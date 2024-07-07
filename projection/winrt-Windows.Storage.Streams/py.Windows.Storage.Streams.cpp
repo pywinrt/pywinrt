@@ -10559,7 +10559,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Buffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Buffer_Static.get())) == -1)
+    py::pytype_handle Buffer_type{py::register_python_type(module.get(), &type_spec_Buffer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Buffer_Static.get()))};
+    if (!Buffer_type)
     {
         return nullptr;
     }
@@ -10570,32 +10571,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataReader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataReader_Static.get())) == -1)
+    py::pytype_handle DataReader_type{py::register_python_type(module.get(), &type_spec_DataReader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DataReader_Static.get()))};
+    if (!DataReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataReaderLoadOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DataReaderLoadOperation_type{py::register_python_type(module.get(), &type_spec_DataReaderLoadOperation, object_bases.get(), nullptr)};
+    if (!DataReaderLoadOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataWriter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DataWriter_type{py::register_python_type(module.get(), &type_spec_DataWriter, object_bases.get(), nullptr)};
+    if (!DataWriter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DataWriterStoreOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DataWriterStoreOperation_type{py::register_python_type(module.get(), &type_spec_DataWriterStoreOperation, object_bases.get(), nullptr)};
+    if (!DataWriterStoreOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileInputStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileInputStream_type{py::register_python_type(module.get(), &type_spec_FileInputStream, object_bases.get(), nullptr)};
+    if (!FileInputStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileOutputStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileOutputStream_type{py::register_python_type(module.get(), &type_spec_FileOutputStream, object_bases.get(), nullptr)};
+    if (!FileOutputStream_type)
     {
         return nullptr;
     }
@@ -10606,22 +10613,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileRandomAccessStream_Static.get())) == -1)
+    py::pytype_handle FileRandomAccessStream_type{py::register_python_type(module.get(), &type_spec_FileRandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FileRandomAccessStream_Static.get()))};
+    if (!FileRandomAccessStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InMemoryRandomAccessStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InMemoryRandomAccessStream_type{py::register_python_type(module.get(), &type_spec_InMemoryRandomAccessStream, object_bases.get(), nullptr)};
+    if (!InMemoryRandomAccessStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputStreamOverStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InputStreamOverStream_type{py::register_python_type(module.get(), &type_spec_InputStreamOverStream, object_bases.get(), nullptr)};
+    if (!InputStreamOverStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OutputStreamOverStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OutputStreamOverStream_type{py::register_python_type(module.get(), &type_spec_OutputStreamOverStream, object_bases.get(), nullptr)};
+    if (!OutputStreamOverStream_type)
     {
         return nullptr;
     }
@@ -10632,12 +10643,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStream_Static.get())) == -1)
+    py::pytype_handle RandomAccessStream_type{py::register_python_type(module.get(), &type_spec_RandomAccessStream, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStream_Static.get()))};
+    if (!RandomAccessStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamOverStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RandomAccessStreamOverStream_type{py::register_python_type(module.get(), &type_spec_RandomAccessStreamOverStream, object_bases.get(), nullptr)};
+    if (!RandomAccessStreamOverStream_type)
     {
         return nullptr;
     }
@@ -10648,62 +10661,74 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_streams(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStreamReference_Static.get())) == -1)
+    py::pytype_handle RandomAccessStreamReference_type{py::register_python_type(module.get(), &type_spec_RandomAccessStreamReference, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RandomAccessStreamReference_Static.get()))};
+    if (!RandomAccessStreamReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBuffer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBuffer_type{py::register_python_type(module.get(), &type_spec_IBuffer, object_bases.get(), nullptr)};
+    if (!IBuffer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContentTypeProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContentTypeProvider_type{py::register_python_type(module.get(), &type_spec_IContentTypeProvider, object_bases.get(), nullptr)};
+    if (!IContentTypeProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDataReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IDataReader_type{py::register_python_type(module.get(), &type_spec_IDataReader, object_bases.get(), nullptr)};
+    if (!IDataReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDataWriter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IDataWriter_type{py::register_python_type(module.get(), &type_spec_IDataWriter, object_bases.get(), nullptr)};
+    if (!IDataWriter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInputStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInputStream_type{py::register_python_type(module.get(), &type_spec_IInputStream, object_bases.get(), nullptr)};
+    if (!IInputStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IInputStreamReference, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IInputStreamReference_type{py::register_python_type(module.get(), &type_spec_IInputStreamReference, object_bases.get(), nullptr)};
+    if (!IInputStreamReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IOutputStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IOutputStream_type{py::register_python_type(module.get(), &type_spec_IOutputStream, object_bases.get(), nullptr)};
+    if (!IOutputStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPropertySetSerializer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPropertySetSerializer_type{py::register_python_type(module.get(), &type_spec_IPropertySetSerializer, object_bases.get(), nullptr)};
+    if (!IPropertySetSerializer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStream, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IRandomAccessStream_type{py::register_python_type(module.get(), &type_spec_IRandomAccessStream, object_bases.get(), nullptr)};
+    if (!IRandomAccessStream_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IRandomAccessStreamReference_type{py::register_python_type(module.get(), &type_spec_IRandomAccessStreamReference, object_bases.get(), nullptr)};
+    if (!IRandomAccessStreamReference_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IRandomAccessStreamWithContentType_type{py::register_python_type(module.get(), &type_spec_IRandomAccessStreamWithContentType, object_bases.get(), nullptr)};
+    if (!IRandomAccessStreamWithContentType_type)
     {
         return nullptr;
     }

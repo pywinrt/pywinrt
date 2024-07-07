@@ -5370,67 +5370,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintManager_Static.get())) == -1)
+    py::pytype_handle PrintManager_type{py::register_python_type(module.get(), &type_spec_PrintManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PrintManager_Static.get()))};
+    if (!PrintManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintPageInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintPageInfo_type{py::register_python_type(module.get(), &type_spec_PrintPageInfo, object_bases.get(), nullptr)};
+    if (!PrintPageInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintPageRange, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintPageRange_type{py::register_python_type(module.get(), &type_spec_PrintPageRange, object_bases.get(), nullptr)};
+    if (!PrintPageRange_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintPageRangeOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintPageRangeOptions_type{py::register_python_type(module.get(), &type_spec_PrintPageRangeOptions, object_bases.get(), nullptr)};
+    if (!PrintPageRangeOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTask, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTask_type{py::register_python_type(module.get(), &type_spec_PrintTask, object_bases.get(), nullptr)};
+    if (!PrintTask_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskOptions_type{py::register_python_type(module.get(), &type_spec_PrintTaskOptions, object_bases.get(), nullptr)};
+    if (!PrintTaskOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskProgressingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskProgressingEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskProgressingEventArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskProgressingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskRequest_type{py::register_python_type(module.get(), &type_spec_PrintTaskRequest, object_bases.get(), nullptr)};
+    if (!PrintTaskRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskRequestedDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskRequestedDeferral_type{py::register_python_type(module.get(), &type_spec_PrintTaskRequestedDeferral, object_bases.get(), nullptr)};
+    if (!PrintTaskRequestedDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskSourceRequestedArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskSourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskSourceRequestedArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskSourceRequestedArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskSourceRequestedDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskSourceRequestedDeferral_type{py::register_python_type(module.get(), &type_spec_PrintTaskSourceRequestedDeferral, object_bases.get(), nullptr)};
+    if (!PrintTaskSourceRequestedDeferral_type)
     {
         return nullptr;
     }
@@ -5441,32 +5454,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StandardPrintTaskOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardPrintTaskOptions_Static.get())) == -1)
+    py::pytype_handle StandardPrintTaskOptions_type{py::register_python_type(module.get(), &type_spec_StandardPrintTaskOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardPrintTaskOptions_Static.get()))};
+    if (!StandardPrintTaskOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrintDocumentSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrintDocumentSource_type{py::register_python_type(module.get(), &type_spec_IPrintDocumentSource, object_bases.get(), nullptr)};
+    if (!IPrintDocumentSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCore, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrintTaskOptionsCore_type{py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCore, object_bases.get(), nullptr)};
+    if (!IPrintTaskOptionsCore_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCoreProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrintTaskOptionsCoreProperties_type{py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCoreProperties, object_bases.get(), nullptr)};
+    if (!IPrintTaskOptionsCoreProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCoreUIConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrintTaskOptionsCoreUIConfiguration_type{py::register_python_type(module.get(), &type_spec_IPrintTaskOptionsCoreUIConfiguration, object_bases.get(), nullptr)};
+    if (!IPrintTaskOptionsCoreUIConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintPageDescription, nullptr, nullptr) == -1)
+    py::pytype_handle PrintPageDescription_type{py::register_python_type(module.get(), &type_spec_PrintPageDescription, nullptr, nullptr)};
+    if (!PrintPageDescription_type)
     {
         return nullptr;
     }

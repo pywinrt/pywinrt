@@ -3274,32 +3274,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesignerAppExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_DesignerAppExitedEventArgs, object_bases.get(), nullptr)};
+    if (!DesignerAppExitedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesignerAppManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesignerAppManager_type{py::register_python_type(module.get(), &type_spec_DesignerAppManager, object_bases.get(), nullptr)};
+    if (!DesignerAppManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesignerAppView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesignerAppView_type{py::register_python_type(module.get(), &type_spec_DesignerAppView, object_bases.get(), nullptr)};
+    if (!DesignerAppView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesktopWindowXamlSource_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr)};
+    if (!DesktopWindowXamlSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesktopWindowXamlSourceGotFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceGotFocusEventArgs, object_bases.get(), nullptr)};
+    if (!DesktopWindowXamlSourceGotFocusEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DesktopWindowXamlSourceTakeFocusRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSourceTakeFocusRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!DesktopWindowXamlSourceTakeFocusRequestedEventArgs_type)
     {
         return nullptr;
     }
@@ -3310,7 +3316,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementCompositionPreview_Static.get())) == -1)
+    py::pytype_handle ElementCompositionPreview_type{py::register_python_type(module.get(), &type_spec_ElementCompositionPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElementCompositionPreview_Static.get()))};
+    if (!ElementCompositionPreview_type)
     {
         return nullptr;
     }
@@ -3321,17 +3328,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsXamlManager_Static.get())) == -1)
+    py::pytype_handle WindowsXamlManager_type{py::register_python_type(module.get(), &type_spec_WindowsXamlManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowsXamlManager_Static.get()))};
+    if (!WindowsXamlManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle XamlSourceFocusNavigationRequest_type{py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationRequest, object_bases.get(), nullptr)};
+    if (!XamlSourceFocusNavigationRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle XamlSourceFocusNavigationResult_type{py::register_python_type(module.get(), &type_spec_XamlSourceFocusNavigationResult, object_bases.get(), nullptr)};
+    if (!XamlSourceFocusNavigationResult_type)
     {
         return nullptr;
     }
@@ -3342,22 +3352,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Static.get())) == -1)
+    py::pytype_handle XamlUIPresenter_type{py::register_python_type(module.get(), &type_spec_XamlUIPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUIPresenter_Static.get()))};
+    if (!XamlUIPresenter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IXamlUIPresenterHost_type{py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost, object_bases.get(), nullptr)};
+    if (!IXamlUIPresenterHost_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IXamlUIPresenterHost2_type{py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost2, object_bases.get(), nullptr)};
+    if (!IXamlUIPresenterHost2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IXamlUIPresenterHost3_type{py::register_python_type(module.get(), &type_spec_IXamlUIPresenterHost3, object_bases.get(), nullptr)};
+    if (!IXamlUIPresenterHost3_type)
     {
         return nullptr;
     }

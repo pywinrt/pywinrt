@@ -176,7 +176,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemProtection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemProtection_Static.get())) == -1)
+    py::pytype_handle SystemProtection_type{py::register_python_type(module.get(), &type_spec_SystemProtection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemProtection_Static.get()))};
+    if (!SystemProtection_type)
     {
         return nullptr;
     }

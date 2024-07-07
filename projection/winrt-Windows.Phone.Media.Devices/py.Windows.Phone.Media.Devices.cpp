@@ -346,7 +346,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_media_devices(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioRoutingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioRoutingManager_Static.get())) == -1)
+    py::pytype_handle AudioRoutingManager_type{py::register_python_type(module.get(), &type_spec_AudioRoutingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioRoutingManager_Static.get()))};
+    if (!AudioRoutingManager_type)
     {
         return nullptr;
     }

@@ -339,6 +339,23 @@ namespace py
 
     using pyobj_handle = winrt::handle_type<pyobj_ptr_traits>;
 
+    struct pytype_ptr_traits
+    {
+        using type = PyTypeObject*;
+
+        static void close(type value) noexcept
+        {
+            Py_CLEAR(value);
+        }
+
+        static constexpr type invalid() noexcept
+        {
+            return nullptr;
+        }
+    };
+
+    using pytype_handle = winrt::handle_type<pytype_ptr_traits>;
+
     // Runtime API shared with other modules
 
     /** Unique identifier for validating runtime API struct pointer. */
@@ -350,7 +367,7 @@ namespace py
      * This must be changed if the runtime API changes in a way that breaks
      * binary compatibility.
      */
-    const uint16_t runtime_abi_version_major = 1;
+    const uint16_t runtime_abi_version_major = 2;
 
     /**
      * ABI version for runtime verification.
@@ -360,7 +377,7 @@ namespace py
      */
     const uint16_t runtime_abi_version_minor = 0;
 
-    int register_python_type(
+    PyTypeObject* register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
         PyObject* base_type,
@@ -436,7 +453,7 @@ namespace py
         return 0;
     }
 
-    inline int register_python_type(
+    inline PyTypeObject* register_python_type(
         PyObject* module,
         PyType_Spec* type_spec,
         PyObject* base_type,

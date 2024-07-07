@@ -6594,22 +6594,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), nullptr)};
+    if (!Binding_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BindingBase_type{py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), nullptr)};
+    if (!BindingBase_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), nullptr)};
+    if (!BindingExpression_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BindingExpressionBase_type{py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), nullptr)};
+    if (!BindingExpressionBase_type)
     {
         return nullptr;
     }
@@ -6620,7 +6624,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingOperations_Static.get())) == -1)
+    py::pytype_handle BindingOperations_type{py::register_python_type(module.get(), &type_spec_BindingOperations, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingOperations_Static.get()))};
+    if (!BindingOperations_type)
     {
         return nullptr;
     }
@@ -6631,82 +6636,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get())) == -1)
+    py::pytype_handle CollectionViewSource_type{py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get()))};
+    if (!CollectionViewSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CurrentChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_CurrentChangingEventArgs, object_bases.get(), nullptr)};
+    if (!CurrentChangingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ItemIndexRange_type{py::register_python_type(module.get(), &type_spec_ItemIndexRange, object_bases.get(), nullptr)};
+    if (!ItemIndexRange_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PropertyChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PropertyChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PropertyChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), nullptr)};
+    if (!RelativeSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICollectionView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICollectionView_type{py::register_python_type(module.get(), &type_spec_ICollectionView, object_bases.get(), nullptr)};
+    if (!ICollectionView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICollectionViewFactory, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICollectionViewFactory_type{py::register_python_type(module.get(), &type_spec_ICollectionViewFactory, object_bases.get(), nullptr)};
+    if (!ICollectionViewFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICollectionViewGroup, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICollectionViewGroup_type{py::register_python_type(module.get(), &type_spec_ICollectionViewGroup, object_bases.get(), nullptr)};
+    if (!ICollectionViewGroup_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICustomProperty, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICustomProperty_type{py::register_python_type(module.get(), &type_spec_ICustomProperty, object_bases.get(), nullptr)};
+    if (!ICustomProperty_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICustomPropertyProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICustomPropertyProvider_type{py::register_python_type(module.get(), &type_spec_ICustomPropertyProvider, object_bases.get(), nullptr)};
+    if (!ICustomPropertyProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IItemsRangeInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IItemsRangeInfo_type{py::register_python_type(module.get(), &type_spec_IItemsRangeInfo, object_bases.get(), nullptr)};
+    if (!IItemsRangeInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INotifyPropertyChanged, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INotifyPropertyChanged_type{py::register_python_type(module.get(), &type_spec_INotifyPropertyChanged, object_bases.get(), nullptr)};
+    if (!INotifyPropertyChanged_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISelectionInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISelectionInfo_type{py::register_python_type(module.get(), &type_spec_ISelectionInfo, object_bases.get(), nullptr)};
+    if (!ISelectionInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISupportIncrementalLoading, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISupportIncrementalLoading_type{py::register_python_type(module.get(), &type_spec_ISupportIncrementalLoading, object_bases.get(), nullptr)};
+    if (!ISupportIncrementalLoading_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IValueConverter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IValueConverter_type{py::register_python_type(module.get(), &type_spec_IValueConverter, object_bases.get(), nullptr)};
+    if (!IValueConverter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LoadMoreItemsResult, nullptr, nullptr) == -1)
+    py::pytype_handle LoadMoreItemsResult_type{py::register_python_type(module.get(), &type_spec_LoadMoreItemsResult, nullptr, nullptr)};
+    if (!LoadMoreItemsResult_type)
     {
         return nullptr;
     }

@@ -138,7 +138,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotedesktop(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InteractiveSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractiveSession_Static.get())) == -1)
+    py::pytype_handle InteractiveSession_type{py::register_python_type(module.get(), &type_spec_InteractiveSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractiveSession_Static.get()))};
+    if (!InteractiveSession_type)
     {
         return nullptr;
     }

@@ -1669,37 +1669,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_people(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EyesPose, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EyesPose_Static.get())) == -1)
+    py::pytype_handle EyesPose_type{py::register_python_type(module.get(), &type_spec_EyesPose, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EyesPose_Static.get()))};
+    if (!EyesPose_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HandMeshObserver, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HandMeshObserver_type{py::register_python_type(module.get(), &type_spec_HandMeshObserver, object_bases.get(), nullptr)};
+    if (!HandMeshObserver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HandMeshVertexState, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HandMeshVertexState_type{py::register_python_type(module.get(), &type_spec_HandMeshVertexState, object_bases.get(), nullptr)};
+    if (!HandMeshVertexState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HandPose, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HandPose_type{py::register_python_type(module.get(), &type_spec_HandPose, object_bases.get(), nullptr)};
+    if (!HandPose_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HeadPose, object_bases.get(), nullptr) == -1)
+    py::pytype_handle HeadPose_type{py::register_python_type(module.get(), &type_spec_HeadPose, object_bases.get(), nullptr)};
+    if (!HeadPose_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HandMeshVertex, nullptr, nullptr) == -1)
+    py::pytype_handle HandMeshVertex_type{py::register_python_type(module.get(), &type_spec_HandMeshVertex, nullptr, nullptr)};
+    if (!HandMeshVertex_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JointPose, nullptr, nullptr) == -1)
+    py::pytype_handle JointPose_type{py::register_python_type(module.get(), &type_spec_JointPose, nullptr, nullptr)};
+    if (!JointPose_type)
     {
         return nullptr;
     }

@@ -1509,12 +1509,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ErrorReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ErrorReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_ErrorReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!ErrorReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PinChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PinChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PinChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PinChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -1525,7 +1527,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_serialcommunication(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SerialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SerialDevice_Static.get())) == -1)
+    py::pytype_handle SerialDevice_type{py::register_python_type(module.get(), &type_spec_SerialDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SerialDevice_Static.get()))};
+    if (!SerialDevice_type)
     {
         return nullptr;
     }

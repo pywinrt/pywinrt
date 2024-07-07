@@ -4813,7 +4813,8 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorHelper_Static.get())) == -1)
+    py::pytype_handle ColorHelper_type{py::register_python_type(module.get(), &type_spec_ColorHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorHelper_Static.get()))};
+    if (!ColorHelper_type)
     {
         return nullptr;
     }
@@ -4824,27 +4825,32 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Static.get())) == -1)
+    py::pytype_handle Colors_type{py::register_python_type(module.get(), &type_spec_Colors, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Colors_Static.get()))};
+    if (!Colors_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IClosableNotifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IClosableNotifier_type{py::register_python_type(module.get(), &type_spec_IClosableNotifier, object_bases.get(), nullptr)};
+    if (!IClosableNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr) == -1)
+    py::pytype_handle DisplayId_type{py::register_python_type(module.get(), &type_spec_DisplayId, nullptr, nullptr)};
+    if (!DisplayId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IconId, nullptr, nullptr) == -1)
+    py::pytype_handle IconId_type{py::register_python_type(module.get(), &type_spec_IconId, nullptr, nullptr)};
+    if (!IconId_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr) == -1)
+    py::pytype_handle WindowId_type{py::register_python_type(module.get(), &type_spec_WindowId, nullptr, nullptr)};
+    if (!WindowId_type)
     {
         return nullptr;
     }

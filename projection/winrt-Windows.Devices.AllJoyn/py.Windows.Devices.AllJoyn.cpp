@@ -6368,7 +6368,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynAboutData_type{py::register_python_type(module.get(), &type_spec_AllJoynAboutData, object_bases.get(), nullptr)};
+    if (!AllJoynAboutData_type)
     {
         return nullptr;
     }
@@ -6379,17 +6380,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynAboutDataView_Static.get())) == -1)
+    py::pytype_handle AllJoynAboutDataView_type{py::register_python_type(module.get(), &type_spec_AllJoynAboutDataView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynAboutDataView_Static.get()))};
+    if (!AllJoynAboutDataView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynAcceptSessionJoinerEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynAcceptSessionJoinerEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynAcceptSessionJoinerEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynAuthenticationCompleteEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynAuthenticationCompleteEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynAuthenticationCompleteEventArgs_type)
     {
         return nullptr;
     }
@@ -6400,47 +6404,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynBusAttachment_Static.get())) == -1)
+    py::pytype_handle AllJoynBusAttachment_type{py::register_python_type(module.get(), &type_spec_AllJoynBusAttachment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynBusAttachment_Static.get()))};
+    if (!AllJoynBusAttachment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynBusAttachmentStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynBusAttachmentStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynBusAttachmentStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObject, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynBusObject_type{py::register_python_type(module.get(), &type_spec_AllJoynBusObject, object_bases.get(), nullptr)};
+    if (!AllJoynBusObject_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynBusObjectStoppedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynBusObjectStoppedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynBusObjectStoppedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentials, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynCredentials_type{py::register_python_type(module.get(), &type_spec_AllJoynCredentials, object_bases.get(), nullptr)};
+    if (!AllJoynCredentials_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynCredentialsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynCredentialsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynCredentialsRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynCredentialsVerificationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynCredentialsVerificationRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynCredentialsVerificationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynMessageInfo_type{py::register_python_type(module.get(), &type_spec_AllJoynMessageInfo, object_bases.get(), nullptr)};
+    if (!AllJoynMessageInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynProducerStoppedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynProducerStoppedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynProducerStoppedEventArgs_type)
     {
         return nullptr;
     }
@@ -6451,12 +6464,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynServiceInfo_Static.get())) == -1)
+    py::pytype_handle AllJoynServiceInfo_type{py::register_python_type(module.get(), &type_spec_AllJoynServiceInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynServiceInfo_Static.get()))};
+    if (!AllJoynServiceInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynServiceInfoRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynServiceInfoRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynServiceInfoRemovedEventArgs_type)
     {
         return nullptr;
     }
@@ -6467,27 +6482,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynSession_Static.get())) == -1)
+    py::pytype_handle AllJoynSession_type{py::register_python_type(module.get(), &type_spec_AllJoynSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynSession_Static.get()))};
+    if (!AllJoynSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynSessionJoinedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynSessionJoinedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynSessionJoinedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynSessionLostEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynSessionLostEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynSessionLostEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynSessionMemberAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberAddedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynSessionMemberAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynSessionMemberRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynSessionMemberRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynSessionMemberRemovedEventArgs_type)
     {
         return nullptr;
     }
@@ -6498,22 +6518,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_alljoyn(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Static.get())) == -1)
+    py::pytype_handle AllJoynStatus_type{py::register_python_type(module.get(), &type_spec_AllJoynStatus, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AllJoynStatus_Static.get()))};
+    if (!AllJoynStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AllJoynWatcherStoppedEventArgs_type{py::register_python_type(module.get(), &type_spec_AllJoynWatcherStoppedEventArgs, object_bases.get(), nullptr)};
+    if (!AllJoynWatcherStoppedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAllJoynAcceptSessionJoiner_type{py::register_python_type(module.get(), &type_spec_IAllJoynAcceptSessionJoiner, object_bases.get(), nullptr)};
+    if (!IAllJoynAcceptSessionJoiner_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAllJoynProducer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAllJoynProducer_type{py::register_python_type(module.get(), &type_spec_IAllJoynProducer, object_bases.get(), nullptr)};
+    if (!IAllJoynProducer_type)
     {
         return nullptr;
     }

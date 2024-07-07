@@ -22479,552 +22479,662 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_activation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppointmentsProviderAddAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppointmentsProviderAddAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppointmentsProviderRemoveAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppointmentsProviderRemoveAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppointmentsProviderReplaceAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppointmentsProviderReplaceAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppointmentsProviderShowTimeFrameActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppointmentsProviderShowTimeFrameActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BackgroundActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackgroundActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!BackgroundActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BarcodeScannerPreviewActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_BarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!BarcodeScannerPreviewActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CachedFileUpdaterActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!CachedFileUpdaterActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CameraSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CameraSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!CameraSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CommandLineActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_CommandLineActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!CommandLineActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CommandLineActivationOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CommandLineActivationOperation_type{py::register_python_type(module.get(), &type_spec_CommandLineActivationOperation, object_bases.get(), nullptr)};
+    if (!CommandLineActivationOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactMapActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactMapActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactMapActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactMessageActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactMessageActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactMessageActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactPanelActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactPanelActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactPanelActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactPostActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactPostActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactPostActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactVideoCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContactVideoCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ContactVideoCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DeviceActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_DeviceActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!DeviceActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DevicePairingActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!DevicePairingActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DialReceiverActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_DialReceiverActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!DialReceiverActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_FileActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!FileActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileOpenPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_FileOpenPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!FileOpenPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileOpenPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_FileOpenPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!FileOpenPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileSavePickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_FileSavePickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!FileSavePickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileSavePickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_FileSavePickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!FileSavePickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FolderPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_FolderPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!FolderPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!LaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LockScreenActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!LockScreenActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LockScreenCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!LockScreenCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LockScreenComponentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LockScreenComponentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_LockScreenComponentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!LockScreenComponentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhoneCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PhoneCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!PhoneCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerReturnedActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PickerReturnedActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PickerReturnedActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!PickerReturnedActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Print3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Print3DWorkflowActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_Print3DWorkflowActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!Print3DWorkflowActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PrintTaskSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintTaskSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProtocolActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtocolActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ProtocolActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProtocolForResultsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ProtocolForResultsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RestrictedLaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_RestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!RestrictedLaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SearchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_SearchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!SearchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ShareTargetActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareTargetActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ShareTargetActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SplashScreen, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SplashScreen_type{py::register_python_type(module.get(), &type_spec_SplashScreen, object_bases.get(), nullptr)};
+    if (!SplashScreen_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle StartupTaskActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_StartupTaskActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!StartupTaskActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileActivatedInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TileActivatedInfo_type{py::register_python_type(module.get(), &type_spec_TileActivatedInfo, object_bases.get(), nullptr)};
+    if (!TileActivatedInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ToastNotificationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ToastNotificationActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ToastNotificationActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserDataAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!UserDataAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_VoiceCommandActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!VoiceCommandActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WalletActionActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WalletActionActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WalletActionActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WebAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_WebAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!WebAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WebAuthenticationBrokerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!WebAuthenticationBrokerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IActivatedEventArgsWithUser, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IActivatedEventArgsWithUser_type{py::register_python_type(module.get(), &type_spec_IActivatedEventArgsWithUser, object_bases.get(), nullptr)};
+    if (!IActivatedEventArgsWithUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IApplicationViewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IApplicationViewActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IApplicationViewActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IApplicationViewActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderAddAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderAddAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderAddAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderRemoveAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderRemoveAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderRemoveAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderReplaceAppointmentActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderReplaceAppointmentActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderReplaceAppointmentActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderShowAppointmentDetailsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAppointmentsProviderShowTimeFrameActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IAppointmentsProviderShowTimeFrameActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IAppointmentsProviderShowTimeFrameActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBackgroundActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBackgroundActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IBackgroundActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IBackgroundActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IBarcodeScannerPreviewActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IBarcodeScannerPreviewActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IBarcodeScannerPreviewActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICachedFileUpdaterActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ICachedFileUpdaterActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ICachedFileUpdaterActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICameraSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICameraSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ICameraSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ICameraSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ICommandLineActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ICommandLineActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ICommandLineActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ICommandLineActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactMapActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactMapActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactMapActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactMapActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactMessageActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactMessageActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactMessageActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactMessageActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactPanelActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactPanelActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactPanelActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactPanelActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactPostActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactPostActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactPostActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactPostActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactVideoCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactVideoCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactVideoCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactVideoCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactsProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactsProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContactsProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContactsProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContinuationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContinuationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IContinuationActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IContinuationActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDeviceActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IDeviceActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IDeviceActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IDeviceActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDevicePairingActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IDevicePairingActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IDevicePairingActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IDevicePairingActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IDialReceiverActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IDialReceiverActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IDialReceiverActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IDialReceiverActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IFileActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileActivatedEventArgsWithCallerPackageFamilyName_type{py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgsWithCallerPackageFamilyName, object_bases.get(), nullptr)};
+    if (!IFileActivatedEventArgsWithCallerPackageFamilyName_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgsWithNeighboringFiles, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileActivatedEventArgsWithNeighboringFiles_type{py::register_python_type(module.get(), &type_spec_IFileActivatedEventArgsWithNeighboringFiles, object_bases.get(), nullptr)};
+    if (!IFileActivatedEventArgsWithNeighboringFiles_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileOpenPickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileOpenPickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IFileOpenPickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileOpenPickerActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileOpenPickerActivatedEventArgs2_type{py::register_python_type(module.get(), &type_spec_IFileOpenPickerActivatedEventArgs2, object_bases.get(), nullptr)};
+    if (!IFileOpenPickerActivatedEventArgs2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileOpenPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileOpenPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!IFileOpenPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileSavePickerActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileSavePickerActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileSavePickerActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IFileSavePickerActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileSavePickerActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileSavePickerActivatedEventArgs2_type{py::register_python_type(module.get(), &type_spec_IFileSavePickerActivatedEventArgs2, object_bases.get(), nullptr)};
+    if (!IFileSavePickerActivatedEventArgs2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFileSavePickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFileSavePickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IFileSavePickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!IFileSavePickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IFolderPickerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IFolderPickerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IFolderPickerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!IFolderPickerContinuationEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ILaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ILaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILaunchActivatedEventArgs2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILaunchActivatedEventArgs2_type{py::register_python_type(module.get(), &type_spec_ILaunchActivatedEventArgs2, object_bases.get(), nullptr)};
+    if (!ILaunchActivatedEventArgs2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILockScreenActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILockScreenActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ILockScreenActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ILockScreenActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ILockScreenCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ILockScreenCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ILockScreenCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ILockScreenCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPhoneCallActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPhoneCallActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPhoneCallActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IPhoneCallActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPickerReturnedActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPickerReturnedActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPickerReturnedActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IPickerReturnedActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrelaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrelaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPrelaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IPrelaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrint3DWorkflowActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPrint3DWorkflowActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IPrint3DWorkflowActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPrintTaskSettingsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IPrintTaskSettingsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IPrintTaskSettingsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IProtocolActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IProtocolActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IProtocolActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IProtocolActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type{py::register_python_type(module.get(), &type_spec_IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData, object_bases.get(), nullptr)};
+    if (!IProtocolActivatedEventArgsWithCallerPackageFamilyNameAndData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IProtocolForResultsActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IProtocolForResultsActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IProtocolForResultsActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IRestrictedLaunchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IRestrictedLaunchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IRestrictedLaunchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISearchActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISearchActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ISearchActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!ISearchActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISearchActivatedEventArgsWithLinguisticDetails_type{py::register_python_type(module.get(), &type_spec_ISearchActivatedEventArgsWithLinguisticDetails, object_bases.get(), nullptr)};
+    if (!ISearchActivatedEventArgsWithLinguisticDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IShareTargetActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IShareTargetActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IShareTargetActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IShareTargetActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStartupTaskActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IStartupTaskActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IStartupTaskActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IStartupTaskActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IToastNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IToastNotificationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IToastNotificationActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IToastNotificationActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IUserDataAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IUserDataAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IUserDataAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IViewSwitcherProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IViewSwitcherProvider_type{py::register_python_type(module.get(), &type_spec_IViewSwitcherProvider, object_bases.get(), nullptr)};
+    if (!IViewSwitcherProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IVoiceCommandActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IVoiceCommandActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IVoiceCommandActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IVoiceCommandActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWalletActionActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IWalletActionActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IWalletActionActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IWalletActionActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IWebAccountProviderActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebAccountProviderActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!IWebAccountProviderActivatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IWebAuthenticationBrokerContinuationEventArgs_type{py::register_python_type(module.get(), &type_spec_IWebAuthenticationBrokerContinuationEventArgs, object_bases.get(), nullptr)};
+    if (!IWebAuthenticationBrokerContinuationEventArgs_type)
     {
         return nullptr;
     }

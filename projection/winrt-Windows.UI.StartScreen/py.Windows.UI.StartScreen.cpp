@@ -4283,7 +4283,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpList_Static.get())) == -1)
+    py::pytype_handle JumpList_type{py::register_python_type(module.get(), &type_spec_JumpList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpList_Static.get()))};
+    if (!JumpList_type)
     {
         return nullptr;
     }
@@ -4294,7 +4295,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_JumpListItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItem_Static.get())) == -1)
+    py::pytype_handle JumpListItem_type{py::register_python_type(module.get(), &type_spec_JumpListItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_JumpListItem_Static.get()))};
+    if (!JumpListItem_type)
     {
         return nullptr;
     }
@@ -4305,12 +4307,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryTile_Static.get())) == -1)
+    py::pytype_handle SecondaryTile_type{py::register_python_type(module.get(), &type_spec_SecondaryTile, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryTile_Static.get()))};
+    if (!SecondaryTile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryTileVisualElements, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryTileVisualElements_type{py::register_python_type(module.get(), &type_spec_SecondaryTileVisualElements, object_bases.get(), nullptr)};
+    if (!SecondaryTileVisualElements_type)
     {
         return nullptr;
     }
@@ -4321,27 +4325,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_startscreen(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StartScreenManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StartScreenManager_Static.get())) == -1)
+    py::pytype_handle StartScreenManager_type{py::register_python_type(module.get(), &type_spec_StartScreenManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StartScreenManager_Static.get()))};
+    if (!StartScreenManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TileMixedRealityModel, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TileMixedRealityModel_type{py::register_python_type(module.get(), &type_spec_TileMixedRealityModel, object_bases.get(), nullptr)};
+    if (!TileMixedRealityModel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualElementsRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VisualElementsRequest_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequest, object_bases.get(), nullptr)};
+    if (!VisualElementsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualElementsRequestDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VisualElementsRequestDeferral_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestDeferral, object_bases.get(), nullptr)};
+    if (!VisualElementsRequestDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VisualElementsRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_VisualElementsRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!VisualElementsRequestedEventArgs_type)
     {
         return nullptr;
     }

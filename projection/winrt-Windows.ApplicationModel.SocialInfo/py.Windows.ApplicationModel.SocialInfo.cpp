@@ -2365,32 +2365,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_socialinfo(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialFeedChildItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialFeedChildItem_type{py::register_python_type(module.get(), &type_spec_SocialFeedChildItem, object_bases.get(), nullptr)};
+    if (!SocialFeedChildItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialFeedContent, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialFeedContent_type{py::register_python_type(module.get(), &type_spec_SocialFeedContent, object_bases.get(), nullptr)};
+    if (!SocialFeedContent_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialFeedItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialFeedItem_type{py::register_python_type(module.get(), &type_spec_SocialFeedItem, object_bases.get(), nullptr)};
+    if (!SocialFeedItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialFeedSharedItem_type{py::register_python_type(module.get(), &type_spec_SocialFeedSharedItem, object_bases.get(), nullptr)};
+    if (!SocialFeedSharedItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialItemThumbnail, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialItemThumbnail_type{py::register_python_type(module.get(), &type_spec_SocialItemThumbnail, object_bases.get(), nullptr)};
+    if (!SocialItemThumbnail_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SocialUserInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SocialUserInfo_type{py::register_python_type(module.get(), &type_spec_SocialUserInfo, object_bases.get(), nullptr)};
+    if (!SocialUserInfo_type)
     {
         return nullptr;
     }

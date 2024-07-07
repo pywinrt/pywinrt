@@ -4716,92 +4716,110 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_miracast(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiver, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiver_type{py::register_python_type(module.get(), &type_spec_MiracastReceiver, object_bases.get(), nullptr)};
+    if (!MiracastReceiver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverApplySettingsResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverApplySettingsResult_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverApplySettingsResult, object_bases.get(), nullptr)};
+    if (!MiracastReceiverApplySettingsResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverConnection_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverConnection, object_bases.get(), nullptr)};
+    if (!MiracastReceiverConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverConnectionCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverConnectionCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverConnectionCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!MiracastReceiverConnectionCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannel, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverCursorImageChannel_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannel, object_bases.get(), nullptr)};
+    if (!MiracastReceiverCursorImageChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannelSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverCursorImageChannelSettings_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverCursorImageChannelSettings, object_bases.get(), nullptr)};
+    if (!MiracastReceiverCursorImageChannelSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverDisconnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverDisconnectedEventArgs, object_bases.get(), nullptr)};
+    if (!MiracastReceiverDisconnectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverGameControllerDevice, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverGameControllerDevice_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverGameControllerDevice, object_bases.get(), nullptr)};
+    if (!MiracastReceiverGameControllerDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverInputDevices, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverInputDevices_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverInputDevices, object_bases.get(), nullptr)};
+    if (!MiracastReceiverInputDevices_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverKeyboardDevice, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverKeyboardDevice_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverKeyboardDevice, object_bases.get(), nullptr)};
+    if (!MiracastReceiverKeyboardDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverMediaSourceCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverMediaSourceCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!MiracastReceiverMediaSourceCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverSession_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverSession, object_bases.get(), nullptr)};
+    if (!MiracastReceiverSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSessionStartResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverSessionStartResult_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverSessionStartResult, object_bases.get(), nullptr)};
+    if (!MiracastReceiverSessionStartResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverSettings_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverSettings, object_bases.get(), nullptr)};
+    if (!MiracastReceiverSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStatus, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverStatus_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverStatus, object_bases.get(), nullptr)};
+    if (!MiracastReceiverStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverStreamControl, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverStreamControl_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverStreamControl, object_bases.get(), nullptr)};
+    if (!MiracastReceiverStreamControl_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastReceiverVideoStreamSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastReceiverVideoStreamSettings_type{py::register_python_type(module.get(), &type_spec_MiracastReceiverVideoStreamSettings, object_bases.get(), nullptr)};
+    if (!MiracastReceiverVideoStreamSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MiracastTransmitter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MiracastTransmitter_type{py::register_python_type(module.get(), &type_spec_MiracastTransmitter, object_bases.get(), nullptr)};
+    if (!MiracastTransmitter_type)
     {
         return nullptr;
     }

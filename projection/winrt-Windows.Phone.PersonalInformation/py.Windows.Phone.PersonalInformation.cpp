@@ -4844,12 +4844,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactAddress_type{py::register_python_type(module.get(), &type_spec_ContactAddress, object_bases.get(), nullptr)};
+    if (!ContactAddress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactChangeRecord, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactChangeRecord_type{py::register_python_type(module.get(), &type_spec_ContactChangeRecord, object_bases.get(), nullptr)};
+    if (!ContactChangeRecord_type)
     {
         return nullptr;
     }
@@ -4860,17 +4862,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactInformation_Static.get())) == -1)
+    py::pytype_handle ContactInformation_type{py::register_python_type(module.get(), &type_spec_ContactInformation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactInformation_Static.get()))};
+    if (!ContactInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactQueryOptions_type{py::register_python_type(module.get(), &type_spec_ContactQueryOptions, object_bases.get(), nullptr)};
+    if (!ContactQueryOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactQueryResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ContactQueryResult_type{py::register_python_type(module.get(), &type_spec_ContactQueryResult, object_bases.get(), nullptr)};
+    if (!ContactQueryResult_type)
     {
         return nullptr;
     }
@@ -4881,7 +4886,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactStore_Static.get())) == -1)
+    py::pytype_handle ContactStore_type{py::register_python_type(module.get(), &type_spec_ContactStore, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContactStore_Static.get()))};
+    if (!ContactStore_type)
     {
         return nullptr;
     }
@@ -4892,22 +4898,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_personalinformation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Static.get())) == -1)
+    py::pytype_handle KnownContactProperties_type{py::register_python_type(module.get(), &type_spec_KnownContactProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownContactProperties_Static.get()))};
+    if (!KnownContactProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StoredContact, object_bases.get(), nullptr) == -1)
+    py::pytype_handle StoredContact_type{py::register_python_type(module.get(), &type_spec_StoredContact, object_bases.get(), nullptr)};
+    if (!StoredContact_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactInformation_type{py::register_python_type(module.get(), &type_spec_IContactInformation, object_bases.get(), nullptr)};
+    if (!IContactInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IContactInformation2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IContactInformation2_type{py::register_python_type(module.get(), &type_spec_IContactInformation2, object_bases.get(), nullptr)};
+    if (!IContactInformation2_type)
     {
         return nullptr;
     }

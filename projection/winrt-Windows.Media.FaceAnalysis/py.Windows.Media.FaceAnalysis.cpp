@@ -958,7 +958,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DetectedFace, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DetectedFace_type{py::register_python_type(module.get(), &type_spec_DetectedFace, object_bases.get(), nullptr)};
+    if (!DetectedFace_type)
     {
         return nullptr;
     }
@@ -969,7 +970,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Static.get())) == -1)
+    py::pytype_handle FaceDetector_type{py::register_python_type(module.get(), &type_spec_FaceDetector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceDetector_Static.get()))};
+    if (!FaceDetector_type)
     {
         return nullptr;
     }
@@ -980,7 +982,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_faceanalysis(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Static.get())) == -1)
+    py::pytype_handle FaceTracker_type{py::register_python_type(module.get(), &type_spec_FaceTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FaceTracker_Static.get()))};
+    if (!FaceTracker_type)
     {
         return nullptr;
     }

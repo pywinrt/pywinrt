@@ -7326,7 +7326,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Static.get())) == -1)
+    py::pytype_handle KnownRemoteSystemCapabilities_type{py::register_python_type(module.get(), &type_spec_KnownRemoteSystemCapabilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownRemoteSystemCapabilities_Static.get()))};
+    if (!KnownRemoteSystemCapabilities_type)
     {
         return nullptr;
     }
@@ -7337,17 +7338,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystem_Static.get())) == -1)
+    py::pytype_handle RemoteSystem_type{py::register_python_type(module.get(), &type_spec_RemoteSystem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystem_Static.get()))};
+    if (!RemoteSystem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemAddedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemApp, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemApp_type{py::register_python_type(module.get(), &type_spec_RemoteSystemApp, object_bases.get(), nullptr)};
+    if (!RemoteSystemApp_type)
     {
         return nullptr;
     }
@@ -7358,12 +7362,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemAppRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemAppRegistration_Static.get())) == -1)
+    py::pytype_handle RemoteSystemAppRegistration_type{py::register_python_type(module.get(), &type_spec_RemoteSystemAppRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemAppRegistration_Static.get()))};
+    if (!RemoteSystemAppRegistration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemAuthorizationKindFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemAuthorizationKindFilter_type{py::register_python_type(module.get(), &type_spec_RemoteSystemAuthorizationKindFilter, object_bases.get(), nullptr)};
+    if (!RemoteSystemAuthorizationKindFilter_type)
     {
         return nullptr;
     }
@@ -7374,7 +7380,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionInfo_Static.get())) == -1)
+    py::pytype_handle RemoteSystemConnectionInfo_type{py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionInfo_Static.get()))};
+    if (!RemoteSystemConnectionInfo_type)
     {
         return nullptr;
     }
@@ -7385,22 +7392,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionRequest, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionRequest_Static.get())) == -1)
+    py::pytype_handle RemoteSystemConnectionRequest_type{py::register_python_type(module.get(), &type_spec_RemoteSystemConnectionRequest, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemConnectionRequest_Static.get()))};
+    if (!RemoteSystemConnectionRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemDiscoveryTypeFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemDiscoveryTypeFilter_type{py::register_python_type(module.get(), &type_spec_RemoteSystemDiscoveryTypeFilter, object_bases.get(), nullptr)};
+    if (!RemoteSystemDiscoveryTypeFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemEnumerationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemEnumerationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemEnumerationCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemEnumerationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemKindFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemKindFilter_type{py::register_python_type(module.get(), &type_spec_RemoteSystemKindFilter, object_bases.get(), nullptr)};
+    if (!RemoteSystemKindFilter_type)
     {
         return nullptr;
     }
@@ -7411,12 +7422,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Static.get())) == -1)
+    py::pytype_handle RemoteSystemKinds_type{py::register_python_type(module.get(), &type_spec_RemoteSystemKinds, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemKinds_Static.get()))};
+    if (!RemoteSystemKinds_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemRemovedEventArgs_type)
     {
         return nullptr;
     }
@@ -7427,142 +7440,170 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_remotesystems(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemSession_Static.get())) == -1)
+    py::pytype_handle RemoteSystemSession_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RemoteSystemSession_Static.get()))};
+    if (!RemoteSystemSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionAddedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionController, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionController_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionController, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionController_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionCreationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionCreationResult_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionCreationResult, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionCreationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionDisconnectedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionDisconnectedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionDisconnectedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionDisconnectedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionInfo_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInfo, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionInvitation_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitation, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionInvitation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitationListener, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionInvitationListener_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitationListener, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionInvitationListener_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitationReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionInvitationReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionInvitationReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionInvitationReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionJoinRequest_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinRequest, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionJoinRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionJoinRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionJoinRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionJoinResult_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionJoinResult, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionJoinResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionMessageChannel, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionMessageChannel_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionMessageChannel, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionMessageChannel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionOptions_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionOptions, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipant, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionParticipant_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipant, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionParticipant_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionParticipantAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantAddedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionParticipantAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionParticipantRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionParticipantRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionParticipantWatcher_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionParticipantWatcher, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionParticipantWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionValueSetReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionValueSetReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionValueSetReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionValueSetReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemSessionWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemSessionWatcher_type{py::register_python_type(module.get(), &type_spec_RemoteSystemSessionWatcher, object_bases.get(), nullptr)};
+    if (!RemoteSystemSessionWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemStatusTypeFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemStatusTypeFilter_type{py::register_python_type(module.get(), &type_spec_RemoteSystemStatusTypeFilter, object_bases.get(), nullptr)};
+    if (!RemoteSystemStatusTypeFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemUpdatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemWatcher_type{py::register_python_type(module.get(), &type_spec_RemoteSystemWatcher, object_bases.get(), nullptr)};
+    if (!RemoteSystemWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemWatcherErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemWatcherErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_RemoteSystemWatcherErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    if (!RemoteSystemWatcherErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RemoteSystemWebAccountFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RemoteSystemWebAccountFilter_type{py::register_python_type(module.get(), &type_spec_RemoteSystemWebAccountFilter, object_bases.get(), nullptr)};
+    if (!RemoteSystemWebAccountFilter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IRemoteSystemFilter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IRemoteSystemFilter_type{py::register_python_type(module.get(), &type_spec_IRemoteSystemFilter, object_bases.get(), nullptr)};
+    if (!IRemoteSystemFilter_type)
     {
         return nullptr;
     }

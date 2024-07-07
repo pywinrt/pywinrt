@@ -1736,27 +1736,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_provider(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorAuthentication_Static.get())) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorAuthentication_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthentication, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorAuthentication_Static.get()))};
+    if (!SecondaryAuthenticationFactorAuthentication_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorAuthenticationResult_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationResult, object_bases.get(), nullptr)};
+    if (!SecondaryAuthenticationFactorAuthenticationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorAuthenticationStageInfo_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorAuthenticationStageInfo, object_bases.get(), nullptr)};
+    if (!SecondaryAuthenticationFactorAuthenticationStageInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorInfo_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorInfo, object_bases.get(), nullptr)};
+    if (!SecondaryAuthenticationFactorInfo_type)
     {
         return nullptr;
     }
@@ -1767,12 +1772,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_identity_provider(v
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorRegistration_Static.get())) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorRegistration_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SecondaryAuthenticationFactorRegistration_Static.get()))};
+    if (!SecondaryAuthenticationFactorRegistration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistrationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecondaryAuthenticationFactorRegistrationResult_type{py::register_python_type(module.get(), &type_spec_SecondaryAuthenticationFactorRegistrationResult, object_bases.get(), nullptr)};
+    if (!SecondaryAuthenticationFactorRegistrationResult_type)
     {
         return nullptr;
     }

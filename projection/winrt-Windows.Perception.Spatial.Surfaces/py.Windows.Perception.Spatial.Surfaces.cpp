@@ -1482,17 +1482,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialSurfaceInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialSurfaceInfo_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceInfo, object_bases.get(), nullptr)};
+    if (!SpatialSurfaceInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialSurfaceMesh, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialSurfaceMesh_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMesh, object_bases.get(), nullptr)};
+    if (!SpatialSurfaceMesh_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpatialSurfaceMeshBuffer_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshBuffer, object_bases.get(), nullptr)};
+    if (!SpatialSurfaceMeshBuffer_type)
     {
         return nullptr;
     }
@@ -1503,7 +1506,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceMeshOptions_Static.get())) == -1)
+    py::pytype_handle SpatialSurfaceMeshOptions_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceMeshOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceMeshOptions_Static.get()))};
+    if (!SpatialSurfaceMeshOptions_type)
     {
         return nullptr;
     }
@@ -1514,7 +1518,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_perception_spatial_surfaces(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialSurfaceObserver, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceObserver_Static.get())) == -1)
+    py::pytype_handle SpatialSurfaceObserver_type{py::register_python_type(module.get(), &type_spec_SpatialSurfaceObserver, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialSurfaceObserver_Static.get()))};
+    if (!SpatialSurfaceObserver_type)
     {
         return nullptr;
     }

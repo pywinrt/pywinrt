@@ -150,7 +150,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_data_html(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HtmlUtilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HtmlUtilities_Static.get())) == -1)
+    py::pytype_handle HtmlUtilities_type{py::register_python_type(module.get(), &type_spec_HtmlUtilities, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HtmlUtilities_Static.get()))};
+    if (!HtmlUtilities_type)
     {
         return nullptr;
     }

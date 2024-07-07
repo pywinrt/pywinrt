@@ -2183,32 +2183,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_gaming_input_forcefeedback(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConditionForceEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConditionForceEffect_type{py::register_python_type(module.get(), &type_spec_ConditionForceEffect, object_bases.get(), nullptr)};
+    if (!ConditionForceEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConstantForceEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConstantForceEffect_type{py::register_python_type(module.get(), &type_spec_ConstantForceEffect, object_bases.get(), nullptr)};
+    if (!ConstantForceEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ForceFeedbackMotor, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ForceFeedbackMotor_type{py::register_python_type(module.get(), &type_spec_ForceFeedbackMotor, object_bases.get(), nullptr)};
+    if (!ForceFeedbackMotor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PeriodicForceEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PeriodicForceEffect_type{py::register_python_type(module.get(), &type_spec_PeriodicForceEffect, object_bases.get(), nullptr)};
+    if (!PeriodicForceEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RampForceEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RampForceEffect_type{py::register_python_type(module.get(), &type_spec_RampForceEffect, object_bases.get(), nullptr)};
+    if (!RampForceEffect_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IForceFeedbackEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IForceFeedbackEffect_type{py::register_python_type(module.get(), &type_spec_IForceFeedbackEffect, object_bases.get(), nullptr)};
+    if (!IForceFeedbackEffect_type)
     {
         return nullptr;
     }

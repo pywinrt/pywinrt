@@ -4315,22 +4315,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_bulkaccess(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileInformation_type{py::register_python_type(module.get(), &type_spec_FileInformation, object_bases.get(), nullptr)};
+    if (!FileInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileInformationFactory, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileInformationFactory_type{py::register_python_type(module.get(), &type_spec_FileInformationFactory, object_bases.get(), nullptr)};
+    if (!FileInformationFactory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FolderInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FolderInformation_type{py::register_python_type(module.get(), &type_spec_FolderInformation, object_bases.get(), nullptr)};
+    if (!FolderInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IStorageItemInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IStorageItemInformation_type{py::register_python_type(module.get(), &type_spec_IStorageItemInformation, object_bases.get(), nullptr)};
+    if (!IStorageItemInformation_type)
     {
         return nullptr;
     }

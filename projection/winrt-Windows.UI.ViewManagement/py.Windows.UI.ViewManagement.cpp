@@ -7226,12 +7226,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AccessibilitySettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AccessibilitySettings_type{py::register_python_type(module.get(), &type_spec_AccessibilitySettings, object_bases.get(), nullptr)};
+    if (!AccessibilitySettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ActivationViewSwitcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ActivationViewSwitcher_type{py::register_python_type(module.get(), &type_spec_ActivationViewSwitcher, object_bases.get(), nullptr)};
+    if (!ActivationViewSwitcher_type)
     {
         return nullptr;
     }
@@ -7242,12 +7244,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationView_Static.get())) == -1)
+    py::pytype_handle ApplicationView_type{py::register_python_type(module.get(), &type_spec_ApplicationView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationView_Static.get()))};
+    if (!ApplicationView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ApplicationViewConsolidatedEventArgs_type{py::register_python_type(module.get(), &type_spec_ApplicationViewConsolidatedEventArgs, object_bases.get(), nullptr)};
+    if (!ApplicationViewConsolidatedEventArgs_type)
     {
         return nullptr;
     }
@@ -7258,7 +7262,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationViewScaling, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewScaling_Static.get())) == -1)
+    py::pytype_handle ApplicationViewScaling_type{py::register_python_type(module.get(), &type_spec_ApplicationViewScaling, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewScaling_Static.get()))};
+    if (!ApplicationViewScaling_type)
     {
         return nullptr;
     }
@@ -7269,12 +7274,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationViewSwitcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewSwitcher_Static.get())) == -1)
+    py::pytype_handle ApplicationViewSwitcher_type{py::register_python_type(module.get(), &type_spec_ApplicationViewSwitcher, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewSwitcher_Static.get()))};
+    if (!ApplicationViewSwitcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationViewTitleBar, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ApplicationViewTitleBar_type{py::register_python_type(module.get(), &type_spec_ApplicationViewTitleBar, object_bases.get(), nullptr)};
+    if (!ApplicationViewTitleBar_type)
     {
         return nullptr;
     }
@@ -7285,7 +7292,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ApplicationViewTransferContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewTransferContext_Static.get())) == -1)
+    py::pytype_handle ApplicationViewTransferContext_type{py::register_python_type(module.get(), &type_spec_ApplicationViewTransferContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ApplicationViewTransferContext_Static.get()))};
+    if (!ApplicationViewTransferContext_type)
     {
         return nullptr;
     }
@@ -7296,12 +7304,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPane_Static.get())) == -1)
+    py::pytype_handle InputPane_type{py::register_python_type(module.get(), &type_spec_InputPane, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPane_Static.get()))};
+    if (!InputPane_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle InputPaneVisibilityEventArgs_type{py::register_python_type(module.get(), &type_spec_InputPaneVisibilityEventArgs, object_bases.get(), nullptr)};
+    if (!InputPaneVisibilityEventArgs_type)
     {
         return nullptr;
     }
@@ -7312,7 +7322,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProjectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProjectionManager_Static.get())) == -1)
+    py::pytype_handle ProjectionManager_type{py::register_python_type(module.get(), &type_spec_ProjectionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProjectionManager_Static.get()))};
+    if (!ProjectionManager_type)
     {
         return nullptr;
     }
@@ -7323,32 +7334,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StatusBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StatusBar_Static.get())) == -1)
+    py::pytype_handle StatusBar_type{py::register_python_type(module.get(), &type_spec_StatusBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StatusBar_Static.get()))};
+    if (!StatusBar_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StatusBarProgressIndicator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle StatusBarProgressIndicator_type{py::register_python_type(module.get(), &type_spec_StatusBarProgressIndicator, object_bases.get(), nullptr)};
+    if (!StatusBarProgressIndicator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UISettings_type{py::register_python_type(module.get(), &type_spec_UISettings, object_bases.get(), nullptr)};
+    if (!UISettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UISettingsAnimationsEnabledChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAnimationsEnabledChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UISettingsAnimationsEnabledChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UISettingsAutoHideScrollBarsChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsAutoHideScrollBarsChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UISettingsAutoHideScrollBarsChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UISettingsMessageDurationChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_UISettingsMessageDurationChangedEventArgs, object_bases.get(), nullptr)};
+    if (!UISettingsMessageDurationChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -7359,7 +7376,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UIViewSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIViewSettings_Static.get())) == -1)
+    py::pytype_handle UIViewSettings_type{py::register_python_type(module.get(), &type_spec_UIViewSettings, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UIViewSettings_Static.get()))};
+    if (!UIViewSettings_type)
     {
         return nullptr;
     }
@@ -7370,7 +7388,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_viewmanagement(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ViewModePreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ViewModePreferences_Static.get())) == -1)
+    py::pytype_handle ViewModePreferences_type{py::register_python_type(module.get(), &type_spec_ViewModePreferences, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ViewModePreferences_Static.get()))};
+    if (!ViewModePreferences_type)
     {
         return nullptr;
     }

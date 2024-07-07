@@ -3008,12 +3008,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivity, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivity_Static.get())) == -1)
+    py::pytype_handle UserActivity_type{py::register_python_type(module.get(), &type_spec_UserActivity, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivity_Static.get()))};
+    if (!UserActivity_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityAttribution, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivityAttribution_type{py::register_python_type(module.get(), &type_spec_UserActivityAttribution, object_bases.get(), nullptr)};
+    if (!UserActivityAttribution_type)
     {
         return nullptr;
     }
@@ -3024,7 +3026,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityChannel_Static.get())) == -1)
+    py::pytype_handle UserActivityChannel_type{py::register_python_type(module.get(), &type_spec_UserActivityChannel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityChannel_Static.get()))};
+    if (!UserActivityChannel_type)
     {
         return nullptr;
     }
@@ -3035,12 +3038,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityContentInfo_Static.get())) == -1)
+    py::pytype_handle UserActivityContentInfo_type{py::register_python_type(module.get(), &type_spec_UserActivityContentInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityContentInfo_Static.get()))};
+    if (!UserActivityContentInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivityRequest_type{py::register_python_type(module.get(), &type_spec_UserActivityRequest, object_bases.get(), nullptr)};
+    if (!UserActivityRequest_type)
     {
         return nullptr;
     }
@@ -3051,32 +3056,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_useractivities(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityRequestManager_Static.get())) == -1)
+    py::pytype_handle UserActivityRequestManager_type{py::register_python_type(module.get(), &type_spec_UserActivityRequestManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserActivityRequestManager_Static.get()))};
+    if (!UserActivityRequestManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivityRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_UserActivityRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!UserActivityRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivitySession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivitySession_type{py::register_python_type(module.get(), &type_spec_UserActivitySession, object_bases.get(), nullptr)};
+    if (!UserActivitySession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivitySessionHistoryItem_type{py::register_python_type(module.get(), &type_spec_UserActivitySessionHistoryItem, object_bases.get(), nullptr)};
+    if (!UserActivitySessionHistoryItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserActivityVisualElements_type{py::register_python_type(module.get(), &type_spec_UserActivityVisualElements, object_bases.get(), nullptr)};
+    if (!UserActivityVisualElements_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IUserActivityContentInfo_type{py::register_python_type(module.get(), &type_spec_IUserActivityContentInfo, object_bases.get(), nullptr)};
+    if (!IUserActivityContentInfo_type)
     {
         return nullptr;
     }

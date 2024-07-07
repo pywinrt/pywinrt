@@ -14369,42 +14369,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDClient, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDClient_type{py::register_python_type(module.get(), &type_spec_NDClient, object_bases.get(), nullptr)};
+    if (!NDClient_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDCustomData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDCustomData_type{py::register_python_type(module.get(), &type_spec_NDCustomData, object_bases.get(), nullptr)};
+    if (!NDCustomData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDDownloadEngineNotifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDDownloadEngineNotifier_type{py::register_python_type(module.get(), &type_spec_NDDownloadEngineNotifier, object_bases.get(), nullptr)};
+    if (!NDDownloadEngineNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDLicenseFetchDescriptor, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDLicenseFetchDescriptor_type{py::register_python_type(module.get(), &type_spec_NDLicenseFetchDescriptor, object_bases.get(), nullptr)};
+    if (!NDLicenseFetchDescriptor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDStorageFileHelper, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDStorageFileHelper_type{py::register_python_type(module.get(), &type_spec_NDStorageFileHelper, object_bases.get(), nullptr)};
+    if (!NDStorageFileHelper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDStreamParserNotifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDStreamParserNotifier_type{py::register_python_type(module.get(), &type_spec_NDStreamParserNotifier, object_bases.get(), nullptr)};
+    if (!NDStreamParserNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NDTCPMessenger, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NDTCPMessenger_type{py::register_python_type(module.get(), &type_spec_NDTCPMessenger, object_bases.get(), nullptr)};
+    if (!NDTCPMessenger_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyContentHeader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyContentHeader_type{py::register_python_type(module.get(), &type_spec_PlayReadyContentHeader, object_bases.get(), nullptr)};
+    if (!PlayReadyContentHeader_type)
     {
         return nullptr;
     }
@@ -14415,62 +14423,74 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyContentResolver, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyContentResolver_Static.get())) == -1)
+    py::pytype_handle PlayReadyContentResolver_type{py::register_python_type(module.get(), &type_spec_PlayReadyContentResolver, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyContentResolver_Static.get()))};
+    if (!PlayReadyContentResolver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyDomain, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyDomain_type{py::register_python_type(module.get(), &type_spec_PlayReadyDomain, object_bases.get(), nullptr)};
+    if (!PlayReadyDomain_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyDomainIterable, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyDomainIterable_type{py::register_python_type(module.get(), &type_spec_PlayReadyDomainIterable, object_bases.get(), nullptr)};
+    if (!PlayReadyDomainIterable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyDomainIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyDomainIterator_type{py::register_python_type(module.get(), &type_spec_PlayReadyDomainIterator, object_bases.get(), nullptr)};
+    if (!PlayReadyDomainIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyDomainJoinServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyDomainJoinServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyDomainJoinServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyDomainJoinServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyDomainLeaveServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyDomainLeaveServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyDomainLeaveServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyDomainLeaveServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyITADataGenerator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyITADataGenerator_type{py::register_python_type(module.get(), &type_spec_PlayReadyITADataGenerator, object_bases.get(), nullptr)};
+    if (!PlayReadyITADataGenerator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyIndividualizationServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyIndividualizationServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyIndividualizationServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyIndividualizationServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicense, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyLicense_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicense, object_bases.get(), nullptr)};
+    if (!PlayReadyLicense_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyLicenseAcquisitionServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyLicenseAcquisitionServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseIterable, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyLicenseIterable_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicenseIterable, object_bases.get(), nullptr)};
+    if (!PlayReadyLicenseIterable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyLicenseIterator_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicenseIterator, object_bases.get(), nullptr)};
+    if (!PlayReadyLicenseIterator_type)
     {
         return nullptr;
     }
@@ -14481,42 +14501,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseManagement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyLicenseManagement_Static.get())) == -1)
+    py::pytype_handle PlayReadyLicenseManagement_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicenseManagement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyLicenseManagement_Static.get()))};
+    if (!PlayReadyLicenseManagement_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyLicenseSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyLicenseSession_type{py::register_python_type(module.get(), &type_spec_PlayReadyLicenseSession, object_bases.get(), nullptr)};
+    if (!PlayReadyLicenseSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyMeteringReportServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyMeteringReportServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyMeteringReportServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyMeteringReportServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyRevocationServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadyRevocationServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadyRevocationServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadyRevocationServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadySecureStopIterable, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadySecureStopIterable_type{py::register_python_type(module.get(), &type_spec_PlayReadySecureStopIterable, object_bases.get(), nullptr)};
+    if (!PlayReadySecureStopIterable_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadySecureStopIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadySecureStopIterator_type{py::register_python_type(module.get(), &type_spec_PlayReadySecureStopIterator, object_bases.get(), nullptr)};
+    if (!PlayReadySecureStopIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadySecureStopServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadySecureStopServiceRequest_type{py::register_python_type(module.get(), &type_spec_PlayReadySecureStopServiceRequest, object_bases.get(), nullptr)};
+    if (!PlayReadySecureStopServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadySoapMessage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PlayReadySoapMessage_type{py::register_python_type(module.get(), &type_spec_PlayReadySoapMessage, object_bases.get(), nullptr)};
+    if (!PlayReadySoapMessage_type)
     {
         return nullptr;
     }
@@ -14527,122 +14555,146 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_protection_playready(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Static.get())) == -1)
+    py::pytype_handle PlayReadyStatics_type{py::register_python_type(module.get(), &type_spec_PlayReadyStatics, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlayReadyStatics_Static.get()))};
+    if (!PlayReadyStatics_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDClosedCaptionDataReceivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDClosedCaptionDataReceivedEventArgs_type{py::register_python_type(module.get(), &type_spec_INDClosedCaptionDataReceivedEventArgs, object_bases.get(), nullptr)};
+    if (!INDClosedCaptionDataReceivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDCustomData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDCustomData_type{py::register_python_type(module.get(), &type_spec_INDCustomData, object_bases.get(), nullptr)};
+    if (!INDCustomData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDDownloadEngine, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDDownloadEngine_type{py::register_python_type(module.get(), &type_spec_INDDownloadEngine, object_bases.get(), nullptr)};
+    if (!INDDownloadEngine_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDDownloadEngineNotifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDDownloadEngineNotifier_type{py::register_python_type(module.get(), &type_spec_INDDownloadEngineNotifier, object_bases.get(), nullptr)};
+    if (!INDDownloadEngineNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDLicenseFetchCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDLicenseFetchCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_INDLicenseFetchCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!INDLicenseFetchCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDLicenseFetchDescriptor, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDLicenseFetchDescriptor_type{py::register_python_type(module.get(), &type_spec_INDLicenseFetchDescriptor, object_bases.get(), nullptr)};
+    if (!INDLicenseFetchDescriptor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDLicenseFetchResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDLicenseFetchResult_type{py::register_python_type(module.get(), &type_spec_INDLicenseFetchResult, object_bases.get(), nullptr)};
+    if (!INDLicenseFetchResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDMessenger, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDMessenger_type{py::register_python_type(module.get(), &type_spec_INDMessenger, object_bases.get(), nullptr)};
+    if (!INDMessenger_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDProximityDetectionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDProximityDetectionCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_INDProximityDetectionCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!INDProximityDetectionCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDRegistrationCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDRegistrationCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_INDRegistrationCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!INDRegistrationCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDSendResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDSendResult_type{py::register_python_type(module.get(), &type_spec_INDSendResult, object_bases.get(), nullptr)};
+    if (!INDSendResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDStartResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDStartResult_type{py::register_python_type(module.get(), &type_spec_INDStartResult, object_bases.get(), nullptr)};
+    if (!INDStartResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDStorageFileHelper, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDStorageFileHelper_type{py::register_python_type(module.get(), &type_spec_INDStorageFileHelper, object_bases.get(), nullptr)};
+    if (!INDStorageFileHelper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDStreamParser, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDStreamParser_type{py::register_python_type(module.get(), &type_spec_INDStreamParser, object_bases.get(), nullptr)};
+    if (!INDStreamParser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDStreamParserNotifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDStreamParserNotifier_type{py::register_python_type(module.get(), &type_spec_INDStreamParserNotifier, object_bases.get(), nullptr)};
+    if (!INDStreamParserNotifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_INDTransmitterProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle INDTransmitterProperties_type{py::register_python_type(module.get(), &type_spec_INDTransmitterProperties, object_bases.get(), nullptr)};
+    if (!INDTransmitterProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyDomain, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyDomain_type{py::register_python_type(module.get(), &type_spec_IPlayReadyDomain, object_bases.get(), nullptr)};
+    if (!IPlayReadyDomain_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyLicense, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyLicense_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicense, object_bases.get(), nullptr)};
+    if (!IPlayReadyLicense_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyLicenseAcquisitionServiceRequest_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseAcquisitionServiceRequest, object_bases.get(), nullptr)};
+    if (!IPlayReadyLicenseAcquisitionServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyLicenseSession_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseSession, object_bases.get(), nullptr)};
+    if (!IPlayReadyLicenseSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseSession2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyLicenseSession2_type{py::register_python_type(module.get(), &type_spec_IPlayReadyLicenseSession2, object_bases.get(), nullptr)};
+    if (!IPlayReadyLicenseSession2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadySecureStopServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadySecureStopServiceRequest_type{py::register_python_type(module.get(), &type_spec_IPlayReadySecureStopServiceRequest, object_bases.get(), nullptr)};
+    if (!IPlayReadySecureStopServiceRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IPlayReadyServiceRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IPlayReadyServiceRequest_type{py::register_python_type(module.get(), &type_spec_IPlayReadyServiceRequest, object_bases.get(), nullptr)};
+    if (!IPlayReadyServiceRequest_type)
     {
         return nullptr;
     }

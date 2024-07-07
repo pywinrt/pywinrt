@@ -2693,7 +2693,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticActionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DiagnosticActionResult_type{py::register_python_type(module.get(), &type_spec_DiagnosticActionResult, object_bases.get(), nullptr)};
+    if (!DiagnosticActionResult_type)
     {
         return nullptr;
     }
@@ -2704,17 +2705,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Static.get())) == -1)
+    py::pytype_handle DiagnosticInvoker_type{py::register_python_type(module.get(), &type_spec_DiagnosticInvoker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DiagnosticInvoker_Static.get()))};
+    if (!DiagnosticInvoker_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessCpuUsage_type{py::register_python_type(module.get(), &type_spec_ProcessCpuUsage, object_bases.get(), nullptr)};
+    if (!ProcessCpuUsage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessCpuUsageReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessCpuUsageReport_type{py::register_python_type(module.get(), &type_spec_ProcessCpuUsageReport, object_bases.get(), nullptr)};
+    if (!ProcessCpuUsageReport_type)
     {
         return nullptr;
     }
@@ -2725,37 +2729,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProcessDiagnosticInfo_Static.get())) == -1)
+    py::pytype_handle ProcessDiagnosticInfo_type{py::register_python_type(module.get(), &type_spec_ProcessDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProcessDiagnosticInfo_Static.get()))};
+    if (!ProcessDiagnosticInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessDiskUsage_type{py::register_python_type(module.get(), &type_spec_ProcessDiskUsage, object_bases.get(), nullptr)};
+    if (!ProcessDiskUsage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessDiskUsageReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessDiskUsageReport_type{py::register_python_type(module.get(), &type_spec_ProcessDiskUsageReport, object_bases.get(), nullptr)};
+    if (!ProcessDiskUsageReport_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessMemoryUsage_type{py::register_python_type(module.get(), &type_spec_ProcessMemoryUsage, object_bases.get(), nullptr)};
+    if (!ProcessMemoryUsage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProcessMemoryUsageReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProcessMemoryUsageReport_type{py::register_python_type(module.get(), &type_spec_ProcessMemoryUsageReport, object_bases.get(), nullptr)};
+    if (!ProcessMemoryUsageReport_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemCpuUsage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SystemCpuUsage_type{py::register_python_type(module.get(), &type_spec_SystemCpuUsage, object_bases.get(), nullptr)};
+    if (!SystemCpuUsage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemCpuUsageReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SystemCpuUsageReport_type{py::register_python_type(module.get(), &type_spec_SystemCpuUsageReport, object_bases.get(), nullptr)};
+    if (!SystemCpuUsageReport_type)
     {
         return nullptr;
     }
@@ -2766,17 +2777,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_diagnostics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Static.get())) == -1)
+    py::pytype_handle SystemDiagnosticInfo_type{py::register_python_type(module.get(), &type_spec_SystemDiagnosticInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemDiagnosticInfo_Static.get()))};
+    if (!SystemDiagnosticInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SystemMemoryUsage_type{py::register_python_type(module.get(), &type_spec_SystemMemoryUsage, object_bases.get(), nullptr)};
+    if (!SystemMemoryUsage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SystemMemoryUsageReport, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SystemMemoryUsageReport_type{py::register_python_type(module.get(), &type_spec_SystemMemoryUsageReport, object_bases.get(), nullptr)};
+    if (!SystemMemoryUsageReport_type)
     {
         return nullptr;
     }

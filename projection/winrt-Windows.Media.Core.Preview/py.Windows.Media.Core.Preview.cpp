@@ -197,7 +197,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_core_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SoundLevelBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoundLevelBroker_Static.get())) == -1)
+    py::pytype_handle SoundLevelBroker_type{py::register_python_type(module.get(), &type_spec_SoundLevelBroker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SoundLevelBroker_Static.get()))};
+    if (!SoundLevelBroker_type)
     {
         return nullptr;
     }

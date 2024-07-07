@@ -6559,162 +6559,194 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_email_dataprovider(void) n
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailDataProviderConnection_type{py::register_python_type(module.get(), &type_spec_EmailDataProviderConnection, object_bases.get(), nullptr)};
+    if (!EmailDataProviderConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailDataProviderTriggerDetails_type{py::register_python_type(module.get(), &type_spec_EmailDataProviderTriggerDetails, object_bases.get(), nullptr)};
+    if (!EmailDataProviderTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxCreateFolderRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxCreateFolderRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxCreateFolderRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxCreateFolderRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxCreateFolderRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDeleteFolderRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxDeleteFolderRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDeleteFolderRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDeleteFolderRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxDeleteFolderRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDownloadAttachmentRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxDownloadAttachmentRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDownloadAttachmentRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadAttachmentRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxDownloadAttachmentRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDownloadMessageRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxDownloadMessageRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxDownloadMessageRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxDownloadMessageRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxDownloadMessageRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxEmptyFolderRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxEmptyFolderRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxEmptyFolderRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxEmptyFolderRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxEmptyFolderRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxForwardMeetingRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxForwardMeetingRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxForwardMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxForwardMeetingRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxForwardMeetingRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxGetAutoReplySettingsRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxGetAutoReplySettingsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxGetAutoReplySettingsRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxGetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxGetAutoReplySettingsRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxMoveFolderRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxMoveFolderRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxMoveFolderRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxMoveFolderRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxMoveFolderRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxProposeNewTimeForMeetingRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxProposeNewTimeForMeetingRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxProposeNewTimeForMeetingRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxProposeNewTimeForMeetingRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxProposeNewTimeForMeetingRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxResolveRecipientsRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxResolveRecipientsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxResolveRecipientsRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxResolveRecipientsRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxResolveRecipientsRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxServerSearchReadBatchRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxServerSearchReadBatchRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxServerSearchReadBatchRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxServerSearchReadBatchRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxServerSearchReadBatchRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxSetAutoReplySettingsRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxSetAutoReplySettingsRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxSetAutoReplySettingsRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSetAutoReplySettingsRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxSetAutoReplySettingsRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxSyncManagerSyncRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxSyncManagerSyncRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxSyncManagerSyncRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxSyncManagerSyncRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxSyncManagerSyncRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxUpdateMeetingResponseRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxUpdateMeetingResponseRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxUpdateMeetingResponseRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxUpdateMeetingResponseRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxUpdateMeetingResponseRequestEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxValidateCertificatesRequest_type{py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequest, object_bases.get(), nullptr)};
+    if (!EmailMailboxValidateCertificatesRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EmailMailboxValidateCertificatesRequestEventArgs_type{py::register_python_type(module.get(), &type_spec_EmailMailboxValidateCertificatesRequestEventArgs, object_bases.get(), nullptr)};
+    if (!EmailMailboxValidateCertificatesRequestEventArgs_type)
     {
         return nullptr;
     }

@@ -770,7 +770,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EndpointPair, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EndpointPair_type{py::register_python_type(module.get(), &type_spec_EndpointPair, object_bases.get(), nullptr)};
+    if (!EndpointPair_type)
     {
         return nullptr;
     }
@@ -781,7 +782,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HostName, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HostName_Static.get())) == -1)
+    py::pytype_handle HostName_type{py::register_python_type(module.get(), &type_spec_HostName, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HostName_Static.get()))};
+    if (!HostName_type)
     {
         return nullptr;
     }

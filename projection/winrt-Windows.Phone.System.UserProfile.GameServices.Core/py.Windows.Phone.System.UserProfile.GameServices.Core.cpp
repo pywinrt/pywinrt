@@ -594,12 +594,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_system_userprofile_gameservices_core(
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameService_Static.get())) == -1)
+    py::pytype_handle GameService_type{py::register_python_type(module.get(), &type_spec_GameService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameService_Static.get()))};
+    if (!GameService_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameServicePropertyCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameServicePropertyCollection_type{py::register_python_type(module.get(), &type_spec_GameServicePropertyCollection, object_bases.get(), nullptr)};
+    if (!GameServicePropertyCollection_type)
     {
         return nullptr;
     }

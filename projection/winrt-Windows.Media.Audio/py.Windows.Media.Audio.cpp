@@ -18178,37 +18178,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioDeviceInputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioDeviceInputNode_type{py::register_python_type(module.get(), &type_spec_AudioDeviceInputNode, object_bases.get(), nullptr)};
+    if (!AudioDeviceInputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioDeviceOutputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioDeviceOutputNode_type{py::register_python_type(module.get(), &type_spec_AudioDeviceOutputNode, object_bases.get(), nullptr)};
+    if (!AudioDeviceOutputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFileInputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioFileInputNode_type{py::register_python_type(module.get(), &type_spec_AudioFileInputNode, object_bases.get(), nullptr)};
+    if (!AudioFileInputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFileOutputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioFileOutputNode_type{py::register_python_type(module.get(), &type_spec_AudioFileOutputNode, object_bases.get(), nullptr)};
+    if (!AudioFileOutputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFrameCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioFrameCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_AudioFrameCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!AudioFrameCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFrameInputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioFrameInputNode_type{py::register_python_type(module.get(), &type_spec_AudioFrameInputNode, object_bases.get(), nullptr)};
+    if (!AudioFrameInputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioFrameOutputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioFrameOutputNode_type{py::register_python_type(module.get(), &type_spec_AudioFrameOutputNode, object_bases.get(), nullptr)};
+    if (!AudioFrameOutputNode_type)
     {
         return nullptr;
     }
@@ -18219,37 +18226,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioGraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioGraph_Static.get())) == -1)
+    py::pytype_handle AudioGraph_type{py::register_python_type(module.get(), &type_spec_AudioGraph, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioGraph_Static.get()))};
+    if (!AudioGraph_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioGraphBatchUpdater, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioGraphBatchUpdater_type{py::register_python_type(module.get(), &type_spec_AudioGraphBatchUpdater, object_bases.get(), nullptr)};
+    if (!AudioGraphBatchUpdater_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioGraphConnection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioGraphConnection_type{py::register_python_type(module.get(), &type_spec_AudioGraphConnection, object_bases.get(), nullptr)};
+    if (!AudioGraphConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioGraphSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioGraphSettings_type{py::register_python_type(module.get(), &type_spec_AudioGraphSettings, object_bases.get(), nullptr)};
+    if (!AudioGraphSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioGraphUnrecoverableErrorOccurredEventArgs_type{py::register_python_type(module.get(), &type_spec_AudioGraphUnrecoverableErrorOccurredEventArgs, object_bases.get(), nullptr)};
+    if (!AudioGraphUnrecoverableErrorOccurredEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeEmitter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioNodeEmitter_type{py::register_python_type(module.get(), &type_spec_AudioNodeEmitter, object_bases.get(), nullptr)};
+    if (!AudioNodeEmitter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeEmitterConeProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioNodeEmitterConeProperties_type{py::register_python_type(module.get(), &type_spec_AudioNodeEmitterConeProperties, object_bases.get(), nullptr)};
+    if (!AudioNodeEmitterConeProperties_type)
     {
         return nullptr;
     }
@@ -18260,12 +18274,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeEmitterDecayModel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioNodeEmitterDecayModel_Static.get())) == -1)
+    py::pytype_handle AudioNodeEmitterDecayModel_type{py::register_python_type(module.get(), &type_spec_AudioNodeEmitterDecayModel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioNodeEmitterDecayModel_Static.get()))};
+    if (!AudioNodeEmitterDecayModel_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeEmitterNaturalDecayModelProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioNodeEmitterNaturalDecayModelProperties_type{py::register_python_type(module.get(), &type_spec_AudioNodeEmitterNaturalDecayModelProperties, object_bases.get(), nullptr)};
+    if (!AudioNodeEmitterNaturalDecayModelProperties_type)
     {
         return nullptr;
     }
@@ -18276,12 +18292,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeEmitterShape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioNodeEmitterShape_Static.get())) == -1)
+    py::pytype_handle AudioNodeEmitterShape_type{py::register_python_type(module.get(), &type_spec_AudioNodeEmitterShape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioNodeEmitterShape_Static.get()))};
+    if (!AudioNodeEmitterShape_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioNodeListener, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioNodeListener_type{py::register_python_type(module.get(), &type_spec_AudioNodeListener, object_bases.get(), nullptr)};
+    if (!AudioNodeListener_type)
     {
         return nullptr;
     }
@@ -18292,12 +18310,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioPlaybackConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioPlaybackConnection_Static.get())) == -1)
+    py::pytype_handle AudioPlaybackConnection_type{py::register_python_type(module.get(), &type_spec_AudioPlaybackConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioPlaybackConnection_Static.get()))};
+    if (!AudioPlaybackConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioPlaybackConnectionOpenResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioPlaybackConnectionOpenResult_type{py::register_python_type(module.get(), &type_spec_AudioPlaybackConnectionOpenResult, object_bases.get(), nullptr)};
+    if (!AudioPlaybackConnectionOpenResult_type)
     {
         return nullptr;
     }
@@ -18308,82 +18328,98 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioStateMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioStateMonitor_Static.get())) == -1)
+    py::pytype_handle AudioStateMonitor_type{py::register_python_type(module.get(), &type_spec_AudioStateMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioStateMonitor_Static.get()))};
+    if (!AudioStateMonitor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AudioSubmixNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AudioSubmixNode_type{py::register_python_type(module.get(), &type_spec_AudioSubmixNode, object_bases.get(), nullptr)};
+    if (!AudioSubmixNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateAudioDeviceInputNodeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateAudioDeviceInputNodeResult_type{py::register_python_type(module.get(), &type_spec_CreateAudioDeviceInputNodeResult, object_bases.get(), nullptr)};
+    if (!CreateAudioDeviceInputNodeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateAudioDeviceOutputNodeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateAudioDeviceOutputNodeResult_type{py::register_python_type(module.get(), &type_spec_CreateAudioDeviceOutputNodeResult, object_bases.get(), nullptr)};
+    if (!CreateAudioDeviceOutputNodeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateAudioFileInputNodeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateAudioFileInputNodeResult_type{py::register_python_type(module.get(), &type_spec_CreateAudioFileInputNodeResult, object_bases.get(), nullptr)};
+    if (!CreateAudioFileInputNodeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateAudioFileOutputNodeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateAudioFileOutputNodeResult_type{py::register_python_type(module.get(), &type_spec_CreateAudioFileOutputNodeResult, object_bases.get(), nullptr)};
+    if (!CreateAudioFileOutputNodeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateAudioGraphResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateAudioGraphResult_type{py::register_python_type(module.get(), &type_spec_CreateAudioGraphResult, object_bases.get(), nullptr)};
+    if (!CreateAudioGraphResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreateMediaSourceAudioInputNodeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreateMediaSourceAudioInputNodeResult_type{py::register_python_type(module.get(), &type_spec_CreateMediaSourceAudioInputNodeResult, object_bases.get(), nullptr)};
+    if (!CreateMediaSourceAudioInputNodeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EchoEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EchoEffectDefinition_type{py::register_python_type(module.get(), &type_spec_EchoEffectDefinition, object_bases.get(), nullptr)};
+    if (!EchoEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EqualizerBand, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EqualizerBand_type{py::register_python_type(module.get(), &type_spec_EqualizerBand, object_bases.get(), nullptr)};
+    if (!EqualizerBand_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_EqualizerEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle EqualizerEffectDefinition_type{py::register_python_type(module.get(), &type_spec_EqualizerEffectDefinition, object_bases.get(), nullptr)};
+    if (!EqualizerEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FrameInputNodeQuantumStartedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FrameInputNodeQuantumStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_FrameInputNodeQuantumStartedEventArgs, object_bases.get(), nullptr)};
+    if (!FrameInputNodeQuantumStartedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LimiterEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LimiterEffectDefinition_type{py::register_python_type(module.get(), &type_spec_LimiterEffectDefinition, object_bases.get(), nullptr)};
+    if (!LimiterEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaSourceAudioInputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaSourceAudioInputNode_type{py::register_python_type(module.get(), &type_spec_MediaSourceAudioInputNode, object_bases.get(), nullptr)};
+    if (!MediaSourceAudioInputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ReverbEffectDefinition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ReverbEffectDefinition_type{py::register_python_type(module.get(), &type_spec_ReverbEffectDefinition, object_bases.get(), nullptr)};
+    if (!ReverbEffectDefinition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SetDefaultSpatialAudioFormatResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SetDefaultSpatialAudioFormatResult_type{py::register_python_type(module.get(), &type_spec_SetDefaultSpatialAudioFormatResult, object_bases.get(), nullptr)};
+    if (!SetDefaultSpatialAudioFormatResult_type)
     {
         return nullptr;
     }
@@ -18394,7 +18430,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAudioDeviceConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioDeviceConfiguration_Static.get())) == -1)
+    py::pytype_handle SpatialAudioDeviceConfiguration_type{py::register_python_type(module.get(), &type_spec_SpatialAudioDeviceConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioDeviceConfiguration_Static.get()))};
+    if (!SpatialAudioDeviceConfiguration_type)
     {
         return nullptr;
     }
@@ -18405,7 +18442,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAudioFormatConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatConfiguration_Static.get())) == -1)
+    py::pytype_handle SpatialAudioFormatConfiguration_type{py::register_python_type(module.get(), &type_spec_SpatialAudioFormatConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatConfiguration_Static.get()))};
+    if (!SpatialAudioFormatConfiguration_type)
     {
         return nullptr;
     }
@@ -18416,27 +18454,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpatialAudioFormatSubtype, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatSubtype_Static.get())) == -1)
+    py::pytype_handle SpatialAudioFormatSubtype_type{py::register_python_type(module.get(), &type_spec_SpatialAudioFormatSubtype, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpatialAudioFormatSubtype_Static.get()))};
+    if (!SpatialAudioFormatSubtype_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAudioInputNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAudioInputNode_type{py::register_python_type(module.get(), &type_spec_IAudioInputNode, object_bases.get(), nullptr)};
+    if (!IAudioInputNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAudioInputNode2, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAudioInputNode2_type{py::register_python_type(module.get(), &type_spec_IAudioInputNode2, object_bases.get(), nullptr)};
+    if (!IAudioInputNode2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAudioNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAudioNode_type{py::register_python_type(module.get(), &type_spec_IAudioNode, object_bases.get(), nullptr)};
+    if (!IAudioNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAudioNodeWithListener, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAudioNodeWithListener_type{py::register_python_type(module.get(), &type_spec_IAudioNodeWithListener, object_bases.get(), nullptr)};
+    if (!IAudioNodeWithListener_type)
     {
         return nullptr;
     }

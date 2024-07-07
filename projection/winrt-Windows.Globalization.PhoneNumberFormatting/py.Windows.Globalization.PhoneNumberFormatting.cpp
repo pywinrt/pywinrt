@@ -1054,7 +1054,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) n
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneNumberFormatter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneNumberFormatter_Static.get())) == -1)
+    py::pytype_handle PhoneNumberFormatter_type{py::register_python_type(module.get(), &type_spec_PhoneNumberFormatter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneNumberFormatter_Static.get()))};
+    if (!PhoneNumberFormatter_type)
     {
         return nullptr;
     }
@@ -1065,7 +1066,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_phonenumberformatting(void) n
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhoneNumberInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneNumberInfo_Static.get())) == -1)
+    py::pytype_handle PhoneNumberInfo_type{py::register_python_type(module.get(), &type_spec_PhoneNumberInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PhoneNumberInfo_Static.get()))};
+    if (!PhoneNumberInfo_type)
     {
         return nullptr;
     }

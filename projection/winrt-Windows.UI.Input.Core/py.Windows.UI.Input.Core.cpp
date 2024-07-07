@@ -266,7 +266,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerIndependentInputSource_Static.get())) == -1)
+    py::pytype_handle RadialControllerIndependentInputSource_type{py::register_python_type(module.get(), &type_spec_RadialControllerIndependentInputSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialControllerIndependentInputSource_Static.get()))};
+    if (!RadialControllerIndependentInputSource_type)
     {
         return nullptr;
     }

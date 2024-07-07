@@ -1709,47 +1709,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_pickers_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileOpenPickerUI, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileOpenPickerUI_type{py::register_python_type(module.get(), &type_spec_FileOpenPickerUI, object_bases.get(), nullptr)};
+    if (!FileOpenPickerUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_FileRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!FileRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FileSavePickerUI, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FileSavePickerUI_type{py::register_python_type(module.get(), &type_spec_FileSavePickerUI, object_bases.get(), nullptr)};
+    if (!FileSavePickerUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerClosingDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PickerClosingDeferral_type{py::register_python_type(module.get(), &type_spec_PickerClosingDeferral, object_bases.get(), nullptr)};
+    if (!PickerClosingDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerClosingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PickerClosingEventArgs_type{py::register_python_type(module.get(), &type_spec_PickerClosingEventArgs, object_bases.get(), nullptr)};
+    if (!PickerClosingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PickerClosingOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PickerClosingOperation_type{py::register_python_type(module.get(), &type_spec_PickerClosingOperation, object_bases.get(), nullptr)};
+    if (!PickerClosingOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TargetFileRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TargetFileRequest_type{py::register_python_type(module.get(), &type_spec_TargetFileRequest, object_bases.get(), nullptr)};
+    if (!TargetFileRequest_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TargetFileRequestDeferral, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TargetFileRequestDeferral_type{py::register_python_type(module.get(), &type_spec_TargetFileRequestDeferral, object_bases.get(), nullptr)};
+    if (!TargetFileRequestDeferral_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TargetFileRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TargetFileRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_TargetFileRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!TargetFileRequestedEventArgs_type)
     {
         return nullptr;
     }

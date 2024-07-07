@@ -70193,7 +70193,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Ellipse, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, object_bases.get(), nullptr)};
+    if (!Ellipse_type)
     {
         return nullptr;
     }
@@ -70204,7 +70205,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Static.get())) == -1)
+    py::pytype_handle Line_type{py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Static.get()))};
+    if (!Line_type)
     {
         return nullptr;
     }
@@ -70215,7 +70217,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get())) == -1)
+    py::pytype_handle Path_type{py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get()))};
+    if (!Path_type)
     {
         return nullptr;
     }
@@ -70226,7 +70229,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Static.get())) == -1)
+    py::pytype_handle Polygon_type{py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Static.get()))};
+    if (!Polygon_type)
     {
         return nullptr;
     }
@@ -70237,7 +70241,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Static.get())) == -1)
+    py::pytype_handle Polyline_type{py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Static.get()))};
+    if (!Polyline_type)
     {
         return nullptr;
     }
@@ -70248,7 +70253,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get())) == -1)
+    py::pytype_handle Rectangle_type{py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get()))};
+    if (!Rectangle_type)
     {
         return nullptr;
     }
@@ -70259,7 +70265,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get())) == -1)
+    py::pytype_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
+    if (!Shape_type)
     {
         return nullptr;
     }

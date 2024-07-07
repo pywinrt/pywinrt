@@ -2507,27 +2507,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommand, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommand_type{py::register_python_type(module.get(), &type_spec_VoiceCommand, object_bases.get(), nullptr)};
+    if (!VoiceCommand_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_VoiceCommandCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!VoiceCommandCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandConfirmationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandConfirmationResult, object_bases.get(), nullptr)};
+    if (!VoiceCommandConfirmationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandContentTile_type{py::register_python_type(module.get(), &type_spec_VoiceCommandContentTile, object_bases.get(), nullptr)};
+    if (!VoiceCommandContentTile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandDefinition_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDefinition, object_bases.get(), nullptr)};
+    if (!VoiceCommandDefinition_type)
     {
         return nullptr;
     }
@@ -2538,12 +2543,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDefinitionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Static.get())) == -1)
+    py::pytype_handle VoiceCommandDefinitionManager_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDefinitionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandDefinitionManager_Static.get()))};
+    if (!VoiceCommandDefinitionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandDisambiguationResult_type{py::register_python_type(module.get(), &type_spec_VoiceCommandDisambiguationResult, object_bases.get(), nullptr)};
+    if (!VoiceCommandDisambiguationResult_type)
     {
         return nullptr;
     }
@@ -2554,7 +2561,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandResponse, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Static.get())) == -1)
+    py::pytype_handle VoiceCommandResponse_type{py::register_python_type(module.get(), &type_spec_VoiceCommandResponse, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandResponse_Static.get()))};
+    if (!VoiceCommandResponse_type)
     {
         return nullptr;
     }
@@ -2565,12 +2573,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_voicecommands(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandServiceConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandServiceConnection_Static.get())) == -1)
+    py::pytype_handle VoiceCommandServiceConnection_type{py::register_python_type(module.get(), &type_spec_VoiceCommandServiceConnection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandServiceConnection_Static.get()))};
+    if (!VoiceCommandServiceConnection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandUserMessage_type{py::register_python_type(module.get(), &type_spec_VoiceCommandUserMessage, object_bases.get(), nullptr)};
+    if (!VoiceCommandUserMessage_type)
     {
         return nullptr;
     }

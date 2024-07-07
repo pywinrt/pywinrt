@@ -187,7 +187,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement_preview(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowManagementPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowManagementPreview_Static.get())) == -1)
+    py::pytype_handle WindowManagementPreview_type{py::register_python_type(module.get(), &type_spec_WindowManagementPreview, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowManagementPreview_Static.get()))};
+    if (!WindowManagementPreview_type)
     {
         return nullptr;
     }

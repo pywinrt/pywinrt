@@ -1267,7 +1267,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackgroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyManager_Static.get())) == -1)
+    py::pytype_handle BackgroundEnergyManager_type{py::register_python_type(module.get(), &type_spec_BackgroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundEnergyManager_Static.get()))};
+    if (!BackgroundEnergyManager_type)
     {
         return nullptr;
     }
@@ -1278,7 +1279,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ForegroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyManager_Static.get())) == -1)
+    py::pytype_handle ForegroundEnergyManager_type{py::register_python_type(module.get(), &type_spec_ForegroundEnergyManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ForegroundEnergyManager_Static.get()))};
+    if (!ForegroundEnergyManager_type)
     {
         return nullptr;
     }
@@ -1289,7 +1291,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_system_power(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PowerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Static.get())) == -1)
+    py::pytype_handle PowerManager_type{py::register_python_type(module.get(), &type_spec_PowerManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerManager_Static.get()))};
+    if (!PowerManager_type)
     {
         return nullptr;
     }

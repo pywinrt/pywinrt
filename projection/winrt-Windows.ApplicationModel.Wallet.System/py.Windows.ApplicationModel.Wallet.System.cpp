@@ -460,7 +460,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet_system(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletItemSystemStore, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WalletItemSystemStore_type{py::register_python_type(module.get(), &type_spec_WalletItemSystemStore, object_bases.get(), nullptr)};
+    if (!WalletItemSystemStore_type)
     {
         return nullptr;
     }
@@ -471,7 +472,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_wallet_system(void) noexce
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WalletManagerSystem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WalletManagerSystem_Static.get())) == -1)
+    py::pytype_handle WalletManagerSystem_type{py::register_python_type(module.get(), &type_spec_WalletManagerSystem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WalletManagerSystem_Static.get()))};
+    if (!WalletManagerSystem_type)
     {
         return nullptr;
     }

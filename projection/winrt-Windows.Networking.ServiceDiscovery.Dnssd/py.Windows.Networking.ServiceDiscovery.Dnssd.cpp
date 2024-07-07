@@ -1593,22 +1593,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_servicediscovery_dnssd(void) noe
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DnssdRegistrationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DnssdRegistrationResult_type{py::register_python_type(module.get(), &type_spec_DnssdRegistrationResult, object_bases.get(), nullptr)};
+    if (!DnssdRegistrationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DnssdServiceInstance, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DnssdServiceInstance_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstance, object_bases.get(), nullptr)};
+    if (!DnssdServiceInstance_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DnssdServiceInstanceCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DnssdServiceInstanceCollection_type{py::register_python_type(module.get(), &type_spec_DnssdServiceInstanceCollection, object_bases.get(), nullptr)};
+    if (!DnssdServiceInstanceCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DnssdServiceWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DnssdServiceWatcher_type{py::register_python_type(module.get(), &type_spec_DnssdServiceWatcher, object_bases.get(), nullptr)};
+    if (!DnssdServiceWatcher_type)
     {
         return nullptr;
     }

@@ -343,12 +343,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_accessibility(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ScreenReaderPositionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_ScreenReaderPositionChangedEventArgs, object_bases.get(), nullptr)};
+    if (!ScreenReaderPositionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScreenReaderService, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ScreenReaderService_type{py::register_python_type(module.get(), &type_spec_ScreenReaderService, object_bases.get(), nullptr)};
+    if (!ScreenReaderService_type)
     {
         return nullptr;
     }

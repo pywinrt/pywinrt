@@ -535,12 +535,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BackPressedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle BackPressedEventArgs_type{py::register_python_type(module.get(), &type_spec_BackPressedEventArgs, object_bases.get(), nullptr)};
+    if (!BackPressedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CameraEventArgs_type{py::register_python_type(module.get(), &type_spec_CameraEventArgs, object_bases.get(), nullptr)};
+    if (!CameraEventArgs_type)
     {
         return nullptr;
     }
@@ -551,7 +553,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_phone_ui_input(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_HardwareButtons, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HardwareButtons_Static.get())) == -1)
+    py::pytype_handle HardwareButtons_type{py::register_python_type(module.get(), &type_spec_HardwareButtons, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HardwareButtons_Static.get()))};
+    if (!HardwareButtons_type)
     {
         return nullptr;
     }

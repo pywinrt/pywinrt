@@ -9571,7 +9571,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownCameraIntrinsicsProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Static.get())) == -1)
+    py::pytype_handle KnownCameraIntrinsicsProperties_type{py::register_python_type(module.get(), &type_spec_KnownCameraIntrinsicsProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownCameraIntrinsicsProperties_Static.get()))};
+    if (!KnownCameraIntrinsicsProperties_type)
     {
         return nullptr;
     }
@@ -9582,7 +9583,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionColorFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionColorFrameSourceProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionColorFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionColorFrameSourceProperties_Static.get()))};
+    if (!KnownPerceptionColorFrameSourceProperties_type)
     {
         return nullptr;
     }
@@ -9593,7 +9595,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionDepthFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionDepthFrameSourceProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionDepthFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionDepthFrameSourceProperties_Static.get()))};
+    if (!KnownPerceptionDepthFrameSourceProperties_type)
     {
         return nullptr;
     }
@@ -9604,7 +9607,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionFrameSourceProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionFrameSourceProperties_Static.get()))};
+    if (!KnownPerceptionFrameSourceProperties_type)
     {
         return nullptr;
     }
@@ -9615,7 +9619,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionInfraredFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionInfraredFrameSourceProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionInfraredFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionInfraredFrameSourceProperties_Static.get()))};
+    if (!KnownPerceptionInfraredFrameSourceProperties_type)
     {
         return nullptr;
     }
@@ -9626,7 +9631,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionVideoFrameSourceProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoFrameSourceProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoFrameSourceProperties_Static.get()))};
+    if (!KnownPerceptionVideoFrameSourceProperties_type)
     {
         return nullptr;
     }
@@ -9637,22 +9643,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoProfileProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Static.get())) == -1)
+    py::pytype_handle KnownPerceptionVideoProfileProperties_type{py::register_python_type(module.get(), &type_spec_KnownPerceptionVideoProfileProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KnownPerceptionVideoProfileProperties_Static.get()))};
+    if (!KnownPerceptionVideoProfileProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrame, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrameArrivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameArrivedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrameArrivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrameReader_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameReader, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrameReader_type)
     {
         return nullptr;
     }
@@ -9663,52 +9673,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionColorFrameSource_Static.get())) == -1)
+    py::pytype_handle PerceptionColorFrameSource_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionColorFrameSource_Static.get()))};
+    if (!PerceptionColorFrameSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrameSourceAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceAddedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrameSourceAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrameSourceRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrameSourceRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionColorFrameSourceWatcher_type{py::register_python_type(module.get(), &type_spec_PerceptionColorFrameSourceWatcher, object_bases.get(), nullptr)};
+    if (!PerceptionColorFrameSourceWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionControlSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionControlSession_type{py::register_python_type(module.get(), &type_spec_PerceptionControlSession, object_bases.get(), nullptr)};
+    if (!PerceptionControlSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthCorrelatedCameraIntrinsics_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCameraIntrinsics, object_bases.get(), nullptr)};
+    if (!PerceptionDepthCorrelatedCameraIntrinsics_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCoordinateMapper, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthCorrelatedCoordinateMapper_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthCorrelatedCoordinateMapper, object_bases.get(), nullptr)};
+    if (!PerceptionDepthCorrelatedCoordinateMapper_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrame, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrameArrivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameArrivedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrameArrivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrameReader_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameReader, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrameReader_type)
     {
         return nullptr;
     }
@@ -9719,47 +9739,56 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionDepthFrameSource_Static.get())) == -1)
+    py::pytype_handle PerceptionDepthFrameSource_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionDepthFrameSource_Static.get()))};
+    if (!PerceptionDepthFrameSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrameSourceAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceAddedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrameSourceAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrameSourceRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrameSourceRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionDepthFrameSourceWatcher_type{py::register_python_type(module.get(), &type_spec_PerceptionDepthFrameSourceWatcher, object_bases.get(), nullptr)};
+    if (!PerceptionDepthFrameSourceWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionFrameSourcePropertiesChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertiesChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionFrameSourcePropertiesChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertyChangeResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionFrameSourcePropertyChangeResult_type{py::register_python_type(module.get(), &type_spec_PerceptionFrameSourcePropertyChangeResult, object_bases.get(), nullptr)};
+    if (!PerceptionFrameSourcePropertyChangeResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrame_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrame, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameArrivedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrameArrivedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameArrivedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrameArrivedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrameReader_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameReader, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrameReader_type)
     {
         return nullptr;
     }
@@ -9770,27 +9799,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_perception(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionInfraredFrameSource_Static.get())) == -1)
+    py::pytype_handle PerceptionInfraredFrameSource_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerceptionInfraredFrameSource_Static.get()))};
+    if (!PerceptionInfraredFrameSource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrameSourceAddedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceAddedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrameSourceAddedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrameSourceRemovedEventArgs_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceRemovedEventArgs, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrameSourceRemovedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionInfraredFrameSourceWatcher_type{py::register_python_type(module.get(), &type_spec_PerceptionInfraredFrameSourceWatcher, object_bases.get(), nullptr)};
+    if (!PerceptionInfraredFrameSourceWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PerceptionVideoProfile, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PerceptionVideoProfile_type{py::register_python_type(module.get(), &type_spec_PerceptionVideoProfile, object_bases.get(), nullptr)};
+    if (!PerceptionVideoProfile_type)
     {
         return nullptr;
     }

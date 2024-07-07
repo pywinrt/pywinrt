@@ -302,7 +302,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeolocationProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GeolocationProvider_type{py::register_python_type(module.get(), &type_spec_GeolocationProvider, object_bases.get(), nullptr)};
+    if (!GeolocationProvider_type)
     {
         return nullptr;
     }

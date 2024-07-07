@@ -998,22 +998,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_spi_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProviderSpiConnectionSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProviderSpiConnectionSettings_type{py::register_python_type(module.get(), &type_spec_ProviderSpiConnectionSettings, object_bases.get(), nullptr)};
+    if (!ProviderSpiConnectionSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpiControllerProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISpiControllerProvider_type{py::register_python_type(module.get(), &type_spec_ISpiControllerProvider, object_bases.get(), nullptr)};
+    if (!ISpiControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpiDeviceProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISpiDeviceProvider_type{py::register_python_type(module.get(), &type_spec_ISpiDeviceProvider, object_bases.get(), nullptr)};
+    if (!ISpiDeviceProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpiProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISpiProvider_type{py::register_python_type(module.get(), &type_spec_ISpiProvider, object_bases.get(), nullptr)};
+    if (!ISpiProvider_type)
     {
         return nullptr;
     }

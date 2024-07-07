@@ -2673,7 +2673,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ConnectionRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ConnectionRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!ConnectionRequestedEventArgs_type)
     {
         return nullptr;
     }
@@ -2684,17 +2685,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Static.get())) == -1)
+    py::pytype_handle PeerFinder_type{py::register_python_type(module.get(), &type_spec_PeerFinder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PeerFinder_Static.get()))};
+    if (!PeerFinder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PeerInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PeerInformation_type{py::register_python_type(module.get(), &type_spec_PeerInformation, object_bases.get(), nullptr)};
+    if (!PeerInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PeerWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PeerWatcher_type{py::register_python_type(module.get(), &type_spec_PeerWatcher, object_bases.get(), nullptr)};
+    if (!PeerWatcher_type)
     {
         return nullptr;
     }
@@ -2705,17 +2709,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_proximity(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximityDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProximityDevice_Static.get())) == -1)
+    py::pytype_handle ProximityDevice_type{py::register_python_type(module.get(), &type_spec_ProximityDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProximityDevice_Static.get()))};
+    if (!ProximityDevice_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProximityMessage, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProximityMessage_type{py::register_python_type(module.get(), &type_spec_ProximityMessage, object_bases.get(), nullptr)};
+    if (!ProximityMessage_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle TriggeredConnectionStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_TriggeredConnectionStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!TriggeredConnectionStateChangedEventArgs_type)
     {
         return nullptr;
     }

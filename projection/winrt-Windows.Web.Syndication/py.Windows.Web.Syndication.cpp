@@ -10729,22 +10729,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationAttribute, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationAttribute_type{py::register_python_type(module.get(), &type_spec_SyndicationAttribute, object_bases.get(), nullptr)};
+    if (!SyndicationAttribute_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationCategory, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationCategory_type{py::register_python_type(module.get(), &type_spec_SyndicationCategory, object_bases.get(), nullptr)};
+    if (!SyndicationCategory_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationClient, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationClient_type{py::register_python_type(module.get(), &type_spec_SyndicationClient, object_bases.get(), nullptr)};
+    if (!SyndicationClient_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationContent, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationContent_type{py::register_python_type(module.get(), &type_spec_SyndicationContent, object_bases.get(), nullptr)};
+    if (!SyndicationContent_type)
     {
         return nullptr;
     }
@@ -10755,67 +10759,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_web_syndication(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SyndicationError_Static.get())) == -1)
+    py::pytype_handle SyndicationError_type{py::register_python_type(module.get(), &type_spec_SyndicationError, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SyndicationError_Static.get()))};
+    if (!SyndicationError_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationFeed, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationFeed_type{py::register_python_type(module.get(), &type_spec_SyndicationFeed, object_bases.get(), nullptr)};
+    if (!SyndicationFeed_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationGenerator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationGenerator_type{py::register_python_type(module.get(), &type_spec_SyndicationGenerator, object_bases.get(), nullptr)};
+    if (!SyndicationGenerator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationItem, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationItem_type{py::register_python_type(module.get(), &type_spec_SyndicationItem, object_bases.get(), nullptr)};
+    if (!SyndicationItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationLink, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationLink_type{py::register_python_type(module.get(), &type_spec_SyndicationLink, object_bases.get(), nullptr)};
+    if (!SyndicationLink_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationNode_type{py::register_python_type(module.get(), &type_spec_SyndicationNode, object_bases.get(), nullptr)};
+    if (!SyndicationNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationPerson, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationPerson_type{py::register_python_type(module.get(), &type_spec_SyndicationPerson, object_bases.get(), nullptr)};
+    if (!SyndicationPerson_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SyndicationText, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SyndicationText_type{py::register_python_type(module.get(), &type_spec_SyndicationText, object_bases.get(), nullptr)};
+    if (!SyndicationText_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISyndicationClient, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISyndicationClient_type{py::register_python_type(module.get(), &type_spec_ISyndicationClient, object_bases.get(), nullptr)};
+    if (!ISyndicationClient_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISyndicationNode, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISyndicationNode_type{py::register_python_type(module.get(), &type_spec_ISyndicationNode, object_bases.get(), nullptr)};
+    if (!ISyndicationNode_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISyndicationText, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISyndicationText_type{py::register_python_type(module.get(), &type_spec_ISyndicationText, object_bases.get(), nullptr)};
+    if (!ISyndicationText_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RetrievalProgress, nullptr, nullptr) == -1)
+    py::pytype_handle RetrievalProgress_type{py::register_python_type(module.get(), &type_spec_RetrievalProgress, nullptr, nullptr)};
+    if (!RetrievalProgress_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TransferProgress, nullptr, nullptr) == -1)
+    py::pytype_handle TransferProgress_type{py::register_python_type(module.get(), &type_spec_TransferProgress, nullptr, nullptr)};
+    if (!TransferProgress_type)
     {
         return nullptr;
     }

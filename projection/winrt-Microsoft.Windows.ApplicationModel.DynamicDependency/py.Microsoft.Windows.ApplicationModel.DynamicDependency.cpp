@@ -1523,12 +1523,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AddPackageDependencyOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AddPackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_AddPackageDependencyOptions, object_bases.get(), nullptr)};
+    if (!AddPackageDependencyOptions_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CreatePackageDependencyOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CreatePackageDependencyOptions_type{py::register_python_type(module.get(), &type_spec_CreatePackageDependencyOptions, object_bases.get(), nullptr)};
+    if (!CreatePackageDependencyOptions_type)
     {
         return nullptr;
     }
@@ -1539,12 +1541,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageDependency, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageDependency_Static.get())) == -1)
+    py::pytype_handle PackageDependency_type{py::register_python_type(module.get(), &type_spec_PackageDependency, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageDependency_Static.get()))};
+    if (!PackageDependency_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageDependencyContext, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PackageDependencyContext_type{py::register_python_type(module.get(), &type_spec_PackageDependencyContext, object_bases.get(), nullptr)};
+    if (!PackageDependencyContext_type)
     {
         return nullptr;
     }
@@ -1555,12 +1559,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_applicationmodel_dynamicdependenc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageDependencyRank, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageDependencyRank_Static.get())) == -1)
+    py::pytype_handle PackageDependencyRank_type{py::register_python_type(module.get(), &type_spec_PackageDependencyRank, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PackageDependencyRank_Static.get()))};
+    if (!PackageDependencyRank_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PackageDependencyContextId, nullptr, nullptr) == -1)
+    py::pytype_handle PackageDependencyContextId_type{py::register_python_type(module.get(), &type_spec_PackageDependencyContextId, nullptr, nullptr)};
+    if (!PackageDependencyContextId_type)
     {
         return nullptr;
     }

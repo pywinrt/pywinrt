@@ -1293,32 +1293,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_apprecording(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppRecordingManager_Static.get())) == -1)
+    py::pytype_handle AppRecordingManager_type{py::register_python_type(module.get(), &type_spec_AppRecordingManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppRecordingManager_Static.get()))};
+    if (!AppRecordingManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppRecordingResult_type{py::register_python_type(module.get(), &type_spec_AppRecordingResult, object_bases.get(), nullptr)};
+    if (!AppRecordingResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppRecordingSaveScreenshotResult_type{py::register_python_type(module.get(), &type_spec_AppRecordingSaveScreenshotResult, object_bases.get(), nullptr)};
+    if (!AppRecordingSaveScreenshotResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppRecordingSavedScreenshotInfo_type{py::register_python_type(module.get(), &type_spec_AppRecordingSavedScreenshotInfo, object_bases.get(), nullptr)};
+    if (!AppRecordingSavedScreenshotInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatus, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppRecordingStatus_type{py::register_python_type(module.get(), &type_spec_AppRecordingStatus, object_bases.get(), nullptr)};
+    if (!AppRecordingStatus_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppRecordingStatusDetails_type{py::register_python_type(module.get(), &type_spec_AppRecordingStatusDetails, object_bases.get(), nullptr)};
+    if (!AppRecordingStatusDetails_type)
     {
         return nullptr;
     }

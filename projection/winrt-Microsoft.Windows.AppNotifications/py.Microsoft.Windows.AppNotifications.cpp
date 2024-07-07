@@ -1898,12 +1898,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotification, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppNotification_type{py::register_python_type(module.get(), &type_spec_AppNotification, object_bases.get(), nullptr)};
+    if (!AppNotification_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationActivatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppNotificationActivatedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppNotificationActivatedEventArgs, object_bases.get(), nullptr)};
+    if (!AppNotificationActivatedEventArgs_type)
     {
         return nullptr;
     }
@@ -1914,12 +1916,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_appnotifications(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationManager_Static.get())) == -1)
+    py::pytype_handle AppNotificationManager_type{py::register_python_type(module.get(), &type_spec_AppNotificationManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppNotificationManager_Static.get()))};
+    if (!AppNotificationManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppNotificationProgressData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppNotificationProgressData_type{py::register_python_type(module.get(), &type_spec_AppNotificationProgressData, object_bases.get(), nullptr)};
+    if (!AppNotificationProgressData_type)
     {
         return nullptr;
     }

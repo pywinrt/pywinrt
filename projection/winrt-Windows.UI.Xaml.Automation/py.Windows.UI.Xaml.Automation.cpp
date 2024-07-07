@@ -8656,7 +8656,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AnnotationPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle AnnotationPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_AnnotationPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnnotationPatternIdentifiers_Static.get()))};
+    if (!AnnotationPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8667,7 +8668,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Static.get())) == -1)
+    py::pytype_handle AutomationAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Static.get()))};
+    if (!AutomationAnnotation_type)
     {
         return nullptr;
     }
@@ -8678,7 +8680,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationElementIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Static.get())) == -1)
+    py::pytype_handle AutomationElementIdentifiers_type{py::register_python_type(module.get(), &type_spec_AutomationElementIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationElementIdentifiers_Static.get()))};
+    if (!AutomationElementIdentifiers_type)
     {
         return nullptr;
     }
@@ -8689,12 +8692,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Static.get())) == -1)
+    py::pytype_handle AutomationProperties_type{py::register_python_type(module.get(), &type_spec_AutomationProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationProperties_Static.get()))};
+    if (!AutomationProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AutomationProperty, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AutomationProperty_type{py::register_python_type(module.get(), &type_spec_AutomationProperty, object_bases.get(), nullptr)};
+    if (!AutomationProperty_type)
     {
         return nullptr;
     }
@@ -8705,7 +8710,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DockPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle DockPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_DockPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DockPatternIdentifiers_Static.get()))};
+    if (!DockPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8716,7 +8722,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DragPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle DragPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_DragPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragPatternIdentifiers_Static.get()))};
+    if (!DragPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8727,7 +8734,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DropTargetPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle DropTargetPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_DropTargetPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetPatternIdentifiers_Static.get()))};
+    if (!DropTargetPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8738,7 +8746,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ExpandCollapsePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle ExpandCollapsePatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_ExpandCollapsePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpandCollapsePatternIdentifiers_Static.get()))};
+    if (!ExpandCollapsePatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8749,7 +8758,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle GridItemPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_GridItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridItemPatternIdentifiers_Static.get()))};
+    if (!GridItemPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8760,7 +8770,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GridPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle GridPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_GridPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridPatternIdentifiers_Static.get()))};
+    if (!GridPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8771,7 +8782,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MultipleViewPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle MultipleViewPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_MultipleViewPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MultipleViewPatternIdentifiers_Static.get()))};
+    if (!MultipleViewPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8782,7 +8794,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RangeValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle RangeValuePatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_RangeValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeValuePatternIdentifiers_Static.get()))};
+    if (!RangeValuePatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8793,7 +8806,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScrollPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle ScrollPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_ScrollPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPatternIdentifiers_Static.get()))};
+    if (!ScrollPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8804,7 +8818,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectionItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle SelectionItemPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_SelectionItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionItemPatternIdentifiers_Static.get()))};
+    if (!SelectionItemPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8815,7 +8830,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SelectionPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle SelectionPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_SelectionPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectionPatternIdentifiers_Static.get()))};
+    if (!SelectionPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8826,7 +8842,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpreadsheetItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle SpreadsheetItemPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_SpreadsheetItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpreadsheetItemPatternIdentifiers_Static.get()))};
+    if (!SpreadsheetItemPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8837,7 +8854,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StylesPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle StylesPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_StylesPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StylesPatternIdentifiers_Static.get()))};
+    if (!StylesPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8848,7 +8866,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TableItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle TableItemPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_TableItemPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TableItemPatternIdentifiers_Static.get()))};
+    if (!TableItemPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8859,7 +8878,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TablePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle TablePatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_TablePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TablePatternIdentifiers_Static.get()))};
+    if (!TablePatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8870,7 +8890,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TogglePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle TogglePatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_TogglePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TogglePatternIdentifiers_Static.get()))};
+    if (!TogglePatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8881,7 +8902,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TransformPattern2Identifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Static.get())) == -1)
+    py::pytype_handle TransformPattern2Identifiers_type{py::register_python_type(module.get(), &type_spec_TransformPattern2Identifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPattern2Identifiers_Static.get()))};
+    if (!TransformPattern2Identifiers_type)
     {
         return nullptr;
     }
@@ -8892,7 +8914,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TransformPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle TransformPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_TransformPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformPatternIdentifiers_Static.get()))};
+    if (!TransformPatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8903,7 +8926,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle ValuePatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_ValuePatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ValuePatternIdentifiers_Static.get()))};
+    if (!ValuePatternIdentifiers_type)
     {
         return nullptr;
     }
@@ -8914,7 +8938,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Static.get())) == -1)
+    py::pytype_handle WindowPatternIdentifiers_type{py::register_python_type(module.get(), &type_spec_WindowPatternIdentifiers, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowPatternIdentifiers_Static.get()))};
+    if (!WindowPatternIdentifiers_type)
     {
         return nullptr;
     }

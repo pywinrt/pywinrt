@@ -5431,17 +5431,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_NamedResource, object_bases.get(), nullptr) == -1)
+    py::pytype_handle NamedResource_type{py::register_python_type(module.get(), &type_spec_NamedResource, object_bases.get(), nullptr)};
+    if (!NamedResource_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceCandidate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceCandidate_type{py::register_python_type(module.get(), &type_spec_ResourceCandidate, object_bases.get(), nullptr)};
+    if (!ResourceCandidate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceCandidateVectorView_type{py::register_python_type(module.get(), &type_spec_ResourceCandidateVectorView, object_bases.get(), nullptr)};
+    if (!ResourceCandidateVectorView_type)
     {
         return nullptr;
     }
@@ -5452,12 +5455,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceContext_Static.get())) == -1)
+    py::pytype_handle ResourceContext_type{py::register_python_type(module.get(), &type_spec_ResourceContext, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceContext_Static.get()))};
+    if (!ResourceContext_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceContextLanguagesVectorView_type{py::register_python_type(module.get(), &type_spec_ResourceContextLanguagesVectorView, object_bases.get(), nullptr)};
+    if (!ResourceContextLanguagesVectorView_type)
     {
         return nullptr;
     }
@@ -5468,52 +5473,62 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_resources_core(void) noexc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Static.get())) == -1)
+    py::pytype_handle ResourceManager_type{py::register_python_type(module.get(), &type_spec_ResourceManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ResourceManager_Static.get()))};
+    if (!ResourceManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceMap, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceMap_type{py::register_python_type(module.get(), &type_spec_ResourceMap, object_bases.get(), nullptr)};
+    if (!ResourceMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceMapIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceMapIterator_type{py::register_python_type(module.get(), &type_spec_ResourceMapIterator, object_bases.get(), nullptr)};
+    if (!ResourceMapIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceMapMapView_type{py::register_python_type(module.get(), &type_spec_ResourceMapMapView, object_bases.get(), nullptr)};
+    if (!ResourceMapMapView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceMapMapViewIterator_type{py::register_python_type(module.get(), &type_spec_ResourceMapMapViewIterator, object_bases.get(), nullptr)};
+    if (!ResourceMapMapViewIterator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceQualifier, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceQualifier_type{py::register_python_type(module.get(), &type_spec_ResourceQualifier, object_bases.get(), nullptr)};
+    if (!ResourceQualifier_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceQualifierMapView_type{py::register_python_type(module.get(), &type_spec_ResourceQualifierMapView, object_bases.get(), nullptr)};
+    if (!ResourceQualifierMapView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceQualifierObservableMap_type{py::register_python_type(module.get(), &type_spec_ResourceQualifierObservableMap, object_bases.get(), nullptr)};
+    if (!ResourceQualifierObservableMap_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ResourceQualifierVectorView_type{py::register_python_type(module.get(), &type_spec_ResourceQualifierVectorView, object_bases.get(), nullptr)};
+    if (!ResourceQualifierVectorView_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ResourceLayoutInfo, nullptr, nullptr) == -1)
+    py::pytype_handle ResourceLayoutInfo_type{py::register_python_type(module.get(), &type_spec_ResourceLayoutInfo, nullptr, nullptr)};
+    if (!ResourceLayoutInfo_type)
     {
         return nullptr;
     }

@@ -3895,22 +3895,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceAudioNotificationRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceAudioNotificationRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!GuidanceAudioNotificationRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceLaneInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceLaneInfo_type{py::register_python_type(module.get(), &type_spec_GuidanceLaneInfo, object_bases.get(), nullptr)};
+    if (!GuidanceLaneInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceManeuver, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceManeuver_type{py::register_python_type(module.get(), &type_spec_GuidanceManeuver, object_bases.get(), nullptr)};
+    if (!GuidanceManeuver_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceMapMatchedCoordinate_type{py::register_python_type(module.get(), &type_spec_GuidanceMapMatchedCoordinate, object_bases.get(), nullptr)};
+    if (!GuidanceMapMatchedCoordinate_type)
     {
         return nullptr;
     }
@@ -3921,22 +3925,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Static.get())) == -1)
+    py::pytype_handle GuidanceNavigator_type{py::register_python_type(module.get(), &type_spec_GuidanceNavigator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceNavigator_Static.get()))};
+    if (!GuidanceNavigator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceReroutedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceReroutedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceReroutedEventArgs, object_bases.get(), nullptr)};
+    if (!GuidanceReroutedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceRoadSegment, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceRoadSegment_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSegment, object_bases.get(), nullptr)};
+    if (!GuidanceRoadSegment_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceRoadSignpost, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceRoadSignpost_type{py::register_python_type(module.get(), &type_spec_GuidanceRoadSignpost, object_bases.get(), nullptr)};
+    if (!GuidanceRoadSignpost_type)
     {
         return nullptr;
     }
@@ -3947,7 +3955,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceRoute, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceRoute_Static.get())) == -1)
+    py::pytype_handle GuidanceRoute_type{py::register_python_type(module.get(), &type_spec_GuidanceRoute, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceRoute_Static.get()))};
+    if (!GuidanceRoute_type)
     {
         return nullptr;
     }
@@ -3958,12 +3967,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_services_maps_guidance(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceTelemetryCollector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceTelemetryCollector_Static.get())) == -1)
+    py::pytype_handle GuidanceTelemetryCollector_type{py::register_python_type(module.get(), &type_spec_GuidanceTelemetryCollector, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GuidanceTelemetryCollector_Static.get()))};
+    if (!GuidanceTelemetryCollector_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GuidanceUpdatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GuidanceUpdatedEventArgs, object_bases.get(), nullptr)};
+    if (!GuidanceUpdatedEventArgs_type)
     {
         return nullptr;
     }

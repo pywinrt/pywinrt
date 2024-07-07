@@ -555,12 +555,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture_core(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VariablePhotoCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VariablePhotoCapturedEventArgs_type{py::register_python_type(module.get(), &type_spec_VariablePhotoCapturedEventArgs, object_bases.get(), nullptr)};
+    if (!VariablePhotoCapturedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceCapture, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VariablePhotoSequenceCapture_type{py::register_python_type(module.get(), &type_spec_VariablePhotoSequenceCapture, object_bases.get(), nullptr)};
+    if (!VariablePhotoSequenceCapture_type)
     {
         return nullptr;
     }

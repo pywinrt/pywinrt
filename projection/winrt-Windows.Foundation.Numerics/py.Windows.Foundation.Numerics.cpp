@@ -2727,42 +2727,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr) == -1)
+    py::pytype_handle Matrix3x2_type{py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr)};
+    if (!Matrix3x2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr) == -1)
+    py::pytype_handle Matrix4x4_type{py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr)};
+    if (!Matrix4x4_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr) == -1)
+    py::pytype_handle Plane_type{py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr)};
+    if (!Plane_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr) == -1)
+    py::pytype_handle Quaternion_type{py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr)};
+    if (!Quaternion_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Rational, nullptr, nullptr) == -1)
+    py::pytype_handle Rational_type{py::register_python_type(module.get(), &type_spec_Rational, nullptr, nullptr)};
+    if (!Rational_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr) == -1)
+    py::pytype_handle Vector2_type{py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr)};
+    if (!Vector2_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr) == -1)
+    py::pytype_handle Vector3_type{py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr)};
+    if (!Vector3_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr) == -1)
+    py::pytype_handle Vector4_type{py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr)};
+    if (!Vector4_type)
     {
         return nullptr;
     }

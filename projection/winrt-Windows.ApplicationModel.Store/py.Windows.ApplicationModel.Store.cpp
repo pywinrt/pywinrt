@@ -3111,7 +3111,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Static.get())) == -1)
+    py::pytype_handle CurrentApp_type{py::register_python_type(module.get(), &type_spec_CurrentApp, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentApp_Static.get()))};
+    if (!CurrentApp_type)
     {
         return nullptr;
     }
@@ -3122,42 +3123,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_store(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Static.get())) == -1)
+    py::pytype_handle CurrentAppSimulator_type{py::register_python_type(module.get(), &type_spec_CurrentAppSimulator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CurrentAppSimulator_Static.get()))};
+    if (!CurrentAppSimulator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LicenseInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LicenseInformation_type{py::register_python_type(module.get(), &type_spec_LicenseInformation, object_bases.get(), nullptr)};
+    if (!LicenseInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ListingInformation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ListingInformation_type{py::register_python_type(module.get(), &type_spec_ListingInformation, object_bases.get(), nullptr)};
+    if (!ListingInformation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProductLicense, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProductLicense_type{py::register_python_type(module.get(), &type_spec_ProductLicense, object_bases.get(), nullptr)};
+    if (!ProductLicense_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProductListing, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProductListing_type{py::register_python_type(module.get(), &type_spec_ProductListing, object_bases.get(), nullptr)};
+    if (!ProductListing_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ProductPurchaseDisplayProperties_type{py::register_python_type(module.get(), &type_spec_ProductPurchaseDisplayProperties, object_bases.get(), nullptr)};
+    if (!ProductPurchaseDisplayProperties_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PurchaseResults, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PurchaseResults_type{py::register_python_type(module.get(), &type_spec_PurchaseResults, object_bases.get(), nullptr)};
+    if (!PurchaseResults_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UnfulfilledConsumable_type{py::register_python_type(module.get(), &type_spec_UnfulfilledConsumable, object_bases.get(), nullptr)};
+    if (!UnfulfilledConsumable_type)
     {
         return nullptr;
     }

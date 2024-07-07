@@ -24779,42 +24779,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdvancedCapturedPhoto, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AdvancedCapturedPhoto_type{py::register_python_type(module.get(), &type_spec_AdvancedCapturedPhoto, object_bases.get(), nullptr)};
+    if (!AdvancedCapturedPhoto_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdvancedPhotoCapture, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AdvancedPhotoCapture_type{py::register_python_type(module.get(), &type_spec_AdvancedPhotoCapture, object_bases.get(), nullptr)};
+    if (!AdvancedPhotoCapture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundService, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastBackgroundService_type{py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundService, object_bases.get(), nullptr)};
+    if (!AppBroadcastBackgroundService_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundServiceSignInInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastBackgroundServiceSignInInfo_type{py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundServiceSignInInfo, object_bases.get(), nullptr)};
+    if (!AppBroadcastBackgroundServiceSignInInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundServiceStreamInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastBackgroundServiceStreamInfo_type{py::register_python_type(module.get(), &type_spec_AppBroadcastBackgroundServiceStreamInfo, object_bases.get(), nullptr)};
+    if (!AppBroadcastBackgroundServiceStreamInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastCameraCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastCameraCaptureStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastCameraCaptureStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastCameraCaptureStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastGlobalSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastGlobalSettings_type{py::register_python_type(module.get(), &type_spec_AppBroadcastGlobalSettings, object_bases.get(), nullptr)};
+    if (!AppBroadcastGlobalSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastHeartbeatRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastHeartbeatRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastHeartbeatRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastHeartbeatRequestedEventArgs_type)
     {
         return nullptr;
     }
@@ -24825,17 +24833,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastManager_Static.get())) == -1)
+    py::pytype_handle AppBroadcastManager_type{py::register_python_type(module.get(), &type_spec_AppBroadcastManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastManager_Static.get()))};
+    if (!AppBroadcastManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastMicrophoneCaptureStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastMicrophoneCaptureStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPlugIn, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPlugIn_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPlugIn, object_bases.get(), nullptr)};
+    if (!AppBroadcastPlugIn_type)
     {
         return nullptr;
     }
@@ -24846,97 +24857,116 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastPlugInManager_Static.get())) == -1)
+    py::pytype_handle AppBroadcastPlugInManager_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBroadcastPlugInManager_Static.get()))};
+    if (!AppBroadcastPlugInManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPlugInStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPlugInStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastPlugInStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPreview, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPreview_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPreview, object_bases.get(), nullptr)};
+    if (!AppBroadcastPreview_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPreviewStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastPreviewStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPreviewStreamReader_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamReader, object_bases.get(), nullptr)};
+    if (!AppBroadcastPreviewStreamReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamVideoFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPreviewStreamVideoFrame_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamVideoFrame, object_bases.get(), nullptr)};
+    if (!AppBroadcastPreviewStreamVideoFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamVideoHeader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastPreviewStreamVideoHeader_type{py::register_python_type(module.get(), &type_spec_AppBroadcastPreviewStreamVideoHeader, object_bases.get(), nullptr)};
+    if (!AppBroadcastPreviewStreamVideoHeader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastProviderSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastProviderSettings_type{py::register_python_type(module.get(), &type_spec_AppBroadcastProviderSettings, object_bases.get(), nullptr)};
+    if (!AppBroadcastProviderSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastServices, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastServices_type{py::register_python_type(module.get(), &type_spec_AppBroadcastServices, object_bases.get(), nullptr)};
+    if (!AppBroadcastServices_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastSignInStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastSignInStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastSignInStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastSignInStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastState, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastState_type{py::register_python_type(module.get(), &type_spec_AppBroadcastState, object_bases.get(), nullptr)};
+    if (!AppBroadcastState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamAudioFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamAudioFrame_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamAudioFrame, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamAudioFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamAudioHeader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamAudioHeader_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamAudioHeader, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamAudioHeader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamReader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamReader_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamReader, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamReader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamVideoFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamVideoFrame_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamVideoFrame, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamVideoFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastStreamVideoHeader, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastStreamVideoHeader_type{py::register_python_type(module.get(), &type_spec_AppBroadcastStreamVideoHeader, object_bases.get(), nullptr)};
+    if (!AppBroadcastStreamVideoHeader_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastTriggerDetails_type{py::register_python_type(module.get(), &type_spec_AppBroadcastTriggerDetails, object_bases.get(), nullptr)};
+    if (!AppBroadcastTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppBroadcastViewerCountChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppBroadcastViewerCountChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppBroadcastViewerCountChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppBroadcastViewerCountChangedEventArgs_type)
     {
         return nullptr;
     }
@@ -24947,22 +24977,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapture_Static.get())) == -1)
+    py::pytype_handle AppCapture_type{py::register_python_type(module.get(), &type_spec_AppCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCapture_Static.get()))};
+    if (!AppCapture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureAlternateShortcutKeys, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureAlternateShortcutKeys_type{py::register_python_type(module.get(), &type_spec_AppCaptureAlternateShortcutKeys, object_bases.get(), nullptr)};
+    if (!AppCaptureAlternateShortcutKeys_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureDurationGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureDurationGeneratedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppCaptureDurationGeneratedEventArgs, object_bases.get(), nullptr)};
+    if (!AppCaptureDurationGeneratedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureFileGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureFileGeneratedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppCaptureFileGeneratedEventArgs, object_bases.get(), nullptr)};
+    if (!AppCaptureFileGeneratedEventArgs_type)
     {
         return nullptr;
     }
@@ -24973,57 +25007,68 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCaptureManager_Static.get())) == -1)
+    py::pytype_handle AppCaptureManager_type{py::register_python_type(module.get(), &type_spec_AppCaptureManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppCaptureManager_Static.get()))};
+    if (!AppCaptureManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureMetadataWriter, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureMetadataWriter_type{py::register_python_type(module.get(), &type_spec_AppCaptureMetadataWriter, object_bases.get(), nullptr)};
+    if (!AppCaptureMetadataWriter_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureMicrophoneCaptureStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppCaptureMicrophoneCaptureStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppCaptureMicrophoneCaptureStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureRecordOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureRecordOperation_type{py::register_python_type(module.get(), &type_spec_AppCaptureRecordOperation, object_bases.get(), nullptr)};
+    if (!AppCaptureRecordOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureRecordingStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureRecordingStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_AppCaptureRecordingStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!AppCaptureRecordingStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureServices, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureServices_type{py::register_python_type(module.get(), &type_spec_AppCaptureServices, object_bases.get(), nullptr)};
+    if (!AppCaptureServices_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureSettings_type{py::register_python_type(module.get(), &type_spec_AppCaptureSettings, object_bases.get(), nullptr)};
+    if (!AppCaptureSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AppCaptureState, object_bases.get(), nullptr) == -1)
+    py::pytype_handle AppCaptureState_type{py::register_python_type(module.get(), &type_spec_AppCaptureState, object_bases.get(), nullptr)};
+    if (!AppCaptureState_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraCaptureUI, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CameraCaptureUI_type{py::register_python_type(module.get(), &type_spec_CameraCaptureUI, object_bases.get(), nullptr)};
+    if (!CameraCaptureUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraCaptureUIPhotoCaptureSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CameraCaptureUIPhotoCaptureSettings_type{py::register_python_type(module.get(), &type_spec_CameraCaptureUIPhotoCaptureSettings, object_bases.get(), nullptr)};
+    if (!CameraCaptureUIPhotoCaptureSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraCaptureUIVideoCaptureSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CameraCaptureUIVideoCaptureSettings_type{py::register_python_type(module.get(), &type_spec_CameraCaptureUIVideoCaptureSettings, object_bases.get(), nullptr)};
+    if (!CameraCaptureUIVideoCaptureSettings_type)
     {
         return nullptr;
     }
@@ -25034,32 +25079,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CameraOptionsUI, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraOptionsUI_Static.get())) == -1)
+    py::pytype_handle CameraOptionsUI_type{py::register_python_type(module.get(), &type_spec_CameraOptionsUI, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CameraOptionsUI_Static.get()))};
+    if (!CameraOptionsUI_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CapturedFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CapturedFrame_type{py::register_python_type(module.get(), &type_spec_CapturedFrame, object_bases.get(), nullptr)};
+    if (!CapturedFrame_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CapturedFrameControlValues, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CapturedFrameControlValues_type{py::register_python_type(module.get(), &type_spec_CapturedFrameControlValues, object_bases.get(), nullptr)};
+    if (!CapturedFrameControlValues_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CapturedPhoto, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CapturedPhoto_type{py::register_python_type(module.get(), &type_spec_CapturedPhoto, object_bases.get(), nullptr)};
+    if (!CapturedPhoto_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServices, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameBarServices_type{py::register_python_type(module.get(), &type_spec_GameBarServices, object_bases.get(), nullptr)};
+    if (!GameBarServices_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServicesCommandEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameBarServicesCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_GameBarServicesCommandEventArgs, object_bases.get(), nullptr)};
+    if (!GameBarServicesCommandEventArgs_type)
     {
         return nullptr;
     }
@@ -25070,32 +25121,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServicesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBarServicesManager_Static.get())) == -1)
+    py::pytype_handle GameBarServicesManager_type{py::register_python_type(module.get(), &type_spec_GameBarServicesManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GameBarServicesManager_Static.get()))};
+    if (!GameBarServicesManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameBarServicesManagerGameBarServicesCreatedEventArgs_type{py::register_python_type(module.get(), &type_spec_GameBarServicesManagerGameBarServicesCreatedEventArgs, object_bases.get(), nullptr)};
+    if (!GameBarServicesManagerGameBarServicesCreatedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GameBarServicesTargetInfo, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GameBarServicesTargetInfo_type{py::register_python_type(module.get(), &type_spec_GameBarServicesTargetInfo, object_bases.get(), nullptr)};
+    if (!GameBarServicesTargetInfo_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLagMediaRecording, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LowLagMediaRecording_type{py::register_python_type(module.get(), &type_spec_LowLagMediaRecording, object_bases.get(), nullptr)};
+    if (!LowLagMediaRecording_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoCapture, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LowLagPhotoCapture_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoCapture, object_bases.get(), nullptr)};
+    if (!LowLagPhotoCapture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceCapture, object_bases.get(), nullptr) == -1)
+    py::pytype_handle LowLagPhotoSequenceCapture_type{py::register_python_type(module.get(), &type_spec_LowLagPhotoSequenceCapture, object_bases.get(), nullptr)};
+    if (!LowLagPhotoSequenceCapture_type)
     {
         return nullptr;
     }
@@ -25106,72 +25163,86 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaCapture_Static.get())) == -1)
+    py::pytype_handle MediaCapture_type{py::register_python_type(module.get(), &type_spec_MediaCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaCapture_Static.get()))};
+    if (!MediaCapture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureDeviceExclusiveControlStatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaCaptureDeviceExclusiveControlStatusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!MediaCaptureDeviceExclusiveControlStatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureFailedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureFailedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaCaptureFailedEventArgs, object_bases.get(), nullptr)};
+    if (!MediaCaptureFailedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureFocusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureFocusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_MediaCaptureFocusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!MediaCaptureFocusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureInitializationSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureInitializationSettings_type{py::register_python_type(module.get(), &type_spec_MediaCaptureInitializationSettings, object_bases.get(), nullptr)};
+    if (!MediaCaptureInitializationSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCapturePauseResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCapturePauseResult_type{py::register_python_type(module.get(), &type_spec_MediaCapturePauseResult, object_bases.get(), nullptr)};
+    if (!MediaCapturePauseResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureRelativePanelWatcher, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureRelativePanelWatcher_type{py::register_python_type(module.get(), &type_spec_MediaCaptureRelativePanelWatcher, object_bases.get(), nullptr)};
+    if (!MediaCaptureRelativePanelWatcher_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureSettings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureSettings_type{py::register_python_type(module.get(), &type_spec_MediaCaptureSettings, object_bases.get(), nullptr)};
+    if (!MediaCaptureSettings_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureStopResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureStopResult_type{py::register_python_type(module.get(), &type_spec_MediaCaptureStopResult, object_bases.get(), nullptr)};
+    if (!MediaCaptureStopResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureVideoProfile, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureVideoProfile_type{py::register_python_type(module.get(), &type_spec_MediaCaptureVideoProfile, object_bases.get(), nullptr)};
+    if (!MediaCaptureVideoProfile_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_MediaCaptureVideoProfileMediaDescription, object_bases.get(), nullptr) == -1)
+    py::pytype_handle MediaCaptureVideoProfileMediaDescription_type{py::register_python_type(module.get(), &type_spec_MediaCaptureVideoProfileMediaDescription, object_bases.get(), nullptr)};
+    if (!MediaCaptureVideoProfileMediaDescription_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OptionalReferencePhotoCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OptionalReferencePhotoCapturedEventArgs_type{py::register_python_type(module.get(), &type_spec_OptionalReferencePhotoCapturedEventArgs, object_bases.get(), nullptr)};
+    if (!OptionalReferencePhotoCapturedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoCapturedEventArgs_type{py::register_python_type(module.get(), &type_spec_PhotoCapturedEventArgs, object_bases.get(), nullptr)};
+    if (!PhotoCapturedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PhotoConfirmationCapturedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PhotoConfirmationCapturedEventArgs_type{py::register_python_type(module.get(), &type_spec_PhotoConfirmationCapturedEventArgs, object_bases.get(), nullptr)};
+    if (!PhotoConfirmationCapturedEventArgs_type)
     {
         return nullptr;
     }
@@ -25182,22 +25253,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ScreenCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScreenCapture_Static.get())) == -1)
+    py::pytype_handle ScreenCapture_type{py::register_python_type(module.get(), &type_spec_ScreenCapture, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScreenCapture_Static.get()))};
+    if (!ScreenCapture_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SourceSuspensionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SourceSuspensionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SourceSuspensionChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SourceSuspensionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VideoStreamConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VideoStreamConfiguration_type{py::register_python_type(module.get(), &type_spec_VideoStreamConfiguration, object_bases.get(), nullptr)};
+    if (!VideoStreamConfiguration_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WhiteBalanceGain, nullptr, nullptr) == -1)
+    py::pytype_handle WhiteBalanceGain_type{py::register_python_type(module.get(), &type_spec_WhiteBalanceGain, nullptr, nullptr)};
+    if (!WhiteBalanceGain_type)
     {
         return nullptr;
     }

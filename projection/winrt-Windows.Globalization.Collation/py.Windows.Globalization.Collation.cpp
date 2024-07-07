@@ -609,12 +609,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_globalization_collation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CharacterGrouping, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CharacterGrouping_type{py::register_python_type(module.get(), &type_spec_CharacterGrouping, object_bases.get(), nullptr)};
+    if (!CharacterGrouping_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CharacterGroupings, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CharacterGroupings_type{py::register_python_type(module.get(), &type_spec_CharacterGroupings, object_bases.get(), nullptr)};
+    if (!CharacterGroupings_type)
     {
         return nullptr;
     }

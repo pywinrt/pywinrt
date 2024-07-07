@@ -321,7 +321,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_portable(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ServiceDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ServiceDevice_Static.get())) == -1)
+    py::pytype_handle ServiceDevice_type{py::register_python_type(module.get(), &type_spec_ServiceDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ServiceDevice_Static.get()))};
+    if (!ServiceDevice_type)
     {
         return nullptr;
     }
@@ -332,7 +333,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_portable(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StorageDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageDevice_Static.get())) == -1)
+    py::pytype_handle StorageDevice_type{py::register_python_type(module.get(), &type_spec_StorageDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StorageDevice_Static.get()))};
+    if (!StorageDevice_type)
     {
         return nullptr;
     }

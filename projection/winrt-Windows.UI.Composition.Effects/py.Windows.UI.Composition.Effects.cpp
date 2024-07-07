@@ -571,7 +571,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_effects(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SceneLightingEffect, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SceneLightingEffect_type{py::register_python_type(module.get(), &type_spec_SceneLightingEffect, object_bases.get(), nullptr)};
+    if (!SceneLightingEffect_type)
     {
         return nullptr;
     }

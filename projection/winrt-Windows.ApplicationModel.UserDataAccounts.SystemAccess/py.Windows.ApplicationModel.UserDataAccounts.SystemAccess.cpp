@@ -3108,7 +3108,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, object_bases.get(), nullptr) == -1)
+    py::pytype_handle DeviceAccountConfiguration_type{py::register_python_type(module.get(), &type_spec_DeviceAccountConfiguration, object_bases.get(), nullptr)};
+    if (!DeviceAccountConfiguration_type)
     {
         return nullptr;
     }
@@ -3119,7 +3120,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_userdataaccounts_systemacc
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountSystemAccessManager_Static.get())) == -1)
+    py::pytype_handle UserDataAccountSystemAccessManager_type{py::register_python_type(module.get(), &type_spec_UserDataAccountSystemAccessManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_UserDataAccountSystemAccessManager_Static.get()))};
+    if (!UserDataAccountSystemAccessManager_type)
     {
         return nullptr;
     }

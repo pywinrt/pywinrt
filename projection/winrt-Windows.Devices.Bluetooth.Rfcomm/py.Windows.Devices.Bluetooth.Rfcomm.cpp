@@ -1552,12 +1552,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RfcommDeviceService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommDeviceService_Static.get())) == -1)
+    py::pytype_handle RfcommDeviceService_type{py::register_python_type(module.get(), &type_spec_RfcommDeviceService, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommDeviceService_Static.get()))};
+    if (!RfcommDeviceService_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RfcommDeviceServicesResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle RfcommDeviceServicesResult_type{py::register_python_type(module.get(), &type_spec_RfcommDeviceServicesResult, object_bases.get(), nullptr)};
+    if (!RfcommDeviceServicesResult_type)
     {
         return nullptr;
     }
@@ -1568,7 +1570,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RfcommServiceId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceId_Static.get())) == -1)
+    py::pytype_handle RfcommServiceId_type{py::register_python_type(module.get(), &type_spec_RfcommServiceId, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceId_Static.get()))};
+    if (!RfcommServiceId_type)
     {
         return nullptr;
     }
@@ -1579,7 +1582,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_bluetooth_rfcomm(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_RfcommServiceProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceProvider_Static.get())) == -1)
+    py::pytype_handle RfcommServiceProvider_type{py::register_python_type(module.get(), &type_spec_RfcommServiceProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RfcommServiceProvider_Static.get()))};
+    if (!RfcommServiceProvider_type)
     {
         return nullptr;
     }

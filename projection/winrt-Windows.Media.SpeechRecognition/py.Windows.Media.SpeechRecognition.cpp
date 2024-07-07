@@ -4867,67 +4867,80 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechContinuousRecognitionCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionCompletedEventArgs, object_bases.get(), nullptr)};
+    if (!SpeechContinuousRecognitionCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechContinuousRecognitionResultGeneratedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionResultGeneratedEventArgs, object_bases.get(), nullptr)};
+    if (!SpeechContinuousRecognitionResultGeneratedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechContinuousRecognitionSession_type{py::register_python_type(module.get(), &type_spec_SpeechContinuousRecognitionSession, object_bases.get(), nullptr)};
+    if (!SpeechContinuousRecognitionSession_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionCompilationResult_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionCompilationResult, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionCompilationResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionGrammarFileConstraint_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionGrammarFileConstraint, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionGrammarFileConstraint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionHypothesis_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesis, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionHypothesis_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionHypothesisGeneratedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionHypothesisGeneratedEventArgs, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionHypothesisGeneratedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionListConstraint_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionListConstraint, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionListConstraint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionQualityDegradingEventArgs_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionQualityDegradingEventArgs, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionQualityDegradingEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionResult_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionResult, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionSemanticInterpretation_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionSemanticInterpretation, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionSemanticInterpretation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionTopicConstraint_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionTopicConstraint, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionTopicConstraint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognitionVoiceCommandDefinitionConstraint_type{py::register_python_type(module.get(), &type_spec_SpeechRecognitionVoiceCommandDefinitionConstraint, object_bases.get(), nullptr)};
+    if (!SpeechRecognitionVoiceCommandDefinitionConstraint_type)
     {
         return nullptr;
     }
@@ -4938,22 +4951,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Static.get())) == -1)
+    py::pytype_handle SpeechRecognizer_type{py::register_python_type(module.get(), &type_spec_SpeechRecognizer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SpeechRecognizer_Static.get()))};
+    if (!SpeechRecognizer_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognizerStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_SpeechRecognizerStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!SpeechRecognizerStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognizerTimeouts_type{py::register_python_type(module.get(), &type_spec_SpeechRecognizerTimeouts, object_bases.get(), nullptr)};
+    if (!SpeechRecognizerTimeouts_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SpeechRecognizerUIOptions_type{py::register_python_type(module.get(), &type_spec_SpeechRecognizerUIOptions, object_bases.get(), nullptr)};
+    if (!SpeechRecognizerUIOptions_type)
     {
         return nullptr;
     }
@@ -4964,17 +4981,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_speechrecognition(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Static.get())) == -1)
+    py::pytype_handle VoiceCommandManager_type{py::register_python_type(module.get(), &type_spec_VoiceCommandManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VoiceCommandManager_Static.get()))};
+    if (!VoiceCommandManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VoiceCommandSet, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VoiceCommandSet_type{py::register_python_type(module.get(), &type_spec_VoiceCommandSet, object_bases.get(), nullptr)};
+    if (!VoiceCommandSet_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ISpeechRecognitionConstraint_type{py::register_python_type(module.get(), &type_spec_ISpeechRecognitionConstraint, object_bases.get(), nullptr)};
+    if (!ISpeechRecognitionConstraint_type)
     {
         return nullptr;
     }

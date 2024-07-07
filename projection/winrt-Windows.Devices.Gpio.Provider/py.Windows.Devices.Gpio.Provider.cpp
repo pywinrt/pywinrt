@@ -836,22 +836,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_gpio_provider(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GpioPinProviderValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GpioPinProviderValueChangedEventArgs, object_bases.get(), nullptr)};
+    if (!GpioPinProviderValueChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGpioControllerProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGpioControllerProvider_type{py::register_python_type(module.get(), &type_spec_IGpioControllerProvider, object_bases.get(), nullptr)};
+    if (!IGpioControllerProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGpioPinProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGpioPinProvider_type{py::register_python_type(module.get(), &type_spec_IGpioPinProvider, object_bases.get(), nullptr)};
+    if (!IGpioPinProvider_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGpioProvider, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGpioProvider_type{py::register_python_type(module.get(), &type_spec_IGpioProvider, object_bases.get(), nullptr)};
+    if (!IGpioProvider_type)
     {
         return nullptr;
     }

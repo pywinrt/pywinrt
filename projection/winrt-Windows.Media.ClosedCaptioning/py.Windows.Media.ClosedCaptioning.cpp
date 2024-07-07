@@ -494,7 +494,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_closedcaptioning(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Static.get())) == -1)
+    py::pytype_handle ClosedCaptionProperties_type{py::register_python_type(module.get(), &type_spec_ClosedCaptionProperties, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ClosedCaptionProperties_Static.get()))};
+    if (!ClosedCaptionProperties_type)
     {
         return nullptr;
     }

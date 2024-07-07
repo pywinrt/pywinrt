@@ -4369,7 +4369,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_CivicAddress, object_bases.get(), nullptr) == -1)
+    py::pytype_handle CivicAddress_type{py::register_python_type(module.get(), &type_spec_CivicAddress, object_bases.get(), nullptr)};
+    if (!CivicAddress_type)
     {
         return nullptr;
     }
@@ -4380,22 +4381,26 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeoboundingBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeoboundingBox_Static.get())) == -1)
+    py::pytype_handle GeoboundingBox_type{py::register_python_type(module.get(), &type_spec_GeoboundingBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeoboundingBox_Static.get()))};
+    if (!GeoboundingBox_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geocircle, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geocircle_type{py::register_python_type(module.get(), &type_spec_Geocircle, object_bases.get(), nullptr)};
+    if (!Geocircle_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geocoordinate, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geocoordinate_type{py::register_python_type(module.get(), &type_spec_Geocoordinate, object_bases.get(), nullptr)};
+    if (!Geocoordinate_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeocoordinateSatelliteData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GeocoordinateSatelliteData_type{py::register_python_type(module.get(), &type_spec_GeocoordinateSatelliteData, object_bases.get(), nullptr)};
+    if (!GeocoordinateSatelliteData_type)
     {
         return nullptr;
     }
@@ -4406,27 +4411,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Static.get())) == -1)
+    py::pytype_handle Geolocator_type{py::register_python_type(module.get(), &type_spec_Geolocator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geolocator_Static.get()))};
+    if (!Geolocator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geopath, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geopath_type{py::register_python_type(module.get(), &type_spec_Geopath, object_bases.get(), nullptr)};
+    if (!Geopath_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geopoint, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geopoint_type{py::register_python_type(module.get(), &type_spec_Geopoint, object_bases.get(), nullptr)};
+    if (!Geopoint_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geoposition, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geoposition_type{py::register_python_type(module.get(), &type_spec_Geoposition, object_bases.get(), nullptr)};
+    if (!Geoposition_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Geovisit, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Geovisit_type{py::register_python_type(module.get(), &type_spec_Geovisit, object_bases.get(), nullptr)};
+    if (!Geovisit_type)
     {
         return nullptr;
     }
@@ -4437,42 +4447,50 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_geolocation(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeovisitMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeovisitMonitor_Static.get())) == -1)
+    py::pytype_handle GeovisitMonitor_type{py::register_python_type(module.get(), &type_spec_GeovisitMonitor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeovisitMonitor_Static.get()))};
+    if (!GeovisitMonitor_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeovisitStateChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GeovisitStateChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GeovisitStateChangedEventArgs, object_bases.get(), nullptr)};
+    if (!GeovisitStateChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GeovisitTriggerDetails, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GeovisitTriggerDetails_type{py::register_python_type(module.get(), &type_spec_GeovisitTriggerDetails, object_bases.get(), nullptr)};
+    if (!GeovisitTriggerDetails_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_PositionChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle PositionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_PositionChangedEventArgs, object_bases.get(), nullptr)};
+    if (!PositionChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_StatusChangedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle StatusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_StatusChangedEventArgs, object_bases.get(), nullptr)};
+    if (!StatusChangedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_VenueData, object_bases.get(), nullptr) == -1)
+    py::pytype_handle VenueData_type{py::register_python_type(module.get(), &type_spec_VenueData, object_bases.get(), nullptr)};
+    if (!VenueData_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IGeoshape, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IGeoshape_type{py::register_python_type(module.get(), &type_spec_IGeoshape, object_bases.get(), nullptr)};
+    if (!IGeoshape_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_BasicGeoposition, nullptr, nullptr) == -1)
+    py::pytype_handle BasicGeoposition_type{py::register_python_type(module.get(), &type_spec_BasicGeoposition, nullptr, nullptr)};
+    if (!BasicGeoposition_type)
     {
         return nullptr;
     }

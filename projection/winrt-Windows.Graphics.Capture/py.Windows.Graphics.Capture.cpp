@@ -1584,7 +1584,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Direct3D11CaptureFrame, object_bases.get(), nullptr) == -1)
+    py::pytype_handle Direct3D11CaptureFrame_type{py::register_python_type(module.get(), &type_spec_Direct3D11CaptureFrame, object_bases.get(), nullptr)};
+    if (!Direct3D11CaptureFrame_type)
     {
         return nullptr;
     }
@@ -1595,7 +1596,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_Direct3D11CaptureFramePool, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Direct3D11CaptureFramePool_Static.get())) == -1)
+    py::pytype_handle Direct3D11CaptureFramePool_type{py::register_python_type(module.get(), &type_spec_Direct3D11CaptureFramePool, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Direct3D11CaptureFramePool_Static.get()))};
+    if (!Direct3D11CaptureFramePool_type)
     {
         return nullptr;
     }
@@ -1606,7 +1608,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GraphicsCaptureAccess, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureAccess_Static.get())) == -1)
+    py::pytype_handle GraphicsCaptureAccess_type{py::register_python_type(module.get(), &type_spec_GraphicsCaptureAccess, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureAccess_Static.get()))};
+    if (!GraphicsCaptureAccess_type)
     {
         return nullptr;
     }
@@ -1617,12 +1620,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GraphicsCaptureItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureItem_Static.get())) == -1)
+    py::pytype_handle GraphicsCaptureItem_type{py::register_python_type(module.get(), &type_spec_GraphicsCaptureItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureItem_Static.get()))};
+    if (!GraphicsCaptureItem_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GraphicsCapturePicker, object_bases.get(), nullptr) == -1)
+    py::pytype_handle GraphicsCapturePicker_type{py::register_python_type(module.get(), &type_spec_GraphicsCapturePicker, object_bases.get(), nullptr)};
+    if (!GraphicsCapturePicker_type)
     {
         return nullptr;
     }
@@ -1633,7 +1638,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_GraphicsCaptureSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureSession_Static.get())) == -1)
+    py::pytype_handle GraphicsCaptureSession_type{py::register_python_type(module.get(), &type_spec_GraphicsCaptureSession, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GraphicsCaptureSession_Static.get()))};
+    if (!GraphicsCaptureSession_type)
     {
         return nullptr;
     }

@@ -2186,17 +2186,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdAuthenticator_type{py::register_python_type(module.get(), &type_spec_OnlineIdAuthenticator, object_bases.get(), nullptr)};
+    if (!OnlineIdAuthenticator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdServiceTicket_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicket, object_bases.get(), nullptr)};
+    if (!OnlineIdServiceTicket_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdServiceTicketRequest_type{py::register_python_type(module.get(), &type_spec_OnlineIdServiceTicketRequest, object_bases.get(), nullptr)};
+    if (!OnlineIdServiceTicketRequest_type)
     {
         return nullptr;
     }
@@ -2207,37 +2210,44 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_onlineid(void) noex
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Static.get())) == -1)
+    py::pytype_handle OnlineIdSystemAuthenticator_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OnlineIdSystemAuthenticator_Static.get()))};
+    if (!OnlineIdSystemAuthenticator_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdSystemAuthenticatorForUser_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemAuthenticatorForUser, object_bases.get(), nullptr)};
+    if (!OnlineIdSystemAuthenticatorForUser_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdSystemIdentity_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemIdentity, object_bases.get(), nullptr)};
+    if (!OnlineIdSystemIdentity_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr) == -1)
+    py::pytype_handle OnlineIdSystemTicketResult_type{py::register_python_type(module.get(), &type_spec_OnlineIdSystemTicketResult, object_bases.get(), nullptr)};
+    if (!OnlineIdSystemTicketResult_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SignOutUserOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SignOutUserOperation_type{py::register_python_type(module.get(), &type_spec_SignOutUserOperation, object_bases.get(), nullptr)};
+    if (!SignOutUserOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserAuthenticationOperation_type{py::register_python_type(module.get(), &type_spec_UserAuthenticationOperation, object_bases.get(), nullptr)};
+    if (!UserAuthenticationOperation_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_UserIdentity, object_bases.get(), nullptr) == -1)
+    py::pytype_handle UserIdentity_type{py::register_python_type(module.get(), &type_spec_UserIdentity, object_bases.get(), nullptr)};
+    if (!UserIdentity_type)
     {
         return nullptr;
     }

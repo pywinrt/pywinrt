@@ -4773,12 +4773,14 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveCardBuilder_Static.get())) == -1)
+    py::pytype_handle AdaptiveCardBuilder_type{py::register_python_type(module.get(), &type_spec_AdaptiveCardBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AdaptiveCardBuilder_Static.get()))};
+    if (!AdaptiveCardBuilder_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FocusSession, object_bases.get(), nullptr) == -1)
+    py::pytype_handle FocusSession_type{py::register_python_type(module.get(), &type_spec_FocusSession, object_bases.get(), nullptr)};
+    if (!FocusSession_type)
     {
         return nullptr;
     }
@@ -4789,17 +4791,20 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Static.get())) == -1)
+    py::pytype_handle FocusSessionManager_type{py::register_python_type(module.get(), &type_spec_FocusSessionManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FocusSessionManager_Static.get()))};
+    if (!FocusSessionManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_SecurityAppManager, object_bases.get(), nullptr) == -1)
+    py::pytype_handle SecurityAppManager_type{py::register_python_type(module.get(), &type_spec_SecurityAppManager, object_bases.get(), nullptr)};
+    if (!SecurityAppManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle ShareWindowCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_ShareWindowCommandEventArgs, object_bases.get(), nullptr)};
+    if (!ShareWindowCommandEventArgs_type)
     {
         return nullptr;
     }
@@ -4810,7 +4815,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ShareWindowCommandSource_Static.get())) == -1)
+    py::pytype_handle ShareWindowCommandSource_type{py::register_python_type(module.get(), &type_spec_ShareWindowCommandSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ShareWindowCommandSource_Static.get()))};
+    if (!ShareWindowCommandSource_type)
     {
         return nullptr;
     }
@@ -4821,27 +4827,32 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_TaskbarManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TaskbarManager_Static.get())) == -1)
+    py::pytype_handle TaskbarManager_type{py::register_python_type(module.get(), &type_spec_TaskbarManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TaskbarManager_Static.get()))};
+    if (!TaskbarManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTab, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTab_type{py::register_python_type(module.get(), &type_spec_WindowTab, object_bases.get(), nullptr)};
+    if (!WindowTab_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabCloseRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabCloseRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowTabCloseRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabCollection, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabCollection_type{py::register_python_type(module.get(), &type_spec_WindowTabCollection, object_bases.get(), nullptr)};
+    if (!WindowTabCollection_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabGroup, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabGroup_type{py::register_python_type(module.get(), &type_spec_WindowTabGroup, object_bases.get(), nullptr)};
+    if (!WindowTabGroup_type)
     {
         return nullptr;
     }
@@ -4852,7 +4863,8 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabIcon_Static.get())) == -1)
+    py::pytype_handle WindowTabIcon_type{py::register_python_type(module.get(), &type_spec_WindowTabIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabIcon_Static.get()))};
+    if (!WindowTabIcon_type)
     {
         return nullptr;
     }
@@ -4863,32 +4875,38 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_shell(void) noexcept
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabManager_Static.get())) == -1)
+    py::pytype_handle WindowTabManager_type{py::register_python_type(module.get(), &type_spec_WindowTabManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WindowTabManager_Static.get()))};
+    if (!WindowTabManager_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabSwitchRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabSwitchRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowTabSwitchRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabTearOutRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabTearOutRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowTabTearOutRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr) == -1)
+    py::pytype_handle WindowTabThumbnailRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowTabThumbnailRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowTabThumbnailRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCard, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAdaptiveCard_type{py::register_python_type(module.get(), &type_spec_IAdaptiveCard, object_bases.get(), nullptr)};
+    if (!IAdaptiveCard_type)
     {
         return nullptr;
     }
 
-    if (py::register_python_type(module.get(), &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr) == -1)
+    py::pytype_handle IAdaptiveCardBuilderStatics_type{py::register_python_type(module.get(), &type_spec_IAdaptiveCardBuilderStatics, object_bases.get(), nullptr)};
+    if (!IAdaptiveCardBuilderStatics_type)
     {
         return nullptr;
     }
