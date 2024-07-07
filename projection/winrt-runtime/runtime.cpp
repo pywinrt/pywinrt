@@ -394,7 +394,15 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
         return nullptr;
     }
 
-    pyobj_handle valueAsBytes{PyBytes_FromStringAndSize((char*)&value, sizeof(value))};
+    // It is faster to swap in C++ rather than using bytes_le in Python since
+    // Python stores the bytes in a different order.
+    alignas(4) char buffer[sizeof(winrt::guid)];
+    *reinterpret_cast<uint32_t*>(buffer) = _byteswap_ulong(value.Data1);
+    *reinterpret_cast<uint16_t*>(buffer + 4) = _byteswap_ushort(value.Data2);
+    *reinterpret_cast<uint16_t*>(buffer + 6) = _byteswap_ushort(value.Data3);
+    std::memcpy(buffer + 8, value.Data4, sizeof(value.Data4));
+
+    pyobj_handle valueAsBytes{PyBytes_FromStringAndSize(buffer, sizeof(buffer))};
     if (!valueAsBytes)
     {
         return nullptr;
@@ -410,7 +418,7 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
         return nullptr;
     }
 
-    auto result = PyDict_SetItemString(kwargs.get(), "bytes_le", valueAsBytes.get());
+    auto result = PyDict_SetItemString(kwargs.get(), "bytes", valueAsBytes.get());
     if (result == -1)
     {
         return nullptr;
@@ -423,13 +431,12 @@ winrt::guid py::convert_to_guid(PyObject* obj)
 {
     throw_if_pyobj_null(obj);
 
-    pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes_le")};
+    pyobj_handle bytes{PyObject_GetAttrString(obj, "bytes")};
     if (!bytes)
     {
         throw python_exception();
     }
 
-    winrt::guid result;
     char* buffer;
     Py_ssize_t size;
     if (PyBytes_AsStringAndSize(bytes.get(), &buffer, &size) == -1)
@@ -437,13 +444,19 @@ winrt::guid py::convert_to_guid(PyObject* obj)
         throw python_exception();
     }
 
-    if (size != sizeof(result))
+    if (size != sizeof(winrt::guid))
     {
-        PyErr_SetString(PyExc_ValueError, "bytes_le is wrong size");
+        PyErr_SetString(PyExc_ValueError, "bytes is wrong size");
         throw python_exception();
     }
 
-    memcpy(&result, buffer, size);
+    // It is faster to swap in C++ rather than using bytes_le in Python since
+    // Python stores the bytes in a different order.
+    winrt::guid result;
+    result.Data1 = _byteswap_ulong(*reinterpret_cast<uint32_t*>(buffer));
+    result.Data2 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 4));
+    result.Data3 = _byteswap_ushort(*reinterpret_cast<uint16_t*>(buffer + 6));
+    std::memcpy(result.Data4, buffer + 8, sizeof(result.Data4));
 
     return result;
 }
