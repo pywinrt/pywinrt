@@ -408,7 +408,7 @@ PyObject* py::convert_guid(winrt::guid value) noexcept
         return nullptr;
     }
 
-    return PyObject_CallFunction(state->uuid_type, "sO", nullptr, value_as_bytes.get());
+    return PyObject_CallOneArg(state->to_uuid_func, value_as_bytes.get());
 }
 
 winrt::guid py::convert_to_guid(PyObject* obj)
