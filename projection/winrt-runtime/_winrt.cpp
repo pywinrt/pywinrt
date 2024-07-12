@@ -333,6 +333,57 @@ namespace py::cpp::_winrt
         Py_RETURN_NONE;
     }
 
+    /**
+     * Equivalent to functools.cache(functools.partial(uuid.UUID, None))
+     *
+     * This is a performance optimization since the UUID constructor is expensive.
+     */
+    static PyObject* wrap_uuid_constructor() noexcept
+    {
+        pyobj_handle uuid_module{PyImport_ImportModule("uuid")};
+        if (!uuid_module)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle uuid_type{PyObject_GetAttrString(uuid_module.get(), "UUID")};
+        if (!uuid_type)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle functools_module{PyImport_ImportModule("functools")};
+        if (!functools_module)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle partial_func{
+            PyObject_GetAttrString(functools_module.get(), "partial")};
+        if (!partial_func)
+        {
+            return nullptr;
+        }
+
+        pyobj_handle partial_uuid_func{PyObject_CallFunctionObjArgs(
+            partial_func.get(), uuid_type.get(), Py_None, nullptr)};
+        if (!partial_uuid_func)
+        {
+            return nullptr;
+        }
+
+        // REVISIT: we could probably implement a cache function in C++ that
+        // would even more performant
+        pyobj_handle cache_func{
+            PyObject_GetAttrString(functools_module.get(), "cache")};
+        if (!cache_func)
+        {
+            return nullptr;
+        }
+
+        return PyObject_CallOneArg(cache_func.get(), partial_uuid_func.get());
+    }
+
     static int module_traverse(PyObject* module, visitproc visit, void* arg) noexcept
     {
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module));
@@ -340,7 +391,7 @@ namespace py::cpp::_winrt
         Py_VISIT(state->object_type);
         Py_VISIT(state->array_type);
         Py_VISIT(state->mapping_iter_type);
-        Py_VISIT(state->uuid_type);
+        Py_VISIT(state->to_uuid_func);
 
         return 0;
     }
@@ -352,7 +403,7 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->object_type);
         Py_CLEAR(state->array_type);
         Py_CLEAR(state->mapping_iter_type);
-        Py_CLEAR(state->uuid_type);
+        Py_CLEAR(state->to_uuid_func);
 
         return 0;
     }
@@ -364,7 +415,7 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->object_type);
         Py_XDECREF(state->array_type);
         Py_XDECREF(state->mapping_iter_type);
-        Py_XDECREF(state->uuid_type);
+        Py_XDECREF(state->to_uuid_func);
     }
 
     PyDoc_STRVAR(module_doc, "_winrt");
@@ -464,14 +515,8 @@ namespace py::cpp::_winrt
             return nullptr;
         }
 
-        pyobj_handle uuid_module{PyImport_ImportModule("uuid")};
-        if (!uuid_module)
-        {
-            return nullptr;
-        }
-
-        pyobj_handle uuid_type{PyObject_GetAttrString(uuid_module.get(), "UUID")};
-        if (!uuid_type)
+        pyobj_handle to_uuid_func{wrap_uuid_constructor()};
+        if (!to_uuid_func)
         {
             return nullptr;
         }
@@ -479,7 +524,7 @@ namespace py::cpp::_winrt
         state->object_type = object_type.detach();
         state->array_type = array_type.detach();
         state->mapping_iter_type = mapping_iter_type.detach();
-        state->uuid_type = uuid_type.detach();
+        state->to_uuid_func = to_uuid_func.detach();
 
         return module.detach();
     }
