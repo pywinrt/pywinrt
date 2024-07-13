@@ -224,6 +224,7 @@ namespace py::cpp::_winrt
         .abi_version_major = py::runtime_abi_version_major,
         .abi_version_minor = py::runtime_abi_version_minor,
         .register_python_type = py::register_python_type,
+        .get_python_type = py::get_python_type,
         .wrap_mapping_iter = py::wrap_mapping_iter,
         .is_buffer_compatible = py::is_buffer_compatible,
         .convert_datetime = py::convert_datetime,
@@ -393,6 +394,11 @@ namespace py::cpp::_winrt
         Py_VISIT(state->mapping_iter_type);
         Py_VISIT(state->to_uuid_func);
 
+        for (const auto& [key, value] : state->type_cache)
+        {
+            Py_VISIT(value);
+        }
+
         return 0;
     }
 
@@ -405,6 +411,13 @@ namespace py::cpp::_winrt
         Py_CLEAR(state->mapping_iter_type);
         Py_CLEAR(state->to_uuid_func);
 
+        auto type_cache = std::move(state->type_cache);
+
+        for (auto& [key, value] : type_cache)
+        {
+            Py_XDECREF(value);
+        }
+
         return 0;
     }
 
@@ -416,6 +429,13 @@ namespace py::cpp::_winrt
         Py_XDECREF(state->array_type);
         Py_XDECREF(state->mapping_iter_type);
         Py_XDECREF(state->to_uuid_func);
+
+        for (auto& [key, value] : state->type_cache)
+        {
+            Py_XDECREF(value);
+        }
+
+        std::destroy_at(&state->type_cache);
     }
 
     PyDoc_STRVAR(module_doc, "_winrt");
@@ -467,6 +487,7 @@ namespace py::cpp::_winrt
         }
 
         auto state = reinterpret_cast<module_state*>(PyModule_GetState(module.get()));
+        std::construct_at(&state->type_cache);
 
         py::pytype_handle object_type{py::register_python_type(
             module.get(), &Object_type_spec, nullptr, nullptr)};

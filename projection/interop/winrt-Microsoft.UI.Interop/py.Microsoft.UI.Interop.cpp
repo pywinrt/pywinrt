@@ -181,6 +181,11 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_interop(void) noexcept
 {
     using namespace py::cpp::Microsoft::UI::Interop;
 
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle module{PyModule_Create(&module_def)};
 
     return module.detach();
