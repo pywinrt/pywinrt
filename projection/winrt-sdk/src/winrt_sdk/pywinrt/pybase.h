@@ -643,31 +643,15 @@ namespace py
     PyObject* wrap_enum(PyObject* value) noexcept
     {
         static_assert(is_enum_category_v<T>);
-        static_assert(py_type<T>::module_name);
-        static_assert(py_type<T>::type_name);
 
-        // TODO: it would be nice if we could make this a relative import
-
-        // new reference
-        pyobj_handle module{PyImport_ImportModule(py_type<T>::module_name)};
-
-        if (!module)
-        {
-            return nullptr;
-        }
-
-        // new reference
-        pyobj_handle type_object{
-            PyObject_GetAttrString(module.get(), py_type<T>::type_name)};
-
+        auto type_object = get_python_type_for<T>();
         if (!type_object)
         {
             return nullptr;
         }
 
-        // new reference
-        pyobj_handle obj{PyObject_CallOneArg(type_object.get(), value)};
-
+        pyobj_handle obj{
+            PyObject_CallOneArg(reinterpret_cast<PyObject*>(type_object), value)};
         if (!obj)
         {
             return nullptr;
