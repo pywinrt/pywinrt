@@ -170,27 +170,15 @@ namespace py::cpp::_winrt
         return 0;
     }
 
-    static PyObject* MappingIter_iternext(PyObject* self) noexcept
+    static PyObject* MappingIter_iternext(MappingIter_object* self) noexcept
     {
-        // new reference
-        py::pyobj_handle base_iter{PyObject_GetAttrString(self, "_iter")};
-
-        if (!base_iter)
-        {
-            return nullptr;
-        }
-
-        // new reference
-        py::pyobj_handle next{PyIter_Next(base_iter.get())};
-
+        py::pyobj_handle next{PyIter_Next(self->_iter)};
         if (!next)
         {
             return nullptr;
         }
 
-        // new reference
         py::pyobj_handle key{PyObject_GetAttrString(next.get(), "key")};
-
         if (!key)
         {
             return nullptr;
