@@ -130,6 +130,7 @@ namespace py::cpp::_winrt
     {
         PyObject_HEAD;
         PyObject* _iter;
+        PyObject* _key;
     };
 
     static PyMemberDef MappingIter_members[]
@@ -138,6 +139,7 @@ namespace py::cpp::_winrt
             offsetof(MappingIter_object, _iter),
             0,
             PyDoc_STR("base KeyValuePair iterator")},
+           {"_key", T_OBJECT, offsetof(MappingIter_object, _key), 0, nullptr},
            {}};
 
     static int MappingIter_init(PyObject* self, PyObject* args, PyObject* kwds) noexcept
@@ -167,18 +169,41 @@ namespace py::cpp::_winrt
             return -1;
         }
 
+        py::pyobj_handle key{PyUnicode_FromString("key")};
+        if (!key)
+        {
+            return -1;
+        }
+
+        if (PyObject_SetAttrString(self, "_key", key.get()) == -1)
+        {
+            return -1;
+        }
+
         return 0;
     }
 
     static PyObject* MappingIter_iternext(MappingIter_object* self) noexcept
     {
+        if (!self->_iter)
+        {
+            PyErr_SetString(PyExc_RuntimeError, "_iter was deleted");
+            return nullptr;
+        }
+
         py::pyobj_handle next{PyIter_Next(self->_iter)};
         if (!next)
         {
             return nullptr;
         }
 
-        py::pyobj_handle key{PyObject_GetAttrString(next.get(), "key")};
+        if (!self->_key)
+        {
+            PyErr_SetString(PyExc_RuntimeError, "_key was deleted");
+            return nullptr;
+        }
+
+        py::pyobj_handle key{PyObject_GetAttr(next.get(), self->_key)};
         if (!key)
         {
             return nullptr;
