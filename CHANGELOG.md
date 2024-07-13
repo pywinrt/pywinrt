@@ -14,10 +14,6 @@
 ### Fixed
 - Fixed spelling of `initialize` in `__all__` in Windows App bootstrap package.
 
-### Fixed
-- Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
-  package missing `Microsoft.WindowsAppRuntime.Bootstrap.dll`.
-
 ## [v2.1.0] - 2024-06-23
 
 ### Added
@@ -46,6 +42,18 @@
 - Fixed handling of bool, char, string and IReference types in projected structs.
 
 [#25]: https://github.com/pywinrt/pywinrt/issues/25
+
+### Post-release
+
+#### v2.1.0-post.1
+
+Released for `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
+package only.
+
+##### Fixed
+- Fixed `winrt.Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap`
+  package missing `Microsoft.WindowsAppRuntime.Bootstrap.dll`.
+
 
 ## [v2.0.1] - 2024-04-28
 
