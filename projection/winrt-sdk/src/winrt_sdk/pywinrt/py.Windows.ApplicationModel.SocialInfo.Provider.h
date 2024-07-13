@@ -44,6 +44,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialDashboardItemUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialDashboardItemUpdater";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
         static constexpr const char* type_name = "SocialDashboardItemUpdater";
     };
@@ -51,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialFeedUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialFeedUpdater";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
         static constexpr const char* type_name = "SocialFeedUpdater";
     };
@@ -58,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::Provider::SocialInfoProviderManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.provider.SocialInfoProviderManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo.provider";
         static constexpr const char* type_name = "SocialInfoProviderManager";
     };

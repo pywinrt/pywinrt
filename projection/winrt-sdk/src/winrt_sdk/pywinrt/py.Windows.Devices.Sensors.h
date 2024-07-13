@@ -142,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AccelerometerReadingType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AccelerometerReadingType";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AccelerometerReadingType";
     };
@@ -149,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingConfidence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensorReadingConfidence";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensorReadingConfidence";
     };
@@ -156,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivityType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivityType";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivityType";
     };
@@ -163,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanEngagement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanEngagement";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanEngagement";
     };
@@ -170,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresence";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresence";
     };
@@ -177,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::MagnetometerAccuracy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.MagnetometerAccuracy";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "MagnetometerAccuracy";
     };
@@ -184,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::PedometerStepKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.PedometerStepKind";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "PedometerStepKind";
     };
@@ -191,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorOptimizationGoal";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorOptimizationGoal";
     };
@@ -198,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorReadingType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorReadingType";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorReadingType";
     };
@@ -205,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorType";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorType";
     };
@@ -212,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SimpleOrientation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SimpleOrientation";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SimpleOrientation";
     };
@@ -219,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Accelerometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Accelerometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Accelerometer";
     };
@@ -226,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AccelerometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AccelerometerDataThreshold";
     };
@@ -233,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AccelerometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AccelerometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AccelerometerReading";
     };
@@ -240,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AccelerometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AccelerometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AccelerometerReadingChangedEventArgs";
     };
@@ -247,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AccelerometerShakenEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AccelerometerShakenEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AccelerometerShakenEventArgs";
     };
@@ -254,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensor";
     };
@@ -261,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensorReading";
     };
@@ -268,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensorReadingChangeReport";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensorReadingChangeReport";
     };
@@ -275,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensorReadingChangedEventArgs";
     };
@@ -282,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ActivitySensorTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ActivitySensorTriggerDetails";
     };
@@ -289,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AdaptiveDimmingOptions";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AdaptiveDimmingOptions";
     };
@@ -296,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Altimeter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Altimeter";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Altimeter";
     };
@@ -303,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AltimeterReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AltimeterReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AltimeterReading";
     };
@@ -310,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.AltimeterReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "AltimeterReadingChangedEventArgs";
     };
@@ -317,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Barometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Barometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Barometer";
     };
@@ -324,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::BarometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.BarometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "BarometerDataThreshold";
     };
@@ -331,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::BarometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.BarometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "BarometerReading";
     };
@@ -338,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::BarometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.BarometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "BarometerReadingChangedEventArgs";
     };
@@ -345,6 +374,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Compass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Compass";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Compass";
     };
@@ -352,6 +382,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::CompassDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.CompassDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "CompassDataThreshold";
     };
@@ -359,6 +390,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::CompassReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.CompassReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "CompassReading";
     };
@@ -366,6 +398,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.CompassReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "CompassReadingChangedEventArgs";
     };
@@ -373,6 +406,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Gyrometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Gyrometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Gyrometer";
     };
@@ -380,6 +414,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.GyrometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "GyrometerDataThreshold";
     };
@@ -387,6 +422,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::GyrometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.GyrometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "GyrometerReading";
     };
@@ -394,6 +430,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.GyrometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "GyrometerReadingChangedEventArgs";
     };
@@ -401,6 +438,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HingeAngleReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HingeAngleReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HingeAngleReading";
     };
@@ -408,6 +446,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HingeAngleSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HingeAngleSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HingeAngleSensor";
     };
@@ -415,6 +454,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HingeAngleSensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HingeAngleSensorReadingChangedEventArgs";
     };
@@ -422,6 +462,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceFeatures>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceFeatures";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceFeatures";
     };
@@ -429,6 +470,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceSensor";
     };
@@ -436,6 +478,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceSensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceSensorReading";
     };
@@ -443,6 +486,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceSensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceSensorReadingChangedEventArgs";
     };
@@ -450,6 +494,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceSensorReadingUpdate";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceSensorReadingUpdate";
     };
@@ -457,6 +502,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::HumanPresenceSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HumanPresenceSettings";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "HumanPresenceSettings";
     };
@@ -464,6 +510,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Inclinometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Inclinometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Inclinometer";
     };
@@ -471,6 +518,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::InclinometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.InclinometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "InclinometerDataThreshold";
     };
@@ -478,6 +526,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::InclinometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.InclinometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "InclinometerReading";
     };
@@ -485,6 +534,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::InclinometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.InclinometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "InclinometerReadingChangedEventArgs";
     };
@@ -492,6 +542,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::LightSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LightSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "LightSensor";
     };
@@ -499,6 +550,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::LightSensorDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LightSensorDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "LightSensorDataThreshold";
     };
@@ -506,6 +558,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::LightSensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LightSensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "LightSensorReading";
     };
@@ -513,6 +566,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LightSensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "LightSensorReadingChangedEventArgs";
     };
@@ -520,6 +574,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.LockOnLeaveOptions";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "LockOnLeaveOptions";
     };
@@ -527,6 +582,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Magnetometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Magnetometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Magnetometer";
     };
@@ -534,6 +590,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.MagnetometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "MagnetometerDataThreshold";
     };
@@ -541,6 +598,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::MagnetometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.MagnetometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "MagnetometerReading";
     };
@@ -548,6 +606,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::MagnetometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.MagnetometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "MagnetometerReadingChangedEventArgs";
     };
@@ -555,6 +614,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::OrientationSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OrientationSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "OrientationSensor";
     };
@@ -562,6 +622,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::OrientationSensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OrientationSensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "OrientationSensorReading";
     };
@@ -569,6 +630,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::OrientationSensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.OrientationSensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "OrientationSensorReadingChangedEventArgs";
     };
@@ -576,6 +638,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Pedometer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Pedometer";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "Pedometer";
     };
@@ -583,6 +646,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::PedometerDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.PedometerDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "PedometerDataThreshold";
     };
@@ -590,6 +654,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::PedometerReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.PedometerReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "PedometerReading";
     };
@@ -597,6 +662,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::PedometerReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.PedometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "PedometerReadingChangedEventArgs";
     };
@@ -604,6 +670,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ProximitySensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ProximitySensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ProximitySensor";
     };
@@ -611,6 +678,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ProximitySensorDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ProximitySensorDataThreshold";
     };
@@ -618,6 +686,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorDisplayOnOffController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ProximitySensorDisplayOnOffController";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ProximitySensorDisplayOnOffController";
     };
@@ -625,6 +694,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ProximitySensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ProximitySensorReading";
     };
@@ -632,6 +702,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ProximitySensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ProximitySensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ProximitySensorReadingChangedEventArgs";
     };
@@ -639,6 +710,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorDataThresholdTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorDataThresholdTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorDataThresholdTriggerDetails";
     };
@@ -646,6 +718,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorQuaternion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorQuaternion";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorQuaternion";
     };
@@ -653,6 +726,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SensorRotationMatrix>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SensorRotationMatrix";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SensorRotationMatrix";
     };
@@ -660,6 +734,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SimpleOrientationSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SimpleOrientationSensor";
     };
@@ -667,6 +742,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.SimpleOrientationSensorOrientationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "SimpleOrientationSensorOrientationChangedEventArgs";
     };
@@ -674,6 +750,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.WakeOnApproachOptions";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "WakeOnApproachOptions";
     };
@@ -681,6 +758,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtension>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.IHumanPresenceSensorExtension";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "IHumanPresenceSensorExtension";
     };
@@ -688,6 +766,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::ISensorDataThreshold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.ISensorDataThreshold";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "ISensorDataThreshold";
     };

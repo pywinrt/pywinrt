@@ -402,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastCameraCaptureState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastCameraCaptureState";
     };
@@ -409,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastCameraOverlayLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastCameraOverlayLocation";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastCameraOverlayLocation";
     };
@@ -416,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastCameraOverlaySize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastCameraOverlaySize";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastCameraOverlaySize";
     };
@@ -423,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastCaptureTargetType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastCaptureTargetType";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastCaptureTargetType";
     };
@@ -430,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastExitBroadcastModeReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastExitBroadcastModeReason";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastExitBroadcastModeReason";
     };
@@ -437,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastMicrophoneCaptureState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastMicrophoneCaptureState";
     };
@@ -444,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPlugInState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPlugInState";
     };
@@ -451,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreviewState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreviewState";
     };
@@ -458,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastSignInResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastSignInResult";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastSignInResult";
     };
@@ -465,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastSignInState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastSignInState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastSignInState";
     };
@@ -472,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamState";
     };
@@ -479,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastTerminationReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastTerminationReason";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastTerminationReason";
     };
@@ -486,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastVideoEncodingBitrateMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastVideoEncodingBitrateMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastVideoEncodingBitrateMode";
     };
@@ -493,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastVideoEncodingResolutionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastVideoEncodingResolutionMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastVideoEncodingResolutionMode";
     };
@@ -500,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureHistoricalBufferLengthUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureHistoricalBufferLengthUnit";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureHistoricalBufferLengthUnit";
     };
@@ -507,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureMetadataPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureMetadataPriority";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureMetadataPriority";
     };
@@ -514,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureMicrophoneCaptureState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureMicrophoneCaptureState";
     };
@@ -521,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureRecordingState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureRecordingState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureRecordingState";
     };
@@ -528,6 +546,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureVideoEncodingBitrateMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureVideoEncodingBitrateMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureVideoEncodingBitrateMode";
     };
@@ -535,6 +554,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureVideoEncodingFrameRateMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureVideoEncodingFrameRateMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureVideoEncodingFrameRateMode";
     };
@@ -542,6 +562,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureVideoEncodingResolutionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureVideoEncodingResolutionMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureVideoEncodingResolutionMode";
     };
@@ -549,6 +570,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIMaxPhotoResolution>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIMaxPhotoResolution";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIMaxPhotoResolution";
     };
@@ -556,6 +578,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIMaxVideoResolution>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIMaxVideoResolution";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIMaxVideoResolution";
     };
@@ -563,6 +586,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIMode";
     };
@@ -570,6 +594,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIPhotoFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIPhotoFormat";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIPhotoFormat";
     };
@@ -577,6 +602,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIVideoFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIVideoFormat";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIVideoFormat";
     };
@@ -584,6 +610,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::ForegroundActivationArgument>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.ForegroundActivationArgument";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "ForegroundActivationArgument";
     };
@@ -591,6 +618,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarCommand";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarCommand";
     };
@@ -598,6 +626,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarCommandOrigin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarCommandOrigin";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarCommandOrigin";
     };
@@ -605,6 +634,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServicesDisplayMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServicesDisplayMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServicesDisplayMode";
     };
@@ -612,6 +642,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarTargetCapturePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarTargetCapturePolicy";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarTargetCapturePolicy";
     };
@@ -619,6 +650,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::KnownVideoProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.KnownVideoProfile";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "KnownVideoProfile";
     };
@@ -626,6 +658,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlReleaseMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlReleaseMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureDeviceExclusiveControlReleaseMode";
     };
@@ -633,6 +666,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureDeviceExclusiveControlStatus";
     };
@@ -640,6 +674,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureMemoryPreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureMemoryPreference";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureMemoryPreference";
     };
@@ -647,6 +682,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureSharingMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureSharingMode";
     };
@@ -654,6 +690,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureThermalStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureThermalStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureThermalStatus";
     };
@@ -661,6 +698,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCategory";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCategory";
     };
@@ -668,6 +706,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaStreamType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaStreamType";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaStreamType";
     };
@@ -675,6 +714,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::PhotoCaptureSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.PhotoCaptureSource";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "PhotoCaptureSource";
     };
@@ -682,6 +722,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::PowerlineFrequency>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.PowerlineFrequency";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "PowerlineFrequency";
     };
@@ -689,6 +730,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::StreamingCaptureMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.StreamingCaptureMode";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "StreamingCaptureMode";
     };
@@ -696,6 +738,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::VideoDeviceCharacteristic>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.VideoDeviceCharacteristic";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "VideoDeviceCharacteristic";
     };
@@ -703,6 +746,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::VideoRotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.VideoRotation";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "VideoRotation";
     };
@@ -710,6 +754,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AdvancedCapturedPhoto>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AdvancedCapturedPhoto";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AdvancedCapturedPhoto";
     };
@@ -717,6 +762,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AdvancedPhotoCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AdvancedPhotoCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AdvancedPhotoCapture";
     };
@@ -724,6 +770,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastBackgroundService";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastBackgroundService";
     };
@@ -731,6 +778,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceSignInInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastBackgroundServiceSignInInfo";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastBackgroundServiceSignInInfo";
     };
@@ -738,6 +786,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastBackgroundServiceStreamInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastBackgroundServiceStreamInfo";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastBackgroundServiceStreamInfo";
     };
@@ -745,6 +794,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastCameraCaptureStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastCameraCaptureStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastCameraCaptureStateChangedEventArgs";
     };
@@ -752,6 +802,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastGlobalSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastGlobalSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastGlobalSettings";
     };
@@ -759,6 +810,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastHeartbeatRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastHeartbeatRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastHeartbeatRequestedEventArgs";
     };
@@ -766,6 +818,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastManager";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastManager";
     };
@@ -773,6 +826,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastMicrophoneCaptureStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastMicrophoneCaptureStateChangedEventArgs";
     };
@@ -780,6 +834,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPlugIn>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPlugIn";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPlugIn";
     };
@@ -787,6 +842,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPlugInManager";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPlugInManager";
     };
@@ -794,6 +850,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPlugInStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPlugInStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPlugInStateChangedEventArgs";
     };
@@ -801,6 +858,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreview";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreview";
     };
@@ -808,6 +866,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreviewStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreviewStateChangedEventArgs";
     };
@@ -815,6 +874,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreviewStreamReader";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreviewStreamReader";
     };
@@ -822,6 +882,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreviewStreamVideoFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreviewStreamVideoFrame";
     };
@@ -829,6 +890,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastPreviewStreamVideoHeader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastPreviewStreamVideoHeader";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastPreviewStreamVideoHeader";
     };
@@ -836,6 +898,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastProviderSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastProviderSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastProviderSettings";
     };
@@ -843,6 +906,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastServices>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastServices";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastServices";
     };
@@ -850,6 +914,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastSignInStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastSignInStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastSignInStateChangedEventArgs";
     };
@@ -857,6 +922,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastState";
     };
@@ -864,6 +930,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamAudioFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamAudioFrame";
     };
@@ -871,6 +938,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamAudioHeader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamAudioHeader";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamAudioHeader";
     };
@@ -878,6 +946,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamReader";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamReader";
     };
@@ -885,6 +954,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamStateChangedEventArgs";
     };
@@ -892,6 +962,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamVideoFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamVideoFrame";
     };
@@ -899,6 +970,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastStreamVideoHeader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastStreamVideoHeader";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastStreamVideoHeader";
     };
@@ -906,6 +978,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastTriggerDetails";
     };
@@ -913,6 +986,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppBroadcastViewerCountChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppBroadcastViewerCountChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppBroadcastViewerCountChangedEventArgs";
     };
@@ -920,6 +994,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCapture";
     };
@@ -927,6 +1002,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureAlternateShortcutKeys>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureAlternateShortcutKeys";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureAlternateShortcutKeys";
     };
@@ -934,6 +1010,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureDurationGeneratedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureDurationGeneratedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureDurationGeneratedEventArgs";
     };
@@ -941,6 +1018,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureFileGeneratedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureFileGeneratedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureFileGeneratedEventArgs";
     };
@@ -948,6 +1026,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureManager";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureManager";
     };
@@ -955,6 +1034,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureMetadataWriter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureMetadataWriter";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureMetadataWriter";
     };
@@ -962,6 +1042,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureMicrophoneCaptureStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureMicrophoneCaptureStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureMicrophoneCaptureStateChangedEventArgs";
     };
@@ -969,6 +1050,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureRecordOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureRecordOperation";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureRecordOperation";
     };
@@ -976,6 +1058,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureRecordingStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureRecordingStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureRecordingStateChangedEventArgs";
     };
@@ -983,6 +1066,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureServices>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureServices";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureServices";
     };
@@ -990,6 +1074,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureSettings";
     };
@@ -997,6 +1082,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::AppCaptureState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.AppCaptureState";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "AppCaptureState";
     };
@@ -1004,6 +1090,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUI";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUI";
     };
@@ -1011,6 +1098,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIPhotoCaptureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIPhotoCaptureSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIPhotoCaptureSettings";
     };
@@ -1018,6 +1106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraCaptureUIVideoCaptureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraCaptureUIVideoCaptureSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraCaptureUIVideoCaptureSettings";
     };
@@ -1025,6 +1114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CameraOptionsUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CameraOptionsUI";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CameraOptionsUI";
     };
@@ -1032,6 +1122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CapturedFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CapturedFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CapturedFrame";
     };
@@ -1039,6 +1130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CapturedFrameControlValues>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CapturedFrameControlValues";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CapturedFrameControlValues";
     };
@@ -1046,6 +1138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::CapturedPhoto>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.CapturedPhoto";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "CapturedPhoto";
     };
@@ -1053,6 +1146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServices>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServices";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServices";
     };
@@ -1060,6 +1154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServicesCommandEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServicesCommandEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServicesCommandEventArgs";
     };
@@ -1067,6 +1162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServicesManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServicesManager";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServicesManager";
     };
@@ -1074,6 +1170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServicesManagerGameBarServicesCreatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServicesManagerGameBarServicesCreatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServicesManagerGameBarServicesCreatedEventArgs";
     };
@@ -1081,6 +1178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::GameBarServicesTargetInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.GameBarServicesTargetInfo";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "GameBarServicesTargetInfo";
     };
@@ -1088,6 +1186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::LowLagMediaRecording>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.LowLagMediaRecording";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "LowLagMediaRecording";
     };
@@ -1095,6 +1194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::LowLagPhotoCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.LowLagPhotoCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "LowLagPhotoCapture";
     };
@@ -1102,6 +1202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::LowLagPhotoSequenceCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.LowLagPhotoSequenceCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "LowLagPhotoSequenceCapture";
     };
@@ -1109,6 +1210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCapture";
     };
@@ -1116,6 +1218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureDeviceExclusiveControlStatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureDeviceExclusiveControlStatusChangedEventArgs";
     };
@@ -1123,6 +1226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureFailedEventArgs";
     };
@@ -1130,6 +1234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureFocusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureFocusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureFocusChangedEventArgs";
     };
@@ -1137,6 +1242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureInitializationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureInitializationSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureInitializationSettings";
     };
@@ -1144,6 +1250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCapturePauseResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCapturePauseResult";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCapturePauseResult";
     };
@@ -1151,6 +1258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureRelativePanelWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureRelativePanelWatcher";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureRelativePanelWatcher";
     };
@@ -1158,6 +1266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureSettings";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureSettings";
     };
@@ -1165,6 +1274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureStopResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureStopResult";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureStopResult";
     };
@@ -1172,6 +1282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureVideoProfile";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureVideoProfile";
     };
@@ -1179,6 +1290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::MediaCaptureVideoProfileMediaDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.MediaCaptureVideoProfileMediaDescription";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "MediaCaptureVideoProfileMediaDescription";
     };
@@ -1186,6 +1298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::OptionalReferencePhotoCapturedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.OptionalReferencePhotoCapturedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "OptionalReferencePhotoCapturedEventArgs";
     };
@@ -1193,6 +1306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::PhotoCapturedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.PhotoCapturedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "PhotoCapturedEventArgs";
     };
@@ -1200,6 +1314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::PhotoConfirmationCapturedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.PhotoConfirmationCapturedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "PhotoConfirmationCapturedEventArgs";
     };
@@ -1207,6 +1322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::ScreenCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.ScreenCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "ScreenCapture";
     };
@@ -1214,6 +1330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::SourceSuspensionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.SourceSuspensionChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "SourceSuspensionChangedEventArgs";
     };
@@ -1221,6 +1338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::VideoStreamConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.VideoStreamConfiguration";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "VideoStreamConfiguration";
     };
@@ -1228,6 +1346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::WhiteBalanceGain>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.WhiteBalanceGain";
         static constexpr const char* module_name = "winrt.windows.media.capture";
         static constexpr const char* type_name = "WhiteBalanceGain";
     };

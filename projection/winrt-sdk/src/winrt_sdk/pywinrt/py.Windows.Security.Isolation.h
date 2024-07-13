@@ -190,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentActivator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentActivator";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentActivator";
     };
@@ -197,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAllowedClipboardFormats>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentAllowedClipboardFormats";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentAllowedClipboardFormats";
     };
@@ -204,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentAvailablePrinters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentAvailablePrinters";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentAvailablePrinters";
     };
@@ -211,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentClipboardCopyPasteDirections>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentClipboardCopyPasteDirections";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentClipboardCopyPasteDirections";
     };
@@ -218,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreateStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateStatus";
     };
@@ -225,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreationPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreationPriority";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreationPriority";
     };
@@ -232,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHostError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentHostError";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentHostError";
     };
@@ -239,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentLaunchFileStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentLaunchFileStatus";
     };
@@ -246,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentOwnerRegistrationStatus";
     };
@@ -253,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentPostMessageStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentPostMessageStatus";
     };
@@ -260,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcessState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentProcessState";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentProcessState";
     };
@@ -267,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProgressState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentProgressState";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentProgressState";
     };
@@ -274,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFileStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFileStatus";
     };
@@ -281,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFolderStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFolderStatus";
     };
@@ -288,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentSignInProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentSignInProgress";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentSignInProgress";
     };
@@ -295,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentStartProcessStatus";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentStartProcessStatus";
     };
@@ -302,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironment";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironment";
     };
@@ -309,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreateResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateResult";
     };
@@ -316,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentFile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentFile";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentFile";
     };
@@ -323,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentHost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentHost";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentHost";
     };
@@ -330,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentLaunchFileResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentLaunchFileResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentLaunchFileResult";
     };
@@ -337,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentOptions";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentOptions";
     };
@@ -344,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistration";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentOwnerRegistration";
     };
@@ -351,6 +374,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationData";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentOwnerRegistrationData";
     };
@@ -358,6 +382,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentOwnerRegistrationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentOwnerRegistrationResult";
     };
@@ -365,6 +390,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentPostMessageResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentPostMessageResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentPostMessageResult";
     };
@@ -372,6 +398,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentProcess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentProcess";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentProcess";
     };
@@ -379,6 +406,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileRequestOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFileRequestOptions";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFileRequestOptions";
     };
@@ -386,6 +414,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFileResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFileResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFileResult";
     };
@@ -393,6 +422,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderRequestOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFolderRequestOptions";
     };
@@ -400,6 +430,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentShareFolderResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentShareFolderResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentShareFolderResult";
     };
@@ -407,6 +438,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentStartProcessResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentStartProcessResult";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentStartProcessResult";
     };
@@ -414,6 +446,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentTelemetryParameters";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentTelemetryParameters";
     };
@@ -421,6 +454,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentUserInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentUserInfo";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentUserInfo";
     };
@@ -428,6 +462,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsHostMessenger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsHostMessenger";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsHostMessenger";
     };
@@ -435,6 +470,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentCreateProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.isolation.IsolatedWindowsEnvironmentCreateProgress";
         static constexpr const char* module_name = "winrt.windows.security.isolation";
         static constexpr const char* type_name = "IsolatedWindowsEnvironmentCreateProgress";
     };

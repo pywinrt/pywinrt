@@ -153,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayBitsPerChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayBitsPerChannel";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayBitsPerChannel";
     };
@@ -160,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayDeviceCapability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayDeviceCapability";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayDeviceCapability";
     };
@@ -167,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerOptions";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerOptions";
     };
@@ -174,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerResult";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerResult";
     };
@@ -181,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayModeQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayModeQueryOptions";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayModeQueryOptions";
     };
@@ -188,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPathScaling>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPathScaling";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPathScaling";
     };
@@ -195,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPathStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPathStatus";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPathStatus";
     };
@@ -202,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPresentStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPresentStatus";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPresentStatus";
     };
@@ -209,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayRotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayRotation";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayRotation";
     };
@@ -216,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayScanoutOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayScanoutOptions";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayScanoutOptions";
     };
@@ -223,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplaySourceStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplaySourceStatus";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplaySourceStatus";
     };
@@ -230,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayStateApplyOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayStateApplyOptions";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayStateApplyOptions";
     };
@@ -237,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayStateFunctionalizeOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayStateFunctionalizeOptions";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayStateFunctionalizeOptions";
     };
@@ -244,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayStateOperationStatus";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayStateOperationStatus";
     };
@@ -251,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTargetPersistence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTargetPersistence";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTargetPersistence";
     };
@@ -258,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTaskSignalKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTaskSignalKind";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTaskSignalKind";
     };
@@ -265,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormatColorSpace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayWireFormatColorSpace";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayWireFormatColorSpace";
     };
@@ -272,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormatEotf>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayWireFormatEotf";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayWireFormatEotf";
     };
@@ -279,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormatHdrMetadata>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayWireFormatHdrMetadata";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayWireFormatHdrMetadata";
     };
@@ -286,6 +305,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormatPixelEncoding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayWireFormatPixelEncoding";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayWireFormatPixelEncoding";
     };
@@ -293,6 +313,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayAdapter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayAdapter";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayAdapter";
     };
@@ -300,6 +321,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayDevice";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayDevice";
     };
@@ -307,6 +329,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayFence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayFence";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayFence";
     };
@@ -314,6 +337,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManager";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManager";
     };
@@ -321,6 +345,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerChangedEventArgs";
     };
@@ -328,6 +353,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerDisabledEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerDisabledEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerDisabledEventArgs";
     };
@@ -335,6 +361,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerEnabledEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerEnabledEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerEnabledEventArgs";
     };
@@ -342,6 +369,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerPathsFailedOrInvalidatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerPathsFailedOrInvalidatedEventArgs";
     };
@@ -349,6 +377,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayManagerResultWithState";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayManagerResultWithState";
     };
@@ -356,6 +385,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayModeInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayModeInfo";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayModeInfo";
     };
@@ -363,6 +393,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPath>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPath";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPath";
     };
@@ -370,6 +401,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPrimaryDescription";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPrimaryDescription";
     };
@@ -377,6 +409,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayScanout>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayScanout";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayScanout";
     };
@@ -384,6 +417,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplaySource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplaySource";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplaySource";
     };
@@ -391,6 +425,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayState";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayState";
     };
@@ -398,6 +433,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayStateOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayStateOperationResult";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayStateOperationResult";
     };
@@ -405,6 +441,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplaySurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplaySurface";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplaySurface";
     };
@@ -412,6 +449,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTarget";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTarget";
     };
@@ -419,6 +457,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTask";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTask";
     };
@@ -426,6 +465,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTaskPool>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTaskPool";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTaskPool";
     };
@@ -433,6 +473,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayTaskResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayTaskResult";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayTaskResult";
     };
@@ -440,6 +481,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayView";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayView";
     };
@@ -447,6 +489,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayWireFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayWireFormat";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayWireFormat";
     };
@@ -454,6 +497,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::Core::DisplayPresentationRate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayPresentationRate";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayPresentationRate";
     };

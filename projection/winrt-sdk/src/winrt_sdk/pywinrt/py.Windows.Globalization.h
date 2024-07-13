@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DayOfWeek>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.DayOfWeek";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "DayOfWeek";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::LanguageLayoutDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.LanguageLayoutDirection";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "LanguageLayoutDirection";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::ApplicationLanguages>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.ApplicationLanguages";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "ApplicationLanguages";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Calendar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.Calendar";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "Calendar";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::CalendarIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.CalendarIdentifiers";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "CalendarIdentifiers";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::ClockIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.ClockIdentifiers";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "ClockIdentifiers";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::CurrencyAmount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.CurrencyAmount";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "CurrencyAmount";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::CurrencyIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.CurrencyIdentifiers";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "CurrencyIdentifiers";
     };
@@ -114,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::GeographicRegion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.GeographicRegion";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "GeographicRegion";
     };
@@ -121,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::JapanesePhoneme>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.JapanesePhoneme";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "JapanesePhoneme";
     };
@@ -128,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::JapanesePhoneticAnalyzer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.JapanesePhoneticAnalyzer";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "JapanesePhoneticAnalyzer";
     };
@@ -135,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Language>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.Language";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "Language";
     };
@@ -142,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumeralSystemIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.NumeralSystemIdentifiers";
         static constexpr const char* module_name = "winrt.windows.globalization";
         static constexpr const char* type_name = "NumeralSystemIdentifiers";
     };

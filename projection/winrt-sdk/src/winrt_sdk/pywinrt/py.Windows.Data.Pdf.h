@@ -53,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfPageRotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageRotation";
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfPageRotation";
     };
@@ -60,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfDocument>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfDocument";
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfDocument";
     };
@@ -67,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfPage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPage";
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfPage";
     };
@@ -74,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfPageDimensions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageDimensions";
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfPageDimensions";
     };
@@ -81,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Pdf::PdfPageRenderOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.pdf.PdfPageRenderOptions";
         static constexpr const char* module_name = "winrt.windows.data.pdf";
         static constexpr const char* type_name = "PdfPageRenderOptions";
     };

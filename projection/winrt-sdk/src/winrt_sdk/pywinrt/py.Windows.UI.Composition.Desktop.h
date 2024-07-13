@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Desktop::DesktopWindowTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.desktop.DesktopWindowTarget";
         static constexpr const char* module_name = "winrt.windows.ui.composition.desktop";
         static constexpr const char* type_name = "DesktopWindowTarget";
     };

@@ -50,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSaveScreenshotOption";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingSaveScreenshotOption";
     };
@@ -57,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingManager";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingManager";
     };
@@ -64,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingResult";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingResult";
     };
@@ -71,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSaveScreenshotResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSaveScreenshotResult";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingSaveScreenshotResult";
     };
@@ -78,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingSavedScreenshotInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingSavedScreenshotInfo";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingSavedScreenshotInfo";
     };
@@ -85,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingStatus";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingStatus";
     };
@@ -92,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppRecording::AppRecordingStatusDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.apprecording.AppRecordingStatusDetails";
         static constexpr const char* module_name = "winrt.windows.media.apprecording";
         static constexpr const char* type_name = "AppRecordingStatusDetails";
     };

@@ -68,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.DesktopAcrylicKind";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "DesktopAcrylicKind";
     };
@@ -75,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.MicaKind";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "MicaKind";
     };
@@ -82,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.SystemBackdropState";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "SystemBackdropState";
     };
@@ -89,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropTheme>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.SystemBackdropTheme";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "SystemBackdropTheme";
     };
@@ -96,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.DesktopAcrylicController";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "DesktopAcrylicController";
     };
@@ -103,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaController>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.MicaController";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "MicaController";
     };
@@ -110,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::SystemBackdropConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.SystemBackdropConfiguration";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "SystemBackdropConfiguration";
     };
@@ -117,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.ISystemBackdropController";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "ISystemBackdropController";
     };
@@ -124,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.systembackdrops.ISystemBackdropControllerWithTargets";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.systembackdrops";
         static constexpr const char* type_name = "ISystemBackdropControllerWithTargets";
     };

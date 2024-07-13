@@ -101,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourceAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionFrameSourceAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionFrameSourceAccessStatus";
     };
@@ -108,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeStatus";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionFrameSourcePropertyChangeStatus";
     };
@@ -115,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownCameraIntrinsicsProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownCameraIntrinsicsProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownCameraIntrinsicsProperties";
     };
@@ -122,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionColorFrameSourceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionColorFrameSourceProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionColorFrameSourceProperties";
     };
@@ -129,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionDepthFrameSourceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionDepthFrameSourceProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionDepthFrameSourceProperties";
     };
@@ -136,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionFrameSourceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionFrameSourceProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionFrameSourceProperties";
     };
@@ -143,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionInfraredFrameSourceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionInfraredFrameSourceProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionInfraredFrameSourceProperties";
     };
@@ -150,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoFrameSourceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionVideoFrameSourceProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionVideoFrameSourceProperties";
     };
@@ -157,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::KnownPerceptionVideoProfileProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.KnownPerceptionVideoProfileProperties";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "KnownPerceptionVideoProfileProperties";
     };
@@ -164,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrame";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrame";
     };
@@ -171,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameArrivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameArrivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameArrivedEventArgs";
     };
@@ -178,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameReader";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameReader";
     };
@@ -185,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameSource";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameSource";
     };
@@ -192,6 +205,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameSourceAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameSourceAddedEventArgs";
     };
@@ -199,6 +213,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameSourceRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameSourceRemovedEventArgs";
     };
@@ -206,6 +221,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionColorFrameSourceWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionColorFrameSourceWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionColorFrameSourceWatcher";
     };
@@ -213,6 +229,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionControlSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionControlSession";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionControlSession";
     };
@@ -220,6 +237,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCameraIntrinsics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthCorrelatedCameraIntrinsics";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthCorrelatedCameraIntrinsics";
     };
@@ -227,6 +245,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthCorrelatedCoordinateMapper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthCorrelatedCoordinateMapper";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthCorrelatedCoordinateMapper";
     };
@@ -234,6 +253,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrame";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrame";
     };
@@ -241,6 +261,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameArrivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameArrivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameArrivedEventArgs";
     };
@@ -248,6 +269,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameReader";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameReader";
     };
@@ -255,6 +277,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameSource";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameSource";
     };
@@ -262,6 +285,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameSourceAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameSourceAddedEventArgs";
     };
@@ -269,6 +293,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameSourceRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameSourceRemovedEventArgs";
     };
@@ -276,6 +301,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionDepthFrameSourceWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionDepthFrameSourceWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionDepthFrameSourceWatcher";
     };
@@ -283,6 +309,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertiesChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionFrameSourcePropertiesChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionFrameSourcePropertiesChangedEventArgs";
     };
@@ -290,6 +317,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionFrameSourcePropertyChangeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionFrameSourcePropertyChangeResult";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionFrameSourcePropertyChangeResult";
     };
@@ -297,6 +325,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrame";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrame";
     };
@@ -304,6 +333,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameArrivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameArrivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameArrivedEventArgs";
     };
@@ -311,6 +341,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameReader";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameReader";
     };
@@ -318,6 +349,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameSource";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameSource";
     };
@@ -325,6 +357,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameSourceAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameSourceAddedEventArgs";
     };
@@ -332,6 +365,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameSourceRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameSourceRemovedEventArgs";
     };
@@ -339,6 +373,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionInfraredFrameSourceWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionInfraredFrameSourceWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionInfraredFrameSourceWatcher";
     };
@@ -346,6 +381,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::PerceptionVideoProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.PerceptionVideoProfile";
         static constexpr const char* module_name = "winrt.windows.devices.perception";
         static constexpr const char* type_name = "PerceptionVideoProfile";
     };

@@ -223,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerDiscoveryTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerDiscoveryTypes";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerDiscoveryTypes";
     };
@@ -230,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerRole>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerRole";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerRole";
     };
@@ -237,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerWatcherStatus";
     };
@@ -244,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.TriggeredConnectState";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "TriggeredConnectState";
     };
@@ -251,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::ConnectionRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ConnectionRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "ConnectionRequestedEventArgs";
     };
@@ -258,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerFinder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerFinder";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerFinder";
     };
@@ -265,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerInformation";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerInformation";
     };
@@ -272,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::PeerWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.PeerWatcher";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "PeerWatcher";
     };
@@ -279,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::ProximityDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ProximityDevice";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "ProximityDevice";
     };
@@ -286,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::ProximityMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.ProximityMessage";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "ProximityMessage";
     };
@@ -293,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.proximity.TriggeredConnectionStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.proximity";
         static constexpr const char* type_name = "TriggeredConnectionStateChangedEventArgs";
     };

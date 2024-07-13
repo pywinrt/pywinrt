@@ -27,6 +27,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Html::HtmlUtilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.html.HtmlUtilities";
         static constexpr const char* module_name = "winrt.windows.data.html";
         static constexpr const char* type_name = "HtmlUtilities";
     };

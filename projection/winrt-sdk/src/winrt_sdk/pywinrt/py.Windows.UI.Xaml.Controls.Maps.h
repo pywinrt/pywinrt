@@ -231,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapAnimationKind";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapAnimationKind";
     };
@@ -238,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCameraChangeReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapCameraChangeReason";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapCameraChangeReason";
     };
@@ -245,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapColorScheme>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapColorScheme";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapColorScheme";
     };
@@ -252,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementCollisionBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementCollisionBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementCollisionBehavior";
     };
@@ -259,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInteractionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapInteractionMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapInteractionMode";
     };
@@ -266,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLoadingStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapLoadingStatus";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapLoadingStatus";
     };
@@ -273,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3DShadingOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapModel3DShadingOption";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapModel3DShadingOption";
     };
@@ -280,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPanInteractionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapPanInteractionMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapPanInteractionMode";
     };
@@ -287,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapProjection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapProjection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapProjection";
     };
@@ -294,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapStyle";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapStyle";
     };
@@ -301,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileAnimationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileAnimationState";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileAnimationState";
     };
@@ -308,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileLayer";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileLayer";
     };
@@ -315,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapVisibleRegionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapVisibleRegionKind";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapVisibleRegionKind";
     };
@@ -322,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapWatermarkMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapWatermarkMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapWatermarkMode";
     };
@@ -329,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.CustomMapTileDataSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "CustomMapTileDataSource";
     };
@@ -336,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.HttpMapTileDataSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "HttpMapTileDataSource";
     };
@@ -343,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.LocalMapTileDataSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "LocalMapTileDataSource";
     };
@@ -350,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapActualCameraChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapActualCameraChangedEventArgs";
     };
@@ -357,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapActualCameraChangingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapActualCameraChangingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapActualCameraChangingEventArgs";
     };
@@ -364,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapBillboard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapBillboard";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapBillboard";
     };
@@ -371,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCamera>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapCamera";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapCamera";
     };
@@ -378,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapContextRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapContextRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapContextRequestedEventArgs";
     };
@@ -385,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControl";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControl";
     };
@@ -392,6 +415,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkClickEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlBusinessLandmarkClickEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlBusinessLandmarkClickEventArgs";
     };
@@ -399,6 +423,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerEnteredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlBusinessLandmarkPointerEnteredEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlBusinessLandmarkPointerEnteredEventArgs";
     };
@@ -406,6 +431,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkPointerExitedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlBusinessLandmarkPointerExitedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlBusinessLandmarkPointerExitedEventArgs";
     };
@@ -413,6 +439,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlBusinessLandmarkRightTappedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlBusinessLandmarkRightTappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlBusinessLandmarkRightTappedEventArgs";
     };
@@ -420,6 +447,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlDataHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlDataHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlDataHelper";
     };
@@ -427,6 +455,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureClickEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlTransitFeatureClickEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlTransitFeatureClickEventArgs";
     };
@@ -434,6 +463,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerEnteredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlTransitFeaturePointerEnteredEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlTransitFeaturePointerEnteredEventArgs";
     };
@@ -441,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeaturePointerExitedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlTransitFeaturePointerExitedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlTransitFeaturePointerExitedEventArgs";
     };
@@ -448,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapControlTransitFeatureRightTappedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapControlTransitFeatureRightTappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapControlTransitFeatureRightTappedEventArgs";
     };
@@ -455,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperience>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapCustomExperience";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapCustomExperience";
     };
@@ -462,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapCustomExperienceChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapCustomExperienceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapCustomExperienceChangedEventArgs";
     };
@@ -469,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElement";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElement";
     };
@@ -476,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElement3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElement3D";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElement3D";
     };
@@ -483,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementClickEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementClickEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementClickEventArgs";
     };
@@ -490,6 +527,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerEnteredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementPointerEnteredEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementPointerEnteredEventArgs";
     };
@@ -497,6 +535,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementPointerExitedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementPointerExitedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementPointerExitedEventArgs";
     };
@@ -504,6 +543,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementsLayer";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementsLayer";
     };
@@ -511,6 +551,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerClickEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementsLayerClickEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementsLayerClickEventArgs";
     };
@@ -518,6 +559,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerContextRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementsLayerContextRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementsLayerContextRequestedEventArgs";
     };
@@ -525,6 +567,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerEnteredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementsLayerPointerEnteredEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementsLayerPointerEnteredEventArgs";
     };
@@ -532,6 +575,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapElementsLayerPointerExitedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapElementsLayerPointerExitedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapElementsLayerPointerExitedEventArgs";
     };
@@ -539,6 +583,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapIcon>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapIcon";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapIcon";
     };
@@ -546,6 +591,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapInputEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapInputEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapInputEventArgs";
     };
@@ -553,6 +599,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapItemsControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapItemsControl";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapItemsControl";
     };
@@ -560,6 +607,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapLayer";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapLayer";
     };
@@ -567,6 +615,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapModel3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapModel3D";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapModel3D";
     };
@@ -574,6 +623,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolygon>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapPolygon";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapPolygon";
     };
@@ -581,6 +631,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapPolyline>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapPolyline";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapPolyline";
     };
@@ -588,6 +639,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRightTappedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapRightTappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapRightTappedEventArgs";
     };
@@ -595,6 +647,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapRouteView";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapRouteView";
     };
@@ -602,6 +655,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapScene>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapScene";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapScene";
     };
@@ -609,6 +663,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapStyleSheet";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapStyleSheet";
     };
@@ -616,6 +671,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntries>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapStyleSheetEntries";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapStyleSheetEntries";
     };
@@ -623,6 +679,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapStyleSheetEntryStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapStyleSheetEntryStates";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapStyleSheetEntryStates";
     };
@@ -630,6 +687,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTargetCameraChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTargetCameraChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTargetCameraChangedEventArgs";
     };
@@ -637,6 +695,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileBitmapRequest";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileBitmapRequest";
     };
@@ -644,6 +703,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileBitmapRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileBitmapRequestDeferral";
     };
@@ -651,6 +711,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileBitmapRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileBitmapRequestedEventArgs";
     };
@@ -658,6 +719,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileDataSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileDataSource";
     };
@@ -665,6 +727,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileSource";
     };
@@ -672,6 +735,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileUriRequest";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileUriRequest";
     };
@@ -679,6 +743,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileUriRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileUriRequestDeferral";
     };
@@ -686,6 +751,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapTileUriRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapTileUriRequestedEventArgs";
     };
@@ -693,6 +759,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsideExperience>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.StreetsideExperience";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "StreetsideExperience";
     };
@@ -700,6 +767,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.StreetsidePanorama";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "StreetsidePanorama";
     };
@@ -707,6 +775,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.maps.MapZoomLevelRange";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.maps";
         static constexpr const char* type_name = "MapZoomLevelRange";
     };

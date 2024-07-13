@@ -105,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothAddressType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothAddressType";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothAddressType";
     };
@@ -112,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothCacheMode";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothCacheMode";
     };
@@ -119,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothConnectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothConnectionStatus";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothConnectionStatus";
     };
@@ -126,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothError";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothError";
     };
@@ -133,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequestStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParametersRequestStatus";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEPreferredConnectionParametersRequestStatus";
     };
@@ -140,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothMajorClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothMajorClass";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothMajorClass";
     };
@@ -147,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothMinorClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothMinorClass";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothMinorClass";
     };
@@ -154,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothServiceCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothServiceCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothServiceCapabilities";
     };
@@ -161,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothAdapter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothAdapter";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothAdapter";
     };
@@ -168,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothClassOfDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothClassOfDevice";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothClassOfDevice";
     };
@@ -175,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothDevice";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothDevice";
     };
@@ -182,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothDeviceId";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothDeviceId";
     };
@@ -189,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEAppearance";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEAppearance";
     };
@@ -196,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceCategories>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEAppearanceCategories";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEAppearanceCategories";
     };
@@ -203,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEAppearanceSubcategories>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEAppearanceSubcategories";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEAppearanceSubcategories";
     };
@@ -210,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEConnectionParameters";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEConnectionParameters";
     };
@@ -217,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEConnectionPhy";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEConnectionPhy";
     };
@@ -224,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEConnectionPhyInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEConnectionPhyInfo";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEConnectionPhyInfo";
     };
@@ -231,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEDevice";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEDevice";
     };
@@ -238,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParameters";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEPreferredConnectionParameters";
     };
@@ -245,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothLEPreferredConnectionParametersRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothLEPreferredConnectionParametersRequest";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothLEPreferredConnectionParametersRequest";
     };
@@ -252,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothSignalStrengthFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothSignalStrengthFilter";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothSignalStrengthFilter";
     };
@@ -259,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::BluetoothUuidHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.BluetoothUuidHelper";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth";
         static constexpr const char* type_name = "BluetoothUuidHelper";
     };

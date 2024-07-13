@@ -48,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::QuickLink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.sharetarget.QuickLink";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
         static constexpr const char* type_name = "QuickLink";
     };
@@ -55,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.sharetarget.ShareOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.sharetarget";
         static constexpr const char* type_name = "ShareOperation";
     };

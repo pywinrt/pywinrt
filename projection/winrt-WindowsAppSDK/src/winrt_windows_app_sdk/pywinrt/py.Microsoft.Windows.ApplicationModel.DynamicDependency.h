@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyLifetimeArtifactKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyLifetimeArtifactKind";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyLifetimeArtifactKind";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyProcessorArchitectures>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyProcessorArchitectures";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyProcessorArchitectures";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::AddPackageDependencyOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.AddPackageDependencyOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "AddPackageDependencyOptions";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::CreatePackageDependencyOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.CreatePackageDependencyOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "CreatePackageDependencyOptions";
     };
@@ -74,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependency>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependency";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependency";
     };
@@ -81,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContext";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyContext";
     };
@@ -88,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyRank>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyRank";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyRank";
     };
@@ -95,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::DynamicDependency::PackageDependencyContextId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency.PackageDependencyContextId";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.dynamicdependency";
         static constexpr const char* type_name = "PackageDependencyContextId";
     };

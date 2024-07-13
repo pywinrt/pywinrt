@@ -66,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PointerDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PointerDeviceType";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PointerDeviceType";
     };
@@ -73,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::KeyboardCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.KeyboardCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "KeyboardCapabilities";
     };
@@ -80,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::MouseCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.MouseCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "MouseCapabilities";
     };
@@ -87,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::MouseDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.MouseDevice";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "MouseDevice";
     };
@@ -94,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::MouseEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.MouseEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "MouseEventArgs";
     };
@@ -101,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenButtonListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenButtonListener";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenButtonListener";
     };
@@ -108,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenDevice";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenDevice";
     };
@@ -115,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenDockListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenDockListener";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenDockListener";
     };
@@ -122,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenDockedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenDockedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenDockedEventArgs";
     };
@@ -129,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenTailButtonClickedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenTailButtonClickedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenTailButtonClickedEventArgs";
     };
@@ -136,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenTailButtonDoubleClickedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenTailButtonDoubleClickedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenTailButtonDoubleClickedEventArgs";
     };
@@ -143,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenTailButtonLongPressedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenTailButtonLongPressedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenTailButtonLongPressedEventArgs";
     };
@@ -150,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PenUndockedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PenUndockedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PenUndockedEventArgs";
     };
@@ -157,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PointerDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PointerDevice";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PointerDevice";
     };
@@ -164,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::TouchCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.TouchCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "TouchCapabilities";
     };
@@ -171,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::MouseDelta>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.MouseDelta";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "MouseDelta";
     };
@@ -178,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Input::PointerDeviceUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.input.PointerDeviceUsage";
         static constexpr const char* module_name = "winrt.windows.devices.input";
         static constexpr const char* type_name = "PointerDeviceUsage";
     };

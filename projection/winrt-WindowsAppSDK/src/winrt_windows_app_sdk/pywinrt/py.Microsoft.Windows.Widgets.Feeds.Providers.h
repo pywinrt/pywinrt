@@ -36,6 +36,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersRequestedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.CustomQueryParametersRequestedArgs";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "CustomQueryParametersRequestedArgs";
     };
@@ -43,6 +44,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.CustomQueryParametersUpdateOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "CustomQueryParametersUpdateOptions";
     };
@@ -50,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedDisabledArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedDisabledArgs";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedDisabledArgs";
     };
@@ -57,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedEnabledArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedEnabledArgs";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedEnabledArgs";
     };
@@ -64,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedManager";
     };
@@ -71,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderDisabledArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedProviderDisabledArgs";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedProviderDisabledArgs";
     };
@@ -78,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedProviderEnabledArgs";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedProviderEnabledArgs";
     };
@@ -85,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.FeedProviderInfo";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "FeedProviderInfo";
     };
@@ -92,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.IFeedManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "IFeedManager";
     };
@@ -99,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.feeds.providers.IFeedProvider";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets.feeds.providers";
         static constexpr const char* type_name = "IFeedProvider";
     };

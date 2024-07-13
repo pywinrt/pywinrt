@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::AuthenticationProtocol>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.AuthenticationProtocol";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "AuthenticationProtocol";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::CredentialSaveOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.CredentialSaveOption";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "CredentialSaveOption";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerificationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.UserConsentVerificationResult";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "UserConsentVerificationResult";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifierAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.UserConsentVerifierAvailability";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "UserConsentVerifierAvailability";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.CredentialPicker";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "CredentialPicker";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.CredentialPickerOptions";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "CredentialPickerOptions";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::CredentialPickerResults>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.CredentialPickerResults";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "CredentialPickerResults";
     };
@@ -101,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::UI::UserConsentVerifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.ui.UserConsentVerifier";
         static constexpr const char* module_name = "winrt.windows.security.credentials.ui";
         static constexpr const char* type_name = "UserConsentVerifier";
     };

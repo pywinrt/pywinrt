@@ -27,6 +27,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Resources::CustomXamlResourceLoader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.resources.CustomXamlResourceLoader";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.resources";
         static constexpr const char* type_name = "CustomXamlResourceLoader";
     };

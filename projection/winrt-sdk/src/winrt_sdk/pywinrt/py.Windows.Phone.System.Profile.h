@@ -27,6 +27,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::Profile::RetailMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.profile.RetailMode";
         static constexpr const char* module_name = "winrt.windows.phone.system.profile";
         static constexpr const char* type_name = "RetailMode";
     };

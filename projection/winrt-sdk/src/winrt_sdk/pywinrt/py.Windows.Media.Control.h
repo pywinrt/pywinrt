@@ -60,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackStatus";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackStatus";
     };
@@ -67,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::CurrentSessionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.CurrentSessionChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "CurrentSessionChangedEventArgs";
     };
@@ -74,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSession";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSession";
     };
@@ -81,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionManager";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionManager";
     };
@@ -88,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionMediaProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionMediaProperties";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionMediaProperties";
     };
@@ -95,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackControls>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackControls";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackControls";
     };
@@ -102,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionPlaybackInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionPlaybackInfo";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionPlaybackInfo";
     };
@@ -109,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::GlobalSystemMediaTransportControlsSessionTimelineProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.GlobalSystemMediaTransportControlsSessionTimelineProperties";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "GlobalSystemMediaTransportControlsSessionTimelineProperties";
     };
@@ -116,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::MediaPropertiesChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.MediaPropertiesChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "MediaPropertiesChangedEventArgs";
     };
@@ -123,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::PlaybackInfoChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.PlaybackInfoChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "PlaybackInfoChangedEventArgs";
     };
@@ -130,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::SessionsChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.SessionsChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "SessionsChangedEventArgs";
     };
@@ -137,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Control::TimelinePropertiesChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.control.TimelinePropertiesChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.control";
         static constexpr const char* type_name = "TimelinePropertiesChangedEventArgs";
     };

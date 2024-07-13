@@ -51,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.AnimationEffect";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "AnimationEffect";
     };
@@ -58,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationEffectTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.AnimationEffectTarget";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "AnimationEffectTarget";
     };
@@ -65,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.PropertyAnimationType";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "PropertyAnimationType";
     };
@@ -72,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::AnimationDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.AnimationDescription";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "AnimationDescription";
     };
@@ -79,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::OpacityAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.OpacityAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "OpacityAnimation";
     };
@@ -86,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::PropertyAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.PropertyAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "PropertyAnimation";
     };
@@ -93,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::ScaleAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.ScaleAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "ScaleAnimation";
     };
@@ -100,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::TranslationAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.TranslationAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "TranslationAnimation";
     };
@@ -107,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AnimationMetrics::IPropertyAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.animationmetrics.IPropertyAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.core.animationmetrics";
         static constexpr const char* type_name = "IPropertyAnimation";
     };

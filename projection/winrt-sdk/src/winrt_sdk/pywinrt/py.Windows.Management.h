@@ -48,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmAlertDataType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlertDataType";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmAlertDataType";
     };
@@ -55,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmAlertMark>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlertMark";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmAlertMark";
     };
@@ -62,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmSessionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSessionState";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmSessionState";
     };
@@ -69,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmAlert>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmAlert";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmAlert";
     };
@@ -76,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSession";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmSession";
     };
@@ -83,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::MdmSessionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.MdmSessionManager";
         static constexpr const char* module_name = "winrt.windows.management";
         static constexpr const char* type_name = "MdmSessionManager";
     };

@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderPositionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.accessibility.ScreenReaderPositionChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.accessibility";
         static constexpr const char* type_name = "ScreenReaderPositionChangedEventArgs";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Accessibility::ScreenReaderService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.accessibility.ScreenReaderService";
         static constexpr const char* module_name = "winrt.windows.ui.accessibility";
         static constexpr const char* type_name = "ScreenReaderService";
     };

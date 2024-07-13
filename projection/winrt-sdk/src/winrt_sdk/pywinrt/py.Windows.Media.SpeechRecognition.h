@@ -90,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechContinuousRecognitionMode";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechContinuousRecognitionMode";
     };
@@ -97,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionAudioProblem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionAudioProblem";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionAudioProblem";
     };
@@ -104,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConfidence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionConfidence";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionConfidence";
     };
@@ -111,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintProbability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionConstraintProbability";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionConstraintProbability";
     };
@@ -118,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionConstraintType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionConstraintType";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionConstraintType";
     };
@@ -125,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResultStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionResultStatus";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionResultStatus";
     };
@@ -132,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionScenario>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionScenario";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionScenario";
     };
@@ -139,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognizerState";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognizerState";
     };
@@ -146,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechContinuousRecognitionCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechContinuousRecognitionCompletedEventArgs";
     };
@@ -153,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionResultGeneratedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechContinuousRecognitionResultGeneratedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechContinuousRecognitionResultGeneratedEventArgs";
     };
@@ -160,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechContinuousRecognitionSession";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechContinuousRecognitionSession";
     };
@@ -167,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionCompilationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionCompilationResult";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionCompilationResult";
     };
@@ -174,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionGrammarFileConstraint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionGrammarFileConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionGrammarFileConstraint";
     };
@@ -181,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesis>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionHypothesis";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionHypothesis";
     };
@@ -188,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionHypothesisGeneratedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionHypothesisGeneratedEventArgs";
     };
@@ -195,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionListConstraint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionListConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionListConstraint";
     };
@@ -202,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionQualityDegradingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionQualityDegradingEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionQualityDegradingEventArgs";
     };
@@ -209,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionResult";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionResult";
     };
@@ -216,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionSemanticInterpretation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionSemanticInterpretation";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionSemanticInterpretation";
     };
@@ -223,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionTopicConstraint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionTopicConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionTopicConstraint";
     };
@@ -230,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognitionVoiceCommandDefinitionConstraint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognitionVoiceCommandDefinitionConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognitionVoiceCommandDefinitionConstraint";
     };
@@ -237,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognizer";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognizer";
     };
@@ -244,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognizerStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognizerStateChangedEventArgs";
     };
@@ -251,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerTimeouts>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognizerTimeouts";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognizerTimeouts";
     };
@@ -258,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::SpeechRecognizerUIOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.SpeechRecognizerUIOptions";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "SpeechRecognizerUIOptions";
     };
@@ -265,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.VoiceCommandManager";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "VoiceCommandManager";
     };
@@ -272,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::VoiceCommandSet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.VoiceCommandSet";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "VoiceCommandSet";
     };
@@ -279,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechRecognition::ISpeechRecognitionConstraint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechrecognition.ISpeechRecognitionConstraint";
         static constexpr const char* module_name = "winrt.windows.media.speechrecognition";
         static constexpr const char* type_name = "ISpeechRecognitionConstraint";
     };

@@ -96,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionBindingAxisModes>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionBindingAxisModes";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionBindingAxisModes";
     };
@@ -103,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionChainingMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionChainingMode";
     };
@@ -110,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionSourceMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionSourceMode";
     };
@@ -117,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceRedirectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionSourceRedirectionMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionSourceRedirectionMode";
     };
@@ -124,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerClampingOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerClampingOption";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerClampingOption";
     };
@@ -131,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerPositionUpdateOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerPositionUpdateOption";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerPositionUpdateOption";
     };
@@ -138,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.VisualInteractionSourceRedirectionMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "VisualInteractionSourceRedirectionMode";
     };
@@ -145,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.CompositionConditionalValue";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "CompositionConditionalValue";
     };
@@ -152,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::CompositionInteractionSourceCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.CompositionInteractionSourceCollection";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "CompositionInteractionSourceCollection";
     };
@@ -159,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionSourceConfiguration";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionSourceConfiguration";
     };
@@ -166,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTracker>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTracker";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTracker";
     };
@@ -173,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerCustomAnimationStateEnteredArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerCustomAnimationStateEnteredArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerCustomAnimationStateEnteredArgs";
     };
@@ -180,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerIdleStateEnteredArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerIdleStateEnteredArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerIdleStateEnteredArgs";
     };
@@ -187,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaModifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaModifier";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInertiaModifier";
     };
@@ -194,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaMotion>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaMotion";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInertiaMotion";
     };
@@ -201,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaNaturalMotion>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaNaturalMotion";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInertiaNaturalMotion";
     };
@@ -208,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaRestingValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaRestingValue";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInertiaRestingValue";
     };
@@ -215,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInertiaStateEnteredArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInertiaStateEnteredArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInertiaStateEnteredArgs";
     };
@@ -222,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerInteractingStateEnteredArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerInteractingStateEnteredArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerInteractingStateEnteredArgs";
     };
@@ -229,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerRequestIgnoredArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerRequestIgnoredArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerRequestIgnoredArgs";
     };
@@ -236,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerValuesChangedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerValuesChangedArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerValuesChangedArgs";
     };
@@ -243,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerVector2InertiaModifier";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerVector2InertiaModifier";
     };
@@ -250,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::InteractionTrackerVector2InertiaNaturalMotion>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.InteractionTrackerVector2InertiaNaturalMotion";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "InteractionTrackerVector2InertiaNaturalMotion";
     };
@@ -257,6 +280,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.VisualInteractionSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "VisualInteractionSource";
     };
@@ -264,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::ICompositionInteractionSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.ICompositionInteractionSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "ICompositionInteractionSource";
     };
@@ -271,6 +296,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Interactions::IInteractionTrackerOwner>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.interactions.IInteractionTrackerOwner";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.interactions";
         static constexpr const char* type_name = "IInteractionTrackerOwner";
     };

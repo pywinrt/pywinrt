@@ -116,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreCanLicenseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreCanLicenseStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreCanLicenseStatus";
     };
@@ -123,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreConsumableStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreConsumableStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreConsumableStatus";
     };
@@ -130,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreDurationUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreDurationUnit";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreDurationUnit";
     };
@@ -137,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdateState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageUpdateState";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdateState";
     };
@@ -144,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePurchaseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePurchaseStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePurchaseStatus";
     };
@@ -151,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemExtendedState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItemExtendedState";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItemExtendedState";
     };
@@ -158,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItemKind";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItemKind";
     };
@@ -165,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItemState";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItemState";
     };
@@ -172,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreRateAndReviewStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreRateAndReviewStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreRateAndReviewStatus";
     };
@@ -179,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreUninstallStorePackageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreUninstallStorePackageStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreUninstallStorePackageStatus";
     };
@@ -186,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreAcquireLicenseResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreAcquireLicenseResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreAcquireLicenseResult";
     };
@@ -193,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreAppLicense>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreAppLicense";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreAppLicense";
     };
@@ -200,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreAvailability";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreAvailability";
     };
@@ -207,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreCanAcquireLicenseResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreCanAcquireLicenseResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreCanAcquireLicenseResult";
     };
@@ -214,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreCollectionData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreCollectionData";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreCollectionData";
     };
@@ -221,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreConsumableResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreConsumableResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreConsumableResult";
     };
@@ -228,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreContext";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreContext";
     };
@@ -235,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreImage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreImage";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreImage";
     };
@@ -242,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreLicense>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreLicense";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreLicense";
     };
@@ -249,6 +268,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageInstallOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageInstallOptions";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageInstallOptions";
     };
@@ -256,6 +276,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageLicense>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageLicense";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageLicense";
     };
@@ -263,6 +284,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageUpdate";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdate";
     };
@@ -270,6 +292,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdateResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageUpdateResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdateResult";
     };
@@ -277,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePrice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePrice";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePrice";
     };
@@ -284,6 +308,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreProduct>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreProduct";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreProduct";
     };
@@ -291,6 +316,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreProductOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreProductOptions";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreProductOptions";
     };
@@ -298,6 +324,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreProductPagedQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreProductPagedQueryResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreProductPagedQueryResult";
     };
@@ -305,6 +332,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreProductQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreProductQueryResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreProductQueryResult";
     };
@@ -312,6 +340,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreProductResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreProductResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreProductResult";
     };
@@ -319,6 +348,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePurchaseProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePurchaseProperties";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePurchaseProperties";
     };
@@ -326,6 +356,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePurchaseResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePurchaseResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePurchaseResult";
     };
@@ -333,6 +364,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItem";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItem";
     };
@@ -340,6 +372,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItemCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItemCompletedEventArgs";
     };
@@ -347,6 +380,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreQueueItemStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreQueueItemStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreQueueItemStatus";
     };
@@ -354,6 +388,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreRateAndReviewResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreRateAndReviewResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreRateAndReviewResult";
     };
@@ -361,6 +396,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreRequestHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreRequestHelper";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreRequestHelper";
     };
@@ -368,6 +404,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreSendRequestResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreSendRequestResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreSendRequestResult";
     };
@@ -375,6 +412,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreSku>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreSku";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreSku";
     };
@@ -382,6 +420,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreSubscriptionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreSubscriptionInfo";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreSubscriptionInfo";
     };
@@ -389,6 +428,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreUninstallStorePackageResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreUninstallStorePackageResult";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreUninstallStorePackageResult";
     };
@@ -396,6 +436,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StoreVideo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StoreVideo";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StoreVideo";
     };
@@ -403,6 +444,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Store::StorePackageUpdateStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.store.StorePackageUpdateStatus";
         static constexpr const char* module_name = "winrt.windows.services.store";
         static constexpr const char* type_name = "StorePackageUpdateStatus";
     };

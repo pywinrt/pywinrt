@@ -315,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioDecoderDegradation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioDecoderDegradation";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioDecoderDegradation";
     };
@@ -322,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioDecoderDegradationReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioDecoderDegradationReason";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioDecoderDegradationReason";
     };
@@ -329,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.CodecCategory";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "CodecCategory";
     };
@@ -336,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.CodecKind";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "CodecKind";
     };
@@ -343,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.FaceDetectionMode";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "FaceDetectionMode";
     };
@@ -350,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaDecoderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaDecoderStatus";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaDecoderStatus";
     };
@@ -357,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceState";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceState";
     };
@@ -364,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceStatus";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceStatus";
     };
@@ -371,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceClosedReason";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceClosedReason";
     };
@@ -378,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceErrorStatus";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceErrorStatus";
     };
@@ -385,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaTrackKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaTrackKind";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaTrackKind";
     };
@@ -392,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseAppendMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseAppendMode";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseAppendMode";
     };
@@ -399,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseEndOfStreamStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseEndOfStreamStatus";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseEndOfStreamStatus";
     };
@@ -406,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseReadyState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseReadyState";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseReadyState";
     };
@@ -413,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalysisRecommendation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SceneAnalysisRecommendation";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SceneAnalysisRecommendation";
     };
@@ -420,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataKind";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataKind";
     };
@@ -427,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataTrackErrorCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataTrackErrorCode";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataTrackErrorCode";
     };
@@ -434,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextBoutenPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextBoutenPosition";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextBoutenPosition";
     };
@@ -441,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextBoutenType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextBoutenType";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextBoutenType";
     };
@@ -448,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextDisplayAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextDisplayAlignment";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextDisplayAlignment";
     };
@@ -455,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextFlowDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextFlowDirection";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextFlowDirection";
     };
@@ -462,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextFontStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextFontStyle";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextFontStyle";
     };
@@ -469,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextLineAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextLineAlignment";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextLineAlignment";
     };
@@ -476,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyAlign>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextRubyAlign";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextRubyAlign";
     };
@@ -483,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextRubyPosition";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextRubyPosition";
     };
@@ -490,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRubyReserve>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextRubyReserve";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextRubyReserve";
     };
@@ -497,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextScrollMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextScrollMode";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextScrollMode";
     };
@@ -504,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextUnit";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextUnit";
     };
@@ -511,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWeight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextWeight";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextWeight";
     };
@@ -518,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWrapping>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextWrapping";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextWrapping";
     };
@@ -525,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextWritingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextWritingMode";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextWritingMode";
     };
@@ -532,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoStabilizationEffectEnabledChangedReason";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoStabilizationEffectEnabledChangedReason";
     };
@@ -539,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioStreamDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioStreamDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioStreamDescriptor";
     };
@@ -546,6 +579,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioTrack";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioTrack";
     };
@@ -553,6 +587,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioTrackOpenFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioTrackOpenFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioTrackOpenFailedEventArgs";
     };
@@ -560,6 +595,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::AudioTrackSupportInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.AudioTrackSupportInfo";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "AudioTrackSupportInfo";
     };
@@ -567,6 +603,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::ChapterCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ChapterCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "ChapterCue";
     };
@@ -574,6 +611,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.CodecInfo";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "CodecInfo";
     };
@@ -581,6 +619,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.CodecQuery";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "CodecQuery";
     };
@@ -588,6 +627,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::CodecSubtypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.CodecSubtypes";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "CodecSubtypes";
     };
@@ -595,6 +635,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::DataCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.DataCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "DataCue";
     };
@@ -602,6 +643,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.FaceDetectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "FaceDetectedEventArgs";
     };
@@ -609,6 +651,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectionEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.FaceDetectionEffect";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "FaceDetectionEffect";
     };
@@ -616,6 +659,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectionEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.FaceDetectionEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "FaceDetectionEffectDefinition";
     };
@@ -623,6 +667,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::FaceDetectionEffectFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.FaceDetectionEffectFrame";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "FaceDetectionEffectFrame";
     };
@@ -630,6 +675,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::HighDynamicRangeControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.HighDynamicRangeControl";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "HighDynamicRangeControl";
     };
@@ -637,6 +683,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::HighDynamicRangeOutput>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.HighDynamicRangeOutput";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "HighDynamicRangeOutput";
     };
@@ -644,6 +691,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::ImageCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ImageCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "ImageCue";
     };
@@ -651,6 +699,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::InitializeMediaStreamSourceRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.InitializeMediaStreamSourceRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "InitializeMediaStreamSourceRequestedEventArgs";
     };
@@ -658,6 +707,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::LowLightFusion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.LowLightFusion";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "LowLightFusion";
     };
@@ -665,6 +715,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::LowLightFusionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.LowLightFusionResult";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "LowLightFusionResult";
     };
@@ -672,6 +723,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaBinder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaBinder";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaBinder";
     };
@@ -679,6 +731,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaBindingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaBindingEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaBindingEventArgs";
     };
@@ -686,6 +739,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaCueEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaCueEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaCueEventArgs";
     };
@@ -693,6 +747,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSource";
     };
@@ -700,6 +755,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceAppServiceConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceAppServiceConnection";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceAppServiceConnection";
     };
@@ -707,6 +763,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceError";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceError";
     };
@@ -714,6 +771,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceOpenOperationCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceOpenOperationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceOpenOperationCompletedEventArgs";
     };
@@ -721,6 +779,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaSourceStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaSourceStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaSourceStateChangedEventArgs";
     };
@@ -728,6 +787,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSample>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSample";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSample";
     };
@@ -735,6 +795,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSamplePropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSamplePropertySet";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSamplePropertySet";
     };
@@ -742,6 +803,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSampleProtectionProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSampleProtectionProperties";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSampleProtectionProperties";
     };
@@ -749,6 +811,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSource";
     };
@@ -756,6 +819,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceClosedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceClosedEventArgs";
     };
@@ -763,6 +827,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceClosedRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceClosedRequest";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceClosedRequest";
     };
@@ -770,6 +835,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRenderedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSampleRenderedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSampleRenderedEventArgs";
     };
@@ -777,6 +843,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSampleRequest";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSampleRequest";
     };
@@ -784,6 +851,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSampleRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSampleRequestDeferral";
     };
@@ -791,6 +859,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSampleRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSampleRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSampleRequestedEventArgs";
     };
@@ -798,6 +867,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceStartingEventArgs";
     };
@@ -805,6 +875,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceStartingRequest";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceStartingRequest";
     };
@@ -812,6 +883,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceStartingRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceStartingRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceStartingRequestDeferral";
     };
@@ -819,6 +891,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSwitchStreamsRequest";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSwitchStreamsRequest";
     };
@@ -826,6 +899,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSwitchStreamsRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSwitchStreamsRequestDeferral";
     };
@@ -833,6 +907,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MediaStreamSourceSwitchStreamsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MediaStreamSourceSwitchStreamsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MediaStreamSourceSwitchStreamsRequestedEventArgs";
     };
@@ -840,6 +915,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseSourceBuffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseSourceBuffer";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseSourceBuffer";
     };
@@ -847,6 +923,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseSourceBufferList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseSourceBufferList";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseSourceBufferList";
     };
@@ -854,6 +931,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseStreamSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseStreamSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseStreamSource";
     };
@@ -861,6 +939,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalysisEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SceneAnalysisEffect";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SceneAnalysisEffect";
     };
@@ -868,6 +947,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalysisEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SceneAnalysisEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SceneAnalysisEffectDefinition";
     };
@@ -875,6 +955,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalysisEffectFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SceneAnalysisEffectFrame";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SceneAnalysisEffectFrame";
     };
@@ -882,6 +963,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SceneAnalyzedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SceneAnalyzedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SceneAnalyzedEventArgs";
     };
@@ -889,6 +971,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::SpeechCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.SpeechCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "SpeechCue";
     };
@@ -896,6 +979,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataStreamDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataStreamDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataStreamDescriptor";
     };
@@ -903,6 +987,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataTrack";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataTrack";
     };
@@ -910,6 +995,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataTrackError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataTrackError";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataTrackError";
     };
@@ -917,6 +1003,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedMetadataTrackFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedMetadataTrackFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedMetadataTrackFailedEventArgs";
     };
@@ -924,6 +1011,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextBouten>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextBouten";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextBouten";
     };
@@ -931,6 +1019,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextCue";
     };
@@ -938,6 +1027,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextLine>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextLine";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextLine";
     };
@@ -945,6 +1035,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRegion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextRegion";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextRegion";
     };
@@ -952,6 +1043,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextRuby>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextRuby";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextRuby";
     };
@@ -959,6 +1051,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextSource";
     };
@@ -966,6 +1059,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextSourceResolveResultEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextSourceResolveResultEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextSourceResolveResultEventArgs";
     };
@@ -973,6 +1067,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextStyle";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextStyle";
     };
@@ -980,6 +1075,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextSubformat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextSubformat";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextSubformat";
     };
@@ -987,6 +1083,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStabilizationEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoStabilizationEffect";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoStabilizationEffect";
     };
@@ -994,6 +1091,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStabilizationEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoStabilizationEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoStabilizationEffectDefinition";
     };
@@ -1001,6 +1099,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStabilizationEffectEnabledChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoStabilizationEffectEnabledChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoStabilizationEffectEnabledChangedEventArgs";
     };
@@ -1008,6 +1107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoStreamDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoStreamDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoStreamDescriptor";
     };
@@ -1015,6 +1115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoTrack";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoTrack";
     };
@@ -1022,6 +1123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoTrackOpenFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoTrackOpenFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoTrackOpenFailedEventArgs";
     };
@@ -1029,6 +1131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::VideoTrackSupportInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.VideoTrackSupportInfo";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "VideoTrackSupportInfo";
     };
@@ -1036,6 +1139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaCue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaCue";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "IMediaCue";
     };
@@ -1043,6 +1147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaSource";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "IMediaSource";
     };
@@ -1050,6 +1155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaStreamDescriptor";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "IMediaStreamDescriptor";
     };
@@ -1057,6 +1163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaStreamDescriptor2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaStreamDescriptor2";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "IMediaStreamDescriptor2";
     };
@@ -1064,6 +1171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::IMediaTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.IMediaTrack";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "IMediaTrack";
     };
@@ -1071,6 +1179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::ISingleSelectMediaTrackList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ISingleSelectMediaTrackList";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "ISingleSelectMediaTrackList";
     };
@@ -1078,6 +1187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::ITimedMetadataTrackProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.ITimedMetadataTrackProvider";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "ITimedMetadataTrackProvider";
     };
@@ -1085,6 +1195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::MseTimeRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.MseTimeRange";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "MseTimeRange";
     };
@@ -1092,6 +1203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextDouble>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextDouble";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextDouble";
     };
@@ -1099,6 +1211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextPadding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextPadding";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextPadding";
     };
@@ -1106,6 +1219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextPoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextPoint";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextPoint";
     };
@@ -1113,6 +1227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::TimedTextSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.TimedTextSize";
         static constexpr const char* module_name = "winrt.windows.media.core";
         static constexpr const char* type_name = "TimedTextSize";
     };

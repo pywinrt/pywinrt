@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::DomainNameType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.DomainNameType";
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "DomainNameType";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::HostNameSortOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.HostNameSortOptions";
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "HostNameSortOptions";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::HostNameType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.HostNameType";
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "HostNameType";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::EndpointPair>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.EndpointPair";
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "EndpointPair";
     };
@@ -70,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::HostName>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.HostName";
         static constexpr const char* module_name = "winrt.windows.networking";
         static constexpr const char* type_name = "HostName";
     };

@@ -45,6 +45,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotePlacementChangedPreviewEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.notes.NotePlacementChangedPreviewEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
         static constexpr const char* type_name = "NotePlacementChangedPreviewEventArgs";
     };
@@ -52,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NoteVisibilityChangedPreviewEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.notes.NoteVisibilityChangedPreviewEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
         static constexpr const char* type_name = "NoteVisibilityChangedPreviewEventArgs";
     };
@@ -59,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.notes.NotesWindowManagerPreview";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
         static constexpr const char* type_name = "NotesWindowManagerPreview";
     };
@@ -66,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Notes::NotesWindowManagerPreviewShowNoteOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.notes.NotesWindowManagerPreviewShowNoteOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.notes";
         static constexpr const char* type_name = "NotesWindowManagerPreviewShowNoteOptions";
     };

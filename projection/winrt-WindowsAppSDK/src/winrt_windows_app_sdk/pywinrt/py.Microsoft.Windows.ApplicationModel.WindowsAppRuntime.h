@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentStatus";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentStatus";
     };
@@ -44,6 +45,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentInitializeOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentInitializeOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentInitializeOptions";
     };
@@ -51,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentManager";
     };
@@ -58,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::ApplicationModel::WindowsAppRuntime::DeploymentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime.DeploymentResult";
         static constexpr const char* module_name = "winrt.microsoft.windows.applicationmodel.windowsappruntime";
         static constexpr const char* type_name = "DeploymentResult";
     };

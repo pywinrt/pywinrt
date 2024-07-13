@@ -39,6 +39,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensor";
         static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
         static constexpr const char* type_name = "CustomSensor";
     };
@@ -46,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensorReading";
         static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
         static constexpr const char* type_name = "CustomSensorReading";
     };
@@ -53,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Sensors::Custom::CustomSensorReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.custom.CustomSensorReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors.custom";
         static constexpr const char* type_name = "CustomSensorReadingChangedEventArgs";
     };

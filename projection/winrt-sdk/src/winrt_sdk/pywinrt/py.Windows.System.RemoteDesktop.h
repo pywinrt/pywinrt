@@ -27,6 +27,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::InteractiveSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.InteractiveSession";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop";
         static constexpr const char* type_name = "InteractiveSession";
     };

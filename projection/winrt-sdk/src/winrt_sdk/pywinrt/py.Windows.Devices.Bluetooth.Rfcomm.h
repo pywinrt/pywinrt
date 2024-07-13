@@ -65,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceService";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
         static constexpr const char* type_name = "RfcommDeviceService";
     };
@@ -72,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceServicesResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommDeviceServicesResult";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
         static constexpr const char* type_name = "RfcommDeviceServicesResult";
     };
@@ -79,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommServiceId";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
         static constexpr const char* type_name = "RfcommServiceId";
     };
@@ -86,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.rfcomm.RfcommServiceProvider";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.rfcomm";
         static constexpr const char* type_name = "RfcommServiceProvider";
     };

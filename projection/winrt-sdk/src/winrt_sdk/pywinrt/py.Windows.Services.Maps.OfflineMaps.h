@@ -53,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageQueryStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageQueryStatus";
     };
@@ -60,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStartDownloadStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageStartDownloadStatus";
     };
@@ -67,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageStatus";
     };
@@ -74,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackage";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackage";
     };
@@ -81,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageQueryResult";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageQueryResult";
     };
@@ -88,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::OfflineMaps::OfflineMapPackageStartDownloadResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.offlinemaps.OfflineMapPackageStartDownloadResult";
         static constexpr const char* module_name = "winrt.windows.services.maps.offlinemaps";
         static constexpr const char* type_name = "OfflineMapPackageStartDownloadResult";
     };

@@ -51,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemAppAssociation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletItemAppAssociation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
         static constexpr const char* type_name = "WalletItemAppAssociation";
     };
@@ -58,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletItemSystemStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletItemSystemStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
         static constexpr const char* type_name = "WalletItemSystemStore";
     };
@@ -65,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Wallet::System::WalletManagerSystem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.wallet.system.WalletManagerSystem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.wallet.system";
         static constexpr const char* type_name = "WalletManagerSystem";
     };

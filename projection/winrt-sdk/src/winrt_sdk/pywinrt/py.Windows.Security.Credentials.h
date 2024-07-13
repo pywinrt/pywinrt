@@ -77,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialAttestationStatus";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialAttestationStatus";
     };
@@ -84,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialCreationOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialCreationOption";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialCreationOption";
     };
@@ -91,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialStatus";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialStatus";
     };
@@ -98,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::WebAccountPictureSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountPictureSize";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "WebAccountPictureSize";
     };
@@ -105,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::WebAccountState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountState";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "WebAccountState";
     };
@@ -112,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredential>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredential";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredential";
     };
@@ -119,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialAttestationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialAttestationResult";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialAttestationResult";
     };
@@ -126,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialManager";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialManager";
     };
@@ -133,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialOperationResult";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialOperationResult";
     };
@@ -140,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::KeyCredentialRetrievalResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.KeyCredentialRetrievalResult";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "KeyCredentialRetrievalResult";
     };
@@ -147,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::PasswordCredential>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordCredential";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "PasswordCredential";
     };
@@ -154,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::PasswordCredentialPropertyStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordCredentialPropertyStore";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "PasswordCredentialPropertyStore";
     };
@@ -161,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::PasswordVault>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.PasswordVault";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "PasswordVault";
     };
@@ -168,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::WebAccount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccount";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "WebAccount";
     };
@@ -175,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::WebAccountProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.WebAccountProvider";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "WebAccountProvider";
     };
@@ -182,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Credentials::IWebAccount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.credentials.IWebAccount";
         static constexpr const char* module_name = "winrt.windows.security.credentials";
         static constexpr const char* type_name = "IWebAccount";
     };

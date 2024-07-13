@@ -97,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRawElementProviderSimple>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IRawElementProviderSimple";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IRawElementProviderSimple";
     };
@@ -104,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IAnnotationProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IAnnotationProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IAnnotationProvider";
     };
@@ -111,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ICustomNavigationProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ICustomNavigationProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ICustomNavigationProvider";
     };
@@ -118,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDockProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IDockProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IDockProvider";
     };
@@ -125,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDragProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IDragProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IDragProvider";
     };
@@ -132,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IDropTargetProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IDropTargetProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IDropTargetProvider";
     };
@@ -139,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IExpandCollapseProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IExpandCollapseProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IExpandCollapseProvider";
     };
@@ -146,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IGridItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IGridItemProvider";
     };
@@ -153,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IGridProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IGridProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IGridProvider";
     };
@@ -160,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IInvokeProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IInvokeProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IInvokeProvider";
     };
@@ -167,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IItemContainerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IItemContainerProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IItemContainerProvider";
     };
@@ -174,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IMultipleViewProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IMultipleViewProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IMultipleViewProvider";
     };
@@ -181,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IObjectModelProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IObjectModelProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IObjectModelProvider";
     };
@@ -188,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IRangeValueProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IRangeValueProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IRangeValueProvider";
     };
@@ -195,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IScrollItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IScrollItemProvider";
     };
@@ -202,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IScrollProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IScrollProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IScrollProvider";
     };
@@ -209,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ISelectionItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ISelectionItemProvider";
     };
@@ -216,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISelectionProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ISelectionProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ISelectionProvider";
     };
@@ -223,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ISpreadsheetItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ISpreadsheetItemProvider";
     };
@@ -230,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISpreadsheetProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ISpreadsheetProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ISpreadsheetProvider";
     };
@@ -237,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IStylesProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IStylesProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IStylesProvider";
     };
@@ -244,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ISynchronizedInputProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ISynchronizedInputProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ISynchronizedInputProvider";
     };
@@ -251,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITableItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITableItemProvider";
     };
@@ -258,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITableProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITableProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITableProvider";
     };
@@ -265,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextChildProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextChildProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextChildProvider";
     };
@@ -272,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextEditProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextEditProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextEditProvider";
     };
@@ -279,6 +305,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextProvider";
     };
@@ -286,6 +313,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextProvider2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextProvider2";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextProvider2";
     };
@@ -293,6 +321,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextRangeProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextRangeProvider";
     };
@@ -300,6 +329,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITextRangeProvider2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITextRangeProvider2";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITextRangeProvider2";
     };
@@ -307,6 +337,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IToggleProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IToggleProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IToggleProvider";
     };
@@ -314,6 +345,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITransformProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITransformProvider";
     };
@@ -321,6 +353,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::ITransformProvider2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.ITransformProvider2";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "ITransformProvider2";
     };
@@ -328,6 +361,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IValueProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IValueProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IValueProvider";
     };
@@ -335,6 +369,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IVirtualizedItemProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IVirtualizedItemProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IVirtualizedItemProvider";
     };
@@ -342,6 +377,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Automation::Provider::IWindowProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.automation.provider.IWindowProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.automation.provider";
         static constexpr const char* type_name = "IWindowProvider";
     };

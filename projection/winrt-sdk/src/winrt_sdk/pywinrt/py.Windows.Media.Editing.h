@@ -88,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaTrimmingPreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.MediaTrimmingPreference";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "MediaTrimmingPreference";
     };
@@ -95,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::VideoFramePrecision>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.VideoFramePrecision";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "VideoFramePrecision";
     };
@@ -102,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::BackgroundAudioTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.BackgroundAudioTrack";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "BackgroundAudioTrack";
     };
@@ -109,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::EmbeddedAudioTrack>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.EmbeddedAudioTrack";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "EmbeddedAudioTrack";
     };
@@ -116,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaClip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.MediaClip";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "MediaClip";
     };
@@ -123,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaComposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.MediaComposition";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "MediaComposition";
     };
@@ -130,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaOverlay>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.MediaOverlay";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "MediaOverlay";
     };
@@ -137,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Editing::MediaOverlayLayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.editing.MediaOverlayLayer";
         static constexpr const char* module_name = "winrt.windows.media.editing";
         static constexpr const char* type_name = "MediaOverlayLayer";
     };

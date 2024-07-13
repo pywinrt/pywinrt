@@ -114,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::AccessoryNotificationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.AccessoryNotificationType";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "AccessoryNotificationType";
     };
@@ -121,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::CalendarChangedEvent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.CalendarChangedEvent";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "CalendarChangedEvent";
     };
@@ -128,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallAudioEndpoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneCallAudioEndpoint";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneCallAudioEndpoint";
     };
@@ -135,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneCallDirection";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneCallDirection";
     };
@@ -142,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneCallState";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneCallState";
     };
@@ -149,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallTransport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneCallTransport";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneCallTransport";
     };
@@ -156,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneLineRegistrationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneLineRegistrationState";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneLineRegistrationState";
     };
@@ -163,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneMediaType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneMediaType";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneMediaType";
     };
@@ -170,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneNotificationType";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneNotificationType";
     };
@@ -177,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackCapability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PlaybackCapability";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PlaybackCapability";
     };
@@ -184,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PlaybackCommand";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PlaybackCommand";
     };
@@ -191,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PlaybackStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PlaybackStatus";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PlaybackStatus";
     };
@@ -198,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::ReminderState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.ReminderState";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "ReminderState";
     };
@@ -205,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::VibrateState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.VibrateState";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "VibrateState";
     };
@@ -212,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::AccessoryManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.AccessoryManager";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "AccessoryManager";
     };
@@ -219,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::AlarmNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.AlarmNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "AlarmNotificationTriggerDetails";
     };
@@ -226,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::AppNotificationInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.AppNotificationInfo";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "AppNotificationInfo";
     };
@@ -233,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::BinaryId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.BinaryId";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "BinaryId";
     };
@@ -240,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::CalendarChangedNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.CalendarChangedNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "CalendarChangedNotificationTriggerDetails";
     };
@@ -247,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::CortanaTileNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.CortanaTileNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "CortanaTileNotificationTriggerDetails";
     };
@@ -254,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::EmailAccountInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.EmailAccountInfo";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "EmailAccountInfo";
     };
@@ -261,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::EmailFolderInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.EmailFolderInfo";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "EmailFolderInfo";
     };
@@ -268,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::EmailNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.EmailNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "EmailNotificationTriggerDetails";
     };
@@ -275,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::EmailReadNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.EmailReadNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "EmailReadNotificationTriggerDetails";
     };
@@ -282,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::MediaControlsTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.MediaControlsTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "MediaControlsTriggerDetails";
     };
@@ -289,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::MediaMetadata>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.MediaMetadata";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "MediaMetadata";
     };
@@ -296,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneCallDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneCallDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneCallDetails";
     };
@@ -303,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneLineDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneLineDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneLineDetails";
     };
@@ -310,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::PhoneNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.PhoneNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "PhoneNotificationTriggerDetails";
     };
@@ -317,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::ReminderNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.ReminderNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "ReminderNotificationTriggerDetails";
     };
@@ -324,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::SpeedDialEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.SpeedDialEntry";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "SpeedDialEntry";
     };
@@ -331,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::TextResponse>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.TextResponse";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "TextResponse";
     };
@@ -338,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::ToastNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.ToastNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "ToastNotificationTriggerDetails";
     };
@@ -345,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::VolumeInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.VolumeInfo";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "VolumeInfo";
     };
@@ -352,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Notification::Management::IAccessoryNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.notification.management.IAccessoryNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.phone.notification.management";
         static constexpr const char* type_name = "IAccessoryNotificationTriggerDetails";
     };

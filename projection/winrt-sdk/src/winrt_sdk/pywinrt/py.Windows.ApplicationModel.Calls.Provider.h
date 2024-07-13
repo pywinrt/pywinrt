@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.provider.PhoneCallOrigin";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
         static constexpr const char* type_name = "PhoneCallOrigin";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::Provider::PhoneCallOriginManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.provider.PhoneCallOriginManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls.provider";
         static constexpr const char* type_name = "PhoneCallOriginManager";
     };

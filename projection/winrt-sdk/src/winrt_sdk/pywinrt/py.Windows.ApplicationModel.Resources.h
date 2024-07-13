@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::ResourceLoader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.ResourceLoader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources";
         static constexpr const char* type_name = "ResourceLoader";
     };

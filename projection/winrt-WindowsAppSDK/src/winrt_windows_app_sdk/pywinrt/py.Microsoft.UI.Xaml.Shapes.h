@@ -108,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Ellipse>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Ellipse";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Ellipse";
     };
@@ -115,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Line>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Line";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Line";
     };
@@ -122,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Path>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Path";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Path";
     };
@@ -129,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Polygon>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Polygon";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Polygon";
     };
@@ -136,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Polyline>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Polyline";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Polyline";
     };
@@ -143,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Rectangle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Rectangle";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Rectangle";
     };
@@ -150,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Shapes::Shape>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.shapes.Shape";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.shapes";
         static constexpr const char* type_name = "Shape";
     };

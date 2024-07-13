@@ -51,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayColorSpace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayColorSpace";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayColorSpace";
     };
@@ -58,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdrOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayHdrOption";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayHdrOption";
     };
@@ -65,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayPixelEncoding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayPixelEncoding";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayPixelEncoding";
     };
@@ -72,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayInformation";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayInformation";
     };
@@ -79,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayMode";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayMode";
     };
@@ -86,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Display::Core::HdmiDisplayHdr2086Metadata>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.display.core.HdmiDisplayHdr2086Metadata";
         static constexpr const char* module_name = "winrt.windows.graphics.display.core";
         static constexpr const char* type_name = "HdmiDisplayHdr2086Metadata";
     };

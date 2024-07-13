@@ -60,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::AtomPub::AtomPubClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.atompub.AtomPubClient";
         static constexpr const char* module_name = "winrt.windows.web.atompub";
         static constexpr const char* type_name = "AtomPubClient";
     };
@@ -67,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::AtomPub::ResourceCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.atompub.ResourceCollection";
         static constexpr const char* module_name = "winrt.windows.web.atompub";
         static constexpr const char* type_name = "ResourceCollection";
     };
@@ -74,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::AtomPub::ServiceDocument>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.atompub.ServiceDocument";
         static constexpr const char* module_name = "winrt.windows.web.atompub";
         static constexpr const char* type_name = "ServiceDocument";
     };
@@ -81,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::AtomPub::Workspace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.atompub.Workspace";
         static constexpr const char* module_name = "winrt.windows.web.atompub";
         static constexpr const char* type_name = "Workspace";
     };

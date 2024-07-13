@@ -143,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::WorkItemOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemOptions";
         static constexpr const char* module_name = "winrt.windows.system.threading";
         static constexpr const char* type_name = "WorkItemOptions";
     };
@@ -150,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::WorkItemPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.WorkItemPriority";
         static constexpr const char* module_name = "winrt.windows.system.threading";
         static constexpr const char* type_name = "WorkItemPriority";
     };
@@ -157,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::ThreadPool>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPool";
         static constexpr const char* module_name = "winrt.windows.system.threading";
         static constexpr const char* type_name = "ThreadPool";
     };
@@ -164,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::ThreadPoolTimer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.ThreadPoolTimer";
         static constexpr const char* module_name = "winrt.windows.system.threading";
         static constexpr const char* type_name = "ThreadPoolTimer";
     };

@@ -91,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::SecurityAppKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.SecurityAppKind";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "SecurityAppKind";
     };
@@ -98,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::SecurityAppState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.SecurityAppState";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "SecurityAppState";
     };
@@ -105,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::SecurityAppSubstatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.SecurityAppSubstatus";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "SecurityAppSubstatus";
     };
@@ -112,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::ShareWindowCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.ShareWindowCommand";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "ShareWindowCommand";
     };
@@ -119,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::AdaptiveCardBuilder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.AdaptiveCardBuilder";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "AdaptiveCardBuilder";
     };
@@ -126,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::FocusSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.FocusSession";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "FocusSession";
     };
@@ -133,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::FocusSessionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.FocusSessionManager";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "FocusSessionManager";
     };
@@ -140,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::SecurityAppManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.SecurityAppManager";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "SecurityAppManager";
     };
@@ -147,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::ShareWindowCommandEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.ShareWindowCommandEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "ShareWindowCommandEventArgs";
     };
@@ -154,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::ShareWindowCommandSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.ShareWindowCommandSource";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "ShareWindowCommandSource";
     };
@@ -161,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::TaskbarManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.TaskbarManager";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "TaskbarManager";
     };
@@ -168,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTab>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTab";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTab";
     };
@@ -175,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabCloseRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabCloseRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabCloseRequestedEventArgs";
     };
@@ -182,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabCollection";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabCollection";
     };
@@ -189,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabGroup";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabGroup";
     };
@@ -196,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabIcon>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabIcon";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabIcon";
     };
@@ -203,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabManager";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabManager";
     };
@@ -210,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabSwitchRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabSwitchRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabSwitchRequestedEventArgs";
     };
@@ -217,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabTearOutRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabTearOutRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabTearOutRequestedEventArgs";
     };
@@ -224,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.WindowTabThumbnailRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "WindowTabThumbnailRequestedEventArgs";
     };
@@ -231,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::IAdaptiveCard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.IAdaptiveCard";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "IAdaptiveCard";
     };
@@ -238,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Shell::IAdaptiveCardBuilderStatics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.shell.IAdaptiveCardBuilderStatics";
         static constexpr const char* module_name = "winrt.windows.ui.shell";
         static constexpr const char* type_name = "IAdaptiveCardBuilderStatics";
     };

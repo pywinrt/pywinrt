@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::InkWorkspace::InkWorkspaceHostedAppManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.inkworkspace.InkWorkspaceHostedAppManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.inkworkspace";
         static constexpr const char* type_name = "InkWorkspaceHostedAppManager";
     };

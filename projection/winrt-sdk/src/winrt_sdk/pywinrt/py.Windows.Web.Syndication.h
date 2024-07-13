@@ -78,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationErrorStatus";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationErrorStatus";
     };
@@ -85,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationFormat";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationFormat";
     };
@@ -92,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationTextType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationTextType";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationTextType";
     };
@@ -99,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationAttribute>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationAttribute";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationAttribute";
     };
@@ -106,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationCategory";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationCategory";
     };
@@ -113,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationClient";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationClient";
     };
@@ -120,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationContent";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationContent";
     };
@@ -127,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationError";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationError";
     };
@@ -134,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationFeed>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationFeed";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationFeed";
     };
@@ -141,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationGenerator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationGenerator";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationGenerator";
     };
@@ -148,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationItem";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationItem";
     };
@@ -155,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationLink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationLink";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationLink";
     };
@@ -162,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationNode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationNode";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationNode";
     };
@@ -169,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationPerson>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationPerson";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationPerson";
     };
@@ -176,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::SyndicationText>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.SyndicationText";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "SyndicationText";
     };
@@ -183,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationClient";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "ISyndicationClient";
     };
@@ -190,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationNode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationNode";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "ISyndicationNode";
     };
@@ -197,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::ISyndicationText>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.ISyndicationText";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "ISyndicationText";
     };
@@ -204,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::RetrievalProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.RetrievalProgress";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "RetrievalProgress";
     };
@@ -211,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Syndication::TransferProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.syndication.TransferProgress";
         static constexpr const char* module_name = "winrt.windows.web.syndication";
         static constexpr const char* type_name = "TransferProgress";
     };

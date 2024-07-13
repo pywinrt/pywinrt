@@ -29,6 +29,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Widgets::WidgetSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.widgets.WidgetSize";
         static constexpr const char* module_name = "winrt.microsoft.windows.widgets";
         static constexpr const char* type_name = "WidgetSize";
     };

@@ -48,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::ContactPartnerProvisioningManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.provisioning.ContactPartnerProvisioningManager";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation.provisioning";
         static constexpr const char* type_name = "ContactPartnerProvisioningManager";
     };
@@ -55,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::Provisioning::MessagePartnerProvisioningManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.provisioning.MessagePartnerProvisioningManager";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation.provisioning";
         static constexpr const char* type_name = "MessagePartnerProvisioningManager";
     };

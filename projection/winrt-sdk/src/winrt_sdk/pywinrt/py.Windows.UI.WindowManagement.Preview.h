@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::Preview::WindowManagementPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.preview.WindowManagementPreview";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement.preview";
         static constexpr const char* type_name = "WindowManagementPreview";
     };

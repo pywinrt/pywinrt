@@ -106,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelDeviceKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelDeviceKind";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelDeviceKind";
     };
@@ -113,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelFeatureKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelFeatureKind";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelFeatureKind";
     };
@@ -120,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelPixelRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelPixelRange";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelPixelRange";
     };
@@ -127,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorKind";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorKind";
     };
@@ -134,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ImageFeatureDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ImageFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ImageFeatureDescriptor";
     };
@@ -141,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ImageFeatureValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ImageFeatureValue";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ImageFeatureValue";
     };
@@ -148,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModel";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModel";
     };
@@ -155,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelBinding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelBinding";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelBinding";
     };
@@ -162,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelDevice";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelDevice";
     };
@@ -169,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelEvaluationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelEvaluationResult";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelEvaluationResult";
     };
@@ -176,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelSession";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelSession";
     };
@@ -183,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::LearningModelSessionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.LearningModelSessionOptions";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "LearningModelSessionOptions";
     };
@@ -190,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::MapFeatureDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.MapFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "MapFeatureDescriptor";
     };
@@ -197,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::SequenceFeatureDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.SequenceFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "SequenceFeatureDescriptor";
     };
@@ -204,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorBoolean>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorBoolean";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorBoolean";
     };
@@ -211,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorDouble>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorDouble";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorDouble";
     };
@@ -218,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorFeatureDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorFeatureDescriptor";
     };
@@ -225,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorFloat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorFloat";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorFloat";
     };
@@ -232,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorFloat16Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorFloat16Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorFloat16Bit";
     };
@@ -239,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorInt16Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorInt16Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorInt16Bit";
     };
@@ -246,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorInt32Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorInt32Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorInt32Bit";
     };
@@ -253,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorInt64Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorInt64Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorInt64Bit";
     };
@@ -260,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorInt8Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorInt8Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorInt8Bit";
     };
@@ -267,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorString>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorString";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorString";
     };
@@ -274,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt16Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorUInt16Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorUInt16Bit";
     };
@@ -281,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt32Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorUInt32Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorUInt32Bit";
     };
@@ -288,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt64Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorUInt64Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorUInt64Bit";
     };
@@ -295,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::TensorUInt8Bit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.TensorUInt8Bit";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "TensorUInt8Bit";
     };
@@ -302,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelFeatureDescriptor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ILearningModelFeatureDescriptor";
     };
@@ -309,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelFeatureValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelFeatureValue";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ILearningModelFeatureValue";
     };
@@ -316,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ILearningModelOperatorProvider";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ILearningModelOperatorProvider";
     };
@@ -323,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::ITensor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.ITensor";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning";
         static constexpr const char* type_name = "ITensor";
     };

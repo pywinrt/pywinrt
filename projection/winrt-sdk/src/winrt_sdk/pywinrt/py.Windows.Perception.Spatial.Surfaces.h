@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceInfo";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
         static constexpr const char* type_name = "SpatialSurfaceInfo";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMesh>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMesh";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
         static constexpr const char* type_name = "SpatialSurfaceMesh";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshBuffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMeshBuffer";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
         static constexpr const char* type_name = "SpatialSurfaceMeshBuffer";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceMeshOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceMeshOptions";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
         static constexpr const char* type_name = "SpatialSurfaceMeshOptions";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Surfaces::SpatialSurfaceObserver>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.surfaces.SpatialSurfaceObserver";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.surfaces";
         static constexpr const char* type_name = "SpatialSurfaceObserver";
     };

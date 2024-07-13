@@ -90,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::AudioEncodingQuality>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.AudioEncodingQuality";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "AudioEncodingQuality";
     };
@@ -97,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaMirroringOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaMirroringOptions";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaMirroringOptions";
     };
@@ -104,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaPixelFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaPixelFormat";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaPixelFormat";
     };
@@ -111,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaRotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaRotation";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaRotation";
     };
@@ -118,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaThumbnailFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaThumbnailFormat";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaThumbnailFormat";
     };
@@ -125,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::SphericalVideoFrameFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.SphericalVideoFrameFormat";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "SphericalVideoFrameFormat";
     };
@@ -132,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::StereoscopicVideoPackingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.StereoscopicVideoPackingMode";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "StereoscopicVideoPackingMode";
     };
@@ -139,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::VideoEncodingQuality>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.VideoEncodingQuality";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "VideoEncodingQuality";
     };
@@ -146,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::AudioEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.AudioEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "AudioEncodingProperties";
     };
@@ -153,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::Av1ProfileIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.Av1ProfileIds";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "Av1ProfileIds";
     };
@@ -160,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::ContainerEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.ContainerEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "ContainerEncodingProperties";
     };
@@ -167,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::H264ProfileIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.H264ProfileIds";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "H264ProfileIds";
     };
@@ -174,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::HevcProfileIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.HevcProfileIds";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "HevcProfileIds";
     };
@@ -181,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::ImageEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.ImageEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "ImageEncodingProperties";
     };
@@ -188,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaEncodingProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaEncodingProfile";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaEncodingProfile";
     };
@@ -195,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaEncodingSubtypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaEncodingSubtypes";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaEncodingSubtypes";
     };
@@ -202,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaPropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaPropertySet";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaPropertySet";
     };
@@ -209,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::MediaRatio>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.MediaRatio";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "MediaRatio";
     };
@@ -216,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::Mpeg2ProfileIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.Mpeg2ProfileIds";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "Mpeg2ProfileIds";
     };
@@ -223,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::TimedMetadataEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.TimedMetadataEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "TimedMetadataEncodingProperties";
     };
@@ -230,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::VideoEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.VideoEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "VideoEncodingProperties";
     };
@@ -237,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::Vp9ProfileIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.Vp9ProfileIds";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "Vp9ProfileIds";
     };
@@ -244,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::MediaProperties::IMediaEncodingProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.mediaproperties.IMediaEncodingProperties";
         static constexpr const char* module_name = "winrt.windows.media.mediaproperties";
         static constexpr const char* type_name = "IMediaEncodingProperties";
     };

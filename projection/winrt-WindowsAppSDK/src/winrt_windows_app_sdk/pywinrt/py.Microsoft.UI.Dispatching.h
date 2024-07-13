@@ -63,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueuePriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherQueuePriority";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueuePriority";
     };
@@ -70,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherRunOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherRunOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherRunOptions";
     };
@@ -77,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherExitDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherExitDeferral";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherExitDeferral";
     };
@@ -84,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueue>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherQueue";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueue";
     };
@@ -91,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueController>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherQueueController";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueueController";
     };
@@ -98,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueShutdownStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherQueueShutdownStartingEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueueShutdownStartingEventArgs";
     };
@@ -105,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Dispatching::DispatcherQueueTimer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.dispatching.DispatcherQueueTimer";
         static constexpr const char* module_name = "winrt.microsoft.ui.dispatching";
         static constexpr const char* type_name = "DispatcherQueueTimer";
     };

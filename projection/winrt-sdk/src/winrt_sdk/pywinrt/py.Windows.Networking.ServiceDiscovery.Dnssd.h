@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdRegistrationStatus";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdRegistrationStatus";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdServiceWatcherStatus";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdRegistrationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdRegistrationResult";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdRegistrationResult";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceInstance";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdServiceInstance";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstanceCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceInstanceCollection";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdServiceInstanceCollection";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.servicediscovery.dnssd.DnssdServiceWatcher";
         static constexpr const char* module_name = "winrt.windows.networking.servicediscovery.dnssd";
         static constexpr const char* type_name = "DnssdServiceWatcher";
     };

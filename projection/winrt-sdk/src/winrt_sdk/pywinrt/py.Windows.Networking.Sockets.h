@@ -154,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerResetReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ControlChannelTriggerResetReason";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ControlChannelTriggerResetReason";
     };
@@ -161,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerResourceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ControlChannelTriggerResourceType";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ControlChannelTriggerResourceType";
     };
@@ -168,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTriggerStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ControlChannelTriggerStatus";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ControlChannelTriggerStatus";
     };
@@ -175,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketReceiveMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.MessageWebSocketReceiveMode";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "MessageWebSocketReceiveMode";
     };
@@ -182,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityConnectedStandbyAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityConnectedStandbyAction";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityConnectedStandbyAction";
     };
@@ -189,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityKind";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityKind";
     };
@@ -196,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityTriggerReason";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityTriggerReason";
     };
@@ -203,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketErrorStatus";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketErrorStatus";
     };
@@ -210,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketMessageType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketMessageType";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketMessageType";
     };
@@ -217,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketProtectionLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketProtectionLevel";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketProtectionLevel";
     };
@@ -224,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketQualityOfService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketQualityOfService";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketQualityOfService";
     };
@@ -231,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketSslErrorSeverity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketSslErrorSeverity";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketSslErrorSeverity";
     };
@@ -238,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ControlChannelTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ControlChannelTrigger";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ControlChannelTrigger";
     };
@@ -245,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::DatagramSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.DatagramSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "DatagramSocket";
     };
@@ -252,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.DatagramSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "DatagramSocketControl";
     };
@@ -259,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.DatagramSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "DatagramSocketInformation";
     };
@@ -266,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::DatagramSocketMessageReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.DatagramSocketMessageReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "DatagramSocketMessageReceivedEventArgs";
     };
@@ -273,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.MessageWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "MessageWebSocket";
     };
@@ -280,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.MessageWebSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "MessageWebSocketControl";
     };
@@ -287,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.MessageWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "MessageWebSocketInformation";
     };
@@ -294,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::MessageWebSocketMessageReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.MessageWebSocketMessageReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "MessageWebSocketMessageReceivedEventArgs";
     };
@@ -301,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ServerMessageWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ServerMessageWebSocket";
     };
@@ -308,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ServerMessageWebSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ServerMessageWebSocketControl";
     };
@@ -315,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ServerMessageWebSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ServerMessageWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ServerMessageWebSocketInformation";
     };
@@ -322,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ServerStreamWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ServerStreamWebSocket";
     };
@@ -329,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::ServerStreamWebSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.ServerStreamWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "ServerStreamWebSocketInformation";
     };
@@ -336,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityContext";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityContext";
     };
@@ -343,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityInformation";
     };
@@ -350,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketActivityTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketActivityTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketActivityTriggerDetails";
     };
@@ -357,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::SocketError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.SocketError";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "SocketError";
     };
@@ -364,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocket";
     };
@@ -371,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketControl";
     };
@@ -378,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketInformation";
     };
@@ -385,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketListener";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketListener";
     };
@@ -392,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerConnectionReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketListenerConnectionReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketListenerConnectionReceivedEventArgs";
     };
@@ -399,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketListenerControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketListenerControl";
     };
@@ -406,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamSocketListenerInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamSocketListenerInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamSocketListenerInformation";
     };
@@ -413,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamWebSocket";
     };
@@ -420,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamWebSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamWebSocketControl";
     };
@@ -427,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::StreamWebSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.StreamWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "StreamWebSocketInformation";
     };
@@ -434,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::WebSocketClosedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.WebSocketClosedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "WebSocketClosedEventArgs";
     };
@@ -441,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::WebSocketError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.WebSocketError";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "WebSocketError";
     };
@@ -448,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::WebSocketKeepAlive>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.WebSocketKeepAlive";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "WebSocketKeepAlive";
     };
@@ -455,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::WebSocketServerCustomValidationRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.WebSocketServerCustomValidationRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "WebSocketServerCustomValidationRequestedEventArgs";
     };
@@ -462,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IControlChannelTriggerEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IControlChannelTriggerEventDetails";
     };
@@ -469,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IControlChannelTriggerResetEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IControlChannelTriggerResetEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IControlChannelTriggerResetEventDetails";
     };
@@ -476,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocket";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IWebSocket";
     };
@@ -483,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketControl";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IWebSocketControl";
     };
@@ -490,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketControl2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketControl2";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IWebSocketControl2";
     };
@@ -497,6 +546,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketInformation";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IWebSocketInformation";
     };
@@ -504,6 +554,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::IWebSocketInformation2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.IWebSocketInformation2";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "IWebSocketInformation2";
     };
@@ -511,6 +562,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::BandwidthStatistics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.BandwidthStatistics";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "BandwidthStatistics";
     };
@@ -518,6 +570,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Sockets::RoundTripTimeStatistics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.sockets.RoundTripTimeStatistics";
         static constexpr const char* module_name = "winrt.windows.networking.sockets";
         static constexpr const char* type_name = "RoundTripTimeStatistics";
     };

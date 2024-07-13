@@ -127,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatConversationThreadingKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatConversationThreadingKind";
     };
@@ -134,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatItemKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatItemKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatItemKind";
     };
@@ -141,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChangeType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChangeType";
     };
@@ -148,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageKind";
     };
@@ -155,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageOperatorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageOperatorKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageOperatorKind";
     };
@@ -162,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageStatus";
     };
@@ -169,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageTransportKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageTransportKind";
     };
@@ -176,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageValidationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageValidationStatus";
     };
@@ -183,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatRestoreHistorySpan>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatRestoreHistorySpan";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatRestoreHistorySpan";
     };
@@ -190,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatStoreChangedEventKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatStoreChangedEventKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatStoreChangedEventKind";
     };
@@ -197,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatTransportErrorCodeCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatTransportErrorCodeCategory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatTransportErrorCodeCategory";
     };
@@ -204,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatTransportInterpretedErrorCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatTransportInterpretedErrorCode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatTransportInterpretedErrorCode";
     };
@@ -211,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsServiceKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsServiceKind";
     };
@@ -218,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatCapabilities";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatCapabilities";
     };
@@ -225,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatCapabilitiesManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatCapabilitiesManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatCapabilitiesManager";
     };
@@ -232,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatConversation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatConversation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatConversation";
     };
@@ -239,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatConversationReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatConversationReader";
     };
@@ -246,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatConversationThreadingInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatConversationThreadingInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatConversationThreadingInfo";
     };
@@ -253,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessage";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessage";
     };
@@ -260,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageAttachment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageAttachment";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageAttachment";
     };
@@ -267,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageBlocking>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageBlocking";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageBlocking";
     };
@@ -274,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChange";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChange";
     };
@@ -281,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChangeReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChangeReader";
     };
@@ -288,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangeTracker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChangeTracker";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChangeTracker";
     };
@@ -295,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChangedDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChangedDeferral";
     };
@@ -302,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageChangedEventArgs";
     };
@@ -309,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageManager";
     };
@@ -316,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageNotificationTriggerDetails";
     };
@@ -323,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageReader";
     };
@@ -330,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageStore";
     };
@@ -337,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageStoreChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageStoreChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageStoreChangedEventArgs";
     };
@@ -344,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageTransport";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageTransport";
     };
@@ -351,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageTransportConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageTransportConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageTransportConfiguration";
     };
@@ -358,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatMessageValidationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatMessageValidationResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatMessageValidationResult";
     };
@@ -365,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatQueryOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatQueryOptions";
     };
@@ -372,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatRecipientDeliveryInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatRecipientDeliveryInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatRecipientDeliveryInfo";
     };
@@ -379,6 +415,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatSearchReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatSearchReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatSearchReader";
     };
@@ -386,6 +423,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatSyncConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatSyncConfiguration";
     };
@@ -393,6 +431,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::ChatSyncManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.ChatSyncManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "ChatSyncManager";
     };
@@ -400,6 +439,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsEndUserMessage";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsEndUserMessage";
     };
@@ -407,6 +447,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsEndUserMessageAction";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsEndUserMessageAction";
     };
@@ -414,6 +455,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsEndUserMessageAvailableEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsEndUserMessageAvailableEventArgs";
     };
@@ -421,6 +463,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageAvailableTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsEndUserMessageAvailableTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsEndUserMessageAvailableTriggerDetails";
     };
@@ -428,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsEndUserMessageManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsEndUserMessageManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsEndUserMessageManager";
     };
@@ -435,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsManager";
     };
@@ -442,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsServiceKindSupportedChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsServiceKindSupportedChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsServiceKindSupportedChangedEventArgs";
     };
@@ -449,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsTransport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsTransport";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsTransport";
     };
@@ -456,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RcsTransportConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RcsTransportConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RcsTransportConfiguration";
     };
@@ -463,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::RemoteParticipantComposingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.RemoteParticipantComposingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "RemoteParticipantComposingChangedEventArgs";
     };
@@ -470,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Chat::IChatItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.chat.IChatItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.chat";
         static constexpr const char* type_name = "IChatItem";
     };

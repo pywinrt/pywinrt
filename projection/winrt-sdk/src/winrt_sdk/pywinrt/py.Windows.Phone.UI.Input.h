@@ -34,6 +34,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::UI::Input::BackPressedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.ui.input.BackPressedEventArgs";
         static constexpr const char* module_name = "winrt.windows.phone.ui.input";
         static constexpr const char* type_name = "BackPressedEventArgs";
     };
@@ -41,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::UI::Input::CameraEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.ui.input.CameraEventArgs";
         static constexpr const char* module_name = "winrt.windows.phone.ui.input";
         static constexpr const char* type_name = "CameraEventArgs";
     };
@@ -48,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::UI::Input::HardwareButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.ui.input.HardwareButtons";
         static constexpr const char* module_name = "winrt.windows.phone.ui.input";
         static constexpr const char* type_name = "HardwareButtons";
     };

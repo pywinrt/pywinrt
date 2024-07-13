@@ -80,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::FulfillmentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.FulfillmentResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "FulfillmentResult";
     };
@@ -87,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductPurchaseStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ProductPurchaseStatus";
     };
@@ -94,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ProductType";
     };
@@ -101,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::CurrentApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.CurrentApp";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "CurrentApp";
     };
@@ -108,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::CurrentAppSimulator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.CurrentAppSimulator";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "CurrentAppSimulator";
     };
@@ -115,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::LicenseInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.LicenseInformation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "LicenseInformation";
     };
@@ -122,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ListingInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ListingInformation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ListingInformation";
     };
@@ -129,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductLicense>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductLicense";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ProductLicense";
     };
@@ -136,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductListing>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductListing";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ProductListing";
     };
@@ -143,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.ProductPurchaseDisplayProperties";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "ProductPurchaseDisplayProperties";
     };
@@ -150,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::PurchaseResults>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.PurchaseResults";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "PurchaseResults";
     };
@@ -157,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::UnfulfilledConsumable>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.UnfulfilledConsumable";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store";
         static constexpr const char* type_name = "UnfulfilledConsumable";
     };

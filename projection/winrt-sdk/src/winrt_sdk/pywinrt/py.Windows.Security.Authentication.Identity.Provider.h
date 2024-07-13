@@ -81,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationMessage";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationMessage";
     };
@@ -88,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationScenario>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationScenario";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationScenario";
     };
@@ -95,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationStage";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStage";
     };
@@ -102,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStatus";
     };
@@ -109,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDeviceCapabilities";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorDeviceCapabilities";
     };
@@ -116,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDeviceFindScope>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDeviceFindScope";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorDeviceFindScope";
     };
@@ -123,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresence";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorDevicePresence";
     };
@@ -130,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresenceMonitoringMode";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorDevicePresenceMonitoringMode";
     };
@@ -137,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatus";
     };
@@ -144,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorFinishAuthenticationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorFinishAuthenticationStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorFinishAuthenticationStatus";
     };
@@ -151,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorRegistrationStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistrationStatus";
     };
@@ -158,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthentication>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthentication";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthentication";
     };
@@ -165,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationResult";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationResult";
     };
@@ -172,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs";
     };
@@ -179,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorAuthenticationStageInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorAuthenticationStageInfo";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationStageInfo";
     };
@@ -186,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorInfo";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorInfo";
     };
@@ -193,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorRegistration";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistration";
     };
@@ -200,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::Provider::SecondaryAuthenticationFactorRegistrationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.provider.SecondaryAuthenticationFactorRegistrationResult";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity.provider";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorRegistrationResult";
     };

@@ -119,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PdlConversionHostBasedProcessingOperations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PdlConversionHostBasedProcessingOperations";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PdlConversionHostBasedProcessingOperations";
     };
@@ -126,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowAttributesMergePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowAttributesMergePolicy";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowAttributesMergePolicy";
     };
@@ -133,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobAbortReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobAbortReason";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobAbortReason";
     };
@@ -140,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConversionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConversionType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlConversionType";
     };
@@ -147,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJobStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPrinterJobStatus";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPrinterJobStatus";
     };
@@ -154,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSessionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSessionStatus";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSessionStatus";
     };
@@ -161,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedStatus";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSubmittedStatus";
     };
@@ -168,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUICompletionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowUICompletionStatus";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowUICompletionStatus";
     };
@@ -175,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowBackgroundSession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowBackgroundSession";
     };
@@ -182,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowBackgroundSetupRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowBackgroundSetupRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowBackgroundSetupRequestedEventArgs";
     };
@@ -189,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowConfiguration";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowConfiguration";
     };
@@ -196,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowForegroundSession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowForegroundSession";
     };
@@ -203,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowForegroundSetupRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowForegroundSetupRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowForegroundSetupRequestedEventArgs";
     };
@@ -210,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobActivatedEventArgs";
     };
@@ -217,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobBackgroundSession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobBackgroundSession";
     };
@@ -224,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobNotificationEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobNotificationEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobNotificationEventArgs";
     };
@@ -231,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobStartingEventArgs";
     };
@@ -238,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobTriggerDetails";
     };
@@ -245,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowJobUISession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowJobUISession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowJobUISession";
     };
@@ -252,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelSourceFileContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowObjectModelSourceFileContent";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowObjectModelSourceFileContent";
     };
@@ -259,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowObjectModelTargetPackage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowObjectModelTargetPackage";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowObjectModelTargetPackage";
     };
@@ -266,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlConverter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlConverter";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlConverter";
     };
@@ -273,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlDataAvailableEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlDataAvailableEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlDataAvailableEventArgs";
     };
@@ -280,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlModificationRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlModificationRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlModificationRequestedEventArgs";
     };
@@ -287,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlSourceContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlSourceContent";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlSourceContent";
     };
@@ -294,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPdlTargetStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPdlTargetStream";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPdlTargetStream";
     };
@@ -301,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowPrinterJob>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowPrinterJob";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowPrinterJob";
     };
@@ -308,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSourceContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSourceContent";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSourceContent";
     };
@@ -315,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSpoolStreamContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSpoolStreamContent";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSpoolStreamContent";
     };
@@ -322,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowStreamTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowStreamTarget";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowStreamTarget";
     };
@@ -329,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSubmittedEventArgs";
     };
@@ -336,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowSubmittedOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowSubmittedOperation";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowSubmittedOperation";
     };
@@ -343,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowTarget";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowTarget";
     };
@@ -350,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowTriggerDetails";
     };
@@ -357,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUIActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowUIActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowUIActivatedEventArgs";
     };
@@ -364,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowUILauncher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowUILauncher";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowUILauncher";
     };
@@ -371,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::Workflow::PrintWorkflowXpsDataAvailableEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.workflow.PrintWorkflowXpsDataAvailableEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.workflow";
         static constexpr const char* type_name = "PrintWorkflowXpsDataAvailableEventArgs";
     };

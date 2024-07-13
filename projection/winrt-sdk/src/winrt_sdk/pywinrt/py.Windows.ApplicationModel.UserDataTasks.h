@@ -94,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDaysOfWeek>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskDaysOfWeek";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskDaysOfWeek";
     };
@@ -101,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskDetailsKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskDetailsKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskDetailsKind";
     };
@@ -108,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskKind";
     };
@@ -115,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppReadAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskListOtherAppReadAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskListOtherAppReadAccess";
     };
@@ -122,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListOtherAppWriteAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskListOtherAppWriteAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskListOtherAppWriteAccess";
     };
@@ -129,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskListSyncStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskListSyncStatus";
     };
@@ -136,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskPriority";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskPriority";
     };
@@ -143,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskQueryKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskQueryKind";
     };
@@ -150,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQuerySortProperty>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskQuerySortProperty";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskQuerySortProperty";
     };
@@ -157,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskRecurrenceUnit";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskRecurrenceUnit";
     };
@@ -164,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskRegenerationUnit";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskRegenerationUnit";
     };
@@ -171,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskSensitivity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskSensitivity";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskSensitivity";
     };
@@ -178,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskStoreAccessType";
     };
@@ -185,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskWeekOfMonth>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskWeekOfMonth";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskWeekOfMonth";
     };
@@ -192,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTask";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTask";
     };
@@ -199,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskBatch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskBatch";
     };
@@ -206,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskList";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskList";
     };
@@ -213,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListLimitedWriteOperations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskListLimitedWriteOperations";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskListLimitedWriteOperations";
     };
@@ -220,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskListSyncManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskListSyncManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskListSyncManager";
     };
@@ -227,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskManager";
     };
@@ -234,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskQueryOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskQueryOptions";
     };
@@ -241,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskReader";
     };
@@ -248,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRecurrenceProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskRecurrenceProperties";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskRecurrenceProperties";
     };
@@ -255,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskRegenerationProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskRegenerationProperties";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskRegenerationProperties";
     };
@@ -262,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataTasks::UserDataTaskStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdatatasks.UserDataTaskStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdatatasks";
         static constexpr const char* type_name = "UserDataTaskStore";
     };

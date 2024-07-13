@@ -28,6 +28,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::Preview::ClassicAppManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.preview.ClassicAppManager";
         static constexpr const char* module_name = "winrt.windows.management.deployment.preview";
         static constexpr const char* type_name = "ClassicAppManager";
     };
@@ -35,6 +36,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::Preview::InstalledClassicAppInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.preview.InstalledClassicAppInfo";
         static constexpr const char* module_name = "winrt.windows.management.deployment.preview";
         static constexpr const char* type_name = "InstalledClassicAppInfo";
     };

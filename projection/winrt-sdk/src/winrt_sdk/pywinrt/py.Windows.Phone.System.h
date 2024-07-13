@@ -27,6 +27,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::SystemProtection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.SystemProtection";
         static constexpr const char* module_name = "winrt.windows.phone.system";
         static constexpr const char* type_name = "SystemProtection";
     };

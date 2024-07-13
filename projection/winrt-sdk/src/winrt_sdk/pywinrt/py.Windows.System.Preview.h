@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Preview::HingeState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.HingeState";
         static constexpr const char* module_name = "winrt.windows.system.preview";
         static constexpr const char* type_name = "HingeState";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreview";
         static constexpr const char* module_name = "winrt.windows.system.preview";
         static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreview";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreviewReading";
         static constexpr const char* module_name = "winrt.windows.system.preview";
         static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReading";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Preview::TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.preview";
         static constexpr const char* type_name = "TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs";
     };

@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropFrameOfReferencePreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.preview.SpatialGraphInteropFrameOfReferencePreview";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.preview";
         static constexpr const char* type_name = "SpatialGraphInteropFrameOfReferencePreview";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::Preview::SpatialGraphInteropPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.preview.SpatialGraphInteropPreview";
         static constexpr const char* module_name = "winrt.windows.perception.spatial.preview";
         static constexpr const char* type_name = "SpatialGraphInteropPreview";
     };

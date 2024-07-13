@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Xml::Xsl::XsltProcessor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.xml.xsl.XsltProcessor";
         static constexpr const char* module_name = "winrt.windows.data.xml.xsl";
         static constexpr const char* type_name = "XsltProcessor";
     };

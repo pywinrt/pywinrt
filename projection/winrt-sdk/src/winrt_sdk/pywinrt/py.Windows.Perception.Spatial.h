@@ -115,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportPurpose>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorExportPurpose";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorExportPurpose";
     };
@@ -122,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityWatcherStatus";
     };
@@ -129,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLocatability";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLocatability";
     };
@@ -136,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLookDirectionRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLookDirectionRange";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLookDirectionRange";
     };
@@ -143,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialMovementRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialMovementRange";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialMovementRange";
     };
@@ -150,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialPerceptionAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialPerceptionAccessStatus";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialPerceptionAccessStatus";
     };
@@ -157,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchor";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchor";
     };
@@ -164,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExportSufficiency>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorExportSufficiency";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorExportSufficiency";
     };
@@ -171,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorExporter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorExporter";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorExporter";
     };
@@ -178,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorManager";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorManager";
     };
@@ -185,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorRawCoordinateSystemAdjustedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorRawCoordinateSystemAdjustedEventArgs";
     };
@@ -192,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorStore";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorStore";
     };
@@ -199,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialAnchorTransferManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialAnchorTransferManager";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialAnchorTransferManager";
     };
@@ -206,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingVolume>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingVolume";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingVolume";
     };
@@ -213,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialCoordinateSystem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialCoordinateSystem";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialCoordinateSystem";
     };
@@ -220,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntity";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntity";
     };
@@ -227,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityAddedEventArgs";
     };
@@ -234,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityRemovedEventArgs";
     };
@@ -241,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityStore";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityStore";
     };
@@ -248,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityUpdatedEventArgs";
     };
@@ -255,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialEntityWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialEntityWatcher";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialEntityWatcher";
     };
@@ -262,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLocation";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLocation";
     };
@@ -269,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLocator";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLocator";
     };
@@ -276,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLocatorAttachedFrameOfReference";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLocatorAttachedFrameOfReference";
     };
@@ -283,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialLocatorPositionalTrackingDeactivatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialLocatorPositionalTrackingDeactivatingEventArgs";
     };
@@ -290,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialStageFrameOfReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialStageFrameOfReference";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialStageFrameOfReference";
     };
@@ -297,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialStationaryFrameOfReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialStationaryFrameOfReference";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialStationaryFrameOfReference";
     };
@@ -304,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingBox>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingBox";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingBox";
     };
@@ -311,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingFrustum>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingFrustum";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingFrustum";
     };
@@ -318,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingOrientedBox>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingOrientedBox";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingOrientedBox";
     };
@@ -325,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialBoundingSphere>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialBoundingSphere";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialBoundingSphere";
     };
@@ -332,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Spatial::SpatialRay>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.spatial.SpatialRay";
         static constexpr const char* module_name = "winrt.windows.perception.spatial";
         static constexpr const char* type_name = "SpatialRay";
     };

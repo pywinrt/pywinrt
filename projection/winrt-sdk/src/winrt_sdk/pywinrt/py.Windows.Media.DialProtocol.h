@@ -71,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppLaunchResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppLaunchResult";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialAppLaunchResult";
     };
@@ -78,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppState";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialAppState";
     };
@@ -85,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppStopResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppStopResult";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialAppStopResult";
     };
@@ -92,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceDisplayStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDeviceDisplayStatus";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDeviceDisplayStatus";
     };
@@ -99,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialApp";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialApp";
     };
@@ -106,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialAppStateDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialAppStateDetails";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialAppStateDetails";
     };
@@ -113,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevice";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDevice";
     };
@@ -120,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevicePicker";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDevicePicker";
     };
@@ -127,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDevicePickerFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDevicePickerFilter";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDevicePickerFilter";
     };
@@ -134,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDeviceSelectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDeviceSelectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDeviceSelectedEventArgs";
     };
@@ -141,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialDisconnectButtonClickedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialDisconnectButtonClickedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialDisconnectButtonClickedEventArgs";
     };
@@ -148,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::DialProtocol::DialReceiverApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.dialprotocol.DialReceiverApp";
         static constexpr const char* module_name = "winrt.windows.media.dialprotocol";
         static constexpr const char* type_name = "DialReceiverApp";
     };

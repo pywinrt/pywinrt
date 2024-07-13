@@ -142,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::LogicalDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.LogicalDirection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "LogicalDirection";
     };
@@ -149,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::UnderlineStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.UnderlineStyle";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "UnderlineStyle";
     };
@@ -156,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Block>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Block";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Block";
     };
@@ -163,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::BlockCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.BlockCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "BlockCollection";
     };
@@ -170,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Bold>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Bold";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Bold";
     };
@@ -177,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::ContactContentLinkProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.ContactContentLinkProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "ContactContentLinkProvider";
     };
@@ -184,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.ContentLink";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "ContentLink";
     };
@@ -191,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkInvokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.ContentLinkInvokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "ContentLinkInvokedEventArgs";
     };
@@ -198,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.ContentLinkProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "ContentLinkProvider";
     };
@@ -205,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::ContentLinkProviderCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.ContentLinkProviderCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "ContentLinkProviderCollection";
     };
@@ -212,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Glyphs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Glyphs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Glyphs";
     };
@@ -219,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Hyperlink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Hyperlink";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Hyperlink";
     };
@@ -226,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::HyperlinkClickEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.HyperlinkClickEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "HyperlinkClickEventArgs";
     };
@@ -233,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Inline>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Inline";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Inline";
     };
@@ -240,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::InlineCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.InlineCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "InlineCollection";
     };
@@ -247,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::InlineUIContainer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.InlineUIContainer";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "InlineUIContainer";
     };
@@ -254,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Italic>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Italic";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Italic";
     };
@@ -261,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::LineBreak>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.LineBreak";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "LineBreak";
     };
@@ -268,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Paragraph>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Paragraph";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Paragraph";
     };
@@ -275,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::PlaceContentLinkProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.PlaceContentLinkProvider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "PlaceContentLinkProvider";
     };
@@ -282,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Run>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Run";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Run";
     };
@@ -289,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Span>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Span";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Span";
     };
@@ -296,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextElement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextElement";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextElement";
     };
@@ -303,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextHighlighter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextHighlighter";
     };
@@ -310,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextHighlighterBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextHighlighterBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextHighlighterBase";
     };
@@ -317,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextPointer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextPointer";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextPointer";
     };
@@ -324,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Typography>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Typography";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Typography";
     };
@@ -331,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::Underline>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.Underline";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "Underline";
     };
@@ -338,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Documents::TextRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.documents.TextRange";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.documents";
         static constexpr const char* type_name = "TextRange";
     };

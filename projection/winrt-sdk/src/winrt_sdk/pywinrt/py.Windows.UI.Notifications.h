@@ -134,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::AdaptiveNotificationContentKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.AdaptiveNotificationContentKind";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "AdaptiveNotificationContentKind";
     };
@@ -141,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::BadgeTemplateType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.BadgeTemplateType";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "BadgeTemplateType";
     };
@@ -148,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationKinds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationKinds";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationKinds";
     };
@@ -155,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationMirroring>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationMirroring";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationMirroring";
     };
@@ -162,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationSetting>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationSetting";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationSetting";
     };
@@ -169,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationUpdateResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationUpdateResult";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationUpdateResult";
     };
@@ -176,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::PeriodicUpdateRecurrence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.PeriodicUpdateRecurrence";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "PeriodicUpdateRecurrence";
     };
@@ -183,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileFlyoutTemplateType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileFlyoutTemplateType";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileFlyoutTemplateType";
     };
@@ -190,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileTemplateType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileTemplateType";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileTemplateType";
     };
@@ -197,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastDismissalReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastDismissalReason";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastDismissalReason";
     };
@@ -204,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastHistoryChangedType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastHistoryChangedType";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastHistoryChangedType";
     };
@@ -211,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationMode";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationMode";
     };
@@ -218,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationPriority";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationPriority";
     };
@@ -225,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastTemplateType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastTemplateType";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastTemplateType";
     };
@@ -232,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::UserNotificationChangedKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.UserNotificationChangedKind";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "UserNotificationChangedKind";
     };
@@ -239,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::AdaptiveNotificationText>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.AdaptiveNotificationText";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "AdaptiveNotificationText";
     };
@@ -246,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::BadgeNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.BadgeNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "BadgeNotification";
     };
@@ -253,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::BadgeUpdateManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.BadgeUpdateManager";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "BadgeUpdateManager";
     };
@@ -260,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::BadgeUpdateManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.BadgeUpdateManagerForUser";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "BadgeUpdateManagerForUser";
     };
@@ -267,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::BadgeUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.BadgeUpdater";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "BadgeUpdater";
     };
@@ -274,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationHints>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.KnownAdaptiveNotificationHints";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "KnownAdaptiveNotificationHints";
     };
@@ -281,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::KnownAdaptiveNotificationTextStyles>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.KnownAdaptiveNotificationTextStyles";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "KnownAdaptiveNotificationTextStyles";
     };
@@ -288,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::KnownNotificationBindings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.KnownNotificationBindings";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "KnownNotificationBindings";
     };
@@ -295,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::Notification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.Notification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "Notification";
     };
@@ -302,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationBinding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationBinding";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationBinding";
     };
@@ -309,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationData";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationData";
     };
@@ -316,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::NotificationVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.NotificationVisual";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "NotificationVisual";
     };
@@ -323,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ScheduledTileNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ScheduledTileNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ScheduledTileNotification";
     };
@@ -330,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ScheduledToastNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ScheduledToastNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ScheduledToastNotification";
     };
@@ -337,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ScheduledToastNotificationShowingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ScheduledToastNotificationShowingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ScheduledToastNotificationShowingEventArgs";
     };
@@ -344,6 +374,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ShownTileNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ShownTileNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ShownTileNotification";
     };
@@ -351,6 +382,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileFlyoutNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileFlyoutNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileFlyoutNotification";
     };
@@ -358,6 +390,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdateManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileFlyoutUpdateManager";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileFlyoutUpdateManager";
     };
@@ -365,6 +398,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileFlyoutUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileFlyoutUpdater";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileFlyoutUpdater";
     };
@@ -372,6 +406,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileNotification";
     };
@@ -379,6 +414,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileUpdateManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileUpdateManager";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileUpdateManager";
     };
@@ -386,6 +422,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileUpdateManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileUpdateManagerForUser";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileUpdateManagerForUser";
     };
@@ -393,6 +430,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::TileUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.TileUpdater";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "TileUpdater";
     };
@@ -400,6 +438,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastActivatedEventArgs";
     };
@@ -407,6 +446,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastCollection";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastCollection";
     };
@@ -414,6 +454,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastCollectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastCollectionManager";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastCollectionManager";
     };
@@ -421,6 +462,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastDismissedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastDismissedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastDismissedEventArgs";
     };
@@ -428,6 +470,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastFailedEventArgs";
     };
@@ -435,6 +478,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotification";
     };
@@ -442,6 +486,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationActionTriggerDetail";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationActionTriggerDetail";
     };
@@ -449,6 +494,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationHistory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationHistory";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationHistory";
     };
@@ -456,6 +502,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationHistoryChangedTriggerDetail";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationHistoryChangedTriggerDetail";
     };
@@ -463,6 +510,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationManager";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationManager";
     };
@@ -470,6 +518,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotificationManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotificationManagerForUser";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotificationManagerForUser";
     };
@@ -477,6 +526,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::ToastNotifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.ToastNotifier";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "ToastNotifier";
     };
@@ -484,6 +534,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::UserNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.UserNotification";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "UserNotification";
     };
@@ -491,6 +542,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::UserNotificationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.UserNotificationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "UserNotificationChangedEventArgs";
     };
@@ -498,6 +550,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::IAdaptiveNotificationContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.IAdaptiveNotificationContent";
         static constexpr const char* module_name = "winrt.windows.ui.notifications";
         static constexpr const char* type_name = "IAdaptiveNotificationContent";
     };

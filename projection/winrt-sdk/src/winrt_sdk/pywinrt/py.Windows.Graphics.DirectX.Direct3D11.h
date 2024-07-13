@@ -47,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DBindings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DBindings";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DBindings";
     };
@@ -54,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DUsage";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DUsage";
     };
@@ -61,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.IDirect3DDevice";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "IDirect3DDevice";
     };
@@ -68,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.IDirect3DSurface";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "IDirect3DSurface";
     };
@@ -75,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DMultisampleDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DMultisampleDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DMultisampleDescription";
     };
@@ -82,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::Direct3D11::Direct3DSurfaceDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.direct3d11.Direct3DSurfaceDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.directx.direct3d11";
         static constexpr const char* type_name = "Direct3DSurfaceDescription";
     };

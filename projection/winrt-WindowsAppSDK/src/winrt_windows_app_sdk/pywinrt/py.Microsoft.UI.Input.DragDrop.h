@@ -63,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragDropModifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragDropModifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragDropModifiers";
     };
@@ -70,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragUIContentMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragUIContentMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragUIContentMode";
     };
@@ -77,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragDropManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragDropManager";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragDropManager";
     };
@@ -84,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragInfo";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragInfo";
     };
@@ -91,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragOperation";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragOperation";
     };
@@ -98,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DragUIOverride>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DragUIOverride";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DragUIOverride";
     };
@@ -105,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::DropOperationTargetRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.DropOperationTargetRequestedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "DropOperationTargetRequestedEventArgs";
     };
@@ -112,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::DragDrop::IDropOperationTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.dragdrop.IDropOperationTarget";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.dragdrop";
         static constexpr const char* type_name = "IDropOperationTarget";
     };

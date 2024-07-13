@@ -39,6 +39,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::CoreAppWindowPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.CoreAppWindowPreview";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview";
         static constexpr const char* type_name = "CoreAppWindowPreview";
     };
@@ -46,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::SystemNavigationCloseRequestedPreviewEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.SystemNavigationCloseRequestedPreviewEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview";
         static constexpr const char* type_name = "SystemNavigationCloseRequestedPreviewEventArgs";
     };
@@ -53,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::SystemNavigationManagerPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.SystemNavigationManagerPreview";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview";
         static constexpr const char* type_name = "SystemNavigationManagerPreview";
     };

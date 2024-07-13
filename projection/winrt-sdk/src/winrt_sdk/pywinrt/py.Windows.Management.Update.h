@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAdministratorOptions";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAdministratorOptions";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministratorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAdministratorStatus";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAdministratorStatus";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAttentionRequiredReason";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAttentionRequiredReason";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::PreviewBuildsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.PreviewBuildsManager";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "PreviewBuildsManager";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::PreviewBuildsState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.PreviewBuildsState";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "PreviewBuildsState";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdate";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdate";
     };
@@ -103,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateActionCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateActionCompletedEventArgs";
     };
@@ -110,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateActionProgress";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateActionProgress";
     };
@@ -117,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateActionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateActionResult";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateActionResult";
     };
@@ -124,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAdministrator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAdministrator";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAdministrator";
     };
@@ -131,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateApprovalData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateApprovalData";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateApprovalData";
     };
@@ -138,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAttentionRequiredInfo";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAttentionRequiredInfo";
     };
@@ -145,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateAttentionRequiredReasonChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateAttentionRequiredReasonChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateAttentionRequiredReasonChangedEventArgs";
     };
@@ -152,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateGetAdministratorResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateGetAdministratorResult";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateGetAdministratorResult";
     };
@@ -159,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateItem";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateItem";
     };
@@ -166,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateManager";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateManager";
     };
@@ -173,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateProgressChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateProgressChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateProgressChangedEventArgs";
     };
@@ -180,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateRestartRequestOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateRestartRequestOptions";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateRestartRequestOptions";
     };
@@ -187,6 +205,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Update::WindowsUpdateScanCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.update.WindowsUpdateScanCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.management.update";
         static constexpr const char* type_name = "WindowsUpdateScanCompletedEventArgs";
     };

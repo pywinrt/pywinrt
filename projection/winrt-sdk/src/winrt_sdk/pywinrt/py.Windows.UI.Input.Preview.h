@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::InputActivationListenerPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.InputActivationListenerPreview";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview";
         static constexpr const char* type_name = "InputActivationListenerPreview";
     };

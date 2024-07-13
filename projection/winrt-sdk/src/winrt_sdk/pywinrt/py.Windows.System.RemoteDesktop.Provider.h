@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopConnectionStatus";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopLocalAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopLocalAction";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopLocalAction";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::PerformLocalActionRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.PerformLocalActionRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "PerformLocalActionRequestedEventArgs";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionInfo";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopConnectionInfo";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopConnectionRemoteInfo";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopConnectionRemoteInfo";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopInfo";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopInfo";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Provider::RemoteDesktopRegistrar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.provider.RemoteDesktopRegistrar";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.provider";
         static constexpr const char* type_name = "RemoteDesktopRegistrar";
     };

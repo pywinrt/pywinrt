@@ -112,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResultStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResultStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentCanMakePaymentResultStatus";
     };
@@ -119,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentOptionPresence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentOptionPresence";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentOptionPresence";
     };
@@ -126,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangeKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestChangeKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestChangeKind";
     };
@@ -133,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestCompletionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestCompletionStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestCompletionStatus";
     };
@@ -140,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestStatus";
     };
@@ -147,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentShippingType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentShippingType";
     };
@@ -154,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentAddress";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentAddress";
     };
@@ -161,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCanMakePaymentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentCanMakePaymentResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentCanMakePaymentResult";
     };
@@ -168,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentCurrencyAmount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentCurrencyAmount";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentCurrencyAmount";
     };
@@ -175,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentDetails";
     };
@@ -182,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentDetailsModifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentDetailsModifier";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentDetailsModifier";
     };
@@ -189,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentItem";
     };
@@ -196,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMediator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentMediator";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentMediator";
     };
@@ -203,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMerchantInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentMerchantInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentMerchantInfo";
     };
@@ -210,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentMethodData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentMethodData";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentMethodData";
     };
@@ -217,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentOptions";
     };
@@ -224,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequest";
     };
@@ -231,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestChangedArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestChangedArgs";
     };
@@ -238,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestChangedResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestChangedResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestChangedResult";
     };
@@ -245,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentRequestSubmitResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentRequestSubmitResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentRequestSubmitResult";
     };
@@ -252,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentResponse>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentResponse";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentResponse";
     };
@@ -259,6 +280,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentShippingOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentShippingOption";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentShippingOption";
     };
@@ -266,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Payments::PaymentToken>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.payments.PaymentToken";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.payments";
         static constexpr const char* type_name = "PaymentToken";
     };

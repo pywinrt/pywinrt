@@ -142,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::CrossSlidingState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.CrossSlidingState";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "CrossSlidingState";
     };
@@ -149,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::DraggingState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.DraggingState";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "DraggingState";
     };
@@ -156,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::EdgeGestureKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.EdgeGestureKind";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "EdgeGestureKind";
     };
@@ -163,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::GazeInputAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.GazeInputAccessStatus";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "GazeInputAccessStatus";
     };
@@ -170,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::GestureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.GestureSettings";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "GestureSettings";
     };
@@ -177,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::HoldingState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.HoldingState";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "HoldingState";
     };
@@ -184,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::InputActivationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.InputActivationState";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "InputActivationState";
     };
@@ -191,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::PointerUpdateKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.PointerUpdateKind";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "PointerUpdateKind";
     };
@@ -198,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerMenuKnownIcon>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerMenuKnownIcon";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerMenuKnownIcon";
     };
@@ -205,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerSystemMenuItemKind";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerSystemMenuItemKind";
     };
@@ -212,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::AttachableInputObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.AttachableInputObject";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "AttachableInputObject";
     };
@@ -219,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::CrossSlidingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.CrossSlidingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "CrossSlidingEventArgs";
     };
@@ -226,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::DraggingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.DraggingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "DraggingEventArgs";
     };
@@ -233,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::EdgeGesture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.EdgeGesture";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "EdgeGesture";
     };
@@ -240,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::EdgeGestureEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.EdgeGestureEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "EdgeGestureEventArgs";
     };
@@ -247,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::GestureRecognizer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.GestureRecognizer";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "GestureRecognizer";
     };
@@ -254,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::HoldingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.HoldingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "HoldingEventArgs";
     };
@@ -261,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::InputActivationListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.InputActivationListener";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "InputActivationListener";
     };
@@ -268,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::InputActivationListenerActivationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.InputActivationListenerActivationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "InputActivationListenerActivationChangedEventArgs";
     };
@@ -275,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::KeyboardDeliveryInterceptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.KeyboardDeliveryInterceptor";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "KeyboardDeliveryInterceptor";
     };
@@ -282,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationCompletedEventArgs";
     };
@@ -289,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationInertiaStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationInertiaStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationInertiaStartingEventArgs";
     };
@@ -296,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationStartedEventArgs";
     };
@@ -303,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationUpdatedEventArgs";
     };
@@ -310,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::MouseWheelParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.MouseWheelParameters";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "MouseWheelParameters";
     };
@@ -317,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::PointerPoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.PointerPoint";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "PointerPoint";
     };
@@ -324,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::PointerPointProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.PointerPointProperties";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "PointerPointProperties";
     };
@@ -331,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::PointerVisualizationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.PointerVisualizationSettings";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "PointerVisualizationSettings";
     };
@@ -338,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialController";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialController";
     };
@@ -345,6 +374,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerButtonClickedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerButtonClickedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerButtonClickedEventArgs";
     };
@@ -352,6 +382,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerButtonHoldingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerButtonHoldingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerButtonHoldingEventArgs";
     };
@@ -359,6 +390,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerButtonPressedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerButtonPressedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerButtonPressedEventArgs";
     };
@@ -366,6 +398,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerButtonReleasedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerButtonReleasedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerButtonReleasedEventArgs";
     };
@@ -373,6 +406,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerConfiguration";
     };
@@ -380,6 +414,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerControlAcquiredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerControlAcquiredEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerControlAcquiredEventArgs";
     };
@@ -387,6 +422,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerMenu>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerMenu";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerMenu";
     };
@@ -394,6 +430,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerMenuItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerMenuItem";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerMenuItem";
     };
@@ -401,6 +438,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerRotationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerRotationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerRotationChangedEventArgs";
     };
@@ -408,6 +446,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerScreenContact>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerScreenContact";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerScreenContact";
     };
@@ -415,6 +454,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerScreenContactContinuedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerScreenContactContinuedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerScreenContactContinuedEventArgs";
     };
@@ -422,6 +462,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerScreenContactEndedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerScreenContactEndedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerScreenContactEndedEventArgs";
     };
@@ -429,6 +470,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RadialControllerScreenContactStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerScreenContactStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerScreenContactStartedEventArgs";
     };
@@ -436,6 +478,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::RightTappedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RightTappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RightTappedEventArgs";
     };
@@ -443,6 +486,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::SystemButtonEventController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.SystemButtonEventController";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "SystemButtonEventController";
     };
@@ -450,6 +494,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::SystemFunctionButtonEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.SystemFunctionButtonEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "SystemFunctionButtonEventArgs";
     };
@@ -457,6 +502,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.SystemFunctionLockChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "SystemFunctionLockChangedEventArgs";
     };
@@ -464,6 +510,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.SystemFunctionLockIndicatorChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "SystemFunctionLockIndicatorChangedEventArgs";
     };
@@ -471,6 +518,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::TappedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "TappedEventArgs";
     };
@@ -478,6 +526,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::IPointerPointTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.IPointerPointTransform";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "IPointerPointTransform";
     };
@@ -485,6 +534,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::CrossSlideThresholds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.CrossSlideThresholds";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "CrossSlideThresholds";
     };
@@ -492,6 +542,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationDelta>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationDelta";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationDelta";
     };
@@ -499,6 +550,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::ManipulationVelocities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.ManipulationVelocities";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "ManipulationVelocities";
     };

@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Fonts::LanguageFont>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.fonts.LanguageFont";
         static constexpr const char* module_name = "winrt.windows.globalization.fonts";
         static constexpr const char* type_name = "LanguageFont";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Fonts::LanguageFontGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.fonts.LanguageFontGroup";
         static constexpr const char* module_name = "winrt.windows.globalization.fonts";
         static constexpr const char* type_name = "LanguageFontGroup";
     };

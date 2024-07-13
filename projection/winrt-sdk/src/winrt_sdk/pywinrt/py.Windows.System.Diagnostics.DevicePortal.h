@@ -57,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.deviceportal.DevicePortalConnectionClosedReason";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
         static constexpr const char* type_name = "DevicePortalConnectionClosedReason";
     };
@@ -64,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.deviceportal.DevicePortalConnection";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
         static constexpr const char* type_name = "DevicePortalConnection";
     };
@@ -71,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionClosedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.deviceportal.DevicePortalConnectionClosedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
         static constexpr const char* type_name = "DevicePortalConnectionClosedEventArgs";
     };
@@ -78,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::DevicePortal::DevicePortalConnectionRequestReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.deviceportal.DevicePortalConnectionRequestReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.deviceportal";
         static constexpr const char* type_name = "DevicePortalConnectionRequestReceivedEventArgs";
     };

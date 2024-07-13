@@ -36,6 +36,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugOverdrawContentKinds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.diagnostics.CompositionDebugOverdrawContentKinds";
         static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugOverdrawContentKinds";
     };
@@ -43,6 +44,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugHeatMaps>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.diagnostics.CompositionDebugHeatMaps";
         static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugHeatMaps";
     };
@@ -50,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Diagnostics::CompositionDebugSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.diagnostics.CompositionDebugSettings";
         static constexpr const char* module_name = "winrt.windows.ui.composition.diagnostics";
         static constexpr const char* type_name = "CompositionDebugSettings";
     };

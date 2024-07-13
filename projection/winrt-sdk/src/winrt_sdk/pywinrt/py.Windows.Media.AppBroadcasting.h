@@ -40,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.appbroadcasting.AppBroadcastingMonitor";
         static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
         static constexpr const char* type_name = "AppBroadcastingMonitor";
     };
@@ -47,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.appbroadcasting.AppBroadcastingStatus";
         static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
         static constexpr const char* type_name = "AppBroadcastingStatus";
     };
@@ -54,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingStatusDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.appbroadcasting.AppBroadcastingStatusDetails";
         static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
         static constexpr const char* type_name = "AppBroadcastingStatusDetails";
     };
@@ -61,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::AppBroadcasting::AppBroadcastingUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.appbroadcasting.AppBroadcastingUI";
         static constexpr const char* module_name = "winrt.windows.media.appbroadcasting";
         static constexpr const char* type_name = "AppBroadcastingUI";
     };

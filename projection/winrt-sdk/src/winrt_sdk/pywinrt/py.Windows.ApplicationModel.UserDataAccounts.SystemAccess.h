@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountAuthenticationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountAuthenticationType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountAuthenticationType";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountIconId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountIconId";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountIconId";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountMailAgeFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountMailAgeFilter";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountMailAgeFilter";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountServerType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountServerType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountServerType";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountSyncScheduleKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountSyncScheduleKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountSyncScheduleKind";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::DeviceAccountConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.DeviceAccountConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "DeviceAccountConfiguration";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::SystemAccess::UserDataAccountSystemAccessManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess.UserDataAccountSystemAccessManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts.systemaccess";
         static constexpr const char* type_name = "UserDataAccountSystemAccessManager";
     };

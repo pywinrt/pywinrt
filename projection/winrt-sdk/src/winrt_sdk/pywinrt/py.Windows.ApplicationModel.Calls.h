@@ -170,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CellularDtmfMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CellularDtmfMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "CellularDtmfMode";
     };
@@ -177,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::DtmfKey>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.DtmfKey";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "DtmfKey";
     };
@@ -184,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::DtmfToneAudioPlayback>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.DtmfToneAudioPlayback";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "DtmfToneAudioPlayback";
     };
@@ -191,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneAudioRoutingEndpoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneAudioRoutingEndpoint";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneAudioRoutingEndpoint";
     };
@@ -198,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallAudioDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallAudioDevice";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallAudioDevice";
     };
@@ -205,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallDirection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallDirection";
     };
@@ -212,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryMedia>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryMedia";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryMedia";
     };
@@ -219,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryOtherAppReadAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryOtherAppReadAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryOtherAppReadAccess";
     };
@@ -226,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryDesiredMedia>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryQueryDesiredMedia";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryQueryDesiredMedia";
     };
@@ -233,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryRawAddressKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryRawAddressKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryRawAddressKind";
     };
@@ -240,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistorySourceIdKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistorySourceIdKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistorySourceIdKind";
     };
@@ -247,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryStoreAccessType";
     };
@@ -254,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallMedia>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallMedia";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallMedia";
     };
@@ -261,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallOperationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallOperationStatus";
     };
@@ -268,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallStatus";
     };
@@ -275,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineNetworkOperatorDisplayTextLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineNetworkOperatorDisplayTextLocation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineNetworkOperatorDisplayTextLocation";
     };
@@ -282,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineOperationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineOperationStatus";
     };
@@ -289,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineTransport";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineTransport";
     };
@@ -296,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineWatcherStatus";
     };
@@ -303,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneNetworkState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneNetworkState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneNetworkState";
     };
@@ -310,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneSimState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneSimState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneSimState";
     };
@@ -317,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemailType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneVoicemailType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneVoicemailType";
     };
@@ -324,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::TransportDeviceAudioRoutingStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.TransportDeviceAudioRoutingStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "TransportDeviceAudioRoutingStatus";
     };
@@ -331,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCallMedia";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCallMedia";
     };
@@ -338,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallRejectReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCallRejectReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCallRejectReason";
     };
@@ -345,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallResourceReservationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCallResourceReservationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCallResourceReservationStatus";
     };
@@ -352,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCallState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCallState";
     };
@@ -359,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CallAnswerEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "CallAnswerEventArgs";
     };
@@ -366,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CallRejectEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "CallRejectEventArgs";
     };
@@ -373,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CallStateChangeEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "CallStateChangeEventArgs";
     };
@@ -380,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.LockScreenCallEndCallDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "LockScreenCallEndCallDeferral";
     };
@@ -387,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.LockScreenCallEndRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "LockScreenCallEndRequestedEventArgs";
     };
@@ -394,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.LockScreenCallUI";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "LockScreenCallUI";
     };
@@ -401,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.MuteChangeEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "MuteChangeEventArgs";
     };
@@ -408,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCall>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCall";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCall";
     };
@@ -415,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallBlocking";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallBlocking";
     };
@@ -422,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntry";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntry";
     };
@@ -429,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryAddress";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryAddress";
     };
@@ -436,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryQueryOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryQueryOptions";
     };
@@ -443,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntryReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryEntryReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryEntryReader";
     };
@@ -450,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryManager";
     };
@@ -457,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryManagerForUser";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryManagerForUser";
     };
@@ -464,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallHistoryStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallHistoryStore";
     };
@@ -471,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallInfo";
     };
@@ -478,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallManager";
     };
@@ -485,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallStore";
     };
@@ -492,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallVideoCapabilities";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallVideoCapabilities";
     };
@@ -499,6 +546,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallVideoCapabilitiesManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallVideoCapabilitiesManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallVideoCapabilitiesManager";
     };
@@ -506,6 +554,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneCallsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneCallsResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneCallsResult";
     };
@@ -513,6 +562,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneDialOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneDialOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneDialOptions";
     };
@@ -520,6 +570,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLine>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLine";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLine";
     };
@@ -527,6 +578,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineCellularDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineCellularDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineCellularDetails";
     };
@@ -534,6 +586,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineConfiguration";
     };
@@ -541,6 +594,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineDialResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineDialResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineDialResult";
     };
@@ -548,6 +602,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineTransportDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineTransportDevice";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineTransportDevice";
     };
@@ -555,6 +610,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineWatcher";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineWatcher";
     };
@@ -562,6 +618,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneLineWatcherEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneLineWatcherEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneLineWatcherEventArgs";
     };
@@ -569,6 +626,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::PhoneVoicemail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.PhoneVoicemail";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "PhoneVoicemail";
     };
@@ -576,6 +634,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipCallCoordinator";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipCallCoordinator";
     };
@@ -583,6 +642,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCall>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCall";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "VoipPhoneCall";
     };

@@ -105,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfigurationCreationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfigurationCreationStatus";
     };
@@ -112,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationRemovalResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfigurationRemovalResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfigurationRemovalResult";
     };
@@ -119,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationSetModelDataResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfigurationSetModelDataResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfigurationSetModelDataResult";
     };
@@ -126,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationStateChangeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfigurationStateChangeResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfigurationStateChangeResult";
     };
@@ -133,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionTrainingDataFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionTrainingDataFormat";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionTrainingDataFormat";
     };
@@ -140,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectorKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectorKind";
     };
@@ -147,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectorPowerState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectorPowerState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectorPowerState";
     };
@@ -154,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentActivationKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentActivationKind";
     };
@@ -161,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentActivationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentActivationResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentActivationResult";
     };
@@ -168,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionUpdateResponse>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSessionUpdateResponse";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSessionUpdateResponse";
     };
@@ -175,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentState";
     };
@@ -182,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSystemStateChangeType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSystemStateChangeType";
     };
@@ -189,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentVoiceActivationPrerequisiteKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentVoiceActivationPrerequisiteKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentVoiceActivationPrerequisiteKind";
     };
@@ -196,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangeKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.DetectionConfigurationAvailabilityChangeKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "DetectionConfigurationAvailabilityChangeKind";
     };
@@ -203,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationTrainingStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.DetectionConfigurationTrainingStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "DetectionConfigurationTrainingStatus";
     };
@@ -210,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::SignalDetectorResourceKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.SignalDetectorResourceKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "SignalDetectorResourceKind";
     };
@@ -217,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfiguration";
     };
@@ -224,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetectionConfigurationCreationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetectionConfigurationCreationResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetectionConfigurationCreationResult";
     };
@@ -231,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ActivationSignalDetector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ActivationSignalDetector";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ActivationSignalDetector";
     };
@@ -238,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentDetectorManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentDetectorManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentDetectorManager";
     };
@@ -245,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSession";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSession";
     };
@@ -252,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSessionInterruptedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSessionInterruptedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSessionInterruptedEventArgs";
     };
@@ -259,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignal>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSignal";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSignal";
     };
@@ -266,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSignalDetectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSignalDetectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSignalDetectedEventArgs";
     };
@@ -273,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::ConversationalAgentSystemStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.ConversationalAgentSystemStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "ConversationalAgentSystemStateChangedEventArgs";
     };
@@ -280,6 +305,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.DetectionConfigurationAvailabilityChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "DetectionConfigurationAvailabilityChangedEventArgs";
     };
@@ -287,6 +313,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ConversationalAgent::DetectionConfigurationAvailabilityInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.conversationalagent.DetectionConfigurationAvailabilityInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.conversationalagent";
         static constexpr const char* type_name = "DetectionConfigurationAvailabilityInfo";
     };

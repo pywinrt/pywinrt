@@ -77,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothEventTriggeringMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.BluetoothEventTriggeringMode";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "BluetoothEventTriggeringMode";
     };
@@ -84,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementPublisherTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.BluetoothLEAdvertisementPublisherTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherTriggerDetails";
     };
@@ -91,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::BluetoothLEAdvertisementWatcherTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.BluetoothLEAdvertisementWatcherTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherTriggerDetails";
     };
@@ -98,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattCharacteristicNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.GattCharacteristicNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "GattCharacteristicNotificationTriggerDetails";
     };
@@ -105,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.GattServiceProviderConnection";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "GattServiceProviderConnection";
     };
@@ -112,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::GattServiceProviderTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.GattServiceProviderTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "GattServiceProviderTriggerDetails";
     };
@@ -119,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommConnectionTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.RfcommConnectionTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "RfcommConnectionTriggerDetails";
     };
@@ -126,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommInboundConnectionInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.RfcommInboundConnectionInformation";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "RfcommInboundConnectionInformation";
     };
@@ -133,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Background::RfcommOutboundConnectionInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.background.RfcommOutboundConnectionInformation";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.background";
         static constexpr const char* type_name = "RfcommOutboundConnectionInformation";
     };

@@ -59,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::AddFileResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.AddFileResult";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "AddFileResult";
     };
@@ -66,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSelectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileSelectionMode";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "FileSelectionMode";
     };
@@ -73,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::SetFileNameResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.SetFileNameResult";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "SetFileNameResult";
     };
@@ -80,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::FileOpenPickerUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileOpenPickerUI";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "FileOpenPickerUI";
     };
@@ -87,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::FileRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "FileRemovedEventArgs";
     };
@@ -94,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::FileSavePickerUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.FileSavePickerUI";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "FileSavePickerUI";
     };
@@ -101,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingDeferral";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "PickerClosingDeferral";
     };
@@ -108,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingEventArgs";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "PickerClosingEventArgs";
     };
@@ -115,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::PickerClosingOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.PickerClosingOperation";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "PickerClosingOperation";
     };
@@ -122,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequest";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "TargetFileRequest";
     };
@@ -129,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "TargetFileRequestDeferral";
     };
@@ -136,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::Provider::TargetFileRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.provider.TargetFileRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.storage.pickers.provider";
         static constexpr const char* type_name = "TargetFileRequestedEventArgs";
     };

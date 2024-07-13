@@ -35,6 +35,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemManufacturers::OemSupportInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.OemSupportInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
         static constexpr const char* type_name = "OemSupportInfo";
     };
@@ -42,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SmbiosInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SmbiosInformation";
         static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
         static constexpr const char* type_name = "SmbiosInformation";
     };
@@ -49,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportDeviceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SystemSupportDeviceInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
         static constexpr const char* type_name = "SystemSupportDeviceInfo";
     };
@@ -56,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemManufacturers::SystemSupportInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.systemmanufacturers.SystemSupportInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile.systemmanufacturers";
         static constexpr const char* type_name = "SystemSupportInfo";
     };

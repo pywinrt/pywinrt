@@ -57,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.EnterpriseEnrollmentStatus";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "EnterpriseEnrollmentStatus";
     };
@@ -64,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.EnterpriseStatus";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "EnterpriseStatus";
     };
@@ -71,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::Enterprise>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.Enterprise";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "Enterprise";
     };
@@ -78,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.EnterpriseEnrollmentManager";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "EnterpriseEnrollmentManager";
     };
@@ -85,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::EnterpriseEnrollmentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.EnterpriseEnrollmentResult";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "EnterpriseEnrollmentResult";
     };
@@ -92,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::InstallationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.InstallationManager";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "InstallationManager";
     };
@@ -99,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Management::Deployment::PackageInstallResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.management.deployment.PackageInstallResult";
         static constexpr const char* module_name = "winrt.windows.phone.management.deployment";
         static constexpr const char* type_name = "PackageInstallResult";
     };

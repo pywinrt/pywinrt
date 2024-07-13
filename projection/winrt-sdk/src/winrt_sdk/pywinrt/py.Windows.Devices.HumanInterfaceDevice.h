@@ -62,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollectionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidCollectionType";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidCollectionType";
     };
@@ -69,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidReportType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidReportType";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidReportType";
     };
@@ -76,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidBooleanControl";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidBooleanControl";
     };
@@ -83,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidBooleanControlDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidBooleanControlDescription";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidBooleanControlDescription";
     };
@@ -90,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidCollection";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidCollection";
     };
@@ -97,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidDevice";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidDevice";
     };
@@ -104,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidFeatureReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidFeatureReport";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidFeatureReport";
     };
@@ -111,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidInputReport";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidInputReport";
     };
@@ -118,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidInputReportReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidInputReportReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidInputReportReceivedEventArgs";
     };
@@ -125,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidNumericControl";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidNumericControl";
     };
@@ -132,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidNumericControlDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidNumericControlDescription";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidNumericControlDescription";
     };
@@ -139,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::HumanInterfaceDevice::HidOutputReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.humaninterfacedevice.HidOutputReport";
         static constexpr const char* module_name = "winrt.windows.devices.humaninterfacedevice";
         static constexpr const char* type_name = "HidOutputReport";
     };

@@ -51,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateAttentionRequiredReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateAttentionRequiredReason";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateAttentionRequiredReason";
     };
@@ -58,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateItemState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateItemState";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateItemState";
     };
@@ -65,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateManagerState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateManagerState";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateManagerState";
     };
@@ -72,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateStartInstallAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateStartInstallAction";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateStartInstallAction";
     };
@@ -79,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateItem";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateItem";
     };
@@ -86,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateLastErrorInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateLastErrorInfo";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateLastErrorInfo";
     };
@@ -93,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Update::SystemUpdateManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.update.SystemUpdateManager";
         static constexpr const char* module_name = "winrt.windows.system.update";
         static constexpr const char* type_name = "SystemUpdateManager";
     };

@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.EnterpriseKeyCredentialRegistrationInfo";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
         static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationInfo";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Identity::EnterpriseKeyCredentialRegistrationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.identity.EnterpriseKeyCredentialRegistrationManager";
         static constexpr const char* module_name = "winrt.windows.security.authentication.identity";
         static constexpr const char* type_name = "EnterpriseKeyCredentialRegistrationManager";
     };

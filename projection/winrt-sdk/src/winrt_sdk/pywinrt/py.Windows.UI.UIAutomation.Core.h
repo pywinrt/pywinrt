@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationRemoteOperationStatus";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationRemoteOperationStatus";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationRemoteOperationResult";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationRemoteOperationResult";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRegistrar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.CoreAutomationRegistrar";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "CoreAutomationRegistrar";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.CoreAutomationRemoteOperation";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "CoreAutomationRemoteOperation";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.CoreAutomationRemoteOperationContext";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "CoreAutomationRemoteOperationContext";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationClientSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.RemoteAutomationClientSession";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "RemoteAutomationClientSession";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationConnectionRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.RemoteAutomationConnectionRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "RemoteAutomationConnectionRequestedEventArgs";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationDisconnectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.RemoteAutomationDisconnectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "RemoteAutomationDisconnectedEventArgs";
     };
@@ -114,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationServer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.RemoteAutomationServer";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "RemoteAutomationServer";
     };
@@ -121,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::RemoteAutomationWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.RemoteAutomationWindow";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "RemoteAutomationWindow";
     };
@@ -128,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationConnectionBoundObjectProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.ICoreAutomationConnectionBoundObjectProvider";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "ICoreAutomationConnectionBoundObjectProvider";
     };
@@ -135,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::ICoreAutomationRemoteOperationExtensionProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.ICoreAutomationRemoteOperationExtensionProvider";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "ICoreAutomationRemoteOperationExtensionProvider";
     };
@@ -142,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationAnnotationTypeRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationAnnotationTypeRegistration";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationAnnotationTypeRegistration";
     };
@@ -149,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIAutomation::Core::AutomationRemoteOperationOperandId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.uiautomation.core.AutomationRemoteOperationOperandId";
         static constexpr const char* module_name = "winrt.windows.ui.uiautomation.core";
         static constexpr const char* type_name = "AutomationRemoteOperationOperandId";
     };

@@ -43,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicApplicationPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.holographic.HolographicApplicationPreview";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
         static constexpr const char* type_name = "HolographicApplicationPreview";
     };
@@ -50,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Preview::Holographic::HolographicKeyboardPlacementOverridePreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.preview.holographic.HolographicKeyboardPlacementOverridePreview";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.preview.holographic";
         static constexpr const char* type_name = "HolographicKeyboardPlacementOverridePreview";
     };

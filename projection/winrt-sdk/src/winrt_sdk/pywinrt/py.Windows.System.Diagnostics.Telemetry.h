@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationStatus";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
         static constexpr const char* type_name = "PlatformTelemetryRegistrationStatus";
     };
@@ -39,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryClient";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
         static constexpr const char* type_name = "PlatformTelemetryClient";
     };
@@ -46,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationResult";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
         static constexpr const char* type_name = "PlatformTelemetryRegistrationResult";
     };
@@ -53,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::Telemetry::PlatformTelemetryRegistrationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.telemetry.PlatformTelemetryRegistrationSettings";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.telemetry";
         static constexpr const char* type_name = "PlatformTelemetryRegistrationSettings";
     };

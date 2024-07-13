@@ -75,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::AccountPictureKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AccountPictureKind";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "AccountPictureKind";
     };
@@ -82,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::SetAccountPictureResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.SetAccountPictureResult";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "SetAccountPictureResult";
     };
@@ -89,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::SetImageFeedResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.SetImageFeedResult";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "SetImageFeedResult";
     };
@@ -96,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::AdvertisingManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AdvertisingManager";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "AdvertisingManager";
     };
@@ -103,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::AdvertisingManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AdvertisingManagerForUser";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "AdvertisingManagerForUser";
     };
@@ -110,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::AssignedAccessSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.AssignedAccessSettings";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "AssignedAccessSettings";
     };
@@ -117,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::DiagnosticsSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.DiagnosticsSettings";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "DiagnosticsSettings";
     };
@@ -124,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::FirstSignInSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.FirstSignInSettings";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "FirstSignInSettings";
     };
@@ -131,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferences>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.GlobalizationPreferences";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "GlobalizationPreferences";
     };
@@ -138,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::GlobalizationPreferencesForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.GlobalizationPreferencesForUser";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "GlobalizationPreferencesForUser";
     };
@@ -145,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::LockScreen>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.LockScreen";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "LockScreen";
     };
@@ -152,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::UserInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.UserInformation";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "UserInformation";
     };
@@ -159,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserProfile::UserProfilePersonalizationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.userprofile.UserProfilePersonalizationSettings";
         static constexpr const char* module_name = "winrt.windows.system.userprofile";
         static constexpr const char* type_name = "UserProfilePersonalizationSettings";
     };

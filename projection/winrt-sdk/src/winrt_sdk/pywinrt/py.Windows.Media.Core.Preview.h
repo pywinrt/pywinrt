@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Core::Preview::SoundLevelBroker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.core.preview.SoundLevelBroker";
         static constexpr const char* module_name = "winrt.windows.media.core.preview";
         static constexpr const char* type_name = "SoundLevelBroker";
     };

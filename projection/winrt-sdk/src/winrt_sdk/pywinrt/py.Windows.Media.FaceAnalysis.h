@@ -49,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::FaceAnalysis::DetectedFace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.DetectedFace";
         static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
         static constexpr const char* type_name = "DetectedFace";
     };
@@ -56,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::FaceAnalysis::FaceDetector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.FaceDetector";
         static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
         static constexpr const char* type_name = "FaceDetector";
     };
@@ -63,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::FaceAnalysis::FaceTracker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.faceanalysis.FaceTracker";
         static constexpr const char* module_name = "winrt.windows.media.faceanalysis";
         static constexpr const char* type_name = "FaceTracker";
     };

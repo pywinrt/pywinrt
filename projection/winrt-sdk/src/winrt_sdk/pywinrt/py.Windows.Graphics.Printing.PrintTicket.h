@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeatureSelectionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketFeatureSelectionType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketFeatureSelectionType";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDataType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketParameterDataType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketParameterDataType";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValueType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketValueType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketValueType";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketCapabilities";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketCapabilities";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketFeature>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketFeature";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketFeature";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketOption";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketOption";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketParameterDefinition";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketParameterDefinition";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketParameterInitializer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketParameterInitializer";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketParameterInitializer";
     };
@@ -114,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::PrintTicketValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.PrintTicketValue";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "PrintTicketValue";
     };
@@ -121,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.WorkflowPrintTicket";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "WorkflowPrintTicket";
     };
@@ -128,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicketValidationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printticket.WorkflowPrintTicketValidationResult";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printticket";
         static constexpr const char* type_name = "WorkflowPrintTicketValidationResult";
     };

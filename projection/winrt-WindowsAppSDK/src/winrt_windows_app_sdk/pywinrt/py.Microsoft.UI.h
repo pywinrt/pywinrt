@@ -72,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::ColorHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.ColorHelper";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "ColorHelper";
     };
@@ -79,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Colors>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.Colors";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "Colors";
     };
@@ -86,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::IClosableNotifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.IClosableNotifier";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "IClosableNotifier";
     };
@@ -93,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::DisplayId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.DisplayId";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "DisplayId";
     };
@@ -100,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::IconId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.IconId";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "IconId";
     };
@@ -107,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::WindowId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.WindowId";
         static constexpr const char* module_name = "winrt.microsoft.ui";
         static constexpr const char* type_name = "WindowId";
     };

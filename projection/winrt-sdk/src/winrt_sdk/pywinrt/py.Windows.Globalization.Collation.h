@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Collation::CharacterGrouping>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.collation.CharacterGrouping";
         static constexpr const char* module_name = "winrt.windows.globalization.collation";
         static constexpr const char* type_name = "CharacterGrouping";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::Collation::CharacterGroupings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.collation.CharacterGroupings";
         static constexpr const char* module_name = "winrt.windows.globalization.collation";
         static constexpr const char* type_name = "CharacterGroupings";
     };

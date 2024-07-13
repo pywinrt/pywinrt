@@ -70,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAppInstallationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentAppInstallationState";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentAppInstallationState";
     };
@@ -77,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentAvailability";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentAvailability";
     };
@@ -84,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentInteraction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentInteraction";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentInteraction";
     };
@@ -91,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentObjectKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentObjectKind";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentObjectKind";
     };
@@ -98,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentValueKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentValueKind";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentValueKind";
     };
@@ -105,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentAction";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentAction";
     };
@@ -112,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentAvailabilityChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentAvailabilityChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentAvailabilityChangedEventArgs";
     };
@@ -119,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentChangedEventArgs";
     };
@@ -126,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentCollection";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentCollection";
     };
@@ -133,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentContainer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentContainer";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentContainer";
     };
@@ -140,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentFile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentFile";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentFile";
     };
@@ -147,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentImage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentImage";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentImage";
     };
@@ -154,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentItem";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentItem";
     };
@@ -161,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentItemState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentItemState";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentItemState";
     };
@@ -168,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentObject";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentObject";
     };
@@ -175,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentStateChangedEventArgs";
     };
@@ -182,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentSubscription";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentSubscription";
     };
@@ -189,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentSubscriptionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentSubscriptionOptions";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentSubscriptionOptions";
     };
@@ -196,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::TargetedContent::TargetedContentValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.targetedcontent.TargetedContentValue";
         static constexpr const char* module_name = "winrt.windows.services.targetedcontent";
         static constexpr const char* type_name = "TargetedContentValue";
     };

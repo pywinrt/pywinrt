@@ -139,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::KnownPerceptionFrameKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.KnownPerceptionFrameKind";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "KnownPerceptionFrameKind";
     };
@@ -146,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionControlGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionControlGroup";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionControlGroup";
     };
@@ -153,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionCorrelation";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionCorrelation";
     };
@@ -160,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionCorrelationGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionCorrelationGroup";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionCorrelationGroup";
     };
@@ -167,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFaceAuthenticationGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionFaceAuthenticationGroup";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionFaceAuthenticationGroup";
     };
@@ -174,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionFrame";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionFrame";
     };
@@ -181,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionFrameProviderInfo";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionFrameProviderInfo";
     };
@@ -188,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionFrameProviderManagerService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionFrameProviderManagerService";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionFrameProviderManagerService";
     };
@@ -195,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionPropertyChangeRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionPropertyChangeRequest";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionPropertyChangeRequest";
     };
@@ -202,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::PerceptionVideoFrameAllocator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.PerceptionVideoFrameAllocator";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "PerceptionVideoFrameAllocator";
     };
@@ -209,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.IPerceptionFrameProvider";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "IPerceptionFrameProvider";
     };
@@ -216,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Perception::Provider::IPerceptionFrameProviderManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.perception.provider.IPerceptionFrameProviderManager";
         static constexpr const char* module_name = "winrt.windows.devices.perception.provider";
         static constexpr const char* type_name = "IPerceptionFrameProviderManager";
     };

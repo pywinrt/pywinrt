@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundReason";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundResult";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundRevokedReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundRevokedReason";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundRevokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundRevokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundRevokedEventArgs";
     };
@@ -70,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::Foreground::ExtendedExecutionForegroundSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.foreground.ExtendedExecutionForegroundSession";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution.foreground";
         static constexpr const char* type_name = "ExtendedExecutionForegroundSession";
     };

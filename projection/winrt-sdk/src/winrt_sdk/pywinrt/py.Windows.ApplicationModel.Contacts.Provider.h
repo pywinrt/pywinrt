@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::AddContactResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.AddContactResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
         static constexpr const char* type_name = "AddContactResult";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactPickerUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.ContactPickerUI";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
         static constexpr const char* type_name = "ContactPickerUI";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::Provider::ContactRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.provider.ContactRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.provider";
         static constexpr const char* type_name = "ContactRemovedEventArgs";
     };

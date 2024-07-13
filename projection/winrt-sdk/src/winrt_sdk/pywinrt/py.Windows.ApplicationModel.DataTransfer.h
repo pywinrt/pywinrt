@@ -163,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResultStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ClipboardHistoryItemsResultStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ClipboardHistoryItemsResultStatus";
     };
@@ -170,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataPackageOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataPackageOperation";
     };
@@ -177,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::SetHistoryItemAsContentStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.SetHistoryItemAsContentStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "SetHistoryItemAsContentStatus";
     };
@@ -184,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUITheme>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareUITheme";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareUITheme";
     };
@@ -191,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::Clipboard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.Clipboard";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "Clipboard";
     };
@@ -198,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardContentOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ClipboardContentOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ClipboardContentOptions";
     };
@@ -205,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ClipboardHistoryChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ClipboardHistoryChangedEventArgs";
     };
@@ -212,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ClipboardHistoryItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ClipboardHistoryItem";
     };
@@ -219,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ClipboardHistoryItemsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ClipboardHistoryItemsResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ClipboardHistoryItemsResult";
     };
@@ -226,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataPackage";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataPackage";
     };
@@ -233,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataPackagePropertySet";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataPackagePropertySet";
     };
@@ -240,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackagePropertySetView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataPackagePropertySetView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataPackagePropertySetView";
     };
@@ -247,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataPackageView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataPackageView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataPackageView";
     };
@@ -254,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataProviderDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataProviderDeferral";
     };
@@ -261,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataProviderRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataProviderRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataProviderRequest";
     };
@@ -268,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataRequest";
     };
@@ -275,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataRequestDeferral";
     };
@@ -282,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataRequestedEventArgs";
     };
@@ -289,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DataTransferManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.DataTransferManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "DataTransferManager";
     };
@@ -296,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::HtmlFormatHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.HtmlFormatHelper";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "HtmlFormatHelper";
     };
@@ -303,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::OperationCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.OperationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "OperationCompletedEventArgs";
     };
@@ -310,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareCompletedEventArgs";
     };
@@ -317,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareProvider";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareProvider";
     };
@@ -324,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProviderOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareProviderOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareProviderOperation";
     };
@@ -331,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareProvidersRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareProvidersRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareProvidersRequestedEventArgs";
     };
@@ -338,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareTargetInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareTargetInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareTargetInfo";
     };
@@ -345,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::ShareUIOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.ShareUIOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "ShareUIOptions";
     };
@@ -352,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::SharedStorageAccessManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.SharedStorageAccessManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "SharedStorageAccessManager";
     };
@@ -359,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::StandardDataFormats>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.StandardDataFormats";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "StandardDataFormats";
     };
@@ -366,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::TargetApplicationChosenEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.TargetApplicationChosenEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer";
         static constexpr const char* type_name = "TargetApplicationChosenEventArgs";
     };

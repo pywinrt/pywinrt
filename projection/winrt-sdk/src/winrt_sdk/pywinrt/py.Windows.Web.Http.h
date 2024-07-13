@@ -99,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpCompletionOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCompletionOption";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpCompletionOption";
     };
@@ -106,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpProgressStage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpProgressStage";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpProgressStage";
     };
@@ -113,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpResponseMessageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpResponseMessageSource";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpResponseMessageSource";
     };
@@ -120,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpStatusCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStatusCode";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpStatusCode";
     };
@@ -127,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpVersion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpVersion";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpVersion";
     };
@@ -134,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpBufferContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpBufferContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpBufferContent";
     };
@@ -141,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpClient";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpClient";
     };
@@ -148,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpCookie>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookie";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpCookie";
     };
@@ -155,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpCookieCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookieCollection";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpCookieCollection";
     };
@@ -162,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpCookieManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpCookieManager";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpCookieManager";
     };
@@ -169,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpFormUrlEncodedContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpFormUrlEncodedContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpFormUrlEncodedContent";
     };
@@ -176,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpGetBufferResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetBufferResult";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpGetBufferResult";
     };
@@ -183,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpGetInputStreamResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetInputStreamResult";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpGetInputStreamResult";
     };
@@ -190,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpGetStringResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpGetStringResult";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpGetStringResult";
     };
@@ -197,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMethod";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpMethod";
     };
@@ -204,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpMultipartContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMultipartContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpMultipartContent";
     };
@@ -211,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpMultipartFormDataContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpMultipartFormDataContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpMultipartFormDataContent";
     };
@@ -218,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpRequestMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpRequestMessage";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpRequestMessage";
     };
@@ -225,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpRequestResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpRequestResult";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpRequestResult";
     };
@@ -232,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpResponseMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpResponseMessage";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpResponseMessage";
     };
@@ -239,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpStreamContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStreamContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpStreamContent";
     };
@@ -246,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpStringContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpStringContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpStringContent";
     };
@@ -253,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpTransportInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpTransportInformation";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpTransportInformation";
     };
@@ -260,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::IHttpContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.IHttpContent";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "IHttpContent";
     };
@@ -267,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::HttpProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.HttpProgress";
         static constexpr const char* module_name = "winrt.windows.web.http";
         static constexpr const char* type_name = "HttpProgress";
     };

@@ -45,6 +45,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playlists::PlaylistFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playlists.PlaylistFormat";
         static constexpr const char* module_name = "winrt.windows.media.playlists";
         static constexpr const char* type_name = "PlaylistFormat";
     };
@@ -52,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playlists::Playlist>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playlists.Playlist";
         static constexpr const char* module_name = "winrt.windows.media.playlists";
         static constexpr const char* type_name = "Playlist";
     };

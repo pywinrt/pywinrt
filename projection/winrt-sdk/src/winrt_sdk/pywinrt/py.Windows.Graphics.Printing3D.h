@@ -140,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskCompletion";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskCompletion";
     };
@@ -147,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskDetail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskDetail";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskDetail";
     };
@@ -154,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DBufferFormat";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DBufferFormat";
     };
@@ -161,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMeshVerificationMode";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMeshVerificationMode";
     };
@@ -168,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModelUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DModelUnit";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DModelUnit";
     };
@@ -175,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DObjectType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DObjectType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DObjectType";
     };
@@ -182,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DPackageCompression>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DPackageCompression";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DPackageCompression";
     };
@@ -189,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureEdgeBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DTextureEdgeBehavior";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DTextureEdgeBehavior";
     };
@@ -196,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DManager";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DManager";
     };
@@ -203,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTask";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTask";
     };
@@ -210,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskCompletedEventArgs";
     };
@@ -217,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskRequest";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskRequest";
     };
@@ -224,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskRequestedEventArgs";
     };
@@ -231,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskSourceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskSourceChangedEventArgs";
     };
@@ -238,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Print3DTaskSourceRequestedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Print3DTaskSourceRequestedArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Print3DTaskSourceRequestedArgs";
     };
@@ -245,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3D3MFPackage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3D3MFPackage";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3D3MFPackage";
     };
@@ -252,6 +268,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DBaseMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DBaseMaterial";
     };
@@ -259,6 +276,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBaseMaterialGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DBaseMaterialGroup";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DBaseMaterialGroup";
     };
@@ -266,6 +284,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DColorMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DColorMaterial";
     };
@@ -273,6 +292,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DColorMaterialGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DColorMaterialGroup";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DColorMaterialGroup";
     };
@@ -280,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DComponent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DComponent";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DComponent";
     };
@@ -287,6 +308,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DComponentWithMatrix>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DComponentWithMatrix";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DComponentWithMatrix";
     };
@@ -294,6 +316,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DCompositeMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DCompositeMaterial";
     };
@@ -301,6 +324,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DCompositeMaterialGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DCompositeMaterialGroup";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DCompositeMaterialGroup";
     };
@@ -308,6 +332,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DFaceReductionOptions";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DFaceReductionOptions";
     };
@@ -315,6 +340,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMaterial";
     };
@@ -322,6 +348,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMesh>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMesh";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMesh";
     };
@@ -329,6 +356,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMeshVerificationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMeshVerificationResult";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMeshVerificationResult";
     };
@@ -336,6 +364,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DModel";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DModel";
     };
@@ -343,6 +372,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DModelTexture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DModelTexture";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DModelTexture";
     };
@@ -350,6 +380,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMultiplePropertyMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMultiplePropertyMaterial";
     };
@@ -357,6 +388,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DMultiplePropertyMaterialGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DMultiplePropertyMaterialGroup";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DMultiplePropertyMaterialGroup";
     };
@@ -364,6 +396,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterial>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DTexture2CoordMaterial";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DTexture2CoordMaterial";
     };
@@ -371,6 +404,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTexture2CoordMaterialGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DTexture2CoordMaterialGroup";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DTexture2CoordMaterialGroup";
     };
@@ -378,6 +412,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DTextureResource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DTextureResource";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DTextureResource";
     };
@@ -385,6 +420,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing3D::Printing3DBufferDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing3d.Printing3DBufferDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.printing3d";
         static constexpr const char* type_name = "Printing3DBufferDescription";
     };

@@ -59,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataAvailability";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataAvailability";
     };
@@ -66,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataBufferUnprotectStatus";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataBufferUnprotectStatus";
     };
@@ -73,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataStorageItemProtectionStatus";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataStorageItemProtectionStatus";
     };
@@ -80,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataAvailabilityStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataAvailabilityStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataAvailabilityStateChangedEventArgs";
     };
@@ -87,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataBufferUnprotectResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataBufferUnprotectResult";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataBufferUnprotectResult";
     };
@@ -94,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataProtectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataProtectionManager";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataProtectionManager";
     };
@@ -101,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::DataProtection::UserDataStorageItemProtectionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.dataprotection.UserDataStorageItemProtectionInfo";
         static constexpr const char* module_name = "winrt.windows.security.dataprotection";
         static constexpr const char* type_name = "UserDataStorageItemProtectionInfo";
     };

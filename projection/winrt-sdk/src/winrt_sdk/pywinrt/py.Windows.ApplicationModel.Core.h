@@ -69,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::AppRestartFailureReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.AppRestartFailureReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "AppRestartFailureReason";
     };
@@ -76,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::AppListEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.AppListEntry";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "AppListEntry";
     };
@@ -83,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplication>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplication";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "CoreApplication";
     };
@@ -90,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplicationView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "CoreApplicationView";
     };
@@ -97,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::CoreApplicationViewTitleBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.CoreApplicationViewTitleBar";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "CoreApplicationViewTitleBar";
     };
@@ -104,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::HostedViewClosingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.HostedViewClosingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "HostedViewClosingEventArgs";
     };
@@ -111,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.UnhandledError";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "UnhandledError";
     };
@@ -118,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::UnhandledErrorDetectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.UnhandledErrorDetectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "UnhandledErrorDetectedEventArgs";
     };
@@ -125,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::ICoreApplicationUnhandledError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.ICoreApplicationUnhandledError";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "ICoreApplicationUnhandledError";
     };
@@ -132,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.IFrameworkView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "IFrameworkView";
     };
@@ -139,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Core::IFrameworkViewSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.core.IFrameworkViewSource";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.core";
         static constexpr const char* type_name = "IFrameworkViewSource";
     };

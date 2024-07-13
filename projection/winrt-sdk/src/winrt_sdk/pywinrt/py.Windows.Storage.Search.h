@@ -92,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::CommonFileQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.CommonFileQuery";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "CommonFileQuery";
     };
@@ -99,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::CommonFolderQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.CommonFolderQuery";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "CommonFolderQuery";
     };
@@ -106,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::DateStackOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.DateStackOption";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "DateStackOption";
     };
@@ -113,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::FolderDepth>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.FolderDepth";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "FolderDepth";
     };
@@ -120,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IndexedState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IndexedState";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IndexedState";
     };
@@ -127,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IndexerOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IndexerOption";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IndexerOption";
     };
@@ -134,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::ContentIndexer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.ContentIndexer";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "ContentIndexer";
     };
@@ -141,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::ContentIndexerQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.ContentIndexerQuery";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "ContentIndexerQuery";
     };
@@ -148,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IndexableContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IndexableContent";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IndexableContent";
     };
@@ -155,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::QueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.QueryOptions";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "QueryOptions";
     };
@@ -162,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::SortEntryVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.SortEntryVector";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "SortEntryVector";
     };
@@ -169,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::StorageFileQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.StorageFileQueryResult";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "StorageFileQueryResult";
     };
@@ -176,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::StorageFolderQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.StorageFolderQueryResult";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "StorageFolderQueryResult";
     };
@@ -183,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::StorageItemQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.StorageItemQueryResult";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "StorageItemQueryResult";
     };
@@ -190,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::StorageLibraryChangeTrackerTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.StorageLibraryChangeTrackerTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "StorageLibraryChangeTrackerTriggerDetails";
     };
@@ -197,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::StorageLibraryContentChangedTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.StorageLibraryContentChangedTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "StorageLibraryContentChangedTriggerDetails";
     };
@@ -204,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::ValueAndLanguage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.ValueAndLanguage";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "ValueAndLanguage";
     };
@@ -211,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IIndexableContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IIndexableContent";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IIndexableContent";
     };
@@ -218,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IStorageFolderQueryOperations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IStorageFolderQueryOperations";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IStorageFolderQueryOperations";
     };
@@ -225,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::IStorageQueryResultBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.IStorageQueryResultBase";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "IStorageQueryResultBase";
     };
@@ -232,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Search::SortEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.search.SortEntry";
         static constexpr const char* module_name = "winrt.windows.storage.search";
         static constexpr const char* type_name = "SortEntry";
     };

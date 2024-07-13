@@ -179,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ClockState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ClockState";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ClockState";
     };
@@ -186,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationComponent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ConnectedAnimationComponent";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ConnectedAnimationComponent";
     };
@@ -193,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EasingMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EasingMode";
     };
@@ -200,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FillBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.FillBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "FillBehavior";
     };
@@ -207,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.RepeatBehaviorType";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepeatBehaviorType";
     };
@@ -214,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SlideNavigationTransitionEffect";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SlideNavigationTransitionEffect";
     };
@@ -221,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::AddDeleteThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.AddDeleteThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "AddDeleteThemeTransition";
     };
@@ -228,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BackEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.BackEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "BackEase";
     };
@@ -235,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.BasicConnectedAnimationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "BasicConnectedAnimationConfiguration";
     };
@@ -242,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BeginStoryboard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.BeginStoryboard";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "BeginStoryboard";
     };
@@ -249,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::BounceEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.BounceEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "BounceEase";
     };
@@ -256,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CircleEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.CircleEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "CircleEase";
     };
@@ -263,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ColorAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ColorAnimation";
     };
@@ -270,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorAnimationUsingKeyFrames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ColorAnimationUsingKeyFrames";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ColorAnimationUsingKeyFrames";
     };
@@ -277,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ColorKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ColorKeyFrame";
     };
@@ -284,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ColorKeyFrameCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ColorKeyFrameCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ColorKeyFrameCollection";
     };
@@ -291,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CommonNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.CommonNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "CommonNavigationTransitionInfo";
     };
@@ -298,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ConnectedAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ConnectedAnimation";
     };
@@ -305,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ConnectedAnimationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ConnectedAnimationConfiguration";
     };
@@ -312,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ConnectedAnimationService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ConnectedAnimationService";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ConnectedAnimationService";
     };
@@ -319,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ContentThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ContentThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ContentThemeTransition";
     };
@@ -326,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ContinuumNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ContinuumNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ContinuumNavigationTransitionInfo";
     };
@@ -333,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::CubicEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.CubicEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "CubicEase";
     };
@@ -340,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DirectConnectedAnimationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DirectConnectedAnimationConfiguration";
     };
@@ -347,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteColorKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DiscreteColorKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DiscreteColorKeyFrame";
     };
@@ -354,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteDoubleKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DiscreteDoubleKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DiscreteDoubleKeyFrame";
     };
@@ -361,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscreteObjectKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DiscreteObjectKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DiscreteObjectKeyFrame";
     };
@@ -368,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DiscretePointKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DiscretePointKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DiscretePointKeyFrame";
     };
@@ -375,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DoubleAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DoubleAnimation";
     };
@@ -382,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleAnimationUsingKeyFrames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DoubleAnimationUsingKeyFrames";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DoubleAnimationUsingKeyFrames";
     };
@@ -389,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DoubleKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DoubleKeyFrame";
     };
@@ -396,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DoubleKeyFrameCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DoubleKeyFrameCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DoubleKeyFrameCollection";
     };
@@ -403,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DragItemThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DragItemThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DragItemThemeAnimation";
     };
@@ -410,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DragOverThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DragOverThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DragOverThemeAnimation";
     };
@@ -417,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DrillInNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DrillInNavigationTransitionInfo";
     };
@@ -424,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillInThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DrillInThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DrillInThemeAnimation";
     };
@@ -431,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DrillOutThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DrillOutThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DrillOutThemeAnimation";
     };
@@ -438,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::DropTargetItemThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.DropTargetItemThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "DropTargetItemThemeAnimation";
     };
@@ -445,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingColorKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EasingColorKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EasingColorKeyFrame";
     };
@@ -452,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingDoubleKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EasingDoubleKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EasingDoubleKeyFrame";
     };
@@ -459,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingFunctionBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EasingFunctionBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EasingFunctionBase";
     };
@@ -466,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EasingPointKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EasingPointKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EasingPointKeyFrame";
     };
@@ -473,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EdgeUIThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EdgeUIThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EdgeUIThemeTransition";
     };
@@ -480,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ElasticEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ElasticEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ElasticEase";
     };
@@ -487,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EntranceNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EntranceNavigationTransitionInfo";
     };
@@ -494,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::EntranceThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.EntranceThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "EntranceThemeTransition";
     };
@@ -501,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ExponentialEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ExponentialEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ExponentialEase";
     };
@@ -508,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FadeInThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.FadeInThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "FadeInThemeAnimation";
     };
@@ -515,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::FadeOutThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.FadeOutThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "FadeOutThemeAnimation";
     };
@@ -522,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.GravityConnectedAnimationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "GravityConnectedAnimationConfiguration";
     };
@@ -529,6 +579,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeySpline>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.KeySpline";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "KeySpline";
     };
@@ -536,6 +587,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTimeHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.KeyTimeHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "KeyTimeHelper";
     };
@@ -543,6 +595,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearColorKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.LinearColorKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "LinearColorKeyFrame";
     };
@@ -550,6 +603,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearDoubleKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.LinearDoubleKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "LinearDoubleKeyFrame";
     };
@@ -557,6 +611,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::LinearPointKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.LinearPointKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "LinearPointKeyFrame";
     };
@@ -564,6 +619,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.NavigationThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "NavigationThemeTransition";
     };
@@ -571,6 +627,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::NavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.NavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "NavigationTransitionInfo";
     };
@@ -578,6 +635,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectAnimationUsingKeyFrames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ObjectAnimationUsingKeyFrames";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ObjectAnimationUsingKeyFrames";
     };
@@ -585,6 +643,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ObjectKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ObjectKeyFrame";
     };
@@ -592,6 +651,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ObjectKeyFrameCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ObjectKeyFrameCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ObjectKeyFrameCollection";
     };
@@ -599,6 +659,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PaneThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PaneThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PaneThemeTransition";
     };
@@ -606,6 +667,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointAnimation";
     };
@@ -613,6 +675,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointAnimationUsingKeyFrames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointAnimationUsingKeyFrames";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointAnimationUsingKeyFrames";
     };
@@ -620,6 +683,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointKeyFrame";
     };
@@ -627,6 +691,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointKeyFrameCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointKeyFrameCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointKeyFrameCollection";
     };
@@ -634,6 +699,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointerDownThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointerDownThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointerDownThemeAnimation";
     };
@@ -641,6 +707,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PointerUpThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PointerUpThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PointerUpThemeAnimation";
     };
@@ -648,6 +715,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopInThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PopInThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PopInThemeAnimation";
     };
@@ -655,6 +723,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopOutThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PopOutThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PopOutThemeAnimation";
     };
@@ -662,6 +731,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PopupThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PopupThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PopupThemeTransition";
     };
@@ -669,6 +739,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::PowerEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.PowerEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "PowerEase";
     };
@@ -676,6 +747,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuadraticEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.QuadraticEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "QuadraticEase";
     };
@@ -683,6 +755,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuarticEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.QuarticEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "QuarticEase";
     };
@@ -690,6 +763,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::QuinticEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.QuinticEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "QuinticEase";
     };
@@ -697,6 +771,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::ReorderThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.ReorderThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "ReorderThemeTransition";
     };
@@ -704,6 +779,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehaviorHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.RepeatBehaviorHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepeatBehaviorHelper";
     };
@@ -711,6 +787,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.RepositionThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepositionThemeAnimation";
     };
@@ -718,6 +795,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepositionThemeTransition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.RepositionThemeTransition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepositionThemeTransition";
     };
@@ -725,6 +803,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SineEase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SineEase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SineEase";
     };
@@ -732,6 +811,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SlideNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SlideNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SlideNavigationTransitionInfo";
     };
@@ -739,6 +819,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplineColorKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SplineColorKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SplineColorKeyFrame";
     };
@@ -746,6 +827,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplineDoubleKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SplineDoubleKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SplineDoubleKeyFrame";
     };
@@ -753,6 +835,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplinePointKeyFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SplinePointKeyFrame";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SplinePointKeyFrame";
     };
@@ -760,6 +843,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplitCloseThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SplitCloseThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SplitCloseThemeAnimation";
     };
@@ -767,6 +851,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SplitOpenThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SplitOpenThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SplitOpenThemeAnimation";
     };
@@ -774,6 +859,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Storyboard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.Storyboard";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "Storyboard";
     };
@@ -781,6 +867,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SuppressNavigationTransitionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SuppressNavigationTransitionInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SuppressNavigationTransitionInfo";
     };
@@ -788,6 +875,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeBackThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SwipeBackThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SwipeBackThemeAnimation";
     };
@@ -795,6 +883,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::SwipeHintThemeAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.SwipeHintThemeAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "SwipeHintThemeAnimation";
     };
@@ -802,6 +891,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Timeline>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.Timeline";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "Timeline";
     };
@@ -809,6 +899,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::TimelineCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.TimelineCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "TimelineCollection";
     };
@@ -816,6 +907,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::Transition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.Transition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "Transition";
     };
@@ -823,6 +915,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::TransitionCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.TransitionCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "TransitionCollection";
     };
@@ -830,6 +923,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::KeyTime>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.KeyTime";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "KeyTime";
     };
@@ -837,6 +931,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Animation::RepeatBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.animation.RepeatBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.animation";
         static constexpr const char* type_name = "RepeatBehavior";
     };

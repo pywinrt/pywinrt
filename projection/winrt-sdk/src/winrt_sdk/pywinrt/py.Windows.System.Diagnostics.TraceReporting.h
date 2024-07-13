@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticActionState";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticActionState";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticEscalationType";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticEscalationType";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticEventBufferLatencies";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticEventBufferLatencies";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTracePriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticTracePriority";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticTracePriority";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticTraceSlotState";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticTraceSlotState";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticTraceSlotType";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticTraceSlotType";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticActions";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticActions";
     };
@@ -101,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticTraceInfo";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticTraceInfo";
     };
@@ -108,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.diagnostics.tracereporting.PlatformDiagnosticTraceRuntimeInfo";
         static constexpr const char* module_name = "winrt.windows.system.diagnostics.tracereporting";
         static constexpr const char* type_name = "PlatformDiagnosticTraceRuntimeInfo";
     };

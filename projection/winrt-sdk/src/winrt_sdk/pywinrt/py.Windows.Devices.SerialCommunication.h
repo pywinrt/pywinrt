@@ -54,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialError";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialError";
     };
@@ -61,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialHandshake>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialHandshake";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialHandshake";
     };
@@ -68,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialParity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialParity";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialParity";
     };
@@ -75,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialPinChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialPinChange";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialPinChange";
     };
@@ -82,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialStopBitCount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialStopBitCount";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialStopBitCount";
     };
@@ -89,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::ErrorReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.ErrorReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "ErrorReceivedEventArgs";
     };
@@ -96,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::PinChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.PinChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "PinChangedEventArgs";
     };
@@ -103,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SerialCommunication::SerialDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.serialcommunication.SerialDevice";
         static constexpr const char* module_name = "winrt.windows.devices.serialcommunication";
         static constexpr const char* type_name = "SerialDevice";
     };

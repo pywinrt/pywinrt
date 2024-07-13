@@ -136,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemAccessStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemAccessStatus";
     };
@@ -143,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemAuthorizationKind";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemAuthorizationKind";
     };
@@ -150,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemDiscoveryType";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemDiscoveryType";
     };
@@ -157,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemPlatform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemPlatform";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemPlatform";
     };
@@ -164,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionCreationStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionCreationStatus";
     };
@@ -171,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionDisconnectedReason";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionDisconnectedReason";
     };
@@ -178,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionJoinStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionJoinStatus";
     };
@@ -185,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannelReliability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionMessageChannelReliability";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionMessageChannelReliability";
     };
@@ -192,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionParticipantWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionParticipantWatcherStatus";
     };
@@ -199,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionWatcherStatus";
     };
@@ -206,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemStatus";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemStatus";
     };
@@ -213,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatusType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemStatusType";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemStatusType";
     };
@@ -220,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemWatcherError";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemWatcherError";
     };
@@ -227,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::KnownRemoteSystemCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.KnownRemoteSystemCapabilities";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "KnownRemoteSystemCapabilities";
     };
@@ -234,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystem";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystem";
     };
@@ -241,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemAddedEventArgs";
     };
@@ -248,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemApp";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemApp";
     };
@@ -255,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAppRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemAppRegistration";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemAppRegistration";
     };
@@ -262,6 +280,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemAuthorizationKindFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemAuthorizationKindFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemAuthorizationKindFilter";
     };
@@ -269,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemConnectionInfo";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemConnectionInfo";
     };
@@ -276,6 +296,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemConnectionRequest";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemConnectionRequest";
     };
@@ -283,6 +304,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemDiscoveryTypeFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemDiscoveryTypeFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemDiscoveryTypeFilter";
     };
@@ -290,6 +312,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemEnumerationCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemEnumerationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemEnumerationCompletedEventArgs";
     };
@@ -297,6 +320,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemKindFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemKindFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemKindFilter";
     };
@@ -304,6 +328,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemKinds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemKinds";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemKinds";
     };
@@ -311,6 +336,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemRemovedEventArgs";
     };
@@ -318,6 +344,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSession";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSession";
     };
@@ -325,6 +352,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionAddedEventArgs";
     };
@@ -332,6 +360,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionController";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionController";
     };
@@ -339,6 +368,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionCreationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionCreationResult";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionCreationResult";
     };
@@ -346,6 +376,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionDisconnectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionDisconnectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionDisconnectedEventArgs";
     };
@@ -353,6 +384,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionInfo";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionInfo";
     };
@@ -360,6 +392,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionInvitation";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionInvitation";
     };
@@ -367,6 +400,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionInvitationListener";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionInvitationListener";
     };
@@ -374,6 +408,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionInvitationReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionInvitationReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionInvitationReceivedEventArgs";
     };
@@ -381,6 +416,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionJoinRequest";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionJoinRequest";
     };
@@ -388,6 +424,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionJoinRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionJoinRequestedEventArgs";
     };
@@ -395,6 +432,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionJoinResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionJoinResult";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionJoinResult";
     };
@@ -402,6 +440,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionMessageChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionMessageChannel";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionMessageChannel";
     };
@@ -409,6 +448,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionOptions";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionOptions";
     };
@@ -416,6 +456,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipant>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionParticipant";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionParticipant";
     };
@@ -423,6 +464,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionParticipantAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionParticipantAddedEventArgs";
     };
@@ -430,6 +472,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionParticipantRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionParticipantRemovedEventArgs";
     };
@@ -437,6 +480,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionParticipantWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionParticipantWatcher";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionParticipantWatcher";
     };
@@ -444,6 +488,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionRemovedEventArgs";
     };
@@ -451,6 +496,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionUpdatedEventArgs";
     };
@@ -458,6 +504,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionValueSetReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionValueSetReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionValueSetReceivedEventArgs";
     };
@@ -465,6 +512,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemSessionWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemSessionWatcher";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemSessionWatcher";
     };
@@ -472,6 +520,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemStatusTypeFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemStatusTypeFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemStatusTypeFilter";
     };
@@ -479,6 +528,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemUpdatedEventArgs";
     };
@@ -486,6 +536,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemWatcher";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemWatcher";
     };
@@ -493,6 +544,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWatcherErrorOccurredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemWatcherErrorOccurredEventArgs";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemWatcherErrorOccurredEventArgs";
     };
@@ -500,6 +552,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::RemoteSystemWebAccountFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.RemoteSystemWebAccountFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "RemoteSystemWebAccountFilter";
     };
@@ -507,6 +560,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteSystems::IRemoteSystemFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotesystems.IRemoteSystemFilter";
         static constexpr const char* module_name = "winrt.windows.system.remotesystems";
         static constexpr const char* type_name = "IRemoteSystemFilter";
     };

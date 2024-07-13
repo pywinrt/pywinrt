@@ -83,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::ByteOrder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.ByteOrder";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "ByteOrder";
     };
@@ -90,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::FileOpenDisposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.FileOpenDisposition";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "FileOpenDisposition";
     };
@@ -97,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::InputStreamOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.InputStreamOptions";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "InputStreamOptions";
     };
@@ -104,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::UnicodeEncoding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.UnicodeEncoding";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "UnicodeEncoding";
     };
@@ -111,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::Buffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.Buffer";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "Buffer";
     };
@@ -118,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::DataReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.DataReader";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "DataReader";
     };
@@ -125,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::DataReaderLoadOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.DataReaderLoadOperation";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "DataReaderLoadOperation";
     };
@@ -132,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::DataWriter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.DataWriter";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "DataWriter";
     };
@@ -139,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::DataWriterStoreOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.DataWriterStoreOperation";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "DataWriterStoreOperation";
     };
@@ -146,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::FileInputStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.FileInputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "FileInputStream";
     };
@@ -153,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::FileOutputStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.FileOutputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "FileOutputStream";
     };
@@ -160,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::FileRandomAccessStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.FileRandomAccessStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "FileRandomAccessStream";
     };
@@ -167,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::InMemoryRandomAccessStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.InMemoryRandomAccessStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "InMemoryRandomAccessStream";
     };
@@ -174,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::InputStreamOverStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.InputStreamOverStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "InputStreamOverStream";
     };
@@ -181,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::OutputStreamOverStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.OutputStreamOverStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "OutputStreamOverStream";
     };
@@ -188,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::RandomAccessStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.RandomAccessStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "RandomAccessStream";
     };
@@ -195,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::RandomAccessStreamOverStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.RandomAccessStreamOverStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "RandomAccessStreamOverStream";
     };
@@ -202,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::RandomAccessStreamReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.RandomAccessStreamReference";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "RandomAccessStreamReference";
     };
@@ -209,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IBuffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IBuffer";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IBuffer";
     };
@@ -216,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IContentTypeProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IContentTypeProvider";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IContentTypeProvider";
     };
@@ -223,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IDataReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IDataReader";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IDataReader";
     };
@@ -230,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IDataWriter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IDataWriter";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IDataWriter";
     };
@@ -237,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IInputStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IInputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IInputStream";
     };
@@ -244,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IInputStreamReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IInputStreamReference";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IInputStreamReference";
     };
@@ -251,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IOutputStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IOutputStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IOutputStream";
     };
@@ -258,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IPropertySetSerializer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IPropertySetSerializer";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IPropertySetSerializer";
     };
@@ -265,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStream";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IRandomAccessStream";
     };
@@ -272,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStreamReference";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IRandomAccessStreamReference";
     };
@@ -279,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Streams::IRandomAccessStreamWithContentType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.streams.IRandomAccessStreamWithContentType";
         static constexpr const char* module_name = "winrt.windows.storage.streams";
         static constexpr const char* type_name = "IRandomAccessStreamWithContentType";
     };

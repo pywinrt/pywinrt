@@ -78,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformAutomaticAppSignInPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.PlatformAutomaticAppSignInPolicy";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "PlatformAutomaticAppSignInPolicy";
     };
@@ -85,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformDataCollectionLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.PlatformDataCollectionLevel";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "PlatformDataCollectionLevel";
     };
@@ -92,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemIdentificationSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SystemIdentificationSource";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SystemIdentificationSource";
     };
@@ -99,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemOutOfBoxExperienceState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SystemOutOfBoxExperienceState";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SystemOutOfBoxExperienceState";
     };
@@ -106,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::UnsupportedAppRequirementReasons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.UnsupportedAppRequirementReasons";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "UnsupportedAppRequirementReasons";
     };
@@ -113,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::AnalyticsInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.AnalyticsInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "AnalyticsInfo";
     };
@@ -120,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::AnalyticsVersionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.AnalyticsVersionInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "AnalyticsVersionInfo";
     };
@@ -127,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::AppApplicability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.AppApplicability";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "AppApplicability";
     };
@@ -134,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::EducationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.EducationSettings";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "EducationSettings";
     };
@@ -141,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::HardwareIdentification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.HardwareIdentification";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "HardwareIdentification";
     };
@@ -148,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::HardwareToken>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.HardwareToken";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "HardwareToken";
     };
@@ -155,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::KnownRetailInfoProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.KnownRetailInfoProperties";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "KnownRetailInfoProperties";
     };
@@ -162,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformAutomaticAppSignInManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.PlatformAutomaticAppSignInManager";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "PlatformAutomaticAppSignInManager";
     };
@@ -169,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::PlatformDiagnosticsAndUsageDataSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.PlatformDiagnosticsAndUsageDataSettings";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "PlatformDiagnosticsAndUsageDataSettings";
     };
@@ -176,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::RetailInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.RetailInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "RetailInfo";
     };
@@ -183,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SharedModeSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SharedModeSettings";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SharedModeSettings";
     };
@@ -190,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SmartAppControlPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SmartAppControlPolicy";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SmartAppControlPolicy";
     };
@@ -197,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemIdentification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SystemIdentification";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SystemIdentification";
     };
@@ -204,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemIdentificationInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SystemIdentificationInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SystemIdentificationInfo";
     };
@@ -211,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::SystemSetupInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.SystemSetupInfo";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "SystemSetupInfo";
     };
@@ -218,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::UnsupportedAppRequirement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.UnsupportedAppRequirement";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "UnsupportedAppRequirement";
     };
@@ -225,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Profile::WindowsIntegrityPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.profile.WindowsIntegrityPolicy";
         static constexpr const char* module_name = "winrt.windows.system.profile";
         static constexpr const char* type_name = "WindowsIntegrityPolicy";
     };

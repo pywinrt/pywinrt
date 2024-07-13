@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.embedded.devicelockdown.DeviceLockdownProfile";
         static constexpr const char* module_name = "winrt.windows.embedded.devicelockdown";
         static constexpr const char* type_name = "DeviceLockdownProfile";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Embedded::DeviceLockdown::DeviceLockdownProfileInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.embedded.devicelockdown.DeviceLockdownProfileInformation";
         static constexpr const char* module_name = "winrt.windows.embedded.devicelockdown";
         static constexpr const char* type_name = "DeviceLockdownProfileInformation";
     };

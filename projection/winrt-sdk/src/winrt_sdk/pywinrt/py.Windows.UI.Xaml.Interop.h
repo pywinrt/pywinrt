@@ -131,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.NotifyCollectionChangedAction";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedAction";
     };
@@ -138,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::TypeKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.TypeKind";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "TypeKind";
     };
@@ -145,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.NotifyCollectionChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedEventArgs";
     };
@@ -152,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterable>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.IBindableIterable";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableIterable";
     };
@@ -159,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableIterator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.IBindableIterator";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableIterator";
     };
@@ -166,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableObservableVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.IBindableObservableVector";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableObservableVector";
     };
@@ -173,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.IBindableVector";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableVector";
     };
@@ -180,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::IBindableVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.IBindableVectorView";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableVectorView";
     };
@@ -187,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::INotifyCollectionChanged>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.INotifyCollectionChanged";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "INotifyCollectionChanged";
     };
@@ -194,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Interop::TypeName>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.interop.TypeName";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.interop";
         static constexpr const char* type_name = "TypeName";
     };

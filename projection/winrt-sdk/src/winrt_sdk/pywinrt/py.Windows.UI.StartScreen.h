@@ -88,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::ForegroundText>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.ForegroundText";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "ForegroundText";
     };
@@ -95,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpListItemKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.JumpListItemKind";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "JumpListItemKind";
     };
@@ -102,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpListSystemGroupKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.JumpListSystemGroupKind";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "JumpListSystemGroupKind";
     };
@@ -109,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModelActivationBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.TileMixedRealityModelActivationBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "TileMixedRealityModelActivationBehavior";
     };
@@ -116,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.TileOptions";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "TileOptions";
     };
@@ -123,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.TileSize";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "TileSize";
     };
@@ -130,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.JumpList";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "JumpList";
     };
@@ -137,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::JumpListItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.JumpListItem";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "JumpListItem";
     };
@@ -144,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::SecondaryTile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.SecondaryTile";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "SecondaryTile";
     };
@@ -151,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::SecondaryTileVisualElements>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.SecondaryTileVisualElements";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "SecondaryTileVisualElements";
     };
@@ -158,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::StartScreenManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.StartScreenManager";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "StartScreenManager";
     };
@@ -165,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::TileMixedRealityModel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.TileMixedRealityModel";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "TileMixedRealityModel";
     };
@@ -172,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.VisualElementsRequest";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "VisualElementsRequest";
     };
@@ -179,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.VisualElementsRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "VisualElementsRequestDeferral";
     };
@@ -186,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::StartScreen::VisualElementsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.startscreen.VisualElementsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.startscreen";
         static constexpr const char* type_name = "VisualElementsRequestedEventArgs";
     };

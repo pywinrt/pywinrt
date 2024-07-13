@@ -48,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectType";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObjectType";
     };
@@ -55,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObject";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObject";
     };
@@ -62,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectCollection";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObjectCollection";
     };
@@ -69,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectUpdate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectUpdate";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObjectUpdate";
     };
@@ -76,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Pnp::PnpObjectWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.pnp.PnpObjectWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration.pnp";
         static constexpr const char* type_name = "PnpObjectWatcher";
     };

@@ -60,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::BulkAccess::FileInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FileInformation";
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
         static constexpr const char* type_name = "FileInformation";
     };
@@ -67,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::BulkAccess::FileInformationFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FileInformationFactory";
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
         static constexpr const char* type_name = "FileInformationFactory";
     };
@@ -74,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::BulkAccess::FolderInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.FolderInformation";
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
         static constexpr const char* type_name = "FolderInformation";
     };
@@ -81,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::BulkAccess::IStorageItemInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.bulkaccess.IStorageItemInformation";
         static constexpr const char* module_name = "winrt.windows.storage.bulkaccess";
         static constexpr const char* type_name = "IStorageItemInformation";
     };

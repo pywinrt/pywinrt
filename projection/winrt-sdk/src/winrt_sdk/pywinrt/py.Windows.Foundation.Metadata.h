@@ -51,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::AttributeTargets>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.AttributeTargets";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "AttributeTargets";
     };
@@ -58,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::CompositionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.CompositionType";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "CompositionType";
     };
@@ -65,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::DeprecationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.DeprecationType";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "DeprecationType";
     };
@@ -72,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::FeatureStage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.FeatureStage";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "FeatureStage";
     };
@@ -79,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::GCPressureAmount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.GCPressureAmount";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "GCPressureAmount";
     };
@@ -86,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::MarshalingType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.MarshalingType";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "MarshalingType";
     };
@@ -93,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::Platform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.Platform";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "Platform";
     };
@@ -100,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::ThreadingModel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.ThreadingModel";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "ThreadingModel";
     };
@@ -107,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Metadata::ApiInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.metadata.ApiInformation";
         static constexpr const char* module_name = "winrt.windows.foundation.metadata";
         static constexpr const char* type_name = "ApiInformation";
     };

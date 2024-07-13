@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoCapturedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.core.VariablePhotoCapturedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture.core";
         static constexpr const char* type_name = "VariablePhotoCapturedEventArgs";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Core::VariablePhotoSequenceCapture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.core.VariablePhotoSequenceCapture";
         static constexpr const char* module_name = "winrt.windows.media.capture.core";
         static constexpr const char* type_name = "VariablePhotoSequenceCapture";
     };

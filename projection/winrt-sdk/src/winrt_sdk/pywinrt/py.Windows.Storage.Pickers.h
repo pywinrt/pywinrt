@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::PickerLocationId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.PickerLocationId";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "PickerLocationId";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::PickerViewMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.PickerViewMode";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "PickerViewMode";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FileExtensionVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileExtensionVector";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FileExtensionVector";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FileOpenPicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileOpenPicker";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FileOpenPicker";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FilePickerFileTypesOrderedMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FilePickerFileTypesOrderedMap";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FilePickerFileTypesOrderedMap";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FilePickerSelectedFilesArray>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FilePickerSelectedFilesArray";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FilePickerSelectedFilesArray";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FileSavePicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FileSavePicker";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FileSavePicker";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Pickers::FolderPicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.pickers.FolderPicker";
         static constexpr const char* module_name = "winrt.windows.storage.pickers";
         static constexpr const char* type_name = "FolderPicker";
     };

@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::LocalContentSuggestionSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.LocalContentSuggestionSettings";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "LocalContentSuggestionSettings";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPane>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPane";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPane";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneQueryChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneQueryChangedEventArgs";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQueryLinguisticDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneQueryLinguisticDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneQueryLinguisticDetails";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneQuerySubmittedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneQuerySubmittedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneQuerySubmittedEventArgs";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneResultSuggestionChosenEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneResultSuggestionChosenEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneResultSuggestionChosenEventArgs";
     };
@@ -103,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneSuggestionsRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneSuggestionsRequest";
     };
@@ -110,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneSuggestionsRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneSuggestionsRequestDeferral";
     };
@@ -117,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneSuggestionsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneSuggestionsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneSuggestionsRequestedEventArgs";
     };
@@ -124,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchPaneVisibilityChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchPaneVisibilityChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchPaneVisibilityChangedEventArgs";
     };
@@ -131,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchQueryLinguisticDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchQueryLinguisticDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchQueryLinguisticDetails";
     };
@@ -138,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchSuggestionCollection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchSuggestionCollection";
     };
@@ -145,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchSuggestionsRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchSuggestionsRequest";
     };
@@ -152,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::SearchSuggestionsRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.SearchSuggestionsRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "SearchSuggestionsRequestDeferral";
     };
@@ -159,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::ISearchPaneQueryChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.ISearchPaneQueryChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search";
         static constexpr const char* type_name = "ISearchPaneQueryChangedEventArgs";
     };

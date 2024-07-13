@@ -102,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::AddPackageByAppInstallerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.AddPackageByAppInstallerOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "AddPackageByAppInstallerOptions";
     };
@@ -109,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeploymentOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentOptions";
     };
@@ -116,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentProgressState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeploymentProgressState";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentProgressState";
     };
@@ -123,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageInstallState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageInstallState";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageInstallState";
     };
@@ -130,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageState";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageState";
     };
@@ -137,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageStatus";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageStatus";
     };
@@ -144,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageStubPreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageStubPreference";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageStubPreference";
     };
@@ -151,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageTypes";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageTypes";
     };
@@ -158,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::RemovalOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.RemovalOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "RemovalOptions";
     };
@@ -165,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerCreationCollisionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.SharedPackageContainerCreationCollisionOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "SharedPackageContainerCreationCollisionOptions";
     };
@@ -172,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.SharedPackageContainerOperationStatus";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "SharedPackageContainerOperationStatus";
     };
@@ -179,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::StubPackageOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.StubPackageOption";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "StubPackageOption";
     };
@@ -186,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::AddPackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.AddPackageOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "AddPackageOptions";
     };
@@ -193,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::AppInstallerManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.AppInstallerManager";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "AppInstallerManager";
     };
@@ -200,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::AutoUpdateSettingsOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.AutoUpdateSettingsOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "AutoUpdateSettingsOptions";
     };
@@ -207,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.CreateSharedPackageContainerOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "CreateSharedPackageContainerOptions";
     };
@@ -214,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::CreateSharedPackageContainerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.CreateSharedPackageContainerResult";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "CreateSharedPackageContainerResult";
     };
@@ -221,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeleteSharedPackageContainerOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeleteSharedPackageContainerOptions";
     };
@@ -228,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeleteSharedPackageContainerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeleteSharedPackageContainerResult";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeleteSharedPackageContainerResult";
     };
@@ -235,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeploymentResult";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentResult";
     };
@@ -242,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::FindSharedPackageContainerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.FindSharedPackageContainerOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "FindSharedPackageContainerOptions";
     };
@@ -249,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageAllUserProvisioningOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageAllUserProvisioningOptions";
     };
@@ -256,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageManager";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageManager";
     };
@@ -263,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageManagerDebugSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageManagerDebugSettings";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageManagerDebugSettings";
     };
@@ -270,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageUserInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageUserInformation";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageUserInformation";
     };
@@ -277,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::PackageVolume>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.PackageVolume";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "PackageVolume";
     };
@@ -284,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::RegisterPackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.RegisterPackageOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "RegisterPackageOptions";
     };
@@ -291,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.SharedPackageContainer";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "SharedPackageContainer";
     };
@@ -298,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.SharedPackageContainerManager";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "SharedPackageContainerManager";
     };
@@ -305,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::SharedPackageContainerMember>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.SharedPackageContainerMember";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "SharedPackageContainerMember";
     };
@@ -312,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::StagePackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.StagePackageOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "StagePackageOptions";
     };
@@ -319,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.UpdateSharedPackageContainerOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "UpdateSharedPackageContainerOptions";
     };
@@ -326,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::UpdateSharedPackageContainerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.UpdateSharedPackageContainerResult";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "UpdateSharedPackageContainerResult";
     };
@@ -333,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Deployment::DeploymentProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.DeploymentProgress";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "DeploymentProgress";
     };

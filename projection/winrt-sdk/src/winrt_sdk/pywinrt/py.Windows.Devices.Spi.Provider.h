@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiMode";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ProviderSpiMode";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiSharingMode";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ProviderSpiSharingMode";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ProviderSpiConnectionSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ProviderSpiConnectionSettings";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ProviderSpiConnectionSettings";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ISpiControllerProvider";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ISpiControllerProvider";
     };
@@ -74,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiDeviceProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ISpiDeviceProvider";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ISpiDeviceProvider";
     };
@@ -81,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::Provider::ISpiProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.provider.ISpiProvider";
         static constexpr const char* module_name = "winrt.windows.devices.spi.provider";
         static constexpr const char* type_name = "ISpiProvider";
     };

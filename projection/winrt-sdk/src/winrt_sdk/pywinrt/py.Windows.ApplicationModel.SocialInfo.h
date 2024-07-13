@@ -64,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItemStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedItemStyle";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedItemStyle";
     };
@@ -71,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedKind";
     };
@@ -78,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedUpdateMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedUpdateMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedUpdateMode";
     };
@@ -85,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemBadgeStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialItemBadgeStyle";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialItemBadgeStyle";
     };
@@ -92,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedChildItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedChildItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedChildItem";
     };
@@ -99,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedContent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedContent";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedContent";
     };
@@ -106,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedItem";
     };
@@ -113,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialFeedSharedItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialFeedSharedItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialFeedSharedItem";
     };
@@ -120,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialItemThumbnail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialItemThumbnail";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialItemThumbnail";
     };
@@ -127,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SocialInfo::SocialUserInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.socialinfo.SocialUserInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.socialinfo";
         static constexpr const char* type_name = "SocialUserInfo";
     };

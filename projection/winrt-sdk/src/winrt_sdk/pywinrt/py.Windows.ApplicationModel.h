@@ -138,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AddResourcePackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AddResourcePackageOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AddResourcePackageOptions";
     };
@@ -145,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExecutionContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppExecutionContext";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppExecutionContext";
     };
@@ -152,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppInstallerPolicySource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppInstallerPolicySource";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppInstallerPolicySource";
     };
@@ -159,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::FullTrustLaunchResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.FullTrustLaunchResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "FullTrustLaunchResult";
     };
@@ -166,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.LimitedAccessFeatureStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "LimitedAccessFeatureStatus";
     };
@@ -173,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageContentGroupState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageContentGroupState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageContentGroupState";
     };
@@ -180,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageRelationship>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageRelationship";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageRelationship";
     };
@@ -187,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageSignatureKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageSignatureKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageSignatureKind";
     };
@@ -194,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageUpdateAvailability";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageUpdateAvailability";
     };
@@ -201,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::StartupTaskState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.StartupTaskState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "StartupTaskState";
     };
@@ -208,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppDisplayInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppDisplayInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppDisplayInfo";
     };
@@ -215,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppInfo";
     };
@@ -222,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppInstallerInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppInstallerInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppInstallerInfo";
     };
@@ -229,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppInstance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.AppInstance";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "AppInstance";
     };
@@ -236,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::CameraApplicationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.CameraApplicationManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "CameraApplicationManager";
     };
@@ -243,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DesignMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.DesignMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "DesignMode";
     };
@@ -250,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::EnteredBackgroundEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.EnteredBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "EnteredBackgroundEventArgs";
     };
@@ -257,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::FindRelatedPackagesOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.FindRelatedPackagesOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "FindRelatedPackagesOptions";
     };
@@ -264,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::FullTrustProcessLaunchResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.FullTrustProcessLaunchResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "FullTrustProcessLaunchResult";
     };
@@ -271,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::FullTrustProcessLauncher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.FullTrustProcessLauncher";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "FullTrustProcessLauncher";
     };
@@ -278,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LeavingBackgroundEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.LeavingBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "LeavingBackgroundEventArgs";
     };
@@ -285,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatureRequestResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.LimitedAccessFeatureRequestResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "LimitedAccessFeatureRequestResult";
     };
@@ -292,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LimitedAccessFeatures>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.LimitedAccessFeatures";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "LimitedAccessFeatures";
     };
@@ -299,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Package>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.Package";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "Package";
     };
@@ -306,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageCatalog>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageCatalog";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageCatalog";
     };
@@ -313,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageCatalogAddOptionalPackageResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageCatalogAddOptionalPackageResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageCatalogAddOptionalPackageResult";
     };
@@ -320,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageCatalogAddResourcePackageResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageCatalogAddResourcePackageResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageCatalogAddResourcePackageResult";
     };
@@ -327,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveOptionalPackagesResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageCatalogRemoveOptionalPackagesResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageCatalogRemoveOptionalPackagesResult";
     };
@@ -334,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageCatalogRemoveResourcePackagesResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageCatalogRemoveResourcePackagesResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageCatalogRemoveResourcePackagesResult";
     };
@@ -341,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageContentGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageContentGroup";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageContentGroup";
     };
@@ -348,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageContentGroupStagingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageContentGroupStagingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageContentGroupStagingEventArgs";
     };
@@ -355,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageId";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageId";
     };
@@ -362,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageInstallingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageInstallingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageInstallingEventArgs";
     };
@@ -369,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageStagingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageStagingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageStagingEventArgs";
     };
@@ -376,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageStatus";
     };
@@ -383,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageStatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageStatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageStatusChangedEventArgs";
     };
@@ -390,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageUninstallingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageUninstallingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageUninstallingEventArgs";
     };
@@ -397,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageUpdateAvailabilityResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageUpdateAvailabilityResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageUpdateAvailabilityResult";
     };
@@ -404,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageUpdatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageUpdatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageUpdatingEventArgs";
     };
@@ -411,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::StartupTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.StartupTask";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "StartupTask";
     };
@@ -418,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SuspendingDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.SuspendingDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "SuspendingDeferral";
     };
@@ -425,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SuspendingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.SuspendingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "SuspendingEventArgs";
     };
@@ -432,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::SuspendingOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.SuspendingOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "SuspendingOperation";
     };
@@ -439,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.IEnteredBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "IEnteredBackgroundEventArgs";
     };
@@ -446,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ILeavingBackgroundEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ILeavingBackgroundEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "ILeavingBackgroundEventArgs";
     };
@@ -453,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::IPackageCatalogStatics2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.IPackageCatalogStatics2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "IPackageCatalogStatics2";
     };
@@ -460,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "ISuspendingDeferral";
     };
@@ -467,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "ISuspendingEventArgs";
     };
@@ -474,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ISuspendingOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.ISuspendingOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "ISuspendingOperation";
     };
@@ -481,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageInstallProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageInstallProgress";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageInstallProgress";
     };
@@ -488,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::PackageVersion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.PackageVersion";
         static constexpr const char* module_name = "winrt.windows.applicationmodel";
         static constexpr const char* type_name = "PackageVersion";
     };

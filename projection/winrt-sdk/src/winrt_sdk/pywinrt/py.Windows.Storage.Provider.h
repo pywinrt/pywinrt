@@ -160,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::CachedFileOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.CachedFileOptions";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "CachedFileOptions";
     };
@@ -167,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::CachedFileTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.CachedFileTarget";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "CachedFileTarget";
     };
@@ -174,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::FileUpdateStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.FileUpdateStatus";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "FileUpdateStatus";
     };
@@ -181,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::ReadActivationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.ReadActivationMode";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "ReadActivationMode";
     };
@@ -188,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderHardlinkPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderHardlinkPolicy";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderHardlinkPolicy";
     };
@@ -195,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderHydrationPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderHydrationPolicy";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderHydrationPolicy";
     };
@@ -202,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderHydrationPolicyModifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderHydrationPolicyModifier";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderHydrationPolicyModifier";
     };
@@ -209,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderInSyncPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderInSyncPolicy";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderInSyncPolicy";
     };
@@ -216,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderKnownFolderSyncStatus";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderKnownFolderSyncStatus";
     };
@@ -223,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderPopulationPolicy";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderPopulationPolicy";
     };
@@ -230,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderProtectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderProtectionMode";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderProtectionMode";
     };
@@ -237,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderState";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderState";
     };
@@ -244,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderUICommandState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderUICommandState";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderUICommandState";
     };
@@ -251,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderUriSourceStatus";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderUriSourceStatus";
     };
@@ -258,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::UIStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.UIStatus";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "UIStatus";
     };
@@ -265,6 +280,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::WriteActivationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.WriteActivationMode";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "WriteActivationMode";
     };
@@ -272,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::CachedFileUpdater>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.CachedFileUpdater";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "CachedFileUpdater";
     };
@@ -279,6 +296,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::CachedFileUpdaterUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.CachedFileUpdaterUI";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "CachedFileUpdaterUI";
     };
@@ -286,6 +304,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.FileUpdateRequest";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "FileUpdateRequest";
     };
@@ -293,6 +312,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequestDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.FileUpdateRequestDeferral";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "FileUpdateRequestDeferral";
     };
@@ -300,6 +320,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::FileUpdateRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.FileUpdateRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "FileUpdateRequestedEventArgs";
     };
@@ -307,6 +328,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderFileTypeInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderFileTypeInfo";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderFileTypeInfo";
     };
@@ -314,6 +336,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderGetContentInfoForPathResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderGetContentInfoForPathResult";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderGetContentInfoForPathResult";
     };
@@ -321,6 +344,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderGetPathForContentUriResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderGetPathForContentUriResult";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderGetPathForContentUriResult";
     };
@@ -328,6 +352,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderItemProperties";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderItemProperties";
     };
@@ -335,6 +360,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemProperty>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderItemProperty";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderItemProperty";
     };
@@ -342,6 +368,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderItemPropertyDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderItemPropertyDefinition";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderItemPropertyDefinition";
     };
@@ -349,6 +376,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderKnownFolderEntry";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderKnownFolderEntry";
     };
@@ -356,6 +384,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderKnownFolderSyncInfo";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderKnownFolderSyncInfo";
     };
@@ -363,6 +392,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncRequestArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderKnownFolderSyncRequestArgs";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderKnownFolderSyncRequestArgs";
     };
@@ -370,6 +400,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderMoreInfoUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderMoreInfoUI";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderMoreInfoUI";
     };
@@ -377,6 +408,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderQuotaUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderQuotaUI";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderQuotaUI";
     };
@@ -384,6 +416,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderStatusUI>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderStatusUI";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderStatusUI";
     };
@@ -391,6 +424,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSyncRootInfo";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderSyncRootInfo";
     };
@@ -398,6 +432,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::StorageProviderSyncRootManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.StorageProviderSyncRootManager";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "StorageProviderSyncRootManager";
     };
@@ -405,6 +440,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderItemPropertySource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderItemPropertySource";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderItemPropertySource";
     };
@@ -412,6 +448,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderKnownFolderSyncInfoSource";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderKnownFolderSyncInfoSource";
     };
@@ -419,6 +456,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderKnownFolderSyncInfoSourceFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderKnownFolderSyncInfoSourceFactory";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderKnownFolderSyncInfoSourceFactory";
     };
@@ -426,6 +464,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderPropertyCapabilities";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderPropertyCapabilities";
     };
@@ -433,6 +472,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderStatusUISource";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderStatusUISource";
     };
@@ -440,6 +480,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderStatusUISourceFactory";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderStatusUISourceFactory";
     };
@@ -447,6 +488,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderUICommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderUICommand";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderUICommand";
     };
@@ -454,6 +496,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Provider::IStorageProviderUriSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.provider.IStorageProviderUriSource";
         static constexpr const char* module_name = "winrt.windows.storage.provider";
         static constexpr const char* type_name = "IStorageProviderUriSource";
     };

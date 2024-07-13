@@ -75,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureAccessKind";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCaptureAccessKind";
     };
@@ -82,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.Direct3D11CaptureFrame";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "Direct3D11CaptureFrame";
     };
@@ -89,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::Direct3D11CaptureFramePool>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.Direct3D11CaptureFramePool";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "Direct3D11CaptureFramePool";
     };
@@ -96,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureAccess";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCaptureAccess";
     };
@@ -103,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureItem";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCaptureItem";
     };
@@ -110,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCapturePicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCapturePicker";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCapturePicker";
     };
@@ -117,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureSession";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCaptureSession";
     };

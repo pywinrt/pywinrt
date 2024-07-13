@@ -116,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ArcadeStickButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStickButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "ArcadeStickButtons";
     };
@@ -123,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::FlightStickButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStickButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "FlightStickButtons";
     };
@@ -130,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerButtonLabel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerButtonLabel";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GameControllerButtonLabel";
     };
@@ -137,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerSwitchKind";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GameControllerSwitchKind";
     };
@@ -144,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GameControllerSwitchPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GameControllerSwitchPosition";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GameControllerSwitchPosition";
     };
@@ -151,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GamepadButtons";
     };
@@ -158,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::OptionalUINavigationButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.OptionalUINavigationButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "OptionalUINavigationButtons";
     };
@@ -165,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RacingWheelButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheelButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RacingWheelButtons";
     };
@@ -172,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RequiredUINavigationButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RequiredUINavigationButtons";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RequiredUINavigationButtons";
     };
@@ -179,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ArcadeStick>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStick";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "ArcadeStick";
     };
@@ -186,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::FlightStick>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStick";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "FlightStick";
     };
@@ -193,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Gamepad>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.Gamepad";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "Gamepad";
     };
@@ -200,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Headset>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.Headset";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "Headset";
     };
@@ -207,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RacingWheel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheel";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RacingWheel";
     };
@@ -214,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RawGameController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RawGameController";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RawGameController";
     };
@@ -221,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::UINavigationController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.UINavigationController";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "UINavigationController";
     };
@@ -228,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::IGameController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.IGameController";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "IGameController";
     };
@@ -235,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::IGameControllerBatteryInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.IGameControllerBatteryInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "IGameControllerBatteryInfo";
     };
@@ -242,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::ArcadeStickReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.ArcadeStickReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "ArcadeStickReading";
     };
@@ -249,6 +268,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::FlightStickReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.FlightStickReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "FlightStickReading";
     };
@@ -256,6 +276,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GamepadReading";
     };
@@ -263,6 +284,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::GamepadVibration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.GamepadVibration";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "GamepadVibration";
     };
@@ -270,6 +292,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::RacingWheelReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.RacingWheelReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "RacingWheelReading";
     };
@@ -277,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::UINavigationReading>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.UINavigationReading";
         static constexpr const char* module_name = "winrt.windows.gaming.input";
         static constexpr const char* type_name = "UINavigationReading";
     };

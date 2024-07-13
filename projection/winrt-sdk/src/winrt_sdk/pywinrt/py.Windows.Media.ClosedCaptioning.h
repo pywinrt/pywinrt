@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionColor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionColor";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionColor";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionEdgeEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionEdgeEffect";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionEdgeEffect";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionOpacity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionOpacity";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionOpacity";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionSize";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionSize";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionStyle";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionStyle";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ClosedCaptioning::ClosedCaptionProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.closedcaptioning.ClosedCaptionProperties";
         static constexpr const char* module_name = "winrt.windows.media.closedcaptioning";
         static constexpr const char* type_name = "ClosedCaptionProperties";
     };

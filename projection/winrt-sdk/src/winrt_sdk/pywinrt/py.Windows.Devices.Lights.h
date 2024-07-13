@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::LampArrayKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampArrayKind";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampArrayKind";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::LampPurposes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampPurposes";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampPurposes";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Lamp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.Lamp";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "Lamp";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::LampArray>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampArray";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampArray";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::LampAvailabilityChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampAvailabilityChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampAvailabilityChangedEventArgs";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::LampInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.LampInfo";
         static constexpr const char* module_name = "winrt.windows.devices.lights";
         static constexpr const char* type_name = "LampInfo";
     };

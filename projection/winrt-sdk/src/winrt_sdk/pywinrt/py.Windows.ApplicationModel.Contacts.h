@@ -190,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAddressKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAddressKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAddressKind";
     };
@@ -197,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationOperations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAnnotationOperations";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAnnotationOperations";
     };
@@ -204,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAnnotationStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAnnotationStoreAccessType";
     };
@@ -211,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatchStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactBatchStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactBatchStatus";
     };
@@ -218,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardHeaderKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactCardHeaderKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactCardHeaderKind";
     };
@@ -225,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardTabKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactCardTabKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactCardTabKind";
     };
@@ -232,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChangeType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChangeType";
     };
@@ -239,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactDateKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactDateKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactDateKind";
     };
@@ -246,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactEmailKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactEmailKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactEmailKind";
     };
@@ -253,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactFieldCategory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactFieldCategory";
     };
@@ -260,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactFieldType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactFieldType";
     };
@@ -267,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppReadAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListOtherAppReadAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListOtherAppReadAccess";
     };
@@ -274,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListOtherAppWriteAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListOtherAppWriteAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListOtherAppWriteAccess";
     };
@@ -281,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListSyncStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListSyncStatus";
     };
@@ -288,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReasonKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactMatchReasonKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactMatchReasonKind";
     };
@@ -295,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactNameOrder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactNameOrder";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactNameOrder";
     };
@@ -302,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPhoneKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPhoneKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPhoneKind";
     };
@@ -309,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryDesiredFields>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactQueryDesiredFields";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactQueryDesiredFields";
     };
@@ -316,6 +334,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchFields>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactQuerySearchFields";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactQuerySearchFields";
     };
@@ -323,6 +342,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQuerySearchScope>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactQuerySearchScope";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactQuerySearchScope";
     };
@@ -330,6 +350,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactRelationship>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactRelationship";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactRelationship";
     };
@@ -337,6 +358,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactSelectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactSelectionMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactSelectionMode";
     };
@@ -344,6 +366,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactStoreAccessType";
     };
@@ -351,6 +374,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.PinnedContactSurface";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "PinnedContactSurface";
     };
@@ -358,6 +382,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::AggregateContactManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.AggregateContactManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "AggregateContactManager";
     };
@@ -365,6 +390,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::Contact>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.Contact";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "Contact";
     };
@@ -372,6 +398,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAddress";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAddress";
     };
@@ -379,6 +406,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAnnotation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAnnotation";
     };
@@ -386,6 +414,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAnnotationList";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAnnotationList";
     };
@@ -393,6 +422,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactAnnotationStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactAnnotationStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactAnnotationStore";
     };
@@ -400,6 +430,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactBatch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactBatch";
     };
@@ -407,6 +438,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardDelayedDataLoader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactCardDelayedDataLoader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactCardDelayedDataLoader";
     };
@@ -414,6 +446,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactCardOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactCardOptions";
     };
@@ -421,6 +454,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChange";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChange";
     };
@@ -428,6 +462,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChangeReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChangeReader";
     };
@@ -435,6 +470,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangeTracker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChangeTracker";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChangeTracker";
     };
@@ -442,6 +478,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChangedDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChangedDeferral";
     };
@@ -449,6 +486,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactChangedEventArgs";
     };
@@ -456,6 +494,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactConnectedServiceAccount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactConnectedServiceAccount";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactConnectedServiceAccount";
     };
@@ -463,6 +502,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactDate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactDate";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactDate";
     };
@@ -470,6 +510,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactEmail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactEmail";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactEmail";
     };
@@ -477,6 +518,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactField>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactField";
     };
@@ -484,6 +526,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactFieldFactory";
     };
@@ -491,6 +534,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactGroup";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactGroup";
     };
@@ -498,6 +542,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactInformation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactInformation";
     };
@@ -505,6 +550,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactInstantMessageField>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactInstantMessageField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactInstantMessageField";
     };
@@ -512,6 +558,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactJobInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactJobInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactJobInfo";
     };
@@ -519,6 +566,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactLaunchActionVerbs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactLaunchActionVerbs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactLaunchActionVerbs";
     };
@@ -526,6 +574,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactList";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactList";
     };
@@ -533,6 +582,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListLimitedWriteOperations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListLimitedWriteOperations";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListLimitedWriteOperations";
     };
@@ -540,6 +590,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncConstraints>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListSyncConstraints";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListSyncConstraints";
     };
@@ -547,6 +598,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactListSyncManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactListSyncManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactListSyncManager";
     };
@@ -554,6 +606,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactLocationField>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactLocationField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactLocationField";
     };
@@ -561,6 +614,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactManager";
     };
@@ -568,6 +622,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactManagerForUser";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactManagerForUser";
     };
@@ -575,6 +630,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactMatchReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactMatchReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactMatchReason";
     };
@@ -582,6 +638,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPanel";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPanel";
     };
@@ -589,6 +646,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelClosingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPanelClosingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPanelClosingEventArgs";
     };
@@ -596,6 +654,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPanelLaunchFullAppRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPanelLaunchFullAppRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPanelLaunchFullAppRequestedEventArgs";
     };
@@ -603,6 +662,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPhone>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPhone";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPhone";
     };
@@ -610,6 +670,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactPicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactPicker";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactPicker";
     };
@@ -617,6 +678,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactQueryOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactQueryOptions";
     };
@@ -624,6 +686,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactQueryTextSearch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactQueryTextSearch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactQueryTextSearch";
     };
@@ -631,6 +694,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactReader";
     };
@@ -638,6 +702,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactSignificantOther>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactSignificantOther";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactSignificantOther";
     };
@@ -645,6 +710,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactStore";
     };
@@ -652,6 +718,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactStoreNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactStoreNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactStoreNotificationTriggerDetails";
     };
@@ -659,6 +726,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::ContactWebsite>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.ContactWebsite";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "ContactWebsite";
     };
@@ -666,6 +734,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::FullContactCardOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.FullContactCardOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "FullContactCardOptions";
     };
@@ -673,6 +742,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::KnownContactField>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.KnownContactField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "KnownContactField";
     };
@@ -680,6 +750,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactIdsQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.PinnedContactIdsQueryResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "PinnedContactIdsQueryResult";
     };
@@ -687,6 +758,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::PinnedContactManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.PinnedContactManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "PinnedContactManager";
     };
@@ -694,6 +766,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactField>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactField";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "IContactField";
     };
@@ -701,6 +774,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactFieldFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "IContactFieldFactory";
     };
@@ -708,6 +782,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactInstantMessageFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "IContactInstantMessageFieldFactory";
     };
@@ -715,6 +790,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.IContactLocationFieldFactory";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts";
         static constexpr const char* type_name = "IContactLocationFieldFactory";
     };

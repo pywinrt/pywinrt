@@ -47,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::TokenBindingKeyType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.TokenBindingKeyType";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web";
         static constexpr const char* type_name = "TokenBindingKeyType";
     };
@@ -54,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationOptions";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web";
         static constexpr const char* type_name = "WebAuthenticationOptions";
     };
@@ -61,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web";
         static constexpr const char* type_name = "WebAuthenticationStatus";
     };
@@ -68,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationBroker";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web";
         static constexpr const char* type_name = "WebAuthenticationBroker";
     };
@@ -75,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::WebAuthenticationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.WebAuthenticationResult";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web";
         static constexpr const char* type_name = "WebAuthenticationResult";
     };

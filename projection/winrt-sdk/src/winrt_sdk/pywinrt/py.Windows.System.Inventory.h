@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Inventory::InstalledDesktopApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.inventory.InstalledDesktopApp";
         static constexpr const char* module_name = "winrt.windows.system.inventory";
         static constexpr const char* type_name = "InstalledDesktopApp";
     };

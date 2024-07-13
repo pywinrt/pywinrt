@@ -40,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberFormat";
     };
@@ -47,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberMatchResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberMatchResult";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberMatchResult";
     };
@@ -54,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberParseResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberParseResult";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberParseResult";
     };
@@ -61,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PredictedPhoneNumberKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PredictedPhoneNumberKind";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PredictedPhoneNumberKind";
     };
@@ -68,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberFormatter";
     };
@@ -75,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.phonenumberformatting.PhoneNumberInfo";
         static constexpr const char* module_name = "winrt.windows.globalization.phonenumberformatting";
         static constexpr const char* type_name = "PhoneNumberInfo";
     };
