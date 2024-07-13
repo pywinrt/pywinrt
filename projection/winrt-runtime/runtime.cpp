@@ -194,6 +194,70 @@ PyTypeObject* py::register_python_type(
     return type_object.detach();
 }
 
+PyTypeObject* py::get_python_type(std::string_view qualified_name) noexcept
+{
+    auto state = py::cpp::_winrt::get_module_state();
+    if (!state)
+    {
+        return nullptr;
+    }
+
+    auto it = state->type_cache.find(qualified_name);
+    if (it != state->type_cache.end())
+    {
+        return it->second;
+    }
+
+    auto pos = qualified_name.find_last_of('.');
+    if (pos == std::string_view::npos)
+    {
+        PyErr_Format(
+            PyExc_ValueError, "invalid qualified name: %s", qualified_name.data());
+        return nullptr;
+    }
+
+    std::string module_name{qualified_name.substr(0, pos)};
+    std::string type_name{qualified_name.substr(pos + 1)};
+
+    pyobj_handle module{PyImport_ImportModule(module_name.c_str())};
+    if (!module)
+    {
+        return nullptr;
+    }
+
+    pyobj_handle type{PyObject_GetAttrString(module.get(), type_name.c_str())};
+    if (!type)
+    {
+        return nullptr;
+    }
+
+    if (!PyType_Check(type.get()))
+    {
+        PyErr_Format(
+            PyExc_TypeError,
+            "'%s.%s' is not a type",
+            module_name.c_str(),
+            type_name.c_str());
+        return nullptr;
+    }
+
+    // TODO: verify that the Python type is compatible with the winrt
+    // runtime module version and that it actually matches the C++ type
+
+    try
+    {
+        state->type_cache[qualified_name]
+            = reinterpret_cast<PyTypeObject*>(Py_NewRef(type.get()));
+    }
+    catch (...)
+    {
+        to_PyErr();
+        return nullptr;
+    }
+
+    return reinterpret_cast<PyTypeObject*>(type.get());
+}
+
 /**
  * Wraps a WinRT KeyValuePair iterator in a Python type that iterates the
  * keys only to be consistent with the Python mapping protocol.

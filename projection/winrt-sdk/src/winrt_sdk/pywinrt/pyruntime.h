@@ -11,6 +11,7 @@ namespace py::cpp::_winrt
         PyTypeObject* object_type;
         PyTypeObject* array_type;
         PyTypeObject* mapping_iter_type;
+        std::unordered_map<std::string_view, PyTypeObject*> type_cache;
         PyObject* to_uuid_func;
     };
 

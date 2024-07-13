@@ -166,5 +166,11 @@ Requirements:
 PyMODINIT_FUNC PyInit__winrt_windows_graphics_capture_interop(void) noexcept
 {
     using namespace py::cpp::Windows::Graphics::Capture::Interop;
+
+    if (py::import_winrt_runtime() == -1)
+    {
+        return nullptr;
+    }
+
     return PyModule_Create(&module_def);
 }

@@ -318,6 +318,7 @@ namespace py
     template<typename T>
     struct py_type
     {
+        static constexpr std::string_view qualified_name = {};
         static constexpr const char* module_name = 0;
         static constexpr const char* type_name = 0;
     };
@@ -382,6 +383,7 @@ namespace py
         PyType_Spec* type_spec,
         PyObject* base_type,
         PyTypeObject* metaclass) noexcept;
+    PyTypeObject* get_python_type(std::string_view qualified_name) noexcept;
     PyObject* wrap_mapping_iter(PyObject* iter) noexcept;
     bool is_buffer_compatible(
         Py_buffer const& view, Py_ssize_t itemsize, const char* format) noexcept;
@@ -397,6 +399,7 @@ namespace py
         uint16_t abi_version_major;
         uint16_t abi_version_minor;
         decltype(register_python_type)* register_python_type;
+        decltype(get_python_type)* get_python_type;
         decltype(wrap_mapping_iter)* wrap_mapping_iter;
         decltype(is_buffer_compatible)* is_buffer_compatible;
         decltype(convert_datetime)* convert_datetime;
@@ -466,6 +469,12 @@ namespace py
         WINRT_ASSERT(PyWinRT_API && PyWinRT_API->register_python_type);
         return (*PyWinRT_API->register_python_type)(
             module, type_spec, base_type, metaclass);
+    }
+
+    inline PyTypeObject* get_python_type(std::string_view qualified_name) noexcept
+    {
+        WINRT_ASSERT(PyWinRT_API && PyWinRT_API->get_python_type);
+        return (*PyWinRT_API->get_python_type)(qualified_name);
     }
 
     inline PyObject* wrap_mapping_iter(PyObject* iter) noexcept
@@ -609,45 +618,16 @@ namespace py
      * registered.
      */
     template<typename T>
-    PyTypeObject* get_python_type() noexcept
+    PyTypeObject* get_python_type_for() noexcept
     {
         using winrt_type = std::conditional_t<
             is_pinterface_category_v<T>,
             typename pinterface_python_type<T>::abstract,
             T>;
 
-        static_assert(py_type<winrt_type>::module_name);
-        static_assert(py_type<winrt_type>::type_name);
+        static_assert(!std::empty(py_type<winrt_type>::qualified_name));
 
-        pyobj_handle module{PyImport_ImportModule(py_type<winrt_type>::module_name)};
-
-        if (!module)
-        {
-            return nullptr;
-        }
-
-        pyobj_handle type{
-            PyObject_GetAttrString(module.get(), py_type<winrt_type>::type_name)};
-
-        if (!type)
-        {
-            return nullptr;
-        }
-
-        if (!PyType_Check(type.get()))
-        {
-            PyErr_Format(
-                PyExc_TypeError,
-                "'%s.%s' is not a type",
-                py_type<winrt_type>::module_name,
-                py_type<winrt_type>::type_name);
-            return nullptr;
-        }
-
-        // TODO: verify that the Python type is compatible with the winrt
-        // runtime module version and that it actually matches the C++ type
-
-        return reinterpret_cast<PyTypeObject*>(type.get());
+        return get_python_type(py_type<winrt_type>::qualified_name);
     }
 
     /**
@@ -761,8 +741,7 @@ namespace py
 
         using ptype = pinterface_python_type<T>;
 
-        auto type = get_python_type<T>();
-
+        auto type = get_python_type_for<T>();
         if (!type)
         {
             return nullptr;
@@ -794,8 +773,7 @@ namespace py
 
         if constexpr (is_class_category_v<T> || is_interface_category_v<T>)
         {
-            auto type = get_python_type<T>();
-
+            auto type = get_python_type_for<T>();
             if (!type)
             {
                 return nullptr;
@@ -1467,8 +1445,7 @@ namespace py
     {
         static PyObject* convert(T instance) noexcept
         {
-            auto type = py::get_python_type<T>();
-
+            auto type = get_python_type_for<T>();
             if (!type)
             {
                 return nullptr;
@@ -1481,8 +1458,7 @@ namespace py
         {
             throw_if_pyobj_null(obj);
 
-            auto type = py::get_python_type<T>();
-
+            auto type = get_python_type_for<T>();
             if (!type)
             {
                 throw python_exception();
@@ -1603,8 +1579,7 @@ namespace py
     {
         throw_if_pyobj_null(obj);
 
-        auto type = get_python_type<T>();
-
+        auto type = get_python_type_for<T>();
         if (!type)
         {
             throw python_exception();
