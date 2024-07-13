@@ -49,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewMeetingInfoDisplayKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewMeetingInfoDisplayKind";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewMeetingInfoDisplayKind";
     };
@@ -56,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewSystemState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewSystemState";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewSystemState";
     };
@@ -63,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamEndMeetingKind";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamEndMeetingKind";
     };
@@ -70,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamViewCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamViewCommand";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamViewCommand";
     };
@@ -77,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCleanupRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamCleanupRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamCleanupRequestedEventArgs";
     };
@@ -84,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamCommandInvokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamCommandInvokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamCommandInvokedEventArgs";
     };
@@ -91,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamDeviceCredentials>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamDeviceCredentials";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamDeviceCredentials";
     };
@@ -98,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamEndMeetingRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamEndMeetingRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamEndMeetingRequestedEventArgs";
     };
@@ -105,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamJoinMeetingRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamJoinMeetingRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamJoinMeetingRequestedEventArgs";
     };
@@ -112,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::Preview::Communications::PreviewTeamView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.preview.communications.PreviewTeamView";
         static constexpr const char* module_name = "winrt.windows.ui.core.preview.communications";
         static constexpr const char* type_name = "PreviewTeamView";
     };

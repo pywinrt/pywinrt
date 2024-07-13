@@ -54,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayAdvancedColorKind";
         static constexpr const char* module_name = "winrt.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayAdvancedColorKind";
     };
@@ -61,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayHdrMetadataFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayHdrMetadataFormat";
         static constexpr const char* module_name = "winrt.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayHdrMetadataFormat";
     };
@@ -68,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayAdvancedColorInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayAdvancedColorInfo";
         static constexpr const char* module_name = "winrt.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayAdvancedColorInfo";
     };
@@ -75,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Graphics::Display::DisplayInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.graphics.display.DisplayInformation";
         static constexpr const char* module_name = "winrt.microsoft.graphics.display";
         static constexpr const char* type_name = "DisplayInformation";
     };

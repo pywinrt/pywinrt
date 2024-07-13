@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinderStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocationFinderStatus";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalCategories>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalCategories";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalCategories";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocation";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocation";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinder";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocationFinder";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationFinderResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationFinderResult";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocationFinderResult";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationHoursOfOperationItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationHoursOfOperationItem";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocationHoursOfOperationItem";
     };
@@ -103,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::LocalLocationRatingInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.LocalLocationRatingInfo";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "LocalLocationRatingInfo";
     };
@@ -110,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::LocalSearch::PlaceInfoHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.localsearch.PlaceInfoHelper";
         static constexpr const char* module_name = "winrt.windows.services.maps.localsearch";
         static constexpr const char* type_name = "PlaceInfoHelper";
     };

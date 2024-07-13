@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.provider.IPwmControllerProvider";
         static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
         static constexpr const char* type_name = "IPwmControllerProvider";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::Provider::IPwmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.provider.IPwmProvider";
         static constexpr const char* module_name = "winrt.windows.devices.pwm.provider";
         static constexpr const char* type_name = "IPwmProvider";
     };

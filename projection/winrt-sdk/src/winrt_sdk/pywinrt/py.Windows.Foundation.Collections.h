@@ -3044,6 +3044,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::CollectionChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.CollectionChange";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "CollectionChange";
     };
@@ -3051,6 +3052,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::PropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.PropertySet";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "PropertySet";
     };
@@ -3058,6 +3060,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::StringMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.StringMap";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "StringMap";
     };
@@ -3065,6 +3068,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::ValueSet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.ValueSet";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "ValueSet";
     };
@@ -3072,6 +3076,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IIterable>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IIterable";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IIterable";
     };
@@ -3079,6 +3084,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IIterator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IIterator";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IIterator";
     };
@@ -3086,6 +3092,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IKeyValuePair>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IKeyValuePair";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IKeyValuePair";
     };
@@ -3093,6 +3100,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IMapChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IMapChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IMapChangedEventArgs";
     };
@@ -3100,6 +3108,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IMapView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IMapView";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IMapView";
     };
@@ -3107,6 +3116,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IMap";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IMap";
     };
@@ -3114,6 +3124,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IObservableMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IObservableMap";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IObservableMap";
     };
@@ -3121,6 +3132,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IObservableVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IObservableVector";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IObservableVector";
     };
@@ -3128,6 +3140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::IPropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IPropertySet";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IPropertySet";
     };
@@ -3135,6 +3148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Collections::IVectorChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IVectorChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IVectorChangedEventArgs";
     };
@@ -3142,6 +3156,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IVectorView";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IVectorView";
     };
@@ -3149,6 +3164,7 @@ namespace py
     template<>
     struct py_type<py::proj::Windows::Foundation::Collections::IVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.collections.IVector";
         static constexpr const char* module_name = "winrt.windows.foundation.collections";
         static constexpr const char* type_name = "IVector";
     };

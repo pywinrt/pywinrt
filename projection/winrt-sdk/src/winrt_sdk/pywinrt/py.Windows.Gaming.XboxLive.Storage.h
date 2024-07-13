@@ -60,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveErrorStatus";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveErrorStatus";
     };
@@ -67,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobGetResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobGetResult";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveBlobGetResult";
     };
@@ -74,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveBlobInfo";
     };
@@ -81,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoGetResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfoGetResult";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveBlobInfoGetResult";
     };
@@ -88,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveBlobInfoQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveBlobInfoQuery";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveBlobInfoQuery";
     };
@@ -95,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainer";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveContainer";
     };
@@ -102,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveContainerInfo";
     };
@@ -109,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoGetResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoGetResult";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveContainerInfoGetResult";
     };
@@ -116,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveContainerInfoQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveContainerInfoQuery";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveContainerInfoQuery";
     };
@@ -123,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveOperationResult";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveOperationResult";
     };
@@ -130,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveProvider";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveProvider";
     };
@@ -137,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::XboxLive::Storage::GameSaveProviderGetResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.xboxlive.storage.GameSaveProviderGetResult";
         static constexpr const char* module_name = "winrt.windows.gaming.xboxlive.storage";
         static constexpr const char* type_name = "GameSaveProviderGetResult";
     };

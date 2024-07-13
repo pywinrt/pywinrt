@@ -57,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatterMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.CurrencyFormatterMode";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "CurrencyFormatterMode";
     };
@@ -64,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::RoundingAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.RoundingAlgorithm";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "RoundingAlgorithm";
     };
@@ -71,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::CurrencyFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.CurrencyFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "CurrencyFormatter";
     };
@@ -78,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::DecimalFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.DecimalFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "DecimalFormatter";
     };
@@ -85,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::IncrementNumberRounder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.IncrementNumberRounder";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "IncrementNumberRounder";
     };
@@ -92,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::NumeralSystemTranslator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.NumeralSystemTranslator";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "NumeralSystemTranslator";
     };
@@ -99,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::PercentFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.PercentFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "PercentFormatter";
     };
@@ -106,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::PermilleFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.PermilleFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "PermilleFormatter";
     };
@@ -113,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::SignificantDigitsNumberRounder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.SignificantDigitsNumberRounder";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "SignificantDigitsNumberRounder";
     };
@@ -120,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberFormatter";
     };
@@ -127,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatter2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatter2";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberFormatter2";
     };
@@ -134,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberFormatterOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberFormatterOptions";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberFormatterOptions";
     };
@@ -141,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberParser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberParser";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberParser";
     };
@@ -148,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberRounder";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberRounder";
     };
@@ -155,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::INumberRounderOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.INumberRounderOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "INumberRounderOption";
     };
@@ -162,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignedZeroOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.ISignedZeroOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "ISignedZeroOption";
     };
@@ -169,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::NumberFormatting::ISignificantDigitsOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.numberformatting.ISignificantDigitsOption";
         static constexpr const char* module_name = "winrt.windows.globalization.numberformatting";
         static constexpr const char* type_name = "ISignificantDigitsOption";
     };

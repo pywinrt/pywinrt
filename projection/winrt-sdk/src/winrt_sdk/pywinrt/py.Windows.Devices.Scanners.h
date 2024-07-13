@@ -75,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoCroppingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerAutoCroppingMode";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerAutoCroppingMode";
     };
@@ -82,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerColorMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerColorMode";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerColorMode";
     };
@@ -89,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFormat";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerFormat";
     };
@@ -96,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerScanSource";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerScanSource";
     };
@@ -103,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScanner>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScanner";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScanner";
     };
@@ -110,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerAutoConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerAutoConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerAutoConfiguration";
     };
@@ -117,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFeederConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFeederConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerFeederConfiguration";
     };
@@ -124,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerFlatbedConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerFlatbedConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerFlatbedConfiguration";
     };
@@ -131,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerPreviewResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerPreviewResult";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerPreviewResult";
     };
@@ -138,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerScanResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerScanResult";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerScanResult";
     };
@@ -145,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::IImageScannerFormatConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.IImageScannerFormatConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "IImageScannerFormatConfiguration";
     };
@@ -152,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::IImageScannerSourceConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.IImageScannerSourceConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "IImageScannerSourceConfiguration";
     };
@@ -159,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Scanners::ImageScannerResolution>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.scanners.ImageScannerResolution";
         static constexpr const char* module_name = "winrt.windows.devices.scanners";
         static constexpr const char* type_name = "ImageScannerResolution";
     };

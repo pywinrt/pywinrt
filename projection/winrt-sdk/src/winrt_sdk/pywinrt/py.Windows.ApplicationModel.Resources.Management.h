@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
         static constexpr const char* type_name = "IndexedResourceType";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceCandidate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceCandidate";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
         static constexpr const char* type_name = "IndexedResourceCandidate";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Management::IndexedResourceQualifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.IndexedResourceQualifier";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
         static constexpr const char* type_name = "IndexedResourceQualifier";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Management::ResourceIndexer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.management.ResourceIndexer";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.management";
         static constexpr const char* type_name = "ResourceIndexer";
     };

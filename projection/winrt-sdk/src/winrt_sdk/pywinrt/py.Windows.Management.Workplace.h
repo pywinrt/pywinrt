@@ -31,6 +31,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Workplace::MessagingSyncPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.MessagingSyncPolicy";
         static constexpr const char* module_name = "winrt.windows.management.workplace";
         static constexpr const char* type_name = "MessagingSyncPolicy";
     };
@@ -38,6 +39,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Workplace::MdmPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.MdmPolicy";
         static constexpr const char* module_name = "winrt.windows.management.workplace";
         static constexpr const char* type_name = "MdmPolicy";
     };
@@ -45,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Workplace::WorkplaceSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.workplace.WorkplaceSettings";
         static constexpr const char* module_name = "winrt.windows.management.workplace";
         static constexpr const char* type_name = "WorkplaceSettings";
     };

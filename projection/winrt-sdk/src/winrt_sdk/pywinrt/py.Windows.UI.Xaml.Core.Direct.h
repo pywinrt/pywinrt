@@ -62,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlEventIndex>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlEventIndex";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "XamlEventIndex";
     };
@@ -69,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlPropertyIndex>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlPropertyIndex";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "XamlPropertyIndex";
     };
@@ -76,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlTypeIndex>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlTypeIndex";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "XamlTypeIndex";
     };
@@ -83,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::XamlDirect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.XamlDirect";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "XamlDirect";
     };
@@ -90,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Core::Direct::IXamlDirectObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.core.direct.IXamlDirectObject";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.core.direct";
         static constexpr const char* type_name = "IXamlDirectObject";
     };

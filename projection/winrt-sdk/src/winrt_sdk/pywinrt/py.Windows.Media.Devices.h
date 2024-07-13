@@ -347,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AdvancedPhotoMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AdvancedPhotoMode";
     };
@@ -354,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceRole>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AudioDeviceRole";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AudioDeviceRole";
     };
@@ -361,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AutoFocusRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AutoFocusRange";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AutoFocusRange";
     };
@@ -368,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraOcclusionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CameraOcclusionKind";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CameraOcclusionKind";
     };
@@ -375,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraStreamState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CameraStreamState";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CameraStreamState";
     };
@@ -382,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CaptureSceneMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CaptureSceneMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CaptureSceneMode";
     };
@@ -389,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CaptureUse>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CaptureUse";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CaptureUse";
     };
@@ -396,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ColorTemperaturePreset>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ColorTemperaturePreset";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ColorTemperaturePreset";
     };
@@ -403,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DigitalWindowMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DigitalWindowMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DigitalWindowMode";
     };
@@ -410,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.FocusMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "FocusMode";
     };
@@ -417,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusPreset>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.FocusPreset";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "FocusPreset";
     };
@@ -424,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::HdrVideoMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.HdrVideoMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "HdrVideoMode";
     };
@@ -431,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::InfraredTorchMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.InfraredTorchMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "InfraredTorchMode";
     };
@@ -438,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::IsoSpeedPreset>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IsoSpeedPreset";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "IsoSpeedPreset";
     };
@@ -445,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ManualFocusDistance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ManualFocusDistance";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ManualFocusDistance";
     };
@@ -452,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCaptureFocusState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaCaptureFocusState";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaCaptureFocusState";
     };
@@ -459,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCaptureOptimization>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaCaptureOptimization";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaCaptureOptimization";
     };
@@ -466,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaCapturePauseBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaCapturePauseBehavior";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaCapturePauseBehavior";
     };
@@ -473,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.OpticalImageStabilizationMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "OpticalImageStabilizationMode";
     };
@@ -480,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::RegionOfInterestType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.RegionOfInterestType";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "RegionOfInterestType";
     };
@@ -487,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::SendCommandStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.SendCommandStatus";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "SendCommandStatus";
     };
@@ -494,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::TelephonyKey>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.TelephonyKey";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "TelephonyKey";
     };
@@ -501,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoDeviceControllerGetDevicePropertyStatus";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoDeviceControllerGetDevicePropertyStatus";
     };
@@ -508,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerSetDevicePropertyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoDeviceControllerSetDevicePropertyStatus";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoDeviceControllerSetDevicePropertyStatus";
     };
@@ -515,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoTemporalDenoisingMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoTemporalDenoisingMode";
     };
@@ -522,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ZoomTransitionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ZoomTransitionMode";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ZoomTransitionMode";
     };
@@ -529,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoCaptureSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AdvancedPhotoCaptureSettings";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AdvancedPhotoCaptureSettings";
     };
@@ -536,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AdvancedPhotoControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AdvancedPhotoControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AdvancedPhotoControl";
     };
@@ -543,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AudioDeviceController";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AudioDeviceController";
     };
@@ -550,6 +579,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceModule>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AudioDeviceModule";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AudioDeviceModule";
     };
@@ -557,6 +587,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceModuleNotificationEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AudioDeviceModuleNotificationEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AudioDeviceModuleNotificationEventArgs";
     };
@@ -564,6 +595,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::AudioDeviceModulesManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.AudioDeviceModulesManager";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "AudioDeviceModulesManager";
     };
@@ -571,6 +603,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CallControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CallControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CallControl";
     };
@@ -578,6 +611,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraOcclusionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CameraOcclusionInfo";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CameraOcclusionInfo";
     };
@@ -585,6 +619,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraOcclusionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CameraOcclusionState";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CameraOcclusionState";
     };
@@ -592,6 +627,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::CameraOcclusionStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.CameraOcclusionStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "CameraOcclusionStateChangedEventArgs";
     };
@@ -599,6 +635,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DefaultAudioCaptureDeviceChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DefaultAudioCaptureDeviceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DefaultAudioCaptureDeviceChangedEventArgs";
     };
@@ -606,6 +643,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DefaultAudioRenderDeviceChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DefaultAudioRenderDeviceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DefaultAudioRenderDeviceChangedEventArgs";
     };
@@ -613,6 +651,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DialRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DialRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DialRequestedEventArgs";
     };
@@ -620,6 +659,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DigitalWindowBounds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DigitalWindowBounds";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DigitalWindowBounds";
     };
@@ -627,6 +667,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DigitalWindowCapability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DigitalWindowCapability";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DigitalWindowCapability";
     };
@@ -634,6 +675,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::DigitalWindowControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.DigitalWindowControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "DigitalWindowControl";
     };
@@ -641,6 +683,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ExposureCompensationControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ExposureCompensationControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ExposureCompensationControl";
     };
@@ -648,6 +691,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ExposureControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ExposureControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ExposureControl";
     };
@@ -655,6 +699,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ExposurePriorityVideoControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ExposurePriorityVideoControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ExposurePriorityVideoControl";
     };
@@ -662,6 +707,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::FlashControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.FlashControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "FlashControl";
     };
@@ -669,6 +715,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.FocusControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "FocusControl";
     };
@@ -676,6 +723,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::FocusSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.FocusSettings";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "FocusSettings";
     };
@@ -683,6 +731,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::HdrVideoControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.HdrVideoControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "HdrVideoControl";
     };
@@ -690,6 +739,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::InfraredTorchControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.InfraredTorchControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "InfraredTorchControl";
     };
@@ -697,6 +747,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::IsoSpeedControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IsoSpeedControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "IsoSpeedControl";
     };
@@ -704,6 +755,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::KeypadPressedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.KeypadPressedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "KeypadPressedEventArgs";
     };
@@ -711,6 +763,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::LowLagPhotoControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.LowLagPhotoControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "LowLagPhotoControl";
     };
@@ -718,6 +771,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::LowLagPhotoSequenceControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.LowLagPhotoSequenceControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "LowLagPhotoSequenceControl";
     };
@@ -725,6 +779,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaDevice";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaDevice";
     };
@@ -732,6 +787,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaDeviceControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaDeviceControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaDeviceControl";
     };
@@ -739,6 +795,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::MediaDeviceControlCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.MediaDeviceControlCapabilities";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "MediaDeviceControlCapabilities";
     };
@@ -746,6 +803,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ModuleCommandResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ModuleCommandResult";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ModuleCommandResult";
     };
@@ -753,6 +811,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::OpticalImageStabilizationControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.OpticalImageStabilizationControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "OpticalImageStabilizationControl";
     };
@@ -760,6 +819,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::PanelBasedOptimizationControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.PanelBasedOptimizationControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "PanelBasedOptimizationControl";
     };
@@ -767,6 +827,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::PhotoConfirmationControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.PhotoConfirmationControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "PhotoConfirmationControl";
     };
@@ -774,6 +835,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::RedialRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.RedialRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "RedialRequestedEventArgs";
     };
@@ -781,6 +843,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::RegionOfInterest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.RegionOfInterest";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "RegionOfInterest";
     };
@@ -788,6 +851,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::RegionsOfInterestControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.RegionsOfInterestControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "RegionsOfInterestControl";
     };
@@ -795,6 +859,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::SceneModeControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.SceneModeControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "SceneModeControl";
     };
@@ -802,6 +867,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::TorchControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.TorchControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "TorchControl";
     };
@@ -809,6 +875,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoDeviceController";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoDeviceController";
     };
@@ -816,6 +883,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoDeviceControllerGetDevicePropertyResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoDeviceControllerGetDevicePropertyResult";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoDeviceControllerGetDevicePropertyResult";
     };
@@ -823,6 +891,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::VideoTemporalDenoisingControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.VideoTemporalDenoisingControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "VideoTemporalDenoisingControl";
     };
@@ -830,6 +899,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::WhiteBalanceControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.WhiteBalanceControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "WhiteBalanceControl";
     };
@@ -837,6 +907,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ZoomControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ZoomControl";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ZoomControl";
     };
@@ -844,6 +915,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::ZoomSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.ZoomSettings";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "ZoomSettings";
     };
@@ -851,6 +923,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::IDefaultAudioDeviceChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IDefaultAudioDeviceChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "IDefaultAudioDeviceChangedEventArgs";
     };
@@ -858,6 +931,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Devices::IMediaDeviceController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.devices.IMediaDeviceController";
         static constexpr const char* module_name = "winrt.windows.media.devices";
         static constexpr const char* type_name = "IMediaDeviceController";
     };

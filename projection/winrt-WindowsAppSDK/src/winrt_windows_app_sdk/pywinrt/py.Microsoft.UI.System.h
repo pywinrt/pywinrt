@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::System::ThemeSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.system.ThemeSettings";
         static constexpr const char* module_name = "winrt.microsoft.ui.system";
         static constexpr const char* type_name = "ThemeSettings";
     };

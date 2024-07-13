@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Composition::Core::CompositorController>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.composition.core.CompositorController";
         static constexpr const char* module_name = "winrt.microsoft.ui.composition.core";
         static constexpr const char* type_name = "CompositorController";
     };

@@ -29,6 +29,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Speech::Recognition::SpeechRecognitionUIStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.speech.recognition.SpeechRecognitionUIStatus";
         static constexpr const char* module_name = "winrt.windows.phone.speech.recognition";
         static constexpr const char* type_name = "SpeechRecognitionUIStatus";
     };

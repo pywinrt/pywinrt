@@ -74,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheReadBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheReadBehavior";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpCacheReadBehavior";
     };
@@ -81,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheWriteBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheWriteBehavior";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpCacheWriteBehavior";
     };
@@ -88,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCookieUsageBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCookieUsageBehavior";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpCookieUsageBehavior";
     };
@@ -95,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpBaseProtocolFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpBaseProtocolFilter";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpBaseProtocolFilter";
     };
@@ -102,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpCacheControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpCacheControl";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpCacheControl";
     };
@@ -109,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::HttpServerCustomValidationRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.HttpServerCustomValidationRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "HttpServerCustomValidationRequestedEventArgs";
     };
@@ -116,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Filters::IHttpFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.filters.IHttpFilter";
         static constexpr const char* module_name = "winrt.windows.web.http.filters";
         static constexpr const char* type_name = "IHttpFilter";
     };

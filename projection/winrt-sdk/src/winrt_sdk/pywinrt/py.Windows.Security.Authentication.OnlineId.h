@@ -57,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::CredentialPromptType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.CredentialPromptType";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "CredentialPromptType";
     };
@@ -64,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemTicketStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdSystemTicketStatus";
     };
@@ -71,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdAuthenticator";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdAuthenticator";
     };
@@ -78,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdServiceTicket";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdServiceTicket";
     };
@@ -85,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdServiceTicketRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdServiceTicketRequest";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdServiceTicketRequest";
     };
@@ -92,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticator";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdSystemAuthenticator";
     };
@@ -99,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemAuthenticatorForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemAuthenticatorForUser";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdSystemAuthenticatorForUser";
     };
@@ -106,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemIdentity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemIdentity";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdSystemIdentity";
     };
@@ -113,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::OnlineIdSystemTicketResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.OnlineIdSystemTicketResult";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "OnlineIdSystemTicketResult";
     };
@@ -120,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::SignOutUserOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.SignOutUserOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "SignOutUserOperation";
     };
@@ -127,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserAuthenticationOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.UserAuthenticationOperation";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "UserAuthenticationOperation";
     };
@@ -134,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authentication::OnlineId::UserIdentity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.onlineid.UserIdentity";
         static constexpr const char* module_name = "winrt.windows.security.authentication.onlineid";
         static constexpr const char* type_name = "UserIdentity";
     };

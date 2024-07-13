@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactDataProviderConnection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactDataProviderConnection";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactDataProviderTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactDataProviderTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactDataProviderTriggerDetails";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListCreateOrUpdateContactRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListCreateOrUpdateContactRequest";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListCreateOrUpdateContactRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListCreateOrUpdateContactRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListCreateOrUpdateContactRequestEventArgs";
     };
@@ -74,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListDeleteContactRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListDeleteContactRequest";
     };
@@ -81,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListDeleteContactRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListDeleteContactRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListDeleteContactRequestEventArgs";
     };
@@ -88,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListServerSearchReadBatchRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListServerSearchReadBatchRequest";
     };
@@ -95,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListServerSearchReadBatchRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListServerSearchReadBatchRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListServerSearchReadBatchRequestEventArgs";
     };
@@ -102,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListSyncManagerSyncRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListSyncManagerSyncRequest";
     };
@@ -109,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Contacts::DataProvider::ContactListSyncManagerSyncRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.contacts.dataprovider.ContactListSyncManagerSyncRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.contacts.dataprovider";
         static constexpr const char* type_name = "ContactListSyncManagerSyncRequestEventArgs";
     };

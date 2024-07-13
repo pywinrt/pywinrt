@@ -183,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Printing::PreviewPageCountType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.printing.PreviewPageCountType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.printing";
         static constexpr const char* type_name = "PreviewPageCountType";
     };
@@ -190,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Printing::AddPagesEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.printing.AddPagesEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.printing";
         static constexpr const char* type_name = "AddPagesEventArgs";
     };
@@ -197,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Printing::GetPreviewPageEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.printing.GetPreviewPageEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.printing";
         static constexpr const char* type_name = "GetPreviewPageEventArgs";
     };
@@ -204,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Printing::PaginateEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.printing.PaginateEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.printing";
         static constexpr const char* type_name = "PaginateEventArgs";
     };
@@ -211,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Printing::PrintDocument>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.printing.PrintDocument";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.printing";
         static constexpr const char* type_name = "PrintDocument";
     };

@@ -40,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AddAppointmentOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.AddAppointmentOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
         static constexpr const char* type_name = "AddAppointmentOperation";
     };
@@ -47,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::AppointmentsProviderLaunchActionVerbs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.AppointmentsProviderLaunchActionVerbs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
         static constexpr const char* type_name = "AppointmentsProviderLaunchActionVerbs";
     };
@@ -54,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::RemoveAppointmentOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.RemoveAppointmentOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
         static constexpr const char* type_name = "RemoveAppointmentOperation";
     };
@@ -61,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider::ReplaceAppointmentOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider.ReplaceAppointmentOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.appointmentsprovider";
         static constexpr const char* type_name = "ReplaceAppointmentOperation";
     };

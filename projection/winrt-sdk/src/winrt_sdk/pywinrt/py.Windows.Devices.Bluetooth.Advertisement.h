@@ -72,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFlags>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFlags";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementFlags";
     };
@@ -79,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatus";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherStatus";
     };
@@ -86,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementType";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementType";
     };
@@ -93,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherStatus";
     };
@@ -100,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEScanningMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEScanningMode";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEScanningMode";
     };
@@ -107,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisement";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisement";
     };
@@ -114,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementBytePattern>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementBytePattern";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementBytePattern";
     };
@@ -121,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataSection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementDataSection";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementDataSection";
     };
@@ -128,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementDataTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementDataTypes";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementDataTypes";
     };
@@ -135,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementFilter";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementFilter";
     };
@@ -142,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisher";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementPublisher";
     };
@@ -149,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementPublisherStatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherStatusChangedEventArgs";
     };
@@ -156,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementReceivedEventArgs";
     };
@@ -163,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementWatcher";
     };
@@ -170,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEAdvertisementWatcherStoppedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherStoppedEventArgs";
     };
@@ -177,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Bluetooth::Advertisement::BluetoothLEManufacturerData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.bluetooth.advertisement.BluetoothLEManufacturerData";
         static constexpr const char* module_name = "winrt.windows.devices.bluetooth.advertisement";
         static constexpr const char* type_name = "BluetoothLEManufacturerData";
     };

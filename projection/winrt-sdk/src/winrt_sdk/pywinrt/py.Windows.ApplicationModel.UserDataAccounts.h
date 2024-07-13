@@ -80,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountContentKinds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountContentKinds";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountContentKinds";
     };
@@ -87,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountOtherAppReadAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountOtherAppReadAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountOtherAppReadAccess";
     };
@@ -94,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountStoreAccessType";
     };
@@ -101,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccount";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccount";
     };
@@ -108,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountManager";
     };
@@ -115,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountManagerForUser";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountManagerForUser";
     };
@@ -122,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountStore";
     };
@@ -129,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserDataAccounts::UserDataAccountStoreChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.userdataaccounts.UserDataAccountStoreChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.userdataaccounts";
         static constexpr const char* type_name = "UserDataAccountStoreChangedEventArgs";
     };

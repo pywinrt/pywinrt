@@ -56,6 +56,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceMonitorStatus";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "GeofenceMonitorStatus";
     };
@@ -63,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceRemovalReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceRemovalReason";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "GeofenceRemovalReason";
     };
@@ -70,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceState";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "GeofenceState";
     };
@@ -77,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::MonitoredGeofenceStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.MonitoredGeofenceStates";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "MonitoredGeofenceStates";
     };
@@ -84,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::Geofence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.Geofence";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "Geofence";
     };
@@ -91,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceMonitor";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "GeofenceMonitor";
     };
@@ -98,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geofencing::GeofenceStateChangeReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.geofencing.GeofenceStateChangeReport";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.geofencing";
         static constexpr const char* type_name = "GeofenceStateChangeReport";
     };

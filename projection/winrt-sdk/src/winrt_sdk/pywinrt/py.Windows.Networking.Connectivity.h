@@ -154,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::CellularApnAuthenticationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.CellularApnAuthenticationType";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "CellularApnAuthenticationType";
     };
@@ -161,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionProfileDeleteStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectionProfileDeleteStatus";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectionProfileDeleteStatus";
     };
@@ -168,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DataUsageGranularity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DataUsageGranularity";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DataUsageGranularity";
     };
@@ -175,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DomainAuthenticationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DomainAuthenticationKind";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DomainAuthenticationKind";
     };
@@ -182,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DomainConnectivityLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DomainConnectivityLevel";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DomainConnectivityLevel";
     };
@@ -189,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkAuthenticationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkAuthenticationType";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkAuthenticationType";
     };
@@ -196,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkConnectivityLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkConnectivityLevel";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkConnectivityLevel";
     };
@@ -203,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkCostType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkCostType";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkCostType";
     };
@@ -210,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkEncryptionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkEncryptionType";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkEncryptionType";
     };
@@ -217,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkTypes";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkTypes";
     };
@@ -224,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::RoamingStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.RoamingStates";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "RoamingStates";
     };
@@ -231,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::TriStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.TriStates";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "TriStates";
     };
@@ -238,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanDataClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.WwanDataClass";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "WwanDataClass";
     };
@@ -245,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanNetworkIPKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.WwanNetworkIPKind";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "WwanNetworkIPKind";
     };
@@ -252,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanNetworkRegistrationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.WwanNetworkRegistrationState";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "WwanNetworkRegistrationState";
     };
@@ -259,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::AttributedNetworkUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.AttributedNetworkUsage";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "AttributedNetworkUsage";
     };
@@ -266,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::CellularApnContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.CellularApnContext";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "CellularApnContext";
     };
@@ -273,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionCost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectionCost";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectionCost";
     };
@@ -280,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectionProfile";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectionProfile";
     };
@@ -287,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionProfileFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectionProfileFilter";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectionProfileFilter";
     };
@@ -294,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectionSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectionSession";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectionSession";
     };
@@ -301,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectivityInterval>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectivityInterval";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectivityInterval";
     };
@@ -308,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ConnectivityManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ConnectivityManager";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ConnectivityManager";
     };
@@ -315,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DataPlanStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DataPlanStatus";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DataPlanStatus";
     };
@@ -322,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DataPlanUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DataPlanUsage";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DataPlanUsage";
     };
@@ -329,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::DataUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.DataUsage";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "DataUsage";
     };
@@ -336,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::IPInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.IPInformation";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "IPInformation";
     };
@@ -343,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::LanIdentifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.LanIdentifier";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "LanIdentifier";
     };
@@ -350,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::LanIdentifierData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.LanIdentifierData";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "LanIdentifierData";
     };
@@ -357,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkAdapter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkAdapter";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkAdapter";
     };
@@ -364,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkInformation";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkInformation";
     };
@@ -371,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkItem";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkItem";
     };
@@ -378,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkSecuritySettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkSecuritySettings";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkSecuritySettings";
     };
@@ -385,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkStateChangeEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkStateChangeEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkStateChangeEventDetails";
     };
@@ -392,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkUsage";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkUsage";
     };
@@ -399,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ProviderNetworkUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ProviderNetworkUsage";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ProviderNetworkUsage";
     };
@@ -406,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::ProxyConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.ProxyConfiguration";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "ProxyConfiguration";
     };
@@ -413,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::RoutePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.RoutePolicy";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "RoutePolicy";
     };
@@ -420,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WlanConnectionProfileDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.WlanConnectionProfileDetails";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "WlanConnectionProfileDetails";
     };
@@ -427,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::WwanConnectionProfileDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.WwanConnectionProfileDetails";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "WwanConnectionProfileDetails";
     };
@@ -434,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::Connectivity::NetworkUsageStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.connectivity.NetworkUsageStates";
         static constexpr const char* module_name = "winrt.windows.networking.connectivity";
         static constexpr const char* type_name = "NetworkUsageStates";
     };

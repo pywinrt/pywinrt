@@ -70,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeErrorReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppAttributeErrorReason";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppAttributeErrorReason";
     };
@@ -77,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeValueKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppAttributeValueKind";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppAttributeValueKind";
     };
@@ -84,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppResolutionUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppResolutionUnit";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppResolutionUnit";
     };
@@ -91,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PageConfigurationSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PageConfigurationSource";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PageConfigurationSource";
     };
@@ -98,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppAttributeError";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppAttributeError";
     };
@@ -105,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppAttributeValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppAttributeValue";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppAttributeValue";
     };
@@ -112,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppIntegerRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppIntegerRange";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppIntegerRange";
     };
@@ -119,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppPrintDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppPrintDevice";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppPrintDevice";
     };
@@ -126,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppResolution>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppResolution";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppResolution";
     };
@@ -133,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppSetAttributesResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppSetAttributesResult";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppSetAttributesResult";
     };
@@ -140,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::IppTextWithLanguage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppTextWithLanguage";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppTextWithLanguage";
     };
@@ -147,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PageConfigurationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PageConfigurationSettings";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PageConfigurationSettings";
     };
@@ -154,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PdlPassthroughProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PdlPassthroughProvider";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PdlPassthroughProvider";
     };
@@ -161,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PdlPassthroughTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PdlPassthroughTarget";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PdlPassthroughTarget";
     };
@@ -168,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Print3DDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.Print3DDevice";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "Print3DDevice";
     };
@@ -175,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::PrintSchema>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.PrintSchema";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "PrintSchema";
     };

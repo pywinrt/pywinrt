@@ -45,6 +45,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListenerAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.management.UserNotificationListenerAccessStatus";
         static constexpr const char* module_name = "winrt.windows.ui.notifications.management";
         static constexpr const char* type_name = "UserNotificationListenerAccessStatus";
     };
@@ -52,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::Management::UserNotificationListener>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.management.UserNotificationListener";
         static constexpr const char* module_name = "winrt.windows.ui.notifications.management";
         static constexpr const char* type_name = "UserNotificationListener";
     };

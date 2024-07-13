@@ -179,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailAttachmentDownloadState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailAttachmentDownloadState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailAttachmentDownloadState";
     };
@@ -186,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailBatchStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailBatchStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailBatchStatus";
     };
@@ -193,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailCertificateValidationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailCertificateValidationStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailCertificateValidationStatus";
     };
@@ -200,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailFlagState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailFlagState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailFlagState";
     };
@@ -207,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailImportance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailImportance";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailImportance";
     };
@@ -214,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxActionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxActionKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxActionKind";
     };
@@ -221,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxAllowedSmimeEncryptionAlgorithmNegotiation";
     };
@@ -228,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplyMessageResponseKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxAutoReplyMessageResponseKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxAutoReplyMessageResponseKind";
     };
@@ -235,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChangeType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChangeType";
     };
@@ -242,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxCreateFolderStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxCreateFolderStatus";
     };
@@ -249,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxDeleteFolderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxDeleteFolderStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxDeleteFolderStatus";
     };
@@ -256,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxEmptyFolderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxEmptyFolderStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxEmptyFolderStatus";
     };
@@ -263,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppReadAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxOtherAppReadAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxOtherAppReadAccess";
     };
@@ -270,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxOtherAppWriteAccess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxOtherAppWriteAccess";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxOtherAppWriteAccess";
     };
@@ -277,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSmimeEncryptionAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxSmimeEncryptionAlgorithm";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxSmimeEncryptionAlgorithm";
     };
@@ -284,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSmimeSigningAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxSmimeSigningAlgorithm";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxSmimeSigningAlgorithm";
     };
@@ -291,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxSyncStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxSyncStatus";
     };
@@ -298,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMeetingResponseType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMeetingResponseType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMeetingResponseType";
     };
@@ -305,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageBodyKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageBodyKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageBodyKind";
     };
@@ -312,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageDownloadState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageDownloadState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageDownloadState";
     };
@@ -319,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageResponseKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageResponseKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageResponseKind";
     };
@@ -326,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageSmimeKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageSmimeKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageSmimeKind";
     };
@@ -333,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQueryKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQueryKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQueryKind";
     };
@@ -340,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQuerySearchFields>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQuerySearchFields";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQuerySearchFields";
     };
@@ -347,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQuerySearchScope>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQuerySearchScope";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQuerySearchScope";
     };
@@ -354,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQuerySortDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQuerySortDirection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQuerySortDirection";
     };
@@ -361,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQuerySortProperty>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQuerySortProperty";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQuerySortProperty";
     };
@@ -368,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailRecipientResolutionStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailRecipientResolutionStatus";
     };
@@ -375,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailSpecialFolderKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailSpecialFolderKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailSpecialFolderKind";
     };
@@ -382,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailStoreAccessType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailStoreAccessType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailStoreAccessType";
     };
@@ -389,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailAttachment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailAttachment";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailAttachment";
     };
@@ -396,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailConversation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailConversation";
     };
@@ -403,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversationBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailConversationBatch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailConversationBatch";
     };
@@ -410,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailConversationReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailConversationReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailConversationReader";
     };
@@ -417,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailFolder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailFolder";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailFolder";
     };
@@ -424,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailIrmInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailIrmInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailIrmInfo";
     };
@@ -431,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailIrmTemplate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailIrmTemplate";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailIrmTemplate";
     };
@@ -438,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailItemCounts>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailItemCounts";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailItemCounts";
     };
@@ -445,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailbox>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailbox";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailbox";
     };
@@ -452,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxAction";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxAction";
     };
@@ -459,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReply>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxAutoReply";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxAutoReply";
     };
@@ -466,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxAutoReplySettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxAutoReplySettings";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxAutoReplySettings";
     };
@@ -473,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxCapabilities";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxCapabilities";
     };
@@ -480,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChange";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChange";
     };
@@ -487,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChangeReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChangeReader";
     };
@@ -494,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangeTracker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChangeTracker";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChangeTracker";
     };
@@ -501,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChangedDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChangedDeferral";
     };
@@ -508,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxChangedEventArgs";
     };
@@ -515,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxCreateFolderResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxCreateFolderResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxCreateFolderResult";
     };
@@ -522,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxPolicies>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxPolicies";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxPolicies";
     };
@@ -529,6 +579,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMailboxSyncManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMailboxSyncManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMailboxSyncManager";
     };
@@ -536,6 +587,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailManager";
     };
@@ -543,6 +595,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailManagerForUser";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailManagerForUser";
     };
@@ -550,6 +603,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMeetingInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMeetingInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMeetingInfo";
     };
@@ -557,6 +611,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessage";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessage";
     };
@@ -564,6 +619,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageBatch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageBatch";
     };
@@ -571,6 +627,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailMessageReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailMessageReader";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailMessageReader";
     };
@@ -578,6 +635,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQueryOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQueryOptions";
     };
@@ -585,6 +643,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailQueryTextSearch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailQueryTextSearch";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailQueryTextSearch";
     };
@@ -592,6 +651,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailRecipient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailRecipient";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailRecipient";
     };
@@ -599,6 +659,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailRecipientResolutionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailRecipientResolutionResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailRecipientResolutionResult";
     };
@@ -606,6 +667,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailStore";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailStore";
     };
@@ -613,6 +675,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::EmailStoreNotificationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.EmailStoreNotificationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email";
         static constexpr const char* type_name = "EmailStoreNotificationTriggerDetails";
     };

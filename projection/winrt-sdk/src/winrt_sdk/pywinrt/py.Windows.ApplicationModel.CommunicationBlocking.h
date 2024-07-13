@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAccessManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.communicationblocking.CommunicationBlockingAccessManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
         static constexpr const char* type_name = "CommunicationBlockingAccessManager";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::CommunicationBlocking::CommunicationBlockingAppManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.communicationblocking.CommunicationBlockingAppManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.communicationblocking";
         static constexpr const char* type_name = "CommunicationBlockingAppManager";
     };

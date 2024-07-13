@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::Automation::Core::CorePerceptionAutomation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.automation.core.CorePerceptionAutomation";
         static constexpr const char* module_name = "winrt.windows.perception.automation.core";
         static constexpr const char* type_name = "CorePerceptionAutomation";
     };

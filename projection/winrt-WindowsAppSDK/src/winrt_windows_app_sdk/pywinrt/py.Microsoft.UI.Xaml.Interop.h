@@ -124,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedAction";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedAction";
     };
@@ -131,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.NotifyCollectionChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "NotifyCollectionChangedEventArgs";
     };
@@ -138,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableIterable>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.IBindableIterable";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableIterable";
     };
@@ -145,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableIterator>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.IBindableIterator";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableIterator";
     };
@@ -152,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableObservableVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.IBindableObservableVector";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableObservableVector";
     };
@@ -159,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableVector>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.IBindableVector";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableVector";
     };
@@ -166,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::IBindableVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.IBindableVectorView";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "IBindableVectorView";
     };
@@ -173,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Interop::INotifyCollectionChanged>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.interop.INotifyCollectionChanged";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.interop";
         static constexpr const char* type_name = "INotifyCollectionChanged";
     };

@@ -72,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangePolarity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangePolarity";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangePolarity";
     };
@@ -79,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioOpenStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioOpenStatus";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioOpenStatus";
     };
@@ -86,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinDriveMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioPinDriveMode";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioPinDriveMode";
     };
@@ -93,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinEdge>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioPinEdge";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioPinEdge";
     };
@@ -100,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioPinValue";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioPinValue";
     };
@@ -107,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioSharingMode";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioSharingMode";
     };
@@ -114,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeCounter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeCounter";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeCounter";
     };
@@ -121,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeReader";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeReader";
     };
@@ -128,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioController";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioController";
     };
@@ -135,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioPin";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioPin";
     };
@@ -142,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioPinValueChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioPinValueChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioPinValueChangedEventArgs";
     };
@@ -149,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeCount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeCount";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeCount";
     };
@@ -156,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Gpio::GpioChangeRecord>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.gpio.GpioChangeRecord";
         static constexpr const char* module_name = "winrt.windows.devices.gpio";
         static constexpr const char* type_name = "GpioChangeRecord";
     };

@@ -67,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionErrorStatus";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingConnectionErrorStatus";
     };
@@ -74,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnectionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionState";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingConnectionState";
     };
@@ -81,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingPlaybackTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingPlaybackTypes";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingPlaybackTypes";
     };
@@ -88,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnection";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingConnection";
     };
@@ -95,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingConnectionErrorOccurredEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingConnectionErrorOccurredEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingConnectionErrorOccurredEventArgs";
     };
@@ -102,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevice";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingDevice";
     };
@@ -109,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingDevicePicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevicePicker";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingDevicePicker";
     };
@@ -116,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingDevicePickerFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDevicePickerFilter";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingDevicePickerFilter";
     };
@@ -123,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingDeviceSelectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingDeviceSelectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingDeviceSelectedEventArgs";
     };
@@ -130,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Casting::CastingSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.casting.CastingSource";
         static constexpr const char* module_name = "winrt.windows.media.casting";
         static constexpr const char* type_name = "CastingSource";
     };

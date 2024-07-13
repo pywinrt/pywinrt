@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.radios";
         static constexpr const char* type_name = "RadioAccessStatus";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioKind";
         static constexpr const char* module_name = "winrt.windows.devices.radios";
         static constexpr const char* type_name = "RadioKind";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Radios::RadioState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.RadioState";
         static constexpr const char* module_name = "winrt.windows.devices.radios";
         static constexpr const char* type_name = "RadioState";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Radios::Radio>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.radios.Radio";
         static constexpr const char* module_name = "winrt.windows.devices.radios";
         static constexpr const char* type_name = "Radio";
     };

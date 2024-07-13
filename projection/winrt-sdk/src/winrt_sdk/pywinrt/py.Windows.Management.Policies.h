@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Policies::NamedPolicyKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicyKind";
         static constexpr const char* module_name = "winrt.windows.management.policies";
         static constexpr const char* type_name = "NamedPolicyKind";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Policies::NamedPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicy";
         static constexpr const char* module_name = "winrt.windows.management.policies";
         static constexpr const char* type_name = "NamedPolicy";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Policies::NamedPolicyData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.policies.NamedPolicyData";
         static constexpr const char* module_name = "winrt.windows.management.policies";
         static constexpr const char* type_name = "NamedPolicyData";
     };

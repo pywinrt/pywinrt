@@ -88,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.DataProtectionStatus";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "DataProtectionStatus";
     };
@@ -95,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::EnforcementLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.EnforcementLevel";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "EnforcementLevel";
     };
@@ -102,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.FileProtectionStatus";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "FileProtectionStatus";
     };
@@ -109,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedImportExportStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedImportExportStatus";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedImportExportStatus";
     };
@@ -116,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectionPolicyAuditAction";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectionPolicyAuditAction";
     };
@@ -123,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyEvaluationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectionPolicyEvaluationResult";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectionPolicyEvaluationResult";
     };
@@ -130,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyRequestAccessBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectionPolicyRequestAccessBehavior";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectionPolicyRequestAccessBehavior";
     };
@@ -137,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::BufferProtectUnprotectResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.BufferProtectUnprotectResult";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "BufferProtectUnprotectResult";
     };
@@ -144,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.DataProtectionInfo";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "DataProtectionInfo";
     };
@@ -151,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::DataProtectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.DataProtectionManager";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "DataProtectionManager";
     };
@@ -158,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.FileProtectionInfo";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "FileProtectionInfo";
     };
@@ -165,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileProtectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.FileProtectionManager";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "FileProtectionManager";
     };
@@ -172,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileRevocationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.FileRevocationManager";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "FileRevocationManager";
     };
@@ -179,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::FileUnprotectOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.FileUnprotectOptions";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "FileUnprotectOptions";
     };
@@ -186,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessResumedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedAccessResumedEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedAccessResumedEventArgs";
     };
@@ -193,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedAccessSuspendingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedAccessSuspendingEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedAccessSuspendingEventArgs";
     };
@@ -200,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerExportResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedContainerExportResult";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedContainerExportResult";
     };
@@ -207,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContainerImportResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedContainerImportResult";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedContainerImportResult";
     };
@@ -214,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedContentRevokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedContentRevokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedContentRevokedEventArgs";
     };
@@ -221,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectedFileCreateResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectedFileCreateResult";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectedFileCreateResult";
     };
@@ -228,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyAuditInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectionPolicyAuditInfo";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectionPolicyAuditInfo";
     };
@@ -235,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ProtectionPolicyManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ProtectionPolicyManager";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ProtectionPolicyManager";
     };
@@ -242,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::EnterpriseData::ThreadNetworkContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.enterprisedata.ThreadNetworkContext";
         static constexpr const char* module_name = "winrt.windows.security.enterprisedata";
         static constexpr const char* type_name = "ThreadNetworkContext";
     };

@@ -47,6 +47,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseRefreshOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseRefreshOption";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
         static constexpr const char* type_name = "LicenseRefreshOption";
     };
@@ -54,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
         static constexpr const char* type_name = "LicenseManager";
     };
@@ -61,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseSatisfactionInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
         static constexpr const char* type_name = "LicenseSatisfactionInfo";
     };
@@ -68,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::LicenseManagement::LicenseSatisfactionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.licensemanagement.LicenseSatisfactionResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.licensemanagement";
         static constexpr const char* type_name = "LicenseSatisfactionResult";
     };

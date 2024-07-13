@@ -81,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbControlRecipient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbControlRecipient";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbControlRecipient";
     };
@@ -88,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbControlTransferType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbControlTransferType";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbControlTransferType";
     };
@@ -95,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbEndpointType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbEndpointType";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbEndpointType";
     };
@@ -102,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbReadOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbReadOptions";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbReadOptions";
     };
@@ -109,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbTransferDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbTransferDirection";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbTransferDirection";
     };
@@ -116,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbWriteOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbWriteOptions";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbWriteOptions";
     };
@@ -123,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbBulkInEndpointDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbBulkInEndpointDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbBulkInEndpointDescriptor";
     };
@@ -130,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbBulkInPipe>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbBulkInPipe";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbBulkInPipe";
     };
@@ -137,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbBulkOutEndpointDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbBulkOutEndpointDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbBulkOutEndpointDescriptor";
     };
@@ -144,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbBulkOutPipe>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbBulkOutPipe";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbBulkOutPipe";
     };
@@ -151,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbConfiguration";
     };
@@ -158,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbConfigurationDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbConfigurationDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbConfigurationDescriptor";
     };
@@ -165,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbControlRequestType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbControlRequestType";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbControlRequestType";
     };
@@ -172,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbDescriptor";
     };
@@ -179,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbDevice";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbDevice";
     };
@@ -186,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbDeviceClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbDeviceClass";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbDeviceClass";
     };
@@ -193,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbDeviceClasses>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbDeviceClasses";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbDeviceClasses";
     };
@@ -200,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbDeviceDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbDeviceDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbDeviceDescriptor";
     };
@@ -207,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbEndpointDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbEndpointDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbEndpointDescriptor";
     };
@@ -214,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterface";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterface";
     };
@@ -221,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterfaceDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterfaceDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterfaceDescriptor";
     };
@@ -228,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterfaceSetting>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterfaceSetting";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterfaceSetting";
     };
@@ -235,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInEndpointDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterruptInEndpointDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterruptInEndpointDescriptor";
     };
@@ -242,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterruptInEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterruptInEventArgs";
     };
@@ -249,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterruptInPipe>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterruptInPipe";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterruptInPipe";
     };
@@ -256,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterruptOutEndpointDescriptor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterruptOutEndpointDescriptor";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterruptOutEndpointDescriptor";
     };
@@ -263,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbInterruptOutPipe>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbInterruptOutPipe";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbInterruptOutPipe";
     };
@@ -270,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Usb::UsbSetupPacket>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.usb.UsbSetupPacket";
         static constexpr const char* module_name = "winrt.windows.devices.usb";
         static constexpr const char* type_name = "UsbSetupPacket";
     };

@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Background::DeviceServicingDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.background.DeviceServicingDetails";
         static constexpr const char* module_name = "winrt.windows.devices.background";
         static constexpr const char* type_name = "DeviceServicingDetails";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Background::DeviceUseDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.background.DeviceUseDetails";
         static constexpr const char* module_name = "winrt.windows.devices.background";
         static constexpr const char* type_name = "DeviceUseDetails";
     };

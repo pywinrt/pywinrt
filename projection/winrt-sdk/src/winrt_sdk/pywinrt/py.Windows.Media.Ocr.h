@@ -50,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Ocr::OcrEngine>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrEngine";
         static constexpr const char* module_name = "winrt.windows.media.ocr";
         static constexpr const char* type_name = "OcrEngine";
     };
@@ -57,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Ocr::OcrLine>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrLine";
         static constexpr const char* module_name = "winrt.windows.media.ocr";
         static constexpr const char* type_name = "OcrLine";
     };
@@ -64,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Ocr::OcrResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrResult";
         static constexpr const char* module_name = "winrt.windows.media.ocr";
         static constexpr const char* type_name = "OcrResult";
     };
@@ -71,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Ocr::OcrWord>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.ocr.OcrWord";
         static constexpr const char* module_name = "winrt.windows.media.ocr";
         static constexpr const char* type_name = "OcrWord";
     };

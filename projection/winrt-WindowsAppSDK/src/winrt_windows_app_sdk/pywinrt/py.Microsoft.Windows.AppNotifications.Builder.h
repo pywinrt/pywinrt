@@ -64,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationAudioLooping>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationAudioLooping";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationAudioLooping";
     };
@@ -71,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButtonStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationButtonStyle";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationButtonStyle";
     };
@@ -78,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationDuration>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationDuration";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationDuration";
     };
@@ -85,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationImageCrop>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationImageCrop";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationImageCrop";
     };
@@ -92,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationScenario>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationScenario";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationScenario";
     };
@@ -99,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationSoundEvent>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationSoundEvent";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationSoundEvent";
     };
@@ -106,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationBuilder";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationBuilder";
     };
@@ -113,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationButton";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationButton";
     };
@@ -120,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationComboBox>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationComboBox";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationComboBox";
     };
@@ -127,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationProgressBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationProgressBar";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationProgressBar";
     };
@@ -134,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::AppNotifications::Builder::AppNotificationTextProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.appnotifications.builder.AppNotificationTextProperties";
         static constexpr const char* module_name = "winrt.microsoft.windows.appnotifications.builder";
         static constexpr const char* type_name = "AppNotificationTextProperties";
     };

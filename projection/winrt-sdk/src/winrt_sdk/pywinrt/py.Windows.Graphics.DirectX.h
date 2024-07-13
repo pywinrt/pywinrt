@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXAlphaMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.DirectXAlphaMode";
         static constexpr const char* module_name = "winrt.windows.graphics.directx";
         static constexpr const char* type_name = "DirectXAlphaMode";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXColorSpace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.DirectXColorSpace";
         static constexpr const char* module_name = "winrt.windows.graphics.directx";
         static constexpr const char* type_name = "DirectXColorSpace";
     };
@@ -52,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXPixelFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.DirectXPixelFormat";
         static constexpr const char* module_name = "winrt.windows.graphics.directx";
         static constexpr const char* type_name = "DirectXPixelFormat";
     };
@@ -59,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::DirectX::DirectXPrimitiveTopology>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.directx.DirectXPrimitiveTopology";
         static constexpr const char* module_name = "winrt.windows.graphics.directx";
         static constexpr const char* type_name = "DirectXPrimitiveTopology";
     };

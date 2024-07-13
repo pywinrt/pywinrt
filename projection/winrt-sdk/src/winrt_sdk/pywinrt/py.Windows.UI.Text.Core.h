@@ -89,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextFormatUpdatingReason";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextFormatUpdatingReason";
     };
@@ -96,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextFormatUpdatingResult";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextFormatUpdatingResult";
     };
@@ -103,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextInputPaneDisplayPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextInputPaneDisplayPolicy";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextInputPaneDisplayPolicy";
     };
@@ -110,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextInputScope>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextInputScope";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextInputScope";
     };
@@ -117,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextSelectionUpdatingResult";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextSelectionUpdatingResult";
     };
@@ -124,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextTextUpdatingResult";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextTextUpdatingResult";
     };
@@ -131,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextCompositionCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextCompositionCompletedEventArgs";
     };
@@ -138,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextCompositionSegment";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextCompositionSegment";
     };
@@ -145,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextCompositionStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextCompositionStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextCompositionStartedEventArgs";
     };
@@ -152,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextEditContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextEditContext";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextEditContext";
     };
@@ -159,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextFormatUpdatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextFormatUpdatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextFormatUpdatingEventArgs";
     };
@@ -166,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutBounds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextLayoutBounds";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextLayoutBounds";
     };
@@ -173,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextLayoutRequest";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextLayoutRequest";
     };
@@ -180,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextLayoutRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextLayoutRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextLayoutRequestedEventArgs";
     };
@@ -187,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextSelectionRequest";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextSelectionRequest";
     };
@@ -194,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextSelectionRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextSelectionRequestedEventArgs";
     };
@@ -201,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextSelectionUpdatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextSelectionUpdatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextSelectionUpdatingEventArgs";
     };
@@ -208,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextServicesConstants>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextServicesConstants";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextServicesConstants";
     };
@@ -215,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextServicesManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextServicesManager";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextServicesManager";
     };
@@ -222,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextTextRequest";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextTextRequest";
     };
@@ -229,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextTextRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextTextRequestedEventArgs";
     };
@@ -236,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextTextUpdatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextTextUpdatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextTextUpdatingEventArgs";
     };
@@ -243,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Text::Core::CoreTextRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.text.core.CoreTextRange";
         static constexpr const char* module_name = "winrt.windows.ui.text.core";
         static constexpr const char* type_name = "CoreTextRange";
     };

@@ -43,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Haptics::VibrationAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.VibrationAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "VibrationAccessStatus";
     };
@@ -50,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Haptics::KnownSimpleHapticsControllerWaveforms>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.KnownSimpleHapticsControllerWaveforms";
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "KnownSimpleHapticsControllerWaveforms";
     };
@@ -57,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.SimpleHapticsController";
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "SimpleHapticsController";
     };
@@ -64,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.SimpleHapticsControllerFeedback";
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "SimpleHapticsControllerFeedback";
     };
@@ -71,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Haptics::VibrationDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.haptics.VibrationDevice";
         static constexpr const char* module_name = "winrt.windows.devices.haptics";
         static constexpr const char* type_name = "VibrationDevice";
     };

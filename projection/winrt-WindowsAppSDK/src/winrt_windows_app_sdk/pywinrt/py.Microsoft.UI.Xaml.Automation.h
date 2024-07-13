@@ -139,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AnnotationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AnnotationType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AnnotationType";
     };
@@ -146,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationActiveEnd>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationActiveEnd";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationActiveEnd";
     };
@@ -153,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationAnimationStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationAnimationStyle";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationAnimationStyle";
     };
@@ -160,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationBulletStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationBulletStyle";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationBulletStyle";
     };
@@ -167,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationCaretBidiMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationCaretBidiMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationCaretBidiMode";
     };
@@ -174,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationCaretPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationCaretPosition";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationCaretPosition";
     };
@@ -181,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationFlowDirections>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationFlowDirections";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationFlowDirections";
     };
@@ -188,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationOutlineStyles>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationOutlineStyles";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationOutlineStyles";
     };
@@ -195,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationStyleId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationStyleId";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationStyleId";
     };
@@ -202,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationTextDecorationLineStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationTextDecorationLineStyle";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationTextDecorationLineStyle";
     };
@@ -209,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationTextEditChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationTextEditChangeType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationTextEditChangeType";
     };
@@ -216,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::DockPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.DockPosition";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "DockPosition";
     };
@@ -223,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ExpandCollapseState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ExpandCollapseState";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ExpandCollapseState";
     };
@@ -230,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::RowOrColumnMajor>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.RowOrColumnMajor";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "RowOrColumnMajor";
     };
@@ -237,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ScrollAmount>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ScrollAmount";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ScrollAmount";
     };
@@ -244,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::SupportedTextSelection>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.SupportedTextSelection";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "SupportedTextSelection";
     };
@@ -251,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::SynchronizedInputType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.SynchronizedInputType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "SynchronizedInputType";
     };
@@ -258,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ToggleState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ToggleState";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ToggleState";
     };
@@ -265,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::WindowInteractionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.WindowInteractionState";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "WindowInteractionState";
     };
@@ -272,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::WindowVisualState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.WindowVisualState";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "WindowVisualState";
     };
@@ -279,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ZoomUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ZoomUnit";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ZoomUnit";
     };
@@ -286,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AnnotationPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AnnotationPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AnnotationPatternIdentifiers";
     };
@@ -293,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationAnnotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationAnnotation";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationAnnotation";
     };
@@ -300,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationElementIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationElementIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationElementIdentifiers";
     };
@@ -307,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationProperties";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationProperties";
     };
@@ -314,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::AutomationProperty>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.AutomationProperty";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "AutomationProperty";
     };
@@ -321,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::DockPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.DockPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "DockPatternIdentifiers";
     };
@@ -328,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::DragPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.DragPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "DragPatternIdentifiers";
     };
@@ -335,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::DropTargetPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.DropTargetPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "DropTargetPatternIdentifiers";
     };
@@ -342,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ExpandCollapsePatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ExpandCollapsePatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ExpandCollapsePatternIdentifiers";
     };
@@ -349,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::GridItemPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.GridItemPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "GridItemPatternIdentifiers";
     };
@@ -356,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::GridPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.GridPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "GridPatternIdentifiers";
     };
@@ -363,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::MultipleViewPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.MultipleViewPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "MultipleViewPatternIdentifiers";
     };
@@ -370,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::RangeValuePatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.RangeValuePatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "RangeValuePatternIdentifiers";
     };
@@ -377,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ScrollPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ScrollPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ScrollPatternIdentifiers";
     };
@@ -384,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::SelectionItemPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.SelectionItemPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "SelectionItemPatternIdentifiers";
     };
@@ -391,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::SelectionPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.SelectionPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "SelectionPatternIdentifiers";
     };
@@ -398,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::SpreadsheetItemPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.SpreadsheetItemPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "SpreadsheetItemPatternIdentifiers";
     };
@@ -405,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::StylesPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.StylesPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "StylesPatternIdentifiers";
     };
@@ -412,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::TableItemPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.TableItemPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "TableItemPatternIdentifiers";
     };
@@ -419,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::TablePatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.TablePatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "TablePatternIdentifiers";
     };
@@ -426,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::TogglePatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.TogglePatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "TogglePatternIdentifiers";
     };
@@ -433,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::TransformPattern2Identifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.TransformPattern2Identifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "TransformPattern2Identifiers";
     };
@@ -440,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::TransformPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.TransformPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "TransformPatternIdentifiers";
     };
@@ -447,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::ValuePatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.ValuePatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "ValuePatternIdentifiers";
     };
@@ -454,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::WindowPatternIdentifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.WindowPatternIdentifiers";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation";
         static constexpr const char* type_name = "WindowPatternIdentifiers";
     };

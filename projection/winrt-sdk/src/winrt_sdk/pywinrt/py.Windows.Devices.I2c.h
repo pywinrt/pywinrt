@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cBusSpeed>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cBusSpeed";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cBusSpeed";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cSharingMode";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cSharingMode";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cTransferStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cTransferStatus";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cTransferStatus";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cConnectionSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cConnectionSettings";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cConnectionSettings";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cController";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cController";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cDevice";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cDevice";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::II2cDeviceStatics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.II2cDeviceStatics";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "II2cDeviceStatics";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::I2c::I2cTransferResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.i2c.I2cTransferResult";
         static constexpr const char* module_name = "winrt.windows.devices.i2c";
         static constexpr const char* type_name = "I2cTransferResult";
     };

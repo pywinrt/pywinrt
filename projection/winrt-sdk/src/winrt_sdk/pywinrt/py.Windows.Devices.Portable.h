@@ -36,6 +36,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Portable::ServiceDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.ServiceDeviceType";
         static constexpr const char* module_name = "winrt.windows.devices.portable";
         static constexpr const char* type_name = "ServiceDeviceType";
     };
@@ -43,6 +44,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Portable::ServiceDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.ServiceDevice";
         static constexpr const char* module_name = "winrt.windows.devices.portable";
         static constexpr const char* type_name = "ServiceDevice";
     };
@@ -50,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Portable::StorageDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.portable.StorageDevice";
         static constexpr const char* module_name = "winrt.windows.devices.portable";
         static constexpr const char* type_name = "StorageDevice";
     };

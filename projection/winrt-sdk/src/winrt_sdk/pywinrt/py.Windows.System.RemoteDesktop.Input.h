@@ -63,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.remotedesktop.input.RemoteTextConnection";
         static constexpr const char* module_name = "winrt.windows.system.remotedesktop.input";
         static constexpr const char* type_name = "RemoteTextConnection";
     };

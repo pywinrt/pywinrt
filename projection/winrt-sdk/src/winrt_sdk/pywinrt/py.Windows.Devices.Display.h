@@ -49,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorConnectionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorConnectionKind";
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitorConnectionKind";
     };
@@ -56,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorDescriptorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorDescriptorKind";
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitorDescriptorKind";
     };
@@ -63,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorPhysicalConnectorKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorPhysicalConnectorKind";
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitorPhysicalConnectorKind";
     };
@@ -70,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitorUsageKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitorUsageKind";
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitorUsageKind";
     };
@@ -77,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Display::DisplayMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.DisplayMonitor";
         static constexpr const char* module_name = "winrt.windows.devices.display";
         static constexpr const char* type_name = "DisplayMonitor";
     };

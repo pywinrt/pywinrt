@@ -69,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectCompletionBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectCompletionBehavior";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayEffectCompletionBehavior";
     };
@@ -76,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectStartMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectStartMode";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayEffectStartMode";
     };
@@ -83,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayRepetitionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayRepetitionMode";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayRepetitionMode";
     };
@@ -90,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBitmapEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayBitmapEffect";
     };
@@ -97,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBitmapRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBitmapRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayBitmapRequestedEventArgs";
     };
@@ -104,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayBlinkEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayBlinkEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayBlinkEffect";
     };
@@ -111,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayColorRampEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayColorRampEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayColorRampEffect";
     };
@@ -118,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayCustomEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayCustomEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayCustomEffect";
     };
@@ -125,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayEffectPlaylist>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayEffectPlaylist";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayEffectPlaylist";
     };
@@ -132,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArraySolidEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArraySolidEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArraySolidEffect";
     };
@@ -139,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::LampArrayUpdateRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.LampArrayUpdateRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "LampArrayUpdateRequestedEventArgs";
     };
@@ -146,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Lights::Effects::ILampArrayEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.lights.effects.ILampArrayEffect";
         static constexpr const char* module_name = "winrt.windows.devices.lights.effects";
         static constexpr const char* type_name = "ILampArrayEffect";
     };

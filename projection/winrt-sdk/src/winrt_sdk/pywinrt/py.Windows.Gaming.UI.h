@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatMessageOrigin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatMessageOrigin";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameChatMessageOrigin";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlayPosition";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameChatOverlayPosition";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameBar";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameBar";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatMessageReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatMessageReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameChatMessageReceivedEventArgs";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatOverlay>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlay";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameChatOverlay";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameChatOverlayMessageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameChatOverlayMessageSource";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameChatOverlayMessageSource";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::UI::GameUIProviderActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.ui.GameUIProviderActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.gaming.ui";
         static constexpr const char* type_name = "GameUIProviderActivatedEventArgs";
     };

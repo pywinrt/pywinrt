@@ -71,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::FeatureElementKindPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.FeatureElementKindPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "FeatureElementKindPreview";
     };
@@ -78,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDeviceKindPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelDeviceKindPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelDeviceKindPreview";
     };
@@ -85,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelFeatureKindPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelFeatureKindPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelFeatureKindPreview";
     };
@@ -92,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::ImageVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.ImageVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "ImageVariableDescriptorPreview";
     };
@@ -99,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::InferencingOptionsPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.InferencingOptionsPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "InferencingOptionsPreview";
     };
@@ -106,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelBindingPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelBindingPreview";
     };
@@ -113,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelDescriptionPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelDescriptionPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelDescriptionPreview";
     };
@@ -120,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelEvaluationResultPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelEvaluationResultPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelEvaluationResultPreview";
     };
@@ -127,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelPreview";
     };
@@ -134,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::LearningModelVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.LearningModelVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "LearningModelVariableDescriptorPreview";
     };
@@ -141,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::MapVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.MapVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "MapVariableDescriptorPreview";
     };
@@ -148,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::SequenceVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.SequenceVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "SequenceVariableDescriptorPreview";
     };
@@ -155,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::TensorVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.TensorVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "TensorVariableDescriptorPreview";
     };
@@ -162,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::AI::MachineLearning::Preview::ILearningModelVariableDescriptorPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ai.machinelearning.preview.ILearningModelVariableDescriptorPreview";
         static constexpr const char* module_name = "winrt.windows.ai.machinelearning.preview";
         static constexpr const char* type_name = "ILearningModelVariableDescriptorPreview";
     };

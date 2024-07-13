@@ -83,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionState";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlPermissionState";
     };
@@ -90,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionType";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlPermissionType";
     };
@@ -97,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlContentLoadingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlContentLoadingEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlContentLoadingEventArgs";
     };
@@ -104,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlDOMContentLoadedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlDOMContentLoadedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlDOMContentLoadedEventArgs";
     };
@@ -111,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlDeferredPermissionRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlDeferredPermissionRequest";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlDeferredPermissionRequest";
     };
@@ -118,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlLongRunningScriptDetectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlLongRunningScriptDetectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlLongRunningScriptDetectedEventArgs";
     };
@@ -125,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNavigationCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlNavigationCompletedEventArgs";
     };
@@ -132,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlNavigationStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNavigationStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlNavigationStartingEventArgs";
     };
@@ -139,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlNewWindowRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlNewWindowRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlNewWindowRequestedEventArgs";
     };
@@ -146,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionRequest";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlPermissionRequest";
     };
@@ -153,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlPermissionRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlPermissionRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlPermissionRequestedEventArgs";
     };
@@ -160,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlScriptNotifyEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlScriptNotifyEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlScriptNotifyEventArgs";
     };
@@ -167,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlSettings";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlSettings";
     };
@@ -174,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlUnsupportedUriSchemeIdentifiedEventArgs";
     };
@@ -181,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlUnviewableContentIdentifiedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlUnviewableContentIdentifiedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlUnviewableContentIdentifiedEventArgs";
     };
@@ -188,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::WebViewControlWebResourceRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.WebViewControlWebResourceRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "WebViewControlWebResourceRequestedEventArgs";
     };
@@ -195,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::IWebViewControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.IWebViewControl";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "IWebViewControl";
     };
@@ -202,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::IWebViewControl2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.IWebViewControl2";
         static constexpr const char* module_name = "winrt.windows.web.ui";
         static constexpr const char* type_name = "IWebViewControl2";
     };

@@ -128,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderAcquisitionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameReaderAcquisitionMode";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameReaderAcquisitionMode";
     };
@@ -135,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReaderStartStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameReaderStartStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameReaderStartStatus";
     };
@@ -142,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceGetPropertyStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceGetPropertyStatus";
     };
@@ -149,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceKind";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceKind";
     };
@@ -156,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceSetPropertyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceSetPropertyStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceSetPropertyStatus";
     };
@@ -163,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReaderStartStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MultiSourceMediaFrameReaderStartStatus";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MultiSourceMediaFrameReaderStartStatus";
     };
@@ -170,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::AudioMediaFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.AudioMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "AudioMediaFrame";
     };
@@ -177,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::BufferMediaFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.BufferMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "BufferMediaFrame";
     };
@@ -184,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.DepthMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "DepthMediaFrame";
     };
@@ -191,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::DepthMediaFrameFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.DepthMediaFrameFormat";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "DepthMediaFrameFormat";
     };
@@ -198,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::InfraredMediaFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.InfraredMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "InfraredMediaFrame";
     };
@@ -205,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameArrivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameArrivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameArrivedEventArgs";
     };
@@ -212,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameFormat";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameFormat";
     };
@@ -219,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameReader";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameReader";
     };
@@ -226,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameReference";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameReference";
     };
@@ -233,6 +248,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSource";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSource";
     };
@@ -240,6 +256,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceController";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceController";
     };
@@ -247,6 +264,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGetPropertyResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceGetPropertyResult";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceGetPropertyResult";
     };
@@ -254,6 +272,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceGroup";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceGroup";
     };
@@ -261,6 +280,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MediaFrameSourceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MediaFrameSourceInfo";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MediaFrameSourceInfo";
     };
@@ -268,6 +288,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameArrivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MultiSourceMediaFrameArrivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MultiSourceMediaFrameArrivedEventArgs";
     };
@@ -275,6 +296,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MultiSourceMediaFrameReader";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MultiSourceMediaFrameReader";
     };
@@ -282,6 +304,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::MultiSourceMediaFrameReference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.MultiSourceMediaFrameReference";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "MultiSourceMediaFrameReference";
     };
@@ -289,6 +312,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.VideoMediaFrame";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "VideoMediaFrame";
     };
@@ -296,6 +320,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Capture::Frames::VideoMediaFrameFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.capture.frames.VideoMediaFrameFormat";
         static constexpr const char* module_name = "winrt.windows.media.capture.frames";
         static constexpr const char* type_name = "VideoMediaFrameFormat";
     };

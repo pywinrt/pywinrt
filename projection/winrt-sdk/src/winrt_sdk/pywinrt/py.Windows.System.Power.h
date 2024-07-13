@@ -43,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::BatteryStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.BatteryStatus";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "BatteryStatus";
     };
@@ -50,6 +51,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::EnergySaverStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.EnergySaverStatus";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "EnergySaverStatus";
     };
@@ -57,6 +59,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::PowerSupplyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.PowerSupplyStatus";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "PowerSupplyStatus";
     };
@@ -64,6 +67,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::BackgroundEnergyManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.BackgroundEnergyManager";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "BackgroundEnergyManager";
     };
@@ -71,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::ForegroundEnergyManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.ForegroundEnergyManager";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "ForegroundEnergyManager";
     };
@@ -78,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::PowerManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.PowerManager";
         static constexpr const char* module_name = "winrt.windows.system.power";
         static constexpr const char* type_name = "PowerManager";
     };

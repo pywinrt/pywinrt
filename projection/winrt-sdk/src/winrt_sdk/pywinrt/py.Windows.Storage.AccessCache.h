@@ -62,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::AccessCacheOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.AccessCacheOptions";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "AccessCacheOptions";
     };
@@ -69,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::RecentStorageItemVisibility>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.RecentStorageItemVisibility";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "RecentStorageItemVisibility";
     };
@@ -76,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::AccessListEntryView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.AccessListEntryView";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "AccessListEntryView";
     };
@@ -83,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::ItemRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.ItemRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "ItemRemovedEventArgs";
     };
@@ -90,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::StorageApplicationPermissions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.StorageApplicationPermissions";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "StorageApplicationPermissions";
     };
@@ -97,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::StorageItemAccessList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.StorageItemAccessList";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "StorageItemAccessList";
     };
@@ -104,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::StorageItemMostRecentlyUsedList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.StorageItemMostRecentlyUsedList";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "StorageItemMostRecentlyUsedList";
     };
@@ -111,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::IStorageItemAccessList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.IStorageItemAccessList";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "IStorageItemAccessList";
     };
@@ -118,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::AccessCache::AccessListEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.accesscache.AccessListEntry";
         static constexpr const char* module_name = "winrt.windows.storage.accesscache";
         static constexpr const char* type_name = "AccessListEntry";
     };

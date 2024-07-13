@@ -64,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.MediaVideoProcessingAlgorithm";
         static constexpr const char* module_name = "winrt.windows.media.transcoding";
         static constexpr const char* type_name = "MediaVideoProcessingAlgorithm";
     };
@@ -71,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Transcoding::TranscodeFailureReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.TranscodeFailureReason";
         static constexpr const char* module_name = "winrt.windows.media.transcoding";
         static constexpr const char* type_name = "TranscodeFailureReason";
     };
@@ -78,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Transcoding::MediaTranscoder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.MediaTranscoder";
         static constexpr const char* module_name = "winrt.windows.media.transcoding";
         static constexpr const char* type_name = "MediaTranscoder";
     };
@@ -85,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Transcoding::PrepareTranscodeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.transcoding.PrepareTranscodeResult";
         static constexpr const char* module_name = "winrt.windows.media.transcoding";
         static constexpr const char* type_name = "PrepareTranscodeResult";
     };

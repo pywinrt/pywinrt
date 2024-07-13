@@ -64,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeDisposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeDisposition";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreWetStrokeDisposition";
     };
@@ -71,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreIncrementalInkStroke>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreIncrementalInkStroke";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreIncrementalInkStroke";
     };
@@ -78,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkIndependentInputSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreInkIndependentInputSource";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreInkIndependentInputSource";
     };
@@ -85,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreInkPresenterHost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreInkPresenterHost";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreInkPresenterHost";
     };
@@ -92,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreWetStrokeUpdateEventArgs";
     };
@@ -99,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Core::CoreWetStrokeUpdateSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.core.CoreWetStrokeUpdateSource";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.core";
         static constexpr const char* type_name = "CoreWetStrokeUpdateSource";
     };

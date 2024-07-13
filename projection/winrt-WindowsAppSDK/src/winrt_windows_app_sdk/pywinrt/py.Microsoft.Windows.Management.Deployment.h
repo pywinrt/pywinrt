@@ -73,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentProgressStatus";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentProgressStatus";
     };
@@ -80,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentStatus";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentStatus";
     };
@@ -87,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.StubPackageOption";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "StubPackageOption";
     };
@@ -94,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.AddPackageOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "AddPackageOptions";
     };
@@ -101,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.EnsureReadyOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "EnsureReadyOptions";
     };
@@ -108,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentManager";
     };
@@ -115,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentResult";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentResult";
     };
@@ -122,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageRuntimeManager";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageRuntimeManager";
     };
@@ -129,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSet>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSet";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSet";
     };
@@ -136,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetItem";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetItem";
     };
@@ -143,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetItemRuntimeDisposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetItemRuntimeDisposition";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetItemRuntimeDisposition";
     };
@@ -150,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageSetRuntimeDisposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageSetRuntimeDisposition";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageSetRuntimeDisposition";
     };
@@ -157,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageVolume>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageVolume";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageVolume";
     };
@@ -164,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::ProvisionPackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.ProvisionPackageOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "ProvisionPackageOptions";
     };
@@ -171,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.RegisterPackageOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "RegisterPackageOptions";
     };
@@ -178,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.RemovePackageOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "RemovePackageOptions";
     };
@@ -185,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.StagePackageOptions";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "StagePackageOptions";
     };
@@ -192,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentProgress";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentProgress";
     };

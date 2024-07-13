@@ -28,6 +28,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::Diagnostics::BackgroundEnergyDiagnostics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.diagnostics.BackgroundEnergyDiagnostics";
         static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
         static constexpr const char* type_name = "BackgroundEnergyDiagnostics";
     };
@@ -35,6 +36,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Power::Diagnostics::ForegroundEnergyDiagnostics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.power.diagnostics.ForegroundEnergyDiagnostics";
         static constexpr const char* module_name = "winrt.windows.system.power.diagnostics";
         static constexpr const char* type_name = "ForegroundEnergyDiagnostics";
     };

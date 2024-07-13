@@ -138,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintBinding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintBinding";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintBinding";
     };
@@ -145,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintBordering>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintBordering";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintBordering";
     };
@@ -152,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintCollation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintCollation";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintCollation";
     };
@@ -159,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintColorMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintColorMode";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintColorMode";
     };
@@ -166,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintDuplex>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintDuplex";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintDuplex";
     };
@@ -173,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintHolePunch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintHolePunch";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintHolePunch";
     };
@@ -180,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintMediaSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintMediaSize";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintMediaSize";
     };
@@ -187,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintMediaType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintMediaType";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintMediaType";
     };
@@ -194,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintOrientation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintOrientation";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintOrientation";
     };
@@ -201,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintQuality>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintQuality";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintQuality";
     };
@@ -208,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintStaple>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintStaple";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintStaple";
     };
@@ -215,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskCompletion";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskCompletion";
     };
@@ -222,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintManager";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintManager";
     };
@@ -229,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintPageInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintPageInfo";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageInfo";
     };
@@ -236,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintPageRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintPageRange";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageRange";
     };
@@ -243,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintPageRangeOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintPageRangeOptions";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageRangeOptions";
     };
@@ -250,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTask";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTask";
     };
@@ -257,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskCompletedEventArgs";
     };
@@ -264,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskOptions";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskOptions";
     };
@@ -271,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskProgressingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskProgressingEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskProgressingEventArgs";
     };
@@ -278,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskRequest";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskRequest";
     };
@@ -285,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskRequestedDeferral";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskRequestedDeferral";
     };
@@ -292,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskRequestedEventArgs";
     };
@@ -299,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskSourceRequestedArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskSourceRequestedArgs";
     };
@@ -306,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintTaskSourceRequestedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintTaskSourceRequestedDeferral";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintTaskSourceRequestedDeferral";
     };
@@ -313,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::StandardPrintTaskOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.StandardPrintTaskOptions";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "StandardPrintTaskOptions";
     };
@@ -320,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintDocumentSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintDocumentSource";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "IPrintDocumentSource";
     };
@@ -327,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCore";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "IPrintTaskOptionsCore";
     };
@@ -334,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCoreProperties";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "IPrintTaskOptionsCoreProperties";
     };
@@ -341,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::IPrintTaskOptionsCoreUIConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.IPrintTaskOptionsCoreUIConfiguration";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "IPrintTaskOptionsCoreUIConfiguration";
     };
@@ -348,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintPageDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.PrintPageDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.printing";
         static constexpr const char* type_name = "PrintPageDescription";
     };

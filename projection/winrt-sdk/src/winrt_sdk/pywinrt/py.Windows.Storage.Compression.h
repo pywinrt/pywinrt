@@ -41,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Compression::CompressAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.CompressAlgorithm";
         static constexpr const char* module_name = "winrt.windows.storage.compression";
         static constexpr const char* type_name = "CompressAlgorithm";
     };
@@ -48,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Compression::Compressor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.Compressor";
         static constexpr const char* module_name = "winrt.windows.storage.compression";
         static constexpr const char* type_name = "Compressor";
     };
@@ -55,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Storage::Compression::Decompressor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.storage.compression.Decompressor";
         static constexpr const char* module_name = "winrt.windows.storage.compression";
         static constexpr const char* type_name = "Decompressor";
     };

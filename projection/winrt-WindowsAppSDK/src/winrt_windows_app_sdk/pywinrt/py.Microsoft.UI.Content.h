@@ -91,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentCoordinateRoundingMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentCoordinateRoundingMode";
     };
@@ -98,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentLayoutDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentLayoutDirection";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentLayoutDirection";
     };
@@ -105,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSizePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSizePolicy";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSizePolicy";
     };
@@ -112,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentCoordinateConverter>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentCoordinateConverter";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentCoordinateConverter";
     };
@@ -119,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentDeferral";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentDeferral";
     };
@@ -126,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentEnvironmentSettingChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentEnvironmentSettingChangedEventArgs";
     };
@@ -133,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentEnvironmentStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentEnvironmentStateChangedEventArgs";
     };
@@ -140,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIsland>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIsland";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIsland";
     };
@@ -147,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandAutomationProviderRequestedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandAutomationProviderRequestedEventArgs";
     };
@@ -154,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandEnvironment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandEnvironment";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandEnvironment";
     };
@@ -161,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentIslandStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentIslandStateChangedEventArgs";
     };
@@ -168,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSite>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSite";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSite";
     };
@@ -175,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteEnvironment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteEnvironment";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteEnvironment";
     };
@@ -182,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteEnvironmentView";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteEnvironmentView";
     };
@@ -189,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteRequestedStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteRequestedStateChangedEventArgs";
     };
@@ -196,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::ContentSiteView>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.ContentSiteView";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "ContentSiteView";
     };
@@ -203,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::DesktopChildSiteBridge>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.DesktopChildSiteBridge";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "DesktopChildSiteBridge";
     };
@@ -210,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::DesktopSiteBridge>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.DesktopSiteBridge";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "DesktopSiteBridge";
     };
@@ -217,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Content::IContentSiteBridge>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.content.IContentSiteBridge";
         static constexpr const char* module_name = "winrt.microsoft.ui.content";
         static constexpr const char* type_name = "IContentSiteBridge";
     };

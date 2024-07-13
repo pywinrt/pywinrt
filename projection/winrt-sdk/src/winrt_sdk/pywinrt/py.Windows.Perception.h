@@ -33,6 +33,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::PerceptionTimestamp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.PerceptionTimestamp";
         static constexpr const char* module_name = "winrt.windows.perception";
         static constexpr const char* type_name = "PerceptionTimestamp";
     };
@@ -40,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Perception::PerceptionTimestampHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.perception.PerceptionTimestampHelper";
         static constexpr const char* module_name = "winrt.windows.perception";
         static constexpr const char* type_name = "PerceptionTimestampHelper";
     };

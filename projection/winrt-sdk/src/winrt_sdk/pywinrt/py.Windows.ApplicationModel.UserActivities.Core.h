@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::Core::CoreUserActivityManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.core.CoreUserActivityManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities.core";
         static constexpr const char* type_name = "CoreUserActivityManager";
     };

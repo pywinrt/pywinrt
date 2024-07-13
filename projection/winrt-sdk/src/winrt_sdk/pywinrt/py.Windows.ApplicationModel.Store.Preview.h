@@ -84,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationDownloadMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "DeliveryOptimizationDownloadMode";
     };
@@ -91,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationDownloadModeSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationDownloadModeSource";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "DeliveryOptimizationDownloadModeSource";
     };
@@ -98,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreLogOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreLogOptions";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StoreLogOptions";
     };
@@ -105,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductPurchaseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewProductPurchaseStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StorePreviewProductPurchaseStatus";
     };
@@ -112,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreSystemFeature>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreSystemFeature";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StoreSystemFeature";
     };
@@ -119,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::DeliveryOptimizationSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.DeliveryOptimizationSettings";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "DeliveryOptimizationSettings";
     };
@@ -126,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreConfiguration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StoreConfiguration";
     };
@@ -133,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StoreHardwareManufacturerInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StoreHardwareManufacturerInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StoreHardwareManufacturerInfo";
     };
@@ -140,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreview";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StorePreview";
     };
@@ -147,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewProductInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewProductInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StorePreviewProductInfo";
     };
@@ -154,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewPurchaseResults>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewPurchaseResults";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StorePreviewPurchaseResults";
     };
@@ -161,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::StorePreviewSkuInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.StorePreviewSkuInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "StorePreviewSkuInfo";
     };
@@ -168,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Store::Preview::WebAuthenticationCoreManagerHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.store.preview.WebAuthenticationCoreManagerHelper";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.store.preview";
         static constexpr const char* type_name = "WebAuthenticationCoreManagerHelper";
     };

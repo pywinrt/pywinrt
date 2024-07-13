@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Inking::Preview::PalmRejectionDelayZonePreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.inking.preview.PalmRejectionDelayZonePreview";
         static constexpr const char* module_name = "winrt.windows.ui.input.inking.preview";
         static constexpr const char* type_name = "PalmRejectionDelayZonePreview";
     };

@@ -75,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::Capi1KdfTargetAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.Capi1KdfTargetAlgorithm";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "Capi1KdfTargetAlgorithm";
     };
@@ -82,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPadding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicPadding";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicPadding";
     };
@@ -89,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPrivateKeyBlobType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicPrivateKeyBlobType";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicPrivateKeyBlobType";
     };
@@ -96,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicPublicKeyBlobType";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicPublicKeyBlobType";
     };
@@ -103,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.AsymmetricAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "AsymmetricAlgorithmNames";
     };
@@ -110,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::AsymmetricKeyAlgorithmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.AsymmetricKeyAlgorithmProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "AsymmetricKeyAlgorithmProvider";
     };
@@ -117,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicEngine>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicEngine";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicEngine";
     };
@@ -124,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicHash>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicHash";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicHash";
     };
@@ -131,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::CryptographicKey>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.CryptographicKey";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "CryptographicKey";
     };
@@ -138,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::EccCurveNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.EccCurveNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "EccCurveNames";
     };
@@ -145,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::EncryptedAndAuthenticatedData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.EncryptedAndAuthenticatedData";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "EncryptedAndAuthenticatedData";
     };
@@ -152,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.HashAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "HashAlgorithmNames";
     };
@@ -159,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::HashAlgorithmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.HashAlgorithmProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "HashAlgorithmProvider";
     };
@@ -166,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.KeyDerivationAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "KeyDerivationAlgorithmNames";
     };
@@ -173,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationAlgorithmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.KeyDerivationAlgorithmProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "KeyDerivationAlgorithmProvider";
     };
@@ -180,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::KeyDerivationParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.KeyDerivationParameters";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "KeyDerivationParameters";
     };
@@ -187,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.MacAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "MacAlgorithmNames";
     };
@@ -194,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::MacAlgorithmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.MacAlgorithmProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "MacAlgorithmProvider";
     };
@@ -201,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::PersistedKeyProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.PersistedKeyProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "PersistedKeyProvider";
     };
@@ -208,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::SymmetricAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.SymmetricAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "SymmetricAlgorithmNames";
     };
@@ -215,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Core::SymmetricKeyAlgorithmProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.core.SymmetricKeyAlgorithmProvider";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.core";
         static constexpr const char* type_name = "SymmetricKeyAlgorithmProvider";
     };

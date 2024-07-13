@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Media::Devices::AudioRoutingEndpoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.media.devices.AudioRoutingEndpoint";
         static constexpr const char* module_name = "winrt.windows.phone.media.devices";
         static constexpr const char* type_name = "AudioRoutingEndpoint";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Media::Devices::AvailableAudioRoutingEndpoints>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.media.devices.AvailableAudioRoutingEndpoints";
         static constexpr const char* module_name = "winrt.windows.phone.media.devices";
         static constexpr const char* type_name = "AvailableAudioRoutingEndpoints";
     };
@@ -52,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Media::Devices::AudioRoutingManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.media.devices.AudioRoutingManager";
         static constexpr const char* module_name = "winrt.windows.phone.media.devices";
         static constexpr const char* type_name = "AudioRoutingManager";
     };

@@ -88,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiAccessStatus";
     };
@@ -95,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiConnectionMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiConnectionMethod";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiConnectionMethod";
     };
@@ -102,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiConnectionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiConnectionStatus";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiConnectionStatus";
     };
@@ -109,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiNetworkKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiNetworkKind";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiNetworkKind";
     };
@@ -116,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotAvailability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotAvailability";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotAvailability";
     };
@@ -123,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotCellularBars>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotCellularBars";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotCellularBars";
     };
@@ -130,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotConnectStatus";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotConnectStatus";
     };
@@ -137,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiPhyKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiPhyKind";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiPhyKind";
     };
@@ -144,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiReconnectionKind";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiReconnectionKind";
     };
@@ -151,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiWpsConfigurationStatus";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiWpsConfigurationStatus";
     };
@@ -158,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiWpsKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiWpsKind";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiWpsKind";
     };
@@ -165,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiAdapter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiAdapter";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiAdapter";
     };
@@ -172,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiAvailableNetwork";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiAvailableNetwork";
     };
@@ -179,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiConnectionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiConnectionResult";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiConnectionResult";
     };
@@ -186,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiNetworkReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiNetworkReport";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiNetworkReport";
     };
@@ -193,6 +208,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotConnectTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotConnectTriggerDetails";
     };
@@ -200,6 +216,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotConnectionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotConnectionResult";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotConnectionResult";
     };
@@ -207,6 +224,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetwork>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotNetwork";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotNetwork";
     };
@@ -214,6 +232,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiOnDemandHotspotNetworkProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiOnDemandHotspotNetworkProperties";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiOnDemandHotspotNetworkProperties";
     };
@@ -221,6 +240,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::WiFi::WiFiWpsConfigurationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.wifi.WiFiWpsConfigurationResult";
         static constexpr const char* module_name = "winrt.windows.devices.wifi";
         static constexpr const char* type_name = "WiFiWpsConfigurationResult";
     };

@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Power::Battery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.Battery";
         static constexpr const char* module_name = "winrt.windows.devices.power";
         static constexpr const char* type_name = "Battery";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Power::BatteryReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.BatteryReport";
         static constexpr const char* module_name = "winrt.windows.devices.power";
         static constexpr const char* type_name = "BatteryReport";
     };

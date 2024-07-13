@@ -87,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.SettingsLaunchKind";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "SettingsLaunchKind";
     };
@@ -94,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.WorkflowPrintTicketValidationStatus";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "WorkflowPrintTicketValidationStatus";
     };
@@ -101,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportExtensionSession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportExtensionSession";
     };
@@ -108,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportExtensionTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportExtensionTriggerDetails";
     };
@@ -115,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportPrintDeviceCapabilitiesChangedEventArgs";
     };
@@ -122,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportPrintDeviceCapabilitiesUpdatePolicy";
     };
@@ -129,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportPrintTicketElement";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportPrintTicketElement";
     };
@@ -136,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketValidationRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportPrintTicketValidationRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportPrintTicketValidationRequestedEventArgs";
     };
@@ -143,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrinterSelectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportPrinterSelectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportPrinterSelectedEventArgs";
     };
@@ -150,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSessionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportSessionInfo";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportSessionInfo";
     };
@@ -157,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportSettingsActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportSettingsActivatedEventArgs";
     };
@@ -164,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsUISession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportSettingsUISession";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportSettingsUISession";
     };

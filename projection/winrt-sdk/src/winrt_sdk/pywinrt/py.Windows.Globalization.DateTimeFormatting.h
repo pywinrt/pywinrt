@@ -58,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DayFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "DayFormat";
     };
@@ -65,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DayOfWeekFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DayOfWeekFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "DayOfWeekFormat";
     };
@@ -72,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::HourFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.HourFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "HourFormat";
     };
@@ -79,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MinuteFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.MinuteFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "MinuteFormat";
     };
@@ -86,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::MonthFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.MonthFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "MonthFormat";
     };
@@ -93,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::SecondFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.SecondFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "SecondFormat";
     };
@@ -100,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::YearFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.YearFormat";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "YearFormat";
     };
@@ -107,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Globalization::DateTimeFormatting::DateTimeFormatter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.globalization.datetimeformatting.DateTimeFormatter";
         static constexpr const char* module_name = "winrt.windows.globalization.datetimeformatting";
         static constexpr const char* type_name = "DateTimeFormatter";
     };

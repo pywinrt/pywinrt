@@ -75,6 +75,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceCandidateKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceCandidateKind";
     };
@@ -82,6 +83,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierPersistence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceQualifierPersistence";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceQualifierPersistence";
     };
@@ -89,6 +91,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::NamedResource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.NamedResource";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "NamedResource";
     };
@@ -96,6 +99,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceCandidate";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceCandidate";
     };
@@ -103,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceCandidateVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceCandidateVectorView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceCandidateVectorView";
     };
@@ -110,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceContext";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceContext";
     };
@@ -117,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceContextLanguagesVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceContextLanguagesVectorView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceContextLanguagesVectorView";
     };
@@ -124,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceManager";
     };
@@ -131,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceMap";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceMap";
     };
@@ -138,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapIterator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceMapIterator";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceMapIterator";
     };
@@ -145,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceMapMapView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceMapMapView";
     };
@@ -152,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceMapMapViewIterator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceMapMapViewIterator";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceMapMapViewIterator";
     };
@@ -159,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceQualifier";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceQualifier";
     };
@@ -166,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierMapView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceQualifierMapView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceQualifierMapView";
     };
@@ -173,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierObservableMap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceQualifierObservableMap";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceQualifierObservableMap";
     };
@@ -180,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceQualifierVectorView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceQualifierVectorView";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceQualifierVectorView";
     };
@@ -187,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Resources::Core::ResourceLayoutInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.resources.core.ResourceLayoutInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.resources.core";
         static constexpr const char* type_name = "ResourceLayoutInfo";
     };

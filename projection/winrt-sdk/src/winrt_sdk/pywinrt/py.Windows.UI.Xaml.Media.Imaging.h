@@ -113,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapCreateOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.BitmapCreateOptions";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "BitmapCreateOptions";
     };
@@ -120,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::DecodePixelType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.DecodePixelType";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "DecodePixelType";
     };
@@ -127,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceLoadStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SvgImageSourceLoadStatus";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SvgImageSourceLoadStatus";
     };
@@ -134,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapImage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.BitmapImage";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "BitmapImage";
     };
@@ -141,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::BitmapSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.BitmapSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "BitmapSource";
     };
@@ -148,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::DownloadProgressEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.DownloadProgressEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "DownloadProgressEventArgs";
     };
@@ -155,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::RenderTargetBitmap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.RenderTargetBitmap";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "RenderTargetBitmap";
     };
@@ -162,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SoftwareBitmapSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SoftwareBitmapSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SoftwareBitmapSource";
     };
@@ -169,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SurfaceImageSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SurfaceImageSource";
     };
@@ -176,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SvgImageSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SvgImageSource";
     };
@@ -183,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SvgImageSourceFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SvgImageSourceFailedEventArgs";
     };
@@ -190,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.SvgImageSourceOpenedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "SvgImageSourceOpenedEventArgs";
     };
@@ -197,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::VirtualSurfaceImageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.VirtualSurfaceImageSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "VirtualSurfaceImageSource";
     };
@@ -204,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::WriteableBitmap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.WriteableBitmap";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "WriteableBitmap";
     };
@@ -211,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.imaging.XamlRenderingBackgroundTask";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media.imaging";
         static constexpr const char* type_name = "XamlRenderingBackgroundTask";
     };

@@ -188,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::GraphicsTrustStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.GraphicsTrustStatus";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "GraphicsTrustStatus";
     };
@@ -195,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::HdcpProtection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.HdcpProtection";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "HdcpProtection";
     };
@@ -202,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::HdcpSetProtectionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.HdcpSetProtectionResult";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "HdcpSetProtectionResult";
     };
@@ -209,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::ProtectionCapabilityResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.ProtectionCapabilityResult";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "ProtectionCapabilityResult";
     };
@@ -216,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::RenewalStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.RenewalStatus";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "RenewalStatus";
     };
@@ -223,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalReasons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.RevocationAndRenewalReasons";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "RevocationAndRenewalReasons";
     };
@@ -230,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::ComponentLoadFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.ComponentLoadFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "ComponentLoadFailedEventArgs";
     };
@@ -237,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::ComponentRenewal>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.ComponentRenewal";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "ComponentRenewal";
     };
@@ -244,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::HdcpSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.HdcpSession";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "HdcpSession";
     };
@@ -251,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::MediaProtectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.MediaProtectionManager";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "MediaProtectionManager";
     };
@@ -258,6 +268,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::MediaProtectionPMPServer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.MediaProtectionPMPServer";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "MediaProtectionPMPServer";
     };
@@ -265,6 +276,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::MediaProtectionServiceCompletion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.MediaProtectionServiceCompletion";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "MediaProtectionServiceCompletion";
     };
@@ -272,6 +284,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::ProtectionCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.ProtectionCapabilities";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "ProtectionCapabilities";
     };
@@ -279,6 +292,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.RevocationAndRenewalInformation";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "RevocationAndRenewalInformation";
     };
@@ -286,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::RevocationAndRenewalItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.RevocationAndRenewalItem";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "RevocationAndRenewalItem";
     };
@@ -293,6 +308,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::ServiceRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.ServiceRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "ServiceRequestedEventArgs";
     };
@@ -300,6 +316,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Protection::IMediaProtectionServiceRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.protection.IMediaProtectionServiceRequest";
         static constexpr const char* module_name = "winrt.windows.media.protection";
         static constexpr const char* type_name = "IMediaProtectionServiceRequest";
     };

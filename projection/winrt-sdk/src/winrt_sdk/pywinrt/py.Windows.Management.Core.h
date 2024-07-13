@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Management::Core::ApplicationDataManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.core.ApplicationDataManager";
         static constexpr const char* module_name = "winrt.windows.management.core";
         static constexpr const char* type_name = "ApplicationDataManager";
     };

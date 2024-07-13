@@ -66,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactChangeType";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactChangeType";
     };
@@ -73,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResultOrdering>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactQueryResultOrdering";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactQueryResultOrdering";
     };
@@ -80,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreApplicationAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactStoreApplicationAccessMode";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactStoreApplicationAccessMode";
     };
@@ -87,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStoreSystemAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactStoreSystemAccessMode";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactStoreSystemAccessMode";
     };
@@ -94,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::VCardFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.VCardFormat";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "VCardFormat";
     };
@@ -101,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactAddress";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactAddress";
     };
@@ -108,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactChangeRecord>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactChangeRecord";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactChangeRecord";
     };
@@ -115,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactInformation";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactInformation";
     };
@@ -122,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactQueryOptions";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactQueryOptions";
     };
@@ -129,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactQueryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactQueryResult";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactQueryResult";
     };
@@ -136,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::ContactStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.ContactStore";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "ContactStore";
     };
@@ -143,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::KnownContactProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.KnownContactProperties";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "KnownContactProperties";
     };
@@ -150,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::StoredContact>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.StoredContact";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "StoredContact";
     };
@@ -157,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.IContactInformation";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "IContactInformation";
     };
@@ -164,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::PersonalInformation::IContactInformation2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.personalinformation.IContactInformation2";
         static constexpr const char* module_name = "winrt.windows.phone.personalinformation";
         static constexpr const char* type_name = "IContactInformation2";
     };

@@ -30,6 +30,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfileModes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.applicationmodel.ApplicationProfileModes";
         static constexpr const char* module_name = "winrt.windows.phone.applicationmodel";
         static constexpr const char* type_name = "ApplicationProfileModes";
     };
@@ -37,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::ApplicationModel::ApplicationProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.applicationmodel.ApplicationProfile";
         static constexpr const char* module_name = "winrt.windows.phone.applicationmodel";
         static constexpr const char* type_name = "ApplicationProfile";
     };

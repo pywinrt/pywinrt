@@ -55,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticRequestInitiator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticRequestInitiator";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticRequestInitiator";
     };
@@ -62,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticProvider";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticProvider";
     };
@@ -69,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticProviderRequestResponseCompletedEventArgs";
     };
@@ -76,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestResponseTimestamps>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticProviderRequestResponseTimestamps";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticProviderRequestResponseTimestamps";
     };
@@ -83,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderRequestSentEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticProviderRequestSentEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticProviderRequestSentEventArgs";
     };
@@ -90,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticProviderResponseReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticProviderResponseReceivedEventArgs";
     };
@@ -97,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::Http::Diagnostics::HttpDiagnosticSourceLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.http.diagnostics.HttpDiagnosticSourceLocation";
         static constexpr const char* module_name = "winrt.windows.web.http.diagnostics";
         static constexpr const char* type_name = "HttpDiagnosticSourceLocation";
     };

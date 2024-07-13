@@ -55,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIContentMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIContentMode";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDragUIContentMode";
     };
@@ -62,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragDropManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragDropManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDragDropManager";
     };
@@ -69,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDragInfo";
     };
@@ -76,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragOperation";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDragOperation";
     };
@@ -83,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDragUIOverride>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDragUIOverride";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDragUIOverride";
     };
@@ -90,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::CoreDropOperationTargetRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.CoreDropOperationTargetRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "CoreDropOperationTargetRequestedEventArgs";
     };
@@ -97,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::DataTransfer::DragDrop::Core::ICoreDropOperationTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core.ICoreDropOperationTarget";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.datatransfer.dragdrop.core";
         static constexpr const char* type_name = "ICoreDropOperationTarget";
     };

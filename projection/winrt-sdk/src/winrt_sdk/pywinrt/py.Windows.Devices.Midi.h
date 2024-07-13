@@ -68,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiMessageType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiMessageType";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiMessageType";
     };
@@ -75,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiActiveSensingMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiActiveSensingMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiActiveSensingMessage";
     };
@@ -82,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiChannelPressureMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiChannelPressureMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiChannelPressureMessage";
     };
@@ -89,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiContinueMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiContinueMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiContinueMessage";
     };
@@ -96,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiControlChangeMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiControlChangeMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiControlChangeMessage";
     };
@@ -103,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiInPort>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiInPort";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiInPort";
     };
@@ -110,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiMessageReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiMessageReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiMessageReceivedEventArgs";
     };
@@ -117,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiNoteOffMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiNoteOffMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiNoteOffMessage";
     };
@@ -124,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiNoteOnMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiNoteOnMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiNoteOnMessage";
     };
@@ -131,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiOutPort>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiOutPort";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiOutPort";
     };
@@ -138,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiPitchBendChangeMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiPitchBendChangeMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiPitchBendChangeMessage";
     };
@@ -145,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiPolyphonicKeyPressureMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiPolyphonicKeyPressureMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiPolyphonicKeyPressureMessage";
     };
@@ -152,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiProgramChangeMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiProgramChangeMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiProgramChangeMessage";
     };
@@ -159,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiSongPositionPointerMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiSongPositionPointerMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiSongPositionPointerMessage";
     };
@@ -166,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiSongSelectMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiSongSelectMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiSongSelectMessage";
     };
@@ -173,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiStartMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiStartMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiStartMessage";
     };
@@ -180,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiStopMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiStopMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiStopMessage";
     };
@@ -187,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiSynthesizer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiSynthesizer";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiSynthesizer";
     };
@@ -194,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiSystemExclusiveMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiSystemExclusiveMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiSystemExclusiveMessage";
     };
@@ -201,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiSystemResetMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiSystemResetMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiSystemResetMessage";
     };
@@ -208,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiTimeCodeMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiTimeCodeMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiTimeCodeMessage";
     };
@@ -215,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiTimingClockMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiTimingClockMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiTimingClockMessage";
     };
@@ -222,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::MidiTuneRequestMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.MidiTuneRequestMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "MidiTuneRequestMessage";
     };
@@ -229,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::IMidiMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.IMidiMessage";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "IMidiMessage";
     };
@@ -236,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Midi::IMidiOutPort>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.midi.IMidiOutPort";
         static constexpr const char* module_name = "winrt.windows.devices.midi";
         static constexpr const char* type_name = "IMidiOutPort";
     };

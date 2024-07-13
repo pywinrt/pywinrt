@@ -90,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyRoutingStage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlAcceleratorKeyRoutingStage";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlAcceleratorKeyRoutingStage";
     };
@@ -97,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlMoveFocusReason";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlMoveFocusReason";
     };
@@ -104,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessCapabilityState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcessCapabilityState";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlProcessCapabilityState";
     };
@@ -111,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControl>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControl";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControl";
     };
@@ -118,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlAcceleratorKeyPressedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlAcceleratorKeyPressedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlAcceleratorKeyPressedEventArgs";
     };
@@ -125,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlMoveFocusRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlMoveFocusRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlMoveFocusRequestedEventArgs";
     };
@@ -132,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcess>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcess";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlProcess";
     };
@@ -139,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::UI::Interop::WebViewControlProcessOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.ui.interop.WebViewControlProcessOptions";
         static constexpr const char* module_name = "winrt.windows.web.ui.interop";
         static constexpr const char* type_name = "WebViewControlProcessOptions";
     };

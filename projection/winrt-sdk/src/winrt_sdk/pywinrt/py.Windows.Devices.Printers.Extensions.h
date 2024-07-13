@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowDetail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.Print3DWorkflowDetail";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "Print3DWorkflowDetail";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.Print3DWorkflowStatus";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "Print3DWorkflowStatus";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.Print3DWorkflow";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "Print3DWorkflow";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrintRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.Print3DWorkflowPrintRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "Print3DWorkflowPrintRequestedEventArgs";
     };
@@ -74,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::Print3DWorkflowPrinterChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.Print3DWorkflowPrinterChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "Print3DWorkflowPrinterChangedEventArgs";
     };
@@ -81,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintExtensionContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintExtensionContext";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintExtensionContext";
     };
@@ -88,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintNotificationEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintNotificationEventDetails";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintNotificationEventDetails";
     };
@@ -95,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintTaskConfiguration";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintTaskConfiguration";
     };
@@ -102,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintTaskConfigurationSaveRequest";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintTaskConfigurationSaveRequest";
     };
@@ -109,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintTaskConfigurationSaveRequestedDeferral";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintTaskConfigurationSaveRequestedDeferral";
     };
@@ -116,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Printers::Extensions::PrintTaskConfigurationSaveRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.extensions.PrintTaskConfigurationSaveRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.printers.extensions";
         static constexpr const char* type_name = "PrintTaskConfigurationSaveRequestedEventArgs";
     };

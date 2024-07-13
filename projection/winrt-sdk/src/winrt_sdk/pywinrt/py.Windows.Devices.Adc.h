@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Adc::AdcChannelMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcChannelMode";
         static constexpr const char* module_name = "winrt.windows.devices.adc";
         static constexpr const char* type_name = "AdcChannelMode";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Adc::AdcChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcChannel";
         static constexpr const char* module_name = "winrt.windows.devices.adc";
         static constexpr const char* type_name = "AdcChannel";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Adc::AdcController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.adc.AdcController";
         static constexpr const char* module_name = "winrt.windows.devices.adc";
         static constexpr const char* type_name = "AdcController";
     };

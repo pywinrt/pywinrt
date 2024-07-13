@@ -35,6 +35,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::BinaryStringEncoding>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.BinaryStringEncoding";
         static constexpr const char* module_name = "winrt.windows.security.cryptography";
         static constexpr const char* type_name = "BinaryStringEncoding";
     };
@@ -42,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::CryptographicBuffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.CryptographicBuffer";
         static constexpr const char* module_name = "winrt.windows.security.cryptography";
         static constexpr const char* type_name = "CryptographicBuffer";
     };

@@ -107,6 +107,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapAlphaMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapAlphaMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapAlphaMode";
     };
@@ -114,6 +115,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapBufferAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapBufferAccessMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapBufferAccessMode";
     };
@@ -121,6 +123,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapFlip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapFlip";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapFlip";
     };
@@ -128,6 +131,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapInterpolationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapInterpolationMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapInterpolationMode";
     };
@@ -135,6 +139,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPixelFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapPixelFormat";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapPixelFormat";
     };
@@ -142,6 +147,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapRotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapRotation";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapRotation";
     };
@@ -149,6 +155,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::ColorManagementMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.ColorManagementMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "ColorManagementMode";
     };
@@ -156,6 +163,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::ExifOrientationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.ExifOrientationMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "ExifOrientationMode";
     };
@@ -163,6 +171,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::JpegSubsamplingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.JpegSubsamplingMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "JpegSubsamplingMode";
     };
@@ -170,6 +179,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::PngFilterMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.PngFilterMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "PngFilterMode";
     };
@@ -177,6 +187,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::TiffCompressionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.TiffCompressionMode";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "TiffCompressionMode";
     };
@@ -184,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapBuffer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapBuffer";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapBuffer";
     };
@@ -191,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapCodecInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapCodecInformation";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapCodecInformation";
     };
@@ -198,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapDecoder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapDecoder";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapDecoder";
     };
@@ -205,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapEncoder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapEncoder";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapEncoder";
     };
@@ -212,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapFrame";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapFrame";
     };
@@ -219,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapProperties";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapProperties";
     };
@@ -226,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPropertiesView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapPropertiesView";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapPropertiesView";
     };
@@ -233,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapPropertySet";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapPropertySet";
     };
@@ -240,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapTransform";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapTransform";
     };
@@ -247,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapTypedValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapTypedValue";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapTypedValue";
     };
@@ -254,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::ImageStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.ImageStream";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "ImageStream";
     };
@@ -261,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::PixelDataProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.PixelDataProvider";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "PixelDataProvider";
     };
@@ -268,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::SoftwareBitmap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.SoftwareBitmap";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "SoftwareBitmap";
     };
@@ -275,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapFrame";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "IBitmapFrame";
     };
@@ -282,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapFrameWithSoftwareBitmap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapFrameWithSoftwareBitmap";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "IBitmapFrameWithSoftwareBitmap";
     };
@@ -289,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::IBitmapPropertiesView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.IBitmapPropertiesView";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "IBitmapPropertiesView";
     };
@@ -296,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapBounds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapBounds";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapBounds";
     };
@@ -303,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapPlaneDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapPlaneDescription";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapPlaneDescription";
     };
@@ -310,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Imaging::BitmapSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.imaging.BitmapSize";
         static constexpr const char* module_name = "winrt.windows.graphics.imaging";
         static constexpr const char* type_name = "BitmapSize";
     };

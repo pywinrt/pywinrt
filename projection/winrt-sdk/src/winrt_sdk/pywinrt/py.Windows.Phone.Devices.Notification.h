@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::Devices::Notification::VibrationDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.devices.notification.VibrationDevice";
         static constexpr const char* module_name = "winrt.windows.phone.devices.notification";
         static constexpr const char* type_name = "VibrationDevice";
     };

@@ -41,6 +41,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::WebErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.WebErrorStatus";
         static constexpr const char* module_name = "winrt.windows.web";
         static constexpr const char* type_name = "WebErrorStatus";
     };
@@ -48,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::WebError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.WebError";
         static constexpr const char* module_name = "winrt.windows.web";
         static constexpr const char* type_name = "WebError";
     };
@@ -55,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Web::IUriToStreamResolver>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.web.IUriToStreamResolver";
         static constexpr const char* module_name = "winrt.windows.web";
         static constexpr const char* type_name = "IUriToStreamResolver";
     };

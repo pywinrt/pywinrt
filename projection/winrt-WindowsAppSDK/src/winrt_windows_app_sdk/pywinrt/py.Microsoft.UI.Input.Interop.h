@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Input::Interop::PenDeviceInterop>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.interop.PenDeviceInterop";
         static constexpr const char* module_name = "winrt.microsoft.ui.input.interop";
         static constexpr const char* type_name = "PenDeviceInterop";
     };

@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiMode";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiMode";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiSharingMode";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiSharingMode";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiBusInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiBusInfo";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiBusInfo";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiConnectionSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiConnectionSettings";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiConnectionSettings";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiController";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiController";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::SpiDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.SpiDevice";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "SpiDevice";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Spi::ISpiDeviceStatics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.spi.ISpiDeviceStatics";
         static constexpr const char* module_name = "winrt.windows.devices.spi";
         static constexpr const char* type_name = "ISpiDeviceStatics";
     };

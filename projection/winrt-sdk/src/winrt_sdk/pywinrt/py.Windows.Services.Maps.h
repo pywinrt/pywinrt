@@ -98,6 +98,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::ManeuverWarningKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.ManeuverWarningKind";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "ManeuverWarningKind";
     };
@@ -105,6 +106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::ManeuverWarningSeverity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.ManeuverWarningSeverity";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "ManeuverWarningSeverity";
     };
@@ -112,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationDesiredAccuracy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapLocationDesiredAccuracy";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapLocationDesiredAccuracy";
     };
@@ -119,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationFinderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapLocationFinderStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapLocationFinderStatus";
     };
@@ -126,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapManeuverNotices>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapManeuverNotices";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapManeuverNotices";
     };
@@ -133,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteFinderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteFinderStatus";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteFinderStatus";
     };
@@ -140,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteManeuverKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteManeuverKind";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteManeuverKind";
     };
@@ -147,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteOptimization>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteOptimization";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteOptimization";
     };
@@ -154,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteRestrictions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteRestrictions";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteRestrictions";
     };
@@ -161,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapServiceDataUsagePreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapServiceDataUsagePreference";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapServiceDataUsagePreference";
     };
@@ -168,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::TrafficCongestion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.TrafficCongestion";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "TrafficCongestion";
     };
@@ -175,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::WaypointKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.WaypointKind";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "WaypointKind";
     };
@@ -182,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::EnhancedWaypoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.EnhancedWaypoint";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "EnhancedWaypoint";
     };
@@ -189,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::ManeuverWarning>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.ManeuverWarning";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "ManeuverWarning";
     };
@@ -196,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapAddress";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapAddress";
     };
@@ -203,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapLocation";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapLocation";
     };
@@ -210,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationFinder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapLocationFinder";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapLocationFinder";
     };
@@ -217,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapLocationFinderResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapLocationFinderResult";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapLocationFinderResult";
     };
@@ -224,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapManager";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapManager";
     };
@@ -231,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRoute>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRoute";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRoute";
     };
@@ -238,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteDrivingOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteDrivingOptions";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteDrivingOptions";
     };
@@ -245,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteFinder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteFinder";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteFinder";
     };
@@ -252,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteFinderResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteFinderResult";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteFinderResult";
     };
@@ -259,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteLeg>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteLeg";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteLeg";
     };
@@ -266,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapRouteManeuver>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapRouteManeuver";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapRouteManeuver";
     };
@@ -273,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::MapService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.MapService";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "MapService";
     };
@@ -280,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::PlaceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.PlaceInfo";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "PlaceInfo";
     };
@@ -287,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.maps.PlaceInfoCreateOptions";
         static constexpr const char* module_name = "winrt.windows.services.maps";
         static constexpr const char* type_name = "PlaceInfoCreateOptions";
     };

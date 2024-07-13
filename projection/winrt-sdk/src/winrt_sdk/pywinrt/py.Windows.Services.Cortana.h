@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaPermission>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermission";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaPermission";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsChangeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermissionsChangeResult";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaPermissionsChangeResult";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsights>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaActionableInsights";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaActionableInsights";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaActionableInsightsOptions";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaActionableInsightsOptions";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaPermissionsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaPermissionsManager";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaPermissionsManager";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Services::Cortana::CortanaSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.services.cortana.CortanaSettings";
         static constexpr const char* module_name = "winrt.windows.services.cortana";
         static constexpr const char* type_name = "CortanaSettings";
     };

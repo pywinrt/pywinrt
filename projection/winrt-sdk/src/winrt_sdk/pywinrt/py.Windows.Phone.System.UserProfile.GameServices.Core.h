@@ -44,6 +44,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceGameOutcome>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.userprofile.gameservices.core.GameServiceGameOutcome";
         static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
         static constexpr const char* type_name = "GameServiceGameOutcome";
     };
@@ -51,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServiceScoreKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.userprofile.gameservices.core.GameServiceScoreKind";
         static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
         static constexpr const char* type_name = "GameServiceScoreKind";
     };
@@ -58,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.userprofile.gameservices.core.GameService";
         static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
         static constexpr const char* type_name = "GameService";
     };
@@ -65,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::UserProfile::GameServices::Core::GameServicePropertyCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.userprofile.gameservices.core.GameServicePropertyCollection";
         static constexpr const char* module_name = "winrt.windows.phone.system.userprofile.gameservices.core";
         static constexpr const char* type_name = "GameServicePropertyCollection";
     };

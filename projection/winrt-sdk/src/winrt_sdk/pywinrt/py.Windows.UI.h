@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ColorHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.ColorHelper";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "ColorHelper";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Colors>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.Colors";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "Colors";
     };
@@ -52,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIContentRoot>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.UIContentRoot";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "UIContentRoot";
     };
@@ -59,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::UIContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.UIContext";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "UIContext";
     };
@@ -66,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Color>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.Color";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "Color";
     };
@@ -73,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.WindowId";
         static constexpr const char* module_name = "winrt.windows.ui";
         static constexpr const char* type_name = "WindowId";
     };

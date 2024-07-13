@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewKind";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewKind";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewOcclusionKind";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewOcclusionKind";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewXYFocusTransferDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewXYFocusTransferDirection";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewXYFocusTransferDirection";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreFrameworkInputView";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreFrameworkInputView";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewAnimationStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreFrameworkInputViewAnimationStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreFrameworkInputViewAnimationStartingEventArgs";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreFrameworkInputViewOcclusionsChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreFrameworkInputViewOcclusionsChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreFrameworkInputViewOcclusionsChangedEventArgs";
     };
@@ -103,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputView";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputView";
     };
@@ -110,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewAnimationStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewAnimationStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewAnimationStartingEventArgs";
     };
@@ -117,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewHidingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewHidingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewHidingEventArgs";
     };
@@ -124,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewOcclusion";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewOcclusion";
     };
@@ -131,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewOcclusionsChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewOcclusionsChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewOcclusionsChangedEventArgs";
     };
@@ -138,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewShowingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewShowingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewShowingEventArgs";
     };
@@ -145,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::CoreInputViewTransferringXYFocusEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.CoreInputViewTransferringXYFocusEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "CoreInputViewTransferringXYFocusEventArgs";
     };
@@ -152,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::Core::UISettingsController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.core.UISettingsController";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement.core";
         static constexpr const char* type_name = "UISettingsController";
     };

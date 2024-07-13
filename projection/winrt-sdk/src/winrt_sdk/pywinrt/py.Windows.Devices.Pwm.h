@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::PwmPulsePolarity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmPulsePolarity";
         static constexpr const char* module_name = "winrt.windows.devices.pwm";
         static constexpr const char* type_name = "PwmPulsePolarity";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::PwmController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmController";
         static constexpr const char* module_name = "winrt.windows.devices.pwm";
         static constexpr const char* type_name = "PwmController";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Pwm::PwmPin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.pwm.PwmPin";
         static constexpr const char* module_name = "winrt.windows.devices.pwm";
         static constexpr const char* type_name = "PwmPin";
     };

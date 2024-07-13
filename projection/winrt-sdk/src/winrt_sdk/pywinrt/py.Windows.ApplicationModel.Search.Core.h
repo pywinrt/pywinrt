@@ -53,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.core.SearchSuggestionKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "SearchSuggestionKind";
     };
@@ -60,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::Core::RequestingFocusOnKeyboardInputEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.core.RequestingFocusOnKeyboardInputEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "RequestingFocusOnKeyboardInputEventArgs";
     };
@@ -67,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.core.SearchSuggestion";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "SearchSuggestion";
     };
@@ -74,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.core.SearchSuggestionManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "SearchSuggestionManager";
     };
@@ -81,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Search::Core::SearchSuggestionsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.search.core.SearchSuggestionsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.search.core";
         static constexpr const char* type_name = "SearchSuggestionsRequestedEventArgs";
     };

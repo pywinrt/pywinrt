@@ -471,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AnimationDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.AnimationDirection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "AnimationDirection";
     };
@@ -478,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComponentResourceLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ComponentResourceLocation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ComponentResourceLocation";
     };
@@ -485,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::EdgeTransitionLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.EdgeTransitionLocation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "EdgeTransitionLocation";
     };
@@ -492,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.FlyoutPlacementMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "FlyoutPlacementMode";
     };
@@ -499,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.FlyoutShowMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "FlyoutShowMode";
     };
@@ -506,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GeneratorDirection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GeneratorDirection";
     };
@@ -513,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GroupHeaderPlacement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GroupHeaderPlacement";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GroupHeaderPlacement";
     };
@@ -520,6 +527,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ListViewItemPresenterCheckMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ListViewItemPresenterCheckMode";
     };
@@ -527,6 +535,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ListViewItemPresenterSelectionIndicatorMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ListViewItemPresenterSelectionIndicatorMode";
     };
@@ -534,6 +543,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PlacementMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PlacementMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PlacementMode";
     };
@@ -541,6 +551,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PopupPlacementMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PopupPlacementMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PopupPlacementMode";
     };
@@ -548,6 +559,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ScrollEventType";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ScrollEventType";
     };
@@ -555,6 +567,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollingIndicatorMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ScrollingIndicatorMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ScrollingIndicatorMode";
     };
@@ -562,6 +575,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SliderSnapsTo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.SliderSnapsTo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "SliderSnapsTo";
     };
@@ -569,6 +583,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.SnapPointsAlignment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "SnapPointsAlignment";
     };
@@ -576,6 +591,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::TickPlacement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.TickPlacement";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "TickPlacement";
     };
@@ -583,6 +599,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarButtonTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.AppBarButtonTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "AppBarButtonTemplateSettings";
     };
@@ -590,6 +607,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.AppBarTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "AppBarTemplateSettings";
     };
@@ -597,6 +615,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::AppBarToggleButtonTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.AppBarToggleButtonTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "AppBarToggleButtonTemplateSettings";
     };
@@ -604,6 +623,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ButtonBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ButtonBase";
     };
@@ -611,6 +631,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CalendarPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CalendarPanel";
     };
@@ -618,6 +639,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CalendarViewTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CalendarViewTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CalendarViewTemplateSettings";
     };
@@ -625,6 +647,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CarouselPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CarouselPanel";
     };
@@ -632,6 +655,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ColorPickerSlider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ColorPickerSlider";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ColorPickerSlider";
     };
@@ -639,6 +663,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ColorSpectrum";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ColorSpectrum";
     };
@@ -646,6 +671,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ComboBoxTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ComboBoxTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ComboBoxTemplateSettings";
     };
@@ -653,6 +679,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CommandBarFlyoutCommandBar";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CommandBarFlyoutCommandBar";
     };
@@ -660,6 +687,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBarTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CommandBarFlyoutCommandBarTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CommandBarFlyoutCommandBarTemplateSettings";
     };
@@ -667,6 +695,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.CommandBarTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "CommandBarTemplateSettings";
     };
@@ -674,6 +703,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.DragCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "DragCompletedEventArgs";
     };
@@ -681,6 +711,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.DragDeltaEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "DragDeltaEventArgs";
     };
@@ -688,6 +719,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.DragStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "DragStartedEventArgs";
     };
@@ -695,6 +727,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.FlyoutBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "FlyoutBase";
     };
@@ -702,6 +735,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.FlyoutBaseClosingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "FlyoutBaseClosingEventArgs";
     };
@@ -709,6 +743,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.FlyoutShowOptions";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "FlyoutShowOptions";
     };
@@ -716,6 +751,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPositionHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GeneratorPositionHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GeneratorPositionHelper";
     };
@@ -723,6 +759,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GridViewItemPresenter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GridViewItemPresenter";
     };
@@ -730,6 +767,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GridViewItemTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GridViewItemTemplateSettings";
     };
@@ -737,6 +775,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ItemsChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ItemsChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ItemsChangedEventArgs";
     };
@@ -744,6 +783,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemBackgroundConverter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.JumpListItemBackgroundConverter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "JumpListItemBackgroundConverter";
     };
@@ -751,6 +791,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::JumpListItemForegroundConverter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.JumpListItemForegroundConverter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "JumpListItemForegroundConverter";
     };
@@ -758,6 +799,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LayoutInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.LayoutInformation";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "LayoutInformation";
     };
@@ -765,6 +807,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ListViewItemPresenter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ListViewItemPresenter";
     };
@@ -772,6 +815,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ListViewItemTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ListViewItemTemplateSettings";
     };
@@ -779,6 +823,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.LoopingSelector";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "LoopingSelector";
     };
@@ -786,6 +831,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.LoopingSelectorItem";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "LoopingSelectorItem";
     };
@@ -793,6 +839,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::LoopingSelectorPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.LoopingSelectorPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "LoopingSelectorPanel";
     };
@@ -800,6 +847,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutItemTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.MenuFlyoutItemTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "MenuFlyoutItemTemplateSettings";
     };
@@ -807,6 +855,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::MenuFlyoutPresenterTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.MenuFlyoutPresenterTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "MenuFlyoutPresenterTemplateSettings";
     };
@@ -814,6 +863,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.NavigationViewItemPresenter";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "NavigationViewItemPresenter";
     };
@@ -821,6 +871,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.OrientedVirtualizingPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "OrientedVirtualizingPanel";
     };
@@ -828,6 +879,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PickerFlyoutBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PickerFlyoutBase";
     };
@@ -835,6 +887,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PivotHeaderItem";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PivotHeaderItem";
     };
@@ -842,6 +895,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotHeaderPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PivotHeaderPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PivotHeaderPanel";
     };
@@ -849,6 +903,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::PivotPanel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.PivotPanel";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "PivotPanel";
     };
@@ -856,6 +911,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::Popup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.Popup";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "Popup";
     };
@@ -863,6 +919,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressBarTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ProgressBarTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ProgressBarTemplateSettings";
     };
@@ -870,6 +927,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ProgressRingTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ProgressRingTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ProgressRingTemplateSettings";
     };
@@ -877,6 +935,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.RangeBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "RangeBase";
     };
@@ -884,6 +943,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.RangeBaseValueChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "RangeBaseValueChangedEventArgs";
     };
@@ -891,6 +951,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::RepeatButton>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.RepeatButton";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "RepeatButton";
     };
@@ -898,6 +959,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ScrollBar";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ScrollBar";
     };
@@ -905,6 +967,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ScrollEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ScrollEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ScrollEventArgs";
     };
@@ -912,6 +975,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.Selector";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "Selector";
     };
@@ -919,6 +983,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.SelectorItem";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "SelectorItem";
     };
@@ -926,6 +991,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SettingsFlyoutTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.SettingsFlyoutTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "SettingsFlyoutTemplateSettings";
     };
@@ -933,6 +999,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::SplitViewTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.SplitViewTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "SplitViewTemplateSettings";
     };
@@ -940,6 +1007,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::Thumb>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.Thumb";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "Thumb";
     };
@@ -947,6 +1015,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::TickBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.TickBar";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "TickBar";
     };
@@ -954,6 +1023,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ToggleButton";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ToggleButton";
     };
@@ -961,6 +1031,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleSwitchTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ToggleSwitchTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ToggleSwitchTemplateSettings";
     };
@@ -968,6 +1039,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::ToolTipTemplateSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.ToolTipTemplateSettings";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "ToolTipTemplateSettings";
     };
@@ -975,6 +1047,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::IScrollSnapPointsInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.IScrollSnapPointsInfo";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "IScrollSnapPointsInfo";
     };
@@ -982,6 +1055,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Controls::Primitives::GeneratorPosition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.controls.primitives.GeneratorPosition";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.controls.primitives";
         static constexpr const char* type_name = "GeneratorPosition";
     };

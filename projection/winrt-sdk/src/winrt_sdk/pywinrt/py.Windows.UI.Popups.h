@@ -81,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::MessageDialogOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.MessageDialogOptions";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "MessageDialogOptions";
     };
@@ -88,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::Placement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.Placement";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "Placement";
     };
@@ -95,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::MessageDialog>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.MessageDialog";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "MessageDialog";
     };
@@ -102,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::PopupMenu>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.PopupMenu";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "PopupMenu";
     };
@@ -109,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::UICommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.UICommand";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "UICommand";
     };
@@ -116,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::UICommandSeparator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.UICommandSeparator";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "UICommandSeparator";
     };
@@ -123,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Popups::IUICommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.popups.IUICommand";
         static constexpr const char* module_name = "winrt.windows.ui.popups";
         static constexpr const char* type_name = "IUICommand";
     };

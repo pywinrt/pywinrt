@@ -219,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppDiagnosticInfoWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppDiagnosticInfoWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppDiagnosticInfoWatcherStatus";
     };
@@ -226,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppMemoryUsageLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppMemoryUsageLevel";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppMemoryUsageLevel";
     };
@@ -233,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupEnergyQuotaState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupEnergyQuotaState";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupEnergyQuotaState";
     };
@@ -240,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupExecutionState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupExecutionState";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupExecutionState";
     };
@@ -247,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupInfoWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupInfoWatcherStatus";
     };
@@ -254,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AutoUpdateTimeZoneStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AutoUpdateTimeZoneStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AutoUpdateTimeZoneStatus";
     };
@@ -261,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DiagnosticAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DiagnosticAccessStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DiagnosticAccessStatus";
     };
@@ -268,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DispatcherQueuePriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DispatcherQueuePriority";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DispatcherQueuePriority";
     };
@@ -275,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LaunchFileStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LaunchFileStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LaunchFileStatus";
     };
@@ -282,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LaunchQuerySupportStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LaunchQuerySupportStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LaunchQuerySupportStatus";
     };
@@ -289,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LaunchQuerySupportType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LaunchQuerySupportType";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LaunchQuerySupportType";
     };
@@ -296,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LaunchUriStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LaunchUriStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LaunchUriStatus";
     };
@@ -303,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::PowerState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.PowerState";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "PowerState";
     };
@@ -310,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProcessorArchitecture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProcessorArchitecture";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProcessorArchitecture";
     };
@@ -317,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteLaunchUriStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.RemoteLaunchUriStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "RemoteLaunchUriStatus";
     };
@@ -324,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ShutdownKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ShutdownKind";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ShutdownKind";
     };
@@ -331,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserAgeConsentGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserAgeConsentGroup";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserAgeConsentGroup";
     };
@@ -338,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserAgeConsentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserAgeConsentResult";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserAgeConsentResult";
     };
@@ -345,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserAuthenticationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserAuthenticationStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserAuthenticationStatus";
     };
@@ -352,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserPictureSize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserPictureSize";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserPictureSize";
     };
@@ -359,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserType";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserType";
     };
@@ -366,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserWatcherStatus";
     };
@@ -373,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserWatcherUpdateKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserWatcherUpdateKind";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserWatcherUpdateKind";
     };
@@ -380,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::VirtualKey>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.VirtualKey";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "VirtualKey";
     };
@@ -387,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::VirtualKeyModifiers>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.VirtualKeyModifiers";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "VirtualKeyModifiers";
     };
@@ -394,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppActivationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppActivationResult";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppActivationResult";
     };
@@ -401,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppDiagnosticInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppDiagnosticInfo";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppDiagnosticInfo";
     };
@@ -408,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppDiagnosticInfoWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppDiagnosticInfoWatcher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppDiagnosticInfoWatcher";
     };
@@ -415,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppDiagnosticInfoWatcherEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppDiagnosticInfoWatcherEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppDiagnosticInfoWatcherEventArgs";
     };
@@ -422,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppExecutionStateChangeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppExecutionStateChangeResult";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppExecutionStateChangeResult";
     };
@@ -429,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppMemoryReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppMemoryReport";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppMemoryReport";
     };
@@ -436,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppMemoryUsageLimitChangingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppMemoryUsageLimitChangingEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppMemoryUsageLimitChangingEventArgs";
     };
@@ -443,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupBackgroundTaskReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupBackgroundTaskReport";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupBackgroundTaskReport";
     };
@@ -450,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupInfo";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupInfo";
     };
@@ -457,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupInfoWatcher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupInfoWatcher";
     };
@@ -464,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcherEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupInfoWatcherEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupInfoWatcherEventArgs";
     };
@@ -471,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupInfoWatcherExecutionStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupInfoWatcherExecutionStateChangedEventArgs";
     };
@@ -478,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupMemoryReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupMemoryReport";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupMemoryReport";
     };
@@ -485,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppResourceGroupStateReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppResourceGroupStateReport";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppResourceGroupStateReport";
     };
@@ -492,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppUriHandlerHost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppUriHandlerHost";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppUriHandlerHost";
     };
@@ -499,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppUriHandlerRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppUriHandlerRegistration";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppUriHandlerRegistration";
     };
@@ -506,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::AppUriHandlerRegistrationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.AppUriHandlerRegistrationManager";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "AppUriHandlerRegistrationManager";
     };
@@ -513,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DateTimeSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DateTimeSettings";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DateTimeSettings";
     };
@@ -520,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DispatcherQueue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DispatcherQueue";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DispatcherQueue";
     };
@@ -527,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DispatcherQueueController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DispatcherQueueController";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DispatcherQueueController";
     };
@@ -534,6 +579,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DispatcherQueueShutdownStartingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DispatcherQueueShutdownStartingEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DispatcherQueueShutdownStartingEventArgs";
     };
@@ -541,6 +587,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::DispatcherQueueTimer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.DispatcherQueueTimer";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "DispatcherQueueTimer";
     };
@@ -548,6 +595,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::FolderLauncherOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.FolderLauncherOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "FolderLauncherOptions";
     };
@@ -555,6 +603,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::KnownUserProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.KnownUserProperties";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "KnownUserProperties";
     };
@@ -562,6 +611,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LaunchUriResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LaunchUriResult";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LaunchUriResult";
     };
@@ -569,6 +619,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Launcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.Launcher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "Launcher";
     };
@@ -576,6 +627,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LauncherOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LauncherOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LauncherOptions";
     };
@@ -583,6 +635,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::LauncherUIOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.LauncherUIOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "LauncherUIOptions";
     };
@@ -590,6 +643,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::MemoryManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.MemoryManager";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "MemoryManager";
     };
@@ -597,6 +651,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProcessLauncher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProcessLauncher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProcessLauncher";
     };
@@ -604,6 +659,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProcessLauncherOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProcessLauncherOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProcessLauncherOptions";
     };
@@ -611,6 +667,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProcessLauncherResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProcessLauncherResult";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProcessLauncherResult";
     };
@@ -618,6 +675,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProcessMemoryReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProcessMemoryReport";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProcessMemoryReport";
     };
@@ -625,6 +683,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ProtocolForResultsOperation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ProtocolForResultsOperation";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ProtocolForResultsOperation";
     };
@@ -632,6 +691,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteLauncher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.RemoteLauncher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "RemoteLauncher";
     };
@@ -639,6 +699,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::RemoteLauncherOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.RemoteLauncherOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "RemoteLauncherOptions";
     };
@@ -646,6 +707,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ShutdownManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ShutdownManager";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ShutdownManager";
     };
@@ -653,6 +715,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::TimeZoneSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.TimeZoneSettings";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "TimeZoneSettings";
     };
@@ -660,6 +723,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::User>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.User";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "User";
     };
@@ -667,6 +731,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserAuthenticationStatusChangeDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserAuthenticationStatusChangeDeferral";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserAuthenticationStatusChangeDeferral";
     };
@@ -674,6 +739,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserAuthenticationStatusChangingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserAuthenticationStatusChangingEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserAuthenticationStatusChangingEventArgs";
     };
@@ -681,6 +747,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserChangedEventArgs";
     };
@@ -688,6 +755,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserDeviceAssociation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserDeviceAssociation";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserDeviceAssociation";
     };
@@ -695,6 +763,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserDeviceAssociationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserDeviceAssociationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserDeviceAssociationChangedEventArgs";
     };
@@ -702,6 +771,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserPicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserPicker";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserPicker";
     };
@@ -709,6 +779,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::UserWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.UserWatcher";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "UserWatcher";
     };
@@ -716,6 +787,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::ILauncherViewOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.ILauncherViewOptions";
         static constexpr const char* module_name = "winrt.windows.system";
         static constexpr const char* type_name = "ILauncherViewOptions";
     };

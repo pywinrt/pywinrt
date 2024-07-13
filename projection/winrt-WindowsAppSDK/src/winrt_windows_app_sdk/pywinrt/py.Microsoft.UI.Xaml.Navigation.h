@@ -234,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationCacheMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.NavigationCacheMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "NavigationCacheMode";
     };
@@ -241,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.NavigationMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "NavigationMode";
     };
@@ -248,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.FrameNavigationOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "FrameNavigationOptions";
     };
@@ -255,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigatingCancelEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.NavigatingCancelEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "NavigatingCancelEventArgs";
     };
@@ -262,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.NavigationEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "NavigationEventArgs";
     };
@@ -269,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::NavigationFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.NavigationFailedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "NavigationFailedEventArgs";
     };
@@ -276,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Navigation::PageStackEntry>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.navigation.PageStackEntry";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.navigation";
         static constexpr const char* type_name = "PageStackEntry";
     };

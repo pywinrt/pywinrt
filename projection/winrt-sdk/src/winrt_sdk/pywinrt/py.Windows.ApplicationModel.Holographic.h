@@ -37,6 +37,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Holographic::HolographicKeyboard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.holographic.HolographicKeyboard";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.holographic";
         static constexpr const char* type_name = "HolographicKeyboard";
     };

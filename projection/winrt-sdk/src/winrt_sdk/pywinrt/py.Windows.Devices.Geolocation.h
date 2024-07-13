@@ -81,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::AltitudeReferenceSystem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.AltitudeReferenceSystem";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "AltitudeReferenceSystem";
     };
@@ -88,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeolocationAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeolocationAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeolocationAccessStatus";
     };
@@ -95,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeoshapeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeoshapeType";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeoshapeType";
     };
@@ -102,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionAccuracy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.PositionAccuracy";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "PositionAccuracy";
     };
@@ -109,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.PositionSource";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "PositionSource";
     };
@@ -116,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.PositionStatus";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "PositionStatus";
     };
@@ -123,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::VisitMonitoringScope>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.VisitMonitoringScope";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "VisitMonitoringScope";
     };
@@ -130,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::VisitStateChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.VisitStateChange";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "VisitStateChange";
     };
@@ -137,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::CivicAddress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.CivicAddress";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "CivicAddress";
     };
@@ -144,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeoboundingBox>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeoboundingBox";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeoboundingBox";
     };
@@ -151,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geocircle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geocircle";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geocircle";
     };
@@ -158,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geocoordinate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geocoordinate";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geocoordinate";
     };
@@ -165,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeocoordinateSatelliteData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeocoordinateSatelliteData";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeocoordinateSatelliteData";
     };
@@ -172,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geolocator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geolocator";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geolocator";
     };
@@ -179,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geopath>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geopath";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geopath";
     };
@@ -186,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geopoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geopoint";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geopoint";
     };
@@ -193,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geoposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geoposition";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geoposition";
     };
@@ -200,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Geovisit>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.Geovisit";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "Geovisit";
     };
@@ -207,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeovisitMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeovisitMonitor";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeovisitMonitor";
     };
@@ -214,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeovisitStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeovisitStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeovisitStateChangedEventArgs";
     };
@@ -221,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::GeovisitTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.GeovisitTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "GeovisitTriggerDetails";
     };
@@ -228,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::PositionChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.PositionChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "PositionChangedEventArgs";
     };
@@ -235,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::StatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.StatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "StatusChangedEventArgs";
     };
@@ -242,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::VenueData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.VenueData";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "VenueData";
     };
@@ -249,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::IGeoshape>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.IGeoshape";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "IGeoshape";
     };
@@ -256,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::BasicGeoposition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.BasicGeoposition";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation";
         static constexpr const char* type_name = "BasicGeoposition";
     };

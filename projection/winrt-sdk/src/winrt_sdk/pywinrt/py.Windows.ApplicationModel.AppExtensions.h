@@ -53,6 +53,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtension>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtension";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtension";
     };
@@ -60,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionCatalog";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionCatalog";
     };
@@ -67,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageInstalledEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionPackageInstalledEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionPackageInstalledEventArgs";
     };
@@ -74,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageStatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionPackageStatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionPackageStatusChangedEventArgs";
     };
@@ -81,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUninstallingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionPackageUninstallingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionPackageUninstallingEventArgs";
     };
@@ -88,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionPackageUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionPackageUpdatedEventArgs";
     };
@@ -95,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::AppExtensions::AppExtensionPackageUpdatingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appextensions.AppExtensionPackageUpdatingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appextensions";
         static constexpr const char* type_name = "AppExtensionPackageUpdatingEventArgs";
     };

@@ -72,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipFirmwareUpdateStatus";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipFirmwareUpdateStatus";
     };
@@ -79,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipMessageClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipMessageClass";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipMessageClass";
     };
@@ -86,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceSubtype>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.XusbDeviceSubtype";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "XusbDeviceSubtype";
     };
@@ -93,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::XusbDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.XusbDeviceType";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "XusbDeviceType";
     };
@@ -100,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GameControllerFactoryManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GameControllerFactoryManager";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GameControllerFactoryManager";
     };
@@ -107,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipFirmwareUpdateResult";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipFirmwareUpdateResult";
     };
@@ -114,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipGameControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipGameControllerProvider";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipGameControllerProvider";
     };
@@ -121,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::HidGameControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.HidGameControllerProvider";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "HidGameControllerProvider";
     };
@@ -128,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::XusbGameControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.XusbGameControllerProvider";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "XusbGameControllerProvider";
     };
@@ -135,6 +144,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::ICustomGameControllerFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.ICustomGameControllerFactory";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "ICustomGameControllerFactory";
     };
@@ -142,6 +152,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerInputSink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.IGameControllerInputSink";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "IGameControllerInputSink";
     };
@@ -149,6 +160,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::IGameControllerProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.IGameControllerProvider";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "IGameControllerProvider";
     };
@@ -156,6 +168,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::IGipGameControllerInputSink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.IGipGameControllerInputSink";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "IGipGameControllerInputSink";
     };
@@ -163,6 +176,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::IHidGameControllerInputSink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.IHidGameControllerInputSink";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "IHidGameControllerInputSink";
     };
@@ -170,6 +184,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::IXusbGameControllerInputSink>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.IXusbGameControllerInputSink";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "IXusbGameControllerInputSink";
     };
@@ -177,6 +192,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GameControllerVersionInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GameControllerVersionInfo";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GameControllerVersionInfo";
     };
@@ -184,6 +200,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Gaming::Input::Custom::GipFirmwareUpdateProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.gaming.input.custom.GipFirmwareUpdateProgress";
         static constexpr const char* module_name = "winrt.windows.gaming.input.custom";
         static constexpr const char* type_name = "GipFirmwareUpdateProgress";
     };

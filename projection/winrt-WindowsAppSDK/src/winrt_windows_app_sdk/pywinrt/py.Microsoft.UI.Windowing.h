@@ -87,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowPresenterKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindowPresenterKind";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowPresenterKind";
     };
@@ -94,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::CompactOverlaySize>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.CompactOverlaySize";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "CompactOverlaySize";
     };
@@ -101,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::DisplayAreaFallback>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.DisplayAreaFallback";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "DisplayAreaFallback";
     };
@@ -108,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::DisplayAreaWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.DisplayAreaWatcherStatus";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "DisplayAreaWatcherStatus";
     };
@@ -115,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::IconShowOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.IconShowOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "IconShowOptions";
     };
@@ -122,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::OverlappedPresenterState>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.OverlappedPresenterState";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "OverlappedPresenterState";
     };
@@ -129,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::TitleBarHeightOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.TitleBarHeightOption";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "TitleBarHeightOption";
     };
@@ -136,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindow";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindow";
     };
@@ -143,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindowChangedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowChangedEventArgs";
     };
@@ -150,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowClosingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindowClosingEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowClosingEventArgs";
     };
@@ -157,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindowPresenter";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowPresenter";
     };
@@ -164,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::AppWindowTitleBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.AppWindowTitleBar";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "AppWindowTitleBar";
     };
@@ -171,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.CompactOverlayPresenter";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "CompactOverlayPresenter";
     };
@@ -178,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::DisplayArea>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.DisplayArea";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "DisplayArea";
     };
@@ -185,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::DisplayAreaWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.DisplayAreaWatcher";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "DisplayAreaWatcher";
     };
@@ -192,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::FullScreenPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.FullScreenPresenter";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "FullScreenPresenter";
     };
@@ -199,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Windowing::OverlappedPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.windowing.OverlappedPresenter";
         static constexpr const char* module_name = "winrt.microsoft.ui.windowing";
         static constexpr const char* type_name = "OverlappedPresenter";
     };

@@ -182,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsEdgeLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SettingsEdgeLocation";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SettingsEdgeLocation";
     };
@@ -189,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SupportedWebAccountActions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SupportedWebAccountActions";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SupportedWebAccountActions";
     };
@@ -196,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountAction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.WebAccountAction";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "WebAccountAction";
     };
@@ -203,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPane>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.AccountsSettingsPane";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "AccountsSettingsPane";
     };
@@ -210,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneCommandsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "AccountsSettingsPaneCommandsRequestedEventArgs";
     };
@@ -217,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::AccountsSettingsPaneEventDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.AccountsSettingsPaneEventDeferral";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "AccountsSettingsPaneEventDeferral";
     };
@@ -224,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::CredentialCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.CredentialCommand";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "CredentialCommand";
     };
@@ -231,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SettingsCommand";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SettingsCommand";
     };
@@ -238,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPane>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SettingsPane";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SettingsPane";
     };
@@ -245,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SettingsPaneCommandsRequest";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SettingsPaneCommandsRequest";
     };
@@ -252,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::SettingsPaneCommandsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.SettingsPaneCommandsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "SettingsPaneCommandsRequestedEventArgs";
     };
@@ -259,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.WebAccountCommand";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "WebAccountCommand";
     };
@@ -266,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountInvokedArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.WebAccountInvokedArgs";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "WebAccountInvokedArgs";
     };
@@ -273,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ApplicationSettings::WebAccountProviderCommand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.applicationsettings.WebAccountProviderCommand";
         static constexpr const char* module_name = "winrt.windows.ui.applicationsettings";
         static constexpr const char* type_name = "WebAccountProviderCommand";
     };

@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonErrorStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonErrorStatus";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonErrorStatus";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonValueType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonValueType";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonValueType";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonArray>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonArray";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonArray";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonError";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonError";
     };
@@ -70,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonObject";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonObject";
     };
@@ -77,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::JsonValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.JsonValue";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "JsonValue";
     };
@@ -84,6 +90,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Data::Json::IJsonValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.data.json.IJsonValue";
         static constexpr const char* module_name = "winrt.windows.data.json";
         static constexpr const char* type_name = "IJsonValue";
     };

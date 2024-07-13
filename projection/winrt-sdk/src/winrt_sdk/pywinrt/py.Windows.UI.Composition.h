@@ -250,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationControllerProgressBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationControllerProgressBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationControllerProgressBehavior";
     };
@@ -257,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationDelayBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationDelayBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationDelayBehavior";
     };
@@ -264,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationDirection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationDirection";
     };
@@ -271,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationIterationBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationIterationBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationIterationBehavior";
     };
@@ -278,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationPropertyAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationPropertyAccessMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationPropertyAccessMode";
     };
@@ -285,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationStopBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationStopBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationStopBehavior";
     };
@@ -292,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBackfaceVisibility>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBackfaceVisibility";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBackfaceVisibility";
     };
@@ -299,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBatchTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBatchTypes";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBatchTypes";
     };
@@ -306,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBitmapInterpolationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBitmapInterpolationMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBitmapInterpolationMode";
     };
@@ -313,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBorderMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBorderMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBorderMode";
     };
@@ -320,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionColorSpace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionColorSpace";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionColorSpace";
     };
@@ -327,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionCompositeMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionCompositeMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionCompositeMode";
     };
@@ -334,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionDropShadowSourcePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionDropShadowSourcePolicy";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionDropShadowSourcePolicy";
     };
@@ -341,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEasingFunctionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEasingFunctionMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEasingFunctionMode";
     };
@@ -348,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEffectFactoryLoadStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEffectFactoryLoadStatus";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEffectFactoryLoadStatus";
     };
@@ -355,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGetValueStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGetValueStatus";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGetValueStatus";
     };
@@ -362,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGradientExtendMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGradientExtendMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGradientExtendMode";
     };
@@ -369,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionMappingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionMappingMode";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionMappingMode";
     };
@@ -376,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStretch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionStretch";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionStretch";
     };
@@ -383,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStrokeCap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionStrokeCap";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionStrokeCap";
     };
@@ -390,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStrokeLineJoin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionStrokeLineJoin";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionStrokeLineJoin";
     };
@@ -397,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AmbientLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AmbientLight";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AmbientLight";
     };
@@ -404,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationController";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationController";
     };
@@ -411,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::AnimationPropertyInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.AnimationPropertyInfo";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "AnimationPropertyInfo";
     };
@@ -418,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BackEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BackEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BackEasingFunction";
     };
@@ -425,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BooleanKeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BooleanKeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BooleanKeyFrameAnimation";
     };
@@ -432,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BounceEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BounceEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BounceEasingFunction";
     };
@@ -439,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BounceScalarNaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BounceScalarNaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BounceScalarNaturalMotionAnimation";
     };
@@ -446,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BounceVector2NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BounceVector2NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BounceVector2NaturalMotionAnimation";
     };
@@ -453,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::BounceVector3NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.BounceVector3NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "BounceVector3NaturalMotionAnimation";
     };
@@ -460,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CircleEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CircleEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CircleEasingFunction";
     };
@@ -467,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ColorKeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ColorKeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ColorKeyFrameAnimation";
     };
@@ -474,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionAnimation";
     };
@@ -481,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionAnimationGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionAnimationGroup";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionAnimationGroup";
     };
@@ -488,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBackdropBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBackdropBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBackdropBrush";
     };
@@ -495,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBatchCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBatchCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBatchCompletedEventArgs";
     };
@@ -502,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionBrush";
     };
@@ -509,6 +546,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionCapabilities";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionCapabilities";
     };
@@ -516,6 +554,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionClip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionClip";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionClip";
     };
@@ -523,6 +562,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionColorBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionColorBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionColorBrush";
     };
@@ -530,6 +570,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionColorGradientStop>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionColorGradientStop";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionColorGradientStop";
     };
@@ -537,6 +578,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionColorGradientStopCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionColorGradientStopCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionColorGradientStopCollection";
     };
@@ -544,6 +586,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionCommitBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionCommitBatch";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionCommitBatch";
     };
@@ -551,6 +594,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionContainerShape>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionContainerShape";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionContainerShape";
     };
@@ -558,6 +602,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionDrawingSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionDrawingSurface";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionDrawingSurface";
     };
@@ -565,6 +610,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEasingFunction";
     };
@@ -572,6 +618,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEffectBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEffectBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEffectBrush";
     };
@@ -579,6 +626,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEffectFactory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEffectFactory";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEffectFactory";
     };
@@ -586,6 +634,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEffectSourceParameter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEffectSourceParameter";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEffectSourceParameter";
     };
@@ -593,6 +642,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionEllipseGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionEllipseGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionEllipseGeometry";
     };
@@ -600,6 +650,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGeometricClip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGeometricClip";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGeometricClip";
     };
@@ -607,6 +658,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGeometry";
     };
@@ -614,6 +666,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGradientBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGradientBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGradientBrush";
     };
@@ -621,6 +674,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionGraphicsDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionGraphicsDevice";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionGraphicsDevice";
     };
@@ -628,6 +682,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionLight";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionLight";
     };
@@ -635,6 +690,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionLineGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionLineGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionLineGeometry";
     };
@@ -642,6 +698,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionLinearGradientBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionLinearGradientBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionLinearGradientBrush";
     };
@@ -649,6 +706,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionMaskBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionMaskBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionMaskBrush";
     };
@@ -656,6 +714,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionMipmapSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionMipmapSurface";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionMipmapSurface";
     };
@@ -663,6 +722,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionNineGridBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionNineGridBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionNineGridBrush";
     };
@@ -670,6 +730,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionObject";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionObject";
     };
@@ -677,6 +738,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionPath>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionPath";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionPath";
     };
@@ -684,6 +746,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionPathGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionPathGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionPathGeometry";
     };
@@ -691,6 +754,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionProjectedShadow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionProjectedShadow";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionProjectedShadow";
     };
@@ -698,6 +762,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCaster>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionProjectedShadowCaster";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionProjectedShadowCaster";
     };
@@ -705,6 +770,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowCasterCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionProjectedShadowCasterCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionProjectedShadowCasterCollection";
     };
@@ -712,6 +778,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiver>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionProjectedShadowReceiver";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionProjectedShadowReceiver";
     };
@@ -719,6 +786,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionProjectedShadowReceiverUnorderedCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionProjectedShadowReceiverUnorderedCollection";
     };
@@ -726,6 +794,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionPropertySet>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionPropertySet";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionPropertySet";
     };
@@ -733,6 +802,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionRadialGradientBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionRadialGradientBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionRadialGradientBrush";
     };
@@ -740,6 +810,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionRectangleGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionRectangleGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionRectangleGeometry";
     };
@@ -747,6 +818,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionRoundedRectangleGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionRoundedRectangleGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionRoundedRectangleGeometry";
     };
@@ -754,6 +826,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionScopedBatch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionScopedBatch";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionScopedBatch";
     };
@@ -761,6 +834,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionShadow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionShadow";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionShadow";
     };
@@ -768,6 +842,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionShape>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionShape";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionShape";
     };
@@ -775,6 +850,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionShapeCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionShapeCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionShapeCollection";
     };
@@ -782,6 +858,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionSpriteShape>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionSpriteShape";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionSpriteShape";
     };
@@ -789,6 +866,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionStrokeDashArray>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionStrokeDashArray";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionStrokeDashArray";
     };
@@ -796,6 +874,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionSurfaceBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionSurfaceBrush";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionSurfaceBrush";
     };
@@ -803,6 +882,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionTarget";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionTarget";
     };
@@ -810,6 +890,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionTexture>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionTexture";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionTexture";
     };
@@ -817,6 +898,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionTransform";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionTransform";
     };
@@ -824,6 +906,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionViewBox>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionViewBox";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionViewBox";
     };
@@ -831,6 +914,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionVirtualDrawingSurface";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionVirtualDrawingSurface";
     };
@@ -838,6 +922,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CompositionVisualSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CompositionVisualSurface";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CompositionVisualSurface";
     };
@@ -845,6 +930,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Compositor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Compositor";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Compositor";
     };
@@ -852,6 +938,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ContainerVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ContainerVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ContainerVisual";
     };
@@ -859,6 +946,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::CubicBezierEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.CubicBezierEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "CubicBezierEasingFunction";
     };
@@ -866,6 +954,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::DelegatedInkTrailVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.DelegatedInkTrailVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "DelegatedInkTrailVisual";
     };
@@ -873,6 +962,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::DistantLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.DistantLight";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "DistantLight";
     };
@@ -880,6 +970,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::DropShadow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.DropShadow";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "DropShadow";
     };
@@ -887,6 +978,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ElasticEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ElasticEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ElasticEasingFunction";
     };
@@ -894,6 +986,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ExponentialEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ExponentialEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ExponentialEasingFunction";
     };
@@ -901,6 +994,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ExpressionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ExpressionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ExpressionAnimation";
     };
@@ -908,6 +1002,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ImplicitAnimationCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ImplicitAnimationCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ImplicitAnimationCollection";
     };
@@ -915,6 +1010,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::InitialValueExpressionCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.InitialValueExpressionCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "InitialValueExpressionCollection";
     };
@@ -922,6 +1018,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::InsetClip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.InsetClip";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "InsetClip";
     };
@@ -929,6 +1026,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::KeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.KeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "KeyFrameAnimation";
     };
@@ -936,6 +1034,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::LayerVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.LayerVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "LayerVisual";
     };
@@ -943,6 +1042,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::LinearEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.LinearEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "LinearEasingFunction";
     };
@@ -950,6 +1050,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "NaturalMotionAnimation";
     };
@@ -957,6 +1058,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::PathKeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.PathKeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "PathKeyFrameAnimation";
     };
@@ -964,6 +1066,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::PointLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.PointLight";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "PointLight";
     };
@@ -971,6 +1074,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::PowerEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.PowerEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "PowerEasingFunction";
     };
@@ -978,6 +1082,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::QuaternionKeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.QuaternionKeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "QuaternionKeyFrameAnimation";
     };
@@ -985,6 +1090,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::RectangleClip>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.RectangleClip";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "RectangleClip";
     };
@@ -992,6 +1098,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::RedirectVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.RedirectVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "RedirectVisual";
     };
@@ -999,6 +1106,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::RenderingDeviceReplacedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.RenderingDeviceReplacedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "RenderingDeviceReplacedEventArgs";
     };
@@ -1006,6 +1114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ScalarKeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ScalarKeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ScalarKeyFrameAnimation";
     };
@@ -1013,6 +1122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ScalarNaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ScalarNaturalMotionAnimation";
     };
@@ -1020,6 +1130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ShapeVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ShapeVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ShapeVisual";
     };
@@ -1027,6 +1138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SineEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SineEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SineEasingFunction";
     };
@@ -1034,6 +1146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SpotLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SpotLight";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SpotLight";
     };
@@ -1041,6 +1154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SpringScalarNaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SpringScalarNaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SpringScalarNaturalMotionAnimation";
     };
@@ -1048,6 +1162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SpringVector2NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SpringVector2NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SpringVector2NaturalMotionAnimation";
     };
@@ -1055,6 +1170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SpringVector3NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SpringVector3NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SpringVector3NaturalMotionAnimation";
     };
@@ -1062,6 +1178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::SpriteVisual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.SpriteVisual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "SpriteVisual";
     };
@@ -1069,6 +1186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::StepEasingFunction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.StepEasingFunction";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "StepEasingFunction";
     };
@@ -1076,6 +1194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Vector2KeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Vector2KeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Vector2KeyFrameAnimation";
     };
@@ -1083,6 +1202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Vector2NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Vector2NaturalMotionAnimation";
     };
@@ -1090,6 +1210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Vector3KeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Vector3KeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Vector3KeyFrameAnimation";
     };
@@ -1097,6 +1218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Vector3NaturalMotionAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Vector3NaturalMotionAnimation";
     };
@@ -1104,6 +1226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Vector4KeyFrameAnimation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Vector4KeyFrameAnimation";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Vector4KeyFrameAnimation";
     };
@@ -1111,6 +1234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::Visual>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.Visual";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "Visual";
     };
@@ -1118,6 +1242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::VisualCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.VisualCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "VisualCollection";
     };
@@ -1125,6 +1250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::VisualUnorderedCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.VisualUnorderedCollection";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "VisualUnorderedCollection";
     };
@@ -1132,6 +1258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::IAnimationObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.IAnimationObject";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "IAnimationObject";
     };
@@ -1139,6 +1266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ICompositionAnimationBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ICompositionAnimationBase";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ICompositionAnimationBase";
     };
@@ -1146,6 +1274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ICompositionSupportsSystemBackdrop>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ICompositionSupportsSystemBackdrop";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ICompositionSupportsSystemBackdrop";
     };
@@ -1153,6 +1282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ICompositionSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ICompositionSurface";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ICompositionSurface";
     };
@@ -1160,6 +1290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::ICompositionSurfaceFacade>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.ICompositionSurfaceFacade";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "ICompositionSurfaceFacade";
     };
@@ -1167,6 +1298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::IVisualElement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.IVisualElement";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "IVisualElement";
     };
@@ -1174,6 +1306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::IVisualElement2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.IVisualElement2";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "IVisualElement2";
     };
@@ -1181,6 +1314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Composition::InkTrailPoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.composition.InkTrailPoint";
         static constexpr const char* module_name = "winrt.windows.ui.composition";
         static constexpr const char* type_name = "InkTrailPoint";
     };

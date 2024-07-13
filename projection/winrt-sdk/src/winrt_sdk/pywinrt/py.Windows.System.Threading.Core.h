@@ -79,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::Core::PreallocatedWorkItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.PreallocatedWorkItem";
         static constexpr const char* module_name = "winrt.windows.system.threading.core";
         static constexpr const char* type_name = "PreallocatedWorkItem";
     };
@@ -86,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::System::Threading::Core::SignalNotifier>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.system.threading.core.SignalNotifier";
         static constexpr const char* module_name = "winrt.windows.system.threading.core";
         static constexpr const char* type_name = "SignalNotifier";
     };

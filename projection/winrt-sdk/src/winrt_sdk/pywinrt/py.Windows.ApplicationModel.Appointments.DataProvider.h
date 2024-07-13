@@ -55,6 +55,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarCancelMeetingRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarCancelMeetingRequest";
     };
@@ -62,6 +63,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCancelMeetingRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarCancelMeetingRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarCancelMeetingRequestEventArgs";
     };
@@ -69,6 +71,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarCreateOrUpdateAppointmentRequest";
     };
@@ -76,6 +79,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarCreateOrUpdateAppointmentRequestEventArgs";
     };
@@ -83,6 +87,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarForwardMeetingRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarForwardMeetingRequest";
     };
@@ -90,6 +95,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarForwardMeetingRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarForwardMeetingRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarForwardMeetingRequestEventArgs";
     };
@@ -97,6 +103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarProposeNewTimeForMeetingRequest";
     };
@@ -104,6 +111,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarProposeNewTimeForMeetingRequestEventArgs";
     };
@@ -111,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarSyncManagerSyncRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarSyncManagerSyncRequest";
     };
@@ -118,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarSyncManagerSyncRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarSyncManagerSyncRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarSyncManagerSyncRequestEventArgs";
     };
@@ -125,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarUpdateMeetingResponseRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarUpdateMeetingResponseRequest";
     };
@@ -132,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentCalendarUpdateMeetingResponseRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentCalendarUpdateMeetingResponseRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentCalendarUpdateMeetingResponseRequestEventArgs";
     };
@@ -139,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentDataProviderConnection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentDataProviderConnection";
     };
@@ -146,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Appointments::DataProvider::AppointmentDataProviderTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.appointments.dataprovider.AppointmentDataProviderTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.appointments.dataprovider";
         static constexpr const char* type_name = "AppointmentDataProviderTriggerDetails";
     };

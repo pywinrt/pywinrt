@@ -61,6 +61,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasDisallowConvenienceLogonResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasDisallowConvenienceLogonResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasDisallowConvenienceLogonResult";
     };
@@ -68,6 +69,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasEncryptionProviderType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasEncryptionProviderType";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasEncryptionProviderType";
     };
@@ -75,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMaxInactivityTimeLockResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasMaxInactivityTimeLockResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasMaxInactivityTimeLockResult";
     };
@@ -82,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMaxPasswordFailedAttemptsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasMaxPasswordFailedAttemptsResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasMaxPasswordFailedAttemptsResult";
     };
@@ -89,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordComplexCharactersResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasMinPasswordComplexCharactersResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasMinPasswordComplexCharactersResult";
     };
@@ -96,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasMinPasswordLengthResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasMinPasswordLengthResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasMinPasswordLengthResult";
     };
@@ -103,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordExpirationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasPasswordExpirationResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasPasswordExpirationResult";
     };
@@ -110,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasPasswordHistoryResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasPasswordHistoryResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasPasswordHistoryResult";
     };
@@ -117,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasRequireEncryptionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasRequireEncryptionResult";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasRequireEncryptionResult";
     };
@@ -124,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientDeviceInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasClientDeviceInformation";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasClientDeviceInformation";
     };
@@ -131,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasClientSecurityPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasClientSecurityPolicy";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasClientSecurityPolicy";
     };
@@ -138,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::ExchangeActiveSyncProvisioning::EasComplianceResults>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.exchangeactivesyncprovisioning.EasComplianceResults";
         static constexpr const char* module_name = "winrt.windows.security.exchangeactivesyncprovisioning";
         static constexpr const char* type_name = "EasComplianceResults";
     };

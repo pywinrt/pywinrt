@@ -77,6 +77,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalityRelation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.CausalityRelation";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "CausalityRelation";
     };
@@ -84,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalitySource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.CausalitySource";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "CausalitySource";
     };
@@ -91,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalitySynchronousWork>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.CausalitySynchronousWork";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "CausalitySynchronousWork";
     };
@@ -98,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::CausalityTraceLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.CausalityTraceLevel";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "CausalityTraceLevel";
     };
@@ -105,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ErrorOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ErrorOptions";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "ErrorOptions";
     };
@@ -112,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingFieldFormat";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingFieldFormat";
     };
@@ -119,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingLevel";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingLevel";
     };
@@ -126,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingOpcode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingOpcode";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingOpcode";
     };
@@ -133,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::AsyncCausalityTracer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.AsyncCausalityTracer";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "AsyncCausalityTracer";
     };
@@ -140,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ErrorDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ErrorDetails";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "ErrorDetails";
     };
@@ -147,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::FileLoggingSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.FileLoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "FileLoggingSession";
     };
@@ -154,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LogFileGeneratedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LogFileGeneratedEventArgs";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LogFileGeneratedEventArgs";
     };
@@ -161,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingActivity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingActivity";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingActivity";
     };
@@ -168,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingChannel";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingChannel";
     };
@@ -175,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingChannelOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingChannelOptions";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingChannelOptions";
     };
@@ -182,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingFields>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingFields";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingFields";
     };
@@ -189,6 +205,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingOptions";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingOptions";
     };
@@ -196,6 +213,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::LoggingSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.LoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "LoggingSession";
     };
@@ -203,6 +221,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::RuntimeBrokerErrorSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.RuntimeBrokerErrorSettings";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "RuntimeBrokerErrorSettings";
     };
@@ -210,6 +229,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::TracingStatusChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.TracingStatusChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "TracingStatusChangedEventArgs";
     };
@@ -217,6 +237,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::IErrorReportingSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.IErrorReportingSettings";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "IErrorReportingSettings";
     };
@@ -224,6 +245,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::IFileLoggingSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.IFileLoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "IFileLoggingSession";
     };
@@ -231,6 +253,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingChannel";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "ILoggingChannel";
     };
@@ -238,6 +261,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingSession";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "ILoggingSession";
     };
@@ -245,6 +269,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Foundation::Diagnostics::ILoggingTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.foundation.diagnostics.ILoggingTarget";
         static constexpr const char* module_name = "winrt.windows.foundation.diagnostics";
         static constexpr const char* type_name = "ILoggingTarget";
     };

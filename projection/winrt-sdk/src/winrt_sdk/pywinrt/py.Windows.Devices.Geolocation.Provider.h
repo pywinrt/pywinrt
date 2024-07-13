@@ -40,6 +40,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Provider::LocationOverrideStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.provider.LocationOverrideStatus";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.provider";
         static constexpr const char* type_name = "LocationOverrideStatus";
     };
@@ -47,6 +48,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Geolocation::Provider::GeolocationProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.geolocation.provider.GeolocationProvider";
         static constexpr const char* module_name = "winrt.windows.devices.geolocation.provider";
         static constexpr const char* type_name = "GeolocationProvider";
     };

@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockApplicationHost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockApplicationHost";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockApplicationHost";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenBadge>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenBadge";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockScreenBadge";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockScreenInfo";
     };
@@ -67,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenUnlockingDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockScreenUnlockingDeferral";
     };
@@ -74,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::LockScreen::LockScreenUnlockingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.lockscreen.LockScreenUnlockingEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.lockscreen";
         static constexpr const char* type_name = "LockScreenUnlockingEventArgs";
     };

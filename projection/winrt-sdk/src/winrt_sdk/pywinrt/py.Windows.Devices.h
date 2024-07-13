@@ -54,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::LowLevelDevicesAggregateProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.LowLevelDevicesAggregateProvider";
         static constexpr const char* module_name = "winrt.windows.devices";
         static constexpr const char* type_name = "LowLevelDevicesAggregateProvider";
     };
@@ -61,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::LowLevelDevicesController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.LowLevelDevicesController";
         static constexpr const char* module_name = "winrt.windows.devices";
         static constexpr const char* type_name = "LowLevelDevicesController";
     };
@@ -68,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::ILowLevelDevicesAggregateProvider>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.ILowLevelDevicesAggregateProvider";
         static constexpr const char* module_name = "winrt.windows.devices";
         static constexpr const char* type_name = "ILowLevelDevicesAggregateProvider";
     };

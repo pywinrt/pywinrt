@@ -60,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationType";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationType";
     };
@@ -67,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationChannel";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannel";
     };
@@ -74,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationChannelManager";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannelManager";
     };
@@ -81,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationChannelManagerForUser";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannelManagerForUser";
     };
@@ -88,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationChannelsRevokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationChannelsRevokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationChannelsRevokedEventArgs";
     };
@@ -95,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::PushNotificationReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.PushNotificationReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "PushNotificationReceivedEventArgs";
     };
@@ -102,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::PushNotifications::RawNotification>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.pushnotifications.RawNotification";
         static constexpr const char* module_name = "winrt.windows.networking.pushnotifications";
         static constexpr const char* type_name = "RawNotification";
     };

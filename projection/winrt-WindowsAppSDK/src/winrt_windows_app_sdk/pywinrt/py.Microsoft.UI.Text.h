@@ -129,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::CaretType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.CaretType";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "CaretType";
     };
@@ -136,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::FindOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.FindOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "FindOptions";
     };
@@ -143,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::FormatEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.FormatEffect";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "FormatEffect";
     };
@@ -150,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::HorizontalCharacterAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.HorizontalCharacterAlignment";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "HorizontalCharacterAlignment";
     };
@@ -157,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::LetterCase>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.LetterCase";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "LetterCase";
     };
@@ -164,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::LineSpacingRule>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.LineSpacingRule";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "LineSpacingRule";
     };
@@ -171,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::LinkType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.LinkType";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "LinkType";
     };
@@ -178,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::MarkerAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.MarkerAlignment";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "MarkerAlignment";
     };
@@ -185,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::MarkerStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.MarkerStyle";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "MarkerStyle";
     };
@@ -192,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::MarkerType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.MarkerType";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "MarkerType";
     };
@@ -199,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ParagraphAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ParagraphAlignment";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ParagraphAlignment";
     };
@@ -206,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ParagraphStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ParagraphStyle";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ParagraphStyle";
     };
@@ -213,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::PointOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.PointOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "PointOptions";
     };
@@ -220,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::RangeGravity>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.RangeGravity";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "RangeGravity";
     };
@@ -227,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::RichEditMathMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.RichEditMathMode";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "RichEditMathMode";
     };
@@ -234,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::SelectionOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.SelectionOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "SelectionOptions";
     };
@@ -241,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::SelectionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.SelectionType";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "SelectionType";
     };
@@ -248,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TabAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TabAlignment";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TabAlignment";
     };
@@ -255,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TabLeader>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TabLeader";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TabLeader";
     };
@@ -262,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TextGetOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TextGetOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TextGetOptions";
     };
@@ -269,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TextRangeUnit>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TextRangeUnit";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TextRangeUnit";
     };
@@ -276,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TextScript>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TextScript";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TextScript";
     };
@@ -283,6 +305,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TextSetOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TextSetOptions";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TextSetOptions";
     };
@@ -290,6 +313,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::UnderlineType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.UnderlineType";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "UnderlineType";
     };
@@ -297,6 +321,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::VerticalCharacterAlignment>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.VerticalCharacterAlignment";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "VerticalCharacterAlignment";
     };
@@ -304,6 +329,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::FontWeights>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.FontWeights";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "FontWeights";
     };
@@ -311,6 +337,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::RichEditTextDocument>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.RichEditTextDocument";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "RichEditTextDocument";
     };
@@ -318,6 +345,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::RichEditTextRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.RichEditTextRange";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "RichEditTextRange";
     };
@@ -325,6 +353,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::TextConstants>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.TextConstants";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "TextConstants";
     };
@@ -332,6 +361,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextCharacterFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextCharacterFormat";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ITextCharacterFormat";
     };
@@ -339,6 +369,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextParagraphFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextParagraphFormat";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ITextParagraphFormat";
     };
@@ -346,6 +377,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextRange>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextRange";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ITextRange";
     };
@@ -353,6 +385,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Text::ITextSelection>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.text.ITextSelection";
         static constexpr const char* module_name = "winrt.microsoft.ui.text";
         static constexpr const char* type_name = "ITextSelection";
     };

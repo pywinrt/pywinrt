@@ -296,6 +296,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AcrylicBackgroundSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AcrylicBackgroundSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AcrylicBackgroundSource";
     };
@@ -303,6 +304,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AlignmentX>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AlignmentX";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AlignmentX";
     };
@@ -310,6 +312,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AlignmentY>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AlignmentY";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AlignmentY";
     };
@@ -317,6 +320,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AudioCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AudioCategory";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AudioCategory";
     };
@@ -324,6 +328,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AudioDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AudioDeviceType";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AudioDeviceType";
     };
@@ -331,6 +336,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::BrushMappingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.BrushMappingMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "BrushMappingMode";
     };
@@ -338,6 +344,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ColorInterpolationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ColorInterpolationMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ColorInterpolationMode";
     };
@@ -345,6 +352,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ElementCompositeMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ElementCompositeMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ElementCompositeMode";
     };
@@ -352,6 +360,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::FastPlayFallbackBehaviour>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.FastPlayFallbackBehaviour";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "FastPlayFallbackBehaviour";
     };
@@ -359,6 +368,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::FillRule>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.FillRule";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "FillRule";
     };
@@ -366,6 +376,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GradientSpreadMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GradientSpreadMethod";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GradientSpreadMethod";
     };
@@ -373,6 +384,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LoadedImageSourceLoadStatus";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LoadedImageSourceLoadStatus";
     };
@@ -380,6 +392,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MediaCanPlayResponse>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.MediaCanPlayResponse";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "MediaCanPlayResponse";
     };
@@ -387,6 +400,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MediaElementState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.MediaElementState";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "MediaElementState";
     };
@@ -394,6 +408,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PenLineCap>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PenLineCap";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PenLineCap";
     };
@@ -401,6 +416,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PenLineJoin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PenLineJoin";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PenLineJoin";
     };
@@ -408,6 +424,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RevealBrushState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RevealBrushState";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RevealBrushState";
     };
@@ -415,6 +432,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stereo3DVideoPackingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Stereo3DVideoPackingMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Stereo3DVideoPackingMode";
     };
@@ -422,6 +440,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stereo3DVideoRenderMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Stereo3DVideoRenderMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Stereo3DVideoRenderMode";
     };
@@ -429,6 +448,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Stretch>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Stretch";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Stretch";
     };
@@ -436,6 +456,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::StyleSimulations>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.StyleSimulations";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "StyleSimulations";
     };
@@ -443,6 +464,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::SweepDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.SweepDirection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "SweepDirection";
     };
@@ -450,6 +472,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::AcrylicBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.AcrylicBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "AcrylicBrush";
     };
@@ -457,6 +480,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ArcSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ArcSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ArcSegment";
     };
@@ -464,6 +488,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::BezierSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.BezierSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "BezierSegment";
     };
@@ -471,6 +496,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::BitmapCache>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.BitmapCache";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "BitmapCache";
     };
@@ -478,6 +504,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Brush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Brush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Brush";
     };
@@ -485,6 +512,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::BrushCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.BrushCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "BrushCollection";
     };
@@ -492,6 +520,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::CacheMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.CacheMode";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "CacheMode";
     };
@@ -499,6 +528,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::CompositeTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.CompositeTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "CompositeTransform";
     };
@@ -506,6 +536,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::CompositionTarget>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.CompositionTarget";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "CompositionTarget";
     };
@@ -513,6 +544,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::DoubleCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.DoubleCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "DoubleCollection";
     };
@@ -520,6 +552,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::EllipseGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.EllipseGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "EllipseGeometry";
     };
@@ -527,6 +560,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::FontFamily>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.FontFamily";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "FontFamily";
     };
@@ -534,6 +568,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GeneralTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GeneralTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GeneralTransform";
     };
@@ -541,6 +576,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Geometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Geometry";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Geometry";
     };
@@ -548,6 +584,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GeometryCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GeometryCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GeometryCollection";
     };
@@ -555,6 +592,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GeometryGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GeometryGroup";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GeometryGroup";
     };
@@ -562,6 +600,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GradientBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GradientBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GradientBrush";
     };
@@ -569,6 +608,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GradientStop>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GradientStop";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GradientStop";
     };
@@ -576,6 +616,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::GradientStopCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.GradientStopCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "GradientStopCollection";
     };
@@ -583,6 +624,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ImageBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ImageBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ImageBrush";
     };
@@ -590,6 +632,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ImageSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ImageSource";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ImageSource";
     };
@@ -597,6 +640,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LineGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LineGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LineGeometry";
     };
@@ -604,6 +648,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LineSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LineSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LineSegment";
     };
@@ -611,6 +656,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LinearGradientBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LinearGradientBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LinearGradientBrush";
     };
@@ -618,6 +664,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSourceLoadCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LoadedImageSourceLoadCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LoadedImageSourceLoadCompletedEventArgs";
     };
@@ -625,6 +672,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::LoadedImageSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.LoadedImageSurface";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "LoadedImageSurface";
     };
@@ -632,6 +680,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Matrix3DProjection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Matrix3DProjection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Matrix3DProjection";
     };
@@ -639,6 +688,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MatrixHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.MatrixHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "MatrixHelper";
     };
@@ -646,6 +696,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MatrixTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.MatrixTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "MatrixTransform";
     };
@@ -653,6 +704,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::MediaTransportControlsThumbnailRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.MediaTransportControlsThumbnailRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "MediaTransportControlsThumbnailRequestedEventArgs";
     };
@@ -660,6 +712,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PartialMediaFailureDetectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PartialMediaFailureDetectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PartialMediaFailureDetectedEventArgs";
     };
@@ -667,6 +720,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PathFigure>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PathFigure";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PathFigure";
     };
@@ -674,6 +728,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PathFigureCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PathFigureCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PathFigureCollection";
     };
@@ -681,6 +736,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PathGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PathGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PathGeometry";
     };
@@ -688,6 +744,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PathSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PathSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PathSegment";
     };
@@ -695,6 +752,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PathSegmentCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PathSegmentCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PathSegmentCollection";
     };
@@ -702,6 +760,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PlaneProjection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PlaneProjection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PlaneProjection";
     };
@@ -709,6 +768,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PointCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PointCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PointCollection";
     };
@@ -716,6 +776,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PolyBezierSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PolyBezierSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PolyBezierSegment";
     };
@@ -723,6 +784,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PolyLineSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PolyLineSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PolyLineSegment";
     };
@@ -730,6 +792,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::PolyQuadraticBezierSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.PolyQuadraticBezierSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "PolyQuadraticBezierSegment";
     };
@@ -737,6 +800,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Projection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Projection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Projection";
     };
@@ -744,6 +808,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::QuadraticBezierSegment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.QuadraticBezierSegment";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "QuadraticBezierSegment";
     };
@@ -751,6 +816,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RateChangedRoutedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RateChangedRoutedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RateChangedRoutedEventArgs";
     };
@@ -758,6 +824,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RectangleGeometry>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RectangleGeometry";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RectangleGeometry";
     };
@@ -765,6 +832,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RenderedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RenderedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RenderedEventArgs";
     };
@@ -772,6 +840,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RenderingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RenderingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RenderingEventArgs";
     };
@@ -779,6 +848,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RevealBackgroundBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RevealBackgroundBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RevealBackgroundBrush";
     };
@@ -786,6 +856,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RevealBorderBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RevealBorderBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RevealBorderBrush";
     };
@@ -793,6 +864,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RevealBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RevealBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RevealBrush";
     };
@@ -800,6 +872,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::RotateTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.RotateTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "RotateTransform";
     };
@@ -807,6 +880,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ScaleTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ScaleTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ScaleTransform";
     };
@@ -814,6 +888,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Shadow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Shadow";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Shadow";
     };
@@ -821,6 +896,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::SkewTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.SkewTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "SkewTransform";
     };
@@ -828,6 +904,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::SolidColorBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.SolidColorBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "SolidColorBrush";
     };
@@ -835,6 +912,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::ThemeShadow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.ThemeShadow";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "ThemeShadow";
     };
@@ -842,6 +920,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TileBrush>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TileBrush";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TileBrush";
     };
@@ -849,6 +928,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TimelineMarker";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TimelineMarker";
     };
@@ -856,6 +936,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TimelineMarkerCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TimelineMarkerCollection";
     };
@@ -863,6 +944,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TimelineMarkerRoutedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TimelineMarkerRoutedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TimelineMarkerRoutedEventArgs";
     };
@@ -870,6 +952,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Transform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Transform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Transform";
     };
@@ -877,6 +960,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TransformCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TransformCollection";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TransformCollection";
     };
@@ -884,6 +968,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TransformGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TransformGroup";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TransformGroup";
     };
@@ -891,6 +976,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::TranslateTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.TranslateTransform";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "TranslateTransform";
     };
@@ -898,6 +984,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::VisualTreeHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.VisualTreeHelper";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "VisualTreeHelper";
     };
@@ -905,6 +992,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::XamlCompositionBrushBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.XamlCompositionBrushBase";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "XamlCompositionBrushBase";
     };
@@ -912,6 +1000,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::XamlLight>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.XamlLight";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "XamlLight";
     };
@@ -919,6 +1008,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Xaml::Media::Matrix>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.xaml.media.Matrix";
         static constexpr const char* module_name = "winrt.windows.ui.xaml.media";
         static constexpr const char* type_name = "Matrix";
     };

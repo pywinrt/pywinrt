@@ -116,6 +116,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceAccessStatus";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceAccessStatus";
     };
@@ -123,6 +124,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceClass";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceClass";
     };
@@ -130,6 +132,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationKind";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationKind";
     };
@@ -137,6 +140,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingKinds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingKinds";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePairingKinds";
     };
@@ -144,6 +148,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingProtectionLevel";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePairingProtectionLevel";
     };
@@ -151,6 +156,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingResultStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingResultStatus";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePairingResultStatus";
     };
@@ -158,6 +164,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePickerDisplayStatusOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePickerDisplayStatusOptions";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePickerDisplayStatusOptions";
     };
@@ -165,6 +172,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResultStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceUnpairingResultStatus";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceUnpairingResultStatus";
     };
@@ -172,6 +180,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEventKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceWatcherEventKind";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceWatcherEventKind";
     };
@@ -179,6 +188,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceWatcherStatus";
     };
@@ -186,6 +196,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::Panel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.Panel";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "Panel";
     };
@@ -193,6 +204,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceAccessChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceAccessChangedEventArgs";
     };
@@ -200,6 +212,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceAccessInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceAccessInformation";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceAccessInformation";
     };
@@ -207,6 +220,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceConnectionChangeTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceConnectionChangeTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceConnectionChangeTriggerDetails";
     };
@@ -214,6 +228,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceDisconnectButtonClickedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceDisconnectButtonClickedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceDisconnectButtonClickedEventArgs";
     };
@@ -221,6 +236,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformation";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformation";
     };
@@ -228,6 +244,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCollection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationCollection";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationCollection";
     };
@@ -235,6 +252,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationCustomPairing";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationCustomPairing";
     };
@@ -242,6 +260,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationPairing>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationPairing";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationPairing";
     };
@@ -249,6 +268,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationUpdate";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationUpdate";
     };
@@ -256,6 +276,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePairingRequestedEventArgs";
     };
@@ -263,6 +284,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingResult";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePairingResult";
     };
@@ -270,6 +292,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePicker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePicker";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePicker";
     };
@@ -277,6 +300,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePickerAppearance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePickerAppearance";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePickerAppearance";
     };
@@ -284,6 +308,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePickerFilter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePickerFilter";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DevicePickerFilter";
     };
@@ -291,6 +316,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceSelectedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceSelectedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceSelectedEventArgs";
     };
@@ -298,6 +324,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceThumbnail>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceThumbnail";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceThumbnail";
     };
@@ -305,6 +332,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceUnpairingResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceUnpairingResult";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceUnpairingResult";
     };
@@ -312,6 +340,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceWatcher";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceWatcher";
     };
@@ -319,6 +348,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherEvent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceWatcherEvent";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceWatcherEvent";
     };
@@ -326,6 +356,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceWatcherTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceWatcherTriggerDetails";
     };
@@ -333,6 +364,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::EnclosureLocation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.EnclosureLocation";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "EnclosureLocation";
     };
@@ -340,6 +372,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.IDevicePairingSettings";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "IDevicePairingSettings";
     };

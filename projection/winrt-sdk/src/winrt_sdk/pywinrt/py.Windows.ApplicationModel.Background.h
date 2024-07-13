@@ -357,6 +357,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AlarmAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.AlarmAccessStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "AlarmAccessStatus";
     };
@@ -364,6 +365,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ApplicationTriggerResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ApplicationTriggerResult";
     };
@@ -371,6 +373,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundAccessRequestKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundAccessRequestKind";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundAccessRequestKind";
     };
@@ -378,6 +381,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundAccessStatus";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundAccessStatus";
     };
@@ -385,6 +389,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCancellationReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskCancellationReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskCancellationReason";
     };
@@ -392,6 +397,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskThrottleCounter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskThrottleCounter";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskThrottleCounter";
     };
@@ -399,6 +405,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCostValue>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundWorkCostValue";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundWorkCostValue";
     };
@@ -406,6 +413,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CustomSystemEventTriggerRecurrence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.CustomSystemEventTriggerRecurrence";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "CustomSystemEventTriggerRecurrence";
     };
@@ -413,6 +421,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceTriggerResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceTriggerResult";
     };
@@ -420,6 +429,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::LocationTriggerType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.LocationTriggerType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "LocationTriggerType";
     };
@@ -427,6 +437,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MediaProcessingTriggerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MediaProcessingTriggerResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MediaProcessingTriggerResult";
     };
@@ -434,6 +445,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemConditionType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SystemConditionType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SystemConditionType";
     };
@@ -441,6 +453,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemTriggerType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SystemTriggerType";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SystemTriggerType";
     };
@@ -448,6 +461,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ActivitySensorTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ActivitySensorTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ActivitySensorTrigger";
     };
@@ -455,6 +469,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AlarmApplicationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.AlarmApplicationManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "AlarmApplicationManager";
     };
@@ -462,6 +477,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.AppBroadcastTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "AppBroadcastTrigger";
     };
@@ -469,6 +485,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AppBroadcastTriggerProviderInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.AppBroadcastTriggerProviderInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "AppBroadcastTriggerProviderInfo";
     };
@@ -476,6 +493,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ApplicationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ApplicationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ApplicationTrigger";
     };
@@ -483,6 +501,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ApplicationTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ApplicationTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ApplicationTriggerDetails";
     };
@@ -490,6 +509,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::AppointmentStoreNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.AppointmentStoreNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "AppointmentStoreNotificationTrigger";
     };
@@ -497,6 +517,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundExecutionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundExecutionManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundExecutionManager";
     };
@@ -504,6 +525,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskBuilder";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskBuilder";
     };
@@ -511,6 +533,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskCompletedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskCompletedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskCompletedEventArgs";
     };
@@ -518,6 +541,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskDeferral";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskDeferral";
     };
@@ -525,6 +549,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskProgressEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskProgressEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskProgressEventArgs";
     };
@@ -532,6 +557,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskRegistration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskRegistration";
     };
@@ -539,6 +565,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundTaskRegistrationGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundTaskRegistrationGroup";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundTaskRegistrationGroup";
     };
@@ -546,6 +573,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BackgroundWorkCost>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BackgroundWorkCost";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BackgroundWorkCost";
     };
@@ -553,6 +581,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementPublisherTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BluetoothLEAdvertisementPublisherTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BluetoothLEAdvertisementPublisherTrigger";
     };
@@ -560,6 +589,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::BluetoothLEAdvertisementWatcherTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.BluetoothLEAdvertisementWatcherTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "BluetoothLEAdvertisementWatcherTrigger";
     };
@@ -567,6 +597,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.CachedFileUpdaterTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "CachedFileUpdaterTrigger";
     };
@@ -574,6 +605,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CachedFileUpdaterTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.CachedFileUpdaterTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "CachedFileUpdaterTriggerDetails";
     };
@@ -581,6 +613,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ChatMessageNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ChatMessageNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ChatMessageNotificationTrigger";
     };
@@ -588,6 +621,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ChatMessageReceivedNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ChatMessageReceivedNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ChatMessageReceivedNotificationTrigger";
     };
@@ -595,6 +629,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CommunicationBlockingAppSetAsActiveTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.CommunicationBlockingAppSetAsActiveTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "CommunicationBlockingAppSetAsActiveTrigger";
     };
@@ -602,6 +637,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ContactStoreNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ContactStoreNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ContactStoreNotificationTrigger";
     };
@@ -609,6 +645,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ContentPrefetchTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ContentPrefetchTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ContentPrefetchTrigger";
     };
@@ -616,6 +653,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ConversationalAgentTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ConversationalAgentTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ConversationalAgentTrigger";
     };
@@ -623,6 +661,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::CustomSystemEventTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.CustomSystemEventTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "CustomSystemEventTrigger";
     };
@@ -630,6 +669,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceConnectionChangeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceConnectionChangeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceConnectionChangeTrigger";
     };
@@ -637,6 +677,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceManufacturerNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceManufacturerNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceManufacturerNotificationTrigger";
     };
@@ -644,6 +685,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceServicingTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceServicingTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceServicingTrigger";
     };
@@ -651,6 +693,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceUseTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceUseTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceUseTrigger";
     };
@@ -658,6 +701,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::DeviceWatcherTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceWatcherTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceWatcherTrigger";
     };
@@ -665,6 +709,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::EmailStoreNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.EmailStoreNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "EmailStoreNotificationTrigger";
     };
@@ -672,6 +717,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::GattCharacteristicNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.GattCharacteristicNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "GattCharacteristicNotificationTrigger";
     };
@@ -679,6 +725,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.GattServiceProviderTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "GattServiceProviderTrigger";
     };
@@ -686,6 +733,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::GattServiceProviderTriggerResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.GattServiceProviderTriggerResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "GattServiceProviderTriggerResult";
     };
@@ -693,6 +741,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::GeovisitTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.GeovisitTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "GeovisitTrigger";
     };
@@ -700,6 +749,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::LocationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.LocationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "LocationTrigger";
     };
@@ -707,6 +757,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MaintenanceTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MaintenanceTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MaintenanceTrigger";
     };
@@ -714,6 +765,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MediaProcessingTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MediaProcessingTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MediaProcessingTrigger";
     };
@@ -721,6 +773,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandDeviceServiceNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MobileBroadbandDeviceServiceNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceNotificationTrigger";
     };
@@ -728,6 +781,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandPcoDataChangeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MobileBroadbandPcoDataChangeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MobileBroadbandPcoDataChangeTrigger";
     };
@@ -735,6 +789,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandPinLockStateChangeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MobileBroadbandPinLockStateChangeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MobileBroadbandPinLockStateChangeTrigger";
     };
@@ -742,6 +797,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandRadioStateChangeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MobileBroadbandRadioStateChangeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MobileBroadbandRadioStateChangeTrigger";
     };
@@ -749,6 +805,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::MobileBroadbandRegistrationStateChangeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.MobileBroadbandRegistrationStateChangeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "MobileBroadbandRegistrationStateChangeTrigger";
     };
@@ -756,6 +813,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorDataUsageTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.NetworkOperatorDataUsageTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "NetworkOperatorDataUsageTrigger";
     };
@@ -763,6 +821,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorHotspotAuthenticationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.NetworkOperatorHotspotAuthenticationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "NetworkOperatorHotspotAuthenticationTrigger";
     };
@@ -770,6 +829,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::NetworkOperatorNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.NetworkOperatorNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "NetworkOperatorNotificationTrigger";
     };
@@ -777,6 +837,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::PaymentAppCanMakePaymentTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.PaymentAppCanMakePaymentTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "PaymentAppCanMakePaymentTrigger";
     };
@@ -784,6 +845,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::PhoneTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.PhoneTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "PhoneTrigger";
     };
@@ -791,6 +853,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::PushNotificationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.PushNotificationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "PushNotificationTrigger";
     };
@@ -798,6 +861,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::RcsEndUserMessageAvailableTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.RcsEndUserMessageAvailableTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "RcsEndUserMessageAvailableTrigger";
     };
@@ -805,6 +869,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::RfcommConnectionTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.RfcommConnectionTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "RfcommConnectionTrigger";
     };
@@ -812,6 +877,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SecondaryAuthenticationFactorAuthenticationTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SecondaryAuthenticationFactorAuthenticationTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SecondaryAuthenticationFactorAuthenticationTrigger";
     };
@@ -819,6 +885,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SensorDataThresholdTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SensorDataThresholdTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SensorDataThresholdTrigger";
     };
@@ -826,6 +893,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SmartCardTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SmartCardTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SmartCardTrigger";
     };
@@ -833,6 +901,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SmsMessageReceivedTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SmsMessageReceivedTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SmsMessageReceivedTrigger";
     };
@@ -840,6 +909,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SocketActivityTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SocketActivityTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SocketActivityTrigger";
     };
@@ -847,6 +917,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryChangeTrackerTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.StorageLibraryChangeTrackerTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "StorageLibraryChangeTrackerTrigger";
     };
@@ -854,6 +925,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::StorageLibraryContentChangedTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.StorageLibraryContentChangedTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "StorageLibraryContentChangedTrigger";
     };
@@ -861,6 +933,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemCondition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SystemCondition";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SystemCondition";
     };
@@ -868,6 +941,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::SystemTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.SystemTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "SystemTrigger";
     };
@@ -875,6 +949,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::TetheringEntitlementCheckTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.TetheringEntitlementCheckTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "TetheringEntitlementCheckTrigger";
     };
@@ -882,6 +957,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::TimeTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.TimeTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "TimeTrigger";
     };
@@ -889,6 +965,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ToastNotificationActionTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ToastNotificationActionTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ToastNotificationActionTrigger";
     };
@@ -896,6 +973,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::ToastNotificationHistoryChangedTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.ToastNotificationHistoryChangedTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "ToastNotificationHistoryChangedTrigger";
     };
@@ -903,6 +981,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::UserNotificationChangedTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.UserNotificationChangedTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "UserNotificationChangedTrigger";
     };
@@ -910,6 +989,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotConnectTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.WiFiOnDemandHotspotConnectTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "WiFiOnDemandHotspotConnectTrigger";
     };
@@ -917,6 +997,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::WiFiOnDemandHotspotUpdateMetadataTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.WiFiOnDemandHotspotUpdateMetadataTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "WiFiOnDemandHotspotUpdateMetadataTrigger";
     };
@@ -924,6 +1005,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundCondition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundCondition";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundCondition";
     };
@@ -931,6 +1013,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTask>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTask";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTask";
     };
@@ -938,6 +1021,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskInstance";
     };
@@ -945,6 +1029,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskInstance2";
     };
@@ -952,6 +1037,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskInstance4>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskInstance4";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskInstance4";
     };
@@ -959,6 +1045,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskRegistration";
     };
@@ -966,6 +1053,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration2";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskRegistration2";
     };
@@ -973,6 +1061,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTaskRegistration3>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTaskRegistration3";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTaskRegistration3";
     };
@@ -980,6 +1069,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Background::IBackgroundTrigger>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.IBackgroundTrigger";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "IBackgroundTrigger";
     };

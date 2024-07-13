@@ -186,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::AutoLoadedDisplayPropertyKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.AutoLoadedDisplayPropertyKind";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "AutoLoadedDisplayPropertyKind";
     };
@@ -193,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::FailedMediaStreamKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.FailedMediaStreamKind";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "FailedMediaStreamKind";
     };
@@ -200,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakInsertionMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakInsertionMethod";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakInsertionMethod";
     };
@@ -207,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaCommandEnablingRule>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaCommandEnablingRule";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaCommandEnablingRule";
     };
@@ -214,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemChangedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItemChangedReason";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItemChangedReason";
     };
@@ -221,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemErrorCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItemErrorCode";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItemErrorCode";
     };
@@ -228,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionVideoConstrictionReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackSessionVideoConstrictionReason";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackSessionVideoConstrictionReason";
     };
@@ -235,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackState";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackState";
     };
@@ -242,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerAudioCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerAudioCategory";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerAudioCategory";
     };
@@ -249,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerAudioDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerAudioDeviceType";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerAudioDeviceType";
     };
@@ -256,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerError";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerError";
     };
@@ -263,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerState";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerState";
     };
@@ -270,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::SphericalVideoProjectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.SphericalVideoProjectionMode";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "SphericalVideoProjectionMode";
     };
@@ -277,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::StereoscopicVideoRenderMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.StereoscopicVideoRenderMode";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "StereoscopicVideoRenderMode";
     };
@@ -284,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::TimedMetadataTrackPresentationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.TimedMetadataTrackPresentationMode";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "TimedMetadataTrackPresentationMode";
     };
@@ -291,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::BackgroundMediaPlayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.BackgroundMediaPlayer";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "BackgroundMediaPlayer";
     };
@@ -298,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::CurrentMediaPlaybackItemChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.CurrentMediaPlaybackItemChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "CurrentMediaPlaybackItemChangedEventArgs";
     };
@@ -305,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreak>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreak";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreak";
     };
@@ -312,6 +330,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakEndedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakEndedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakEndedEventArgs";
     };
@@ -319,6 +338,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakManager";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakManager";
     };
@@ -326,6 +346,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakSchedule>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakSchedule";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakSchedule";
     };
@@ -333,6 +354,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakSeekedOverEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakSeekedOverEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakSeekedOverEventArgs";
     };
@@ -340,6 +362,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakSkippedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakSkippedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakSkippedEventArgs";
     };
@@ -347,6 +370,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaBreakStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaBreakStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaBreakStartedEventArgs";
     };
@@ -354,6 +378,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaItemDisplayProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaItemDisplayProperties";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaItemDisplayProperties";
     };
@@ -361,6 +386,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackAudioTrackList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackAudioTrackList";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackAudioTrackList";
     };
@@ -368,6 +394,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManager";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManager";
     };
@@ -375,6 +402,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs";
     };
@@ -382,6 +410,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerCommandBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerCommandBehavior";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerCommandBehavior";
     };
@@ -389,6 +418,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerFastForwardReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerFastForwardReceivedEventArgs";
     };
@@ -396,6 +426,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerNextReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerNextReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerNextReceivedEventArgs";
     };
@@ -403,6 +434,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPauseReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerPauseReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerPauseReceivedEventArgs";
     };
@@ -410,6 +442,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPlayReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerPlayReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerPlayReceivedEventArgs";
     };
@@ -417,6 +450,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPositionReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerPositionReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerPositionReceivedEventArgs";
     };
@@ -424,6 +458,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerPreviousReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerPreviousReceivedEventArgs";
     };
@@ -431,6 +466,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRateReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerRateReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerRateReceivedEventArgs";
     };
@@ -438,6 +474,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerRewindReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerRewindReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerRewindReceivedEventArgs";
     };
@@ -445,6 +482,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackCommandManagerShuffleReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackCommandManagerShuffleReceivedEventArgs";
     };
@@ -452,6 +490,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItem";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItem";
     };
@@ -459,6 +498,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemError>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItemError";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItemError";
     };
@@ -466,6 +506,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItemFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItemFailedEventArgs";
     };
@@ -473,6 +514,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackItemOpenedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackItemOpenedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackItemOpenedEventArgs";
     };
@@ -480,6 +522,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackList";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackList";
     };
@@ -487,6 +530,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackSession";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackSession";
     };
@@ -494,6 +538,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionBufferingStartedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackSessionBufferingStartedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackSessionBufferingStartedEventArgs";
     };
@@ -501,6 +546,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSessionOutputDegradationPolicyState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackSessionOutputDegradationPolicyState";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackSessionOutputDegradationPolicyState";
     };
@@ -508,6 +554,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackSphericalVideoProjection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackSphericalVideoProjection";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackSphericalVideoProjection";
     };
@@ -515,6 +562,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackTimedMetadataTrackList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackTimedMetadataTrackList";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackTimedMetadataTrackList";
     };
@@ -522,6 +570,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlaybackVideoTrackList>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlaybackVideoTrackList";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlaybackVideoTrackList";
     };
@@ -529,6 +578,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayer";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayer";
     };
@@ -536,6 +586,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerDataReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerDataReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerDataReceivedEventArgs";
     };
@@ -543,6 +594,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerFailedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerFailedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerFailedEventArgs";
     };
@@ -550,6 +602,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerRateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerRateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerRateChangedEventArgs";
     };
@@ -557,6 +610,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::MediaPlayerSurface>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.MediaPlayerSurface";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "MediaPlayerSurface";
     };
@@ -564,6 +618,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarker>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.PlaybackMediaMarker";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "PlaybackMediaMarker";
     };
@@ -571,6 +626,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerReachedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.PlaybackMediaMarkerReachedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "PlaybackMediaMarkerReachedEventArgs";
     };
@@ -578,6 +634,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::PlaybackMediaMarkerSequence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.PlaybackMediaMarkerSequence";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "PlaybackMediaMarkerSequence";
     };
@@ -585,6 +642,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::TimedMetadataPresentationModeChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.TimedMetadataPresentationModeChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "TimedMetadataPresentationModeChangedEventArgs";
     };
@@ -592,6 +650,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::IMediaEnginePlaybackSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.IMediaEnginePlaybackSource";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "IMediaEnginePlaybackSource";
     };
@@ -599,6 +658,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Playback::IMediaPlaybackSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.playback.IMediaPlaybackSource";
         static constexpr const char* module_name = "winrt.windows.media.playback";
         static constexpr const char* type_name = "IMediaPlaybackSource";
     };

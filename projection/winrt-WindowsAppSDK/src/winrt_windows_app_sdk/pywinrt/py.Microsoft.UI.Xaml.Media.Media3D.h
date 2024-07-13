@@ -49,6 +49,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::CompositeTransform3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.CompositeTransform3D";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "CompositeTransform3D";
     };
@@ -56,6 +57,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3DHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Matrix3DHelper";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Matrix3DHelper";
     };
@@ -63,6 +65,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::PerspectiveTransform3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.PerspectiveTransform3D";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "PerspectiveTransform3D";
     };
@@ -70,6 +73,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Transform3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Transform3D";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Transform3D";
     };
@@ -77,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.media.media3d.Matrix3D";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.media.media3d";
         static constexpr const char* type_name = "Matrix3D";
     };

@@ -85,6 +85,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowClosedReason";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowClosedReason";
     };
@@ -92,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowFrameStyle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowFrameStyle";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowFrameStyle";
     };
@@ -99,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowPresentationKind";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowPresentationKind";
     };
@@ -106,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarVisibility>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowTitleBarVisibility";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowTitleBarVisibility";
     };
@@ -113,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowingEnvironmentKind";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironmentKind";
     };
@@ -120,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindow";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindow";
     };
@@ -127,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowChangedEventArgs";
     };
@@ -134,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowCloseRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowCloseRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowCloseRequestedEventArgs";
     };
@@ -141,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowClosedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowClosedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowClosedEventArgs";
     };
@@ -148,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowFrame";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowFrame";
     };
@@ -155,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPlacement>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowPlacement";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowPlacement";
     };
@@ -162,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowPresentationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowPresentationConfiguration";
     };
@@ -169,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowPresenter>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowPresenter";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowPresenter";
     };
@@ -176,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowTitleBar";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowTitleBar";
     };
@@ -183,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::AppWindowTitleBarOcclusion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.AppWindowTitleBarOcclusion";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "AppWindowTitleBarOcclusion";
     };
@@ -190,6 +205,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::CompactOverlayPresentationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.CompactOverlayPresentationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "CompactOverlayPresentationConfiguration";
     };
@@ -197,6 +213,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::DefaultPresentationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.DefaultPresentationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "DefaultPresentationConfiguration";
     };
@@ -204,6 +221,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::DisplayRegion>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.DisplayRegion";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "DisplayRegion";
     };
@@ -211,6 +229,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::FullScreenPresentationConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.FullScreenPresentationConfiguration";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "FullScreenPresentationConfiguration";
     };
@@ -218,6 +237,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowServices>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowServices";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowServices";
     };
@@ -225,6 +245,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowingEnvironment";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironment";
     };
@@ -232,6 +253,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowingEnvironmentAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironmentAddedEventArgs";
     };
@@ -239,6 +261,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowingEnvironmentChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironmentChangedEventArgs";
     };
@@ -246,6 +269,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::WindowManagement::WindowingEnvironmentRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.windowmanagement.WindowingEnvironmentRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.windowmanagement";
         static constexpr const char* type_name = "WindowingEnvironmentRemovedEventArgs";
     };

@@ -247,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::DataClasses>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.DataClasses";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "DataClasses";
     };
@@ -254,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimAuthenticationPreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimAuthenticationPreference";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimAuthenticationPreference";
     };
@@ -261,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResultKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimDiscoverResultKind";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimDiscoverResultKind";
     };
@@ -268,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimOperationStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimOperationStatus";
     };
@@ -275,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileClass>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileClass";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileClass";
     };
@@ -282,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadataState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileMetadataState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileMetadataState";
     };
@@ -289,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileState";
     };
@@ -296,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimState";
     };
@@ -303,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimWatcherStatus";
     };
@@ -310,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationResponseCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.HotspotAuthenticationResponseCode";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "HotspotAuthenticationResponseCode";
     };
@@ -317,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcherStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAccountWatcherStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAccountWatcherStatus";
     };
@@ -324,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceType";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceType";
     };
@@ -331,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandModemStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandModemStatus";
     };
@@ -338,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinFormat";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinFormat";
     };
@@ -345,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinLockState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinLockState";
     };
@@ -352,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinType";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinType";
     };
@@ -359,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandRadioState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandRadioState";
     };
@@ -366,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandSlotState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandSlotState";
     };
@@ -373,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUiccAppOperationStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUiccAppOperationStatus";
     };
@@ -380,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkDeviceStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkDeviceStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkDeviceStatus";
     };
@@ -387,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageNotificationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorDataUsageNotificationKind";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorDataUsageNotificationKind";
     };
@@ -394,6 +415,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorEventMessageType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorEventMessageType";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorEventMessageType";
     };
@@ -401,6 +423,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkRegistrationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkRegistrationState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkRegistrationState";
     };
@@ -408,6 +431,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProfileMediaType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProfileMediaType";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProfileMediaType";
     };
@@ -415,6 +439,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringCapability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringCapability";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringCapability";
     };
@@ -422,6 +447,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringOperationStatus";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringOperationStatus";
     };
@@ -429,6 +455,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringOperationalState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringOperationalState";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringOperationalState";
     };
@@ -436,6 +463,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringWiFiBand";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringWiFiBand";
     };
@@ -443,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UiccAccessCondition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UiccAccessCondition";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UiccAccessCondition";
     };
@@ -450,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UiccAppKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UiccAppKind";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UiccAppKind";
     };
@@ -457,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UiccAppRecordKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UiccAppRecordKind";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UiccAppRecordKind";
     };
@@ -464,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UssdResultCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UssdResultCode";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UssdResultCode";
     };
@@ -471,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESim>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESim";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESim";
     };
@@ -478,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimAddedEventArgs";
     };
@@ -485,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverEvent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimDiscoverEvent";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimDiscoverEvent";
     };
@@ -492,6 +527,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimDiscoverResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimDiscoverResult";
     };
@@ -499,6 +535,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimDownloadProfileMetadataResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimDownloadProfileMetadataResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimDownloadProfileMetadataResult";
     };
@@ -506,6 +543,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimManager";
     };
@@ -513,6 +551,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimOperationResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimOperationResult";
     };
@@ -520,6 +559,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimPolicy";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimPolicy";
     };
@@ -527,6 +567,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfile";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfile";
     };
@@ -534,6 +575,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileMetadata>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileMetadata";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileMetadata";
     };
@@ -541,6 +583,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfilePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfilePolicy";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfilePolicy";
     };
@@ -548,6 +591,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimRemovedEventArgs";
     };
@@ -555,6 +599,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimServiceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimServiceInfo";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimServiceInfo";
     };
@@ -562,6 +607,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimUpdatedEventArgs";
     };
@@ -569,6 +615,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimWatcher";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimWatcher";
     };
@@ -576,6 +623,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::FdnAccessManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.FdnAccessManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "FdnAccessManager";
     };
@@ -583,6 +631,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.HotspotAuthenticationContext";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "HotspotAuthenticationContext";
     };
@@ -590,6 +639,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotAuthenticationEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.HotspotAuthenticationEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "HotspotAuthenticationEventDetails";
     };
@@ -597,6 +647,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::HotspotCredentialsAuthenticationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.HotspotCredentialsAuthenticationResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "HotspotCredentialsAuthenticationResult";
     };
@@ -604,6 +655,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::KnownCSimFilePaths>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.KnownCSimFilePaths";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "KnownCSimFilePaths";
     };
@@ -611,6 +663,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::KnownRuimFilePaths>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.KnownRuimFilePaths";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "KnownRuimFilePaths";
     };
@@ -618,6 +671,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::KnownSimFilePaths>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.KnownSimFilePaths";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "KnownSimFilePaths";
     };
@@ -625,6 +679,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::KnownUSimFilePaths>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.KnownUSimFilePaths";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "KnownUSimFilePaths";
     };
@@ -632,6 +687,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccount>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAccount";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAccount";
     };
@@ -639,6 +695,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAccountEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAccountEventArgs";
     };
@@ -646,6 +703,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountUpdatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAccountUpdatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAccountUpdatedEventArgs";
     };
@@ -653,6 +711,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAccountWatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAccountWatcher";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAccountWatcher";
     };
@@ -660,6 +719,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandAntennaSar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandAntennaSar";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandAntennaSar";
     };
@@ -667,6 +727,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellCdma>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellCdma";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellCdma";
     };
@@ -674,6 +735,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellGsm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellGsm";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellGsm";
     };
@@ -681,6 +743,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellLte>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellLte";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellLte";
     };
@@ -688,6 +751,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellNR>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellNR";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellNR";
     };
@@ -695,6 +759,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellTdscdma>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellTdscdma";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellTdscdma";
     };
@@ -702,6 +767,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellUmts>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellUmts";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellUmts";
     };
@@ -709,6 +775,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCellsInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCellsInfo";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCellsInfo";
     };
@@ -716,6 +783,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandCurrentSlotIndexChangedEventArgs";
     };
@@ -723,6 +791,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceInformation";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceInformation";
     };
@@ -730,6 +799,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceService";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceService";
     };
@@ -737,6 +807,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceCommandResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceCommandResult";
     };
@@ -744,6 +815,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceCommandSession";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceCommandSession";
     };
@@ -751,6 +823,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceDataReceivedEventArgs";
     };
@@ -758,6 +831,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceDataSession";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceDataSession";
     };
@@ -765,6 +839,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceInformation";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceInformation";
     };
@@ -772,6 +847,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandDeviceServiceTriggerDetails";
     };
@@ -779,6 +855,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandModem";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandModem";
     };
@@ -786,6 +863,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandModemConfiguration";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandModemConfiguration";
     };
@@ -793,6 +871,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemIsolation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandModemIsolation";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandModemIsolation";
     };
@@ -800,6 +879,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetwork>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandNetwork";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandNetwork";
     };
@@ -807,6 +887,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandNetworkRegistrationStateChange";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandNetworkRegistrationStateChange";
     };
@@ -814,6 +895,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandNetworkRegistrationStateChangeTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandNetworkRegistrationStateChangeTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandNetworkRegistrationStateChangeTriggerDetails";
     };
@@ -821,6 +903,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPco>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPco";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPco";
     };
@@ -828,6 +911,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPcoDataChangeTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPcoDataChangeTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPcoDataChangeTriggerDetails";
     };
@@ -835,6 +919,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPin>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPin";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPin";
     };
@@ -842,6 +927,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinLockStateChange";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinLockStateChange";
     };
@@ -849,6 +935,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinLockStateChangeTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinLockStateChangeTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinLockStateChangeTriggerDetails";
     };
@@ -856,6 +943,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinManager";
     };
@@ -863,6 +951,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandPinOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandPinOperationResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandPinOperationResult";
     };
@@ -870,6 +959,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChange>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandRadioStateChange";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandRadioStateChange";
     };
@@ -877,6 +967,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandRadioStateChangeTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandRadioStateChangeTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandRadioStateChangeTriggerDetails";
     };
@@ -884,6 +975,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSarManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandSarManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandSarManager";
     };
@@ -891,6 +983,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandSlotInfo";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandSlotInfo";
     };
@@ -898,6 +991,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfoChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandSlotInfoChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandSlotInfoChangedEventArgs";
     };
@@ -905,6 +999,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandSlotManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandSlotManager";
     };
@@ -912,6 +1007,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandTransmissionStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandTransmissionStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandTransmissionStateChangedEventArgs";
     };
@@ -919,6 +1015,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUicc";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUicc";
     };
@@ -926,6 +1023,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccApp>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUiccApp";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUiccApp";
     };
@@ -933,6 +1031,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppReadRecordResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUiccAppReadRecordResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUiccAppReadRecordResult";
     };
@@ -940,6 +1039,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppRecordDetailsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUiccAppRecordDetailsResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUiccAppRecordDetailsResult";
     };
@@ -947,6 +1047,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandUiccAppsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandUiccAppsResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "MobileBroadbandUiccAppsResult";
     };
@@ -954,6 +1055,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorDataUsageTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorDataUsageTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorDataUsageTriggerDetails";
     };
@@ -961,6 +1063,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorNotificationEventDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorNotificationEventDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorNotificationEventDetails";
     };
@@ -968,6 +1071,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringAccessPointConfiguration";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorTetheringAccessPointConfiguration";
     };
@@ -975,6 +1079,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringClient";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorTetheringClient";
     };
@@ -982,6 +1087,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringManager";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorTetheringManager";
     };
@@ -989,6 +1095,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringOperationResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorTetheringOperationResult";
     };
@@ -996,6 +1103,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProvisionFromXmlDocumentResults";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProvisionFromXmlDocumentResults";
     };
@@ -1003,6 +1111,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProvisionedProfile";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProvisionedProfile";
     };
@@ -1010,6 +1119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProvisioningAgent";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProvisioningAgent";
     };
@@ -1017,6 +1127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringEntitlementCheckTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringEntitlementCheckTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringEntitlementCheckTriggerDetails";
     };
@@ -1024,6 +1135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UssdMessage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UssdMessage";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UssdMessage";
     };
@@ -1031,6 +1143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UssdReply>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UssdReply";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UssdReply";
     };
@@ -1038,6 +1151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::UssdSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.UssdSession";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "UssdSession";
     };
@@ -1045,6 +1159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ESimProfileInstallProgress>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ESimProfileInstallProgress";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ESimProfileInstallProgress";
     };
@@ -1052,6 +1167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::ProfileUsage>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.ProfileUsage";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "ProfileUsage";
     };

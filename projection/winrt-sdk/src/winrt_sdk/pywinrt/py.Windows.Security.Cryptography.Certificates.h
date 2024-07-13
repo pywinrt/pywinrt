@@ -93,6 +93,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChainPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateChainPolicy";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateChainPolicy";
     };
@@ -100,6 +101,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ChainValidationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.ChainValidationResult";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "ChainValidationResult";
     };
@@ -107,6 +109,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::EnrollKeyUsages>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.EnrollKeyUsages";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "EnrollKeyUsages";
     };
@@ -114,6 +117,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ExportOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.ExportOption";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "ExportOption";
     };
@@ -121,6 +125,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::InstallOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.InstallOptions";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "InstallOptions";
     };
@@ -128,6 +133,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeyProtectionLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.KeyProtectionLevel";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "KeyProtectionLevel";
     };
@@ -135,6 +141,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeySize>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.KeySize";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "KeySize";
     };
@@ -142,6 +149,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::SignatureValidationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.SignatureValidationResult";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "SignatureValidationResult";
     };
@@ -149,6 +157,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::Certificate>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.Certificate";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "Certificate";
     };
@@ -156,6 +165,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateChain>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateChain";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateChain";
     };
@@ -163,6 +173,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateEnrollmentManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateEnrollmentManager";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateEnrollmentManager";
     };
@@ -170,6 +181,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateExtension>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateExtension";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateExtension";
     };
@@ -177,6 +189,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateKeyUsages>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateKeyUsages";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateKeyUsages";
     };
@@ -184,6 +197,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateQuery>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateQuery";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateQuery";
     };
@@ -191,6 +205,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateRequestProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateRequestProperties";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateRequestProperties";
     };
@@ -198,6 +213,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateStore";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateStore";
     };
@@ -205,6 +221,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CertificateStores>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CertificateStores";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CertificateStores";
     };
@@ -212,6 +229,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ChainBuildingParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.ChainBuildingParameters";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "ChainBuildingParameters";
     };
@@ -219,6 +237,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::ChainValidationParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.ChainValidationParameters";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "ChainValidationParameters";
     };
@@ -226,6 +245,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CmsAttachedSignature>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CmsAttachedSignature";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CmsAttachedSignature";
     };
@@ -233,6 +253,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CmsDetachedSignature>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CmsDetachedSignature";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CmsDetachedSignature";
     };
@@ -240,6 +261,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CmsSignerInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CmsSignerInfo";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CmsSignerInfo";
     };
@@ -247,6 +269,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::CmsTimestampInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.CmsTimestampInfo";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "CmsTimestampInfo";
     };
@@ -254,6 +277,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAlgorithmNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.KeyAlgorithmNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "KeyAlgorithmNames";
     };
@@ -261,6 +285,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeyAttestationHelper>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.KeyAttestationHelper";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "KeyAttestationHelper";
     };
@@ -268,6 +293,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::KeyStorageProviderNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.KeyStorageProviderNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "KeyStorageProviderNames";
     };
@@ -275,6 +301,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::PfxImportParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.PfxImportParameters";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "PfxImportParameters";
     };
@@ -282,6 +309,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::StandardCertificateStoreNames>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.StandardCertificateStoreNames";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "StandardCertificateStoreNames";
     };
@@ -289,6 +317,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::SubjectAlternativeNameInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.SubjectAlternativeNameInfo";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "SubjectAlternativeNameInfo";
     };
@@ -296,6 +325,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateEnrollmentManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.UserCertificateEnrollmentManager";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "UserCertificateEnrollmentManager";
     };
@@ -303,6 +333,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Cryptography::Certificates::UserCertificateStore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.cryptography.certificates.UserCertificateStore";
         static constexpr const char* module_name = "winrt.windows.security.cryptography.certificates";
         static constexpr const char* type_name = "UserCertificateStore";
     };

@@ -191,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardActivationPolicyChangeResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardActivationPolicyChangeResult";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardActivationPolicyChangeResult";
     };
@@ -198,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupActivationPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardAppletIdGroupActivationPolicy";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardAppletIdGroupActivationPolicy";
     };
@@ -205,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardAutomaticResponseStatus";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardAutomaticResponseStatus";
     };
@@ -212,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramAlgorithm";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramAlgorithm";
     };
@@ -219,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGeneratorOperationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramGeneratorOperationStatus";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramGeneratorOperationStatus";
     };
@@ -226,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageConfirmationResponseFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialPackageConfirmationResponseFormat";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialPackageConfirmationResponseFormat";
     };
@@ -233,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageFormat>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialPackageFormat";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialPackageFormat";
     };
@@ -240,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialProtectionMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialProtectionMethod";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialProtectionMethod";
     };
@@ -247,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialType";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialType";
     };
@@ -254,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramPlacementOptions";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramPlacementOptions";
     };
@@ -261,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyAlgorithm>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramStorageKeyAlgorithm";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramStorageKeyAlgorithm";
     };
@@ -268,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCapabilities>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramStorageKeyCapabilities";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramStorageKeyCapabilities";
     };
@@ -275,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptographicKeyAttestationStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptographicKeyAttestationStatus";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptographicKeyAttestationStatus";
     };
@@ -282,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulationCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulationCategory";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulationCategory";
     };
@@ -289,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulationType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulationType";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulationType";
     };
@@ -296,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorConnectionDeactivatedReason";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorConnectionDeactivatedReason";
     };
@@ -303,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorConnectionSource";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorConnectionSource";
     };
@@ -310,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorEnablementPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorEnablementPolicy";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorEnablementPolicy";
     };
@@ -317,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardLaunchBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardLaunchBehavior";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardLaunchBehavior";
     };
@@ -324,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardPinCharacterPolicyOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardPinCharacterPolicyOption";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardPinCharacterPolicyOption";
     };
@@ -331,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardReaderKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardReaderKind";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardReaderKind";
     };
@@ -338,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardReaderStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardReaderStatus";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardReaderStatus";
     };
@@ -345,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardStatus";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardStatus";
     };
@@ -352,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardTriggerType";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardTriggerType";
     };
@@ -359,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardUnlockPromptingBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardUnlockPromptingBehavior";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardUnlockPromptingBehavior";
     };
@@ -366,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::CardAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.CardAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "CardAddedEventArgs";
     };
@@ -373,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::CardRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.CardRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "CardRemovedEventArgs";
     };
@@ -380,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::KnownSmartCardAppletIds>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.KnownSmartCardAppletIds";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "KnownSmartCardAppletIds";
     };
@@ -387,6 +415,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCard>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCard";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCard";
     };
@@ -394,6 +423,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroup>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardAppletIdGroup";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardAppletIdGroup";
     };
@@ -401,6 +431,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAppletIdGroupRegistration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardAppletIdGroupRegistration";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardAppletIdGroupRegistration";
     };
@@ -408,6 +439,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardAutomaticResponseApdu>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardAutomaticResponseApdu";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardAutomaticResponseApdu";
     };
@@ -415,6 +447,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardChallengeContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardChallengeContext";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardChallengeContext";
     };
@@ -422,6 +455,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardConnection";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardConnection";
     };
@@ -429,6 +463,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGenerator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramGenerator";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramGenerator";
     };
@@ -436,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult";
     };
@@ -443,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult";
     };
@@ -450,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult";
     };
@@ -457,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialCharacteristics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialCharacteristics";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialCharacteristics";
     };
@@ -464,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPackageCharacteristics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialPackageCharacteristics";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialPackageCharacteristics";
     };
@@ -471,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramMaterialPossessionProof>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramMaterialPossessionProof";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramMaterialPossessionProof";
     };
@@ -478,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramPlacementStep";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramPlacementStep";
     };
@@ -485,6 +527,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyCharacteristics>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramStorageKeyCharacteristics";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramStorageKeyCharacteristics";
     };
@@ -492,6 +535,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardCryptogramStorageKeyInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardCryptogramStorageKeyInfo";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardCryptogramStorageKeyInfo";
     };
@@ -499,6 +543,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulator";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulator";
     };
@@ -506,6 +551,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorApduReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorApduReceivedEventArgs";
     };
@@ -513,6 +559,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionDeactivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorConnectionDeactivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorConnectionDeactivatedEventArgs";
     };
@@ -520,6 +567,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardEmulatorConnectionProperties>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardEmulatorConnectionProperties";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardEmulatorConnectionProperties";
     };
@@ -527,6 +575,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardPinPolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardPinPolicy";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardPinPolicy";
     };
@@ -534,6 +583,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetDeferral>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardPinResetDeferral";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardPinResetDeferral";
     };
@@ -541,6 +591,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardPinResetRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardPinResetRequest";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardPinResetRequest";
     };
@@ -548,6 +599,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardProvisioning>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardProvisioning";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardProvisioning";
     };
@@ -555,6 +607,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardReader>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardReader";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardReader";
     };
@@ -562,6 +615,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::SmartCards::SmartCardTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.smartcards.SmartCardTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.devices.smartcards";
         static constexpr const char* type_name = "SmartCardTriggerDetails";
     };

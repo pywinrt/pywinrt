@@ -50,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::ContentAccessRestrictionLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.ContentAccessRestrictionLevel";
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "ContentAccessRestrictionLevel";
     };
@@ -57,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentCategory>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentCategory";
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "RatedContentCategory";
     };
@@ -64,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::ContentRestrictionsBrowsePolicy>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.ContentRestrictionsBrowsePolicy";
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "ContentRestrictionsBrowsePolicy";
     };
@@ -71,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentDescription>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentDescription";
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "RatedContentDescription";
     };
@@ -78,6 +82,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::ContentRestrictions::RatedContentRestrictions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.contentrestrictions.RatedContentRestrictions";
         static constexpr const char* module_name = "winrt.windows.media.contentrestrictions";
         static constexpr const char* type_name = "RatedContentRestrictions";
     };

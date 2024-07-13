@@ -32,6 +32,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Notifications::Preview::ToastOcclusionManagerPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.notifications.preview.ToastOcclusionManagerPreview";
         static constexpr const char* module_name = "winrt.windows.ui.notifications.preview";
         static constexpr const char* type_name = "ToastOcclusionManagerPreview";
     };

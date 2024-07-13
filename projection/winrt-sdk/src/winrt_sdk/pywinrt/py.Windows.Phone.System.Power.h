@@ -35,6 +35,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::Power::PowerSavingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.power.PowerSavingMode";
         static constexpr const char* module_name = "winrt.windows.phone.system.power";
         static constexpr const char* type_name = "PowerSavingMode";
     };
@@ -42,6 +43,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::System::Power::PowerManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.system.power.PowerManager";
         static constexpr const char* module_name = "winrt.windows.phone.system.power";
         static constexpr const char* type_name = "PowerManager";
     };

@@ -64,6 +64,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechAppendedSilence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechAppendedSilence";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "SpeechAppendedSilence";
     };
@@ -71,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechPunctuationSilence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechPunctuationSilence";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "SpeechPunctuationSilence";
     };
@@ -78,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceGender>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.VoiceGender";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "VoiceGender";
     };
@@ -85,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesisStream>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesisStream";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "SpeechSynthesisStream";
     };
@@ -92,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesizer";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "SpeechSynthesizer";
     };
@@ -99,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::SpeechSynthesizerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.SpeechSynthesizerOptions";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "SpeechSynthesizerOptions";
     };
@@ -106,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::SpeechSynthesis::VoiceInformation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.speechsynthesis.VoiceInformation";
         static constexpr const char* module_name = "winrt.windows.media.speechsynthesis";
         static constexpr const char* type_name = "VoiceInformation";
     };

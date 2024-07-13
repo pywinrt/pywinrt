@@ -195,6 +195,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AppViewBackButtonVisibility>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.AppViewBackButtonVisibility";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "AppViewBackButtonVisibility";
     };
@@ -202,6 +203,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreAcceleratorKeyEventType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreAcceleratorKeyEventType";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreAcceleratorKeyEventType";
     };
@@ -209,6 +211,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreCursorType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreCursorType";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreCursorType";
     };
@@ -216,6 +219,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreDispatcherPriority>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreDispatcherPriority";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreDispatcherPriority";
     };
@@ -223,6 +227,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreIndependentInputFilters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreIndependentInputFilters";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreIndependentInputFilters";
     };
@@ -230,6 +235,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreInputDeviceTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreInputDeviceTypes";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreInputDeviceTypes";
     };
@@ -237,6 +243,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreProcessEventsOption>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreProcessEventsOption";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreProcessEventsOption";
     };
@@ -244,6 +251,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreProximityEvaluationScore>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreProximityEvaluationScore";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreProximityEvaluationScore";
     };
@@ -251,6 +259,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreVirtualKeyStates>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreVirtualKeyStates";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreVirtualKeyStates";
     };
@@ -258,6 +267,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowActivationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowActivationMode";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowActivationMode";
     };
@@ -265,6 +275,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowActivationState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowActivationState";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowActivationState";
     };
@@ -272,6 +283,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowFlowDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowFlowDirection";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowFlowDirection";
     };
@@ -279,6 +291,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AcceleratorKeyEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.AcceleratorKeyEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "AcceleratorKeyEventArgs";
     };
@@ -286,6 +299,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::AutomationProviderRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.AutomationProviderRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "AutomationProviderRequestedEventArgs";
     };
@@ -293,6 +307,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::BackRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.BackRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "BackRequestedEventArgs";
     };
@@ -300,6 +315,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CharacterReceivedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CharacterReceivedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CharacterReceivedEventArgs";
     };
@@ -307,6 +323,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ClosestInteractiveBoundsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ClosestInteractiveBoundsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ClosestInteractiveBoundsRequestedEventArgs";
     };
@@ -314,6 +331,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreAcceleratorKeys>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreAcceleratorKeys";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreAcceleratorKeys";
     };
@@ -321,6 +339,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreComponentInputSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreComponentInputSource";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreComponentInputSource";
     };
@@ -328,6 +347,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreCursor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreCursor";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreCursor";
     };
@@ -335,6 +355,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreDispatcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreDispatcher";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreDispatcher";
     };
@@ -342,6 +363,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreIndependentInputSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreIndependentInputSource";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreIndependentInputSource";
     };
@@ -349,6 +371,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreIndependentInputSourceController>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreIndependentInputSourceController";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreIndependentInputSourceController";
     };
@@ -356,6 +379,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindow";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindow";
     };
@@ -363,6 +387,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowDialog>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowDialog";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowDialog";
     };
@@ -370,6 +395,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowEventArgs";
     };
@@ -377,6 +403,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowFlyout>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowFlyout";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowFlyout";
     };
@@ -384,6 +411,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowPopupShowingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowPopupShowingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowPopupShowingEventArgs";
     };
@@ -391,6 +419,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreWindowResizeManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreWindowResizeManager";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreWindowResizeManager";
     };
@@ -398,6 +427,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::IdleDispatchedHandlerArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.IdleDispatchedHandlerArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "IdleDispatchedHandlerArgs";
     };
@@ -405,6 +435,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::InputEnabledEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.InputEnabledEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "InputEnabledEventArgs";
     };
@@ -412,6 +443,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::KeyEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.KeyEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "KeyEventArgs";
     };
@@ -419,6 +451,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::PointerEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.PointerEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "PointerEventArgs";
     };
@@ -426,6 +459,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::SystemNavigationManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.SystemNavigationManager";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "SystemNavigationManager";
     };
@@ -433,6 +467,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::TouchHitTestingEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.TouchHitTestingEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "TouchHitTestingEventArgs";
     };
@@ -440,6 +475,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::VisibilityChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.VisibilityChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "VisibilityChangedEventArgs";
     };
@@ -447,6 +483,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::WindowActivatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.WindowActivatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "WindowActivatedEventArgs";
     };
@@ -454,6 +491,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::WindowSizeChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.WindowSizeChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "WindowSizeChangedEventArgs";
     };
@@ -461,6 +499,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreAcceleratorKeys>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreAcceleratorKeys";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICoreAcceleratorKeys";
     };
@@ -468,6 +507,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreInputSourceBase>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreInputSourceBase";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICoreInputSourceBase";
     };
@@ -475,6 +515,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerInputSource";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICorePointerInputSource";
     };
@@ -482,6 +523,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerInputSource2>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerInputSource2";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICorePointerInputSource2";
     };
@@ -489,6 +531,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICorePointerRedirector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICorePointerRedirector";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICorePointerRedirector";
     };
@@ -496,6 +539,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreWindow";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICoreWindow";
     };
@@ -503,6 +547,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::ICoreWindowEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.ICoreWindowEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "ICoreWindowEventArgs";
     };
@@ -510,6 +555,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::IInitializeWithCoreWindow>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.IInitializeWithCoreWindow";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "IInitializeWithCoreWindow";
     };
@@ -517,6 +563,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CorePhysicalKeyStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CorePhysicalKeyStatus";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CorePhysicalKeyStatus";
     };
@@ -524,6 +571,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Core::CoreProximityEvaluation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.core.CoreProximityEvaluation";
         static constexpr const char* module_name = "winrt.windows.ui.core";
         static constexpr const char* type_name = "CoreProximityEvaluation";
     };

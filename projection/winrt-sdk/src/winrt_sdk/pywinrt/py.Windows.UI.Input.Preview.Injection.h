@@ -81,6 +81,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputButtonChangeKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputButtonChangeKind";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputButtonChangeKind";
     };
@@ -88,6 +89,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputKeyOptions";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputKeyOptions";
     };
@@ -95,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputMouseOptions";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputMouseOptions";
     };
@@ -102,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenButtons>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPenButtons";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPenButtons";
     };
@@ -109,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPenParameters";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPenParameters";
     };
@@ -116,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPointerOptions";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPointerOptions";
     };
@@ -123,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputShortcut>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputShortcut";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputShortcut";
     };
@@ -130,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputTouchParameters";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputTouchParameters";
     };
@@ -137,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputVisualizationMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputVisualizationMode";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputVisualizationMode";
     };
@@ -144,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputGamepadInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputGamepadInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputGamepadInfo";
     };
@@ -151,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputKeyboardInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputKeyboardInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputKeyboardInfo";
     };
@@ -158,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputMouseInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputMouseInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputMouseInfo";
     };
@@ -165,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPenInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPenInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPenInfo";
     };
@@ -172,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputTouchInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputTouchInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputTouchInfo";
     };
@@ -179,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InputInjector>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InputInjector";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InputInjector";
     };
@@ -186,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPoint>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPoint";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPoint";
     };
@@ -193,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputPointerInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputPointerInfo";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputPointerInfo";
     };
@@ -200,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::Input::Preview::Injection::InjectedInputRectangle>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.preview.injection.InjectedInputRectangle";
         static constexpr const char* module_name = "winrt.windows.ui.input.preview.injection";
         static constexpr const char* type_name = "InjectedInputRectangle";
     };

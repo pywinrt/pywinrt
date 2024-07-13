@@ -70,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityState";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityState";
     };
@@ -77,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivity>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivity";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivity";
     };
@@ -84,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityAttribution>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityAttribution";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityAttribution";
     };
@@ -91,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityChannel>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityChannel";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityChannel";
     };
@@ -98,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityContentInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityContentInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityContentInfo";
     };
@@ -105,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityRequest";
     };
@@ -112,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequestManager";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityRequestManager";
     };
@@ -119,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityRequestedEventArgs";
     };
@@ -126,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivitySession";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivitySession";
     };
@@ -133,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivitySessionHistoryItem>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivitySessionHistoryItem";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivitySessionHistoryItem";
     };
@@ -140,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::UserActivityVisualElements>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.UserActivityVisualElements";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "UserActivityVisualElements";
     };
@@ -147,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::UserActivities::IUserActivityContentInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.useractivities.IUserActivityContentInfo";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.useractivities";
         static constexpr const char* type_name = "IUserActivityContentInfo";
     };

@@ -72,6 +72,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.XamlSourceFocusNavigationReason";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "XamlSourceFocusNavigationReason";
     };
@@ -79,6 +80,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.DesktopWindowXamlSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "DesktopWindowXamlSource";
     };
@@ -86,6 +88,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.DesktopWindowXamlSourceGotFocusEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "DesktopWindowXamlSourceGotFocusEventArgs";
     };
@@ -93,6 +96,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "DesktopWindowXamlSourceTakeFocusRequestedEventArgs";
     };
@@ -100,6 +104,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::ElementCompositionPreview>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.ElementCompositionPreview";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "ElementCompositionPreview";
     };
@@ -107,6 +112,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::WindowsXamlManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.WindowsXamlManager";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "WindowsXamlManager";
     };
@@ -114,6 +120,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlShutdownCompletedOnThreadEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.XamlShutdownCompletedOnThreadEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "XamlShutdownCompletedOnThreadEventArgs";
     };
@@ -121,6 +128,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.XamlSourceFocusNavigationRequest";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "XamlSourceFocusNavigationRequest";
     };
@@ -128,6 +136,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.hosting.XamlSourceFocusNavigationResult";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.hosting";
         static constexpr const char* type_name = "XamlSourceFocusNavigationResult";
     };

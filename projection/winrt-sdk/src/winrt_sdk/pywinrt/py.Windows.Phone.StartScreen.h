@@ -38,6 +38,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::StartScreen::DualSimTile>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.startscreen.DualSimTile";
         static constexpr const char* module_name = "winrt.windows.phone.startscreen";
         static constexpr const char* type_name = "DualSimTile";
     };
@@ -45,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Phone::StartScreen::IToastNotificationManagerStatics3>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.phone.startscreen.IToastNotificationManagerStatics3";
         static constexpr const char* module_name = "winrt.windows.phone.startscreen";
         static constexpr const char* type_name = "IToastNotificationManagerStatics3";
     };

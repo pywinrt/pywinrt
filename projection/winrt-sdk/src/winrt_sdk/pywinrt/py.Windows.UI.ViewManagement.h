@@ -119,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewBoundsMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewBoundsMode";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewBoundsMode";
     };
@@ -126,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewMode";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewMode";
     };
@@ -133,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewOrientation>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewOrientation";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewOrientation";
     };
@@ -140,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewState";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewState";
     };
@@ -147,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitchingOptions>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewSwitchingOptions";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewSwitchingOptions";
     };
@@ -154,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewWindowingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewWindowingMode";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewWindowingMode";
     };
@@ -161,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::FullScreenSystemOverlayMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.FullScreenSystemOverlayMode";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "FullScreenSystemOverlayMode";
     };
@@ -168,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::HandPreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.HandPreference";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "HandPreference";
     };
@@ -175,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ScreenCaptureDisabledBehavior";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ScreenCaptureDisabledBehavior";
     };
@@ -182,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UIColorType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UIColorType";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UIColorType";
     };
@@ -189,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UIElementType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UIElementType";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UIElementType";
     };
@@ -196,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UserInteractionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UserInteractionMode";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UserInteractionMode";
     };
@@ -203,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ViewSizePreference>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ViewSizePreference";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ViewSizePreference";
     };
@@ -210,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::AccessibilitySettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.AccessibilitySettings";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "AccessibilitySettings";
     };
@@ -217,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ActivationViewSwitcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ActivationViewSwitcher";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ActivationViewSwitcher";
     };
@@ -224,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationView";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationView";
     };
@@ -231,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewConsolidatedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewConsolidatedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewConsolidatedEventArgs";
     };
@@ -238,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewScaling>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewScaling";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewScaling";
     };
@@ -245,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewSwitcher";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewSwitcher";
     };
@@ -252,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTitleBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewTitleBar";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewTitleBar";
     };
@@ -259,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ApplicationViewTransferContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ApplicationViewTransferContext";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ApplicationViewTransferContext";
     };
@@ -266,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::InputPane>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.InputPane";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "InputPane";
     };
@@ -273,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::InputPaneVisibilityEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.InputPaneVisibilityEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "InputPaneVisibilityEventArgs";
     };
@@ -280,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ProjectionManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ProjectionManager";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ProjectionManager";
     };
@@ -287,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::StatusBar>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.StatusBar";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "StatusBar";
     };
@@ -294,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::StatusBarProgressIndicator>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.StatusBarProgressIndicator";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "StatusBarProgressIndicator";
     };
@@ -301,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UISettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UISettings";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UISettings";
     };
@@ -308,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UISettingsAnimationsEnabledChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UISettingsAnimationsEnabledChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UISettingsAnimationsEnabledChangedEventArgs";
     };
@@ -315,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UISettingsAutoHideScrollBarsChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UISettingsAutoHideScrollBarsChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UISettingsAutoHideScrollBarsChangedEventArgs";
     };
@@ -322,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UISettingsMessageDurationChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UISettingsMessageDurationChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UISettingsMessageDurationChangedEventArgs";
     };
@@ -329,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::UIViewSettings>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.UIViewSettings";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "UIViewSettings";
     };
@@ -336,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::UI::ViewManagement::ViewModePreferences>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.viewmanagement.ViewModePreferences";
         static constexpr const char* module_name = "winrt.windows.ui.viewmanagement";
         static constexpr const char* type_name = "ViewModePreferences";
     };

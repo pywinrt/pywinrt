@@ -42,6 +42,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
         static constexpr const char* type_name = "ExtendedExecutionReason";
     };
@@ -49,6 +50,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
         static constexpr const char* type_name = "ExtendedExecutionResult";
     };
@@ -56,6 +58,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionRevokedReason";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
         static constexpr const char* type_name = "ExtendedExecutionRevokedReason";
     };
@@ -63,6 +66,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionRevokedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionRevokedEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
         static constexpr const char* type_name = "ExtendedExecutionRevokedEventArgs";
     };
@@ -70,6 +74,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::ExtendedExecution::ExtendedExecutionSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.extendedexecution.ExtendedExecutionSession";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.extendedexecution";
         static constexpr const char* type_name = "ExtendedExecutionSession";
     };

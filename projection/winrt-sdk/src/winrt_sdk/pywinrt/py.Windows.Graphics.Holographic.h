@@ -114,6 +114,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicDepthReprojectionMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicDepthReprojectionMethod";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicDepthReprojectionMethod";
     };
@@ -121,6 +122,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentResult>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFramePresentResult";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFramePresentResult";
     };
@@ -128,6 +130,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentWaitBehavior>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFramePresentWaitBehavior";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFramePresentWaitBehavior";
     };
@@ -135,6 +138,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicReprojectionMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicReprojectionMode";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicReprojectionMode";
     };
@@ -142,6 +146,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceUserPresence>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicSpaceUserPresence";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicSpaceUserPresence";
     };
@@ -149,6 +154,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfigurationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicViewConfigurationKind";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicViewConfigurationKind";
     };
@@ -156,6 +162,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicCamera>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicCamera";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicCamera";
     };
@@ -163,6 +170,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraPose>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicCameraPose";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicCameraPose";
     };
@@ -170,6 +178,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraRenderingParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicCameraRenderingParameters";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicCameraRenderingParameters";
     };
@@ -177,6 +186,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicCameraViewportParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicCameraViewportParameters";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicCameraViewportParameters";
     };
@@ -184,6 +194,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicDisplay>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicDisplay";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicDisplay";
     };
@@ -191,6 +202,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrame>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrame";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrame";
     };
@@ -198,6 +210,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePrediction>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFramePrediction";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFramePrediction";
     };
@@ -205,6 +218,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFramePresentationMonitor";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFramePresentationMonitor";
     };
@@ -212,6 +226,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFramePresentationReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFramePresentationReport";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFramePresentationReport";
     };
@@ -219,6 +234,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameRenderingReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrameRenderingReport";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrameRenderingReport";
     };
@@ -226,6 +242,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutMonitor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrameScanoutMonitor";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrameScanoutMonitor";
     };
@@ -233,6 +250,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameScanoutReport>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrameScanoutReport";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrameScanoutReport";
     };
@@ -240,6 +258,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicQuadLayer";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicQuadLayer";
     };
@@ -247,6 +266,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicQuadLayerUpdateParameters>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicQuadLayerUpdateParameters";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicQuadLayerUpdateParameters";
     };
@@ -254,6 +274,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpace>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicSpace";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicSpace";
     };
@@ -261,6 +282,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicSpaceCameraAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicSpaceCameraAddedEventArgs";
     };
@@ -268,6 +290,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicSpaceCameraRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicSpaceCameraRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicSpaceCameraRemovedEventArgs";
     };
@@ -275,6 +298,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicViewConfiguration>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicViewConfiguration";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicViewConfiguration";
     };
@@ -282,6 +306,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicAdapterId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicAdapterId";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicAdapterId";
     };
@@ -289,6 +314,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicFrameId>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicFrameId";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicFrameId";
     };
@@ -296,6 +322,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Graphics::Holographic::HolographicStereoTransform>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.holographic.HolographicStereoTransform";
         static constexpr const char* module_name = "winrt.windows.graphics.holographic";
         static constexpr const char* type_name = "HolographicStereoTransform";
     };

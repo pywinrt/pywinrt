@@ -52,6 +52,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::DeviceAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.DeviceAccessMode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "DeviceAccessMode";
     };
@@ -59,6 +60,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::DeviceSharingMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.DeviceSharingMode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "DeviceSharingMode";
     };
@@ -66,6 +68,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::IOControlAccessMode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlAccessMode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "IOControlAccessMode";
     };
@@ -73,6 +76,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::IOControlBufferingMethod>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlBufferingMethod";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "IOControlBufferingMethod";
     };
@@ -80,6 +84,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::CustomDevice>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.CustomDevice";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "CustomDevice";
     };
@@ -87,6 +92,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::IOControlCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IOControlCode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "IOControlCode";
     };
@@ -94,6 +100,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::KnownDeviceTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.KnownDeviceTypes";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "KnownDeviceTypes";
     };
@@ -101,6 +108,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::Custom::IIOControlCode>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.custom.IIOControlCode";
         static constexpr const char* module_name = "winrt.windows.devices.custom";
         static constexpr const char* type_name = "IIOControlCode";
     };

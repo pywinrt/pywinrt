@@ -215,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AccessibilityView>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AccessibilityView";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AccessibilityView";
     };
@@ -222,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationControlType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationControlType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationControlType";
     };
@@ -229,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationEvents>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationEvents";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationEvents";
     };
@@ -236,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationHeadingLevel>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationHeadingLevel";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationHeadingLevel";
     };
@@ -243,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLandmarkType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationLandmarkType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationLandmarkType";
     };
@@ -250,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationLiveSetting>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationLiveSetting";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationLiveSetting";
     };
@@ -257,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNavigationDirection>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationNavigationDirection";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationNavigationDirection";
     };
@@ -264,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationKind>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationNotificationKind";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationNotificationKind";
     };
@@ -271,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationNotificationProcessing>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationNotificationProcessing";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationNotificationProcessing";
     };
@@ -278,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationOrientation>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationOrientation";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationOrientation";
     };
@@ -285,6 +295,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationStructureChangeType>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationStructureChangeType";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationStructureChangeType";
     };
@@ -292,6 +303,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PatternInterface>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PatternInterface";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PatternInterface";
     };
@@ -299,6 +311,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AnimatedVisualPlayerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AnimatedVisualPlayerAutomationPeer";
     };
@@ -306,6 +319,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AppBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AppBarAutomationPeer";
     };
@@ -313,6 +327,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AppBarButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AppBarButtonAutomationPeer";
     };
@@ -320,6 +335,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AppBarToggleButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AppBarToggleButtonAutomationPeer";
     };
@@ -327,6 +343,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutoSuggestBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutoSuggestBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutoSuggestBoxAutomationPeer";
     };
@@ -334,6 +351,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationPeer";
     };
@@ -341,6 +359,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeerAnnotation>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.AutomationPeerAnnotation";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "AutomationPeerAnnotation";
     };
@@ -348,6 +367,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.BreadcrumbBarItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "BreadcrumbBarItemAutomationPeer";
     };
@@ -355,6 +375,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ButtonAutomationPeer";
     };
@@ -362,6 +383,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ButtonBaseAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ButtonBaseAutomationPeer";
     };
@@ -369,6 +391,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.CalendarDatePickerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "CalendarDatePickerAutomationPeer";
     };
@@ -376,6 +399,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.CheckBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "CheckBoxAutomationPeer";
     };
@@ -383,6 +407,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ColorPickerSliderAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ColorPickerSliderAutomationPeer";
     };
@@ -390,6 +415,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ColorSpectrumAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ColorSpectrumAutomationPeer";
     };
@@ -397,6 +423,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ComboBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ComboBoxAutomationPeer";
     };
@@ -404,6 +431,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ComboBoxItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ComboBoxItemAutomationPeer";
     };
@@ -411,6 +439,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ComboBoxItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ComboBoxItemDataAutomationPeer";
     };
@@ -418,6 +447,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.DatePickerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "DatePickerAutomationPeer";
     };
@@ -425,6 +455,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::DatePickerFlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.DatePickerFlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "DatePickerFlyoutPresenterAutomationPeer";
     };
@@ -432,6 +463,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.DropDownButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "DropDownButtonAutomationPeer";
     };
@@ -439,6 +471,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ExpanderAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ExpanderAutomationPeer";
     };
@@ -446,6 +479,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.FlipViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "FlipViewAutomationPeer";
     };
@@ -453,6 +487,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.FlipViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "FlipViewItemAutomationPeer";
     };
@@ -460,6 +495,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.FlipViewItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "FlipViewItemDataAutomationPeer";
     };
@@ -467,6 +503,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.FlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "FlyoutPresenterAutomationPeer";
     };
@@ -474,6 +511,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.FrameworkElementAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "FrameworkElementAutomationPeer";
     };
@@ -481,6 +519,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.GridViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "GridViewAutomationPeer";
     };
@@ -488,6 +527,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.GridViewHeaderItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "GridViewHeaderItemAutomationPeer";
     };
@@ -495,6 +535,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.GridViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "GridViewItemAutomationPeer";
     };
@@ -502,6 +543,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.GridViewItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "GridViewItemDataAutomationPeer";
     };
@@ -509,6 +551,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.GroupItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "GroupItemAutomationPeer";
     };
@@ -516,6 +559,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.HubAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "HubAutomationPeer";
     };
@@ -523,6 +567,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.HubSectionAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "HubSectionAutomationPeer";
     };
@@ -530,6 +575,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.HyperlinkButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "HyperlinkButtonAutomationPeer";
     };
@@ -537,6 +583,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ImageAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ImageAutomationPeer";
     };
@@ -544,6 +591,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.InfoBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "InfoBarAutomationPeer";
     };
@@ -551,6 +599,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ItemAutomationPeer";
     };
@@ -558,6 +607,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ItemContainerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ItemContainerAutomationPeer";
     };
@@ -565,6 +615,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ItemsControlAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ItemsControlAutomationPeer";
     };
@@ -572,6 +623,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ItemsViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ItemsViewAutomationPeer";
     };
@@ -579,6 +631,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListBoxAutomationPeer";
     };
@@ -586,6 +639,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListBoxItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListBoxItemAutomationPeer";
     };
@@ -593,6 +647,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListBoxItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListBoxItemDataAutomationPeer";
     };
@@ -600,6 +655,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListPickerFlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListPickerFlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListPickerFlyoutPresenterAutomationPeer";
     };
@@ -607,6 +663,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewAutomationPeer";
     };
@@ -614,6 +671,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewBaseAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewBaseAutomationPeer";
     };
@@ -621,6 +679,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewBaseHeaderItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewBaseHeaderItemAutomationPeer";
     };
@@ -628,6 +687,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewHeaderItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewHeaderItemAutomationPeer";
     };
@@ -635,6 +695,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewItemAutomationPeer";
     };
@@ -642,6 +703,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ListViewItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ListViewItemDataAutomationPeer";
     };
@@ -649,6 +711,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.LoopingSelectorAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "LoopingSelectorAutomationPeer";
     };
@@ -656,6 +719,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.LoopingSelectorItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "LoopingSelectorItemAutomationPeer";
     };
@@ -663,6 +727,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::LoopingSelectorItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.LoopingSelectorItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "LoopingSelectorItemDataAutomationPeer";
     };
@@ -670,6 +735,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MediaPlayerElementAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MediaPlayerElementAutomationPeer";
     };
@@ -677,6 +743,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MediaTransportControlsAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MediaTransportControlsAutomationPeer";
     };
@@ -684,6 +751,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MenuBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MenuBarAutomationPeer";
     };
@@ -691,6 +759,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MenuBarItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MenuBarItemAutomationPeer";
     };
@@ -698,6 +767,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MenuFlyoutItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MenuFlyoutItemAutomationPeer";
     };
@@ -705,6 +775,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.MenuFlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "MenuFlyoutPresenterAutomationPeer";
     };
@@ -712,6 +783,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.NavigationViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "NavigationViewAutomationPeer";
     };
@@ -719,6 +791,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.NavigationViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "NavigationViewItemAutomationPeer";
     };
@@ -726,6 +799,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.NumberBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "NumberBoxAutomationPeer";
     };
@@ -733,6 +807,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PasswordBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PasswordBoxAutomationPeer";
     };
@@ -740,6 +815,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PersonPictureAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PersonPictureAutomationPeer";
     };
@@ -747,6 +823,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PickerFlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PickerFlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PickerFlyoutPresenterAutomationPeer";
     };
@@ -754,6 +831,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PipsPagerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PipsPagerAutomationPeer";
     };
@@ -761,6 +839,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PivotAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PivotAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PivotAutomationPeer";
     };
@@ -768,6 +847,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PivotItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PivotItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PivotItemAutomationPeer";
     };
@@ -775,6 +855,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::PivotItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.PivotItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "PivotItemDataAutomationPeer";
     };
@@ -782,6 +863,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ProgressBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ProgressBarAutomationPeer";
     };
@@ -789,6 +871,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ProgressRingAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ProgressRingAutomationPeer";
     };
@@ -796,6 +879,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RadioButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RadioButtonAutomationPeer";
     };
@@ -803,6 +887,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RadioButtonsAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RadioButtonsAutomationPeer";
     };
@@ -810,6 +895,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RangeBaseAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RangeBaseAutomationPeer";
     };
@@ -817,6 +903,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RatingControlAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RatingControlAutomationPeer";
     };
@@ -824,6 +911,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RepeatButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RepeatButtonAutomationPeer";
     };
@@ -831,6 +919,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RepeaterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RepeaterAutomationPeer";
     };
@@ -838,6 +927,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RichEditBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RichEditBoxAutomationPeer";
     };
@@ -845,6 +935,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RichTextBlockAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RichTextBlockAutomationPeer";
     };
@@ -852,6 +943,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RichTextBlockOverflowAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RichTextBlockOverflowAutomationPeer";
     };
@@ -859,6 +951,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ScrollBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ScrollBarAutomationPeer";
     };
@@ -866,6 +959,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ScrollViewerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ScrollViewerAutomationPeer";
     };
@@ -873,6 +967,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SelectorAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SelectorAutomationPeer";
     };
@@ -880,6 +975,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SelectorBarItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SelectorBarItemAutomationPeer";
     };
@@ -887,6 +983,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SelectorItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SelectorItemAutomationPeer";
     };
@@ -894,6 +991,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SemanticZoomAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SemanticZoomAutomationPeer";
     };
@@ -901,6 +999,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SliderAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SliderAutomationPeer";
     };
@@ -908,6 +1007,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.SplitButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "SplitButtonAutomationPeer";
     };
@@ -915,6 +1015,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TabViewAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TabViewAutomationPeer";
     };
@@ -922,6 +1023,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TabViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TabViewItemAutomationPeer";
     };
@@ -929,6 +1031,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TeachingTipAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TeachingTipAutomationPeer";
     };
@@ -936,6 +1039,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TextBlockAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TextBlockAutomationPeer";
     };
@@ -943,6 +1047,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TextBoxAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TextBoxAutomationPeer";
     };
@@ -950,6 +1055,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ThumbAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ThumbAutomationPeer";
     };
@@ -957,6 +1063,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TimePickerAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TimePickerAutomationPeer";
     };
@@ -964,6 +1071,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TimePickerFlyoutPresenterAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TimePickerFlyoutPresenterAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TimePickerFlyoutPresenterAutomationPeer";
     };
@@ -971,6 +1079,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ToggleButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ToggleButtonAutomationPeer";
     };
@@ -978,6 +1087,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ToggleMenuFlyoutItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ToggleMenuFlyoutItemAutomationPeer";
     };
@@ -985,6 +1095,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ToggleSplitButtonAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ToggleSplitButtonAutomationPeer";
     };
@@ -992,6 +1103,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ToggleSwitchAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ToggleSwitchAutomationPeer";
     };
@@ -999,6 +1111,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TreeViewItemAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TreeViewItemAutomationPeer";
     };
@@ -1006,6 +1119,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TreeViewItemDataAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TreeViewItemDataAutomationPeer";
     };
@@ -1013,6 +1127,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.TreeViewListAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "TreeViewListAutomationPeer";
     };
@@ -1020,6 +1135,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.WebView2AutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "WebView2AutomationPeer";
     };
@@ -1027,6 +1143,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::RawElementProviderRuntimeId>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.RawElementProviderRuntimeId";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "RawElementProviderRuntimeId";
     };

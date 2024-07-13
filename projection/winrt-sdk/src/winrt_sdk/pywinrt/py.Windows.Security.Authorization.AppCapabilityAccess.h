@@ -46,6 +46,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapabilityAccessStatus";
         static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
         static constexpr const char* type_name = "AppCapabilityAccessStatus";
     };
@@ -53,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapability";
         static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
         static constexpr const char* type_name = "AppCapability";
     };
@@ -60,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authorization.appcapabilityaccess.AppCapabilityAccessChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.security.authorization.appcapabilityaccess";
         static constexpr const char* type_name = "AppCapabilityAccessChangedEventArgs";
     };

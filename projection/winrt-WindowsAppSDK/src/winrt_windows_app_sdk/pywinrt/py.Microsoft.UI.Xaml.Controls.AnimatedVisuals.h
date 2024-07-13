@@ -54,6 +54,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedAcceptVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedAcceptVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedAcceptVisualSource";
     };
@@ -61,6 +62,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedBackVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedBackVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedBackVisualSource";
     };
@@ -68,6 +70,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronDownSmallVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedChevronDownSmallVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedChevronDownSmallVisualSource";
     };
@@ -75,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronRightDownSmallVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedChevronRightDownSmallVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedChevronRightDownSmallVisualSource";
     };
@@ -82,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedChevronUpDownSmallVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedChevronUpDownSmallVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedChevronUpDownSmallVisualSource";
     };
@@ -89,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedFindVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedFindVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedFindVisualSource";
     };
@@ -96,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedGlobalNavigationButtonVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedGlobalNavigationButtonVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedGlobalNavigationButtonVisualSource";
     };
@@ -103,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::AnimatedVisuals::AnimatedSettingsVisualSource>
     {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals.AnimatedSettingsVisualSource";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls.animatedvisuals";
         static constexpr const char* type_name = "AnimatedSettingsVisualSource";
     };

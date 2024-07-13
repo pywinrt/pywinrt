@@ -97,6 +97,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationMechanism>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynAuthenticationMechanism";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynAuthenticationMechanism";
     };
@@ -104,6 +105,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentState>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynBusAttachmentState";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynBusAttachmentState";
     };
@@ -111,6 +113,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSessionLostReason";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSessionLostReason";
     };
@@ -118,6 +121,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynTrafficType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynTrafficType";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynTrafficType";
     };
@@ -125,6 +129,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutData>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynAboutData";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynAboutData";
     };
@@ -132,6 +137,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAboutDataView>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynAboutDataView";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynAboutDataView";
     };
@@ -139,6 +145,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAcceptSessionJoinerEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynAcceptSessionJoinerEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynAcceptSessionJoinerEventArgs";
     };
@@ -146,6 +153,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynAuthenticationCompleteEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynAuthenticationCompleteEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynAuthenticationCompleteEventArgs";
     };
@@ -153,6 +161,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachment>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynBusAttachment";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynBusAttachment";
     };
@@ -160,6 +169,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusAttachmentStateChangedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynBusAttachmentStateChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynBusAttachmentStateChangedEventArgs";
     };
@@ -167,6 +177,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObject>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynBusObject";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynBusObject";
     };
@@ -174,6 +185,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynBusObjectStoppedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynBusObjectStoppedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynBusObjectStoppedEventArgs";
     };
@@ -181,6 +193,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentials>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynCredentials";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynCredentials";
     };
@@ -188,6 +201,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynCredentialsRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynCredentialsRequestedEventArgs";
     };
@@ -195,6 +209,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynCredentialsVerificationRequestedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynCredentialsVerificationRequestedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynCredentialsVerificationRequestedEventArgs";
     };
@@ -202,6 +217,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynMessageInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynMessageInfo";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynMessageInfo";
     };
@@ -209,6 +225,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynProducerStoppedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynProducerStoppedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynProducerStoppedEventArgs";
     };
@@ -216,6 +233,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfo>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynServiceInfo";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynServiceInfo";
     };
@@ -223,6 +241,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynServiceInfoRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynServiceInfoRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynServiceInfoRemovedEventArgs";
     };
@@ -230,6 +249,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSession>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSession";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSession";
     };
@@ -237,6 +257,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionJoinedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSessionJoinedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSessionJoinedEventArgs";
     };
@@ -244,6 +265,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionLostEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSessionLostEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSessionLostEventArgs";
     };
@@ -251,6 +273,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberAddedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSessionMemberAddedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSessionMemberAddedEventArgs";
     };
@@ -258,6 +281,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynSessionMemberRemovedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynSessionMemberRemovedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynSessionMemberRemovedEventArgs";
     };
@@ -265,6 +289,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynStatus>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynStatus";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynStatus";
     };
@@ -272,6 +297,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::AllJoynWatcherStoppedEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.AllJoynWatcherStoppedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "AllJoynWatcherStoppedEventArgs";
     };
@@ -279,6 +305,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::IAllJoynAcceptSessionJoiner>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.IAllJoynAcceptSessionJoiner";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "IAllJoynAcceptSessionJoiner";
     };
@@ -286,6 +313,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Devices::AllJoyn::IAllJoynProducer>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.alljoyn.IAllJoynProducer";
         static constexpr const char* module_name = "winrt.windows.devices.alljoyn";
         static constexpr const char* type_name = "IAllJoynProducer";
     };

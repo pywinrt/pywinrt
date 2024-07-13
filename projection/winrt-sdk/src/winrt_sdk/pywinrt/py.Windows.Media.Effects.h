@@ -119,6 +119,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffectType>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectType";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioEffectType";
     };
@@ -126,6 +127,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::MediaEffectClosedReason>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.MediaEffectClosedReason";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "MediaEffectClosedReason";
     };
@@ -133,6 +135,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::MediaMemoryTypes>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.MediaMemoryTypes";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "MediaMemoryTypes";
     };
@@ -140,6 +143,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioCaptureEffectsManager";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioCaptureEffectsManager";
     };
@@ -147,6 +151,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffect";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioEffect";
     };
@@ -154,6 +159,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioEffectDefinition";
     };
@@ -161,6 +167,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffectsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectsManager";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioEffectsManager";
     };
@@ -168,6 +175,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioRenderEffectsManager>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioRenderEffectsManager";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "AudioRenderEffectsManager";
     };
@@ -175,6 +183,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::CompositeVideoFrameContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.CompositeVideoFrameContext";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "CompositeVideoFrameContext";
     };
@@ -182,6 +191,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::ProcessAudioFrameContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.ProcessAudioFrameContext";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "ProcessAudioFrameContext";
     };
@@ -189,6 +199,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::ProcessVideoFrameContext>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.ProcessVideoFrameContext";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "ProcessVideoFrameContext";
     };
@@ -196,6 +207,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::SlowMotionEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.SlowMotionEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "SlowMotionEffectDefinition";
     };
@@ -203,6 +215,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::VideoCompositorDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoCompositorDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "VideoCompositorDefinition";
     };
@@ -210,6 +223,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::VideoEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "VideoEffectDefinition";
     };
@@ -217,6 +231,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::VideoTransformEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoTransformEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "VideoTransformEffectDefinition";
     };
@@ -224,6 +239,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::VideoTransformSphericalProjection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.VideoTransformSphericalProjection";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "VideoTransformSphericalProjection";
     };
@@ -231,6 +247,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IAudioEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IAudioEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IAudioEffectDefinition";
     };
@@ -238,6 +255,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IBasicAudioEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IBasicAudioEffect";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IBasicAudioEffect";
     };
@@ -245,6 +263,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IBasicVideoEffect>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IBasicVideoEffect";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IBasicVideoEffect";
     };
@@ -252,6 +271,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IVideoCompositor>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IVideoCompositor";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IVideoCompositor";
     };
@@ -259,6 +279,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IVideoCompositorDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IVideoCompositorDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IVideoCompositorDefinition";
     };
@@ -266,6 +287,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::Media::Effects::IVideoEffectDefinition>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.IVideoEffectDefinition";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "IVideoEffectDefinition";
     };

@@ -78,6 +78,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderConnection>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailDataProviderConnection";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailDataProviderConnection";
     };
@@ -85,6 +86,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailDataProviderTriggerDetails>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailDataProviderTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailDataProviderTriggerDetails";
     };
@@ -92,6 +94,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxCreateFolderRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxCreateFolderRequest";
     };
@@ -99,6 +102,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxCreateFolderRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxCreateFolderRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxCreateFolderRequestEventArgs";
     };
@@ -106,6 +110,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDeleteFolderRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDeleteFolderRequest";
     };
@@ -113,6 +118,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDeleteFolderRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDeleteFolderRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDeleteFolderRequestEventArgs";
     };
@@ -120,6 +126,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDownloadAttachmentRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDownloadAttachmentRequest";
     };
@@ -127,6 +134,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadAttachmentRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDownloadAttachmentRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDownloadAttachmentRequestEventArgs";
     };
@@ -134,6 +142,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDownloadMessageRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDownloadMessageRequest";
     };
@@ -141,6 +150,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxDownloadMessageRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxDownloadMessageRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxDownloadMessageRequestEventArgs";
     };
@@ -148,6 +158,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxEmptyFolderRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxEmptyFolderRequest";
     };
@@ -155,6 +166,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxEmptyFolderRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxEmptyFolderRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxEmptyFolderRequestEventArgs";
     };
@@ -162,6 +174,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxForwardMeetingRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxForwardMeetingRequest";
     };
@@ -169,6 +182,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxForwardMeetingRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxForwardMeetingRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxForwardMeetingRequestEventArgs";
     };
@@ -176,6 +190,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxGetAutoReplySettingsRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxGetAutoReplySettingsRequest";
     };
@@ -183,6 +198,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxGetAutoReplySettingsRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxGetAutoReplySettingsRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxGetAutoReplySettingsRequestEventArgs";
     };
@@ -190,6 +206,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxMoveFolderRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxMoveFolderRequest";
     };
@@ -197,6 +214,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxMoveFolderRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxMoveFolderRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxMoveFolderRequestEventArgs";
     };
@@ -204,6 +222,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxProposeNewTimeForMeetingRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxProposeNewTimeForMeetingRequest";
     };
@@ -211,6 +230,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxProposeNewTimeForMeetingRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxProposeNewTimeForMeetingRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxProposeNewTimeForMeetingRequestEventArgs";
     };
@@ -218,6 +238,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxResolveRecipientsRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxResolveRecipientsRequest";
     };
@@ -225,6 +246,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxResolveRecipientsRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxResolveRecipientsRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxResolveRecipientsRequestEventArgs";
     };
@@ -232,6 +254,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxServerSearchReadBatchRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxServerSearchReadBatchRequest";
     };
@@ -239,6 +262,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxServerSearchReadBatchRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxServerSearchReadBatchRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxServerSearchReadBatchRequestEventArgs";
     };
@@ -246,6 +270,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxSetAutoReplySettingsRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxSetAutoReplySettingsRequest";
     };
@@ -253,6 +278,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSetAutoReplySettingsRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxSetAutoReplySettingsRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxSetAutoReplySettingsRequestEventArgs";
     };
@@ -260,6 +286,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxSyncManagerSyncRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxSyncManagerSyncRequest";
     };
@@ -267,6 +294,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxSyncManagerSyncRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxSyncManagerSyncRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxSyncManagerSyncRequestEventArgs";
     };
@@ -274,6 +302,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxUpdateMeetingResponseRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxUpdateMeetingResponseRequest";
     };
@@ -281,6 +310,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxUpdateMeetingResponseRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxUpdateMeetingResponseRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxUpdateMeetingResponseRequestEventArgs";
     };
@@ -288,6 +318,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequest>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxValidateCertificatesRequest";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxValidateCertificatesRequest";
     };
@@ -295,6 +326,7 @@ namespace py
     template<>
     struct py_type<winrt::Windows::ApplicationModel::Email::DataProvider::EmailMailboxValidateCertificatesRequestEventArgs>
     {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.email.dataprovider.EmailMailboxValidateCertificatesRequestEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.email.dataprovider";
         static constexpr const char* type_name = "EmailMailboxValidateCertificatesRequestEventArgs";
     };
