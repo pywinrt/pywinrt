@@ -119,7 +119,7 @@ namespace py::cpp::Windows::Graphics::Capture::Interop
         R"(Targets a monitor(s) for the creation of a graphics capture item.
 
 Args:
-    monitor (HMONITOR): The monitor handle that represents the monitor to capture. 
+    monitor (HMONITOR): The monitor handle that represents the monitor to capture.
 
 Returns:
     A graphics capture item.
