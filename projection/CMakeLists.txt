@@ -134,6 +134,10 @@ else()
         "winrt-Windows.Graphics.DirectX.Direct3D11"
         "winrt-Windows.Storage"
         "winrt-Windows.Storage.Streams"
+        "winrt-Windows.System"
+        "winrt-Windows.UI"
+        "winrt-Windows.UI.Composition"
+        "winrt-Windows.UI.Composition.Desktop"
     )
     set(app_packages
         "winrt-Microsoft.UI"
@@ -142,6 +146,8 @@ else()
     set(interop_packages
         "interop/winrt-Windows.Foundation.Interop"
         "interop/winrt-Windows.Graphics.Capture.Interop"
+        "interop/winrt-Windows.System.Interop"
+        "interop/winrt-Windows.UI.Composition.Interop"
     )
     set(app_interop_packages
         "interop/winrt-Microsoft.UI.Interop"
@@ -191,6 +197,10 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
         target_link_directories(${package_target} PRIVATE
             "${WINDOWS_APP_SDK_PATH}/lib/win10-${WINDOWS_APP_SDK_ARCH}"
         )
+    endif()
+
+    if (${package} STREQUAL "interop/winrt-Windows.System.Interop")
+        target_link_libraries(${package_target} PRIVATE "CoreMessaging")
     endif()
 
     if (${package} STREQUAL "interop/winrt-Microsoft.UI.Interop")

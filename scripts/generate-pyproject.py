@@ -233,6 +233,9 @@ def is_windows_app_package(name: str) -> bool:
 def is_component_pacakge(name: str) -> bool:
     return name in ["winrt-TestComponent"]
 
+def is_dispatcher_queue_package(name: str) -> bool:
+    return name == "winrt-Windows.System.Interop"
+
 
 def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
@@ -329,9 +332,16 @@ def write_project_files(
                     extra_build=APP_SDK_EXTRA_BUILD
                     if is_app_sdk_interop_package(package_name)
                     else "",
-                    extra_libraries=', "Microsoft.WindowsAppRuntime.Bootstrap"'
-                    if is_app_sdk_bootstrap_package(package_name)
-                    else "",
+                    extra_libraries=(
+                        ', "Microsoft.WindowsAppRuntime.Bootstrap"'
+                        if is_app_sdk_bootstrap_package(package_name)
+                        else ""
+                    )
+                    + (
+                        ', "CoreMessaging"'
+                        if is_dispatcher_queue_package(package_name)
+                        else ""
+                    ),
                 )
             )
 

@@ -29,3 +29,5 @@ to bridge between WinRT and other interfaces.
 
    windows/foundation/interop
    windows/graphics/capture/interop
+   windows/system/interop
+   windows/ui/composition/interop
