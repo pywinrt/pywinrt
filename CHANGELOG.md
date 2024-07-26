@@ -7,6 +7,8 @@
 ### Added
 - Added `__repr__` implementation for projected struct types.
 - Added `--component-dlls` option to PyWinRT.exe for user component packages.
+- Added `winrt.windows.system.interop` package.
+- Added `winrt.windows.ui.composition.interop` package.
 
 ### Changed
 - General performance improvements.
