@@ -16,7 +16,7 @@ classifiers = [
     "Intended Audience :: Developers",
 ]
 dynamic = ["version", "dependencies", "optional-dependencies"]
-requires-python = ">=3.9,<3.13"
+requires-python = ">=3.9,<3.14"
 
 [project.urls]
 # Homepage = "https://github.com/pywinrt/pywinrt"
