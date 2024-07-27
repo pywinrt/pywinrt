@@ -777,3 +777,112 @@ class TestNumerics(unittest.TestCase):
         self.assertAlmostEqual(q.y, 0.431331, places=5)
         self.assertAlmostEqual(q.z, 0.539164, places=5)
         self.assertAlmostEqual(q.w, 0.646997, places=5)
+
+    def test_transform(self):
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform(wfn.Matrix3x2(3, 4, 5, 6, 7, 8)),
+            wfn.Vector2(20, 24),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform(
+                wfn.Matrix4x4(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+            ),
+            wfn.Vector2(32, 36),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform_normal(wfn.Matrix3x2(3, 4, 5, 6, 7, 8)),
+            wfn.Vector2(13, 16),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform_normal(
+                wfn.Matrix4x4(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18),
+            ),
+            wfn.Vector2(17, 20),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform(wfn.Quaternion(3, 4, 5, 6)),
+            wfn.Vector2(-153, -50),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform4(
+                wfn.Matrix4x4(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+            ),
+            wfn.Vector4(32, 36, 40, 44),
+        )
+        self.assertEqual(
+            wfn.Vector2(1, 2).transform4(wfn.Quaternion(3, 4, 5, 6)),
+            wfn.Vector4(-153, -50, 134, 1),
+        )
+
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).transform(
+                wfn.Matrix4x4(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+            ),
+            wfn.Vector3(72, 79, 86),
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).transform_normal(
+                wfn.Matrix4x4(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+            ),
+            wfn.Vector3(56, 62, 68),
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).transform(wfn.Quaternion(4, 5, 6, 7)),
+            wfn.Vector3(145, -70, -33),
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).transform4(
+                wfn.Matrix4x4(4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+            ),
+            wfn.Vector4(72, 79, 86, 93),
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).transform4(wfn.Quaternion(4, 5, 6, 7)),
+            wfn.Vector4(145, -70, -33, 1),
+        )
+
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).transform(
+                wfn.Matrix4x4(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
+            ),
+            wfn.Vector4(130, 140, 150, 160),
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).transform(wfn.Quaternion(5, 6, 7, 8)),
+            wfn.Vector4(225, -110, -61, 4),
+        )
+
+        self.assertEqual(
+            wfn.Matrix4x4(
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+            ).transform(wfn.Quaternion(17, 18, 19, 20)),
+            wfn.Matrix4x4(
+                2433,
+                -1214,
+                -1021,
+                4,
+                1829,
+                -906,
+                -761,
+                8,
+                1225,
+                -598,
+                -501,
+                12,
+                621,
+                -290,
+                -241,
+                16,
+            ),
+        )
+
+        self.assertEqual(
+            wfn.Plane(wfn.Vector3(1, 0, 0), 1).transform(
+                wfn.Matrix4x4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+            ),
+            wfn.Plane(wfn.Vector3(1, 0, 0), 1),
+        )
+        self.assertEqual(
+            wfn.Plane(wfn.Vector3(1, 2, 3), 4).transform(wfn.Quaternion(5, 6, 7, 8)),
+            wfn.Plane(wfn.Vector3(225, -110, -61), 4),
+        )
