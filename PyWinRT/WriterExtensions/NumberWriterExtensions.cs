@@ -142,6 +142,7 @@ static class NumberWriterExtensions
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
                 new("invert", "Matrix4x4", []),
+                new("decompose", "typing.Tuple[Vector3, Quaternion, Vector3]", []),
                 new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
                 new(
@@ -246,15 +247,43 @@ static class NumberWriterExtensions
                                 w.Indent--;
                                 w.WriteLine("}");
                                 w.WriteBlankLine();
+                                w.WriteLine("return py::convert(_result);");
+                            }
+                            else if (method.Name == "decompose")
+                            {
+                                w.WriteLine("winrt::Windows::Foundation::Numerics::float3 _out0;");
+                                w.WriteLine(
+                                    "winrt::Windows::Foundation::Numerics::quaternion _out1;"
+                                );
+                                w.WriteLine("winrt::Windows::Foundation::Numerics::float3 _out2;");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_out0, &_out1, &_out2))"
+                                );
+                                w.WriteLine("{");
+                                w.Indent++;
+                                w.WriteLine(
+                                    "PyErr_SetString(PyExc_ValueError, \"Matrix is not decomposable\");"
+                                );
+                                w.WriteLine("return nullptr;");
+                                w.Indent--;
+                                w.WriteLine("}");
+                                w.WriteBlankLine();
+                                w.WriteLine("py::pyobj_handle out0{py::convert(_out0)};");
+                                w.WriteLine("py::pyobj_handle out1{py::convert(_out1)};");
+                                w.WriteLine("py::pyobj_handle out2{py::convert(_out2)};");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    "return PyTuple_Pack(3, out0.get(), out1.get(), out2.get());"
+                                );
                             }
                             else
                             {
                                 w.WriteLine(
                                     $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
                                 );
+                                w.WriteLine("return py::convert(_result);");
                             }
-
-                            w.WriteLine("return py::convert(_result);");
 
                             break;
                         case 1:

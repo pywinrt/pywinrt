@@ -734,6 +734,33 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* decompose_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            winrt::Windows::Foundation::Numerics::float3 _out0;
+            winrt::Windows::Foundation::Numerics::quaternion _out1;
+            winrt::Windows::Foundation::Numerics::float3 _out2;
+
+            if (!winrt::Windows::Foundation::Numerics::decompose(self->obj, &_out0, &_out1, &_out2))
+            {
+                PyErr_SetString(PyExc_ValueError, "Matrix is not decomposable");
+                return nullptr;
+            }
+
+            py::pyobj_handle out0{py::convert(_out0)};
+            py::pyobj_handle out1{py::convert(_out1)};
+            py::pyobj_handle out2{py::convert(_out2)};
+
+            return PyTuple_Pack(3, out0.get(), out1.get(), out2.get());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* transform_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* arg) noexcept
     {
         try
@@ -780,6 +807,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix4x4), METH_NOARGS, nullptr },
         { "translation", reinterpret_cast<PyCFunction>(translation_Matrix4x4), METH_NOARGS, nullptr },
         { "invert", reinterpret_cast<PyCFunction>(invert_Matrix4x4), METH_NOARGS, nullptr },
+        { "decompose", reinterpret_cast<PyCFunction>(decompose_Matrix4x4), METH_NOARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Matrix4x4), METH_O, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
