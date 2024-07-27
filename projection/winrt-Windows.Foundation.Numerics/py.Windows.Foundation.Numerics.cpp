@@ -69,6 +69,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* is_identity_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix3x2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3x2>>();
@@ -80,6 +94,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Matrix3x2[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -587,6 +602,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* is_identity_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix4x4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4x4>>();
@@ -598,6 +627,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Matrix4x4[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1695,6 +1725,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* is_identity_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* length_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
     {
         try
@@ -1734,6 +1778,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Quaternion[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Quaternion), METH_NOARGS, nullptr },
         { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Quaternion), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },

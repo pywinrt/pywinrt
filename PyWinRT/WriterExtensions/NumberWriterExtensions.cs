@@ -121,6 +121,7 @@ static class NumberWriterExtensions
             "Matrix3x2",
             new List<MethodInfo>
             {
+                new("is_identity", "bool", []),
                 // new("determinant", "float", []),
                 // new("invert", "Matrix3x2", []),
                 // new("transform", "Vector2", [new ParamInfo("value", "Vector2")]),
@@ -132,6 +133,7 @@ static class NumberWriterExtensions
             "Matrix4x4",
             new List<MethodInfo>
             {
+                new("is_identity", "bool", []),
                 // new("determinant", "float", []),
                 // new("invert", "Matrix4x4", []),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
@@ -154,7 +156,7 @@ static class NumberWriterExtensions
             "Quaternion",
             new List<MethodInfo>
             {
-                // new("is_identity", "bool", []),
+                new("is_identity", "bool", []),
                 new("length", "float", []),
                 new("length_squared", "float", []),
                 // new("normalize", "Quaternion", []),
