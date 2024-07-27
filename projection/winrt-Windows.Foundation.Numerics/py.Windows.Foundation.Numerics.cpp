@@ -2638,6 +2638,52 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* min_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2656,6 +2702,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot", reinterpret_cast<PyCFunction>(dot_Vector2), METH_O, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector2), METH_NOARGS, nullptr },
         { "reflect", reinterpret_cast<PyCFunction>(reflect_Vector2), METH_O, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector2), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector2), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3175,6 +3224,52 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* min_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -3194,6 +3289,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "cross", reinterpret_cast<PyCFunction>(cross_Vector3), METH_O, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector3), METH_NOARGS, nullptr },
         { "reflect", reinterpret_cast<PyCFunction>(reflect_Vector3), METH_O, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector3), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector3), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector3), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3725,6 +3823,52 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* min_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -3742,6 +3886,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector4), METH_O, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Vector4), METH_O, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector4), METH_NOARGS, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector4), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector4), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };

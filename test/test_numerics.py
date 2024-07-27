@@ -654,3 +654,85 @@ class TestNumerics(unittest.TestCase):
             wfn.Vector3(1, 2, 3).reflect(wfn.Vector3(4, 5, 6)),
             wfn.Vector3(-255, -318, -381),
         )
+
+    def test_min(self):
+        self.assertEqual(wfn.Vector2(1, 2).min(wfn.Vector2(3, 4)), wfn.Vector2(1, 2))
+        self.assertEqual(wfn.Vector2(3, 4).min(wfn.Vector2(1, 2)), wfn.Vector2(1, 2))
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).min(wfn.Vector3(4, 5, 6)), wfn.Vector3(1, 2, 3)
+        )
+        self.assertEqual(
+            wfn.Vector3(4, 5, 6).min(wfn.Vector3(1, 2, 3)), wfn.Vector3(1, 2, 3)
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).min(wfn.Vector4(5, 6, 7, 8)),
+            wfn.Vector4(1, 2, 3, 4),
+        )
+        self.assertEqual(
+            wfn.Vector4(5, 6, 7, 8).min(wfn.Vector4(1, 2, 3, 4)),
+            wfn.Vector4(1, 2, 3, 4),
+        )
+
+    def test_max(self):
+        self.assertEqual(wfn.Vector2(1, 2).max(wfn.Vector2(3, 4)), wfn.Vector2(3, 4))
+        self.assertEqual(wfn.Vector2(3, 4).max(wfn.Vector2(1, 2)), wfn.Vector2(3, 4))
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).max(wfn.Vector3(4, 5, 6)), wfn.Vector3(4, 5, 6)
+        )
+        self.assertEqual(
+            wfn.Vector3(4, 5, 6).max(wfn.Vector3(1, 2, 3)), wfn.Vector3(4, 5, 6)
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).max(wfn.Vector4(5, 6, 7, 8)),
+            wfn.Vector4(5, 6, 7, 8),
+        )
+        self.assertEqual(
+            wfn.Vector4(5, 6, 7, 8).max(wfn.Vector4(1, 2, 3, 4)),
+            wfn.Vector4(5, 6, 7, 8),
+        )
+
+    def test_clamp(self):
+        self.assertEqual(
+            wfn.Vector2(1, 2).clamp(wfn.Vector2(3, 4), wfn.Vector2(5, 6)),
+            wfn.Vector2(3, 4),
+        )
+        self.assertEqual(
+            wfn.Vector2(3, 4).clamp(wfn.Vector2(1, 2), wfn.Vector2(5, 6)),
+            wfn.Vector2(3, 4),
+        )
+        self.assertEqual(
+            wfn.Vector2(5, 6).clamp(wfn.Vector2(1, 2), wfn.Vector2(3, 4)),
+            wfn.Vector2(3, 4),
+        )
+
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).clamp(wfn.Vector3(4, 5, 6), wfn.Vector3(7, 8, 9)),
+            wfn.Vector3(4, 5, 6),
+        )
+        self.assertEqual(
+            wfn.Vector3(4, 5, 6).clamp(wfn.Vector3(1, 2, 3), wfn.Vector3(7, 8, 9)),
+            wfn.Vector3(4, 5, 6),
+        )
+        self.assertEqual(
+            wfn.Vector3(7, 8, 9).clamp(wfn.Vector3(1, 2, 3), wfn.Vector3(4, 5, 6)),
+            wfn.Vector3(4, 5, 6),
+        )
+
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).clamp(
+                wfn.Vector4(5, 6, 7, 8), wfn.Vector4(9, 10, 11, 12)
+            ),
+            wfn.Vector4(5, 6, 7, 8),
+        )
+        self.assertEqual(
+            wfn.Vector4(5, 6, 7, 8).clamp(
+                wfn.Vector4(1, 2, 3, 4), wfn.Vector4(9, 10, 11, 12)
+            ),
+            wfn.Vector4(5, 6, 7, 8),
+        )
+        self.assertEqual(
+            wfn.Vector4(9, 10, 11, 12).clamp(
+                wfn.Vector4(1, 2, 3, 4), wfn.Vector4(5, 6, 7, 8)
+            ),
+            wfn.Vector4(5, 6, 7, 8),
+        )

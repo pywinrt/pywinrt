@@ -42,13 +42,13 @@ static class NumberWriterExtensions
                 new("dot", "float", [new ParamInfo("value", "Vector2")]),
                 new("normalize", "Vector2", []),
                 new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
-                // new("min", "Vector2", [new ParamInfo("value", "Vector2")]),
-                // new("max", "Vector2", [new ParamInfo("value", "Vector2")]),
-                // new(
-                //     "clamp",
-                //     "Vector2",
-                //     [new ParamInfo("min", "Vector2"), new ParamInfo("max", "Vector2")]
-                // ),
+                new("min", "Vector2", [new ParamInfo("value", "Vector2")]),
+                new("max", "Vector2", [new ParamInfo("value", "Vector2")]),
+                new(
+                    "clamp",
+                    "Vector2",
+                    [new ParamInfo("min", "Vector2"), new ParamInfo("max", "Vector2")]
+                ),
                 // new(
                 //     "lerp",
                 //     "Vector2",
@@ -73,13 +73,13 @@ static class NumberWriterExtensions
                 new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
                 new("normalize", "Vector3", []),
                 new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
-                // new("min", "Vector3", [new ParamInfo("value", "Vector3")]),
-                // new("max", "Vector3", [new ParamInfo("value", "Vector3")]),
-                // new(
-                //     "clamp",
-                //     "Vector3",
-                //     [new ParamInfo("min", "Vector3"), new ParamInfo("max", "Vector3")]
-                // ),
+                new("min", "Vector3", [new ParamInfo("value", "Vector3")]),
+                new("max", "Vector3", [new ParamInfo("value", "Vector3")]),
+                new(
+                    "clamp",
+                    "Vector3",
+                    [new ParamInfo("min", "Vector3"), new ParamInfo("max", "Vector3")]
+                ),
                 // new(
                 //     "lerp",
                 //     "Vector3",
@@ -100,13 +100,13 @@ static class NumberWriterExtensions
                 new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
                 new("dot", "float", [new ParamInfo("value", "Vector4")]),
                 new("normalize", "Vector4", []),
-                // new("min", "Vector4", [new ParamInfo("value", "Vector4")]),
-                // new("max", "Vector4", [new ParamInfo("value", "Vector4")]),
-                // new(
-                //     "clamp",
-                //     "Vector4",
-                //     [new ParamInfo("min", "Vector4"), new ParamInfo("max", "Vector4")]
-                // ),
+                new("min", "Vector4", [new ParamInfo("value", "Vector4")]),
+                new("max", "Vector4", [new ParamInfo("value", "Vector4")]),
+                new(
+                    "clamp",
+                    "Vector4",
+                    [new ParamInfo("min", "Vector4"), new ParamInfo("max", "Vector4")]
+                ),
                 // new(
                 //     "lerp",
                 //     "Vector4",
@@ -215,6 +215,7 @@ static class NumberWriterExtensions
                                 $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
                             );
                             w.WriteLine("return py::convert(_result);");
+
                             break;
                         case 1:
                             var param = method.Parameters[0];
@@ -225,6 +226,23 @@ static class NumberWriterExtensions
                                 $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg);"
                             );
                             w.WriteLine("return py::convert(_result);");
+
+                            break;
+                        case 2:
+                            var param0 = method.Parameters[0];
+                            var param1 = method.Parameters[1];
+
+                            w.WriteLine(
+                                $"auto _arg0 = py::convert_to<{param0.CppWinrtType}>(args, 0);"
+                            );
+                            w.WriteLine(
+                                $"auto _arg1 = py::convert_to<{param1.CppWinrtType}>(args, 1);"
+                            );
+                            w.WriteLine(
+                                $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg0, _arg1);"
+                            );
+                            w.WriteLine("return py::convert(_result);");
+
                             break;
                         default:
                             throw new NotImplementedException();
