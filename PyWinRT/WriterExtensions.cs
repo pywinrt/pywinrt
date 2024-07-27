@@ -1646,7 +1646,9 @@ static class WriterExtensions
         w.WriteLine("{");
         w.Indent++;
 
-        w.WriteLine($"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.Name}\";");
+        w.WriteLine(
+            $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.Name}\";"
+        );
         w.WriteLine($"static constexpr const char* module_name = \"{type.PyModuleName}\";");
         w.WriteLine($"static constexpr const char* type_name = \"{type.Name}\";");
 
