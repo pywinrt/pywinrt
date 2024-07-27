@@ -619,3 +619,29 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(
             wfn.Vector3(1, 2, 3).cross(wfn.Vector3(4, 5, 6)), wfn.Vector3(-3, 6, -3)
         )
+
+    def test_normalize(self):
+        self.assertEqual(wfn.Vector2(3, 4).normalize(), wfn.Vector2(3 / 5, 4 / 5))
+
+        n = wfn.Vector3(1, 2, 3).normalize()
+        self.assertAlmostEqual(n.x, 1 / 14**0.5, places=5)
+        self.assertAlmostEqual(n.y, 2 / 14**0.5, places=5)
+        self.assertAlmostEqual(n.z, 3 / 14**0.5, places=5)
+
+        n = wfn.Vector4(1, 2, 3, 4).normalize()
+        self.assertAlmostEqual(n.x, 1 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.y, 2 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.z, 3 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.w, 4 / 30**0.5, places=5)
+
+        n = wfn.Plane(wfn.Vector3(1, 2, 3), 4).normalize()
+        self.assertAlmostEqual(n.normal.x, 1 / 14**0.5, places=5)
+        self.assertAlmostEqual(n.normal.y, 2 / 14**0.5, places=5)
+        self.assertAlmostEqual(n.normal.z, 3 / 14**0.5, places=5)
+        self.assertAlmostEqual(n.d, 4 / 14**0.5, places=5)
+
+        n = wfn.Quaternion(1, 2, 3, 4).normalize()
+        self.assertAlmostEqual(n.x, 1 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.y, 2 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.z, 3 / 30**0.5, places=5)
+        self.assertAlmostEqual(n.w, 4 / 30**0.5, places=5)
