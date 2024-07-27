@@ -185,6 +185,7 @@ static class NumberWriterExtensions
                     "Quaternion",
                     [new ParamInfo("value", "Quaternion"), new ParamInfo("amount", "float")]
                 ),
+                new("concatenate", "Quaternion", [new ParamInfo("value", "Quaternion")]),
             }
         }
     };

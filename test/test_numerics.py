@@ -951,3 +951,9 @@ class TestNumerics(unittest.TestCase):
         self.assertAlmostEqual(q.y, -0.066667, places=5)
         self.assertAlmostEqual(q.z, -0.1, places=5)
         self.assertAlmostEqual(q.w, 0.133333, places=5)
+
+    def test_concatenate(self):
+        self.assertEqual(
+            wfn.Quaternion(1, 2, 3, 4).concatenate(wfn.Quaternion(5, 6, 7, 8)),
+            wfn.Quaternion(32, 32, 56, -6),
+        )
