@@ -126,6 +126,7 @@ static class NumberWriterExtensions
             {
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
+                new("translation", "Vector2", []),
                 // new("invert", "Matrix3x2", []),
                 new(
                     "lerp",
@@ -140,6 +141,7 @@ static class NumberWriterExtensions
             {
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
+                new("translation", "Vector2", []),
                 // new("invert", "Matrix4x4", []),
                 new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
