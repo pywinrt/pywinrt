@@ -895,3 +895,14 @@ class TestNumerics(unittest.TestCase):
             ).determinant(),
             0,
         )
+
+    def test_translation(self):
+        self.assertEqual(
+            wfn.Matrix3x2(1, 2, 3, 4, 5, 6).translation(), wfn.Vector2(5, 6)
+        )
+        self.assertEqual(
+            wfn.Matrix4x4(
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+            ).translation(),
+            wfn.Vector3(13, 14, 15),
+        )

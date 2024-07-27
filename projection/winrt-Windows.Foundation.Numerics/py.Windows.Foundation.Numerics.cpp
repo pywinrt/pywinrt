@@ -97,6 +97,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* translation_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::translation(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* lerp_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* args) noexcept
     {
         try
@@ -126,6 +140,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyMethodDef _methods_Matrix3x2[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix3x2), METH_NOARGS, nullptr },
+        { "translation", reinterpret_cast<PyCFunction>(translation_Matrix3x2), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
         { }
@@ -662,6 +677,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* translation_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::translation(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* transform_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* arg) noexcept
     {
         try
@@ -706,6 +735,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyMethodDef _methods_Matrix4x4[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
         { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix4x4), METH_NOARGS, nullptr },
+        { "translation", reinterpret_cast<PyCFunction>(translation_Matrix4x4), METH_NOARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Matrix4x4), METH_O, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
