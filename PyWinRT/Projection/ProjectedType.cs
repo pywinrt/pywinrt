@@ -5,20 +5,6 @@ class ProjectedType
     // TODO: eventually, this should be private
     public readonly TypeDefinition Type;
 
-    internal static readonly IReadOnlyDictionary<string, string> CustomNumerics = new Dictionary<
-        string,
-        string
-    >
-    {
-        { "Matrix3x2", "float3x2" },
-        { "Matrix4x4", "float4x4" },
-        { "Plane", "plane" },
-        { "Quaternion", "quaternion" },
-        { "Vector2", "float2" },
-        { "Vector3", "float3" },
-        { "Vector4", "float4" },
-    };
-
     public ProjectedType(TypeDefinition type)
     {
         Type = type;
@@ -44,10 +30,7 @@ class ProjectedType
         {
             CppWinrtType = "winrt::event_token";
         }
-        else if (
-            type.Namespace == "Windows.Foundation.Numerics"
-            && CustomNumerics.TryGetValue(type.Name, out var cppName)
-        )
+        else if (type.IsCustomNumeric(out var cppName))
         {
             CppWinrtType = $"winrt::{CppNamespace}::{cppName}";
         }
