@@ -49,11 +49,11 @@ static class NumberWriterExtensions
                     "Vector2",
                     [new ParamInfo("min", "Vector2"), new ParamInfo("max", "Vector2")]
                 ),
-                // new(
-                //     "lerp",
-                //     "Vector2",
-                //     [new ParamInfo("value", "Vector2"), new ParamInfo("amount", "float")]
-                // ),
+                new(
+                    "lerp",
+                    "Vector2",
+                    [new ParamInfo("value", "Vector2"), new ParamInfo("amount", "float")]
+                ),
                 // new("transform", "Vector2", [new ParamInfo("position", "Matrix3x2")]),
                 // new("transform", "Vector2", [new ParamInfo("position", "Matrix4x4")]),
                 // new("transform_normal", "Vector2", [new ParamInfo("normal", "Matrix3x2")]),
@@ -80,11 +80,11 @@ static class NumberWriterExtensions
                     "Vector3",
                     [new ParamInfo("min", "Vector3"), new ParamInfo("max", "Vector3")]
                 ),
-                // new(
-                //     "lerp",
-                //     "Vector3",
-                //     [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
-                // ),
+                new(
+                    "lerp",
+                    "Vector3",
+                    [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
+                ),
                 // new("transform", "Vector3", [new ParamInfo("position", "Matrix4x4")]),
                 // new("transform_normal", "Vector3", [new ParamInfo("normal", "Matrix4x4")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Quaternion")])
@@ -107,11 +107,11 @@ static class NumberWriterExtensions
                     "Vector4",
                     [new ParamInfo("min", "Vector4"), new ParamInfo("max", "Vector4")]
                 ),
-                // new(
-                //     "lerp",
-                //     "Vector4",
-                //     [new ParamInfo("value", "Vector4"), new ParamInfo("amount", "float")]
-                // ),
+                new(
+                    "lerp",
+                    "Vector4",
+                    [new ParamInfo("value", "Vector4"), new ParamInfo("amount", "float")]
+                ),
                 // new("transform", "Vector4", [new ParamInfo("position", "Matrix4x4")]),
                 // new("transform", "Vector4", [new ParamInfo("value", "Quaternion")])
             }
@@ -123,9 +123,11 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 // new("determinant", "float", []),
                 // new("invert", "Matrix3x2", []),
-                // new("transform", "Vector2", [new ParamInfo("value", "Vector2")]),
-                // new("transform", "Vector2", [new ParamInfo("value", "Vector3")]),
-                // new("transform", "Vector2", [new ParamInfo("value", "Vector4")])
+                new(
+                    "lerp",
+                    "Matrix3x2",
+                    [new ParamInfo("value", "Matrix3x2"), new ParamInfo("amount", "float")]
+                ),
             }
         },
         {
@@ -137,6 +139,11 @@ static class NumberWriterExtensions
                 // new("invert", "Matrix4x4", []),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
+                new(
+                    "lerp",
+                    "Matrix4x4",
+                    [new ParamInfo("value", "Matrix4x4"), new ParamInfo("amount", "float")]
+                )
             }
         },
         {
@@ -162,11 +169,16 @@ static class NumberWriterExtensions
                 new("normalize", "Quaternion", []),
                 // new("conjugate", "Quaternion", []),
                 // new("invert", "Quaternion", []),
-                // new(
-                //     "slerp",
-                //     "Quaternion",
-                //     [new ParamInfo("target", "Quaternion"), new ParamInfo("amount", "float")]
-                // ),
+                new(
+                    "slerp",
+                    "Quaternion",
+                    [new ParamInfo("value", "Quaternion"), new ParamInfo("amount", "float")]
+                ),
+                new(
+                    "lerp",
+                    "Quaternion",
+                    [new ParamInfo("value", "Quaternion"), new ParamInfo("amount", "float")]
+                ),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
             }
