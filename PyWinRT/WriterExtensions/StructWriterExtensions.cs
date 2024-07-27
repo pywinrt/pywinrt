@@ -19,7 +19,7 @@ static class StructWriterExtensions
         if (type.Type.IsCustomNumeric() && type.Name != "Plane")
         {
             w.WriteBlankLine();
-            w.WriteNumberMethods(type);
+            w.WriteNumberSlotMethods(type);
         }
 
         w.WriteStructEqualityMethods(type);

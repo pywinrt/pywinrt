@@ -185,16 +185,7 @@ static class WriterExtensions
 
         if (type.Type.IsCustomNumeric() && type.Name != "Plane")
         {
-            w.WriteLine($"{{ Py_nb_add, reinterpret_cast<void*>(_add_{name}) }},");
-            w.WriteLine($"{{ Py_nb_subtract, reinterpret_cast<void*>(_sub_{name}) }},");
-            w.WriteLine($"{{ Py_nb_multiply, reinterpret_cast<void*>(_mul_{name}) }},");
-
-            if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal))
-            {
-                w.WriteLine($"{{ Py_nb_true_divide, reinterpret_cast<void*>(_truediv_{name}) }},");
-            }
-
-            w.WriteLine($"{{ Py_nb_negative, reinterpret_cast<void*>(_neg_{name}) }},");
+            w.WriteNumberSlots(type);
         }
 
         if (type.Category == Category.Struct)
