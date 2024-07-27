@@ -374,3 +374,18 @@ class TestNumerics(unittest.TestCase):
             r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Quaternion' and 'int'",
         ):
             wfn.Quaternion() / 1
+
+    def test_neg(self):
+        self.assertEqual(-wfn.Vector2(1, 2), wfn.Vector2(-1, -2))
+        self.assertEqual(-wfn.Vector3(1, 2, 3), wfn.Vector3(-1, -2, -3))
+        self.assertEqual(-wfn.Vector4(1, 2, 3, 4), wfn.Vector4(-1, -2, -3, -4))
+        self.assertEqual(
+            -wfn.Matrix3x2(1, 2, 3, 4, 5, 6), wfn.Matrix3x2(-1, -2, -3, -4, -5, -6)
+        )
+        self.assertEqual(
+            -wfn.Matrix4x4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16),
+            wfn.Matrix4x4(
+                -1, -2, -3, -4, -5, -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16
+            ),
+        )
+        self.assertEqual(-wfn.Quaternion(1, 2, 3, 4), wfn.Quaternion(-1, -2, -3, -4))
