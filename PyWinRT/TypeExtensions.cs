@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Mono.Cecil;
 using Mono.Collections.Generic;
@@ -79,11 +80,7 @@ static class TypeExtensions
                     field.DeclaringType.Name == "HResult"
                     || field.DeclaringType.Name == "EventRegistrationToken"
                 )
-            )
-            || (
-                field.DeclaringType.Namespace == "Windows.Foundation.Numerics"
-                && ProjectedType.CustomNumerics.ContainsKey(field.DeclaringType.Name)
-            )
+            ) || field.DeclaringType.IsCustomNumeric()
         )
         {
             return field.Name.ToLowerInvariant();
@@ -284,8 +281,7 @@ static class TypeExtensions
             { FullName: "System.Object" } => "winrt::Windows::Foundation::IInspectable",
             { FullName: "Windows.Foundation.EventRegistrationToken" } => "winrt::event_token",
             { FullName: "Windows.Foundation.HResult" } => "winrt::hresult",
-            { Namespace: "Windows.Foundation.Numerics", Name: var name }
-                when ProjectedType.CustomNumerics.TryGetValue(name, out var cppName)
+            { Namespace: "Windows.Foundation.Numerics" } when type.IsCustomNumeric(out var cppName)
                 => $"winrt::{type.Namespace.ToCppNamespace()}::{cppName}",
             { HasGenericParameters: true }
                 => $"winrt::{type.Namespace.ToCppNamespace()}::{type.Name.ToNonGeneric()}<{string.Join(", ", type.GenericParameters.Select(p => p.ToCppTypeName(map)))}>",
@@ -520,4 +516,32 @@ static class TypeExtensions
 
     public static bool HasFlagsAttribute(this TypeDefinition type) =>
         type.CustomAttributes.Any(a => a.AttributeType.FullName == "System.FlagsAttribute");
+
+    static readonly IReadOnlyDictionary<string, string> CustomNumerics = new Dictionary<
+        string,
+        string
+    >
+    {
+        { "Matrix3x2", "float3x2" },
+        { "Matrix4x4", "float4x4" },
+        { "Plane", "plane" },
+        { "Quaternion", "quaternion" },
+        { "Vector2", "float2" },
+        { "Vector3", "float3" },
+        { "Vector4", "float4" },
+    };
+
+    public static bool IsCustomNumeric(this TypeReference type) =>
+        type.Namespace == "Windows.Foundation.Numerics" && CustomNumerics.ContainsKey(type.Name);
+
+    public static bool IsCustomNumeric(
+        this TypeReference type,
+        [NotNullWhen(true)] out string? cppName
+    )
+    {
+        cppName = default;
+
+        return type.Namespace == "Windows.Foundation.Numerics"
+            && CustomNumerics.TryGetValue(type.Name, out cppName);
+    }
 }
