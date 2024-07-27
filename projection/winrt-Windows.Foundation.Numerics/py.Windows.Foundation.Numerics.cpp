@@ -1507,6 +1507,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* normalize_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* dot_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
     {
         try
@@ -1563,6 +1577,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Plane[] = {
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Plane), METH_NOARGS, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Plane), METH_O, nullptr },
         { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
@@ -1830,6 +1845,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* normalize_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
@@ -1845,6 +1874,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Quaternion), METH_NOARGS, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Quaternion), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Quaternion), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2579,6 +2609,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* normalize_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2595,6 +2639,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "distance", reinterpret_cast<PyCFunction>(distance_Vector2), METH_O, nullptr },
         { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector2), METH_O, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Vector2), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector2), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3085,6 +3130,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* normalize_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -3102,6 +3161,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector3), METH_O, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Vector3), METH_O, nullptr },
         { "cross", reinterpret_cast<PyCFunction>(cross_Vector3), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector3), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3619,6 +3679,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* normalize_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -3635,6 +3709,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "distance", reinterpret_cast<PyCFunction>(distance_Vector4), METH_O, nullptr },
         { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector4), METH_O, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Vector4), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector4), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };
