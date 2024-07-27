@@ -144,7 +144,7 @@ static class NumberWriterExtensions
                 new("invert", "Matrix4x4", []),
                 new("decompose", "typing.Tuple[Vector3, Quaternion, Vector3]", []),
                 new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
-                // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
+                new("transpose", "Matrix4x4", []),
                 new(
                     "lerp",
                     "Matrix4x4",
