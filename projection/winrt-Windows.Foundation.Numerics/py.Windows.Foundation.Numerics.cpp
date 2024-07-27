@@ -776,6 +776,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transpose_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::transpose(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* lerp_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* args) noexcept
     {
         try
@@ -809,6 +823,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "invert", reinterpret_cast<PyCFunction>(invert_Matrix4x4), METH_NOARGS, nullptr },
         { "decompose", reinterpret_cast<PyCFunction>(decompose_Matrix4x4), METH_NOARGS, nullptr },
         { "transform", reinterpret_cast<PyCFunction>(transform_Matrix4x4), METH_O, nullptr },
+        { "transpose", reinterpret_cast<PyCFunction>(transpose_Matrix4x4), METH_NOARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { }

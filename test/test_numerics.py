@@ -938,3 +938,13 @@ class TestNumerics(unittest.TestCase):
             wfn.Matrix4x4(
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
             ).decompose()
+
+    def test_transpose(self):
+        self.assertEqual(
+            wfn.Matrix4x4(
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+            ).transpose(),
+            wfn.Matrix4x4(
+                1, 5, 9, 13, 2, 6, 10, 14, 3, 7, 11, 15, 4, 8, 12, 16
+            ),
+        )
