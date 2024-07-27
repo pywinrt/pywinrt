@@ -55,9 +55,9 @@ static class NumberWriterExtensions
                 ),
                 new("transform", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
                 new("transform", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
                 new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
                 new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
-                new("transform", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
                 new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
                 new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")])
             }
@@ -87,8 +87,8 @@ static class NumberWriterExtensions
                     [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
                 ),
                 new("transform", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
-                new("transform_normal", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
                 new("transform", "Vector3", [new ParamInfo("rotation", "Quaternion")]),
+                new("transform_normal", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
                 new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
                 new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
