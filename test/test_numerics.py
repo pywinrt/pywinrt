@@ -736,3 +736,44 @@ class TestNumerics(unittest.TestCase):
             ),
             wfn.Vector4(5, 6, 7, 8),
         )
+
+    def test_lerp(self):
+        self.assertEqual(
+            wfn.Vector2(1, 2).lerp(wfn.Vector2(3, 4), 0.5), wfn.Vector2(2, 3)
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).lerp(wfn.Vector3(4, 5, 6), 0.5),
+            wfn.Vector3(2.5, 3.5, 4.5),
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).lerp(wfn.Vector4(5, 6, 7, 8), 0.5),
+            wfn.Vector4(3, 4, 5, 6),
+        )
+        self.assertEqual(
+            wfn.Matrix3x2(1, 2, 3, 4, 5, 6).lerp(
+                wfn.Matrix3x2(7, 8, 9, 10, 11, 12), 0.5
+            ),
+            wfn.Matrix3x2(4, 5, 6, 7, 8, 9),
+        )
+        self.assertEqual(
+            wfn.Matrix4x4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16).lerp(
+                wfn.Matrix4x4(
+                    17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+                ),
+                0.5,
+            ),
+            wfn.Matrix4x4(
+                9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24
+            ),
+        )
+
+        self.assertEqual(
+            wfn.Quaternion(1, 2, 3, 4).slerp(wfn.Quaternion(5, 6, 7, 8), 0.5),
+            wfn.Quaternion(3, 4, 5, 6),
+        )
+
+        q = wfn.Quaternion(1, 2, 3, 4).lerp(wfn.Quaternion(5, 6, 7, 8), 0.5)
+        self.assertAlmostEqual(q.x, 0.323498, places=5)
+        self.assertAlmostEqual(q.y, 0.431331, places=5)
+        self.assertAlmostEqual(q.z, 0.539164, places=5)
+        self.assertAlmostEqual(q.w, 0.646997, places=5)

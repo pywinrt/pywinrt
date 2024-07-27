@@ -83,6 +83,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* lerp_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix3x2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3x2>>();
@@ -95,6 +111,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Matrix3x2[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -616,6 +633,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* lerp_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix4x4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4x4>>();
@@ -628,6 +661,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Matrix4x4[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1859,6 +1893,38 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* slerp_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::slerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
@@ -1875,6 +1941,8 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Quaternion), METH_NOARGS, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Quaternion), METH_O, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Quaternion), METH_NOARGS, nullptr },
+        { "slerp", reinterpret_cast<PyCFunction>(slerp_Quaternion), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2684,6 +2752,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* lerp_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2705,6 +2789,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "min", reinterpret_cast<PyCFunction>(min_Vector2), METH_O, nullptr },
         { "max", reinterpret_cast<PyCFunction>(max_Vector2), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector2), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3270,6 +3355,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* lerp_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -3292,6 +3393,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "min", reinterpret_cast<PyCFunction>(min_Vector3), METH_O, nullptr },
         { "max", reinterpret_cast<PyCFunction>(max_Vector3), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector3), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector3), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3869,6 +3971,22 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* lerp_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -3889,6 +4007,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "min", reinterpret_cast<PyCFunction>(min_Vector4), METH_O, nullptr },
         { "max", reinterpret_cast<PyCFunction>(max_Vector4), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector4), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };
