@@ -125,7 +125,7 @@ static class NumberWriterExtensions
             new List<MethodInfo>
             {
                 new("is_identity", "bool", []),
-                // new("determinant", "float", []),
+                new("determinant", "float", []),
                 // new("invert", "Matrix3x2", []),
                 new(
                     "lerp",
@@ -139,7 +139,7 @@ static class NumberWriterExtensions
             new List<MethodInfo>
             {
                 new("is_identity", "bool", []),
-                // new("determinant", "float", []),
+                new("determinant", "float", []),
                 // new("invert", "Matrix4x4", []),
                 new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
