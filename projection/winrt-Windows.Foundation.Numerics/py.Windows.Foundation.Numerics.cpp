@@ -2145,6 +2145,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* concatenate_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::concatenate(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
@@ -2165,6 +2180,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "inverse", reinterpret_cast<PyCFunction>(inverse_Quaternion), METH_NOARGS, nullptr },
         { "slerp", reinterpret_cast<PyCFunction>(slerp_Quaternion), METH_VARARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
+        { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { }
     };
