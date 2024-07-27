@@ -557,6 +557,13 @@ class TestNumerics(unittest.TestCase):
             q, wfn.Quaternion(1, 2, 3, 4) * inverse(wfn.Quaternion(5, 6, 7, 8))
         )
 
+    def test_is_identity(self):
+        self.assertTrue(wfn.Matrix3x2(1, 0, 0, 1, 0, 0).is_identity())
+        self.assertTrue(
+            wfn.Matrix4x4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1).is_identity()
+        )
+        self.assertTrue(wfn.Quaternion(0, 0, 0, 1).is_identity())
+
     def test_length(self):
         self.assertEqual(wfn.Vector2(3, 4).length(), 5)
         self.assertEqual(abs(wfn.Vector2(3, 4)), 5)
