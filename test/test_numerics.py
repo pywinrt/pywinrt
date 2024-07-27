@@ -3,13 +3,6 @@ import unittest
 import winrt.windows.foundation.numerics as wfn
 
 
-# TODO: replace this when inverse method is implemented on Quaternion
-def inverse(q: wfn.Quaternion) -> wfn.Quaternion:
-    return wfn.Quaternion(-q.x, -q.y, -q.z, q.w) * (
-        1 / (q.x**2 + q.y**2 + q.z**2 + q.w**2)
-    )
-
-
 class TestNumerics(unittest.TestCase):
     def test_struct_ctor_pos(self):
         r = wfn.Rational(2, 4)
@@ -329,7 +322,7 @@ class TestNumerics(unittest.TestCase):
 
         self.assertEqual(
             wfn.Quaternion(1, 2, 3, 4) / wfn.Quaternion(5, 6, 7, 8),
-            wfn.Quaternion(1, 2, 3, 4) * inverse(wfn.Quaternion(5, 6, 7, 8)),
+            wfn.Quaternion(1, 2, 3, 4) * wfn.Quaternion(5, 6, 7, 8).inverse(),
         )
 
     def test_truediv_bad_type(self):
@@ -554,7 +547,7 @@ class TestNumerics(unittest.TestCase):
         q = wfn.Quaternion(1, 2, 3, 4)
         q /= wfn.Quaternion(5, 6, 7, 8)
         self.assertEqual(
-            q, wfn.Quaternion(1, 2, 3, 4) * inverse(wfn.Quaternion(5, 6, 7, 8))
+            q, wfn.Quaternion(1, 2, 3, 4) * wfn.Quaternion(5, 6, 7, 8).inverse()
         )
 
     def test_is_identity(self):
@@ -951,3 +944,10 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(
             wfn.Quaternion(1, 2, 3, 4).conjugate(), wfn.Quaternion(-1, -2, -3, 4)
         )
+
+    def test_inverse(self):
+        q = wfn.Quaternion(1, 2, 3, 4).inverse()
+        self.assertAlmostEqual(q.x, -0.033333, places=5)
+        self.assertAlmostEqual(q.y, -0.066667, places=5)
+        self.assertAlmostEqual(q.z, -0.1, places=5)
+        self.assertAlmostEqual(q.w, 0.133333, places=5)

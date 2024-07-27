@@ -2099,6 +2099,20 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* inverse_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::inverse(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* slerp_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args) noexcept
     {
         try
@@ -2148,6 +2162,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "dot", reinterpret_cast<PyCFunction>(dot_Quaternion), METH_O, nullptr },
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Quaternion), METH_NOARGS, nullptr },
         { "conjugate", reinterpret_cast<PyCFunction>(conjugate_Quaternion), METH_NOARGS, nullptr },
+        { "inverse", reinterpret_cast<PyCFunction>(inverse_Quaternion), METH_NOARGS, nullptr },
         { "slerp", reinterpret_cast<PyCFunction>(slerp_Quaternion), METH_VARARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
