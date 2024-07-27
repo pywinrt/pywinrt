@@ -645,3 +645,12 @@ class TestNumerics(unittest.TestCase):
         self.assertAlmostEqual(n.y, 2 / 30**0.5, places=5)
         self.assertAlmostEqual(n.z, 3 / 30**0.5, places=5)
         self.assertAlmostEqual(n.w, 4 / 30**0.5, places=5)
+
+    def test_reflect(self):
+        self.assertEqual(
+            wfn.Vector2(1, 2).reflect(wfn.Vector2(3, 4)), wfn.Vector2(-65, -86)
+        )
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).reflect(wfn.Vector3(4, 5, 6)),
+            wfn.Vector3(-255, -318, -381),
+        )

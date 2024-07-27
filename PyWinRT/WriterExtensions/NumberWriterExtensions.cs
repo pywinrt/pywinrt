@@ -41,7 +41,7 @@ static class NumberWriterExtensions
                 new("distance_squared", "float", [new ParamInfo("value", "Vector2")]),
                 new("dot", "float", [new ParamInfo("value", "Vector2")]),
                 new("normalize", "Vector2", []),
-                // new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
+                new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
                 // new("min", "Vector2", [new ParamInfo("value", "Vector2")]),
                 // new("max", "Vector2", [new ParamInfo("value", "Vector2")]),
                 // new(
@@ -72,7 +72,7 @@ static class NumberWriterExtensions
                 new("dot", "float", [new ParamInfo("value", "Vector3")]),
                 new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
                 new("normalize", "Vector3", []),
-                // new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
+                new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
                 // new("min", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("max", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new(
@@ -100,7 +100,6 @@ static class NumberWriterExtensions
                 new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
                 new("dot", "float", [new ParamInfo("value", "Vector4")]),
                 new("normalize", "Vector4", []),
-                // new("reflect", "Vector4", [new ParamInfo("normal", "Vector4")]),
                 // new("min", "Vector4", [new ParamInfo("value", "Vector4")]),
                 // new("max", "Vector4", [new ParamInfo("value", "Vector4")]),
                 // new(
