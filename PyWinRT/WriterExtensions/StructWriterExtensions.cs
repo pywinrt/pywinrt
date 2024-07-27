@@ -15,6 +15,13 @@ static class StructWriterExtensions
             w.WriteStructGetSetFunction(type, field);
         }
         w.WriteGetSetTable(type);
+
+        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        {
+            w.WriteBlankLine();
+            w.WriteNumberMethods(type);
+        }
+
         w.WriteStructEqualityMethods(type);
         w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);

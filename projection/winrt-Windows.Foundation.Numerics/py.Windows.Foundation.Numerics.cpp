@@ -292,6 +292,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Matrix3x2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* other, int op) noexcept
     {
         try
@@ -374,6 +398,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Matrix3x2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3x2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix3x2) },
         { }
@@ -1034,6 +1059,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Matrix4x4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* other, int op) noexcept
     {
         try
@@ -1176,6 +1225,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Matrix4x4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix4x4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix4x4) },
         { }
@@ -1618,6 +1668,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* other, int op) noexcept
     {
         try
@@ -1688,6 +1762,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
         { }
@@ -2058,6 +2133,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* other, int op) noexcept
     {
         try
@@ -2116,6 +2215,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
         { }
@@ -2308,6 +2408,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* other, int op) noexcept
     {
         try
@@ -2372,6 +2496,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
         { }
@@ -2600,6 +2725,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* other, int op) noexcept
     {
         try
@@ -2670,6 +2819,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
         { }
