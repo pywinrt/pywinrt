@@ -925,3 +925,16 @@ class TestNumerics(unittest.TestCase):
             wfn.Matrix4x4(
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
             ).invert()
+
+    def test_decompose(self):
+        scale, rotation, translation = wfn.Matrix4x4(
+            1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 4, 5, 6, 1
+        ).decompose()
+        self.assertEqual(scale, wfn.Vector3(1, 2, 3))
+        self.assertEqual(rotation, wfn.Quaternion(0, 0, 0, 1))
+        self.assertEqual(translation, wfn.Vector3(4, 5, 6))
+
+        with self.assertRaises(ValueError):
+            wfn.Matrix4x4(
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+            ).decompose()
