@@ -190,6 +190,26 @@ static class NumberWriterExtensions
         w.WriteLine("}");
     }
 
+    static void WriteNumberNeg(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine($"static PyObject* _neg_{type.Name}(PyObject* operand) noexcept");
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteTryCatch(
+            () =>
+            {
+                w.WriteLine(
+                    $"auto _operand = py::converter<{type.CppWinrtType}>::convert_to(operand);"
+                );
+                w.WriteLine($"auto _result = -_operand;");
+                w.WriteLine($"return py::convert(_result);");
+            },
+            w.WriteReturnNotImplementedOnTypeError
+        );
+        w.Indent--;
+        w.WriteLine("}");
+    }
+
     public static void WriteNumberMethods(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteNumberAdd(type);
@@ -203,5 +223,8 @@ static class NumberWriterExtensions
             w.WriteBlankLine();
             w.WriteNumberDiv(type);
         }
+
+        w.WriteBlankLine();
+        w.WriteNumberNeg(type);
     }
 }

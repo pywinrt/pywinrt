@@ -193,6 +193,8 @@ static class WriterExtensions
             {
                 w.WriteLine($"{{ Py_nb_true_divide, reinterpret_cast<void*>(_truediv_{name}) }},");
             }
+
+            w.WriteLine($"{{ Py_nb_negative, reinterpret_cast<void*>(_neg_{name}) }},");
         }
 
         if (type.Category == Category.Struct)
