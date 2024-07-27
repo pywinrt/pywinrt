@@ -39,7 +39,7 @@ static class NumberWriterExtensions
                 new("length_squared", "float", []),
                 new("distance", "float", [new ParamInfo("value", "Vector2")]),
                 new("distance_squared", "float", [new ParamInfo("value", "Vector2")]),
-                // new("dot", "float", [new ParamInfo("value", "Vector2")]),
+                new("dot", "float", [new ParamInfo("value", "Vector2")]),
                 // new("normalize", "Vector2", []),
                 // new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
                 // new("min", "Vector2", [new ParamInfo("value", "Vector2")]),
@@ -69,7 +69,7 @@ static class NumberWriterExtensions
                 new("length_squared", "float", []),
                 new("distance", "float", [new ParamInfo("value", "Vector3")]),
                 new("distance_squared", "float", [new ParamInfo("value", "Vector3")]),
-                // new("dot", "float", [new ParamInfo("value", "Vector3")]),
+                new("dot", "float", [new ParamInfo("value", "Vector3")]),
                 // new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("normalize", "Vector3", []),
                 // new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
@@ -98,7 +98,7 @@ static class NumberWriterExtensions
                 new("length_squared", "float", []),
                 new("distance", "float", [new ParamInfo("value", "Vector4")]),
                 new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
-                // new("dot", "float", [new ParamInfo("value", "Vector4")]),
+                new("dot", "float", [new ParamInfo("value", "Vector4")]),
                 // new("normalize", "Vector4", []),
                 // new("reflect", "Vector4", [new ParamInfo("normal", "Vector4")]),
                 // new("min", "Vector4", [new ParamInfo("value", "Vector4")]),
@@ -147,9 +147,9 @@ static class NumberWriterExtensions
                 // new("normalize", "Plane", []),
                 // new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")]),
                 // new("transform", "Plane", [new ParamInfo("quaternion", "Quaternion")]),
-                // new("dot", "float", [new ParamInfo("value", "Vector3")]),
-                // new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")]),
-                // new("dot_normal", "float", [new ParamInfo("value", "Vector3")])
+                new("dot", "float", [new ParamInfo("value", "Vector4")]),
+                new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")]),
+                new("dot_normal", "float", [new ParamInfo("value", "Vector3")])
             }
         },
         {
@@ -159,6 +159,7 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 new("length", "float", []),
                 new("length_squared", "float", []),
+                new("dot", "float", [new ParamInfo("value", "Quaternion")]),
                 // new("normalize", "Quaternion", []),
                 // new("conjugate", "Quaternion", []),
                 // new("invert", "Quaternion", []),
