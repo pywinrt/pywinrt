@@ -2,6 +2,228 @@ using System.CodeDom.Compiler;
 
 static class NumberWriterExtensions
 {
+    private record ParamInfo(string Name, string Type);
+
+    private record MethodInfo(
+        string Name,
+        string ReturnPyType,
+        IReadOnlyList<ParamInfo> Parameters
+    );
+
+    private static readonly IReadOnlyDictionary<
+        string,
+        IReadOnlyCollection<MethodInfo>
+    > extraMethods = new Dictionary<string, IReadOnlyCollection<MethodInfo>>
+    {
+        {
+            "Vector2",
+            new List<MethodInfo>
+            {
+                new("length", "float", []),
+                new("length_squared", "float", []),
+                // new("distance", "float", [new ParamInfo("value", "Vector2")]),
+                // new("distance_squared", "float", [new ParamInfo("value", "Vector2")]),
+                // new("dot", "float", [new ParamInfo("value", "Vector2")]),
+                // new("normalize", "Vector2", []),
+                // new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
+                // new("min", "Vector2", [new ParamInfo("value", "Vector2")]),
+                // new("max", "Vector2", [new ParamInfo("value", "Vector2")]),
+                // new(
+                //     "clamp",
+                //     "Vector2",
+                //     [new ParamInfo("min", "Vector2"), new ParamInfo("max", "Vector2")]
+                // ),
+                // new(
+                //     "lerp",
+                //     "Vector2",
+                //     [new ParamInfo("value", "Vector2"), new ParamInfo("amount", "float")]
+                // ),
+                // new("transform", "Vector2", [new ParamInfo("position", "Matrix3x2")]),
+                // new("transform", "Vector2", [new ParamInfo("position", "Matrix4x4")]),
+                // new("transform_normal", "Vector2", [new ParamInfo("normal", "Matrix3x2")]),
+                // new("transform_normal", "Vector2", [new ParamInfo("normal", "Matrix4x4")]),
+                // new("transform", "Vector2", [new ParamInfo("value", "Quaternion")])
+            }
+        },
+        {
+            "Vector3",
+            new List<MethodInfo>
+            {
+                new("length", "float", []),
+                new("length_squared", "float", []),
+                // new("distance", "float", [new ParamInfo("value", "Vector3")]),
+                // new("distance_squared", "float", [new ParamInfo("value", "Vector3")]),
+                // new("dot", "float", [new ParamInfo("value", "Vector3")]),
+                // new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
+                // new("normalize", "Vector3", []),
+                // new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
+                // new("min", "Vector3", [new ParamInfo("value", "Vector3")]),
+                // new("max", "Vector3", [new ParamInfo("value", "Vector3")]),
+                // new(
+                //     "clamp",
+                //     "Vector3",
+                //     [new ParamInfo("min", "Vector3"), new ParamInfo("max", "Vector3")]
+                // ),
+                // new(
+                //     "lerp",
+                //     "Vector3",
+                //     [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
+                // ),
+                // new("transform", "Vector3", [new ParamInfo("position", "Matrix4x4")]),
+                // new("transform_normal", "Vector3", [new ParamInfo("normal", "Matrix4x4")]),
+                // new("transform", "Vector3", [new ParamInfo("value", "Quaternion")])
+            }
+        },
+        {
+            "Vector4",
+            new List<MethodInfo>
+            {
+                new("length", "float", []),
+                new("length_squared", "float", []),
+                // new("distance", "float", [new ParamInfo("value", "Vector4")]),
+                // new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
+                // new("dot", "float", [new ParamInfo("value", "Vector4")]),
+                // new("normalize", "Vector4", []),
+                // new("reflect", "Vector4", [new ParamInfo("normal", "Vector4")]),
+                // new("min", "Vector4", [new ParamInfo("value", "Vector4")]),
+                // new("max", "Vector4", [new ParamInfo("value", "Vector4")]),
+                // new(
+                //     "clamp",
+                //     "Vector4",
+                //     [new ParamInfo("min", "Vector4"), new ParamInfo("max", "Vector4")]
+                // ),
+                // new(
+                //     "lerp",
+                //     "Vector4",
+                //     [new ParamInfo("value", "Vector4"), new ParamInfo("amount", "float")]
+                // ),
+                // new("transform", "Vector4", [new ParamInfo("position", "Matrix4x4")]),
+                // new("transform", "Vector4", [new ParamInfo("value", "Quaternion")])
+            }
+        },
+        {
+            "Matrix3x2",
+            new List<MethodInfo>
+            {
+                // new("determinant", "float", []),
+                // new("invert", "Matrix3x2", []),
+                // new("transform", "Vector2", [new ParamInfo("value", "Vector2")]),
+                // new("transform", "Vector2", [new ParamInfo("value", "Vector3")]),
+                // new("transform", "Vector2", [new ParamInfo("value", "Vector4")])
+            }
+        },
+        {
+            "Matrix4x4",
+            new List<MethodInfo>
+            {
+                // new("determinant", "float", []),
+                // new("invert", "Matrix4x4", []),
+                // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
+                // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
+            }
+        },
+        {
+            "Plane",
+            new List<MethodInfo>
+            {
+                // new("normalize", "Plane", []),
+                // new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")]),
+                // new("transform", "Plane", [new ParamInfo("quaternion", "Quaternion")]),
+                // new("dot", "float", [new ParamInfo("value", "Vector3")]),
+                // new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")]),
+                // new("dot_normal", "float", [new ParamInfo("value", "Vector3")])
+            }
+        },
+        {
+            "Quaternion",
+            new List<MethodInfo>
+            {
+                // new("is_identity", "bool", []),
+                new("length", "float", []),
+                new("length_squared", "float", []),
+                // new("normalize", "Quaternion", []),
+                // new("conjugate", "Quaternion", []),
+                // new("invert", "Quaternion", []),
+                // new(
+                //     "slerp",
+                //     "Quaternion",
+                //     [new ParamInfo("target", "Quaternion"), new ParamInfo("amount", "float")]
+                // ),
+                // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
+                // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
+            }
+        }
+    };
+
+    public static void WriteNumberMethodPyTyping(this IndentedTextWriter w, ProjectedType type)
+    {
+        foreach (var method in extraMethods[type.Name])
+        {
+            w.WriteLine($"def {method.Name}(self) -> {method.ReturnPyType}: ...");
+        }
+    }
+
+    public static void WriteNumberMethods(this IndentedTextWriter w, ProjectedType type)
+    {
+        foreach (var overloads in extraMethods[type.Name].GroupBy(m => m.Name))
+        {
+            var method = overloads.First();
+            var args = method.Parameters.Count switch
+            {
+                0 => "/*unused*/",
+                1 => "arg",
+                _ => "args"
+            };
+
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"static PyObject* {method.Name}_{type.Name}(winrt_struct_wrapper<{type.CppWinrtType}>* self, PyObject* {args}) noexcept"
+            );
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteTryCatch(() =>
+            {
+                if (overloads.Count() == 1)
+                {
+                    switch (method.Parameters.Count)
+                    {
+                        case 0:
+                            w.WriteLine(
+                                $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
+                            );
+                            w.WriteLine("return py::convert(_result);");
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
+                }
+                else
+                {
+                    throw new NotImplementedException();
+                }
+            });
+            w.Indent--;
+            w.WriteLine("}");
+        }
+    }
+
+    public static void WriteNumberMethodDefs(this IndentedTextWriter w, ProjectedType type)
+    {
+        foreach (var method in extraMethods[type.Name].DistinctBy(m => m.Name))
+        {
+            var flags = method.Parameters.Count switch
+            {
+                0 => "METH_NOARGS",
+                1 => "METH_O",
+                _ => "METH_VARARGS",
+            };
+
+            w.WriteLine(
+                $"{{ \"{method.Name}\", reinterpret_cast<PyCFunction>({method.Name}_{type.Name}), {flags}, nullptr }},"
+            );
+        }
+    }
+
     static void WriteReturnNotImplementedOnTypeError(this IndentedTextWriter w)
     {
         w.WriteLine("py::to_PyErr();");
@@ -210,6 +432,28 @@ static class NumberWriterExtensions
         w.WriteLine("}");
     }
 
+    static void WriteNumberAbs(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine($"static PyObject* _abs_{type.Name}(PyObject* operand) noexcept");
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteTryCatch(
+            () =>
+            {
+                w.WriteLine(
+                    $"auto _operand = py::converter<{type.CppWinrtType}>::convert_to(operand);"
+                );
+                w.WriteLine(
+                    $"auto _result = winrt::Windows::Foundation::Numerics::length(_operand);"
+                );
+                w.WriteLine($"return py::convert(_result);");
+            },
+            w.WriteReturnNotImplementedOnTypeError
+        );
+        w.Indent--;
+        w.WriteLine("}");
+    }
+
     public static void WriteNumberSlotMethods(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteNumberAdd(type);
@@ -226,6 +470,12 @@ static class NumberWriterExtensions
 
         w.WriteBlankLine();
         w.WriteNumberNeg(type);
+
+        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal) && type.Name != "Plane")
+        {
+            w.WriteBlankLine();
+            w.WriteNumberAbs(type);
+        }
     }
 
     public static void WriteNumberSlots(this IndentedTextWriter w, ProjectedType type)
@@ -240,5 +490,10 @@ static class NumberWriterExtensions
         }
 
         w.WriteLine($"{{ Py_nb_negative, reinterpret_cast<void*>(_neg_{type.Name}) }},");
+
+        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal) && type.Name != "Plane")
+        {
+            w.WriteLine($"{{ Py_nb_absolute, reinterpret_cast<void*>(_abs_{type.Name}) }},");
+        }
     }
 }

@@ -556,3 +556,19 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(
             q, wfn.Quaternion(1, 2, 3, 4) * inverse(wfn.Quaternion(5, 6, 7, 8))
         )
+
+    def test_length(self):
+        self.assertEqual(wfn.Vector2(3, 4).length(), 5)
+        self.assertEqual(abs(wfn.Vector2(3, 4)), 5)
+        self.assertAlmostEqual(wfn.Vector3(1, 2, 3).length(), 14**0.5, places=5)
+        self.assertAlmostEqual(abs(wfn.Vector3(1, 2, 3)), 14**0.5, places=5)
+        self.assertAlmostEqual(wfn.Vector4(1, 2, 3, 4).length(), 30**0.5, places=5)
+        self.assertAlmostEqual(abs(wfn.Vector4(1, 2, 3, 4)), 30**0.5, places=5)
+        self.assertAlmostEqual(wfn.Quaternion(1, 2, 3, 4).length(), 30**0.5, places=5)
+        self.assertAlmostEqual(abs(wfn.Quaternion(1, 2, 3, 4)), 30**0.5, places=5)
+
+    def test_length_squared(self):
+        self.assertEqual(wfn.Vector2(3, 4).length_squared(), 25)
+        self.assertEqual(wfn.Vector3(1, 2, 3).length_squared(), 14)
+        self.assertEqual(wfn.Vector4(1, 2, 3, 4).length_squared(), 30)
+        self.assertEqual(wfn.Quaternion(1, 2, 3, 4).length_squared(), 30)
