@@ -173,7 +173,7 @@ static class NumberWriterExtensions
                 new("length_squared", "float", []),
                 new("dot", "float", [new ParamInfo("value", "Quaternion")]),
                 new("normalize", "Quaternion", []),
-                // new("conjugate", "Quaternion", []),
+                new("conjugate", "Quaternion", []),
                 new(
                     "slerp",
                     "Quaternion",
