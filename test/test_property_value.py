@@ -230,7 +230,7 @@ class TestPropertyValue(unittest.TestCase):
             self.assertEqual(a[x], x+1)
 
     def test_create_char16_array(self):
-        o = wf.PropertyValue.create_char16_array(array('u', ["A", "B", "C", "D", "E"]))
+        o = wf.PropertyValue.create_char16_array(Array('u', ["A", "B", "C", "D", "E"]))
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.CHAR16_ARRAY)
         a = ipv.get_char16_array()
