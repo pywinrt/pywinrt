@@ -7,11 +7,10 @@ static class NumberWriterExtensions
         public string CppWinrtType => cppWinrtTypeFromPyType[PyType];
     };
 
-    private record MethodInfo(
-        string Name,
-        string ReturnPyType,
-        IReadOnlyList<ParamInfo> Parameters
-    );
+    private record MethodInfo(string Name, string ReturnPyType, IReadOnlyList<ParamInfo> Parameters)
+    {
+        public string ReturnCppWinrtType => cppWinrtTypeFromPyType[ReturnPyType];
+    }
 
     private static readonly IReadOnlyDictionary<string, string> cppWinrtTypeFromPyType =
         new Dictionary<string, string>
@@ -127,7 +126,7 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
-                // new("invert", "Matrix3x2", []),
+                new("invert", "Matrix3x2", []),
                 new(
                     "lerp",
                     "Matrix3x2",
@@ -142,7 +141,7 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
-                // new("invert", "Matrix4x4", []),
+                new("invert", "Matrix4x4", []),
                 new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
                 new(
@@ -174,7 +173,6 @@ static class NumberWriterExtensions
                 new("dot", "float", [new ParamInfo("value", "Quaternion")]),
                 new("normalize", "Quaternion", []),
                 // new("conjugate", "Quaternion", []),
-                // new("invert", "Quaternion", []),
                 new(
                     "slerp",
                     "Quaternion",
@@ -232,9 +230,30 @@ static class NumberWriterExtensions
                     switch (method.Parameters.Count)
                     {
                         case 0:
-                            w.WriteLine(
-                                $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
-                            );
+                            if (method.Name == "invert")
+                            {
+                                w.WriteLine($"{method.ReturnCppWinrtType} _result;");
+                                w.WriteBlankLine();
+                                w.WriteLine(
+                                    $"if (!winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, &_result))"
+                                );
+                                w.WriteLine("{");
+                                w.Indent++;
+                                w.WriteLine(
+                                    "PyErr_SetString(PyExc_ValueError, \"Matrix is not invertible\");"
+                                );
+                                w.WriteLine("return nullptr;");
+                                w.Indent--;
+                                w.WriteLine("}");
+                                w.WriteBlankLine();
+                            }
+                            else
+                            {
+                                w.WriteLine(
+                                    $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
+                                );
+                            }
+
                             w.WriteLine("return py::convert(_result);");
 
                             break;

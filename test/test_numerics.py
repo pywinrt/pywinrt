@@ -906,3 +906,22 @@ class TestNumerics(unittest.TestCase):
             ).translation(),
             wfn.Vector3(13, 14, 15),
         )
+
+    def test_invert(self):
+        self.assertEqual(
+            wfn.Matrix3x2(1, 2, 3, 4, 5, 6).invert(),
+            wfn.Matrix3x2(-2, 1, 1.5, -0.5, 1, -2),
+        )
+
+        with self.assertRaises(ValueError):
+            wfn.Matrix3x2(0, 0, 0, 0, 0, 0).invert()
+
+        self.assertEqual(
+            wfn.Matrix4x4(1, 2, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1).invert(),
+            wfn.Matrix4x4(1, -2, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1),
+        )
+
+        with self.assertRaises(ValueError):
+            wfn.Matrix4x4(
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+            ).invert()
