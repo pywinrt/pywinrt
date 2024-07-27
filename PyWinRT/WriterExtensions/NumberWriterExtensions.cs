@@ -70,7 +70,7 @@ static class NumberWriterExtensions
                 new("distance", "float", [new ParamInfo("value", "Vector3")]),
                 new("distance_squared", "float", [new ParamInfo("value", "Vector3")]),
                 new("dot", "float", [new ParamInfo("value", "Vector3")]),
-                // new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
+                new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("normalize", "Vector3", []),
                 // new("reflect", "Vector3", [new ParamInfo("normal", "Vector3")]),
                 // new("min", "Vector3", [new ParamInfo("value", "Vector3")]),
