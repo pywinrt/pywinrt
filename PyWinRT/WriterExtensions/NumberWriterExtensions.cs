@@ -210,7 +210,7 @@ static class NumberWriterExtensions
         w.WriteLine("}");
     }
 
-    public static void WriteNumberMethods(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteNumberSlotMethods(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteNumberAdd(type);
         w.WriteBlankLine();
@@ -226,5 +226,19 @@ static class NumberWriterExtensions
 
         w.WriteBlankLine();
         w.WriteNumberNeg(type);
+    }
+
+    public static void WriteNumberSlots(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine($"{{ Py_nb_add, reinterpret_cast<void*>(_add_{type.Name}) }},");
+        w.WriteLine($"{{ Py_nb_subtract, reinterpret_cast<void*>(_sub_{type.Name}) }},");
+        w.WriteLine($"{{ Py_nb_multiply, reinterpret_cast<void*>(_mul_{type.Name}) }},");
+
+        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal))
+        {
+            w.WriteLine($"{{ Py_nb_true_divide, reinterpret_cast<void*>(_truediv_{type.Name}) }},");
+        }
+
+        w.WriteLine($"{{ Py_nb_negative, reinterpret_cast<void*>(_neg_{type.Name}) }},");
     }
 }
