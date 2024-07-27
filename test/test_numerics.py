@@ -299,3 +299,78 @@ class TestNumerics(unittest.TestCase):
             r"unsupported operand type\(s\) for \*: 'int' and 'winrt._winrt_windows_foundation_numerics.Quaternion'",
         ):
             1 * wfn.Quaternion()
+
+    def test_truediv(self):
+        self.assertEqual(
+            wfn.Vector2(1, 2) / wfn.Vector2(3, 4), wfn.Vector2(1 / 3, 2 / 4)
+        )
+        self.assertEqual(wfn.Vector2(1, 2) / 3, wfn.Vector2(1 / 3, 2 / 3))
+
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3) / wfn.Vector3(4, 5, 6),
+            wfn.Vector3(1 / 4, 2 / 5, 3 / 6),
+        )
+        self.assertEqual(wfn.Vector3(1, 2, 3) / 4, wfn.Vector3(1 / 4, 2 / 4, 3 / 4))
+
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4) / wfn.Vector4(5, 6, 7, 8),
+            wfn.Vector4(1 / 5, 2 / 6, 3 / 7, 4 / 8),
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4) / 5, wfn.Vector4(1 / 5, 2 / 5, 3 / 5, 4 / 5)
+        )
+
+        # TODO: replace this when inverse method is implemented on Quaternion
+        def inverse(q: wfn.Quaternion) -> wfn.Quaternion:
+            return wfn.Quaternion(-q.x, -q.y, -q.z, q.w) * (
+                1 / (q.x**2 + q.y**2 + q.z**2 + q.w**2)
+            )
+
+        self.assertEqual(
+            wfn.Quaternion(1, 2, 3, 4) / wfn.Quaternion(5, 6, 7, 8),
+            wfn.Quaternion(1, 2, 3, 4) * inverse(wfn.Quaternion(5, 6, 7, 8)),
+        )
+
+    def test_truediv_bad_type(self):
+        o = object()
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Plane' and 'object'",
+        ):
+            wfn.Plane(wfn.Vector3(), 0) / o
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Vector2' and 'object'",
+        ):
+            wfn.Vector2() / o
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Vector3' and 'object'",
+        ):
+            wfn.Vector3() / o
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Vector4' and 'object'",
+        ):
+            wfn.Vector4() / o
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Matrix3x2' and 'int'",
+        ):
+            wfn.Matrix3x2() / 1
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Matrix4x4' and 'int'",
+        ):
+            wfn.Matrix4x4() / 1
+
+        with self.assertRaisesRegex(
+            TypeError,
+            r"unsupported operand type\(s\) for /: 'winrt._winrt_windows_foundation_numerics.Quaternion' and 'int'",
+        ):
+            wfn.Quaternion() / 1

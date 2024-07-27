@@ -138,6 +138,58 @@ static class NumberWriterExtensions
         w.WriteLine("}");
     }
 
+    static void WriteNumberDiv(this IndentedTextWriter w, ProjectedType type)
+    {
+        w.WriteLine(
+            $"static PyObject* _truediv_{type.Name}(PyObject* left, PyObject* right) noexcept"
+        );
+        w.WriteLine("{");
+        w.Indent++;
+        w.WriteTryCatch(
+            () =>
+            {
+                w.WriteLine($"auto _left = py::converter<{type.CppWinrtType}>::convert_to(left);");
+
+                if (type.Name != "Quaternion")
+                {
+                    w.WriteBlankLine();
+                    w.WriteLine("py::pyobj_handle right_float{PyNumber_Float(right)};");
+                    w.WriteLine("if (right_float)");
+                    w.WriteLine("{");
+                    w.Indent++;
+                    w.WriteLine("auto _right_float = PyFloat_AsDouble(right_float.get());");
+                    w.WriteLine("if (_right_float == -1 && PyErr_Occurred())");
+                    w.WriteLine("{");
+                    w.Indent++;
+                    w.WriteLine("return nullptr;");
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
+                    w.WriteLine($"auto _result = _left / static_cast<float>(_right_float);");
+                    w.WriteLine($"return py::convert(_result);");
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteLine("else");
+                    w.WriteLine("{");
+                    w.Indent++;
+                    w.WriteLine("PyErr_Clear();");
+                    w.Indent--;
+                    w.WriteLine("}");
+                }
+
+                w.WriteLine(
+                    $"auto _right = py::converter<{type.CppWinrtType}>::convert_to(right);"
+                );
+                w.WriteBlankLine();
+                w.WriteLine($"auto _result = _left / _right;");
+                w.WriteLine($"return py::convert(_result);");
+            },
+            w.WriteReturnNotImplementedOnTypeError
+        );
+        w.Indent--;
+        w.WriteLine("}");
+    }
+
     public static void WriteNumberMethods(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteNumberAdd(type);
@@ -145,5 +197,11 @@ static class NumberWriterExtensions
         w.WriteNumberSub(type);
         w.WriteBlankLine();
         w.WriteNumberMul(type);
+
+        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal))
+        {
+            w.WriteBlankLine();
+            w.WriteNumberDiv(type);
+        }
     }
 }

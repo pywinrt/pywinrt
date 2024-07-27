@@ -1894,6 +1894,30 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _truediv_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* other, int op) noexcept
     {
         try
@@ -1967,6 +1991,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_add, reinterpret_cast<void*>(_add_Quaternion) },
         { Py_nb_subtract, reinterpret_cast<void*>(_sub_Quaternion) },
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Quaternion) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
         { }
@@ -2443,6 +2468,47 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _truediv_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* other, int op) noexcept
     {
         try
@@ -2504,6 +2570,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_add, reinterpret_cast<void*>(_add_Vector2) },
         { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector2) },
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector2) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
         { }
@@ -2802,6 +2869,47 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _truediv_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* other, int op) noexcept
     {
         try
@@ -2869,6 +2977,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_add, reinterpret_cast<void*>(_add_Vector3) },
         { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector3) },
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector3) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
         { }
@@ -3203,6 +3312,47 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _truediv_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* other, int op) noexcept
     {
         try
@@ -3276,6 +3426,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_add, reinterpret_cast<void*>(_add_Vector4) },
         { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector4) },
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector4) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
         { }
