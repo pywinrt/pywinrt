@@ -9,6 +9,7 @@
 - Added `--component-dlls` option to PyWinRT.exe for user component packages.
 - Added `winrt.windows.system.interop` package.
 - Added `winrt.windows.ui.composition.interop` package.
+- Added support for Python 3.13.
 
 ### Changed
 - General performance improvements.
