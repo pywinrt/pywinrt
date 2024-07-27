@@ -2425,6 +2425,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* distance_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2438,6 +2468,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyMethodDef _methods_Vector2[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector2), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector2), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector2), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2868,6 +2900,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* distance_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -2881,6 +2943,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyMethodDef _methods_Vector3[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector3), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector3), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector3), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3353,6 +3417,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* distance_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -3366,6 +3460,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     static PyMethodDef _methods_Vector4[] = {
         { "length", reinterpret_cast<PyCFunction>(length_Vector4), METH_NOARGS, nullptr },
         { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector4), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector4), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };

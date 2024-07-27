@@ -2,13 +2,29 @@ using System.CodeDom.Compiler;
 
 static class NumberWriterExtensions
 {
-    private record ParamInfo(string Name, string Type);
+    private record ParamInfo(string Name, string PyType)
+    {
+        public string CppWinrtType => cppWinrtTypeFromPyType[PyType];
+    };
 
     private record MethodInfo(
         string Name,
         string ReturnPyType,
         IReadOnlyList<ParamInfo> Parameters
     );
+
+    private static readonly IReadOnlyDictionary<string, string> cppWinrtTypeFromPyType =
+        new Dictionary<string, string>
+        {
+            { "float", "float" },
+            { "Vector2", "winrt::Windows::Foundation::Numerics::float2" },
+            { "Vector3", "winrt::Windows::Foundation::Numerics::float3" },
+            { "Vector4", "winrt::Windows::Foundation::Numerics::float4" },
+            { "Matrix3x2", "winrt::Windows::Foundation::Numerics::float3x2" },
+            { "Matrix4x4", "winrt::Windows::Foundation::Numerics::float4x4" },
+            { "Plane", "winrt::Windows::Foundation::Numerics::plane" },
+            { "Quaternion", "winrt::Windows::Foundation::Numerics::quaternion" }
+        };
 
     private static readonly IReadOnlyDictionary<
         string,
@@ -21,8 +37,8 @@ static class NumberWriterExtensions
             {
                 new("length", "float", []),
                 new("length_squared", "float", []),
-                // new("distance", "float", [new ParamInfo("value", "Vector2")]),
-                // new("distance_squared", "float", [new ParamInfo("value", "Vector2")]),
+                new("distance", "float", [new ParamInfo("value", "Vector2")]),
+                new("distance_squared", "float", [new ParamInfo("value", "Vector2")]),
                 // new("dot", "float", [new ParamInfo("value", "Vector2")]),
                 // new("normalize", "Vector2", []),
                 // new("reflect", "Vector2", [new ParamInfo("normal", "Vector2")]),
@@ -51,8 +67,8 @@ static class NumberWriterExtensions
             {
                 new("length", "float", []),
                 new("length_squared", "float", []),
-                // new("distance", "float", [new ParamInfo("value", "Vector3")]),
-                // new("distance_squared", "float", [new ParamInfo("value", "Vector3")]),
+                new("distance", "float", [new ParamInfo("value", "Vector3")]),
+                new("distance_squared", "float", [new ParamInfo("value", "Vector3")]),
                 // new("dot", "float", [new ParamInfo("value", "Vector3")]),
                 // new("cross", "Vector3", [new ParamInfo("value", "Vector3")]),
                 // new("normalize", "Vector3", []),
@@ -80,8 +96,8 @@ static class NumberWriterExtensions
             {
                 new("length", "float", []),
                 new("length_squared", "float", []),
-                // new("distance", "float", [new ParamInfo("value", "Vector4")]),
-                // new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
+                new("distance", "float", [new ParamInfo("value", "Vector4")]),
+                new("distance_squared", "float", [new ParamInfo("value", "Vector4")]),
                 // new("dot", "float", [new ParamInfo("value", "Vector4")]),
                 // new("normalize", "Vector4", []),
                 // new("reflect", "Vector4", [new ParamInfo("normal", "Vector4")]),
@@ -159,7 +175,12 @@ static class NumberWriterExtensions
     {
         foreach (var method in extraMethods[type.Name])
         {
-            w.WriteLine($"def {method.Name}(self) -> {method.ReturnPyType}: ...");
+            var parameters = string.Join(
+                "",
+                method.Parameters.Select(p => $", {p.Name}: {p.PyType}")
+            );
+
+            w.WriteLine($"def {method.Name}(self{parameters}) -> {method.ReturnPyType}: ...");
         }
     }
 
@@ -190,6 +211,16 @@ static class NumberWriterExtensions
                         case 0:
                             w.WriteLine(
                                 $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj);"
+                            );
+                            w.WriteLine("return py::convert(_result);");
+                            break;
+                        case 1:
+                            var param = method.Parameters[0];
+                            w.WriteLine(
+                                $"auto _arg = py::converter<{param.CppWinrtType}>::convert_to(arg);"
+                            );
+                            w.WriteLine(
+                                $"auto _result = winrt::Windows::Foundation::Numerics::{method.Name}(self->obj, _arg);"
                             );
                             w.WriteLine("return py::convert(_result);");
                             break;
