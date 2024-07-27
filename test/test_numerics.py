@@ -572,3 +572,23 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(wfn.Vector3(1, 2, 3).length_squared(), 14)
         self.assertEqual(wfn.Vector4(1, 2, 3, 4).length_squared(), 30)
         self.assertEqual(wfn.Quaternion(1, 2, 3, 4).length_squared(), 30)
+
+    def test_distance(self):
+        self.assertEqual(wfn.Vector2(1, 2).distance(wfn.Vector2(4, 6)), 5)
+        self.assertAlmostEqual(
+            wfn.Vector3(1, 2, 3).distance(wfn.Vector3(4, 6, 9)), 61**0.5, places=5
+        )
+        self.assertAlmostEqual(
+            wfn.Vector4(1, 2, 3, 4).distance(wfn.Vector4(4, 6, 9, 12)),
+            125**0.5,
+            places=5,
+        )
+
+    def test_distance_squared(self):
+        self.assertEqual(wfn.Vector2(1, 2).distance_squared(wfn.Vector2(4, 6)), 25)
+        self.assertEqual(
+            wfn.Vector3(1, 2, 3).distance_squared(wfn.Vector3(4, 6, 9)), 61
+        )
+        self.assertEqual(
+            wfn.Vector4(1, 2, 3, 4).distance_squared(wfn.Vector4(4, 6, 9, 12)), 125
+        )
