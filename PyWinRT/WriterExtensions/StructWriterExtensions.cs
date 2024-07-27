@@ -8,12 +8,20 @@ static class StructWriterExtensions
         w.WriteLine($"// ----- {type.Name} struct --------------------");
         w.WriteStructConstructor(type);
         w.WriteDeallocFunction(type);
+
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberMethods(type);
+        }
+
         w.WriteAssignArrayMethod(type);
         w.WriteMethodTable(type);
+
         foreach (var field in type.Type.Fields)
         {
             w.WriteStructGetSetFunction(type, field);
         }
+
         w.WriteGetSetTable(type);
 
         if (type.Type.IsCustomNumeric() && type.Name != "Plane")

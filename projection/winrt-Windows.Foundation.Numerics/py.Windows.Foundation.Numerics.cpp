@@ -1695,6 +1695,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* length_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
@@ -1706,6 +1734,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Quaternion[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Quaternion), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1986,6 +2016,28 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _abs_Quaternion(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* other, int op) noexcept
     {
         try
@@ -2061,6 +2113,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Quaternion) },
         { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Quaternion) },
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Quaternion) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
         { }
@@ -2344,6 +2397,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* length_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2355,6 +2436,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector2[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector2), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector2), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2600,6 +2683,28 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _abs_Vector2(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* other, int op) noexcept
     {
         try
@@ -2663,6 +2768,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector2) },
         { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector2) },
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector2) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
         { }
@@ -2734,6 +2840,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* length_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -2745,6 +2879,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector3[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector3), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector3), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3024,6 +3160,28 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _abs_Vector3(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* other, int op) noexcept
     {
         try
@@ -3093,6 +3251,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector3) },
         { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector3) },
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector3) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
         { }
@@ -3166,6 +3325,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* length_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -3177,6 +3364,8 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector4[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector4), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector4), METH_NOARGS, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3490,6 +3679,28 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* _abs_Vector4(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* other, int op) noexcept
     {
         try
@@ -3565,6 +3776,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector4) },
         { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector4) },
         { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector4) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
         { }

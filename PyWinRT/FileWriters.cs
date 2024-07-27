@@ -185,6 +185,11 @@ static class FileWriters
                 $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)}"))}) -> None: ..."
             );
 
+            if (type.Type.IsCustomNumeric())
+            {
+                w.WriteNumberMethodPyTyping(type);
+            }
+
             w.Indent--;
             w.WriteBlankLine();
         }

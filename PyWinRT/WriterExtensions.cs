@@ -317,6 +317,11 @@ static class WriterExtensions
             writeRow(method);
         }
 
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberMethodDefs(type);
+        }
+
         foreach (var evt in type.Events.Where(e => !e.IsStatic))
         {
             writeRow(evt.AddMethod);
