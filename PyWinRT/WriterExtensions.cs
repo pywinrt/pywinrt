@@ -183,6 +183,11 @@ static class WriterExtensions
         w.WriteLine($"{{ Py_tp_methods, reinterpret_cast<void*>(_methods_{name}) }},");
         w.WriteLine($"{{ Py_tp_getset, reinterpret_cast<void*>(_getset_{name}) }},");
 
+        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        {
+            w.WriteLine($"{{ Py_nb_add, reinterpret_cast<void*>(_add_{name}) }},");
+        }
+
         if (type.Category == Category.Struct)
         {
             w.WriteLine($"{{ Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_{name}) }},");
