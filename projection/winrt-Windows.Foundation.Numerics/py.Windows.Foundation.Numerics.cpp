@@ -633,6 +633,21 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transform_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* lerp_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* args) noexcept
     {
         try
@@ -661,6 +676,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Matrix4x4[] = {
         { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Matrix4x4), METH_O, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { }
@@ -1555,6 +1571,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transform_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* dot_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
     {
         try
@@ -1612,6 +1656,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 
     static PyMethodDef _methods_Plane[] = {
         { "normalize", reinterpret_cast<PyCFunction>(normalize_Plane), METH_NOARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Plane), METH_O, nullptr },
         { "dot", reinterpret_cast<PyCFunction>(dot_Plane), METH_O, nullptr },
         { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
         { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
@@ -2768,6 +2813,97 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transform_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix3x2', 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_normal_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix3x2', 'winrt._winrt_windows_foundation_numerics.Matrix4x4' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform4_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -2790,6 +2926,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "max", reinterpret_cast<PyCFunction>(max_Vector2), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector2), METH_VARARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector2), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector2), METH_O, nullptr },
+        { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector2), METH_O, nullptr },
+        { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3371,6 +3510,77 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transform_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_normal_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform4_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -3394,6 +3604,9 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "max", reinterpret_cast<PyCFunction>(max_Vector3), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector3), METH_VARARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector3), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector3), METH_O, nullptr },
+        { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector3), METH_O, nullptr },
+        { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -3987,6 +4200,34 @@ namespace py::cpp::Windows::Foundation::Numerics
         }
     }
 
+    static PyObject* transform_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -4008,6 +4249,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         { "max", reinterpret_cast<PyCFunction>(max_Vector4), METH_O, nullptr },
         { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector4), METH_VARARGS, nullptr },
         { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };

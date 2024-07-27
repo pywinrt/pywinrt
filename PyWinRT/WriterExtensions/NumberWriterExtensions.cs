@@ -54,11 +54,13 @@ static class NumberWriterExtensions
                     "Vector2",
                     [new ParamInfo("value", "Vector2"), new ParamInfo("amount", "float")]
                 ),
-                // new("transform", "Vector2", [new ParamInfo("position", "Matrix3x2")]),
-                // new("transform", "Vector2", [new ParamInfo("position", "Matrix4x4")]),
-                // new("transform_normal", "Vector2", [new ParamInfo("normal", "Matrix3x2")]),
-                // new("transform_normal", "Vector2", [new ParamInfo("normal", "Matrix4x4")]),
-                // new("transform", "Vector2", [new ParamInfo("value", "Quaternion")])
+                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
+                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
+                new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
+                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")])
             }
         },
         {
@@ -85,9 +87,11 @@ static class NumberWriterExtensions
                     "Vector3",
                     [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
                 ),
-                // new("transform", "Vector3", [new ParamInfo("position", "Matrix4x4")]),
-                // new("transform_normal", "Vector3", [new ParamInfo("normal", "Matrix4x4")]),
-                // new("transform", "Vector3", [new ParamInfo("value", "Quaternion")])
+                new("transform", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform_normal", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector3", [new ParamInfo("rotation", "Quaternion")]),
+                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
         },
         {
@@ -112,8 +116,8 @@ static class NumberWriterExtensions
                     "Vector4",
                     [new ParamInfo("value", "Vector4"), new ParamInfo("amount", "float")]
                 ),
-                // new("transform", "Vector4", [new ParamInfo("position", "Matrix4x4")]),
-                // new("transform", "Vector4", [new ParamInfo("value", "Quaternion")])
+                new("transform", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
         },
         {
@@ -137,7 +141,7 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 // new("determinant", "float", []),
                 // new("invert", "Matrix4x4", []),
-                // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
+                new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
                 // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
                 new(
                     "lerp",
@@ -151,8 +155,8 @@ static class NumberWriterExtensions
             new List<MethodInfo>
             {
                 new("normalize", "Plane", []),
-                // new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")]),
-                // new("transform", "Plane", [new ParamInfo("quaternion", "Quaternion")]),
+                new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Plane", [new ParamInfo("rotation", "Quaternion")]),
                 new("dot", "float", [new ParamInfo("value", "Vector4")]),
                 new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")]),
                 new("dot_normal", "float", [new ParamInfo("value", "Vector3")])
@@ -179,8 +183,6 @@ static class NumberWriterExtensions
                     "Quaternion",
                     [new ParamInfo("value", "Quaternion"), new ParamInfo("amount", "float")]
                 ),
-                // new("transform", "Vector3", [new ParamInfo("value", "Vector3")]),
-                // new("transform", "Vector3", [new ParamInfo("value", "Vector4")])
             }
         }
     };
@@ -193,6 +195,11 @@ static class NumberWriterExtensions
                 "",
                 method.Parameters.Select(p => $", {p.Name}: {p.PyType}")
             );
+
+            if (extraMethods[type.Name].Count(m => m.Name == method.Name) > 1)
+            {
+                w.WriteLine("@typing.overload");
+            }
 
             w.WriteLine($"def {method.Name}(self{parameters}) -> {method.ReturnPyType}: ...");
         }
@@ -262,7 +269,43 @@ static class NumberWriterExtensions
                 }
                 else
                 {
-                    throw new NotImplementedException();
+                    switch (method.Parameters.Count)
+                    {
+                        case 1:
+                            foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
+                            {
+                                var param = overload.Parameters[0];
+
+                                if (i > 0)
+                                {
+                                    w.WriteBlankLine();
+                                }
+
+                                w.WriteLine(
+                                    $"if (std::string_view(Py_TYPE(arg)->tp_name) == \"winrt._winrt_windows_foundation_numerics.{param.PyType}\")"
+                                );
+                                w.WriteLine("{");
+                                w.Indent++;
+                                w.WriteLine(
+                                    $"auto _arg = py::converter<{param.CppWinrtType}>::convert_to(arg);"
+                                );
+                                w.WriteLine(
+                                    $"auto _result = winrt::Windows::Foundation::Numerics::{overload.Name}(self->obj, _arg);"
+                                );
+                                w.WriteLine("return py::convert(_result);");
+                                w.Indent--;
+                                w.WriteLine("}");
+                            }
+
+                            w.WriteBlankLine();
+                            w.WriteLine(
+                                $"PyErr_Format(PyExc_TypeError, \"Expecting one of {string.Join(", ", overloads.Select(o => $"'winrt._winrt_windows_foundation_numerics.{o.Parameters[0].PyType}'"))} but got '%s'\", Py_TYPE(arg)->tp_name);"
+                            );
+                            w.WriteLine("return nullptr;");
+                            break;
+                        default:
+                            throw new NotImplementedException();
+                    }
                 }
             });
             w.Indent--;
