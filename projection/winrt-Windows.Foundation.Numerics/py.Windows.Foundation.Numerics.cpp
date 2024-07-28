@@ -69,6 +69,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* _get_identity_Matrix3x2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3x2::identity());
+    }
+
     static PyObject* is_identity_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
     {
         try
@@ -600,6 +605,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Matrix3x2};
 
     static PyGetSetDef getset_Matrix3x2_Static[] = {
+        { "identity", _get_identity_Matrix3x2, nullptr, nullptr, nullptr },
         { }
     };
 
@@ -707,6 +713,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* _get_identity_Matrix4x4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4x4::identity());
     }
 
     static PyObject* is_identity_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
@@ -1712,6 +1723,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Matrix4x4};
 
     static PyGetSetDef getset_Matrix4x4_Static[] = {
+        { "identity", _get_identity_Matrix4x4, nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2152,6 +2164,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* _get_identity_Quaternion(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::quaternion::identity());
     }
 
     static PyObject* is_identity_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
@@ -2712,6 +2729,7 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Quaternion};
 
     static PyGetSetDef getset_Quaternion_Static[] = {
+        { "identity", _get_identity_Quaternion, nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3005,6 +3023,26 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* _get_zero_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::zero());
+    }
+
+    static PyObject* _get_one_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::one());
+    }
+
+    static PyObject* _get_unit_x_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::unit_y());
     }
 
     static PyObject* length_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
@@ -3653,6 +3691,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Vector2};
 
     static PyGetSetDef getset_Vector2_Static[] = {
+        { "zero", _get_zero_Vector2, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector2, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector2, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector2, nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3734,6 +3776,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* _get_zero_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::zero());
+    }
+
+    static PyObject* _get_one_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::one());
+    }
+
+    static PyObject* _get_unit_x_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_y());
+    }
+
+    static PyObject* _get_unit_z_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_z());
     }
 
     static PyObject* length_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
@@ -4415,6 +4482,11 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Vector3};
 
     static PyGetSetDef getset_Vector3_Static[] = {
+        { "zero", _get_zero_Vector3, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector3, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector3, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector3, nullptr, nullptr, nullptr },
+        { "unit_z", _get_unit_z_Vector3, nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4498,6 +4570,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* _get_zero_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::zero());
+    }
+
+    static PyObject* _get_one_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::one());
+    }
+
+    static PyObject* _get_unit_x_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_y());
+    }
+
+    static PyObject* _get_unit_z_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_z());
+    }
+
+    static PyObject* _get_unit_w_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_w());
     }
 
     static PyObject* length_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
@@ -5128,6 +5230,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         _type_slots_Vector4};
 
     static PyGetSetDef getset_Vector4_Static[] = {
+        { "zero", _get_zero_Vector4, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector4, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector4, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector4, nullptr, nullptr, nullptr },
+        { "unit_z", _get_unit_z_Vector4, nullptr, nullptr, nullptr },
+        { "unit_w", _get_unit_w_Vector4, nullptr, nullptr, nullptr },
         { }
     };
 

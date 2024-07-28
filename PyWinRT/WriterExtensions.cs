@@ -106,6 +106,11 @@ static class WriterExtensions
             );
         }
 
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberCommonValuesGetSetDefs(type);
+        }
+
         w.WriteLine("{ }");
         w.Indent--;
         w.WriteLine("};");
