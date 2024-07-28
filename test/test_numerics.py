@@ -1,6 +1,9 @@
+import os
 import unittest
 
 import winrt.windows.foundation.numerics as wfn
+
+ON_MINGW = "MINGW_PREFIX" in os.environ
 
 
 class TestNumerics(unittest.TestCase):
@@ -597,15 +600,19 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(wfn.Vector2(1, 2).dot(wfn.Vector2(3, 4)), 11)
         self.assertEqual(wfn.Vector3(1, 2, 3).dot(wfn.Vector3(4, 5, 6)), 32)
         self.assertEqual(wfn.Vector4(1, 2, 3, 4).dot(wfn.Vector4(5, 6, 7, 8)), 70)
-        self.assertEqual(
-            wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot(wfn.Vector4(5, 6, 7, 8)), 70
-        )
-        self.assertEqual(
-            wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot_coordinate(wfn.Vector3(5, 6, 7)), 42
-        )
-        self.assertEqual(
-            wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot_normal(wfn.Vector3(5, 6, 7)), 38
-        )
+
+        if not ON_MINGW:
+            self.assertEqual(
+                wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot(wfn.Vector4(5, 6, 7, 8)), 70
+            )
+            self.assertEqual(
+                wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot_coordinate(wfn.Vector3(5, 6, 7)),
+                42,
+            )
+            self.assertEqual(
+                wfn.Plane(wfn.Vector3(1, 2, 3), 4).dot_normal(wfn.Vector3(5, 6, 7)), 38
+            )
+
         self.assertEqual(wfn.Quaternion(1, 2, 3, 4).dot(wfn.Quaternion(5, 6, 7, 8)), 70)
 
     def test_cross(self):
@@ -742,23 +749,27 @@ class TestNumerics(unittest.TestCase):
             wfn.Vector4(1, 2, 3, 4).lerp(wfn.Vector4(5, 6, 7, 8), 0.5),
             wfn.Vector4(3, 4, 5, 6),
         )
-        self.assertEqual(
-            wfn.Matrix3x2(1, 2, 3, 4, 5, 6).lerp(
-                wfn.Matrix3x2(7, 8, 9, 10, 11, 12), 0.5
-            ),
-            wfn.Matrix3x2(4, 5, 6, 7, 8, 9),
-        )
-        self.assertEqual(
-            wfn.Matrix4x4(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16).lerp(
-                wfn.Matrix4x4(
-                    17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+
+        if not ON_MINGW:
+            self.assertEqual(
+                wfn.Matrix3x2(1, 2, 3, 4, 5, 6).lerp(
+                    wfn.Matrix3x2(7, 8, 9, 10, 11, 12), 0.5
                 ),
-                0.5,
-            ),
-            wfn.Matrix4x4(
-                9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24
-            ),
-        )
+                wfn.Matrix3x2(4, 5, 6, 7, 8, 9),
+            )
+            self.assertEqual(
+                wfn.Matrix4x4(
+                    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+                ).lerp(
+                    wfn.Matrix4x4(
+                        17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32
+                    ),
+                    0.5,
+                ),
+                wfn.Matrix4x4(
+                    9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24
+                ),
+            )
 
         self.assertEqual(
             wfn.Quaternion(1, 2, 3, 4).slerp(wfn.Quaternion(5, 6, 7, 8), 0.5),
@@ -771,6 +782,7 @@ class TestNumerics(unittest.TestCase):
         self.assertAlmostEqual(q.z, 0.539164, places=5)
         self.assertAlmostEqual(q.w, 0.646997, places=5)
 
+    @unittest.skipIf(ON_MINGW, "Not implemented")
     def test_transform(self):
         self.assertEqual(
             wfn.Vector2(1, 2).transform(wfn.Matrix3x2(3, 4, 5, 6, 7, 8)),
@@ -900,6 +912,7 @@ class TestNumerics(unittest.TestCase):
             wfn.Vector3(13, 14, 15),
         )
 
+    @unittest.skipIf(ON_MINGW, "Not implemented")
     def test_invert(self):
         self.assertEqual(
             wfn.Matrix3x2(1, 2, 3, 4, 5, 6).invert(),
@@ -919,6 +932,7 @@ class TestNumerics(unittest.TestCase):
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
             ).invert()
 
+    @unittest.skipIf(ON_MINGW, "Not implemented")
     def test_decompose(self):
         scale, rotation, translation = wfn.Matrix4x4(
             1, 0, 0, 0, 0, 2, 0, 0, 0, 0, 3, 0, 4, 5, 6, 1

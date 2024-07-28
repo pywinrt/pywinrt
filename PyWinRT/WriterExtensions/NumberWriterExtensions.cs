@@ -7,7 +7,12 @@ static class NumberWriterExtensions
         public string CppWinrtType => cppWinrtTypeFromPyType[PyType];
     };
 
-    private record MethodInfo(string Name, string ReturnPyType, IReadOnlyList<ParamInfo> Parameters)
+    private record MethodInfo(
+        string Name,
+        string ReturnPyType,
+        IReadOnlyList<ParamInfo> Parameters,
+        bool NoMinGW = false
+    )
     {
         public string ReturnCppWinrtType => cppWinrtTypeFromPyType[ReturnPyType];
     }
@@ -53,12 +58,22 @@ static class NumberWriterExtensions
                     "Vector2",
                     [new ParamInfo("value", "Vector2"), new ParamInfo("amount", "float")]
                 ),
-                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
-                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix3x2")], NoMinGW: true),
+                new("transform", "Vector2", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
                 new("transform", "Vector2", [new ParamInfo("rotation", "Quaternion")]),
-                new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix3x2")]),
-                new("transform_normal", "Vector2", [new ParamInfo("matrix", "Matrix4x4")]),
-                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new(
+                    "transform_normal",
+                    "Vector2",
+                    [new ParamInfo("matrix", "Matrix3x2")],
+                    NoMinGW: true
+                ),
+                new(
+                    "transform_normal",
+                    "Vector2",
+                    [new ParamInfo("matrix", "Matrix4x4")],
+                    NoMinGW: true
+                ),
+                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
                 new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")])
             }
         },
@@ -86,10 +101,20 @@ static class NumberWriterExtensions
                     "Vector3",
                     [new ParamInfo("value", "Vector3"), new ParamInfo("amount", "float")]
                 ),
-                new("transform", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
-                new("transform", "Vector3", [new ParamInfo("rotation", "Quaternion")]),
-                new("transform_normal", "Vector3", [new ParamInfo("matrix", "Matrix4x4")]),
-                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector3", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
+                new(
+                    "transform",
+                    "Vector3",
+                    [new ParamInfo("rotation", "Quaternion")],
+                    NoMinGW: true
+                ),
+                new(
+                    "transform_normal",
+                    "Vector3",
+                    [new ParamInfo("matrix", "Matrix4x4")],
+                    NoMinGW: true
+                ),
+                new("transform4", "Vector4", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
                 new("transform4", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
         },
@@ -115,7 +140,7 @@ static class NumberWriterExtensions
                     "Vector4",
                     [new ParamInfo("value", "Vector4"), new ParamInfo("amount", "float")]
                 ),
-                new("transform", "Vector4", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Vector4", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
                 new("transform", "Vector4", [new ParamInfo("rotation", "Quaternion")]),
             }
         },
@@ -126,11 +151,12 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
-                new("invert", "Matrix3x2", []),
+                new("invert", "Matrix3x2", [], NoMinGW: true),
                 new(
                     "lerp",
                     "Matrix3x2",
-                    [new ParamInfo("value", "Matrix3x2"), new ParamInfo("amount", "float")]
+                    [new ParamInfo("value", "Matrix3x2"), new ParamInfo("amount", "float")],
+                    NoMinGW: true
                 ),
             }
         },
@@ -141,14 +167,20 @@ static class NumberWriterExtensions
                 new("is_identity", "bool", []),
                 new("determinant", "float", []),
                 new("translation", "Vector2", []),
-                new("invert", "Matrix4x4", []),
-                new("decompose", "typing.Tuple[Vector3, Quaternion, Vector3]", []),
-                new("transform", "Matrix4x4", [new ParamInfo("rotation", "Quaternion")]),
+                new("invert", "Matrix4x4", [], NoMinGW: true),
+                new("decompose", "typing.Tuple[Vector3, Quaternion, Vector3]", [], NoMinGW: true),
+                new(
+                    "transform",
+                    "Matrix4x4",
+                    [new ParamInfo("rotation", "Quaternion")],
+                    NoMinGW: true
+                ),
                 new("transpose", "Matrix4x4", []),
                 new(
                     "lerp",
                     "Matrix4x4",
-                    [new ParamInfo("value", "Matrix4x4"), new ParamInfo("amount", "float")]
+                    [new ParamInfo("value", "Matrix4x4"), new ParamInfo("amount", "float")],
+                    NoMinGW: true
                 )
             }
         },
@@ -157,11 +189,11 @@ static class NumberWriterExtensions
             new List<MethodInfo>
             {
                 new("normalize", "Plane", []),
-                new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")]),
+                new("transform", "Plane", [new ParamInfo("matrix", "Matrix4x4")], NoMinGW: true),
                 new("transform", "Plane", [new ParamInfo("rotation", "Quaternion")]),
-                new("dot", "float", [new ParamInfo("value", "Vector4")]),
-                new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")]),
-                new("dot_normal", "float", [new ParamInfo("value", "Vector3")])
+                new("dot", "float", [new ParamInfo("value", "Vector4")], NoMinGW: true),
+                new("dot_coordinate", "float", [new ParamInfo("value", "Vector3")], NoMinGW: true),
+                new("dot_normal", "float", [new ParamInfo("value", "Vector3")], NoMinGW: true),
             }
         },
         {
@@ -230,6 +262,23 @@ static class NumberWriterExtensions
             {
                 if (overloads.Count() == 1)
                 {
+                    if (method.NoMinGW)
+                    {
+                        w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                        w.WriteLine("(void)self;");
+
+                        if (method.Parameters.Count > 0)
+                        {
+                            w.WriteLine($"(void){args};");
+                        }
+
+                        w.WriteLine(
+                            "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
+                        );
+                        w.WriteLine("return nullptr;");
+                        w.WriteLineNoTabs("#else");
+                    }
+
                     switch (method.Parameters.Count)
                     {
                         case 0:
@@ -318,9 +367,33 @@ static class NumberWriterExtensions
                         default:
                             throw new NotImplementedException();
                     }
+
+                    if (method.NoMinGW)
+                    {
+                        w.WriteLineNoTabs("#endif");
+                    }
                 }
                 else
                 {
+                    var allOverloadsNotImplemented = overloads.All(o => o.NoMinGW);
+
+                    if (allOverloadsNotImplemented)
+                    {
+                        w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                        w.WriteLine("(void)self;");
+
+                        if (method.Parameters.Count > 0)
+                        {
+                            w.WriteLine($"(void){args};");
+                        }
+
+                        w.WriteLine(
+                            "PyErr_SetString(PyExc_NotImplementedError, \"This method is not implemented on MinGW\");"
+                        );
+                        w.WriteLine("return nullptr;");
+                        w.WriteLineNoTabs("#else");
+                    }
+
                     switch (method.Parameters.Count)
                     {
                         case 1:
@@ -338,6 +411,17 @@ static class NumberWriterExtensions
                                 );
                                 w.WriteLine("{");
                                 w.Indent++;
+
+                                if (!allOverloadsNotImplemented && overload.NoMinGW)
+                                {
+                                    w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                                    w.WriteLine(
+                                        $"PyErr_SetString(PyExc_NotImplementedError, \"Overload for {param.PyType} is not implemented on MinGW\");"
+                                    );
+                                    w.WriteLine("return nullptr;");
+                                    w.WriteLineNoTabs("#else");
+                                }
+
                                 w.WriteLine(
                                     $"auto _arg = py::converter<{param.CppWinrtType}>::convert_to(arg);"
                                 );
@@ -345,6 +429,12 @@ static class NumberWriterExtensions
                                     $"auto _result = winrt::Windows::Foundation::Numerics::{overload.Name}(self->obj, _arg);"
                                 );
                                 w.WriteLine("return py::convert(_result);");
+
+                                if (!allOverloadsNotImplemented && overload.NoMinGW)
+                                {
+                                    w.WriteLineNoTabs("#endif");
+                                }
+
                                 w.Indent--;
                                 w.WriteLine("}");
                             }
@@ -357,6 +447,11 @@ static class NumberWriterExtensions
                             break;
                         default:
                             throw new NotImplementedException();
+                    }
+
+                    if (allOverloadsNotImplemented)
+                    {
+                        w.WriteLineNoTabs("#endif");
                     }
                 }
             });
