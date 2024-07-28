@@ -2757,7 +2757,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
@@ -2769,7 +2769,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
@@ -4199,7 +4199,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix3x2" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix3x2 is not implemented on MinGW");
@@ -4211,7 +4211,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
@@ -4223,7 +4223,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
@@ -4250,14 +4250,14 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix3x2" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
                 return py::convert(_result);
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
@@ -4279,7 +4279,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
@@ -4291,7 +4291,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
@@ -4978,14 +4978,14 @@ namespace py::cpp::Windows::Foundation::Numerics
             PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
             return nullptr;
 #else
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
                 return py::convert(_result);
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
@@ -5029,7 +5029,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
@@ -5041,7 +5041,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
@@ -5741,7 +5741,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     {
         try
         {
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
             {
 #if defined(__MINGW32__)
                 PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
@@ -5753,7 +5753,7 @@ namespace py::cpp::Windows::Foundation::Numerics
 #endif
             }
 
-            if (std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
             {
                 auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
                 auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
