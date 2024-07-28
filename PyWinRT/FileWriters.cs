@@ -170,8 +170,35 @@ static class FileWriters
 
         foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
         {
+            var metaclass = "";
+
+            if (type.PyRequiresMetaclass)
+            {
+                w.WriteLine("@typing.final");
+                w.WriteLine($"class {type.Name}_Static(type):");
+                w.Indent++;
+
+                var pass = true;
+
+                if (type.Type.IsCustomNumeric())
+                {
+                    w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
+                    w.WriteNumberCommonValuesPyTyping(type, ref pass);
+                }
+
+                if (pass)
+                {
+                    w.WriteLine("pass");
+                }
+
+                w.Indent--;
+                w.WriteBlankLine();
+
+                metaclass = $"(metaclass={type.Name}_Static)";
+            }
+
             w.WriteLine("@typing.final");
-            w.WriteLine($"class {type.Name}:");
+            w.WriteLine($"class {type.Name}{metaclass}:");
             w.Indent++;
 
             foreach (var field in type.Type.Fields)
@@ -184,6 +211,11 @@ static class FileWriters
             w.WriteLine(
                 $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)}"))}) -> None: ..."
             );
+
+            if (type.Type.IsCustomNumeric())
+            {
+                w.WriteNumberMethodPyTyping(type);
+            }
 
             w.Indent--;
             w.WriteBlankLine();

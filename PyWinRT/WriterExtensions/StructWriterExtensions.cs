@@ -8,17 +8,39 @@ static class StructWriterExtensions
         w.WriteLine($"// ----- {type.Name} struct --------------------");
         w.WriteStructConstructor(type);
         w.WriteDeallocFunction(type);
+
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberFactoryFunctionMethodDefs(type);
+            w.WriteNumberCommonValueMethods(type);
+            w.WriteNumberMethods(type);
+        }
+
         w.WriteAssignArrayMethod(type);
         w.WriteMethodTable(type);
+
         foreach (var field in type.Type.Fields)
         {
             w.WriteStructGetSetFunction(type, field);
         }
+
         w.WriteGetSetTable(type);
+
+        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        {
+            w.WriteBlankLine();
+            w.WriteNumberSlotMethods(type);
+        }
+
         w.WriteStructEqualityMethods(type);
         w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);
         w.WriteTypeSpec(type);
+
+        if (type.PyRequiresMetaclass)
+        {
+            w.WriteMetaclass(type);
+        }
     }
 
     static void WriteStructConstructor(this IndentedTextWriter w, ProjectedType type)

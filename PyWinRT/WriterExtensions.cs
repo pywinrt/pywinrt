@@ -1,6 +1,5 @@
 using System.CodeDom.Compiler;
 using Mono.Cecil;
-using Mono.Cecil.Rocks;
 
 static class WriterExtensions
 {
@@ -58,7 +57,7 @@ static class WriterExtensions
         }
     }
 
-    static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteMetaclassPropertyGetsetTable(type);
         w.WriteMetaclassMethodTable(type);
@@ -107,6 +106,11 @@ static class WriterExtensions
             );
         }
 
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberCommonValuesGetSetDefs(type);
+        }
+
         w.WriteLine("{ }");
         w.Indent--;
         w.WriteLine("};");
@@ -133,6 +137,11 @@ static class WriterExtensions
             w.WriteLine(
                 $"{{ \"{@event.RemoveMethod.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{@event.RemoveMethod.Name}), METH_O, nullptr }},"
             );
+        }
+
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberFactoryFunctionDefs(type);
         }
 
         w.WriteLine("{ }");
@@ -182,6 +191,11 @@ static class WriterExtensions
 
         w.WriteLine($"{{ Py_tp_methods, reinterpret_cast<void*>(_methods_{name}) }},");
         w.WriteLine($"{{ Py_tp_getset, reinterpret_cast<void*>(_getset_{name}) }},");
+
+        if (type.Type.IsCustomNumeric() && type.Name != "Plane")
+        {
+            w.WriteNumberSlots(type);
+        }
 
         if (type.Category == Category.Struct)
         {
@@ -310,6 +324,11 @@ static class WriterExtensions
         foreach (var method in type.Methods.Where(m => !m.IsStatic).DistinctBy(m => m.Name))
         {
             writeRow(method);
+        }
+
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberMethodDefs(type);
         }
 
         foreach (var evt in type.Events.Where(e => !e.IsStatic))
@@ -1646,7 +1665,9 @@ static class WriterExtensions
         w.WriteLine("{");
         w.Indent++;
 
-        w.WriteLine($"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.Name}\";");
+        w.WriteLine(
+            $"static constexpr std::string_view qualified_name = \"{type.PyModuleName}.{type.Name}\";"
+        );
         w.WriteLine($"static constexpr const char* module_name = \"{type.PyModuleName}\";");
         w.WriteLine($"static constexpr const char* type_name = \"{type.Name}\";");
 

@@ -69,6 +69,365 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* make_translation_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_translation(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_translation(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_vector_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_scalar_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_skew_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_skew(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_skew(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_rotation(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_rotation(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _get_identity_Matrix3x2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3x2::identity());
+    }
+
+    static PyObject* is_identity_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* determinant_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::determinant(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* translation_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::translation(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* invert_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            winrt::Windows::Foundation::Numerics::float3x2 _result;
+
+            if (!winrt::Windows::Foundation::Numerics::invert(self->obj, &_result))
+            {
+                PyErr_SetString(PyExc_ValueError, "Matrix is not invertible");
+                return nullptr;
+            }
+
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Matrix3x2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3x2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix3x2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3x2>>();
@@ -80,6 +439,11 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Matrix3x2[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix3x2), METH_NOARGS, nullptr },
+        { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix3x2), METH_NOARGS, nullptr },
+        { "translation", reinterpret_cast<PyCFunction>(translation_Matrix3x2), METH_NOARGS, nullptr },
+        { "invert", reinterpret_cast<PyCFunction>(invert_Matrix3x2), METH_NOARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix3x2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix3x2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -292,6 +656,118 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Matrix3x2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Matrix3x2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Matrix3x2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Matrix3x2(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Matrix3x2(py::wrapper::Windows::Foundation::Numerics::Matrix3x2* self, PyObject* other, int op) noexcept
     {
         try
@@ -374,6 +850,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix3x2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix3x2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix3x2) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Matrix3x2) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Matrix3x2) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Matrix3x2) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Matrix3x2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix3x2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix3x2) },
         { }
@@ -385,6 +865,38 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Matrix3x2};
+
+    static PyGetSetDef getset_Matrix3x2_Static[] = {
+        { "identity", _get_identity_Matrix3x2, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Matrix3x2_Static[] = {
+        { "make_translation", make_translation_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale", make_scale_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale_from_vector", make_scale_from_vector_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale_from_scalar", make_scale_from_scalar_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_skew", make_skew_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_rotation", make_rotation_Matrix3x2, METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Matrix3x2_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3x2_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix3x2_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix3x2_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Matrix3x2_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Matrix3x2_Static
+    };
 
     // ----- Matrix4x4 struct --------------------
 
@@ -471,6 +983,794 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* make_billboard_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_billboard(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_constrained_billboard_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+            auto _arg4 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 4);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_constrained_billboard(_arg0, _arg1, _arg2, _arg3, _arg4);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_translation_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_translation(_arg0);
+                return py::convert(_result);
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_translation(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 4)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 4 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1, _arg2, _arg3);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_vector_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_scalar_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_x_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_x(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_x(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_y_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_y(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_y(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_z_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_z(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_z(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_axis_angle_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_axis_angle(_arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_field_of_view_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective_field_of_view(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_off_center_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _arg4 = py::convert_to<float>(args, 4);
+            auto _arg5 = py::convert_to<float>(args, 5);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective_off_center(_arg0, _arg1, _arg2, _arg3, _arg4, _arg5);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_orthographic_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_orthographic(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_orthographic_off_center_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _arg4 = py::convert_to<float>(args, 4);
+            auto _arg5 = py::convert_to<float>(args, 5);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_orthographic_off_center(_arg0, _arg1, _arg2, _arg3, _arg4, _arg5);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_look_at_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_look_at(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_world_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_world(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_quaternion_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_quaternion(_arg0);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_yaw_pitch_roll_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_yaw_pitch_roll(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_shadow_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_shadow(_arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_reflection_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_reflection(_arg0);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _get_identity_Matrix4x4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4x4::identity());
+    }
+
+    static PyObject* is_identity_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* determinant_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::determinant(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* translation_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::translation(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* invert_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            winrt::Windows::Foundation::Numerics::float4x4 _result;
+
+            if (!winrt::Windows::Foundation::Numerics::invert(self->obj, &_result))
+            {
+                PyErr_SetString(PyExc_ValueError, "Matrix is not invertible");
+                return nullptr;
+            }
+
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* decompose_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            winrt::Windows::Foundation::Numerics::float3 _out0;
+            winrt::Windows::Foundation::Numerics::quaternion _out1;
+            winrt::Windows::Foundation::Numerics::float3 _out2;
+
+            if (!winrt::Windows::Foundation::Numerics::decompose(self->obj, &_out0, &_out1, &_out2))
+            {
+                PyErr_SetString(PyExc_ValueError, "Matrix is not decomposable");
+                return nullptr;
+            }
+
+            py::pyobj_handle out0{py::convert(_out0)};
+            py::pyobj_handle out1{py::convert(_out1)};
+            py::pyobj_handle out2{py::convert(_out2)};
+
+            return PyTuple_Pack(3, out0.get(), out1.get(), out2.get());
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transpose_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::transpose(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Matrix4x4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Matrix4x4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4x4>>();
@@ -482,6 +1782,14 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Matrix4x4[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Matrix4x4), METH_NOARGS, nullptr },
+        { "determinant", reinterpret_cast<PyCFunction>(determinant_Matrix4x4), METH_NOARGS, nullptr },
+        { "translation", reinterpret_cast<PyCFunction>(translation_Matrix4x4), METH_NOARGS, nullptr },
+        { "invert", reinterpret_cast<PyCFunction>(invert_Matrix4x4), METH_NOARGS, nullptr },
+        { "decompose", reinterpret_cast<PyCFunction>(decompose_Matrix4x4), METH_NOARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Matrix4x4), METH_O, nullptr },
+        { "transpose", reinterpret_cast<PyCFunction>(transpose_Matrix4x4), METH_NOARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Matrix4x4), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Matrix4x4, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1034,6 +2342,118 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Matrix4x4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Matrix4x4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Matrix4x4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Matrix4x4(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Matrix4x4(py::wrapper::Windows::Foundation::Numerics::Matrix4x4* self, PyObject* other, int op) noexcept
     {
         try
@@ -1176,6 +2596,10 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Matrix4x4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Matrix4x4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Matrix4x4) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Matrix4x4) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Matrix4x4) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Matrix4x4) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Matrix4x4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Matrix4x4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Matrix4x4) },
         { }
@@ -1187,6 +2611,53 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Matrix4x4};
+
+    static PyGetSetDef getset_Matrix4x4_Static[] = {
+        { "identity", _get_identity_Matrix4x4, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Matrix4x4_Static[] = {
+        { "make_billboard", make_billboard_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_constrained_billboard", make_constrained_billboard_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_translation", make_translation_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale", make_scale_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale_from_vector", make_scale_from_vector_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale_from_scalar", make_scale_from_scalar_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_x", make_rotation_x_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_y", make_rotation_y_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_z", make_rotation_z_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_axis_angle", make_from_axis_angle_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective_field_of_view", make_perspective_field_of_view_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective", make_perspective_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective_off_center", make_perspective_off_center_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_orthographic", make_orthographic_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_orthographic_off_center", make_orthographic_off_center_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_look_at", make_look_at_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_world", make_world_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_quaternion", make_from_quaternion_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_shadow", make_shadow_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_reflection", make_reflection_Matrix4x4, METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Matrix4x4_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix4x4_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix4x4_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix4x4_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Matrix4x4_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Matrix4x4_Static
+    };
 
     // ----- Plane struct --------------------
 
@@ -1245,6 +2716,142 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* make_from_vertices_Plane(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_plane_from_vertices(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* normalize_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_coordinate_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot_coordinate(self->obj, _arg);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_normal_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot_normal(self->obj, _arg);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Plane(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::plane>>();
@@ -1256,6 +2863,11 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Plane[] = {
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Plane), METH_NOARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Plane), METH_O, nullptr },
+        { "dot", reinterpret_cast<PyCFunction>(dot_Plane), METH_O, nullptr },
+        { "dot_coordinate", reinterpret_cast<PyCFunction>(dot_coordinate_Plane), METH_O, nullptr },
+        { "dot_normal", reinterpret_cast<PyCFunction>(dot_normal_Plane), METH_O, nullptr },
         { "_assign_array_", _assign_array_Plane, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1402,6 +3014,32 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Plane};
 
+    static PyGetSetDef getset_Plane_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Plane_Static[] = {
+        { "make_from_vertices", make_from_vertices_Plane, METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Plane_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Plane_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Plane_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Plane_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Plane_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Plane_Static
+    };
+
     // ----- Quaternion struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* _new_Quaternion(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1463,6 +3101,205 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* make_from_axis_angle_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_axis_angle(_arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_yaw_pitch_roll_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_yaw_pitch_roll(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_rotation_matrix_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_rotation_matrix(_arg0);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _get_identity_Quaternion(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::quaternion::identity());
+    }
+
+    static PyObject* is_identity_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::is_identity(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* normalize_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* conjugate_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::conjugate(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* inverse_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::inverse(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* slerp_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::slerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* concatenate_Quaternion(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::quaternion>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::concatenate(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Quaternion(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::quaternion>>();
@@ -1474,6 +3311,16 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Quaternion[] = {
+        { "is_identity", reinterpret_cast<PyCFunction>(is_identity_Quaternion), METH_NOARGS, nullptr },
+        { "length", reinterpret_cast<PyCFunction>(length_Quaternion), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Quaternion), METH_NOARGS, nullptr },
+        { "dot", reinterpret_cast<PyCFunction>(dot_Quaternion), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Quaternion), METH_NOARGS, nullptr },
+        { "conjugate", reinterpret_cast<PyCFunction>(conjugate_Quaternion), METH_NOARGS, nullptr },
+        { "inverse", reinterpret_cast<PyCFunction>(inverse_Quaternion), METH_NOARGS, nullptr },
+        { "slerp", reinterpret_cast<PyCFunction>(slerp_Quaternion), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Quaternion), METH_VARARGS, nullptr },
+        { "concatenate", reinterpret_cast<PyCFunction>(concatenate_Quaternion), METH_O, nullptr },
         { "_assign_array_", _assign_array_Quaternion, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -1618,6 +3465,164 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _truediv_Quaternion(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Quaternion(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _abs_Quaternion(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Quaternion(py::wrapper::Windows::Foundation::Numerics::Quaternion* self, PyObject* other, int op) noexcept
     {
         try
@@ -1688,6 +3693,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Quaternion) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Quaternion) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Quaternion) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Quaternion) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Quaternion) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Quaternion) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Quaternion) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Quaternion) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Quaternion) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Quaternion) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Quaternion) },
         { }
@@ -1699,6 +3710,35 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Quaternion};
+
+    static PyGetSetDef getset_Quaternion_Static[] = {
+        { "identity", _get_identity_Quaternion, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Quaternion_Static[] = {
+        { "make_from_axis_angle", make_from_axis_angle_Quaternion, METH_VARARGS, nullptr },
+        { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Quaternion, METH_VARARGS, nullptr },
+        { "make_from_rotation_matrix", make_from_rotation_matrix_Quaternion, METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Quaternion_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Quaternion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Quaternion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Quaternion_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Quaternion_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Quaternion_Static
+    };
 
     // ----- Rational struct --------------------
 
@@ -1971,6 +4011,303 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* _get_zero_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::zero());
+    }
+
+    static PyObject* _get_one_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::one());
+    }
+
+    static PyObject* _get_unit_x_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector2(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float2::unit_y());
+    }
+
+    static PyObject* length_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* normalize_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* reflect_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::reflect(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* min_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix3x2" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix3x2 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix3x2', 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_normal_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix3x2" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix3x2")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3x2>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix3x2', 'winrt._winrt_windows_foundation_numerics.Matrix4x4' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform4_Vector2(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float2>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector2(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float2>>();
@@ -1982,6 +4319,20 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector2[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector2), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector2), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector2), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector2), METH_O, nullptr },
+        { "dot", reinterpret_cast<PyCFunction>(dot_Vector2), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector2), METH_NOARGS, nullptr },
+        { "reflect", reinterpret_cast<PyCFunction>(reflect_Vector2), METH_O, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector2), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector2), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector2), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector2), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector2), METH_O, nullptr },
+        { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector2), METH_O, nullptr },
+        { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector2), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector2, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2058,6 +4409,197 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            py::pyobj_handle left_float{PyNumber_Float(left)};
+            if (left_float)
+            {
+                auto _left_float = PyFloat_AsDouble(left_float.get());
+                if (_left_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _truediv_Vector2(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Vector2(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _abs_Vector2(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float2>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector2(py::wrapper::Windows::Foundation::Numerics::Vector2* self, PyObject* other, int op) noexcept
     {
         try
@@ -2116,6 +4658,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector2) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector2) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector2) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector2) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector2) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector2) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector2) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector2) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector2) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector2) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector2) },
         { }
@@ -2127,6 +4675,35 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector2};
+
+    static PyGetSetDef getset_Vector2_Static[] = {
+        { "zero", _get_zero_Vector2, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector2, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector2, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector2, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Vector2_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector2_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector2_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector2_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector2_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector2_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector2_Static
+    };
 
     // ----- Vector3 struct --------------------
 
@@ -2187,6 +4764,300 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* _get_zero_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::zero());
+    }
+
+    static PyObject* _get_one_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::one());
+    }
+
+    static PyObject* _get_unit_x_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_y());
+    }
+
+    static PyObject* _get_unit_z_Vector3(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float3::unit_z());
+    }
+
+    static PyObject* length_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* cross_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::cross(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* normalize_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* reflect_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::reflect(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* min_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_normal_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)self;
+            (void)arg;
+            PyErr_SetString(PyExc_NotImplementedError, "This method is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::transform_normal(self->obj, _arg);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform4_Vector3(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform4(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector3(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float3>>();
@@ -2198,6 +5069,21 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector3[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector3), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector3), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector3), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector3), METH_O, nullptr },
+        { "dot", reinterpret_cast<PyCFunction>(dot_Vector3), METH_O, nullptr },
+        { "cross", reinterpret_cast<PyCFunction>(cross_Vector3), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector3), METH_NOARGS, nullptr },
+        { "reflect", reinterpret_cast<PyCFunction>(reflect_Vector3), METH_O, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector3), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector3), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector3), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector3), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector3), METH_O, nullptr },
+        { "transform_normal", reinterpret_cast<PyCFunction>(transform_normal_Vector3), METH_O, nullptr },
+        { "transform4", reinterpret_cast<PyCFunction>(transform4_Vector3), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector3, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2308,6 +5194,197 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            py::pyobj_handle left_float{PyNumber_Float(left)};
+            if (left_float)
+            {
+                auto _left_float = PyFloat_AsDouble(left_float.get());
+                if (_left_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _truediv_Vector3(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Vector3(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _abs_Vector3(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float3>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector3(py::wrapper::Windows::Foundation::Numerics::Vector3* self, PyObject* other, int op) noexcept
     {
         try
@@ -2372,6 +5449,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector3) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector3) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector3) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector3) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector3) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector3) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector3) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector3) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector3) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector3) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector3) },
         { }
@@ -2383,6 +5466,36 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector3};
+
+    static PyGetSetDef getset_Vector3_Static[] = {
+        { "zero", _get_zero_Vector3, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector3, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector3, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector3, nullptr, nullptr, nullptr },
+        { "unit_z", _get_unit_z_Vector3, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Vector3_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector3_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector3_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector3_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector3_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector3_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector3_Static
+    };
 
     // ----- Vector4 struct --------------------
 
@@ -2445,6 +5558,218 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* _get_zero_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::zero());
+    }
+
+    static PyObject* _get_one_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::one());
+    }
+
+    static PyObject* _get_unit_x_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_x());
+    }
+
+    static PyObject* _get_unit_y_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_y());
+    }
+
+    static PyObject* _get_unit_z_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_z());
+    }
+
+    static PyObject* _get_unit_w_Vector4(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        return py::convert(winrt::Windows::Foundation::Numerics::float4::unit_w());
+    }
+
+    static PyObject* length_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* length_squared_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::length_squared(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* distance_squared_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::distance_squared(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* dot_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::dot(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* normalize_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            auto _result = winrt::Windows::Foundation::Numerics::normalize(self->obj);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* min_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::min(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* max_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(arg);
+            auto _result = winrt::Windows::Foundation::Numerics::max(self->obj, _arg);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* clamp_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::clamp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* lerp_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::lerp(self->obj, _arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* transform_Vector4(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Matrix4x4" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Matrix4x4")
+            {
+#if defined(__MINGW32__)
+                PyErr_SetString(PyExc_NotImplementedError, "Overload for Matrix4x4 is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::float4x4>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+#endif
+            }
+
+            if (std::string_view(Py_TYPE(arg)->tp_name) == "Quaternion" || std::string_view(Py_TYPE(arg)->tp_name) == "winrt._winrt_windows_foundation_numerics.Quaternion")
+            {
+                auto _arg = py::converter<winrt::Windows::Foundation::Numerics::quaternion>::convert_to(arg);
+                auto _result = winrt::Windows::Foundation::Numerics::transform(self->obj, _arg);
+                return py::convert(_result);
+            }
+
+            PyErr_Format(PyExc_TypeError, "Expecting one of 'winrt._winrt_windows_foundation_numerics.Matrix4x4', 'winrt._winrt_windows_foundation_numerics.Quaternion' but got '%s'", Py_TYPE(arg)->tp_name);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Vector4(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Foundation::Numerics::float4>>();
@@ -2456,6 +5781,17 @@ namespace py::cpp::Windows::Foundation::Numerics
     }
 
     static PyMethodDef _methods_Vector4[] = {
+        { "length", reinterpret_cast<PyCFunction>(length_Vector4), METH_NOARGS, nullptr },
+        { "length_squared", reinterpret_cast<PyCFunction>(length_squared_Vector4), METH_NOARGS, nullptr },
+        { "distance", reinterpret_cast<PyCFunction>(distance_Vector4), METH_O, nullptr },
+        { "distance_squared", reinterpret_cast<PyCFunction>(distance_squared_Vector4), METH_O, nullptr },
+        { "dot", reinterpret_cast<PyCFunction>(dot_Vector4), METH_O, nullptr },
+        { "normalize", reinterpret_cast<PyCFunction>(normalize_Vector4), METH_NOARGS, nullptr },
+        { "min", reinterpret_cast<PyCFunction>(min_Vector4), METH_O, nullptr },
+        { "max", reinterpret_cast<PyCFunction>(max_Vector4), METH_O, nullptr },
+        { "clamp", reinterpret_cast<PyCFunction>(clamp_Vector4), METH_VARARGS, nullptr },
+        { "lerp", reinterpret_cast<PyCFunction>(lerp_Vector4), METH_VARARGS, nullptr },
+        { "transform", reinterpret_cast<PyCFunction>(transform_Vector4), METH_O, nullptr },
         { "_assign_array_", _assign_array_Vector4, METH_O | METH_STATIC, nullptr },
         { }
     };
@@ -2600,6 +5936,197 @@ namespace py::cpp::Windows::Foundation::Numerics
         { }
     };
 
+    static PyObject* _add_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left + _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _sub_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left - _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _mul_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            py::pyobj_handle left_float{PyNumber_Float(left)};
+            if (left_float)
+            {
+                auto _left_float = PyFloat_AsDouble(left_float.get());
+                if (_left_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+                auto _result = static_cast<float>(_left_float) * py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left * static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left * _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _truediv_Vector4(PyObject* left, PyObject* right) noexcept
+    {
+        try
+        {
+            auto _left = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(left);
+
+            py::pyobj_handle right_float{PyNumber_Float(right)};
+            if (right_float)
+            {
+                auto _right_float = PyFloat_AsDouble(right_float.get());
+                if (_right_float == -1 && PyErr_Occurred())
+                {
+                    return nullptr;
+                }
+
+                auto _result = _left / static_cast<float>(_right_float);
+                return py::convert(_result);
+            }
+            else
+            {
+                PyErr_Clear();
+            }
+            auto _right = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(right);
+
+            auto _result = _left / _right;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _neg_Vector4(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(operand);
+            auto _result = -_operand;
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
+    static PyObject* _abs_Vector4(PyObject* operand) noexcept
+    {
+        try
+        {
+            auto _operand = py::converter<winrt::Windows::Foundation::Numerics::float4>::convert_to(operand);
+            auto _result = winrt::Windows::Foundation::Numerics::length(_operand);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+
+            if (PyErr_ExceptionMatches(PyExc_TypeError))
+            {
+                PyErr_Clear();
+                Py_RETURN_NOTIMPLEMENTED;
+            }
+
+            return nullptr;
+        }
+    }
+
     static PyObject* _richcompare_Vector4(py::wrapper::Windows::Foundation::Numerics::Vector4* self, PyObject* other, int op) noexcept
     {
         try
@@ -2670,6 +6197,12 @@ namespace py::cpp::Windows::Foundation::Numerics
         { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Vector4) },
         { Py_tp_methods, reinterpret_cast<void*>(_methods_Vector4) },
         { Py_tp_getset, reinterpret_cast<void*>(_getset_Vector4) },
+        { Py_nb_add, reinterpret_cast<void*>(_add_Vector4) },
+        { Py_nb_subtract, reinterpret_cast<void*>(_sub_Vector4) },
+        { Py_nb_multiply, reinterpret_cast<void*>(_mul_Vector4) },
+        { Py_nb_true_divide, reinterpret_cast<void*>(_truediv_Vector4) },
+        { Py_nb_negative, reinterpret_cast<void*>(_neg_Vector4) },
+        { Py_nb_absolute, reinterpret_cast<void*>(_abs_Vector4) },
         { Py_tp_richcompare, reinterpret_cast<void*>(_richcompare_Vector4) },
         { Py_tp_repr, reinterpret_cast<void*>(_repr_Vector4) },
         { }
@@ -2681,6 +6214,37 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector4};
+
+    static PyGetSetDef getset_Vector4_Static[] = {
+        { "zero", _get_zero_Vector4, nullptr, nullptr, nullptr },
+        { "one", _get_one_Vector4, nullptr, nullptr, nullptr },
+        { "unit_x", _get_unit_x_Vector4, nullptr, nullptr, nullptr },
+        { "unit_y", _get_unit_y_Vector4, nullptr, nullptr, nullptr },
+        { "unit_z", _get_unit_z_Vector4, nullptr, nullptr, nullptr },
+        { "unit_w", _get_unit_w_Vector4, nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Vector4_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector4_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector4_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector4_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector4_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector4_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector4_Static
+    };
 
     // ----- Windows.Foundation.Numerics Initialization --------------------
 
@@ -2727,25 +6291,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Matrix3x2_type{py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr)};
+    py::pyobj_handle type_Matrix3x2_Static{PyType_FromSpec(&type_spec_Matrix3x2_Static)};
+    if (!type_Matrix3x2_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Matrix3x2_type{py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, reinterpret_cast<PyTypeObject*>(type_Matrix3x2_Static.get()))};
     if (!Matrix3x2_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Matrix4x4_type{py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr)};
+    py::pyobj_handle type_Matrix4x4_Static{PyType_FromSpec(&type_spec_Matrix4x4_Static)};
+    if (!type_Matrix4x4_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Matrix4x4_type{py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, reinterpret_cast<PyTypeObject*>(type_Matrix4x4_Static.get()))};
     if (!Matrix4x4_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Plane_type{py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr)};
+    py::pyobj_handle type_Plane_Static{PyType_FromSpec(&type_spec_Plane_Static)};
+    if (!type_Plane_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Plane_type{py::register_python_type(module.get(), &type_spec_Plane, nullptr, reinterpret_cast<PyTypeObject*>(type_Plane_Static.get()))};
     if (!Plane_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Quaternion_type{py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr)};
+    py::pyobj_handle type_Quaternion_Static{PyType_FromSpec(&type_spec_Quaternion_Static)};
+    if (!type_Quaternion_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Quaternion_type{py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, reinterpret_cast<PyTypeObject*>(type_Quaternion_Static.get()))};
     if (!Quaternion_type)
     {
         return nullptr;
@@ -2757,19 +6345,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Vector2_type{py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr)};
+    py::pyobj_handle type_Vector2_Static{PyType_FromSpec(&type_spec_Vector2_Static)};
+    if (!type_Vector2_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector2_type{py::register_python_type(module.get(), &type_spec_Vector2, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector2_Static.get()))};
     if (!Vector2_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector3_type{py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr)};
+    py::pyobj_handle type_Vector3_Static{PyType_FromSpec(&type_spec_Vector3_Static)};
+    if (!type_Vector3_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector3_type{py::register_python_type(module.get(), &type_spec_Vector3, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector3_Static.get()))};
     if (!Vector3_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector4_type{py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr)};
+    py::pyobj_handle type_Vector4_Static{PyType_FromSpec(&type_spec_Vector4_Static)};
+    if (!type_Vector4_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector4_type{py::register_python_type(module.get(), &type_spec_Vector4, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector4_Static.get()))};
     if (!Vector4_type)
     {
         return nullptr;
