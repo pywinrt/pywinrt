@@ -1014,7 +1014,7 @@ static class NumberWriterExtensions
                                 }
 
                                 w.WriteLine(
-                                    $"if (std::string_view(Py_TYPE(arg)->tp_name) == \"winrt._winrt_windows_foundation_numerics.{param.PyType}\")"
+                                    $"if (std::string_view(Py_TYPE(arg)->tp_name) == \"{param.PyType}\" || std::string_view(Py_TYPE(arg)->tp_name) == \"winrt._winrt_windows_foundation_numerics.{param.PyType}\")"
                                 );
                                 w.WriteLine("{");
                                 w.Indent++;
