@@ -69,6 +69,268 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_DECREF(tp);
     }
 
+    static PyObject* make_translation_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_translation(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_translation(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_vector_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_scalar_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_skew_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_skew(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_skew(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_Matrix3x2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_rotation(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float3x2_rotation(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _get_identity_Matrix3x2(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         return py::convert(winrt::Windows::Foundation::Numerics::float3x2::identity());
@@ -610,6 +872,12 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     static PyMethodDef methods_Matrix3x2_Static[] = {
+        { "make_translation", make_translation_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale", make_scale_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale_from_vector", make_scale_from_vector_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_scale_from_scalar", make_scale_from_scalar_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_skew", make_skew_Matrix3x2, METH_VARARGS, nullptr },
+        { "make_rotation", make_rotation_Matrix3x2, METH_VARARGS, nullptr },
         { }
     };
 
@@ -713,6 +981,628 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* make_billboard_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_billboard(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_constrained_billboard_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+            auto _arg4 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 4);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_constrained_billboard(_arg0, _arg1, _arg2, _arg3, _arg4);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_translation_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_translation(_arg0);
+                return py::convert(_result);
+            }
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_translation(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 3)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 3 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1, _arg2);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 4)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 4 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<float>(args, 1);
+                auto _arg2 = py::convert_to<float>(args, 2);
+                auto _arg3 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 3);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1, _arg2, _arg3);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_vector_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_scale_from_scalar_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_scale(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_x_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_x(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_x(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_y_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_y(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_y(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_rotation_z_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto n_args = PyTuple_Size(args);
+
+            if (n_args == 1)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 1 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_z(_arg0);
+                return py::convert(_result);
+#endif
+            }
+
+            if (n_args == 2)
+            {
+#if defined(__MINGW32__)
+                (void)args;
+                PyErr_SetString(PyExc_NotImplementedError, "Overload with 2 args is not implemented on MinGW");
+                return nullptr;
+#else
+                auto _arg0 = py::convert_to<float>(args, 0);
+                auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+                auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_rotation_z(_arg0, _arg1);
+                return py::convert(_result);
+#endif
+            }
+
+            PyErr_Format(PyExc_TypeError, "No overload take %d args.", n_args);
+            return nullptr;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_axis_angle_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_axis_angle(_arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_field_of_view_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective_field_of_view(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_perspective_off_center_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _arg4 = py::convert_to<float>(args, 4);
+            auto _arg5 = py::convert_to<float>(args, 5);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_perspective_off_center(_arg0, _arg1, _arg2, _arg3, _arg4, _arg5);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_orthographic_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_orthographic(_arg0, _arg1, _arg2, _arg3);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_orthographic_off_center_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _arg3 = py::convert_to<float>(args, 3);
+            auto _arg4 = py::convert_to<float>(args, 4);
+            auto _arg5 = py::convert_to<float>(args, 5);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_orthographic_off_center(_arg0, _arg1, _arg2, _arg3, _arg4, _arg5);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_look_at_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_look_at(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_world_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_world(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_quaternion_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_quaternion(_arg0);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_yaw_pitch_roll_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_from_yaw_pitch_roll(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_shadow_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_shadow(_arg0, _arg1);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_reflection_Matrix4x4(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::plane>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_float4x4_reflection(_arg0);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
     }
 
     static PyObject* _get_identity_Matrix4x4(PyObject* /*unused*/, void* /*unused*/) noexcept
@@ -1728,6 +2618,27 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     static PyMethodDef methods_Matrix4x4_Static[] = {
+        { "make_billboard", make_billboard_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_constrained_billboard", make_constrained_billboard_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_translation", make_translation_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale", make_scale_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale_from_vector", make_scale_from_vector_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_scale_from_scalar", make_scale_from_scalar_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_x", make_rotation_x_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_y", make_rotation_y_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_rotation_z", make_rotation_z_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_axis_angle", make_from_axis_angle_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective_field_of_view", make_perspective_field_of_view_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective", make_perspective_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_perspective_off_center", make_perspective_off_center_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_orthographic", make_orthographic_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_orthographic_off_center", make_orthographic_off_center_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_look_at", make_look_at_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_world", make_world_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_quaternion", make_from_quaternion_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_shadow", make_shadow_Matrix4x4, METH_VARARGS, nullptr },
+        { "make_reflection", make_reflection_Matrix4x4, METH_VARARGS, nullptr },
         { }
     };
 
@@ -1803,6 +2714,29 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* make_from_vertices_Plane(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+#if defined(__MINGW32__)
+            (void)args;
+            PyErr_SetString(PyExc_NotImplementedError, "This function is not implemented on MinGW");
+            return nullptr;
+#else
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
+            auto _arg2 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_plane_from_vertices(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+#endif
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
     }
 
     static PyObject* normalize_Plane(winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* self, PyObject* /*unused*/) noexcept
@@ -2085,6 +3019,7 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     static PyMethodDef methods_Plane_Static[] = {
+        { "make_from_vertices", make_from_vertices_Plane, METH_VARARGS, nullptr },
         { }
     };
 
@@ -2164,6 +3099,54 @@ namespace py::cpp::Windows::Foundation::Numerics
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* make_from_axis_angle_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_axis_angle(_arg0, _arg1);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_yaw_pitch_roll_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<float>(args, 0);
+            auto _arg1 = py::convert_to<float>(args, 1);
+            auto _arg2 = py::convert_to<float>(args, 2);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_yaw_pitch_roll(_arg0, _arg1, _arg2);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* make_from_rotation_matrix_Quaternion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        try
+        {
+            auto _arg0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 0);
+            auto _result = winrt::Windows::Foundation::Numerics::make_quaternion_from_rotation_matrix(_arg0);
+            return py::convert(_result);
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
     }
 
     static PyObject* _get_identity_Quaternion(PyObject* /*unused*/, void* /*unused*/) noexcept
@@ -2734,6 +3717,9 @@ namespace py::cpp::Windows::Foundation::Numerics
     };
 
     static PyMethodDef methods_Quaternion_Static[] = {
+        { "make_from_axis_angle", make_from_axis_angle_Quaternion, METH_VARARGS, nullptr },
+        { "make_from_yaw_pitch_roll", make_from_yaw_pitch_roll_Quaternion, METH_VARARGS, nullptr },
+        { "make_from_rotation_matrix", make_from_rotation_matrix_Quaternion, METH_VARARGS, nullptr },
         { }
     };
 

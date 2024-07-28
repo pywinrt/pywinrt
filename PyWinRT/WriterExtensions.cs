@@ -139,6 +139,11 @@ static class WriterExtensions
             );
         }
 
+        if (type.Type.IsCustomNumeric())
+        {
+            w.WriteNumberFactoryFunctionDefs(type);
+        }
+
         w.WriteLine("{ }");
         w.Indent--;
         w.WriteLine("};");
