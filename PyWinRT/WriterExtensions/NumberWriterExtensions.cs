@@ -7,6 +7,13 @@ static class NumberWriterExtensions
         public string CppWinrtType => cppWinrtTypeFromPyType[PyType];
     };
 
+    private record FactoryInfo(
+        string PyName,
+        string CppWinrtName,
+        IReadOnlyList<ParamInfo> Parameters,
+        bool NoMinGW = false
+    );
+
     private record MethodInfo(
         string Name,
         string ReturnPyType,
@@ -58,6 +65,377 @@ static class NumberWriterExtensions
                 new List<string> { "identity" }
             }
         };
+
+    private static readonly IReadOnlyDictionary<
+        string,
+        IReadOnlyCollection<FactoryInfo>
+    > factoryFunctions = new Dictionary<string, IReadOnlyCollection<FactoryInfo>>
+    {
+        {
+            "Matrix3x2",
+            new List<FactoryInfo>
+            {
+                new(
+                    "make_translation",
+                    "make_float3x2_translation",
+                    [new ParamInfo("position", "Vector2")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_translation",
+                    "make_float3x2_translation",
+                    [new ParamInfo("x_position", "float"), new ParamInfo("y_position", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale",
+                    "make_float3x2_scale",
+                    [new ParamInfo("x_scale", "float"), new ParamInfo("y_scale", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale",
+                    "make_float3x2_scale",
+                    [
+                        new ParamInfo("x_scale", "float"),
+                        new ParamInfo("y_scale", "float"),
+                        new ParamInfo("center_point", "Vector2")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_vector",
+                    "make_float3x2_scale",
+                    [new ParamInfo("scales", "Vector2")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_vector",
+                    "make_float3x2_scale",
+                    [new ParamInfo("scales", "Vector2"), new ParamInfo("center_point", "Vector2")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_scalar",
+                    "make_float3x2_scale",
+                    [new ParamInfo("scale", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_scalar",
+                    "make_float3x2_scale",
+                    [new ParamInfo("scale", "float"), new ParamInfo("center_point", "Vector2")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_skew",
+                    "make_float3x2_skew",
+                    [new ParamInfo("radians_x", "float"), new ParamInfo("radians_y", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_skew",
+                    "make_float3x2_skew",
+                    [
+                        new ParamInfo("radians_x", "float"),
+                        new ParamInfo("radians_y", "float"),
+                        new ParamInfo("center_point", "Vector2")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation",
+                    "make_float3x2_rotation",
+                    [new ParamInfo("radians", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation",
+                    "make_float3x2_rotation",
+                    [new ParamInfo("radians", "float"), new ParamInfo("center_point", "Vector2")],
+                    NoMinGW: true
+                ),
+            }
+        },
+        {
+            "Matrix4x4",
+            new List<FactoryInfo>
+            {
+                new(
+                    "make_billboard",
+                    "make_float4x4_billboard",
+                    [
+                        new ParamInfo("object_position", "Vector3"),
+                        new ParamInfo("camera_position", "Vector3"),
+                        new ParamInfo("camera_up_vector", "Vector3"),
+                        new ParamInfo("camera_forward_vector", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_constrained_billboard",
+                    "make_float4x4_constrained_billboard",
+                    [
+                        new ParamInfo("object_position", "Vector3"),
+                        new ParamInfo("camera_position", "Vector3"),
+                        new ParamInfo("rotate_axis", "Vector3"),
+                        new ParamInfo("camera_forward_vector", "Vector3"),
+                        new ParamInfo("object_forward_vector", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_translation",
+                    "make_float4x4_translation",
+                    [new ParamInfo("position", "Vector3")]
+                ),
+                new(
+                    "make_translation",
+                    "make_float4x4_translation",
+                    [
+                        new ParamInfo("x_position", "float"),
+                        new ParamInfo("y_position", "float"),
+                        new ParamInfo("z_position", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale",
+                    "make_float4x4_scale",
+                    [
+                        new ParamInfo("x_scale", "float"),
+                        new ParamInfo("y_scale", "float"),
+                        new ParamInfo("z_scale", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale",
+                    "make_float4x4_scale",
+                    [
+                        new ParamInfo("x_scale", "float"),
+                        new ParamInfo("y_scale", "float"),
+                        new ParamInfo("z_scale", "float"),
+                        new ParamInfo("center_point", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_vector",
+                    "make_float4x4_scale",
+                    [new ParamInfo("scales", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_vector",
+                    "make_float4x4_scale",
+                    [new ParamInfo("scales", "Vector3"), new ParamInfo("center_point", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_scalar",
+                    "make_float4x4_scale",
+                    [new ParamInfo("scale", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_scale_from_scalar",
+                    "make_float4x4_scale",
+                    [new ParamInfo("scale", "float"), new ParamInfo("center_point", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_x",
+                    "make_float4x4_rotation_x",
+                    [new ParamInfo("radians", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_x",
+                    "make_float4x4_rotation_x",
+                    [new ParamInfo("radians", "float"), new ParamInfo("center_point", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_y",
+                    "make_float4x4_rotation_y",
+                    [new ParamInfo("radians", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_y",
+                    "make_float4x4_rotation_y",
+                    [new ParamInfo("radians", "float"), new ParamInfo("center_point", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_z",
+                    "make_float4x4_rotation_z",
+                    [new ParamInfo("radians", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_rotation_z",
+                    "make_float4x4_rotation_z",
+                    [new ParamInfo("radians", "float"), new ParamInfo("center_point", "Vector3")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_from_axis_angle",
+                    "make_float4x4_from_axis_angle",
+                    [new ParamInfo("axis", "Vector3"), new ParamInfo("angle", "float")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_perspective_field_of_view",
+                    "make_float4x4_perspective_field_of_view",
+                    [
+                        new ParamInfo("field_of_view", "float"),
+                        new ParamInfo("aspect_ratio", "float"),
+                        new ParamInfo("near_plane_distance", "float"),
+                        new ParamInfo("far_plane_distance", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_perspective",
+                    "make_float4x4_perspective",
+                    [
+                        new ParamInfo("width", "float"),
+                        new ParamInfo("height", "float"),
+                        new ParamInfo("near_plane_distance", "float"),
+                        new ParamInfo("far_plane_distance", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_perspective_off_center",
+                    "make_float4x4_perspective_off_center",
+                    [
+                        new ParamInfo("left", "float"),
+                        new ParamInfo("right", "float"),
+                        new ParamInfo("bottom", "float"),
+                        new ParamInfo("top", "float"),
+                        new ParamInfo("near_plane_distance", "float"),
+                        new ParamInfo("far_plane_distance", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_orthographic",
+                    "make_float4x4_orthographic",
+                    [
+                        new ParamInfo("width", "float"),
+                        new ParamInfo("height", "float"),
+                        new ParamInfo("z_near_plane", "float"),
+                        new ParamInfo("z_far_plane", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_orthographic_off_center",
+                    "make_float4x4_orthographic_off_center",
+                    [
+                        new ParamInfo("left", "float"),
+                        new ParamInfo("right", "float"),
+                        new ParamInfo("bottom", "float"),
+                        new ParamInfo("top", "float"),
+                        new ParamInfo("z_near_plane", "float"),
+                        new ParamInfo("z_far_plane", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_look_at",
+                    "make_float4x4_look_at",
+                    [
+                        new ParamInfo("camera_position", "Vector3"),
+                        new ParamInfo("camera_target", "Vector3"),
+                        new ParamInfo("camera_up_vector", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_world",
+                    "make_float4x4_world",
+                    [
+                        new ParamInfo("position", "Vector3"),
+                        new ParamInfo("forward", "Vector3"),
+                        new ParamInfo("up", "Vector3")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_from_quaternion",
+                    "make_float4x4_from_quaternion",
+                    [new ParamInfo("quaternion", "Quaternion")]
+                ),
+                new(
+                    "make_from_yaw_pitch_roll",
+                    "make_float4x4_from_yaw_pitch_roll",
+                    [
+                        new ParamInfo("yaw", "float"),
+                        new ParamInfo("pitch", "float"),
+                        new ParamInfo("roll", "float")
+                    ],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_shadow",
+                    "make_float4x4_shadow",
+                    [new ParamInfo("light_direction", "Vector3"), new ParamInfo("plane", "Plane")],
+                    NoMinGW: true
+                ),
+                new(
+                    "make_reflection",
+                    "make_float4x4_reflection",
+                    [new ParamInfo("value", "Plane")],
+                    NoMinGW: true
+                )
+            }
+        },
+        {
+            "Plane",
+            new List<FactoryInfo>
+            {
+                new(
+                    "make_from_vertices",
+                    "make_plane_from_vertices",
+                    [
+                        new ParamInfo("point1", "Vector3"),
+                        new ParamInfo("point2", "Vector3"),
+                        new ParamInfo("point3", "Vector3")
+                    ],
+                    NoMinGW: true
+                )
+            }
+        },
+        {
+            "Quaternion",
+            new List<FactoryInfo>
+            {
+                new(
+                    "make_from_axis_angle",
+                    "make_quaternion_from_axis_angle",
+                    [new ParamInfo("axis", "Vector3"), new ParamInfo("angle", "float")]
+                ),
+                new(
+                    "make_from_yaw_pitch_roll",
+                    "make_quaternion_from_yaw_pitch_roll",
+                    [
+                        new ParamInfo("yaw", "float"),
+                        new ParamInfo("pitch", "float"),
+                        new ParamInfo("roll", "float")
+                    ]
+                ),
+                new(
+                    "make_from_rotation_matrix",
+                    "make_quaternion_from_rotation_matrix",
+                    [new ParamInfo("matrix", "Matrix4x4")]
+                )
+            }
+        },
+    };
 
     private static readonly IReadOnlyDictionary<
         string,
@@ -305,6 +683,149 @@ static class NumberWriterExtensions
         foreach (var value in values)
         {
             w.WriteLine($"{{ \"{value}\", _get_{value}_{type.Name}, nullptr, nullptr, nullptr }},");
+        }
+    }
+
+    public static void WriteNumberFactoryFunctionPyTyping(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        ref bool pass
+    )
+    {
+        if (!factoryFunctions.TryGetValue(type.Name, out var functions))
+        {
+            return;
+        }
+
+        pass = false;
+
+        foreach (var func in functions)
+        {
+            var parameters = string.Join(
+                "",
+                func.Parameters.Select(p => $", {p.Name}: {p.PyType}")
+            );
+
+            if (functions.Count(f => f.PyName == func.PyName) > 1)
+            {
+                w.WriteLine("@typing.overload");
+            }
+
+            w.WriteLine($"def {func.PyName}(self{parameters}) -> {type.Name}: ...");
+        }
+    }
+
+    public static void WriteNumberFactoryFunctionMethodDefs(
+        this IndentedTextWriter w,
+        ProjectedType type
+    )
+    {
+        if (!factoryFunctions.TryGetValue(type.Name, out var functions))
+        {
+            return;
+        }
+
+        foreach (var overloads in functions.GroupBy(o => o.PyName))
+        {
+            var func = overloads.First();
+
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"static PyObject* {func.PyName}_{type.Name}(PyObject* /*unused*/, PyObject* args) noexcept"
+            );
+            w.WriteLine("{");
+            w.Indent++;
+
+            w.WriteTryCatch(() =>
+            {
+                var isOverloaded = overloads.Count() > 1;
+
+                if (isOverloaded)
+                {
+                    w.WriteLine("auto n_args = PyTuple_Size(args);");
+                    w.WriteBlankLine();
+                }
+
+                foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
+                {
+                    if (isOverloaded)
+                    {
+                        w.WriteLine($"if (n_args == {overload.Parameters.Count})");
+                        w.WriteLine("{");
+                        w.Indent++;
+                    }
+
+                    if (overload.NoMinGW)
+                    {
+                        w.WriteLineNoTabs("#if defined(__MINGW32__)");
+                        w.WriteLine("(void)args;");
+                        if (isOverloaded)
+                        {
+                            w.WriteLine(
+                                $"PyErr_SetString(PyExc_NotImplementedError, \"Overload with {overload.Parameters.Count} args is not implemented on MinGW\");"
+                            );
+                        }
+                        else
+                        {
+                            w.WriteLine(
+                                "PyErr_SetString(PyExc_NotImplementedError, \"This function is not implemented on MinGW\");"
+                            );
+                        }
+                        w.WriteLine("return nullptr;");
+                        w.WriteLineNoTabs("#else");
+                    }
+
+                    foreach (var (j, param) in overload.Parameters.Select((p, j) => (j, p)))
+                    {
+                        w.WriteLine(
+                            $"auto _arg{j} = py::convert_to<{param.CppWinrtType}>(args, {j});"
+                        );
+                    }
+
+                    w.WriteLine(
+                        $"auto _result = winrt::Windows::Foundation::Numerics::{overload.CppWinrtName}({string.Join(", ", Enumerable.Range(0, overload.Parameters.Count).Select(j => $"_arg{j}"))});"
+                    );
+                    w.WriteLine("return py::convert(_result);");
+
+                    if (overload.NoMinGW)
+                    {
+                        w.WriteLineNoTabs("#endif");
+                    }
+
+                    if (isOverloaded)
+                    {
+                        w.Indent--;
+                        w.WriteLine("}");
+                        w.WriteBlankLine();
+                    }
+                }
+
+                if (isOverloaded)
+                {
+                    w.WriteLine(
+                        "PyErr_Format(PyExc_TypeError, \"No overload take %d args.\", n_args);"
+                    );
+                    w.WriteLine("return nullptr;");
+                }
+            });
+
+            w.Indent--;
+            w.WriteLine("}");
+        }
+    }
+
+    public static void WriteNumberFactoryFunctionDefs(this IndentedTextWriter w, ProjectedType type)
+    {
+        if (!factoryFunctions.TryGetValue(type.Name, out var functions))
+        {
+            return;
+        }
+
+        foreach (var func in functions.DistinctBy(f => f.PyName))
+        {
+            w.WriteLine(
+                $"{{ \"{func.PyName}\", {func.PyName}_{type.Name}, METH_VARARGS, nullptr }},"
+            );
         }
     }
 

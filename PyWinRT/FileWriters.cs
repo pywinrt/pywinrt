@@ -182,6 +182,7 @@ static class FileWriters
 
                 if (type.Type.IsCustomNumeric())
                 {
+                    w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
                     w.WriteNumberCommonValuesPyTyping(type, ref pass);
                 }
 

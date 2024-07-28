@@ -11,6 +11,7 @@ static class StructWriterExtensions
 
         if (type.Type.IsCustomNumeric())
         {
+            w.WriteNumberFactoryFunctionMethodDefs(type);
             w.WriteNumberCommonValueMethods(type);
             w.WriteNumberMethods(type);
         }
