@@ -30,6 +30,35 @@ static class NumberWriterExtensions
             { "Quaternion", "winrt::Windows::Foundation::Numerics::quaternion" }
         };
 
+    private static readonly IReadOnlyDictionary<string, IReadOnlyCollection<string>> commonValues =
+        new Dictionary<string, IReadOnlyCollection<string>>
+        {
+            {
+                "Vector2",
+                new List<string> { "zero", "one", "unit_x", "unit_y" }
+            },
+            {
+                "Vector3",
+                new List<string> { "zero", "one", "unit_x", "unit_y", "unit_z" }
+            },
+            {
+                "Vector4",
+                new List<string> { "zero", "one", "unit_x", "unit_y", "unit_z", "unit_w" }
+            },
+            {
+                "Matrix3x2",
+                new List<string> { "identity" }
+            },
+            {
+                "Matrix4x4",
+                new List<string> { "identity" }
+            },
+            {
+                "Quaternion",
+                new List<string> { "identity" }
+            }
+        };
+
     private static readonly IReadOnlyDictionary<
         string,
         IReadOnlyCollection<MethodInfo>
@@ -221,6 +250,63 @@ static class NumberWriterExtensions
             }
         }
     };
+
+    public static void WriteNumberCommonValuesPyTyping(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        ref bool pass
+    )
+    {
+        if (!commonValues.TryGetValue(type.Name, out var values))
+        {
+            return;
+        }
+
+        pass = false;
+
+        foreach (var value in values)
+        {
+            w.WriteLine($"@_property");
+            w.WriteLine($"def {value}(self) -> {type.Name}: ...");
+        }
+    }
+
+    public static void WriteNumberCommonValueMethods(this IndentedTextWriter w, ProjectedType type)
+    {
+        if (!commonValues.TryGetValue(type.Name, out var values))
+        {
+            return;
+        }
+
+        foreach (var value in values)
+        {
+            w.WriteBlankLine();
+            w.WriteLine(
+                $"static PyObject* _get_{value}_{type.Name}(PyObject* /*unused*/, void* /*unused*/) noexcept"
+            );
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine($"return py::convert({type.CppWinrtType}::{value}());");
+            w.Indent--;
+            w.WriteLine("}");
+        }
+    }
+
+    public static void WriteNumberCommonValuesGetSetDefs(
+        this IndentedTextWriter w,
+        ProjectedType type
+    )
+    {
+        if (!commonValues.TryGetValue(type.Name, out var values))
+        {
+            return;
+        }
+
+        foreach (var value in values)
+        {
+            w.WriteLine($"{{ \"{value}\", _get_{value}_{type.Name}, nullptr, nullptr, nullptr }},");
+        }
+    }
 
     public static void WriteNumberMethodPyTyping(this IndentedTextWriter w, ProjectedType type)
     {

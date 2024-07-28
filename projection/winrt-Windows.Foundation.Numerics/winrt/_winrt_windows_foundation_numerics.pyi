@@ -14,7 +14,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Matrix3x2_Static(type):
-    pass
+    @_property
+    def identity(self) -> Matrix3x2: ...
 
 @typing.final
 class Matrix3x2(metaclass=Matrix3x2_Static):
@@ -33,7 +34,8 @@ class Matrix3x2(metaclass=Matrix3x2_Static):
 
 @typing.final
 class Matrix4x4_Static(type):
-    pass
+    @_property
+    def identity(self) -> Matrix4x4: ...
 
 @typing.final
 class Matrix4x4(metaclass=Matrix4x4_Static):
@@ -83,7 +85,8 @@ class Plane(metaclass=Plane_Static):
 
 @typing.final
 class Quaternion_Static(type):
-    pass
+    @_property
+    def identity(self) -> Quaternion: ...
 
 @typing.final
 class Quaternion(metaclass=Quaternion_Static):
@@ -111,7 +114,14 @@ class Rational:
 
 @typing.final
 class Vector2_Static(type):
-    pass
+    @_property
+    def zero(self) -> Vector2: ...
+    @_property
+    def one(self) -> Vector2: ...
+    @_property
+    def unit_x(self) -> Vector2: ...
+    @_property
+    def unit_y(self) -> Vector2: ...
 
 @typing.final
 class Vector2(metaclass=Vector2_Static):
@@ -146,7 +156,16 @@ class Vector2(metaclass=Vector2_Static):
 
 @typing.final
 class Vector3_Static(type):
-    pass
+    @_property
+    def zero(self) -> Vector3: ...
+    @_property
+    def one(self) -> Vector3: ...
+    @_property
+    def unit_x(self) -> Vector3: ...
+    @_property
+    def unit_y(self) -> Vector3: ...
+    @_property
+    def unit_z(self) -> Vector3: ...
 
 @typing.final
 class Vector3(metaclass=Vector3_Static):
@@ -178,7 +197,18 @@ class Vector3(metaclass=Vector3_Static):
 
 @typing.final
 class Vector4_Static(type):
-    pass
+    @_property
+    def zero(self) -> Vector4: ...
+    @_property
+    def one(self) -> Vector4: ...
+    @_property
+    def unit_x(self) -> Vector4: ...
+    @_property
+    def unit_y(self) -> Vector4: ...
+    @_property
+    def unit_z(self) -> Vector4: ...
+    @_property
+    def unit_w(self) -> Vector4: ...
 
 @typing.final
 class Vector4(metaclass=Vector4_Static):

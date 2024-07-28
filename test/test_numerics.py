@@ -42,6 +42,37 @@ class TestNumerics(unittest.TestCase):
         self.assertEqual(n.z, 3.0)
         self.assertEqual(p.d, 4.0)
 
+    def test_zero_one(self):
+        self.assertEqual(wfn.Vector2.zero, wfn.Vector2(0, 0))
+        self.assertEqual(wfn.Vector2.one, wfn.Vector2(1, 1))
+
+        self.assertEqual(wfn.Vector3.zero, wfn.Vector3(0, 0, 0))
+        self.assertEqual(wfn.Vector3.one, wfn.Vector3(1, 1, 1))
+
+        self.assertEqual(wfn.Vector4.zero, wfn.Vector4(0, 0, 0, 0))
+        self.assertEqual(wfn.Vector4.one, wfn.Vector4(1, 1, 1, 1))
+
+    def test_unit(self):
+        self.assertEqual(wfn.Vector2.unit_x, wfn.Vector2(1, 0))
+        self.assertEqual(wfn.Vector2.unit_y, wfn.Vector2(0, 1))
+
+        self.assertEqual(wfn.Vector3.unit_x, wfn.Vector3(1, 0, 0))
+        self.assertEqual(wfn.Vector3.unit_y, wfn.Vector3(0, 1, 0))
+        self.assertEqual(wfn.Vector3.unit_z, wfn.Vector3(0, 0, 1))
+
+        self.assertEqual(wfn.Vector4.unit_x, wfn.Vector4(1, 0, 0, 0))
+        self.assertEqual(wfn.Vector4.unit_y, wfn.Vector4(0, 1, 0, 0))
+        self.assertEqual(wfn.Vector4.unit_z, wfn.Vector4(0, 0, 1, 0))
+        self.assertEqual(wfn.Vector4.unit_w, wfn.Vector4(0, 0, 0, 1))
+
+    def test_identity(self):
+        self.assertEqual(wfn.Matrix3x2.identity, wfn.Matrix3x2(1, 0, 0, 1, 0, 0))
+        self.assertEqual(
+            wfn.Matrix4x4.identity,
+            wfn.Matrix4x4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1),
+        )
+        self.assertEqual(wfn.Quaternion.identity, wfn.Quaternion(0, 0, 0, 1))
+
     def test_add(self):
         self.assertEqual(wfn.Vector2(1, 2) + wfn.Vector2(3, 4), wfn.Vector2(4, 6))
         self.assertEqual(

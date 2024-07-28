@@ -177,7 +177,19 @@ static class FileWriters
                 w.WriteLine("@typing.final");
                 w.WriteLine($"class {type.Name}_Static(type):");
                 w.Indent++;
-                w.WriteLine("pass");
+
+                var pass = true;
+
+                if (type.Type.IsCustomNumeric())
+                {
+                    w.WriteNumberCommonValuesPyTyping(type, ref pass);
+                }
+
+                if (pass)
+                {
+                    w.WriteLine("pass");
+                }
+
                 w.Indent--;
                 w.WriteBlankLine();
 
