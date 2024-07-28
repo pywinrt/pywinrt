@@ -1,6 +1,5 @@
 using System.CodeDom.Compiler;
 using Mono.Cecil;
-using Mono.Cecil.Rocks;
 
 static class WriterExtensions
 {
@@ -58,7 +57,7 @@ static class WriterExtensions
         }
     }
 
-    static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
     {
         w.WriteMetaclassPropertyGetsetTable(type);
         w.WriteMetaclassMethodTable(type);

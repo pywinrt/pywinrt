@@ -13,7 +13,11 @@ import winrt.system
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Matrix3x2:
+class Matrix3x2_Static(type):
+    pass
+
+@typing.final
+class Matrix3x2(metaclass=Matrix3x2_Static):
     m11: winrt.system.Single
     m12: winrt.system.Single
     m21: winrt.system.Single
@@ -28,7 +32,11 @@ class Matrix3x2:
     def lerp(self, value: Matrix3x2, amount: float) -> Matrix3x2: ...
 
 @typing.final
-class Matrix4x4:
+class Matrix4x4_Static(type):
+    pass
+
+@typing.final
+class Matrix4x4(metaclass=Matrix4x4_Static):
     m11: winrt.system.Single
     m12: winrt.system.Single
     m13: winrt.system.Single
@@ -56,7 +64,11 @@ class Matrix4x4:
     def lerp(self, value: Matrix4x4, amount: float) -> Matrix4x4: ...
 
 @typing.final
-class Plane:
+class Plane_Static(type):
+    pass
+
+@typing.final
+class Plane(metaclass=Plane_Static):
     normal: Vector3
     d: winrt.system.Single
     def __init__(self, normal: Vector3, d: winrt.system.Single) -> None: ...
@@ -70,7 +82,11 @@ class Plane:
     def dot_normal(self, value: Vector3) -> float: ...
 
 @typing.final
-class Quaternion:
+class Quaternion_Static(type):
+    pass
+
+@typing.final
+class Quaternion(metaclass=Quaternion_Static):
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
@@ -94,7 +110,11 @@ class Rational:
     def __init__(self, numerator: winrt.system.UInt32, denominator: winrt.system.UInt32) -> None: ...
 
 @typing.final
-class Vector2:
+class Vector2_Static(type):
+    pass
+
+@typing.final
+class Vector2(metaclass=Vector2_Static):
     x: winrt.system.Single
     y: winrt.system.Single
     def __init__(self, x: winrt.system.Single, y: winrt.system.Single) -> None: ...
@@ -125,7 +145,11 @@ class Vector2:
     def transform4(self, rotation: Quaternion) -> Vector4: ...
 
 @typing.final
-class Vector3:
+class Vector3_Static(type):
+    pass
+
+@typing.final
+class Vector3(metaclass=Vector3_Static):
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single
@@ -153,7 +177,11 @@ class Vector3:
     def transform4(self, rotation: Quaternion) -> Vector4: ...
 
 @typing.final
-class Vector4:
+class Vector4_Static(type):
+    pass
+
+@typing.final
+class Vector4(metaclass=Vector4_Static):
     x: winrt.system.Single
     y: winrt.system.Single
     z: winrt.system.Single

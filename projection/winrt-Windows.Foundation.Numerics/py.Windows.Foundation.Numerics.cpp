@@ -599,6 +599,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Matrix3x2};
 
+    static PyGetSetDef getset_Matrix3x2_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Matrix3x2_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Matrix3x2_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix3x2_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix3x2_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix3x2_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Matrix3x2_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Matrix3x2_Static
+    };
+
     // ----- Matrix4x4 struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4x4>* _new_Matrix4x4(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1686,6 +1711,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Matrix4x4};
 
+    static PyGetSetDef getset_Matrix4x4_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Matrix4x4_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Matrix4x4_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Matrix4x4_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Matrix4x4_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Matrix4x4_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Matrix4x4_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Matrix4x4_Static
+    };
+
     // ----- Plane struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::plane>* _new_Plane(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2017,6 +2067,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Plane};
+
+    static PyGetSetDef getset_Plane_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Plane_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Plane_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Plane_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Plane_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Plane_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Plane_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Plane_Static
+    };
 
     // ----- Quaternion struct --------------------
 
@@ -2635,6 +2710,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Quaternion};
+
+    static PyGetSetDef getset_Quaternion_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Quaternion_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Quaternion_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Quaternion_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Quaternion_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Quaternion_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Quaternion_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Quaternion_Static
+    };
 
     // ----- Rational struct --------------------
 
@@ -3552,6 +3652,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector2};
 
+    static PyGetSetDef getset_Vector2_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Vector2_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector2_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector2_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector2_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector2_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector2_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector2_Static
+    };
+
     // ----- Vector3 struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float3>* _new_Vector3(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4289,6 +4414,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector3};
 
+    static PyGetSetDef getset_Vector3_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Vector3_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector3_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector3_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector3_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector3_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector3_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector3_Static
+    };
+
     // ----- Vector4 struct --------------------
 
     winrt_struct_wrapper<winrt::Windows::Foundation::Numerics::float4>* _new_Vector4(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4977,6 +5127,31 @@ namespace py::cpp::Windows::Foundation::Numerics
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector4};
 
+    static PyGetSetDef getset_Vector4_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Vector4_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector4_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector4_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector4_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector4_Static =
+    {
+        "winrt._winrt_windows_foundation_numerics.Vector4_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector4_Static
+    };
+
     // ----- Windows.Foundation.Numerics Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Foundation.Numerics");
@@ -5022,25 +5197,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Matrix3x2_type{py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, nullptr)};
+    py::pyobj_handle type_Matrix3x2_Static{PyType_FromSpec(&type_spec_Matrix3x2_Static)};
+    if (!type_Matrix3x2_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Matrix3x2_type{py::register_python_type(module.get(), &type_spec_Matrix3x2, nullptr, reinterpret_cast<PyTypeObject*>(type_Matrix3x2_Static.get()))};
     if (!Matrix3x2_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Matrix4x4_type{py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, nullptr)};
+    py::pyobj_handle type_Matrix4x4_Static{PyType_FromSpec(&type_spec_Matrix4x4_Static)};
+    if (!type_Matrix4x4_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Matrix4x4_type{py::register_python_type(module.get(), &type_spec_Matrix4x4, nullptr, reinterpret_cast<PyTypeObject*>(type_Matrix4x4_Static.get()))};
     if (!Matrix4x4_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Plane_type{py::register_python_type(module.get(), &type_spec_Plane, nullptr, nullptr)};
+    py::pyobj_handle type_Plane_Static{PyType_FromSpec(&type_spec_Plane_Static)};
+    if (!type_Plane_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Plane_type{py::register_python_type(module.get(), &type_spec_Plane, nullptr, reinterpret_cast<PyTypeObject*>(type_Plane_Static.get()))};
     if (!Plane_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Quaternion_type{py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, nullptr)};
+    py::pyobj_handle type_Quaternion_Static{PyType_FromSpec(&type_spec_Quaternion_Static)};
+    if (!type_Quaternion_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Quaternion_type{py::register_python_type(module.get(), &type_spec_Quaternion, nullptr, reinterpret_cast<PyTypeObject*>(type_Quaternion_Static.get()))};
     if (!Quaternion_type)
     {
         return nullptr;
@@ -5052,19 +5251,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_foundation_numerics(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Vector2_type{py::register_python_type(module.get(), &type_spec_Vector2, nullptr, nullptr)};
+    py::pyobj_handle type_Vector2_Static{PyType_FromSpec(&type_spec_Vector2_Static)};
+    if (!type_Vector2_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector2_type{py::register_python_type(module.get(), &type_spec_Vector2, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector2_Static.get()))};
     if (!Vector2_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector3_type{py::register_python_type(module.get(), &type_spec_Vector3, nullptr, nullptr)};
+    py::pyobj_handle type_Vector3_Static{PyType_FromSpec(&type_spec_Vector3_Static)};
+    if (!type_Vector3_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector3_type{py::register_python_type(module.get(), &type_spec_Vector3, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector3_Static.get()))};
     if (!Vector3_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector4_type{py::register_python_type(module.get(), &type_spec_Vector4, nullptr, nullptr)};
+    py::pyobj_handle type_Vector4_Static{PyType_FromSpec(&type_spec_Vector4_Static)};
+    if (!type_Vector4_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector4_type{py::register_python_type(module.get(), &type_spec_Vector4, nullptr, reinterpret_cast<PyTypeObject*>(type_Vector4_Static.get()))};
     if (!Vector4_type)
     {
         return nullptr;

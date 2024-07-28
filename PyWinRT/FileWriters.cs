@@ -170,8 +170,22 @@ static class FileWriters
 
         foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
         {
+            var metaclass = "";
+
+            if (type.PyRequiresMetaclass)
+            {
+                w.WriteLine("@typing.final");
+                w.WriteLine($"class {type.Name}_Static(type):");
+                w.Indent++;
+                w.WriteLine("pass");
+                w.Indent--;
+                w.WriteBlankLine();
+
+                metaclass = $"(metaclass={type.Name}_Static)";
+            }
+
             w.WriteLine("@typing.final");
-            w.WriteLine($"class {type.Name}:");
+            w.WriteLine($"class {type.Name}{metaclass}:");
             w.Indent++;
 
             foreach (var field in type.Type.Fields)

@@ -34,6 +34,11 @@ static class StructWriterExtensions
         w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);
         w.WriteTypeSpec(type);
+
+        if (type.PyRequiresMetaclass)
+        {
+            w.WriteMetaclass(type);
+        }
     }
 
     static void WriteStructConstructor(this IndentedTextWriter w, ProjectedType type)
