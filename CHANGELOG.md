@@ -10,6 +10,7 @@
 - Added `winrt.windows.system.interop` package.
 - Added `winrt.windows.ui.composition.interop` package.
 - Added support for Python 3.13.
+- Added extra operators and methods for `winrt.windows.numerics` types.
 
 ### Changed
 - General performance improvements.
