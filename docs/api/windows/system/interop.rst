@@ -50,7 +50,7 @@ APIs for desktop interop with the `Windows.System
 
     :raises: :exc:`OSError` on failure
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.2
 
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/dispatcherqueue/nf-dispatcherqueue-createdispatcherqueuecontroller
 
@@ -71,7 +71,7 @@ APIs for desktop interop with the `Windows.System
 
         Specifies a single-threaded apartment (STA) COM threading apartment.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.2
 
 .. class:: DispatcherQueueThreadType
 
@@ -86,4 +86,4 @@ APIs for desktop interop with the `Windows.System
 
             A new dedicated thread.
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.2

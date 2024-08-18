@@ -25,4 +25,4 @@ APIs for desktop interop with the `Windows.UI.Composition
 
     :raises: :exc:`OSError` on failure
 
-    .. versionadded:: unreleased
+    .. versionadded:: 2.2
