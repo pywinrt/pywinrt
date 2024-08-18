@@ -214,6 +214,11 @@ static class FileWriters
 
             if (type.Type.IsCustomNumeric())
             {
+                if (type.Name != "Plane")
+                {
+                    w.WriteNumberSlotMethodsPyTyping(type);
+                }
+
                 w.WriteNumberMethodPyTyping(type);
             }
 

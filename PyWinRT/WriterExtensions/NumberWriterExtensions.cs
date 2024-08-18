@@ -437,6 +437,122 @@ static class NumberWriterExtensions
         },
     };
 
+    private static readonly IReadOnlyDictionary<string, IReadOnlyCollection<MethodInfo>> operators =
+        new Dictionary<string, IReadOnlyCollection<MethodInfo>>
+        {
+            {
+                "Vector2",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__sub__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__mul__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__mul__", "Vector2", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Vector2", [new ParamInfo("other", "float")]),
+                    new("__truediv__", "Vector2", [new ParamInfo("value", "Vector2")]),
+                    new("__truediv__", "Vector2", [new ParamInfo("value", "float")]),
+                    new("__neg__", "Vector2", []),
+                    new("__iadd__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__isub__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__imul__", "Vector2", [new ParamInfo("other", "Vector2")]),
+                    new("__imul__", "Vector2", [new ParamInfo("other", "float")]),
+                    new("__itruediv__", "Vector2", [new ParamInfo("value", "Vector2")]),
+                    new("__itruediv__", "Vector2", [new ParamInfo("value", "float")]),
+                    new("__abs__", "float", []),
+                }
+            },
+            {
+                "Vector3",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__sub__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__mul__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__mul__", "Vector3", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Vector3", [new ParamInfo("other", "float")]),
+                    new("__truediv__", "Vector3", [new ParamInfo("value", "Vector3")]),
+                    new("__truediv__", "Vector3", [new ParamInfo("value", "float")]),
+                    new("__neg__", "Vector3", []),
+                    new("__iadd__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__isub__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__imul__", "Vector3", [new ParamInfo("other", "Vector3")]),
+                    new("__imul__", "Vector3", [new ParamInfo("other", "float")]),
+                    new("__itruediv__", "Vector3", [new ParamInfo("value", "Vector3")]),
+                    new("__itruediv__", "Vector3", [new ParamInfo("value", "float")]),
+                    new("__abs__", "float", []),
+                }
+            },
+            {
+                "Vector4",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__sub__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__mul__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__mul__", "Vector4", [new ParamInfo("other", "float")]),
+                    new("__rmul__", "Vector4", [new ParamInfo("other", "float")]),
+                    new("__truediv__", "Vector4", [new ParamInfo("value", "Vector4")]),
+                    new("__truediv__", "Vector4", [new ParamInfo("value", "float")]),
+                    new("__neg__", "Vector4", []),
+                    new("__iadd__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__isub__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__imul__", "Vector4", [new ParamInfo("other", "Vector4")]),
+                    new("__imul__", "Vector4", [new ParamInfo("other", "float")]),
+                    new("__itruediv__", "Vector4", [new ParamInfo("value", "Vector4")]),
+                    new("__itruediv__", "Vector4", [new ParamInfo("value", "float")]),
+                    new("__abs__", "float", []),
+                }
+            },
+            {
+                "Matrix3x2",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__sub__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__mul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__mul__", "Matrix3x2", [new ParamInfo("other", "float")]),
+                    new("__neg__", "Matrix3x2", []),
+                    new("__iadd__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__isub__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__imul__", "Matrix3x2", [new ParamInfo("other", "Matrix3x2")]),
+                    new("__imul__", "Matrix3x2", [new ParamInfo("other", "float")]),
+                }
+            },
+            {
+                "Matrix4x4",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__sub__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__mul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__mul__", "Matrix4x4", [new ParamInfo("other", "float")]),
+                    new("__neg__", "Matrix4x4", []),
+                    new("__iadd__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__isub__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__imul__", "Matrix4x4", [new ParamInfo("other", "Matrix4x4")]),
+                    new("__imul__", "Matrix4x4", [new ParamInfo("other", "float")]),
+                }
+            },
+            {
+                "Quaternion",
+                new List<MethodInfo>
+                {
+                    new("__add__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__sub__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__mul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__mul__", "Quaternion", [new ParamInfo("other", "float")]),
+                    new("__truediv__", "Quaternion", [new ParamInfo("value", "Quaternion")]),
+                    new("__neg__", "Quaternion", []),
+                    new("__iadd__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__isub__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__imul__", "Quaternion", [new ParamInfo("other", "Quaternion")]),
+                    new("__imul__", "Quaternion", [new ParamInfo("other", "float")]),
+                    new("__itruediv__", "Quaternion", [new ParamInfo("value", "Quaternion")]),
+                    new("__abs__", "float", []),
+                }
+            }
+        };
+
     private static readonly IReadOnlyDictionary<
         string,
         IReadOnlyCollection<MethodInfo>
@@ -826,6 +942,24 @@ static class NumberWriterExtensions
             w.WriteLine(
                 $"{{ \"{func.PyName}\", {func.PyName}_{type.Name}, METH_VARARGS, nullptr }},"
             );
+        }
+    }
+
+    public static void WriteNumberSlotMethodsPyTyping(this IndentedTextWriter w, ProjectedType type)
+    {
+        foreach (var method in operators[type.Name])
+        {
+            var parameters = string.Join(
+                "",
+                method.Parameters.Select(p => $", {p.Name}: {p.PyType}")
+            );
+
+            if (operators[type.Name].Count(m => m.Name == method.Name) > 1)
+            {
+                w.WriteLine("@typing.overload");
+            }
+
+            w.WriteLine($"def {method.Name}(self{parameters}) -> {method.ReturnPyType}: ...");
         }
     }
 
@@ -1331,7 +1465,7 @@ static class NumberWriterExtensions
         w.WriteBlankLine();
         w.WriteNumberNeg(type);
 
-        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal) && type.Name != "Plane")
+        if (!type.Name.StartsWith("Matrix", StringComparison.Ordinal))
         {
             w.WriteBlankLine();
             w.WriteNumberAbs(type);
