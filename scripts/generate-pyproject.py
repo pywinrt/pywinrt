@@ -52,7 +52,8 @@ BINARY_PACKAGE_TEMPLATE = """\
 # use local winrt-sdk build dependency
 environment = {{ PYTHONPATH="{relative}/winrt-sdk/src{extra_python_path}" }}
 # don't install winrt-sdk from PyPI
-build-frontend = {{ name = "build", args = ["--skip-dependency-check", "--no-isolation"] }}
+build-frontend = {{ name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }}
+before-build = "uv pip install setuptools"
 # don't build for PyPy
 skip = "pp*"
 # suppress warnings about ARM64 testing
