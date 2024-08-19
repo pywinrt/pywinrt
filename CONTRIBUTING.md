@@ -98,7 +98,7 @@ To build Python wheels of the projection packages:
 
 To only build for a specific Python and target architecture:
 
-    py .\scripts\build-bdist.py --only cp312_win_amd64
+    py .\scripts\build-bdist.py --only cp312-win_amd64
 
 
 ## Profiling
