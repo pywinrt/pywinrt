@@ -28,7 +28,7 @@ jobs:
       - name: Build sdists
         run: python scripts/build-sdist.py
       - name: Upload wheels
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sdist_${{ github.run_id }}
           path: wheelhouse/
@@ -58,7 +58,7 @@ jobs:
       - name: Build bdist wheels
         run: python scripts/build-bdist.py --only ${{ matrix.py }}-${{ matrix.arch }}
       - name: Upload wheels
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: bdist_${{ matrix.py }}-${{ matrix.arch }}_${{ github.run_id }}
           path: wheelhouse/
@@ -66,9 +66,11 @@ jobs:
     needs: [sdist, bdist]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           path: artifacts
+          pattern: "[bs]dist_*"
+          merge-multiple: true
       - run: |
           mkdir -p dist
           mv artifacts/{b,s}dist_*/* dist/
