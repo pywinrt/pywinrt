@@ -21,7 +21,13 @@ canvas = Canvas()
 canvas.create_rectangle(10, 10, 890, 610)
 canvas.pack(side="top", fill="both", expand=True)
 
+# The WinRT Composition APIs require a dispatch queue to be
+# integrated with the Windows message loop that was set up by Tk().
+# We must keep a handle to the controller object to keep it from
+# being destroyed. Even though we don't use the controller variable
+# the compositor object needs it behind the scenes.
 controller = create_dispatcher_queue_controller()
+
 compositor = Compositor()
 target = create_desktop_window_target(compositor, canvas.winfo_id())
 c_root = compositor.create_container_visual()
