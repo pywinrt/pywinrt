@@ -15,6 +15,7 @@ __all__ = [
     "InputActivationState",
     "InputPointerSourceDeviceKinds",
     "InputSystemCursorShape",
+    "MoveSizeOperation",
     "NonClientRegionKind",
     "PointerDeviceType",
     "PointerUpdateKind",
@@ -27,6 +28,9 @@ __all__ = [
     "ContextMenuKeyEventArgs",
     "CrossSlidingEventArgs",
     "DraggingEventArgs",
+    "EnteredMoveSizeEventArgs",
+    "EnteringMoveSizeEventArgs",
+    "ExitedMoveSizeEventArgs",
     "FocusChangedEventArgs",
     "FocusNavigationRequest",
     "FocusNavigationRequestEventArgs",
@@ -63,6 +67,8 @@ __all__ = [
     "PointerPredictor",
     "RightTappedEventArgs",
     "TappedEventArgs",
+    "WindowRectChangedEventArgs",
+    "WindowRectChangingEventArgs",
     "IPointerPointTransform",
 ]
 
@@ -149,6 +155,17 @@ class InputSystemCursorShape(enum.IntEnum):
     PERSON = 15
     APP_STARTING = 16
 
+class MoveSizeOperation(enum.IntEnum):
+    MOVE = 0
+    SIZE_BOTTOM = 1
+    SIZE_BOTTOM_LEFT = 2
+    SIZE_BOTTOM_RIGHT = 3
+    SIZE_LEFT = 4
+    SIZE_RIGHT = 5
+    SIZE_TOP = 6
+    SIZE_TOP_LEFT = 7
+    SIZE_TOP_RIGHT = 8
+
 class NonClientRegionKind(enum.IntEnum):
     CLOSE = 0
     MAXIMIZE = 1
@@ -193,6 +210,9 @@ CharacterReceivedEventArgs = _winrt_microsoft_ui_input.CharacterReceivedEventArg
 ContextMenuKeyEventArgs = _winrt_microsoft_ui_input.ContextMenuKeyEventArgs
 CrossSlidingEventArgs = _winrt_microsoft_ui_input.CrossSlidingEventArgs
 DraggingEventArgs = _winrt_microsoft_ui_input.DraggingEventArgs
+EnteredMoveSizeEventArgs = _winrt_microsoft_ui_input.EnteredMoveSizeEventArgs
+EnteringMoveSizeEventArgs = _winrt_microsoft_ui_input.EnteringMoveSizeEventArgs
+ExitedMoveSizeEventArgs = _winrt_microsoft_ui_input.ExitedMoveSizeEventArgs
 FocusChangedEventArgs = _winrt_microsoft_ui_input.FocusChangedEventArgs
 FocusNavigationRequest = _winrt_microsoft_ui_input.FocusNavigationRequest
 FocusNavigationRequestEventArgs = _winrt_microsoft_ui_input.FocusNavigationRequestEventArgs
@@ -229,4 +249,6 @@ PointerPointProperties = _winrt_microsoft_ui_input.PointerPointProperties
 PointerPredictor = _winrt_microsoft_ui_input.PointerPredictor
 RightTappedEventArgs = _winrt_microsoft_ui_input.RightTappedEventArgs
 TappedEventArgs = _winrt_microsoft_ui_input.TappedEventArgs
+WindowRectChangedEventArgs = _winrt_microsoft_ui_input.WindowRectChangedEventArgs
+WindowRectChangingEventArgs = _winrt_microsoft_ui_input.WindowRectChangingEventArgs
 IPointerPointTransform = _winrt_microsoft_ui_input.IPointerPointTransform

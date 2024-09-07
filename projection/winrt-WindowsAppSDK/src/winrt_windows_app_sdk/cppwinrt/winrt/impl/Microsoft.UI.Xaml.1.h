@@ -979,6 +979,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         IXamlRoot2(std::nullptr_t = nullptr) noexcept {}
         IXamlRoot2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IXamlRoot3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IXamlRoot3>
+    {
+        IXamlRoot3(std::nullptr_t = nullptr) noexcept {}
+        IXamlRoot3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IXamlRootChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IXamlRootChangedEventArgs>

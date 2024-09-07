@@ -686,6 +686,14 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         using impl::consume_t<ScrollBarAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IRangeValueProvider>::SetValue;
         using impl::consume_t<ScrollBarAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>::SetValue;
     };
+    struct WINRT_IMPL_EMPTY_BASES ScrollPresenterAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer,
+        impl::base<ScrollPresenterAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
+        impl::require<ScrollPresenterAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>
+    {
+        ScrollPresenterAutomationPeer(std::nullptr_t) noexcept {}
+        ScrollPresenterAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer(ptr, take_ownership_from_abi) {}
+        explicit ScrollPresenterAutomationPeer(winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter const& owner);
+    };
     struct WINRT_IMPL_EMPTY_BASES ScrollViewerAutomationPeer : winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer,
         impl::base<ScrollViewerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer, winrt::Microsoft::UI::Xaml::DependencyObject>,
         impl::require<ScrollViewerAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Provider::IScrollProvider, winrt::Microsoft::UI::Xaml::Automation::Peers::IFrameworkElementAutomationPeer, winrt::Microsoft::UI::Xaml::Automation::Peers::IAutomationPeer, winrt::Microsoft::UI::Xaml::IDependencyObject>

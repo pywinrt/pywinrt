@@ -20,6 +20,13 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
         IEnsureReadyOptions(std::nullptr_t = nullptr) noexcept {}
         IEnsureReadyOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IEnsureReadyOptions2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IEnsureReadyOptions2>
+    {
+        IEnsureReadyOptions2(std::nullptr_t = nullptr) noexcept {}
+        IEnsureReadyOptions2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IPackageDeploymentManager :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPackageDeploymentManager>
@@ -27,12 +34,26 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
         IPackageDeploymentManager(std::nullptr_t = nullptr) noexcept {}
         IPackageDeploymentManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IPackageDeploymentManager2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPackageDeploymentManager2>
+    {
+        IPackageDeploymentManager2(std::nullptr_t = nullptr) noexcept {}
+        IPackageDeploymentManager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IPackageDeploymentManagerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPackageDeploymentManagerStatics>
     {
         IPackageDeploymentManagerStatics(std::nullptr_t = nullptr) noexcept {}
         IPackageDeploymentManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPackageDeploymentManagerStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPackageDeploymentManagerStatics2>
+    {
+        IPackageDeploymentManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IPackageDeploymentManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPackageDeploymentResult :
         winrt::Windows::Foundation::IInspectable,

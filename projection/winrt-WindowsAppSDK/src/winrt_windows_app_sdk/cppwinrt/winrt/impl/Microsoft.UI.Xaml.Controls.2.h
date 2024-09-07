@@ -2271,7 +2271,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES PipsPager : winrt::Microsoft::UI::Xaml::Controls::IPipsPager,
         impl::base<PipsPager, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<PipsPager, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<PipsPager, winrt::Microsoft::UI::Xaml::Controls::IPipsPager2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         PipsPager(std::nullptr_t) noexcept {}
         PipsPager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::IPipsPager(ptr, take_ownership_from_abi) {}
@@ -2286,6 +2286,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto NextButtonStyleProperty();
         [[nodiscard]] static auto SelectedPipStyleProperty();
         [[nodiscard]] static auto NormalPipStyleProperty();
+        [[nodiscard]] static auto WrapModeProperty();
     };
     struct WINRT_IMPL_EMPTY_BASES PipsPagerSelectedIndexChangedEventArgs : winrt::Microsoft::UI::Xaml::Controls::IPipsPagerSelectedIndexChangedEventArgs
     {
@@ -3090,7 +3091,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     };
     struct WINRT_IMPL_EMPTY_BASES TabView : winrt::Microsoft::UI::Xaml::Controls::ITabView,
         impl::base<TabView, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
-        impl::require<TabView, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
+        impl::require<TabView, winrt::Microsoft::UI::Xaml::Controls::ITabView2, winrt::Microsoft::UI::Xaml::Controls::IControl, winrt::Microsoft::UI::Xaml::IFrameworkElement, winrt::Microsoft::UI::Xaml::IUIElement, winrt::Microsoft::UI::Composition::IAnimationObject, winrt::Microsoft::UI::Composition::IVisualElement, winrt::Microsoft::UI::Composition::IVisualElement2, winrt::Microsoft::UI::Xaml::IDependencyObject>
     {
         TabView(std::nullptr_t) noexcept {}
         TabView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabView(ptr, take_ownership_from_abi) {}
@@ -3113,6 +3114,17 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         [[nodiscard]] static auto AllowDropTabsProperty();
         [[nodiscard]] static auto SelectedIndexProperty();
         [[nodiscard]] static auto SelectedItemProperty();
+        [[nodiscard]] static auto CanTearOutTabsProperty();
+    };
+    struct WINRT_IMPL_EMPTY_BASES TabViewExternalTornOutTabsDroppedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs
+    {
+        TabViewExternalTornOutTabsDroppedEventArgs(std::nullptr_t) noexcept {}
+        TabViewExternalTornOutTabsDroppedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TabViewExternalTornOutTabsDroppingEventArgs : winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs
+    {
+        TabViewExternalTornOutTabsDroppingEventArgs(std::nullptr_t) noexcept {}
+        TabViewExternalTornOutTabsDroppingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES TabViewItem : winrt::Microsoft::UI::Xaml::Controls::ITabViewItem,
         impl::base<TabViewItem, winrt::Microsoft::UI::Xaml::Controls::ListViewItem, winrt::Microsoft::UI::Xaml::Controls::Primitives::SelectorItem, winrt::Microsoft::UI::Xaml::Controls::ContentControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,
@@ -3156,6 +3168,16 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         TabViewTabDroppedOutsideEventArgs(std::nullptr_t) noexcept {}
         TabViewTabDroppedOutsideEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TabViewTabTearOutRequestedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs
+    {
+        TabViewTabTearOutRequestedEventArgs(std::nullptr_t) noexcept {}
+        TabViewTabTearOutRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES TabViewTabTearOutWindowRequestedEventArgs : winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs
+    {
+        TabViewTabTearOutWindowRequestedEventArgs(std::nullptr_t) noexcept {}
+        TabViewTabTearOutWindowRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES TeachingTip : winrt::Microsoft::UI::Xaml::Controls::ITeachingTip,
         impl::base<TeachingTip, winrt::Microsoft::UI::Xaml::Controls::ContentControl, winrt::Microsoft::UI::Xaml::Controls::Control, winrt::Microsoft::UI::Xaml::FrameworkElement, winrt::Microsoft::UI::Xaml::UIElement, winrt::Microsoft::UI::Xaml::DependencyObject>,

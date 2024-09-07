@@ -16,6 +16,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
     struct IClosableNotifier;
     struct IColorHelper;
     struct IColorHelperStatics;
+    struct IColorHelperStatics2;
     struct IColors;
     struct IColorsStatics;
     struct ColorHelper;
@@ -30,6 +31,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::IClosableNotifier>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::IColorHelper>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::IColorHelperStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::IColorHelperStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::IColors>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::IColorsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::ColorHelper>{ using type = class_category; };
@@ -46,12 +48,14 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IClosableNotifier> = L"Microsoft.UI.IClosableNotifier";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IColorHelper> = L"Microsoft.UI.IColorHelper";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IColorHelperStatics> = L"Microsoft.UI.IColorHelperStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IColorHelperStatics2> = L"Microsoft.UI.IColorHelperStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IColors> = L"Microsoft.UI.IColors";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::IColorsStatics> = L"Microsoft.UI.IColorsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::ClosableNotifierHandler> = L"Microsoft.UI.ClosableNotifierHandler";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IClosableNotifier>{ 0x2989E93B,0xED0F,0x5E79,{ 0x90,0xF2,0xEA,0xC5,0x92,0xFC,0x6E,0x6A } }; // 2989E93B-ED0F-5E79-90F2-EAC592FC6E6A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IColorHelper>{ 0x3ADDDCCD,0x3949,0x585B,{ 0xA5,0x66,0xCC,0xB8,0x35,0x0D,0xD2,0x21 } }; // 3ADDDCCD-3949-585B-A566-CCB8350DD221
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IColorHelperStatics>{ 0x1D1D85A1,0xEB63,0x538A,{ 0x84,0xF0,0x01,0x92,0x10,0xBC,0x40,0x6B } }; // 1D1D85A1-EB63-538A-84F0-019210BC406B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IColorHelperStatics2>{ 0x982A2D93,0x0EC4,0x56B7,{ 0x9C,0x20,0x0B,0x5C,0x77,0x94,0x90,0x66 } }; // 982A2D93-0EC4-56B7-9C20-0B5C77949066
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IColors>{ 0x8CF15863,0x8411,0x5AFD,{ 0x94,0x6C,0x32,0x8E,0x04,0xDA,0x2F,0x2F } }; // 8CF15863-8411-5AFD-946C-328E04DA2F2F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::IColorsStatics>{ 0x8620A5B0,0x015A,0x57AC,{ 0xA3,0xF3,0x89,0x5D,0x0B,0x12,0x69,0xAE } }; // 8620A5B0-015A-57AC-A3F3-895D0B1269AE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::ClosableNotifierHandler>{ 0x478CEC68,0xEA8E,0x52FC,{ 0x87,0xE2,0xC8,0x19,0xDE,0x00,0x0F,0x92 } }; // 478CEC68-EA8E-52FC-87E2-C819DE000F92
@@ -79,6 +83,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall FromArgb(uint8_t, uint8_t, uint8_t, uint8_t, struct struct_Windows_UI_Color*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::IColorHelperStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall ToDisplayName(struct struct_Windows_UI_Color, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::IColors>
@@ -274,6 +285,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::IColorHelperStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_IColorHelperStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_IColorHelperStatics2
+    {
+        auto ToDisplayName(winrt::Windows::UI::Color const& color) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::IColorHelperStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_IColorHelperStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_IColors

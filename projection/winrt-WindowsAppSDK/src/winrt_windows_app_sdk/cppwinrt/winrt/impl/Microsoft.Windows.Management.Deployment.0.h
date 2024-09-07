@@ -21,6 +21,15 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 }
 WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
 {
+    enum class PackageDeploymentFeature : int32_t
+    {
+        PackageUriScheme_ms_uup = 1,
+        IsPackageReadyOrNewerAvailable = 2,
+        RemovePackageByUri = 3,
+        ResetPackage = 4,
+        RepairPackage = 5,
+        ProvisionPackage_Framework = 6,
+    };
     enum class PackageDeploymentProgressStatus : int32_t
     {
         Queued = 0,
@@ -34,6 +43,12 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
         CompletedSuccess = 1,
         CompletedFailure = 2,
     };
+    enum class PackageReadyOrNewerAvailableStatus : int32_t
+    {
+        NotReady = 0,
+        Ready = 1,
+        NewerAvailable = 2,
+    };
     enum class StubPackageOption : int32_t
     {
         Default = 0,
@@ -43,8 +58,11 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
     };
     struct IAddPackageOptions;
     struct IEnsureReadyOptions;
+    struct IEnsureReadyOptions2;
     struct IPackageDeploymentManager;
+    struct IPackageDeploymentManager2;
     struct IPackageDeploymentManagerStatics;
+    struct IPackageDeploymentManagerStatics2;
     struct IPackageDeploymentResult;
     struct IPackageRuntimeManager;
     struct IPackageRuntimeManagerStatics;
@@ -79,8 +97,11 @@ namespace winrt::impl
 {
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IAddPackageOptions>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManager>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManagerStatics>{ using type = interface_category; };
@@ -108,8 +129,10 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentStatus>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress>{ using type = struct_category<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus, double>; };
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions> = L"Microsoft.Windows.Management.Deployment.AddPackageOptions";
@@ -126,14 +149,19 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::RegisterPackageOptions> = L"Microsoft.Windows.Management.Deployment.RegisterPackageOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::RemovePackageOptions> = L"Microsoft.Windows.Management.Deployment.RemovePackageOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::StagePackageOptions> = L"Microsoft.Windows.Management.Deployment.StagePackageOptions";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature> = L"Microsoft.Windows.Management.Deployment.PackageDeploymentFeature";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus> = L"Microsoft.Windows.Management.Deployment.PackageDeploymentProgressStatus";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentStatus> = L"Microsoft.Windows.Management.Deployment.PackageDeploymentStatus";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus> = L"Microsoft.Windows.Management.Deployment.PackageReadyOrNewerAvailableStatus";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption> = L"Microsoft.Windows.Management.Deployment.StubPackageOption";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress> = L"Microsoft.Windows.Management.Deployment.PackageDeploymentProgress";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IAddPackageOptions> = L"Microsoft.Windows.Management.Deployment.IAddPackageOptions";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions> = L"Microsoft.Windows.Management.Deployment.IEnsureReadyOptions";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2> = L"Microsoft.Windows.Management.Deployment.IEnsureReadyOptions2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager> = L"Microsoft.Windows.Management.Deployment.IPackageDeploymentManager";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2> = L"Microsoft.Windows.Management.Deployment.IPackageDeploymentManager2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics> = L"Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2> = L"Microsoft.Windows.Management.Deployment.IPackageDeploymentManagerStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult> = L"Microsoft.Windows.Management.Deployment.IPackageDeploymentResult";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManager> = L"Microsoft.Windows.Management.Deployment.IPackageRuntimeManager";
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManagerStatics> = L"Microsoft.Windows.Management.Deployment.IPackageRuntimeManagerStatics";
@@ -150,8 +178,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentContract> = L"Microsoft.Windows.Management.Deployment.PackageDeploymentContract";
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IAddPackageOptions>{ 0xE3DB7F39,0xF9D0,0x5884,{ 0xBD,0xEF,0x61,0x53,0xB5,0x45,0x74,0xA3 } }; // E3DB7F39-F9D0-5884-BDEF-6153B54574A3
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions>{ 0x20102D03,0xEC44,0x5C2B,{ 0x8F,0xD6,0x11,0x04,0xDC,0x99,0x75,0x5D } }; // 20102D03-EC44-5C2B-8FD6-1104DC99755D
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>{ 0xEEFA9259,0xB13A,0x50A3,{ 0x91,0x9E,0xAE,0x11,0x6D,0x83,0xC0,0xDA } }; // EEFA9259-B13A-50A3-919E-AE116D83C0DA
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager>{ 0xF41717D8,0x5AB2,0x57AC,{ 0x83,0xCD,0xD0,0xC4,0x8C,0xC7,0x84,0xCD } }; // F41717D8-5AB2-57AC-83CD-D0C48CC784CD
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>{ 0x6FC6D0F3,0xF9DD,0x5C14,{ 0x9D,0x3F,0x07,0x71,0x65,0xED,0xDF,0x98 } }; // 6FC6D0F3-F9DD-5C14-9D3F-077165EDDF98
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics>{ 0xDBDA4AC6,0xCA28,0x59B8,{ 0x9F,0xC6,0xDB,0xFB,0x57,0x65,0xF1,0xC2 } }; // DBDA4AC6-CA28-59B8-9FC6-DBFB5765F1C2
+    template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2>{ 0x0EC31486,0x00B5,0x5937,{ 0x8C,0xD4,0x75,0x92,0x60,0xFD,0xC4,0xA2 } }; // 0EC31486-00B5-5937-8CD4-759260FDC4A2
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult>{ 0xD6B99601,0x18C2,0x599E,{ 0x8B,0xD1,0x40,0xA9,0x31,0x0A,0xD2,0x63 } }; // D6B99601-18C2-599E-8BD1-40A9310AD263
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManager>{ 0x6BF0FD29,0x6C2A,0x58D1,{ 0xAF,0x0C,0xAB,0xD2,0xEA,0xC4,0x5E,0x29 } }; // 6BF0FD29-6C2A-58D1-AF0C-ABD2EAC45E29
     template <> inline constexpr guid guid_v<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManagerStatics>{ 0x790947DE,0x01D4,0x5858,{ 0xAA,0x69,0x9C,0x93,0x90,0xFB,0x7D,0x3E } }; // 790947DE-01D4-5858-AA69-9C9390FB7D3E
@@ -227,6 +258,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_AddPackageOptions(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_RegisterNewerIfAvailable(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_RegisterNewerIfAvailable(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -267,11 +306,30 @@ namespace winrt::impl
             virtual int32_t __stdcall IsPackageRegistrationPendingForUser(void*, void*, bool*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall IsPackageReadyOrNewerAvailable(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall IsPackageReadyOrNewerAvailableByUri(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall IsPackageSetReadyOrNewerAvailable(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall IsPackageProvisioned(void*, bool*) noexcept = 0;
+            virtual int32_t __stdcall IsPackageProvisionedByUri(void*, bool*) noexcept = 0;
+            virtual int32_t __stdcall IsPackageSetProvisioned(void*, bool*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall GetDefault(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall IsPackageDeploymentFeatureSupported(int32_t, bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult>
@@ -509,6 +567,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IEnsureReadyOptions<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Windows_Management_Deployment_IEnsureReadyOptions2
+    {
+        [[nodiscard]] auto RegisterNewerIfAvailable() const;
+        auto RegisterNewerIfAvailable(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IEnsureReadyOptions2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager
     {
         auto IsPackageReady(param::hstring const& package) const;
@@ -551,6 +619,20 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager<D>;
     };
     template <typename D>
+    struct consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2
+    {
+        auto IsPackageReadyOrNewerAvailable(param::hstring const& package) const;
+        auto IsPackageReadyOrNewerAvailableByUri(winrt::Windows::Foundation::Uri const& packageUri) const;
+        auto IsPackageSetReadyOrNewerAvailable(winrt::Microsoft::Windows::Management::Deployment::PackageSet const& packageSet) const;
+        auto IsPackageProvisioned(param::hstring const& package) const;
+        auto IsPackageProvisionedByUri(winrt::Windows::Foundation::Uri const& packageUri) const;
+        auto IsPackageSetProvisioned(winrt::Microsoft::Windows::Management::Deployment::PackageSet const& packageSet) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics
     {
         auto GetDefault() const;
@@ -558,6 +640,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics>
     {
         template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics2
+    {
+        auto IsPackageDeploymentFeatureSupported(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature const& feature) const;
+    };
+    template <> struct consume<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentResult

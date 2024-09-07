@@ -5,6 +5,10 @@
 #include "pybase.h"
 static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/WinRT headers.");
 
+#if __has_include("py.Microsoft.UI.h")
+#include "py.Microsoft.UI.h"
+#endif
+
 #if __has_include("py.Microsoft.UI.Composition.h")
 #include "py.Microsoft.UI.Composition.h"
 #endif
@@ -121,6 +125,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Xaml.Interop.h"
 #endif
 
+#include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Microsoft.UI.Input.h>
@@ -966,12 +971,16 @@ namespace py::wrapper::Microsoft::UI::Xaml::Controls
     using SymbolIcon = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SymbolIcon>;
     using SymbolIconSource = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::SymbolIconSource>;
     using TabView = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabView>;
+    using TabViewExternalTornOutTabsDroppedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs>;
+    using TabViewExternalTornOutTabsDroppingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs>;
     using TabViewItem = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>;
     using TabViewItemTemplateSettings = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings>;
     using TabViewTabCloseRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabCloseRequestedEventArgs>;
     using TabViewTabDragCompletedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragCompletedEventArgs>;
     using TabViewTabDragStartingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragStartingEventArgs>;
     using TabViewTabDroppedOutsideEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDroppedOutsideEventArgs>;
+    using TabViewTabTearOutRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs>;
+    using TabViewTabTearOutWindowRequestedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs>;
     using TeachingTip = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>;
     using TeachingTipClosedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>;
     using TeachingTipClosingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>;
@@ -1191,6 +1200,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PipsPagerButtonVisibility> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Xaml::Controls::PivotHeaderFocusVisualPlacement> = "i";
@@ -1723,6 +1735,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerButtonVisibility";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "PipsPagerButtonVisibility";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.PipsPagerWrapMode";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "PipsPagerWrapMode";
     };
 
     template<>
@@ -4222,6 +4242,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TabViewExternalTornOutTabsDroppedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewExternalTornOutTabsDroppingEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TabViewExternalTornOutTabsDroppingEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>
     {
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewItem";
@@ -4267,6 +4303,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabDroppedOutsideEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
         static constexpr const char* type_name = "TabViewTabDroppedOutsideEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabTearOutRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TabViewTabTearOutRequestedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.controls.TabViewTabTearOutWindowRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.controls";
+        static constexpr const char* type_name = "TabViewTabTearOutWindowRequestedEventArgs";
     };
 
     template<>

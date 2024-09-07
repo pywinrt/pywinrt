@@ -6,8 +6,12 @@ param(
     [switch]$noCppWinRT,
 
     [Parameter(Mandatory=$false)]
-    [string]$WindowsAppSDKVersion = "1.5.240311000",
+    [string]$WindowsAppSDKVersion = "1.6.240829007",
     [switch]$noWindowsAppSDK,
+
+    [Parameter(Mandatory=$false)]
+    [string]$WebView2Version = "1.0.2739.15",
+    [switch]$noWebView2,
 
     [Parameter(Mandatory=$false)]
     [string]$TestWinRTVersion = "1.0.12",
@@ -33,6 +37,14 @@ if (!$noCppWinRT) {
 
 if (!$noWindowsAppSDK) {
     & nuget install Microsoft.WindowsAppSDK -Version $WindowsAppSDKVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+
+    if ($LASTEXITCODE -ne 0) {
+        exit $LASTEXITCODE
+    }
+}
+
+if (!$noWebView2) {
+    & nuget install Microsoft.Web.WebView2 -Version $WebView2Version -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

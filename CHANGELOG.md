@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Changed
+- Updated to Windows App SDK 1.6.240829007
+
 ## [v2.2.0] - 2024-08-18
 
 ### Added

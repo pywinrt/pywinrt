@@ -100,6 +100,7 @@ __all__ = [
     "RichTextBlockAutomationPeer",
     "RichTextBlockOverflowAutomationPeer",
     "ScrollBarAutomationPeer",
+    "ScrollPresenterAutomationPeer",
     "ScrollViewerAutomationPeer",
     "SelectorAutomationPeer",
     "SelectorBarItemAutomationPeer",
@@ -383,6 +384,7 @@ RichEditBoxAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.RichEditBo
 RichTextBlockAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.RichTextBlockAutomationPeer
 RichTextBlockOverflowAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer
 ScrollBarAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer
+ScrollPresenterAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.ScrollPresenterAutomationPeer
 ScrollViewerAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer
 SelectorAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer
 SelectorBarItemAutomationPeer = _winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer

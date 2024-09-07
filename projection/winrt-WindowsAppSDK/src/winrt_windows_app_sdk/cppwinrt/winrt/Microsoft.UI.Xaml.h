@@ -4773,6 +4773,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlRoot2)->get_ContentIslandEnvironment(&value));
         return winrt::Microsoft::UI::Content::ContentIslandEnvironment{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_UI_Xaml_IXamlRoot3<D>::CoordinateConverter() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Xaml::IXamlRoot3)->get_CoordinateConverter(&value));
+        return winrt::Microsoft::UI::Content::ContentCoordinateConverter{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_Xaml_IXamlServiceProvider<D>::GetService(winrt::Windows::UI::Xaml::Interop::TypeName const& type) const
     {
         void* result{};
@@ -12156,6 +12162,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Xaml::IXamlRoot3> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlRoot3>
+    {
+        int32_t __stdcall get_CoordinateConverter(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Content::ContentCoordinateConverter>(this->shim().CoordinateConverter());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs>
     {
     };
@@ -14390,6 +14410,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRoot3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlRootChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::IXamlServiceProvider> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Xaml::AdaptiveTrigger> : winrt::impl::hash_base {};

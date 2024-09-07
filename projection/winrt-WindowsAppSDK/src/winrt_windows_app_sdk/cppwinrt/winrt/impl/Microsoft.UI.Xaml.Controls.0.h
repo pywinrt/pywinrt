@@ -3,6 +3,10 @@
 #pragma once
 #ifndef WINRT_Microsoft_UI_Xaml_Controls_0_H
 #define WINRT_Microsoft_UI_Xaml_Controls_0_H
+WINRT_EXPORT namespace winrt::Microsoft::UI
+{
+    struct WindowId;
+}
 WINRT_EXPORT namespace winrt::Microsoft::UI::Composition
 {
     struct CompositionAnimation;
@@ -527,6 +531,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         Visible = 0,
         VisibleOnPointerOver = 1,
         Collapsed = 2,
+    };
+    enum class PipsPagerWrapMode : int32_t
+    {
+        None = 0,
+        Wrap = 1,
     };
     enum class PivotHeaderFocusVisualPlacement : int32_t
     {
@@ -1288,6 +1297,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IItemsViewSelectionChangedEventArgs;
     struct IItemsViewStatics;
     struct IItemsWrapGrid;
+    struct IItemsWrapGridFactory;
     struct IItemsWrapGridStatics;
     struct IKeyIndexMapping;
     struct ILayout;
@@ -1450,9 +1460,11 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct IPickerFlyoutPresenter;
     struct IPickerFlyoutStatics;
     struct IPipsPager;
+    struct IPipsPager2;
     struct IPipsPagerFactory;
     struct IPipsPagerSelectedIndexChangedEventArgs;
     struct IPipsPagerStatics;
+    struct IPipsPagerStatics2;
     struct IPipsPagerTemplateSettings;
     struct IPivot;
     struct IPivotFactory;
@@ -1594,6 +1606,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ISymbolIconSourceStatics;
     struct ISymbolIconStatics;
     struct ITabView;
+    struct ITabView2;
+    struct ITabViewExternalTornOutTabsDroppedEventArgs;
+    struct ITabViewExternalTornOutTabsDroppingEventArgs;
     struct ITabViewFactory;
     struct ITabViewItem;
     struct ITabViewItemFactory;
@@ -1604,10 +1619,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct ITabViewItemTemplateSettingsStatics;
     struct ITabViewItemTemplateSettingsStatics2;
     struct ITabViewStatics;
+    struct ITabViewStatics2;
     struct ITabViewTabCloseRequestedEventArgs;
     struct ITabViewTabDragCompletedEventArgs;
     struct ITabViewTabDragStartingEventArgs;
     struct ITabViewTabDroppedOutsideEventArgs;
+    struct ITabViewTabTearOutRequestedEventArgs;
+    struct ITabViewTabTearOutWindowRequestedEventArgs;
     struct ITeachingTip;
     struct ITeachingTipClosedEventArgs;
     struct ITeachingTipClosingEventArgs;
@@ -1991,12 +2009,16 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     struct SymbolIcon;
     struct SymbolIconSource;
     struct TabView;
+    struct TabViewExternalTornOutTabsDroppedEventArgs;
+    struct TabViewExternalTornOutTabsDroppingEventArgs;
     struct TabViewItem;
     struct TabViewItemTemplateSettings;
     struct TabViewTabCloseRequestedEventArgs;
     struct TabViewTabDragCompletedEventArgs;
     struct TabViewTabDragStartingEventArgs;
     struct TabViewTabDroppedOutsideEventArgs;
+    struct TabViewTabTearOutRequestedEventArgs;
+    struct TabViewTabTearOutWindowRequestedEventArgs;
     struct TeachingTip;
     struct TeachingTipClosedEventArgs;
     struct TeachingTipClosingEventArgs;
@@ -2351,6 +2373,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsViewSelectionChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsViewStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGrid>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ILayout>{ using type = interface_category; };
@@ -2513,9 +2536,11 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutPresenter>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPager>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPager2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerSelectedIndexChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerTemplateSettings>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPivot>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::IPivotFactory>{ using type = interface_category; };
@@ -2657,6 +2682,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabView>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabView2>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewItem>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemFactory>{ using type = interface_category; };
@@ -2667,10 +2695,13 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabCloseRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragCompletedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragStartingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs>{ using type = interface_category; };
@@ -3054,12 +3085,16 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SymbolIcon>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::SymbolIconSource>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabView>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabCloseRequestedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragCompletedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragStartingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDroppedOutsideEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>{ using type = class_category; };
@@ -3163,6 +3198,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::ParallaxSourceOffsetKind>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PasswordRevealMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PipsPagerButtonVisibility>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PivotHeaderFocusVisualPlacement>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PivotSlideInAnimationGroup>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Controls::PlayerAnimationOptimization>{ using type = enum_category; };
@@ -3488,12 +3524,16 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SymbolIcon> = L"Microsoft.UI.Xaml.Controls.SymbolIcon";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::SymbolIconSource> = L"Microsoft.UI.Xaml.Controls.SymbolIconSource";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabView> = L"Microsoft.UI.Xaml.Controls.TabView";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewExternalTornOutTabsDroppingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewItem> = L"Microsoft.UI.Xaml.Controls.TabViewItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings> = L"Microsoft.UI.Xaml.Controls.TabViewItemTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabCloseRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabCloseRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabDragCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabDragStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDroppedOutsideEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabDroppedOutsideEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabTearOutRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.TabViewTabTearOutWindowRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTip> = L"Microsoft.UI.Xaml.Controls.TeachingTip";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.TeachingTipClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.TeachingTipClosingEventArgs";
@@ -3597,6 +3637,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ParallaxSourceOffsetKind> = L"Microsoft.UI.Xaml.Controls.ParallaxSourceOffsetKind";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PasswordRevealMode> = L"Microsoft.UI.Xaml.Controls.PasswordRevealMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PipsPagerButtonVisibility> = L"Microsoft.UI.Xaml.Controls.PipsPagerButtonVisibility";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode> = L"Microsoft.UI.Xaml.Controls.PipsPagerWrapMode";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PivotHeaderFocusVisualPlacement> = L"Microsoft.UI.Xaml.Controls.PivotHeaderFocusVisualPlacement";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PivotSlideInAnimationGroup> = L"Microsoft.UI.Xaml.Controls.PivotSlideInAnimationGroup";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::PlayerAnimationOptimization> = L"Microsoft.UI.Xaml.Controls.PlayerAnimationOptimization";
@@ -3926,6 +3967,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsViewSelectionChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.IItemsViewSelectionChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsViewStatics> = L"Microsoft.UI.Xaml.Controls.IItemsViewStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGrid> = L"Microsoft.UI.Xaml.Controls.IItemsWrapGrid";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridFactory> = L"Microsoft.UI.Xaml.Controls.IItemsWrapGridFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridStatics> = L"Microsoft.UI.Xaml.Controls.IItemsWrapGridStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping> = L"Microsoft.UI.Xaml.Controls.IKeyIndexMapping";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ILayout> = L"Microsoft.UI.Xaml.Controls.ILayout";
@@ -4088,9 +4130,11 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutPresenter> = L"Microsoft.UI.Xaml.Controls.IPickerFlyoutPresenter";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutStatics> = L"Microsoft.UI.Xaml.Controls.IPickerFlyoutStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPager> = L"Microsoft.UI.Xaml.Controls.IPipsPager";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPager2> = L"Microsoft.UI.Xaml.Controls.IPipsPager2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerFactory> = L"Microsoft.UI.Xaml.Controls.IPipsPagerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerSelectedIndexChangedEventArgs> = L"Microsoft.UI.Xaml.Controls.IPipsPagerSelectedIndexChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics> = L"Microsoft.UI.Xaml.Controls.IPipsPagerStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics2> = L"Microsoft.UI.Xaml.Controls.IPipsPagerStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerTemplateSettings> = L"Microsoft.UI.Xaml.Controls.IPipsPagerTemplateSettings";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPivot> = L"Microsoft.UI.Xaml.Controls.IPivot";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::IPivotFactory> = L"Microsoft.UI.Xaml.Controls.IPivotFactory";
@@ -4232,6 +4276,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconSourceStatics> = L"Microsoft.UI.Xaml.Controls.ISymbolIconSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconStatics> = L"Microsoft.UI.Xaml.Controls.ISymbolIconStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabView> = L"Microsoft.UI.Xaml.Controls.ITabView";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabView2> = L"Microsoft.UI.Xaml.Controls.ITabView2";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewExternalTornOutTabsDroppedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewExternalTornOutTabsDroppingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewFactory> = L"Microsoft.UI.Xaml.Controls.ITabViewFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItem> = L"Microsoft.UI.Xaml.Controls.ITabViewItem";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemFactory> = L"Microsoft.UI.Xaml.Controls.ITabViewItemFactory";
@@ -4242,10 +4289,13 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics> = L"Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics2> = L"Microsoft.UI.Xaml.Controls.ITabViewItemTemplateSettingsStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics> = L"Microsoft.UI.Xaml.Controls.ITabViewStatics";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics2> = L"Microsoft.UI.Xaml.Controls.ITabViewStatics2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabCloseRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabCloseRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragCompletedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabDragCompletedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragStartingEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabDragStartingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabDroppedOutsideEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabTearOutRequestedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITabViewTabTearOutWindowRequestedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip> = L"Microsoft.UI.Xaml.Controls.ITeachingTip";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs> = L"Microsoft.UI.Xaml.Controls.ITeachingTipClosedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs> = L"Microsoft.UI.Xaml.Controls.ITeachingTipClosingEventArgs";
@@ -4659,6 +4709,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsViewSelectionChangedEventArgs>{ 0x9CD1690F,0x6C9D,0x543C,{ 0x82,0xF2,0x30,0xCD,0x37,0xD7,0x65,0xB3 } }; // 9CD1690F-6C9D-543C-82F2-30CD37D765B3
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsViewStatics>{ 0xC64F1948,0x77D3,0x5DF5,{ 0x8D,0x33,0xC5,0x86,0x02,0xD4,0xCF,0xB9 } }; // C64F1948-77D3-5DF5-8D33-C58602D4CFB9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGrid>{ 0x29910BC5,0xB305,0x5529,{ 0xB8,0x8C,0x77,0x6C,0x66,0xE1,0xB3,0xBA } }; // 29910BC5-B305-5529-B88C-776C66E1B3BA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridFactory>{ 0xC2F96D8C,0x3A18,0x552E,{ 0xB9,0x70,0x6C,0x57,0x56,0x52,0xE9,0x2D } }; // C2F96D8C-3A18-552E-B970-6C575652E92D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridStatics>{ 0xF757D5CB,0x3BF2,0x5A23,{ 0x96,0x8F,0x04,0x5B,0xC8,0x0D,0x57,0xCE } }; // F757D5CB-3BF2-5A23-968F-045BC80D57CE
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IKeyIndexMapping>{ 0xB1F3BBA0,0x108E,0x560D,{ 0x96,0x81,0x26,0x39,0x1B,0x4B,0xC3,0x0D } }; // B1F3BBA0-108E-560D-9681-26391B4BC30D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ILayout>{ 0x24E50C1C,0x9C51,0x5144,{ 0x9D,0xDC,0x3F,0x50,0x01,0x91,0xC2,0x62 } }; // 24E50C1C-9C51-5144-9DDC-3F500191C262
@@ -4821,9 +4872,11 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutPresenter>{ 0x2181B3F9,0x9F94,0x5EBE,{ 0x9B,0x56,0xAA,0x10,0x6B,0x7E,0x02,0xCD } }; // 2181B3F9-9F94-5EBE-9B56-AA106B7E02CD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPickerFlyoutStatics>{ 0xA8D33E85,0xAEAA,0x5079,{ 0x98,0x3B,0xCE,0x45,0xE4,0x68,0x67,0x2A } }; // A8D33E85-AEAA-5079-983B-CE45E468672A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPager>{ 0xDE7FC5D5,0x9446,0x5693,{ 0xBB,0xF3,0xFD,0x7F,0x94,0x3A,0x56,0x7C } }; // DE7FC5D5-9446-5693-BBF3-FD7F943A567C
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPager2>{ 0x2ED8334B,0x4F00,0x5606,{ 0x9F,0x72,0xE6,0xF7,0x30,0x07,0x46,0xA0 } }; // 2ED8334B-4F00-5606-9F72-E6F7300746A0
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerFactory>{ 0x020722CD,0x813A,0x5165,{ 0xA8,0x99,0x3D,0xF9,0xAD,0xCD,0x80,0x5E } }; // 020722CD-813A-5165-A899-3DF9ADCD805E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerSelectedIndexChangedEventArgs>{ 0x6C2CE4FC,0xBF52,0x5CA6,{ 0x9D,0xA4,0xB0,0xBD,0x5B,0x92,0x8D,0x97 } }; // 6C2CE4FC-BF52-5CA6-9DA4-B0BD5B928D97
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics>{ 0x37714CD8,0xFBA6,0x5D98,{ 0xA3,0x95,0x0A,0x7A,0x3E,0xA6,0x48,0x67 } }; // 37714CD8-FBA6-5D98-A395-0A7A3EA64867
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics2>{ 0x00143F5F,0xEF77,0x54A9,{ 0x9B,0xF3,0x5D,0xAE,0x37,0x99,0xE4,0xA4 } }; // 00143F5F-EF77-54A9-9BF3-5DAE3799E4A4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerTemplateSettings>{ 0x9D8C1252,0x56C5,0x57AF,{ 0x9A,0x3A,0x08,0xE9,0xB9,0x47,0xE5,0xFA } }; // 9D8C1252-56C5-57AF-9A3A-08E9B947E5FA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPivot>{ 0x1C6438E5,0xECAC,0x5FB6,{ 0x8E,0x8E,0x00,0xDE,0x7E,0x92,0x23,0x03 } }; // 1C6438E5-ECAC-5FB6-8E8E-00DE7E922303
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::IPivotFactory>{ 0xDA9D033C,0x4782,0x5A69,{ 0x90,0xAF,0x07,0x6C,0xCD,0xF0,0x71,0xAE } }; // DA9D033C-4782-5A69-90AF-076CCDF071AE
@@ -4965,6 +5018,9 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconSourceStatics>{ 0xFDB6B1C7,0x33D9,0x56D0,{ 0x98,0xE5,0x87,0x76,0xAA,0x1B,0xB7,0x9A } }; // FDB6B1C7-33D9-56D0-98E5-8776AA1BB79A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ISymbolIconStatics>{ 0xCCAA0C34,0x31F2,0x50F1,{ 0xB3,0x28,0xBE,0x6E,0xDC,0x29,0x1A,0xAA } }; // CCAA0C34-31F2-50F1-B328-BE6EDC291AAA
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabView>{ 0x07B509E1,0x1D38,0x551B,{ 0x95,0xF4,0x47,0x32,0xB0,0x49,0xF6,0xA6 } }; // 07B509E1-1D38-551B-95F4-4732B049F6A6
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabView2>{ 0xDEAA552E,0x4E6C,0x5239,{ 0xAC,0x75,0xD9,0x41,0x9A,0x23,0x09,0xDA } }; // DEAA552E-4E6C-5239-AC75-D9419A2309DA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs>{ 0x69912428,0x34D9,0x5AAC,{ 0x85,0xB7,0xA9,0x1D,0x71,0xC1,0x33,0xAA } }; // 69912428-34D9-5AAC-85B7-A91D71C133AA
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs>{ 0xB2378908,0xC5D7,0x560E,{ 0xA2,0xE2,0x46,0x40,0x3E,0x13,0xE5,0xAD } }; // B2378908-C5D7-560E-A2E2-46403E13E5AD
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewFactory>{ 0xE7E83685,0xEEDF,0x5106,{ 0x94,0x29,0x88,0x44,0x35,0xAB,0x16,0x6B } }; // E7E83685-EEDF-5106-9429-884435AB166B
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItem>{ 0x64980AFA,0x97AF,0x5190,{ 0x90,0xB3,0x4B,0xA2,0x77,0xB1,0x11,0x3D } }; // 64980AFA-97AF-5190-90B3-4BA277B1113D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemFactory>{ 0xB64C2423,0x7E56,0x5D41,{ 0x8A,0x84,0x1E,0xE2,0x8F,0x98,0x26,0xA4 } }; // B64C2423-7E56-5D41-8A84-1EE28F9826A4
@@ -4975,10 +5031,13 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics>{ 0xEB62DD88,0xFC12,0x5338,{ 0x8E,0x88,0x78,0x8B,0xE7,0x2D,0x07,0xD6 } }; // EB62DD88-FC12-5338-8E88-788BE72D07D6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettingsStatics2>{ 0xD31AB42B,0x3842,0x5E4D,{ 0x88,0x45,0x62,0x32,0xEE,0xA8,0xEE,0x1D } }; // D31AB42B-3842-5E4D-8845-6232EEA8EE1D
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics>{ 0xF4326C08,0x1B94,0x53D7,{ 0x93,0x4F,0xE6,0xAE,0x0D,0x3D,0x18,0xAB } }; // F4326C08-1B94-53D7-934F-E6AE0D3D18AB
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics2>{ 0xB589DA39,0x25F2,0x517C,{ 0x82,0xD1,0xC5,0x1D,0x80,0x85,0x55,0x0E } }; // B589DA39-25F2-517C-82D1-C51D8085550E
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabCloseRequestedEventArgs>{ 0xD56AB9B2,0xE264,0x5C7E,{ 0xA1,0xCB,0xE4,0x1A,0x16,0xA6,0xC6,0xC6 } }; // D56AB9B2-E264-5C7E-A1CB-E41A16A6C6C6
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragCompletedEventArgs>{ 0x791FC623,0xC8F6,0x5102,{ 0x81,0xBD,0x18,0x69,0xCD,0xE8,0x22,0x84 } }; // 791FC623-C8F6-5102-81BD-1869CDE82284
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragStartingEventArgs>{ 0x97682812,0x1A7B,0x53FD,{ 0x8B,0x4E,0xC2,0xF7,0x0D,0x2A,0xD2,0x50 } }; // 97682812-1A7B-53FD-8B4E-C2F70D2AD250
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs>{ 0x1F1F4D5D,0x0FB1,0x51AB,{ 0xB6,0x6F,0xF7,0xA3,0x22,0xBF,0x2D,0x13 } }; // 1F1F4D5D-0FB1-51AB-B66F-F7A322BF2D13
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>{ 0xE8A0C441,0x66C5,0x578A,{ 0x81,0x77,0x47,0xDF,0xFF,0xB9,0x7B,0x83 } }; // E8A0C441-66C5-578A-8177-47DFFFB97B83
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>{ 0x0C13AFA7,0xF291,0x5BAC,{ 0xA6,0xE8,0xCC,0x67,0xA6,0x9B,0x04,0xC9 } }; // 0C13AFA7-F291-5BAC-A6E8-CC67A69B04C9
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip>{ 0xDAEBD5F7,0x3B47,0x5B12,{ 0xB8,0x04,0xF4,0xE1,0x44,0x2B,0x21,0x13 } }; // DAEBD5F7-3B47-5B12-B804-F4E1442B2113
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs>{ 0x2536F506,0x4038,0x59DB,{ 0x9E,0x35,0xA9,0x25,0x2F,0xB5,0xAD,0xB2 } }; // 2536F506-4038-59DB-9E35-A9252FB5ADB2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs>{ 0x16F53512,0x3C55,0x5636,{ 0xA8,0x56,0x22,0x9D,0x97,0x68,0xD6,0x4E } }; // 16F53512-3C55-5636-A856-229D9768D64E
@@ -5375,12 +5434,16 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SymbolIcon>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISymbolIcon; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::SymbolIconSource>{ using type = winrt::Microsoft::UI::Xaml::Controls::ISymbolIconSource; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabView>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabView; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewItem>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewItem; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewItemTemplateSettings>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewItemTemplateSettings; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabCloseRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabCloseRequestedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragCompletedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragCompletedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDragStartingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDragStartingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabDroppedOutsideEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTip>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTip; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosedEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Controls::TeachingTipClosingEventArgs>{ using type = winrt::Microsoft::UI::Xaml::Controls::ITeachingTipClosingEventArgs; };
@@ -8927,6 +8990,13 @@ namespace winrt::impl
             virtual int32_t __stdcall put_AreStickyGroupHeadersEnabled(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -10760,6 +10830,14 @@ namespace winrt::impl
             virtual int32_t __stdcall get_TemplateSettings(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPipsPager2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_WrapMode(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_WrapMode(int32_t) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -10787,6 +10865,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_NextButtonStyleProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_SelectedPipStyleProperty(void**) noexcept = 0;
             virtual int32_t __stdcall get_NormalPipStyleProperty(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_WrapModeProperty(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerTemplateSettings>
@@ -12806,6 +12891,42 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_TabStripDrop(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabView2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CanTearOutTabs(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_CanTearOutTabs(bool) noexcept = 0;
+            virtual int32_t __stdcall add_TabTearOutWindowRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_TabTearOutWindowRequested(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_TabTearOutRequested(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_TabTearOutRequested(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ExternalTornOutTabsDropping(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ExternalTornOutTabsDropping(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ExternalTornOutTabsDropped(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ExternalTornOutTabsDropped(winrt::event_token) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Items(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_Tabs(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_DropIndex(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Items(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_Tabs(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_DropIndex(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_AllowDrop(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowDrop(bool) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewFactory>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -12909,6 +13030,13 @@ namespace winrt::impl
             virtual int32_t __stdcall get_SelectedItemProperty(void**) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_CanTearOutTabsProperty(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabCloseRequestedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -12943,6 +13071,25 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_Item(void**) noexcept = 0;
             virtual int32_t __stdcall get_Tab(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Items(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_Tabs(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_NewWindowId(struct struct_Microsoft_UI_WindowId*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Items(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_Tabs(uint32_t* __valueSize, void***) noexcept = 0;
+            virtual int32_t __stdcall get_NewWindowId(struct struct_Microsoft_UI_WindowId*) noexcept = 0;
+            virtual int32_t __stdcall put_NewWindowId(struct struct_Microsoft_UI_WindowId) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Controls::ITeachingTip>
@@ -18658,6 +18805,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemsWrapGrid<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IItemsWrapGridFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IItemsWrapGridFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IItemsWrapGridFactory<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IItemsWrapGridStatics
     {
         [[nodiscard]] auto GroupPaddingProperty() const;
@@ -20881,6 +21037,16 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPipsPager<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPipsPager2
+    {
+        [[nodiscard]] auto WrapMode() const;
+        auto WrapMode(winrt::Microsoft::UI::Xaml::Controls::PipsPagerWrapMode const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPipsPager2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPipsPager2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IPipsPagerFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -20914,6 +21080,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPipsPagerStatics<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_IPipsPagerStatics2
+    {
+        [[nodiscard]] auto WrapModeProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::IPipsPagerStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_IPipsPagerStatics2<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_IPipsPagerTemplateSettings
@@ -23333,6 +23508,56 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabView<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabView2
+    {
+        [[nodiscard]] auto CanTearOutTabs() const;
+        auto CanTearOutTabs(bool value) const;
+        auto TabTearOutWindowRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs> const& handler) const;
+        using TabTearOutWindowRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITabView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITabView2>::remove_TabTearOutWindowRequested>;
+        [[nodiscard]] auto TabTearOutWindowRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutWindowRequestedEventArgs> const& handler) const;
+        auto TabTearOutWindowRequested(winrt::event_token const& token) const noexcept;
+        auto TabTearOutRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs> const& handler) const;
+        using TabTearOutRequested_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITabView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITabView2>::remove_TabTearOutRequested>;
+        [[nodiscard]] auto TabTearOutRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewTabTearOutRequestedEventArgs> const& handler) const;
+        auto TabTearOutRequested(winrt::event_token const& token) const noexcept;
+        auto ExternalTornOutTabsDropping(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs> const& handler) const;
+        using ExternalTornOutTabsDropping_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITabView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITabView2>::remove_ExternalTornOutTabsDropping>;
+        [[nodiscard]] auto ExternalTornOutTabsDropping(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppingEventArgs> const& handler) const;
+        auto ExternalTornOutTabsDropping(winrt::event_token const& token) const noexcept;
+        auto ExternalTornOutTabsDropped(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs> const& handler) const;
+        using ExternalTornOutTabsDropped_revoker = impl::event_revoker<winrt::Microsoft::UI::Xaml::Controls::ITabView2, &impl::abi_t<winrt::Microsoft::UI::Xaml::Controls::ITabView2>::remove_ExternalTornOutTabsDropped>;
+        [[nodiscard]] auto ExternalTornOutTabsDropped(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TabView, winrt::Microsoft::UI::Xaml::Controls::TabViewExternalTornOutTabsDroppedEventArgs> const& handler) const;
+        auto ExternalTornOutTabsDropped(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabView2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabView2<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabViewExternalTornOutTabsDroppedEventArgs
+    {
+        [[nodiscard]] auto Items() const;
+        [[nodiscard]] auto Tabs() const;
+        [[nodiscard]] auto DropIndex() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewExternalTornOutTabsDroppedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabViewExternalTornOutTabsDroppingEventArgs
+    {
+        [[nodiscard]] auto Items() const;
+        [[nodiscard]] auto Tabs() const;
+        [[nodiscard]] auto DropIndex() const;
+        [[nodiscard]] auto AllowDrop() const;
+        auto AllowDrop(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewExternalTornOutTabsDroppingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewExternalTornOutTabsDroppingEventArgs<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ITabViewFactory
     {
         auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
@@ -23458,6 +23683,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewStatics<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabViewStatics2
+    {
+        [[nodiscard]] auto CanTearOutTabsProperty() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewStatics2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewStatics2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ITabViewTabCloseRequestedEventArgs
     {
         [[nodiscard]] auto Item() const;
@@ -23500,6 +23734,29 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabDroppedOutsideEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewTabDroppedOutsideEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabViewTabTearOutRequestedEventArgs
+    {
+        [[nodiscard]] auto Items() const;
+        [[nodiscard]] auto Tabs() const;
+        [[nodiscard]] auto NewWindowId() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutRequestedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewTabTearOutRequestedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Controls_ITabViewTabTearOutWindowRequestedEventArgs
+    {
+        [[nodiscard]] auto Items() const;
+        [[nodiscard]] auto Tabs() const;
+        [[nodiscard]] auto NewWindowId() const;
+        auto NewWindowId(winrt::Microsoft::UI::WindowId const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Controls::ITabViewTabTearOutWindowRequestedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Controls_ITabViewTabTearOutWindowRequestedEventArgs<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Controls_ITeachingTip

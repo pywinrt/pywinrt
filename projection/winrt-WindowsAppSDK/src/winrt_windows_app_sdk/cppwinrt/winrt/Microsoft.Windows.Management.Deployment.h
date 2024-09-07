@@ -201,6 +201,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions)->get_AddPackageOptions(&value));
         return winrt::Microsoft::Windows::Management::Deployment::AddPackageOptions{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IEnsureReadyOptions2<D>::RegisterNewerIfAvailable() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2)->get_RegisterNewerIfAvailable(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IEnsureReadyOptions2<D>::RegisterNewerIfAvailable(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2)->put_RegisterNewerIfAvailable(value));
+    }
     template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager<D>::IsPackageReady(param::hstring const& package) const
     {
         bool result{};
@@ -405,11 +415,53 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager)->IsPackageRegistrationPendingForUser(*(void**)(&userSecurityId), *(void**)(&packageFamilyName), &result));
         return result;
     }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageReadyOrNewerAvailable(param::hstring const& package) const
+    {
+        winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageReadyOrNewerAvailable(*(void**)(&package), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageReadyOrNewerAvailableByUri(winrt::Windows::Foundation::Uri const& packageUri) const
+    {
+        winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageReadyOrNewerAvailableByUri(*(void**)(&packageUri), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageSetReadyOrNewerAvailable(winrt::Microsoft::Windows::Management::Deployment::PackageSet const& packageSet) const
+    {
+        winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageSetReadyOrNewerAvailable(*(void**)(&packageSet), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageProvisioned(param::hstring const& package) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageProvisioned(*(void**)(&package), &result));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageProvisionedByUri(winrt::Windows::Foundation::Uri const& packageUri) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageProvisionedByUri(*(void**)(&packageUri), &result));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManager2<D>::IsPackageSetProvisioned(winrt::Microsoft::Windows::Management::Deployment::PackageSet const& packageSet) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2)->IsPackageSetProvisioned(*(void**)(&packageSet), &result));
+        return result;
+    }
     template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics)->GetDefault(&result));
         return winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentManagerStatics2<D>::IsPackageDeploymentFeatureSupported(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature const& feature) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2)->IsPackageDeploymentFeatureSupported(static_cast<int32_t>(feature), &result));
+        return result;
     }
     template <typename D> auto consume_Microsoft_Windows_Management_Deployment_IPackageDeploymentResult<D>::Status() const
     {
@@ -1243,6 +1295,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2> : produce_base<D, winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>
+    {
+        int32_t __stdcall get_RegisterNewerIfAvailable(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().RegisterNewerIfAvailable());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_RegisterNewerIfAvailable(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RegisterNewerIfAvailable(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager> : produce_base<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager>
     {
         int32_t __stdcall IsPackageReady(void* package, bool* result) noexcept final try
@@ -1516,6 +1588,54 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2> : produce_base<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>
+    {
+        int32_t __stdcall IsPackageReadyOrNewerAvailable(void* package, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>(this->shim().IsPackageReadyOrNewerAvailable(*reinterpret_cast<hstring const*>(&package)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsPackageReadyOrNewerAvailableByUri(void* packageUri, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>(this->shim().IsPackageReadyOrNewerAvailableByUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&packageUri)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsPackageSetReadyOrNewerAvailable(void* packageSet, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>(this->shim().IsPackageSetReadyOrNewerAvailable(*reinterpret_cast<winrt::Microsoft::Windows::Management::Deployment::PackageSet const*>(&packageSet)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsPackageProvisioned(void* package, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsPackageProvisioned(*reinterpret_cast<hstring const*>(&package)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsPackageProvisionedByUri(void* packageUri, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsPackageProvisionedByUri(*reinterpret_cast<winrt::Windows::Foundation::Uri const*>(&packageUri)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsPackageSetProvisioned(void* packageSet, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsPackageSetProvisioned(*reinterpret_cast<winrt::Microsoft::Windows::Management::Deployment::PackageSet const*>(&packageSet)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics> : produce_base<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics>
     {
         int32_t __stdcall GetDefault(void** result) noexcept final try
@@ -1523,6 +1643,19 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager>(this->shim().GetDefault());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2> : produce_base<D, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2>
+    {
+        int32_t __stdcall IsPackageDeploymentFeatureSupported(int32_t feature, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsPackageDeploymentFeatureSupported(*reinterpret_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature const*>(&feature)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2389,6 +2522,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager(*)(IPackageDeploymentManagerStatics const&), PackageDeploymentManager, IPackageDeploymentManagerStatics>([](IPackageDeploymentManagerStatics const& f) { return f.GetDefault(); });
     }
+    inline auto PackageDeploymentManager::IsPackageDeploymentFeatureSupported(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature const& feature)
+    {
+        return impl::call_factory<PackageDeploymentManager, IPackageDeploymentManagerStatics2>([&](IPackageDeploymentManagerStatics2 const& f) { return f.IsPackageDeploymentFeatureSupported(feature); });
+    }
     inline auto PackageRuntimeManager::GetDefault()
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::Management::Deployment::PackageRuntimeManager(*)(IPackageRuntimeManagerStatics const&), PackageRuntimeManager, IPackageRuntimeManagerStatics>([](IPackageRuntimeManagerStatics const& f) { return f.GetDefault(); });
@@ -2443,8 +2580,11 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IAddPackageOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManagerStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Management::Deployment::IPackageRuntimeManagerStatics> : winrt::impl::hash_base {};

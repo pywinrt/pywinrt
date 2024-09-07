@@ -144,6 +144,7 @@ namespace py::wrapper::Microsoft::UI::Xaml::Automation::Peers
     using RichTextBlockAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>;
     using RichTextBlockOverflowAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>;
     using ScrollBarAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>;
+    using ScrollPresenterAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>;
     using ScrollViewerAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>;
     using SelectorAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>;
     using SelectorBarItemAutomationPeer = py::winrt_wrapper<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>;
@@ -954,6 +955,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ScrollBarAutomationPeer";
         static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
         static constexpr const char* type_name = "ScrollBarAutomationPeer";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.xaml.automation.peers.ScrollPresenterAutomationPeer";
+        static constexpr const char* module_name = "winrt.microsoft.ui.xaml.automation.peers";
+        static constexpr const char* type_name = "ScrollPresenterAutomationPeer";
     };
 
     template<>

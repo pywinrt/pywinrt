@@ -1214,6 +1214,67 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
+    static PyObject* EnsureReadyOptions_get_RegisterNewerIfAvailable(py::wrapper::Microsoft::Windows::Management::Deployment::EnsureReadyOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.EnsureReadyOptions", L"RegisterNewerIfAvailable");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RegisterNewerIfAvailable());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int EnsureReadyOptions_put_RegisterNewerIfAvailable(py::wrapper::Microsoft::Windows::Management::Deployment::EnsureReadyOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Management.Deployment.EnsureReadyOptions", L"RegisterNewerIfAvailable");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.RegisterNewerIfAvailable(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_EnsureReadyOptions(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Management::Deployment::EnsureReadyOptions>>();
@@ -1246,6 +1307,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyGetSetDef _getset_EnsureReadyOptions[] = {
         { "add_package_options", reinterpret_cast<getter>(EnsureReadyOptions_get_AddPackageOptions), nullptr, nullptr, nullptr },
+        { "register_newer_if_available", reinterpret_cast<getter>(EnsureReadyOptions_get_RegisterNewerIfAvailable), reinterpret_cast<setter>(EnsureReadyOptions_put_RegisterNewerIfAvailable), nullptr, nullptr },
         { }
     };
 
@@ -1665,6 +1727,120 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
+    static PyObject* PackageDeploymentManager_IsPackageDeploymentFeatureSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageDeploymentFeatureSupported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>(args, 0);
+
+                return py::convert(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentManager::IsPackageDeploymentFeatureSupported(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageDeploymentManager_IsPackageProvisioned(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageProvisioned", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.IsPackageProvisioned(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageDeploymentManager_IsPackageProvisionedByUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageProvisionedByUri", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+
+                return py::convert(self->obj.IsPackageProvisionedByUri(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PackageDeploymentManager_IsPackageReady(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1727,6 +1903,82 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(self->obj.IsPackageReadyByUri(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageDeploymentManager_IsPackageReadyOrNewerAvailable(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReadyOrNewerAvailable", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.IsPackageReadyOrNewerAvailable(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageDeploymentManager_IsPackageReadyOrNewerAvailableByUri(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageReadyOrNewerAvailableByUri", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+
+                return py::convert(self->obj.IsPackageReadyOrNewerAvailableByUri(param0));
             }
             catch (...)
             {
@@ -1818,6 +2070,44 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         }
     }
 
+    static PyObject* PackageDeploymentManager_IsPackageSetProvisioned(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageSetProvisioned", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
+
+                return py::convert(self->obj.IsPackageSetProvisioned(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PackageDeploymentManager_IsPackageSetReady(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1842,6 +2132,44 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
 
                 return py::convert(self->obj.IsPackageSetReady(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageDeploymentManager_IsPackageSetReadyOrNewerAvailable(py::wrapper::Microsoft::Windows::Management::Deployment::PackageDeploymentManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Management.Deployment.PackageDeploymentManager", L"IsPackageSetReadyOrNewerAvailable", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Management::Deployment::PackageSet>(args, 0);
+
+                return py::convert(self->obj.IsPackageSetReadyOrNewerAvailable(param0));
             }
             catch (...)
             {
@@ -2664,11 +2992,17 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
         { "ensure_package_ready_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_EnsurePackageReadyAsync), METH_VARARGS, nullptr },
         { "ensure_package_ready_by_uri_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_EnsurePackageReadyByUriAsync), METH_VARARGS, nullptr },
         { "ensure_package_set_ready_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_EnsurePackageSetReadyAsync), METH_VARARGS, nullptr },
+        { "is_package_provisioned", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageProvisioned), METH_VARARGS, nullptr },
+        { "is_package_provisioned_by_uri", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageProvisionedByUri), METH_VARARGS, nullptr },
         { "is_package_ready", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageReady), METH_VARARGS, nullptr },
         { "is_package_ready_by_uri", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageReadyByUri), METH_VARARGS, nullptr },
+        { "is_package_ready_or_newer_available", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageReadyOrNewerAvailable), METH_VARARGS, nullptr },
+        { "is_package_ready_or_newer_available_by_uri", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageReadyOrNewerAvailableByUri), METH_VARARGS, nullptr },
         { "is_package_registration_pending", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageRegistrationPending), METH_VARARGS, nullptr },
         { "is_package_registration_pending_for_user", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageRegistrationPendingForUser), METH_VARARGS, nullptr },
+        { "is_package_set_provisioned", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageSetProvisioned), METH_VARARGS, nullptr },
         { "is_package_set_ready", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageSetReady), METH_VARARGS, nullptr },
+        { "is_package_set_ready_or_newer_available", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageSetReadyOrNewerAvailable), METH_VARARGS, nullptr },
         { "provision_package_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_ProvisionPackageAsync), METH_VARARGS, nullptr },
         { "provision_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_ProvisionPackageByUriAsync), METH_VARARGS, nullptr },
         { "provision_package_set_async", reinterpret_cast<PyCFunction>(PackageDeploymentManager_ProvisionPackageSetAsync), METH_VARARGS, nullptr },
@@ -2719,6 +3053,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyMethodDef methods_PackageDeploymentManager_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(PackageDeploymentManager_GetDefault), METH_VARARGS, nullptr },
+        { "is_package_deployment_feature_supported", reinterpret_cast<PyCFunction>(PackageDeploymentManager_IsPackageDeploymentFeatureSupported), METH_VARARGS, nullptr },
         { }
     };
 

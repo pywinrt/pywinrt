@@ -10,6 +10,7 @@ __all__ = [
     "CoreWebView2BrowserProcessExitKind",
     "CoreWebView2BrowsingDataKinds",
     "CoreWebView2CapturePreviewImageFormat",
+    "CoreWebView2ChannelSearchKind",
     "CoreWebView2ClientCertificateKind",
     "CoreWebView2ContextMenuItemKind",
     "CoreWebView2ContextMenuTargetKind",
@@ -18,6 +19,8 @@ __all__ = [
     "CoreWebView2DownloadInterruptReason",
     "CoreWebView2DownloadState",
     "CoreWebView2FaviconImageFormat",
+    "CoreWebView2FileSystemHandleKind",
+    "CoreWebView2FileSystemHandlePermission",
     "CoreWebView2FrameKind",
     "CoreWebView2HostResourceAccessKind",
     "CoreWebView2KeyEventKind",
@@ -26,6 +29,7 @@ __all__ = [
     "CoreWebView2MouseEventVirtualKeys",
     "CoreWebView2MoveFocusReason",
     "CoreWebView2NavigationKind",
+    "CoreWebView2NonClientRegionKind",
     "CoreWebView2PdfToolbarItems",
     "CoreWebView2PermissionKind",
     "CoreWebView2PermissionState",
@@ -41,12 +45,18 @@ __all__ = [
     "CoreWebView2ProcessFailedKind",
     "CoreWebView2ProcessFailedReason",
     "CoreWebView2ProcessKind",
+    "CoreWebView2ReleaseChannels",
+    "CoreWebView2SaveAsKind",
+    "CoreWebView2SaveAsUIResult",
     "CoreWebView2ScriptDialogKind",
+    "CoreWebView2ScrollbarStyle",
     "CoreWebView2ServerCertificateErrorAction",
     "CoreWebView2SharedBufferAccess",
+    "CoreWebView2TextDirectionKind",
     "CoreWebView2TrackingPreventionLevel",
     "CoreWebView2WebErrorStatus",
     "CoreWebView2WebResourceContext",
+    "CoreWebView2WebResourceRequestSourceKinds",
     "CoreWebView2PhysicalKeyStatus",
     "CoreWebView2",
     "CoreWebView2AcceleratorKeyPressedEventArgs",
@@ -75,7 +85,9 @@ __all__ = [
     "CoreWebView2DownloadStartingEventArgs",
     "CoreWebView2Environment",
     "CoreWebView2EnvironmentOptions",
+    "CoreWebView2ExecuteScriptResult",
     "CoreWebView2File",
+    "CoreWebView2FileSystemHandle",
     "CoreWebView2Frame",
     "CoreWebView2FrameCreatedEventArgs",
     "CoreWebView2FrameInfo",
@@ -87,6 +99,9 @@ __all__ = [
     "CoreWebView2NavigationCompletedEventArgs",
     "CoreWebView2NavigationStartingEventArgs",
     "CoreWebView2NewWindowRequestedEventArgs",
+    "CoreWebView2NonClientRegionChangedEventArgs",
+    "CoreWebView2Notification",
+    "CoreWebView2NotificationReceivedEventArgs",
     "CoreWebView2PermissionRequestedEventArgs",
     "CoreWebView2PermissionSetting",
     "CoreWebView2PointerInfo",
@@ -95,7 +110,9 @@ __all__ = [
     "CoreWebView2ProcessFailedEventArgs",
     "CoreWebView2ProcessInfo",
     "CoreWebView2Profile",
+    "CoreWebView2SaveAsUIShowingEventArgs",
     "CoreWebView2ScriptDialogOpeningEventArgs",
+    "CoreWebView2ScriptException",
     "CoreWebView2ServerCertificateErrorDetectedEventArgs",
     "CoreWebView2Settings",
     "CoreWebView2SharedBuffer",
@@ -139,6 +156,10 @@ class CoreWebView2BrowsingDataKinds(enum.IntFlag):
 class CoreWebView2CapturePreviewImageFormat(enum.IntEnum):
     PNG = 0
     JPEG = 1
+
+class CoreWebView2ChannelSearchKind(enum.IntEnum):
+    MOST_STABLE = 0
+    LEAST_STABLE = 1
 
 class CoreWebView2ClientCertificateKind(enum.IntEnum):
     SMART_CARD = 0
@@ -211,6 +232,14 @@ class CoreWebView2FaviconImageFormat(enum.IntEnum):
     PNG = 0
     JPEG = 1
 
+class CoreWebView2FileSystemHandleKind(enum.IntEnum):
+    FILE = 0
+    DIRECTORY = 1
+
+class CoreWebView2FileSystemHandlePermission(enum.IntEnum):
+    READ_ONLY = 0
+    READ_WRITE = 1
+
 class CoreWebView2FrameKind(enum.IntEnum):
     UNKNOWN = 0
     MAIN_FRAME = 1
@@ -272,6 +301,11 @@ class CoreWebView2NavigationKind(enum.IntEnum):
     RELOAD = 0
     BACK_OR_FORWARD = 1
     NEW_DOCUMENT = 2
+
+class CoreWebView2NonClientRegionKind(enum.IntEnum):
+    NOWHERE = 0
+    CLIENT = 1
+    CAPTION = 2
 
 class CoreWebView2PdfToolbarItems(enum.IntFlag):
     NONE = 0x0
@@ -385,11 +419,35 @@ class CoreWebView2ProcessKind(enum.IntEnum):
     PPAPI_PLUGIN = 5
     PPAPI_BROKER = 6
 
+class CoreWebView2ReleaseChannels(enum.IntFlag):
+    NONE = 0x0
+    STABLE = 0x1
+    BETA = 0x2
+    DEV = 0x4
+    CANARY = 0x8
+
+class CoreWebView2SaveAsKind(enum.IntEnum):
+    DEFAULT = 0
+    HTML_ONLY = 1
+    SINGLE_FILE = 2
+    COMPLETE = 3
+
+class CoreWebView2SaveAsUIResult(enum.IntEnum):
+    SUCCESS = 0
+    INVALID_PATH = 1
+    FILE_ALREADY_EXISTS = 2
+    KIND_NOT_SUPPORTED = 3
+    CANCELLED = 4
+
 class CoreWebView2ScriptDialogKind(enum.IntEnum):
     ALERT = 0
     CONFIRM = 1
     PROMPT = 2
     BEFOREUNLOAD = 3
+
+class CoreWebView2ScrollbarStyle(enum.IntEnum):
+    DEFAULT = 0
+    FLUENT_OVERLAY = 1
 
 class CoreWebView2ServerCertificateErrorAction(enum.IntEnum):
     ALWAYS_ALLOW = 0
@@ -399,6 +457,11 @@ class CoreWebView2ServerCertificateErrorAction(enum.IntEnum):
 class CoreWebView2SharedBufferAccess(enum.IntEnum):
     READ_ONLY = 0
     READ_WRITE = 1
+
+class CoreWebView2TextDirectionKind(enum.IntEnum):
+    DEFAULT = 0
+    LEFT_TO_RIGHT = 1
+    RIGHT_TO_LEFT = 2
 
 class CoreWebView2TrackingPreventionLevel(enum.IntEnum):
     NONE = 0
@@ -446,6 +509,13 @@ class CoreWebView2WebResourceContext(enum.IntEnum):
     CSP_VIOLATION_REPORT = 15
     OTHER = 16
 
+class CoreWebView2WebResourceRequestSourceKinds(enum.IntFlag):
+    NONE = 0x0
+    DOCUMENT = 0x1
+    SHARED_WORKER = 0x2
+    SERVICE_WORKER = 0x4
+    ALL = 0xFFFFFFFF
+
 CoreWebView2PhysicalKeyStatus = _winrt_microsoft_web_webview2_core.CoreWebView2PhysicalKeyStatus
 CoreWebView2 = _winrt_microsoft_web_webview2_core.CoreWebView2
 CoreWebView2AcceleratorKeyPressedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2AcceleratorKeyPressedEventArgs
@@ -474,7 +544,9 @@ CoreWebView2DownloadOperation = _winrt_microsoft_web_webview2_core.CoreWebView2D
 CoreWebView2DownloadStartingEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2DownloadStartingEventArgs
 CoreWebView2Environment = _winrt_microsoft_web_webview2_core.CoreWebView2Environment
 CoreWebView2EnvironmentOptions = _winrt_microsoft_web_webview2_core.CoreWebView2EnvironmentOptions
+CoreWebView2ExecuteScriptResult = _winrt_microsoft_web_webview2_core.CoreWebView2ExecuteScriptResult
 CoreWebView2File = _winrt_microsoft_web_webview2_core.CoreWebView2File
+CoreWebView2FileSystemHandle = _winrt_microsoft_web_webview2_core.CoreWebView2FileSystemHandle
 CoreWebView2Frame = _winrt_microsoft_web_webview2_core.CoreWebView2Frame
 CoreWebView2FrameCreatedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2FrameCreatedEventArgs
 CoreWebView2FrameInfo = _winrt_microsoft_web_webview2_core.CoreWebView2FrameInfo
@@ -486,6 +558,9 @@ CoreWebView2MoveFocusRequestedEventArgs = _winrt_microsoft_web_webview2_core.Cor
 CoreWebView2NavigationCompletedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2NavigationCompletedEventArgs
 CoreWebView2NavigationStartingEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2NavigationStartingEventArgs
 CoreWebView2NewWindowRequestedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2NewWindowRequestedEventArgs
+CoreWebView2NonClientRegionChangedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2NonClientRegionChangedEventArgs
+CoreWebView2Notification = _winrt_microsoft_web_webview2_core.CoreWebView2Notification
+CoreWebView2NotificationReceivedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2NotificationReceivedEventArgs
 CoreWebView2PermissionRequestedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2PermissionRequestedEventArgs
 CoreWebView2PermissionSetting = _winrt_microsoft_web_webview2_core.CoreWebView2PermissionSetting
 CoreWebView2PointerInfo = _winrt_microsoft_web_webview2_core.CoreWebView2PointerInfo
@@ -494,7 +569,9 @@ CoreWebView2ProcessExtendedInfo = _winrt_microsoft_web_webview2_core.CoreWebView
 CoreWebView2ProcessFailedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2ProcessFailedEventArgs
 CoreWebView2ProcessInfo = _winrt_microsoft_web_webview2_core.CoreWebView2ProcessInfo
 CoreWebView2Profile = _winrt_microsoft_web_webview2_core.CoreWebView2Profile
+CoreWebView2SaveAsUIShowingEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2SaveAsUIShowingEventArgs
 CoreWebView2ScriptDialogOpeningEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2ScriptDialogOpeningEventArgs
+CoreWebView2ScriptException = _winrt_microsoft_web_webview2_core.CoreWebView2ScriptException
 CoreWebView2ServerCertificateErrorDetectedEventArgs = _winrt_microsoft_web_webview2_core.CoreWebView2ServerCertificateErrorDetectedEventArgs
 CoreWebView2Settings = _winrt_microsoft_web_webview2_core.CoreWebView2Settings
 CoreWebView2SharedBuffer = _winrt_microsoft_web_webview2_core.CoreWebView2SharedBuffer

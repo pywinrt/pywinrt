@@ -3,6 +3,7 @@
 #pragma once
 #ifndef WINRT_Microsoft_UI_2_H
 #define WINRT_Microsoft_UI_2_H
+#include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Microsoft.UI.1.h"
 WINRT_EXPORT namespace winrt::Microsoft::UI
 {
@@ -60,6 +61,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
         ColorHelper(std::nullptr_t) noexcept {}
         ColorHelper(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::IColorHelper(ptr, take_ownership_from_abi) {}
         static auto FromArgb(uint8_t a, uint8_t r, uint8_t g, uint8_t b);
+        static auto ToDisplayName(winrt::Windows::UI::Color const& color);
     };
     struct WINRT_IMPL_EMPTY_BASES Colors : winrt::Microsoft::UI::IColors
     {

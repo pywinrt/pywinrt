@@ -206,17 +206,13 @@ foreach(package ${packages} ${app_packages} ${interop_packages} ${app_interop_pa
     if (${package} STREQUAL "interop/winrt-Microsoft.UI.Interop")
         if (NOT CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
             # winrt/Microsoft.UI.Interop.h has stuff that other compilers don't like
-            target_compile_options(${package_target} PRIVATE
-                -Wno-unknown-pragmas
-                # https://github.com/microsoft/WindowsAppSDK/issues/4515
-                -Wno-missing-field-initializers
-            )
+            target_compile_options(${package_target} PRIVATE -Wno-unknown-pragmas)
         endif()
     endif()
 
     if (${package} STREQUAL "interop/winrt-Microsoft.Windows.ApplicationModel.DynamicDependency.Bootstrap")
         target_link_libraries(${package_target} PRIVATE "Microsoft.WindowsAppRuntime.Bootstrap")
-        install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win10-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
+        install(FILES "${WINDOWS_APP_SDK_PATH}/runtimes/win-${WINDOWS_APP_SDK_ARCH}/native/Microsoft.WindowsAppRuntime.Bootstrap.dll"
             DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     endif()
 endforeach()
