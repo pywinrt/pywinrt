@@ -106,6 +106,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls::Primitives
     struct RangeBase;
     struct RepeatButton;
     struct ScrollBar;
+    struct ScrollPresenter;
     struct Selector;
     struct Thumb;
     struct ToggleButton;
@@ -471,6 +472,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct IRichTextBlockOverflowAutomationPeerFactory;
     struct IScrollBarAutomationPeer;
     struct IScrollBarAutomationPeerFactory;
+    struct IScrollPresenterAutomationPeer;
+    struct IScrollPresenterAutomationPeerFactory;
     struct IScrollViewerAutomationPeer;
     struct IScrollViewerAutomationPeerFactory;
     struct ISelectorAutomationPeer;
@@ -597,6 +600,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
     struct RichTextBlockAutomationPeer;
     struct RichTextBlockOverflowAutomationPeer;
     struct ScrollBarAutomationPeer;
+    struct ScrollPresenterAutomationPeer;
     struct ScrollViewerAutomationPeer;
     struct SelectorAutomationPeer;
     struct SelectorBarItemAutomationPeer;
@@ -786,6 +790,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeerFactory>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeerFactory>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer>{ using type = interface_category; };
@@ -912,6 +918,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>{ using type = class_category; };
@@ -1029,6 +1036,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.RichTextBlockAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.RichTextBlockOverflowAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ScrollBarAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ScrollPresenterAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ScrollViewerAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.SelectorAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.SelectorBarItemAutomationPeer";
@@ -1227,6 +1235,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IRichTextBlockOverflowAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollBarAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollBarAutomationPeerFactory";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollPresenterAutomationPeer";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollPresenterAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeer";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeerFactory> = L"Microsoft.UI.Xaml.Automation.Peers.IScrollViewerAutomationPeerFactory";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer> = L"Microsoft.UI.Xaml.Automation.Peers.ISelectorAutomationPeer";
@@ -1434,6 +1444,8 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeerFactory>{ 0x3E7B3CED,0xBD1F,0x5851,{ 0x97,0xA4,0x1C,0x31,0x8F,0x60,0xD6,0x41 } }; // 3E7B3CED-BD1F-5851-97A4-1C318F60D641
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer>{ 0x028A26C4,0x05F7,0x58B2,{ 0xA8,0x1E,0xA7,0xAC,0x03,0x2F,0x75,0x6F } }; // 028A26C4-05F7-58B2-A81E-A7AC032F756F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeerFactory>{ 0xFC67A9CC,0xE914,0x532A,{ 0x87,0x17,0x0B,0x38,0x3E,0x21,0x57,0xF3 } }; // FC67A9CC-E914-532A-8717-0B383E2157F3
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer>{ 0x995A6964,0x607F,0x5D95,{ 0xBD,0xF9,0x18,0x70,0xA5,0xE8,0x2A,0x0C } }; // 995A6964-607F-5D95-BDF9-1870A5E82A0C
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeerFactory>{ 0x47E29168,0x5E30,0x5ABC,{ 0xB8,0x44,0x7D,0x89,0xB5,0xC3,0xEE,0xC0 } }; // 47E29168-5E30-5ABC-B844-7D89B5C3EEC0
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer>{ 0x25394BAD,0x6CA2,0x5E04,{ 0x95,0xFA,0x95,0x41,0x2C,0x1F,0x80,0xAC } }; // 25394BAD-6CA2-5E04-95FA-95412C1F80AC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeerFactory>{ 0x3F1578F9,0x60EC,0x5F7C,{ 0x8D,0x11,0x10,0xC5,0x35,0xA7,0x5A,0x12 } }; // 3F1578F9-60EC-5F7C-8D11-10C535A75A12
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer>{ 0x4BAC62BA,0xFB33,0x5F8B,{ 0x99,0x5E,0x0D,0xD9,0x34,0x31,0x29,0x4F } }; // 4BAC62BA-FB33-5F8B-995E-0DD93431294F
@@ -1560,6 +1572,7 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IRichTextBlockAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IRichTextBlockOverflowAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeer; };
+    template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorAutomationPeer; };
     template <> struct default_interface<winrt::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer>{ using type = winrt::Microsoft::UI::Xaml::Automation::Peers::ISelectorBarItemAutomationPeer; };
@@ -2747,6 +2760,19 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
         {
             virtual int32_t __stdcall CreateInstanceWithOwner(void*, void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeerFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void*, void**, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollViewerAutomationPeer>
@@ -4530,6 +4556,23 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollBarAutomationPeerFactory>
     {
         template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IScrollBarAutomationPeerFactory<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IScrollPresenterAutomationPeer
+    {
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeer>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IScrollPresenterAutomationPeer<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Xaml_Automation_Peers_IScrollPresenterAutomationPeerFactory
+    {
+        auto CreateInstance(winrt::Microsoft::UI::Xaml::Controls::Primitives::ScrollPresenter const& owner, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Xaml::Automation::Peers::IScrollPresenterAutomationPeerFactory>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Xaml_Automation_Peers_IScrollPresenterAutomationPeerFactory<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Xaml_Automation_Peers_IScrollViewerAutomationPeer

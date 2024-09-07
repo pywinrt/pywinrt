@@ -27,6 +27,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
         IColorHelperStatics(std::nullptr_t = nullptr) noexcept {}
         IColorHelperStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IColorHelperStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IColorHelperStatics2>
+    {
+        IColorHelperStatics2(std::nullptr_t = nullptr) noexcept {}
+        IColorHelperStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IColors :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IColors>

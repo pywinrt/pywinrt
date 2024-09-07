@@ -27,10 +27,16 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         return !(left == right);
     }
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2 : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2,
-        impl::require<CoreWebView2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PrivatePartial, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_10, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_11, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_12, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_13, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_14, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_15, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_16, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_17, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_18, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_19, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_20, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_9>
+        impl::require<CoreWebView2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PrivatePartial, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_10, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_11, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_12, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_13, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_14, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_15, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_16, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_17, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_18, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_19, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_20, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_21, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_22, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_9, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2>
     {
         CoreWebView2(std::nullptr_t) noexcept {}
         CoreWebView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2(ptr, take_ownership_from_abi) {}
+        using winrt::Microsoft::Web::WebView2::Core::ICoreWebView2::AddWebResourceRequestedFilter;
+        using impl::consume_t<CoreWebView2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual>::AddWebResourceRequestedFilter;
+        using winrt::Microsoft::Web::WebView2::Core::ICoreWebView2::PostWebMessageAsJson;
+        using impl::consume_t<CoreWebView2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2>::PostWebMessageAsJson;
+        using winrt::Microsoft::Web::WebView2::Core::ICoreWebView2::RemoveWebResourceRequestedFilter;
+        using impl::consume_t<CoreWebView2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual>::RemoveWebResourceRequestedFilter;
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2AcceleratorKeyPressedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2AcceleratorKeyPressedEventArgs,
         impl::require<CoreWebView2AcceleratorKeyPressedEventArgs, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2AcceleratorKeyPressedEventArgs2>
@@ -77,7 +83,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2CompositionController : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController,
         impl::base<CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>,
-        impl::require<CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PrivatePartialController, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller>
+        impl::require<CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PrivatePartialController, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Controller>
     {
         CoreWebView2CompositionController(std::nullptr_t) noexcept {}
         CoreWebView2CompositionController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController(ptr, take_ownership_from_abi) {}
@@ -166,7 +172,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2DownloadStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2DownloadStartingEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2Environment : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment,
-        impl::require<CoreWebView2Environment, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment10, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment11, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment12, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment13, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment9, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual>
+        impl::require<CoreWebView2Environment, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment10, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment11, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment12, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment13, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment9, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual>
     {
         CoreWebView2Environment(std::nullptr_t) noexcept {}
         CoreWebView2Environment(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment(ptr, take_ownership_from_abi) {}
@@ -179,18 +185,30 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         static auto GetAvailableBrowserVersionString();
         static auto GetAvailableBrowserVersionString(param::hstring const& browserExecutableFolder);
         static auto CompareBrowserVersionString(param::hstring const& browserVersionString1, param::hstring const& browserVersionString2);
+        static auto GetAvailableBrowserVersionString(param::hstring const& browserExecutableFolder, winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions const& options);
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2EnvironmentOptions : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions,
-        impl::require<CoreWebView2EnvironmentOptions, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual3>
+        impl::require<CoreWebView2EnvironmentOptions, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual3>
     {
         CoreWebView2EnvironmentOptions(std::nullptr_t) noexcept {}
         CoreWebView2EnvironmentOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions(ptr, take_ownership_from_abi) {}
         CoreWebView2EnvironmentOptions();
     };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2ExecuteScriptResult : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult,
+        impl::require<CoreWebView2ExecuteScriptResult, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult_Manual>
+    {
+        CoreWebView2ExecuteScriptResult(std::nullptr_t) noexcept {}
+        CoreWebView2ExecuteScriptResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2File : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File
     {
         CoreWebView2File(std::nullptr_t) noexcept {}
         CoreWebView2File(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2FileSystemHandle : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle
+    {
+        CoreWebView2FileSystemHandle(std::nullptr_t) noexcept {}
+        CoreWebView2FileSystemHandle(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2Frame : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame,
         impl::require<CoreWebView2Frame, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame5>
@@ -255,6 +273,22 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2NewWindowRequestedEventArgs(std::nullptr_t) noexcept {}
         CoreWebView2NewWindowRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NewWindowRequestedEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2NonClientRegionChangedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs
+    {
+        CoreWebView2NonClientRegionChangedEventArgs(std::nullptr_t) noexcept {}
+        CoreWebView2NonClientRegionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2Notification : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification,
+        impl::require<CoreWebView2Notification, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification_Manual2>
+    {
+        CoreWebView2Notification(std::nullptr_t) noexcept {}
+        CoreWebView2Notification(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2NotificationReceivedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs
+    {
+        CoreWebView2NotificationReceivedEventArgs(std::nullptr_t) noexcept {}
+        CoreWebView2NotificationReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2PermissionRequestedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs,
         impl::require<CoreWebView2PermissionRequestedEventArgs, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs3>
     {
@@ -283,7 +317,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2ProcessExtendedInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessExtendedInfo(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2ProcessFailedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs,
-        impl::require<CoreWebView2ProcessFailedEventArgs, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs2>
+        impl::require<CoreWebView2ProcessFailedEventArgs, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs3>
     {
         CoreWebView2ProcessFailedEventArgs(std::nullptr_t) noexcept {}
         CoreWebView2ProcessFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs(ptr, take_ownership_from_abi) {}
@@ -294,17 +328,27 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2ProcessInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessInfo(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2Profile : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile,
-        impl::require<CoreWebView2Profile, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8>
+        impl::require<CoreWebView2Profile, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8>
     {
         CoreWebView2Profile(std::nullptr_t) noexcept {}
         CoreWebView2Profile(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile(ptr, take_ownership_from_abi) {}
         using impl::consume_t<CoreWebView2Profile, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual>::ClearBrowsingDataAsync;
         using impl::consume_t<CoreWebView2Profile, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile2>::ClearBrowsingDataAsync;
     };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2SaveAsUIShowingEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs
+    {
+        CoreWebView2SaveAsUIShowingEventArgs(std::nullptr_t) noexcept {}
+        CoreWebView2SaveAsUIShowingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2ScriptDialogOpeningEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs
     {
         CoreWebView2ScriptDialogOpeningEventArgs(std::nullptr_t) noexcept {}
         CoreWebView2ScriptDialogOpeningEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2ScriptException : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException
+    {
+        CoreWebView2ScriptException(std::nullptr_t) noexcept {}
+        CoreWebView2ScriptException(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2ServerCertificateErrorDetectedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs
     {
@@ -312,7 +356,7 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2ServerCertificateErrorDetectedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES CoreWebView2Settings : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings,
-        impl::require<CoreWebView2Settings, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings_Manual>
+        impl::require<CoreWebView2Settings, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings2, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings3, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings4, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings5, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings6, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings7, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings8, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings_Manual>
     {
         CoreWebView2Settings(std::nullptr_t) noexcept {}
         CoreWebView2Settings(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings(ptr, take_ownership_from_abi) {}
@@ -339,7 +383,8 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         CoreWebView2WebResourceRequest(std::nullptr_t) noexcept {}
         CoreWebView2WebResourceRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequest(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES CoreWebView2WebResourceRequestedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs
+    struct WINRT_IMPL_EMPTY_BASES CoreWebView2WebResourceRequestedEventArgs : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs,
+        impl::require<CoreWebView2WebResourceRequestedEventArgs, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs2>
     {
         CoreWebView2WebResourceRequestedEventArgs(std::nullptr_t) noexcept {}
         CoreWebView2WebResourceRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs(ptr, take_ownership_from_abi) {}

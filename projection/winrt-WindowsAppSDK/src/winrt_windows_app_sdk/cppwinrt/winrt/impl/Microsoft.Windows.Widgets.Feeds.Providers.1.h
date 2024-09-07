@@ -27,6 +27,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         ICustomQueryParametersUpdateOptionsFactory(std::nullptr_t = nullptr) noexcept {}
         ICustomQueryParametersUpdateOptionsFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFeedAnalyticsInfoReportedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedAnalyticsInfoReportedArgs>
+    {
+        IFeedAnalyticsInfoReportedArgs(std::nullptr_t = nullptr) noexcept {}
+        IFeedAnalyticsInfoReportedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedAnnouncementInvokedTarget :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedAnnouncementInvokedTarget>
+    {
+        IFeedAnnouncementInvokedTarget(std::nullptr_t = nullptr) noexcept {}
+        IFeedAnnouncementInvokedTarget(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IFeedDisabledArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IFeedDisabledArgs>
@@ -41,12 +55,26 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         IFeedEnabledArgs(std::nullptr_t = nullptr) noexcept {}
         IFeedEnabledArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFeedErrorInfoReportedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedErrorInfoReportedArgs>
+    {
+        IFeedErrorInfoReportedArgs(std::nullptr_t = nullptr) noexcept {}
+        IFeedErrorInfoReportedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IFeedManager :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IFeedManager>
     {
         IFeedManager(std::nullptr_t = nullptr) noexcept {}
         IFeedManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedManager2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedManager2>
+    {
+        IFeedManager2(std::nullptr_t = nullptr) noexcept {}
+        IFeedManager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IFeedManagerStatics :
         winrt::Windows::Foundation::IInspectable,
@@ -55,12 +83,26 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         IFeedManagerStatics(std::nullptr_t = nullptr) noexcept {}
         IFeedManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFeedMessageReceivedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedMessageReceivedArgs>
+    {
+        IFeedMessageReceivedArgs(std::nullptr_t = nullptr) noexcept {}
+        IFeedMessageReceivedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IFeedProvider :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IFeedProvider>
     {
         IFeedProvider(std::nullptr_t = nullptr) noexcept {}
         IFeedProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedProviderAnalytics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedProviderAnalytics>
+    {
+        IFeedProviderAnalytics(std::nullptr_t = nullptr) noexcept {}
+        IFeedProviderAnalytics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IFeedProviderDisabledArgs :
         winrt::Windows::Foundation::IInspectable,
@@ -76,12 +118,61 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
         IFeedProviderEnabledArgs(std::nullptr_t = nullptr) noexcept {}
         IFeedProviderEnabledArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IFeedProviderErrors :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedProviderErrors>
+    {
+        IFeedProviderErrors(std::nullptr_t = nullptr) noexcept {}
+        IFeedProviderErrors(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IFeedProviderInfo :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IFeedProviderInfo>
     {
         IFeedProviderInfo(std::nullptr_t = nullptr) noexcept {}
         IFeedProviderInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedProviderMessage :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedProviderMessage>
+    {
+        IFeedProviderMessage(std::nullptr_t = nullptr) noexcept {}
+        IFeedProviderMessage(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedResourceProvider :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedResourceProvider>
+    {
+        IFeedResourceProvider(std::nullptr_t = nullptr) noexcept {}
+        IFeedResourceProvider(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedResourceRequest :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedResourceRequest>
+    {
+        IFeedResourceRequest(std::nullptr_t = nullptr) noexcept {}
+        IFeedResourceRequest(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedResourceRequestedArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedResourceRequestedArgs>
+    {
+        IFeedResourceRequestedArgs(std::nullptr_t = nullptr) noexcept {}
+        IFeedResourceRequestedArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedResourceResponse :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedResourceResponse>
+    {
+        IFeedResourceResponse(std::nullptr_t = nullptr) noexcept {}
+        IFeedResourceResponse(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IFeedResourceResponseFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IFeedResourceResponseFactory>
+    {
+        IFeedResourceResponseFactory(std::nullptr_t = nullptr) noexcept {}
+        IFeedResourceResponseFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

@@ -29,6 +29,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 }
 WINRT_EXPORT namespace winrt::Windows::Graphics
 {
+    struct PointInt32;
     struct RectInt32;
 }
 WINRT_EXPORT namespace winrt::Windows::System
@@ -135,6 +136,18 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         Person = 15,
         AppStarting = 16,
     };
+    enum class MoveSizeOperation : int32_t
+    {
+        Move = 0,
+        SizeBottom = 1,
+        SizeBottomLeft = 2,
+        SizeBottomRight = 3,
+        SizeLeft = 4,
+        SizeRight = 5,
+        SizeTop = 6,
+        SizeTopLeft = 7,
+        SizeTopRight = 8,
+    };
     enum class NonClientRegionKind : int32_t
     {
         Close = 0,
@@ -179,6 +192,9 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IContextMenuKeyEventArgs;
     struct ICrossSlidingEventArgs;
     struct IDraggingEventArgs;
+    struct IEnteredMoveSizeEventArgs;
+    struct IEnteringMoveSizeEventArgs;
+    struct IExitedMoveSizeEventArgs;
     struct IFocusChangedEventArgs;
     struct IFocusNavigationRequest;
     struct IFocusNavigationRequestEventArgs;
@@ -211,6 +227,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IInputLightDismissActionStatics;
     struct IInputLightDismissEventArgs;
     struct IInputNonClientPointerSource;
+    struct IInputNonClientPointerSource2;
     struct IInputNonClientPointerSourceStatics;
     struct IInputObject;
     struct IInputObjectFactory;
@@ -237,10 +254,15 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct IPointerPredictorStatics;
     struct IRightTappedEventArgs;
     struct ITappedEventArgs;
+    struct IWindowRectChangedEventArgs;
+    struct IWindowRectChangingEventArgs;
     struct CharacterReceivedEventArgs;
     struct ContextMenuKeyEventArgs;
     struct CrossSlidingEventArgs;
     struct DraggingEventArgs;
+    struct EnteredMoveSizeEventArgs;
+    struct EnteringMoveSizeEventArgs;
+    struct ExitedMoveSizeEventArgs;
     struct FocusChangedEventArgs;
     struct FocusNavigationRequest;
     struct FocusNavigationRequestEventArgs;
@@ -277,6 +299,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     struct PointerPredictor;
     struct RightTappedEventArgs;
     struct TappedEventArgs;
+    struct WindowRectChangedEventArgs;
+    struct WindowRectChangingEventArgs;
     struct CrossSlideThresholds;
     struct ManipulationDelta;
     struct ManipulationVelocities;
@@ -288,6 +312,9 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IDraggingEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IFocusChangedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IFocusNavigationRequest>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>{ using type = interface_category; };
@@ -320,6 +347,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSource>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputObject>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IInputObjectFactory>{ using type = interface_category; };
@@ -346,10 +374,15 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::IPointerPredictorStatics>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::IRightTappedEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::ITappedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::DraggingEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::FocusChangedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationRequest>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>{ using type = class_category; };
@@ -386,6 +419,8 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::PointerPredictor>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::RightTappedEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::TappedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>{ using type = class_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Microsoft::UI::Input::CrossSlidingState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::DraggingState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::FocusNavigationReason>{ using type = enum_category; };
@@ -395,6 +430,7 @@ namespace winrt::impl
     template <> struct category<winrt::Microsoft::UI::Input::InputActivationState>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::InputSystemCursorShape>{ using type = enum_category; };
+    template <> struct category<winrt::Microsoft::UI::Input::MoveSizeOperation>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::NonClientRegionKind>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::PointerDeviceType>{ using type = enum_category; };
     template <> struct category<winrt::Microsoft::UI::Input::PointerUpdateKind>{ using type = enum_category; };
@@ -407,6 +443,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs> = L"Microsoft.UI.Input.ContextMenuKeyEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingEventArgs> = L"Microsoft.UI.Input.CrossSlidingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::DraggingEventArgs> = L"Microsoft.UI.Input.DraggingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> = L"Microsoft.UI.Input.EnteredMoveSizeEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> = L"Microsoft.UI.Input.EnteringMoveSizeEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> = L"Microsoft.UI.Input.ExitedMoveSizeEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusChangedEventArgs> = L"Microsoft.UI.Input.FocusChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationRequest> = L"Microsoft.UI.Input.FocusNavigationRequest";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> = L"Microsoft.UI.Input.FocusNavigationRequestEventArgs";
@@ -443,6 +482,8 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerPredictor> = L"Microsoft.UI.Input.PointerPredictor";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::RightTappedEventArgs> = L"Microsoft.UI.Input.RightTappedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::TappedEventArgs> = L"Microsoft.UI.Input.TappedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> = L"Microsoft.UI.Input.WindowRectChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> = L"Microsoft.UI.Input.WindowRectChangingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::CrossSlidingState> = L"Microsoft.UI.Input.CrossSlidingState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::DraggingState> = L"Microsoft.UI.Input.DraggingState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::FocusNavigationReason> = L"Microsoft.UI.Input.FocusNavigationReason";
@@ -452,6 +493,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputActivationState> = L"Microsoft.UI.Input.InputActivationState";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputPointerSourceDeviceKinds> = L"Microsoft.UI.Input.InputPointerSourceDeviceKinds";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::InputSystemCursorShape> = L"Microsoft.UI.Input.InputSystemCursorShape";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::MoveSizeOperation> = L"Microsoft.UI.Input.MoveSizeOperation";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::NonClientRegionKind> = L"Microsoft.UI.Input.NonClientRegionKind";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerDeviceType> = L"Microsoft.UI.Input.PointerDeviceType";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::PointerUpdateKind> = L"Microsoft.UI.Input.PointerUpdateKind";
@@ -464,6 +506,9 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs> = L"Microsoft.UI.Input.IContextMenuKeyEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs> = L"Microsoft.UI.Input.ICrossSlidingEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IDraggingEventArgs> = L"Microsoft.UI.Input.IDraggingEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs> = L"Microsoft.UI.Input.IEnteredMoveSizeEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs> = L"Microsoft.UI.Input.IEnteringMoveSizeEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs> = L"Microsoft.UI.Input.IExitedMoveSizeEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusChangedEventArgs> = L"Microsoft.UI.Input.IFocusChangedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusNavigationRequest> = L"Microsoft.UI.Input.IFocusNavigationRequest";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs> = L"Microsoft.UI.Input.IFocusNavigationRequestEventArgs";
@@ -496,6 +541,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics> = L"Microsoft.UI.Input.IInputLightDismissActionStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs> = L"Microsoft.UI.Input.IInputLightDismissEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource> = L"Microsoft.UI.Input.IInputNonClientPointerSource";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2> = L"Microsoft.UI.Input.IInputNonClientPointerSource2";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics> = L"Microsoft.UI.Input.IInputNonClientPointerSourceStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputObject> = L"Microsoft.UI.Input.IInputObject";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IInputObjectFactory> = L"Microsoft.UI.Input.IInputObjectFactory";
@@ -522,10 +568,15 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IPointerPredictorStatics> = L"Microsoft.UI.Input.IPointerPredictorStatics";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IRightTappedEventArgs> = L"Microsoft.UI.Input.IRightTappedEventArgs";
     template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::ITappedEventArgs> = L"Microsoft.UI.Input.ITappedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> = L"Microsoft.UI.Input.IWindowRectChangedEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs> = L"Microsoft.UI.Input.IWindowRectChangingEventArgs";
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs>{ 0x36122718,0x9263,0x592B,{ 0x8D,0x87,0x8F,0x86,0x54,0x3F,0xFC,0x95 } }; // 36122718-9263-592B-8D87-8F86543FFC95
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs>{ 0xF6025762,0x9426,0x541A,{ 0xB6,0x47,0x03,0x7A,0xBD,0xBE,0xCE,0xFC } }; // F6025762-9426-541A-B647-037ABDBECEFC
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs>{ 0x7679641F,0xBA9F,0x543C,{ 0xA7,0xC8,0x62,0x29,0xA9,0x8F,0x89,0xEF } }; // 7679641F-BA9F-543C-A7C8-6229A98F89EF
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IDraggingEventArgs>{ 0x3EFB1B75,0x3D3B,0x550E,{ 0x96,0x3D,0x08,0x28,0xCA,0x76,0x12,0x8A } }; // 3EFB1B75-3D3B-550E-963D-0828CA76128A
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs>{ 0x698D28FE,0xD325,0x59E0,{ 0x98,0x34,0xB1,0x0F,0xC2,0xF7,0xBA,0x67 } }; // 698D28FE-D325-59E0-9834-B10FC2F7BA67
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs>{ 0x47C083B2,0x402B,0x51EC,{ 0x88,0x36,0xD4,0x86,0x79,0xFE,0xA6,0x95 } }; // 47C083B2-402B-51EC-8836-D48679FEA695
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs>{ 0xDF12A46E,0xDAEE,0x5DAC,{ 0xA6,0x78,0xD7,0xD5,0xE4,0xD0,0x89,0x3A } }; // DF12A46E-DAEE-5DAC-A678-D7D5E4D0893A
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusChangedEventArgs>{ 0xA039B115,0xDBDF,0x594C,{ 0x9B,0x86,0xDA,0x6A,0xA0,0x5C,0x9F,0xA2 } }; // A039B115-DBDF-594C-9B86-DA6AA05C9FA2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusNavigationRequest>{ 0x6D84BB83,0x9C84,0x5112,{ 0x85,0xE9,0x89,0x19,0xAC,0xF9,0x72,0x62 } }; // 6D84BB83-9C84-5112-85E9-8919ACF97262
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs>{ 0x35A63426,0xE271,0x59F9,{ 0xA2,0x31,0x0D,0x19,0x03,0x14,0xB4,0x15 } }; // 35A63426-E271-59F9-A231-0D190314B415
@@ -558,6 +609,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics>{ 0xED9B8DEF,0x6496,0x5169,{ 0x98,0x4D,0xD4,0x4B,0x4E,0x69,0x06,0x23 } }; // ED9B8DEF-6496-5169-984D-D44B4E690623
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs>{ 0x078660EE,0x07CA,0x5808,{ 0xB9,0x82,0xE6,0xE8,0x99,0xCF,0x09,0x8C } }; // 078660EE-07CA-5808-B982-E6E899CF098C
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource>{ 0x471732B4,0x3D07,0x5104,{ 0xB1,0x92,0xEB,0xAC,0xF7,0x1E,0x86,0xDF } }; // 471732B4-3D07-5104-B192-EBACF71E86DF
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>{ 0xDD2B10C4,0x7DE6,0x5C1D,{ 0xB4,0x38,0x06,0xDD,0xC9,0x94,0x05,0x8F } }; // DD2B10C4-7DE6-5C1D-B438-06DDC994058F
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>{ 0x7D0B775C,0x1903,0x5DC7,{ 0xBD,0x2F,0x7A,0x4B,0x31,0xF0,0xCF,0xF2 } }; // 7D0B775C-1903-5DC7-BD2F-7A4B31F0CFF2
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputObject>{ 0x42EDBC88,0xD386,0x544D,{ 0xB1,0xB8,0x68,0x61,0x7F,0xE6,0x82,0x82 } }; // 42EDBC88-D386-544D-B1B8-68617FE68282
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IInputObjectFactory>{ 0xF7786BC2,0xB0B8,0x5961,{ 0x9A,0x57,0xAE,0x19,0x9D,0x45,0x21,0x06 } }; // F7786BC2-B0B8-5961-9A57-AE199D452106
@@ -584,10 +636,15 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IPointerPredictorStatics>{ 0x78A8EF30,0x3E5C,0x55CD,{ 0x8F,0x85,0x65,0xAC,0x09,0xB1,0xA9,0x87 } }; // 78A8EF30-3E5C-55CD-8F85-65AC09B1A987
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IRightTappedEventArgs>{ 0x8FF73B39,0x887E,0x50A4,{ 0x85,0x00,0x77,0x95,0x30,0x39,0xDC,0xB4 } }; // 8FF73B39-887E-50A4-8500-77953039DCB4
     template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::ITappedEventArgs>{ 0xC3A01BB5,0x6076,0x5E0F,{ 0x87,0x1A,0x9D,0x94,0xA6,0xA8,0xF8,0x2B } }; // C3A01BB5-6076-5E0F-871A-9D94A6A8F82B
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>{ 0x8A885D28,0xD2D9,0x5DDA,{ 0x98,0x48,0xCD,0xF2,0x47,0x77,0x10,0x37 } }; // 8A885D28-D2D9-5DDA-9848-CDF247771037
+    template <> inline constexpr guid guid_v<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>{ 0xDB13ED3C,0xDEBC,0x5855,{ 0x8D,0x70,0x59,0x36,0xFD,0x81,0x34,0x57 } }; // DB13ED3C-DEBC-5855-8D70-5936FD813457
     template <> struct default_interface<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs>{ using type = winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>{ using type = winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>{ using type = winrt::Microsoft::UI::Input::ICrossSlidingEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::DraggingEventArgs>{ using type = winrt::Microsoft::UI::Input::IDraggingEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>{ using type = winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>{ using type = winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>{ using type = winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::FocusChangedEventArgs>{ using type = winrt::Microsoft::UI::Input::IFocusChangedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::FocusNavigationRequest>{ using type = winrt::Microsoft::UI::Input::IFocusNavigationRequest; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>{ using type = winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs; };
@@ -624,6 +681,8 @@ namespace winrt::impl
     template <> struct default_interface<winrt::Microsoft::UI::Input::PointerPredictor>{ using type = winrt::Microsoft::UI::Input::IPointerPredictor; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::RightTappedEventArgs>{ using type = winrt::Microsoft::UI::Input::IRightTappedEventArgs; };
     template <> struct default_interface<winrt::Microsoft::UI::Input::TappedEventArgs>{ using type = winrt::Microsoft::UI::Input::ITappedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>{ using type = winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs; };
+    template <> struct default_interface<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>{ using type = winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs; };
     template <> struct abi<winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -658,6 +717,32 @@ namespace winrt::impl
             virtual int32_t __stdcall get_DraggingState(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_PointerDeviceType(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_Position(winrt::Windows::Foundation::Point*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeOperation(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeOperation(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeWindowId(struct struct_Microsoft_UI_WindowId*) noexcept = 0;
+            virtual int32_t __stdcall put_MoveSizeWindowId(struct struct_Microsoft_UI_WindowId) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeOperation(int32_t*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Microsoft::UI::Input::IFocusChangedEventArgs>
@@ -991,6 +1076,22 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_RegionsChanged(winrt::event_token) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall add_EnteringMoveSize(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_EnteringMoveSize(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_EnteredMoveSize(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_EnteredMoveSize(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_WindowRectChanging(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_WindowRectChanging(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_WindowRectChanged(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_WindowRectChanged(winrt::event_token) noexcept = 0;
+            virtual int32_t __stdcall add_ExitedMoveSize(void*, winrt::event_token*) noexcept = 0;
+            virtual int32_t __stdcall remove_ExitedMoveSize(winrt::event_token) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -1260,6 +1361,31 @@ namespace winrt::impl
             virtual int32_t __stdcall get_TapCount(uint32_t*) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeOperation(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_OldWindowRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_NewWindowRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_MoveSizeOperation(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_OldWindowRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall get_NewWindowRect(struct struct_Windows_Graphics_RectInt32*) noexcept = 0;
+            virtual int32_t __stdcall put_NewWindowRect(struct struct_Windows_Graphics_RectInt32) noexcept = 0;
+            virtual int32_t __stdcall get_AllowRectChange(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_AllowRectChange(bool) noexcept = 0;
+            virtual int32_t __stdcall get_ShowWindow(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_ShowWindow(bool) noexcept = 0;
+        };
+    };
     template <typename D>
     struct consume_Microsoft_UI_Input_ICharacterReceivedEventArgs
     {
@@ -1303,6 +1429,38 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Input::IDraggingEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_IDraggingEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IEnteredMoveSizeEventArgs
+    {
+        [[nodiscard]] auto PointerScreenPoint() const;
+        [[nodiscard]] auto MoveSizeOperation() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IEnteredMoveSizeEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs
+    {
+        [[nodiscard]] auto PointerScreenPoint() const;
+        [[nodiscard]] auto MoveSizeOperation() const;
+        [[nodiscard]] auto MoveSizeWindowId() const;
+        auto MoveSizeWindowId(winrt::Microsoft::UI::WindowId const& value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IExitedMoveSizeEventArgs
+    {
+        [[nodiscard]] auto PointerScreenPoint() const;
+        [[nodiscard]] auto MoveSizeOperation() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IExitedMoveSizeEventArgs<D>;
     };
     template <typename D>
     struct consume_Microsoft_UI_Input_IFocusChangedEventArgs
@@ -1756,6 +1914,34 @@ namespace winrt::impl
         template <typename D> using type = consume_Microsoft_UI_Input_IInputNonClientPointerSource<D>;
     };
     template <typename D>
+    struct consume_Microsoft_UI_Input_IInputNonClientPointerSource2
+    {
+        auto EnteringMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> const& handler) const;
+        using EnteringMoveSize_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>::remove_EnteringMoveSize>;
+        [[nodiscard]] auto EnteringMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> const& handler) const;
+        auto EnteringMoveSize(winrt::event_token const& token) const noexcept;
+        auto EnteredMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> const& handler) const;
+        using EnteredMoveSize_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>::remove_EnteredMoveSize>;
+        [[nodiscard]] auto EnteredMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> const& handler) const;
+        auto EnteredMoveSize(winrt::event_token const& token) const noexcept;
+        auto WindowRectChanging(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> const& handler) const;
+        using WindowRectChanging_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>::remove_WindowRectChanging>;
+        [[nodiscard]] auto WindowRectChanging(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> const& handler) const;
+        auto WindowRectChanging(winrt::event_token const& token) const noexcept;
+        auto WindowRectChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> const& handler) const;
+        using WindowRectChanged_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>::remove_WindowRectChanged>;
+        [[nodiscard]] auto WindowRectChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> const& handler) const;
+        auto WindowRectChanged(winrt::event_token const& token) const noexcept;
+        auto ExitedMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> const& handler) const;
+        using ExitedMoveSize_revoker = impl::event_revoker<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2, &impl::abi_t<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>::remove_ExitedMoveSize>;
+        [[nodiscard]] auto ExitedMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> const& handler) const;
+        auto ExitedMoveSize(winrt::event_token const& token) const noexcept;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>;
+    };
+    template <typename D>
     struct consume_Microsoft_UI_Input_IInputNonClientPointerSourceStatics
     {
         auto GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const;
@@ -2095,6 +2281,35 @@ namespace winrt::impl
     template <> struct consume<winrt::Microsoft::UI::Input::ITappedEventArgs>
     {
         template <typename D> using type = consume_Microsoft_UI_Input_ITappedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IWindowRectChangedEventArgs
+    {
+        [[nodiscard]] auto PointerScreenPoint() const;
+        [[nodiscard]] auto MoveSizeOperation() const;
+        [[nodiscard]] auto OldWindowRect() const;
+        [[nodiscard]] auto NewWindowRect() const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Microsoft_UI_Input_IWindowRectChangingEventArgs
+    {
+        [[nodiscard]] auto PointerScreenPoint() const;
+        [[nodiscard]] auto MoveSizeOperation() const;
+        [[nodiscard]] auto OldWindowRect() const;
+        [[nodiscard]] auto NewWindowRect() const;
+        auto NewWindowRect(winrt::Windows::Graphics::RectInt32 const& value) const;
+        [[nodiscard]] auto AllowRectChange() const;
+        auto AllowRectChange(bool value) const;
+        [[nodiscard]] auto ShowWindow() const;
+        auto ShowWindow(bool value) const;
+    };
+    template <> struct consume<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>
+    {
+        template <typename D> using type = consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>;
     };
     struct struct_Microsoft_UI_Input_CrossSlideThresholds
     {

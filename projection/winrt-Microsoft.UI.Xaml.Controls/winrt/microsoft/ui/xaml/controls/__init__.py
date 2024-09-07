@@ -61,6 +61,7 @@ __all__ = [
     "ParallaxSourceOffsetKind",
     "PasswordRevealMode",
     "PipsPagerButtonVisibility",
+    "PipsPagerWrapMode",
     "PivotHeaderFocusVisualPlacement",
     "PivotSlideInAnimationGroup",
     "PlayerAnimationOptimization",
@@ -373,12 +374,16 @@ __all__ = [
     "SymbolIcon",
     "SymbolIconSource",
     "TabView",
+    "TabViewExternalTornOutTabsDroppedEventArgs",
+    "TabViewExternalTornOutTabsDroppingEventArgs",
     "TabViewItem",
     "TabViewItemTemplateSettings",
     "TabViewTabCloseRequestedEventArgs",
     "TabViewTabDragCompletedEventArgs",
     "TabViewTabDragStartingEventArgs",
     "TabViewTabDroppedOutsideEventArgs",
+    "TabViewTabTearOutRequestedEventArgs",
+    "TabViewTabTearOutWindowRequestedEventArgs",
     "TeachingTip",
     "TeachingTipClosedEventArgs",
     "TeachingTipClosingEventArgs",
@@ -708,6 +713,10 @@ class PipsPagerButtonVisibility(enum.IntEnum):
     VISIBLE = 0
     VISIBLE_ON_POINTER_OVER = 1
     COLLAPSED = 2
+
+class PipsPagerWrapMode(enum.IntEnum):
+    NONE = 0
+    WRAP = 1
 
 class PivotHeaderFocusVisualPlacement(enum.IntEnum):
     ITEM_HEADERS = 0
@@ -1413,12 +1422,16 @@ winrt.system._mixin_mutable_sequence(SwipeItems)
 SymbolIcon = _winrt_microsoft_ui_xaml_controls.SymbolIcon
 SymbolIconSource = _winrt_microsoft_ui_xaml_controls.SymbolIconSource
 TabView = _winrt_microsoft_ui_xaml_controls.TabView
+TabViewExternalTornOutTabsDroppedEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewExternalTornOutTabsDroppedEventArgs
+TabViewExternalTornOutTabsDroppingEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewExternalTornOutTabsDroppingEventArgs
 TabViewItem = _winrt_microsoft_ui_xaml_controls.TabViewItem
 TabViewItemTemplateSettings = _winrt_microsoft_ui_xaml_controls.TabViewItemTemplateSettings
 TabViewTabCloseRequestedEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabCloseRequestedEventArgs
 TabViewTabDragCompletedEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabDragCompletedEventArgs
 TabViewTabDragStartingEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabDragStartingEventArgs
 TabViewTabDroppedOutsideEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabDroppedOutsideEventArgs
+TabViewTabTearOutRequestedEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabTearOutRequestedEventArgs
+TabViewTabTearOutWindowRequestedEventArgs = _winrt_microsoft_ui_xaml_controls.TabViewTabTearOutWindowRequestedEventArgs
 TeachingTip = _winrt_microsoft_ui_xaml_controls.TeachingTip
 TeachingTipClosedEventArgs = _winrt_microsoft_ui_xaml_controls.TeachingTipClosedEventArgs
 TeachingTipClosingEventArgs = _winrt_microsoft_ui_xaml_controls.TeachingTipClosingEventArgs

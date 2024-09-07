@@ -51,6 +51,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::IColorHelperStatics)->FromArgb(a, r, g, b, put_abi(result)));
         return result;
     }
+    template <typename D> auto consume_Microsoft_UI_IColorHelperStatics2<D>::ToDisplayName(winrt::Windows::UI::Color const& color) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::IColorHelperStatics2)->ToDisplayName(impl::bind_in(color), &result));
+        return hstring{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_UI_IColorsStatics<D>::AliceBlue() const
     {
         winrt::Windows::UI::Color value{};
@@ -962,6 +968,20 @@ namespace winrt::impl
             zero_abi<winrt::Windows::UI::Color>(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::UI::Color>(this->shim().FromArgb(a, r, g, b));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::IColorHelperStatics2> : produce_base<D, winrt::Microsoft::UI::IColorHelperStatics2>
+    {
+        int32_t __stdcall ToDisplayName(struct struct_Windows_UI_Color color, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<hstring>(this->shim().ToDisplayName(*reinterpret_cast<winrt::Windows::UI::Color const*>(&color)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2114,6 +2134,10 @@ WINRT_EXPORT namespace winrt::Microsoft::UI
     {
         return impl::call_factory<ColorHelper, IColorHelperStatics>([&](IColorHelperStatics const& f) { return f.FromArgb(a, r, g, b); });
     }
+    inline auto ColorHelper::ToDisplayName(winrt::Windows::UI::Color const& color)
+    {
+        return impl::call_factory<ColorHelper, IColorHelperStatics2>([&](IColorHelperStatics2 const& f) { return f.ToDisplayName(color); });
+    }
     inline auto Colors::AliceBlue()
     {
         return impl::call_factory_cast<winrt::Windows::UI::Color(*)(IColorsStatics const&), Colors, IColorsStatics>([](IColorsStatics const& f) { return f.AliceBlue(); });
@@ -2723,6 +2747,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::IClosableNotifier> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::IColorHelper> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::IColorHelperStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::IColorHelperStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::IColors> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::IColorsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::ColorHelper> : winrt::impl::hash_base {};

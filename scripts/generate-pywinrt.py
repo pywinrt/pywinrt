@@ -66,6 +66,15 @@ subprocess.check_call(
     + include_args
 )
 
+# TODO: split WebView2 to a separate source package
+WEBVIEW2_PACKAGE_METADATA = (
+    REPO_ROOT_PATH
+    / "_tools"
+    / "Microsoft.Web.WebView2"
+    / "lib"
+    / "Microsoft.Web.WebView2.Core.winmd"
+)
+
 # generate code for windows app sdk
 
 WINDOWS_APP_SDK_PACKAGE_METADATA = (
@@ -90,6 +99,8 @@ subprocess.check_call(
         WINDOWS_APP_SDK_PACKAGE_METADATA,
         "--input",
         WINDOWS_APP_SDK_PACKAGE_METADATA2,
+        "--input",
+        WEBVIEW2_PACKAGE_METADATA,
         "--reference",
         WINDOWS_SDK,
         "--output",
@@ -120,7 +131,7 @@ subprocess.check_call(
         WINDOWS_SDK,
         "--output",
         PROJECTION_PATH,
-        "--component-dlls"
+        "--component-dlls",
     ]
 )
 

@@ -608,6 +608,428 @@ namespace py::cpp::Microsoft::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_DraggingEventArgs};
 
+    // ----- EnteredMoveSizeEventArgs class --------------------
+
+    static PyObject* _new_EnteredMoveSizeEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_EnteredMoveSizeEventArgs(py::wrapper::Microsoft::UI::Input::EnteredMoveSizeEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* EnteredMoveSizeEventArgs_get_MoveSizeOperation(py::wrapper::Microsoft::UI::Input::EnteredMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteredMoveSizeEventArgs", L"MoveSizeOperation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeOperation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* EnteredMoveSizeEventArgs_get_PointerScreenPoint(py::wrapper::Microsoft::UI::Input::EnteredMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteredMoveSizeEventArgs", L"PointerScreenPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerScreenPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_EnteredMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_EnteredMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_EnteredMoveSizeEventArgs[] = {
+        { "_assign_array_", _assign_array_EnteredMoveSizeEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_EnteredMoveSizeEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_EnteredMoveSizeEventArgs[] = {
+        { "move_size_operation", reinterpret_cast<getter>(EnteredMoveSizeEventArgs_get_MoveSizeOperation), nullptr, nullptr, nullptr },
+        { "pointer_screen_point", reinterpret_cast<getter>(EnteredMoveSizeEventArgs_get_PointerScreenPoint), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_EnteredMoveSizeEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_EnteredMoveSizeEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnteredMoveSizeEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_EnteredMoveSizeEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_EnteredMoveSizeEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EnteredMoveSizeEventArgs = {
+        "winrt._winrt_microsoft_ui_input.EnteredMoveSizeEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::EnteredMoveSizeEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_EnteredMoveSizeEventArgs};
+
+    // ----- EnteringMoveSizeEventArgs class --------------------
+
+    static PyObject* _new_EnteringMoveSizeEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_EnteringMoveSizeEventArgs(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* EnteringMoveSizeEventArgs_get_MoveSizeWindowId(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteringMoveSizeEventArgs", L"MoveSizeWindowId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeWindowId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int EnteringMoveSizeEventArgs_put_MoveSizeWindowId(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteringMoveSizeEventArgs", L"MoveSizeWindowId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(arg);
+
+            self->obj.MoveSizeWindowId(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* EnteringMoveSizeEventArgs_get_MoveSizeOperation(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteringMoveSizeEventArgs", L"MoveSizeOperation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeOperation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* EnteringMoveSizeEventArgs_get_PointerScreenPoint(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.EnteringMoveSizeEventArgs", L"PointerScreenPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerScreenPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_EnteringMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_EnteringMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_EnteringMoveSizeEventArgs[] = {
+        { "_assign_array_", _assign_array_EnteringMoveSizeEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_EnteringMoveSizeEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_EnteringMoveSizeEventArgs[] = {
+        { "move_size_window_id", reinterpret_cast<getter>(EnteringMoveSizeEventArgs_get_MoveSizeWindowId), reinterpret_cast<setter>(EnteringMoveSizeEventArgs_put_MoveSizeWindowId), nullptr, nullptr },
+        { "move_size_operation", reinterpret_cast<getter>(EnteringMoveSizeEventArgs_get_MoveSizeOperation), nullptr, nullptr, nullptr },
+        { "pointer_screen_point", reinterpret_cast<getter>(EnteringMoveSizeEventArgs_get_PointerScreenPoint), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_EnteringMoveSizeEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_EnteringMoveSizeEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_EnteringMoveSizeEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_EnteringMoveSizeEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_EnteringMoveSizeEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_EnteringMoveSizeEventArgs = {
+        "winrt._winrt_microsoft_ui_input.EnteringMoveSizeEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::EnteringMoveSizeEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_EnteringMoveSizeEventArgs};
+
+    // ----- ExitedMoveSizeEventArgs class --------------------
+
+    static PyObject* _new_ExitedMoveSizeEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_ExitedMoveSizeEventArgs(py::wrapper::Microsoft::UI::Input::ExitedMoveSizeEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ExitedMoveSizeEventArgs_get_MoveSizeOperation(py::wrapper::Microsoft::UI::Input::ExitedMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.ExitedMoveSizeEventArgs", L"MoveSizeOperation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeOperation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExitedMoveSizeEventArgs_get_PointerScreenPoint(py::wrapper::Microsoft::UI::Input::ExitedMoveSizeEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.ExitedMoveSizeEventArgs", L"PointerScreenPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerScreenPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ExitedMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ExitedMoveSizeEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ExitedMoveSizeEventArgs[] = {
+        { "_assign_array_", _assign_array_ExitedMoveSizeEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ExitedMoveSizeEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_ExitedMoveSizeEventArgs[] = {
+        { "move_size_operation", reinterpret_cast<getter>(ExitedMoveSizeEventArgs_get_MoveSizeOperation), nullptr, nullptr, nullptr },
+        { "pointer_screen_point", reinterpret_cast<getter>(ExitedMoveSizeEventArgs_get_PointerScreenPoint), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_ExitedMoveSizeEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ExitedMoveSizeEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ExitedMoveSizeEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ExitedMoveSizeEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ExitedMoveSizeEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ExitedMoveSizeEventArgs = {
+        "winrt._winrt_microsoft_ui_input.ExitedMoveSizeEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::ExitedMoveSizeEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ExitedMoveSizeEventArgs};
+
     // ----- FocusChangedEventArgs class --------------------
 
     static PyObject* _new_FocusChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6641,6 +7063,291 @@ namespace py::cpp::Microsoft::UI::Input
         }
     }
 
+    static PyObject* InputNonClientPointerSource_add_EnteredMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"EnteredMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>>(arg);
+
+            return py::convert(self->obj.EnteredMoveSize(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_remove_EnteredMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"EnteredMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.EnteredMoveSize(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_add_EnteringMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"EnteringMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>>(arg);
+
+            return py::convert(self->obj.EnteringMoveSize(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_remove_EnteringMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"EnteringMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.EnteringMoveSize(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_add_ExitedMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"ExitedMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>>(arg);
+
+            return py::convert(self->obj.ExitedMoveSize(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_remove_ExitedMoveSize(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"ExitedMoveSize");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ExitedMoveSize(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_add_WindowRectChanged(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"WindowRectChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>>(arg);
+
+            return py::convert(self->obj.WindowRectChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_remove_WindowRectChanged(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"WindowRectChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.WindowRectChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_add_WindowRectChanging(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"WindowRectChanging");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>>(arg);
+
+            return py::convert(self->obj.WindowRectChanging(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* InputNonClientPointerSource_remove_WindowRectChanging(py::wrapper::Microsoft::UI::Input::InputNonClientPointerSource* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Input.InputNonClientPointerSource", L"WindowRectChanging");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.WindowRectChanging(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_InputNonClientPointerSource(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::InputNonClientPointerSource>>();
@@ -6684,6 +7391,16 @@ namespace py::cpp::Microsoft::UI::Input
         { "remove_pointer_released", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_PointerReleased), METH_O, nullptr },
         { "add_regions_changed", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_RegionsChanged), METH_O, nullptr },
         { "remove_regions_changed", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_RegionsChanged), METH_O, nullptr },
+        { "add_entered_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_EnteredMoveSize), METH_O, nullptr },
+        { "remove_entered_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_EnteredMoveSize), METH_O, nullptr },
+        { "add_entering_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_EnteringMoveSize), METH_O, nullptr },
+        { "remove_entering_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_EnteringMoveSize), METH_O, nullptr },
+        { "add_exited_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_ExitedMoveSize), METH_O, nullptr },
+        { "remove_exited_move_size", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_ExitedMoveSize), METH_O, nullptr },
+        { "add_window_rect_changed", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_WindowRectChanged), METH_O, nullptr },
+        { "remove_window_rect_changed", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_WindowRectChanged), METH_O, nullptr },
+        { "add_window_rect_changing", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_add_WindowRectChanging), METH_O, nullptr },
+        { "remove_window_rect_changing", reinterpret_cast<PyCFunction>(InputNonClientPointerSource_remove_WindowRectChanging), METH_O, nullptr },
         { "_assign_array_", _assign_array_InputNonClientPointerSource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_InputNonClientPointerSource), METH_O | METH_STATIC, nullptr },
         { }
@@ -11391,6 +12108,513 @@ namespace py::cpp::Microsoft::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_TappedEventArgs};
 
+    // ----- WindowRectChangedEventArgs class --------------------
+
+    static PyObject* _new_WindowRectChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WindowRectChangedEventArgs(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WindowRectChangedEventArgs_get_MoveSizeOperation(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangedEventArgs", L"MoveSizeOperation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeOperation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowRectChangedEventArgs_get_NewWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangedEventArgs", L"NewWindowRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.NewWindowRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowRectChangedEventArgs_get_OldWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangedEventArgs", L"OldWindowRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OldWindowRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowRectChangedEventArgs_get_PointerScreenPoint(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangedEventArgs", L"PointerScreenPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerScreenPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WindowRectChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WindowRectChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WindowRectChangedEventArgs[] = {
+        { "_assign_array_", _assign_array_WindowRectChangedEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WindowRectChangedEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_WindowRectChangedEventArgs[] = {
+        { "move_size_operation", reinterpret_cast<getter>(WindowRectChangedEventArgs_get_MoveSizeOperation), nullptr, nullptr, nullptr },
+        { "new_window_rect", reinterpret_cast<getter>(WindowRectChangedEventArgs_get_NewWindowRect), nullptr, nullptr, nullptr },
+        { "old_window_rect", reinterpret_cast<getter>(WindowRectChangedEventArgs_get_OldWindowRect), nullptr, nullptr, nullptr },
+        { "pointer_screen_point", reinterpret_cast<getter>(WindowRectChangedEventArgs_get_PointerScreenPoint), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_WindowRectChangedEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WindowRectChangedEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowRectChangedEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowRectChangedEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowRectChangedEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowRectChangedEventArgs = {
+        "winrt._winrt_microsoft_ui_input.WindowRectChangedEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::WindowRectChangedEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WindowRectChangedEventArgs};
+
+    // ----- WindowRectChangingEventArgs class --------------------
+
+    static PyObject* _new_WindowRectChangingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WindowRectChangingEventArgs(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_ShowWindow(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"ShowWindow");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ShowWindow());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WindowRectChangingEventArgs_put_ShowWindow(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"ShowWindow");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.ShowWindow(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_NewWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"NewWindowRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.NewWindowRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WindowRectChangingEventArgs_put_NewWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"NewWindowRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(arg);
+
+            self->obj.NewWindowRect(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_AllowRectChange(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"AllowRectChange");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowRectChange());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WindowRectChangingEventArgs_put_AllowRectChange(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"AllowRectChange");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowRectChange(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_MoveSizeOperation(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"MoveSizeOperation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MoveSizeOperation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_OldWindowRect(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"OldWindowRect");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OldWindowRect());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowRectChangingEventArgs_get_PointerScreenPoint(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Input.WindowRectChangingEventArgs", L"PointerScreenPoint");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PointerScreenPoint());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WindowRectChangingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WindowRectChangingEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WindowRectChangingEventArgs[] = {
+        { "_assign_array_", _assign_array_WindowRectChangingEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WindowRectChangingEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_WindowRectChangingEventArgs[] = {
+        { "show_window", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_ShowWindow), reinterpret_cast<setter>(WindowRectChangingEventArgs_put_ShowWindow), nullptr, nullptr },
+        { "new_window_rect", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_NewWindowRect), reinterpret_cast<setter>(WindowRectChangingEventArgs_put_NewWindowRect), nullptr, nullptr },
+        { "allow_rect_change", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_AllowRectChange), reinterpret_cast<setter>(WindowRectChangingEventArgs_put_AllowRectChange), nullptr, nullptr },
+        { "move_size_operation", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_MoveSizeOperation), nullptr, nullptr, nullptr },
+        { "old_window_rect", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_OldWindowRect), nullptr, nullptr, nullptr },
+        { "pointer_screen_point", reinterpret_cast<getter>(WindowRectChangingEventArgs_get_PointerScreenPoint), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_WindowRectChangingEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WindowRectChangingEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WindowRectChangingEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WindowRectChangingEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WindowRectChangingEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WindowRectChangingEventArgs = {
+        "winrt._winrt_microsoft_ui_input.WindowRectChangingEventArgs",
+        sizeof(py::wrapper::Microsoft::UI::Input::WindowRectChangingEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WindowRectChangingEventArgs};
+
     // ----- IPointerPointTransform interface --------------------
 
     static PyObject* _new_IPointerPointTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12891,6 +14115,24 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle EnteredMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteredMoveSizeEventArgs, object_bases.get(), nullptr)};
+    if (!EnteredMoveSizeEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EnteringMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_EnteringMoveSizeEventArgs, object_bases.get(), nullptr)};
+    if (!EnteringMoveSizeEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExitedMoveSizeEventArgs_type{py::register_python_type(module.get(), &type_spec_ExitedMoveSizeEventArgs, object_bases.get(), nullptr)};
+    if (!ExitedMoveSizeEventArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle FocusChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_FocusChangedEventArgs, object_bases.get(), nullptr)};
     if (!FocusChangedEventArgs_type)
     {
@@ -13187,6 +14429,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
 
     py::pytype_handle TappedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr)};
     if (!TappedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WindowRectChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangedEventArgs, object_bases.get(), nullptr)};
+    if (!WindowRectChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WindowRectChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_WindowRectChangingEventArgs, object_bases.get(), nullptr)};
+    if (!WindowRectChangingEventArgs_type)
     {
         return nullptr;
     }

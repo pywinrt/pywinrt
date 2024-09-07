@@ -62,6 +62,44 @@ namespace py::cpp::Microsoft::UI
         }
     }
 
+    static PyObject* ColorHelper_ToDisplayName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.ColorHelper", L"ToDisplayName", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Color>(args, 0);
+
+                return py::convert(winrt::Microsoft::UI::ColorHelper::ToDisplayName(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ColorHelper(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::ColorHelper>>();
@@ -117,6 +155,7 @@ namespace py::cpp::Microsoft::UI
 
     static PyMethodDef methods_ColorHelper_Static[] = {
         { "from_argb", reinterpret_cast<PyCFunction>(ColorHelper_FromArgb), METH_VARARGS, nullptr },
+        { "to_display_name", reinterpret_cast<PyCFunction>(ColorHelper_ToDisplayName), METH_VARARGS, nullptr },
         { }
     };
 

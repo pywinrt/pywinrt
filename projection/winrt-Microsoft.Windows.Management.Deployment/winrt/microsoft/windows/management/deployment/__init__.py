@@ -6,8 +6,10 @@ import winrt.system
 from winrt import _winrt_microsoft_windows_management_deployment
 
 __all__ = [
+    "PackageDeploymentFeature",
     "PackageDeploymentProgressStatus",
     "PackageDeploymentStatus",
+    "PackageReadyOrNewerAvailableStatus",
     "StubPackageOption",
     "PackageDeploymentProgress",
     "AddPackageOptions",
@@ -26,6 +28,14 @@ __all__ = [
     "StagePackageOptions",
 ]
 
+class PackageDeploymentFeature(enum.IntEnum):
+    PACKAGE_URI_SCHEME_MS_UUP = 1
+    IS_PACKAGE_READY_OR_NEWER_AVAILABLE = 2
+    REMOVE_PACKAGE_BY_URI = 3
+    RESET_PACKAGE = 4
+    REPAIR_PACKAGE = 5
+    PROVISION_PACKAGE_FRAMEWORK = 6
+
 class PackageDeploymentProgressStatus(enum.IntEnum):
     QUEUED = 0
     IN_PROGRESS = 1
@@ -36,6 +46,11 @@ class PackageDeploymentStatus(enum.IntEnum):
     IN_PROGRESS = 0
     COMPLETED_SUCCESS = 1
     COMPLETED_FAILURE = 2
+
+class PackageReadyOrNewerAvailableStatus(enum.IntEnum):
+    NOT_READY = 0
+    READY = 1
+    NEWER_AVAILABLE = 2
 
 class StubPackageOption(enum.IntEnum):
     DEFAULT = 0

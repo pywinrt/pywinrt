@@ -242,6 +242,153 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_CustomQueryParametersUpdateOptions};
 
+    // ----- FeedAnalyticsInfoReportedArgs class --------------------
+
+    static PyObject* _new_FeedAnalyticsInfoReportedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FeedAnalyticsInfoReportedArgs(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedAnalyticsInfoReportedArgs_get_AnalyticsJson(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs", L"AnalyticsJson");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AnalyticsJson());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedAnalyticsInfoReportedArgs_get_FeedDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedAnalyticsInfoReportedArgs_get_FeedProviderDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedAnalyticsInfoReportedArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedProviderDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedAnalyticsInfoReportedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedAnalyticsInfoReportedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedAnalyticsInfoReportedArgs[] = {
+        { "_assign_array_", _assign_array_FeedAnalyticsInfoReportedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedAnalyticsInfoReportedArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedAnalyticsInfoReportedArgs[] = {
+        { "analytics_json", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_AnalyticsJson), nullptr, nullptr, nullptr },
+        { "feed_definition_id", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
+        { "feed_provider_definition_id", reinterpret_cast<getter>(FeedAnalyticsInfoReportedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedAnalyticsInfoReportedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedAnalyticsInfoReportedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedAnalyticsInfoReportedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedAnalyticsInfoReportedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedAnalyticsInfoReportedArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedAnalyticsInfoReportedArgs = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedAnalyticsInfoReportedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedAnalyticsInfoReportedArgs};
+
     // ----- FeedDisabledArgs class --------------------
 
     static PyObject* _new_FeedDisabledArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -482,6 +629,153 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_FeedEnabledArgs};
 
+    // ----- FeedErrorInfoReportedArgs class --------------------
+
+    static PyObject* _new_FeedErrorInfoReportedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FeedErrorInfoReportedArgs(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedErrorInfoReportedArgs_get_ErrorJson(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs", L"ErrorJson");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ErrorJson());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedErrorInfoReportedArgs_get_FeedDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedErrorInfoReportedArgs_get_FeedProviderDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedErrorInfoReportedArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedProviderDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedErrorInfoReportedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedErrorInfoReportedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedErrorInfoReportedArgs[] = {
+        { "_assign_array_", _assign_array_FeedErrorInfoReportedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedErrorInfoReportedArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedErrorInfoReportedArgs[] = {
+        { "error_json", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_ErrorJson), nullptr, nullptr, nullptr },
+        { "feed_definition_id", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
+        { "feed_provider_definition_id", reinterpret_cast<getter>(FeedErrorInfoReportedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedErrorInfoReportedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedErrorInfoReportedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedErrorInfoReportedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedErrorInfoReportedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedErrorInfoReportedArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedErrorInfoReportedArgs = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedErrorInfoReportedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedErrorInfoReportedArgs};
+
     // ----- FeedManager class --------------------
 
     static PyObject* _new_FeedManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -571,6 +865,47 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         }
     }
 
+    static PyObject* FeedManager_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"SendMessageToContent", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                self->obj.SendMessageToContent(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* FeedManager_SetCustomQueryParameters(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -595,6 +930,47 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
                 auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions>(args, 0);
 
                 self->obj.SetCustomQueryParameters(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedManager_TryShowAnnouncement(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedManager", L"TryShowAnnouncement", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>(args, 2);
+
+                self->obj.TryShowAnnouncement(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -636,7 +1012,9 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
 
     static PyMethodDef _methods_FeedManager[] = {
         { "get_enabled_feed_providers", reinterpret_cast<PyCFunction>(FeedManager_GetEnabledFeedProviders), METH_VARARGS, nullptr },
+        { "send_message_to_content", reinterpret_cast<PyCFunction>(FeedManager_SendMessageToContent), METH_VARARGS, nullptr },
         { "set_custom_query_parameters", reinterpret_cast<PyCFunction>(FeedManager_SetCustomQueryParameters), METH_VARARGS, nullptr },
+        { "try_show_announcement", reinterpret_cast<PyCFunction>(FeedManager_TryShowAnnouncement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FeedManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FeedManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -686,6 +1064,153 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         type_slots_FeedManager_Static
     };
+
+    // ----- FeedMessageReceivedArgs class --------------------
+
+    static PyObject* _new_FeedMessageReceivedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FeedMessageReceivedArgs(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedMessageReceivedArgs_get_FeedDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedMessageReceivedArgs_get_FeedProviderDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedProviderDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedMessageReceivedArgs_get_Message(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedMessageReceivedArgs", L"Message");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Message());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedMessageReceivedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedMessageReceivedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedMessageReceivedArgs[] = {
+        { "_assign_array_", _assign_array_FeedMessageReceivedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedMessageReceivedArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedMessageReceivedArgs[] = {
+        { "feed_definition_id", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
+        { "feed_provider_definition_id", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
+        { "message", reinterpret_cast<getter>(FeedMessageReceivedArgs_get_Message), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedMessageReceivedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedMessageReceivedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedMessageReceivedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedMessageReceivedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedMessageReceivedArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedMessageReceivedArgs = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedMessageReceivedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedMessageReceivedArgs};
 
     // ----- FeedProviderDisabledArgs class --------------------
 
@@ -993,6 +1518,872 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_FeedProviderInfo};
 
+    // ----- FeedResourceRequest class --------------------
+
+    static PyObject* _new_FeedResourceRequest(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FeedResourceRequest(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedResourceRequest_get_Method(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Method");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Method());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FeedResourceRequest_put_Method(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Method");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Method(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FeedResourceRequest_get_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Headers());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FeedResourceRequest_put_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::StringMap>(arg);
+
+            self->obj.Headers(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FeedResourceRequest_get_Content(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Content());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FeedResourceRequest_put_Content(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(arg);
+
+            self->obj.Content(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FeedResourceRequest_get_Uri(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequest", L"Uri");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Uri());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedResourceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedResourceRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedResourceRequest[] = {
+        { "_assign_array_", _assign_array_FeedResourceRequest, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceRequest), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedResourceRequest[] = {
+        { "method", reinterpret_cast<getter>(FeedResourceRequest_get_Method), reinterpret_cast<setter>(FeedResourceRequest_put_Method), nullptr, nullptr },
+        { "headers", reinterpret_cast<getter>(FeedResourceRequest_get_Headers), reinterpret_cast<setter>(FeedResourceRequest_put_Headers), nullptr, nullptr },
+        { "content", reinterpret_cast<getter>(FeedResourceRequest_get_Content), reinterpret_cast<setter>(FeedResourceRequest_put_Content), nullptr, nullptr },
+        { "uri", reinterpret_cast<getter>(FeedResourceRequest_get_Uri), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedResourceRequest[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceRequest) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceRequest) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceRequest) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceRequest) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedResourceRequest = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceRequest",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedResourceRequest};
+
+    // ----- FeedResourceRequestedArgs class --------------------
+
+    static PyObject* _new_FeedResourceRequestedArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_FeedResourceRequestedArgs(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedResourceRequestedArgs_GetDeferral(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"GetDeferral", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetDeferral());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedResourceRequestedArgs_get_Response(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"Response");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Response());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FeedResourceRequestedArgs_put_Response(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"Response");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>(arg);
+
+            self->obj.Response(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FeedResourceRequestedArgs_get_FeedDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"FeedDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedResourceRequestedArgs_get_FeedProviderDefinitionId(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"FeedProviderDefinitionId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FeedProviderDefinitionId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedResourceRequestedArgs_get_Request(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceRequestedArgs", L"Request");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Request());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedResourceRequestedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedResourceRequestedArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedResourceRequestedArgs[] = {
+        { "get_deferral", reinterpret_cast<PyCFunction>(FeedResourceRequestedArgs_GetDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_FeedResourceRequestedArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceRequestedArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedResourceRequestedArgs[] = {
+        { "response", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_Response), reinterpret_cast<setter>(FeedResourceRequestedArgs_put_Response), nullptr, nullptr },
+        { "feed_definition_id", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_FeedDefinitionId), nullptr, nullptr, nullptr },
+        { "feed_provider_definition_id", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_FeedProviderDefinitionId), nullptr, nullptr, nullptr },
+        { "request", reinterpret_cast<getter>(FeedResourceRequestedArgs_get_Request), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedResourceRequestedArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceRequestedArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceRequestedArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceRequestedArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceRequestedArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedResourceRequestedArgs = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceRequestedArgs",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedResourceRequestedArgs};
+
+    // ----- FeedResourceResponse class --------------------
+
+    static PyObject* _new_FeedResourceResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<int32_t>(args, 2);
+
+                winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse instance{param0, param1, param2};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_FeedResourceResponse(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* FeedResourceResponse_get_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Headers());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int FeedResourceResponse_put_Headers(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse", L"Headers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<winrt::hstring, winrt::hstring>>>(arg);
+
+            self->obj.Headers(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* FeedResourceResponse_get_Content(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Content());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedResourceResponse_get_ReasonPhrase(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse", L"ReasonPhrase");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ReasonPhrase());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* FeedResourceResponse_get_StatusCode(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.FeedResourceResponse", L"StatusCode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.StatusCode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_FeedResourceResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_FeedResourceResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_FeedResourceResponse[] = {
+        { "_assign_array_", _assign_array_FeedResourceResponse, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_FeedResourceResponse), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_FeedResourceResponse[] = {
+        { "headers", reinterpret_cast<getter>(FeedResourceResponse_get_Headers), reinterpret_cast<setter>(FeedResourceResponse_put_Headers), nullptr, nullptr },
+        { "content", reinterpret_cast<getter>(FeedResourceResponse_get_Content), nullptr, nullptr, nullptr },
+        { "reason_phrase", reinterpret_cast<getter>(FeedResourceResponse_get_ReasonPhrase), nullptr, nullptr, nullptr },
+        { "status_code", reinterpret_cast<getter>(FeedResourceResponse_get_StatusCode), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_FeedResourceResponse[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_FeedResourceResponse) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_FeedResourceResponse) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_FeedResourceResponse) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_FeedResourceResponse) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FeedResourceResponse = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.FeedResourceResponse",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_FeedResourceResponse};
+
+    // ----- IFeedAnnouncementInvokedTarget interface --------------------
+
+    static PyObject* _new_IFeedAnnouncementInvokedTarget(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedAnnouncementInvokedTarget(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedAnnouncementInvokedTarget_OnAnnouncementInvoked(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedAnnouncementInvokedTarget", L"OnAnnouncementInvoked", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs>(args, 0);
+
+                self->obj.OnAnnouncementInvoked(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedAnnouncementInvokedTarget(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedAnnouncementInvokedTarget(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedAnnouncementInvokedTarget[] = {
+        { "on_announcement_invoked", reinterpret_cast<PyCFunction>(IFeedAnnouncementInvokedTarget_OnAnnouncementInvoked), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedAnnouncementInvokedTarget, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedAnnouncementInvokedTarget), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedAnnouncementInvokedTarget[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedAnnouncementInvokedTarget[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedAnnouncementInvokedTarget) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedAnnouncementInvokedTarget) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedAnnouncementInvokedTarget) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedAnnouncementInvokedTarget) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedAnnouncementInvokedTarget = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedAnnouncementInvokedTarget",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedAnnouncementInvokedTarget};
+
     // ----- IFeedManager interface --------------------
 
     static PyObject* _new_IFeedManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1135,6 +2526,156 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedManager};
+
+    // ----- IFeedManager2 interface --------------------
+
+    static PyObject* _new_IFeedManager2(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedManager2(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedManager2_SendMessageToContent(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2", L"SendMessageToContent", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                self->obj.SendMessageToContent(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IFeedManager2_TryShowAnnouncement(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedManager2", L"TryShowAnnouncement", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement>(args, 2);
+
+                self->obj.TryShowAnnouncement(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedManager2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedManager2(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedManager2[] = {
+        { "send_message_to_content", reinterpret_cast<PyCFunction>(IFeedManager2_SendMessageToContent), METH_VARARGS, nullptr },
+        { "try_show_announcement", reinterpret_cast<PyCFunction>(IFeedManager2_TryShowAnnouncement), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedManager2, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedManager2), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedManager2[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedManager2[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedManager2) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedManager2) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedManager2) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedManager2) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedManager2 = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedManager2",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedManager2};
 
     // ----- IFeedProvider interface --------------------
 
@@ -1402,6 +2943,430 @@ namespace py::cpp::Microsoft::Windows::Widgets::Feeds::Providers
         Py_TPFLAGS_DEFAULT,
         _type_slots_IFeedProvider};
 
+    // ----- IFeedProviderAnalytics interface --------------------
+
+    static PyObject* _new_IFeedProviderAnalytics(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedProviderAnalytics(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedProviderAnalytics_OnAnalyticsInfoReported(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderAnalytics", L"OnAnalyticsInfoReported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs>(args, 0);
+
+                self->obj.OnAnalyticsInfoReported(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedProviderAnalytics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedProviderAnalytics(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedProviderAnalytics[] = {
+        { "on_analytics_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderAnalytics_OnAnalyticsInfoReported), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedProviderAnalytics, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderAnalytics), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedProviderAnalytics[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedProviderAnalytics[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderAnalytics) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderAnalytics) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderAnalytics) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderAnalytics) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedProviderAnalytics = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderAnalytics",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedProviderAnalytics};
+
+    // ----- IFeedProviderErrors interface --------------------
+
+    static PyObject* _new_IFeedProviderErrors(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedProviderErrors(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedProviderErrors_OnErrorInfoReported(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderErrors", L"OnErrorInfoReported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs>(args, 0);
+
+                self->obj.OnErrorInfoReported(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedProviderErrors(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedProviderErrors(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedProviderErrors[] = {
+        { "on_error_info_reported", reinterpret_cast<PyCFunction>(IFeedProviderErrors_OnErrorInfoReported), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedProviderErrors, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderErrors), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedProviderErrors[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedProviderErrors[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderErrors) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderErrors) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderErrors) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderErrors) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedProviderErrors = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderErrors",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedProviderErrors};
+
+    // ----- IFeedProviderMessage interface --------------------
+
+    static PyObject* _new_IFeedProviderMessage(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedProviderMessage(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedProviderMessage_OnMessageReceived(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedProviderMessage", L"OnMessageReceived", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs>(args, 0);
+
+                self->obj.OnMessageReceived(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedProviderMessage(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedProviderMessage[] = {
+        { "on_message_received", reinterpret_cast<PyCFunction>(IFeedProviderMessage_OnMessageReceived), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedProviderMessage, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedProviderMessage), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedProviderMessage[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedProviderMessage[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedProviderMessage) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedProviderMessage) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedProviderMessage) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedProviderMessage) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedProviderMessage = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedProviderMessage",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedProviderMessage};
+
+    // ----- IFeedResourceProvider interface --------------------
+
+    static PyObject* _new_IFeedResourceProvider(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IFeedResourceProvider(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IFeedResourceProvider_OnResourceRequested(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.Widgets.Feeds.Providers.IFeedResourceProvider", L"OnResourceRequested", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs>(args, 0);
+
+                self->obj.OnResourceRequested(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IFeedResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IFeedResourceProvider(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IFeedResourceProvider[] = {
+        { "on_resource_requested", reinterpret_cast<PyCFunction>(IFeedResourceProvider_OnResourceRequested), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IFeedResourceProvider, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IFeedResourceProvider), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IFeedResourceProvider[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IFeedResourceProvider[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IFeedResourceProvider) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IFeedResourceProvider) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IFeedResourceProvider) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IFeedResourceProvider) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IFeedResourceProvider = {
+        "winrt._winrt_microsoft_windows_widgets_feeds_providers.IFeedResourceProvider",
+        sizeof(py::wrapper::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IFeedResourceProvider};
+
     // ----- Microsoft.Windows.Widgets.Feeds.Providers Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.Windows.Widgets.Feeds.Providers");
@@ -1459,6 +3424,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle FeedAnalyticsInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedAnalyticsInfoReportedArgs, object_bases.get(), nullptr)};
+    if (!FeedAnalyticsInfoReportedArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle FeedDisabledArgs_type{py::register_python_type(module.get(), &type_spec_FeedDisabledArgs, object_bases.get(), nullptr)};
     if (!FeedDisabledArgs_type)
     {
@@ -1471,6 +3442,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle FeedErrorInfoReportedArgs_type{py::register_python_type(module.get(), &type_spec_FeedErrorInfoReportedArgs, object_bases.get(), nullptr)};
+    if (!FeedErrorInfoReportedArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_FeedManager_Static{PyType_FromSpec(&type_spec_FeedManager_Static)};
     if (!type_FeedManager_Static)
     {
@@ -1479,6 +3456,12 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
 
     py::pytype_handle FeedManager_type{py::register_python_type(module.get(), &type_spec_FeedManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FeedManager_Static.get()))};
     if (!FeedManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FeedMessageReceivedArgs_type{py::register_python_type(module.get(), &type_spec_FeedMessageReceivedArgs, object_bases.get(), nullptr)};
+    if (!FeedMessageReceivedArgs_type)
     {
         return nullptr;
     }
@@ -1501,14 +3484,68 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_windows_widgets_feeds_providers(void) noe
         return nullptr;
     }
 
+    py::pytype_handle FeedResourceRequest_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequest, object_bases.get(), nullptr)};
+    if (!FeedResourceRequest_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FeedResourceRequestedArgs_type{py::register_python_type(module.get(), &type_spec_FeedResourceRequestedArgs, object_bases.get(), nullptr)};
+    if (!FeedResourceRequestedArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FeedResourceResponse_type{py::register_python_type(module.get(), &type_spec_FeedResourceResponse, object_bases.get(), nullptr)};
+    if (!FeedResourceResponse_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedAnnouncementInvokedTarget_type{py::register_python_type(module.get(), &type_spec_IFeedAnnouncementInvokedTarget, object_bases.get(), nullptr)};
+    if (!IFeedAnnouncementInvokedTarget_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedManager_type{py::register_python_type(module.get(), &type_spec_IFeedManager, object_bases.get(), nullptr)};
     if (!IFeedManager_type)
     {
         return nullptr;
     }
 
+    py::pytype_handle IFeedManager2_type{py::register_python_type(module.get(), &type_spec_IFeedManager2, object_bases.get(), nullptr)};
+    if (!IFeedManager2_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle IFeedProvider_type{py::register_python_type(module.get(), &type_spec_IFeedProvider, object_bases.get(), nullptr)};
     if (!IFeedProvider_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedProviderAnalytics_type{py::register_python_type(module.get(), &type_spec_IFeedProviderAnalytics, object_bases.get(), nullptr)};
+    if (!IFeedProviderAnalytics_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedProviderErrors_type{py::register_python_type(module.get(), &type_spec_IFeedProviderErrors, object_bases.get(), nullptr)};
+    if (!IFeedProviderErrors_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedProviderMessage_type{py::register_python_type(module.get(), &type_spec_IFeedProviderMessage, object_bases.get(), nullptr)};
+    if (!IFeedProviderMessage_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IFeedResourceProvider_type{py::register_python_type(module.get(), &type_spec_IFeedResourceProvider, object_bases.get(), nullptr)};
+    if (!IFeedResourceProvider_type)
     {
         return nullptr;
     }

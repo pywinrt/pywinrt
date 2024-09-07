@@ -25,17 +25,20 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Management::Deployment
         AddPackageOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Management::Deployment::IAddPackageOptions(ptr, take_ownership_from_abi) {}
         AddPackageOptions();
     };
-    struct WINRT_IMPL_EMPTY_BASES EnsureReadyOptions : winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions
+    struct WINRT_IMPL_EMPTY_BASES EnsureReadyOptions : winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions,
+        impl::require<EnsureReadyOptions, winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions2>
     {
         EnsureReadyOptions(std::nullptr_t) noexcept {}
         EnsureReadyOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Management::Deployment::IEnsureReadyOptions(ptr, take_ownership_from_abi) {}
         EnsureReadyOptions();
     };
-    struct WINRT_IMPL_EMPTY_BASES PackageDeploymentManager : winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager
+    struct WINRT_IMPL_EMPTY_BASES PackageDeploymentManager : winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager,
+        impl::require<PackageDeploymentManager, winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager2>
     {
         PackageDeploymentManager(std::nullptr_t) noexcept {}
         PackageDeploymentManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentManager(ptr, take_ownership_from_abi) {}
         static auto GetDefault();
+        static auto IsPackageDeploymentFeatureSupported(winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature const& feature);
     };
     struct WINRT_IMPL_EMPTY_BASES PackageDeploymentResult : winrt::Microsoft::Windows::Management::Deployment::IPackageDeploymentResult
     {

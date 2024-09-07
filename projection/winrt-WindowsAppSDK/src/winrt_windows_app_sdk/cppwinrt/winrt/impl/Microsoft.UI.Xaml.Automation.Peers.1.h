@@ -1140,6 +1140,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Automation::Peers
         IScrollBarAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
         IScrollBarAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IScrollPresenterAutomationPeer :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollPresenterAutomationPeer>
+    {
+        IScrollPresenterAutomationPeer(std::nullptr_t = nullptr) noexcept {}
+        IScrollPresenterAutomationPeer(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IScrollPresenterAutomationPeerFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IScrollPresenterAutomationPeerFactory>
+    {
+        IScrollPresenterAutomationPeerFactory(std::nullptr_t = nullptr) noexcept {}
+        IScrollPresenterAutomationPeerFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IScrollViewerAutomationPeer :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IScrollViewerAutomationPeer>

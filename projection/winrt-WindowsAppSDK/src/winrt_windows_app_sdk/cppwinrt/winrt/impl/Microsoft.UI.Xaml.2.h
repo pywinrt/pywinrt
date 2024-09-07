@@ -924,7 +924,7 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml
         XamlResourceReferenceFailedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlResourceReferenceFailedEventArgs(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES XamlRoot : winrt::Microsoft::UI::Xaml::IXamlRoot,
-        impl::require<XamlRoot, winrt::Microsoft::UI::Xaml::IXamlRoot2>
+        impl::require<XamlRoot, winrt::Microsoft::UI::Xaml::IXamlRoot2, winrt::Microsoft::UI::Xaml::IXamlRoot3>
     {
         XamlRoot(std::nullptr_t) noexcept {}
         XamlRoot(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Xaml::IXamlRoot(ptr, take_ownership_from_abi) {}

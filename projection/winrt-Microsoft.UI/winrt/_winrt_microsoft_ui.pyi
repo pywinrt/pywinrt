@@ -34,6 +34,7 @@ class WindowId:
 @typing.final
 class ColorHelper_Static(type):
     def from_argb(cls, a: winrt.system.UInt8, r: winrt.system.UInt8, g: winrt.system.UInt8, b: winrt.system.UInt8, /) -> windows_ui.Color: ...
+    def to_display_name(cls, color: windows_ui.Color, /) -> str: ...
 
 @typing.final
 class ColorHelper(winrt.system.Object, metaclass=ColorHelper_Static):

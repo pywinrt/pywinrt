@@ -58,10 +58,16 @@ namespace py::wrapper::Microsoft::Windows::Management::Deployment
 namespace py
 {
     template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentStatus> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::StubPackageOption> = "i";
@@ -69,6 +75,14 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgress> = "T{i:status:d:progress:}";
 
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentFeature>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentFeature";
+        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr const char* type_name = "PackageDeploymentFeature";
+    };
 
     template<>
     struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageDeploymentProgressStatus>
@@ -84,6 +98,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageDeploymentStatus";
         static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
         static constexpr const char* type_name = "PackageDeploymentStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::Windows::Management::Deployment::PackageReadyOrNewerAvailableStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.windows.management.deployment.PackageReadyOrNewerAvailableStatus";
+        static constexpr const char* module_name = "winrt.microsoft.windows.management.deployment";
+        static constexpr const char* type_name = "PackageReadyOrNewerAvailableStatus";
     };
 
     template<>

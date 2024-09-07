@@ -7,6 +7,10 @@
 static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.240111.5"), "Mismatched C++/WinRT headers.");
 #define CPPWINRT_VERSION "2.0.240111.5"
 #include "winrt/Microsoft.Windows.Widgets.h"
+#include "winrt/impl/Microsoft.Windows.Widgets.Notifications.2.h"
+#include "winrt/impl/Windows.Foundation.2.h"
+#include "winrt/impl/Windows.Foundation.Collections.2.h"
+#include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Microsoft.Windows.Widgets.Feeds.Providers.2.h"
 namespace winrt::impl
 {
@@ -34,6 +38,28 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::ICustomQueryParametersUpdateOptionsFactory)->CreateInstance(*(void**)(&feedProviderDefinitionId), *(void**)(&customQueryParameters), &value));
         return winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedAnalyticsInfoReportedArgs<D>::FeedProviderDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs)->get_FeedProviderDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedAnalyticsInfoReportedArgs<D>::FeedDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs)->get_FeedDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedAnalyticsInfoReportedArgs<D>::AnalyticsJson() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs)->get_AnalyticsJson(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedAnnouncementInvokedTarget<D>::OnAnnouncementInvoked(winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs const& args) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget)->OnAnnouncementInvoked(*(void**)(&args)));
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedDisabledArgs<D>::FeedProviderDefinitionId() const
     {
         void* value{};
@@ -58,6 +84,24 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedEnabledArgs)->get_FeedDefinitionId(&value));
         return hstring{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedErrorInfoReportedArgs<D>::FeedProviderDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs)->get_FeedProviderDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedErrorInfoReportedArgs<D>::FeedDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs)->get_FeedDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedErrorInfoReportedArgs<D>::ErrorJson() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs)->get_ErrorJson(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager<D>::GetEnabledFeedProviders() const
     {
         uint32_t result_impl_size{};
@@ -69,11 +113,37 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager)->SetCustomQueryParameters(*(void**)(&options)));
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager2<D>::SendMessageToContent(param::hstring const& feedProviderDefinitionId, param::hstring const& feedDefinitionId, param::hstring const& message) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2)->SendMessageToContent(*(void**)(&feedProviderDefinitionId), *(void**)(&feedDefinitionId), *(void**)(&message)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManager2<D>::TryShowAnnouncement(param::hstring const& feedProviderDefinitionId, param::hstring const& feedDefinitionId, winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement const& announcement) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2)->TryShowAnnouncement(*(void**)(&feedProviderDefinitionId), *(void**)(&feedDefinitionId), *(void**)(&announcement)));
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedManagerStatics<D>::GetDefault() const
     {
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics)->GetDefault(&result));
         return winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedMessageReceivedArgs<D>::FeedProviderDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs)->get_FeedProviderDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedMessageReceivedArgs<D>::FeedDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs)->get_FeedDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedMessageReceivedArgs<D>::Message() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs)->get_Message(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProvider<D>::OnFeedProviderEnabled(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs const& args) const
     {
@@ -95,6 +165,10 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider)->OnCustomQueryParametersRequested(*(void**)(&args)));
     }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProviderAnalytics<D>::OnAnalyticsInfoReported(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs const& args) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics)->OnAnalyticsInfoReported(*(void**)(&args)));
+    }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProviderDisabledArgs<D>::FeedProviderDefinitionId() const
     {
         void* value{};
@@ -106,6 +180,10 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderEnabledArgs)->get_FeedProviderDefinitionId(&value));
         return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProviderErrors<D>::OnErrorInfoReported(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs const& args) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors)->OnErrorInfoReported(*(void**)(&args)));
     }
     template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProviderInfo<D>::FeedProviderDefinitionId() const
     {
@@ -119,6 +197,118 @@ namespace winrt::impl
         void** value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderInfo)->get_EnabledFeedDefinitionIds(&value_impl_size, &value));
         return com_array<hstring>{ value, value_impl_size, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedProviderMessage<D>::OnMessageReceived(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs const& args) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage)->OnMessageReceived(*(void**)(&args)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceProvider<D>::OnResourceRequested(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs const& args) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider)->OnResourceRequested(*(void**)(&args)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Uri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->get_Uri(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Method() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->get_Method(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Method(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->put_Method(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Content() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->get_Content(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Content(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->put_Content(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Headers() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->get_Headers(&value));
+        return winrt::Windows::Foundation::Collections::StringMap{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequest<D>::Headers(winrt::Windows::Foundation::Collections::StringMap const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest)->put_Headers(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::FeedProviderDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->get_FeedProviderDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::FeedDefinitionId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->get_FeedDefinitionId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::Request() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->get_Request(&value));
+        return winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::Response() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->get_Response(&value));
+        return winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::Response(winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->put_Response(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceRequestedArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponse<D>::Content() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse)->get_Content(&value));
+        return winrt::Windows::Storage::Streams::IRandomAccessStreamReference{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponse<D>::Headers() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse)->get_Headers(&value));
+        return winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponse<D>::Headers(param::async_iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse)->put_Headers(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponse<D>::ReasonPhrase() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse)->get_ReasonPhrase(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponse<D>::StatusCode() const
+    {
+        int32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse)->get_StatusCode(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Windows_Widgets_Feeds_Providers_IFeedResourceResponseFactory<D>::CreateInstance(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& content, param::hstring const& reasonPhrase, int32_t statusCode) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponseFactory)->CreateInstance(*(void**)(&content), *(void**)(&reasonPhrase), statusCode, &value));
+        return winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse{ value, take_ownership_from_abi };
     }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
@@ -172,6 +362,47 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs>
+    {
+        int32_t __stdcall get_FeedProviderDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedProviderDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FeedDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AnalyticsJson(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().AnalyticsJson());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget>
+    {
+        int32_t __stdcall OnAnnouncementInvoked(void* args) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnAnnouncementInvoked(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncementInvokedArgs const*>(&args));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedDisabledArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedDisabledArgs>
     {
         int32_t __stdcall get_FeedProviderDefinitionId(void** value) noexcept final try
@@ -214,6 +445,36 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs>
+    {
+        int32_t __stdcall get_FeedProviderDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedProviderDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FeedDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ErrorJson(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ErrorJson());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager>
     {
@@ -233,6 +494,24 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2>
+    {
+        int32_t __stdcall SendMessageToContent(void* feedProviderDefinitionId, void* feedDefinitionId, void* message) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SendMessageToContent(*reinterpret_cast<hstring const*>(&feedProviderDefinitionId), *reinterpret_cast<hstring const*>(&feedDefinitionId), *reinterpret_cast<hstring const*>(&message));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall TryShowAnnouncement(void* feedProviderDefinitionId, void* feedDefinitionId, void* announcement) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().TryShowAnnouncement(*reinterpret_cast<hstring const*>(&feedProviderDefinitionId), *reinterpret_cast<hstring const*>(&feedDefinitionId), *reinterpret_cast<winrt::Microsoft::Windows::Widgets::Notifications::FeedAnnouncement const*>(&announcement));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics>
@@ -242,6 +521,36 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager>(this->shim().GetDefault());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs>
+    {
+        int32_t __stdcall get_FeedProviderDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedProviderDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FeedDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Message(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Message());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -286,6 +595,17 @@ namespace winrt::impl
         }
         catch (...) { return to_hresult(); }
     };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics>
+    {
+        int32_t __stdcall OnAnalyticsInfoReported(void* args) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnAnalyticsInfoReported(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs const*>(&args));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderDisabledArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderDisabledArgs>
@@ -314,6 +634,17 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors>
+    {
+        int32_t __stdcall OnErrorInfoReported(void* args) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnErrorInfoReported(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs const*>(&args));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderInfo> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderInfo>
@@ -336,6 +667,198 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage>
+    {
+        int32_t __stdcall OnMessageReceived(void* args) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnMessageReceived(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs const*>(&args));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider>
+    {
+        int32_t __stdcall OnResourceRequested(void* args) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().OnResourceRequested(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs const*>(&args));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest>
+    {
+        int32_t __stdcall get_Uri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Uri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Method(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Method());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Method(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Method(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Content(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Content());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Content(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Content(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Headers(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::StringMap>(this->shim().Headers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Headers(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Headers(*reinterpret_cast<winrt::Windows::Foundation::Collections::StringMap const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs>
+    {
+        int32_t __stdcall get_FeedProviderDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedProviderDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_FeedDefinitionId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FeedDefinitionId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Request(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest>(this->shim().Request());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Response(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>(this->shim().Response());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Response(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Response(*reinterpret_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse>
+    {
+        int32_t __stdcall get_Content(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(this->shim().Content());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Headers(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>>(this->shim().Headers());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Headers(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Headers(*reinterpret_cast<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ReasonPhrase(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ReasonPhrase());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_StatusCode(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().StatusCode());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponseFactory> : produce_base<D, winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponseFactory>
+    {
+        int32_t __stdcall CreateInstance(void* content, void* reasonPhrase, int32_t statusCode, void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Storage::Streams::IRandomAccessStreamReference const*>(&content), *reinterpret_cast<hstring const*>(&reasonPhrase), statusCode));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
 {
@@ -347,6 +870,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Windows::Widgets::Feeds::Providers
     {
         return impl::call_factory_cast<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager(*)(IFeedManagerStatics const&), FeedManager, IFeedManagerStatics>([](IFeedManagerStatics const& f) { return f.GetDefault(); });
     }
+    inline FeedResourceResponse::FeedResourceResponse(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& content, param::hstring const& reasonPhrase, int32_t statusCode) :
+        FeedResourceResponse(impl::call_factory<FeedResourceResponse, IFeedResourceResponseFactory>([&](IFeedResourceResponseFactory const& f) { return f.CreateInstance(content, reasonPhrase, statusCode); }))
+    {
+    }
 }
 namespace std
 {
@@ -354,22 +881,41 @@ namespace std
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::ICustomQueryParametersRequestedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::ICustomQueryParametersUpdateOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::ICustomQueryParametersUpdateOptionsFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnalyticsInfoReportedArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedAnnouncementInvokedTarget> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedDisabledArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedEnabledArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedErrorInfoReportedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManager2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedManagerStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedMessageReceivedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderAnalytics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderDisabledArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderEnabledArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderErrors> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedProviderMessage> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceProvider> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceRequestedArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponse> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::IFeedResourceResponseFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersRequestedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::CustomQueryParametersUpdateOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedAnalyticsInfoReportedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedDisabledArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedEnabledArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedErrorInfoReportedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedManager> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedMessageReceivedArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderDisabledArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderEnabledArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedProviderInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequest> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceRequestedArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Windows::Widgets::Feeds::Providers::FeedResourceResponse> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

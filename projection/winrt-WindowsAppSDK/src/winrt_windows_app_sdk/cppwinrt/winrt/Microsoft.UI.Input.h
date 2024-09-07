@@ -86,6 +86,52 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IDraggingEventArgs)->get_Position(put_abi(value)));
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteredMoveSizeEventArgs<D>::PointerScreenPoint() const
+    {
+        winrt::Windows::Graphics::PointInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs)->get_PointerScreenPoint(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteredMoveSizeEventArgs<D>::MoveSizeOperation() const
+    {
+        winrt::Microsoft::UI::Input::MoveSizeOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs)->get_MoveSizeOperation(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs<D>::PointerScreenPoint() const
+    {
+        winrt::Windows::Graphics::PointInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs)->get_PointerScreenPoint(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs<D>::MoveSizeOperation() const
+    {
+        winrt::Microsoft::UI::Input::MoveSizeOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs)->get_MoveSizeOperation(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs<D>::MoveSizeWindowId() const
+    {
+        winrt::Microsoft::UI::WindowId value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs)->get_MoveSizeWindowId(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IEnteringMoveSizeEventArgs<D>::MoveSizeWindowId(winrt::Microsoft::UI::WindowId const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs)->put_MoveSizeWindowId(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IExitedMoveSizeEventArgs<D>::PointerScreenPoint() const
+    {
+        winrt::Windows::Graphics::PointInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs)->get_PointerScreenPoint(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IExitedMoveSizeEventArgs<D>::MoveSizeOperation() const
+    {
+        winrt::Microsoft::UI::Input::MoveSizeOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs)->get_MoveSizeOperation(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IFocusChangedEventArgs<D>::Handled() const
     {
         bool value{};
@@ -925,6 +971,76 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource)->remove_RegionsChanged(impl::bind_in(token));
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteringMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->add_EnteringMoveSize(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteringMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, EnteringMoveSize_revoker>(this, EnteringMoveSize(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteringMoveSize(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->remove_EnteringMoveSize(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteredMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->add_EnteredMoveSize(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteredMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, EnteredMoveSize_revoker>(this, EnteredMoveSize(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::EnteredMoveSize(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->remove_EnteredMoveSize(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanging(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->add_WindowRectChanging(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanging(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, WindowRectChanging_revoker>(this, WindowRectChanging(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanging(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->remove_WindowRectChanging(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->add_WindowRectChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, WindowRectChanged_revoker>(this, WindowRectChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::WindowRectChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->remove_WindowRectChanged(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::ExitedMoveSize(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->add_ExitedMoveSize(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::ExitedMoveSize(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, ExitedMoveSize_revoker>(this, ExitedMoveSize(handler));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSource2<D>::ExitedMoveSize(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IInputNonClientPointerSource2)->remove_ExitedMoveSize(impl::bind_in(token));
+    }
     template <typename D> auto consume_Microsoft_UI_Input_IInputNonClientPointerSourceStatics<D>::GetForWindowId(winrt::Microsoft::UI::WindowId const& windowId) const
     {
         void* result{};
@@ -1609,6 +1725,78 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::ITappedEventArgs)->get_TapCount(&value));
         return value;
     }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>::PointerScreenPoint() const
+    {
+        winrt::Windows::Graphics::PointInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs)->get_PointerScreenPoint(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>::MoveSizeOperation() const
+    {
+        winrt::Microsoft::UI::Input::MoveSizeOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs)->get_MoveSizeOperation(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>::OldWindowRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs)->get_OldWindowRect(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangedEventArgs<D>::NewWindowRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs)->get_NewWindowRect(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::PointerScreenPoint() const
+    {
+        winrt::Windows::Graphics::PointInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_PointerScreenPoint(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::MoveSizeOperation() const
+    {
+        winrt::Microsoft::UI::Input::MoveSizeOperation value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_MoveSizeOperation(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::OldWindowRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_OldWindowRect(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::NewWindowRect() const
+    {
+        winrt::Windows::Graphics::RectInt32 value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_NewWindowRect(put_abi(value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::NewWindowRect(winrt::Windows::Graphics::RectInt32 const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->put_NewWindowRect(impl::bind_in(value)));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::AllowRectChange() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_AllowRectChange(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::AllowRectChange(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->put_AllowRectChange(value));
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::ShowWindow() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->get_ShowWindow(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_UI_Input_IWindowRectChangingEventArgs<D>::ShowWindow(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs)->put_ShowWindow(value));
+    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::ICharacterReceivedEventArgs>
@@ -1715,6 +1903,84 @@ namespace winrt::impl
             zero_abi<winrt::Windows::Foundation::Point>(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Foundation::Point>(this->shim().Position());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs>
+    {
+        int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::PointInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::PointInt32>(this->shim().PointerScreenPoint());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeOperation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::MoveSizeOperation>(this->shim().MoveSizeOperation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs>
+    {
+        int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::PointInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::PointInt32>(this->shim().PointerScreenPoint());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeOperation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::MoveSizeOperation>(this->shim().MoveSizeOperation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeWindowId(struct struct_Microsoft_UI_WindowId* value) noexcept final try
+        {
+            zero_abi<winrt::Microsoft::UI::WindowId>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::WindowId>(this->shim().MoveSizeWindowId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_MoveSizeWindowId(struct struct_Microsoft_UI_WindowId value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().MoveSizeWindowId(*reinterpret_cast<winrt::Microsoft::UI::WindowId const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs>
+    {
+        int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::PointInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::PointInt32>(this->shim().PointerScreenPoint());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeOperation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::MoveSizeOperation>(this->shim().MoveSizeOperation());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2912,6 +3178,82 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IInputNonClientPointerSource2> : produce_base<D, winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>
+    {
+        int32_t __stdcall add_EnteringMoveSize(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().EnteringMoveSize(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_EnteringMoveSize(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().EnteringMoveSize(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_EnteredMoveSize(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().EnteredMoveSize(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_EnteredMoveSize(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().EnteredMoveSize(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_WindowRectChanging(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().WindowRectChanging(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_WindowRectChanging(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().WindowRectChanging(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_WindowRectChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().WindowRectChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_WindowRectChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().WindowRectChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall add_ExitedMoveSize(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ExitedMoveSize(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Input::InputNonClientPointerSource, winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ExitedMoveSize(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ExitedMoveSize(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics> : produce_base<D, winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics>
     {
         int32_t __stdcall GetForWindowId(struct struct_Microsoft_UI_WindowId windowId, void** result) noexcept final try
@@ -3895,6 +4237,115 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs>
+    {
+        int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::PointInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::PointInt32>(this->shim().PointerScreenPoint());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeOperation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::MoveSizeOperation>(this->shim().MoveSizeOperation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OldWindowRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().OldWindowRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NewWindowRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().NewWindowRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs> : produce_base<D, winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs>
+    {
+        int32_t __stdcall get_PointerScreenPoint(struct struct_Windows_Graphics_PointInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::PointInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::PointInt32>(this->shim().PointerScreenPoint());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_MoveSizeOperation(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::UI::Input::MoveSizeOperation>(this->shim().MoveSizeOperation());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_OldWindowRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().OldWindowRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_NewWindowRect(struct struct_Windows_Graphics_RectInt32* value) noexcept final try
+        {
+            zero_abi<winrt::Windows::Graphics::RectInt32>(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::RectInt32>(this->shim().NewWindowRect());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_NewWindowRect(struct struct_Windows_Graphics_RectInt32 value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NewWindowRect(*reinterpret_cast<winrt::Windows::Graphics::RectInt32 const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AllowRectChange(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllowRectChange());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowRectChange(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowRectChange(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ShowWindow(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ShowWindow());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ShowWindow(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ShowWindow(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::UI::Input
 {
@@ -4083,6 +4534,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IContextMenuKeyEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::ICrossSlidingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IDraggingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IFocusChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IFocusNavigationRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IFocusNavigationRequestEventArgs> : winrt::impl::hash_base {};
@@ -4115,6 +4569,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissActionStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputLightDismissEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSource> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSource2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputNonClientPointerSourceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputObject> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IInputObjectFactory> : winrt::impl::hash_base {};
@@ -4141,10 +4596,15 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::IPointerPredictorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::IRightTappedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::ITappedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::CharacterReceivedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::CrossSlidingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::DraggingEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::FocusChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::FocusNavigationRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs> : winrt::impl::hash_base {};
@@ -4181,6 +4641,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::UI::Input::PointerPredictor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::RightTappedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::UI::Input::TappedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

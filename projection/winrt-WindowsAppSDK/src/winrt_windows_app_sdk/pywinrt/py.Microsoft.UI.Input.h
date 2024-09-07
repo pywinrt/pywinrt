@@ -62,6 +62,9 @@ namespace py::wrapper::Microsoft::UI::Input
     using ContextMenuKeyEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ContextMenuKeyEventArgs>;
     using CrossSlidingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::CrossSlidingEventArgs>;
     using DraggingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::DraggingEventArgs>;
+    using EnteredMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>;
+    using EnteringMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>;
+    using ExitedMoveSizeEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>;
     using FocusChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusChangedEventArgs>;
     using FocusNavigationRequest = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequest>;
     using FocusNavigationRequestEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::FocusNavigationRequestEventArgs>;
@@ -98,6 +101,8 @@ namespace py::wrapper::Microsoft::UI::Input
     using PointerPredictor = py::winrt_wrapper<winrt::Microsoft::UI::Input::PointerPredictor>;
     using RightTappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::RightTappedEventArgs>;
     using TappedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::TappedEventArgs>;
+    using WindowRectChangedEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>;
+    using WindowRectChangingEventArgs = py::winrt_wrapper<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>;
     using IPointerPointTransform = py::winrt_wrapper<winrt::Microsoft::UI::Input::IPointerPointTransform>;
     using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::CrossSlideThresholds>;
     using ManipulationDelta = py::winrt_struct_wrapper<winrt::Microsoft::UI::Input::ManipulationDelta>;
@@ -133,6 +138,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::InputSystemCursorShape> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::MoveSizeOperation> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Microsoft::UI::Input::NonClientRegionKind> = "i";
@@ -232,6 +240,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Microsoft::UI::Input::MoveSizeOperation>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.MoveSizeOperation";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "MoveSizeOperation";
+    };
+
+    template<>
     struct py_type<winrt::Microsoft::UI::Input::NonClientRegionKind>
     {
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.NonClientRegionKind";
@@ -293,6 +309,30 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.DraggingEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
         static constexpr const char* type_name = "DraggingEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::EnteredMoveSizeEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.EnteredMoveSizeEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "EnteredMoveSizeEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::EnteringMoveSizeEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.EnteringMoveSizeEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "EnteringMoveSizeEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::ExitedMoveSizeEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.ExitedMoveSizeEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "ExitedMoveSizeEventArgs";
     };
 
     template<>
@@ -581,6 +621,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.TappedEventArgs";
         static constexpr const char* module_name = "winrt.microsoft.ui.input";
         static constexpr const char* type_name = "TappedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::WindowRectChangedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.WindowRectChangedEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "WindowRectChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Microsoft::UI::Input::WindowRectChangingEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.microsoft.ui.input.WindowRectChangingEventArgs";
+        static constexpr const char* module_name = "winrt.microsoft.ui.input";
+        static constexpr const char* type_name = "WindowRectChangingEventArgs";
     };
 
     template<>

@@ -92,6 +92,21 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         DraggingEventArgs(std::nullptr_t) noexcept {}
         DraggingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IDraggingEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES EnteredMoveSizeEventArgs : winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs
+    {
+        EnteredMoveSizeEventArgs(std::nullptr_t) noexcept {}
+        EnteredMoveSizeEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IEnteredMoveSizeEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES EnteringMoveSizeEventArgs : winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs
+    {
+        EnteringMoveSizeEventArgs(std::nullptr_t) noexcept {}
+        EnteringMoveSizeEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IEnteringMoveSizeEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ExitedMoveSizeEventArgs : winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs
+    {
+        ExitedMoveSizeEventArgs(std::nullptr_t) noexcept {}
+        ExitedMoveSizeEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IExitedMoveSizeEventArgs(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES FocusChangedEventArgs : winrt::Microsoft::UI::Input::IFocusChangedEventArgs
     {
         FocusChangedEventArgs(std::nullptr_t) noexcept {}
@@ -205,7 +220,8 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
         InputLightDismissEventArgs(std::nullptr_t) noexcept {}
         InputLightDismissEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputLightDismissEventArgs(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES InputNonClientPointerSource : winrt::Microsoft::UI::Input::IInputNonClientPointerSource
+    struct WINRT_IMPL_EMPTY_BASES InputNonClientPointerSource : winrt::Microsoft::UI::Input::IInputNonClientPointerSource,
+        impl::require<InputNonClientPointerSource, winrt::Microsoft::UI::Input::IInputNonClientPointerSource2>
     {
         InputNonClientPointerSource(std::nullptr_t) noexcept {}
         InputNonClientPointerSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IInputNonClientPointerSource(ptr, take_ownership_from_abi) {}
@@ -316,6 +332,16 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Input
     {
         TappedEventArgs(std::nullptr_t) noexcept {}
         TappedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::ITappedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES WindowRectChangedEventArgs : winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs
+    {
+        WindowRectChangedEventArgs(std::nullptr_t) noexcept {}
+        WindowRectChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IWindowRectChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES WindowRectChangingEventArgs : winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs
+    {
+        WindowRectChangingEventArgs(std::nullptr_t) noexcept {}
+        WindowRectChangingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Microsoft::UI::Input::IWindowRectChangingEventArgs(ptr, take_ownership_from_abi) {}
     };
 }
 #endif

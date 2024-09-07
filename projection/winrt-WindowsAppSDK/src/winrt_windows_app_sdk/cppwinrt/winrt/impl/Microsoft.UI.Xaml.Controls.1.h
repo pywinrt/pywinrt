@@ -2006,6 +2006,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IItemsWrapGrid(std::nullptr_t = nullptr) noexcept {}
         IItemsWrapGrid(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IItemsWrapGridFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IItemsWrapGridFactory>
+    {
+        IItemsWrapGridFactory(std::nullptr_t = nullptr) noexcept {}
+        IItemsWrapGridFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IItemsWrapGridStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IItemsWrapGridStatics>
@@ -3140,6 +3147,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         IPipsPager(std::nullptr_t = nullptr) noexcept {}
         IPipsPager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IPipsPager2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPipsPager2>
+    {
+        IPipsPager2(std::nullptr_t = nullptr) noexcept {}
+        IPipsPager2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IPipsPagerFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPipsPagerFactory>
@@ -3160,6 +3174,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         IPipsPagerStatics(std::nullptr_t = nullptr) noexcept {}
         IPipsPagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPipsPagerStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPipsPagerStatics2>
+    {
+        IPipsPagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IPipsPagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPipsPagerTemplateSettings :
         winrt::Windows::Foundation::IInspectable,
@@ -4148,6 +4169,27 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ITabView(std::nullptr_t = nullptr) noexcept {}
         ITabView(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ITabView2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabView2>
+    {
+        ITabView2(std::nullptr_t = nullptr) noexcept {}
+        ITabView2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITabViewExternalTornOutTabsDroppedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabViewExternalTornOutTabsDroppedEventArgs>
+    {
+        ITabViewExternalTornOutTabsDroppedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITabViewExternalTornOutTabsDroppedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITabViewExternalTornOutTabsDroppingEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabViewExternalTornOutTabsDroppingEventArgs>
+    {
+        ITabViewExternalTornOutTabsDroppingEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITabViewExternalTornOutTabsDroppingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ITabViewFactory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ITabViewFactory>
@@ -4218,6 +4260,13 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
         ITabViewStatics(std::nullptr_t = nullptr) noexcept {}
         ITabViewStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES ITabViewStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabViewStatics2>
+    {
+        ITabViewStatics2(std::nullptr_t = nullptr) noexcept {}
+        ITabViewStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ITabViewTabCloseRequestedEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ITabViewTabCloseRequestedEventArgs>
@@ -4245,6 +4294,20 @@ WINRT_EXPORT namespace winrt::Microsoft::UI::Xaml::Controls
     {
         ITabViewTabDroppedOutsideEventArgs(std::nullptr_t = nullptr) noexcept {}
         ITabViewTabDroppedOutsideEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITabViewTabTearOutRequestedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabViewTabTearOutRequestedEventArgs>
+    {
+        ITabViewTabTearOutRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITabViewTabTearOutRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES ITabViewTabTearOutWindowRequestedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ITabViewTabTearOutWindowRequestedEventArgs>
+    {
+        ITabViewTabTearOutWindowRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        ITabViewTabTearOutWindowRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES ITeachingTip :
         winrt::Windows::Foundation::IInspectable,

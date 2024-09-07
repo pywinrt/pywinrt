@@ -47,6 +47,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual2)->GetNonDefaultPermissionSettingsAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting>>{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_CoreWebView2Profile_Manual3<D>::GetBrowserExtensionsAsync() const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual3)->GetBrowserExtensionsAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2<D>::Settings() const
     {
         void* value{};
@@ -766,6 +772,32 @@ namespace winrt::impl
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController3<D>::DragLeave() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController3)->DragLeave());
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController4<D>::NonClientRegionChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4)->add_NonClientRegionChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController4<D>::NonClientRegionChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, NonClientRegionChanged_revoker>(this, NonClientRegionChanged(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController4<D>::NonClientRegionChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4)->remove_NonClientRegionChanged(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController4<D>::GetNonClientRegionAtPoint(winrt::Windows::Foundation::Point const& point) const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4)->GetNonClientRegionAtPoint(impl::bind_in(point), reinterpret_cast<int32_t*>(&result)));
+        return result;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2CompositionController4<D>::QueryNonClientRegion(winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind const& Kind) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4)->QueryNonClientRegion(static_cast<int32_t>(Kind), &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Rect>{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ContentLoadingEventArgs<D>::IsErrorPage() const
     {
@@ -1643,6 +1675,18 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment13)->GetProcessExtendedInfosAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessExtendedInfo>>{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Environment14<D>::CreateWebFileSystemFileHandle(param::hstring const& Path, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission const& Permission) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14)->CreateWebFileSystemFileHandle(*(void**)(&Path), static_cast<int32_t>(Permission), &result));
+        return winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Environment14<D>::CreateWebFileSystemDirectoryHandle(param::hstring const& Path, winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission const& Permission) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14)->CreateWebFileSystemDirectoryHandle(*(void**)(&Path), static_cast<int32_t>(Permission), &result));
+        return winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Environment2<D>::CreateWebResourceRequest(param::hstring const& uri, param::hstring const& Method, winrt::Windows::Storage::Streams::IRandomAccessStream const& postData, param::hstring const& Headers) const
     {
         void* result{};
@@ -1793,6 +1837,36 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions6)->put_AreBrowserExtensionsEnabled(value));
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions7<D>::ChannelSearchKind() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2ChannelSearchKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7)->get_ChannelSearchKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions7<D>::ChannelSearchKind(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ChannelSearchKind const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7)->put_ChannelSearchKind(static_cast<int32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions7<D>::ReleaseChannels() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2ReleaseChannels value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7)->get_ReleaseChannels(reinterpret_cast<uint32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions7<D>::ReleaseChannels(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ReleaseChannels const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7)->put_ReleaseChannels(static_cast<uint32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions8<D>::ScrollBarStyle() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScrollbarStyle value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8)->get_ScrollBarStyle(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions8<D>::ScrollBarStyle(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScrollbarStyle const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8)->put_ScrollBarStyle(static_cast<int32_t>(value)));
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentOptions_Manual3<D>::CustomSchemeRegistrations() const
     {
         void* value{};
@@ -1833,6 +1907,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics)->CompareBrowserVersionString(*(void**)(&browserVersionString1), *(void**)(&browserVersionString2), &result));
         return result;
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2EnvironmentStatics2<D>::GetAvailableBrowserVersionString(param::hstring const& browserExecutableFolder, winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions const& options) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics2)->GetAvailableBrowserVersionStringWithOptions(*(void**)(&browserExecutableFolder), *(void**)(&options), &result));
+        return hstring{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Environment_Manual<D>::CreateCoreWebView2ControllerAsync(winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference const& ParentWindow, winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerOptions const& options) const
     {
         void* operation{};
@@ -1845,11 +1925,53 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual)->CreateCoreWebView2CompositionControllerAsync(*(void**)(&ParentWindow), *(void**)(&options), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController>{ operation, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ExecuteScriptResult<D>::Succeeded() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult)->get_Succeeded(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ExecuteScriptResult<D>::ResultAsJson() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult)->get_ResultAsJson(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ExecuteScriptResult<D>::Exception() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult)->get_Exception(&value));
+        return winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ExecuteScriptResult_Manual<D>::TryGetResultAsString(hstring& stringResult) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult_Manual)->TryGetResultAsString(impl::bind_out(stringResult), &result));
+        return result;
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2File<D>::Path() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File)->get_Path(&value));
         return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2FileSystemHandle<D>::Kind() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandleKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle)->get_Kind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2FileSystemHandle<D>::Path() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle)->get_Path(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2FileSystemHandle<D>::Permission() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle)->get_Permission(reinterpret_cast<int32_t*>(&value)));
+        return value;
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Frame<D>::Name() const
     {
@@ -2272,6 +2394,144 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NewWindowRequestedEventArgs3)->get_OriginalSourceFrameInfo(&value));
         return winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NonClientRegionChangedEventArgs<D>::RegionKind() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs)->get_RegionKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Body() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Body(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Direction() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2TextDirectionKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Direction(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Language() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Language(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Tag() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Tag(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::IconUri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_IconUri(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Title() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Title(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::BadgeUri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_BadgeUri(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::BodyImageUri() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_BodyImageUri(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::ShouldRenotify() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_ShouldRenotify(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::RequiresInteraction() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_RequiresInteraction(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::IsSilent() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_IsSilent(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::Timestamp() const
+    {
+        double value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->get_Timestamp(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::CloseRequested(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->add_CloseRequested(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::CloseRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, CloseRequested_revoker>(this, CloseRequested(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::CloseRequested(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->remove_CloseRequested(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::ReportShown() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->ReportShown());
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::ReportClicked() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->ReportClicked());
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification<D>::ReportClosed() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification)->ReportClosed());
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NotificationReceivedEventArgs<D>::SenderOrigin() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs)->get_SenderOrigin(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NotificationReceivedEventArgs<D>::Notification() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs)->get_Notification(&value));
+        return winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NotificationReceivedEventArgs<D>::Handled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs)->get_Handled(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NotificationReceivedEventArgs<D>::Handled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs)->put_Handled(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2NotificationReceivedEventArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Notification_Manual2<D>::VibrationPattern() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification_Manual2)->get_VibrationPattern(&value));
+        return winrt::Windows::Foundation::Collections::IVectorView<uint64_t>{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2PermissionRequestedEventArgs<D>::Uri() const
     {
@@ -2883,6 +3143,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs2)->get_FrameInfosForFailedProcess(&value));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ProcessFailedEventArgs3<D>::FailureSourceModulePath() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs3)->get_FailureSourceModulePath(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ProcessInfo<D>::ProcessId() const
     {
         int32_t value{};
@@ -3005,6 +3271,68 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8)->Delete());
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::ContentMimeType() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_ContentMimeType(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::Cancel() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_Cancel(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::Cancel(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->put_Cancel(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::SuppressDefaultDialog() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_SuppressDefaultDialog(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::SuppressDefaultDialog(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->put_SuppressDefaultDialog(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::SaveAsFilePath() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_SaveAsFilePath(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::SaveAsFilePath(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->put_SaveAsFilePath(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::AllowReplace() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_AllowReplace(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::AllowReplace(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->put_AllowReplace(value));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::Kind() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->get_Kind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::Kind(winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsKind const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->put_Kind(static_cast<int32_t>(value)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2SaveAsUIShowingEventArgs<D>::GetDeferral() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs)->GetDeferral(&result));
+        return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptDialogOpeningEventArgs<D>::Uri() const
     {
         void* value{};
@@ -3048,6 +3376,36 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptException<D>::LineNumber() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException)->get_LineNumber(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptException<D>::ColumnNumber() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException)->get_ColumnNumber(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptException<D>::Name() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException)->get_Name(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptException<D>::Message() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException)->get_Message(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ScriptException<D>::ToJson() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException)->get_ToJson(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2ServerCertificateErrorDetectedEventArgs<D>::ErrorStatus() const
     {
@@ -3253,6 +3611,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings8)->put_IsReputationCheckingRequired(value));
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Settings9<D>::IsNonClientRegionSupportEnabled() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9)->get_IsNonClientRegionSupportEnabled(&value));
+        return value;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Settings9<D>::IsNonClientRegionSupportEnabled(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9)->put_IsNonClientRegionSupportEnabled(value));
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2Settings_Manual<D>::HostObjectDispatchAdapter() const
     {
         void* value{};
@@ -3374,6 +3742,12 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2WebResourceRequestedEventArgs2<D>::RequestedSourceKind() const
+    {
+        winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs2)->get_RequestedSourceKind(reinterpret_cast<uint32_t*>(&value)));
+        return value;
     }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2WebResourceResponse<D>::Content() const
     {
@@ -3707,6 +4081,46 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_20)->get_FrameId(&value));
         return value;
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_21<D>::ExecuteScriptWithResultAsync(param::hstring const& javaScript) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_21)->ExecuteScriptWithResultAsync(*(void**)(&javaScript), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_24<D>::NotificationReceived(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24)->add_NotificationReceived(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_24<D>::NotificationReceived(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, NotificationReceived_revoker>(this, NotificationReceived(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_24<D>::NotificationReceived(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24)->remove_NotificationReceived(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_25<D>::SaveAsUIShowing(winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25)->add_SaveAsUIShowing(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_25<D>::SaveAsUIShowing(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> const& handler) const
+    {
+        return impl::make_event_revoker<D, SaveAsUIShowing_revoker>(this, SaveAsUIShowing(handler));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_25<D>::SaveAsUIShowing(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25)->remove_SaveAsUIShowing(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_25<D>::ShowSaveAsUIAsync() const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25)->ShowSaveAsUIAsync(&operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIResult>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_3<D>::IsSuspended() const
     {
         bool value{};
@@ -3875,6 +4289,18 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_9)->CloseDefaultDownloadDialog());
     }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_Manual<D>::AddWebResourceRequestedFilter(param::hstring const& uri, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext const& resourceContext, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds const& requestSourceKinds) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual)->AddWebResourceRequestedFilter(*(void**)(&uri), static_cast<int32_t>(resourceContext), static_cast<uint32_t>(requestSourceKinds)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_Manual<D>::RemoveWebResourceRequestedFilter(param::hstring const& uri, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext const& resourceContext, winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds const& requestSourceKinds) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual)->RemoveWebResourceRequestedFilter(*(void**)(&uri), static_cast<int32_t>(resourceContext), static_cast<uint32_t>(requestSourceKinds)));
+    }
+    template <typename D> auto consume_Microsoft_Web_WebView2_Core_ICoreWebView2_Manual2<D>::PostWebMessageAsJson(param::hstring const& webMessageAsJson, param::vector_view<winrt::Windows::Foundation::IInspectable> const& additionalObjects) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2)->PostWebMessageAsJson(*(void**)(&webMessageAsJson), *(void**)(&additionalObjects)));
+    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Certificate_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Certificate_Manual>
@@ -3934,6 +4360,20 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting>>>(this->shim().GetNonDefaultPermissionSettingsAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual3> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual3>
+    {
+        int32_t __stdcall GetBrowserExtensionsAsync(void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BrowserExtension>>>(this->shim().GetBrowserExtensionsAsync());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4911,6 +5351,41 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().DragLeave();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4>
+    {
+        int32_t __stdcall add_NonClientRegionChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().NonClientRegionChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2CompositionController, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_NonClientRegionChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NonClientRegionChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall GetNonClientRegionAtPoint(winrt::Windows::Foundation::Point point, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind>(this->shim().GetNonClientRegionAtPoint(*reinterpret_cast<winrt::Windows::Foundation::Point const*>(&point)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall QueryNonClientRegion(int32_t Kind, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::Rect>>(this->shim().QueryNonClientRegion(*reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind const*>(&Kind)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6253,6 +6728,28 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14>
+    {
+        int32_t __stdcall CreateWebFileSystemFileHandle(void* Path, int32_t Permission, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle>(this->shim().CreateWebFileSystemFileHandle(*reinterpret_cast<hstring const*>(&Path), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission const*>(&Permission)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateWebFileSystemDirectoryHandle(void* Path, int32_t Permission, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle>(this->shim().CreateWebFileSystemDirectoryHandle(*reinterpret_cast<hstring const*>(&Path), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission const*>(&Permission)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment2> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment2>
     {
         int32_t __stdcall CreateWebResourceRequest(void* uri, void* Method, void* postData, void* Headers, void** result) noexcept final try
@@ -6536,6 +7033,60 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7>
+    {
+        int32_t __stdcall get_ChannelSearchKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ChannelSearchKind>(this->shim().ChannelSearchKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ChannelSearchKind(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ChannelSearchKind(*reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ChannelSearchKind const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ReleaseChannels(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ReleaseChannels>(this->shim().ReleaseChannels());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ReleaseChannels(uint32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ReleaseChannels(*reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ReleaseChannels const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8>
+    {
+        int32_t __stdcall get_ScrollBarStyle(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScrollbarStyle>(this->shim().ScrollBarStyle());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_ScrollBarStyle(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ScrollBarStyle(*reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScrollbarStyle const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual>
     {
     };
@@ -6608,6 +7159,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics2> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics2>
+    {
+        int32_t __stdcall GetAvailableBrowserVersionStringWithOptions(void* browserExecutableFolder, void* options, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<hstring>(this->shim().GetAvailableBrowserVersionString(*reinterpret_cast<hstring const*>(&browserExecutableFolder), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions const*>(&options)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual>
     {
         int32_t __stdcall CreateCoreWebView2ControllerAsync(void* ParentWindow, void* options, void** operation) noexcept final try
@@ -6630,6 +7195,49 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult>
+    {
+        int32_t __stdcall get_Succeeded(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Succeeded());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ResultAsJson(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ResultAsJson());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Exception(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException>(this->shim().Exception());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult_Manual>
+    {
+        int32_t __stdcall TryGetResultAsString(void** stringResult, int32_t* result) noexcept final try
+        {
+            clear_abi(stringResult);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().TryGetResultAsString(*reinterpret_cast<hstring*>(stringResult)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File>
     {
         int32_t __stdcall get_Path(void** value) noexcept final try
@@ -6637,6 +7245,34 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<hstring>(this->shim().Path());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle>
+    {
+        int32_t __stdcall get_Kind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandleKind>(this->shim().Kind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Path(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Path());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Permission(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandlePermission>(this->shim().Permission());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -7289,6 +7925,209 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo>(this->shim().OriginalSourceFrameInfo());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs>
+    {
+        int32_t __stdcall get_RegionKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionKind>(this->shim().RegionKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification>
+    {
+        int32_t __stdcall get_Body(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Body());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Direction(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2TextDirectionKind>(this->shim().Direction());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Language(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Language());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Tag(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Tag());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IconUri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().IconUri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Title(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Title());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_BadgeUri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().BadgeUri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_BodyImageUri(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().BodyImageUri());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ShouldRenotify(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().ShouldRenotify());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_RequiresInteraction(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().RequiresInteraction());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsSilent(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsSilent());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Timestamp(double* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<double>(this->shim().Timestamp());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_CloseRequested(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().CloseRequested(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_CloseRequested(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().CloseRequested(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall ReportShown() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ReportShown();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ReportClicked() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ReportClicked();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ReportClosed() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ReportClosed();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs>
+    {
+        int32_t __stdcall get_SenderOrigin(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().SenderOrigin());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Notification(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification>(this->shim().Notification());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Handled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Handled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Handled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Handled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification_Manual2> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification_Manual2>
+    {
+        int32_t __stdcall get_VibrationPattern(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<uint64_t>>(this->shim().VibrationPattern());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -8220,6 +9059,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs3> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs3>
+    {
+        int32_t __stdcall get_FailureSourceModulePath(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().FailureSourceModulePath());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessInfo> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessInfo>
     {
         int32_t __stdcall get_ProcessId(int32_t* value) noexcept final try
@@ -8435,6 +9288,99 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs>
+    {
+        int32_t __stdcall get_ContentMimeType(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ContentMimeType());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Cancel(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().Cancel());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Cancel(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Cancel(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SuppressDefaultDialog(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().SuppressDefaultDialog());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SuppressDefaultDialog(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SuppressDefaultDialog(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SaveAsFilePath(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().SaveAsFilePath());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SaveAsFilePath(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SaveAsFilePath(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_AllowReplace(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllowReplace());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowReplace(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowReplace(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Kind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsKind>(this->shim().Kind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Kind(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Kind(*reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsKind const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDeferral(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs>
     {
         int32_t __stdcall get_Uri(void** value) noexcept final try
@@ -8495,6 +9441,50 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException>
+    {
+        int32_t __stdcall get_LineNumber(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().LineNumber());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ColumnNumber(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().ColumnNumber());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Name(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Name());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Message(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().Message());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_ToJson(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().ToJson());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -8840,6 +9830,26 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9>
+    {
+        int32_t __stdcall get_IsNonClientRegionSupportEnabled(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsNonClientRegionSupportEnabled());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_IsNonClientRegionSupportEnabled(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().IsNonClientRegionSupportEnabled(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings_Manual>
     {
         int32_t __stdcall get_HostObjectDispatchAdapter(void** value) noexcept final try
@@ -9049,6 +10059,19 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs2> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs2>
+    {
+        int32_t __stdcall get_RequestedSourceKind(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds>(this->shim().RequestedSourceKind());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -9555,6 +10578,80 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_21> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_21>
+    {
+        int32_t __stdcall ExecuteScriptWithResultAsync(void* javaScript, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult>>(this->shim().ExecuteScriptWithResultAsync(*reinterpret_cast<hstring const*>(&javaScript)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_22> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_22>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24>
+    {
+        int32_t __stdcall add_NotificationReceived(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().NotificationReceived(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_NotificationReceived(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().NotificationReceived(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25>
+    {
+        int32_t __stdcall add_SaveAsUIShowing(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().SaveAsUIShowing(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2, winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_SaveAsUIShowing(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SaveAsUIShowing(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+        int32_t __stdcall ShowSaveAsUIAsync(void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIResult>>(this->shim().ShowSaveAsUIAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3>
     {
         int32_t __stdcall get_IsSuspended(bool* value) noexcept final try
@@ -9801,6 +10898,39 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual>
+    {
+        int32_t __stdcall AddWebResourceRequestedFilter(void* uri, int32_t resourceContext, uint32_t requestSourceKinds) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AddWebResourceRequestedFilter(*reinterpret_cast<hstring const*>(&uri), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext const*>(&resourceContext), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds const*>(&requestSourceKinds));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RemoveWebResourceRequestedFilter(void* uri, int32_t resourceContext, uint32_t requestSourceKinds) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RemoveWebResourceRequestedFilter(*reinterpret_cast<hstring const*>(&uri), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceContext const*>(&resourceContext), *reinterpret_cast<winrt::Microsoft::Web::WebView2::Core::CoreWebView2WebResourceRequestSourceKinds const*>(&requestSourceKinds));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2> : produce_base<D, winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2>
+    {
+        int32_t __stdcall PostWebMessageAsJson(void* webMessageAsJson, void* additionalObjects) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().PostWebMessageAsJson(*reinterpret_cast<hstring const*>(&webMessageAsJson), *reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const*>(&additionalObjects));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
 {
@@ -9897,6 +11027,68 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
         left = left ^ right;
         return left;
     }
+    constexpr auto operator|(CoreWebView2ReleaseChannels const left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        return static_cast<CoreWebView2ReleaseChannels>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(CoreWebView2ReleaseChannels& left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(CoreWebView2ReleaseChannels const left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        return static_cast<CoreWebView2ReleaseChannels>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(CoreWebView2ReleaseChannels& left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(CoreWebView2ReleaseChannels const value) noexcept
+    {
+        return static_cast<CoreWebView2ReleaseChannels>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(CoreWebView2ReleaseChannels const left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        return static_cast<CoreWebView2ReleaseChannels>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(CoreWebView2ReleaseChannels& left, CoreWebView2ReleaseChannels const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
+    constexpr auto operator|(CoreWebView2WebResourceRequestSourceKinds const left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        return static_cast<CoreWebView2WebResourceRequestSourceKinds>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(CoreWebView2WebResourceRequestSourceKinds& left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(CoreWebView2WebResourceRequestSourceKinds const left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        return static_cast<CoreWebView2WebResourceRequestSourceKinds>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(CoreWebView2WebResourceRequestSourceKinds& left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(CoreWebView2WebResourceRequestSourceKinds const value) noexcept
+    {
+        return static_cast<CoreWebView2WebResourceRequestSourceKinds>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(CoreWebView2WebResourceRequestSourceKinds const left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        return static_cast<CoreWebView2WebResourceRequestSourceKinds>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(CoreWebView2WebResourceRequestSourceKinds& left, CoreWebView2WebResourceRequestSourceKinds const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     inline auto CoreWebView2ControllerWindowReference::CreateFromWindowHandle(uint64_t windowHandle)
     {
         return impl::call_factory<CoreWebView2ControllerWindowReference, ICoreWebView2ControllerWindowReferenceStatics>([&](ICoreWebView2ControllerWindowReferenceStatics const& f) { return f.CreateFromWindowHandle(windowHandle); });
@@ -9929,6 +11121,10 @@ WINRT_EXPORT namespace winrt::Microsoft::Web::WebView2::Core
     {
         return impl::call_factory<CoreWebView2Environment, ICoreWebView2EnvironmentStatics>([&](ICoreWebView2EnvironmentStatics const& f) { return f.CompareBrowserVersionString(browserVersionString1, browserVersionString2); });
     }
+    inline auto CoreWebView2Environment::GetAvailableBrowserVersionString(param::hstring const& browserExecutableFolder, winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions const& options)
+    {
+        return impl::call_factory<CoreWebView2Environment, ICoreWebView2EnvironmentStatics2>([&](ICoreWebView2EnvironmentStatics2 const& f) { return f.GetAvailableBrowserVersionString(browserExecutableFolder, options); });
+    }
     inline CoreWebView2EnvironmentOptions::CoreWebView2EnvironmentOptions() :
         CoreWebView2EnvironmentOptions(impl::call_factory_cast<CoreWebView2EnvironmentOptions(*)(winrt::Windows::Foundation::IActivationFactory const&), CoreWebView2EnvironmentOptions>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<CoreWebView2EnvironmentOptions>(); }))
     {
@@ -9941,6 +11137,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ClientCertificate_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile_Manual3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2AcceleratorKeyPressedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2AcceleratorKeyPressedEventArgs2> : winrt::impl::hash_base {};
@@ -9954,6 +11151,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionController4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionControllerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2CompositionControllerStatics2_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ContentLoadingEventArgs> : winrt::impl::hash_base {};
@@ -9987,6 +11185,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment11> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment12> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment13> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment14> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment4> : winrt::impl::hash_base {};
@@ -10001,11 +11200,17 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions5> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions6> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions7> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions8> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentOptions_Manual3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2EnvironmentStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Environment_Manual> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ExecuteScriptResult_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2File> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2FileSystemHandle> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Frame3> : winrt::impl::hash_base {};
@@ -10027,6 +11232,10 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NewWindowRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NewWindowRequestedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NewWindowRequestedEventArgs3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NonClientRegionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2NotificationReceivedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Notification_Manual2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2PermissionRequestedEventArgs3> : winrt::impl::hash_base {};
@@ -10039,6 +11248,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessExtendedInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessFailedEventArgs3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ProcessInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile2> : winrt::impl::hash_base {};
@@ -10048,7 +11258,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Profile8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SaveAsUIShowingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptDialogOpeningEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ScriptException> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2ServerCertificateErrorDetectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings2> : winrt::impl::hash_base {};
@@ -10058,6 +11270,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings8> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings9> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2Settings_Manual> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SharedBuffer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2SharedBuffer_Manual> : winrt::impl::hash_base {};
@@ -10066,6 +11279,7 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebMessageReceivedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequest> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceRequestedEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceResponse> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceResponseReceivedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2WebResourceResponseView> : winrt::impl::hash_base {};
@@ -10082,6 +11296,11 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_19> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_20> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_21> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_22> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_23> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_24> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_25> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_5> : winrt::impl::hash_base {};
@@ -10089,6 +11308,8 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_7> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_8> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_9> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::ICoreWebView2_Manual2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BasicAuthenticationRequestedEventArgs> : winrt::impl::hash_base {};
@@ -10116,7 +11337,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2DownloadStartingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Environment> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2EnvironmentOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ExecuteScriptResult> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2File> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FileSystemHandle> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Frame> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameCreatedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2FrameInfo> : winrt::impl::hash_base {};
@@ -10128,6 +11351,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationCompletedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NavigationStartingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NewWindowRequestedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NonClientRegionChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Notification> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2NotificationReceivedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionRequestedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PermissionSetting> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2PointerInfo> : winrt::impl::hash_base {};
@@ -10136,7 +11362,9 @@ namespace std
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ProcessInfo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Profile> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SaveAsUIShowingEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptDialogOpeningEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ScriptException> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ServerCertificateErrorDetectedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Settings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Microsoft::Web::WebView2::Core::CoreWebView2SharedBuffer> : winrt::impl::hash_base {};

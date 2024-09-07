@@ -49329,6 +49329,32 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
+    static PyObject* XamlRoot_get_CoordinateConverter(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.XamlRoot", L"CoordinateConverter");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CoordinateConverter());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* XamlRoot_add_Changed(py::wrapper::Microsoft::UI::Xaml::XamlRoot* self, PyObject* arg) noexcept
     {
         try
@@ -49424,6 +49450,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "rasterization_scale", reinterpret_cast<getter>(XamlRoot_get_RasterizationScale), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(XamlRoot_get_Size), nullptr, nullptr, nullptr },
         { "content_island_environment", reinterpret_cast<getter>(XamlRoot_get_ContentIslandEnvironment), nullptr, nullptr, nullptr },
+        { "coordinate_converter", reinterpret_cast<getter>(XamlRoot_get_CoordinateConverter), nullptr, nullptr, nullptr },
         { }
     };
 
