@@ -19,6 +19,7 @@ __all__ = [
     "StorageProviderKnownFolderSyncStatus",
     "StorageProviderPopulationPolicy",
     "StorageProviderProtectionMode",
+    "StorageProviderShareLinkState",
     "StorageProviderState",
     "StorageProviderUICommandState",
     "StorageProviderUriSourceStatus",
@@ -47,6 +48,7 @@ __all__ = [
     "IStorageProviderKnownFolderSyncInfoSource",
     "IStorageProviderKnownFolderSyncInfoSourceFactory",
     "IStorageProviderPropertyCapabilities",
+    "IStorageProviderShareLinkSource",
     "IStorageProviderStatusUISource",
     "IStorageProviderStatusUISourceFactory",
     "IStorageProviderUICommand",
@@ -120,6 +122,10 @@ class StorageProviderProtectionMode(enum.IntEnum):
     UNKNOWN = 0
     PERSONAL = 1
 
+class StorageProviderShareLinkState(enum.IntEnum):
+    ENABLED = 0
+    DISABLED = 1
+
 class StorageProviderState(enum.IntEnum):
     IN_SYNC = 0
     SYNCING = 1
@@ -172,6 +178,7 @@ IStorageProviderItemPropertySource = _winrt_windows_storage_provider.IStoragePro
 IStorageProviderKnownFolderSyncInfoSource = _winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource
 IStorageProviderKnownFolderSyncInfoSourceFactory = _winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory
 IStorageProviderPropertyCapabilities = _winrt_windows_storage_provider.IStorageProviderPropertyCapabilities
+IStorageProviderShareLinkSource = _winrt_windows_storage_provider.IStorageProviderShareLinkSource
 IStorageProviderStatusUISource = _winrt_windows_storage_provider.IStorageProviderStatusUISource
 IStorageProviderStatusUISourceFactory = _winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory
 IStorageProviderUICommand = _winrt_windows_storage_provider.IStorageProviderUICommand

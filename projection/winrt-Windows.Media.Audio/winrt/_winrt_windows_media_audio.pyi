@@ -23,7 +23,7 @@ import winrt.windows.media.render as windows_media_render
 import winrt.windows.media.transcoding as windows_media_transcoding
 import winrt.windows.storage as windows_storage
 
-from winrt.windows.media.audio import AudioDeviceNodeCreationStatus, AudioFileNodeCreationStatus, AudioGraphCreationStatus, AudioGraphUnrecoverableError, AudioNodeEmitterDecayKind, AudioNodeEmitterSettings, AudioNodeEmitterShapeKind, AudioPlaybackConnectionOpenResultStatus, AudioPlaybackConnectionState, MediaSourceAudioInputNodeCreationStatus, MixedRealitySpatialAudioFormatPolicy, QuantumSizeSelectionMode, SetDefaultSpatialAudioFormatStatus, SpatialAudioModel
+from winrt.windows.media.audio import AudioDeviceNodeCreationStatus, AudioEffectsPackStatus, AudioFileNodeCreationStatus, AudioGraphCreationStatus, AudioGraphUnrecoverableError, AudioNodeEmitterDecayKind, AudioNodeEmitterSettings, AudioNodeEmitterShapeKind, AudioPlaybackConnectionOpenResultStatus, AudioPlaybackConnectionState, MediaSourceAudioInputNodeCreationStatus, MixedRealitySpatialAudioFormatPolicy, QuantumSizeSelectionMode, SetDefaultSpatialAudioFormatStatus, SpatialAudioModel
 
 Self = typing.TypeVar('Self')
 
@@ -93,6 +93,24 @@ class AudioDeviceOutputNode(winrt.system.Object):
     def listener(self) -> typing.Optional[AudioNodeListener]: ...
     @listener.setter
     def listener(self, value: typing.Optional[AudioNodeListener]) -> None: ...
+
+@typing.final
+class AudioEffectsPackConfiguration_Static(type):
+    def get_for_device_id(cls, effects_pack_id: str, device_id: str, /) -> typing.Optional[AudioEffectsPackConfiguration]: ...
+    def is_device_id_supported(cls, effects_pack_id: str, device_id: str, /) -> bool: ...
+
+@typing.final
+class AudioEffectsPackConfiguration(winrt.system.Object, metaclass=AudioEffectsPackConfiguration_Static):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> AudioEffectsPackConfiguration: ...
+    def add_status_changed(self, handler: windows_foundation.TypedEventHandler[AudioEffectsPackConfiguration, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
+    def remove_status_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
+    @_property
+    def device_id(self) -> str: ...
+    @_property
+    def effects_pack_id(self) -> str: ...
+    @_property
+    def status(self) -> AudioEffectsPackStatus: ...
 
 @typing.final
 class AudioFileInputNode(winrt.system.Object):

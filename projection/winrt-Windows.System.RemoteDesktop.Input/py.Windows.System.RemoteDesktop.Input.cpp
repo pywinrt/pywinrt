@@ -15,7 +15,24 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         }
 
         auto arg_count = PyTuple_Size(args);
-        if (arg_count == 2)
+        if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions>(args, 2);
+
+                winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection instance{param0, param1, param2};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 2)
         {
             try
             {
@@ -146,6 +163,46 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
                 auto param0 = py::convert_to<py::pybuf_view<uint8_t, false>>(args, 0);
 
                 self->obj.ReportDataReceived(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RemoteTextConnection_ReportPredictedKeyEvent(py::wrapper::Windows::System::RemoteDesktop::Input::RemoteTextConnection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteDesktop.Input.RemoteTextConnection", L"ReportPredictedKeyEvent", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint16_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>(args, 1);
+
+                self->obj.ReportPredictedKeyEvent(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -308,6 +365,7 @@ namespace py::cpp::Windows::System::RemoteDesktop::Input
         { "close", reinterpret_cast<PyCFunction>(RemoteTextConnection_Close), METH_VARARGS, nullptr },
         { "register_thread", reinterpret_cast<PyCFunction>(RemoteTextConnection_RegisterThread), METH_VARARGS, nullptr },
         { "report_data_received", reinterpret_cast<PyCFunction>(RemoteTextConnection_ReportDataReceived), METH_VARARGS, nullptr },
+        { "report_predicted_key_event", reinterpret_cast<PyCFunction>(RemoteTextConnection_ReportPredictedKeyEvent), METH_VARARGS, nullptr },
         { "unregister_thread", reinterpret_cast<PyCFunction>(RemoteTextConnection_UnregisterThread), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RemoteTextConnection, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RemoteTextConnection), METH_O | METH_STATIC, nullptr },

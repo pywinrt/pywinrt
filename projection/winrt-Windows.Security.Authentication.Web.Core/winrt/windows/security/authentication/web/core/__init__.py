@@ -7,12 +7,16 @@ from winrt import _winrt_windows_security_authentication_web_core
 
 __all__ = [
     "FindAllWebAccountsStatus",
+    "WebAuthenticationAddAccountStatus",
     "WebTokenRequestPromptType",
     "WebTokenRequestStatus",
     "FindAllAccountsResult",
     "WebAccountEventArgs",
     "WebAccountMonitor",
+    "WebAuthenticationAddAccountResponse",
+    "WebAuthenticationAddAccountResult",
     "WebAuthenticationCoreManager",
+    "WebAuthenticationTransferTokenRequest",
     "WebProviderError",
     "WebTokenRequest",
     "WebTokenRequestResult",
@@ -24,6 +28,13 @@ class FindAllWebAccountsStatus(enum.IntEnum):
     NOT_ALLOWED_BY_PROVIDER = 1
     NOT_SUPPORTED_BY_PROVIDER = 2
     PROVIDER_ERROR = 3
+
+class WebAuthenticationAddAccountStatus(enum.IntEnum):
+    SUCCESS = 0
+    ERROR = 1
+    NOT_SUPPORTED_BY_PROVIDER = 2
+    SERVICE_CONNECTION_ERROR = 3
+    PROVIDER_ERROR = 4
 
 class WebTokenRequestPromptType(enum.IntEnum):
     DEFAULT = 0
@@ -40,7 +51,10 @@ class WebTokenRequestStatus(enum.IntEnum):
 FindAllAccountsResult = _winrt_windows_security_authentication_web_core.FindAllAccountsResult
 WebAccountEventArgs = _winrt_windows_security_authentication_web_core.WebAccountEventArgs
 WebAccountMonitor = _winrt_windows_security_authentication_web_core.WebAccountMonitor
+WebAuthenticationAddAccountResponse = _winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResponse
+WebAuthenticationAddAccountResult = _winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResult
 WebAuthenticationCoreManager = _winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager
+WebAuthenticationTransferTokenRequest = _winrt_windows_security_authentication_web_core.WebAuthenticationTransferTokenRequest
 WebProviderError = _winrt_windows_security_authentication_web_core.WebProviderError
 WebTokenRequest = _winrt_windows_security_authentication_web_core.WebTokenRequest
 WebTokenRequestResult = _winrt_windows_security_authentication_web_core.WebTokenRequestResult

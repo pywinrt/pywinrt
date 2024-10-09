@@ -14,6 +14,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IIterable;
+    template <typename T> struct WINRT_IMPL_EMPTY_BASES IVectorView;
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Storage
@@ -111,6 +112,11 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
         Unknown = 0,
         Personal = 1,
     };
+    enum class StorageProviderShareLinkState : int32_t
+    {
+        Enabled = 0,
+        Disabled = 1,
+    };
     enum class StorageProviderState : int32_t
     {
         InSync = 0,
@@ -168,6 +174,7 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
     struct IStorageProviderMoreInfoUI;
     struct IStorageProviderPropertyCapabilities;
     struct IStorageProviderQuotaUI;
+    struct IStorageProviderShareLinkSource;
     struct IStorageProviderStatusUI;
     struct IStorageProviderStatusUISource;
     struct IStorageProviderStatusUISourceFactory;
@@ -225,6 +232,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderStatusUI>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>{ using type = interface_category; };
@@ -265,6 +273,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderProtectionMode>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::Storage::Provider::StorageProviderShareLinkState>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderState>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderUICommandState>{ using type = enum_category; };
     template <> struct category<winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus>{ using type = enum_category; };
@@ -301,6 +310,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderKnownFolderSyncStatus> = L"Windows.Storage.Provider.StorageProviderKnownFolderSyncStatus";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderPopulationPolicy> = L"Windows.Storage.Provider.StorageProviderPopulationPolicy";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderProtectionMode> = L"Windows.Storage.Provider.StorageProviderProtectionMode";
+    template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderShareLinkState> = L"Windows.Storage.Provider.StorageProviderShareLinkState";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderState> = L"Windows.Storage.Provider.StorageProviderState";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderUICommandState> = L"Windows.Storage.Provider.StorageProviderUICommandState";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::StorageProviderUriSourceStatus> = L"Windows.Storage.Provider.StorageProviderUriSourceStatus";
@@ -329,6 +339,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI> = L"Windows.Storage.Provider.IStorageProviderMoreInfoUI";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities> = L"Windows.Storage.Provider.IStorageProviderPropertyCapabilities";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI> = L"Windows.Storage.Provider.IStorageProviderQuotaUI";
+    template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource> = L"Windows.Storage.Provider.IStorageProviderShareLinkSource";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUI> = L"Windows.Storage.Provider.IStorageProviderStatusUI";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource> = L"Windows.Storage.Provider.IStorageProviderStatusUISource";
     template <> inline constexpr auto& name_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory> = L"Windows.Storage.Provider.IStorageProviderStatusUISourceFactory";
@@ -364,6 +375,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI>{ 0xEF38E591,0xA7CB,0x5E7D,{ 0x9B,0x5E,0x22,0x74,0x98,0x42,0x69,0x7C } }; // EF38E591-A7CB-5E7D-9B5E-22749842697C
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities>{ 0x658D2F0E,0x63B7,0x4567,{ 0xAC,0xF9,0x51,0xAB,0xE3,0x01,0xDD,0xA5 } }; // 658D2F0E-63B7-4567-ACF9-51ABE301DDA5
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI>{ 0xBA6295C3,0x312E,0x544F,{ 0x9F,0xD5,0x1F,0x81,0xB2,0x1F,0x36,0x49 } }; // BA6295C3-312E-544F-9FD5-1F81B21F3649
+    template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>{ 0x4C6055E2,0x029C,0x5539,{ 0x8E,0x51,0xA1,0xAF,0xC8,0x38,0xB5,0xCB } }; // 4C6055E2-029C-5539-8E51-A1AFC838B5CB
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUI>{ 0xD6B6A758,0x198D,0x5B80,{ 0x97,0x7F,0x5F,0xF7,0x3D,0xA3,0x31,0x18 } }; // D6B6A758-198D-5B80-977F-5FF73DA33118
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource>{ 0xA306C249,0x3D66,0x5E70,{ 0x90,0x07,0xE4,0x3D,0xF9,0x60,0x51,0xFF } }; // A306C249-3D66-5E70-9007-E43DF96051FF
     template <> inline constexpr guid guid_v<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory>{ 0x12E46B74,0x4E5A,0x58D1,{ 0xA6,0x2F,0x03,0x76,0xE8,0xEE,0x7D,0xD8 } }; // 12E46B74-4E5A-58D1-A62F-0376E8EE7DD8
@@ -601,6 +613,15 @@ namespace winrt::impl
             virtual int32_t __stdcall put_QuotaUsedLabel(void*) noexcept = 0;
             virtual int32_t __stdcall get_QuotaUsedColor(void**) noexcept = 0;
             virtual int32_t __stdcall put_QuotaUsedColor(void*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateLinkAsync(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall GetDefaultAccessControlStringAsync(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall GetState(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Storage::Provider::IStorageProviderStatusUI>
@@ -1000,6 +1021,17 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI>
     {
         template <typename D> using type = consume_Windows_Storage_Provider_IStorageProviderQuotaUI<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Storage_Provider_IStorageProviderShareLinkSource
+    {
+        auto CreateLinkAsync(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const;
+        auto GetDefaultAccessControlStringAsync(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const;
+        auto GetState(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const;
+    };
+    template <> struct consume<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
+    {
+        template <typename D> using type = consume_Windows_Storage_Provider_IStorageProviderShareLinkSource<D>;
     };
     template <typename D>
     struct consume_Windows_Storage_Provider_IStorageProviderStatusUI

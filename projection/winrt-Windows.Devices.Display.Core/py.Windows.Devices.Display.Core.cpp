@@ -267,6 +267,58 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
+    static PyObject* DisplayAdapter_get_IsIndirectDisplayDevice(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"IsIndirectDisplayDevice");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsIndirectDisplayDevice());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayAdapter_get_PreferredRenderAdapter(py::wrapper::Windows::Devices::Display::Core::DisplayAdapter* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayAdapter", L"PreferredRenderAdapter");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PreferredRenderAdapter());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DisplayAdapter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Display::Core::DisplayAdapter>>();
@@ -306,6 +358,8 @@ namespace py::cpp::Windows::Devices::Display::Core
         { "pci_vendor_id", reinterpret_cast<getter>(DisplayAdapter_get_PciVendorId), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(DisplayAdapter_get_Properties), nullptr, nullptr, nullptr },
         { "source_count", reinterpret_cast<getter>(DisplayAdapter_get_SourceCount), nullptr, nullptr, nullptr },
+        { "is_indirect_display_device", reinterpret_cast<getter>(DisplayAdapter_get_IsIndirectDisplayDevice), nullptr, nullptr, nullptr },
+        { "preferred_render_adapter", reinterpret_cast<getter>(DisplayAdapter_get_PreferredRenderAdapter), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -680,6 +734,32 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
+    static PyObject* DisplayDevice_get_RenderAdapterId(py::wrapper::Windows::Devices::Display::Core::DisplayDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayDevice", L"RenderAdapterId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RenderAdapterId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DisplayDevice(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Display::Core::DisplayDevice>>();
@@ -719,6 +799,7 @@ namespace py::cpp::Windows::Devices::Display::Core
     };
 
     static PyGetSetDef _getset_DisplayDevice[] = {
+        { "render_adapter_id", reinterpret_cast<getter>(DisplayDevice_get_RenderAdapterId), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -919,6 +1000,45 @@ namespace py::cpp::Windows::Devices::Display::Core
                 auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayAdapter>(args, 0);
 
                 return py::convert(self->obj.CreateDisplayDevice(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayManager_CreateDisplayDeviceForIndirectAdapter(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"CreateDisplayDeviceForIndirectAdapter", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayAdapter>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayAdapter>(args, 1);
+
+                return py::convert(self->obj.CreateDisplayDeviceForIndirectAdapter(param0, param1));
             }
             catch (...)
             {
@@ -1307,6 +1427,42 @@ namespace py::cpp::Windows::Devices::Display::Core
         }
     }
 
+    static PyObject* DisplayManager_TryReadCurrentStateForModeQuery(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayManager", L"TryReadCurrentStateForModeQuery", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.TryReadCurrentStateForModeQuery());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DisplayManager_add_Changed(py::wrapper::Windows::Devices::Display::Core::DisplayManager* self, PyObject* arg) noexcept
     {
         try
@@ -1581,6 +1737,7 @@ namespace py::cpp::Windows::Devices::Display::Core
     static PyMethodDef _methods_DisplayManager[] = {
         { "close", reinterpret_cast<PyCFunction>(DisplayManager_Close), METH_VARARGS, nullptr },
         { "create_display_device", reinterpret_cast<PyCFunction>(DisplayManager_CreateDisplayDevice), METH_VARARGS, nullptr },
+        { "create_display_device_for_indirect_adapter", reinterpret_cast<PyCFunction>(DisplayManager_CreateDisplayDeviceForIndirectAdapter), METH_VARARGS, nullptr },
         { "get_current_adapters", reinterpret_cast<PyCFunction>(DisplayManager_GetCurrentAdapters), METH_VARARGS, nullptr },
         { "get_current_targets", reinterpret_cast<PyCFunction>(DisplayManager_GetCurrentTargets), METH_VARARGS, nullptr },
         { "release_target", reinterpret_cast<PyCFunction>(DisplayManager_ReleaseTarget), METH_VARARGS, nullptr },
@@ -1591,6 +1748,7 @@ namespace py::cpp::Windows::Devices::Display::Core
         { "try_acquire_targets_and_create_substate", reinterpret_cast<PyCFunction>(DisplayManager_TryAcquireTargetsAndCreateSubstate), METH_VARARGS, nullptr },
         { "try_acquire_targets_and_read_current_state", reinterpret_cast<PyCFunction>(DisplayManager_TryAcquireTargetsAndReadCurrentState), METH_VARARGS, nullptr },
         { "try_read_current_state_for_all_targets", reinterpret_cast<PyCFunction>(DisplayManager_TryReadCurrentStateForAllTargets), METH_VARARGS, nullptr },
+        { "try_read_current_state_for_mode_query", reinterpret_cast<PyCFunction>(DisplayManager_TryReadCurrentStateForModeQuery), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(DisplayManager_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(DisplayManager_remove_Changed), METH_O, nullptr },
         { "add_disabled", reinterpret_cast<PyCFunction>(DisplayManager_add_Disabled), METH_O, nullptr },
@@ -2817,6 +2975,539 @@ namespace py::cpp::Windows::Devices::Display::Core
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DisplayModeInfo};
+
+    // ----- DisplayMuxDevice class --------------------
+
+    static PyObject* _new_DisplayMuxDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_DisplayMuxDevice(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* DisplayMuxDevice_Close(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"Close", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.Close();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_FromIdAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"FromIdAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(winrt::Windows::Devices::Display::Core::DisplayMuxDevice::FromIdAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_GetAvailableMuxTargets(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"GetAvailableMuxTargets", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAvailableMuxTargets());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_GetDeviceSelector(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"GetDeviceSelector", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(winrt::Windows::Devices::Display::Core::DisplayMuxDevice::GetDeviceSelector());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_SetAutomaticTargetSwitching(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"SetAutomaticTargetSwitching", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.SetAutomaticTargetSwitching());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_SetPreferredTarget(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"SetPreferredTarget", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Display::Core::DisplayTarget>(args, 0);
+
+                return py::convert(self->obj.SetPreferredTarget(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_get_CurrentTarget(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"CurrentTarget");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CurrentTarget());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_get_Id(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"Id");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Id());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_get_IsActive(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"IsActive");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsActive());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_get_IsAutomaticTargetSwitchingEnabled(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"IsAutomaticTargetSwitchingEnabled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsAutomaticTargetSwitchingEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_get_PreferredTarget(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"PreferredTarget");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PreferredTarget());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_add_Changed(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"Changed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Display::Core::DisplayMuxDevice, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.Changed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayMuxDevice_remove_Changed(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Display.Core.DisplayMuxDevice", L"Changed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Changed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_DisplayMuxDevice(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_DisplayMuxDevice(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _enter_DisplayMuxDevice(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* /*unused*/) noexcept
+    {
+        return Py_NewRef(self);
+    }
+
+    static PyObject* _exit_DisplayMuxDevice(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice* self, PyObject* /*unused*/) noexcept
+    {
+        try
+        {
+            self->obj.Close();
+            Py_RETURN_FALSE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_DisplayMuxDevice[] = {
+        { "close", reinterpret_cast<PyCFunction>(DisplayMuxDevice_Close), METH_VARARGS, nullptr },
+        { "get_available_mux_targets", reinterpret_cast<PyCFunction>(DisplayMuxDevice_GetAvailableMuxTargets), METH_VARARGS, nullptr },
+        { "set_automatic_target_switching", reinterpret_cast<PyCFunction>(DisplayMuxDevice_SetAutomaticTargetSwitching), METH_VARARGS, nullptr },
+        { "set_preferred_target", reinterpret_cast<PyCFunction>(DisplayMuxDevice_SetPreferredTarget), METH_VARARGS, nullptr },
+        { "add_changed", reinterpret_cast<PyCFunction>(DisplayMuxDevice_add_Changed), METH_O, nullptr },
+        { "remove_changed", reinterpret_cast<PyCFunction>(DisplayMuxDevice_remove_Changed), METH_O, nullptr },
+        { "_assign_array_", _assign_array_DisplayMuxDevice, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_DisplayMuxDevice), METH_O | METH_STATIC, nullptr },
+        { "__enter__", reinterpret_cast<PyCFunction>(_enter_DisplayMuxDevice), METH_NOARGS, nullptr },
+        { "__exit__", reinterpret_cast<PyCFunction>(_exit_DisplayMuxDevice), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_DisplayMuxDevice[] = {
+        { "current_target", reinterpret_cast<getter>(DisplayMuxDevice_get_CurrentTarget), nullptr, nullptr, nullptr },
+        { "id", reinterpret_cast<getter>(DisplayMuxDevice_get_Id), nullptr, nullptr, nullptr },
+        { "is_active", reinterpret_cast<getter>(DisplayMuxDevice_get_IsActive), nullptr, nullptr, nullptr },
+        { "is_automatic_target_switching_enabled", reinterpret_cast<getter>(DisplayMuxDevice_get_IsAutomaticTargetSwitchingEnabled), nullptr, nullptr, nullptr },
+        { "preferred_target", reinterpret_cast<getter>(DisplayMuxDevice_get_PreferredTarget), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_DisplayMuxDevice[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_DisplayMuxDevice) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DisplayMuxDevice) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DisplayMuxDevice) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_DisplayMuxDevice) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayMuxDevice = {
+        "winrt._winrt_windows_devices_display_core.DisplayMuxDevice",
+        sizeof(py::wrapper::Windows::Devices::Display::Core::DisplayMuxDevice),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_DisplayMuxDevice};
+
+    static PyGetSetDef getset_DisplayMuxDevice_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DisplayMuxDevice_Static[] = {
+        { "from_id_async", reinterpret_cast<PyCFunction>(DisplayMuxDevice_FromIdAsync), METH_VARARGS, nullptr },
+        { "get_device_selector", reinterpret_cast<PyCFunction>(DisplayMuxDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_DisplayMuxDevice_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DisplayMuxDevice_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DisplayMuxDevice_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DisplayMuxDevice_Static =
+    {
+        "winrt._winrt_windows_devices_display_core.DisplayMuxDevice_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DisplayMuxDevice_Static
+    };
 
     // ----- DisplayPath class --------------------
 
@@ -6952,6 +7643,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_display_core(void) noexcept
 
     py::pytype_handle DisplayModeInfo_type{py::register_python_type(module.get(), &type_spec_DisplayModeInfo, object_bases.get(), nullptr)};
     if (!DisplayModeInfo_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DisplayMuxDevice_Static{PyType_FromSpec(&type_spec_DisplayMuxDevice_Static)};
+    if (!type_DisplayMuxDevice_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DisplayMuxDevice_type{py::register_python_type(module.get(), &type_spec_DisplayMuxDevice, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DisplayMuxDevice_Static.get()))};
+    if (!DisplayMuxDevice_type)
     {
         return nullptr;
     }

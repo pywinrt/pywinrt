@@ -4,6 +4,190 @@
 
 namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 {
+    // ----- PrintSupportCommunicationErrorDetectedEventArgs class --------------------
+
+    static PyObject* _new_PrintSupportCommunicationErrorDetectedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PrintSupportCommunicationErrorDetectedEventArgs(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PrintSupportCommunicationErrorDetectedEventArgs_GetDeferral(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs", L"GetDeferral", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetDeferral());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportCommunicationErrorDetectedEventArgs_get_CommunicationConfiguration(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs", L"CommunicationConfiguration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CommunicationConfiguration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportCommunicationErrorDetectedEventArgs_get_ErrorKind(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs", L"ErrorKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ErrorKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportCommunicationErrorDetectedEventArgs_get_ExtendedError(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportCommunicationErrorDetectedEventArgs", L"ExtendedError");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ExtendedError());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PrintSupportCommunicationErrorDetectedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PrintSupportCommunicationErrorDetectedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PrintSupportCommunicationErrorDetectedEventArgs[] = {
+        { "get_deferral", reinterpret_cast<PyCFunction>(PrintSupportCommunicationErrorDetectedEventArgs_GetDeferral), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_PrintSupportCommunicationErrorDetectedEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PrintSupportCommunicationErrorDetectedEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PrintSupportCommunicationErrorDetectedEventArgs[] = {
+        { "communication_configuration", reinterpret_cast<getter>(PrintSupportCommunicationErrorDetectedEventArgs_get_CommunicationConfiguration), nullptr, nullptr, nullptr },
+        { "error_kind", reinterpret_cast<getter>(PrintSupportCommunicationErrorDetectedEventArgs_get_ErrorKind), nullptr, nullptr, nullptr },
+        { "extended_error", reinterpret_cast<getter>(PrintSupportCommunicationErrorDetectedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PrintSupportCommunicationErrorDetectedEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportCommunicationErrorDetectedEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportCommunicationErrorDetectedEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportCommunicationErrorDetectedEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportCommunicationErrorDetectedEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintSupportCommunicationErrorDetectedEventArgs = {
+        "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportCommunicationErrorDetectedEventArgs",
+        sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PrintSupportCommunicationErrorDetectedEventArgs};
+
     // ----- PrintSupportExtensionSession class --------------------
 
     static PyObject* _new_PrintSupportExtensionSession(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -255,6 +439,63 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         }
     }
 
+    static PyObject* PrintSupportExtensionSession_add_CommunicationErrorDetected(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"CommunicationErrorDetected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession, winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>>(arg);
+
+            return py::convert(self->obj.CommunicationErrorDetected(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportExtensionSession_remove_CommunicationErrorDetected(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportExtensionSession", L"CommunicationErrorDetected");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.CommunicationErrorDetected(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PrintSupportExtensionSession(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>>();
@@ -287,6 +528,8 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { "remove_print_ticket_validation_requested", reinterpret_cast<PyCFunction>(PrintSupportExtensionSession_remove_PrintTicketValidationRequested), METH_O, nullptr },
         { "add_printer_selected", reinterpret_cast<PyCFunction>(PrintSupportExtensionSession_add_PrinterSelected), METH_O, nullptr },
         { "remove_printer_selected", reinterpret_cast<PyCFunction>(PrintSupportExtensionSession_remove_PrinterSelected), METH_O, nullptr },
+        { "add_communication_error_detected", reinterpret_cast<PyCFunction>(PrintSupportExtensionSession_add_CommunicationErrorDetected), METH_O, nullptr },
+        { "remove_communication_error_detected", reinterpret_cast<PyCFunction>(PrintSupportExtensionSession_remove_CommunicationErrorDetected), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintSupportExtensionSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintSupportExtensionSession), METH_O | METH_STATIC, nullptr },
         { }
@@ -404,6 +647,932 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PrintSupportExtensionTriggerDetails};
+
+    // ----- PrintSupportIppCommunicationConfiguration class --------------------
+
+    static PyObject* _new_PrintSupportIppCommunicationConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PrintSupportIppCommunicationConfiguration(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PrintSupportIppCommunicationConfiguration_get_CanModifyTimeouts(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration", L"CanModifyTimeouts");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CanModifyTimeouts());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportIppCommunicationConfiguration_get_CommunicationKind(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration", L"CommunicationKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CommunicationKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportIppCommunicationConfiguration_get_IppAttributeTimeouts(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration", L"IppAttributeTimeouts");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IppAttributeTimeouts());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportIppCommunicationConfiguration_get_IppJobTimeouts(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationConfiguration", L"IppJobTimeouts");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IppJobTimeouts());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PrintSupportIppCommunicationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PrintSupportIppCommunicationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PrintSupportIppCommunicationConfiguration[] = {
+        { "_assign_array_", _assign_array_PrintSupportIppCommunicationConfiguration, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PrintSupportIppCommunicationConfiguration), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PrintSupportIppCommunicationConfiguration[] = {
+        { "can_modify_timeouts", reinterpret_cast<getter>(PrintSupportIppCommunicationConfiguration_get_CanModifyTimeouts), nullptr, nullptr, nullptr },
+        { "communication_kind", reinterpret_cast<getter>(PrintSupportIppCommunicationConfiguration_get_CommunicationKind), nullptr, nullptr, nullptr },
+        { "ipp_attribute_timeouts", reinterpret_cast<getter>(PrintSupportIppCommunicationConfiguration_get_IppAttributeTimeouts), nullptr, nullptr, nullptr },
+        { "ipp_job_timeouts", reinterpret_cast<getter>(PrintSupportIppCommunicationConfiguration_get_IppJobTimeouts), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PrintSupportIppCommunicationConfiguration[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportIppCommunicationConfiguration) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportIppCommunicationConfiguration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportIppCommunicationConfiguration) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportIppCommunicationConfiguration) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintSupportIppCommunicationConfiguration = {
+        "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportIppCommunicationConfiguration",
+        sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PrintSupportIppCommunicationConfiguration};
+
+    // ----- PrintSupportIppCommunicationTimeouts class --------------------
+
+    static PyObject* _new_PrintSupportIppCommunicationTimeouts(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PrintSupportIppCommunicationTimeouts(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PrintSupportIppCommunicationTimeouts_get_SendTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"SendTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SendTimeout());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportIppCommunicationTimeouts_put_SendTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"SendTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.SendTimeout(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportIppCommunicationTimeouts_get_ReceiveTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"ReceiveTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ReceiveTimeout());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportIppCommunicationTimeouts_put_ReceiveTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"ReceiveTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.ReceiveTimeout(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportIppCommunicationTimeouts_get_ConnectTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"ConnectTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ConnectTimeout());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportIppCommunicationTimeouts_put_ConnectTimeout(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportIppCommunicationTimeouts", L"ConnectTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.ConnectTimeout(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_PrintSupportIppCommunicationTimeouts(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PrintSupportIppCommunicationTimeouts(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PrintSupportIppCommunicationTimeouts[] = {
+        { "_assign_array_", _assign_array_PrintSupportIppCommunicationTimeouts, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PrintSupportIppCommunicationTimeouts), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PrintSupportIppCommunicationTimeouts[] = {
+        { "send_timeout", reinterpret_cast<getter>(PrintSupportIppCommunicationTimeouts_get_SendTimeout), reinterpret_cast<setter>(PrintSupportIppCommunicationTimeouts_put_SendTimeout), nullptr, nullptr },
+        { "receive_timeout", reinterpret_cast<getter>(PrintSupportIppCommunicationTimeouts_get_ReceiveTimeout), reinterpret_cast<setter>(PrintSupportIppCommunicationTimeouts_put_ReceiveTimeout), nullptr, nullptr },
+        { "connect_timeout", reinterpret_cast<getter>(PrintSupportIppCommunicationTimeouts_get_ConnectTimeout), reinterpret_cast<setter>(PrintSupportIppCommunicationTimeouts_put_ConnectTimeout), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PrintSupportIppCommunicationTimeouts[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportIppCommunicationTimeouts) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportIppCommunicationTimeouts) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportIppCommunicationTimeouts) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportIppCommunicationTimeouts) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintSupportIppCommunicationTimeouts = {
+        "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportIppCommunicationTimeouts",
+        sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PrintSupportIppCommunicationTimeouts};
+
+    // ----- PrintSupportMxdcImageQualityConfiguration class --------------------
+
+    static PyObject* _new_PrintSupportMxdcImageQualityConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PrintSupportMxdcImageQualityConfiguration(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_TextOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"TextOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TextOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_TextOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"TextOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.TextOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_PhotographicOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"PhotographicOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PhotographicOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_PhotographicOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"PhotographicOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.PhotographicOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_NormalOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"NormalOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.NormalOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_NormalOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"NormalOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.NormalOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_HighOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"HighOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HighOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_HighOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"HighOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.HighOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_FaxOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"FaxOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.FaxOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_FaxOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"FaxOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.FaxOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_DraftOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"DraftOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DraftOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_DraftOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"DraftOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.DraftOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PrintSupportMxdcImageQualityConfiguration_get_AutomaticOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"AutomaticOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AutomaticOutputQuality());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PrintSupportMxdcImageQualityConfiguration_put_AutomaticOutputQuality(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportMxdcImageQualityConfiguration", L"AutomaticOutputQuality");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>(arg);
+
+            self->obj.AutomaticOutputQuality(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_PrintSupportMxdcImageQualityConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PrintSupportMxdcImageQualityConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PrintSupportMxdcImageQualityConfiguration[] = {
+        { "_assign_array_", _assign_array_PrintSupportMxdcImageQualityConfiguration, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PrintSupportMxdcImageQualityConfiguration), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PrintSupportMxdcImageQualityConfiguration[] = {
+        { "text_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_TextOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_TextOutputQuality), nullptr, nullptr },
+        { "photographic_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_PhotographicOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_PhotographicOutputQuality), nullptr, nullptr },
+        { "normal_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_NormalOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_NormalOutputQuality), nullptr, nullptr },
+        { "high_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_HighOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_HighOutputQuality), nullptr, nullptr },
+        { "fax_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_FaxOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_FaxOutputQuality), nullptr, nullptr },
+        { "draft_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_DraftOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_DraftOutputQuality), nullptr, nullptr },
+        { "automatic_output_quality", reinterpret_cast<getter>(PrintSupportMxdcImageQualityConfiguration_get_AutomaticOutputQuality), reinterpret_cast<setter>(PrintSupportMxdcImageQualityConfiguration_put_AutomaticOutputQuality), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PrintSupportMxdcImageQualityConfiguration[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PrintSupportMxdcImageQualityConfiguration) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PrintSupportMxdcImageQualityConfiguration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PrintSupportMxdcImageQualityConfiguration) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PrintSupportMxdcImageQualityConfiguration) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PrintSupportMxdcImageQualityConfiguration = {
+        "winrt._winrt_windows_graphics_printing_printsupport.PrintSupportMxdcImageQualityConfiguration",
+        sizeof(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PrintSupportMxdcImageQualityConfiguration};
 
     // ----- PrintSupportPrintDeviceCapabilitiesChangedEventArgs class --------------------
 
@@ -712,6 +1881,58 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         }
     }
 
+    static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_CommunicationConfiguration(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"CommunicationConfiguration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CommunicationConfiguration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_MxdcImageQualityConfiguration(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs", L"MxdcImageQualityConfiguration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MxdcImageQualityConfiguration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PrintSupportPrintDeviceCapabilitiesChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>>();
@@ -751,6 +1972,8 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
 
     static PyGetSetDef _getset_PrintSupportPrintDeviceCapabilitiesChangedEventArgs[] = {
         { "resource_language", reinterpret_cast<getter>(PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_ResourceLanguage), nullptr, nullptr, nullptr },
+        { "communication_configuration", reinterpret_cast<getter>(PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_CommunicationConfiguration), nullptr, nullptr, nullptr },
+        { "mxdc_image_quality_configuration", reinterpret_cast<getter>(PrintSupportPrintDeviceCapabilitiesChangedEventArgs_get_MxdcImageQualityConfiguration), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1962,6 +3185,32 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         }
     }
 
+    static PyObject* PrintSupportSettingsActivatedEventArgs_get_OwnerWindowId(py::wrapper::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Printing.PrintSupport.PrintSupportSettingsActivatedEventArgs", L"OwnerWindowId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OwnerWindowId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PrintSupportSettingsActivatedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportSettingsActivatedEventArgs>>();
@@ -1999,6 +3248,7 @@ namespace py::cpp::Windows::Graphics::Printing::PrintSupport
         { "splash_screen", reinterpret_cast<getter>(PrintSupportSettingsActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(PrintSupportSettingsActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
         { "session", reinterpret_cast<getter>(PrintSupportSettingsActivatedEventArgs_get_Session), nullptr, nullptr, nullptr },
+        { "owner_window_id", reinterpret_cast<getter>(PrintSupportSettingsActivatedEventArgs_get_OwnerWindowId), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2276,6 +3526,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexce
         return nullptr;
     }
 
+    py::pytype_handle PrintSupportCommunicationErrorDetectedEventArgs_type{py::register_python_type(module.get(), &type_spec_PrintSupportCommunicationErrorDetectedEventArgs, object_bases.get(), nullptr)};
+    if (!PrintSupportCommunicationErrorDetectedEventArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle PrintSupportExtensionSession_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionSession, object_bases.get(), nullptr)};
     if (!PrintSupportExtensionSession_type)
     {
@@ -2284,6 +3540,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_graphics_printing_printsupport(void) noexce
 
     py::pytype_handle PrintSupportExtensionTriggerDetails_type{py::register_python_type(module.get(), &type_spec_PrintSupportExtensionTriggerDetails, object_bases.get(), nullptr)};
     if (!PrintSupportExtensionTriggerDetails_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PrintSupportIppCommunicationConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationConfiguration, object_bases.get(), nullptr)};
+    if (!PrintSupportIppCommunicationConfiguration_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PrintSupportIppCommunicationTimeouts_type{py::register_python_type(module.get(), &type_spec_PrintSupportIppCommunicationTimeouts, object_bases.get(), nullptr)};
+    if (!PrintSupportIppCommunicationTimeouts_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PrintSupportMxdcImageQualityConfiguration_type{py::register_python_type(module.get(), &type_spec_PrintSupportMxdcImageQualityConfiguration, object_bases.get(), nullptr)};
+    if (!PrintSupportMxdcImageQualityConfiguration_type)
     {
         return nullptr;
     }

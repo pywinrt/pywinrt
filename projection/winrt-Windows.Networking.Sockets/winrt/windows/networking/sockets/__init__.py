@@ -149,6 +149,7 @@ class SocketProtectionLevel(enum.IntEnum):
     TLS11 = 7
     TLS12 = 8
     UNSPECIFIED = 9
+    TLS13 = 10
 
 class SocketQualityOfService(enum.IntEnum):
     NORMAL = 0

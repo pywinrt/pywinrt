@@ -105,6 +105,7 @@ namespace py::wrapper::Windows::Networking::Vpn
     using IVpnNamespaceInfoFactory = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnNamespaceInfoFactory>;
     using IVpnPacketBufferFactory = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnPacketBufferFactory>;
     using IVpnPlugIn = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnPlugIn>;
+    using IVpnPlugInReconnectTransport = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>;
     using IVpnProfile = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnProfile>;
     using IVpnRouteFactory = py::winrt_wrapper<winrt::Windows::Networking::Vpn::IVpnRouteFactory>;
 }
@@ -589,6 +590,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnPlugIn";
         static constexpr const char* module_name = "winrt.windows.networking.vpn";
         static constexpr const char* type_name = "IVpnPlugIn";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.vpn.IVpnPlugInReconnectTransport";
+        static constexpr const char* module_name = "winrt.windows.networking.vpn";
+        static constexpr const char* type_name = "IVpnPlugInReconnectTransport";
     };
 
     template<>

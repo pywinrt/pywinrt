@@ -5111,6 +5111,207 @@ namespace py::cpp::Windows::Devices::Sensors
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompassReadingChangedEventArgs};
 
+    // ----- DetectedPerson class --------------------
+
+    static PyObject* _new_DetectedPerson(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::DetectedPerson>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::DetectedPerson>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_DetectedPerson(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* DetectedPerson_get_DistanceInMillimeters(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.DetectedPerson", L"DistanceInMillimeters");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DistanceInMillimeters());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DetectedPerson_get_Engagement(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.DetectedPerson", L"Engagement");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Engagement());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DetectedPerson_get_HeadOrientation(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.DetectedPerson", L"HeadOrientation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HeadOrientation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DetectedPerson_get_HeadPosition(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.DetectedPerson", L"HeadPosition");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HeadPosition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DetectedPerson_get_PersonId(py::wrapper::Windows::Devices::Sensors::DetectedPerson* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.DetectedPerson", L"PersonId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PersonId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_DetectedPerson(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::DetectedPerson>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_DetectedPerson(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Sensors::DetectedPerson>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_DetectedPerson[] = {
+        { "_assign_array_", _assign_array_DetectedPerson, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_DetectedPerson), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_DetectedPerson[] = {
+        { "distance_in_millimeters", reinterpret_cast<getter>(DetectedPerson_get_DistanceInMillimeters), nullptr, nullptr, nullptr },
+        { "engagement", reinterpret_cast<getter>(DetectedPerson_get_Engagement), nullptr, nullptr, nullptr },
+        { "head_orientation", reinterpret_cast<getter>(DetectedPerson_get_HeadOrientation), nullptr, nullptr, nullptr },
+        { "head_position", reinterpret_cast<getter>(DetectedPerson_get_HeadPosition), nullptr, nullptr, nullptr },
+        { "person_id", reinterpret_cast<getter>(DetectedPerson_get_PersonId), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_DetectedPerson[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_DetectedPerson) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DetectedPerson) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DetectedPerson) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_DetectedPerson) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DetectedPerson = {
+        "winrt._winrt_windows_devices_sensors.DetectedPerson",
+        sizeof(py::wrapper::Windows::Devices::Sensors::DetectedPerson),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_DetectedPerson};
+
     // ----- Gyrometer class --------------------
 
     static PyObject* _new_Gyrometer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6277,6 +6478,273 @@ namespace py::cpp::Windows::Devices::Sensors
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GyrometerReadingChangedEventArgs};
+
+    // ----- HeadOrientation class --------------------
+
+    static PyObject* _new_HeadOrientation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::HeadOrientation>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HeadOrientation>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_HeadOrientation(py::wrapper::Windows::Devices::Sensors::HeadOrientation* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* HeadOrientation_get_PitchInDegrees(py::wrapper::Windows::Devices::Sensors::HeadOrientation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HeadOrientation", L"PitchInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PitchInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HeadOrientation_get_RollInDegrees(py::wrapper::Windows::Devices::Sensors::HeadOrientation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HeadOrientation", L"RollInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RollInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HeadOrientation_get_YawInDegrees(py::wrapper::Windows::Devices::Sensors::HeadOrientation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HeadOrientation", L"YawInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.YawInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_HeadOrientation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::HeadOrientation>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_HeadOrientation(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Sensors::HeadOrientation>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_HeadOrientation[] = {
+        { "_assign_array_", _assign_array_HeadOrientation, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_HeadOrientation), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_HeadOrientation[] = {
+        { "pitch_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_PitchInDegrees), nullptr, nullptr, nullptr },
+        { "roll_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_RollInDegrees), nullptr, nullptr, nullptr },
+        { "yaw_in_degrees", reinterpret_cast<getter>(HeadOrientation_get_YawInDegrees), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_HeadOrientation[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_HeadOrientation) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadOrientation) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadOrientation) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadOrientation) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HeadOrientation = {
+        "winrt._winrt_windows_devices_sensors.HeadOrientation",
+        sizeof(py::wrapper::Windows::Devices::Sensors::HeadOrientation),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_HeadOrientation};
+
+    // ----- HeadPosition class --------------------
+
+    static PyObject* _new_HeadPosition(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Sensors::HeadPosition>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Sensors::HeadPosition>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_HeadPosition(py::wrapper::Windows::Devices::Sensors::HeadPosition* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* HeadPosition_get_AltitudeInDegrees(py::wrapper::Windows::Devices::Sensors::HeadPosition* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HeadPosition", L"AltitudeInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AltitudeInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HeadPosition_get_AzimuthInDegrees(py::wrapper::Windows::Devices::Sensors::HeadPosition* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HeadPosition", L"AzimuthInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AzimuthInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_HeadPosition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::HeadPosition>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_HeadPosition(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Sensors::HeadPosition>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_HeadPosition[] = {
+        { "_assign_array_", _assign_array_HeadPosition, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_HeadPosition), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_HeadPosition[] = {
+        { "altitude_in_degrees", reinterpret_cast<getter>(HeadPosition_get_AltitudeInDegrees), nullptr, nullptr, nullptr },
+        { "azimuth_in_degrees", reinterpret_cast<getter>(HeadPosition_get_AzimuthInDegrees), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_HeadPosition[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_HeadPosition) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_HeadPosition) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_HeadPosition) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_HeadPosition) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HeadPosition = {
+        "winrt._winrt_windows_devices_sensors.HeadPosition",
+        sizeof(py::wrapper::Windows::Devices::Sensors::HeadPosition),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_HeadPosition};
 
     // ----- HingeAngleReading class --------------------
 
@@ -7569,6 +8037,136 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* HumanPresenceSensor_get_MaxDetectableAltitudeInDegrees(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MaxDetectableAltitudeInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxDetectableAltitudeInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HumanPresenceSensor_get_MaxDetectableAzimuthInDegrees(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MaxDetectableAzimuthInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxDetectableAzimuthInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HumanPresenceSensor_get_MaxDetectablePersons(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MaxDetectablePersons");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxDetectablePersons());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HumanPresenceSensor_get_MinDetectableAltitudeInDegrees(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MinDetectableAltitudeInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinDetectableAltitudeInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HumanPresenceSensor_get_MinDetectableAzimuthInDegrees(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensor", L"MinDetectableAzimuthInDegrees");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinDetectableAzimuthInDegrees());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* HumanPresenceSensor_add_ReadingChanged(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensor* self, PyObject* arg) noexcept
     {
         try
@@ -7665,6 +8263,11 @@ namespace py::cpp::Windows::Devices::Sensors
         { "min_detectable_distance_in_millimeters", reinterpret_cast<getter>(HumanPresenceSensor_get_MinDetectableDistanceInMillimeters), nullptr, nullptr, nullptr },
         { "is_engagement_supported", reinterpret_cast<getter>(HumanPresenceSensor_get_IsEngagementSupported), nullptr, nullptr, nullptr },
         { "is_presence_supported", reinterpret_cast<getter>(HumanPresenceSensor_get_IsPresenceSupported), nullptr, nullptr, nullptr },
+        { "max_detectable_altitude_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MaxDetectableAltitudeInDegrees), nullptr, nullptr, nullptr },
+        { "max_detectable_azimuth_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MaxDetectableAzimuthInDegrees), nullptr, nullptr, nullptr },
+        { "max_detectable_persons", reinterpret_cast<getter>(HumanPresenceSensor_get_MaxDetectablePersons), nullptr, nullptr, nullptr },
+        { "min_detectable_altitude_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MinDetectableAltitudeInDegrees), nullptr, nullptr, nullptr },
+        { "min_detectable_azimuth_in_degrees", reinterpret_cast<getter>(HumanPresenceSensor_get_MinDetectableAzimuthInDegrees), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -7860,6 +8463,58 @@ namespace py::cpp::Windows::Devices::Sensors
         }
     }
 
+    static PyObject* HumanPresenceSensorReading_get_DetectedPersons(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"DetectedPersons");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DetectedPersons());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* HumanPresenceSensorReading_get_OnlookerPresence(py::wrapper::Windows::Devices::Sensors::HumanPresenceSensorReading* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Sensors.HumanPresenceSensorReading", L"OnlookerPresence");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OnlookerPresence());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_HumanPresenceSensorReading(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>>();
@@ -7896,6 +8551,8 @@ namespace py::cpp::Windows::Devices::Sensors
         { "presence", reinterpret_cast<getter>(HumanPresenceSensorReading_get_Presence), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(HumanPresenceSensorReading_get_Timestamp), nullptr, nullptr, nullptr },
         { "properties", reinterpret_cast<getter>(HumanPresenceSensorReading_get_Properties), nullptr, nullptr, nullptr },
+        { "detected_persons", reinterpret_cast<getter>(HumanPresenceSensorReading_get_DetectedPersons), nullptr, nullptr, nullptr },
+        { "onlooker_presence", reinterpret_cast<getter>(HumanPresenceSensorReading_get_OnlookerPresence), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -17667,6 +18324,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle DetectedPerson_type{py::register_python_type(module.get(), &type_spec_DetectedPerson, object_bases.get(), nullptr)};
+    if (!DetectedPerson_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_Gyrometer_Static{PyType_FromSpec(&type_spec_Gyrometer_Static)};
     if (!type_Gyrometer_Static)
     {
@@ -17693,6 +18356,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_sensors(void) noexcept
 
     py::pytype_handle GyrometerReadingChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_GyrometerReadingChangedEventArgs, object_bases.get(), nullptr)};
     if (!GyrometerReadingChangedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HeadOrientation_type{py::register_python_type(module.get(), &type_spec_HeadOrientation, object_bases.get(), nullptr)};
+    if (!HeadOrientation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HeadPosition_type{py::register_python_type(module.get(), &type_spec_HeadPosition, object_bases.get(), nullptr)};
+    if (!HeadPosition_type)
     {
         return nullptr;
     }

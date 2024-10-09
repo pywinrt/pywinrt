@@ -12606,6 +12606,113 @@ namespace py::cpp::Windows::Networking::Vpn
         Py_TPFLAGS_DEFAULT,
         _type_slots_IVpnPlugIn};
 
+    // ----- IVpnPlugInReconnectTransport interface --------------------
+
+    static PyObject* _new_IVpnPlugInReconnectTransport(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IVpnPlugInReconnectTransport(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IVpnPlugInReconnectTransport_ReconnectTransport(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.IVpnPlugInReconnectTransport", L"ReconnectTransport", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnChannel>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                self->obj.ReconnectTransport(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IVpnPlugInReconnectTransport(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::Vpn::IVpnPlugInReconnectTransport>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IVpnPlugInReconnectTransport[] = {
+        { "reconnect_transport", reinterpret_cast<PyCFunction>(IVpnPlugInReconnectTransport_ReconnectTransport), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IVpnPlugInReconnectTransport, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IVpnPlugInReconnectTransport), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IVpnPlugInReconnectTransport[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IVpnPlugInReconnectTransport[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IVpnPlugInReconnectTransport) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IVpnPlugInReconnectTransport) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IVpnPlugInReconnectTransport) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IVpnPlugInReconnectTransport) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IVpnPlugInReconnectTransport = {
+        "winrt._winrt_windows_networking_vpn.IVpnPlugInReconnectTransport",
+        sizeof(py::wrapper::Windows::Networking::Vpn::IVpnPlugInReconnectTransport),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IVpnPlugInReconnectTransport};
+
     // ----- IVpnProfile interface --------------------
 
     static PyObject* _new_IVpnProfile(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -13371,6 +13478,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_vpn(void) noexcept
 
     py::pytype_handle IVpnPlugIn_type{py::register_python_type(module.get(), &type_spec_IVpnPlugIn, object_bases.get(), nullptr)};
     if (!IVpnPlugIn_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IVpnPlugInReconnectTransport_type{py::register_python_type(module.get(), &type_spec_IVpnPlugInReconnectTransport, object_bases.get(), nullptr)};
+    if (!IVpnPlugInReconnectTransport_type)
     {
         return nullptr;
     }

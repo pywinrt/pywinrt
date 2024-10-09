@@ -342,6 +342,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Background::DeviceTriggerResult> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Background::EnergyUseLevel> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Background::LocationTriggerType> = "i";
 
     template<>
@@ -424,6 +427,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.DeviceTriggerResult";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
         static constexpr const char* type_name = "DeviceTriggerResult";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::ApplicationModel::Background::EnergyUseLevel>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.background.EnergyUseLevel";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.background";
+        static constexpr const char* type_name = "EnergyUseLevel";
     };
 
     template<>

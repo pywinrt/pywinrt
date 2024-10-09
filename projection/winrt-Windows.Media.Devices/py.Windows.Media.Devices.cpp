@@ -595,6 +595,32 @@ namespace py::cpp::Windows::Media::Devices
         }
     }
 
+    static PyObject* AudioDeviceController_get_AudioCaptureEffectsManager(py::wrapper::Windows::Media::Devices::AudioDeviceController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Devices.AudioDeviceController", L"AudioCaptureEffectsManager");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AudioCaptureEffectsManager());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_AudioDeviceController(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Devices::AudioDeviceController>>();
@@ -631,6 +657,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyGetSetDef _getset_AudioDeviceController[] = {
         { "volume_percent", reinterpret_cast<getter>(AudioDeviceController_get_VolumePercent), reinterpret_cast<setter>(AudioDeviceController_put_VolumePercent), nullptr, nullptr },
         { "muted", reinterpret_cast<getter>(AudioDeviceController_get_Muted), reinterpret_cast<setter>(AudioDeviceController_put_Muted), nullptr, nullptr },
+        { "audio_capture_effects_manager", reinterpret_cast<getter>(AudioDeviceController_get_AudioCaptureEffectsManager), nullptr, nullptr, nullptr },
         { }
     };
 

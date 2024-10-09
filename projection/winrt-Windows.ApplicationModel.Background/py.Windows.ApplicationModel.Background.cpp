@@ -1756,6 +1756,33 @@ namespace py::cpp::Windows::ApplicationModel::Background
                 return nullptr;
             }
         }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Register", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.Register(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1827,6 +1854,42 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
                 self->obj.SetTrigger(param0);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackgroundTaskBuilder_Validate(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"Validate", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.Validate());
             }
             catch (...)
             {
@@ -2146,6 +2209,93 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
+    static PyObject* BackgroundTaskBuilder_get_AllowRunningTaskInStandby(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AllowRunningTaskInStandby");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AllowRunningTaskInStandby());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int BackgroundTaskBuilder_put_AllowRunningTaskInStandby(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskBuilder* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"AllowRunningTaskInStandby");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.AllowRunningTaskInStandby(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* BackgroundTaskBuilder_get_IsRunningTaskInStandbySupported(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskBuilder", L"IsRunningTaskInStandbySupported");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder::IsRunningTaskInStandbySupported());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_BackgroundTaskBuilder(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Background::BackgroundTaskBuilder>>();
@@ -2175,6 +2325,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { "register", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_Register), METH_VARARGS, nullptr },
         { "set_task_entry_point_clsid", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_SetTaskEntryPointClsid), METH_VARARGS, nullptr },
         { "set_trigger", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_SetTrigger), METH_VARARGS, nullptr },
+        { "validate", reinterpret_cast<PyCFunction>(BackgroundTaskBuilder_Validate), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BackgroundTaskBuilder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BackgroundTaskBuilder), METH_O | METH_STATIC, nullptr },
         { }
@@ -2186,6 +2337,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { "cancel_on_condition_loss", reinterpret_cast<getter>(BackgroundTaskBuilder_get_CancelOnConditionLoss), reinterpret_cast<setter>(BackgroundTaskBuilder_put_CancelOnConditionLoss), nullptr, nullptr },
         { "is_network_requested", reinterpret_cast<getter>(BackgroundTaskBuilder_get_IsNetworkRequested), reinterpret_cast<setter>(BackgroundTaskBuilder_put_IsNetworkRequested), nullptr, nullptr },
         { "task_group", reinterpret_cast<getter>(BackgroundTaskBuilder_get_TaskGroup), reinterpret_cast<setter>(BackgroundTaskBuilder_put_TaskGroup), nullptr, nullptr },
+        { "allow_running_task_in_standby", reinterpret_cast<getter>(BackgroundTaskBuilder_get_AllowRunningTaskInStandby), reinterpret_cast<setter>(BackgroundTaskBuilder_put_AllowRunningTaskInStandby), nullptr, nullptr },
         { }
     };
 
@@ -2203,6 +2355,32 @@ namespace py::cpp::Windows::ApplicationModel::Background
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_BackgroundTaskBuilder};
+
+    static PyGetSetDef getset_BackgroundTaskBuilder_Static[] = {
+        { "is_running_task_in_standby_supported", reinterpret_cast<getter>(BackgroundTaskBuilder_get_IsRunningTaskInStandbySupported), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_BackgroundTaskBuilder_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_BackgroundTaskBuilder_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BackgroundTaskBuilder_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BackgroundTaskBuilder_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BackgroundTaskBuilder_Static =
+    {
+        "winrt._winrt_windows_applicationmodel_background.BackgroundTaskBuilder_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BackgroundTaskBuilder_Static
+    };
 
     // ----- BackgroundTaskCompletedEventArgs class --------------------
 
@@ -2757,6 +2935,58 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
+    static PyObject* BackgroundTaskRegistration_get_AppEnergyUsePredictionContribution(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"AppEnergyUsePredictionContribution");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AppEnergyUsePredictionContribution());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackgroundTaskRegistration_get_TaskLastThrottledInStandbyTimestamp(py::wrapper::Windows::ApplicationModel::Background::BackgroundTaskRegistration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundTaskRegistration", L"TaskLastThrottledInStandbyTimestamp");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TaskLastThrottledInStandbyTimestamp());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* BackgroundTaskRegistration_get_AllTasks(PyObject* /*unused*/, void* /*unused*/) noexcept
     {
         try
@@ -2963,6 +3193,8 @@ namespace py::cpp::Windows::ApplicationModel::Background
         { "task_id", reinterpret_cast<getter>(BackgroundTaskRegistration_get_TaskId), nullptr, nullptr, nullptr },
         { "trigger", reinterpret_cast<getter>(BackgroundTaskRegistration_get_Trigger), nullptr, nullptr, nullptr },
         { "task_group", reinterpret_cast<getter>(BackgroundTaskRegistration_get_TaskGroup), nullptr, nullptr, nullptr },
+        { "app_energy_use_prediction_contribution", reinterpret_cast<getter>(BackgroundTaskRegistration_get_AppEnergyUsePredictionContribution), nullptr, nullptr, nullptr },
+        { "task_last_throttled_in_standby_timestamp", reinterpret_cast<getter>(BackgroundTaskRegistration_get_TaskLastThrottledInStandbyTimestamp), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3290,6 +3522,84 @@ namespace py::cpp::Windows::ApplicationModel::Background
         }
     }
 
+    static PyObject* BackgroundWorkCost_get_AppEnergyUseLevel(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundWorkCost", L"AppEnergyUseLevel");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUseLevel());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackgroundWorkCost_get_AppEnergyUsePrediction(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundWorkCost", L"AppEnergyUsePrediction");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppEnergyUsePrediction());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackgroundWorkCost_get_AppLastThrottledInStandbyTimestamp(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Background.BackgroundWorkCost", L"AppLastThrottledInStandbyTimestamp");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Windows::ApplicationModel::Background::BackgroundWorkCost::AppLastThrottledInStandbyTimestamp());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyMethodDef _methods_BackgroundWorkCost[] = {
         { }
     };
@@ -3314,6 +3624,9 @@ namespace py::cpp::Windows::ApplicationModel::Background
 
     static PyGetSetDef getset_BackgroundWorkCost_Static[] = {
         { "current_background_work_cost", reinterpret_cast<getter>(BackgroundWorkCost_get_CurrentBackgroundWorkCost), nullptr, nullptr, nullptr },
+        { "app_energy_use_level", reinterpret_cast<getter>(BackgroundWorkCost_get_AppEnergyUseLevel), nullptr, nullptr, nullptr },
+        { "app_energy_use_prediction", reinterpret_cast<getter>(BackgroundWorkCost_get_AppEnergyUsePrediction), nullptr, nullptr, nullptr },
+        { "app_last_throttled_in_standby_timestamp", reinterpret_cast<getter>(BackgroundWorkCost_get_AppLastThrottledInStandbyTimestamp), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -12485,7 +12798,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_background(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BackgroundTaskBuilder_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskBuilder, object_bases.get(), nullptr)};
+    py::pyobj_handle type_BackgroundTaskBuilder_Static{PyType_FromSpec(&type_spec_BackgroundTaskBuilder_Static)};
+    if (!type_BackgroundTaskBuilder_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BackgroundTaskBuilder_type{py::register_python_type(module.get(), &type_spec_BackgroundTaskBuilder, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackgroundTaskBuilder_Static.get()))};
     if (!BackgroundTaskBuilder_type)
     {
         return nullptr;

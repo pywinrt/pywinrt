@@ -34,6 +34,7 @@ __all__ = [
     "PackageUserInformation",
     "PackageVolume",
     "RegisterPackageOptions",
+    "RemovePackageOptions",
     "SharedPackageContainer",
     "SharedPackageContainerManager",
     "SharedPackageContainerMember",
@@ -101,6 +102,7 @@ class RemovalOptions(enum.IntFlag):
     NONE = 0x0
     PRESERVE_APPLICATION_DATA = 0x1000
     PRESERVE_ROAMABLE_APPLICATION_DATA = 0x80
+    DEFER_REMOVAL_WHEN_PACKAGES_ARE_IN_USE = 0x2000
     REMOVE_FOR_ALL_USERS = 0x80000
 
 class SharedPackageContainerCreationCollisionOptions(enum.IntEnum):
@@ -138,6 +140,7 @@ PackageManagerDebugSettings = _winrt_windows_management_deployment.PackageManage
 PackageUserInformation = _winrt_windows_management_deployment.PackageUserInformation
 PackageVolume = _winrt_windows_management_deployment.PackageVolume
 RegisterPackageOptions = _winrt_windows_management_deployment.RegisterPackageOptions
+RemovePackageOptions = _winrt_windows_management_deployment.RemovePackageOptions
 SharedPackageContainer = _winrt_windows_management_deployment.SharedPackageContainer
 SharedPackageContainerManager = _winrt_windows_management_deployment.SharedPackageContainerManager
 SharedPackageContainerMember = _winrt_windows_management_deployment.SharedPackageContainerMember

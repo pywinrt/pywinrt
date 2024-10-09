@@ -522,6 +522,394 @@ namespace py::cpp::Windows::Devices::Power
         Py_TPFLAGS_DEFAULT,
         _type_slots_BatteryReport};
 
+    // ----- PowerGridData class --------------------
+
+    static PyObject* _new_PowerGridData(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Power::PowerGridData>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Power::PowerGridData>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PowerGridData(py::wrapper::Windows::Devices::Power::PowerGridData* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PowerGridData_get_IsLowUserExperienceImpact(py::wrapper::Windows::Devices::Power::PowerGridData* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Power.PowerGridData", L"IsLowUserExperienceImpact");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsLowUserExperienceImpact());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridData_get_Severity(py::wrapper::Windows::Devices::Power::PowerGridData* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Power.PowerGridData", L"Severity");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Severity());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PowerGridData(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Power::PowerGridData>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PowerGridData(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Power::PowerGridData>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PowerGridData[] = {
+        { "_assign_array_", _assign_array_PowerGridData, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PowerGridData), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PowerGridData[] = {
+        { "is_low_user_experience_impact", reinterpret_cast<getter>(PowerGridData_get_IsLowUserExperienceImpact), nullptr, nullptr, nullptr },
+        { "severity", reinterpret_cast<getter>(PowerGridData_get_Severity), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PowerGridData[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PowerGridData) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerGridData) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerGridData) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerGridData) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PowerGridData = {
+        "winrt._winrt_windows_devices_power.PowerGridData",
+        sizeof(py::wrapper::Windows::Devices::Power::PowerGridData),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PowerGridData};
+
+    // ----- PowerGridForecast class --------------------
+
+    static PyObject* _new_PowerGridForecast(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Power::PowerGridForecast>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Power::PowerGridForecast>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_PowerGridForecast(py::wrapper::Windows::Devices::Power::PowerGridForecast* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PowerGridForecast_GetForecast(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Power.PowerGridForecast", L"GetForecast", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(winrt::Windows::Devices::Power::PowerGridForecast::GetForecast());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridForecast_get_BlockDuration(py::wrapper::Windows::Devices::Power::PowerGridForecast* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Power.PowerGridForecast", L"BlockDuration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BlockDuration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridForecast_get_Forecast(py::wrapper::Windows::Devices::Power::PowerGridForecast* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Power.PowerGridForecast", L"Forecast");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Forecast());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridForecast_get_StartTime(py::wrapper::Windows::Devices::Power::PowerGridForecast* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Power.PowerGridForecast", L"StartTime");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.StartTime());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridForecast_add_ForecastUpdated(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Power.PowerGridForecast", L"ForecastUpdated");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerGridForecast_remove_ForecastUpdated(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Power.PowerGridForecast", L"ForecastUpdated");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            winrt::Windows::Devices::Power::PowerGridForecast::ForecastUpdated(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PowerGridForecast(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Power::PowerGridForecast>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PowerGridForecast(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Power::PowerGridForecast>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PowerGridForecast[] = {
+        { "_assign_array_", _assign_array_PowerGridForecast, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PowerGridForecast), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PowerGridForecast[] = {
+        { "block_duration", reinterpret_cast<getter>(PowerGridForecast_get_BlockDuration), nullptr, nullptr, nullptr },
+        { "forecast", reinterpret_cast<getter>(PowerGridForecast_get_Forecast), nullptr, nullptr, nullptr },
+        { "start_time", reinterpret_cast<getter>(PowerGridForecast_get_StartTime), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PowerGridForecast[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PowerGridForecast) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PowerGridForecast) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PowerGridForecast) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PowerGridForecast) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PowerGridForecast = {
+        "winrt._winrt_windows_devices_power.PowerGridForecast",
+        sizeof(py::wrapper::Windows::Devices::Power::PowerGridForecast),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PowerGridForecast};
+
+    static PyGetSetDef getset_PowerGridForecast_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PowerGridForecast_Static[] = {
+        { "get_forecast", reinterpret_cast<PyCFunction>(PowerGridForecast_GetForecast), METH_VARARGS, nullptr },
+        { "add_forecast_updated", reinterpret_cast<PyCFunction>(PowerGridForecast_add_ForecastUpdated), METH_O, nullptr },
+        { "remove_forecast_updated", reinterpret_cast<PyCFunction>(PowerGridForecast_remove_ForecastUpdated), METH_O, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_PowerGridForecast_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PowerGridForecast_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PowerGridForecast_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PowerGridForecast_Static =
+    {
+        "winrt._winrt_windows_devices_power.PowerGridForecast_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PowerGridForecast_Static
+    };
+
     // ----- Windows.Devices.Power Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Windows.Devices.Power");
@@ -581,6 +969,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_power(void) noexcept
 
     py::pytype_handle BatteryReport_type{py::register_python_type(module.get(), &type_spec_BatteryReport, object_bases.get(), nullptr)};
     if (!BatteryReport_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PowerGridData_type{py::register_python_type(module.get(), &type_spec_PowerGridData, object_bases.get(), nullptr)};
+    if (!PowerGridData_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PowerGridForecast_Static{PyType_FromSpec(&type_spec_PowerGridForecast_Static)};
+    if (!type_PowerGridForecast_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PowerGridForecast_type{py::register_python_type(module.get(), &type_spec_PowerGridForecast, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerGridForecast_Static.get()))};
+    if (!PowerGridForecast_type)
     {
         return nullptr;
     }

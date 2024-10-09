@@ -10,6 +10,7 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
+import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.graphics as windows_graphics
 import winrt.windows.graphics.directx as windows_graphics_directx
 import winrt.windows.graphics.directx.direct3d11 as windows_graphics_directx_direct3d11
@@ -18,7 +19,7 @@ import winrt.windows.system as windows_system
 import winrt.windows.ui as windows_ui
 import winrt.windows.ui.composition as windows_ui_composition
 
-from winrt.windows.graphics.capture import GraphicsCaptureAccessKind
+from winrt.windows.graphics.capture import GraphicsCaptureAccessKind, GraphicsCaptureDirtyRegionMode
 
 Self = typing.TypeVar('Self')
 
@@ -35,6 +36,10 @@ class Direct3D11CaptureFrame(winrt.system.Object):
     def surface(self) -> typing.Optional[windows_graphics_directx_direct3d11.IDirect3DSurface]: ...
     @_property
     def system_relative_time(self) -> datetime.timedelta: ...
+    @_property
+    def dirty_region_mode(self) -> GraphicsCaptureDirtyRegionMode: ...
+    @_property
+    def dirty_regions(self) -> typing.Optional[windows_foundation_collections.IVectorView[windows_graphics.RectInt32]]: ...
 
 @typing.final
 class Direct3D11CaptureFramePool_Static(type):
@@ -108,4 +113,16 @@ class GraphicsCaptureSession(winrt.system.Object, metaclass=GraphicsCaptureSessi
     def is_border_required(self) -> bool: ...
     @is_border_required.setter
     def is_border_required(self, value: bool) -> None: ...
+    @_property
+    def dirty_region_mode(self) -> GraphicsCaptureDirtyRegionMode: ...
+    @dirty_region_mode.setter
+    def dirty_region_mode(self, value: GraphicsCaptureDirtyRegionMode) -> None: ...
+    @_property
+    def min_update_interval(self) -> datetime.timedelta: ...
+    @min_update_interval.setter
+    def min_update_interval(self, value: datetime.timedelta) -> None: ...
+    @_property
+    def include_secondary_windows(self) -> bool: ...
+    @include_secondary_windows.setter
+    def include_secondary_windows(self, value: bool) -> None: ...
 

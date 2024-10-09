@@ -5269,6 +5269,1105 @@ namespace py::cpp::Windows::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_MouseWheelParameters};
 
+    // ----- PhysicalGestureRecognizer class --------------------
+
+    static PyObject* _new_PhysicalGestureRecognizer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::UI::Input::PhysicalGestureRecognizer instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_PhysicalGestureRecognizer(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PhysicalGestureRecognizer_CompleteGesture(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"CompleteGesture", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.CompleteGesture();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_ProcessDownEvent(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ProcessDownEvent", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
+
+                self->obj.ProcessDownEvent(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_ProcessMoveEvents(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ProcessMoveEvents", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::UI::Input::PointerPoint>>(args, 0);
+
+                self->obj.ProcessMoveEvents(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_ProcessUpEvent(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ProcessUpEvent", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Input::PointerPoint>(args, 0);
+
+                self->obj.ProcessUpEvent(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_TranslationMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TranslationMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TranslationMinContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_TranslationMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TranslationMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.TranslationMinContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_TranslationMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TranslationMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TranslationMaxContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_TranslationMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TranslationMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.TranslationMaxContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_TapMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TapMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TapMinContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_TapMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TapMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.TapMinContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_TapMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TapMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TapMaxContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_TapMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"TapMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.TapMaxContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_HoldStartDelay(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldStartDelay");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HoldStartDelay());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_HoldStartDelay(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldStartDelay");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.HoldStartDelay(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_HoldRadius(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldRadius");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HoldRadius());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_HoldRadius(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldRadius");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<float>(arg);
+
+            self->obj.HoldRadius(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_HoldMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HoldMinContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_HoldMinContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldMinContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.HoldMinContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_HoldMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.HoldMaxContactCount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_HoldMaxContactCount(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"HoldMaxContactCount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<uint32_t>(arg);
+
+            self->obj.HoldMaxContactCount(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_get_GestureSettings(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"GestureSettings");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.GestureSettings());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PhysicalGestureRecognizer_put_GestureSettings(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"GestureSettings");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Input::GestureSettings>(arg);
+
+            self->obj.GestureSettings(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_add_Holding(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"Holding");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::HoldingEventArgs>>(arg);
+
+            return py::convert(self->obj.Holding(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_remove_Holding(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"Holding");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Holding(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_add_ManipulationCompleted(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationCompleted");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationCompletedEventArgs>>(arg);
+
+            return py::convert(self->obj.ManipulationCompleted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_remove_ManipulationCompleted(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationCompleted");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationCompleted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_add_ManipulationStarted(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationStarted");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationStartedEventArgs>>(arg);
+
+            return py::convert(self->obj.ManipulationStarted(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_remove_ManipulationStarted(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationStarted");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationStarted(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_add_ManipulationUpdated(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationUpdated");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>>(arg);
+
+            return py::convert(self->obj.ManipulationUpdated(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_remove_ManipulationUpdated(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"ManipulationUpdated");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ManipulationUpdated(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_add_Tapped(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"Tapped");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::PhysicalGestureRecognizer, winrt::Windows::UI::Input::TappedEventArgs>>(arg);
+
+            return py::convert(self->obj.Tapped(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhysicalGestureRecognizer_remove_Tapped(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.PhysicalGestureRecognizer", L"Tapped");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Tapped(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PhysicalGestureRecognizer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::PhysicalGestureRecognizer>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PhysicalGestureRecognizer(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::PhysicalGestureRecognizer>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PhysicalGestureRecognizer[] = {
+        { "complete_gesture", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_CompleteGesture), METH_VARARGS, nullptr },
+        { "process_down_event", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_ProcessDownEvent), METH_VARARGS, nullptr },
+        { "process_move_events", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_ProcessMoveEvents), METH_VARARGS, nullptr },
+        { "process_up_event", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_ProcessUpEvent), METH_VARARGS, nullptr },
+        { "add_holding", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_add_Holding), METH_O, nullptr },
+        { "remove_holding", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_remove_Holding), METH_O, nullptr },
+        { "add_manipulation_completed", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_add_ManipulationCompleted), METH_O, nullptr },
+        { "remove_manipulation_completed", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_remove_ManipulationCompleted), METH_O, nullptr },
+        { "add_manipulation_started", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_add_ManipulationStarted), METH_O, nullptr },
+        { "remove_manipulation_started", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_remove_ManipulationStarted), METH_O, nullptr },
+        { "add_manipulation_updated", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_add_ManipulationUpdated), METH_O, nullptr },
+        { "remove_manipulation_updated", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_remove_ManipulationUpdated), METH_O, nullptr },
+        { "add_tapped", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_add_Tapped), METH_O, nullptr },
+        { "remove_tapped", reinterpret_cast<PyCFunction>(PhysicalGestureRecognizer_remove_Tapped), METH_O, nullptr },
+        { "_assign_array_", _assign_array_PhysicalGestureRecognizer, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PhysicalGestureRecognizer), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PhysicalGestureRecognizer[] = {
+        { "translation_min_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_TranslationMinContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_TranslationMinContactCount), nullptr, nullptr },
+        { "translation_max_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_TranslationMaxContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_TranslationMaxContactCount), nullptr, nullptr },
+        { "tap_min_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_TapMinContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_TapMinContactCount), nullptr, nullptr },
+        { "tap_max_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_TapMaxContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_TapMaxContactCount), nullptr, nullptr },
+        { "hold_start_delay", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldStartDelay), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldStartDelay), nullptr, nullptr },
+        { "hold_radius", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldRadius), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldRadius), nullptr, nullptr },
+        { "hold_min_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldMinContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldMinContactCount), nullptr, nullptr },
+        { "hold_max_contact_count", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_HoldMaxContactCount), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_HoldMaxContactCount), nullptr, nullptr },
+        { "gesture_settings", reinterpret_cast<getter>(PhysicalGestureRecognizer_get_GestureSettings), reinterpret_cast<setter>(PhysicalGestureRecognizer_put_GestureSettings), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PhysicalGestureRecognizer[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PhysicalGestureRecognizer) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PhysicalGestureRecognizer) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PhysicalGestureRecognizer) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PhysicalGestureRecognizer) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PhysicalGestureRecognizer = {
+        "winrt._winrt_windows_ui_input.PhysicalGestureRecognizer",
+        sizeof(py::wrapper::Windows::UI::Input::PhysicalGestureRecognizer),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PhysicalGestureRecognizer};
+
     // ----- PointerPoint class --------------------
 
     static PyObject* _new_PointerPoint(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5626,6 +6725,58 @@ namespace py::cpp::Windows::UI::Input
         }
     }
 
+    static PyObject* PointerPoint_get_IsPhysicalPositionSupported(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"IsPhysicalPositionSupported");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsPhysicalPositionSupported());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerPoint_get_PhysicalPosition(py::wrapper::Windows::UI::Input::PointerPoint* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.PointerPoint", L"PhysicalPosition");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PhysicalPosition());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_PointerPoint(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::PointerPoint>>();
@@ -5665,6 +6816,8 @@ namespace py::cpp::Windows::UI::Input
         { "properties", reinterpret_cast<getter>(PointerPoint_get_Properties), nullptr, nullptr, nullptr },
         { "raw_position", reinterpret_cast<getter>(PointerPoint_get_RawPosition), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(PointerPoint_get_Timestamp), nullptr, nullptr, nullptr },
+        { "is_physical_position_supported", reinterpret_cast<getter>(PointerPoint_get_IsPhysicalPositionSupported), nullptr, nullptr, nullptr },
+        { "physical_position", reinterpret_cast<getter>(PointerPoint_get_PhysicalPosition), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -11366,6 +12519,624 @@ namespace py::cpp::Windows::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_TappedEventArgs};
 
+    // ----- TouchpadGesturesController class --------------------
+
+    static PyObject* _new_TouchpadGesturesController(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::UI::Input::TouchpadGesturesController>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::TouchpadGesturesController>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_TouchpadGesturesController(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* TouchpadGesturesController_CreateForProcess(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.TouchpadGesturesController", L"CreateForProcess", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(winrt::Windows::UI::Input::TouchpadGesturesController::CreateForProcess());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_IsSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Input.TouchpadGesturesController", L"IsSupported", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(winrt::Windows::UI::Input::TouchpadGesturesController::IsSupported());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_get_SupportedGestures(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"SupportedGestures");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SupportedGestures());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TouchpadGesturesController_put_SupportedGestures(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"SupportedGestures");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::UI::Input::TouchpadGlobalGestureKinds>(arg);
+
+            self->obj.SupportedGestures(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_get_GesturesEnabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GesturesEnabled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.GesturesEnabled());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TouchpadGesturesController_put_GesturesEnabled(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGesturesController", L"GesturesEnabled");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.GesturesEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_add_PointerMoved(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerMoved");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
+
+            return py::convert(self->obj.PointerMoved(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_remove_PointerMoved(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerMoved");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerMoved(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_add_PointerPressed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerPressed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
+
+            return py::convert(self->obj.PointerPressed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_remove_PointerPressed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerPressed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerPressed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_add_PointerReleased(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerReleased");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Core::PointerEventArgs>>(arg);
+
+            return py::convert(self->obj.PointerReleased(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_remove_PointerReleased(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"PointerReleased");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PointerReleased(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_add_TouchpadGlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"TouchpadGlobalActionPerformed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Input::TouchpadGesturesController, winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>(arg);
+
+            return py::convert(self->obj.TouchpadGlobalActionPerformed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TouchpadGesturesController_remove_TouchpadGlobalActionPerformed(py::wrapper::Windows::UI::Input::TouchpadGesturesController* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.UI.Input.TouchpadGesturesController", L"TouchpadGlobalActionPerformed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.TouchpadGlobalActionPerformed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_TouchpadGesturesController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::TouchpadGesturesController>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_TouchpadGesturesController(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::TouchpadGesturesController>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_TouchpadGesturesController[] = {
+        { "add_pointer_moved", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerMoved), METH_O, nullptr },
+        { "remove_pointer_moved", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerMoved), METH_O, nullptr },
+        { "add_pointer_pressed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerPressed), METH_O, nullptr },
+        { "remove_pointer_pressed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerPressed), METH_O, nullptr },
+        { "add_pointer_released", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_PointerReleased), METH_O, nullptr },
+        { "remove_pointer_released", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_PointerReleased), METH_O, nullptr },
+        { "add_touchpad_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_add_TouchpadGlobalActionPerformed), METH_O, nullptr },
+        { "remove_touchpad_global_action_performed", reinterpret_cast<PyCFunction>(TouchpadGesturesController_remove_TouchpadGlobalActionPerformed), METH_O, nullptr },
+        { "_assign_array_", _assign_array_TouchpadGesturesController, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_TouchpadGesturesController), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_TouchpadGesturesController[] = {
+        { "supported_gestures", reinterpret_cast<getter>(TouchpadGesturesController_get_SupportedGestures), reinterpret_cast<setter>(TouchpadGesturesController_put_SupportedGestures), nullptr, nullptr },
+        { "gestures_enabled", reinterpret_cast<getter>(TouchpadGesturesController_get_GesturesEnabled), reinterpret_cast<setter>(TouchpadGesturesController_put_GesturesEnabled), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_TouchpadGesturesController[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_TouchpadGesturesController) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TouchpadGesturesController) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TouchpadGesturesController) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_TouchpadGesturesController) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TouchpadGesturesController = {
+        "winrt._winrt_windows_ui_input.TouchpadGesturesController",
+        sizeof(py::wrapper::Windows::UI::Input::TouchpadGesturesController),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_TouchpadGesturesController};
+
+    static PyGetSetDef getset_TouchpadGesturesController_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TouchpadGesturesController_Static[] = {
+        { "create_for_process", reinterpret_cast<PyCFunction>(TouchpadGesturesController_CreateForProcess), METH_VARARGS, nullptr },
+        { "is_supported", reinterpret_cast<PyCFunction>(TouchpadGesturesController_IsSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_TouchpadGesturesController_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TouchpadGesturesController_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TouchpadGesturesController_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TouchpadGesturesController_Static =
+    {
+        "winrt._winrt_windows_ui_input.TouchpadGesturesController_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TouchpadGesturesController_Static
+    };
+
+    // ----- TouchpadGlobalActionEventArgs class --------------------
+
+    static PyObject* _new_TouchpadGlobalActionEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_TouchpadGlobalActionEventArgs(py::wrapper::Windows::UI::Input::TouchpadGlobalActionEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* TouchpadGlobalActionEventArgs_get_Action(py::wrapper::Windows::UI::Input::TouchpadGlobalActionEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.Input.TouchpadGlobalActionEventArgs", L"Action");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Action());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_TouchpadGlobalActionEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_TouchpadGlobalActionEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_TouchpadGlobalActionEventArgs[] = {
+        { "_assign_array_", _assign_array_TouchpadGlobalActionEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_TouchpadGlobalActionEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_TouchpadGlobalActionEventArgs[] = {
+        { "action", reinterpret_cast<getter>(TouchpadGlobalActionEventArgs_get_Action), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_TouchpadGlobalActionEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_TouchpadGlobalActionEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TouchpadGlobalActionEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TouchpadGlobalActionEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_TouchpadGlobalActionEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TouchpadGlobalActionEventArgs = {
+        "winrt._winrt_windows_ui_input.TouchpadGlobalActionEventArgs",
+        sizeof(py::wrapper::Windows::UI::Input::TouchpadGlobalActionEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_TouchpadGlobalActionEventArgs};
+
     // ----- IPointerPointTransform interface --------------------
 
     static PyObject* _new_IPointerPointTransform(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -12549,6 +14320,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle PhysicalGestureRecognizer_type{py::register_python_type(module.get(), &type_spec_PhysicalGestureRecognizer, object_bases.get(), nullptr)};
+    if (!PhysicalGestureRecognizer_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_PointerPoint_Static{PyType_FromSpec(&type_spec_PointerPoint_Static)};
     if (!type_PointerPoint_Static)
     {
@@ -12719,6 +14496,24 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
 
     py::pytype_handle TappedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedEventArgs, object_bases.get(), nullptr)};
     if (!TappedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TouchpadGesturesController_Static{PyType_FromSpec(&type_spec_TouchpadGesturesController_Static)};
+    if (!type_TouchpadGesturesController_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TouchpadGesturesController_type{py::register_python_type(module.get(), &type_spec_TouchpadGesturesController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TouchpadGesturesController_Static.get()))};
+    if (!TouchpadGesturesController_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TouchpadGlobalActionEventArgs_type{py::register_python_type(module.get(), &type_spec_TouchpadGlobalActionEventArgs, object_bases.get(), nullptr)};
+    if (!TouchpadGlobalActionEventArgs_type)
     {
         return nullptr;
     }

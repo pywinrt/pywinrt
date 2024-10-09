@@ -4,6 +4,886 @@
 
 namespace py::cpp::Windows::ApplicationModel::Calls
 {
+    // ----- AcceptedVoipPhoneCallOptions class --------------------
+
+    static PyObject* _new_AcceptedVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_AcceptedVoipPhoneCallOptions(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ServiceName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcceptedVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ServiceName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_Media(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Media());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcceptedVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
+
+            self->obj.Media(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_Context(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Context());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcceptedVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Context(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactNumber());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcceptedVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactNumber(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AcceptedVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AcceptedVoipPhoneCallOptions_get_AssociatedDeviceIds(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AcceptedVoipPhoneCallOptions", L"AssociatedDeviceIds");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AssociatedDeviceIds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_AcceptedVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AcceptedVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AcceptedVoipPhoneCallOptions[] = {
+        { "_assign_array_", _assign_array_AcceptedVoipPhoneCallOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AcceptedVoipPhoneCallOptions), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_AcceptedVoipPhoneCallOptions[] = {
+        { "service_name", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_ServiceName), reinterpret_cast<setter>(AcceptedVoipPhoneCallOptions_put_ServiceName), nullptr, nullptr },
+        { "media", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_Media), reinterpret_cast<setter>(AcceptedVoipPhoneCallOptions_put_Media), nullptr, nullptr },
+        { "context", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_Context), reinterpret_cast<setter>(AcceptedVoipPhoneCallOptions_put_Context), nullptr, nullptr },
+        { "contact_number", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_ContactNumber), reinterpret_cast<setter>(AcceptedVoipPhoneCallOptions_put_ContactNumber), nullptr, nullptr },
+        { "contact_name", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_ContactName), reinterpret_cast<setter>(AcceptedVoipPhoneCallOptions_put_ContactName), nullptr, nullptr },
+        { "associated_device_ids", reinterpret_cast<getter>(AcceptedVoipPhoneCallOptions_get_AssociatedDeviceIds), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_AcceptedVoipPhoneCallOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AcceptedVoipPhoneCallOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AcceptedVoipPhoneCallOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AcceptedVoipPhoneCallOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AcceptedVoipPhoneCallOptions) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AcceptedVoipPhoneCallOptions = {
+        "winrt._winrt_windows_applicationmodel_calls.AcceptedVoipPhoneCallOptions",
+        sizeof(py::wrapper::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AcceptedVoipPhoneCallOptions};
+
+    // ----- AppInitiatedVoipPhoneCallOptions class --------------------
+
+    static PyObject* _new_AppInitiatedVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_AppInitiatedVoipPhoneCallOptions(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ServiceName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppInitiatedVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ServiceName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_Media(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Media());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppInitiatedVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
+
+            self->obj.Media(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_Context(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Context());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppInitiatedVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Context(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactNumber());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppInitiatedVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactNumber(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int AppInitiatedVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* AppInitiatedVoipPhoneCallOptions_get_AssociatedDeviceIds(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.AppInitiatedVoipPhoneCallOptions", L"AssociatedDeviceIds");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AssociatedDeviceIds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_AppInitiatedVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AppInitiatedVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AppInitiatedVoipPhoneCallOptions[] = {
+        { "_assign_array_", _assign_array_AppInitiatedVoipPhoneCallOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AppInitiatedVoipPhoneCallOptions), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_AppInitiatedVoipPhoneCallOptions[] = {
+        { "service_name", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_ServiceName), reinterpret_cast<setter>(AppInitiatedVoipPhoneCallOptions_put_ServiceName), nullptr, nullptr },
+        { "media", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_Media), reinterpret_cast<setter>(AppInitiatedVoipPhoneCallOptions_put_Media), nullptr, nullptr },
+        { "context", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_Context), reinterpret_cast<setter>(AppInitiatedVoipPhoneCallOptions_put_Context), nullptr, nullptr },
+        { "contact_number", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_ContactNumber), reinterpret_cast<setter>(AppInitiatedVoipPhoneCallOptions_put_ContactNumber), nullptr, nullptr },
+        { "contact_name", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_ContactName), reinterpret_cast<setter>(AppInitiatedVoipPhoneCallOptions_put_ContactName), nullptr, nullptr },
+        { "associated_device_ids", reinterpret_cast<getter>(AppInitiatedVoipPhoneCallOptions_get_AssociatedDeviceIds), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_AppInitiatedVoipPhoneCallOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AppInitiatedVoipPhoneCallOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AppInitiatedVoipPhoneCallOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AppInitiatedVoipPhoneCallOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AppInitiatedVoipPhoneCallOptions) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppInitiatedVoipPhoneCallOptions = {
+        "winrt._winrt_windows_applicationmodel_calls.AppInitiatedVoipPhoneCallOptions",
+        sizeof(py::wrapper::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AppInitiatedVoipPhoneCallOptions};
+
     // ----- CallAnswerEventArgs class --------------------
 
     static PyObject* _new_CallAnswerEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -47,6 +927,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         }
     }
 
+    static PyObject* CallAnswerEventArgs_get_SourceDeviceId(py::wrapper::Windows::ApplicationModel::Calls::CallAnswerEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.CallAnswerEventArgs", L"SourceDeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SourceDeviceId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_CallAnswerEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>>();
@@ -79,6 +985,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyGetSetDef _getset_CallAnswerEventArgs[] = {
         { "accepted_media", reinterpret_cast<getter>(CallAnswerEventArgs_get_AcceptedMedia), nullptr, nullptr, nullptr },
+        { "source_device_id", reinterpret_cast<getter>(CallAnswerEventArgs_get_SourceDeviceId), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -282,6 +1189,818 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CallStateChangeEventArgs};
+
+    // ----- IncomingVoipPhoneCallOptions class --------------------
+
+    static PyObject* _new_IncomingVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_IncomingVoipPhoneCallOptions(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ServiceName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ServiceName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_Ringtone(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Ringtone");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Ringtone());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_Ringtone(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Ringtone");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
+
+            self->obj.Ringtone(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_RingTimeout(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"RingTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RingTimeout());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_RingTimeout(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"RingTimeout");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.RingTimeout(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_Media(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Media());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
+
+            self->obj.Media(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_Context(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Context());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Context(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_ContactRemoteId(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactRemoteId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactRemoteId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_ContactRemoteId(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactRemoteId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactRemoteId(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactNumber());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_ContactNumber(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactNumber");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactNumber(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_ContactName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_ContactImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactImage");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactImage());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_ContactImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"ContactImage");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
+
+            self->obj.ContactImage(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_CallDetails(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"CallDetails");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CallDetails());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_CallDetails(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"CallDetails");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.CallDetails(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_BrandingImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"BrandingImage");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.BrandingImage());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IncomingVoipPhoneCallOptions_put_BrandingImage(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"BrandingImage");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
+
+            self->obj.BrandingImage(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IncomingVoipPhoneCallOptions_get_AssociatedDeviceIds(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.IncomingVoipPhoneCallOptions", L"AssociatedDeviceIds");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AssociatedDeviceIds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IncomingVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IncomingVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IncomingVoipPhoneCallOptions[] = {
+        { "_assign_array_", _assign_array_IncomingVoipPhoneCallOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IncomingVoipPhoneCallOptions), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IncomingVoipPhoneCallOptions[] = {
+        { "service_name", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_ServiceName), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_ServiceName), nullptr, nullptr },
+        { "ringtone", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_Ringtone), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_Ringtone), nullptr, nullptr },
+        { "ring_timeout", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_RingTimeout), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_RingTimeout), nullptr, nullptr },
+        { "media", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_Media), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_Media), nullptr, nullptr },
+        { "context", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_Context), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_Context), nullptr, nullptr },
+        { "contact_remote_id", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_ContactRemoteId), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_ContactRemoteId), nullptr, nullptr },
+        { "contact_number", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_ContactNumber), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_ContactNumber), nullptr, nullptr },
+        { "contact_name", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_ContactName), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_ContactName), nullptr, nullptr },
+        { "contact_image", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_ContactImage), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_ContactImage), nullptr, nullptr },
+        { "call_details", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_CallDetails), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_CallDetails), nullptr, nullptr },
+        { "branding_image", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_BrandingImage), reinterpret_cast<setter>(IncomingVoipPhoneCallOptions_put_BrandingImage), nullptr, nullptr },
+        { "associated_device_ids", reinterpret_cast<getter>(IncomingVoipPhoneCallOptions_get_AssociatedDeviceIds), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_IncomingVoipPhoneCallOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IncomingVoipPhoneCallOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IncomingVoipPhoneCallOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IncomingVoipPhoneCallOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IncomingVoipPhoneCallOptions) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IncomingVoipPhoneCallOptions = {
+        "winrt._winrt_windows_applicationmodel_calls.IncomingVoipPhoneCallOptions",
+        sizeof(py::wrapper::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IncomingVoipPhoneCallOptions};
 
     // ----- LockScreenCallEndCallDeferral class --------------------
 
@@ -893,6 +2612,384 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MuteChangeEventArgs};
+
+    // ----- OutgoingVoipPhoneCallOptions class --------------------
+
+    static PyObject* _new_OutgoingVoipPhoneCallOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_OutgoingVoipPhoneCallOptions(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* OutgoingVoipPhoneCallOptions_get_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ServiceName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OutgoingVoipPhoneCallOptions_put_ServiceName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"ServiceName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ServiceName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OutgoingVoipPhoneCallOptions_get_Media(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Media());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OutgoingVoipPhoneCallOptions_put_Media(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"Media");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(arg);
+
+            self->obj.Media(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OutgoingVoipPhoneCallOptions_get_Context(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Context());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OutgoingVoipPhoneCallOptions_put_Context(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"Context");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Context(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OutgoingVoipPhoneCallOptions_get_ContactName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ContactName());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int OutgoingVoipPhoneCallOptions_put_ContactName(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"ContactName");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ContactName(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* OutgoingVoipPhoneCallOptions_get_AssociatedDeviceIds(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.OutgoingVoipPhoneCallOptions", L"AssociatedDeviceIds");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AssociatedDeviceIds());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_OutgoingVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_OutgoingVoipPhoneCallOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_OutgoingVoipPhoneCallOptions[] = {
+        { "_assign_array_", _assign_array_OutgoingVoipPhoneCallOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_OutgoingVoipPhoneCallOptions), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_OutgoingVoipPhoneCallOptions[] = {
+        { "service_name", reinterpret_cast<getter>(OutgoingVoipPhoneCallOptions_get_ServiceName), reinterpret_cast<setter>(OutgoingVoipPhoneCallOptions_put_ServiceName), nullptr, nullptr },
+        { "media", reinterpret_cast<getter>(OutgoingVoipPhoneCallOptions_get_Media), reinterpret_cast<setter>(OutgoingVoipPhoneCallOptions_put_Media), nullptr, nullptr },
+        { "context", reinterpret_cast<getter>(OutgoingVoipPhoneCallOptions_get_Context), reinterpret_cast<setter>(OutgoingVoipPhoneCallOptions_put_Context), nullptr, nullptr },
+        { "contact_name", reinterpret_cast<getter>(OutgoingVoipPhoneCallOptions_get_ContactName), reinterpret_cast<setter>(OutgoingVoipPhoneCallOptions_put_ContactName), nullptr, nullptr },
+        { "associated_device_ids", reinterpret_cast<getter>(OutgoingVoipPhoneCallOptions_get_AssociatedDeviceIds), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_OutgoingVoipPhoneCallOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_OutgoingVoipPhoneCallOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_OutgoingVoipPhoneCallOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_OutgoingVoipPhoneCallOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_OutgoingVoipPhoneCallOptions) },
+        { }
+    };
+
+    static PyType_Spec type_spec_OutgoingVoipPhoneCallOptions = {
+        "winrt._winrt_windows_applicationmodel_calls.OutgoingVoipPhoneCallOptions",
+        sizeof(py::wrapper::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_OutgoingVoipPhoneCallOptions};
 
     // ----- PhoneCall class --------------------
 
@@ -9150,6 +11247,80 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         }
     }
 
+    static PyObject* VoipCallCoordinator_GetDeviceSelectorForCallControl(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"GetDeviceSelectorForCallControl", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::GetDeviceSelectorForCallControl());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipCallCoordinator_IsCallControlDeviceKindSupportedForAssociation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"IsCallControlDeviceKindSupportedForAssociation", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipCallControlDeviceKind>(args, 0);
+
+                return py::convert(winrt::Windows::ApplicationModel::Calls::VoipCallCoordinator::IsCallControlDeviceKindSupportedForAssociation(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* VoipCallCoordinator_NotifyMuted(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -9312,6 +11483,44 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         }
     }
 
+    static PyObject* VoipCallCoordinator_RequestNewAppInitiatedCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"RequestNewAppInitiatedCallWithOptions", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>(args, 0);
+
+                return py::convert(self->obj.RequestNewAppInitiatedCallWithOptions(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* VoipCallCoordinator_RequestNewIncomingCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -9396,6 +11605,44 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         }
     }
 
+    static PyObject* VoipCallCoordinator_RequestNewIncomingCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"RequestNewIncomingCallWithOptions", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>(args, 0);
+
+                return py::convert(self->obj.RequestNewIncomingCallWithOptions(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* VoipCallCoordinator_RequestNewOutgoingCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -9423,6 +11670,44 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>(args, 3);
 
                 return py::convert(self->obj.RequestNewOutgoingCall(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipCallCoordinator_RequestNewOutgoingCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"RequestNewOutgoingCallWithOptions", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>(args, 0);
+
+                return py::convert(self->obj.RequestNewOutgoingCallWithOptions(param0));
             }
             catch (...)
             {
@@ -9583,6 +11868,44 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         }
     }
 
+    static PyObject* VoipCallCoordinator_SetupNewAcceptedCallWithOptions(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"SetupNewAcceptedCallWithOptions", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>(args, 0);
+
+                return py::convert(self->obj.SetupNewAcceptedCallWithOptions(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* VoipCallCoordinator_TerminateCellularCall(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -9709,11 +12032,15 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "notify_unmuted", reinterpret_cast<PyCFunction>(VoipCallCoordinator_NotifyUnmuted), METH_VARARGS, nullptr },
         { "request_incoming_upgrade_to_video_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestIncomingUpgradeToVideoCall), METH_VARARGS, nullptr },
         { "request_new_app_initiated_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewAppInitiatedCall), METH_VARARGS, nullptr },
+        { "request_new_app_initiated_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewAppInitiatedCallWithOptions), METH_VARARGS, nullptr },
         { "request_new_incoming_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewIncomingCall), METH_VARARGS, nullptr },
+        { "request_new_incoming_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewIncomingCallWithOptions), METH_VARARGS, nullptr },
         { "request_new_outgoing_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewOutgoingCall), METH_VARARGS, nullptr },
+        { "request_new_outgoing_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewOutgoingCallWithOptions), METH_VARARGS, nullptr },
         { "request_outgoing_upgrade_to_video_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestOutgoingUpgradeToVideoCall), METH_VARARGS, nullptr },
         { "reserve_call_resources_async", reinterpret_cast<PyCFunction>(VoipCallCoordinator_ReserveCallResourcesAsync), METH_VARARGS, nullptr },
         { "setup_new_accepted_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_SetupNewAcceptedCall), METH_VARARGS, nullptr },
+        { "setup_new_accepted_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_SetupNewAcceptedCallWithOptions), METH_VARARGS, nullptr },
         { "terminate_cellular_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_TerminateCellularCall), METH_VARARGS, nullptr },
         { "add_mute_state_changed", reinterpret_cast<PyCFunction>(VoipCallCoordinator_add_MuteStateChanged), METH_O, nullptr },
         { "remove_mute_state_changed", reinterpret_cast<PyCFunction>(VoipCallCoordinator_remove_MuteStateChanged), METH_O, nullptr },
@@ -9747,6 +12074,8 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyMethodDef methods_VoipCallCoordinator_Static[] = {
         { "get_default", reinterpret_cast<PyCFunction>(VoipCallCoordinator_GetDefault), METH_VARARGS, nullptr },
+        { "get_device_selector_for_call_control", reinterpret_cast<PyCFunction>(VoipCallCoordinator_GetDeviceSelectorForCallControl), METH_VARARGS, nullptr },
+        { "is_call_control_device_kind_supported_for_association", reinterpret_cast<PyCFunction>(VoipCallCoordinator_IsCallControlDeviceKindSupportedForAssociation), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9782,6 +12111,81 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* VoipPhoneCall_AddAssociatedCallControlDevice(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"AddAssociatedCallControlDevice", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.AddAssociatedCallControlDevice(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipPhoneCall_GetAssociatedCallControlDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"GetAssociatedCallControlDevices", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetAssociatedCallControlDevices());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* VoipPhoneCall_NotifyCallAccepted(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
@@ -9845,6 +12249,34 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 }
 
                 self->obj.NotifyCallActive();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"NotifyCallActive", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                self->obj.NotifyCallActive(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9956,6 +12388,84 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 }
 
                 self->obj.NotifyCallReady();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipPhoneCall_RemoveAssociatedCallControlDevice(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"RemoveAssociatedCallControlDevice", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.RemoveAssociatedCallControlDevice(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipPhoneCall_SetAssociatedCallControlDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"SetAssociatedCallControlDevices", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                self->obj.SetAssociatedCallControlDevices(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10188,6 +12698,32 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         {
             py::to_PyErr();
             return -1;
+        }
+    }
+
+    static PyObject* VoipPhoneCall_get_IsUsingAssociatedDevicesList(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Calls.VoipPhoneCall", L"IsUsingAssociatedDevicesList");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsUsingAssociatedDevicesList());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
         }
     }
 
@@ -10501,11 +13037,15 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     }
 
     static PyMethodDef _methods_VoipPhoneCall[] = {
+        { "add_associated_call_control_device", reinterpret_cast<PyCFunction>(VoipPhoneCall_AddAssociatedCallControlDevice), METH_VARARGS, nullptr },
+        { "get_associated_call_control_devices", reinterpret_cast<PyCFunction>(VoipPhoneCall_GetAssociatedCallControlDevices), METH_VARARGS, nullptr },
         { "notify_call_accepted", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallAccepted), METH_VARARGS, nullptr },
         { "notify_call_active", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallActive), METH_VARARGS, nullptr },
         { "notify_call_ended", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallEnded), METH_VARARGS, nullptr },
         { "notify_call_held", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallHeld), METH_VARARGS, nullptr },
         { "notify_call_ready", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallReady), METH_VARARGS, nullptr },
+        { "remove_associated_call_control_device", reinterpret_cast<PyCFunction>(VoipPhoneCall_RemoveAssociatedCallControlDevice), METH_VARARGS, nullptr },
+        { "set_associated_call_control_devices", reinterpret_cast<PyCFunction>(VoipPhoneCall_SetAssociatedCallControlDevices), METH_VARARGS, nullptr },
         { "try_show_app_u_i", reinterpret_cast<PyCFunction>(VoipPhoneCall_TryShowAppUI), METH_VARARGS, nullptr },
         { "add_answer_requested", reinterpret_cast<PyCFunction>(VoipPhoneCall_add_AnswerRequested), METH_O, nullptr },
         { "remove_answer_requested", reinterpret_cast<PyCFunction>(VoipPhoneCall_remove_AnswerRequested), METH_O, nullptr },
@@ -10526,6 +13066,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "start_time", reinterpret_cast<getter>(VoipPhoneCall_get_StartTime), reinterpret_cast<setter>(VoipPhoneCall_put_StartTime), nullptr, nullptr },
         { "contact_name", reinterpret_cast<getter>(VoipPhoneCall_get_ContactName), reinterpret_cast<setter>(VoipPhoneCall_put_ContactName), nullptr, nullptr },
         { "call_media", reinterpret_cast<getter>(VoipPhoneCall_get_CallMedia), reinterpret_cast<setter>(VoipPhoneCall_put_CallMedia), nullptr, nullptr },
+        { "is_using_associated_devices_list", reinterpret_cast<getter>(VoipPhoneCall_get_IsUsingAssociatedDevicesList), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -10589,6 +13130,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle AcceptedVoipPhoneCallOptions_type{py::register_python_type(module.get(), &type_spec_AcceptedVoipPhoneCallOptions, object_bases.get(), nullptr)};
+    if (!AcceptedVoipPhoneCallOptions_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppInitiatedVoipPhoneCallOptions_type{py::register_python_type(module.get(), &type_spec_AppInitiatedVoipPhoneCallOptions, object_bases.get(), nullptr)};
+    if (!AppInitiatedVoipPhoneCallOptions_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle CallAnswerEventArgs_type{py::register_python_type(module.get(), &type_spec_CallAnswerEventArgs, object_bases.get(), nullptr)};
     if (!CallAnswerEventArgs_type)
     {
@@ -10603,6 +13156,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
 
     py::pytype_handle CallStateChangeEventArgs_type{py::register_python_type(module.get(), &type_spec_CallStateChangeEventArgs, object_bases.get(), nullptr)};
     if (!CallStateChangeEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IncomingVoipPhoneCallOptions_type{py::register_python_type(module.get(), &type_spec_IncomingVoipPhoneCallOptions, object_bases.get(), nullptr)};
+    if (!IncomingVoipPhoneCallOptions_type)
     {
         return nullptr;
     }
@@ -10627,6 +13186,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_applicationmodel_calls(void) noexcept
 
     py::pytype_handle MuteChangeEventArgs_type{py::register_python_type(module.get(), &type_spec_MuteChangeEventArgs, object_bases.get(), nullptr)};
     if (!MuteChangeEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle OutgoingVoipPhoneCallOptions_type{py::register_python_type(module.get(), &type_spec_OutgoingVoipPhoneCallOptions, object_bases.get(), nullptr)};
+    if (!OutgoingVoipPhoneCallOptions_type)
     {
         return nullptr;
     }

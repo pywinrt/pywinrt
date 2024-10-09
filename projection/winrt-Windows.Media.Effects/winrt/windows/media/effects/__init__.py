@@ -6,9 +6,11 @@ import winrt.system
 from winrt import _winrt_windows_media_effects
 
 __all__ = [
+    "AudioEffectState",
     "AudioEffectType",
     "MediaEffectClosedReason",
     "MediaMemoryTypes",
+    "AcousticEchoCancellationConfiguration",
     "AudioCaptureEffectsManager",
     "AudioEffect",
     "AudioEffectDefinition",
@@ -29,6 +31,10 @@ __all__ = [
     "IVideoCompositorDefinition",
     "IVideoEffectDefinition",
 ]
+
+class AudioEffectState(enum.IntEnum):
+    OFF = 0
+    ON = 1
 
 class AudioEffectType(enum.IntEnum):
     OTHER = 0
@@ -63,6 +69,7 @@ class MediaMemoryTypes(enum.IntEnum):
     CPU = 1
     GPU_AND_CPU = 2
 
+AcousticEchoCancellationConfiguration = _winrt_windows_media_effects.AcousticEchoCancellationConfiguration
 AudioCaptureEffectsManager = _winrt_windows_media_effects.AudioCaptureEffectsManager
 AudioEffect = _winrt_windows_media_effects.AudioEffect
 AudioEffectDefinition = _winrt_windows_media_effects.AudioEffectDefinition
