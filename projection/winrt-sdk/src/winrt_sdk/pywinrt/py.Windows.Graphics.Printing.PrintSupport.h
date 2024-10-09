@@ -37,6 +37,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.System.h"
 #endif
 
+#if __has_include("py.Windows.UI.h")
+#include "py.Windows.UI.h"
+#endif
+
 #if __has_include("py.Windows.UI.Shell.h")
 #include "py.Windows.UI.Shell.h"
 #endif
@@ -49,6 +53,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Printing.PrintTicket.h>
 #include <winrt/Windows.System.h>
+#include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Shell.h>
 
 #include <winrt/Windows.Graphics.Printing.PrintSupport.h>
@@ -63,8 +68,12 @@ namespace py::impl::Windows::Graphics::Printing::PrintSupport
 
 namespace py::wrapper::Windows::Graphics::Printing::PrintSupport
 {
+    using PrintSupportCommunicationErrorDetectedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>;
     using PrintSupportExtensionSession = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>;
     using PrintSupportExtensionTriggerDetails = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionTriggerDetails>;
+    using PrintSupportIppCommunicationConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>;
+    using PrintSupportIppCommunicationTimeouts = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>;
+    using PrintSupportMxdcImageQualityConfiguration = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>;
     using PrintSupportPrintDeviceCapabilitiesChangedEventArgs = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesChangedEventArgs>;
     using PrintSupportPrintDeviceCapabilitiesUpdatePolicy = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintDeviceCapabilitiesUpdatePolicy>;
     using PrintSupportPrintTicketElement = py::winrt_wrapper<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportPrintTicketElement>;
@@ -78,11 +87,36 @@ namespace py::wrapper::Windows::Graphics::Printing::PrintSupport
 namespace py
 {
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Printing::PrintSupport::IppCommunicationErrorKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Printing::PrintSupport::IppPrinterCommunicationKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Graphics::Printing::PrintSupport::WorkflowPrintTicketValidationStatus> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality> = "i";
+
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::IppCommunicationErrorKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.IppCommunicationErrorKind";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "IppCommunicationErrorKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::IppPrinterCommunicationKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.IppPrinterCommunicationKind";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "IppPrinterCommunicationKind";
+    };
 
     template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::SettingsLaunchKind>
@@ -101,6 +135,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::XpsImageQuality>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.XpsImageQuality";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "XpsImageQuality";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportCommunicationErrorDetectedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportCommunicationErrorDetectedEventArgs";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportCommunicationErrorDetectedEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportExtensionSession>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportExtensionSession";
@@ -114,6 +164,30 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportExtensionTriggerDetails";
         static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
         static constexpr const char* type_name = "PrintSupportExtensionTriggerDetails";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportIppCommunicationConfiguration";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportIppCommunicationConfiguration";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportIppCommunicationTimeouts>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportIppCommunicationTimeouts";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportIppCommunicationTimeouts";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Printing::PrintSupport::PrintSupportMxdcImageQualityConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.printing.printsupport.PrintSupportMxdcImageQualityConfiguration";
+        static constexpr const char* module_name = "winrt.windows.graphics.printing.printsupport";
+        static constexpr const char* type_name = "PrintSupportMxdcImageQualityConfiguration";
     };
 
     template<>

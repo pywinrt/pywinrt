@@ -10,6 +10,7 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.240111.5"), "Mismatche
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
 #include "winrt/impl/Windows.Graphics.Printing.2.h"
+#include "winrt/impl/Windows.Graphics.Printing.PrintTicket.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.Devices.Printers.2.h"
 namespace winrt::impl
@@ -457,6 +458,44 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice2)->GetPdlPassthroughProvider(&result));
         return winrt::Windows::Devices::Printers::PdlPassthroughProvider{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice3<D>::IsIppFaxOutPrinter() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice3)->get_IsIppFaxOutPrinter(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::DeviceKind() const
+    {
+        winrt::Windows::Devices::Printers::IppPrintDeviceKind value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->get_DeviceKind(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::CanModifyUserDefaultPrintTicket() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->get_CanModifyUserDefaultPrintTicket(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::UserDefaultPrintTicket() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->get_UserDefaultPrintTicket(&value));
+        return winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::UserDefaultPrintTicket(winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->put_UserDefaultPrintTicket(*(void**)(&value)));
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::RefreshPrintDeviceCapabilities() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->RefreshPrintDeviceCapabilities());
+    }
+    template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDevice4<D>::GetMaxSupportedPdlVersion(param::hstring const& pdlContentType) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Printers::IIppPrintDevice4)->GetMaxSupportedPdlVersion(*(void**)(&pdlContentType), &result));
+        return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_Devices_Printers_IIppPrintDeviceStatics<D>::GetDeviceSelector() const
     {
@@ -1256,6 +1295,69 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Printers::IIppPrintDevice3> : produce_base<D, winrt::Windows::Devices::Printers::IIppPrintDevice3>
+    {
+        int32_t __stdcall get_IsIppFaxOutPrinter(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsIppFaxOutPrinter());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Printers::IIppPrintDevice4> : produce_base<D, winrt::Windows::Devices::Printers::IIppPrintDevice4>
+    {
+        int32_t __stdcall get_DeviceKind(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Devices::Printers::IppPrintDeviceKind>(this->shim().DeviceKind());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_CanModifyUserDefaultPrintTicket(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().CanModifyUserDefaultPrintTicket());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_UserDefaultPrintTicket(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(this->shim().UserDefaultPrintTicket());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_UserDefaultPrintTicket(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().UserDefaultPrintTicket(*reinterpret_cast<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall RefreshPrintDeviceCapabilities() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RefreshPrintDeviceCapabilities();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetMaxSupportedPdlVersion(void* pdlContentType, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<hstring>(this->shim().GetMaxSupportedPdlVersion(*reinterpret_cast<hstring const*>(&pdlContentType)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Printers::IIppPrintDeviceStatics> : produce_base<D, winrt::Windows::Devices::Printers::IIppPrintDeviceStatics>
     {
         int32_t __stdcall GetDeviceSelector(void** result) noexcept final try
@@ -1757,6 +1859,8 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Printers::IIppIntegerRangeFactory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDevice4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppPrintDeviceStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppResolution> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Printers::IIppResolutionFactory> : winrt::impl::hash_base {};

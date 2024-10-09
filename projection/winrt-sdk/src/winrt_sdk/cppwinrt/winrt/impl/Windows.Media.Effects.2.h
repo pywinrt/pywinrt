@@ -10,12 +10,18 @@
 #include "winrt/impl/Windows.Media.Effects.1.h"
 WINRT_EXPORT namespace winrt::Windows::Media::Effects
 {
+    struct WINRT_IMPL_EMPTY_BASES AcousticEchoCancellationConfiguration : winrt::Windows::Media::Effects::IAcousticEchoCancellationConfiguration
+    {
+        AcousticEchoCancellationConfiguration(std::nullptr_t) noexcept {}
+        AcousticEchoCancellationConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Effects::IAcousticEchoCancellationConfiguration(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES AudioCaptureEffectsManager : winrt::Windows::Media::Effects::IAudioCaptureEffectsManager
     {
         AudioCaptureEffectsManager(std::nullptr_t) noexcept {}
         AudioCaptureEffectsManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Effects::IAudioCaptureEffectsManager(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES AudioEffect : winrt::Windows::Media::Effects::IAudioEffect
+    struct WINRT_IMPL_EMPTY_BASES AudioEffect : winrt::Windows::Media::Effects::IAudioEffect,
+        impl::require<AudioEffect, winrt::Windows::Media::Effects::IAudioEffect2>
     {
         AudioEffect(std::nullptr_t) noexcept {}
         AudioEffect(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Effects::IAudioEffect(ptr, take_ownership_from_abi) {}

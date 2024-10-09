@@ -68,6 +68,7 @@ namespace py::wrapper::Windows::UI::Input
     using ManipulationStartedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationStartedEventArgs>;
     using ManipulationUpdatedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::ManipulationUpdatedEventArgs>;
     using MouseWheelParameters = py::winrt_wrapper<winrt::Windows::UI::Input::MouseWheelParameters>;
+    using PhysicalGestureRecognizer = py::winrt_wrapper<winrt::Windows::UI::Input::PhysicalGestureRecognizer>;
     using PointerPoint = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPoint>;
     using PointerPointProperties = py::winrt_wrapper<winrt::Windows::UI::Input::PointerPointProperties>;
     using PointerVisualizationSettings = py::winrt_wrapper<winrt::Windows::UI::Input::PointerVisualizationSettings>;
@@ -91,6 +92,8 @@ namespace py::wrapper::Windows::UI::Input
     using SystemFunctionLockChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockChangedEventArgs>;
     using SystemFunctionLockIndicatorChangedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::SystemFunctionLockIndicatorChangedEventArgs>;
     using TappedEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TappedEventArgs>;
+    using TouchpadGesturesController = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGesturesController>;
+    using TouchpadGlobalActionEventArgs = py::winrt_wrapper<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>;
     using IPointerPointTransform = py::winrt_wrapper<winrt::Windows::UI::Input::IPointerPointTransform>;
     using CrossSlideThresholds = py::winrt_struct_wrapper<winrt::Windows::UI::Input::CrossSlideThresholds>;
     using ManipulationDelta = py::winrt_struct_wrapper<winrt::Windows::UI::Input::ManipulationDelta>;
@@ -128,6 +131,12 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::UI::Input::RadialControllerSystemMenuItemKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::TouchpadGlobalAction> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::UI::Input::TouchpadGlobalGestureKinds> = "I";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::UI::Input::CrossSlideThresholds> = "T{f:selection_start:f:speed_bump_start:f:speed_bump_end:f:rearrange_start:}";
@@ -217,6 +226,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.RadialControllerSystemMenuItemKind";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "RadialControllerSystemMenuItemKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Input::TouchpadGlobalAction>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TouchpadGlobalAction";
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "TouchpadGlobalAction";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Input::TouchpadGlobalGestureKinds>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TouchpadGlobalGestureKinds";
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "TouchpadGlobalGestureKinds";
     };
 
     template<>
@@ -337,6 +362,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.MouseWheelParameters";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "MouseWheelParameters";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Input::PhysicalGestureRecognizer>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.PhysicalGestureRecognizer";
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "PhysicalGestureRecognizer";
     };
 
     template<>
@@ -521,6 +554,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TappedEventArgs";
         static constexpr const char* module_name = "winrt.windows.ui.input";
         static constexpr const char* type_name = "TappedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Input::TouchpadGesturesController>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TouchpadGesturesController";
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "TouchpadGesturesController";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::UI::Input::TouchpadGlobalActionEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.ui.input.TouchpadGlobalActionEventArgs";
+        static constexpr const char* module_name = "winrt.windows.ui.input";
+        static constexpr const char* type_name = "TouchpadGlobalActionEventArgs";
     };
 
     template<>

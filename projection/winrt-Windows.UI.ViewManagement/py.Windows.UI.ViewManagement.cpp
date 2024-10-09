@@ -1017,67 +1017,6 @@ namespace py::cpp::Windows::UI::ViewManagement
         }
     }
 
-    static PyObject* ApplicationView_get_Title(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.Title());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static int ApplicationView_put_Title(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (arg == nullptr)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"Title");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return -1;
-            }
-
-            auto param0 = py::convert_to<winrt::hstring>(arg);
-
-            self->obj.Title(param0);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* ApplicationView_get_IsScreenCaptureEnabled(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
     {
         try
@@ -1130,6 +1069,67 @@ namespace py::cpp::Windows::UI::ViewManagement
             auto param0 = py::convert_to<bool>(arg);
 
             self->obj.IsScreenCaptureEnabled(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ApplicationView_get_Title(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"Title");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Title());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ApplicationView_put_Title(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"Title");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Title(param0);
             return 0;
         }
         catch (...)
@@ -1356,32 +1356,6 @@ namespace py::cpp::Windows::UI::ViewManagement
         }
     }
 
-    static PyObject* ApplicationView_get_VisibleBounds(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"VisibleBounds");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.VisibleBounds());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* ApplicationView_get_DesiredBoundsMode(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
     {
         try
@@ -1400,6 +1374,32 @@ namespace py::cpp::Windows::UI::ViewManagement
             }
 
             return py::convert(self->obj.DesiredBoundsMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationView_get_VisibleBounds(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.UI.ViewManagement.ApplicationView", L"VisibleBounds");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.VisibleBounds());
         }
         catch (...)
         {
@@ -2028,8 +2028,8 @@ namespace py::cpp::Windows::UI::ViewManagement
     };
 
     static PyGetSetDef _getset_ApplicationView[] = {
-        { "title", reinterpret_cast<getter>(ApplicationView_get_Title), reinterpret_cast<setter>(ApplicationView_put_Title), nullptr, nullptr },
         { "is_screen_capture_enabled", reinterpret_cast<getter>(ApplicationView_get_IsScreenCaptureEnabled), reinterpret_cast<setter>(ApplicationView_put_IsScreenCaptureEnabled), nullptr, nullptr },
+        { "title", reinterpret_cast<getter>(ApplicationView_get_Title), reinterpret_cast<setter>(ApplicationView_put_Title), nullptr, nullptr },
         { "adjacent_to_left_display_edge", reinterpret_cast<getter>(ApplicationView_get_AdjacentToLeftDisplayEdge), nullptr, nullptr, nullptr },
         { "adjacent_to_right_display_edge", reinterpret_cast<getter>(ApplicationView_get_AdjacentToRightDisplayEdge), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(ApplicationView_get_Id), nullptr, nullptr, nullptr },
@@ -2037,8 +2037,8 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "is_on_lock_screen", reinterpret_cast<getter>(ApplicationView_get_IsOnLockScreen), nullptr, nullptr, nullptr },
         { "orientation", reinterpret_cast<getter>(ApplicationView_get_Orientation), nullptr, nullptr, nullptr },
         { "suppress_system_overlays", reinterpret_cast<getter>(ApplicationView_get_SuppressSystemOverlays), reinterpret_cast<setter>(ApplicationView_put_SuppressSystemOverlays), nullptr, nullptr },
-        { "visible_bounds", reinterpret_cast<getter>(ApplicationView_get_VisibleBounds), nullptr, nullptr, nullptr },
         { "desired_bounds_mode", reinterpret_cast<getter>(ApplicationView_get_DesiredBoundsMode), nullptr, nullptr, nullptr },
+        { "visible_bounds", reinterpret_cast<getter>(ApplicationView_get_VisibleBounds), nullptr, nullptr, nullptr },
         { "full_screen_system_overlay_mode", reinterpret_cast<getter>(ApplicationView_get_FullScreenSystemOverlayMode), reinterpret_cast<setter>(ApplicationView_put_FullScreenSystemOverlayMode), nullptr, nullptr },
         { "title_bar", reinterpret_cast<getter>(ApplicationView_get_TitleBar), nullptr, nullptr, nullptr },
         { "is_full_screen_mode", reinterpret_cast<getter>(ApplicationView_get_IsFullScreenMode), nullptr, nullptr, nullptr },

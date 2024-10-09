@@ -17,6 +17,7 @@ __all__ = [
     "BackgroundWorkCostValue",
     "CustomSystemEventTriggerRecurrence",
     "DeviceTriggerResult",
+    "EnergyUseLevel",
     "LocationTriggerType",
     "MediaProcessingTriggerResult",
     "SystemConditionType",
@@ -162,6 +163,12 @@ class DeviceTriggerResult(enum.IntEnum):
     DENIED_BY_USER = 1
     DENIED_BY_SYSTEM = 2
     LOW_BATTERY = 3
+
+class EnergyUseLevel(enum.IntEnum):
+    UNKNOWN = 0
+    UNDER_HALF_OF_BUDGET = 1
+    OVER_HALF_OF_BUDGET = 2
+    OVER_BUDGET = 3
 
 class LocationTriggerType(enum.IntEnum):
     GEOFENCE = 0

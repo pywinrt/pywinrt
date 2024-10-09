@@ -9,6 +9,7 @@ __all__ = [
     "DeviceAccessStatus",
     "DeviceClass",
     "DeviceInformationKind",
+    "DevicePairingAddPairingSetMemberStatus",
     "DevicePairingKinds",
     "DevicePairingProtectionLevel",
     "DevicePairingResultStatus",
@@ -28,6 +29,7 @@ __all__ = [
     "DeviceInformationUpdate",
     "DevicePairingRequestedEventArgs",
     "DevicePairingResult",
+    "DevicePairingSetMembersRequestedEventArgs",
     "DevicePicker",
     "DevicePickerAppearance",
     "DevicePickerFilter",
@@ -38,6 +40,7 @@ __all__ = [
     "DeviceWatcherEvent",
     "DeviceWatcherTriggerDetails",
     "EnclosureLocation",
+    "IDeviceEnumerationSettings",
     "IDevicePairingSettings",
 ]
 
@@ -66,6 +69,15 @@ class DeviceInformationKind(enum.IntEnum):
     ASSOCIATION_ENDPOINT_CONTAINER = 6
     ASSOCIATION_ENDPOINT_SERVICE = 7
     DEVICE_PANEL = 8
+    ASSOCIATION_ENDPOINT_PROTOCOL = 9
+
+class DevicePairingAddPairingSetMemberStatus(enum.IntEnum):
+    ADDED_TO_SET = 0
+    COULD_NOT_BE_ADDED_TO_SET = 1
+    SET_DISCOVERY_NOT_ATTEMPTED_BY_PROTOCOL = 2
+    SET_DISCOVERY_COMPLETED_BY_PROTOCOL = 3
+    SET_DISCOVERY_PARTIALLY_COMPLETED_BY_PROTOCOL = 4
+    FAILED = 5
 
 class DevicePairingKinds(enum.IntFlag):
     NONE = 0x0
@@ -74,6 +86,7 @@ class DevicePairingKinds(enum.IntFlag):
     PROVIDE_PIN = 0x4
     CONFIRM_PIN_MATCH = 0x8
     PROVIDE_PASSWORD_CREDENTIAL = 0x10
+    PROVIDE_ADDRESS = 0x20
 
 class DevicePairingProtectionLevel(enum.IntEnum):
     DEFAULT = 0
@@ -150,6 +163,7 @@ DeviceInformationPairing = _winrt_windows_devices_enumeration.DeviceInformationP
 DeviceInformationUpdate = _winrt_windows_devices_enumeration.DeviceInformationUpdate
 DevicePairingRequestedEventArgs = _winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs
 DevicePairingResult = _winrt_windows_devices_enumeration.DevicePairingResult
+DevicePairingSetMembersRequestedEventArgs = _winrt_windows_devices_enumeration.DevicePairingSetMembersRequestedEventArgs
 DevicePicker = _winrt_windows_devices_enumeration.DevicePicker
 DevicePickerAppearance = _winrt_windows_devices_enumeration.DevicePickerAppearance
 DevicePickerFilter = _winrt_windows_devices_enumeration.DevicePickerFilter
@@ -160,4 +174,5 @@ DeviceWatcher = _winrt_windows_devices_enumeration.DeviceWatcher
 DeviceWatcherEvent = _winrt_windows_devices_enumeration.DeviceWatcherEvent
 DeviceWatcherTriggerDetails = _winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails
 EnclosureLocation = _winrt_windows_devices_enumeration.EnclosureLocation
+IDeviceEnumerationSettings = _winrt_windows_devices_enumeration.IDeviceEnumerationSettings
 IDevicePairingSettings = _winrt_windows_devices_enumeration.IDevicePairingSettings

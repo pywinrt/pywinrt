@@ -7,12 +7,13 @@
 WINRT_EXPORT namespace winrt::Windows::ApplicationModel::AppExtensions
 {
     struct WINRT_IMPL_EMPTY_BASES AppExtension : winrt::Windows::ApplicationModel::AppExtensions::IAppExtension,
-        impl::require<AppExtension, winrt::Windows::ApplicationModel::AppExtensions::IAppExtension2>
+        impl::require<AppExtension, winrt::Windows::ApplicationModel::AppExtensions::IAppExtension2, winrt::Windows::ApplicationModel::AppExtensions::IAppExtension3>
     {
         AppExtension(std::nullptr_t) noexcept {}
         AppExtension(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::AppExtensions::IAppExtension(ptr, take_ownership_from_abi) {}
     };
-    struct WINRT_IMPL_EMPTY_BASES AppExtensionCatalog : winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog
+    struct WINRT_IMPL_EMPTY_BASES AppExtensionCatalog : winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog,
+        impl::require<AppExtensionCatalog, winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog2>
     {
         AppExtensionCatalog(std::nullptr_t) noexcept {}
         AppExtensionCatalog(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::AppExtensions::IAppExtensionCatalog(ptr, take_ownership_from_abi) {}

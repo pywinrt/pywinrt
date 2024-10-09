@@ -3395,6 +3395,67 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
+    static PyObject* PackageAllUserProvisioningOptions_get_DeferAutomaticRegistration(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"DeferAutomaticRegistration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeferAutomaticRegistration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PackageAllUserProvisioningOptions_put_DeferAutomaticRegistration(py::wrapper::Windows::Management::Deployment::PackageAllUserProvisioningOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.PackageAllUserProvisioningOptions", L"DeferAutomaticRegistration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.DeferAutomaticRegistration(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_PackageAllUserProvisioningOptions(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Management::Deployment::PackageAllUserProvisioningOptions>>();
@@ -3428,6 +3489,7 @@ namespace py::cpp::Windows::Management::Deployment
     static PyGetSetDef _getset_PackageAllUserProvisioningOptions[] = {
         { "optional_package_family_names", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_OptionalPackageFamilyNames), nullptr, nullptr, nullptr },
         { "projection_order_package_family_names", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_ProjectionOrderPackageFamilyNames), nullptr, nullptr, nullptr },
+        { "defer_automatic_registration", reinterpret_cast<getter>(PackageAllUserProvisioningOptions_get_DeferAutomaticRegistration), reinterpret_cast<setter>(PackageAllUserProvisioningOptions_put_DeferAutomaticRegistration), nullptr, nullptr },
         { }
     };
 
@@ -4568,6 +4630,160 @@ namespace py::cpp::Windows::Management::Deployment
         }
     }
 
+    static PyObject* PackageManager_IsPackageRemovalPending(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPending", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.IsPackageRemovalPending(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageManager_IsPackageRemovalPendingByUri(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingByUri", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+
+                return py::convert(self->obj.IsPackageRemovalPendingByUri(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageManager_IsPackageRemovalPendingByUriForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingByUriForUser", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.IsPackageRemovalPendingByUriForUser(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageManager_IsPackageRemovalPendingForUser(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"IsPackageRemovalPendingForUser", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.IsPackageRemovalPendingForUser(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PackageManager_MovePackageToVolumeAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -4956,6 +5172,45 @@ namespace py::cpp::Windows::Management::Deployment
                 auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovalOptions>(args, 1);
 
                 return py::convert(self->obj.RemovePackageAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageManager_RemovePackageByUriAsync(py::wrapper::Windows::Management::Deployment::PackageManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Management.Deployment.PackageManager", L"RemovePackageByUriAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Management::Deployment::RemovePackageOptions>(args, 1);
+
+                return py::convert(self->obj.RemovePackageByUriAsync(param0, param1));
             }
             catch (...)
             {
@@ -5738,6 +5993,10 @@ namespace py::cpp::Windows::Management::Deployment
         { "get_default_package_volume", reinterpret_cast<PyCFunction>(PackageManager_GetDefaultPackageVolume), METH_VARARGS, nullptr },
         { "get_package_stub_preference", reinterpret_cast<PyCFunction>(PackageManager_GetPackageStubPreference), METH_VARARGS, nullptr },
         { "get_package_volumes_async", reinterpret_cast<PyCFunction>(PackageManager_GetPackageVolumesAsync), METH_VARARGS, nullptr },
+        { "is_package_removal_pending", reinterpret_cast<PyCFunction>(PackageManager_IsPackageRemovalPending), METH_VARARGS, nullptr },
+        { "is_package_removal_pending_by_uri", reinterpret_cast<PyCFunction>(PackageManager_IsPackageRemovalPendingByUri), METH_VARARGS, nullptr },
+        { "is_package_removal_pending_by_uri_for_user", reinterpret_cast<PyCFunction>(PackageManager_IsPackageRemovalPendingByUriForUser), METH_VARARGS, nullptr },
+        { "is_package_removal_pending_for_user", reinterpret_cast<PyCFunction>(PackageManager_IsPackageRemovalPendingForUser), METH_VARARGS, nullptr },
         { "move_package_to_volume_async", reinterpret_cast<PyCFunction>(PackageManager_MovePackageToVolumeAsync), METH_VARARGS, nullptr },
         { "provision_package_for_all_users_async", reinterpret_cast<PyCFunction>(PackageManager_ProvisionPackageForAllUsersAsync), METH_VARARGS, nullptr },
         { "register_package_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageAsync), METH_VARARGS, nullptr },
@@ -5746,6 +6005,7 @@ namespace py::cpp::Windows::Management::Deployment
         { "register_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackageByUriAsync), METH_VARARGS, nullptr },
         { "register_packages_by_full_name_async", reinterpret_cast<PyCFunction>(PackageManager_RegisterPackagesByFullNameAsync), METH_VARARGS, nullptr },
         { "remove_package_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageAsync), METH_VARARGS, nullptr },
+        { "remove_package_by_uri_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageByUriAsync), METH_VARARGS, nullptr },
         { "remove_package_volume_async", reinterpret_cast<PyCFunction>(PackageManager_RemovePackageVolumeAsync), METH_VARARGS, nullptr },
         { "request_add_package_async", reinterpret_cast<PyCFunction>(PackageManager_RequestAddPackageAsync), METH_VARARGS, nullptr },
         { "request_add_package_by_app_installer_file_async", reinterpret_cast<PyCFunction>(PackageManager_RequestAddPackageByAppInstallerFileAsync), METH_VARARGS, nullptr },
@@ -7610,6 +7870,342 @@ namespace py::cpp::Windows::Management::Deployment
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RegisterPackageOptions};
+
+    // ----- RemovePackageOptions class --------------------
+
+    static PyObject* _new_RemovePackageOptions(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Management::Deployment::RemovePackageOptions instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_RemovePackageOptions(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* RemovePackageOptions_get_RemoveForAllUsers(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.RemoveForAllUsers());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RemovePackageOptions_put_RemoveForAllUsers(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"RemoveForAllUsers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.RemoveForAllUsers(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RemovePackageOptions_get_PreserveRoamableApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PreserveRoamableApplicationData());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RemovePackageOptions_put_PreserveRoamableApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveRoamableApplicationData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.PreserveRoamableApplicationData(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RemovePackageOptions_get_PreserveApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PreserveApplicationData());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RemovePackageOptions_put_PreserveApplicationData(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"PreserveApplicationData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.PreserveApplicationData(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* RemovePackageOptions_get_DeferRemovalWhenPackagesAreInUse(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"DeferRemovalWhenPackagesAreInUse");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeferRemovalWhenPackagesAreInUse());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int RemovePackageOptions_put_DeferRemovalWhenPackagesAreInUse(py::wrapper::Windows::Management::Deployment::RemovePackageOptions* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Management.Deployment.RemovePackageOptions", L"DeferRemovalWhenPackagesAreInUse");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.DeferRemovalWhenPackagesAreInUse(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_RemovePackageOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Management::Deployment::RemovePackageOptions>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_RemovePackageOptions(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Management::Deployment::RemovePackageOptions>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_RemovePackageOptions[] = {
+        { "_assign_array_", _assign_array_RemovePackageOptions, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_RemovePackageOptions), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_RemovePackageOptions[] = {
+        { "remove_for_all_users", reinterpret_cast<getter>(RemovePackageOptions_get_RemoveForAllUsers), reinterpret_cast<setter>(RemovePackageOptions_put_RemoveForAllUsers), nullptr, nullptr },
+        { "preserve_roamable_application_data", reinterpret_cast<getter>(RemovePackageOptions_get_PreserveRoamableApplicationData), reinterpret_cast<setter>(RemovePackageOptions_put_PreserveRoamableApplicationData), nullptr, nullptr },
+        { "preserve_application_data", reinterpret_cast<getter>(RemovePackageOptions_get_PreserveApplicationData), reinterpret_cast<setter>(RemovePackageOptions_put_PreserveApplicationData), nullptr, nullptr },
+        { "defer_removal_when_packages_are_in_use", reinterpret_cast<getter>(RemovePackageOptions_get_DeferRemovalWhenPackagesAreInUse), reinterpret_cast<setter>(RemovePackageOptions_put_DeferRemovalWhenPackagesAreInUse), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_RemovePackageOptions[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_RemovePackageOptions) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_RemovePackageOptions) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_RemovePackageOptions) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_RemovePackageOptions) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RemovePackageOptions = {
+        "winrt._winrt_windows_management_deployment.RemovePackageOptions",
+        sizeof(py::wrapper::Windows::Management::Deployment::RemovePackageOptions),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_RemovePackageOptions};
 
     // ----- SharedPackageContainer class --------------------
 
@@ -9819,6 +10415,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_management_deployment(void) noexcept
 
     py::pytype_handle RegisterPackageOptions_type{py::register_python_type(module.get(), &type_spec_RegisterPackageOptions, object_bases.get(), nullptr)};
     if (!RegisterPackageOptions_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RemovePackageOptions_type{py::register_python_type(module.get(), &type_spec_RemovePackageOptions, object_bases.get(), nullptr)};
+    if (!RemovePackageOptions_type)
     {
         return nullptr;
     }

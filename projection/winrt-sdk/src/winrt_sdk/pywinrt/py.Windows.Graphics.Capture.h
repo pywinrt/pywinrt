@@ -9,6 +9,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.h"
 #endif
 
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
 #if __has_include("py.Windows.Graphics.h")
 #include "py.Windows.Graphics.h"
 #endif
@@ -38,6 +42,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #endif
 
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.h>
 #include <winrt/Windows.Graphics.DirectX.h>
 #include <winrt/Windows.Graphics.DirectX.Direct3D11.h>
@@ -71,6 +76,9 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind> = "i";
 
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode> = "i";
+
 
     template<>
     struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureAccessKind>
@@ -78,6 +86,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureAccessKind";
         static constexpr const char* module_name = "winrt.windows.graphics.capture";
         static constexpr const char* type_name = "GraphicsCaptureAccessKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.graphics.capture.GraphicsCaptureDirtyRegionMode";
+        static constexpr const char* module_name = "winrt.windows.graphics.capture";
+        static constexpr const char* type_name = "GraphicsCaptureDirtyRegionMode";
     };
 
     template<>

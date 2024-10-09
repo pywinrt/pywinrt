@@ -413,6 +413,24 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderQuotaUI)->put_QuotaUsedColor(*(void**)(&value)));
     }
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderShareLinkSource<D>::CreateLinkAsync(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource)->CreateLinkAsync(*(void**)(&storageItemList), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Uri>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderShareLinkSource<D>::GetDefaultAccessControlStringAsync(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource)->GetDefaultAccessControlStringAsync(*(void**)(&storageItemList), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<hstring>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderShareLinkSource<D>::GetState(param::async_vector_view<winrt::Windows::Storage::IStorageItem> const& storageItemList) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource)->GetState(*(void**)(&storageItemList), &operation));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Provider::StorageProviderShareLinkState>{ operation, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_Storage_Provider_IStorageProviderStatusUI<D>::ProviderState() const
     {
         winrt::Windows::Storage::Provider::StorageProviderState value{};
@@ -1448,6 +1466,34 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>
+    {
+        int32_t __stdcall CreateLinkAsync(void* storageItemList, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Uri>>(this->shim().CreateLinkAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const*>(&storageItemList)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDefaultAccessControlStringAsync(void* storageItemList, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<hstring>>(this->shim().GetDefaultAccessControlStringAsync(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const*>(&storageItemList)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetState(void* storageItemList, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Provider::StorageProviderShareLinkState>>(this->shim().GetState(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem> const*>(&storageItemList)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::Storage::Provider::IStorageProviderStatusUI> : produce_base<D, winrt::Windows::Storage::Provider::IStorageProviderStatusUI>
@@ -2261,6 +2307,7 @@ namespace std
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderMoreInfoUI> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderPropertyCapabilities> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderQuotaUI> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderStatusUI> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderStatusUISource> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Storage::Provider::IStorageProviderStatusUISourceFactory> : winrt::impl::hash_base {};

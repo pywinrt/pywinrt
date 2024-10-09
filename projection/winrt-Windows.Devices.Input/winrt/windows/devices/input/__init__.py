@@ -29,6 +29,7 @@ class PointerDeviceType(enum.IntEnum):
     TOUCH = 0
     PEN = 1
     MOUSE = 2
+    TOUCHPAD = 3
 
 MouseDelta = _winrt_windows_devices_input.MouseDelta
 PointerDeviceUsage = _winrt_windows_devices_input.PointerDeviceUsage

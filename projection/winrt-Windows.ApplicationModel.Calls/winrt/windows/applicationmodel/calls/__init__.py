@@ -29,17 +29,22 @@ __all__ = [
     "PhoneSimState",
     "PhoneVoicemailType",
     "TransportDeviceAudioRoutingStatus",
+    "VoipCallControlDeviceKind",
     "VoipPhoneCallMedia",
     "VoipPhoneCallRejectReason",
     "VoipPhoneCallResourceReservationStatus",
     "VoipPhoneCallState",
+    "AcceptedVoipPhoneCallOptions",
+    "AppInitiatedVoipPhoneCallOptions",
     "CallAnswerEventArgs",
     "CallRejectEventArgs",
     "CallStateChangeEventArgs",
+    "IncomingVoipPhoneCallOptions",
     "LockScreenCallEndCallDeferral",
     "LockScreenCallEndRequestedEventArgs",
     "LockScreenCallUI",
     "MuteChangeEventArgs",
+    "OutgoingVoipPhoneCallOptions",
     "PhoneCall",
     "PhoneCallBlocking",
     "PhoneCallHistoryEntry",
@@ -206,6 +211,10 @@ class TransportDeviceAudioRoutingStatus(enum.IntEnum):
     CAN_ROUTE_TO_LOCAL_DEVICE = 1
     CANNOT_ROUTE_TO_LOCAL_DEVICE = 2
 
+class VoipCallControlDeviceKind(enum.IntEnum):
+    BLUETOOTH = 0
+    USB = 1
+
 class VoipPhoneCallMedia(enum.IntFlag):
     NONE = 0x0
     AUDIO = 0x1
@@ -229,13 +238,17 @@ class VoipPhoneCallState(enum.IntEnum):
     INCOMING = 3
     OUTGOING = 4
 
+AcceptedVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.AcceptedVoipPhoneCallOptions
+AppInitiatedVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.AppInitiatedVoipPhoneCallOptions
 CallAnswerEventArgs = _winrt_windows_applicationmodel_calls.CallAnswerEventArgs
 CallRejectEventArgs = _winrt_windows_applicationmodel_calls.CallRejectEventArgs
 CallStateChangeEventArgs = _winrt_windows_applicationmodel_calls.CallStateChangeEventArgs
+IncomingVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.IncomingVoipPhoneCallOptions
 LockScreenCallEndCallDeferral = _winrt_windows_applicationmodel_calls.LockScreenCallEndCallDeferral
 LockScreenCallEndRequestedEventArgs = _winrt_windows_applicationmodel_calls.LockScreenCallEndRequestedEventArgs
 LockScreenCallUI = _winrt_windows_applicationmodel_calls.LockScreenCallUI
 MuteChangeEventArgs = _winrt_windows_applicationmodel_calls.MuteChangeEventArgs
+OutgoingVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.OutgoingVoipPhoneCallOptions
 PhoneCall = _winrt_windows_applicationmodel_calls.PhoneCall
 PhoneCallBlocking = _winrt_windows_applicationmodel_calls.PhoneCallBlocking
 PhoneCallHistoryEntry = _winrt_windows_applicationmodel_calls.PhoneCallHistoryEntry

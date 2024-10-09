@@ -43,7 +43,7 @@ MINIMAL_NAMESPACES = [
     "Windows.Graphics.DirectX",
     "Windows.Storage.Streams",
 ]
-WINDOWS_SDK = "10.0.22621.0+"
+WINDOWS_SDK = "10.0.26100.0+"
 SDK_PACKAGE_PATH = PROJECTION_PATH / "winrt-sdk" / "src" / "winrt_sdk" / "pywinrt"
 
 include_args = []

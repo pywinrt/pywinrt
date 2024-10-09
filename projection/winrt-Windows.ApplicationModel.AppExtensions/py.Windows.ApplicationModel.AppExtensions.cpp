@@ -21,6 +21,42 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         Py_DECREF(tp);
     }
 
+    static PyObject* AppExtension_GetExtensionProperties(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetExtensionProperties", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetExtensionProperties());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AppExtension_GetExtensionPropertiesAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -57,6 +93,42 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         }
     }
 
+    static PyObject* AppExtension_GetPublicFolder(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetPublicFolder", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetPublicFolder());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AppExtension_GetPublicFolderAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -79,6 +151,42 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
                 }
 
                 return py::convert(self->obj.GetPublicFolderAsync());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppExtension_GetPublicPath(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtension* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtension", L"GetPublicPath", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetPublicPath());
             }
             catch (...)
             {
@@ -274,8 +382,11 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     }
 
     static PyMethodDef _methods_AppExtension[] = {
+        { "get_extension_properties", reinterpret_cast<PyCFunction>(AppExtension_GetExtensionProperties), METH_VARARGS, nullptr },
         { "get_extension_properties_async", reinterpret_cast<PyCFunction>(AppExtension_GetExtensionPropertiesAsync), METH_VARARGS, nullptr },
+        { "get_public_folder", reinterpret_cast<PyCFunction>(AppExtension_GetPublicFolder), METH_VARARGS, nullptr },
         { "get_public_folder_async", reinterpret_cast<PyCFunction>(AppExtension_GetPublicFolderAsync), METH_VARARGS, nullptr },
+        { "get_public_path", reinterpret_cast<PyCFunction>(AppExtension_GetPublicPath), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppExtension, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppExtension), METH_O | METH_STATIC, nullptr },
         { }
@@ -321,6 +432,42 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
         std::destroy_at(&self->obj);
         tp->tp_free(self);
         Py_DECREF(tp);
+    }
+
+    static PyObject* AppExtensionCatalog_FindAll(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.AppExtensions.AppExtensionCatalog", L"FindAll", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.FindAll());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* AppExtensionCatalog_FindAllAsync(py::wrapper::Windows::ApplicationModel::AppExtensions::AppExtensionCatalog* self, PyObject* args) noexcept
@@ -745,6 +892,7 @@ namespace py::cpp::Windows::ApplicationModel::AppExtensions
     }
 
     static PyMethodDef _methods_AppExtensionCatalog[] = {
+        { "find_all", reinterpret_cast<PyCFunction>(AppExtensionCatalog_FindAll), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(AppExtensionCatalog_FindAllAsync), METH_VARARGS, nullptr },
         { "request_remove_package_async", reinterpret_cast<PyCFunction>(AppExtensionCatalog_RequestRemovePackageAsync), METH_VARARGS, nullptr },
         { "add_package_installed", reinterpret_cast<PyCFunction>(AppExtensionCatalog_add_PackageInstalled), METH_O, nullptr },

@@ -546,6 +546,297 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebAccountMonitor};
 
+    // ----- WebAuthenticationAddAccountResponse class --------------------
+
+    static PyObject* _new_WebAuthenticationAddAccountResponse(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccount>(args, 0);
+
+                winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_WebAuthenticationAddAccountResponse(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WebAuthenticationAddAccountResponse_get_Properties(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse", L"Properties");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationAddAccountResponse_get_WebAccount(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResponse", L"WebAccount");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.WebAccount());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WebAuthenticationAddAccountResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WebAuthenticationAddAccountResponse(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WebAuthenticationAddAccountResponse[] = {
+        { "_assign_array_", _assign_array_WebAuthenticationAddAccountResponse, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationAddAccountResponse), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_WebAuthenticationAddAccountResponse[] = {
+        { "properties", reinterpret_cast<getter>(WebAuthenticationAddAccountResponse_get_Properties), nullptr, nullptr, nullptr },
+        { "web_account", reinterpret_cast<getter>(WebAuthenticationAddAccountResponse_get_WebAccount), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_WebAuthenticationAddAccountResponse[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationAddAccountResponse) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationAddAccountResponse) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationAddAccountResponse) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationAddAccountResponse) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationAddAccountResponse = {
+        "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResponse",
+        sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WebAuthenticationAddAccountResponse};
+
+    // ----- WebAuthenticationAddAccountResult class --------------------
+
+    static PyObject* _new_WebAuthenticationAddAccountResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_WebAuthenticationAddAccountResult(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WebAuthenticationAddAccountResult_get_ResponseData(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult", L"ResponseData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ResponseData());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationAddAccountResult_get_ResponseError(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult", L"ResponseError");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ResponseError());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationAddAccountResult_get_ResponseStatus(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationAddAccountResult", L"ResponseStatus");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ResponseStatus());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WebAuthenticationAddAccountResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WebAuthenticationAddAccountResult(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WebAuthenticationAddAccountResult[] = {
+        { "_assign_array_", _assign_array_WebAuthenticationAddAccountResult, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationAddAccountResult), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_WebAuthenticationAddAccountResult[] = {
+        { "response_data", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseData), nullptr, nullptr, nullptr },
+        { "response_error", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseError), nullptr, nullptr, nullptr },
+        { "response_status", reinterpret_cast<getter>(WebAuthenticationAddAccountResult_get_ResponseStatus), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_WebAuthenticationAddAccountResult[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationAddAccountResult) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationAddAccountResult) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationAddAccountResult) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationAddAccountResult) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationAddAccountResult = {
+        "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResult",
+        sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WebAuthenticationAddAccountResult};
+
     // ----- WebAuthenticationCoreManager class --------------------
 
     static PyObject* _new_WebAuthenticationCoreManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -553,6 +844,44 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         static_assert(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>::type_name);
         return nullptr;
+    }
+
+    static PyObject* WebAuthenticationCoreManager_AddAccountWithTransferTokenAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager", L"AddAccountWithTransferTokenAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>(args, 0);
+
+                return py::convert(winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager::AddAccountWithTransferTokenAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* WebAuthenticationCoreManager_CreateWebAccountMonitor(PyObject* /*unused*/, PyObject* args) noexcept
@@ -1047,6 +1376,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
     };
 
     static PyMethodDef methods_WebAuthenticationCoreManager_Static[] = {
+        { "add_account_with_transfer_token_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_AddAccountWithTransferTokenAsync), METH_VARARGS, nullptr },
         { "create_web_account_monitor", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_CreateWebAccountMonitor), METH_VARARGS, nullptr },
         { "find_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountAsync), METH_VARARGS, nullptr },
         { "find_account_provider_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManager_FindAccountProviderAsync), METH_VARARGS, nullptr },
@@ -1073,6 +1403,292 @@ namespace py::cpp::Windows::Security::Authentication::Web::Core
         Py_TPFLAGS_DEFAULT,
         type_slots_WebAuthenticationCoreManager_Static
     };
+
+    // ----- WebAuthenticationTransferTokenRequest class --------------------
+
+    static PyObject* _new_WebAuthenticationTransferTokenRequest(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest instance{param0, param1};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 3)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Security::Credentials::WebAccountProvider>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest instance{param0, param1, param2};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_WebAuthenticationTransferTokenRequest(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* WebAuthenticationTransferTokenRequest_get_TransferToken(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"TransferToken");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.TransferToken());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WebAuthenticationTransferTokenRequest_put_TransferToken(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"TransferToken");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.TransferToken(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WebAuthenticationTransferTokenRequest_get_CorrelationId(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"CorrelationId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CorrelationId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int WebAuthenticationTransferTokenRequest_put_CorrelationId(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"CorrelationId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.CorrelationId(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* WebAuthenticationTransferTokenRequest_get_Properties(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"Properties");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Properties());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationTransferTokenRequest_get_WebAccountProvider(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Security.Authentication.Web.Core.WebAuthenticationTransferTokenRequest", L"WebAccountProvider");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.WebAccountProvider());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_WebAuthenticationTransferTokenRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_WebAuthenticationTransferTokenRequest(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_WebAuthenticationTransferTokenRequest[] = {
+        { "_assign_array_", _assign_array_WebAuthenticationTransferTokenRequest, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_WebAuthenticationTransferTokenRequest), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_WebAuthenticationTransferTokenRequest[] = {
+        { "transfer_token", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_TransferToken), reinterpret_cast<setter>(WebAuthenticationTransferTokenRequest_put_TransferToken), nullptr, nullptr },
+        { "correlation_id", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_CorrelationId), reinterpret_cast<setter>(WebAuthenticationTransferTokenRequest_put_CorrelationId), nullptr, nullptr },
+        { "properties", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_Properties), nullptr, nullptr, nullptr },
+        { "web_account_provider", reinterpret_cast<getter>(WebAuthenticationTransferTokenRequest_get_WebAccountProvider), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_WebAuthenticationTransferTokenRequest[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_WebAuthenticationTransferTokenRequest) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_WebAuthenticationTransferTokenRequest) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_WebAuthenticationTransferTokenRequest) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_WebAuthenticationTransferTokenRequest) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebAuthenticationTransferTokenRequest = {
+        "winrt._winrt_windows_security_authentication_web_core.WebAuthenticationTransferTokenRequest",
+        sizeof(py::wrapper::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_WebAuthenticationTransferTokenRequest};
 
     // ----- WebProviderError class --------------------
 
@@ -2102,6 +2718,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
         return nullptr;
     }
 
+    py::pytype_handle WebAuthenticationAddAccountResponse_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationAddAccountResponse, object_bases.get(), nullptr)};
+    if (!WebAuthenticationAddAccountResponse_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WebAuthenticationAddAccountResult_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationAddAccountResult, object_bases.get(), nullptr)};
+    if (!WebAuthenticationAddAccountResult_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_WebAuthenticationCoreManager_Static{PyType_FromSpec(&type_spec_WebAuthenticationCoreManager_Static)};
     if (!type_WebAuthenticationCoreManager_Static)
     {
@@ -2110,6 +2738,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_security_authentication_web_core(void) noex
 
     py::pytype_handle WebAuthenticationCoreManager_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationCoreManager, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebAuthenticationCoreManager_Static.get()))};
     if (!WebAuthenticationCoreManager_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WebAuthenticationTransferTokenRequest_type{py::register_python_type(module.get(), &type_spec_WebAuthenticationTransferTokenRequest, object_bases.get(), nullptr)};
+    if (!WebAuthenticationTransferTokenRequest_type)
     {
         return nullptr;
     }

@@ -8,6 +8,7 @@
 - Added `winrt.windows.graphics.directx.direct3d11.interop` package.
 
 ### Changed
+- Regenerated files for Windows 11 SDK 10.0.26100.0 (24H2).
 - Updated to Windows App SDK 1.6.240829007
 
 ## [v2.2.0] - 2024-08-18

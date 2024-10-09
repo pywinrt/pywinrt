@@ -9,11 +9,16 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.h"
 #endif
 
+#if __has_include("py.Windows.Foundation.Collections.h")
+#include "py.Windows.Foundation.Collections.h"
+#endif
+
 #if __has_include("py.Windows.System.Power.h")
 #include "py.Windows.System.Power.h"
 #endif
 
 #include <winrt/Windows.Foundation.h>
+#include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.System.Power.h>
 
 #include <winrt/Windows.Devices.Power.h>
@@ -30,6 +35,8 @@ namespace py::wrapper::Windows::Devices::Power
 {
     using Battery = py::winrt_wrapper<winrt::Windows::Devices::Power::Battery>;
     using BatteryReport = py::winrt_wrapper<winrt::Windows::Devices::Power::BatteryReport>;
+    using PowerGridData = py::winrt_wrapper<winrt::Windows::Devices::Power::PowerGridData>;
+    using PowerGridForecast = py::winrt_wrapper<winrt::Windows::Devices::Power::PowerGridForecast>;
 }
 
 namespace py
@@ -49,5 +56,21 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.power.BatteryReport";
         static constexpr const char* module_name = "winrt.windows.devices.power";
         static constexpr const char* type_name = "BatteryReport";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Power::PowerGridData>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.PowerGridData";
+        static constexpr const char* module_name = "winrt.windows.devices.power";
+        static constexpr const char* type_name = "PowerGridData";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Power::PowerGridForecast>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.power.PowerGridForecast";
+        static constexpr const char* module_name = "winrt.windows.devices.power";
+        static constexpr const char* type_name = "PowerGridForecast";
     };
 }

@@ -25,6 +25,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Media.Devices.Core.h"
 #endif
 
+#if __has_include("py.Windows.Media.Effects.h")
+#include "py.Windows.Media.Effects.h"
+#endif
+
 #if __has_include("py.Windows.Media.MediaProperties.h")
 #include "py.Windows.Media.MediaProperties.h"
 #endif
@@ -38,6 +42,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Media.Capture.h>
 #include <winrt/Windows.Media.Devices.Core.h>
+#include <winrt/Windows.Media.Effects.h>
 #include <winrt/Windows.Media.MediaProperties.h>
 #include <winrt/Windows.Storage.Streams.h>
 

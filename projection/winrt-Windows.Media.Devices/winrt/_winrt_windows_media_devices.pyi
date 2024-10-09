@@ -14,6 +14,7 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.media.capture as windows_media_capture
 import winrt.windows.media.devices.core as windows_media_devices_core
+import winrt.windows.media.effects as windows_media_effects
 import winrt.windows.media.mediaproperties as windows_media_mediaproperties
 import winrt.windows.storage.streams as windows_storage_streams
 
@@ -59,6 +60,8 @@ class AudioDeviceController(winrt.system.Object):
     def muted(self) -> bool: ...
     @muted.setter
     def muted(self, value: bool) -> None: ...
+    @_property
+    def audio_capture_effects_manager(self) -> typing.Optional[windows_media_effects.AudioCaptureEffectsManager]: ...
 
 @typing.final
 class AudioDeviceModule(winrt.system.Object):

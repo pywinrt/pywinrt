@@ -39,10 +39,13 @@ __all__ = [
     "CompassDataThreshold",
     "CompassReading",
     "CompassReadingChangedEventArgs",
+    "DetectedPerson",
     "Gyrometer",
     "GyrometerDataThreshold",
     "GyrometerReading",
     "GyrometerReadingChangedEventArgs",
+    "HeadOrientation",
+    "HeadPosition",
     "HingeAngleReading",
     "HingeAngleSensor",
     "HingeAngleSensorReadingChangedEventArgs",
@@ -181,10 +184,13 @@ Compass = _winrt_windows_devices_sensors.Compass
 CompassDataThreshold = _winrt_windows_devices_sensors.CompassDataThreshold
 CompassReading = _winrt_windows_devices_sensors.CompassReading
 CompassReadingChangedEventArgs = _winrt_windows_devices_sensors.CompassReadingChangedEventArgs
+DetectedPerson = _winrt_windows_devices_sensors.DetectedPerson
 Gyrometer = _winrt_windows_devices_sensors.Gyrometer
 GyrometerDataThreshold = _winrt_windows_devices_sensors.GyrometerDataThreshold
 GyrometerReading = _winrt_windows_devices_sensors.GyrometerReading
 GyrometerReadingChangedEventArgs = _winrt_windows_devices_sensors.GyrometerReadingChangedEventArgs
+HeadOrientation = _winrt_windows_devices_sensors.HeadOrientation
+HeadPosition = _winrt_windows_devices_sensors.HeadPosition
 HingeAngleReading = _winrt_windows_devices_sensors.HingeAngleReading
 HingeAngleSensor = _winrt_windows_devices_sensors.HingeAngleSensor
 HingeAngleSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.HingeAngleSensorReadingChangedEventArgs

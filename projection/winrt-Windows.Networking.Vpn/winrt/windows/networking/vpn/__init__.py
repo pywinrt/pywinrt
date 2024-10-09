@@ -61,6 +61,7 @@ __all__ = [
     "IVpnNamespaceInfoFactory",
     "IVpnPacketBufferFactory",
     "IVpnPlugIn",
+    "IVpnPlugInReconnectTransport",
     "IVpnProfile",
     "IVpnRouteFactory",
 ]
@@ -194,5 +195,6 @@ IVpnInterfaceIdFactory = _winrt_windows_networking_vpn.IVpnInterfaceIdFactory
 IVpnNamespaceInfoFactory = _winrt_windows_networking_vpn.IVpnNamespaceInfoFactory
 IVpnPacketBufferFactory = _winrt_windows_networking_vpn.IVpnPacketBufferFactory
 IVpnPlugIn = _winrt_windows_networking_vpn.IVpnPlugIn
+IVpnPlugInReconnectTransport = _winrt_windows_networking_vpn.IVpnPlugInReconnectTransport
 IVpnProfile = _winrt_windows_networking_vpn.IVpnProfile
 IVpnRouteFactory = _winrt_windows_networking_vpn.IVpnRouteFactory
