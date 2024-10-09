@@ -85,6 +85,7 @@ namespace py::wrapper::Windows::Media::Audio
 {
     using AudioDeviceInputNode = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioDeviceInputNode>;
     using AudioDeviceOutputNode = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioDeviceOutputNode>;
+    using AudioEffectsPackConfiguration = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>;
     using AudioFileInputNode = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioFileInputNode>;
     using AudioFileOutputNode = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioFileOutputNode>;
     using AudioFrameCompletedEventArgs = py::winrt_wrapper<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs>;
@@ -134,6 +135,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Media::Audio::AudioDeviceNodeCreationStatus> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Media::Audio::AudioEffectsPackStatus> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Media::Audio::AudioFileNodeCreationStatus> = "i";
 
     template<>
@@ -179,6 +183,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.media.audio.AudioDeviceNodeCreationStatus";
         static constexpr const char* module_name = "winrt.windows.media.audio";
         static constexpr const char* type_name = "AudioDeviceNodeCreationStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Media::Audio::AudioEffectsPackStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.AudioEffectsPackStatus";
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioEffectsPackStatus";
     };
 
     template<>
@@ -299,6 +311,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.media.audio.AudioDeviceOutputNode";
         static constexpr const char* module_name = "winrt.windows.media.audio";
         static constexpr const char* type_name = "AudioDeviceOutputNode";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.audio.AudioEffectsPackConfiguration";
+        static constexpr const char* module_name = "winrt.windows.media.audio";
+        static constexpr const char* type_name = "AudioEffectsPackConfiguration";
     };
 
     template<>

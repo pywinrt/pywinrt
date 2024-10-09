@@ -7,6 +7,7 @@ from winrt import _winrt_windows_media_audio
 
 __all__ = [
     "AudioDeviceNodeCreationStatus",
+    "AudioEffectsPackStatus",
     "AudioFileNodeCreationStatus",
     "AudioGraphCreationStatus",
     "AudioGraphUnrecoverableError",
@@ -22,6 +23,7 @@ __all__ = [
     "SpatialAudioModel",
     "AudioDeviceInputNode",
     "AudioDeviceOutputNode",
+    "AudioEffectsPackConfiguration",
     "AudioFileInputNode",
     "AudioFileOutputNode",
     "AudioFrameCompletedEventArgs",
@@ -71,6 +73,11 @@ class AudioDeviceNodeCreationStatus(enum.IntEnum):
     FORMAT_NOT_SUPPORTED = 2
     UNKNOWN_FAILURE = 3
     ACCESS_DENIED = 4
+
+class AudioEffectsPackStatus(enum.IntEnum):
+    NOT_ENABLED = 0
+    ENABLED = 1
+    NOT_SUPPORTED = 2
 
 class AudioFileNodeCreationStatus(enum.IntEnum):
     SUCCESS = 0
@@ -142,6 +149,7 @@ class SpatialAudioModel(enum.IntEnum):
 
 AudioDeviceInputNode = _winrt_windows_media_audio.AudioDeviceInputNode
 AudioDeviceOutputNode = _winrt_windows_media_audio.AudioDeviceOutputNode
+AudioEffectsPackConfiguration = _winrt_windows_media_audio.AudioEffectsPackConfiguration
 AudioFileInputNode = _winrt_windows_media_audio.AudioFileInputNode
 AudioFileOutputNode = _winrt_windows_media_audio.AudioFileOutputNode
 AudioFrameCompletedEventArgs = _winrt_windows_media_audio.AudioFrameCompletedEventArgs

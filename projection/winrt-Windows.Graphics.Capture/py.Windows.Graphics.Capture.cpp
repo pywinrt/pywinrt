@@ -136,6 +136,58 @@ namespace py::cpp::Windows::Graphics::Capture
         }
     }
 
+    static PyObject* Direct3D11CaptureFrame_get_DirtyRegionMode(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"DirtyRegionMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DirtyRegionMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Direct3D11CaptureFrame_get_DirtyRegions(py::wrapper::Windows::Graphics::Capture::Direct3D11CaptureFrame* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.Direct3D11CaptureFrame", L"DirtyRegions");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DirtyRegions());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_Direct3D11CaptureFrame(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Capture::Direct3D11CaptureFrame>>();
@@ -192,6 +244,8 @@ namespace py::cpp::Windows::Graphics::Capture
         { "content_size", reinterpret_cast<getter>(Direct3D11CaptureFrame_get_ContentSize), nullptr, nullptr, nullptr },
         { "surface", reinterpret_cast<getter>(Direct3D11CaptureFrame_get_Surface), nullptr, nullptr, nullptr },
         { "system_relative_time", reinterpret_cast<getter>(Direct3D11CaptureFrame_get_SystemRelativeTime), nullptr, nullptr, nullptr },
+        { "dirty_region_mode", reinterpret_cast<getter>(Direct3D11CaptureFrame_get_DirtyRegionMode), nullptr, nullptr, nullptr },
+        { "dirty_regions", reinterpret_cast<getter>(Direct3D11CaptureFrame_get_DirtyRegions), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1439,6 +1493,189 @@ namespace py::cpp::Windows::Graphics::Capture
         }
     }
 
+    static PyObject* GraphicsCaptureSession_get_DirtyRegionMode(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"DirtyRegionMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DirtyRegionMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GraphicsCaptureSession_put_DirtyRegionMode(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"DirtyRegionMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Capture::GraphicsCaptureDirtyRegionMode>(arg);
+
+            self->obj.DirtyRegionMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GraphicsCaptureSession_get_MinUpdateInterval(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"MinUpdateInterval");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinUpdateInterval());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GraphicsCaptureSession_put_MinUpdateInterval(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"MinUpdateInterval");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.MinUpdateInterval(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* GraphicsCaptureSession_get_IncludeSecondaryWindows(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IncludeSecondaryWindows");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IncludeSecondaryWindows());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int GraphicsCaptureSession_put_IncludeSecondaryWindows(py::wrapper::Windows::Graphics::Capture::GraphicsCaptureSession* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Graphics.Capture.GraphicsCaptureSession", L"IncludeSecondaryWindows");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.IncludeSecondaryWindows(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_GraphicsCaptureSession(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Graphics::Capture::GraphicsCaptureSession>>();
@@ -1495,6 +1732,9 @@ namespace py::cpp::Windows::Graphics::Capture
     static PyGetSetDef _getset_GraphicsCaptureSession[] = {
         { "is_cursor_capture_enabled", reinterpret_cast<getter>(GraphicsCaptureSession_get_IsCursorCaptureEnabled), reinterpret_cast<setter>(GraphicsCaptureSession_put_IsCursorCaptureEnabled), nullptr, nullptr },
         { "is_border_required", reinterpret_cast<getter>(GraphicsCaptureSession_get_IsBorderRequired), reinterpret_cast<setter>(GraphicsCaptureSession_put_IsBorderRequired), nullptr, nullptr },
+        { "dirty_region_mode", reinterpret_cast<getter>(GraphicsCaptureSession_get_DirtyRegionMode), reinterpret_cast<setter>(GraphicsCaptureSession_put_DirtyRegionMode), nullptr, nullptr },
+        { "min_update_interval", reinterpret_cast<getter>(GraphicsCaptureSession_get_MinUpdateInterval), reinterpret_cast<setter>(GraphicsCaptureSession_put_MinUpdateInterval), nullptr, nullptr },
+        { "include_secondary_windows", reinterpret_cast<getter>(GraphicsCaptureSession_get_IncludeSecondaryWindows), reinterpret_cast<setter>(GraphicsCaptureSession_put_IncludeSecondaryWindows), nullptr, nullptr },
         { }
     };
 

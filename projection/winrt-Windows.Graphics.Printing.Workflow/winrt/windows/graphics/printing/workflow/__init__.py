@@ -9,6 +9,7 @@ __all__ = [
     "PdlConversionHostBasedProcessingOperations",
     "PrintWorkflowAttributesMergePolicy",
     "PrintWorkflowJobAbortReason",
+    "PrintWorkflowJobIssueKind",
     "PrintWorkflowPdlConversionType",
     "PrintWorkflowPrinterJobStatus",
     "PrintWorkflowSessionStatus",
@@ -21,6 +22,7 @@ __all__ = [
     "PrintWorkflowForegroundSetupRequestedEventArgs",
     "PrintWorkflowJobActivatedEventArgs",
     "PrintWorkflowJobBackgroundSession",
+    "PrintWorkflowJobIssueDetectedEventArgs",
     "PrintWorkflowJobNotificationEventArgs",
     "PrintWorkflowJobStartingEventArgs",
     "PrintWorkflowJobTriggerDetails",
@@ -42,6 +44,10 @@ __all__ = [
     "PrintWorkflowTriggerDetails",
     "PrintWorkflowUIActivatedEventArgs",
     "PrintWorkflowUILauncher",
+    "PrintWorkflowVirtualPrinterDataAvailableEventArgs",
+    "PrintWorkflowVirtualPrinterSession",
+    "PrintWorkflowVirtualPrinterTriggerDetails",
+    "PrintWorkflowVirtualPrinterUIEventArgs",
     "PrintWorkflowXpsDataAvailableEventArgs",
 ]
 
@@ -62,10 +68,24 @@ class PrintWorkflowJobAbortReason(enum.IntEnum):
     JOB_FAILED = 0
     USER_CANCELED = 1
 
+class PrintWorkflowJobIssueKind(enum.IntEnum):
+    OTHER = 0
+    ATTENTION_REQUIRED = 1
+    DOOR_OPEN = 2
+    MARKER_SUPPLY_LOW = 3
+    MARKER_SUPPLY_EMPTY = 4
+    MEDIA_JAM = 5
+    MEDIA_EMPTY = 6
+    MEDIA_LOW = 7
+    OUTPUT_AREA_ALMOST_FULL = 8
+    OUTPUT_AREA_FULL = 9
+    JOB_PRINTING_ERROR = 10
+
 class PrintWorkflowPdlConversionType(enum.IntEnum):
     XPS_TO_PDF = 0
     XPS_TO_PWGR = 1
     XPS_TO_PCLM = 2
+    XPS_TO_TIFF = 3
 
 class PrintWorkflowPrinterJobStatus(enum.IntEnum):
     ERROR = 0
@@ -98,6 +118,7 @@ PrintWorkflowForegroundSession = _winrt_windows_graphics_printing_workflow.Print
 PrintWorkflowForegroundSetupRequestedEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowForegroundSetupRequestedEventArgs
 PrintWorkflowJobActivatedEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobActivatedEventArgs
 PrintWorkflowJobBackgroundSession = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobBackgroundSession
+PrintWorkflowJobIssueDetectedEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobIssueDetectedEventArgs
 PrintWorkflowJobNotificationEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobNotificationEventArgs
 PrintWorkflowJobStartingEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobStartingEventArgs
 PrintWorkflowJobTriggerDetails = _winrt_windows_graphics_printing_workflow.PrintWorkflowJobTriggerDetails
@@ -119,4 +140,8 @@ PrintWorkflowTarget = _winrt_windows_graphics_printing_workflow.PrintWorkflowTar
 PrintWorkflowTriggerDetails = _winrt_windows_graphics_printing_workflow.PrintWorkflowTriggerDetails
 PrintWorkflowUIActivatedEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowUIActivatedEventArgs
 PrintWorkflowUILauncher = _winrt_windows_graphics_printing_workflow.PrintWorkflowUILauncher
+PrintWorkflowVirtualPrinterDataAvailableEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterDataAvailableEventArgs
+PrintWorkflowVirtualPrinterSession = _winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterSession
+PrintWorkflowVirtualPrinterTriggerDetails = _winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterTriggerDetails
+PrintWorkflowVirtualPrinterUIEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowVirtualPrinterUIEventArgs
 PrintWorkflowXpsDataAvailableEventArgs = _winrt_windows_graphics_printing_workflow.PrintWorkflowXpsDataAvailableEventArgs

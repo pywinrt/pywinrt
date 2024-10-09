@@ -20,12 +20,26 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel::AppExtensions
         IAppExtension2(std::nullptr_t = nullptr) noexcept {}
         IAppExtension2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAppExtension3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppExtension3>
+    {
+        IAppExtension3(std::nullptr_t = nullptr) noexcept {}
+        IAppExtension3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAppExtensionCatalog :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAppExtensionCatalog>
     {
         IAppExtensionCatalog(std::nullptr_t = nullptr) noexcept {}
         IAppExtensionCatalog(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAppExtensionCatalog2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAppExtensionCatalog2>
+    {
+        IAppExtensionCatalog2(std::nullptr_t = nullptr) noexcept {}
+        IAppExtensionCatalog2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IAppExtensionCatalogStatics :
         winrt::Windows::Foundation::IInspectable,

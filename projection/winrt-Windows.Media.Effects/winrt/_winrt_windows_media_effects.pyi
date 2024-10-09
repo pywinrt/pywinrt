@@ -23,9 +23,15 @@ import winrt.windows.media.transcoding as windows_media_transcoding
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui as windows_ui
 
-from winrt.windows.media.effects import AudioEffectType, MediaEffectClosedReason, MediaMemoryTypes
+from winrt.windows.media.effects import AudioEffectState, AudioEffectType, MediaEffectClosedReason, MediaMemoryTypes
 
 Self = typing.TypeVar('Self')
+
+@typing.final
+class AcousticEchoCancellationConfiguration(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> AcousticEchoCancellationConfiguration: ...
+    def set_echo_cancellation_render_endpoint(self, device_id: str, /) -> None: ...
 
 @typing.final
 class AudioCaptureEffectsManager(winrt.system.Object):
@@ -39,8 +45,15 @@ class AudioCaptureEffectsManager(winrt.system.Object):
 class AudioEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEffect: ...
+    def set_state(self, new_state: AudioEffectState, /) -> None: ...
     @_property
     def audio_effect_type(self) -> AudioEffectType: ...
+    @_property
+    def acoustic_echo_cancellation_configuration(self) -> typing.Optional[AcousticEchoCancellationConfiguration]: ...
+    @_property
+    def can_set_state(self) -> bool: ...
+    @_property
+    def state(self) -> AudioEffectState: ...
 
 @typing.final
 class AudioEffectDefinition(winrt.system.Object):

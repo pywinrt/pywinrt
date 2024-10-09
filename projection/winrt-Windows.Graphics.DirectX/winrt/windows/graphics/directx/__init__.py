@@ -167,6 +167,7 @@ class DirectXPixelFormat(enum.IntEnum):
     V408 = 132
     SAMPLER_FEEDBACK_MIN_MIP_OPAQUE = 189
     SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE = 190
+    A4_B4_G4_R4 = 191
 
 class DirectXPrimitiveTopology(enum.IntEnum):
     UNDEFINED = 0

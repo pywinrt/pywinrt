@@ -6,7 +6,11 @@ from winrt import _winrt_windows_devices_power
 __all__ = [
     "Battery",
     "BatteryReport",
+    "PowerGridData",
+    "PowerGridForecast",
 ]
 
 Battery = _winrt_windows_devices_power.Battery
 BatteryReport = _winrt_windows_devices_power.BatteryReport
+PowerGridData = _winrt_windows_devices_power.PowerGridData
+PowerGridForecast = _winrt_windows_devices_power.PowerGridForecast

@@ -8,6 +8,7 @@ from winrt import _winrt_windows_devices_printers
 __all__ = [
     "IppAttributeErrorReason",
     "IppAttributeValueKind",
+    "IppPrintDeviceKind",
     "IppResolutionUnit",
     "PageConfigurationSource",
     "IppAttributeError",
@@ -53,6 +54,11 @@ class IppAttributeValueKind(enum.IntEnum):
     CHARSET = 18
     NATURAL_LANGUAGE = 19
     MIME_MEDIA_TYPE = 20
+
+class IppPrintDeviceKind(enum.IntEnum):
+    PRINTER = 0
+    FAX_OUT = 1
+    VIRTUAL_PRINTER = 2
 
 class IppResolutionUnit(enum.IntEnum):
     DOTS_PER_INCH = 0

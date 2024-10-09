@@ -4444,6 +4444,110 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         }
     }
 
+    static PyObject* GetEntitlementResult_get_AvailabilityId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"AvailabilityId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AvailabilityId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GetEntitlementResult_get_IsAlreadyOwned(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"IsAlreadyOwned");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsAlreadyOwned());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GetEntitlementResult_get_OrderId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"OrderId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.OrderId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* GetEntitlementResult_get_SkuId(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.GetEntitlementResult", L"SkuId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SkuId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_GetEntitlementResult(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::GetEntitlementResult>>();
@@ -4476,6 +4580,10 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyGetSetDef _getset_GetEntitlementResult[] = {
         { "status", reinterpret_cast<getter>(GetEntitlementResult_get_Status), nullptr, nullptr, nullptr },
+        { "availability_id", reinterpret_cast<getter>(GetEntitlementResult_get_AvailabilityId), nullptr, nullptr, nullptr },
+        { "is_already_owned", reinterpret_cast<getter>(GetEntitlementResult_get_IsAlreadyOwned), nullptr, nullptr, nullptr },
+        { "order_id", reinterpret_cast<getter>(GetEntitlementResult_get_OrderId), nullptr, nullptr, nullptr },
+        { "sku_id", reinterpret_cast<getter>(GetEntitlementResult_get_SkuId), nullptr, nullptr, nullptr },
         { }
     };
 

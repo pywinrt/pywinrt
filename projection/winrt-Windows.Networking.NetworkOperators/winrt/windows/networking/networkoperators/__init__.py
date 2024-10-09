@@ -33,7 +33,9 @@ __all__ = [
     "TetheringCapability",
     "TetheringOperationStatus",
     "TetheringOperationalState",
+    "TetheringWiFiAuthenticationKind",
     "TetheringWiFiBand",
+    "TetheringWiFiPerformancePriority",
     "UiccAccessCondition",
     "UiccAppKind",
     "UiccAppRecordKind",
@@ -78,6 +80,7 @@ __all__ = [
     "MobileBroadbandCurrentSlotIndexChangedEventArgs",
     "MobileBroadbandDeviceInformation",
     "MobileBroadbandDeviceService",
+    "MobileBroadbandDeviceServiceCommandEventArgs",
     "MobileBroadbandDeviceServiceCommandResult",
     "MobileBroadbandDeviceServiceCommandSession",
     "MobileBroadbandDeviceServiceDataReceivedEventArgs",
@@ -115,6 +118,7 @@ __all__ = [
     "NetworkOperatorTetheringClient",
     "NetworkOperatorTetheringManager",
     "NetworkOperatorTetheringOperationResult",
+    "NetworkOperatorTetheringSessionAccessPointConfiguration",
     "ProvisionFromXmlDocumentResults",
     "ProvisionedProfile",
     "ProvisioningAgent",
@@ -353,6 +357,9 @@ class TetheringOperationStatus(enum.IntEnum):
     OPERATION_IN_PROGRESS = 6
     BLUETOOTH_DEVICE_OFF = 7
     NETWORK_LIMITED_CONNECTIVITY = 8
+    ALREADY_ON = 9
+    RADIO_RESTRICTION = 10
+    BAND_INTERFERENCE = 11
 
 class TetheringOperationalState(enum.IntEnum):
     UNKNOWN = 0
@@ -360,10 +367,20 @@ class TetheringOperationalState(enum.IntEnum):
     OFF = 2
     IN_TRANSITION = 3
 
+class TetheringWiFiAuthenticationKind(enum.IntEnum):
+    WPA2 = 0
+    WPA3_TRANSITION_MODE = 1
+    WPA3 = 2
+
 class TetheringWiFiBand(enum.IntEnum):
     AUTO = 0
     TWO_POINT_FOUR_GIGAHERTZ = 1
     FIVE_GIGAHERTZ = 2
+    SIX_GIGAHERTZ = 3
+
+class TetheringWiFiPerformancePriority(enum.IntEnum):
+    DEFAULT = 0
+    TETHERING_OVER_STATION = 1
 
 class UiccAccessCondition(enum.IntEnum):
     ALWAYS_ALLOWED = 0
@@ -437,6 +454,7 @@ MobileBroadbandCellsInfo = _winrt_windows_networking_networkoperators.MobileBroa
 MobileBroadbandCurrentSlotIndexChangedEventArgs = _winrt_windows_networking_networkoperators.MobileBroadbandCurrentSlotIndexChangedEventArgs
 MobileBroadbandDeviceInformation = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceInformation
 MobileBroadbandDeviceService = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceService
+MobileBroadbandDeviceServiceCommandEventArgs = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandEventArgs
 MobileBroadbandDeviceServiceCommandResult = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandResult
 MobileBroadbandDeviceServiceCommandSession = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandSession
 MobileBroadbandDeviceServiceDataReceivedEventArgs = _winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceDataReceivedEventArgs
@@ -474,6 +492,7 @@ NetworkOperatorTetheringAccessPointConfiguration = _winrt_windows_networking_net
 NetworkOperatorTetheringClient = _winrt_windows_networking_networkoperators.NetworkOperatorTetheringClient
 NetworkOperatorTetheringManager = _winrt_windows_networking_networkoperators.NetworkOperatorTetheringManager
 NetworkOperatorTetheringOperationResult = _winrt_windows_networking_networkoperators.NetworkOperatorTetheringOperationResult
+NetworkOperatorTetheringSessionAccessPointConfiguration = _winrt_windows_networking_networkoperators.NetworkOperatorTetheringSessionAccessPointConfiguration
 ProvisionFromXmlDocumentResults = _winrt_windows_networking_networkoperators.ProvisionFromXmlDocumentResults
 ProvisionedProfile = _winrt_windows_networking_networkoperators.ProvisionedProfile
 ProvisioningAgent = _winrt_windows_networking_networkoperators.ProvisioningAgent

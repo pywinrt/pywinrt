@@ -48,13 +48,17 @@ namespace py::impl::Windows::ApplicationModel::Calls
 
 namespace py::wrapper::Windows::ApplicationModel::Calls
 {
+    using AcceptedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>;
+    using AppInitiatedVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>;
     using CallAnswerEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>;
     using CallRejectEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallRejectEventArgs>;
     using CallStateChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::CallStateChangeEventArgs>;
+    using IncomingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>;
     using LockScreenCallEndCallDeferral = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndCallDeferral>;
     using LockScreenCallEndRequestedEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallEndRequestedEventArgs>;
     using LockScreenCallUI = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::LockScreenCallUI>;
     using MuteChangeEventArgs = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::MuteChangeEventArgs>;
+    using OutgoingVoipPhoneCallOptions = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>;
     using PhoneCall = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCall>;
     using PhoneCallBlocking = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallBlocking>;
     using PhoneCallHistoryEntry = py::winrt_wrapper<winrt::Windows::ApplicationModel::Calls::PhoneCallHistoryEntry>;
@@ -153,6 +157,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::TransportDeviceAudioRoutingStatus> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::VoipCallControlDeviceKind> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia> = "I";
@@ -352,6 +359,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::VoipCallControlDeviceKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipCallControlDeviceKind";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "VoipCallControlDeviceKind";
+    };
+
+    template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::VoipPhoneCallMedia>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.VoipPhoneCallMedia";
@@ -384,6 +399,22 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::AcceptedVoipPhoneCallOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.AcceptedVoipPhoneCallOptions";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "AcceptedVoipPhoneCallOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::AppInitiatedVoipPhoneCallOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.AppInitiatedVoipPhoneCallOptions";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "AppInitiatedVoipPhoneCallOptions";
+    };
+
+    template<>
     struct py_type<winrt::Windows::ApplicationModel::Calls::CallAnswerEventArgs>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CallAnswerEventArgs";
@@ -405,6 +436,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.CallStateChangeEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "CallStateChangeEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::IncomingVoipPhoneCallOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.IncomingVoipPhoneCallOptions";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "IncomingVoipPhoneCallOptions";
     };
 
     template<>
@@ -437,6 +476,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.MuteChangeEventArgs";
         static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
         static constexpr const char* type_name = "MuteChangeEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::ApplicationModel::Calls::OutgoingVoipPhoneCallOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.applicationmodel.calls.OutgoingVoipPhoneCallOptions";
+        static constexpr const char* module_name = "winrt.windows.applicationmodel.calls";
+        static constexpr const char* type_name = "OutgoingVoipPhoneCallOptions";
     };
 
     template<>

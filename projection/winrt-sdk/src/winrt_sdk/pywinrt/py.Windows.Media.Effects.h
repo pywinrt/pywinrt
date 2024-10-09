@@ -83,6 +83,7 @@ namespace py::impl::Windows::Media::Effects
 
 namespace py::wrapper::Windows::Media::Effects
 {
+    using AcousticEchoCancellationConfiguration = py::winrt_wrapper<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>;
     using AudioCaptureEffectsManager = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioCaptureEffectsManager>;
     using AudioEffect = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffect>;
     using AudioEffectDefinition = py::winrt_wrapper<winrt::Windows::Media::Effects::AudioEffectDefinition>;
@@ -107,6 +108,9 @@ namespace py::wrapper::Windows::Media::Effects
 namespace py
 {
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::AudioEffectState> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::AudioEffectType> = "i";
 
     template<>
@@ -115,6 +119,14 @@ namespace py
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Media::Effects::MediaMemoryTypes> = "i";
 
+
+    template<>
+    struct py_type<winrt::Windows::Media::Effects::AudioEffectState>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AudioEffectState";
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AudioEffectState";
+    };
 
     template<>
     struct py_type<winrt::Windows::Media::Effects::AudioEffectType>
@@ -138,6 +150,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.media.effects.MediaMemoryTypes";
         static constexpr const char* module_name = "winrt.windows.media.effects";
         static constexpr const char* type_name = "MediaMemoryTypes";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.media.effects.AcousticEchoCancellationConfiguration";
+        static constexpr const char* module_name = "winrt.windows.media.effects";
+        static constexpr const char* type_name = "AcousticEchoCancellationConfiguration";
     };
 
     template<>

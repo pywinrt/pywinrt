@@ -24,6 +24,20 @@ WINRT_EXPORT namespace winrt::Windows::Media::Audio
         IAudioDeviceOutputNode(std::nullptr_t = nullptr) noexcept {}
         IAudioDeviceOutputNode(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IAudioEffectsPackConfiguration :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAudioEffectsPackConfiguration>
+    {
+        IAudioEffectsPackConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IAudioEffectsPackConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IAudioEffectsPackConfigurationStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IAudioEffectsPackConfigurationStatics>
+    {
+        IAudioEffectsPackConfigurationStatics(std::nullptr_t = nullptr) noexcept {}
+        IAudioEffectsPackConfigurationStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IAudioFileInputNode :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IAudioFileInputNode>,

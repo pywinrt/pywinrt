@@ -73,6 +73,32 @@ namespace py::cpp::Windows::Devices::Enumeration
         }
     }
 
+    static PyObject* DeviceAccessChangedEventArgs_get_UserPromptRequired(py::wrapper::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Enumeration.DeviceAccessChangedEventArgs", L"UserPromptRequired");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UserPromptRequired());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DeviceAccessChangedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::DeviceAccessChangedEventArgs>>();
@@ -106,6 +132,7 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyGetSetDef _getset_DeviceAccessChangedEventArgs[] = {
         { "status", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_Status), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_Id), nullptr, nullptr, nullptr },
+        { "user_prompt_required", reinterpret_cast<getter>(DeviceAccessChangedEventArgs_get_UserPromptRequired), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -281,6 +308,32 @@ namespace py::cpp::Windows::Devices::Enumeration
         }
     }
 
+    static PyObject* DeviceAccessInformation_get_UserPromptRequired(py::wrapper::Windows::Devices::Enumeration::DeviceAccessInformation* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Enumeration.DeviceAccessInformation", L"UserPromptRequired");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UserPromptRequired());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* DeviceAccessInformation_add_AccessChanged(py::wrapper::Windows::Devices::Enumeration::DeviceAccessInformation* self, PyObject* arg) noexcept
     {
         try
@@ -372,6 +425,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyGetSetDef _getset_DeviceAccessInformation[] = {
         { "current_status", reinterpret_cast<getter>(DeviceAccessInformation_get_CurrentStatus), nullptr, nullptr, nullptr },
+        { "user_prompt_required", reinterpret_cast<getter>(DeviceAccessInformation_get_UserPromptRequired), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -709,6 +763,36 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateFromIdAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -829,6 +913,36 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateWatcher", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -942,6 +1056,36 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"FindAllAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2, param3));
             }
             catch (...)
             {
@@ -1783,6 +1927,45 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_DECREF(tp);
     }
 
+    static PyObject* DeviceInformationCustomPairing_AddPairingSetMember(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformationCustomPairing", L"AddPairingSetMember", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformation>(args, 0);
+
+                self->obj.AddPairingSetMember(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DeviceInformationCustomPairing_PairAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1935,6 +2118,63 @@ namespace py::cpp::Windows::Devices::Enumeration
         }
     }
 
+    static PyObject* DeviceInformationCustomPairing_add_PairingSetMembersRequested(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Enumeration.DeviceInformationCustomPairing", L"PairingSetMembersRequested");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing, winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>>(arg);
+
+            return py::convert(self->obj.PairingSetMembersRequested(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformationCustomPairing_remove_PairingSetMembersRequested(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Devices.Enumeration.DeviceInformationCustomPairing", L"PairingSetMembersRequested");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.PairingSetMembersRequested(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_DeviceInformationCustomPairing(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::DeviceInformationCustomPairing>>();
@@ -1960,9 +2200,12 @@ namespace py::cpp::Windows::Devices::Enumeration
     }
 
     static PyMethodDef _methods_DeviceInformationCustomPairing[] = {
+        { "add_pairing_set_member", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_AddPairingSetMember), METH_VARARGS, nullptr },
         { "pair_async", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_PairAsync), METH_VARARGS, nullptr },
         { "add_pairing_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_add_PairingRequested), METH_O, nullptr },
         { "remove_pairing_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_remove_PairingRequested), METH_O, nullptr },
+        { "add_pairing_set_members_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_add_PairingSetMembersRequested), METH_O, nullptr },
+        { "remove_pairing_set_members_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_remove_PairingSetMembersRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_DeviceInformationCustomPairing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationCustomPairing), METH_O | METH_STATIC, nullptr },
         { }
@@ -2623,6 +2866,45 @@ namespace py::cpp::Windows::Devices::Enumeration
         }
     }
 
+    static PyObject* DevicePairingRequestedEventArgs_AcceptWithAddress(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DevicePairingRequestedEventArgs", L"AcceptWithAddress", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.AcceptWithAddress(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DevicePairingRequestedEventArgs_AcceptWithPasswordCredential(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2802,6 +3084,7 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyMethodDef _methods_DevicePairingRequestedEventArgs[] = {
         { "accept", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_Accept), METH_VARARGS, nullptr },
+        { "accept_with_address", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_AcceptWithAddress), METH_VARARGS, nullptr },
         { "accept_with_password_credential", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_AcceptWithPasswordCredential), METH_VARARGS, nullptr },
         { "get_deferral", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DevicePairingRequestedEventArgs, METH_O | METH_STATIC, nullptr },
@@ -2950,6 +3233,153 @@ namespace py::cpp::Windows::Devices::Enumeration
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DevicePairingResult};
+
+    // ----- DevicePairingSetMembersRequestedEventArgs class --------------------
+
+    static PyObject* _new_DevicePairingSetMembersRequestedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_DevicePairingSetMembersRequestedEventArgs(py::wrapper::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* DevicePairingSetMembersRequestedEventArgs_get_PairingSetMembers(py::wrapper::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs", L"PairingSetMembers");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PairingSetMembers());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePairingSetMembersRequestedEventArgs_get_ParentDeviceInformation(py::wrapper::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs", L"ParentDeviceInformation");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ParentDeviceInformation());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePairingSetMembersRequestedEventArgs_get_Status(py::wrapper::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Enumeration.DevicePairingSetMembersRequestedEventArgs", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Status());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_DevicePairingSetMembersRequestedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_DevicePairingSetMembersRequestedEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_DevicePairingSetMembersRequestedEventArgs[] = {
+        { "_assign_array_", _assign_array_DevicePairingSetMembersRequestedEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingSetMembersRequestedEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_DevicePairingSetMembersRequestedEventArgs[] = {
+        { "pairing_set_members", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_PairingSetMembers), nullptr, nullptr, nullptr },
+        { "parent_device_information", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_ParentDeviceInformation), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(DevicePairingSetMembersRequestedEventArgs_get_Status), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_DevicePairingSetMembersRequestedEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_DevicePairingSetMembersRequestedEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DevicePairingSetMembersRequestedEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DevicePairingSetMembersRequestedEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_DevicePairingSetMembersRequestedEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DevicePairingSetMembersRequestedEventArgs = {
+        "winrt._winrt_windows_devices_enumeration.DevicePairingSetMembersRequestedEventArgs",
+        sizeof(py::wrapper::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_DevicePairingSetMembersRequestedEventArgs};
 
     // ----- DevicePicker class --------------------
 
@@ -5803,6 +6233,72 @@ namespace py::cpp::Windows::Devices::Enumeration
         Py_TPFLAGS_DEFAULT,
         _type_slots_EnclosureLocation};
 
+    // ----- IDeviceEnumerationSettings interface --------------------
+
+    static PyObject* _new_IDeviceEnumerationSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IDeviceEnumerationSettings(py::wrapper::Windows::Devices::Enumeration::IDeviceEnumerationSettings* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IDeviceEnumerationSettings(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IDeviceEnumerationSettings[] = {
+        { "_assign_array_", _assign_array_IDeviceEnumerationSettings, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IDeviceEnumerationSettings), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IDeviceEnumerationSettings[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IDeviceEnumerationSettings[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IDeviceEnumerationSettings) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IDeviceEnumerationSettings) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IDeviceEnumerationSettings) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IDeviceEnumerationSettings) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IDeviceEnumerationSettings = {
+        "winrt._winrt_windows_devices_enumeration.IDeviceEnumerationSettings",
+        sizeof(py::wrapper::Windows::Devices::Enumeration::IDeviceEnumerationSettings),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IDeviceEnumerationSettings};
+
     // ----- IDevicePairingSettings interface --------------------
 
     static PyObject* _new_IDevicePairingSettings(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5998,6 +6494,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle DevicePairingSetMembersRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_DevicePairingSetMembersRequestedEventArgs, object_bases.get(), nullptr)};
+    if (!DevicePairingSetMembersRequestedEventArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle DevicePicker_type{py::register_python_type(module.get(), &type_spec_DevicePicker, object_bases.get(), nullptr)};
     if (!DevicePicker_type)
     {
@@ -6054,6 +6556,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_devices_enumeration(void) noexcept
 
     py::pytype_handle EnclosureLocation_type{py::register_python_type(module.get(), &type_spec_EnclosureLocation, object_bases.get(), nullptr)};
     if (!EnclosureLocation_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IDeviceEnumerationSettings_type{py::register_python_type(module.get(), &type_spec_IDeviceEnumerationSettings, object_bases.get(), nullptr)};
+    if (!IDeviceEnumerationSettings_type)
     {
         return nullptr;
     }

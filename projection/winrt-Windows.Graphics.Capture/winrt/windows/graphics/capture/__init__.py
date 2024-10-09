@@ -7,6 +7,7 @@ from winrt import _winrt_windows_graphics_capture
 
 __all__ = [
     "GraphicsCaptureAccessKind",
+    "GraphicsCaptureDirtyRegionMode",
     "Direct3D11CaptureFrame",
     "Direct3D11CaptureFramePool",
     "GraphicsCaptureAccess",
@@ -18,6 +19,10 @@ __all__ = [
 class GraphicsCaptureAccessKind(enum.IntEnum):
     BORDERLESS = 0
     PROGRAMMATIC = 1
+
+class GraphicsCaptureDirtyRegionMode(enum.IntEnum):
+    REPORT_ONLY = 0
+    REPORT_AND_RENDER = 1
 
 Direct3D11CaptureFrame = _winrt_windows_graphics_capture.Direct3D11CaptureFrame
 Direct3D11CaptureFramePool = _winrt_windows_graphics_capture.Direct3D11CaptureFramePool

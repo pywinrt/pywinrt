@@ -55,10 +55,13 @@ namespace py::wrapper::Windows::Devices::Sensors
     using CompassDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::CompassDataThreshold>;
     using CompassReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::CompassReading>;
     using CompassReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::CompassReadingChangedEventArgs>;
+    using DetectedPerson = py::winrt_wrapper<winrt::Windows::Devices::Sensors::DetectedPerson>;
     using Gyrometer = py::winrt_wrapper<winrt::Windows::Devices::Sensors::Gyrometer>;
     using GyrometerDataThreshold = py::winrt_wrapper<winrt::Windows::Devices::Sensors::GyrometerDataThreshold>;
     using GyrometerReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::GyrometerReading>;
     using GyrometerReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::GyrometerReadingChangedEventArgs>;
+    using HeadOrientation = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HeadOrientation>;
+    using HeadPosition = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HeadPosition>;
     using HingeAngleReading = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HingeAngleReading>;
     using HingeAngleSensor = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HingeAngleSensor>;
     using HingeAngleSensorReadingChangedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Sensors::HingeAngleSensorReadingChangedEventArgs>;
@@ -404,6 +407,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Devices::Sensors::DetectedPerson>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.DetectedPerson";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "DetectedPerson";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Devices::Sensors::Gyrometer>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.Gyrometer";
@@ -433,6 +444,22 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.GyrometerReadingChangedEventArgs";
         static constexpr const char* module_name = "winrt.windows.devices.sensors";
         static constexpr const char* type_name = "GyrometerReadingChangedEventArgs";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::HeadOrientation>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HeadOrientation";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HeadOrientation";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Sensors::HeadPosition>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.sensors.HeadPosition";
+        static constexpr const char* module_name = "winrt.windows.devices.sensors";
+        static constexpr const char* type_name = "HeadPosition";
     };
 
     template<>

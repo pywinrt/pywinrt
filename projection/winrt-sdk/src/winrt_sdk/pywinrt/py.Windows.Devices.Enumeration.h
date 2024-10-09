@@ -64,6 +64,7 @@ namespace py::wrapper::Windows::Devices::Enumeration
     using DeviceInformationUpdate = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DeviceInformationUpdate>;
     using DevicePairingRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs>;
     using DevicePairingResult = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePairingResult>;
+    using DevicePairingSetMembersRequestedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>;
     using DevicePicker = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePicker>;
     using DevicePickerAppearance = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePickerAppearance>;
     using DevicePickerFilter = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DevicePickerFilter>;
@@ -74,6 +75,7 @@ namespace py::wrapper::Windows::Devices::Enumeration
     using DeviceWatcherEvent = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DeviceWatcherEvent>;
     using DeviceWatcherTriggerDetails = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::DeviceWatcherTriggerDetails>;
     using EnclosureLocation = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::EnclosureLocation>;
+    using IDeviceEnumerationSettings = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>;
     using IDevicePairingSettings = py::winrt_wrapper<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>;
 }
 
@@ -87,6 +89,9 @@ namespace py
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Enumeration::DeviceInformationKind> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Enumeration::DevicePairingAddPairingSetMemberStatus> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Enumeration::DevicePairingKinds> = "I";
@@ -135,6 +140,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DeviceInformationKind";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "DeviceInformationKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingAddPairingSetMemberStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingAddPairingSetMemberStatus";
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePairingAddPairingSetMemberStatus";
     };
 
     template<>
@@ -290,6 +303,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Devices::Enumeration::DevicePairingSetMembersRequestedEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePairingSetMembersRequestedEventArgs";
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "DevicePairingSetMembersRequestedEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Devices::Enumeration::DevicePicker>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.DevicePicker";
@@ -367,6 +388,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.EnclosureLocation";
         static constexpr const char* module_name = "winrt.windows.devices.enumeration";
         static constexpr const char* type_name = "EnclosureLocation";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.enumeration.IDeviceEnumerationSettings";
+        static constexpr const char* module_name = "winrt.windows.devices.enumeration";
+        static constexpr const char* type_name = "IDeviceEnumerationSettings";
     };
 
     template<>

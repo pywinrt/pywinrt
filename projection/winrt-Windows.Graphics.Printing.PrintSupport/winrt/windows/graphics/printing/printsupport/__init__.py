@@ -6,10 +6,17 @@ import winrt.system
 from winrt import _winrt_windows_graphics_printing_printsupport
 
 __all__ = [
+    "IppCommunicationErrorKind",
+    "IppPrinterCommunicationKind",
     "SettingsLaunchKind",
     "WorkflowPrintTicketValidationStatus",
+    "XpsImageQuality",
+    "PrintSupportCommunicationErrorDetectedEventArgs",
     "PrintSupportExtensionSession",
     "PrintSupportExtensionTriggerDetails",
+    "PrintSupportIppCommunicationConfiguration",
+    "PrintSupportIppCommunicationTimeouts",
+    "PrintSupportMxdcImageQualityConfiguration",
     "PrintSupportPrintDeviceCapabilitiesChangedEventArgs",
     "PrintSupportPrintDeviceCapabilitiesUpdatePolicy",
     "PrintSupportPrintTicketElement",
@@ -20,6 +27,19 @@ __all__ = [
     "PrintSupportSettingsUISession",
 ]
 
+class IppCommunicationErrorKind(enum.IntEnum):
+    OTHER = 0
+    TIMEOUT = 1
+    CONNECTION_ERROR = 2
+    ACCESS_DENIED = 3
+
+class IppPrinterCommunicationKind(enum.IntEnum):
+    NETWORK = 0
+    USB = 1
+    PRINTER_CONNECTION = 2
+    UNIVERSAL_PRINT = 3
+    VIRTUAL_PRINTER = 4
+
 class SettingsLaunchKind(enum.IntEnum):
     JOB_PRINT_TICKET = 0
     USER_DEFAULT_PRINT_TICKET = 1
@@ -29,8 +49,18 @@ class WorkflowPrintTicketValidationStatus(enum.IntEnum):
     CONFLICTING = 1
     INVALID = 2
 
+class XpsImageQuality(enum.IntEnum):
+    JPEG_HIGH_COMPRESSION = 0
+    JPEG_MEDIUM_COMPRESSION = 1
+    JPEG_LOW_COMPRESSION = 2
+    PNG = 3
+
+PrintSupportCommunicationErrorDetectedEventArgs = _winrt_windows_graphics_printing_printsupport.PrintSupportCommunicationErrorDetectedEventArgs
 PrintSupportExtensionSession = _winrt_windows_graphics_printing_printsupport.PrintSupportExtensionSession
 PrintSupportExtensionTriggerDetails = _winrt_windows_graphics_printing_printsupport.PrintSupportExtensionTriggerDetails
+PrintSupportIppCommunicationConfiguration = _winrt_windows_graphics_printing_printsupport.PrintSupportIppCommunicationConfiguration
+PrintSupportIppCommunicationTimeouts = _winrt_windows_graphics_printing_printsupport.PrintSupportIppCommunicationTimeouts
+PrintSupportMxdcImageQualityConfiguration = _winrt_windows_graphics_printing_printsupport.PrintSupportMxdcImageQualityConfiguration
 PrintSupportPrintDeviceCapabilitiesChangedEventArgs = _winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesChangedEventArgs
 PrintSupportPrintDeviceCapabilitiesUpdatePolicy = _winrt_windows_graphics_printing_printsupport.PrintSupportPrintDeviceCapabilitiesUpdatePolicy
 PrintSupportPrintTicketElement = _winrt_windows_graphics_printing_printsupport.PrintSupportPrintTicketElement

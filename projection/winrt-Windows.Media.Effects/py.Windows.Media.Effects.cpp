@@ -4,6 +4,112 @@
 
 namespace py::cpp::Windows::Media::Effects
 {
+    // ----- AcousticEchoCancellationConfiguration class --------------------
+
+    static PyObject* _new_AcousticEchoCancellationConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_AcousticEchoCancellationConfiguration(py::wrapper::Windows::Media::Effects::AcousticEchoCancellationConfiguration* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AcousticEchoCancellationConfiguration_SetEchoCancellationRenderEndpoint(py::wrapper::Windows::Media::Effects::AcousticEchoCancellationConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AcousticEchoCancellationConfiguration", L"SetEchoCancellationRenderEndpoint", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.SetEchoCancellationRenderEndpoint(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_AcousticEchoCancellationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AcousticEchoCancellationConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Effects::AcousticEchoCancellationConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AcousticEchoCancellationConfiguration[] = {
+        { "set_echo_cancellation_render_endpoint", reinterpret_cast<PyCFunction>(AcousticEchoCancellationConfiguration_SetEchoCancellationRenderEndpoint), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_AcousticEchoCancellationConfiguration, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AcousticEchoCancellationConfiguration), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_AcousticEchoCancellationConfiguration[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_AcousticEchoCancellationConfiguration[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AcousticEchoCancellationConfiguration) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AcousticEchoCancellationConfiguration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AcousticEchoCancellationConfiguration) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AcousticEchoCancellationConfiguration) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AcousticEchoCancellationConfiguration = {
+        "winrt._winrt_windows_media_effects.AcousticEchoCancellationConfiguration",
+        sizeof(py::wrapper::Windows::Media::Effects::AcousticEchoCancellationConfiguration),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AcousticEchoCancellationConfiguration};
+
     // ----- AudioCaptureEffectsManager class --------------------
 
     static PyObject* _new_AudioCaptureEffectsManager(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -183,6 +289,45 @@ namespace py::cpp::Windows::Media::Effects
         Py_DECREF(tp);
     }
 
+    static PyObject* AudioEffect_SetState(py::wrapper::Windows::Media::Effects::AudioEffect* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Effects.AudioEffect", L"SetState", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Media::Effects::AudioEffectState>(args, 0);
+
+                self->obj.SetState(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AudioEffect_get_AudioEffectType(py::wrapper::Windows::Media::Effects::AudioEffect* self, void* /*unused*/) noexcept
     {
         try
@@ -201,6 +346,84 @@ namespace py::cpp::Windows::Media::Effects
             }
 
             return py::convert(self->obj.AudioEffectType());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffect_get_AcousticEchoCancellationConfiguration(py::wrapper::Windows::Media::Effects::AudioEffect* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"AcousticEchoCancellationConfiguration");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AcousticEchoCancellationConfiguration());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffect_get_CanSetState(py::wrapper::Windows::Media::Effects::AudioEffect* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"CanSetState");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CanSetState());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffect_get_State(py::wrapper::Windows::Media::Effects::AudioEffect* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Effects.AudioEffect", L"State");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.State());
         }
         catch (...)
         {
@@ -234,6 +457,7 @@ namespace py::cpp::Windows::Media::Effects
     }
 
     static PyMethodDef _methods_AudioEffect[] = {
+        { "set_state", reinterpret_cast<PyCFunction>(AudioEffect_SetState), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AudioEffect, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AudioEffect), METH_O | METH_STATIC, nullptr },
         { }
@@ -241,6 +465,9 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyGetSetDef _getset_AudioEffect[] = {
         { "audio_effect_type", reinterpret_cast<getter>(AudioEffect_get_AudioEffectType), nullptr, nullptr, nullptr },
+        { "acoustic_echo_cancellation_configuration", reinterpret_cast<getter>(AudioEffect_get_AcousticEchoCancellationConfiguration), nullptr, nullptr, nullptr },
+        { "can_set_state", reinterpret_cast<getter>(AudioEffect_get_CanSetState), nullptr, nullptr, nullptr },
+        { "state", reinterpret_cast<getter>(AudioEffect_get_State), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4118,6 +4345,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_effects(void) noexcept
     py::pyobj_handle object_bases{PyTuple_Pack(1, object_type)};
 
     if (!object_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AcousticEchoCancellationConfiguration_type{py::register_python_type(module.get(), &type_spec_AcousticEchoCancellationConfiguration, object_bases.get(), nullptr)};
+    if (!AcousticEchoCancellationConfiguration_type)
     {
         return nullptr;
     }
