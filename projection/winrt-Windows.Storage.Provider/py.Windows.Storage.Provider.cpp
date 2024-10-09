@@ -5799,6 +5799,189 @@ namespace py::cpp::Windows::Storage::Provider
         Py_TPFLAGS_DEFAULT,
         _type_slots_IStorageProviderPropertyCapabilities};
 
+    // ----- IStorageProviderShareLinkSource interface --------------------
+
+    static PyObject* _new_IStorageProviderShareLinkSource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IStorageProviderShareLinkSource(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IStorageProviderShareLinkSource_CreateLinkAsync(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderShareLinkSource", L"CreateLinkAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>(args, 0);
+
+                return py::convert(self->obj.CreateLinkAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderShareLinkSource_GetDefaultAccessControlStringAsync(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderShareLinkSource", L"GetDefaultAccessControlStringAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>(args, 0);
+
+                return py::convert(self->obj.GetDefaultAccessControlStringAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageProviderShareLinkSource_GetState(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Provider.IStorageProviderShareLinkSource", L"GetState", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Storage::IStorageItem>>(args, 0);
+
+                return py::convert(self->obj.GetState(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IStorageProviderShareLinkSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IStorageProviderShareLinkSource(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Storage::Provider::IStorageProviderShareLinkSource>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IStorageProviderShareLinkSource[] = {
+        { "create_link_async", reinterpret_cast<PyCFunction>(IStorageProviderShareLinkSource_CreateLinkAsync), METH_VARARGS, nullptr },
+        { "get_default_access_control_string_async", reinterpret_cast<PyCFunction>(IStorageProviderShareLinkSource_GetDefaultAccessControlStringAsync), METH_VARARGS, nullptr },
+        { "get_state", reinterpret_cast<PyCFunction>(IStorageProviderShareLinkSource_GetState), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IStorageProviderShareLinkSource, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderShareLinkSource), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IStorageProviderShareLinkSource[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IStorageProviderShareLinkSource[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IStorageProviderShareLinkSource) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IStorageProviderShareLinkSource) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IStorageProviderShareLinkSource) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IStorageProviderShareLinkSource) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IStorageProviderShareLinkSource = {
+        "winrt._winrt_windows_storage_provider.IStorageProviderShareLinkSource",
+        sizeof(py::wrapper::Windows::Storage::Provider::IStorageProviderShareLinkSource),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IStorageProviderShareLinkSource};
+
     // ----- IStorageProviderStatusUISource interface --------------------
 
     static PyObject* _new_IStorageProviderStatusUISource(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6623,6 +6806,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_storage_provider(void) noexcept
 
     py::pytype_handle IStorageProviderPropertyCapabilities_type{py::register_python_type(module.get(), &type_spec_IStorageProviderPropertyCapabilities, object_bases.get(), nullptr)};
     if (!IStorageProviderPropertyCapabilities_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IStorageProviderShareLinkSource_type{py::register_python_type(module.get(), &type_spec_IStorageProviderShareLinkSource, object_bases.get(), nullptr)};
+    if (!IStorageProviderShareLinkSource_type)
     {
         return nullptr;
     }

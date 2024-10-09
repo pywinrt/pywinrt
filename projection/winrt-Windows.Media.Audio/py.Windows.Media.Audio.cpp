@@ -1277,6 +1277,317 @@ namespace py::cpp::Windows::Media::Audio
         Py_TPFLAGS_DEFAULT,
         _type_slots_AudioDeviceOutputNode};
 
+    // ----- AudioEffectsPackConfiguration class --------------------
+
+    static PyObject* _new_AudioEffectsPackConfiguration(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_AudioEffectsPackConfiguration(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_GetForDeviceId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"GetForDeviceId", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::GetForDeviceId(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_IsDeviceIdSupported(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"IsDeviceIdSupported", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(winrt::Windows::Media::Audio::AudioEffectsPackConfiguration::IsDeviceIdSupported(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_get_DeviceId(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"DeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeviceId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_get_EffectsPackId(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"EffectsPackId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.EffectsPackId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_get_Status(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"Status");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Status());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_add_StatusChanged(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"StatusChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable>>(arg);
+
+            return py::convert(self->obj.StatusChanged(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsPackConfiguration_remove_StatusChanged(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Media.Audio.AudioEffectsPackConfiguration", L"StatusChanged");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.StatusChanged(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_AudioEffectsPackConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_AudioEffectsPackConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_AudioEffectsPackConfiguration[] = {
+        { "add_status_changed", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_add_StatusChanged), METH_O, nullptr },
+        { "remove_status_changed", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_remove_StatusChanged), METH_O, nullptr },
+        { "_assign_array_", _assign_array_AudioEffectsPackConfiguration, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_AudioEffectsPackConfiguration), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_AudioEffectsPackConfiguration[] = {
+        { "device_id", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_DeviceId), nullptr, nullptr, nullptr },
+        { "effects_pack_id", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_EffectsPackId), nullptr, nullptr, nullptr },
+        { "status", reinterpret_cast<getter>(AudioEffectsPackConfiguration_get_Status), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_AudioEffectsPackConfiguration[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_AudioEffectsPackConfiguration) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_AudioEffectsPackConfiguration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_AudioEffectsPackConfiguration) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_AudioEffectsPackConfiguration) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AudioEffectsPackConfiguration = {
+        "winrt._winrt_windows_media_audio.AudioEffectsPackConfiguration",
+        sizeof(py::wrapper::Windows::Media::Audio::AudioEffectsPackConfiguration),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_AudioEffectsPackConfiguration};
+
+    static PyGetSetDef getset_AudioEffectsPackConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AudioEffectsPackConfiguration_Static[] = {
+        { "get_for_device_id", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_GetForDeviceId), METH_VARARGS, nullptr },
+        { "is_device_id_supported", reinterpret_cast<PyCFunction>(AudioEffectsPackConfiguration_IsDeviceIdSupported), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_AudioEffectsPackConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AudioEffectsPackConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AudioEffectsPackConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AudioEffectsPackConfiguration_Static =
+    {
+        "winrt._winrt_windows_media_audio.AudioEffectsPackConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AudioEffectsPackConfiguration_Static
+    };
+
     // ----- AudioFileInputNode class --------------------
 
     static PyObject* _new_AudioFileInputNode(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18186,6 +18497,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_media_audio(void) noexcept
 
     py::pytype_handle AudioDeviceOutputNode_type{py::register_python_type(module.get(), &type_spec_AudioDeviceOutputNode, object_bases.get(), nullptr)};
     if (!AudioDeviceOutputNode_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AudioEffectsPackConfiguration_Static{PyType_FromSpec(&type_spec_AudioEffectsPackConfiguration_Static)};
+    if (!type_AudioEffectsPackConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AudioEffectsPackConfiguration_type{py::register_python_type(module.get(), &type_spec_AudioEffectsPackConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AudioEffectsPackConfiguration_Static.get()))};
+    if (!AudioEffectsPackConfiguration_type)
     {
         return nullptr;
     }

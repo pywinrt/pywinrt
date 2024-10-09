@@ -23,6 +23,7 @@ class PnpObjectType(enum.IntEnum):
     ASSOCIATION_ENDPOINT_CONTAINER = 6
     ASSOCIATION_ENDPOINT_SERVICE = 7
     DEVICE_PANEL = 8
+    ASSOCIATION_ENDPOINT_PROTOCOL = 9
 
 PnpObject = _winrt_windows_devices_enumeration_pnp.PnpObject
 PnpObjectCollection = _winrt_windows_devices_enumeration_pnp.PnpObjectCollection

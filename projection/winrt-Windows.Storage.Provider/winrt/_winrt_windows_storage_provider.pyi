@@ -15,7 +15,7 @@ import winrt.windows.storage as windows_storage
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui as windows_ui
 
-from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, FileUpdateStatus, ReadActivationMode, StorageProviderHardlinkPolicy, StorageProviderHydrationPolicy, StorageProviderHydrationPolicyModifier, StorageProviderInSyncPolicy, StorageProviderKnownFolderSyncStatus, StorageProviderPopulationPolicy, StorageProviderProtectionMode, StorageProviderState, StorageProviderUICommandState, StorageProviderUriSourceStatus, UIStatus, WriteActivationMode
+from winrt.windows.storage.provider import CachedFileOptions, CachedFileTarget, FileUpdateStatus, ReadActivationMode, StorageProviderHardlinkPolicy, StorageProviderHydrationPolicy, StorageProviderHydrationPolicyModifier, StorageProviderInSyncPolicy, StorageProviderKnownFolderSyncStatus, StorageProviderPopulationPolicy, StorageProviderProtectionMode, StorageProviderShareLinkState, StorageProviderState, StorageProviderUICommandState, StorageProviderUriSourceStatus, UIStatus, WriteActivationMode
 from winrt.windows.storage.provider import StorageProviderKnownFolderSyncRequestedHandler
 
 Self = typing.TypeVar('Self')
@@ -387,6 +387,14 @@ class IStorageProviderPropertyCapabilities(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageProviderPropertyCapabilities: ...
     def is_property_supported(self, property_canonical_name: str, /) -> bool: ...
+
+@typing.final
+class IStorageProviderShareLinkSource(winrt.system.Object):
+    @staticmethod
+    def _from(obj: winrt.system.Object, /) -> IStorageProviderShareLinkSource: ...
+    def create_link_async(self, storage_item_list: windows_foundation_collections.IVectorView[windows_storage.IStorageItem], /) -> windows_foundation.IAsyncOperation[windows_foundation.Uri]: ...
+    def get_default_access_control_string_async(self, storage_item_list: windows_foundation_collections.IVectorView[windows_storage.IStorageItem], /) -> windows_foundation.IAsyncOperation[str]: ...
+    def get_state(self, storage_item_list: windows_foundation_collections.IVectorView[windows_storage.IStorageItem], /) -> windows_foundation.IAsyncOperation[StorageProviderShareLinkState]: ...
 
 @typing.final
 class IStorageProviderStatusUISource(winrt.system.Object):

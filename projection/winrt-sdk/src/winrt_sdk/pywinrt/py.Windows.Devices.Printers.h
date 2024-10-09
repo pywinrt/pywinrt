@@ -17,6 +17,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Graphics.Printing.h"
 #endif
 
+#if __has_include("py.Windows.Graphics.Printing.PrintTicket.h")
+#include "py.Windows.Graphics.Printing.PrintTicket.h"
+#endif
+
 #if __has_include("py.Windows.Storage.Streams.h")
 #include "py.Windows.Storage.Streams.h"
 #endif
@@ -24,6 +28,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Graphics.Printing.h>
+#include <winrt/Windows.Graphics.Printing.PrintTicket.h>
 #include <winrt/Windows.Storage.Streams.h>
 
 #include <winrt/Windows.Devices.Printers.h>
@@ -61,6 +66,9 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::IppAttributeValueKind> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::IppPrintDeviceKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Devices::Printers::IppResolutionUnit> = "i";
 
     template<>
@@ -81,6 +89,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppAttributeValueKind";
         static constexpr const char* module_name = "winrt.windows.devices.printers";
         static constexpr const char* type_name = "IppAttributeValueKind";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Printers::IppPrintDeviceKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.printers.IppPrintDeviceKind";
+        static constexpr const char* module_name = "winrt.windows.devices.printers";
+        static constexpr const char* type_name = "IppPrintDeviceKind";
     };
 
     template<>

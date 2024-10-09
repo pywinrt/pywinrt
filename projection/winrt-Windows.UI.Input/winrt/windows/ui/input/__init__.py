@@ -16,6 +16,8 @@ __all__ = [
     "PointerUpdateKind",
     "RadialControllerMenuKnownIcon",
     "RadialControllerSystemMenuItemKind",
+    "TouchpadGlobalAction",
+    "TouchpadGlobalGestureKinds",
     "CrossSlideThresholds",
     "ManipulationDelta",
     "ManipulationVelocities",
@@ -34,6 +36,7 @@ __all__ = [
     "ManipulationStartedEventArgs",
     "ManipulationUpdatedEventArgs",
     "MouseWheelParameters",
+    "PhysicalGestureRecognizer",
     "PointerPoint",
     "PointerPointProperties",
     "PointerVisualizationSettings",
@@ -57,6 +60,8 @@ __all__ = [
     "SystemFunctionLockChangedEventArgs",
     "SystemFunctionLockIndicatorChangedEventArgs",
     "TappedEventArgs",
+    "TouchpadGesturesController",
+    "TouchpadGlobalActionEventArgs",
     "IPointerPointTransform",
 ]
 
@@ -147,6 +152,26 @@ class RadialControllerSystemMenuItemKind(enum.IntEnum):
     VOLUME = 3
     NEXT_PREVIOUS_TRACK = 4
 
+class TouchpadGlobalAction(enum.IntEnum):
+    THREE_FINGER_TAP = 0
+    FOUR_FINGER_TAP = 1
+    FIVE_FINGER_TAP = 2
+    THREE_FINGER_PRESS_DOWN = 3
+    FOUR_FINGER_PRESS_DOWN = 4
+    FIVE_FINGER_PRESS_DOWN = 5
+    THREE_FINGER_PRESS_UP = 6
+    FOUR_FINGER_PRESS_UP = 7
+    FIVE_FINGER_PRESS_UP = 8
+
+class TouchpadGlobalGestureKinds(enum.IntFlag):
+    NONE = 0x0
+    THREE_FINGER_MANIPULATIONS = 0x1
+    FOUR_FINGER_MANIPULATIONS = 0x2
+    FIVE_FINGER_MANIPULATIONS = 0x4
+    THREE_FINGER_ACTIONS = 0x8
+    FOUR_FINGER_ACTIONS = 0x10
+    FIVE_FINGER_ACTIONS = 0x20
+
 CrossSlideThresholds = _winrt_windows_ui_input.CrossSlideThresholds
 ManipulationDelta = _winrt_windows_ui_input.ManipulationDelta
 ManipulationVelocities = _winrt_windows_ui_input.ManipulationVelocities
@@ -165,6 +190,7 @@ ManipulationInertiaStartingEventArgs = _winrt_windows_ui_input.ManipulationInert
 ManipulationStartedEventArgs = _winrt_windows_ui_input.ManipulationStartedEventArgs
 ManipulationUpdatedEventArgs = _winrt_windows_ui_input.ManipulationUpdatedEventArgs
 MouseWheelParameters = _winrt_windows_ui_input.MouseWheelParameters
+PhysicalGestureRecognizer = _winrt_windows_ui_input.PhysicalGestureRecognizer
 PointerPoint = _winrt_windows_ui_input.PointerPoint
 PointerPointProperties = _winrt_windows_ui_input.PointerPointProperties
 PointerVisualizationSettings = _winrt_windows_ui_input.PointerVisualizationSettings
@@ -188,4 +214,6 @@ SystemFunctionButtonEventArgs = _winrt_windows_ui_input.SystemFunctionButtonEven
 SystemFunctionLockChangedEventArgs = _winrt_windows_ui_input.SystemFunctionLockChangedEventArgs
 SystemFunctionLockIndicatorChangedEventArgs = _winrt_windows_ui_input.SystemFunctionLockIndicatorChangedEventArgs
 TappedEventArgs = _winrt_windows_ui_input.TappedEventArgs
+TouchpadGesturesController = _winrt_windows_ui_input.TouchpadGesturesController
+TouchpadGlobalActionEventArgs = _winrt_windows_ui_input.TouchpadGlobalActionEventArgs
 IPointerPointTransform = _winrt_windows_ui_input.IPointerPointTransform

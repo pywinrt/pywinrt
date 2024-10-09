@@ -91,6 +91,7 @@ namespace py::wrapper::Windows::Networking::NetworkOperators
     using MobileBroadbandCurrentSlotIndexChangedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandCurrentSlotIndexChangedEventArgs>;
     using MobileBroadbandDeviceInformation = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceInformation>;
     using MobileBroadbandDeviceService = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceService>;
+    using MobileBroadbandDeviceServiceCommandEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>;
     using MobileBroadbandDeviceServiceCommandResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>;
     using MobileBroadbandDeviceServiceCommandSession = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>;
     using MobileBroadbandDeviceServiceDataReceivedEventArgs = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceDataReceivedEventArgs>;
@@ -128,6 +129,7 @@ namespace py::wrapper::Windows::Networking::NetworkOperators
     using NetworkOperatorTetheringClient = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringClient>;
     using NetworkOperatorTetheringManager = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringManager>;
     using NetworkOperatorTetheringOperationResult = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringOperationResult>;
+    using NetworkOperatorTetheringSessionAccessPointConfiguration = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>;
     using ProvisionFromXmlDocumentResults = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionFromXmlDocumentResults>;
     using ProvisionedProfile = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisionedProfile>;
     using ProvisioningAgent = py::winrt_wrapper<winrt::Windows::Networking::NetworkOperators::ProvisioningAgent>;
@@ -223,7 +225,13 @@ namespace py
     inline constexpr const char* buffer_format<winrt::Windows::Networking::NetworkOperators::TetheringOperationalState> = "i";
 
     template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind> = "i";
+
+    template<>
     inline constexpr const char* buffer_format<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Networking::NetworkOperators::TetheringWiFiPerformancePriority> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Networking::NetworkOperators::UiccAccessCondition> = "i";
@@ -461,11 +469,27 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringWiFiAuthenticationKind";
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "TetheringWiFiAuthenticationKind";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringWiFiBand";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "TetheringWiFiBand";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::TetheringWiFiPerformancePriority>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.TetheringWiFiPerformancePriority";
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "TetheringWiFiPerformancePriority";
     };
 
     template<>
@@ -805,6 +829,14 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceCommandEventArgs";
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "MobileBroadbandDeviceServiceCommandEventArgs";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandResult>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.MobileBroadbandDeviceServiceCommandResult";
@@ -1098,6 +1130,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringOperationResult";
         static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
         static constexpr const char* type_name = "NetworkOperatorTetheringOperationResult";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.networking.networkoperators.NetworkOperatorTetheringSessionAccessPointConfiguration";
+        static constexpr const char* module_name = "winrt.windows.networking.networkoperators";
+        static constexpr const char* type_name = "NetworkOperatorTetheringSessionAccessPointConfiguration";
     };
 
     template<>

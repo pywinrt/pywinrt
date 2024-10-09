@@ -48,6 +48,7 @@ namespace py::wrapper::Windows::Management::Deployment
     using PackageUserInformation = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageUserInformation>;
     using PackageVolume = py::winrt_wrapper<winrt::Windows::Management::Deployment::PackageVolume>;
     using RegisterPackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RegisterPackageOptions>;
+    using RemovePackageOptions = py::winrt_wrapper<winrt::Windows::Management::Deployment::RemovePackageOptions>;
     using SharedPackageContainer = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainer>;
     using SharedPackageContainerManager = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerManager>;
     using SharedPackageContainerMember = py::winrt_wrapper<winrt::Windows::Management::Deployment::SharedPackageContainerMember>;
@@ -313,6 +314,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.RegisterPackageOptions";
         static constexpr const char* module_name = "winrt.windows.management.deployment";
         static constexpr const char* type_name = "RegisterPackageOptions";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Management::Deployment::RemovePackageOptions>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.management.deployment.RemovePackageOptions";
+        static constexpr const char* module_name = "winrt.windows.management.deployment";
+        static constexpr const char* type_name = "RemovePackageOptions";
     };
 
     template<>

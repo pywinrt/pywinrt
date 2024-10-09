@@ -37,6 +37,7 @@ __all__ = [
     "DisplayManagerPathsFailedOrInvalidatedEventArgs",
     "DisplayManagerResultWithState",
     "DisplayModeInfo",
+    "DisplayMuxDevice",
     "DisplayPath",
     "DisplayPrimaryDescription",
     "DisplayScanout",
@@ -185,6 +186,7 @@ DisplayManagerEnabledEventArgs = _winrt_windows_devices_display_core.DisplayMana
 DisplayManagerPathsFailedOrInvalidatedEventArgs = _winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs
 DisplayManagerResultWithState = _winrt_windows_devices_display_core.DisplayManagerResultWithState
 DisplayModeInfo = _winrt_windows_devices_display_core.DisplayModeInfo
+DisplayMuxDevice = _winrt_windows_devices_display_core.DisplayMuxDevice
 DisplayPath = _winrt_windows_devices_display_core.DisplayPath
 DisplayPrimaryDescription = _winrt_windows_devices_display_core.DisplayPrimaryDescription
 DisplayScanout = _winrt_windows_devices_display_core.DisplayScanout

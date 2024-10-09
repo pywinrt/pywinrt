@@ -6,6 +6,13 @@
 #include "winrt/impl/Windows.Graphics.Printing.PrintSupport.0.h"
 WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
 {
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportCommunicationErrorDetectedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportCommunicationErrorDetectedEventArgs>
+    {
+        IPrintSupportCommunicationErrorDetectedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportCommunicationErrorDetectedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IPrintSupportExtensionSession :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPrintSupportExtensionSession>
@@ -20,12 +27,40 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
         IPrintSupportExtensionSession2(std::nullptr_t = nullptr) noexcept {}
         IPrintSupportExtensionSession2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportExtensionSession3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportExtensionSession3>
+    {
+        IPrintSupportExtensionSession3(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportExtensionSession3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES IPrintSupportExtensionTriggerDetails :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IPrintSupportExtensionTriggerDetails>
     {
         IPrintSupportExtensionTriggerDetails(std::nullptr_t = nullptr) noexcept {}
         IPrintSupportExtensionTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportIppCommunicationConfiguration :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportIppCommunicationConfiguration>
+    {
+        IPrintSupportIppCommunicationConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportIppCommunicationConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportIppCommunicationTimeouts :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportIppCommunicationTimeouts>
+    {
+        IPrintSupportIppCommunicationTimeouts(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportIppCommunicationTimeouts(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportMxdcImageQualityConfiguration :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportMxdcImageQualityConfiguration>
+    {
+        IPrintSupportMxdcImageQualityConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportMxdcImageQualityConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPrintSupportPrintDeviceCapabilitiesChangedEventArgs :
         winrt::Windows::Foundation::IInspectable,
@@ -40,6 +75,20 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
     {
         IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2(std::nullptr_t = nullptr) noexcept {}
         IPrintSupportPrintDeviceCapabilitiesChangedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3>
+    {
+        IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportPrintDeviceCapabilitiesChangedEventArgs3(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4>
+    {
+        IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportPrintDeviceCapabilitiesChangedEventArgs4(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPrintSupportPrintDeviceCapabilitiesUpdatePolicy :
         winrt::Windows::Foundation::IInspectable,
@@ -89,6 +138,13 @@ WINRT_EXPORT namespace winrt::Windows::Graphics::Printing::PrintSupport
     {
         IPrintSupportSettingsActivatedEventArgs(std::nullptr_t = nullptr) noexcept {}
         IPrintSupportSettingsActivatedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IPrintSupportSettingsActivatedEventArgs2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPrintSupportSettingsActivatedEventArgs2>
+    {
+        IPrintSupportSettingsActivatedEventArgs2(std::nullptr_t = nullptr) noexcept {}
+        IPrintSupportSettingsActivatedEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct WINRT_IMPL_EMPTY_BASES IPrintSupportSettingsUISession :
         winrt::Windows::Foundation::IInspectable,

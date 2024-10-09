@@ -8938,6 +8938,180 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_TPFLAGS_DEFAULT,
         _type_slots_MobileBroadbandDeviceService};
 
+    // ----- MobileBroadbandDeviceServiceCommandEventArgs class --------------------
+
+    static PyObject* _new_MobileBroadbandDeviceServiceCommandEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_MobileBroadbandDeviceServiceCommandEventArgs(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs", L"DeviceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeviceId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceServiceId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs", L"DeviceServiceId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeviceServiceId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandDeviceServiceCommandEventArgs_get_EventId(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs", L"EventId");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.EventId());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandDeviceServiceCommandEventArgs_get_ReceivedData(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandEventArgs", L"ReceivedData");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ReceivedData());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_MobileBroadbandDeviceServiceCommandEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_MobileBroadbandDeviceServiceCommandEventArgs(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_MobileBroadbandDeviceServiceCommandEventArgs[] = {
+        { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceCommandEventArgs, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceCommandEventArgs), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_MobileBroadbandDeviceServiceCommandEventArgs[] = {
+        { "device_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceId), nullptr, nullptr, nullptr },
+        { "device_service_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_DeviceServiceId), nullptr, nullptr, nullptr },
+        { "event_id", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_EventId), nullptr, nullptr, nullptr },
+        { "received_data", reinterpret_cast<getter>(MobileBroadbandDeviceServiceCommandEventArgs_get_ReceivedData), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_MobileBroadbandDeviceServiceCommandEventArgs[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_MobileBroadbandDeviceServiceCommandEventArgs) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MobileBroadbandDeviceServiceCommandEventArgs) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_MobileBroadbandDeviceServiceCommandEventArgs) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_MobileBroadbandDeviceServiceCommandEventArgs) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MobileBroadbandDeviceServiceCommandEventArgs = {
+        "winrt._winrt_windows_networking_networkoperators.MobileBroadbandDeviceServiceCommandEventArgs",
+        sizeof(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_MobileBroadbandDeviceServiceCommandEventArgs};
+
     // ----- MobileBroadbandDeviceServiceCommandResult class --------------------
 
     static PyObject* _new_MobileBroadbandDeviceServiceCommandResult(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -9190,6 +9364,63 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    static PyObject* MobileBroadbandDeviceServiceCommandSession_add_CommandReceived(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"CommandReceived");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession, winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandEventArgs>>(arg);
+
+            return py::convert(self->obj.CommandReceived(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandDeviceServiceCommandSession_remove_CommandReceived(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceCommandSession", L"CommandReceived");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.CommandReceived(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_MobileBroadbandDeviceServiceCommandSession(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::MobileBroadbandDeviceServiceCommandSession>>();
@@ -9218,6 +9449,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "close_session", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_CloseSession), METH_VARARGS, nullptr },
         { "send_query_command_async", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_SendQueryCommandAsync), METH_VARARGS, nullptr },
         { "send_set_command_async", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_SendSetCommandAsync), METH_VARARGS, nullptr },
+        { "add_command_received", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_add_CommandReceived), METH_O, nullptr },
+        { "remove_command_received", reinterpret_cast<PyCFunction>(MobileBroadbandDeviceServiceCommandSession_remove_CommandReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandDeviceServiceCommandSession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandDeviceServiceCommandSession), METH_O | METH_STATIC, nullptr },
         { }
@@ -15584,6 +15817,82 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         Py_DECREF(tp);
     }
 
+    static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsAuthenticationKindSupported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(args, 0);
+
+                return py::convert(self->obj.IsAuthenticationKindSupported(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"IsAuthenticationKindSupportedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(args, 0);
+
+                return py::convert(self->obj.IsAuthenticationKindSupportedAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* NetworkOperatorTetheringAccessPointConfiguration_IsBandSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -15843,6 +16152,67 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
+    static PyObject* NetworkOperatorTetheringAccessPointConfiguration_get_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"AuthenticationKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AuthenticationKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringAccessPointConfiguration_put_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration", L"AuthenticationKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(arg);
+
+            self->obj.AuthenticationKind(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
     static PyObject* _assign_array_NetworkOperatorTetheringAccessPointConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringAccessPointConfiguration>>();
@@ -15868,6 +16238,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     }
 
     static PyMethodDef _methods_NetworkOperatorTetheringAccessPointConfiguration[] = {
+        { "is_authentication_kind_supported", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupported), METH_VARARGS, nullptr },
+        { "is_authentication_kind_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringAccessPointConfiguration_IsAuthenticationKindSupportedAsync), METH_VARARGS, nullptr },
         { "is_band_supported", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringAccessPointConfiguration_IsBandSupported), METH_VARARGS, nullptr },
         { "is_band_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringAccessPointConfiguration_IsBandSupportedAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NetworkOperatorTetheringAccessPointConfiguration, METH_O | METH_STATIC, nullptr },
@@ -15879,6 +16251,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "ssid", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Ssid), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Ssid), nullptr, nullptr },
         { "passphrase", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Passphrase), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Passphrase), nullptr, nullptr },
         { "band", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_Band), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_Band), nullptr, nullptr },
+        { "authentication_kind", reinterpret_cast<getter>(NetworkOperatorTetheringAccessPointConfiguration_get_AuthenticationKind), reinterpret_cast<setter>(NetworkOperatorTetheringAccessPointConfiguration_put_AuthenticationKind), nullptr, nullptr },
         { }
     };
 
@@ -16535,6 +16908,33 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 return nullptr;
             }
         }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager", L"StartTetheringAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>(args, 0);
+
+                return py::convert(self->obj.StartTetheringAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -16866,6 +17266,560 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NetworkOperatorTetheringOperationResult};
+
+    // ----- NetworkOperatorTetheringSessionAccessPointConfiguration class --------------------
+
+    static PyObject* _new_NetworkOperatorTetheringSessionAccessPointConfiguration(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_NetworkOperatorTetheringSessionAccessPointConfiguration(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"IsAuthenticationKindSupported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(args, 0);
+
+                return py::convert(self->obj.IsAuthenticationKindSupported(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"IsAuthenticationKindSupportedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(args, 0);
+
+                return py::convert(self->obj.IsAuthenticationKindSupportedAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupported(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"IsBandSupported", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(args, 0);
+
+                return py::convert(self->obj.IsBandSupported(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupportedAsync(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"IsBandSupportedAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(args, 0);
+
+                return py::convert(self->obj.IsBandSupportedAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_get_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Ssid");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Ssid());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Ssid(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Ssid");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Ssid(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_get_PerformancePriority(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"PerformancePriority");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.PerformancePriority());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_PerformancePriority(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"PerformancePriority");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiPerformancePriority>(arg);
+
+            self->obj.PerformancePriority(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_get_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Passphrase");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Passphrase());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Passphrase(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Passphrase");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.Passphrase(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_get_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Band");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Band());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_Band(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"Band");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiBand>(arg);
+
+            self->obj.Band(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringSessionAccessPointConfiguration_get_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"AuthenticationKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.AuthenticationKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int NetworkOperatorTetheringSessionAccessPointConfiguration_put_AuthenticationKind(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Networking.NetworkOperators.NetworkOperatorTetheringSessionAccessPointConfiguration", L"AuthenticationKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Networking::NetworkOperators::TetheringWiFiAuthenticationKind>(arg);
+
+            self->obj.AuthenticationKind(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_NetworkOperatorTetheringSessionAccessPointConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_NetworkOperatorTetheringSessionAccessPointConfiguration(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_NetworkOperatorTetheringSessionAccessPointConfiguration[] = {
+        { "is_authentication_kind_supported", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupported), METH_VARARGS, nullptr },
+        { "is_authentication_kind_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringSessionAccessPointConfiguration_IsAuthenticationKindSupportedAsync), METH_VARARGS, nullptr },
+        { "is_band_supported", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupported), METH_VARARGS, nullptr },
+        { "is_band_supported_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringSessionAccessPointConfiguration_IsBandSupportedAsync), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_NetworkOperatorTetheringSessionAccessPointConfiguration, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_NetworkOperatorTetheringSessionAccessPointConfiguration), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_NetworkOperatorTetheringSessionAccessPointConfiguration[] = {
+        { "ssid", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Ssid), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Ssid), nullptr, nullptr },
+        { "performance_priority", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_PerformancePriority), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_PerformancePriority), nullptr, nullptr },
+        { "passphrase", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Passphrase), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Passphrase), nullptr, nullptr },
+        { "band", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_Band), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_Band), nullptr, nullptr },
+        { "authentication_kind", reinterpret_cast<getter>(NetworkOperatorTetheringSessionAccessPointConfiguration_get_AuthenticationKind), reinterpret_cast<setter>(NetworkOperatorTetheringSessionAccessPointConfiguration_put_AuthenticationKind), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_NetworkOperatorTetheringSessionAccessPointConfiguration[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_NetworkOperatorTetheringSessionAccessPointConfiguration) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_NetworkOperatorTetheringSessionAccessPointConfiguration) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_NetworkOperatorTetheringSessionAccessPointConfiguration) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_NetworkOperatorTetheringSessionAccessPointConfiguration) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NetworkOperatorTetheringSessionAccessPointConfiguration = {
+        "winrt._winrt_windows_networking_networkoperators.NetworkOperatorTetheringSessionAccessPointConfiguration",
+        sizeof(py::wrapper::Windows::Networking::NetworkOperators::NetworkOperatorTetheringSessionAccessPointConfiguration),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_NetworkOperatorTetheringSessionAccessPointConfiguration};
 
     // ----- ProvisionFromXmlDocumentResults class --------------------
 
@@ -18941,6 +19895,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle MobileBroadbandDeviceServiceCommandEventArgs_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandEventArgs, object_bases.get(), nullptr)};
+    if (!MobileBroadbandDeviceServiceCommandEventArgs_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle MobileBroadbandDeviceServiceCommandResult_type{py::register_python_type(module.get(), &type_spec_MobileBroadbandDeviceServiceCommandResult, object_bases.get(), nullptr)};
     if (!MobileBroadbandDeviceServiceCommandResult_type)
     {
@@ -19171,6 +20131,12 @@ PyMODINIT_FUNC PyInit__winrt_windows_networking_networkoperators(void) noexcept
 
     py::pytype_handle NetworkOperatorTetheringOperationResult_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringOperationResult, object_bases.get(), nullptr)};
     if (!NetworkOperatorTetheringOperationResult_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NetworkOperatorTetheringSessionAccessPointConfiguration_type{py::register_python_type(module.get(), &type_spec_NetworkOperatorTetheringSessionAccessPointConfiguration, object_bases.get(), nullptr)};
+    if (!NetworkOperatorTetheringSessionAccessPointConfiguration_type)
     {
         return nullptr;
     }

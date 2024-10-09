@@ -41,7 +41,10 @@ namespace py::wrapper::Windows::Security::Authentication::Web::Core
     using FindAllAccountsResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::FindAllAccountsResult>;
     using WebAccountEventArgs = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAccountEventArgs>;
     using WebAccountMonitor = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAccountMonitor>;
+    using WebAuthenticationAddAccountResponse = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse>;
+    using WebAuthenticationAddAccountResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>;
     using WebAuthenticationCoreManager = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>;
+    using WebAuthenticationTransferTokenRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>;
     using WebProviderError = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebProviderError>;
     using WebTokenRequest = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequest>;
     using WebTokenRequestResult = py::winrt_wrapper<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestResult>;
@@ -52,6 +55,9 @@ namespace py
 {
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::Core::FindAllWebAccountsStatus> = "i";
+
+    template<>
+    inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountStatus> = "i";
 
     template<>
     inline constexpr const char* buffer_format<winrt::Windows::Security::Authentication::Web::Core::WebTokenRequestPromptType> = "i";
@@ -66,6 +72,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.FindAllWebAccountsStatus";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
         static constexpr const char* type_name = "FindAllWebAccountsStatus";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountStatus>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.WebAuthenticationAddAccountStatus";
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAuthenticationAddAccountStatus";
     };
 
     template<>
@@ -109,11 +123,35 @@ namespace py
     };
 
     template<>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResponse>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.WebAuthenticationAddAccountResponse";
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAuthenticationAddAccountResponse";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationAddAccountResult>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.WebAuthenticationAddAccountResult";
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAuthenticationAddAccountResult";
+    };
+
+    template<>
     struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationCoreManager>
     {
         static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.WebAuthenticationCoreManager";
         static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
         static constexpr const char* type_name = "WebAuthenticationCoreManager";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Security::Authentication::Web::Core::WebAuthenticationTransferTokenRequest>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.security.authentication.web.core.WebAuthenticationTransferTokenRequest";
+        static constexpr const char* module_name = "winrt.windows.security.authentication.web.core";
+        static constexpr const char* type_name = "WebAuthenticationTransferTokenRequest";
     };
 
     template<>

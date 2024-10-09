@@ -68,6 +68,7 @@ namespace py::wrapper::Windows::Devices::Display::Core
     using DisplayManagerPathsFailedOrInvalidatedEventArgs = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerPathsFailedOrInvalidatedEventArgs>;
     using DisplayManagerResultWithState = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayManagerResultWithState>;
     using DisplayModeInfo = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayModeInfo>;
+    using DisplayMuxDevice = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>;
     using DisplayPath = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPath>;
     using DisplayPrimaryDescription = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayPrimaryDescription>;
     using DisplayScanout = py::winrt_wrapper<winrt::Windows::Devices::Display::Core::DisplayScanout>;
@@ -388,6 +389,14 @@ namespace py
         static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayModeInfo";
         static constexpr const char* module_name = "winrt.windows.devices.display.core";
         static constexpr const char* type_name = "DisplayModeInfo";
+    };
+
+    template<>
+    struct py_type<winrt::Windows::Devices::Display::Core::DisplayMuxDevice>
+    {
+        static constexpr std::string_view qualified_name = "winrt.windows.devices.display.core.DisplayMuxDevice";
+        static constexpr const char* module_name = "winrt.windows.devices.display.core";
+        static constexpr const char* type_name = "DisplayMuxDevice";
     };
 
     template<>

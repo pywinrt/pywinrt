@@ -82,6 +82,7 @@ class PrintColorMode(enum.IntEnum):
     COLOR = 3
     GRAYSCALE = 4
     MONOCHROME = 5
+    AUTO_SELECT = 6
 
 class PrintDuplex(enum.IntEnum):
     DEFAULT = 0

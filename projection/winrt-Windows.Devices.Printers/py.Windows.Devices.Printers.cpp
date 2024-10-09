@@ -2806,6 +2806,44 @@ namespace py::cpp::Windows::Devices::Printers
         }
     }
 
+    static PyObject* IppPrintDevice_GetMaxSupportedPdlVersion(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.IppPrintDevice", L"GetMaxSupportedPdlVersion", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.GetMaxSupportedPdlVersion(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IppPrintDevice_GetPdlPassthroughProvider(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2994,6 +3032,43 @@ namespace py::cpp::Windows::Devices::Printers
         }
     }
 
+    static PyObject* IppPrintDevice_RefreshPrintDeviceCapabilities(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Printers.IppPrintDevice", L"RefreshPrintDeviceCapabilities", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.RefreshPrintDeviceCapabilities();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IppPrintDevice_SetPrinterAttributes(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3122,6 +3197,145 @@ namespace py::cpp::Windows::Devices::Printers
         }
     }
 
+    static PyObject* IppPrintDevice_get_IsIppFaxOutPrinter(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.IppPrintDevice", L"IsIppFaxOutPrinter");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.IsIppFaxOutPrinter());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IppPrintDevice_get_UserDefaultPrintTicket(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.IppPrintDevice", L"UserDefaultPrintTicket");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.UserDefaultPrintTicket());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int IppPrintDevice_put_UserDefaultPrintTicket(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.IppPrintDevice", L"UserDefaultPrintTicket");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Graphics::Printing::PrintTicket::WorkflowPrintTicket>(arg);
+
+            self->obj.UserDefaultPrintTicket(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* IppPrintDevice_get_CanModifyUserDefaultPrintTicket(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.IppPrintDevice", L"CanModifyUserDefaultPrintTicket");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CanModifyUserDefaultPrintTicket());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* IppPrintDevice_get_DeviceKind(py::wrapper::Windows::Devices::Printers::IppPrintDevice* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Windows.Devices.Printers.IppPrintDevice", L"DeviceKind");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DeviceKind());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_IppPrintDevice(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::Devices::Printers::IppPrintDevice>>();
@@ -3149,10 +3363,12 @@ namespace py::cpp::Windows::Devices::Printers
     static PyMethodDef _methods_IppPrintDevice[] = {
         { "get_max_supported_pdf_size", reinterpret_cast<PyCFunction>(IppPrintDevice_GetMaxSupportedPdfSize), METH_VARARGS, nullptr },
         { "get_max_supported_pdf_version", reinterpret_cast<PyCFunction>(IppPrintDevice_GetMaxSupportedPdfVersion), METH_VARARGS, nullptr },
+        { "get_max_supported_pdl_version", reinterpret_cast<PyCFunction>(IppPrintDevice_GetMaxSupportedPdlVersion), METH_VARARGS, nullptr },
         { "get_pdl_passthrough_provider", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPdlPassthroughProvider), METH_VARARGS, nullptr },
         { "get_printer_attributes", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPrinterAttributes), METH_VARARGS, nullptr },
         { "get_printer_attributes_as_buffer", reinterpret_cast<PyCFunction>(IppPrintDevice_GetPrinterAttributesAsBuffer), METH_VARARGS, nullptr },
         { "is_pdl_passthrough_supported", reinterpret_cast<PyCFunction>(IppPrintDevice_IsPdlPassthroughSupported), METH_VARARGS, nullptr },
+        { "refresh_print_device_capabilities", reinterpret_cast<PyCFunction>(IppPrintDevice_RefreshPrintDeviceCapabilities), METH_VARARGS, nullptr },
         { "set_printer_attributes", reinterpret_cast<PyCFunction>(IppPrintDevice_SetPrinterAttributes), METH_VARARGS, nullptr },
         { "set_printer_attributes_from_buffer", reinterpret_cast<PyCFunction>(IppPrintDevice_SetPrinterAttributesFromBuffer), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IppPrintDevice, METH_O | METH_STATIC, nullptr },
@@ -3163,6 +3379,10 @@ namespace py::cpp::Windows::Devices::Printers
     static PyGetSetDef _getset_IppPrintDevice[] = {
         { "printer_name", reinterpret_cast<getter>(IppPrintDevice_get_PrinterName), nullptr, nullptr, nullptr },
         { "printer_uri", reinterpret_cast<getter>(IppPrintDevice_get_PrinterUri), nullptr, nullptr, nullptr },
+        { "is_ipp_fax_out_printer", reinterpret_cast<getter>(IppPrintDevice_get_IsIppFaxOutPrinter), nullptr, nullptr, nullptr },
+        { "user_default_print_ticket", reinterpret_cast<getter>(IppPrintDevice_get_UserDefaultPrintTicket), reinterpret_cast<setter>(IppPrintDevice_put_UserDefaultPrintTicket), nullptr, nullptr },
+        { "can_modify_user_default_print_ticket", reinterpret_cast<getter>(IppPrintDevice_get_CanModifyUserDefaultPrintTicket), nullptr, nullptr, nullptr },
+        { "device_kind", reinterpret_cast<getter>(IppPrintDevice_get_DeviceKind), nullptr, nullptr, nullptr },
         { }
     };
 
