@@ -17,6 +17,8 @@ namespace.
 
     :raises: :exc:`OSError` on failure.
 
+    .. versionadded:: unreleased
+
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11devicefromdxgidevice
 
 .. function:: create_direct3d11_surface_from_dxgi_surface(dxgi_surface)
@@ -30,6 +32,8 @@ namespace.
 
     :raises: :exc:`OSError` on failure.
 
+    .. versionadded:: unreleased
+
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-createdirect3d11surfacefromdxgisurface
 
 .. function:: get_dxgi_device_from_object(device)
@@ -42,6 +46,8 @@ namespace.
     :return: Pointer to IDXGIDevice interface of the WinRT object.
     :rtype: int
 
+    .. versionadded:: unreleased
+
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface
 
 .. function:: get_dxgi_surface_from_object(surface)
@@ -53,5 +59,7 @@ namespace.
 
     :return: Pointer to IDXGISurface interface of the WinRT object.
     :rtype: int
+
+    .. versionadded:: unreleased
 
     .. seealso:: https://learn.microsoft.com/en-us/windows/win32/api/windows.graphics.directx.direct3d11.interop/nf-windows-graphics-directx-direct3d11-interop-getdxgiinterface-r1
