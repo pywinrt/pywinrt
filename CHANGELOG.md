@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added `winrt.windows.graphics.directx.direct3d11.interop` package.
+
 ### Changed
 - Updated to Windows App SDK 1.6.240829007
 
