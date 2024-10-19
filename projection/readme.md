@@ -260,17 +260,6 @@ to get a correctly typed object. WinRT classes and concrete interfaces project a
 method in Python\WinRT to support calling Query Interface on arbitrary objects in order to convert
 them to the correct type so they can be used in Python.
 
-## Known Issues
-
-* This release of the Python/WinRT does not support WinRT composable types. This includes most of
-the classes in the Windows.UI.Composition and Windows.UI.Xaml namespaces. These namespaces are excluded
-from Python/WinRT.
-  * Note, a few methods in other namespaces reference types in these namespaces. For example,
-  [MediaPlayerSurface](https://docs.microsoft.com/uwp/api/windows.media.playback.mediaplayersurface)
-  is in the Windows.Media.Playback namespace but has properties that return types in the
-  Windows.UI.Composition namespace. While these properties are available to Python, accessing them
-  is not supported at this time.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
