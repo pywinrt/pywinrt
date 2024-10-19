@@ -129,6 +129,8 @@ Methods
 
 .. todo:: explain method naming and overload rules
 
+    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#method-overloading
+
 Properties
 ==========
 
@@ -163,6 +165,8 @@ Events
 
 .. todo:: explain events
 
+    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#event-handlers
+
 ----------
 Interfaces
 ----------
@@ -194,15 +198,21 @@ Awaitables
 
 .. todo:: document IAsync*
 
+    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#async-coroutines
+
 Buffers
 =======
 
 .. todo:: document IBuffer and IMemoryBuffer
 
+    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#buffer-protocol
+
 Collections
 ===========
 
 .. todo:: document Iterable, Sequence, Map
+
+    https://github.com/pywinrt/pywinrt/blob/main/projection/readme.md#collection-protocols
 
 
 Context managers
