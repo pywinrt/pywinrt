@@ -12,6 +12,7 @@ on:
       - '!projection/**/*.toml'
       - '!projection/**/*.txt'
       - '!projection/**/setup.py'
+      - projection/CMakeLists.txt
       - test/**
 
 jobs:
