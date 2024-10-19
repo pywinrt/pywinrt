@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [v2.3.0] - 2024-10-19
+
 ### Added
 - Added `winrt.windows.graphics.directx.direct3d11.interop` package.
 
@@ -304,7 +306,8 @@ package only.
 ### Removed
 - Removed selecting apartment thread type during module init.
 
-[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.2.0...HEAD
+[Unreleased]: https://github.com/pywinrt/pywinrt/compare/v2.3.0...HEAD
+[v2.3.0]: https://github.com/pywinrt/pywinrt/compare/v2.2.0...v2.3.0
 [v2.2.0]: https://github.com/pywinrt/pywinrt/compare/v2.1.0...v2.2.0
 [v2.1.0]: https://github.com/pywinrt/pywinrt/compare/v2.0.1...v2.1.0
 [v2.0.1]: https://github.com/pywinrt/pywinrt/compare/v2.0.0...v2.0.1
