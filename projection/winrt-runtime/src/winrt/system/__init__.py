@@ -1,6 +1,16 @@
+import sys
 from collections.abc import Mapping, MutableMapping, MutableSequence, Sequence
 from pathlib import Path
 from typing import Annotated
+
+if sys.version_info >= (3, 12):
+    from collections.abc import Buffer as _buffer
+else:
+    from array import array as _array
+    from typing import Union
+
+    # Before PEP 688, this was the best we could do
+    _buffer = Union[bytes, bytearray, memoryview, _array]
 
 from .. import _winrt
 
@@ -176,6 +186,11 @@ Object = _winrt.Object
 Array = _winrt.Array
 _mixin_mutable_sequence(Array)
 
+# Type hints for Python buffer protocol - can use standard Python types in
+# addition to the WinRT Array.
+ReadableBuffer = _buffer  # WinRT PassArray
+WriteableBuffer = _buffer  # WinRT FillArray
+
 __all__ = [
     "Int8",
     "UInt8",
@@ -190,4 +205,6 @@ __all__ = [
     "Char16",
     "Object",
     "Array",
+    "ReadableBuffer",
+    "WriteableBuffer",
 ]

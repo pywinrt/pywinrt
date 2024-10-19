@@ -149,7 +149,7 @@ class TestPropertyValue(unittest.TestCase):
         self.assertEqual(s.height, 8)
 
     def test_create_uint8_array(self):
-        o = wf.PropertyValue.create_uint8_array(array('B', [1, 2, 3, 4, 5]))
+        o = wf.PropertyValue.create_uint8_array(bytes([1, 2, 3, 4, 5]))
         ipv = wf.IPropertyValue._from(o)
         self.assertEqual(ipv.type, wf.PropertyType.UINT8_ARRAY)
         a = ipv.get_uint8_array()
