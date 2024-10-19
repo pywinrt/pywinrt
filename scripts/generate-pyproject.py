@@ -238,6 +238,10 @@ def is_dispatcher_queue_package(name: str) -> bool:
     return name == "winrt-Windows.System.Interop"
 
 
+def is_direct3d11_package(name: str) -> bool:
+    return name == "winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
+
+
 def winrt_ns_to_py_package(ns: str) -> str:
     return ".".join(avoid_keyword(x.lower()) for x in ns.split("."))
 
@@ -341,6 +345,11 @@ def write_project_files(
                     + (
                         ', "CoreMessaging"'
                         if is_dispatcher_queue_package(package_name)
+                        else ""
+                    )
+                    + (
+                        ', "D3D11"'
+                        if is_direct3d11_package(package_name)
                         else ""
                     ),
                 )
