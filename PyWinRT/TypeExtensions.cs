@@ -372,8 +372,9 @@ static class TypeExtensions
                     _ => param.ParameterType.ToNullablePyTypeName(ns, map, quoteImportedTypes)
                 },
             ParamCategory.PassArray
-            or ParamCategory.FillArray
-                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
+            ParamCategory.FillArray
+                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
             ParamCategory.ReceiveArray
                 => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
             _ => throw new NotImplementedException(),

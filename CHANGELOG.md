@@ -11,6 +11,9 @@
 - Regenerated files for Windows 11 SDK 10.0.26100.0 (24H2).
 - Updated to Windows App SDK 1.6.240829007
 
+### Fixed
+- Fixed type checker errors when passing Python buffer protocol object to WinRT Array parameter.
+
 ## [v2.2.0] - 2024-08-18
 
 ### Added
