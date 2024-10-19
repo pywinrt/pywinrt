@@ -21,6 +21,10 @@ else()
         add_definitions(-D_WIN32_WINNT=_WIN32_WINNT_WIN10)
         # fixes "file too big"
         add_compile_options(-Wa,-mbig-obj)
+
+        # work around bad generated headers
+        # https://github.com/msys2/MINGW-packages/issues/22160
+        add_definitions(-D____FIReference_1_boolean_INTERFACE_DEFINED__)
     endif()
 endif()
 
