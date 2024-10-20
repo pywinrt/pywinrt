@@ -68,12 +68,9 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-          path: artifacts
+          path: dist
           pattern: "[bs]dist_*"
           merge-multiple: true
-      - run: |
-          mkdir -p dist
-          mv artifacts/{b,s}dist_*/* dist/
       - uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
