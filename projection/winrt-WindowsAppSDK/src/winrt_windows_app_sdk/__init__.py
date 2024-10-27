@@ -10,4 +10,16 @@ def get_include_dirs() -> List[str]:
     ``setuptools.setup().``
     """
     package_dir = files("winrt_windows_app_sdk")
-    return [package_dir.joinpath(d) for d in ["cppwinrt", "pywinrt"]]
+
+    try:
+        webview2_dir = files("winrt.microsoft.web.webview2.core")
+    except ModuleNotFoundError:
+        # hack for building on CI without binary packages
+        webview2_dir = package_dir.joinpath(
+            "..", "..", "..", "winrt-Microsoft.Web.WebView2.Core"
+        )
+
+    return [package_dir.joinpath(d) for d in ["cppwinrt", "pywinrt"]] + [
+        webview2_dir.joinpath("cppwinrt"),
+        webview2_dir,
+    ]

@@ -22,13 +22,29 @@ subprocess.check_call(
     [CPPWINRT_EXE, "-input", WINDOWS_SDK, "-output", SDK_PACKAGE_PATH]
 )
 
-# TODO: split WebView2 to a separate source package
+# generate headers for WebView2
+
 WEBVIEW2_PACKAGE_METADATA = (
     REPO_ROOT_PATH
     / "_tools"
     / "Microsoft.Web.WebView2"
     / "lib"
     / "Microsoft.Web.WebView2.Core.winmd"
+)
+
+WEBVIEW2_PACKAGE_PATH = PROJECTION_PATH / "winrt-Microsoft.Web.WebView2.Core" / "cppwinrt"
+
+shutil.rmtree(WEBVIEW2_PACKAGE_PATH, ignore_errors=True)
+subprocess.check_call(
+    [
+        CPPWINRT_EXE,
+        "-input",
+        WEBVIEW2_PACKAGE_METADATA,
+        "-reference",
+        WINDOWS_SDK,
+        "-output",
+        WEBVIEW2_PACKAGE_PATH,
+    ]
 )
 
 # generate headers for windows app sdk
@@ -55,7 +71,7 @@ subprocess.check_call(
         WINDOWS_APP_SDK_PACKAGE_METADATA,
         "-input",
         WINDOWS_APP_SDK_PACKAGE_METADATA2,
-        "-input",
+        "-reference",
         WEBVIEW2_PACKAGE_METADATA,
         "-reference",
         WINDOWS_SDK,

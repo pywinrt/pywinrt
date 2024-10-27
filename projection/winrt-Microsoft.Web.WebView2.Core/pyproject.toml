@@ -1,7 +1,7 @@
 # WARNING: Please don't edit this file. It was automatically generated.
 
 [build-system]
-requires = ["setuptools", "winrt-sdk", "winrt-WindowsAppSDK"]
+requires = ["setuptools", "winrt-sdk"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -29,12 +29,15 @@ version = { file = "pywinrt-version.txt" }
 dependencies = { file = "requirements.txt" }
 optional-dependencies.all = { file = "all-requirements.txt" }
 
+[tool.setuptools.packages.find]
+exclude = ["cppwrint"]
+
 [tool.setuptools.package-data]
 "*" = ["*.pyi", "py.typed"]
 
 [tool.cibuildwheel]
 # use local winrt-sdk build dependency
-environment = { PYTHONPATH="../winrt-sdk/src;../winrt-WindowsAppSDK/src" }
+environment = { PYTHONPATH="../winrt-sdk/src" }
 # don't install winrt-sdk from PyPI
 build-frontend = { name = "build[uv]", args = ["--skip-dependency-check", "--no-isolation"] }
 before-build = "uv pip install setuptools"
@@ -45,3 +48,4 @@ test-skip = "*-win_arm64"
 
 [tool.cibuildwheel.windows]
 archs = ["x86", "AMD64", "ARM64"]
+repair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"
