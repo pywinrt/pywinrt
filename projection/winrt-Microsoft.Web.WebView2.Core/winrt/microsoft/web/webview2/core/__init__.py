@@ -5,6 +5,8 @@ import enum
 import winrt.system
 from winrt import _winrt_microsoft_web_webview2_core
 
+_dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)
+
 __all__ = [
     "CoreWebView2BoundsMode",
     "CoreWebView2BrowserProcessExitKind",

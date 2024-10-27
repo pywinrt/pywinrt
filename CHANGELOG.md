@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Fixed
+- Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
+- Fixed missing `Microsoft.Web.WebView2.Core.dll`.
+
 ## [v2.3.0] - 2024-10-19
 
 ### Added

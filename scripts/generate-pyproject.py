@@ -227,12 +227,17 @@ def is_app_sdk_bootstrap_package(name: str) -> bool:
     )
 
 
+def is_webview2_package(name: str) -> bool:
+    return name.startswith("winrt-Microsoft.Web.WebView2.")
+
+
 def is_windows_app_package(name: str) -> bool:
-    return name.startswith("winrt-Microsoft.")
+    return name.startswith("winrt-Microsoft.") and not is_webview2_package(name)
 
 
 def is_component_pacakge(name: str) -> bool:
-    return name in ["winrt-TestComponent"]
+    return name in ["winrt-TestComponent"] or is_webview2_package(name)
+
 
 def is_dispatcher_queue_package(name: str) -> bool:
     return name == "winrt-Windows.System.Interop"
@@ -302,7 +307,11 @@ def write_project_files(
                     else (
                         '\nrepair-wheel-command = "python scripts/add_bootstrap_dll.py {wheel} {dest_dir}"'
                         if is_app_sdk_bootstrap_package(package_name)
-                        else ""
+                        else (
+                            '\nrepair-wheel-command = "python scripts/add_webview2_dll.py {wheel} {dest_dir}"'
+                            if is_webview2_package(package_name)
+                            else ""
+                        )
                     ),
                 )
             )
@@ -347,11 +356,7 @@ def write_project_files(
                         if is_dispatcher_queue_package(package_name)
                         else ""
                     )
-                    + (
-                        ', "D3D11"'
-                        if is_direct3d11_package(package_name)
-                        else ""
-                    ),
+                    + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
                 )
             )
 
