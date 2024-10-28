@@ -10,7 +10,7 @@ else:
     from typing import Union
 
     # Before PEP 688, this was the best we could do
-    _buffer = Union[bytes, bytearray, memoryview, _array]
+    _buffer = Union[bytes, bytearray, memoryview, _array[int] | _array[float]]
 
 from .._winrt import Array, Object, _add_dll_directory, _remove_dll_directory
 
