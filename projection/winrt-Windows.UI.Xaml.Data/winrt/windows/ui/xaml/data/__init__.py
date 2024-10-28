@@ -74,5 +74,5 @@ INotifyPropertyChanged = _winrt_windows_ui_xaml_data.INotifyPropertyChanged
 ISelectionInfo = _winrt_windows_ui_xaml_data.ISelectionInfo
 ISupportIncrementalLoading = _winrt_windows_ui_xaml_data.ISupportIncrementalLoading
 IValueConverter = _winrt_windows_ui_xaml_data.IValueConverter
-CurrentChangingEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[CurrentChangingEventArgs]], None]
-PropertyChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[PropertyChangedEventArgs]], None]
+CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], None]
+PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], None]

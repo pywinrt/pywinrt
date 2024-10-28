@@ -15,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class Battery_Static(type):
-    def get_default(cls) -> typing.Optional[Battery]: ...
+    def get_default(cls) -> Battery: ...
 
 @typing.final
 class Battery(winrt.system.Object, metaclass=Battery_Static):

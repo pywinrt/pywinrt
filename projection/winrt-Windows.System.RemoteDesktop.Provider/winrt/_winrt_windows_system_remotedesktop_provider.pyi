@@ -26,7 +26,7 @@ class PerformLocalActionRequestedEventArgs(winrt.system.Object):
 
 @typing.final
 class RemoteDesktopConnectionInfo_Static(type):
-    def get_for_launch_uri(cls, launch_uri: typing.Optional[windows_foundation.Uri], window_id: windows_ui.WindowId, /) -> typing.Optional[RemoteDesktopConnectionInfo]: ...
+    def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, window_id: windows_ui.WindowId, /) -> RemoteDesktopConnectionInfo: ...
 
 @typing.final
 class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopConnectionInfo_Static):
@@ -38,7 +38,7 @@ class RemoteDesktopConnectionInfo(winrt.system.Object, metaclass=RemoteDesktopCo
 
 @typing.final
 class RemoteDesktopConnectionRemoteInfo_Static(type):
-    def get_for_launch_uri(cls, launch_uri: typing.Optional[windows_foundation.Uri], /) -> typing.Optional[RemoteDesktopConnectionRemoteInfo]: ...
+    def get_for_launch_uri(cls, launch_uri: windows_foundation.Uri, /) -> RemoteDesktopConnectionRemoteInfo: ...
     def is_switch_supported(cls) -> bool: ...
 
 @typing.final
@@ -68,7 +68,7 @@ class RemoteDesktopInfo(winrt.system.Object):
 class RemoteDesktopRegistrar_Static(type):
     def is_switch_to_local_session_enabled(cls) -> bool: ...
     @_property
-    def desktop_infos(cls) -> typing.Optional[windows_foundation_collections.IVector[RemoteDesktopInfo]]: ...
+    def desktop_infos(cls) -> windows_foundation_collections.IVector[RemoteDesktopInfo]: ...
 
 @typing.final
 class RemoteDesktopRegistrar(winrt.system.Object, metaclass=RemoteDesktopRegistrar_Static):

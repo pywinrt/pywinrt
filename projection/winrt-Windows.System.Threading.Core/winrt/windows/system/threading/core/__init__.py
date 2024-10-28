@@ -14,4 +14,4 @@ __all__ = [
 
 PreallocatedWorkItem = _winrt_windows_system_threading_core.PreallocatedWorkItem
 SignalNotifier = _winrt_windows_system_threading_core.SignalNotifier
-SignalHandler = typing.Callable[[typing.Optional[SignalNotifier], bool], None]
+SignalHandler = typing.Callable[[SignalNotifier, bool], None]

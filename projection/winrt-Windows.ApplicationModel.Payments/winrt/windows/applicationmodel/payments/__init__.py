@@ -84,4 +84,4 @@ PaymentRequestSubmitResult = _winrt_windows_applicationmodel_payments.PaymentReq
 PaymentResponse = _winrt_windows_applicationmodel_payments.PaymentResponse
 PaymentShippingOption = _winrt_windows_applicationmodel_payments.PaymentShippingOption
 PaymentToken = _winrt_windows_applicationmodel_payments.PaymentToken
-PaymentRequestChangedHandler = typing.Callable[[typing.Optional[PaymentRequest], typing.Optional[PaymentRequestChangedArgs]], None]
+PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], None]

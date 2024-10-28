@@ -32,7 +32,7 @@ class EnterpriseKeyCredentialRegistrationInfo(winrt.system.Object):
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager_Static(type):
     @_property
-    def current(cls) -> typing.Optional[EnterpriseKeyCredentialRegistrationManager]: ...
+    def current(cls) -> EnterpriseKeyCredentialRegistrationManager: ...
 
 @typing.final
 class EnterpriseKeyCredentialRegistrationManager(winrt.system.Object, metaclass=EnterpriseKeyCredentialRegistrationManager_Static):

@@ -181,4 +181,4 @@ ICoreWindow = _winrt_windows_ui_core.ICoreWindow
 ICoreWindowEventArgs = _winrt_windows_ui_core.ICoreWindowEventArgs
 IInitializeWithCoreWindow = _winrt_windows_ui_core.IInitializeWithCoreWindow
 DispatchedHandler = typing.Callable[[], None]
-IdleDispatchedHandler = typing.Callable[[typing.Optional[IdleDispatchedHandlerArgs]], None]
+IdleDispatchedHandler = typing.Callable[[IdleDispatchedHandlerArgs], None]

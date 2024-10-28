@@ -243,4 +243,4 @@ SmartCardPinResetRequest = _winrt_windows_devices_smartcards.SmartCardPinResetRe
 SmartCardProvisioning = _winrt_windows_devices_smartcards.SmartCardProvisioning
 SmartCardReader = _winrt_windows_devices_smartcards.SmartCardReader
 SmartCardTriggerDetails = _winrt_windows_devices_smartcards.SmartCardTriggerDetails
-SmartCardPinResetHandler = typing.Callable[[typing.Optional[SmartCardProvisioning], typing.Optional[SmartCardPinResetRequest]], None]
+SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], None]

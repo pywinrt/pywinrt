@@ -214,5 +214,5 @@ IStorageItemProperties = _winrt_windows_storage.IStorageItemProperties
 IStorageItemProperties2 = _winrt_windows_storage.IStorageItemProperties2
 IStorageItemPropertiesWithProvider = _winrt_windows_storage.IStorageItemPropertiesWithProvider
 IStreamedFileDataRequest = _winrt_windows_storage.IStreamedFileDataRequest
-ApplicationDataSetVersionHandler = typing.Callable[[typing.Optional[SetVersionRequest]], None]
-StreamedFileDataRequestedHandler = typing.Callable[[typing.Optional[StreamedFileDataRequest]], None]
+ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], None]
+StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], None]

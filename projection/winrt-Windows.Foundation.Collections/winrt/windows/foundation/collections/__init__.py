@@ -63,4 +63,4 @@ winrt.system._mixin_sequence(IVectorView)
 IVector = _winrt_windows_foundation_collections.IVector
 winrt.system._mixin_mutable_sequence(IVector)
 MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
-VectorChangedEventHandler = typing.Callable[[IObservableVector[T], typing.Optional[IVectorChangedEventArgs]], None]
+VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]

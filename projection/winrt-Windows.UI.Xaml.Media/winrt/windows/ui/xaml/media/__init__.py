@@ -299,5 +299,5 @@ TranslateTransform = _winrt_windows_ui_xaml_media.TranslateTransform
 VisualTreeHelper = _winrt_windows_ui_xaml_media.VisualTreeHelper
 XamlCompositionBrushBase = _winrt_windows_ui_xaml_media.XamlCompositionBrushBase
 XamlLight = _winrt_windows_ui_xaml_media.XamlLight
-RateChangedRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[RateChangedRoutedEventArgs]], None]
-TimelineMarkerRoutedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[TimelineMarkerRoutedEventArgs]], None]
+RateChangedRoutedEventHandler = typing.Callable[[winrt.system.Object, RateChangedRoutedEventArgs], None]
+TimelineMarkerRoutedEventHandler = typing.Callable[[winrt.system.Object, TimelineMarkerRoutedEventArgs], None]

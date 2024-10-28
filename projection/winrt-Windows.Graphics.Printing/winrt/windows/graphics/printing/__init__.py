@@ -372,4 +372,4 @@ IPrintDocumentSource = _winrt_windows_graphics_printing.IPrintDocumentSource
 IPrintTaskOptionsCore = _winrt_windows_graphics_printing.IPrintTaskOptionsCore
 IPrintTaskOptionsCoreProperties = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties
 IPrintTaskOptionsCoreUIConfiguration = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration
-PrintTaskSourceRequestedHandler = typing.Callable[[typing.Optional[PrintTaskSourceRequestedArgs]], None]
+PrintTaskSourceRequestedHandler = typing.Callable[[PrintTaskSourceRequestedArgs], None]

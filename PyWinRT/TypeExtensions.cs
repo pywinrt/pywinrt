@@ -328,30 +328,6 @@ static class TypeExtensions
                 => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
         };
 
-    public static string ToNullablePyTypeName(
-        this TypeReference type,
-        string ns,
-        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
-        bool quoteImportedTypes = false
-    ) =>
-        type switch
-        {
-            ArrayType t => t.ElementType.ToNullablePyTypeName(ns, map, quoteImportedTypes),
-            ByReferenceType t => t.ElementType.ToNullablePyTypeName(ns, map, quoteImportedTypes),
-            OptionalModifierType t
-                => t.ElementType.ToNullablePyTypeName(ns, map, quoteImportedTypes),
-            GenericInstanceType gen when gen.Resolve().ImplementsIAsyncInfo()
-                => type.ToPyTypeName(ns, map, quoteImportedTypes),
-            not GenericParameter
-            and { IsValueType: false, Namespace: var ns2 }
-                when ns2 != "System" && type.Resolve().ImplementsIAsyncInfo()
-                => type.ToPyTypeName(ns, map, quoteImportedTypes),
-            { IsValueType: false, FullName: var name }
-                when name != "System.String" && name != "System.Void"
-                => $"typing.Optional[{type.ToPyTypeName(ns, map, quoteImportedTypes)}]",
-            _ => type.ToPyTypeName(ns, map, quoteImportedTypes)
-        };
-
     public static string ToPyInParamTyping(
         this ParameterDefinition param,
         string ns,
@@ -367,9 +343,7 @@ static class TypeExtensions
                         when gen.ElementType.FullName
                             == "Windows.Foundation.Collections.IIterable`1"
                         => $"typing.Iterable[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
-                    GenericInstanceType
-                        => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
-                    _ => param.ParameterType.ToNullablePyTypeName(ns, map, quoteImportedTypes)
+                    _ => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)
                 },
             ParamCategory.PassArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
@@ -388,8 +362,7 @@ static class TypeExtensions
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.Out
-                => param.ParameterType.ToNullablePyTypeName(ns, map, quoteImportedTypes),
+            ParamCategory.Out => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
             ParamCategory.ReceiveArray
                 => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}]",
             _ => throw new NotImplementedException(),
@@ -414,15 +387,12 @@ static class TypeExtensions
             {
                 outParams.Insert(
                     0,
-                    $"winrt.system.Array[{method.ReturnType.ToNullablePyTypeName(ns, map, quoteImportedTypes)}]"
+                    $"winrt.system.Array[{method.ReturnType.ToPyTypeName(ns, map, quoteImportedTypes)}]"
                 );
             }
             else
             {
-                outParams.Insert(
-                    0,
-                    method.ReturnType.ToNullablePyTypeName(ns, map, quoteImportedTypes)
-                );
+                outParams.Insert(0, method.ReturnType.ToPyTypeName(ns, map, quoteImportedTypes));
             }
         }
 

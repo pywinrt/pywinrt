@@ -42,5 +42,5 @@ IBindableObservableVector = _winrt_windows_ui_xaml_interop.IBindableObservableVe
 IBindableVector = _winrt_windows_ui_xaml_interop.IBindableVector
 IBindableVectorView = _winrt_windows_ui_xaml_interop.IBindableVectorView
 INotifyCollectionChanged = _winrt_windows_ui_xaml_interop.INotifyCollectionChanged
-BindableVectorChangedEventHandler = typing.Callable[[typing.Optional[IBindableObservableVector], typing.Optional[winrt.system.Object]], None]
-NotifyCollectionChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[NotifyCollectionChangedEventArgs]], None]
+BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
+NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]

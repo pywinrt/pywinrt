@@ -185,5 +185,5 @@ ISmsDevice = _winrt_windows_devices_sms.ISmsDevice
 ISmsMessage = _winrt_windows_devices_sms.ISmsMessage
 ISmsMessageBase = _winrt_windows_devices_sms.ISmsMessageBase
 ISmsTextMessage = _winrt_windows_devices_sms.ISmsTextMessage
-SmsDeviceStatusChangedEventHandler = typing.Callable[[typing.Optional[SmsDevice]], None]
-SmsMessageReceivedEventHandler = typing.Callable[[typing.Optional[SmsDevice], typing.Optional[SmsMessageReceivedEventArgs]], None]
+SmsDeviceStatusChangedEventHandler = typing.Callable[[SmsDevice], None]
+SmsMessageReceivedEventHandler = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], None]
