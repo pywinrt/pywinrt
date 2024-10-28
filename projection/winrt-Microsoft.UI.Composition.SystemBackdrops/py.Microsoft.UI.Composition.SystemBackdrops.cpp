@@ -305,7 +305,46 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* DesktopAcrylicController_SetTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
+    static PyObject* DesktopAcrylicController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController", L"SetTarget", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
+
+                return py::convert(self->obj.SetTarget(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopAcrylicController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::DesktopAcrylicController* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -922,7 +961,8 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "remove_system_backdrop_target", reinterpret_cast<PyCFunction>(DesktopAcrylicController_RemoveSystemBackdropTarget), METH_VARARGS, nullptr },
         { "reset_properties", reinterpret_cast<PyCFunction>(DesktopAcrylicController_ResetProperties), METH_VARARGS, nullptr },
         { "set_system_backdrop_configuration", reinterpret_cast<PyCFunction>(DesktopAcrylicController_SetSystemBackdropConfiguration), METH_VARARGS, nullptr },
-        { "set_target", reinterpret_cast<PyCFunction>(DesktopAcrylicController_SetTarget), METH_VARARGS, nullptr },
+        { "set_target_with_core_window", reinterpret_cast<PyCFunction>(DesktopAcrylicController_SetTargetWithCoreWindow), METH_VARARGS, nullptr },
+        { "set_target_with_window_id", reinterpret_cast<PyCFunction>(DesktopAcrylicController_SetTargetWithWindowId), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(DesktopAcrylicController_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(DesktopAcrylicController_remove_StateChanged), METH_O, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(DesktopAcrylicController_add_Closed), METH_O, nullptr },
@@ -1289,7 +1329,46 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* MicaController_SetTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
+    static PyObject* MicaController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.MicaController", L"SetTarget", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
+
+                return py::convert(self->obj.SetTarget(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MicaController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::MicaController* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1906,7 +1985,8 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "remove_system_backdrop_target", reinterpret_cast<PyCFunction>(MicaController_RemoveSystemBackdropTarget), METH_VARARGS, nullptr },
         { "reset_properties", reinterpret_cast<PyCFunction>(MicaController_ResetProperties), METH_VARARGS, nullptr },
         { "set_system_backdrop_configuration", reinterpret_cast<PyCFunction>(MicaController_SetSystemBackdropConfiguration), METH_VARARGS, nullptr },
-        { "set_target", reinterpret_cast<PyCFunction>(MicaController_SetTarget), METH_VARARGS, nullptr },
+        { "set_target_with_core_window", reinterpret_cast<PyCFunction>(MicaController_SetTargetWithCoreWindow), METH_VARARGS, nullptr },
+        { "set_target_with_window_id", reinterpret_cast<PyCFunction>(MicaController_SetTargetWithWindowId), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(MicaController_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(MicaController_remove_StateChanged), METH_O, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(MicaController_add_Closed), METH_O, nullptr },
@@ -2362,7 +2442,46 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* ISystemBackdropController_SetTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
+    static PyObject* ISystemBackdropController_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
+
+                return py::convert(self->obj.SetTarget(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ISystemBackdropController_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropController* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2446,7 +2565,8 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
 
     static PyMethodDef _methods_ISystemBackdropController[] = {
         { "close", reinterpret_cast<PyCFunction>(ISystemBackdropController_Close), METH_VARARGS, nullptr },
-        { "set_target", reinterpret_cast<PyCFunction>(ISystemBackdropController_SetTarget), METH_VARARGS, nullptr },
+        { "set_target_with_core_window", reinterpret_cast<PyCFunction>(ISystemBackdropController_SetTargetWithCoreWindow), METH_VARARGS, nullptr },
+        { "set_target_with_window_id", reinterpret_cast<PyCFunction>(ISystemBackdropController_SetTargetWithWindowId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISystemBackdropController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISystemBackdropController), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_ISystemBackdropController), METH_NOARGS, nullptr },
@@ -2679,7 +2799,46 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         }
     }
 
-    static PyObject* ISystemBackdropControllerWithTargets_SetTarget(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
+    static PyObject* ISystemBackdropControllerWithTargets_SetTargetWithCoreWindow(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.SystemBackdrops.ISystemBackdropController", L"SetTarget", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Core::CoreWindow>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionTarget>(args, 1);
+
+                return py::convert(self->obj.SetTarget(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ISystemBackdropControllerWithTargets_SetTargetWithWindowId(py::wrapper::Microsoft::UI::Composition::SystemBackdrops::ISystemBackdropControllerWithTargets* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2850,7 +3009,8 @@ namespace py::cpp::Microsoft::UI::Composition::SystemBackdrops
         { "remove_all_system_backdrop_targets", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_RemoveAllSystemBackdropTargets), METH_VARARGS, nullptr },
         { "remove_system_backdrop_target", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_RemoveSystemBackdropTarget), METH_VARARGS, nullptr },
         { "set_system_backdrop_configuration", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_SetSystemBackdropConfiguration), METH_VARARGS, nullptr },
-        { "set_target", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_SetTarget), METH_VARARGS, nullptr },
+        { "set_target_with_core_window", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_SetTargetWithCoreWindow), METH_VARARGS, nullptr },
+        { "set_target_with_window_id", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_SetTargetWithWindowId), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_add_StateChanged), METH_O, nullptr },
         { "remove_state_changed", reinterpret_cast<PyCFunction>(ISystemBackdropControllerWithTargets_remove_StateChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_ISystemBackdropControllerWithTargets, METH_O | METH_STATIC, nullptr },

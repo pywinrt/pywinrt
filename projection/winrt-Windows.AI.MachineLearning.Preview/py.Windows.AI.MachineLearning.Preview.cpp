@@ -709,7 +709,18 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModelBindingPreview_BindWithProperties(py::wrapper::Windows::AI::MachineLearning::Preview::LearningModelBindingPreview* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1073,6 +1084,7 @@ namespace py::cpp::Windows::AI::MachineLearning::Preview
 
     static PyMethodDef _methods_LearningModelBindingPreview[] = {
         { "bind", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_Bind), METH_VARARGS, nullptr },
+        { "bind_with_properties", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_BindWithProperties), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_Clear), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_First), METH_VARARGS, nullptr },
         { "has_key", reinterpret_cast<PyCFunction>(LearningModelBindingPreview_HasKey), METH_VARARGS, nullptr },

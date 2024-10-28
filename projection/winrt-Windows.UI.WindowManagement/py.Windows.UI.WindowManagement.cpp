@@ -2217,6 +2217,44 @@ namespace py::cpp::Windows::UI::WindowManagement
                     return nullptr;
                 }
 
+                auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>(args, 0);
+
+                return py::convert(self->obj.RequestPresentation(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindowPresenter_RequestPresentationByKind(py::wrapper::Windows::UI::WindowManagement::AppWindowPresenter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.WindowManagement.AppWindowPresenter", L"RequestPresentation", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
                 auto param0 = py::convert_to<winrt::Windows::UI::WindowManagement::AppWindowPresentationKind>(args, 0);
 
                 return py::convert(self->obj.RequestPresentation(param0));
@@ -2262,6 +2300,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         { "get_configuration", reinterpret_cast<PyCFunction>(AppWindowPresenter_GetConfiguration), METH_VARARGS, nullptr },
         { "is_presentation_supported", reinterpret_cast<PyCFunction>(AppWindowPresenter_IsPresentationSupported), METH_VARARGS, nullptr },
         { "request_presentation", reinterpret_cast<PyCFunction>(AppWindowPresenter_RequestPresentation), METH_VARARGS, nullptr },
+        { "request_presentation_by_kind", reinterpret_cast<PyCFunction>(AppWindowPresenter_RequestPresentationByKind), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppWindowPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppWindowPresenter), METH_O | METH_STATIC, nullptr },
         { }
@@ -4198,7 +4237,18 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowingEnvironment_FindAllWithKind(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4437,6 +4487,7 @@ namespace py::cpp::Windows::UI::WindowManagement
 
     static PyMethodDef methods_WindowingEnvironment_Static[] = {
         { "find_all", reinterpret_cast<PyCFunction>(WindowingEnvironment_FindAll), METH_VARARGS, nullptr },
+        { "find_all_with_kind", reinterpret_cast<PyCFunction>(WindowingEnvironment_FindAllWithKind), METH_VARARGS, nullptr },
         { }
     };
 

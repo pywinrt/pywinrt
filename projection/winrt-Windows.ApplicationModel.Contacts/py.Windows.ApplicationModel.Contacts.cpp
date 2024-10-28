@@ -3456,7 +3456,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactAnnotationStore_CreateAnnotationListInAccountAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactAnnotationStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3780,6 +3791,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyMethodDef _methods_ContactAnnotationStore[] = {
         { "create_annotation_list_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_CreateAnnotationListAsync), METH_VARARGS, nullptr },
+        { "create_annotation_list_in_account_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_CreateAnnotationListInAccountAsync), METH_VARARGS, nullptr },
         { "disable_annotation_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_DisableAnnotationAsync), METH_VARARGS, nullptr },
         { "find_annotation_lists_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_FindAnnotationListsAsync), METH_VARARGS, nullptr },
         { "find_annotations_for_contact_async", reinterpret_cast<PyCFunction>(ContactAnnotationStore_FindAnnotationsForContactAsync), METH_VARARGS, nullptr },
@@ -6206,39 +6218,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_DECREF(tp);
     }
 
-    static PyObject* ContactFieldFactory_CreateField(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    static PyObject* ContactFieldFactory_CreateField_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateField", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
-
-                return py::convert(self->obj.CreateField(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -6267,7 +6251,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactFieldFactory_CreateField_Custom(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6304,11 +6299,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* ContactFieldFactory_CreateInstantMessage(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    static PyObject* ContactFieldFactory_CreateField_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 2)
         {
             try
             {
@@ -6316,34 +6311,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateInstantMessage(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateField", 2);
                 }
 
                 if (!is_overload_present.value())
@@ -6353,9 +6321,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
 
-                return py::convert(self->obj.CreateInstantMessage(param0, param1));
+                return py::convert(self->obj.CreateField(param0, param1));
             }
             catch (...)
             {
@@ -6363,7 +6331,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactFieldFactory_CreateInstantMessage_All(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -6401,11 +6380,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
-    static PyObject* ContactFieldFactory_CreateLocation(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    static PyObject* ContactFieldFactory_CreateInstantMessage_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 2)
         {
             try
             {
@@ -6413,34 +6392,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateLocation(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 2);
                 }
 
                 if (!is_overload_present.value())
@@ -6452,7 +6404,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
 
-                return py::convert(self->obj.CreateLocation(param0, param1));
+                return py::convert(self->obj.CreateInstantMessage(param0, param1));
             }
             catch (...)
             {
@@ -6460,7 +6412,56 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 7)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactFieldFactory_CreateInstantMessage_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateInstantMessage", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateInstantMessage(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactFieldFactory_CreateLocation_All(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 7)
         {
             try
             {
@@ -6500,6 +6501,83 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
+    static PyObject* ContactFieldFactory_CreateLocation_Category(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
+
+                return py::convert(self->obj.CreateLocation(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactFieldFactory_CreateLocation_Default(py::wrapper::Windows::ApplicationModel::Contacts::ContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactFieldFactory", L"CreateLocation", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateLocation(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_ContactFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Contacts::ContactFieldFactory>>();
@@ -6525,9 +6603,15 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_ContactFieldFactory[] = {
-        { "create_field", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateField), METH_VARARGS, nullptr },
-        { "create_instant_message", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateInstantMessage), METH_VARARGS, nullptr },
-        { "create_location", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateLocation), METH_VARARGS, nullptr },
+        { "create_field_category", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateField_Category), METH_VARARGS, nullptr },
+        { "create_field_custom", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateField_Custom), METH_VARARGS, nullptr },
+        { "create_field_default", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateField_Default), METH_VARARGS, nullptr },
+        { "create_instant_message_all", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateInstantMessage_All), METH_VARARGS, nullptr },
+        { "create_instant_message_category", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateInstantMessage_Category), METH_VARARGS, nullptr },
+        { "create_instant_message_default", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateInstantMessage_Default), METH_VARARGS, nullptr },
+        { "create_location_all", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateLocation_All), METH_VARARGS, nullptr },
+        { "create_location_category", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateLocation_Category), METH_VARARGS, nullptr },
+        { "create_location_default", reinterpret_cast<PyCFunction>(ContactFieldFactory_CreateLocation_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactFieldFactory), METH_O | METH_STATIC, nullptr },
         { }
@@ -8272,7 +8356,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactList_GetContactReaderWithOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactList* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9027,6 +9122,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "get_contact_async", reinterpret_cast<PyCFunction>(ContactList_GetContactAsync), METH_VARARGS, nullptr },
         { "get_contact_from_remote_id_async", reinterpret_cast<PyCFunction>(ContactList_GetContactFromRemoteIdAsync), METH_VARARGS, nullptr },
         { "get_contact_reader", reinterpret_cast<PyCFunction>(ContactList_GetContactReader), METH_VARARGS, nullptr },
+        { "get_contact_reader_with_options", reinterpret_cast<PyCFunction>(ContactList_GetContactReaderWithOptions), METH_VARARGS, nullptr },
         { "get_me_contact_async", reinterpret_cast<PyCFunction>(ContactList_GetMeContactAsync), METH_VARARGS, nullptr },
         { "register_sync_manager_async", reinterpret_cast<PyCFunction>(ContactList_RegisterSyncManagerAsync), METH_VARARGS, nullptr },
         { "save_async", reinterpret_cast<PyCFunction>(ContactList_SaveAsync), METH_VARARGS, nullptr },
@@ -11800,7 +11896,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactManager_ConvertContactToVCardAsyncWithMaxBytes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -12086,7 +12193,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactManager_RequestStoreAsyncWithAccessType(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -12153,37 +12271,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManager", L"ShowContactCard", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
-
-                winrt::Windows::ApplicationModel::Contacts::ContactManager::ShowContactCard(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* ContactManager_ShowContactCardWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -12206,6 +12305,47 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactCardOptions>(args, 3);
 
                 winrt::Windows::ApplicationModel::Contacts::ContactManager::ShowContactCard(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactManager_ShowContactCardWithPlacement(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.ContactManager", L"ShowContactCard", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::Contact>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
+
+                winrt::Windows::ApplicationModel::Contacts::ContactManager::ShowContactCard(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -12254,7 +12394,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactManager_ShowDelayLoadedContactCardWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -12545,6 +12696,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyMethodDef methods_ContactManager_Static[] = {
         { "convert_contact_to_v_card_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertContactToVCardAsync), METH_VARARGS, nullptr },
+        { "convert_contact_to_v_card_async_with_max_bytes", reinterpret_cast<PyCFunction>(ContactManager_ConvertContactToVCardAsyncWithMaxBytes), METH_VARARGS, nullptr },
         { "convert_v_card_to_contact_async", reinterpret_cast<PyCFunction>(ContactManager_ConvertVCardToContactAsync), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(ContactManager_GetForUser), METH_VARARGS, nullptr },
         { "is_show_contact_card_supported", reinterpret_cast<PyCFunction>(ContactManager_IsShowContactCardSupported), METH_VARARGS, nullptr },
@@ -12552,8 +12704,12 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         { "is_show_full_contact_card_supported_async", reinterpret_cast<PyCFunction>(ContactManager_IsShowFullContactCardSupportedAsync), METH_VARARGS, nullptr },
         { "request_annotation_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestAnnotationStoreAsync), METH_VARARGS, nullptr },
         { "request_store_async", reinterpret_cast<PyCFunction>(ContactManager_RequestStoreAsync), METH_VARARGS, nullptr },
+        { "request_store_async_with_access_type", reinterpret_cast<PyCFunction>(ContactManager_RequestStoreAsyncWithAccessType), METH_VARARGS, nullptr },
         { "show_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowContactCard), METH_VARARGS, nullptr },
+        { "show_contact_card_with_options", reinterpret_cast<PyCFunction>(ContactManager_ShowContactCardWithOptions), METH_VARARGS, nullptr },
+        { "show_contact_card_with_placement", reinterpret_cast<PyCFunction>(ContactManager_ShowContactCardWithPlacement), METH_VARARGS, nullptr },
         { "show_delay_loaded_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCard), METH_VARARGS, nullptr },
+        { "show_delay_loaded_contact_card_with_options", reinterpret_cast<PyCFunction>(ContactManager_ShowDelayLoadedContactCardWithOptions), METH_VARARGS, nullptr },
         { "show_full_contact_card", reinterpret_cast<PyCFunction>(ContactManager_ShowFullContactCard), METH_VARARGS, nullptr },
         { }
     };
@@ -12623,7 +12779,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactManagerForUser_ConvertContactToVCardAsyncWithMaxBytes(py::wrapper::Windows::ApplicationModel::Contacts::ContactManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -12986,6 +13153,7 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyMethodDef _methods_ContactManagerForUser[] = {
         { "convert_contact_to_v_card_async", reinterpret_cast<PyCFunction>(ContactManagerForUser_ConvertContactToVCardAsync), METH_VARARGS, nullptr },
+        { "convert_contact_to_v_card_async_with_max_bytes", reinterpret_cast<PyCFunction>(ContactManagerForUser_ConvertContactToVCardAsyncWithMaxBytes), METH_VARARGS, nullptr },
         { "convert_v_card_to_contact_async", reinterpret_cast<PyCFunction>(ContactManagerForUser_ConvertVCardToContactAsync), METH_VARARGS, nullptr },
         { "request_annotation_store_async", reinterpret_cast<PyCFunction>(ContactManagerForUser_RequestAnnotationStoreAsync), METH_VARARGS, nullptr },
         { "request_store_async", reinterpret_cast<PyCFunction>(ContactManagerForUser_RequestStoreAsync), METH_VARARGS, nullptr },
@@ -15597,7 +15765,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactStore_CreateContactListInAccountAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -15697,7 +15876,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactStore_FindContactsWithSearchTextAsync(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -15874,7 +16064,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactStore_GetContactReaderWithOptions(py::wrapper::Windows::ApplicationModel::Contacts::ContactStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -16079,12 +16280,15 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
     static PyMethodDef _methods_ContactStore[] = {
         { "create_contact_list_async", reinterpret_cast<PyCFunction>(ContactStore_CreateContactListAsync), METH_VARARGS, nullptr },
+        { "create_contact_list_in_account_async", reinterpret_cast<PyCFunction>(ContactStore_CreateContactListInAccountAsync), METH_VARARGS, nullptr },
         { "find_contact_lists_async", reinterpret_cast<PyCFunction>(ContactStore_FindContactListsAsync), METH_VARARGS, nullptr },
         { "find_contacts_async", reinterpret_cast<PyCFunction>(ContactStore_FindContactsAsync), METH_VARARGS, nullptr },
+        { "find_contacts_with_search_text_async", reinterpret_cast<PyCFunction>(ContactStore_FindContactsWithSearchTextAsync), METH_VARARGS, nullptr },
         { "get_change_tracker", reinterpret_cast<PyCFunction>(ContactStore_GetChangeTracker), METH_VARARGS, nullptr },
         { "get_contact_async", reinterpret_cast<PyCFunction>(ContactStore_GetContactAsync), METH_VARARGS, nullptr },
         { "get_contact_list_async", reinterpret_cast<PyCFunction>(ContactStore_GetContactListAsync), METH_VARARGS, nullptr },
         { "get_contact_reader", reinterpret_cast<PyCFunction>(ContactStore_GetContactReader), METH_VARARGS, nullptr },
+        { "get_contact_reader_with_options", reinterpret_cast<PyCFunction>(ContactStore_GetContactReaderWithOptions), METH_VARARGS, nullptr },
         { "get_me_contact_async", reinterpret_cast<PyCFunction>(ContactStore_GetMeContactAsync), METH_VARARGS, nullptr },
         { "add_contact_changed", reinterpret_cast<PyCFunction>(ContactStore_add_ContactChanged), METH_O, nullptr },
         { "remove_contact_changed", reinterpret_cast<PyCFunction>(ContactStore_remove_ContactChanged), METH_O, nullptr },
@@ -17637,39 +17841,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_DECREF(tp);
     }
 
-    static PyObject* IContactFieldFactory_CreateField(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
+    static PyObject* IContactFieldFactory_CreateField_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactFieldFactory", L"CreateField", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
-
-                return py::convert(self->obj.CreateField(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -17698,7 +17874,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactFieldFactory_CreateField_Custom(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -17721,6 +17908,45 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 auto param3 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 3);
 
                 return py::convert(self->obj.CreateField(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactFieldFactory_CreateField_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactFieldFactory", L"CreateField", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldType>(args, 1);
+
+                return py::convert(self->obj.CreateField(param0, param1));
             }
             catch (...)
             {
@@ -17760,7 +17986,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_IContactFieldFactory[] = {
-        { "create_field", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField), METH_VARARGS, nullptr },
+        { "create_field_category", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Category), METH_VARARGS, nullptr },
+        { "create_field_custom", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Custom), METH_VARARGS, nullptr },
+        { "create_field_default", reinterpret_cast<PyCFunction>(IContactFieldFactory_CreateField_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactFieldFactory), METH_O | METH_STATIC, nullptr },
         { }
@@ -17802,11 +18030,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_DECREF(tp);
     }
 
-    static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
+    static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_All(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 5)
         {
             try
             {
@@ -17814,18 +18042,22 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 5);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(5);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 4);
 
-                return py::convert(self->obj.CreateInstantMessage(param0));
+                return py::convert(self->obj.CreateInstantMessage(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -17833,7 +18065,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -17861,7 +18104,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactInstantMessageFieldFactory_CreateInstantMessage_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactInstantMessageFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -17869,22 +18123,18 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 5);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactInstantMessageFieldFactory", L"CreateInstantMessage", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(5);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 4);
 
-                return py::convert(self->obj.CreateInstantMessage(param0, param1, param2, param3, param4));
+                return py::convert(self->obj.CreateInstantMessage(param0));
             }
             catch (...)
             {
@@ -17924,7 +18174,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_IContactInstantMessageFieldFactory[] = {
-        { "create_instant_message", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage), METH_VARARGS, nullptr },
+        { "create_instant_message_all", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_All), METH_VARARGS, nullptr },
+        { "create_instant_message_category", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_Category), METH_VARARGS, nullptr },
+        { "create_instant_message_default", reinterpret_cast<PyCFunction>(IContactInstantMessageFieldFactory_CreateInstantMessage_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactInstantMessageFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactInstantMessageFieldFactory), METH_O | METH_STATIC, nullptr },
         { }
@@ -17966,66 +18218,11 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         Py_DECREF(tp);
     }
 
-    static PyObject* IContactLocationFieldFactory_CreateLocation(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
+    static PyObject* IContactLocationFieldFactory_CreateLocation_All(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateLocation(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
-
-                return py::convert(self->obj.CreateLocation(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 7)
+        if (arg_count == 7)
         {
             try
             {
@@ -18065,6 +18262,83 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
         }
     }
 
+    static PyObject* IContactLocationFieldFactory_CreateLocation_Category(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Contacts::ContactFieldCategory>(args, 1);
+
+                return py::convert(self->obj.CreateLocation(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactLocationFieldFactory_CreateLocation_Default(py::wrapper::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Contacts.IContactLocationFieldFactory", L"CreateLocation", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateLocation(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* _assign_array_IContactLocationFieldFactory(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Windows::ApplicationModel::Contacts::IContactLocationFieldFactory>>();
@@ -18090,7 +18364,9 @@ namespace py::cpp::Windows::ApplicationModel::Contacts
     }
 
     static PyMethodDef _methods_IContactLocationFieldFactory[] = {
-        { "create_location", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation), METH_VARARGS, nullptr },
+        { "create_location_all", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_All), METH_VARARGS, nullptr },
+        { "create_location_category", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_Category), METH_VARARGS, nullptr },
+        { "create_location_default", reinterpret_cast<PyCFunction>(IContactLocationFieldFactory_CreateLocation_Default), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactLocationFieldFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactLocationFieldFactory), METH_O | METH_STATIC, nullptr },
         { }

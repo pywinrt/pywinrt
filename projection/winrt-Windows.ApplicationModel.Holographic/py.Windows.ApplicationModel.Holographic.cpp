@@ -128,7 +128,18 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* HolographicKeyboard_SetPlacementOverrideWithMaxSize(py::wrapper::Windows::ApplicationModel::Holographic::HolographicKeyboard* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -193,6 +204,7 @@ namespace py::cpp::Windows::ApplicationModel::Holographic
     static PyMethodDef _methods_HolographicKeyboard[] = {
         { "reset_placement_override", reinterpret_cast<PyCFunction>(HolographicKeyboard_ResetPlacementOverride), METH_VARARGS, nullptr },
         { "set_placement_override", reinterpret_cast<PyCFunction>(HolographicKeyboard_SetPlacementOverride), METH_VARARGS, nullptr },
+        { "set_placement_override_with_max_size", reinterpret_cast<PyCFunction>(HolographicKeyboard_SetPlacementOverrideWithMaxSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicKeyboard, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicKeyboard), METH_O | METH_STATIC, nullptr },
         { }

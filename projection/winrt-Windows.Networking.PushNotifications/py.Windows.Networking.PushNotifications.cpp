@@ -259,7 +259,18 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsyncWithId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -490,6 +501,7 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyMethodDef methods_PushNotificationChannelManager_Static[] = {
         { "create_push_notification_channel_for_application_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsync), METH_VARARGS, nullptr },
+        { "create_push_notification_channel_for_application_async_with_id", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForApplicationAsyncWithId), METH_VARARGS, nullptr },
         { "create_push_notification_channel_for_secondary_tile_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_CreatePushNotificationChannelForSecondaryTileAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(PushNotificationChannelManager_GetForUser), METH_VARARGS, nullptr },
@@ -561,7 +573,18 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PushNotificationChannelManagerForUser_CreatePushNotificationChannelForApplicationAsyncWithId(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -665,7 +688,18 @@ namespace py::cpp::Windows::Networking::PushNotifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PushNotificationChannelManagerForUser_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(py::wrapper::Windows::Networking::PushNotifications::PushNotificationChannelManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -753,8 +787,10 @@ namespace py::cpp::Windows::Networking::PushNotifications
 
     static PyMethodDef _methods_PushNotificationChannelManagerForUser[] = {
         { "create_push_notification_channel_for_application_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManagerForUser_CreatePushNotificationChannelForApplicationAsync), METH_VARARGS, nullptr },
+        { "create_push_notification_channel_for_application_async_with_id", reinterpret_cast<PyCFunction>(PushNotificationChannelManagerForUser_CreatePushNotificationChannelForApplicationAsyncWithId), METH_VARARGS, nullptr },
         { "create_push_notification_channel_for_secondary_tile_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManagerForUser_CreatePushNotificationChannelForSecondaryTileAsync), METH_VARARGS, nullptr },
         { "create_raw_push_notification_channel_with_alternate_key_for_application_async", reinterpret_cast<PyCFunction>(PushNotificationChannelManagerForUser_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync), METH_VARARGS, nullptr },
+        { "create_raw_push_notification_channel_with_alternate_key_for_application_async_with_id", reinterpret_cast<PyCFunction>(PushNotificationChannelManagerForUser_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PushNotificationChannelManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PushNotificationChannelManagerForUser), METH_O | METH_STATIC, nullptr },
         { }

@@ -17,9 +17,24 @@ class ProjectedMethod(
     public readonly MethodDefinition Method = method;
 
     /// <summary>
-    /// Gets the name of the method.
+    /// Gets the projected name of the method. For many overloaded methods, this
+    /// is different from the C++/WinRT name.
     /// </summary>
-    public string Name { get; } = method.Name;
+    public string Name { get; } =
+        (
+            method.CustomAttributes.SingleOrDefault(a =>
+                a.AttributeType.FullName == "Windows.Foundation.Metadata.OverloadAttribute"
+            ) is
+            { ConstructorArguments: { Count: 1 } args }
+        )
+            ? args[0].Value as string ?? throw new InvalidOperationException()
+            : method.Name;
+
+    /// <summary>
+    /// Gets the C++/WinRT name of the method.
+    /// </summary>
+    public string CppName { get; } =
+        method.IsSpecialName ? method.Name.Substring(method.Name.IndexOf('_') + 1) : method.Name;
 
     /// <summary>
     /// Gets the inherence chain of the method.

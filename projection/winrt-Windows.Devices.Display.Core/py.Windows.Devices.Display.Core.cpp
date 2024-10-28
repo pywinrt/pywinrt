@@ -5170,7 +5170,18 @@ namespace py::cpp::Windows::Devices::Display::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DisplayState_ConnectTargetToView(py::wrapper::Windows::Devices::Display::Core::DisplayState* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5554,6 +5565,7 @@ namespace py::cpp::Windows::Devices::Display::Core
         { "can_connect_target_to_view", reinterpret_cast<PyCFunction>(DisplayState_CanConnectTargetToView), METH_VARARGS, nullptr },
         { "clone", reinterpret_cast<PyCFunction>(DisplayState_Clone), METH_VARARGS, nullptr },
         { "connect_target", reinterpret_cast<PyCFunction>(DisplayState_ConnectTarget), METH_VARARGS, nullptr },
+        { "connect_target_to_view", reinterpret_cast<PyCFunction>(DisplayState_ConnectTargetToView), METH_VARARGS, nullptr },
         { "disconnect_target", reinterpret_cast<PyCFunction>(DisplayState_DisconnectTarget), METH_VARARGS, nullptr },
         { "get_path_for_target", reinterpret_cast<PyCFunction>(DisplayState_GetPathForTarget), METH_VARARGS, nullptr },
         { "get_view_for_target", reinterpret_cast<PyCFunction>(DisplayState_GetViewForTarget), METH_VARARGS, nullptr },

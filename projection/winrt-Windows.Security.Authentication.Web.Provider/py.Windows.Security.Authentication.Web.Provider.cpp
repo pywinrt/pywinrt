@@ -235,67 +235,6 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 3);
-
-                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 3);
-                auto param4 = py::convert_to<winrt::hstring>(args, 4);
-
-                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountAsync(param0, param1, param2, param3, param4));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -337,7 +276,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccountManager_AddWebAccountWithScopeAndMapAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -345,7 +295,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 5);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 5);
                 }
 
                 if (!is_overload_present.value())
@@ -354,13 +304,13 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 4);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 3);
+                auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
-                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountForUserAsync(param0, param1, param2, param3, param4));
+                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountAsync(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -368,7 +318,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 6)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccountManager_AddWebAccountWithScopeAndMapForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
         {
             try
             {
@@ -393,6 +354,89 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 auto param5 = py::convert_to<winrt::hstring>(args, 5);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountForUserAsync(param0, param1, param2, param3, param4, param5));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccountManager_AddWebAccountWithScopeAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 3);
+
+                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccountManager_AddWebAccountWithScopeForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.Provider.WebAccountManager", L"AddWebAccountForUserAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::IMapView<winrt::hstring, winrt::hstring>>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Security::Authentication::Web::Provider::WebAccountScope>(args, 4);
+
+                return py::convert(winrt::Windows::Security::Authentication::Web::Provider::WebAccountManager::AddWebAccountForUserAsync(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -1125,6 +1169,10 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
     static PyMethodDef methods_WebAccountManager_Static[] = {
         { "add_web_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountAsync), METH_VARARGS, nullptr },
         { "add_web_account_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountForUserAsync), METH_VARARGS, nullptr },
+        { "add_web_account_with_scope_and_map_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountWithScopeAndMapAsync), METH_VARARGS, nullptr },
+        { "add_web_account_with_scope_and_map_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountWithScopeAndMapForUserAsync), METH_VARARGS, nullptr },
+        { "add_web_account_with_scope_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountWithScopeAsync), METH_VARARGS, nullptr },
+        { "add_web_account_with_scope_for_user_async", reinterpret_cast<PyCFunction>(WebAccountManager_AddWebAccountWithScopeForUserAsync), METH_VARARGS, nullptr },
         { "clear_per_user_from_per_app_account_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearPerUserFromPerAppAccountAsync), METH_VARARGS, nullptr },
         { "clear_view_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearViewAsync), METH_VARARGS, nullptr },
         { "clear_web_account_picture_async", reinterpret_cast<PyCFunction>(WebAccountManager_ClearWebAccountPictureAsync), METH_VARARGS, nullptr },
@@ -1615,7 +1663,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccountProviderGetTokenSilentOperation_ReportUserInteractionRequiredWithError(py::wrapper::Windows::Security::Authentication::Web::Provider::WebAccountProviderGetTokenSilentOperation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1817,6 +1876,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(WebAccountProviderGetTokenSilentOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(WebAccountProviderGetTokenSilentOperation_ReportError), METH_VARARGS, nullptr },
         { "report_user_interaction_required", reinterpret_cast<PyCFunction>(WebAccountProviderGetTokenSilentOperation_ReportUserInteractionRequired), METH_VARARGS, nullptr },
+        { "report_user_interaction_required_with_error", reinterpret_cast<PyCFunction>(WebAccountProviderGetTokenSilentOperation_ReportUserInteractionRequiredWithError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccountProviderGetTokenSilentOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccountProviderGetTokenSilentOperation), METH_O | METH_STATIC, nullptr },
         { }
@@ -3838,7 +3898,18 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IWebAccountProviderSilentReportOperation_ReportUserInteractionRequiredWithError(py::wrapper::Windows::Security::Authentication::Web::Provider::IWebAccountProviderSilentReportOperation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3901,6 +3972,7 @@ namespace py::cpp::Windows::Security::Authentication::Web::Provider
         { "report_completed", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportError), METH_VARARGS, nullptr },
         { "report_user_interaction_required", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportUserInteractionRequired), METH_VARARGS, nullptr },
+        { "report_user_interaction_required_with_error", reinterpret_cast<PyCFunction>(IWebAccountProviderSilentReportOperation_ReportUserInteractionRequiredWithError), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IWebAccountProviderSilentReportOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IWebAccountProviderSilentReportOperation), METH_O | METH_STATIC, nullptr },
         { }

@@ -95,7 +95,45 @@ namespace py::cpp::Windows::Security::Credentials
         }
     }
 
-    static PyObject* KeyCredential_RetrievePublicKey(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
+    static PyObject* KeyCredential_RetrievePublicKeyWithBlobType(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.KeyCredential", L"RetrievePublicKey", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 0);
+
+                return py::convert(self->obj.RetrievePublicKey(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeyCredential_RetrievePublicKeyWithDefaultBlobType(py::wrapper::Windows::Security::Credentials::KeyCredential* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -117,33 +155,6 @@ namespace py::cpp::Windows::Security::Credentials
                 }
 
                 return py::convert(self->obj.RetrievePublicKey());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.KeyCredential", L"RetrievePublicKey", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType>(args, 0);
-
-                return py::convert(self->obj.RetrievePublicKey(param0));
             }
             catch (...)
             {
@@ -211,7 +222,8 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_KeyCredential[] = {
         { "get_attestation_async", reinterpret_cast<PyCFunction>(KeyCredential_GetAttestationAsync), METH_VARARGS, nullptr },
         { "request_sign_async", reinterpret_cast<PyCFunction>(KeyCredential_RequestSignAsync), METH_VARARGS, nullptr },
-        { "retrieve_public_key", reinterpret_cast<PyCFunction>(KeyCredential_RetrievePublicKey), METH_VARARGS, nullptr },
+        { "retrieve_public_key_with_blob_type", reinterpret_cast<PyCFunction>(KeyCredential_RetrievePublicKeyWithBlobType), METH_VARARGS, nullptr },
+        { "retrieve_public_key_with_default_blob_type", reinterpret_cast<PyCFunction>(KeyCredential_RetrievePublicKeyWithDefaultBlobType), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_KeyCredential, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_KeyCredential), METH_O | METH_STATIC, nullptr },
         { }
@@ -2211,7 +2223,18 @@ namespace py::cpp::Windows::Security::Credentials
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAccount_SignOutWithClientIdAsync(py::wrapper::Windows::Security::Credentials::WebAccount* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2402,6 +2425,7 @@ namespace py::cpp::Windows::Security::Credentials
     static PyMethodDef _methods_WebAccount[] = {
         { "get_picture_async", reinterpret_cast<PyCFunction>(WebAccount_GetPictureAsync), METH_VARARGS, nullptr },
         { "sign_out_async", reinterpret_cast<PyCFunction>(WebAccount_SignOutAsync), METH_VARARGS, nullptr },
+        { "sign_out_with_client_id_async", reinterpret_cast<PyCFunction>(WebAccount_SignOutWithClientIdAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WebAccount, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WebAccount), METH_O | METH_STATIC, nullptr },
         { }

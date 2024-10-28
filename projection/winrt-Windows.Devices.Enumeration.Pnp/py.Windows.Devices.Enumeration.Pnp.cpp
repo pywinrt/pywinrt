@@ -93,7 +93,18 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PnpObject_CreateWatcherAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -161,7 +172,18 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PnpObject_FindAllAsyncAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -374,7 +396,9 @@ namespace py::cpp::Windows::Devices::Enumeration::Pnp
     static PyMethodDef methods_PnpObject_Static[] = {
         { "create_from_id_async", reinterpret_cast<PyCFunction>(PnpObject_CreateFromIdAsync), METH_VARARGS, nullptr },
         { "create_watcher", reinterpret_cast<PyCFunction>(PnpObject_CreateWatcher), METH_VARARGS, nullptr },
+        { "create_watcher_aqs_filter", reinterpret_cast<PyCFunction>(PnpObject_CreateWatcherAqsFilter), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(PnpObject_FindAllAsync), METH_VARARGS, nullptr },
+        { "find_all_async_aqs_filter", reinterpret_cast<PyCFunction>(PnpObject_FindAllAsyncAqsFilter), METH_VARARGS, nullptr },
         { }
     };
 

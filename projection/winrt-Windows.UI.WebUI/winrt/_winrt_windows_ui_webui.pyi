@@ -1011,10 +1011,8 @@ class WebUIUserDataAccountProviderActivatedEventArgs(winrt.system.Object):
 
 @typing.final
 class WebUIView_Static(type):
-    @typing.overload
     def create_async(cls) -> windows_foundation.IAsyncOperation[WebUIView]: ...
-    @typing.overload
-    def create_async(cls, uri: typing.Optional[windows_foundation.Uri], /) -> windows_foundation.IAsyncOperation[WebUIView]: ...
+    def create_with_uri_async(cls, uri: typing.Optional[windows_foundation.Uri], /) -> windows_foundation.IAsyncOperation[WebUIView]: ...
 
 @typing.final
 class WebUIView(winrt.system.Object, metaclass=WebUIView_Static):

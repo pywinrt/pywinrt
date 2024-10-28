@@ -75,7 +75,18 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaTranscoder_AddAudioEffectWithSettings(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -144,7 +155,18 @@ namespace py::cpp::Windows::Media::Transcoding
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaTranscoder_AddVideoEffectWithSettings(py::wrapper::Windows::Media::Transcoding::MediaTranscoder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -669,7 +691,9 @@ namespace py::cpp::Windows::Media::Transcoding
 
     static PyMethodDef _methods_MediaTranscoder[] = {
         { "add_audio_effect", reinterpret_cast<PyCFunction>(MediaTranscoder_AddAudioEffect), METH_VARARGS, nullptr },
+        { "add_audio_effect_with_settings", reinterpret_cast<PyCFunction>(MediaTranscoder_AddAudioEffectWithSettings), METH_VARARGS, nullptr },
         { "add_video_effect", reinterpret_cast<PyCFunction>(MediaTranscoder_AddVideoEffect), METH_VARARGS, nullptr },
+        { "add_video_effect_with_settings", reinterpret_cast<PyCFunction>(MediaTranscoder_AddVideoEffectWithSettings), METH_VARARGS, nullptr },
         { "clear_effects", reinterpret_cast<PyCFunction>(MediaTranscoder_ClearEffects), METH_VARARGS, nullptr },
         { "prepare_file_transcode_async", reinterpret_cast<PyCFunction>(MediaTranscoder_PrepareFileTranscodeAsync), METH_VARARGS, nullptr },
         { "prepare_media_stream_source_transcode_async", reinterpret_cast<PyCFunction>(MediaTranscoder_PrepareMediaStreamSourceTranscodeAsync), METH_VARARGS, nullptr },

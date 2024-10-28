@@ -1251,7 +1251,18 @@ namespace py::cpp::Windows::Services::Maps::Guidance
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GuidanceNavigator_UpdateUserLocationWithPositionOverride(py::wrapper::Windows::Services::Maps::Guidance::GuidanceNavigator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1986,6 +1997,7 @@ namespace py::cpp::Windows::Services::Maps::Guidance
         { "start_tracking", reinterpret_cast<PyCFunction>(GuidanceNavigator_StartTracking), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(GuidanceNavigator_Stop), METH_VARARGS, nullptr },
         { "update_user_location", reinterpret_cast<PyCFunction>(GuidanceNavigator_UpdateUserLocation), METH_VARARGS, nullptr },
+        { "update_user_location_with_position_override", reinterpret_cast<PyCFunction>(GuidanceNavigator_UpdateUserLocationWithPositionOverride), METH_VARARGS, nullptr },
         { "add_destination_reached", reinterpret_cast<PyCFunction>(GuidanceNavigator_add_DestinationReached), METH_O, nullptr },
         { "remove_destination_reached", reinterpret_cast<PyCFunction>(GuidanceNavigator_remove_DestinationReached), METH_O, nullptr },
         { "add_guidance_updated", reinterpret_cast<PyCFunction>(GuidanceNavigator_add_GuidanceUpdated), METH_O, nullptr },

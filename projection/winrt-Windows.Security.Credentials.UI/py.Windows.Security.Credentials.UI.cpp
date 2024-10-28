@@ -13,11 +13,11 @@ namespace py::cpp::Windows::Security::Credentials::UI
         return nullptr;
     }
 
-    static PyObject* CredentialPicker_PickAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* CredentialPicker_PickWithCaptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 3)
         {
             try
             {
@@ -25,18 +25,20 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0));
+                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -44,7 +46,18 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CredentialPicker_PickWithMessageAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -72,7 +85,18 @@ namespace py::cpp::Windows::Security::Credentials::UI
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CredentialPicker_PickWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -80,20 +104,18 @@ namespace py::cpp::Windows::Security::Credentials::UI
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Credentials.UI.CredentialPicker", L"PickAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Security::Credentials::UI::CredentialPickerOptions>(args, 0);
 
-                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0, param1, param2));
+                return py::convert(winrt::Windows::Security::Credentials::UI::CredentialPicker::PickAsync(param0));
             }
             catch (...)
             {
@@ -135,7 +157,9 @@ namespace py::cpp::Windows::Security::Credentials::UI
     };
 
     static PyMethodDef methods_CredentialPicker_Static[] = {
-        { "pick_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickAsync), METH_VARARGS, nullptr },
+        { "pick_with_caption_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithCaptionAsync), METH_VARARGS, nullptr },
+        { "pick_with_message_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithMessageAsync), METH_VARARGS, nullptr },
+        { "pick_with_options_async", reinterpret_cast<PyCFunction>(CredentialPicker_PickWithOptionsAsync), METH_VARARGS, nullptr },
         { }
     };
 

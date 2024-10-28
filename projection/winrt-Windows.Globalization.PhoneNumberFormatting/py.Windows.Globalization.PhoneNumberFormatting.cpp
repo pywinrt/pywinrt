@@ -74,34 +74,6 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>(args, 1);
-
-                return py::convert(self->obj.Format(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -209,6 +181,45 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.FormatStringWithLeftToRightMarkers(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhoneNumberFormatter_FormatWithOutputFormat(py::wrapper::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormatter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.PhoneNumberFormatting.PhoneNumberFormatter", L"Format", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberInfo>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Globalization::PhoneNumberFormatting::PhoneNumberFormat>(args, 1);
+
+                return py::convert(self->obj.Format(param0, param1));
             }
             catch (...)
             {
@@ -413,6 +424,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
         { "format_partial_string", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_FormatPartialString), METH_VARARGS, nullptr },
         { "format_string", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_FormatString), METH_VARARGS, nullptr },
         { "format_string_with_left_to_right_markers", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_FormatStringWithLeftToRightMarkers), METH_VARARGS, nullptr },
+        { "format_with_output_format", reinterpret_cast<PyCFunction>(PhoneNumberFormatter_FormatWithOutputFormat), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PhoneNumberFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PhoneNumberFormatter), METH_O | METH_STATIC, nullptr },
         { }
@@ -805,7 +817,18 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhoneNumberInfo_TryParseWithRegion(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -983,6 +1006,7 @@ namespace py::cpp::Windows::Globalization::PhoneNumberFormatting
 
     static PyMethodDef methods_PhoneNumberInfo_Static[] = {
         { "try_parse", reinterpret_cast<PyCFunction>(PhoneNumberInfo_TryParse), METH_VARARGS, nullptr },
+        { "try_parse_with_region", reinterpret_cast<PyCFunction>(PhoneNumberInfo_TryParseWithRegion), METH_VARARGS, nullptr },
         { }
     };
 

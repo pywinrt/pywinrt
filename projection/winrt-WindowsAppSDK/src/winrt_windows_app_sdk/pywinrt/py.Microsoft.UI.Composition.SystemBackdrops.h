@@ -25,11 +25,16 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Composition.h"
 #endif
 
+#if __has_include("py.Windows.UI.Core.h")
+#include "py.Windows.UI.Core.h"
+#endif
+
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Composition.h>
+#include <winrt/Windows.UI.Core.h>
 
 #include <winrt/Microsoft.UI.Composition.SystemBackdrops.h>
 

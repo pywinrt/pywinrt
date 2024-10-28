@@ -399,7 +399,7 @@ namespace py::cpp::Windows::ApplicationModel::Search
         }
     }
 
-    static PyObject* SearchPane_Show(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
+    static PyObject* SearchPane_ShowOverloadDefault(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -429,7 +429,18 @@ namespace py::cpp::Windows::ApplicationModel::Search
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SearchPane_ShowOverloadWithQuery(py::wrapper::Windows::ApplicationModel::Search::SearchPane* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1135,7 +1146,8 @@ namespace py::cpp::Windows::ApplicationModel::Search
 
     static PyMethodDef _methods_SearchPane[] = {
         { "set_local_content_suggestion_settings", reinterpret_cast<PyCFunction>(SearchPane_SetLocalContentSuggestionSettings), METH_VARARGS, nullptr },
-        { "show", reinterpret_cast<PyCFunction>(SearchPane_Show), METH_VARARGS, nullptr },
+        { "show_overload_default", reinterpret_cast<PyCFunction>(SearchPane_ShowOverloadDefault), METH_VARARGS, nullptr },
+        { "show_overload_with_query", reinterpret_cast<PyCFunction>(SearchPane_ShowOverloadWithQuery), METH_VARARGS, nullptr },
         { "try_set_query_text", reinterpret_cast<PyCFunction>(SearchPane_TrySetQueryText), METH_VARARGS, nullptr },
         { "add_query_changed", reinterpret_cast<PyCFunction>(SearchPane_add_QueryChanged), METH_O, nullptr },
         { "remove_query_changed", reinterpret_cast<PyCFunction>(SearchPane_remove_QueryChanged), METH_O, nullptr },

@@ -1425,7 +1425,7 @@ namespace py::cpp::Windows::Networking::XboxLive
         Py_DECREF(tp);
     }
 
-    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
+    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairDefaultAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1456,34 +1456,6 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 1);
-
-                return py::convert(self->obj.CreateEndpointPairAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1491,7 +1463,7 @@ namespace py::cpp::Windows::Networking::XboxLive
         }
     }
 
-    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
+    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsDefaultAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1524,7 +1496,18 @@ namespace py::cpp::Windows::Networking::XboxLive
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsWithBehaviorsAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1547,6 +1530,45 @@ namespace py::cpp::Windows::Networking::XboxLive
                 auto param3 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 3);
 
                 return py::convert(self->obj.CreateEndpointPairForPortsAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* XboxLiveEndpointPairTemplate_CreateEndpointPairWithBehaviorsAsync(py::wrapper::Windows::Networking::XboxLive::XboxLiveEndpointPairTemplate* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate", L"CreateEndpointPairAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveDeviceAddress>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Networking::XboxLive::XboxLiveEndpointPairCreationBehaviors>(args, 1);
+
+                return py::convert(self->obj.CreateEndpointPairAsync(param0, param1));
             }
             catch (...)
             {
@@ -1889,8 +1911,10 @@ namespace py::cpp::Windows::Networking::XboxLive
     }
 
     static PyMethodDef _methods_XboxLiveEndpointPairTemplate[] = {
-        { "create_endpoint_pair_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairAsync), METH_VARARGS, nullptr },
-        { "create_endpoint_pair_for_ports_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsAsync), METH_VARARGS, nullptr },
+        { "create_endpoint_pair_default_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairDefaultAsync), METH_VARARGS, nullptr },
+        { "create_endpoint_pair_for_ports_default_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsDefaultAsync), METH_VARARGS, nullptr },
+        { "create_endpoint_pair_for_ports_with_behaviors_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairForPortsWithBehaviorsAsync), METH_VARARGS, nullptr },
+        { "create_endpoint_pair_with_behaviors_async", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_CreateEndpointPairWithBehaviorsAsync), METH_VARARGS, nullptr },
         { "add_inbound_endpoint_pair_created", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_add_InboundEndpointPairCreated), METH_O, nullptr },
         { "remove_inbound_endpoint_pair_created", reinterpret_cast<PyCFunction>(XboxLiveEndpointPairTemplate_remove_InboundEndpointPairCreated), METH_O, nullptr },
         { "_assign_array_", _assign_array_XboxLiveEndpointPairTemplate, METH_O | METH_STATIC, nullptr },

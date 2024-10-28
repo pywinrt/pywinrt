@@ -267,7 +267,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         Py_DECREF(tp);
     }
 
-    static PyObject* DnssdServiceInstance_RegisterDatagramSocketAsync(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
+    static PyObject* DnssdServiceInstance_RegisterDatagramSocketAsync1(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -298,7 +298,18 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DnssdServiceInstance_RegisterDatagramSocketAsync2(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -333,7 +344,7 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
         }
     }
 
-    static PyObject* DnssdServiceInstance_RegisterStreamSocketListenerAsync(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
+    static PyObject* DnssdServiceInstance_RegisterStreamSocketListenerAsync1(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -364,7 +375,18 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DnssdServiceInstance_RegisterStreamSocketListenerAsync2(py::wrapper::Windows::Networking::ServiceDiscovery::Dnssd::DnssdServiceInstance* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -804,8 +826,10 @@ namespace py::cpp::Windows::Networking::ServiceDiscovery::Dnssd
     }
 
     static PyMethodDef _methods_DnssdServiceInstance[] = {
-        { "register_datagram_socket_async", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterDatagramSocketAsync), METH_VARARGS, nullptr },
-        { "register_stream_socket_listener_async", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterStreamSocketListenerAsync), METH_VARARGS, nullptr },
+        { "register_datagram_socket_async1", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterDatagramSocketAsync1), METH_VARARGS, nullptr },
+        { "register_datagram_socket_async2", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterDatagramSocketAsync2), METH_VARARGS, nullptr },
+        { "register_stream_socket_listener_async1", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterStreamSocketListenerAsync1), METH_VARARGS, nullptr },
+        { "register_stream_socket_listener_async2", reinterpret_cast<PyCFunction>(DnssdServiceInstance_RegisterStreamSocketListenerAsync2), METH_VARARGS, nullptr },
         { "to_string", reinterpret_cast<PyCFunction>(DnssdServiceInstance_ToString), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DnssdServiceInstance, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DnssdServiceInstance), METH_O | METH_STATIC, nullptr },

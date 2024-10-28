@@ -737,7 +737,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Application_LoadComponentWithResourceLocation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1354,6 +1365,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyMethodDef methods_Application_Static[] = {
         { "load_component", reinterpret_cast<PyCFunction>(Application_LoadComponent), METH_VARARGS, nullptr },
+        { "load_component_with_resource_location", reinterpret_cast<PyCFunction>(Application_LoadComponentWithResourceLocation), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(Application_Start), METH_VARARGS, nullptr },
         { }
     };
@@ -10128,7 +10140,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragUI_SetContentFromBitmapImageWithAnchorPoint(py::wrapper::Microsoft::UI::Xaml::DragUI* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10233,7 +10256,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragUI_SetContentFromSoftwareBitmapWithAnchorPoint(py::wrapper::Microsoft::UI::Xaml::DragUI* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10295,8 +10329,10 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyMethodDef _methods_DragUI[] = {
         { "set_content_from_bitmap_image", reinterpret_cast<PyCFunction>(DragUI_SetContentFromBitmapImage), METH_VARARGS, nullptr },
+        { "set_content_from_bitmap_image_with_anchor_point", reinterpret_cast<PyCFunction>(DragUI_SetContentFromBitmapImageWithAnchorPoint), METH_VARARGS, nullptr },
         { "set_content_from_data_package", reinterpret_cast<PyCFunction>(DragUI_SetContentFromDataPackage), METH_VARARGS, nullptr },
         { "set_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragUI_SetContentFromSoftwareBitmap), METH_VARARGS, nullptr },
+        { "set_content_from_software_bitmap_with_anchor_point", reinterpret_cast<PyCFunction>(DragUI_SetContentFromSoftwareBitmapWithAnchorPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragUI), METH_O | METH_STATIC, nullptr },
         { }
@@ -10407,7 +10443,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragUIOverride_SetContentFromBitmapImageWithAnchorPoint(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10475,7 +10522,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DragUIOverride_SetContentFromSoftwareBitmapWithAnchorPoint(py::wrapper::Microsoft::UI::Xaml::DragUIOverride* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10782,7 +10840,9 @@ namespace py::cpp::Microsoft::UI::Xaml
     static PyMethodDef _methods_DragUIOverride[] = {
         { "clear", reinterpret_cast<PyCFunction>(DragUIOverride_Clear), METH_VARARGS, nullptr },
         { "set_content_from_bitmap_image", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromBitmapImage), METH_VARARGS, nullptr },
+        { "set_content_from_bitmap_image_with_anchor_point", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromBitmapImageWithAnchorPoint), METH_VARARGS, nullptr },
         { "set_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromSoftwareBitmap), METH_VARARGS, nullptr },
+        { "set_content_from_software_bitmap_with_anchor_point", reinterpret_cast<PyCFunction>(DragUIOverride_SetContentFromSoftwareBitmapWithAnchorPoint), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragUIOverride, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragUIOverride), METH_O | METH_STATIC, nullptr },
         { }
@@ -13829,7 +13889,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FrameworkElement_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::FrameworkElement* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -23000,6 +23071,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "set_value", reinterpret_cast<PyCFunction>(FrameworkElement_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(FrameworkElement_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(FrameworkElement_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(FrameworkElement_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(FrameworkElement_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(FrameworkElement_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(FrameworkElement_TransformToVisual), METH_VARARGS, nullptr },
@@ -24894,7 +24966,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         Py_DECREF(tp);
     }
 
-    static PyObject* PropertyMetadata_Create(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* PropertyMetadata_CreateWithDefaultValue(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -24925,7 +24997,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PropertyMetadata_CreateWithDefaultValueAndCallback(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -24943,6 +25026,83 @@ namespace py::cpp::Microsoft::UI::Xaml
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::PropertyChangedCallback>(args, 1);
+
+                return py::convert(winrt::Microsoft::UI::Xaml::PropertyMetadata::Create(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PropertyMetadata_CreateWithFactory(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::CreateDefaultValueCallback>(args, 0);
+
+                return py::convert(winrt::Microsoft::UI::Xaml::PropertyMetadata::Create(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PropertyMetadata_CreateWithFactoryAndCallback(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.PropertyMetadata", L"Create", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::CreateDefaultValueCallback>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::PropertyChangedCallback>(args, 1);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::PropertyMetadata::Create(param0, param1));
@@ -25068,7 +25228,10 @@ namespace py::cpp::Microsoft::UI::Xaml
     };
 
     static PyMethodDef methods_PropertyMetadata_Static[] = {
-        { "create", reinterpret_cast<PyCFunction>(PropertyMetadata_Create), METH_VARARGS, nullptr },
+        { "create_with_default_value", reinterpret_cast<PyCFunction>(PropertyMetadata_CreateWithDefaultValue), METH_VARARGS, nullptr },
+        { "create_with_default_value_and_callback", reinterpret_cast<PyCFunction>(PropertyMetadata_CreateWithDefaultValueAndCallback), METH_VARARGS, nullptr },
+        { "create_with_factory", reinterpret_cast<PyCFunction>(PropertyMetadata_CreateWithFactory), METH_VARARGS, nullptr },
+        { "create_with_factory_and_callback", reinterpret_cast<PyCFunction>(PropertyMetadata_CreateWithFactoryAndCallback), METH_VARARGS, nullptr },
         { }
     };
 
@@ -25982,7 +26145,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         }
     }
 
-    static PyObject* RectHelper_Union(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* RectHelper_UnionWithPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -26005,6 +26168,45 @@ namespace py::cpp::Microsoft::UI::Xaml
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
+
+                return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::Union(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RectHelper_UnionWithRect(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.RectHelper", L"Union", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
                 return py::convert(winrt::Microsoft::UI::Xaml::RectHelper::Union(param0, param1));
             }
@@ -26113,7 +26315,8 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "get_right", reinterpret_cast<PyCFunction>(RectHelper_GetRight), METH_VARARGS, nullptr },
         { "get_top", reinterpret_cast<PyCFunction>(RectHelper_GetTop), METH_VARARGS, nullptr },
         { "intersect", reinterpret_cast<PyCFunction>(RectHelper_Intersect), METH_VARARGS, nullptr },
-        { "union", reinterpret_cast<PyCFunction>(RectHelper_Union), METH_VARARGS, nullptr },
+        { "union_with_point", reinterpret_cast<PyCFunction>(RectHelper_UnionWithPoint), METH_VARARGS, nullptr },
+        { "union_with_rect", reinterpret_cast<PyCFunction>(RectHelper_UnionWithRect), METH_VARARGS, nullptr },
         { }
     };
 
@@ -34807,7 +35010,18 @@ namespace py::cpp::Microsoft::UI::Xaml
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* UIElement_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::UIElement* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -43315,6 +43529,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "set_value", reinterpret_cast<PyCFunction>(UIElement_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(UIElement_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(UIElement_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(UIElement_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(UIElement_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(UIElement_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(UIElement_TransformToVisual), METH_VARARGS, nullptr },

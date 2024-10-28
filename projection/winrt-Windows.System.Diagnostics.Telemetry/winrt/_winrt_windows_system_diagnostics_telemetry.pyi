@@ -16,10 +16,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PlatformTelemetryClient_Static(type):
-    @typing.overload
     def register(cls, id: str, /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
-    @typing.overload
-    def register(cls, id: str, settings: typing.Optional[PlatformTelemetryRegistrationSettings], /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
+    def register_with_settings(cls, id: str, settings: typing.Optional[PlatformTelemetryRegistrationSettings], /) -> typing.Optional[PlatformTelemetryRegistrationResult]: ...
 
 @typing.final
 class PlatformTelemetryClient(winrt.system.Object, metaclass=PlatformTelemetryClient_Static):

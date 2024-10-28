@@ -706,7 +706,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateFromIdAsyncAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -734,36 +745,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateFromIdAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
-
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* DeviceInformation_CreateFromIdAsyncWithAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -786,6 +779,46 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateFromIdAsyncWithKindAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateFromIdAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateFromIdAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -829,7 +862,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateWatcherAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -846,7 +890,7 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0));
             }
@@ -856,7 +900,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateWatcherAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -884,7 +939,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateWatcherDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -892,20 +958,18 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateWatcher", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateWatcher", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2));
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0));
             }
             catch (...)
             {
@@ -913,7 +977,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateWatcherWithAqsFilterAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -936,6 +1011,46 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_CreateWatcherWithKindAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"CreateWatcher", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::CreateWatcher(param0, param1, param2));
             }
             catch (...)
             {
@@ -979,7 +1094,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_FindAllAsyncAqsFilter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -996,7 +1122,7 @@ namespace py::cpp::Windows::Devices::Enumeration
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0));
             }
@@ -1006,7 +1132,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_FindAllAsyncAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1034,7 +1171,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_FindAllAsyncDeviceClass(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1042,20 +1190,18 @@ namespace py::cpp::Windows::Devices::Enumeration
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"FindAllAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"FindAllAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceClass>(args, 0);
 
-                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2));
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0));
             }
             catch (...)
             {
@@ -1063,7 +1209,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_FindAllAsyncWithAqsFilterAdditionalPropertiesKindAndSettings(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1086,6 +1243,46 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param3 = py::convert_to<winrt::Windows::Devices::Enumeration::IDeviceEnumerationSettings>(args, 3);
 
                 return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformation_FindAllAsyncWithKindAqsFilterAndAdditionalProperties(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformation", L"FindAllAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::DeviceInformationKind>(args, 2);
+
+                return py::convert(winrt::Windows::Devices::Enumeration::DeviceInformation::FindAllAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -1523,8 +1720,21 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyMethodDef methods_DeviceInformation_Static[] = {
         { "create_from_id_async", reinterpret_cast<PyCFunction>(DeviceInformation_CreateFromIdAsync), METH_VARARGS, nullptr },
+        { "create_from_id_async_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_CreateFromIdAsyncAdditionalProperties), METH_VARARGS, nullptr },
+        { "create_from_id_async_with_additional_properties_kind_and_settings", reinterpret_cast<PyCFunction>(DeviceInformation_CreateFromIdAsyncWithAdditionalPropertiesKindAndSettings), METH_VARARGS, nullptr },
+        { "create_from_id_async_with_kind_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_CreateFromIdAsyncWithKindAndAdditionalProperties), METH_VARARGS, nullptr },
         { "create_watcher", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcher), METH_VARARGS, nullptr },
+        { "create_watcher_aqs_filter", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcherAqsFilter), METH_VARARGS, nullptr },
+        { "create_watcher_aqs_filter_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcherAqsFilterAndAdditionalProperties), METH_VARARGS, nullptr },
+        { "create_watcher_device_class", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcherDeviceClass), METH_VARARGS, nullptr },
+        { "create_watcher_with_aqs_filter_additional_properties_kind_and_settings", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcherWithAqsFilterAdditionalPropertiesKindAndSettings), METH_VARARGS, nullptr },
+        { "create_watcher_with_kind_aqs_filter_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_CreateWatcherWithKindAqsFilterAndAdditionalProperties), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsync), METH_VARARGS, nullptr },
+        { "find_all_async_aqs_filter", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncAqsFilter), METH_VARARGS, nullptr },
+        { "find_all_async_aqs_filter_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncAqsFilterAndAdditionalProperties), METH_VARARGS, nullptr },
+        { "find_all_async_device_class", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncDeviceClass), METH_VARARGS, nullptr },
+        { "find_all_async_with_aqs_filter_additional_properties_kind_and_settings", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncWithAqsFilterAdditionalPropertiesKindAndSettings), METH_VARARGS, nullptr },
+        { "find_all_async_with_kind_aqs_filter_and_additional_properties", reinterpret_cast<PyCFunction>(DeviceInformation_FindAllAsyncWithKindAqsFilterAndAdditionalProperties), METH_VARARGS, nullptr },
         { "get_aqs_filter_from_device_class", reinterpret_cast<PyCFunction>(DeviceInformation_GetAqsFilterFromDeviceClass), METH_VARARGS, nullptr },
         { }
     };
@@ -1997,35 +2207,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformationCustomPairing", L"PairAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 1);
-
-                return py::convert(self->obj.PairAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 3)
+    }
+
+    static PyObject* DeviceInformationCustomPairing_PairWithProtectionLevelAndSettingsAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2047,6 +2240,45 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param2 = py::convert_to<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>(args, 2);
 
                 return py::convert(self->obj.PairAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformationCustomPairing_PairWithProtectionLevelAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationCustomPairing* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformationCustomPairing", L"PairAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingKinds>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 1);
+
+                return py::convert(self->obj.PairAsync(param0, param1));
             }
             catch (...)
             {
@@ -2202,6 +2434,8 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DeviceInformationCustomPairing[] = {
         { "add_pairing_set_member", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_AddPairingSetMember), METH_VARARGS, nullptr },
         { "pair_async", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_PairAsync), METH_VARARGS, nullptr },
+        { "pair_with_protection_level_and_settings_async", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_PairWithProtectionLevelAndSettingsAsync), METH_VARARGS, nullptr },
+        { "pair_with_protection_level_async", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_PairWithProtectionLevelAsync), METH_VARARGS, nullptr },
         { "add_pairing_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_add_PairingRequested), METH_O, nullptr },
         { "remove_pairing_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_remove_PairingRequested), METH_O, nullptr },
         { "add_pairing_set_members_requested", reinterpret_cast<PyCFunction>(DeviceInformationCustomPairing_add_PairingSetMembersRequested), METH_O, nullptr },
@@ -2276,34 +2510,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformationPairing", L"PairAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 0);
-
-                return py::convert(self->obj.PairAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 2)
+    }
+
+    static PyObject* DeviceInformationPairing_PairWithProtectionLevelAndSettingsAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2324,6 +2542,44 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param1 = py::convert_to<winrt::Windows::Devices::Enumeration::IDevicePairingSettings>(args, 1);
 
                 return py::convert(self->obj.PairAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DeviceInformationPairing_PairWithProtectionLevelAsync(py::wrapper::Windows::Devices::Enumeration::DeviceInformationPairing* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DeviceInformationPairing", L"PairAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Enumeration::DevicePairingProtectionLevel>(args, 0);
+
+                return py::convert(self->obj.PairAsync(param0));
             }
             catch (...)
             {
@@ -2581,6 +2837,8 @@ namespace py::cpp::Windows::Devices::Enumeration
 
     static PyMethodDef _methods_DeviceInformationPairing[] = {
         { "pair_async", reinterpret_cast<PyCFunction>(DeviceInformationPairing_PairAsync), METH_VARARGS, nullptr },
+        { "pair_with_protection_level_and_settings_async", reinterpret_cast<PyCFunction>(DeviceInformationPairing_PairWithProtectionLevelAndSettingsAsync), METH_VARARGS, nullptr },
+        { "pair_with_protection_level_async", reinterpret_cast<PyCFunction>(DeviceInformationPairing_PairWithProtectionLevelAsync), METH_VARARGS, nullptr },
         { "unpair_async", reinterpret_cast<PyCFunction>(DeviceInformationPairing_UnpairAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DeviceInformationPairing, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DeviceInformationPairing), METH_O | METH_STATIC, nullptr },
@@ -2831,34 +3089,6 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DevicePairingRequestedEventArgs", L"Accept", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                self->obj.Accept(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2929,6 +3159,45 @@ namespace py::cpp::Windows::Devices::Enumeration
                 auto param0 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 0);
 
                 self->obj.AcceptWithPasswordCredential(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePairingRequestedEventArgs_AcceptWithPin(py::wrapper::Windows::Devices::Enumeration::DevicePairingRequestedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Enumeration.DevicePairingRequestedEventArgs", L"Accept", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                self->obj.Accept(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3086,6 +3355,7 @@ namespace py::cpp::Windows::Devices::Enumeration
         { "accept", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_Accept), METH_VARARGS, nullptr },
         { "accept_with_address", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_AcceptWithAddress), METH_VARARGS, nullptr },
         { "accept_with_password_credential", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_AcceptWithPasswordCredential), METH_VARARGS, nullptr },
+        { "accept_with_pin", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_AcceptWithPin), METH_VARARGS, nullptr },
         { "get_deferral", reinterpret_cast<PyCFunction>(DevicePairingRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DevicePairingRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DevicePairingRequestedEventArgs), METH_O | METH_STATIC, nullptr },
@@ -3488,7 +3758,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePicker_PickSingleDeviceAsyncWithPlacement(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3596,7 +3877,18 @@ namespace py::cpp::Windows::Devices::Enumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePicker_ShowWithPlacement(py::wrapper::Windows::Devices::Enumeration::DevicePicker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3908,8 +4200,10 @@ namespace py::cpp::Windows::Devices::Enumeration
     static PyMethodDef _methods_DevicePicker[] = {
         { "hide", reinterpret_cast<PyCFunction>(DevicePicker_Hide), METH_VARARGS, nullptr },
         { "pick_single_device_async", reinterpret_cast<PyCFunction>(DevicePicker_PickSingleDeviceAsync), METH_VARARGS, nullptr },
+        { "pick_single_device_async_with_placement", reinterpret_cast<PyCFunction>(DevicePicker_PickSingleDeviceAsyncWithPlacement), METH_VARARGS, nullptr },
         { "set_display_status", reinterpret_cast<PyCFunction>(DevicePicker_SetDisplayStatus), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(DevicePicker_Show), METH_VARARGS, nullptr },
+        { "show_with_placement", reinterpret_cast<PyCFunction>(DevicePicker_ShowWithPlacement), METH_VARARGS, nullptr },
         { "add_device_picker_dismissed", reinterpret_cast<PyCFunction>(DevicePicker_add_DevicePickerDismissed), METH_O, nullptr },
         { "remove_device_picker_dismissed", reinterpret_cast<PyCFunction>(DevicePicker_remove_DevicePickerDismissed), METH_O, nullptr },
         { "add_device_selected", reinterpret_cast<PyCFunction>(DevicePicker_add_DeviceSelected), METH_O, nullptr },

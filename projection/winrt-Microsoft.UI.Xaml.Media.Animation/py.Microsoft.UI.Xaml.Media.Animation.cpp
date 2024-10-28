@@ -7339,7 +7339,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ConnectedAnimation_TryStartWithCoordinatedElements(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7581,6 +7592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         { "cancel", reinterpret_cast<PyCFunction>(ConnectedAnimation_Cancel), METH_VARARGS, nullptr },
         { "set_animation_component", reinterpret_cast<PyCFunction>(ConnectedAnimation_SetAnimationComponent), METH_VARARGS, nullptr },
         { "try_start", reinterpret_cast<PyCFunction>(ConnectedAnimation_TryStart), METH_VARARGS, nullptr },
+        { "try_start_with_coordinated_elements", reinterpret_cast<PyCFunction>(ConnectedAnimation_TryStartWithCoordinatedElements), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(ConnectedAnimation_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(ConnectedAnimation_remove_Completed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ConnectedAnimation, METH_O | METH_STATIC, nullptr },

@@ -1162,7 +1162,18 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* HolographicCameraRenderingParameters_SetFocusPointWithNormal(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1192,7 +1203,18 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* HolographicCameraRenderingParameters_SetFocusPointWithNormalLinearVelocity(py::wrapper::Windows::Graphics::Holographic::HolographicCameraRenderingParameters* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1492,6 +1514,8 @@ namespace py::cpp::Windows::Graphics::Holographic
     static PyMethodDef _methods_HolographicCameraRenderingParameters[] = {
         { "commit_direct3_d11_depth_buffer", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer), METH_VARARGS, nullptr },
         { "set_focus_point", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPoint), METH_VARARGS, nullptr },
+        { "set_focus_point_with_normal", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPointWithNormal), METH_VARARGS, nullptr },
+        { "set_focus_point_with_normal_linear_velocity", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPointWithNormalLinearVelocity), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicCameraRenderingParameters, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_HolographicCameraRenderingParameters), METH_O | METH_STATIC, nullptr },
         { }
@@ -2119,7 +2143,18 @@ namespace py::cpp::Windows::Graphics::Holographic
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* HolographicFrame_PresentUsingCurrentPredictionWithBehavior(py::wrapper::Windows::Graphics::Holographic::HolographicFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2385,6 +2420,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "get_quad_layer_update_parameters", reinterpret_cast<PyCFunction>(HolographicFrame_GetQuadLayerUpdateParameters), METH_VARARGS, nullptr },
         { "get_rendering_parameters", reinterpret_cast<PyCFunction>(HolographicFrame_GetRenderingParameters), METH_VARARGS, nullptr },
         { "present_using_current_prediction", reinterpret_cast<PyCFunction>(HolographicFrame_PresentUsingCurrentPrediction), METH_VARARGS, nullptr },
+        { "present_using_current_prediction_with_behavior", reinterpret_cast<PyCFunction>(HolographicFrame_PresentUsingCurrentPredictionWithBehavior), METH_VARARGS, nullptr },
         { "update_current_prediction", reinterpret_cast<PyCFunction>(HolographicFrame_UpdateCurrentPrediction), METH_VARARGS, nullptr },
         { "wait_for_frame_to_finish", reinterpret_cast<PyCFunction>(HolographicFrame_WaitForFrameToFinish), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_HolographicFrame, METH_O | METH_STATIC, nullptr },

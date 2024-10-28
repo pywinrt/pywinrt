@@ -618,7 +618,18 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InstallationManager_AddPackagePreloadedAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -685,7 +696,18 @@ namespace py::cpp::Windows::Phone::Management::Deployment
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InstallationManager_FindPackagesByNamePublisher(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -899,7 +921,9 @@ namespace py::cpp::Windows::Phone::Management::Deployment
 
     static PyMethodDef methods_InstallationManager_Static[] = {
         { "add_package_async", reinterpret_cast<PyCFunction>(InstallationManager_AddPackageAsync), METH_VARARGS, nullptr },
+        { "add_package_preloaded_async", reinterpret_cast<PyCFunction>(InstallationManager_AddPackagePreloadedAsync), METH_VARARGS, nullptr },
         { "find_packages", reinterpret_cast<PyCFunction>(InstallationManager_FindPackages), METH_VARARGS, nullptr },
+        { "find_packages_by_name_publisher", reinterpret_cast<PyCFunction>(InstallationManager_FindPackagesByNamePublisher), METH_VARARGS, nullptr },
         { "find_packages_for_current_publisher", reinterpret_cast<PyCFunction>(InstallationManager_FindPackagesForCurrentPublisher), METH_VARARGS, nullptr },
         { "get_pending_package_installs", reinterpret_cast<PyCFunction>(InstallationManager_GetPendingPackageInstalls), METH_VARARGS, nullptr },
         { "register_package_async", reinterpret_cast<PyCFunction>(InstallationManager_RegisterPackageAsync), METH_VARARGS, nullptr },

@@ -944,7 +944,18 @@ namespace py::cpp::Windows::Devices::Spi
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpiDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1273,6 +1284,7 @@ namespace py::cpp::Windows::Devices::Spi
         { "from_id_async", reinterpret_cast<PyCFunction>(SpiDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_bus_info", reinterpret_cast<PyCFunction>(SpiDevice_GetBusInfo), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(SpiDevice_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1416,7 +1428,18 @@ namespace py::cpp::Windows::Devices::Spi
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::Spi::ISpiDeviceStatics* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1478,6 +1501,7 @@ namespace py::cpp::Windows::Devices::Spi
         { "from_id_async", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_bus_info", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetBusInfo), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(ISpiDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ISpiDeviceStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ISpiDeviceStatics), METH_O | METH_STATIC, nullptr },
         { }

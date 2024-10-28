@@ -2023,7 +2023,18 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusManager_FindNextElementWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2089,7 +2100,18 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusManager_FindNextFocusableElementWithHint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2257,34 +2279,6 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Input.FocusManager", L"TryMoveFocus", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Input::FindNextElementOptions>(args, 1);
-
-                return py::convert(winrt::Windows::UI::Xaml::Input::FocusManager::TryMoveFocus(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2323,7 +2317,57 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusManager_TryMoveFocusWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Input.FocusManager", L"TryMoveFocus", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::FocusNavigationDirection>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Input::FindNextElementOptions>(args, 1);
+
+                return py::convert(winrt::Windows::UI::Xaml::Input::FocusManager::TryMoveFocus(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusManager_TryMoveFocusWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2643,11 +2687,15 @@ namespace py::cpp::Windows::UI::Xaml::Input
         { "find_first_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindFirstFocusableElement), METH_VARARGS, nullptr },
         { "find_last_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindLastFocusableElement), METH_VARARGS, nullptr },
         { "find_next_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextElement), METH_VARARGS, nullptr },
+        { "find_next_element_with_options", reinterpret_cast<PyCFunction>(FocusManager_FindNextElementWithOptions), METH_VARARGS, nullptr },
         { "find_next_focusable_element", reinterpret_cast<PyCFunction>(FocusManager_FindNextFocusableElement), METH_VARARGS, nullptr },
+        { "find_next_focusable_element_with_hint", reinterpret_cast<PyCFunction>(FocusManager_FindNextFocusableElementWithHint), METH_VARARGS, nullptr },
         { "get_focused_element", reinterpret_cast<PyCFunction>(FocusManager_GetFocusedElement), METH_VARARGS, nullptr },
         { "try_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryFocusAsync), METH_VARARGS, nullptr },
         { "try_move_focus", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocus), METH_VARARGS, nullptr },
         { "try_move_focus_async", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusAsync), METH_VARARGS, nullptr },
+        { "try_move_focus_with_options", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusWithOptions), METH_VARARGS, nullptr },
+        { "try_move_focus_with_options_async", reinterpret_cast<PyCFunction>(FocusManager_TryMoveFocusWithOptionsAsync), METH_VARARGS, nullptr },
         { "add_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GettingFocus), METH_O, nullptr },
         { "remove_getting_focus", reinterpret_cast<PyCFunction>(FocusManager_remove_GettingFocus), METH_O, nullptr },
         { "add_got_focus", reinterpret_cast<PyCFunction>(FocusManager_add_GotFocus), METH_O, nullptr },

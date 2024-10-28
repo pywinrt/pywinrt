@@ -387,7 +387,18 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusSessionManager_TryStartFocusSession2(py::wrapper::Windows::UI::Shell::FocusSessionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -558,6 +569,7 @@ namespace py::cpp::Windows::UI::Shell
         { "deactivate_focus", reinterpret_cast<PyCFunction>(FocusSessionManager_DeactivateFocus), METH_VARARGS, nullptr },
         { "get_session", reinterpret_cast<PyCFunction>(FocusSessionManager_GetSession), METH_VARARGS, nullptr },
         { "try_start_focus_session", reinterpret_cast<PyCFunction>(FocusSessionManager_TryStartFocusSession), METH_VARARGS, nullptr },
+        { "try_start_focus_session2", reinterpret_cast<PyCFunction>(FocusSessionManager_TryStartFocusSession2), METH_VARARGS, nullptr },
         { "add_is_focus_active_changed", reinterpret_cast<PyCFunction>(FocusSessionManager_add_IsFocusActiveChanged), METH_O, nullptr },
         { "remove_is_focus_active_changed", reinterpret_cast<PyCFunction>(FocusSessionManager_remove_IsFocusActiveChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_FocusSessionManager, METH_O | METH_STATIC, nullptr },
@@ -3326,7 +3338,18 @@ namespace py::cpp::Windows::UI::Shell
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WindowTabIcon_CreateFromFontGlyphWithUri(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3455,6 +3478,7 @@ namespace py::cpp::Windows::UI::Shell
 
     static PyMethodDef methods_WindowTabIcon_Static[] = {
         { "create_from_font_glyph", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromFontGlyph), METH_VARARGS, nullptr },
+        { "create_from_font_glyph_with_uri", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromFontGlyphWithUri), METH_VARARGS, nullptr },
         { "create_from_image", reinterpret_cast<PyCFunction>(WindowTabIcon_CreateFromImage), METH_VARARGS, nullptr },
         { }
     };

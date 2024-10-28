@@ -982,35 +982,6 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-
-                return py::convert(winrt::Windows::Services::Maps::MapLocationFinder::FindLocationsAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1049,7 +1020,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapLocationFinder_FindLocationsAtWithAccuracyAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1070,6 +1052,46 @@ namespace py::cpp::Windows::Services::Maps
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapLocationDesiredAccuracy>(args, 1);
 
                 return py::convert(winrt::Windows::Services::Maps::MapLocationFinder::FindLocationsAtAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapLocationFinder_FindLocationsWithMaxCountAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapLocationFinder", L"FindLocationsAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                return py::convert(winrt::Windows::Services::Maps::MapLocationFinder::FindLocationsAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -1113,6 +1135,8 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef methods_MapLocationFinder_Static[] = {
         { "find_locations_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAsync), METH_VARARGS, nullptr },
         { "find_locations_at_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAtAsync), METH_VARARGS, nullptr },
+        { "find_locations_at_with_accuracy_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsAtWithAccuracyAsync), METH_VARARGS, nullptr },
+        { "find_locations_with_max_count_async", reinterpret_cast<PyCFunction>(MapLocationFinder_FindLocationsWithMaxCountAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2187,96 +2211,6 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteDrivingOptions>(args, 2);
-
-                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 3);
-
-                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 3);
-                auto param4 = py::convert_to<double>(args, 4);
-
-                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2, param3, param4));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2315,7 +2249,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteFromEnhancedWaypointsWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2336,6 +2281,45 @@ namespace py::cpp::Windows::Services::Maps
                 auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteDrivingOptions>(args, 1);
 
                 return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromEnhancedWaypointsAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsAndOptimizationAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 1);
+
+                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param0, param1));
             }
             catch (...)
             {
@@ -2381,35 +2365,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteFromWaypointsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::Geolocation::Geopoint>>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 1);
-
-                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 3)
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationAndRestrictionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2438,7 +2405,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationRestrictionsAndHeadingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2461,6 +2439,169 @@ namespace py::cpp::Windows::Services::Maps
                 auto param3 = py::convert_to<double>(args, 3);
 
                 return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteFromWaypointsAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationAndRestrictionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 3);
+
+                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
+
+                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteWithOptimizationRestrictionsAndHeadingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteOptimization>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Services::Maps::MapRouteRestrictions>(args, 3);
+                auto param4 = py::convert_to<double>(args, 4);
+
+                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapRouteFinder_GetDrivingRouteWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.MapRouteFinder", L"GetDrivingRouteAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Services::Maps::MapRouteDrivingOptions>(args, 2);
+
+                return py::convert(winrt::Windows::Services::Maps::MapRouteFinder::GetDrivingRouteAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -2581,7 +2722,15 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef methods_MapRouteFinder_Static[] = {
         { "get_driving_route_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteAsync), METH_VARARGS, nullptr },
         { "get_driving_route_from_enhanced_waypoints_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromEnhancedWaypointsAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_from_enhanced_waypoints_with_options_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromEnhancedWaypointsWithOptionsAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_from_waypoints_and_optimization_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromWaypointsAndOptimizationAsync), METH_VARARGS, nullptr },
         { "get_driving_route_from_waypoints_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromWaypointsAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_from_waypoints_optimization_and_restrictions_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationAndRestrictionsAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_from_waypoints_optimization_restrictions_and_heading_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteFromWaypointsOptimizationRestrictionsAndHeadingAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_with_optimization_and_restrictions_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteWithOptimizationAndRestrictionsAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_with_optimization_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteWithOptimizationAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_with_optimization_restrictions_and_heading_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteWithOptimizationRestrictionsAndHeadingAsync), METH_VARARGS, nullptr },
+        { "get_driving_route_with_options_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetDrivingRouteWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_walking_route_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetWalkingRouteAsync), METH_VARARGS, nullptr },
         { "get_walking_route_from_waypoints_async", reinterpret_cast<PyCFunction>(MapRouteFinder_GetWalkingRouteFromWaypointsAsync), METH_VARARGS, nullptr },
         { }
@@ -3624,34 +3773,6 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>(args, 1);
-
-                return py::convert(winrt::Windows::Services::Maps::PlaceInfo::Create(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3690,7 +3811,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PlaceInfo_CreateFromAddressWithName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3756,7 +3888,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PlaceInfo_CreateFromIdentifierWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3830,6 +3973,45 @@ namespace py::cpp::Windows::Services::Maps
         }
     }
 
+    static PyObject* PlaceInfo_CreateWithGeopointAndOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Maps.PlaceInfo", L"Create", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Services::Maps::PlaceInfoCreateOptions>(args, 1);
+
+                return py::convert(winrt::Windows::Services::Maps::PlaceInfo::Create(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* PlaceInfo_Show(py::wrapper::Windows::Services::Maps::PlaceInfo* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3862,7 +4044,18 @@ namespace py::cpp::Windows::Services::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PlaceInfo_ShowWithPreferredPlacement(py::wrapper::Windows::Services::Maps::PlaceInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4054,6 +4247,7 @@ namespace py::cpp::Windows::Services::Maps
 
     static PyMethodDef _methods_PlaceInfo[] = {
         { "show", reinterpret_cast<PyCFunction>(PlaceInfo_Show), METH_VARARGS, nullptr },
+        { "show_with_preferred_placement", reinterpret_cast<PyCFunction>(PlaceInfo_ShowWithPreferredPlacement), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PlaceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PlaceInfo), METH_O | METH_STATIC, nullptr },
         { }
@@ -4090,8 +4284,11 @@ namespace py::cpp::Windows::Services::Maps
     static PyMethodDef methods_PlaceInfo_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(PlaceInfo_Create), METH_VARARGS, nullptr },
         { "create_from_address", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromAddress), METH_VARARGS, nullptr },
+        { "create_from_address_with_name", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromAddressWithName), METH_VARARGS, nullptr },
         { "create_from_identifier", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromIdentifier), METH_VARARGS, nullptr },
+        { "create_from_identifier_with_options", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromIdentifierWithOptions), METH_VARARGS, nullptr },
         { "create_from_map_location", reinterpret_cast<PyCFunction>(PlaceInfo_CreateFromMapLocation), METH_VARARGS, nullptr },
+        { "create_with_geopoint_and_options", reinterpret_cast<PyCFunction>(PlaceInfo_CreateWithGeopointAndOptions), METH_VARARGS, nullptr },
         { }
     };
 

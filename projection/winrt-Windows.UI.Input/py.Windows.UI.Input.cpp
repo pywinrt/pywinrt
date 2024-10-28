@@ -6416,7 +6416,18 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerPoint_GetCurrentPointTransformed(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6482,7 +6493,18 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointerPoint_GetIntermediatePointsTransformed(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6842,7 +6864,9 @@ namespace py::cpp::Windows::UI::Input
 
     static PyMethodDef methods_PointerPoint_Static[] = {
         { "get_current_point", reinterpret_cast<PyCFunction>(PointerPoint_GetCurrentPoint), METH_VARARGS, nullptr },
+        { "get_current_point_transformed", reinterpret_cast<PyCFunction>(PointerPoint_GetCurrentPointTransformed), METH_VARARGS, nullptr },
         { "get_intermediate_points", reinterpret_cast<PyCFunction>(PointerPoint_GetIntermediatePoints), METH_VARARGS, nullptr },
+        { "get_intermediate_points_transformed", reinterpret_cast<PyCFunction>(PointerPoint_GetIntermediatePointsTransformed), METH_VARARGS, nullptr },
         { }
     };
 
@@ -10227,7 +10251,18 @@ namespace py::cpp::Windows::UI::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RadialControllerMenuItem_CreateFromFontGlyphWithUri(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -10545,6 +10580,7 @@ namespace py::cpp::Windows::UI::Input
 
     static PyMethodDef methods_RadialControllerMenuItem_Static[] = {
         { "create_from_font_glyph", reinterpret_cast<PyCFunction>(RadialControllerMenuItem_CreateFromFontGlyph), METH_VARARGS, nullptr },
+        { "create_from_font_glyph_with_uri", reinterpret_cast<PyCFunction>(RadialControllerMenuItem_CreateFromFontGlyphWithUri), METH_VARARGS, nullptr },
         { "create_from_icon", reinterpret_cast<PyCFunction>(RadialControllerMenuItem_CreateFromIcon), METH_VARARGS, nullptr },
         { "create_from_known_icon", reinterpret_cast<PyCFunction>(RadialControllerMenuItem_CreateFromKnownIcon), METH_VARARGS, nullptr },
         { }

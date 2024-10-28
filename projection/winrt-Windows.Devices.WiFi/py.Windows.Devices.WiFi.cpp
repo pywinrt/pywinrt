@@ -53,7 +53,18 @@ namespace py::cpp::Windows::Devices::WiFi
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -61,20 +72,22 @@ namespace py::cpp::Windows::Devices::WiFi
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 5);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(5);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiConnectionMethod>(args, 4);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1, param2));
+                return py::convert(self->obj.ConnectAsync(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -82,7 +95,18 @@ namespace py::cpp::Windows::Devices::WiFi
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAndSsidAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -112,7 +136,18 @@ namespace py::cpp::Windows::Devices::WiFi
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WiFiAdapter_ConnectWithPasswordCredentialAsync(py::wrapper::Windows::Devices::WiFi::WiFiAdapter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -120,22 +155,20 @@ namespace py::cpp::Windows::Devices::WiFi
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 5);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.WiFi.WiFiAdapter", L"ConnectAsync", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(5);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiAvailableNetwork>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiReconnectionKind>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Security::Credentials::PasswordCredential>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::Devices::WiFi::WiFiConnectionMethod>(args, 4);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1, param2, param3, param4));
+                return py::convert(self->obj.ConnectAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -542,6 +575,9 @@ namespace py::cpp::Windows::Devices::WiFi
 
     static PyMethodDef _methods_WiFiAdapter[] = {
         { "connect_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ConnectAsync), METH_VARARGS, nullptr },
+        { "connect_with_password_credential_and_ssid_and_connection_method_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync), METH_VARARGS, nullptr },
+        { "connect_with_password_credential_and_ssid_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ConnectWithPasswordCredentialAndSsidAsync), METH_VARARGS, nullptr },
+        { "connect_with_password_credential_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ConnectWithPasswordCredentialAsync), METH_VARARGS, nullptr },
         { "disconnect", reinterpret_cast<PyCFunction>(WiFiAdapter_Disconnect), METH_VARARGS, nullptr },
         { "get_wps_configuration_async", reinterpret_cast<PyCFunction>(WiFiAdapter_GetWpsConfigurationAsync), METH_VARARGS, nullptr },
         { "scan_async", reinterpret_cast<PyCFunction>(WiFiAdapter_ScanAsync), METH_VARARGS, nullptr },

@@ -345,7 +345,18 @@ namespace py::cpp::Windows::Media::SpeechRecognition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpeechContinuousRecognitionSession_StartWithModeAsync(py::wrapper::Windows::Media::SpeechRecognition::SpeechContinuousRecognitionSession* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -619,6 +630,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { "pause_async", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_PauseAsync), METH_VARARGS, nullptr },
         { "resume", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_Resume), METH_VARARGS, nullptr },
         { "start_async", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_StartAsync), METH_VARARGS, nullptr },
+        { "start_with_mode_async", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_StartWithModeAsync), METH_VARARGS, nullptr },
         { "stop_async", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_StopAsync), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(SpeechContinuousRecognitionSession_remove_Completed), METH_O, nullptr },

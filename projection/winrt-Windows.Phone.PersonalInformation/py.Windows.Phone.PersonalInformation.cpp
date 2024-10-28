@@ -792,7 +792,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactInformation_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::ContactInformation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1186,6 +1197,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { "get_properties_async", reinterpret_cast<PyCFunction>(ContactInformation_GetPropertiesAsync), METH_VARARGS, nullptr },
         { "set_display_picture_async", reinterpret_cast<PyCFunction>(ContactInformation_SetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "to_vcard_async", reinterpret_cast<PyCFunction>(ContactInformation_ToVcardAsync), METH_VARARGS, nullptr },
+        { "to_vcard_with_options_async", reinterpret_cast<PyCFunction>(ContactInformation_ToVcardWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactInformation), METH_O | METH_STATIC, nullptr },
         { }
@@ -1501,7 +1513,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactQueryResult_GetContactsAsyncInRange(py::wrapper::Windows::Phone::PersonalInformation::ContactQueryResult* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1599,6 +1622,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     static PyMethodDef _methods_ContactQueryResult[] = {
         { "get_contact_count_async", reinterpret_cast<PyCFunction>(ContactQueryResult_GetContactCountAsync), METH_VARARGS, nullptr },
         { "get_contacts_async", reinterpret_cast<PyCFunction>(ContactQueryResult_GetContactsAsync), METH_VARARGS, nullptr },
+        { "get_contacts_async_in_range", reinterpret_cast<PyCFunction>(ContactQueryResult_GetContactsAsyncInRange), METH_VARARGS, nullptr },
         { "get_current_query_options", reinterpret_cast<PyCFunction>(ContactQueryResult_GetCurrentQueryOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContactQueryResult, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContactQueryResult), METH_O | METH_STATIC, nullptr },
@@ -1641,7 +1665,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         Py_DECREF(tp);
     }
 
-    static PyObject* ContactStore_CreateContactQuery(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
+    static PyObject* ContactStore_CreateContactQueryDefault(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1670,7 +1694,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactStore_CreateContactQueryWithOptions(py::wrapper::Windows::Phone::PersonalInformation::ContactStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1771,7 +1806,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContactStore_CreateOrOpenWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2119,7 +2165,8 @@ namespace py::cpp::Windows::Phone::PersonalInformation
     }
 
     static PyMethodDef _methods_ContactStore[] = {
-        { "create_contact_query", reinterpret_cast<PyCFunction>(ContactStore_CreateContactQuery), METH_VARARGS, nullptr },
+        { "create_contact_query_default", reinterpret_cast<PyCFunction>(ContactStore_CreateContactQueryDefault), METH_VARARGS, nullptr },
+        { "create_contact_query_with_options", reinterpret_cast<PyCFunction>(ContactStore_CreateContactQueryWithOptions), METH_VARARGS, nullptr },
         { "create_me_contact_async", reinterpret_cast<PyCFunction>(ContactStore_CreateMeContactAsync), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(ContactStore_DeleteAsync), METH_VARARGS, nullptr },
         { "delete_contact_async", reinterpret_cast<PyCFunction>(ContactStore_DeleteContactAsync), METH_VARARGS, nullptr },
@@ -2159,6 +2206,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
 
     static PyMethodDef methods_ContactStore_Static[] = {
         { "create_or_open_async", reinterpret_cast<PyCFunction>(ContactStore_CreateOrOpenAsync), METH_VARARGS, nullptr },
+        { "create_or_open_with_options_async", reinterpret_cast<PyCFunction>(ContactStore_CreateOrOpenWithOptionsAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3486,7 +3534,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoredContact_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::StoredContact* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4057,6 +4116,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { "save_async", reinterpret_cast<PyCFunction>(StoredContact_SaveAsync), METH_VARARGS, nullptr },
         { "set_display_picture_async", reinterpret_cast<PyCFunction>(StoredContact_SetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "to_vcard_async", reinterpret_cast<PyCFunction>(StoredContact_ToVcardAsync), METH_VARARGS, nullptr },
+        { "to_vcard_with_options_async", reinterpret_cast<PyCFunction>(StoredContact_ToVcardWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StoredContact, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StoredContact), METH_O | METH_STATIC, nullptr },
         { }
@@ -4247,7 +4307,18 @@ namespace py::cpp::Windows::Phone::PersonalInformation
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IContactInformation_ToVcardWithOptionsAsync(py::wrapper::Windows::Phone::PersonalInformation::IContactInformation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4641,6 +4712,7 @@ namespace py::cpp::Windows::Phone::PersonalInformation
         { "get_properties_async", reinterpret_cast<PyCFunction>(IContactInformation_GetPropertiesAsync), METH_VARARGS, nullptr },
         { "set_display_picture_async", reinterpret_cast<PyCFunction>(IContactInformation_SetDisplayPictureAsync), METH_VARARGS, nullptr },
         { "to_vcard_async", reinterpret_cast<PyCFunction>(IContactInformation_ToVcardAsync), METH_VARARGS, nullptr },
+        { "to_vcard_with_options_async", reinterpret_cast<PyCFunction>(IContactInformation_ToVcardWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IContactInformation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IContactInformation), METH_O | METH_STATIC, nullptr },
         { }

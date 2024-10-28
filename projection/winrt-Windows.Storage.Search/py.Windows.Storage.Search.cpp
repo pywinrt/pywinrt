@@ -91,7 +91,18 @@ namespace py::cpp::Windows::Storage::Search
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIndexer_CreateQueryWithSortOrder(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -120,7 +131,18 @@ namespace py::cpp::Windows::Storage::Search
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIndexer_CreateQueryWithSortOrderAndLanguage(py::wrapper::Windows::Storage::Search::ContentIndexer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -298,7 +320,18 @@ namespace py::cpp::Windows::Storage::Search
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIndexer_GetIndexerWithName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -462,6 +495,8 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_ContentIndexer[] = {
         { "add_async", reinterpret_cast<PyCFunction>(ContentIndexer_AddAsync), METH_VARARGS, nullptr },
         { "create_query", reinterpret_cast<PyCFunction>(ContentIndexer_CreateQuery), METH_VARARGS, nullptr },
+        { "create_query_with_sort_order", reinterpret_cast<PyCFunction>(ContentIndexer_CreateQueryWithSortOrder), METH_VARARGS, nullptr },
+        { "create_query_with_sort_order_and_language", reinterpret_cast<PyCFunction>(ContentIndexer_CreateQueryWithSortOrderAndLanguage), METH_VARARGS, nullptr },
         { "delete_all_async", reinterpret_cast<PyCFunction>(ContentIndexer_DeleteAllAsync), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(ContentIndexer_DeleteAsync), METH_VARARGS, nullptr },
         { "delete_multiple_async", reinterpret_cast<PyCFunction>(ContentIndexer_DeleteMultipleAsync), METH_VARARGS, nullptr },
@@ -498,6 +533,7 @@ namespace py::cpp::Windows::Storage::Search
 
     static PyMethodDef methods_ContentIndexer_Static[] = {
         { "get_indexer", reinterpret_cast<PyCFunction>(ContentIndexer_GetIndexer), METH_VARARGS, nullptr },
+        { "get_indexer_with_name", reinterpret_cast<PyCFunction>(ContentIndexer_GetIndexerWithName), METH_VARARGS, nullptr },
         { }
     };
 
@@ -557,34 +593,6 @@ namespace py::cpp::Windows::Storage::Search
                 }
 
                 return py::convert(self->obj.GetAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<uint32_t>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert(self->obj.GetAsync(param0, param1));
             }
             catch (...)
             {
@@ -664,7 +672,18 @@ namespace py::cpp::Windows::Storage::Search
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIndexerQuery_GetPropertiesRangeAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -685,6 +704,45 @@ namespace py::cpp::Windows::Storage::Search
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert(self->obj.GetPropertiesAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContentIndexerQuery_GetRangeAsync(py::wrapper::Windows::Storage::Search::ContentIndexerQuery* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.ContentIndexerQuery", L"GetAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert(self->obj.GetAsync(param0, param1));
             }
             catch (...)
             {
@@ -753,6 +811,8 @@ namespace py::cpp::Windows::Storage::Search
         { "get_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetAsync), METH_VARARGS, nullptr },
         { "get_count_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetCountAsync), METH_VARARGS, nullptr },
         { "get_properties_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetPropertiesAsync), METH_VARARGS, nullptr },
+        { "get_properties_range_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetPropertiesRangeAsync), METH_VARARGS, nullptr },
+        { "get_range_async", reinterpret_cast<PyCFunction>(ContentIndexerQuery_GetRangeAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ContentIndexerQuery, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ContentIndexerQuery), METH_O | METH_STATIC, nullptr },
         { }
@@ -2639,32 +2699,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetFilesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.GetFilesAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -2685,6 +2720,42 @@ namespace py::cpp::Windows::Storage::Search
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert(self->obj.GetFilesAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFileQueryResult_GetFilesAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageFileQueryResult* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFileQueryResult", L"GetFilesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetFilesAsync());
             }
             catch (...)
             {
@@ -2942,6 +3013,7 @@ namespace py::cpp::Windows::Storage::Search
         { "find_start_index_async", reinterpret_cast<PyCFunction>(StorageFileQueryResult_FindStartIndexAsync), METH_VARARGS, nullptr },
         { "get_current_query_options", reinterpret_cast<PyCFunction>(StorageFileQueryResult_GetCurrentQueryOptions), METH_VARARGS, nullptr },
         { "get_files_async", reinterpret_cast<PyCFunction>(StorageFileQueryResult_GetFilesAsync), METH_VARARGS, nullptr },
+        { "get_files_async_default_start_and_count", reinterpret_cast<PyCFunction>(StorageFileQueryResult_GetFilesAsyncDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_item_count_async", reinterpret_cast<PyCFunction>(StorageFileQueryResult_GetItemCountAsync), METH_VARARGS, nullptr },
         { "get_matching_properties_with_ranges", reinterpret_cast<PyCFunction>(StorageFileQueryResult_GetMatchingPropertiesWithRanges), METH_VARARGS, nullptr },
         { "add_contents_changed", reinterpret_cast<PyCFunction>(StorageFileQueryResult_add_ContentsChanged), METH_O, nullptr },
@@ -3107,32 +3179,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetFoldersAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.GetFoldersAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -3153,6 +3200,42 @@ namespace py::cpp::Windows::Storage::Search
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert(self->obj.GetFoldersAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolderQueryResult_GetFoldersAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageFolderQueryResult* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageFolderQueryResult", L"GetFoldersAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetFoldersAsync());
             }
             catch (...)
             {
@@ -3372,6 +3455,7 @@ namespace py::cpp::Windows::Storage::Search
         { "find_start_index_async", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_FindStartIndexAsync), METH_VARARGS, nullptr },
         { "get_current_query_options", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_GetCurrentQueryOptions), METH_VARARGS, nullptr },
         { "get_folders_async", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_GetFoldersAsync), METH_VARARGS, nullptr },
+        { "get_folders_async_default_start_and_count", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_GetFoldersAsyncDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_item_count_async", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_GetItemCountAsync), METH_VARARGS, nullptr },
         { "add_contents_changed", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_add_ContentsChanged), METH_O, nullptr },
         { "remove_contents_changed", reinterpret_cast<PyCFunction>(StorageFolderQueryResult_remove_ContentsChanged), METH_O, nullptr },
@@ -3572,32 +3656,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.GetItemsAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -3618,6 +3677,42 @@ namespace py::cpp::Windows::Storage::Search
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert(self->obj.GetItemsAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageItemQueryResult_GetItemsAsyncDefaultStartAndCount(py::wrapper::Windows::Storage::Search::StorageItemQueryResult* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.StorageItemQueryResult", L"GetItemsAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetItemsAsync());
             }
             catch (...)
             {
@@ -3802,6 +3897,7 @@ namespace py::cpp::Windows::Storage::Search
         { "get_current_query_options", reinterpret_cast<PyCFunction>(StorageItemQueryResult_GetCurrentQueryOptions), METH_VARARGS, nullptr },
         { "get_item_count_async", reinterpret_cast<PyCFunction>(StorageItemQueryResult_GetItemCountAsync), METH_VARARGS, nullptr },
         { "get_items_async", reinterpret_cast<PyCFunction>(StorageItemQueryResult_GetItemsAsync), METH_VARARGS, nullptr },
+        { "get_items_async_default_start_and_count", reinterpret_cast<PyCFunction>(StorageItemQueryResult_GetItemsAsyncDefaultStartAndCount), METH_VARARGS, nullptr },
         { "add_contents_changed", reinterpret_cast<PyCFunction>(StorageItemQueryResult_add_ContentsChanged), METH_O, nullptr },
         { "remove_contents_changed", reinterpret_cast<PyCFunction>(StorageItemQueryResult_remove_ContentsChanged), METH_O, nullptr },
         { "add_options_changed", reinterpret_cast<PyCFunction>(StorageItemQueryResult_add_OptionsChanged), METH_O, nullptr },
@@ -4633,32 +4729,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFileQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.CreateFileQuery());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -4678,6 +4749,42 @@ namespace py::cpp::Windows::Storage::Search
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert(self->obj.CreateFileQuery(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolderQueryOperations_CreateFileQueryOverloadDefault(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFileQuery", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CreateFileQuery());
             }
             catch (...)
             {
@@ -4734,32 +4841,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFolderQuery", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.CreateFolderQuery());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -4779,6 +4861,42 @@ namespace py::cpp::Windows::Storage::Search
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert(self->obj.CreateFolderQuery(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolderQueryOperations_CreateFolderQueryOverloadDefault(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"CreateFolderQuery", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CreateFolderQuery());
             }
             catch (...)
             {
@@ -4909,34 +5027,7 @@ namespace py::cpp::Windows::Storage::Search
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFilesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
-
-                return py::convert(self->obj.GetFilesAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -4972,7 +5063,85 @@ namespace py::cpp::Windows::Storage::Search
         }
     }
 
+    static PyObject* IStorageFolderQueryOperations_GetFilesAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFilesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
+
+                return py::convert(self->obj.GetFilesAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IStorageFolderQueryOperations_GetFoldersAsync(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFoldersAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                return py::convert(self->obj.GetFoldersAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolderQueryOperations_GetFoldersAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::Search::IStorageFolderQueryOperations* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -4996,35 +5165,6 @@ namespace py::cpp::Windows::Storage::Search
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert(self->obj.GetFoldersAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.Search.IStorageFolderQueryOperations", L"GetFoldersAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-
-                return py::convert(self->obj.GetFoldersAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -5217,13 +5357,17 @@ namespace py::cpp::Windows::Storage::Search
     static PyMethodDef _methods_IStorageFolderQueryOperations[] = {
         { "are_query_options_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_AreQueryOptionsSupported), METH_VARARGS, nullptr },
         { "create_file_query", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFileQuery), METH_VARARGS, nullptr },
+        { "create_file_query_overload_default", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFileQueryOverloadDefault), METH_VARARGS, nullptr },
         { "create_file_query_with_options", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFileQueryWithOptions), METH_VARARGS, nullptr },
         { "create_folder_query", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFolderQuery), METH_VARARGS, nullptr },
+        { "create_folder_query_overload_default", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFolderQueryOverloadDefault), METH_VARARGS, nullptr },
         { "create_folder_query_with_options", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateFolderQueryWithOptions), METH_VARARGS, nullptr },
         { "create_item_query", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateItemQuery), METH_VARARGS, nullptr },
         { "create_item_query_with_options", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_CreateItemQueryWithOptions), METH_VARARGS, nullptr },
         { "get_files_async", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetFilesAsync), METH_VARARGS, nullptr },
+        { "get_files_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetFilesAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_folders_async", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetFoldersAsync), METH_VARARGS, nullptr },
+        { "get_folders_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetFoldersAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_indexed_state_async", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetIndexedStateAsync), METH_VARARGS, nullptr },
         { "get_items_async", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_GetItemsAsync), METH_VARARGS, nullptr },
         { "is_common_file_query_supported", reinterpret_cast<PyCFunction>(IStorageFolderQueryOperations_IsCommonFileQuerySupported), METH_VARARGS, nullptr },

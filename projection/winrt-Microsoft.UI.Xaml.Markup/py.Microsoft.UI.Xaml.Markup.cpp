@@ -2801,6 +2801,44 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         }
     }
 
+    static PyObject* IXamlMetadataProvider_GetXamlTypeByFullName(py::wrapper::Microsoft::UI::Xaml::Markup::IXamlMetadataProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Markup.IXamlMetadataProvider", L"GetXamlType", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.GetXamlType(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IXamlMetadataProvider_GetXmlnsDefinitions(py::wrapper::Microsoft::UI::Xaml::Markup::IXamlMetadataProvider* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2863,6 +2901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
 
     static PyMethodDef _methods_IXamlMetadataProvider[] = {
         { "get_xaml_type", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXamlType), METH_VARARGS, nullptr },
+        { "get_xaml_type_by_full_name", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXamlTypeByFullName), METH_VARARGS, nullptr },
         { "get_xmlns_definitions", reinterpret_cast<PyCFunction>(IXamlMetadataProvider_GetXmlnsDefinitions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IXamlMetadataProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IXamlMetadataProvider), METH_O | METH_STATIC, nullptr },

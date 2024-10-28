@@ -45,134 +45,6 @@ namespace py::cpp::Windows::Security::Authentication::Web
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAndContinue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-
-                winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAndContinue(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAndContinue", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 3);
-
-                winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAndContinue(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* WebAuthenticationBroker_AuthenticateAsync(PyObject* /*unused*/, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-
-                return py::convert(winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
-
-                return py::convert(winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -211,7 +83,18 @@ namespace py::cpp::Windows::Security::Authentication::Web
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationBroker_AuthenticateSilentlyWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -232,6 +115,167 @@ namespace py::cpp::Windows::Security::Authentication::Web
                 auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 1);
 
                 return py::convert(winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateSilentlyAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriAndContinue(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAndContinue", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+
+                winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAndContinue(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 2);
+
+                return py::convert(winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationBroker_AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAndContinue", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 3);
+
+                winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAndContinue(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WebAuthenticationBroker_AuthenticateWithoutCallbackUriAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Web.WebAuthenticationBroker", L"AuthenticateAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Web::WebAuthenticationOptions>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+
+                return py::convert(winrt::Windows::Security::Authentication::Web::WebAuthenticationBroker::AuthenticateAsync(param0, param1));
             }
             catch (...)
             {
@@ -310,8 +354,12 @@ namespace py::cpp::Windows::Security::Authentication::Web
 
     static PyMethodDef methods_WebAuthenticationBroker_Static[] = {
         { "authenticate_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAndContinue), METH_VARARGS, nullptr },
-        { "authenticate_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateAsync), METH_VARARGS, nullptr },
         { "authenticate_silently_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateSilentlyAsync), METH_VARARGS, nullptr },
+        { "authenticate_silently_with_options_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateSilentlyWithOptionsAsync), METH_VARARGS, nullptr },
+        { "authenticate_with_callback_uri_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithCallbackUriAndContinue), METH_VARARGS, nullptr },
+        { "authenticate_with_callback_uri_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithCallbackUriAsync), METH_VARARGS, nullptr },
+        { "authenticate_with_callback_uri_continuation_data_and_options_and_continue", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithCallbackUriContinuationDataAndOptionsAndContinue), METH_VARARGS, nullptr },
+        { "authenticate_without_callback_uri_async", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_AuthenticateWithoutCallbackUriAsync), METH_VARARGS, nullptr },
         { "get_current_application_callback_uri", reinterpret_cast<PyCFunction>(WebAuthenticationBroker_GetCurrentApplicationCallbackUri), METH_VARARGS, nullptr },
         { }
     };

@@ -91,7 +91,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_CreateWithTelemetryAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -238,6 +249,47 @@ namespace py::cpp::Windows::Security::Isolation
         }
     }
 
+    static PyObject* IsolatedWindowsEnvironment_LaunchFileWithUIAndTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 3);
+
+                return py::convert(self->obj.LaunchFileWithUIAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IsolatedWindowsEnvironment_LaunchFileWithUIAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -264,36 +316,6 @@ namespace py::cpp::Windows::Security::Isolation
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 return py::convert(self->obj.LaunchFileWithUIAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Isolation.IsolatedWindowsEnvironment", L"LaunchFileWithUIAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Security::Isolation::IsolatedWindowsEnvironmentTelemetryParameters>(args, 3);
-
-                return py::convert(self->obj.LaunchFileWithUIAsync(param0, param1, param2, param3));
             }
             catch (...)
             {
@@ -340,7 +362,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_PostMessageToReceiverWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -448,7 +481,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_ShareFileWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -516,7 +560,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_ShareFolderWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -585,7 +640,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_StartProcessSilentlyWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -651,7 +717,18 @@ namespace py::cpp::Windows::Security::Isolation
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IsolatedWindowsEnvironment_TerminateWithTelemetryAsync(py::wrapper::Windows::Security::Isolation::IsolatedWindowsEnvironment* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -777,13 +854,19 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironment[] = {
         { "change_priority", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ChangePriority), METH_VARARGS, nullptr },
         { "get_user_info", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetUserInfo), METH_VARARGS, nullptr },
+        { "launch_file_with_u_i_and_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAndTelemetryAsync), METH_VARARGS, nullptr },
         { "launch_file_with_u_i_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAsync), METH_VARARGS, nullptr },
         { "post_message_to_receiver_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_PostMessageToReceiverAsync), METH_VARARGS, nullptr },
+        { "post_message_to_receiver_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_PostMessageToReceiverWithTelemetryAsync), METH_VARARGS, nullptr },
         { "register_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_RegisterMessageReceiver), METH_VARARGS, nullptr },
         { "share_file_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ShareFileAsync), METH_VARARGS, nullptr },
+        { "share_file_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ShareFileWithTelemetryAsync), METH_VARARGS, nullptr },
         { "share_folder_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ShareFolderAsync), METH_VARARGS, nullptr },
+        { "share_folder_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ShareFolderWithTelemetryAsync), METH_VARARGS, nullptr },
         { "start_process_silently_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_StartProcessSilentlyAsync), METH_VARARGS, nullptr },
+        { "start_process_silently_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_StartProcessSilentlyWithTelemetryAsync), METH_VARARGS, nullptr },
         { "terminate_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_TerminateAsync), METH_VARARGS, nullptr },
+        { "terminate_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_TerminateWithTelemetryAsync), METH_VARARGS, nullptr },
         { "unregister_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_UnregisterMessageReceiver), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IsolatedWindowsEnvironment, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IsolatedWindowsEnvironment), METH_O | METH_STATIC, nullptr },
@@ -816,6 +899,7 @@ namespace py::cpp::Windows::Security::Isolation
 
     static PyMethodDef methods_IsolatedWindowsEnvironment_Static[] = {
         { "create_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateAsync), METH_VARARGS, nullptr },
+        { "create_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_CreateWithTelemetryAsync), METH_VARARGS, nullptr },
         { "find_by_owner_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_FindByOwnerId), METH_VARARGS, nullptr },
         { "get_by_id", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetById), METH_VARARGS, nullptr },
         { }

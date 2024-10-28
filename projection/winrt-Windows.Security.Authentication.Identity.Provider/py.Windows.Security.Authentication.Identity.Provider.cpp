@@ -1285,7 +1285,18 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
                 return nullptr;
             }
         }
-        else if (arg_count == 6)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringWithNewDeviceAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
         {
             try
             {
@@ -1541,6 +1552,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Provider
         { "find_all_registered_device_info_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_FindAllRegisteredDeviceInfoAsync), METH_VARARGS, nullptr },
         { "is_device_presence_monitoring_supported", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_IsDevicePresenceMonitoringSupported), METH_VARARGS, nullptr },
         { "register_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringAsync), METH_VARARGS, nullptr },
+        { "register_device_presence_monitoring_with_new_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RegisterDevicePresenceMonitoringWithNewDeviceAsync), METH_VARARGS, nullptr },
         { "request_start_registering_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_RequestStartRegisteringDeviceAsync), METH_VARARGS, nullptr },
         { "unregister_device_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDeviceAsync), METH_VARARGS, nullptr },
         { "unregister_device_presence_monitoring_async", reinterpret_cast<PyCFunction>(SecondaryAuthenticationFactorRegistration_UnregisterDevicePresenceMonitoringAsync), METH_VARARGS, nullptr },

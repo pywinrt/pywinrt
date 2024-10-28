@@ -469,34 +469,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.CurrentApp", L"RequestProductPurchaseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(winrt::Windows::ApplicationModel::Store::CurrentApp::RequestProductPurchaseAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -524,7 +497,18 @@ namespace py::cpp::Windows::ApplicationModel::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CurrentApp_RequestProductPurchaseWithDisplayPropertiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -546,6 +530,44 @@ namespace py::cpp::Windows::ApplicationModel::Store
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>(args, 2);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::CurrentApp::RequestProductPurchaseAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CurrentApp_RequestProductPurchaseWithResultsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.CurrentApp", L"RequestProductPurchaseAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(winrt::Windows::ApplicationModel::Store::CurrentApp::RequestProductPurchaseAsync(param0));
             }
             catch (...)
             {
@@ -681,6 +703,8 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "report_product_fulfillment", reinterpret_cast<PyCFunction>(CurrentApp_ReportProductFulfillment), METH_VARARGS, nullptr },
         { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestAppPurchaseAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_with_display_properties_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseWithDisplayPropertiesAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_with_results_async", reinterpret_cast<PyCFunction>(CurrentApp_RequestProductPurchaseWithResultsAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1087,34 +1111,7 @@ namespace py::cpp::Windows::ApplicationModel::Store
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.CurrentAppSimulator", L"RequestProductPurchaseAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(winrt::Windows::ApplicationModel::Store::CurrentAppSimulator::RequestProductPurchaseAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -1142,7 +1139,18 @@ namespace py::cpp::Windows::ApplicationModel::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CurrentAppSimulator_RequestProductPurchaseWithDisplayPropertiesAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1164,6 +1172,44 @@ namespace py::cpp::Windows::ApplicationModel::Store
                 auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties>(args, 2);
 
                 return py::convert(winrt::Windows::ApplicationModel::Store::CurrentAppSimulator::RequestProductPurchaseAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CurrentAppSimulator_RequestProductPurchaseWithResultsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.CurrentAppSimulator", L"RequestProductPurchaseAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(winrt::Windows::ApplicationModel::Store::CurrentAppSimulator::RequestProductPurchaseAsync(param0));
             }
             catch (...)
             {
@@ -1297,6 +1343,8 @@ namespace py::cpp::Windows::ApplicationModel::Store
         { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_ReportConsumableFulfillmentAsync), METH_VARARGS, nullptr },
         { "request_app_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestAppPurchaseAsync), METH_VARARGS, nullptr },
         { "request_product_purchase_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_with_display_properties_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseWithDisplayPropertiesAsync), METH_VARARGS, nullptr },
+        { "request_product_purchase_with_results_async", reinterpret_cast<PyCFunction>(CurrentAppSimulator_RequestProductPurchaseWithResultsAsync), METH_VARARGS, nullptr },
         { }
     };
 

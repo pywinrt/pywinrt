@@ -453,7 +453,18 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ShareOperation_ReportCompletedWithQuickLink(py::wrapper::Windows::ApplicationModel::DataTransfer::ShareTarget::ShareOperation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -744,6 +755,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
         { "dismiss_u_i", reinterpret_cast<PyCFunction>(ShareOperation_DismissUI), METH_VARARGS, nullptr },
         { "remove_this_quick_link", reinterpret_cast<PyCFunction>(ShareOperation_RemoveThisQuickLink), METH_VARARGS, nullptr },
         { "report_completed", reinterpret_cast<PyCFunction>(ShareOperation_ReportCompleted), METH_VARARGS, nullptr },
+        { "report_completed_with_quick_link", reinterpret_cast<PyCFunction>(ShareOperation_ReportCompletedWithQuickLink), METH_VARARGS, nullptr },
         { "report_data_retrieved", reinterpret_cast<PyCFunction>(ShareOperation_ReportDataRetrieved), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(ShareOperation_ReportError), METH_VARARGS, nullptr },
         { "report_started", reinterpret_cast<PyCFunction>(ShareOperation_ReportStarted), METH_VARARGS, nullptr },

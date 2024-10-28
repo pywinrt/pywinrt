@@ -131,36 +131,6 @@ namespace py::cpp::Windows::UI::Composition::Desktop
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -192,6 +162,47 @@ namespace py::cpp::Windows::UI::Composition::Desktop
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DesktopWindowTarget_StartAnimationWithController(py::wrapper::Windows::UI::Composition::Desktop::DesktopWindowTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -665,6 +676,7 @@ namespace py::cpp::Windows::UI::Composition::Desktop
         { "populate_property_info", reinterpret_cast<PyCFunction>(DesktopWindowTarget_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(DesktopWindowTarget_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(DesktopWindowTarget_TryGetAnimationController), METH_VARARGS, nullptr },

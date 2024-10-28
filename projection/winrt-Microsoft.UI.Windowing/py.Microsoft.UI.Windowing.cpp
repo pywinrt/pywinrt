@@ -89,7 +89,58 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_CreateWithDispatcherQueue(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Create", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenter>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(args, 2);
+
+                return py::convert(winrt::Microsoft::UI::Windowing::AppWindow::Create(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_CreateWithPresenter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -116,7 +167,18 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_CreateWithPresenterAndOwner(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -137,35 +199,6 @@ namespace py::cpp::Microsoft::UI::Windowing
                 auto param1 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 1);
 
                 return py::convert(winrt::Microsoft::UI::Windowing::AppWindow::Create(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Create", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenter>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Dispatching::DispatcherQueue>(args, 2);
-
-                return py::convert(winrt::Microsoft::UI::Windowing::AppWindow::Create(param0, param1, param2));
             }
             catch (...)
             {
@@ -363,7 +396,18 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_MoveAndResizeRelativeToDisplayArea(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -629,6 +673,45 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
+    static PyObject* AppWindow_SetIconWithIconId(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetIcon", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::IconId>(args, 0);
+
+                self->obj.SetIcon(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* AppWindow_SetPresenter(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -651,6 +734,45 @@ namespace py::cpp::Microsoft::UI::Windowing
                 }
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenter>(args, 0);
+
+                self->obj.SetPresenter(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_SetPresenterByKind(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"SetPresenter", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Windowing::AppWindowPresenterKind>(args, 0);
 
                 self->obj.SetPresenter(param0);
                 Py_RETURN_NONE;
@@ -698,34 +820,6 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Show", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<bool>(args, 0);
-
-                self->obj.Show(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -755,6 +849,45 @@ namespace py::cpp::Microsoft::UI::Windowing
                 }
 
                 self->obj.ShowOnceWithRequestedStartupState();
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppWindow_ShowWithActivation(py::wrapper::Microsoft::UI::Windowing::AppWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Windowing.AppWindow", L"Show", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<bool>(args, 0);
+
+                self->obj.Show(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1327,15 +1460,19 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "hide", reinterpret_cast<PyCFunction>(AppWindow_Hide), METH_VARARGS, nullptr },
         { "move", reinterpret_cast<PyCFunction>(AppWindow_Move), METH_VARARGS, nullptr },
         { "move_and_resize", reinterpret_cast<PyCFunction>(AppWindow_MoveAndResize), METH_VARARGS, nullptr },
+        { "move_and_resize_relative_to_display_area", reinterpret_cast<PyCFunction>(AppWindow_MoveAndResizeRelativeToDisplayArea), METH_VARARGS, nullptr },
         { "move_in_z_order_at_bottom", reinterpret_cast<PyCFunction>(AppWindow_MoveInZOrderAtBottom), METH_VARARGS, nullptr },
         { "move_in_z_order_at_top", reinterpret_cast<PyCFunction>(AppWindow_MoveInZOrderAtTop), METH_VARARGS, nullptr },
         { "move_in_z_order_below", reinterpret_cast<PyCFunction>(AppWindow_MoveInZOrderBelow), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(AppWindow_Resize), METH_VARARGS, nullptr },
         { "resize_client", reinterpret_cast<PyCFunction>(AppWindow_ResizeClient), METH_VARARGS, nullptr },
         { "set_icon", reinterpret_cast<PyCFunction>(AppWindow_SetIcon), METH_VARARGS, nullptr },
+        { "set_icon_with_icon_id", reinterpret_cast<PyCFunction>(AppWindow_SetIconWithIconId), METH_VARARGS, nullptr },
         { "set_presenter", reinterpret_cast<PyCFunction>(AppWindow_SetPresenter), METH_VARARGS, nullptr },
+        { "set_presenter_by_kind", reinterpret_cast<PyCFunction>(AppWindow_SetPresenterByKind), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(AppWindow_Show), METH_VARARGS, nullptr },
         { "show_once_with_requested_startup_state", reinterpret_cast<PyCFunction>(AppWindow_ShowOnceWithRequestedStartupState), METH_VARARGS, nullptr },
+        { "show_with_activation", reinterpret_cast<PyCFunction>(AppWindow_ShowWithActivation), METH_VARARGS, nullptr },
         { "add_changed", reinterpret_cast<PyCFunction>(AppWindow_add_Changed), METH_O, nullptr },
         { "remove_changed", reinterpret_cast<PyCFunction>(AppWindow_remove_Changed), METH_O, nullptr },
         { "add_closing", reinterpret_cast<PyCFunction>(AppWindow_add_Closing), METH_O, nullptr },
@@ -1383,6 +1520,9 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyMethodDef methods_AppWindow_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(AppWindow_Create), METH_VARARGS, nullptr },
+        { "create_with_dispatcher_queue", reinterpret_cast<PyCFunction>(AppWindow_CreateWithDispatcherQueue), METH_VARARGS, nullptr },
+        { "create_with_presenter", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenter), METH_VARARGS, nullptr },
+        { "create_with_presenter_and_owner", reinterpret_cast<PyCFunction>(AppWindow_CreateWithPresenterAndOwner), METH_VARARGS, nullptr },
         { "get_from_window_id", reinterpret_cast<PyCFunction>(AppWindow_GetFromWindowId), METH_VARARGS, nullptr },
         { }
     };
@@ -4647,7 +4787,18 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OverlappedPresenter_MinimizeWithActivation(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4712,7 +4863,18 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OverlappedPresenter_RestoreWithActivation(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5249,7 +5411,9 @@ namespace py::cpp::Microsoft::UI::Windowing
     static PyMethodDef _methods_OverlappedPresenter[] = {
         { "maximize", reinterpret_cast<PyCFunction>(OverlappedPresenter_Maximize), METH_VARARGS, nullptr },
         { "minimize", reinterpret_cast<PyCFunction>(OverlappedPresenter_Minimize), METH_VARARGS, nullptr },
+        { "minimize_with_activation", reinterpret_cast<PyCFunction>(OverlappedPresenter_MinimizeWithActivation), METH_VARARGS, nullptr },
         { "restore", reinterpret_cast<PyCFunction>(OverlappedPresenter_Restore), METH_VARARGS, nullptr },
+        { "restore_with_activation", reinterpret_cast<PyCFunction>(OverlappedPresenter_RestoreWithActivation), METH_VARARGS, nullptr },
         { "set_border_and_title_bar", reinterpret_cast<PyCFunction>(OverlappedPresenter_SetBorderAndTitleBar), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OverlappedPresenter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OverlappedPresenter), METH_O | METH_STATIC, nullptr },

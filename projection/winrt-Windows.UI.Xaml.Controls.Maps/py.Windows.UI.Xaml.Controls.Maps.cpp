@@ -4327,7 +4327,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_FindMapElementsAtOffsetWithRadius(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4591,7 +4602,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_GetLocationFromOffsetWithReferenceSystem(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5452,7 +5474,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_StartBringIntoViewWithOptions(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5951,7 +5984,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TryGetLocationFromOffsetWithReferenceSystem(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6222,7 +6266,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TrySetSceneWithAnimationAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6243,133 +6298,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 1);
 
                 return py::convert(self->obj.TrySetSceneAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* MapControl_TrySetViewAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-
-                return py::convert(self->obj.TrySetViewAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
-
-                return py::convert(self->obj.TrySetViewAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 3);
-
-                return py::convert(self->obj.TrySetViewAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 4);
-
-                return py::convert(self->obj.TrySetViewAsync(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -6410,6 +6338,166 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param2 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 2);
 
                 return py::convert(self->obj.TrySetViewBoundsAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TrySetViewWithCenterAndZoomAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
+
+                return py::convert(self->obj.TrySetViewAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TrySetViewWithCenterAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+
+                return py::convert(self->obj.TrySetViewAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TrySetViewWithCenterZoomHeadingAndPitchAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 3);
+
+                return py::convert(self->obj.TrySetViewAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapControl_TrySetViewWithCenterZoomHeadingPitchAndAnimationAsync(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapControl", L"TrySetViewAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapAnimationKind>(args, 4);
+
+                return py::convert(self->obj.TrySetViewAsync(param0, param1, param2, param3, param4));
             }
             catch (...)
             {
@@ -20541,11 +20629,13 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "capture_pointer", reinterpret_cast<PyCFunction>(MapControl_CapturePointer), METH_VARARGS, nullptr },
         { "clear_value", reinterpret_cast<PyCFunction>(MapControl_ClearValue), METH_VARARGS, nullptr },
         { "find_map_elements_at_offset", reinterpret_cast<PyCFunction>(MapControl_FindMapElementsAtOffset), METH_VARARGS, nullptr },
+        { "find_map_elements_at_offset_with_radius", reinterpret_cast<PyCFunction>(MapControl_FindMapElementsAtOffsetWithRadius), METH_VARARGS, nullptr },
         { "find_name", reinterpret_cast<PyCFunction>(MapControl_FindName), METH_VARARGS, nullptr },
         { "focus", reinterpret_cast<PyCFunction>(MapControl_Focus), METH_VARARGS, nullptr },
         { "get_animation_base_value", reinterpret_cast<PyCFunction>(MapControl_GetAnimationBaseValue), METH_VARARGS, nullptr },
         { "get_binding_expression", reinterpret_cast<PyCFunction>(MapControl_GetBindingExpression), METH_VARARGS, nullptr },
         { "get_location_from_offset", reinterpret_cast<PyCFunction>(MapControl_GetLocationFromOffset), METH_VARARGS, nullptr },
+        { "get_location_from_offset_with_reference_system", reinterpret_cast<PyCFunction>(MapControl_GetLocationFromOffsetWithReferenceSystem), METH_VARARGS, nullptr },
         { "get_offset_from_location", reinterpret_cast<PyCFunction>(MapControl_GetOffsetFromLocation), METH_VARARGS, nullptr },
         { "get_value", reinterpret_cast<PyCFunction>(MapControl_GetValue), METH_VARARGS, nullptr },
         { "get_visible_region", reinterpret_cast<PyCFunction>(MapControl_GetVisibleRegion), METH_VARARGS, nullptr },
@@ -20564,6 +20654,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "set_value", reinterpret_cast<PyCFunction>(MapControl_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(MapControl_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(MapControl_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(MapControl_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_continuous_pan", reinterpret_cast<PyCFunction>(MapControl_StartContinuousPan), METH_VARARGS, nullptr },
         { "start_continuous_rotate", reinterpret_cast<PyCFunction>(MapControl_StartContinuousRotate), METH_VARARGS, nullptr },
         { "start_continuous_tilt", reinterpret_cast<PyCFunction>(MapControl_StartContinuousTilt), METH_VARARGS, nullptr },
@@ -20576,14 +20667,19 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         { "stop_continuous_zoom", reinterpret_cast<PyCFunction>(MapControl_StopContinuousZoom), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(MapControl_TransformToVisual), METH_VARARGS, nullptr },
         { "try_get_location_from_offset", reinterpret_cast<PyCFunction>(MapControl_TryGetLocationFromOffset), METH_VARARGS, nullptr },
+        { "try_get_location_from_offset_with_reference_system", reinterpret_cast<PyCFunction>(MapControl_TryGetLocationFromOffsetWithReferenceSystem), METH_VARARGS, nullptr },
         { "try_invoke_keyboard_accelerator", reinterpret_cast<PyCFunction>(MapControl_TryInvokeKeyboardAccelerator), METH_VARARGS, nullptr },
         { "try_pan_async", reinterpret_cast<PyCFunction>(MapControl_TryPanAsync), METH_VARARGS, nullptr },
         { "try_pan_to_async", reinterpret_cast<PyCFunction>(MapControl_TryPanToAsync), METH_VARARGS, nullptr },
         { "try_rotate_async", reinterpret_cast<PyCFunction>(MapControl_TryRotateAsync), METH_VARARGS, nullptr },
         { "try_rotate_to_async", reinterpret_cast<PyCFunction>(MapControl_TryRotateToAsync), METH_VARARGS, nullptr },
         { "try_set_scene_async", reinterpret_cast<PyCFunction>(MapControl_TrySetSceneAsync), METH_VARARGS, nullptr },
-        { "try_set_view_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewAsync), METH_VARARGS, nullptr },
+        { "try_set_scene_with_animation_async", reinterpret_cast<PyCFunction>(MapControl_TrySetSceneWithAnimationAsync), METH_VARARGS, nullptr },
         { "try_set_view_bounds_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewBoundsAsync), METH_VARARGS, nullptr },
+        { "try_set_view_with_center_and_zoom_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewWithCenterAndZoomAsync), METH_VARARGS, nullptr },
+        { "try_set_view_with_center_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewWithCenterAsync), METH_VARARGS, nullptr },
+        { "try_set_view_with_center_zoom_heading_and_pitch_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewWithCenterZoomHeadingAndPitchAsync), METH_VARARGS, nullptr },
+        { "try_set_view_with_center_zoom_heading_pitch_and_animation_async", reinterpret_cast<PyCFunction>(MapControl_TrySetViewWithCenterZoomHeadingPitchAndAnimationAsync), METH_VARARGS, nullptr },
         { "try_tilt_async", reinterpret_cast<PyCFunction>(MapControl_TryTiltAsync), METH_VARARGS, nullptr },
         { "try_tilt_to_async", reinterpret_cast<PyCFunction>(MapControl_TryTiltToAsync), METH_VARARGS, nullptr },
         { "try_zoom_in_async", reinterpret_cast<PyCFunction>(MapControl_TryZoomInAsync), METH_VARARGS, nullptr },
@@ -31216,7 +31312,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapModel3D_CreateFrom3MFWithShadingOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -31573,6 +31680,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyMethodDef methods_MapModel3D_Static[] = {
         { "create_from3_m_f_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFAsync), METH_VARARGS, nullptr },
+        { "create_from3_m_f_with_shading_option_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFWithShadingOptionAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -34795,7 +34903,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapScene_CreateFromBoundingBoxWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -34900,35 +35019,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapScene", L"CreateFromLocation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-                auto param2 = py::convert_to<double>(args, 2);
-
-                return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::MapScene::CreateFromLocation(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -34968,7 +35058,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapScene_CreateFromLocationAndRadiusWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -34991,6 +35092,46 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param3 = py::convert_to<double>(args, 3);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::MapScene::CreateFromLocationAndRadius(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapScene_CreateFromLocationWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.MapScene", L"CreateFromLocation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+                auto param2 = py::convert_to<double>(args, 2);
+
+                return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::MapScene::CreateFromLocation(param0, param1, param2));
             }
             catch (...)
             {
@@ -35036,7 +35177,18 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MapScene_CreateFromLocationsWithHeadingAndPitch(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -35480,10 +35632,14 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
     static PyMethodDef methods_MapScene_Static[] = {
         { "create_from_bounding_box", reinterpret_cast<PyCFunction>(MapScene_CreateFromBoundingBox), METH_VARARGS, nullptr },
+        { "create_from_bounding_box_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromBoundingBoxWithHeadingAndPitch), METH_VARARGS, nullptr },
         { "create_from_camera", reinterpret_cast<PyCFunction>(MapScene_CreateFromCamera), METH_VARARGS, nullptr },
         { "create_from_location", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocation), METH_VARARGS, nullptr },
         { "create_from_location_and_radius", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationAndRadius), METH_VARARGS, nullptr },
+        { "create_from_location_and_radius_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationAndRadiusWithHeadingAndPitch), METH_VARARGS, nullptr },
+        { "create_from_location_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationWithHeadingAndPitch), METH_VARARGS, nullptr },
         { "create_from_locations", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocations), METH_VARARGS, nullptr },
+        { "create_from_locations_with_heading_and_pitch", reinterpret_cast<PyCFunction>(MapScene_CreateFromLocationsWithHeadingAndPitch), METH_VARARGS, nullptr },
         { }
     };
 
@@ -42523,7 +42679,46 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         }
     }
 
-    static PyObject* StreetsidePanorama_FindNearbyAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* StreetsidePanorama_FindNearbyWithLocationAndRadiusAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsidePanorama", L"FindNearbyAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama::FindNearbyAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreetsidePanorama_FindNearbyWithLocationAsync(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -42547,34 +42742,6 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
 
                 return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama::FindNearbyAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Xaml.Controls.Maps.StreetsidePanorama", L"FindNearbyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::Geopoint>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-
-                return py::convert(winrt::Windows::UI::Xaml::Controls::Maps::StreetsidePanorama::FindNearbyAsync(param0, param1));
             }
             catch (...)
             {
@@ -42937,7 +43104,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyMethodDef methods_StreetsidePanorama_Static[] = {
-        { "find_nearby_async", reinterpret_cast<PyCFunction>(StreetsidePanorama_FindNearbyAsync), METH_VARARGS, nullptr },
+        { "find_nearby_with_location_and_radius_async", reinterpret_cast<PyCFunction>(StreetsidePanorama_FindNearbyWithLocationAndRadiusAsync), METH_VARARGS, nullptr },
+        { "find_nearby_with_location_async", reinterpret_cast<PyCFunction>(StreetsidePanorama_FindNearbyWithLocationAsync), METH_VARARGS, nullptr },
         { }
     };
 

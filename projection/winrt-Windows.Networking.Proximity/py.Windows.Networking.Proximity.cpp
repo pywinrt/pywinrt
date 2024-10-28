@@ -246,7 +246,18 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PeerFinder_StartWithMessage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -889,6 +900,7 @@ namespace py::cpp::Windows::Networking::Proximity
         { "create_watcher", reinterpret_cast<PyCFunction>(PeerFinder_CreateWatcher), METH_VARARGS, nullptr },
         { "find_all_peers_async", reinterpret_cast<PyCFunction>(PeerFinder_FindAllPeersAsync), METH_VARARGS, nullptr },
         { "start", reinterpret_cast<PyCFunction>(PeerFinder_Start), METH_VARARGS, nullptr },
+        { "start_with_message", reinterpret_cast<PyCFunction>(PeerFinder_StartWithMessage), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(PeerFinder_Stop), METH_VARARGS, nullptr },
         { "add_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_add_ConnectionRequested), METH_O, nullptr },
         { "remove_connection_requested", reinterpret_cast<PyCFunction>(PeerFinder_remove_ConnectionRequested), METH_O, nullptr },
@@ -1738,7 +1750,18 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProximityDevice_PublishBinaryMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1806,7 +1829,18 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProximityDevice_PublishMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1873,7 +1907,18 @@ namespace py::cpp::Windows::Networking::Proximity
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProximityDevice_PublishUriMessageWithCallback(py::wrapper::Windows::Networking::Proximity::ProximityDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2243,8 +2288,11 @@ namespace py::cpp::Windows::Networking::Proximity
 
     static PyMethodDef _methods_ProximityDevice[] = {
         { "publish_binary_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishBinaryMessage), METH_VARARGS, nullptr },
+        { "publish_binary_message_with_callback", reinterpret_cast<PyCFunction>(ProximityDevice_PublishBinaryMessageWithCallback), METH_VARARGS, nullptr },
         { "publish_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishMessage), METH_VARARGS, nullptr },
+        { "publish_message_with_callback", reinterpret_cast<PyCFunction>(ProximityDevice_PublishMessageWithCallback), METH_VARARGS, nullptr },
         { "publish_uri_message", reinterpret_cast<PyCFunction>(ProximityDevice_PublishUriMessage), METH_VARARGS, nullptr },
+        { "publish_uri_message_with_callback", reinterpret_cast<PyCFunction>(ProximityDevice_PublishUriMessageWithCallback), METH_VARARGS, nullptr },
         { "stop_publishing_message", reinterpret_cast<PyCFunction>(ProximityDevice_StopPublishingMessage), METH_VARARGS, nullptr },
         { "stop_subscribing_for_message", reinterpret_cast<PyCFunction>(ProximityDevice_StopSubscribingForMessage), METH_VARARGS, nullptr },
         { "subscribe_for_message", reinterpret_cast<PyCFunction>(ProximityDevice_SubscribeForMessage), METH_VARARGS, nullptr },

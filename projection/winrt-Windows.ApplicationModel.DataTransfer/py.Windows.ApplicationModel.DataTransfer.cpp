@@ -1629,35 +1629,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetStorageItems", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
-
-                self->obj.SetStorageItems(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -1678,6 +1650,45 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 auto param1 = py::convert_to<bool>(args, 1);
 
                 self->obj.SetStorageItems(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DataPackage_SetStorageItemsReadOnly(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackage* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackage", L"SetStorageItems", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Storage::IStorageItem>>(args, 0);
+
+                self->obj.SetStorageItems(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2184,6 +2195,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { "set_html_format", reinterpret_cast<PyCFunction>(DataPackage_SetHtmlFormat), METH_VARARGS, nullptr },
         { "set_rtf", reinterpret_cast<PyCFunction>(DataPackage_SetRtf), METH_VARARGS, nullptr },
         { "set_storage_items", reinterpret_cast<PyCFunction>(DataPackage_SetStorageItems), METH_VARARGS, nullptr },
+        { "set_storage_items_read_only", reinterpret_cast<PyCFunction>(DataPackage_SetStorageItemsReadOnly), METH_VARARGS, nullptr },
         { "set_text", reinterpret_cast<PyCFunction>(DataPackage_SetText), METH_VARARGS, nullptr },
         { "set_uri", reinterpret_cast<PyCFunction>(DataPackage_SetUri), METH_VARARGS, nullptr },
         { "set_web_link", reinterpret_cast<PyCFunction>(DataPackage_SetWebLink), METH_VARARGS, nullptr },
@@ -4306,6 +4318,44 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         }
     }
 
+    static PyObject* DataPackageView_GetCustomTextAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetTextAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.GetTextAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DataPackageView_GetDataAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -4517,33 +4567,6 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.DataTransfer.DataPackageView", L"GetTextAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.GetTextAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4691,7 +4714,18 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DataPackageView_RequestAccessWithEnterpriseIdAsync(py::wrapper::Windows::ApplicationModel::DataTransfer::DataPackageView* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4906,6 +4940,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { "contains", reinterpret_cast<PyCFunction>(DataPackageView_Contains), METH_VARARGS, nullptr },
         { "get_application_link_async", reinterpret_cast<PyCFunction>(DataPackageView_GetApplicationLinkAsync), METH_VARARGS, nullptr },
         { "get_bitmap_async", reinterpret_cast<PyCFunction>(DataPackageView_GetBitmapAsync), METH_VARARGS, nullptr },
+        { "get_custom_text_async", reinterpret_cast<PyCFunction>(DataPackageView_GetCustomTextAsync), METH_VARARGS, nullptr },
         { "get_data_async", reinterpret_cast<PyCFunction>(DataPackageView_GetDataAsync), METH_VARARGS, nullptr },
         { "get_html_format_async", reinterpret_cast<PyCFunction>(DataPackageView_GetHtmlFormatAsync), METH_VARARGS, nullptr },
         { "get_resource_map_async", reinterpret_cast<PyCFunction>(DataPackageView_GetResourceMapAsync), METH_VARARGS, nullptr },
@@ -4916,6 +4951,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { "get_web_link_async", reinterpret_cast<PyCFunction>(DataPackageView_GetWebLinkAsync), METH_VARARGS, nullptr },
         { "report_operation_completed", reinterpret_cast<PyCFunction>(DataPackageView_ReportOperationCompleted), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(DataPackageView_RequestAccessAsync), METH_VARARGS, nullptr },
+        { "request_access_with_enterprise_id_async", reinterpret_cast<PyCFunction>(DataPackageView_RequestAccessWithEnterpriseIdAsync), METH_VARARGS, nullptr },
         { "set_accepted_format_id", reinterpret_cast<PyCFunction>(DataPackageView_SetAcceptedFormatId), METH_VARARGS, nullptr },
         { "unlock_and_assume_enterprise_identity", reinterpret_cast<PyCFunction>(DataPackageView_UnlockAndAssumeEnterpriseIdentity), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DataPackageView, METH_O | METH_STATIC, nullptr },
@@ -5794,7 +5830,18 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DataTransferManager_ShowShareUIWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -6063,6 +6110,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
         { "get_for_current_view", reinterpret_cast<PyCFunction>(DataTransferManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(DataTransferManager_IsSupported), METH_VARARGS, nullptr },
         { "show_share_u_i", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUI), METH_VARARGS, nullptr },
+        { "show_share_u_i_with_options", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUIWithOptions), METH_VARARGS, nullptr },
         { }
     };
 

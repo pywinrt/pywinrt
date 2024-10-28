@@ -125,7 +125,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceLoader_GetForCurrentViewWithName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -226,7 +237,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceLoader_GetForViewIndependentUseWithName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -432,8 +454,10 @@ namespace py::cpp::Windows::ApplicationModel::Resources
     static PyMethodDef methods_ResourceLoader_Static[] = {
         { "get_default_pri_path", reinterpret_cast<PyCFunction>(ResourceLoader_GetDefaultPriPath), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ResourceLoader_GetForCurrentView), METH_VARARGS, nullptr },
+        { "get_for_current_view_with_name", reinterpret_cast<PyCFunction>(ResourceLoader_GetForCurrentViewWithName), METH_VARARGS, nullptr },
         { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceLoader_GetForUIContext), METH_VARARGS, nullptr },
         { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUse), METH_VARARGS, nullptr },
+        { "get_for_view_independent_use_with_name", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUseWithName), METH_VARARGS, nullptr },
         { "get_string_for_reference", reinterpret_cast<PyCFunction>(ResourceLoader_GetStringForReference), METH_VARARGS, nullptr },
         { }
     };

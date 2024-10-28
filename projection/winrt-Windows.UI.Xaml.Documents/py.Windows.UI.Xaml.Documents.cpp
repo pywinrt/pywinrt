@@ -11023,7 +11023,18 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Glyphs_StartBringIntoViewWithOptions(py::wrapper::Windows::UI::Xaml::Documents::Glyphs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -19872,6 +19883,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "set_value", reinterpret_cast<PyCFunction>(Glyphs_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Glyphs_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Glyphs_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Glyphs_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Glyphs_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Glyphs_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Glyphs_TransformToVisual), METH_VARARGS, nullptr },

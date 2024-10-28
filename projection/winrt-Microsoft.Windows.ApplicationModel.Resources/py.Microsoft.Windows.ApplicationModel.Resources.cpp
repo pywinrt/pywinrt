@@ -1181,34 +1181,6 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
-
-                return py::convert(self->obj.GetValue(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1247,7 +1219,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceMap_GetValueByIndexWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1268,6 +1251,45 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
 
                 return py::convert(self->obj.GetValueByIndex(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceMap_GetValueWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.ApplicationModel.Resources.ResourceMap", L"GetValue", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::Windows::ApplicationModel::Resources::ResourceContext>(args, 1);
+
+                return py::convert(self->obj.GetValue(param0, param1));
             }
             catch (...)
             {
@@ -1351,7 +1373,18 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceMap_TryGetValueWithContext(py::wrapper::Microsoft::Windows::ApplicationModel::Resources::ResourceMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1440,8 +1473,11 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::Resources
         { "get_subtree", reinterpret_cast<PyCFunction>(ResourceMap_GetSubtree), METH_VARARGS, nullptr },
         { "get_value", reinterpret_cast<PyCFunction>(ResourceMap_GetValue), METH_VARARGS, nullptr },
         { "get_value_by_index", reinterpret_cast<PyCFunction>(ResourceMap_GetValueByIndex), METH_VARARGS, nullptr },
+        { "get_value_by_index_with_context", reinterpret_cast<PyCFunction>(ResourceMap_GetValueByIndexWithContext), METH_VARARGS, nullptr },
+        { "get_value_with_context", reinterpret_cast<PyCFunction>(ResourceMap_GetValueWithContext), METH_VARARGS, nullptr },
         { "try_get_subtree", reinterpret_cast<PyCFunction>(ResourceMap_TryGetSubtree), METH_VARARGS, nullptr },
         { "try_get_value", reinterpret_cast<PyCFunction>(ResourceMap_TryGetValue), METH_VARARGS, nullptr },
+        { "try_get_value_with_context", reinterpret_cast<PyCFunction>(ResourceMap_TryGetValueWithContext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceMap, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceMap), METH_O | METH_STATIC, nullptr },
         { }

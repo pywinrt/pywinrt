@@ -1190,35 +1190,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.AppNotificationManager", L"UpdateAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(self->obj.UpdateAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -1240,6 +1212,45 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 return py::convert(self->obj.UpdateAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationManager_UpdateAsync2(py::wrapper::Microsoft::Windows::AppNotifications::AppNotificationManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.Windows.AppNotifications.AppNotificationManager", L"UpdateAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::Windows::AppNotifications::AppNotificationProgressData>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.UpdateAsync(param0, param1));
             }
             catch (...)
             {
@@ -1399,6 +1410,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications
         { "unregister", reinterpret_cast<PyCFunction>(AppNotificationManager_Unregister), METH_VARARGS, nullptr },
         { "unregister_all", reinterpret_cast<PyCFunction>(AppNotificationManager_UnregisterAll), METH_VARARGS, nullptr },
         { "update_async", reinterpret_cast<PyCFunction>(AppNotificationManager_UpdateAsync), METH_VARARGS, nullptr },
+        { "update_async2", reinterpret_cast<PyCFunction>(AppNotificationManager_UpdateAsync2), METH_VARARGS, nullptr },
         { "add_notification_invoked", reinterpret_cast<PyCFunction>(AppNotificationManager_add_NotificationInvoked), METH_O, nullptr },
         { "remove_notification_invoked", reinterpret_cast<PyCFunction>(AppNotificationManager_remove_NotificationInvoked), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppNotificationManager, METH_O | METH_STATIC, nullptr },

@@ -2440,7 +2440,18 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WalletItemStore_GetItemsWithKindAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2579,7 +2590,18 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* WalletItemStore_ShowItemAsync(py::wrapper::Windows::ApplicationModel::Wallet::WalletItemStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2680,9 +2702,11 @@ namespace py::cpp::Windows::ApplicationModel::Wallet
         { "clear_async", reinterpret_cast<PyCFunction>(WalletItemStore_ClearAsync), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(WalletItemStore_DeleteAsync), METH_VARARGS, nullptr },
         { "get_items_async", reinterpret_cast<PyCFunction>(WalletItemStore_GetItemsAsync), METH_VARARGS, nullptr },
+        { "get_items_with_kind_async", reinterpret_cast<PyCFunction>(WalletItemStore_GetItemsWithKindAsync), METH_VARARGS, nullptr },
         { "get_wallet_item_async", reinterpret_cast<PyCFunction>(WalletItemStore_GetWalletItemAsync), METH_VARARGS, nullptr },
         { "import_item_async", reinterpret_cast<PyCFunction>(WalletItemStore_ImportItemAsync), METH_VARARGS, nullptr },
         { "show_async", reinterpret_cast<PyCFunction>(WalletItemStore_ShowAsync), METH_VARARGS, nullptr },
+        { "show_item_async", reinterpret_cast<PyCFunction>(WalletItemStore_ShowItemAsync), METH_VARARGS, nullptr },
         { "update_async", reinterpret_cast<PyCFunction>(WalletItemStore_UpdateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_WalletItemStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_WalletItemStore), METH_O | METH_STATIC, nullptr },

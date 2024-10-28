@@ -52,7 +52,18 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpatialSurfaceInfo_TryComputeLatestMeshWithOptionsAsync(py::wrapper::Windows::Perception::Spatial::Surfaces::SpatialSurfaceInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -203,6 +214,7 @@ namespace py::cpp::Windows::Perception::Spatial::Surfaces
 
     static PyMethodDef _methods_SpatialSurfaceInfo[] = {
         { "try_compute_latest_mesh_async", reinterpret_cast<PyCFunction>(SpatialSurfaceInfo_TryComputeLatestMeshAsync), METH_VARARGS, nullptr },
+        { "try_compute_latest_mesh_with_options_async", reinterpret_cast<PyCFunction>(SpatialSurfaceInfo_TryComputeLatestMeshWithOptionsAsync), METH_VARARGS, nullptr },
         { "try_get_bounds", reinterpret_cast<PyCFunction>(SpatialSurfaceInfo_TryGetBounds), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SpatialSurfaceInfo, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SpatialSurfaceInfo), METH_O | METH_STATIC, nullptr },

@@ -1206,7 +1206,18 @@ namespace py::cpp::Microsoft::UI::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusNavigationRequest_CreateWithHintRect(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1234,7 +1245,18 @@ namespace py::cpp::Microsoft::UI::Input
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusNavigationRequest_CreateWithHintRectAndId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1406,6 +1428,8 @@ namespace py::cpp::Microsoft::UI::Input
 
     static PyMethodDef methods_FocusNavigationRequest_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(FocusNavigationRequest_Create), METH_VARARGS, nullptr },
+        { "create_with_hint_rect", reinterpret_cast<PyCFunction>(FocusNavigationRequest_CreateWithHintRect), METH_VARARGS, nullptr },
+        { "create_with_hint_rect_and_id", reinterpret_cast<PyCFunction>(FocusNavigationRequest_CreateWithHintRectAndId), METH_VARARGS, nullptr },
         { }
     };
 

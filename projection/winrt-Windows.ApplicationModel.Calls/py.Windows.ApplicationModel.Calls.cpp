@@ -6567,7 +6567,18 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhoneCallHistoryStore_GetEntryReaderWithOptions(py::wrapper::Windows::ApplicationModel::Calls::PhoneCallHistoryStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -6892,6 +6903,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "delete_entry_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_DeleteEntryAsync), METH_VARARGS, nullptr },
         { "get_entry_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_GetEntryAsync), METH_VARARGS, nullptr },
         { "get_entry_reader", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_GetEntryReader), METH_VARARGS, nullptr },
+        { "get_entry_reader_with_options", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_GetEntryReaderWithOptions), METH_VARARGS, nullptr },
         { "get_sources_unseen_count_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_GetSourcesUnseenCountAsync), METH_VARARGS, nullptr },
         { "get_unseen_count_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_GetUnseenCountAsync), METH_VARARGS, nullptr },
         { "mark_all_as_seen_async", reinterpret_cast<PyCFunction>(PhoneCallHistoryStore_MarkAllAsSeenAsync), METH_VARARGS, nullptr },
@@ -9846,7 +9858,18 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PhoneLineTransportDevice_GetDeviceSelectorForPhoneLineTransport(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -10394,6 +10417,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     static PyMethodDef methods_PhoneLineTransportDevice_Static[] = {
         { "from_id", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_FromId), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_for_phone_line_transport", reinterpret_cast<PyCFunction>(PhoneLineTransportDevice_GetDeviceSelectorForPhoneLineTransport), METH_VARARGS, nullptr },
         { }
     };
 
@@ -11561,7 +11585,18 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
         }
-        else if (arg_count == 11)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipCallCoordinator_RequestNewIncomingCallWithContactRemoteId(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 11)
         {
             try
             {
@@ -11767,32 +11802,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"ReserveCallResourcesAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.ReserveCallResourcesAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -11812,6 +11822,42 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.ReserveCallResourcesAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipCallCoordinator_ReserveOneProcessCallResourcesAsync(py::wrapper::Windows::ApplicationModel::Calls::VoipCallCoordinator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Calls.VoipCallCoordinator", L"ReserveCallResourcesAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.ReserveCallResourcesAsync());
             }
             catch (...)
             {
@@ -12034,11 +12080,13 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "request_new_app_initiated_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewAppInitiatedCall), METH_VARARGS, nullptr },
         { "request_new_app_initiated_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewAppInitiatedCallWithOptions), METH_VARARGS, nullptr },
         { "request_new_incoming_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewIncomingCall), METH_VARARGS, nullptr },
+        { "request_new_incoming_call_with_contact_remote_id", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewIncomingCallWithContactRemoteId), METH_VARARGS, nullptr },
         { "request_new_incoming_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewIncomingCallWithOptions), METH_VARARGS, nullptr },
         { "request_new_outgoing_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewOutgoingCall), METH_VARARGS, nullptr },
         { "request_new_outgoing_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestNewOutgoingCallWithOptions), METH_VARARGS, nullptr },
         { "request_outgoing_upgrade_to_video_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_RequestOutgoingUpgradeToVideoCall), METH_VARARGS, nullptr },
         { "reserve_call_resources_async", reinterpret_cast<PyCFunction>(VoipCallCoordinator_ReserveCallResourcesAsync), METH_VARARGS, nullptr },
+        { "reserve_one_process_call_resources_async", reinterpret_cast<PyCFunction>(VoipCallCoordinator_ReserveOneProcessCallResourcesAsync), METH_VARARGS, nullptr },
         { "setup_new_accepted_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_SetupNewAcceptedCall), METH_VARARGS, nullptr },
         { "setup_new_accepted_call_with_options", reinterpret_cast<PyCFunction>(VoipCallCoordinator_SetupNewAcceptedCallWithOptions), METH_VARARGS, nullptr },
         { "terminate_cellular_call", reinterpret_cast<PyCFunction>(VoipCallCoordinator_TerminateCellularCall), METH_VARARGS, nullptr },
@@ -12257,7 +12305,18 @@ namespace py::cpp::Windows::ApplicationModel::Calls
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoipPhoneCall_NotifyCallActiveOnDevices(py::wrapper::Windows::ApplicationModel::Calls::VoipPhoneCall* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -13041,6 +13100,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "get_associated_call_control_devices", reinterpret_cast<PyCFunction>(VoipPhoneCall_GetAssociatedCallControlDevices), METH_VARARGS, nullptr },
         { "notify_call_accepted", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallAccepted), METH_VARARGS, nullptr },
         { "notify_call_active", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallActive), METH_VARARGS, nullptr },
+        { "notify_call_active_on_devices", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallActiveOnDevices), METH_VARARGS, nullptr },
         { "notify_call_ended", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallEnded), METH_VARARGS, nullptr },
         { "notify_call_held", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallHeld), METH_VARARGS, nullptr },
         { "notify_call_ready", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallReady), METH_VARARGS, nullptr },

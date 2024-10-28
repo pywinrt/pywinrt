@@ -91,7 +91,18 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AdaptiveMediaSource_CreateFromStreamWithDownloaderAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -159,7 +170,18 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AdaptiveMediaSource_CreateFromUriWithDownloaderAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1283,7 +1305,9 @@ namespace py::cpp::Windows::Media::Streaming::Adaptive
 
     static PyMethodDef methods_AdaptiveMediaSource_Static[] = {
         { "create_from_stream_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromStreamAsync), METH_VARARGS, nullptr },
+        { "create_from_stream_with_downloader_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromStreamWithDownloaderAsync), METH_VARARGS, nullptr },
         { "create_from_uri_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriAsync), METH_VARARGS, nullptr },
+        { "create_from_uri_with_downloader_async", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_CreateFromUriWithDownloaderAsync), METH_VARARGS, nullptr },
         { "is_content_type_supported", reinterpret_cast<PyCFunction>(AdaptiveMediaSource_IsContentTypeSupported), METH_VARARGS, nullptr },
         { }
     };

@@ -993,7 +993,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Ellipse_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Ellipse* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -10186,6 +10197,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Ellipse_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Ellipse_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Ellipse_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Ellipse_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Ellipse_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Ellipse_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Ellipse_TransformToVisual), METH_VARARGS, nullptr },
@@ -11412,7 +11424,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Line_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Line* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -20953,6 +20976,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Line_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Line_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Line_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Line_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Line_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Line_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Line_TransformToVisual), METH_VARARGS, nullptr },
@@ -22212,7 +22236,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Path_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Path* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -31492,6 +31527,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Path_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Path_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Path_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Path_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Path_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Path_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Path_TransformToVisual), METH_VARARGS, nullptr },
@@ -32745,7 +32781,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polygon_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Polygon* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -42112,6 +42159,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Polygon_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Polygon_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Polygon_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Polygon_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Polygon_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Polygon_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Polygon_TransformToVisual), METH_VARARGS, nullptr },
@@ -43367,7 +43415,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Polyline_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Polyline* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -52734,6 +52793,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Polyline_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Polyline_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Polyline_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Polyline_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Polyline_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Polyline_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Polyline_TransformToVisual), METH_VARARGS, nullptr },
@@ -53989,7 +54049,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Rectangle_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Rectangle* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -63356,6 +63427,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Rectangle_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Rectangle_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Rectangle_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Rectangle_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Rectangle_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Rectangle_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Rectangle_TransformToVisual), METH_VARARGS, nullptr },
@@ -64589,7 +64661,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Shape_StartBringIntoViewWithOptions(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -74068,6 +74151,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         { "set_value", reinterpret_cast<PyCFunction>(Shape_SetValue), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Shape_StartAnimation), METH_VARARGS, nullptr },
         { "start_bring_into_view", reinterpret_cast<PyCFunction>(Shape_StartBringIntoView), METH_VARARGS, nullptr },
+        { "start_bring_into_view_with_options", reinterpret_cast<PyCFunction>(Shape_StartBringIntoViewWithOptions), METH_VARARGS, nullptr },
         { "start_drag_async", reinterpret_cast<PyCFunction>(Shape_StartDragAsync), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Shape_StopAnimation), METH_VARARGS, nullptr },
         { "transform_to_visual", reinterpret_cast<PyCFunction>(Shape_TransformToVisual), METH_VARARGS, nullptr },

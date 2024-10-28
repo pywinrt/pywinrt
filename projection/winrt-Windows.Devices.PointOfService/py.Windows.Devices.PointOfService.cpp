@@ -235,7 +235,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BarcodeScanner_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -681,6 +692,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "from_id_async", reinterpret_cast<PyCFunction>(BarcodeScanner_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(BarcodeScanner_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4876,7 +4888,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CashDrawer_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5224,6 +5247,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "from_id_async", reinterpret_cast<PyCFunction>(CashDrawer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(CashDrawer_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(CashDrawer_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9347,7 +9371,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ClaimedLineDisplay_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9601,36 +9636,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryStoreStorageFileBitmapAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
-
-                return py::convert(self->obj.TryStoreStorageFileBitmapAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAndWidthAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -9653,6 +9670,46 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 return py::convert(self->obj.TryStoreStorageFileBitmapAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAsync(py::wrapper::Windows::Devices::PointOfService::ClaimedLineDisplay* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ClaimedLineDisplay", L"TryStoreStorageFileBitmapAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
+
+                return py::convert(self->obj.TryStoreStorageFileBitmapAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -10242,6 +10299,8 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "try_create_window_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryCreateWindowAsync), METH_VARARGS, nullptr },
         { "try_set_descriptor_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TrySetDescriptorAsync), METH_VARARGS, nullptr },
         { "try_store_storage_file_bitmap_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryStoreStorageFileBitmapAsync), METH_VARARGS, nullptr },
+        { "try_store_storage_file_bitmap_with_alignment_and_width_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAndWidthAsync), METH_VARARGS, nullptr },
+        { "try_store_storage_file_bitmap_with_alignment_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryStoreStorageFileBitmapWithAlignmentAsync), METH_VARARGS, nullptr },
         { "try_update_attributes_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_TryUpdateAttributesAsync), METH_VARARGS, nullptr },
         { "add_release_device_requested", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_add_ReleaseDeviceRequested), METH_O, nullptr },
         { "remove_release_device_requested", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_remove_ReleaseDeviceRequested), METH_O, nullptr },
@@ -10294,6 +10353,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     static PyMethodDef methods_ClaimedLineDisplay_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(ClaimedLineDisplay_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -14604,33 +14664,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                self->obj.PrintLine();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -14650,6 +14684,43 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PrintLine(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* JournalPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::JournalPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.JournalPrintJob", L"PrintLine", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.PrintLine();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14695,6 +14766,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "feed_paper_by_map_mode_unit", reinterpret_cast<PyCFunction>(JournalPrintJob_FeedPaperByMapModeUnit), METH_VARARGS, nullptr },
         { "print", reinterpret_cast<PyCFunction>(JournalPrintJob_Print), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(JournalPrintJob_PrintLine), METH_VARARGS, nullptr },
+        { "print_newline", reinterpret_cast<PyCFunction>(JournalPrintJob_PrintNewline), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_JournalPrintJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_JournalPrintJob), METH_O | METH_STATIC, nullptr },
         { }
@@ -15527,7 +15599,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineDisplay_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -15858,6 +15941,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "from_id_async", reinterpret_cast<PyCFunction>(LineDisplay_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(LineDisplay_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(LineDisplay_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -18590,36 +18674,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtCursorAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
-
-                return py::convert(self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAndWidthAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -18642,6 +18708,46 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 return py::convert(self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayStorageFileBitmapAtCursorAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::StorageFile>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayHorizontalAlignment>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Devices::PointOfService::LineDisplayVerticalAlignment>(args, 2);
+
+                return py::convert(self->obj.TryDisplayStorageFileBitmapAtCursorAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -18688,7 +18794,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineDisplayWindow_TryDisplayStorageFileBitmapAtPointWithWidthAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -18766,34 +18883,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayTextAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.TryDisplayTextAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -18821,7 +18911,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineDisplayWindow_TryDisplayTextAtPositionAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -18843,6 +18944,44 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Point>(args, 2);
 
                 return py::convert(self->obj.TryDisplayTextAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LineDisplayWindow_TryDisplayTextNormalAsync(py::wrapper::Windows::Devices::PointOfService::LineDisplayWindow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.LineDisplayWindow", L"TryDisplayTextAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.TryDisplayTextAsync(param0));
             }
             catch (...)
             {
@@ -19119,9 +19258,14 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "read_character_at_cursor_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_ReadCharacterAtCursorAsync), METH_VARARGS, nullptr },
         { "try_clear_text_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryClearTextAsync), METH_VARARGS, nullptr },
         { "try_display_storage_file_bitmap_at_cursor_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorAsync), METH_VARARGS, nullptr },
+        { "try_display_storage_file_bitmap_at_cursor_with_alignment_and_width_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAndWidthAsync), METH_VARARGS, nullptr },
+        { "try_display_storage_file_bitmap_at_cursor_with_alignment_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStorageFileBitmapAtCursorWithAlignmentAsync), METH_VARARGS, nullptr },
         { "try_display_storage_file_bitmap_at_point_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStorageFileBitmapAtPointAsync), METH_VARARGS, nullptr },
+        { "try_display_storage_file_bitmap_at_point_with_width_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStorageFileBitmapAtPointWithWidthAsync), METH_VARARGS, nullptr },
         { "try_display_stored_bitmap_at_cursor_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayStoredBitmapAtCursorAsync), METH_VARARGS, nullptr },
         { "try_display_text_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayTextAsync), METH_VARARGS, nullptr },
+        { "try_display_text_at_position_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayTextAtPositionAsync), METH_VARARGS, nullptr },
+        { "try_display_text_normal_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryDisplayTextNormalAsync), METH_VARARGS, nullptr },
         { "try_refresh_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryRefreshAsync), METH_VARARGS, nullptr },
         { "try_scroll_text_async", reinterpret_cast<PyCFunction>(LineDisplayWindow_TryScrollTextAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LineDisplayWindow, METH_O | METH_STATIC, nullptr },
@@ -19385,7 +19529,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MagneticStripeReader_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -19743,6 +19898,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "from_id_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(MagneticStripeReader_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -22443,7 +22599,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PosPrinter_GetDeviceSelectorWithConnectionTypes(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -22857,6 +23024,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "from_id_async", reinterpret_cast<PyCFunction>(PosPrinter_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default_async", reinterpret_cast<PyCFunction>(PosPrinter_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_connection_types", reinterpret_cast<PyCFunction>(PosPrinter_GetDeviceSelectorWithConnectionTypes), METH_VARARGS, nullptr },
         { }
     };
 
@@ -24691,33 +24859,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"CutPaper", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                self->obj.CutPaper();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -24737,6 +24879,43 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param0 = py::convert_to<double>(args, 0);
 
                 self->obj.CutPaper(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_CutPaperDefault(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"CutPaper", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.CutPaper();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25137,7 +25316,59 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintCustomAlignedBitmap", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -25207,7 +25438,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -25215,20 +25457,18 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintCustomAlignedBitmap", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintLine", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25244,7 +25484,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* ReceiptPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    static PyObject* ReceiptPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -25266,34 +25506,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 }
 
                 self->obj.PrintLine();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25421,7 +25633,60 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetCustomAlignedBitmap", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param3 = py::convert_to<uint32_t>(args, 3);
+
+                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ReceiptPrintJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::ReceiptPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -25485,37 +25750,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 self->obj.SetCustomAlignedBitmap(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.ReceiptPrintJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<uint32_t>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-                auto param3 = py::convert_to<uint32_t>(args, 3);
-
-                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25673,6 +25907,7 @@ namespace py::cpp::Windows::Devices::PointOfService
 
     static PyMethodDef _methods_ReceiptPrintJob[] = {
         { "cut_paper", reinterpret_cast<PyCFunction>(ReceiptPrintJob_CutPaper), METH_VARARGS, nullptr },
+        { "cut_paper_default", reinterpret_cast<PyCFunction>(ReceiptPrintJob_CutPaperDefault), METH_VARARGS, nullptr },
         { "draw_ruled_line", reinterpret_cast<PyCFunction>(ReceiptPrintJob_DrawRuledLine), METH_VARARGS, nullptr },
         { "execute_async", reinterpret_cast<PyCFunction>(ReceiptPrintJob_ExecuteAsync), METH_VARARGS, nullptr },
         { "feed_paper_by_line", reinterpret_cast<PyCFunction>(ReceiptPrintJob_FeedPaperByLine), METH_VARARGS, nullptr },
@@ -25682,11 +25917,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "print_barcode", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintBarcode), METH_VARARGS, nullptr },
         { "print_barcode_custom_align", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintBarcodeCustomAlign), METH_VARARGS, nullptr },
         { "print_bitmap", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintBitmap), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "print_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintLine), METH_VARARGS, nullptr },
+        { "print_newline", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintNewline), METH_VARARGS, nullptr },
         { "print_saved_bitmap", reinterpret_cast<PyCFunction>(ReceiptPrintJob_PrintSavedBitmap), METH_VARARGS, nullptr },
         { "set_barcode_rotation", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetBarcodeRotation), METH_VARARGS, nullptr },
         { "set_bitmap", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetBitmap), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "set_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "set_print_area", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetPrintArea), METH_VARARGS, nullptr },
         { "set_print_rotation", reinterpret_cast<PyCFunction>(ReceiptPrintJob_SetPrintRotation), METH_VARARGS, nullptr },
@@ -26981,7 +27221,59 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlipPrintJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintCustomAlignedBitmap", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlipPrintJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -27051,7 +27343,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlipPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -27059,20 +27362,18 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintCustomAlignedBitmap", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintLine", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -27088,7 +27389,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* SlipPrintJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    static PyObject* SlipPrintJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -27110,34 +27411,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 }
 
                 self->obj.PrintLine();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -27265,7 +27538,60 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlipPrintJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetCustomAlignedBitmap", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param3 = py::convert_to<uint32_t>(args, 3);
+
+                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SlipPrintJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::SlipPrintJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -27329,37 +27655,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 self->obj.SetCustomAlignedBitmap(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.SlipPrintJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<uint32_t>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-                auto param3 = py::convert_to<uint32_t>(args, 3);
-
-                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -27487,11 +27782,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "print_barcode", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintBarcode), METH_VARARGS, nullptr },
         { "print_barcode_custom_align", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintBarcodeCustomAlign), METH_VARARGS, nullptr },
         { "print_bitmap", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintBitmap), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "print_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintLine), METH_VARARGS, nullptr },
+        { "print_newline", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintNewline), METH_VARARGS, nullptr },
         { "print_saved_bitmap", reinterpret_cast<PyCFunction>(SlipPrintJob_PrintSavedBitmap), METH_VARARGS, nullptr },
         { "set_barcode_rotation", reinterpret_cast<PyCFunction>(SlipPrintJob_SetBarcodeRotation), METH_VARARGS, nullptr },
         { "set_bitmap", reinterpret_cast<PyCFunction>(SlipPrintJob_SetBitmap), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(SlipPrintJob_SetBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(SlipPrintJob_SetBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "set_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(SlipPrintJob_SetCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "set_print_area", reinterpret_cast<PyCFunction>(SlipPrintJob_SetPrintArea), METH_VARARGS, nullptr },
         { "set_print_rotation", reinterpret_cast<PyCFunction>(SlipPrintJob_SetPrintRotation), METH_VARARGS, nullptr },
@@ -30493,33 +30793,7 @@ namespace py::cpp::Windows::Devices::PointOfService
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                self->obj.PrintLine();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -30539,6 +30813,43 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 self->obj.PrintLine(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IPosPrinterJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::IPosPrinterJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                self->obj.PrintLine();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -30582,6 +30893,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "execute_async", reinterpret_cast<PyCFunction>(IPosPrinterJob_ExecuteAsync), METH_VARARGS, nullptr },
         { "print", reinterpret_cast<PyCFunction>(IPosPrinterJob_Print), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(IPosPrinterJob_PrintLine), METH_VARARGS, nullptr },
+        { "print_newline", reinterpret_cast<PyCFunction>(IPosPrinterJob_PrintNewline), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IPosPrinterJob, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IPosPrinterJob), METH_O | METH_STATIC, nullptr },
         { }
@@ -30862,7 +31174,59 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IReceiptOrSlipJob_PrintBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintCustomAlignedBitmap", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IReceiptOrSlipJob_PrintBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -30932,7 +31296,18 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IReceiptOrSlipJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -30940,20 +31315,18 @@ namespace py::cpp::Windows::Devices::PointOfService
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"PrintCustomAlignedBitmap", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.PrintCustomAlignedBitmap(param0, param1, param2);
+                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -30969,7 +31342,7 @@ namespace py::cpp::Windows::Devices::PointOfService
         }
     }
 
-    static PyObject* IReceiptOrSlipJob_PrintLine(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    static PyObject* IReceiptOrSlipJob_PrintNewline(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -30991,34 +31364,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 }
 
                 self->obj.PrintLine();
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IPosPrinterJob", L"PrintLine", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                self->obj.PrintLine(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -31146,7 +31491,60 @@ namespace py::cpp::Windows::Devices::PointOfService
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IReceiptOrSlipJob_SetBitmapCustomWidthCustomAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetCustomAlignedBitmap", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+                auto param3 = py::convert_to<uint32_t>(args, 3);
+
+                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IReceiptOrSlipJob_SetBitmapCustomWidthStandardAlign(py::wrapper::Windows::Devices::PointOfService::IReceiptOrSlipJob* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -31210,37 +31608,6 @@ namespace py::cpp::Windows::Devices::PointOfService
                 auto param2 = py::convert_to<uint32_t>(args, 2);
 
                 self->obj.SetCustomAlignedBitmap(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.PointOfService.IReceiptOrSlipJob", L"SetCustomAlignedBitmap", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<uint32_t>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::Imaging::BitmapFrame>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-                auto param3 = py::convert_to<uint32_t>(args, 3);
-
-                self->obj.SetCustomAlignedBitmap(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -31366,11 +31733,16 @@ namespace py::cpp::Windows::Devices::PointOfService
         { "print_barcode", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintBarcode), METH_VARARGS, nullptr },
         { "print_barcode_custom_align", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintBarcodeCustomAlign), METH_VARARGS, nullptr },
         { "print_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintBitmap), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "print_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "print_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "print_line", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintLine), METH_VARARGS, nullptr },
+        { "print_newline", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintNewline), METH_VARARGS, nullptr },
         { "print_saved_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_PrintSavedBitmap), METH_VARARGS, nullptr },
         { "set_barcode_rotation", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetBarcodeRotation), METH_VARARGS, nullptr },
         { "set_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetBitmap), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_custom_align", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetBitmapCustomWidthCustomAlign), METH_VARARGS, nullptr },
+        { "set_bitmap_custom_width_standard_align", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetBitmapCustomWidthStandardAlign), METH_VARARGS, nullptr },
         { "set_custom_aligned_bitmap", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetCustomAlignedBitmap), METH_VARARGS, nullptr },
         { "set_print_area", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetPrintArea), METH_VARARGS, nullptr },
         { "set_print_rotation", reinterpret_cast<PyCFunction>(IReceiptOrSlipJob_SetPrintRotation), METH_VARARGS, nullptr },

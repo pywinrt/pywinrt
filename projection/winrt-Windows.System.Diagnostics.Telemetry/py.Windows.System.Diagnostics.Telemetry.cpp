@@ -44,7 +44,18 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PlatformTelemetryClient_RegisterWithSettings(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -107,6 +118,7 @@ namespace py::cpp::Windows::System::Diagnostics::Telemetry
 
     static PyMethodDef methods_PlatformTelemetryClient_Static[] = {
         { "register", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_Register), METH_VARARGS, nullptr },
+        { "register_with_settings", reinterpret_cast<PyCFunction>(PlatformTelemetryClient_RegisterWithSettings), METH_VARARGS, nullptr },
         { }
     };
 

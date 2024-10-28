@@ -165,34 +165,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
-
-                return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -232,7 +204,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceAndServiceIdWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -254,6 +237,45 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
                 auto param2 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 2);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::GetDeviceSelectorForBluetoothDeviceAndServiceId(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.Rfcomm.RfcommDeviceService", L"GetDeviceSelectorForBluetoothDevice", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDevice>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
+
+                return py::convert(winrt::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService::GetDeviceSelectorForBluetoothDevice(param0, param1));
             }
             catch (...)
             {
@@ -297,7 +319,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RfcommDeviceService_GetSdpRawAttributesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -595,6 +628,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
     static PyMethodDef _methods_RfcommDeviceService[] = {
         { "close", reinterpret_cast<PyCFunction>(RfcommDeviceService_Close), METH_VARARGS, nullptr },
         { "get_sdp_raw_attributes_async", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetSdpRawAttributesAsync), METH_VARARGS, nullptr },
+        { "get_sdp_raw_attributes_with_cache_mode_async", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetSdpRawAttributesWithCacheModeAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(RfcommDeviceService_RequestAccessAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RfcommDeviceService, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RfcommDeviceService), METH_O | METH_STATIC, nullptr },
@@ -638,6 +672,8 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
         { "get_device_selector", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_device_selector_for_bluetooth_device", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetDeviceSelectorForBluetoothDevice), METH_VARARGS, nullptr },
         { "get_device_selector_for_bluetooth_device_and_service_id", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceAndServiceId), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_and_service_id_with_cache_mode", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceAndServiceIdWithCacheMode), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_with_cache_mode", reinterpret_cast<PyCFunction>(RfcommDeviceService_GetDeviceSelectorForBluetoothDeviceWithCacheMode), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1297,7 +1333,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RfcommServiceProvider_StartAdvertisingWithRadioDiscoverability(py::wrapper::Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1448,6 +1495,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Rfcomm
 
     static PyMethodDef _methods_RfcommServiceProvider[] = {
         { "start_advertising", reinterpret_cast<PyCFunction>(RfcommServiceProvider_StartAdvertising), METH_VARARGS, nullptr },
+        { "start_advertising_with_radio_discoverability", reinterpret_cast<PyCFunction>(RfcommServiceProvider_StartAdvertisingWithRadioDiscoverability), METH_VARARGS, nullptr },
         { "stop_advertising", reinterpret_cast<PyCFunction>(RfcommServiceProvider_StopAdvertising), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RfcommServiceProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RfcommServiceProvider), METH_O | METH_STATIC, nullptr },

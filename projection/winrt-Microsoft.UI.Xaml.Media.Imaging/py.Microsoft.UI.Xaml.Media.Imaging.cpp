@@ -2530,7 +2530,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RenderTargetBitmap_RenderToSizeAsync(py::wrapper::Microsoft::UI::Xaml::Media::Imaging::RenderTargetBitmap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2834,6 +2845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         { "read_local_value", reinterpret_cast<PyCFunction>(RenderTargetBitmap_ReadLocalValue), METH_VARARGS, nullptr },
         { "register_property_changed_callback", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "render_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RenderAsync), METH_VARARGS, nullptr },
+        { "render_to_size_async", reinterpret_cast<PyCFunction>(RenderTargetBitmap_RenderToSizeAsync), METH_VARARGS, nullptr },
         { "set_value", reinterpret_cast<PyCFunction>(RenderTargetBitmap_SetValue), METH_VARARGS, nullptr },
         { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(RenderTargetBitmap_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RenderTargetBitmap, METH_O | METH_STATIC, nullptr },
