@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InputActivationListenerPreview_Static(type):
-    def create_for_application_window(cls, window: typing.Optional[windows_ui_windowmanagement.AppWindow], /) -> typing.Optional[windows_ui_input.InputActivationListener]: ...
+    def create_for_application_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> windows_ui_input.InputActivationListener: ...
 
 @typing.final
 class InputActivationListenerPreview(winrt.system.Object, metaclass=InputActivationListenerPreview_Static):

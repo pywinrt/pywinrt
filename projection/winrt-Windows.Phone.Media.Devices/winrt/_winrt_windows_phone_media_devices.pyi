@@ -17,7 +17,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AudioRoutingManager_Static(type):
-    def get_default(cls) -> typing.Optional[AudioRoutingManager]: ...
+    def get_default(cls) -> AudioRoutingManager: ...
 
 @typing.final
 class AudioRoutingManager(winrt.system.Object, metaclass=AudioRoutingManager_Static):

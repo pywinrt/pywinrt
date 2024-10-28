@@ -255,7 +255,7 @@ static class FileWriters
                 foreach (var prop in type.Type.Properties.Where(p => p.GetMethod.IsStatic))
                 {
                     var name = prop.Name.ToPythonIdentifier();
-                    var propType = prop.PropertyType.ToNullablePyTypeName(ns);
+                    var propType = prop.PropertyType.ToPyTypeName(ns);
 
                     w.WriteLine("@_property");
                     w.WriteLine($"def {name}(cls) -> {propType}: ...");
@@ -459,7 +459,7 @@ static class FileWriters
                             continue;
                         }
 
-                        returnType = genericInst.GenericArguments[0].ToNullablePyTypeName(ns);
+                        returnType = genericInst.GenericArguments[0].ToPyTypeName(ns);
 
                         break;
                     }
@@ -515,10 +515,7 @@ static class FileWriters
             foreach (var prop in type.Properties.Where(p => !p.IsStatic))
             {
                 var name = prop.Name.ToPythonIdentifier();
-                var propType = prop.Property.PropertyType.ToNullablePyTypeName(
-                    ns,
-                    prop.GenericArgMap
-                );
+                var propType = prop.Property.PropertyType.ToPyTypeName(ns, prop.GenericArgMap);
 
                 w.WriteLine("@_property");
                 w.WriteLine($"def {name}(self) -> {propType}: ...");

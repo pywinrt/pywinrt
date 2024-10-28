@@ -472,5 +472,5 @@ PhotoConfirmationCapturedEventArgs = _winrt_windows_media_capture.PhotoConfirmat
 ScreenCapture = _winrt_windows_media_capture.ScreenCapture
 SourceSuspensionChangedEventArgs = _winrt_windows_media_capture.SourceSuspensionChangedEventArgs
 VideoStreamConfiguration = _winrt_windows_media_capture.VideoStreamConfiguration
-MediaCaptureFailedEventHandler = typing.Callable[[typing.Optional[MediaCapture], typing.Optional[MediaCaptureFailedEventArgs]], None]
-RecordLimitationExceededEventHandler = typing.Callable[[typing.Optional[MediaCapture]], None]
+MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], None]
+RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], None]

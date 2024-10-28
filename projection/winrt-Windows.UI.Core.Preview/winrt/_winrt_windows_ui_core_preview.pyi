@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CoreAppWindowPreview_Static(type):
-    def get_id_from_window(cls, window: typing.Optional[windows_ui_windowmanagement.AppWindow], /) -> winrt.system.Int32: ...
+    def get_id_from_window(cls, window: windows_ui_windowmanagement.AppWindow, /) -> winrt.system.Int32: ...
 
 @typing.final
 class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_Static):
@@ -27,7 +27,7 @@ class CoreAppWindowPreview(winrt.system.Object, metaclass=CoreAppWindowPreview_S
 class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SystemNavigationCloseRequestedPreviewEventArgs: ...
-    def get_deferral(self) -> typing.Optional[windows_foundation.Deferral]: ...
+    def get_deferral(self) -> windows_foundation.Deferral: ...
     @_property
     def handled(self) -> bool: ...
     @handled.setter
@@ -35,7 +35,7 @@ class SystemNavigationCloseRequestedPreviewEventArgs(winrt.system.Object):
 
 @typing.final
 class SystemNavigationManagerPreview_Static(type):
-    def get_for_current_view(cls) -> typing.Optional[SystemNavigationManagerPreview]: ...
+    def get_for_current_view(cls) -> SystemNavigationManagerPreview: ...
 
 @typing.final
 class SystemNavigationManagerPreview(winrt.system.Object, metaclass=SystemNavigationManagerPreview_Static):

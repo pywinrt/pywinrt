@@ -8,6 +8,7 @@
 - [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method
   names when available. This exposes some APIs that otherwise could not be called
   but also renames many existing methods.
+- Type hints are no longer `typing.Optional` by default.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.

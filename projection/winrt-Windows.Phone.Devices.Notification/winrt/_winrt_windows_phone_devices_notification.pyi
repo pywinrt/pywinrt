@@ -15,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class VibrationDevice_Static(type):
-    def get_default(cls) -> typing.Optional[VibrationDevice]: ...
+    def get_default(cls) -> VibrationDevice: ...
 
 @typing.final
 class VibrationDevice(winrt.system.Object, metaclass=VibrationDevice_Static):

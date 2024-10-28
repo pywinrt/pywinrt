@@ -34,4 +34,4 @@ PopupMenu = _winrt_windows_ui_popups.PopupMenu
 UICommand = _winrt_windows_ui_popups.UICommand
 UICommandSeparator = _winrt_windows_ui_popups.UICommandSeparator
 IUICommand = _winrt_windows_ui_popups.IUICommand
-UICommandInvokedHandler = typing.Callable[[typing.Optional[IUICommand]], None]
+UICommandInvokedHandler = typing.Callable[[IUICommand], None]

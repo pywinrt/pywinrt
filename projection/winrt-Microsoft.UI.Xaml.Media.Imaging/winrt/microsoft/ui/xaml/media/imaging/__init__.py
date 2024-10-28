@@ -52,4 +52,4 @@ SvgImageSourceOpenedEventArgs = _winrt_microsoft_ui_xaml_media_imaging.SvgImageS
 VirtualSurfaceImageSource = _winrt_microsoft_ui_xaml_media_imaging.VirtualSurfaceImageSource
 WriteableBitmap = _winrt_microsoft_ui_xaml_media_imaging.WriteableBitmap
 XamlRenderingBackgroundTask = _winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask
-DownloadProgressEventHandler = typing.Callable[[typing.Optional[winrt.system.Object], typing.Optional[DownloadProgressEventArgs]], None]
+DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]

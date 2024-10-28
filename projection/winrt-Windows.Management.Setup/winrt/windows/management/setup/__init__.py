@@ -64,4 +64,4 @@ DeploymentWorkload = _winrt_windows_management_setup.DeploymentWorkload
 DeploymentWorkloadBatch = _winrt_windows_management_setup.DeploymentWorkloadBatch
 DevicePreparationExecutionContext = _winrt_windows_management_setup.DevicePreparationExecutionContext
 MachineProvisioningProgressReporter = _winrt_windows_management_setup.MachineProvisioningProgressReporter
-DeploymentSessionHeartbeatRequested = typing.Callable[[typing.Optional[DeploymentSessionHeartbeatRequestedEventArgs]], None]
+DeploymentSessionHeartbeatRequested = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], None]

@@ -15,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ApplicationDataManager_Static(type):
-    def create_for_package_family(cls, package_family_name: str, /) -> typing.Optional[windows_storage.ApplicationData]: ...
+    def create_for_package_family(cls, package_family_name: str, /) -> windows_storage.ApplicationData: ...
 
 @typing.final
 class ApplicationDataManager(winrt.system.Object, metaclass=ApplicationDataManager_Static):

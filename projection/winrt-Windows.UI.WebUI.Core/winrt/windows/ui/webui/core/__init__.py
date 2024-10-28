@@ -39,4 +39,4 @@ IWebUICommandBarElement = _winrt_windows_ui_webui_core.IWebUICommandBarElement
 IWebUICommandBarIcon = _winrt_windows_ui_webui_core.IWebUICommandBarIcon
 MenuClosedEventHandler = typing.Callable[[], None]
 MenuOpenedEventHandler = typing.Callable[[], None]
-SizeChangedEventHandler = typing.Callable[[typing.Optional[WebUICommandBarSizeChangedEventArgs]], None]
+SizeChangedEventHandler = typing.Callable[[WebUICommandBarSizeChangedEventArgs], None]

@@ -35,5 +35,5 @@ GameListEntry = _winrt_windows_gaming_preview_gamesenumeration.GameListEntry
 GameModeConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration
 GameModeUserConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration
 IGameListEntry = _winrt_windows_gaming_preview_gamesenumeration.IGameListEntry
-GameListChangedEventHandler = typing.Callable[[typing.Optional[GameListEntry]], None]
+GameListChangedEventHandler = typing.Callable[[GameListEntry], None]
 GameListRemovedEventHandler = typing.Callable[[str], None]

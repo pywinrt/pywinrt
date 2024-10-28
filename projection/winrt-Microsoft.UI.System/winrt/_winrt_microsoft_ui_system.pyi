@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class ThemeSettings_Static(type):
-    def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> typing.Optional[ThemeSettings]: ...
+    def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ThemeSettings: ...
 
 @typing.final
 class ThemeSettings(winrt.system.Object, metaclass=ThemeSettings_Static):

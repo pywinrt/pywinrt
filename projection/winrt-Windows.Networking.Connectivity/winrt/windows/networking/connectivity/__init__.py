@@ -199,4 +199,4 @@ ProxyConfiguration = _winrt_windows_networking_connectivity.ProxyConfiguration
 RoutePolicy = _winrt_windows_networking_connectivity.RoutePolicy
 WlanConnectionProfileDetails = _winrt_windows_networking_connectivity.WlanConnectionProfileDetails
 WwanConnectionProfileDetails = _winrt_windows_networking_connectivity.WwanConnectionProfileDetails
-NetworkStatusChangedEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
+NetworkStatusChangedEventHandler = typing.Callable[[winrt.system.Object], None]

@@ -94,4 +94,4 @@ DisplayEnhancementOverrideCapabilitiesChangedEventArgs = _winrt_windows_graphics
 DisplayInformation = _winrt_windows_graphics_display.DisplayInformation
 DisplayProperties = _winrt_windows_graphics_display.DisplayProperties
 DisplayServices = _winrt_windows_graphics_display.DisplayServices
-DisplayPropertiesEventHandler = typing.Callable[[typing.Optional[winrt.system.Object]], None]
+DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], None]

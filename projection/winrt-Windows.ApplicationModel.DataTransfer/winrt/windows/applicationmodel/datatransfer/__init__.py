@@ -91,5 +91,5 @@ ShareUIOptions = _winrt_windows_applicationmodel_datatransfer.ShareUIOptions
 SharedStorageAccessManager = _winrt_windows_applicationmodel_datatransfer.SharedStorageAccessManager
 StandardDataFormats = _winrt_windows_applicationmodel_datatransfer.StandardDataFormats
 TargetApplicationChosenEventArgs = _winrt_windows_applicationmodel_datatransfer.TargetApplicationChosenEventArgs
-DataProviderHandler = typing.Callable[[typing.Optional[DataProviderRequest]], None]
-ShareProviderHandler = typing.Callable[[typing.Optional[ShareProviderOperation]], None]
+DataProviderHandler = typing.Callable[[DataProviderRequest], None]
+ShareProviderHandler = typing.Callable[[ShareProviderOperation], None]

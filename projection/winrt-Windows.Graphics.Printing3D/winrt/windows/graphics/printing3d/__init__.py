@@ -128,4 +128,4 @@ Printing3DMultiplePropertyMaterialGroup = _winrt_windows_graphics_printing3d.Pri
 Printing3DTexture2CoordMaterial = _winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterial
 Printing3DTexture2CoordMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterialGroup
 Printing3DTextureResource = _winrt_windows_graphics_printing3d.Printing3DTextureResource
-Print3DTaskSourceRequestedHandler = typing.Callable[[typing.Optional[Print3DTaskSourceRequestedArgs]], None]
+Print3DTaskSourceRequestedHandler = typing.Callable[[Print3DTaskSourceRequestedArgs], None]
