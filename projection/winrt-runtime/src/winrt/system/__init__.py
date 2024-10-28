@@ -12,7 +12,7 @@ else:
     # Before PEP 688, this was the best we could do
     _buffer = Union[bytes, bytearray, memoryview, _array]
 
-from .. import _winrt
+from .._winrt import Array, Object, _add_dll_directory, _remove_dll_directory
 
 
 class _DllCookie:
@@ -21,7 +21,7 @@ class _DllCookie:
 
     def close(self):
         if self.cookie:
-            _winrt._remove_dll_directory(self.cookie)
+            _remove_dll_directory(self.cookie)
             self.cookie = None
 
     def __del__(self):
@@ -39,7 +39,7 @@ def _register_dll_search_path(module_path) -> _DllCookie:
         An cookie object that will remove the search path when closed.
     """
     return _DllCookie(
-        _winrt._add_dll_directory(str(Path(module_path).parent.resolve()))
+        _add_dll_directory(str(Path(module_path).parent.resolve()))
     )
 
 
@@ -182,8 +182,6 @@ Single = Annotated[float, "f"]
 Double = Annotated[float, "d"]
 Char16 = Annotated[str, "u"]
 
-Object = _winrt.Object
-Array = _winrt.Array
 _mixin_mutable_sequence(Array)
 
 # Type hints for Python buffer protocol - can use standard Python types in
