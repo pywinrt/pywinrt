@@ -1344,34 +1344,6 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 1);
-
-                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1411,7 +1383,18 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoiceCommandResponse_CreateResponseForPromptWithTiles(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1433,6 +1416,45 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
                 auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 2);
 
                 return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponseForPrompt(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VoiceCommandResponse_CreateResponseWithTiles(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.VoiceCommands.VoiceCommandResponse", L"CreateResponse", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandUserMessage>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandContentTile>>(args, 1);
+
+                return py::convert(winrt::Windows::ApplicationModel::VoiceCommands::VoiceCommandResponse::CreateResponse(param0, param1));
             }
             catch (...)
             {
@@ -1743,6 +1765,8 @@ namespace py::cpp::Windows::ApplicationModel::VoiceCommands
     static PyMethodDef methods_VoiceCommandResponse_Static[] = {
         { "create_response", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponse), METH_VARARGS, nullptr },
         { "create_response_for_prompt", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseForPrompt), METH_VARARGS, nullptr },
+        { "create_response_for_prompt_with_tiles", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseForPromptWithTiles), METH_VARARGS, nullptr },
+        { "create_response_with_tiles", reinterpret_cast<PyCFunction>(VoiceCommandResponse_CreateResponseWithTiles), METH_VARARGS, nullptr },
         { }
     };
 

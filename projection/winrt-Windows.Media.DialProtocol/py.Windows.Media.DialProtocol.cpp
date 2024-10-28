@@ -765,7 +765,18 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DialDevicePicker_PickSingleDialDeviceAsyncWithPlacement(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -872,7 +883,18 @@ namespace py::cpp::Windows::Media::DialProtocol
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DialDevicePicker_ShowWithPlacement(py::wrapper::Windows::Media::DialProtocol::DialDevicePicker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1158,8 +1180,10 @@ namespace py::cpp::Windows::Media::DialProtocol
     static PyMethodDef _methods_DialDevicePicker[] = {
         { "hide", reinterpret_cast<PyCFunction>(DialDevicePicker_Hide), METH_VARARGS, nullptr },
         { "pick_single_dial_device_async", reinterpret_cast<PyCFunction>(DialDevicePicker_PickSingleDialDeviceAsync), METH_VARARGS, nullptr },
+        { "pick_single_dial_device_async_with_placement", reinterpret_cast<PyCFunction>(DialDevicePicker_PickSingleDialDeviceAsyncWithPlacement), METH_VARARGS, nullptr },
         { "set_display_status", reinterpret_cast<PyCFunction>(DialDevicePicker_SetDisplayStatus), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(DialDevicePicker_Show), METH_VARARGS, nullptr },
+        { "show_with_placement", reinterpret_cast<PyCFunction>(DialDevicePicker_ShowWithPlacement), METH_VARARGS, nullptr },
         { "add_dial_device_picker_dismissed", reinterpret_cast<PyCFunction>(DialDevicePicker_add_DialDevicePickerDismissed), METH_O, nullptr },
         { "remove_dial_device_picker_dismissed", reinterpret_cast<PyCFunction>(DialDevicePicker_remove_DialDevicePickerDismissed), METH_O, nullptr },
         { "add_dial_device_selected", reinterpret_cast<PyCFunction>(DialDevicePicker_add_DialDeviceSelected), METH_O, nullptr },

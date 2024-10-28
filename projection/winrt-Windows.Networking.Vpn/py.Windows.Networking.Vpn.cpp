@@ -777,7 +777,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* VpnChannel_RequestCredentialsAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
+    static PyObject* VpnChannel_RequestCredentialsSimpleAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -808,35 +808,18 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert(self->obj.RequestCredentialsAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 3)
+    }
+
+    static PyObject* VpnChannel_RequestCredentialsWithCertificateAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -858,6 +841,45 @@ namespace py::cpp::Windows::Networking::Vpn
                 auto param2 = py::convert_to<winrt::Windows::Security::Cryptography::Certificates::Certificate>(args, 2);
 
                 return py::convert(self->obj.RequestCredentialsAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VpnChannel_RequestCredentialsWithOptionsAsync(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Vpn.VpnChannel", L"RequestCredentialsAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::Vpn::VpnCredentialType>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert(self->obj.RequestCredentialsAsync(param0, param1));
             }
             catch (...)
             {
@@ -1255,7 +1277,7 @@ namespace py::cpp::Windows::Networking::Vpn
         }
     }
 
-    static PyObject* VpnChannel_StartWithTrafficFilter(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
+    static PyObject* VpnChannel_StartWithMultipleTransports(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1296,7 +1318,18 @@ namespace py::cpp::Windows::Networking::Vpn
                 return nullptr;
             }
         }
-        else if (arg_count == 11)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VpnChannel_StartWithTrafficFilter(py::wrapper::Windows::Networking::Vpn::VpnChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 11)
         {
             try
             {
@@ -1734,7 +1767,9 @@ namespace py::cpp::Windows::Networking::Vpn
         { "log_diagnostic_message", reinterpret_cast<PyCFunction>(VpnChannel_LogDiagnosticMessage), METH_VARARGS, nullptr },
         { "replace_and_associate_transport", reinterpret_cast<PyCFunction>(VpnChannel_ReplaceAndAssociateTransport), METH_VARARGS, nullptr },
         { "request_credentials", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentials), METH_VARARGS, nullptr },
-        { "request_credentials_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentialsAsync), METH_VARARGS, nullptr },
+        { "request_credentials_simple_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentialsSimpleAsync), METH_VARARGS, nullptr },
+        { "request_credentials_with_certificate_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentialsWithCertificateAsync), METH_VARARGS, nullptr },
+        { "request_credentials_with_options_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCredentialsWithOptionsAsync), METH_VARARGS, nullptr },
         { "request_custom_prompt", reinterpret_cast<PyCFunction>(VpnChannel_RequestCustomPrompt), METH_VARARGS, nullptr },
         { "request_custom_prompt_async", reinterpret_cast<PyCFunction>(VpnChannel_RequestCustomPromptAsync), METH_VARARGS, nullptr },
         { "request_vpn_packet_buffer", reinterpret_cast<PyCFunction>(VpnChannel_RequestVpnPacketBuffer), METH_VARARGS, nullptr },
@@ -1744,6 +1779,7 @@ namespace py::cpp::Windows::Networking::Vpn
         { "start_existing_transports", reinterpret_cast<PyCFunction>(VpnChannel_StartExistingTransports), METH_VARARGS, nullptr },
         { "start_reconnecting_transport", reinterpret_cast<PyCFunction>(VpnChannel_StartReconnectingTransport), METH_VARARGS, nullptr },
         { "start_with_main_transport", reinterpret_cast<PyCFunction>(VpnChannel_StartWithMainTransport), METH_VARARGS, nullptr },
+        { "start_with_multiple_transports", reinterpret_cast<PyCFunction>(VpnChannel_StartWithMultipleTransports), METH_VARARGS, nullptr },
         { "start_with_traffic_filter", reinterpret_cast<PyCFunction>(VpnChannel_StartWithTrafficFilter), METH_VARARGS, nullptr },
         { "stop", reinterpret_cast<PyCFunction>(VpnChannel_Stop), METH_VARARGS, nullptr },
         { "terminate_connection", reinterpret_cast<PyCFunction>(VpnChannel_TerminateConnection), METH_VARARGS, nullptr },

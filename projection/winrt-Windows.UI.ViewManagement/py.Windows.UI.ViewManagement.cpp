@@ -291,7 +291,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActivationViewSwitcher_ShowAsStandaloneWithSizePreferenceAsync(py::wrapper::Windows::UI::ViewManagement::ActivationViewSwitcher* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -353,6 +364,7 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef _methods_ActivationViewSwitcher[] = {
         { "is_view_presented_on_activation_virtual_desktop", reinterpret_cast<PyCFunction>(ActivationViewSwitcher_IsViewPresentedOnActivationVirtualDesktop), METH_VARARGS, nullptr },
         { "show_as_standalone_async", reinterpret_cast<PyCFunction>(ActivationViewSwitcher_ShowAsStandaloneAsync), METH_VARARGS, nullptr },
+        { "show_as_standalone_with_size_preference_async", reinterpret_cast<PyCFunction>(ActivationViewSwitcher_ShowAsStandaloneWithSizePreferenceAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ActivationViewSwitcher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ActivationViewSwitcher), METH_O | METH_STATIC, nullptr },
         { }
@@ -872,7 +884,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationView_TryEnterViewModeWithPreferencesAsync(py::wrapper::Windows::UI::ViewManagement::ApplicationView* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2017,6 +2040,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "try_consolidate_async", reinterpret_cast<PyCFunction>(ApplicationView_TryConsolidateAsync), METH_VARARGS, nullptr },
         { "try_enter_full_screen_mode", reinterpret_cast<PyCFunction>(ApplicationView_TryEnterFullScreenMode), METH_VARARGS, nullptr },
         { "try_enter_view_mode_async", reinterpret_cast<PyCFunction>(ApplicationView_TryEnterViewModeAsync), METH_VARARGS, nullptr },
+        { "try_enter_view_mode_with_preferences_async", reinterpret_cast<PyCFunction>(ApplicationView_TryEnterViewModeWithPreferencesAsync), METH_VARARGS, nullptr },
         { "try_resize_view", reinterpret_cast<PyCFunction>(ApplicationView_TryResizeView), METH_VARARGS, nullptr },
         { "add_consolidated", reinterpret_cast<PyCFunction>(ApplicationView_add_Consolidated), METH_O, nullptr },
         { "remove_consolidated", reinterpret_cast<PyCFunction>(ApplicationView_remove_Consolidated), METH_O, nullptr },
@@ -2530,7 +2554,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationViewSwitcher_SwitchFromViewAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2558,7 +2593,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationViewSwitcher_SwitchFromViewWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2625,35 +2671,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.ApplicationViewSwitcher", L"TryShowAsStandaloneAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<int32_t>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::UI::ViewManagement::ViewSizePreference>(args, 1);
-
-                return py::convert(winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher::TryShowAsStandaloneAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* ApplicationViewSwitcher_TryShowAsStandaloneWithAnchorViewAndSizePreferenceAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2676,6 +2705,45 @@ namespace py::cpp::Windows::UI::ViewManagement
                 auto param3 = py::convert_to<winrt::Windows::UI::ViewManagement::ViewSizePreference>(args, 3);
 
                 return py::convert(winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher::TryShowAsStandaloneAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationViewSwitcher_TryShowAsStandaloneWithSizePreferenceAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.ViewManagement.ApplicationViewSwitcher", L"TryShowAsStandaloneAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::UI::ViewManagement::ViewSizePreference>(args, 1);
+
+                return py::convert(winrt::Windows::UI::ViewManagement::ApplicationViewSwitcher::TryShowAsStandaloneAsync(param0, param1));
             }
             catch (...)
             {
@@ -2722,7 +2790,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationViewSwitcher_TryShowAsViewModeWithPreferencesAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2789,8 +2868,13 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "disable_system_view_activation_policy", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_DisableSystemViewActivationPolicy), METH_VARARGS, nullptr },
         { "prepare_for_custom_animated_switch_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_PrepareForCustomAnimatedSwitchAsync), METH_VARARGS, nullptr },
         { "switch_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_SwitchAsync), METH_VARARGS, nullptr },
+        { "switch_from_view_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_SwitchFromViewAsync), METH_VARARGS, nullptr },
+        { "switch_from_view_with_options_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_SwitchFromViewWithOptionsAsync), METH_VARARGS, nullptr },
         { "try_show_as_standalone_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsStandaloneAsync), METH_VARARGS, nullptr },
+        { "try_show_as_standalone_with_anchor_view_and_size_preference_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsStandaloneWithAnchorViewAndSizePreferenceAsync), METH_VARARGS, nullptr },
+        { "try_show_as_standalone_with_size_preference_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsStandaloneWithSizePreferenceAsync), METH_VARARGS, nullptr },
         { "try_show_as_view_mode_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsViewModeAsync), METH_VARARGS, nullptr },
+        { "try_show_as_view_mode_with_preferences_async", reinterpret_cast<PyCFunction>(ApplicationViewSwitcher_TryShowAsViewModeWithPreferencesAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4504,7 +4588,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProjectionManager_RequestStartProjectingWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4573,7 +4668,18 @@ namespace py::cpp::Windows::UI::ViewManagement
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProjectionManager_StartProjectingWithDeviceInfoAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4800,7 +4906,9 @@ namespace py::cpp::Windows::UI::ViewManagement
     static PyMethodDef methods_ProjectionManager_Static[] = {
         { "get_device_selector", reinterpret_cast<PyCFunction>(ProjectionManager_GetDeviceSelector), METH_VARARGS, nullptr },
         { "request_start_projecting_async", reinterpret_cast<PyCFunction>(ProjectionManager_RequestStartProjectingAsync), METH_VARARGS, nullptr },
+        { "request_start_projecting_with_placement_async", reinterpret_cast<PyCFunction>(ProjectionManager_RequestStartProjectingWithPlacementAsync), METH_VARARGS, nullptr },
         { "start_projecting_async", reinterpret_cast<PyCFunction>(ProjectionManager_StartProjectingAsync), METH_VARARGS, nullptr },
+        { "start_projecting_with_device_info_async", reinterpret_cast<PyCFunction>(ProjectionManager_StartProjectingWithDeviceInfoAsync), METH_VARARGS, nullptr },
         { "stop_projecting_async", reinterpret_cast<PyCFunction>(ProjectionManager_StopProjectingAsync), METH_VARARGS, nullptr },
         { "swap_displays_for_views_async", reinterpret_cast<PyCFunction>(ProjectionManager_SwapDisplaysForViewsAsync), METH_VARARGS, nullptr },
         { "add_projection_display_available_changed", reinterpret_cast<PyCFunction>(ProjectionManager_add_ProjectionDisplayAvailableChanged), METH_O, nullptr },

@@ -386,7 +386,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppDiagnosticInfo_RequestInfoForAppUserModelId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -546,6 +557,7 @@ namespace py::cpp::Windows::System
         { "request_access_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestAccessAsync), METH_VARARGS, nullptr },
         { "request_info_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoAsync), METH_VARARGS, nullptr },
         { "request_info_for_app_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForAppAsync), METH_VARARGS, nullptr },
+        { "request_info_for_app_user_model_id", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForAppUserModelId), METH_VARARGS, nullptr },
         { "request_info_for_package_async", reinterpret_cast<PyCFunction>(AppDiagnosticInfo_RequestInfoForPackageAsync), METH_VARARGS, nullptr },
         { }
     };
@@ -4112,7 +4124,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DispatcherQueue_TryEnqueueWithPriority(py::wrapper::Windows::System::DispatcherQueue* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4314,6 +4337,7 @@ namespace py::cpp::Windows::System
     static PyMethodDef _methods_DispatcherQueue[] = {
         { "create_timer", reinterpret_cast<PyCFunction>(DispatcherQueue_CreateTimer), METH_VARARGS, nullptr },
         { "try_enqueue", reinterpret_cast<PyCFunction>(DispatcherQueue_TryEnqueue), METH_VARARGS, nullptr },
+        { "try_enqueue_with_priority", reinterpret_cast<PyCFunction>(DispatcherQueue_TryEnqueueWithPriority), METH_VARARGS, nullptr },
         { "add_shutdown_completed", reinterpret_cast<PyCFunction>(DispatcherQueue_add_ShutdownCompleted), METH_O, nullptr },
         { "remove_shutdown_completed", reinterpret_cast<PyCFunction>(DispatcherQueue_remove_ShutdownCompleted), METH_O, nullptr },
         { "add_shutdown_starting", reinterpret_cast<PyCFunction>(DispatcherQueue_add_ShutdownStarting), METH_O, nullptr },
@@ -5755,7 +5779,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_FindUriSchemeHandlersWithLaunchUriTypeAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5821,7 +5856,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchFileWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5887,34 +5933,6 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::FolderLauncherOptions>(args, 1);
-
-                return py::convert(winrt::Windows::System::Launcher::LaunchFolderAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5946,34 +5964,6 @@ namespace py::cpp::Windows::System
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::System::Launcher::LaunchFolderPathAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchFolderPathAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::FolderLauncherOptions>(args, 1);
-
-                return py::convert(winrt::Windows::System::Launcher::LaunchFolderPathAsync(param0, param1));
             }
             catch (...)
             {
@@ -6020,7 +6010,57 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchFolderPathWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchFolderPathAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::FolderLauncherOptions>(args, 1);
+
+                return py::convert(winrt::Windows::System::Launcher::LaunchFolderPathAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchFolderPathWithOptionsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6042,6 +6082,45 @@ namespace py::cpp::Windows::System
                 auto param2 = py::convert_to<winrt::Windows::System::FolderLauncherOptions>(args, 2);
 
                 return py::convert(winrt::Windows::System::Launcher::LaunchFolderPathForUserAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchFolderWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchFolderAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::FolderLauncherOptions>(args, 1);
+
+                return py::convert(winrt::Windows::System::Launcher::LaunchFolderAsync(param0, param1));
             }
             catch (...)
             {
@@ -6087,63 +6166,6 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
-
-                return py::convert(winrt::Windows::System::Launcher::LaunchUriAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
-
-                return py::convert(winrt::Windows::System::Launcher::LaunchUriAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6176,35 +6198,6 @@ namespace py::cpp::Windows::System
                 auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
 
                 return py::convert(winrt::Windows::System::Launcher::LaunchUriForResultsAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriForResultsAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
-
-                return py::convert(winrt::Windows::System::Launcher::LaunchUriForResultsAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -6252,7 +6245,58 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriForResultsWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriForResultsAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
+
+                return py::convert(winrt::Windows::System::Launcher::LaunchUriForResultsAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriForResultsWithDataForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6321,7 +6365,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6329,7 +6384,7 @@ namespace py::cpp::Windows::System
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriForUserAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriAsync", 3);
                 }
 
                 if (!is_overload_present.value())
@@ -6338,11 +6393,11 @@ namespace py::cpp::Windows::System
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 2);
 
-                return py::convert(winrt::Windows::System::Launcher::LaunchUriForUserAsync(param0, param1, param2));
+                return py::convert(winrt::Windows::System::Launcher::LaunchUriAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -6350,7 +6405,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriWithDataForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6373,6 +6439,85 @@ namespace py::cpp::Windows::System
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 3);
 
                 return py::convert(winrt::Windows::System::Launcher::LaunchUriForUserAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 1);
+
+                return py::convert(winrt::Windows::System::Launcher::LaunchUriAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_LaunchUriWithOptionsForUserAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.Launcher", L"LaunchUriForUserAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::System::LauncherOptions>(args, 2);
+
+                return py::convert(winrt::Windows::System::Launcher::LaunchUriForUserAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -6418,7 +6563,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_QueryAppUriSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6484,7 +6640,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_QueryFileSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6551,7 +6718,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Launcher_QueryUriSupportWithPackageFamilyNameAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6617,17 +6795,31 @@ namespace py::cpp::Windows::System
         { "find_app_uri_handlers_async", reinterpret_cast<PyCFunction>(Launcher_FindAppUriHandlersAsync), METH_VARARGS, nullptr },
         { "find_file_handlers_async", reinterpret_cast<PyCFunction>(Launcher_FindFileHandlersAsync), METH_VARARGS, nullptr },
         { "find_uri_scheme_handlers_async", reinterpret_cast<PyCFunction>(Launcher_FindUriSchemeHandlersAsync), METH_VARARGS, nullptr },
+        { "find_uri_scheme_handlers_with_launch_uri_type_async", reinterpret_cast<PyCFunction>(Launcher_FindUriSchemeHandlersWithLaunchUriTypeAsync), METH_VARARGS, nullptr },
         { "launch_file_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFileAsync), METH_VARARGS, nullptr },
+        { "launch_file_with_options_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFileWithOptionsAsync), METH_VARARGS, nullptr },
         { "launch_folder_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderAsync), METH_VARARGS, nullptr },
         { "launch_folder_path_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderPathAsync), METH_VARARGS, nullptr },
         { "launch_folder_path_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderPathForUserAsync), METH_VARARGS, nullptr },
+        { "launch_folder_path_with_options_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderPathWithOptionsAsync), METH_VARARGS, nullptr },
+        { "launch_folder_path_with_options_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderPathWithOptionsForUserAsync), METH_VARARGS, nullptr },
+        { "launch_folder_with_options_async", reinterpret_cast<PyCFunction>(Launcher_LaunchFolderWithOptionsAsync), METH_VARARGS, nullptr },
         { "launch_uri_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriAsync), METH_VARARGS, nullptr },
         { "launch_uri_for_results_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriForResultsAsync), METH_VARARGS, nullptr },
         { "launch_uri_for_results_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriForResultsForUserAsync), METH_VARARGS, nullptr },
+        { "launch_uri_for_results_with_data_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriForResultsWithDataAsync), METH_VARARGS, nullptr },
+        { "launch_uri_for_results_with_data_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriForResultsWithDataForUserAsync), METH_VARARGS, nullptr },
         { "launch_uri_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriForUserAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_data_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriWithDataAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_data_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriWithDataForUserAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_options_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriWithOptionsAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_options_for_user_async", reinterpret_cast<PyCFunction>(Launcher_LaunchUriWithOptionsForUserAsync), METH_VARARGS, nullptr },
         { "query_app_uri_support_async", reinterpret_cast<PyCFunction>(Launcher_QueryAppUriSupportAsync), METH_VARARGS, nullptr },
+        { "query_app_uri_support_with_package_family_name_async", reinterpret_cast<PyCFunction>(Launcher_QueryAppUriSupportWithPackageFamilyNameAsync), METH_VARARGS, nullptr },
         { "query_file_support_async", reinterpret_cast<PyCFunction>(Launcher_QueryFileSupportAsync), METH_VARARGS, nullptr },
+        { "query_file_support_with_package_family_name_async", reinterpret_cast<PyCFunction>(Launcher_QueryFileSupportWithPackageFamilyNameAsync), METH_VARARGS, nullptr },
         { "query_uri_support_async", reinterpret_cast<PyCFunction>(Launcher_QueryUriSupportAsync), METH_VARARGS, nullptr },
+        { "query_uri_support_with_package_family_name_async", reinterpret_cast<PyCFunction>(Launcher_QueryUriSupportWithPackageFamilyNameAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8192,7 +8384,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ProcessLauncher_RunToCompletionAsyncWithOptions(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -8256,6 +8459,7 @@ namespace py::cpp::Windows::System
 
     static PyMethodDef methods_ProcessLauncher_Static[] = {
         { "run_to_completion_async", reinterpret_cast<PyCFunction>(ProcessLauncher_RunToCompletionAsync), METH_VARARGS, nullptr },
+        { "run_to_completion_async_with_options", reinterpret_cast<PyCFunction>(ProcessLauncher_RunToCompletionAsyncWithOptions), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8972,36 +9176,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteLauncher", L"LaunchUriAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::System::RemoteLauncherOptions>(args, 2);
-
-                return py::convert(winrt::Windows::System::RemoteLauncher::LaunchUriAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* RemoteLauncher_LaunchUriWithDataAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -9024,6 +9210,46 @@ namespace py::cpp::Windows::System
                 auto param3 = py::convert_to<winrt::Windows::Foundation::Collections::ValueSet>(args, 3);
 
                 return py::convert(winrt::Windows::System::RemoteLauncher::LaunchUriAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RemoteLauncher_LaunchUriWithOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.System.RemoteLauncher", L"LaunchUriAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::System::RemoteSystems::RemoteSystemConnectionRequest>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::System::RemoteLauncherOptions>(args, 2);
+
+                return py::convert(winrt::Windows::System::RemoteLauncher::LaunchUriAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -9066,6 +9292,8 @@ namespace py::cpp::Windows::System
 
     static PyMethodDef methods_RemoteLauncher_Static[] = {
         { "launch_uri_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_data_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriWithDataAsync), METH_VARARGS, nullptr },
+        { "launch_uri_with_options_async", reinterpret_cast<PyCFunction>(RemoteLauncher_LaunchUriWithOptionsAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -9381,7 +9609,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ShutdownManager_EnterPowerStateWithTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -9485,6 +9724,7 @@ namespace py::cpp::Windows::System
         { "begin_shutdown", reinterpret_cast<PyCFunction>(ShutdownManager_BeginShutdown), METH_VARARGS, nullptr },
         { "cancel_shutdown", reinterpret_cast<PyCFunction>(ShutdownManager_CancelShutdown), METH_VARARGS, nullptr },
         { "enter_power_state", reinterpret_cast<PyCFunction>(ShutdownManager_EnterPowerState), METH_VARARGS, nullptr },
+        { "enter_power_state_with_time_span", reinterpret_cast<PyCFunction>(ShutdownManager_EnterPowerStateWithTimeSpan), METH_VARARGS, nullptr },
         { "is_power_state_supported", reinterpret_cast<PyCFunction>(ShutdownManager_IsPowerStateSupported), METH_VARARGS, nullptr },
         { }
     };
@@ -9842,7 +10082,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* User_FindAllAsyncByType(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9869,7 +10120,18 @@ namespace py::cpp::Windows::System
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* User_FindAllAsyncByTypeAndStatus(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10233,6 +10495,8 @@ namespace py::cpp::Windows::System
     static PyMethodDef methods_User_Static[] = {
         { "create_watcher", reinterpret_cast<PyCFunction>(User_CreateWatcher), METH_VARARGS, nullptr },
         { "find_all_async", reinterpret_cast<PyCFunction>(User_FindAllAsync), METH_VARARGS, nullptr },
+        { "find_all_async_by_type", reinterpret_cast<PyCFunction>(User_FindAllAsyncByType), METH_VARARGS, nullptr },
+        { "find_all_async_by_type_and_status", reinterpret_cast<PyCFunction>(User_FindAllAsyncByTypeAndStatus), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(User_GetDefault), METH_VARARGS, nullptr },
         { "get_from_id", reinterpret_cast<PyCFunction>(User_GetFromId), METH_VARARGS, nullptr },
         { }

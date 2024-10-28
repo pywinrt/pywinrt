@@ -101,7 +101,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* CurrencyFormatter_Format(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
+    static PyObject* CurrencyFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -139,44 +139,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* CurrencyFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatDouble", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<double>(args, 0);
-
-                return py::convert(self->obj.FormatDouble(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* CurrencyFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::CurrencyFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -189,7 +151,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -200,7 +162,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.FormatInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -227,7 +189,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"FormatUInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.CurrencyFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -238,7 +200,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.FormatUInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -1107,7 +1069,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
     static PyMethodDef _methods_CurrencyFormatter[] = {
         { "apply_rounding_for_currency", reinterpret_cast<PyCFunction>(CurrencyFormatter_ApplyRoundingForCurrency), METH_VARARGS, nullptr },
-        { "format", reinterpret_cast<PyCFunction>(CurrencyFormatter_Format), METH_VARARGS, nullptr },
         { "format_double", reinterpret_cast<PyCFunction>(CurrencyFormatter_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(CurrencyFormatter_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(CurrencyFormatter_FormatUInt), METH_VARARGS, nullptr },
@@ -1207,7 +1168,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_DECREF(tp);
     }
 
-    static PyObject* DecimalFormatter_Format(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
+    static PyObject* DecimalFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1245,44 +1206,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* DecimalFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatDouble", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<double>(args, 0);
-
-                return py::convert(self->obj.FormatDouble(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* DecimalFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::DecimalFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1295,7 +1218,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -1306,7 +1229,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.FormatInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -1333,7 +1256,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"FormatUInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.DecimalFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -1344,7 +1267,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.FormatUInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -2090,7 +2013,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef _methods_DecimalFormatter[] = {
-        { "format", reinterpret_cast<PyCFunction>(DecimalFormatter_Format), METH_VARARGS, nullptr },
         { "format_double", reinterpret_cast<PyCFunction>(DecimalFormatter_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(DecimalFormatter_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(DecimalFormatter_FormatUInt), METH_VARARGS, nullptr },
@@ -2892,7 +2814,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_DECREF(tp);
     }
 
-    static PyObject* PercentFormatter_Format(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
+    static PyObject* PercentFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2930,44 +2852,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* PercentFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatDouble", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<double>(args, 0);
-
-                return py::convert(self->obj.FormatDouble(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PercentFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::PercentFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -2980,7 +2864,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -2991,7 +2875,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.FormatInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -3018,7 +2902,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"FormatUInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PercentFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -3029,7 +2913,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.FormatUInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -3775,7 +3659,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef _methods_PercentFormatter[] = {
-        { "format", reinterpret_cast<PyCFunction>(PercentFormatter_Format), METH_VARARGS, nullptr },
         { "format_double", reinterpret_cast<PyCFunction>(PercentFormatter_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(PercentFormatter_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(PercentFormatter_FormatUInt), METH_VARARGS, nullptr },
@@ -3873,7 +3756,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_DECREF(tp);
     }
 
-    static PyObject* PermilleFormatter_Format(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
+    static PyObject* PermilleFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -3911,44 +3794,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         }
     }
 
-    static PyObject* PermilleFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatDouble", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<double>(args, 0);
-
-                return py::convert(self->obj.FormatDouble(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PermilleFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::PermilleFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -3961,7 +3806,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -3972,7 +3817,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<int64_t>(args, 0);
 
-                return py::convert(self->obj.FormatInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -3999,7 +3844,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"FormatUInt", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.PermilleFormatter", L"Format", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -4010,7 +3855,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
 
                 auto param0 = py::convert_to<uint64_t>(args, 0);
 
-                return py::convert(self->obj.FormatUInt(param0));
+                return py::convert(self->obj.Format(param0));
             }
             catch (...)
             {
@@ -4756,7 +4601,6 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef _methods_PermilleFormatter[] = {
-        { "format", reinterpret_cast<PyCFunction>(PermilleFormatter_Format), METH_VARARGS, nullptr },
         { "format_double", reinterpret_cast<PyCFunction>(PermilleFormatter_FormatDouble), METH_VARARGS, nullptr },
         { "format_int", reinterpret_cast<PyCFunction>(PermilleFormatter_FormatInt), METH_VARARGS, nullptr },
         { "format_uint", reinterpret_cast<PyCFunction>(PermilleFormatter_FormatUInt), METH_VARARGS, nullptr },
@@ -5262,7 +5106,7 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
         Py_DECREF(tp);
     }
 
-    static PyObject* INumberFormatter_Format(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
+    static PyObject* INumberFormatter_FormatDouble(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5284,6 +5128,82 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
                 }
 
                 auto param0 = py::convert_to<double>(args, 0);
+
+                return py::convert(self->obj.Format(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* INumberFormatter_FormatInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter", L"Format", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<int64_t>(args, 0);
+
+                return py::convert(self->obj.Format(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* INumberFormatter_FormatUInt(py::wrapper::Windows::Globalization::NumberFormatting::INumberFormatter* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.NumberFormatting.INumberFormatter", L"Format", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<uint64_t>(args, 0);
 
                 return py::convert(self->obj.Format(param0));
             }
@@ -5325,7 +5245,9 @@ namespace py::cpp::Windows::Globalization::NumberFormatting
     }
 
     static PyMethodDef _methods_INumberFormatter[] = {
-        { "format", reinterpret_cast<PyCFunction>(INumberFormatter_Format), METH_VARARGS, nullptr },
+        { "format_double", reinterpret_cast<PyCFunction>(INumberFormatter_FormatDouble), METH_VARARGS, nullptr },
+        { "format_int", reinterpret_cast<PyCFunction>(INumberFormatter_FormatInt), METH_VARARGS, nullptr },
+        { "format_uint", reinterpret_cast<PyCFunction>(INumberFormatter_FormatUInt), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INumberFormatter, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_INumberFormatter), METH_O | METH_STATIC, nullptr },
         { }

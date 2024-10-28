@@ -55,7 +55,18 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* XamlDirect_AddEventHandler_HandledEventsToo(py::wrapper::Windows::UI::Xaml::Core::Direct::XamlDirect* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2146,6 +2157,7 @@ namespace py::cpp::Windows::UI::Xaml::Core::Direct
 
     static PyMethodDef _methods_XamlDirect[] = {
         { "add_event_handler", reinterpret_cast<PyCFunction>(XamlDirect_AddEventHandler), METH_VARARGS, nullptr },
+        { "add_event_handler_handled_events_too", reinterpret_cast<PyCFunction>(XamlDirect_AddEventHandler_HandledEventsToo), METH_VARARGS, nullptr },
         { "add_to_collection", reinterpret_cast<PyCFunction>(XamlDirect_AddToCollection), METH_VARARGS, nullptr },
         { "clear_collection", reinterpret_cast<PyCFunction>(XamlDirect_ClearCollection), METH_VARARGS, nullptr },
         { "clear_property", reinterpret_cast<PyCFunction>(XamlDirect_ClearProperty), METH_VARARGS, nullptr },

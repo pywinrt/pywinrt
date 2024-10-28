@@ -369,7 +369,18 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SearchSuggestionManager_AddToHistoryWithLanguage(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -513,7 +524,18 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SearchSuggestionManager_SetQueryWithLanguage(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -542,7 +564,18 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SearchSuggestionManager_SetQueryWithSearchQueryLinguisticDetails(py::wrapper::Windows::ApplicationModel::Search::Core::SearchSuggestionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -867,9 +900,12 @@ namespace py::cpp::Windows::ApplicationModel::Search::Core
 
     static PyMethodDef _methods_SearchSuggestionManager[] = {
         { "add_to_history", reinterpret_cast<PyCFunction>(SearchSuggestionManager_AddToHistory), METH_VARARGS, nullptr },
+        { "add_to_history_with_language", reinterpret_cast<PyCFunction>(SearchSuggestionManager_AddToHistoryWithLanguage), METH_VARARGS, nullptr },
         { "clear_history", reinterpret_cast<PyCFunction>(SearchSuggestionManager_ClearHistory), METH_VARARGS, nullptr },
         { "set_local_content_suggestion_settings", reinterpret_cast<PyCFunction>(SearchSuggestionManager_SetLocalContentSuggestionSettings), METH_VARARGS, nullptr },
         { "set_query", reinterpret_cast<PyCFunction>(SearchSuggestionManager_SetQuery), METH_VARARGS, nullptr },
+        { "set_query_with_language", reinterpret_cast<PyCFunction>(SearchSuggestionManager_SetQueryWithLanguage), METH_VARARGS, nullptr },
+        { "set_query_with_search_query_linguistic_details", reinterpret_cast<PyCFunction>(SearchSuggestionManager_SetQueryWithSearchQueryLinguisticDetails), METH_VARARGS, nullptr },
         { "add_requesting_focus_on_keyboard_input", reinterpret_cast<PyCFunction>(SearchSuggestionManager_add_RequestingFocusOnKeyboardInput), METH_O, nullptr },
         { "remove_requesting_focus_on_keyboard_input", reinterpret_cast<PyCFunction>(SearchSuggestionManager_remove_RequestingFocusOnKeyboardInput), METH_O, nullptr },
         { "add_suggestions_requested", reinterpret_cast<PyCFunction>(SearchSuggestionManager_add_SuggestionsRequested), METH_O, nullptr },

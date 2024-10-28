@@ -1069,7 +1069,18 @@ namespace py::cpp::Windows::Media::Casting
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CastingDevicePicker_ShowWithPlacement(py::wrapper::Windows::Media::Casting::CastingDevicePicker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1298,6 +1309,7 @@ namespace py::cpp::Windows::Media::Casting
     static PyMethodDef _methods_CastingDevicePicker[] = {
         { "hide", reinterpret_cast<PyCFunction>(CastingDevicePicker_Hide), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(CastingDevicePicker_Show), METH_VARARGS, nullptr },
+        { "show_with_placement", reinterpret_cast<PyCFunction>(CastingDevicePicker_ShowWithPlacement), METH_VARARGS, nullptr },
         { "add_casting_device_picker_dismissed", reinterpret_cast<PyCFunction>(CastingDevicePicker_add_CastingDevicePickerDismissed), METH_O, nullptr },
         { "remove_casting_device_picker_dismissed", reinterpret_cast<PyCFunction>(CastingDevicePicker_remove_CastingDevicePickerDismissed), METH_O, nullptr },
         { "add_casting_device_selected", reinterpret_cast<PyCFunction>(CastingDevicePicker_add_CastingDeviceSelected), METH_O, nullptr },

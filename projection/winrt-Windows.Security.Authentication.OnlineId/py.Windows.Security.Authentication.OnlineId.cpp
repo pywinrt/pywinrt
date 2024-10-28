@@ -74,7 +74,18 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OnlineIdAuthenticator_AuthenticateUserAsyncAdvanced(py::wrapper::Windows::Security::Authentication::OnlineId::OnlineIdAuthenticator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -284,6 +295,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
 
     static PyMethodDef _methods_OnlineIdAuthenticator[] = {
         { "authenticate_user_async", reinterpret_cast<PyCFunction>(OnlineIdAuthenticator_AuthenticateUserAsync), METH_VARARGS, nullptr },
+        { "authenticate_user_async_advanced", reinterpret_cast<PyCFunction>(OnlineIdAuthenticator_AuthenticateUserAsyncAdvanced), METH_VARARGS, nullptr },
         { "sign_out_user_async", reinterpret_cast<PyCFunction>(OnlineIdAuthenticator_SignOutUserAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_OnlineIdAuthenticator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_OnlineIdAuthenticator), METH_O | METH_STATIC, nullptr },

@@ -42,7 +42,18 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GameList_FindAllAsyncPackageFamilyName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -352,6 +363,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
 
     static PyMethodDef methods_GameList_Static[] = {
         { "find_all_async", reinterpret_cast<PyCFunction>(GameList_FindAllAsync), METH_VARARGS, nullptr },
+        { "find_all_async_package_family_name", reinterpret_cast<PyCFunction>(GameList_FindAllAsyncPackageFamilyName), METH_VARARGS, nullptr },
         { "merge_entries_async", reinterpret_cast<PyCFunction>(GameList_MergeEntriesAsync), METH_VARARGS, nullptr },
         { "unmerge_entry_async", reinterpret_cast<PyCFunction>(GameList_UnmergeEntryAsync), METH_VARARGS, nullptr },
         { "add_game_added", reinterpret_cast<PyCFunction>(GameList_add_GameAdded), METH_O, nullptr },
@@ -502,7 +514,18 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GameListEntry_SetLauncherExecutableFileWithParamsAsync(py::wrapper::Windows::Gaming::Preview::GamesEnumeration::GameListEntry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -811,6 +834,7 @@ namespace py::cpp::Windows::Gaming::Preview::GamesEnumeration
         { "launch_async", reinterpret_cast<PyCFunction>(GameListEntry_LaunchAsync), METH_VARARGS, nullptr },
         { "set_category_async", reinterpret_cast<PyCFunction>(GameListEntry_SetCategoryAsync), METH_VARARGS, nullptr },
         { "set_launcher_executable_file_async", reinterpret_cast<PyCFunction>(GameListEntry_SetLauncherExecutableFileAsync), METH_VARARGS, nullptr },
+        { "set_launcher_executable_file_with_params_async", reinterpret_cast<PyCFunction>(GameListEntry_SetLauncherExecutableFileWithParamsAsync), METH_VARARGS, nullptr },
         { "set_title_id_async", reinterpret_cast<PyCFunction>(GameListEntry_SetTitleIdAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GameListEntry, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_GameListEntry), METH_O | METH_STATIC, nullptr },

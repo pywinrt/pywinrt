@@ -17877,7 +17877,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoadedImageSurface_StartLoadFromStreamWithSize(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -17943,7 +17954,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoadedImageSurface_StartLoadFromUriWithSize(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -18195,7 +18217,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef methods_LoadedImageSurface_Static[] = {
         { "start_load_from_stream", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStream), METH_VARARGS, nullptr },
+        { "start_load_from_stream_with_size", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromStreamWithSize), METH_VARARGS, nullptr },
         { "start_load_from_uri", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUri), METH_VARARGS, nullptr },
+        { "start_load_from_uri_with_size", reinterpret_cast<PyCFunction>(LoadedImageSurface_StartLoadFromUriWithSize), METH_VARARGS, nullptr },
         { }
     };
 
@@ -39484,7 +39508,87 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         }
     }
 
-    static PyObject* VisualTreeHelper_FindElementsInHostCoordinates(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                return py::convert(winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualTreeHelper_FindAllElementsInHostCoordinatesRect(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
+                auto param2 = py::convert_to<bool>(args, 2);
+
+                return py::convert(winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualTreeHelper_FindElementsInHostCoordinatesPoint(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -39516,7 +39620,18 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualTreeHelper_FindElementsInHostCoordinatesRect(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -39524,20 +39639,19 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Media.VisualTreeHelper", L"FindElementsInHostCoordinates", 2);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(2);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 1);
-                auto param2 = py::convert_to<bool>(args, 2);
 
-                return py::convert(winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1, param2));
+                return py::convert(winrt::Microsoft::UI::Xaml::Media::VisualTreeHelper::FindElementsInHostCoordinates(param0, param1));
             }
             catch (...)
             {
@@ -39798,7 +39912,10 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
     static PyMethodDef methods_VisualTreeHelper_Static[] = {
         { "disconnect_children_recursive", reinterpret_cast<PyCFunction>(VisualTreeHelper_DisconnectChildrenRecursive), METH_VARARGS, nullptr },
-        { "find_elements_in_host_coordinates", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinates), METH_VARARGS, nullptr },
+        { "find_all_elements_in_host_coordinates_point", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindAllElementsInHostCoordinatesPoint), METH_VARARGS, nullptr },
+        { "find_all_elements_in_host_coordinates_rect", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindAllElementsInHostCoordinatesRect), METH_VARARGS, nullptr },
+        { "find_elements_in_host_coordinates_point", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinatesPoint), METH_VARARGS, nullptr },
+        { "find_elements_in_host_coordinates_rect", reinterpret_cast<PyCFunction>(VisualTreeHelper_FindElementsInHostCoordinatesRect), METH_VARARGS, nullptr },
         { "get_child", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChild), METH_VARARGS, nullptr },
         { "get_children_count", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetChildrenCount), METH_VARARGS, nullptr },
         { "get_open_popups", reinterpret_cast<PyCFunction>(VisualTreeHelper_GetOpenPopups), METH_VARARGS, nullptr },

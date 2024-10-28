@@ -431,7 +431,7 @@ namespace py::cpp::Windows::Storage
         Py_DECREF(tp);
     }
 
-    static PyObject* ApplicationData_ClearAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
+    static PyObject* ApplicationData_ClearAllAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -460,7 +460,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApplicationData_ClearAsync(py::wrapper::Windows::Storage::ApplicationData* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1082,6 +1093,7 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_ApplicationData[] = {
+        { "clear_all_async", reinterpret_cast<PyCFunction>(ApplicationData_ClearAllAsync), METH_VARARGS, nullptr },
         { "clear_async", reinterpret_cast<PyCFunction>(ApplicationData_ClearAsync), METH_VARARGS, nullptr },
         { "clear_publisher_cache_folder_async", reinterpret_cast<PyCFunction>(ApplicationData_ClearPublisherCacheFolderAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ApplicationData_Close), METH_VARARGS, nullptr },
@@ -2718,34 +2730,6 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.DownloadsFolder", L"CreateFileAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
-
-                return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFileAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2785,7 +2769,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DownloadsFolder_CreateFileForUserWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2807,6 +2802,45 @@ namespace py::cpp::Windows::Storage
                 auto param2 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 2);
 
                 return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFileForUserAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DownloadsFolder_CreateFileWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.DownloadsFolder", L"CreateFileAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
+
+                return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFileAsync(param0, param1));
             }
             catch (...)
             {
@@ -2845,34 +2879,6 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFolderAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.DownloadsFolder", L"CreateFolderAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
-
-                return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFolderAsync(param0, param1));
             }
             catch (...)
             {
@@ -2919,7 +2925,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DownloadsFolder_CreateFolderForUserWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2941,6 +2958,45 @@ namespace py::cpp::Windows::Storage
                 auto param2 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 2);
 
                 return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFolderForUserAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DownloadsFolder_CreateFolderWithCollisionOptionAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.DownloadsFolder", L"CreateFolderAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::CreationCollisionOption>(args, 1);
+
+                return py::convert(winrt::Windows::Storage::DownloadsFolder::CreateFolderAsync(param0, param1));
             }
             catch (...)
             {
@@ -2984,8 +3040,12 @@ namespace py::cpp::Windows::Storage
     static PyMethodDef methods_DownloadsFolder_Static[] = {
         { "create_file_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileAsync), METH_VARARGS, nullptr },
         { "create_file_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileForUserAsync), METH_VARARGS, nullptr },
+        { "create_file_for_user_with_collision_option_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileForUserWithCollisionOptionAsync), METH_VARARGS, nullptr },
+        { "create_file_with_collision_option_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFileWithCollisionOptionAsync), METH_VARARGS, nullptr },
         { "create_folder_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderAsync), METH_VARARGS, nullptr },
         { "create_folder_for_user_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderForUserAsync), METH_VARARGS, nullptr },
+        { "create_folder_for_user_with_collision_option_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderForUserWithCollisionOptionAsync), METH_VARARGS, nullptr },
+        { "create_folder_with_collision_option_async", reinterpret_cast<PyCFunction>(DownloadsFolder_CreateFolderWithCollisionOptionAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -3047,7 +3107,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_AppendLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3115,7 +3186,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_AppendTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3220,7 +3302,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_ReadLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3286,7 +3379,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_ReadTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3431,7 +3535,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_WriteLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3499,7 +3614,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileIO_WriteTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3563,14 +3689,20 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef methods_FileIO_Static[] = {
         { "append_lines_async", reinterpret_cast<PyCFunction>(FileIO_AppendLinesAsync), METH_VARARGS, nullptr },
+        { "append_lines_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_AppendLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "append_text_async", reinterpret_cast<PyCFunction>(FileIO_AppendTextAsync), METH_VARARGS, nullptr },
+        { "append_text_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_AppendTextWithEncodingAsync), METH_VARARGS, nullptr },
         { "read_buffer_async", reinterpret_cast<PyCFunction>(FileIO_ReadBufferAsync), METH_VARARGS, nullptr },
         { "read_lines_async", reinterpret_cast<PyCFunction>(FileIO_ReadLinesAsync), METH_VARARGS, nullptr },
+        { "read_lines_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_ReadLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "read_text_async", reinterpret_cast<PyCFunction>(FileIO_ReadTextAsync), METH_VARARGS, nullptr },
+        { "read_text_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_ReadTextWithEncodingAsync), METH_VARARGS, nullptr },
         { "write_buffer_async", reinterpret_cast<PyCFunction>(FileIO_WriteBufferAsync), METH_VARARGS, nullptr },
         { "write_bytes_async", reinterpret_cast<PyCFunction>(FileIO_WriteBytesAsync), METH_VARARGS, nullptr },
         { "write_lines_async", reinterpret_cast<PyCFunction>(FileIO_WriteLinesAsync), METH_VARARGS, nullptr },
+        { "write_lines_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_WriteLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "write_text_async", reinterpret_cast<PyCFunction>(FileIO_WriteTextAsync), METH_VARARGS, nullptr },
+        { "write_text_with_encoding_async", reinterpret_cast<PyCFunction>(FileIO_WriteTextWithEncodingAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -4197,7 +4329,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_AppendLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4265,7 +4408,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_AppendTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4370,7 +4524,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_ReadLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4436,7 +4601,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_ReadTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4581,7 +4757,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_WriteLinesWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4649,7 +4836,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathIO_WriteTextWithEncodingAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4713,14 +4911,20 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef methods_PathIO_Static[] = {
         { "append_lines_async", reinterpret_cast<PyCFunction>(PathIO_AppendLinesAsync), METH_VARARGS, nullptr },
+        { "append_lines_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_AppendLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "append_text_async", reinterpret_cast<PyCFunction>(PathIO_AppendTextAsync), METH_VARARGS, nullptr },
+        { "append_text_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_AppendTextWithEncodingAsync), METH_VARARGS, nullptr },
         { "read_buffer_async", reinterpret_cast<PyCFunction>(PathIO_ReadBufferAsync), METH_VARARGS, nullptr },
         { "read_lines_async", reinterpret_cast<PyCFunction>(PathIO_ReadLinesAsync), METH_VARARGS, nullptr },
+        { "read_lines_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_ReadLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "read_text_async", reinterpret_cast<PyCFunction>(PathIO_ReadTextAsync), METH_VARARGS, nullptr },
+        { "read_text_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_ReadTextWithEncodingAsync), METH_VARARGS, nullptr },
         { "write_buffer_async", reinterpret_cast<PyCFunction>(PathIO_WriteBufferAsync), METH_VARARGS, nullptr },
         { "write_bytes_async", reinterpret_cast<PyCFunction>(PathIO_WriteBytesAsync), METH_VARARGS, nullptr },
         { "write_lines_async", reinterpret_cast<PyCFunction>(PathIO_WriteLinesAsync), METH_VARARGS, nullptr },
+        { "write_lines_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_WriteLinesWithEncodingAsync), METH_VARARGS, nullptr },
         { "write_text_async", reinterpret_cast<PyCFunction>(PathIO_WriteTextAsync), METH_VARARGS, nullptr },
+        { "write_text_with_encoding_async", reinterpret_cast<PyCFunction>(PathIO_WriteTextWithEncodingAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -5057,7 +5261,47 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* StorageFile_CopyAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    static PyObject* StorageFile_CopyOverload(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
+
+                return py::convert(self->obj.CopyAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_CopyOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5088,7 +5332,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_CopyOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5109,35 +5364,6 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert(self->obj.CopyAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"CopyAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
-
-                return py::convert(self->obj.CopyAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -5236,32 +5462,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -5281,6 +5482,42 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"DeleteAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
             {
@@ -5486,62 +5723,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -5577,7 +5759,46 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* StorageFile_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    static PyObject* StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5589,7 +5810,7 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetScaledImageAsThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -5600,7 +5821,7 @@ namespace py::cpp::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0));
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -5608,7 +5829,58 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
+
+                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5636,7 +5908,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5644,20 +5927,18 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"GetThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+                return py::convert(self->obj.GetThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -5786,7 +6067,47 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* StorageFile_MoveAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    static PyObject* StorageFile_MoveOverload(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
+
+                return py::convert(self->obj.MoveAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_MoveOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -5817,7 +6138,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_MoveOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5838,35 +6170,6 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert(self->obj.MoveAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"MoveAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
-
-                return py::convert(self->obj.MoveAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -5905,34 +6208,6 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
 
                 return py::convert(self->obj.OpenAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
-
-                return py::convert(self->obj.OpenAsync(param0, param1));
             }
             catch (...)
             {
@@ -6048,7 +6323,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_OpenTransactedWriteWithOptionsAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -6082,7 +6368,85 @@ namespace py::cpp::Windows::Storage
         }
     }
 
+    static PyObject* StorageFile_OpenWithOptionsAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"OpenAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileAccessMode>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
+
+                return py::convert(self->obj.OpenAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* StorageFile_RenameAsync(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"RenameAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
+
+                return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFile_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6106,34 +6470,6 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFile", L"RenameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
-
-                return py::convert(self->obj.RenameAsync(param0, param1));
             }
             catch (...)
             {
@@ -6566,21 +6902,33 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_StorageFile[] = {
         { "copy_and_replace_async", reinterpret_cast<PyCFunction>(StorageFile_CopyAndReplaceAsync), METH_VARARGS, nullptr },
-        { "copy_async", reinterpret_cast<PyCFunction>(StorageFile_CopyAsync), METH_VARARGS, nullptr },
+        { "copy_overload", reinterpret_cast<PyCFunction>(StorageFile_CopyOverload), METH_VARARGS, nullptr },
+        { "copy_overload_default_name_and_options", reinterpret_cast<PyCFunction>(StorageFile_CopyOverloadDefaultNameAndOptions), METH_VARARGS, nullptr },
+        { "copy_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_CopyOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(StorageFile_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(StorageFile_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "get_parent_async", reinterpret_cast<PyCFunction>(StorageFile_GetParentAsync), METH_VARARGS, nullptr },
         { "get_scaled_image_as_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFile_GetScaledImageAsThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(StorageFile_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFile_GetThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(StorageFile_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "is_equal", reinterpret_cast<PyCFunction>(StorageFile_IsEqual), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(StorageFile_IsOfType), METH_VARARGS, nullptr },
         { "move_and_replace_async", reinterpret_cast<PyCFunction>(StorageFile_MoveAndReplaceAsync), METH_VARARGS, nullptr },
-        { "move_async", reinterpret_cast<PyCFunction>(StorageFile_MoveAsync), METH_VARARGS, nullptr },
+        { "move_overload", reinterpret_cast<PyCFunction>(StorageFile_MoveOverload), METH_VARARGS, nullptr },
+        { "move_overload_default_name_and_options", reinterpret_cast<PyCFunction>(StorageFile_MoveOverloadDefaultNameAndOptions), METH_VARARGS, nullptr },
+        { "move_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_MoveOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "open_async", reinterpret_cast<PyCFunction>(StorageFile_OpenAsync), METH_VARARGS, nullptr },
         { "open_read_async", reinterpret_cast<PyCFunction>(StorageFile_OpenReadAsync), METH_VARARGS, nullptr },
         { "open_sequential_read_async", reinterpret_cast<PyCFunction>(StorageFile_OpenSequentialReadAsync), METH_VARARGS, nullptr },
         { "open_transacted_write_async", reinterpret_cast<PyCFunction>(StorageFile_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
+        { "open_transacted_write_with_options_async", reinterpret_cast<PyCFunction>(StorageFile_OpenTransactedWriteWithOptionsAsync), METH_VARARGS, nullptr },
+        { "open_with_options_async", reinterpret_cast<PyCFunction>(StorageFile_OpenWithOptionsAsync), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(StorageFile_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFile_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StorageFile), METH_O | METH_STATIC, nullptr },
         { }
@@ -6708,34 +7056,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateFileAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -6770,7 +7091,83 @@ namespace py::cpp::Windows::Storage
         }
     }
 
+    static PyObject* StorageFolder_CreateFileAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateFileAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* StorageFolder_CreateFileQuery(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileQuery", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
+
+                return py::convert(self->obj.CreateFileQuery(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_CreateFileQueryOverloadDefault(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6792,33 +7189,6 @@ namespace py::cpp::Windows::Storage
                 }
 
                 return py::convert(self->obj.CreateFileQuery());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFileQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
-
-                return py::convert(self->obj.CreateFileQuery(param0));
             }
             catch (...)
             {
@@ -6875,34 +7245,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateFolderAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -6937,7 +7280,83 @@ namespace py::cpp::Windows::Storage
         }
     }
 
+    static PyObject* StorageFolder_CreateFolderAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateFolderAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* StorageFolder_CreateFolderQuery(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderQuery", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
+
+                return py::convert(self->obj.CreateFolderQuery(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_CreateFolderQueryOverloadDefault(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -6959,33 +7378,6 @@ namespace py::cpp::Windows::Storage
                 }
 
                 return py::convert(self->obj.CreateFolderQuery());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"CreateFolderQuery", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
-
-                return py::convert(self->obj.CreateFolderQuery(param0));
             }
             catch (...)
             {
@@ -7116,32 +7508,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -7161,6 +7528,42 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"DeleteAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
             {
@@ -7253,6 +7656,46 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFilesAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                return py::convert(self->obj.GetFilesAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
         if (arg_count == 0)
         {
             try
@@ -7278,7 +7721,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetFilesAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7298,35 +7752,6 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
 
                 return py::convert(self->obj.GetFilesAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFilesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFileQuery>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-
-                return py::convert(self->obj.GetFilesAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -7460,6 +7885,46 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFoldersAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<uint32_t>(args, 2);
+
+                return py::convert(self->obj.GetFoldersAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
         if (arg_count == 0)
         {
             try
@@ -7485,7 +7950,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetFoldersAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7505,35 +7981,6 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
 
                 return py::convert(self->obj.GetFoldersAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetFoldersAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Search::CommonFolderQuery>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<uint32_t>(args, 2);
-
-                return py::convert(self->obj.GetFoldersAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -7626,32 +8073,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetItemsAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.GetItemsAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -7672,6 +8094,42 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<uint32_t>(args, 1);
 
                 return py::convert(self->obj.GetItemsAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetItemsAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetItemsAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetItemsAsync());
             }
             catch (...)
             {
@@ -7726,62 +8184,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -7817,7 +8220,46 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* StorageFolder_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    static PyObject* StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -7829,7 +8271,7 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetScaledImageAsThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -7840,7 +8282,7 @@ namespace py::cpp::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0));
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -7848,7 +8290,58 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetThumbnailAsync(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
+
+                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7876,7 +8369,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7884,20 +8388,18 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"GetThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+                return py::convert(self->obj.GetThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -8068,34 +8570,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -8116,6 +8591,44 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageFolder_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::StorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.StorageFolder", L"RenameAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.RenameAsync(param0));
             }
             catch (...)
             {
@@ -8465,30 +8978,45 @@ namespace py::cpp::Windows::Storage
     static PyMethodDef _methods_StorageFolder[] = {
         { "are_query_options_supported", reinterpret_cast<PyCFunction>(StorageFolder_AreQueryOptionsSupported), METH_VARARGS, nullptr },
         { "create_file_async", reinterpret_cast<PyCFunction>(StorageFolder_CreateFileAsync), METH_VARARGS, nullptr },
+        { "create_file_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_CreateFileAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "create_file_query", reinterpret_cast<PyCFunction>(StorageFolder_CreateFileQuery), METH_VARARGS, nullptr },
+        { "create_file_query_overload_default", reinterpret_cast<PyCFunction>(StorageFolder_CreateFileQueryOverloadDefault), METH_VARARGS, nullptr },
         { "create_file_query_with_options", reinterpret_cast<PyCFunction>(StorageFolder_CreateFileQueryWithOptions), METH_VARARGS, nullptr },
         { "create_folder_async", reinterpret_cast<PyCFunction>(StorageFolder_CreateFolderAsync), METH_VARARGS, nullptr },
+        { "create_folder_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_CreateFolderAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "create_folder_query", reinterpret_cast<PyCFunction>(StorageFolder_CreateFolderQuery), METH_VARARGS, nullptr },
+        { "create_folder_query_overload_default", reinterpret_cast<PyCFunction>(StorageFolder_CreateFolderQueryOverloadDefault), METH_VARARGS, nullptr },
         { "create_folder_query_with_options", reinterpret_cast<PyCFunction>(StorageFolder_CreateFolderQueryWithOptions), METH_VARARGS, nullptr },
         { "create_item_query", reinterpret_cast<PyCFunction>(StorageFolder_CreateItemQuery), METH_VARARGS, nullptr },
         { "create_item_query_with_options", reinterpret_cast<PyCFunction>(StorageFolder_CreateItemQueryWithOptions), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(StorageFolder_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(StorageFolder_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "get_file_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFileAsync), METH_VARARGS, nullptr },
         { "get_files_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFilesAsync), METH_VARARGS, nullptr },
+        { "get_files_async_overload_default_options_start_and_count", reinterpret_cast<PyCFunction>(StorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount), METH_VARARGS, nullptr },
+        { "get_files_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(StorageFolder_GetFilesAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFolderAsync), METH_VARARGS, nullptr },
         { "get_folders_async", reinterpret_cast<PyCFunction>(StorageFolder_GetFoldersAsync), METH_VARARGS, nullptr },
+        { "get_folders_async_overload_default_options_start_and_count", reinterpret_cast<PyCFunction>(StorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount), METH_VARARGS, nullptr },
+        { "get_folders_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(StorageFolder_GetFoldersAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_indexed_state_async", reinterpret_cast<PyCFunction>(StorageFolder_GetIndexedStateAsync), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(StorageFolder_GetItemAsync), METH_VARARGS, nullptr },
         { "get_items_async", reinterpret_cast<PyCFunction>(StorageFolder_GetItemsAsync), METH_VARARGS, nullptr },
+        { "get_items_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(StorageFolder_GetItemsAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "get_parent_async", reinterpret_cast<PyCFunction>(StorageFolder_GetParentAsync), METH_VARARGS, nullptr },
         { "get_scaled_image_as_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFolder_GetScaledImageAsThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(StorageFolder_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(StorageFolder_GetThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(StorageFolder_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "is_common_file_query_supported", reinterpret_cast<PyCFunction>(StorageFolder_IsCommonFileQuerySupported), METH_VARARGS, nullptr },
         { "is_common_folder_query_supported", reinterpret_cast<PyCFunction>(StorageFolder_IsCommonFolderQuerySupported), METH_VARARGS, nullptr },
         { "is_equal", reinterpret_cast<PyCFunction>(StorageFolder_IsEqual), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(StorageFolder_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(StorageFolder_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(StorageFolder_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "try_get_change_tracker", reinterpret_cast<PyCFunction>(StorageFolder_TryGetChangeTracker), METH_VARARGS, nullptr },
         { "try_get_item_async", reinterpret_cast<PyCFunction>(StorageFolder_TryGetItemAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageFolder, METH_O | METH_STATIC, nullptr },
@@ -9458,7 +9986,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StorageLibraryChangeTracker_EnableWithOptions(py::wrapper::Windows::Storage::StorageLibraryChangeTracker* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9593,6 +10132,7 @@ namespace py::cpp::Windows::Storage
     static PyMethodDef _methods_StorageLibraryChangeTracker[] = {
         { "disable", reinterpret_cast<PyCFunction>(StorageLibraryChangeTracker_Disable), METH_VARARGS, nullptr },
         { "enable", reinterpret_cast<PyCFunction>(StorageLibraryChangeTracker_Enable), METH_VARARGS, nullptr },
+        { "enable_with_options", reinterpret_cast<PyCFunction>(StorageLibraryChangeTracker_EnableWithOptions), METH_VARARGS, nullptr },
         { "get_change_reader", reinterpret_cast<PyCFunction>(StorageLibraryChangeTracker_GetChangeReader), METH_VARARGS, nullptr },
         { "reset", reinterpret_cast<PyCFunction>(StorageLibraryChangeTracker_Reset), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StorageLibraryChangeTracker, METH_O | METH_STATIC, nullptr },
@@ -13423,66 +13963,11 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFile_CopyAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    static PyObject* IStorageFile_CopyOverload(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-
-                return py::convert(self->obj.CopyAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(self->obj.CopyAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -13518,7 +14003,122 @@ namespace py::cpp::Windows::Storage
         }
     }
 
+    static PyObject* IStorageFile_CopyOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+
+                return py::convert(self->obj.CopyAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile_CopyOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"CopyAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.CopyAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IStorageFile_DeleteAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
+
+                return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -13540,33 +14140,6 @@ namespace py::cpp::Windows::Storage
                 }
 
                 return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
-
-                return py::convert(self->obj.DeleteAsync(param0));
             }
             catch (...)
             {
@@ -13693,7 +14266,47 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFile_MoveAsync(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    static PyObject* IStorageFile_MoveOverload(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
+
+                return py::convert(self->obj.MoveAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile_MoveOverloadDefaultNameAndOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -13724,7 +14337,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile_MoveOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -13745,35 +14369,6 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert(self->obj.MoveAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile", L"MoveAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::IStorageFolder>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 2);
-
-                return py::convert(self->obj.MoveAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -13938,34 +14533,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -13986,6 +14554,44 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.RenameAsync(param0));
             }
             catch (...)
             {
@@ -14182,17 +14788,23 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageFile[] = {
         { "copy_and_replace_async", reinterpret_cast<PyCFunction>(IStorageFile_CopyAndReplaceAsync), METH_VARARGS, nullptr },
-        { "copy_async", reinterpret_cast<PyCFunction>(IStorageFile_CopyAsync), METH_VARARGS, nullptr },
+        { "copy_overload", reinterpret_cast<PyCFunction>(IStorageFile_CopyOverload), METH_VARARGS, nullptr },
+        { "copy_overload_default_name_and_options", reinterpret_cast<PyCFunction>(IStorageFile_CopyOverloadDefaultNameAndOptions), METH_VARARGS, nullptr },
+        { "copy_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFile_CopyOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageFile_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFile_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(IStorageFile_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageFile_IsOfType), METH_VARARGS, nullptr },
         { "move_and_replace_async", reinterpret_cast<PyCFunction>(IStorageFile_MoveAndReplaceAsync), METH_VARARGS, nullptr },
-        { "move_async", reinterpret_cast<PyCFunction>(IStorageFile_MoveAsync), METH_VARARGS, nullptr },
+        { "move_overload", reinterpret_cast<PyCFunction>(IStorageFile_MoveOverload), METH_VARARGS, nullptr },
+        { "move_overload_default_name_and_options", reinterpret_cast<PyCFunction>(IStorageFile_MoveOverloadDefaultNameAndOptions), METH_VARARGS, nullptr },
+        { "move_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFile_MoveOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "open_async", reinterpret_cast<PyCFunction>(IStorageFile_OpenAsync), METH_VARARGS, nullptr },
         { "open_read_async", reinterpret_cast<PyCFunction>(IStorageFile_OpenReadAsync), METH_VARARGS, nullptr },
         { "open_sequential_read_async", reinterpret_cast<PyCFunction>(IStorageFile_OpenSequentialReadAsync), METH_VARARGS, nullptr },
         { "open_transacted_write_async", reinterpret_cast<PyCFunction>(IStorageFile_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageFile_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFile_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageFile, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFile), METH_O | METH_STATIC, nullptr },
         { }
@@ -14240,7 +14852,45 @@ namespace py::cpp::Windows::Storage
         Py_DECREF(tp);
     }
 
-    static PyObject* IStorageFile2_OpenAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
+    static PyObject* IStorageFile2_OpenTransactedWriteWithOptionsAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile2", L"OpenTransactedWriteAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 0);
+
+                return py::convert(self->obj.OpenTransactedWriteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFile2_OpenWithOptionsAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14265,44 +14915,6 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 1);
 
                 return py::convert(self->obj.OpenAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* IStorageFile2_OpenTransactedWriteAsync(py::wrapper::Windows::Storage::IStorageFile2* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFile2", L"OpenTransactedWriteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::StorageOpenOptions>(args, 0);
-
-                return py::convert(self->obj.OpenTransactedWriteAsync(param0));
             }
             catch (...)
             {
@@ -14342,8 +14954,8 @@ namespace py::cpp::Windows::Storage
     }
 
     static PyMethodDef _methods_IStorageFile2[] = {
-        { "open_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenAsync), METH_VARARGS, nullptr },
-        { "open_transacted_write_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenTransactedWriteAsync), METH_VARARGS, nullptr },
+        { "open_transacted_write_with_options_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenTransactedWriteWithOptionsAsync), METH_VARARGS, nullptr },
+        { "open_with_options_async", reinterpret_cast<PyCFunction>(IStorageFile2_OpenWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageFile2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFile2), METH_O | METH_STATIC, nullptr },
         { }
@@ -14482,34 +15094,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFileAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.CreateFileAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -14544,7 +15129,7 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFolder_CreateFolderAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    static PyObject* IStorageFolder_CreateFileAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14556,7 +15141,7 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFolderAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFileAsync", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -14567,7 +15152,7 @@ namespace py::cpp::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.CreateFolderAsync(param0));
+                return py::convert(self->obj.CreateFileAsync(param0));
             }
             catch (...)
             {
@@ -14575,7 +15160,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolder_CreateFolderAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -14610,7 +15206,83 @@ namespace py::cpp::Windows::Storage
         }
     }
 
+    static PyObject* IStorageFolder_CreateFolderAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageFolder", L"CreateFolderAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.CreateFolderAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* IStorageFolder_DeleteAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
+
+                return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolder_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14632,33 +15304,6 @@ namespace py::cpp::Windows::Storage
                 }
 
                 return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
-
-                return py::convert(self->obj.DeleteAsync(param0));
             }
             catch (...)
             {
@@ -14747,7 +15392,7 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFolder_GetFilesAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    static PyObject* IStorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14821,7 +15466,7 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFolder_GetFoldersAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    static PyObject* IStorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14895,7 +15540,7 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageFolder_GetItemsAsync(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    static PyObject* IStorageFolder_GetItemsAsyncOverloadDefaultStartAndCount(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -14973,34 +15618,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -15021,6 +15639,44 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageFolder_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.RenameAsync(param0));
             }
             catch (...)
             {
@@ -15165,17 +15821,21 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageFolder[] = {
         { "create_file_async", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFileAsync), METH_VARARGS, nullptr },
+        { "create_file_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFileAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "create_folder_async", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFolderAsync), METH_VARARGS, nullptr },
+        { "create_folder_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_CreateFolderAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageFolder_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "get_file_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetFileAsync), METH_VARARGS, nullptr },
-        { "get_files_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetFilesAsync), METH_VARARGS, nullptr },
+        { "get_files_async_overload_default_options_start_and_count", reinterpret_cast<PyCFunction>(IStorageFolder_GetFilesAsyncOverloadDefaultOptionsStartAndCount), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetFolderAsync), METH_VARARGS, nullptr },
-        { "get_folders_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetFoldersAsync), METH_VARARGS, nullptr },
+        { "get_folders_async_overload_default_options_start_and_count", reinterpret_cast<PyCFunction>(IStorageFolder_GetFoldersAsyncOverloadDefaultOptionsStartAndCount), METH_VARARGS, nullptr },
         { "get_item_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetItemAsync), METH_VARARGS, nullptr },
-        { "get_items_async", reinterpret_cast<PyCFunction>(IStorageFolder_GetItemsAsync), METH_VARARGS, nullptr },
+        { "get_items_async_overload_default_start_and_count", reinterpret_cast<PyCFunction>(IStorageFolder_GetItemsAsyncOverloadDefaultStartAndCount), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageFolder_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageFolder_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageFolder_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageFolder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageFolder), METH_O | METH_STATIC, nullptr },
         { }
@@ -15330,32 +15990,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -15375,6 +16010,42 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItem_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
             {
@@ -15467,34 +16138,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -15515,6 +16159,44 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItem_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.RenameAsync(param0));
             }
             catch (...)
             {
@@ -15659,9 +16341,11 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageItem[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageItem_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(IStorageItem_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageItem_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageItem_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItem, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItem), METH_O | METH_STATIC, nullptr },
         { }
@@ -15711,32 +16395,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.DeleteAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -15756,6 +16415,42 @@ namespace py::cpp::Windows::Storage
                 auto param0 = py::convert_to<winrt::Windows::Storage::StorageDeleteOption>(args, 0);
 
                 return py::convert(self->obj.DeleteAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItem2_DeleteAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"DeleteAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.DeleteAsync());
             }
             catch (...)
             {
@@ -15922,34 +16617,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.RenameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -15970,6 +16638,44 @@ namespace py::cpp::Windows::Storage
                 auto param1 = py::convert_to<winrt::Windows::Storage::NameCollisionOption>(args, 1);
 
                 return py::convert(self->obj.RenameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItem2_RenameAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItem2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItem", L"RenameAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.RenameAsync(param0));
             }
             catch (...)
             {
@@ -16114,11 +16820,13 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageItem2[] = {
         { "delete_async", reinterpret_cast<PyCFunction>(IStorageItem2_DeleteAsync), METH_VARARGS, nullptr },
+        { "delete_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem2_DeleteAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "get_basic_properties_async", reinterpret_cast<PyCFunction>(IStorageItem2_GetBasicPropertiesAsync), METH_VARARGS, nullptr },
         { "get_parent_async", reinterpret_cast<PyCFunction>(IStorageItem2_GetParentAsync), METH_VARARGS, nullptr },
         { "is_equal", reinterpret_cast<PyCFunction>(IStorageItem2_IsEqual), METH_VARARGS, nullptr },
         { "is_of_type", reinterpret_cast<PyCFunction>(IStorageItem2_IsOfType), METH_VARARGS, nullptr },
         { "rename_async", reinterpret_cast<PyCFunction>(IStorageItem2_RenameAsync), METH_VARARGS, nullptr },
+        { "rename_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItem2_RenameAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItem2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItem2), METH_O | METH_STATIC, nullptr },
         { }
@@ -16168,7 +16876,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 3)
         {
             try
             {
@@ -16176,18 +16884,20 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0));
+                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -16195,7 +16905,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -16223,7 +16944,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -16231,20 +16963,18 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+                return py::convert(self->obj.GetThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -16389,6 +17119,8 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageItemProperties[] = {
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemProperties, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemProperties), METH_O | METH_STATIC, nullptr },
         { }
@@ -16438,62 +17170,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-
-                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
+        if (arg_count == 3)
         {
             try
             {
@@ -16529,7 +17206,46 @@ namespace py::cpp::Windows::Storage
         }
     }
 
-    static PyObject* IStorageItemProperties2_GetThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
+    static PyObject* IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -16541,7 +17257,7 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties2", L"GetScaledImageAsThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
@@ -16552,7 +17268,7 @@ namespace py::cpp::Windows::Storage
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0));
+                return py::convert(self->obj.GetScaledImageAsThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -16560,7 +17276,58 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties2_GetThumbnailAsync(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
+
+                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -16588,7 +17355,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemProperties2* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -16596,20 +17374,18 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+                return py::convert(self->obj.GetThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -16754,7 +17530,11 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageItemProperties2[] = {
         { "get_scaled_image_as_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetScaledImageAsThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_scaled_image_as_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemProperties2_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemProperties2, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemProperties2), METH_O | METH_STATIC, nullptr },
         { }
@@ -16804,7 +17584,7 @@ namespace py::cpp::Windows::Storage
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
+        if (arg_count == 3)
         {
             try
             {
@@ -16812,18 +17592,20 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(1);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0));
+                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -16831,7 +17613,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultOptions(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -16859,7 +17652,18 @@ namespace py::cpp::Windows::Storage
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(py::wrapper::Windows::Storage::IStorageItemPropertiesWithProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -16867,20 +17671,18 @@ namespace py::cpp::Windows::Storage
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Storage.IStorageItemProperties", L"GetThumbnailAsync", 1);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(1);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailMode>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Storage::FileProperties::ThumbnailOptions>(args, 2);
 
-                return py::convert(self->obj.GetThumbnailAsync(param0, param1, param2));
+                return py::convert(self->obj.GetThumbnailAsync(param0));
             }
             catch (...)
             {
@@ -17051,6 +17853,8 @@ namespace py::cpp::Windows::Storage
 
     static PyMethodDef _methods_IStorageItemPropertiesWithProvider[] = {
         { "get_thumbnail_async", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsync), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_options", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultOptions), METH_VARARGS, nullptr },
+        { "get_thumbnail_async_overload_default_size_default_options", reinterpret_cast<PyCFunction>(IStorageItemPropertiesWithProvider_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageItemPropertiesWithProvider, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageItemPropertiesWithProvider), METH_O | METH_STATIC, nullptr },
         { }

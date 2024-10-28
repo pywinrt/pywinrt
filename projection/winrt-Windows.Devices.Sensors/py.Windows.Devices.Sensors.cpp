@@ -124,7 +124,18 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Accelerometer_GetDefaultWithAccelerometerReadingType(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -692,6 +703,7 @@ namespace py::cpp::Windows::Devices::Sensors
     static PyMethodDef methods_Accelerometer_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(Accelerometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Accelerometer_GetDefault), METH_VARARGS, nullptr },
+        { "get_default_with_accelerometer_reading_type", reinterpret_cast<PyCFunction>(Accelerometer_GetDefaultWithAccelerometerReadingType), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Accelerometer_GetDeviceSelector), METH_VARARGS, nullptr },
         { }
     };
@@ -1573,7 +1585,18 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ActivitySensor_GetSystemHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1861,6 +1884,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_default_async", reinterpret_cast<PyCFunction>(ActivitySensor_GetDefaultAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(ActivitySensor_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_system_history_async", reinterpret_cast<PyCFunction>(ActivitySensor_GetSystemHistoryAsync), METH_VARARGS, nullptr },
+        { "get_system_history_with_duration_async", reinterpret_cast<PyCFunction>(ActivitySensor_GetSystemHistoryWithDurationAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -10115,33 +10139,6 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
-
-                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -10171,6 +10168,44 @@ namespace py::cpp::Windows::Devices::Sensors
                 }
 
                 return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefaultForRelativeReadings());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Inclinometer_GetDefaultWithSensorReadingType(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.Inclinometer", L"GetDefault", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
+
+                return py::convert(winrt::Windows::Devices::Sensors::Inclinometer::GetDefault(param0));
             }
             catch (...)
             {
@@ -10661,6 +10696,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "from_id_async", reinterpret_cast<PyCFunction>(Inclinometer_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(Inclinometer_GetDefault), METH_VARARGS, nullptr },
         { "get_default_for_relative_readings", reinterpret_cast<PyCFunction>(Inclinometer_GetDefaultForRelativeReadings), METH_VARARGS, nullptr },
+        { "get_default_with_sensor_reading_type", reinterpret_cast<PyCFunction>(Inclinometer_GetDefaultWithSensorReadingType), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(Inclinometer_GetDeviceSelector), METH_VARARGS, nullptr },
         { }
     };
@@ -13713,61 +13749,6 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
-
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
-
-                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -13797,6 +13778,83 @@ namespace py::cpp::Windows::Devices::Sensors
                 }
 
                 return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefaultForRelativeReadings());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OrientationSensor_GetDefaultWithSensorReadingType(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
+
+                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OrientationSensor_GetDefaultWithSensorReadingTypeAndSensorOptimizationGoal(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Sensors.OrientationSensor", L"GetDefault", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Sensors::SensorReadingType>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Sensors::SensorOptimizationGoal>(args, 1);
+
+                return py::convert(winrt::Windows::Devices::Sensors::OrientationSensor::GetDefault(param0, param1));
             }
             catch (...)
             {
@@ -13842,7 +13900,18 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* OrientationSensor_GetDeviceSelectorWithSensorReadingTypeAndSensorOptimizationGoal(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -14288,7 +14357,10 @@ namespace py::cpp::Windows::Devices::Sensors
         { "from_id_async", reinterpret_cast<PyCFunction>(OrientationSensor_FromIdAsync), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(OrientationSensor_GetDefault), METH_VARARGS, nullptr },
         { "get_default_for_relative_readings", reinterpret_cast<PyCFunction>(OrientationSensor_GetDefaultForRelativeReadings), METH_VARARGS, nullptr },
+        { "get_default_with_sensor_reading_type", reinterpret_cast<PyCFunction>(OrientationSensor_GetDefaultWithSensorReadingType), METH_VARARGS, nullptr },
+        { "get_default_with_sensor_reading_type_and_sensor_optimization_goal", reinterpret_cast<PyCFunction>(OrientationSensor_GetDefaultWithSensorReadingTypeAndSensorOptimizationGoal), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(OrientationSensor_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_sensor_reading_type_and_sensor_optimization_goal", reinterpret_cast<PyCFunction>(OrientationSensor_GetDeviceSelectorWithSensorReadingTypeAndSensorOptimizationGoal), METH_VARARGS, nullptr },
         { }
     };
 
@@ -14862,7 +14934,18 @@ namespace py::cpp::Windows::Devices::Sensors
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Pedometer_GetSystemHistoryWithDurationAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -15159,6 +15242,7 @@ namespace py::cpp::Windows::Devices::Sensors
         { "get_device_selector", reinterpret_cast<PyCFunction>(Pedometer_GetDeviceSelector), METH_VARARGS, nullptr },
         { "get_readings_from_trigger_details", reinterpret_cast<PyCFunction>(Pedometer_GetReadingsFromTriggerDetails), METH_VARARGS, nullptr },
         { "get_system_history_async", reinterpret_cast<PyCFunction>(Pedometer_GetSystemHistoryAsync), METH_VARARGS, nullptr },
+        { "get_system_history_with_duration_async", reinterpret_cast<PyCFunction>(Pedometer_GetSystemHistoryWithDurationAsync), METH_VARARGS, nullptr },
         { }
     };
 

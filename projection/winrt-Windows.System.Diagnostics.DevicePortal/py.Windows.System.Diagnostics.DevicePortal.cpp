@@ -90,7 +90,18 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePortalConnection_GetServerMessageWebSocketForRequest2(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -119,7 +130,18 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
         }
-        else if (arg_count == 6)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePortalConnection_GetServerMessageWebSocketForRequest3(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
         {
             try
             {
@@ -189,7 +211,18 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DevicePortalConnection_GetServerStreamWebSocketForRequest2(py::wrapper::Windows::System::Diagnostics::DevicePortal::DevicePortalConnection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -366,7 +399,10 @@ namespace py::cpp::Windows::System::Diagnostics::DevicePortal
 
     static PyMethodDef _methods_DevicePortalConnection[] = {
         { "get_server_message_web_socket_for_request", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerMessageWebSocketForRequest), METH_VARARGS, nullptr },
+        { "get_server_message_web_socket_for_request2", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerMessageWebSocketForRequest2), METH_VARARGS, nullptr },
+        { "get_server_message_web_socket_for_request3", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerMessageWebSocketForRequest3), METH_VARARGS, nullptr },
         { "get_server_stream_web_socket_for_request", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerStreamWebSocketForRequest), METH_VARARGS, nullptr },
+        { "get_server_stream_web_socket_for_request2", reinterpret_cast<PyCFunction>(DevicePortalConnection_GetServerStreamWebSocketForRequest2), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(DevicePortalConnection_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(DevicePortalConnection_remove_Closed), METH_O, nullptr },
         { "add_request_received", reinterpret_cast<PyCFunction>(DevicePortalConnection_add_RequestReceived), METH_O, nullptr },

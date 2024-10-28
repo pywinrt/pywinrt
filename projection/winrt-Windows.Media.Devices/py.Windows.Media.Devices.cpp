@@ -3314,7 +3314,18 @@ namespace py::cpp::Windows::Media::Devices
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DigitalWindowControl_ConfigureWithBounds(py::wrapper::Windows::Media::Devices::DigitalWindowControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3555,6 +3566,7 @@ namespace py::cpp::Windows::Media::Devices
 
     static PyMethodDef _methods_DigitalWindowControl[] = {
         { "configure", reinterpret_cast<PyCFunction>(DigitalWindowControl_Configure), METH_VARARGS, nullptr },
+        { "configure_with_bounds", reinterpret_cast<PyCFunction>(DigitalWindowControl_ConfigureWithBounds), METH_VARARGS, nullptr },
         { "get_bounds", reinterpret_cast<PyCFunction>(DigitalWindowControl_GetBounds), METH_VARARGS, nullptr },
         { "get_capability_for_size", reinterpret_cast<PyCFunction>(DigitalWindowControl_GetCapabilityForSize), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DigitalWindowControl, METH_O | METH_STATIC, nullptr },
@@ -4929,7 +4941,18 @@ namespace py::cpp::Windows::Media::Devices
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FocusControl_SetPresetWithCompletionOptionAsync(py::wrapper::Windows::Media::Devices::FocusControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5431,6 +5454,7 @@ namespace py::cpp::Windows::Media::Devices
         { "focus_async", reinterpret_cast<PyCFunction>(FocusControl_FocusAsync), METH_VARARGS, nullptr },
         { "lock_async", reinterpret_cast<PyCFunction>(FocusControl_LockAsync), METH_VARARGS, nullptr },
         { "set_preset_async", reinterpret_cast<PyCFunction>(FocusControl_SetPresetAsync), METH_VARARGS, nullptr },
+        { "set_preset_with_completion_option_async", reinterpret_cast<PyCFunction>(FocusControl_SetPresetWithCompletionOptionAsync), METH_VARARGS, nullptr },
         { "set_value_async", reinterpret_cast<PyCFunction>(FocusControl_SetValueAsync), METH_VARARGS, nullptr },
         { "unlock_async", reinterpret_cast<PyCFunction>(FocusControl_UnlockAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FocusControl, METH_O | METH_STATIC, nullptr },
@@ -10091,7 +10115,18 @@ namespace py::cpp::Windows::Media::Devices
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RegionsOfInterestControl_SetRegionsWithLockAsync(py::wrapper::Windows::Media::Devices::RegionsOfInterestControl* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10257,6 +10292,7 @@ namespace py::cpp::Windows::Media::Devices
     static PyMethodDef _methods_RegionsOfInterestControl[] = {
         { "clear_regions_async", reinterpret_cast<PyCFunction>(RegionsOfInterestControl_ClearRegionsAsync), METH_VARARGS, nullptr },
         { "set_regions_async", reinterpret_cast<PyCFunction>(RegionsOfInterestControl_SetRegionsAsync), METH_VARARGS, nullptr },
+        { "set_regions_with_lock_async", reinterpret_cast<PyCFunction>(RegionsOfInterestControl_SetRegionsWithLockAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_RegionsOfInterestControl, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_RegionsOfInterestControl), METH_O | METH_STATIC, nullptr },
         { }

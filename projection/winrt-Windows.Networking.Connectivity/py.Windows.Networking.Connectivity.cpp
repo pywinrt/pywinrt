@@ -1165,7 +1165,18 @@ namespace py::cpp::Windows::Networking::Connectivity
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ConnectionProfile_GetLocalUsagePerRoamingStates(py::wrapper::Windows::Networking::Connectivity::ConnectionProfile* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1729,6 +1740,7 @@ namespace py::cpp::Windows::Networking::Connectivity
         { "get_data_plan_status", reinterpret_cast<PyCFunction>(ConnectionProfile_GetDataPlanStatus), METH_VARARGS, nullptr },
         { "get_domain_connectivity_level", reinterpret_cast<PyCFunction>(ConnectionProfile_GetDomainConnectivityLevel), METH_VARARGS, nullptr },
         { "get_local_usage", reinterpret_cast<PyCFunction>(ConnectionProfile_GetLocalUsage), METH_VARARGS, nullptr },
+        { "get_local_usage_per_roaming_states", reinterpret_cast<PyCFunction>(ConnectionProfile_GetLocalUsagePerRoamingStates), METH_VARARGS, nullptr },
         { "get_network_connectivity_level", reinterpret_cast<PyCFunction>(ConnectionProfile_GetNetworkConnectivityLevel), METH_VARARGS, nullptr },
         { "get_network_names", reinterpret_cast<PyCFunction>(ConnectionProfile_GetNetworkNames), METH_VARARGS, nullptr },
         { "get_network_usage_async", reinterpret_cast<PyCFunction>(ConnectionProfile_GetNetworkUsageAsync), METH_VARARGS, nullptr },

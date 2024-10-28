@@ -88,34 +88,6 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(self->obj.Discover(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -152,7 +124,57 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ESim_DiscoverWithServerAddressAndMatchingId(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.ESim", L"Discover", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.Discover(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ESim_DiscoverWithServerAddressAndMatchingIdAsync(py::wrapper::Windows::Networking::NetworkOperators::ESim* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -564,6 +586,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "delete_profile_async", reinterpret_cast<PyCFunction>(ESim_DeleteProfileAsync), METH_VARARGS, nullptr },
         { "discover", reinterpret_cast<PyCFunction>(ESim_Discover), METH_VARARGS, nullptr },
         { "discover_async", reinterpret_cast<PyCFunction>(ESim_DiscoverAsync), METH_VARARGS, nullptr },
+        { "discover_with_server_address_and_matching_id", reinterpret_cast<PyCFunction>(ESim_DiscoverWithServerAddressAndMatchingId), METH_VARARGS, nullptr },
+        { "discover_with_server_address_and_matching_id_async", reinterpret_cast<PyCFunction>(ESim_DiscoverWithServerAddressAndMatchingIdAsync), METH_VARARGS, nullptr },
         { "download_profile_metadata_async", reinterpret_cast<PyCFunction>(ESim_DownloadProfileMetadataAsync), METH_VARARGS, nullptr },
         { "get_profiles", reinterpret_cast<PyCFunction>(ESim_GetProfiles), METH_VARARGS, nullptr },
         { "reset_async", reinterpret_cast<PyCFunction>(ESim_ResetAsync), METH_VARARGS, nullptr },
@@ -1913,7 +1937,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ESimProfileMetadata_ConfirmInstallWithConfirmationCodeAsync(py::wrapper::Windows::Networking::NetworkOperators::ESimProfileMetadata* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2284,6 +2319,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef _methods_ESimProfileMetadata[] = {
         { "confirm_install_async", reinterpret_cast<PyCFunction>(ESimProfileMetadata_ConfirmInstallAsync), METH_VARARGS, nullptr },
+        { "confirm_install_with_confirmation_code_async", reinterpret_cast<PyCFunction>(ESimProfileMetadata_ConfirmInstallWithConfirmationCodeAsync), METH_VARARGS, nullptr },
         { "deny_install_async", reinterpret_cast<PyCFunction>(ESimProfileMetadata_DenyInstallAsync), METH_VARARGS, nullptr },
         { "postpone_install_async", reinterpret_cast<PyCFunction>(ESimProfileMetadata_PostponeInstallAsync), METH_VARARGS, nullptr },
         { "add_state_changed", reinterpret_cast<PyCFunction>(ESimProfileMetadata_add_StateChanged), METH_O, nullptr },
@@ -10292,7 +10328,43 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static PyObject* MobileBroadbandModem_GetIsPassthroughEnabled(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.GetIsPassthroughEnabledAsync());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10330,36 +10402,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    static PyObject* MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndexAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"GetIsPassthroughEnabledAsync", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.GetIsPassthroughEnabledAsync());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -10429,7 +10476,45 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static PyObject* MobileBroadbandModem_SetIsPassthroughEnabled(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<bool>(args, 0);
+
+                return py::convert(self->obj.SetIsPassthroughEnabledAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndex(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -10468,38 +10553,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         }
     }
 
-    static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
+    static PyObject* MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndexAsync(py::wrapper::Windows::Networking::NetworkOperators::MobileBroadbandModem* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.NetworkOperators.MobileBroadbandModem", L"SetIsPassthroughEnabledAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<bool>(args, 0);
-
-                return py::convert(self->obj.SetIsPassthroughEnabledAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -10862,11 +10920,13 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandModem[] = {
         { "get_current_configuration_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetCurrentConfigurationAsync), METH_VARARGS, nullptr },
         { "get_device_service", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetDeviceService), METH_VARARGS, nullptr },
-        { "get_is_passthrough_enabled", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabled), METH_VARARGS, nullptr },
         { "get_is_passthrough_enabled_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabledAsync), METH_VARARGS, nullptr },
+        { "get_is_passthrough_enabled_with_slot_index", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndex), METH_VARARGS, nullptr },
+        { "get_is_passthrough_enabled_with_slot_index_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_GetIsPassthroughEnabledWithSlotIndexAsync), METH_VARARGS, nullptr },
         { "reset_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_ResetAsync), METH_VARARGS, nullptr },
-        { "set_is_passthrough_enabled", reinterpret_cast<PyCFunction>(MobileBroadbandModem_SetIsPassthroughEnabled), METH_VARARGS, nullptr },
         { "set_is_passthrough_enabled_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_SetIsPassthroughEnabledAsync), METH_VARARGS, nullptr },
+        { "set_is_passthrough_enabled_with_slot_index", reinterpret_cast<PyCFunction>(MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndex), METH_VARARGS, nullptr },
+        { "set_is_passthrough_enabled_with_slot_index_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_SetIsPassthroughEnabledWithSlotIndexAsync), METH_VARARGS, nullptr },
         { "try_get_pco_async", reinterpret_cast<PyCFunction>(MobileBroadbandModem_TryGetPcoAsync), METH_VARARGS, nullptr },
         { "add_is_in_emergency_call_mode_changed", reinterpret_cast<PyCFunction>(MobileBroadbandModem_add_IsInEmergencyCallModeChanged), METH_O, nullptr },
         { "remove_is_in_emergency_call_mode_changed", reinterpret_cast<PyCFunction>(MobileBroadbandModem_remove_IsInEmergencyCallModeChanged), METH_O, nullptr },
@@ -16476,7 +16536,18 @@ namespace py::cpp::Windows::Networking::NetworkOperators
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NetworkOperatorTetheringManager_CreateFromConnectionProfileWithTargetAdapter(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -17119,6 +17190,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
 
     static PyMethodDef methods_NetworkOperatorTetheringManager_Static[] = {
         { "create_from_connection_profile", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromConnectionProfile), METH_VARARGS, nullptr },
+        { "create_from_connection_profile_with_target_adapter", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromConnectionProfileWithTargetAdapter), METH_VARARGS, nullptr },
         { "create_from_network_account_id", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_CreateFromNetworkAccountId), METH_VARARGS, nullptr },
         { "disable_no_connections_timeout", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeout), METH_VARARGS, nullptr },
         { "disable_no_connections_timeout_async", reinterpret_cast<PyCFunction>(NetworkOperatorTetheringManager_DisableNoConnectionsTimeoutAsync), METH_VARARGS, nullptr },

@@ -490,16 +490,6 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
-    public static string ToCppMethodName(this MethodDefinition method)
-    {
-        if (method.IsSpecialName)
-        {
-            return method.Name.Substring(method.Name.IndexOf('_') + 1);
-        }
-
-        return method.Name;
-    }
-
     public static bool ImplementsInterface(this TypeDefinition type, string interfaceName)
     {
         if (type.FullName == interfaceName)

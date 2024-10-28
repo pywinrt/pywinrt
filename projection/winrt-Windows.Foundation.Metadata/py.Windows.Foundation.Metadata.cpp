@@ -13,7 +13,7 @@ namespace py::cpp::Windows::Foundation::Metadata
         return nullptr;
     }
 
-    static PyObject* ApiInformation_IsApiContractPresent(PyObject* /*unused*/, PyObject* args) noexcept
+    static PyObject* ApiInformation_IsApiContractPresentByMajor(PyObject* /*unused*/, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -45,7 +45,18 @@ namespace py::cpp::Windows::Foundation::Metadata
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApiInformation_IsApiContractPresentByMajorAndMinor(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -191,7 +202,18 @@ namespace py::cpp::Windows::Foundation::Metadata
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ApiInformation_IsMethodPresentWithArity(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -409,10 +431,12 @@ namespace py::cpp::Windows::Foundation::Metadata
     };
 
     static PyMethodDef methods_ApiInformation_Static[] = {
-        { "is_api_contract_present", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresent), METH_VARARGS, nullptr },
+        { "is_api_contract_present_by_major", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresentByMajor), METH_VARARGS, nullptr },
+        { "is_api_contract_present_by_major_and_minor", reinterpret_cast<PyCFunction>(ApiInformation_IsApiContractPresentByMajorAndMinor), METH_VARARGS, nullptr },
         { "is_enum_named_value_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEnumNamedValuePresent), METH_VARARGS, nullptr },
         { "is_event_present", reinterpret_cast<PyCFunction>(ApiInformation_IsEventPresent), METH_VARARGS, nullptr },
         { "is_method_present", reinterpret_cast<PyCFunction>(ApiInformation_IsMethodPresent), METH_VARARGS, nullptr },
+        { "is_method_present_with_arity", reinterpret_cast<PyCFunction>(ApiInformation_IsMethodPresentWithArity), METH_VARARGS, nullptr },
         { "is_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsPropertyPresent), METH_VARARGS, nullptr },
         { "is_read_only_property_present", reinterpret_cast<PyCFunction>(ApiInformation_IsReadOnlyPropertyPresent), METH_VARARGS, nullptr },
         { "is_type_present", reinterpret_cast<PyCFunction>(ApiInformation_IsTypePresent), METH_VARARGS, nullptr },

@@ -2153,7 +2153,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardChallengeContext_ProvisionAsyncWithNewCardId(py::wrapper::Windows::Devices::SmartCards::SmartCardChallengeContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2300,6 +2311,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "change_administrative_key_async", reinterpret_cast<PyCFunction>(SmartCardChallengeContext_ChangeAdministrativeKeyAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(SmartCardChallengeContext_Close), METH_VARARGS, nullptr },
         { "provision_async", reinterpret_cast<PyCFunction>(SmartCardChallengeContext_ProvisionAsync), METH_VARARGS, nullptr },
+        { "provision_async_with_new_card_id", reinterpret_cast<PyCFunction>(SmartCardChallengeContext_ProvisionAsyncWithNewCardId), METH_VARARGS, nullptr },
         { "verify_response_async", reinterpret_cast<PyCFunction>(SmartCardChallengeContext_VerifyResponseAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardChallengeContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardChallengeContext), METH_O | METH_STATIC, nullptr },
@@ -2694,7 +2706,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardCryptogramGenerator_GetAllCryptogramMaterialPackageCharacteristicsWithStorageKeyAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardCryptogramGenerator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3197,6 +3220,7 @@ namespace py::cpp::Windows::Devices::SmartCards
         { "delete_cryptogram_material_storage_key_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_DeleteCryptogramMaterialStorageKeyAsync), METH_VARARGS, nullptr },
         { "get_all_cryptogram_material_characteristics_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_GetAllCryptogramMaterialCharacteristicsAsync), METH_VARARGS, nullptr },
         { "get_all_cryptogram_material_package_characteristics_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_GetAllCryptogramMaterialPackageCharacteristicsAsync), METH_VARARGS, nullptr },
+        { "get_all_cryptogram_material_package_characteristics_with_storage_key_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_GetAllCryptogramMaterialPackageCharacteristicsWithStorageKeyAsync), METH_VARARGS, nullptr },
         { "get_all_cryptogram_storage_key_characteristics_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_GetAllCryptogramStorageKeyCharacteristicsAsync), METH_VARARGS, nullptr },
         { "import_cryptogram_material_package_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_ImportCryptogramMaterialPackageAsync), METH_VARARGS, nullptr },
         { "request_cryptogram_material_storage_key_info_async", reinterpret_cast<PyCFunction>(SmartCardCryptogramGenerator_RequestCryptogramMaterialStorageKeyInfoAsync), METH_VARARGS, nullptr },
@@ -6004,7 +6028,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondWithCryptogramsAndStateAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6012,19 +6047,20 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondAsync", 2);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondWithCryptogramsAsync", 3);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(2);
+                    py::set_arg_count_version_error(3);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 2);
 
-                return py::convert(self->obj.TryRespondAsync(param0, param1));
+                return py::convert(self->obj.TryRespondWithCryptogramsAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -6071,7 +6107,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardEmulatorApduReceivedEventArgs_TryRespondWithStateAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardEmulatorApduReceivedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6079,20 +6126,19 @@ namespace py::cpp::Windows::Devices::SmartCards
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondWithCryptogramsAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.SmartCards.SmartCardEmulatorApduReceivedEventArgs", L"TryRespondAsync", 2);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(2);
                     return nullptr;
                 }
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Devices::SmartCards::SmartCardCryptogramPlacementStep>>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 2);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IReference<uint32_t>>(args, 1);
 
-                return py::convert(self->obj.TryRespondWithCryptogramsAsync(param0, param1, param2));
+                return py::convert(self->obj.TryRespondAsync(param0, param1));
             }
             catch (...)
             {
@@ -6237,7 +6283,9 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyMethodDef _methods_SmartCardEmulatorApduReceivedEventArgs[] = {
         { "try_respond_async", reinterpret_cast<PyCFunction>(SmartCardEmulatorApduReceivedEventArgs_TryRespondAsync), METH_VARARGS, nullptr },
+        { "try_respond_with_cryptograms_and_state_async", reinterpret_cast<PyCFunction>(SmartCardEmulatorApduReceivedEventArgs_TryRespondWithCryptogramsAndStateAsync), METH_VARARGS, nullptr },
         { "try_respond_with_cryptograms_async", reinterpret_cast<PyCFunction>(SmartCardEmulatorApduReceivedEventArgs_TryRespondWithCryptogramsAsync), METH_VARARGS, nullptr },
+        { "try_respond_with_state_async", reinterpret_cast<PyCFunction>(SmartCardEmulatorApduReceivedEventArgs_TryRespondWithStateAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardEmulatorApduReceivedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardEmulatorApduReceivedEventArgs), METH_O | METH_STATIC, nullptr },
         { }
@@ -7499,7 +7547,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardProvisioning_RequestAttestedVirtualSmartCardCreationAsyncWithCardId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -7643,7 +7702,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardProvisioning_RequestVirtualSmartCardCreationAsyncWithCardId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -7807,7 +7877,9 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef methods_SmartCardProvisioning_Static[] = {
         { "from_smart_card_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_FromSmartCardAsync), METH_VARARGS, nullptr },
         { "request_attested_virtual_smart_card_creation_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestAttestedVirtualSmartCardCreationAsync), METH_VARARGS, nullptr },
+        { "request_attested_virtual_smart_card_creation_async_with_card_id", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestAttestedVirtualSmartCardCreationAsyncWithCardId), METH_VARARGS, nullptr },
         { "request_virtual_smart_card_creation_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardCreationAsync), METH_VARARGS, nullptr },
+        { "request_virtual_smart_card_creation_async_with_card_id", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardCreationAsyncWithCardId), METH_VARARGS, nullptr },
         { "request_virtual_smart_card_deletion_async", reinterpret_cast<PyCFunction>(SmartCardProvisioning_RequestVirtualSmartCardDeletionAsync), METH_VARARGS, nullptr },
         { }
     };
@@ -7949,7 +8021,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardReader_GetDeviceSelectorWithKind(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8276,6 +8359,7 @@ namespace py::cpp::Windows::Devices::SmartCards
     static PyMethodDef methods_SmartCardReader_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(SmartCardReader_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(SmartCardReader_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_with_kind", reinterpret_cast<PyCFunction>(SmartCardReader_GetDeviceSelectorWithKind), METH_VARARGS, nullptr },
         { }
     };
 
@@ -8344,7 +8428,18 @@ namespace py::cpp::Windows::Devices::SmartCards
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SmartCardTriggerDetails_TryLaunchCurrentAppWithBehaviorAsync(py::wrapper::Windows::Devices::SmartCards::SmartCardTriggerDetails* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8535,6 +8630,7 @@ namespace py::cpp::Windows::Devices::SmartCards
 
     static PyMethodDef _methods_SmartCardTriggerDetails[] = {
         { "try_launch_current_app_async", reinterpret_cast<PyCFunction>(SmartCardTriggerDetails_TryLaunchCurrentAppAsync), METH_VARARGS, nullptr },
+        { "try_launch_current_app_with_behavior_async", reinterpret_cast<PyCFunction>(SmartCardTriggerDetails_TryLaunchCurrentAppWithBehaviorAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SmartCardTriggerDetails, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SmartCardTriggerDetails), METH_O | METH_STATIC, nullptr },
         { }

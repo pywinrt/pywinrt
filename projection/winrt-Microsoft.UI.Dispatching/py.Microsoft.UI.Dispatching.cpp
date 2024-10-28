@@ -323,7 +323,18 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DispatcherQueue_RunEventLoopWithOptions(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -390,7 +401,18 @@ namespace py::cpp::Microsoft::UI::Dispatching
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DispatcherQueue_TryEnqueueWithPriority(py::wrapper::Microsoft::UI::Dispatching::DispatcherQueue* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -708,7 +730,9 @@ namespace py::cpp::Microsoft::UI::Dispatching
         { "enqueue_event_loop_exit", reinterpret_cast<PyCFunction>(DispatcherQueue_EnqueueEventLoopExit), METH_VARARGS, nullptr },
         { "ensure_system_dispatcher_queue", reinterpret_cast<PyCFunction>(DispatcherQueue_EnsureSystemDispatcherQueue), METH_VARARGS, nullptr },
         { "run_event_loop", reinterpret_cast<PyCFunction>(DispatcherQueue_RunEventLoop), METH_VARARGS, nullptr },
+        { "run_event_loop_with_options", reinterpret_cast<PyCFunction>(DispatcherQueue_RunEventLoopWithOptions), METH_VARARGS, nullptr },
         { "try_enqueue", reinterpret_cast<PyCFunction>(DispatcherQueue_TryEnqueue), METH_VARARGS, nullptr },
+        { "try_enqueue_with_priority", reinterpret_cast<PyCFunction>(DispatcherQueue_TryEnqueueWithPriority), METH_VARARGS, nullptr },
         { "add_shutdown_completed", reinterpret_cast<PyCFunction>(DispatcherQueue_add_ShutdownCompleted), METH_O, nullptr },
         { "remove_shutdown_completed", reinterpret_cast<PyCFunction>(DispatcherQueue_remove_ShutdownCompleted), METH_O, nullptr },
         { "add_shutdown_starting", reinterpret_cast<PyCFunction>(DispatcherQueue_add_ShutdownStarting), METH_O, nullptr },

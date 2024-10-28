@@ -227,7 +227,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_AddText2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -293,7 +304,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_AddTextBox2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -468,7 +490,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetAppLogoOverride2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -496,7 +529,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetAppLogoOverride3(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -563,7 +607,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetAttributionText2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -629,7 +684,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetAudioEvent2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -695,7 +761,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetAudioUri2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -837,7 +914,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetHeroImage2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -903,7 +991,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetInlineImage2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -931,7 +1030,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationBuilder_SetInlineImage3(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationBuilder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1111,17 +1221,27 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { "add_combo_box", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddComboBox), METH_VARARGS, nullptr },
         { "add_progress_bar", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddProgressBar), METH_VARARGS, nullptr },
         { "add_text", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddText), METH_VARARGS, nullptr },
+        { "add_text2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddText2), METH_VARARGS, nullptr },
         { "add_text_box", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddTextBox), METH_VARARGS, nullptr },
+        { "add_text_box2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_AddTextBox2), METH_VARARGS, nullptr },
         { "build_notification", reinterpret_cast<PyCFunction>(AppNotificationBuilder_BuildNotification), METH_VARARGS, nullptr },
         { "mute_audio", reinterpret_cast<PyCFunction>(AppNotificationBuilder_MuteAudio), METH_VARARGS, nullptr },
         { "set_app_logo_override", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAppLogoOverride), METH_VARARGS, nullptr },
+        { "set_app_logo_override2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAppLogoOverride2), METH_VARARGS, nullptr },
+        { "set_app_logo_override3", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAppLogoOverride3), METH_VARARGS, nullptr },
         { "set_attribution_text", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAttributionText), METH_VARARGS, nullptr },
+        { "set_attribution_text2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAttributionText2), METH_VARARGS, nullptr },
         { "set_audio_event", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAudioEvent), METH_VARARGS, nullptr },
+        { "set_audio_event2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAudioEvent2), METH_VARARGS, nullptr },
         { "set_audio_uri", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAudioUri), METH_VARARGS, nullptr },
+        { "set_audio_uri2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetAudioUri2), METH_VARARGS, nullptr },
         { "set_duration", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetDuration), METH_VARARGS, nullptr },
         { "set_group", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetGroup), METH_VARARGS, nullptr },
         { "set_hero_image", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetHeroImage), METH_VARARGS, nullptr },
+        { "set_hero_image2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetHeroImage2), METH_VARARGS, nullptr },
         { "set_inline_image", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetInlineImage), METH_VARARGS, nullptr },
+        { "set_inline_image2", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetInlineImage2), METH_VARARGS, nullptr },
+        { "set_inline_image3", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetInlineImage3), METH_VARARGS, nullptr },
         { "set_scenario", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetScenario), METH_VARARGS, nullptr },
         { "set_tag", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetTag), METH_VARARGS, nullptr },
         { "set_time_stamp", reinterpret_cast<PyCFunction>(AppNotificationBuilder_SetTimeStamp), METH_VARARGS, nullptr },
@@ -1521,7 +1641,18 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppNotificationButton_SetInvokeUri2(py::wrapper::Microsoft::Windows::AppNotifications::Builder::AppNotificationButton* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2174,6 +2305,7 @@ namespace py::cpp::Microsoft::Windows::AppNotifications::Builder
         { "set_icon", reinterpret_cast<PyCFunction>(AppNotificationButton_SetIcon), METH_VARARGS, nullptr },
         { "set_input_id", reinterpret_cast<PyCFunction>(AppNotificationButton_SetInputId), METH_VARARGS, nullptr },
         { "set_invoke_uri", reinterpret_cast<PyCFunction>(AppNotificationButton_SetInvokeUri), METH_VARARGS, nullptr },
+        { "set_invoke_uri2", reinterpret_cast<PyCFunction>(AppNotificationButton_SetInvokeUri2), METH_VARARGS, nullptr },
         { "set_tool_tip", reinterpret_cast<PyCFunction>(AppNotificationButton_SetToolTip), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppNotificationButton, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppNotificationButton), METH_O | METH_STATIC, nullptr },

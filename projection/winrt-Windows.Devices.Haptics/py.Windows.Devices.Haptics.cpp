@@ -514,35 +514,6 @@ namespace py::cpp::Windows::Devices::Haptics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-
-                self->obj.SendHapticFeedback(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -618,6 +589,46 @@ namespace py::cpp::Windows::Devices::Haptics
                 auto param3 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 3);
 
                 self->obj.SendHapticFeedbackForPlayCount(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SimpleHapticsController_SendHapticFeedbackWithIntensity(py::wrapper::Windows::Devices::Haptics::SimpleHapticsController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Haptics.SimpleHapticsController", L"SendHapticFeedback", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Haptics::SimpleHapticsControllerFeedback>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+
+                self->obj.SendHapticFeedback(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -854,6 +865,7 @@ namespace py::cpp::Windows::Devices::Haptics
         { "send_haptic_feedback", reinterpret_cast<PyCFunction>(SimpleHapticsController_SendHapticFeedback), METH_VARARGS, nullptr },
         { "send_haptic_feedback_for_duration", reinterpret_cast<PyCFunction>(SimpleHapticsController_SendHapticFeedbackForDuration), METH_VARARGS, nullptr },
         { "send_haptic_feedback_for_play_count", reinterpret_cast<PyCFunction>(SimpleHapticsController_SendHapticFeedbackForPlayCount), METH_VARARGS, nullptr },
+        { "send_haptic_feedback_with_intensity", reinterpret_cast<PyCFunction>(SimpleHapticsController_SendHapticFeedbackWithIntensity), METH_VARARGS, nullptr },
         { "stop_feedback", reinterpret_cast<PyCFunction>(SimpleHapticsController_StopFeedback), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_SimpleHapticsController, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_SimpleHapticsController), METH_O | METH_STATIC, nullptr },

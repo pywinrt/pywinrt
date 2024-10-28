@@ -721,7 +721,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailConversation_FindMessagesWithCountAsync(py::wrapper::Windows::ApplicationModel::Email::EmailConversation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1119,6 +1130,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyMethodDef _methods_EmailConversation[] = {
         { "find_messages_async", reinterpret_cast<PyCFunction>(EmailConversation_FindMessagesAsync), METH_VARARGS, nullptr },
+        { "find_messages_with_count_async", reinterpret_cast<PyCFunction>(EmailConversation_FindMessagesWithCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailConversation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailConversation), METH_O | METH_STATIC, nullptr },
         { }
@@ -1535,7 +1547,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailFolder_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1672,7 +1695,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailFolder_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1775,7 +1809,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailFolder_TryMoveWithNewNameAsync(py::wrapper::Windows::ApplicationModel::Email::EmailFolder* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2223,11 +2268,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "delete_async", reinterpret_cast<PyCFunction>(EmailFolder_DeleteAsync), METH_VARARGS, nullptr },
         { "find_child_folders_async", reinterpret_cast<PyCFunction>(EmailFolder_FindChildFoldersAsync), METH_VARARGS, nullptr },
         { "get_conversation_reader", reinterpret_cast<PyCFunction>(EmailFolder_GetConversationReader), METH_VARARGS, nullptr },
+        { "get_conversation_reader_with_options", reinterpret_cast<PyCFunction>(EmailFolder_GetConversationReaderWithOptions), METH_VARARGS, nullptr },
         { "get_message_async", reinterpret_cast<PyCFunction>(EmailFolder_GetMessageAsync), METH_VARARGS, nullptr },
         { "get_message_counts_async", reinterpret_cast<PyCFunction>(EmailFolder_GetMessageCountsAsync), METH_VARARGS, nullptr },
         { "get_message_reader", reinterpret_cast<PyCFunction>(EmailFolder_GetMessageReader), METH_VARARGS, nullptr },
+        { "get_message_reader_with_options", reinterpret_cast<PyCFunction>(EmailFolder_GetMessageReaderWithOptions), METH_VARARGS, nullptr },
         { "save_message_async", reinterpret_cast<PyCFunction>(EmailFolder_SaveMessageAsync), METH_VARARGS, nullptr },
         { "try_move_async", reinterpret_cast<PyCFunction>(EmailFolder_TryMoveAsync), METH_VARARGS, nullptr },
+        { "try_move_with_new_name_async", reinterpret_cast<PyCFunction>(EmailFolder_TryMoveWithNewNameAsync), METH_VARARGS, nullptr },
         { "try_save_async", reinterpret_cast<PyCFunction>(EmailFolder_TrySaveAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailFolder, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailFolder), METH_O | METH_STATIC, nullptr },
@@ -3927,7 +3975,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailMailbox_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4066,7 +4125,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailMailbox_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4471,7 +4541,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailMailbox_SmartSendMessageAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4734,7 +4815,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailMailbox_TryMoveFolderWithNewNameAsync(py::wrapper::Windows::ApplicationModel::Email::EmailMailbox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5642,9 +5734,11 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "get_change_tracker", reinterpret_cast<PyCFunction>(EmailMailbox_GetChangeTracker), METH_VARARGS, nullptr },
         { "get_conversation_async", reinterpret_cast<PyCFunction>(EmailMailbox_GetConversationAsync), METH_VARARGS, nullptr },
         { "get_conversation_reader", reinterpret_cast<PyCFunction>(EmailMailbox_GetConversationReader), METH_VARARGS, nullptr },
+        { "get_conversation_reader_with_options", reinterpret_cast<PyCFunction>(EmailMailbox_GetConversationReaderWithOptions), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_GetFolderAsync), METH_VARARGS, nullptr },
         { "get_message_async", reinterpret_cast<PyCFunction>(EmailMailbox_GetMessageAsync), METH_VARARGS, nullptr },
         { "get_message_reader", reinterpret_cast<PyCFunction>(EmailMailbox_GetMessageReader), METH_VARARGS, nullptr },
+        { "get_message_reader_with_options", reinterpret_cast<PyCFunction>(EmailMailbox_GetMessageReaderWithOptions), METH_VARARGS, nullptr },
         { "get_special_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_GetSpecialFolderAsync), METH_VARARGS, nullptr },
         { "mark_folder_as_seen_async", reinterpret_cast<PyCFunction>(EmailMailbox_MarkFolderAsSeenAsync), METH_VARARGS, nullptr },
         { "mark_folder_sync_enabled_async", reinterpret_cast<PyCFunction>(EmailMailbox_MarkFolderSyncEnabledAsync), METH_VARARGS, nullptr },
@@ -5655,12 +5749,14 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "save_async", reinterpret_cast<PyCFunction>(EmailMailbox_SaveAsync), METH_VARARGS, nullptr },
         { "save_draft_async", reinterpret_cast<PyCFunction>(EmailMailbox_SaveDraftAsync), METH_VARARGS, nullptr },
         { "send_message_async", reinterpret_cast<PyCFunction>(EmailMailbox_SendMessageAsync), METH_VARARGS, nullptr },
+        { "smart_send_message_async", reinterpret_cast<PyCFunction>(EmailMailbox_SmartSendMessageAsync), METH_VARARGS, nullptr },
         { "try_create_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryCreateFolderAsync), METH_VARARGS, nullptr },
         { "try_delete_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryDeleteFolderAsync), METH_VARARGS, nullptr },
         { "try_empty_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryEmptyFolderAsync), METH_VARARGS, nullptr },
         { "try_forward_meeting_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryForwardMeetingAsync), METH_VARARGS, nullptr },
         { "try_get_auto_reply_settings_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryGetAutoReplySettingsAsync), METH_VARARGS, nullptr },
         { "try_move_folder_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryMoveFolderAsync), METH_VARARGS, nullptr },
+        { "try_move_folder_with_new_name_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryMoveFolderWithNewNameAsync), METH_VARARGS, nullptr },
         { "try_move_message_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryMoveMessageAsync), METH_VARARGS, nullptr },
         { "try_propose_new_time_for_meeting_async", reinterpret_cast<PyCFunction>(EmailMailbox_TryProposeNewTimeForMeetingAsync), METH_VARARGS, nullptr },
         { "try_set_auto_reply_settings_async", reinterpret_cast<PyCFunction>(EmailMailbox_TrySetAutoReplySettingsAsync), METH_VARARGS, nullptr },
@@ -13554,7 +13650,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailStore_CreateMailboxInAccountAsync(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -13693,7 +13800,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailStore_GetConversationReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -13870,7 +13988,18 @@ namespace py::cpp::Windows::ApplicationModel::Email
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* EmailStore_GetMessageReaderWithOptions(py::wrapper::Windows::ApplicationModel::Email::EmailStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -13930,13 +14059,16 @@ namespace py::cpp::Windows::ApplicationModel::Email
 
     static PyMethodDef _methods_EmailStore[] = {
         { "create_mailbox_async", reinterpret_cast<PyCFunction>(EmailStore_CreateMailboxAsync), METH_VARARGS, nullptr },
+        { "create_mailbox_in_account_async", reinterpret_cast<PyCFunction>(EmailStore_CreateMailboxInAccountAsync), METH_VARARGS, nullptr },
         { "find_mailboxes_async", reinterpret_cast<PyCFunction>(EmailStore_FindMailboxesAsync), METH_VARARGS, nullptr },
         { "get_conversation_async", reinterpret_cast<PyCFunction>(EmailStore_GetConversationAsync), METH_VARARGS, nullptr },
         { "get_conversation_reader", reinterpret_cast<PyCFunction>(EmailStore_GetConversationReader), METH_VARARGS, nullptr },
+        { "get_conversation_reader_with_options", reinterpret_cast<PyCFunction>(EmailStore_GetConversationReaderWithOptions), METH_VARARGS, nullptr },
         { "get_folder_async", reinterpret_cast<PyCFunction>(EmailStore_GetFolderAsync), METH_VARARGS, nullptr },
         { "get_mailbox_async", reinterpret_cast<PyCFunction>(EmailStore_GetMailboxAsync), METH_VARARGS, nullptr },
         { "get_message_async", reinterpret_cast<PyCFunction>(EmailStore_GetMessageAsync), METH_VARARGS, nullptr },
         { "get_message_reader", reinterpret_cast<PyCFunction>(EmailStore_GetMessageReader), METH_VARARGS, nullptr },
+        { "get_message_reader_with_options", reinterpret_cast<PyCFunction>(EmailStore_GetMessageReaderWithOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_EmailStore, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_EmailStore), METH_O | METH_STATIC, nullptr },
         { }

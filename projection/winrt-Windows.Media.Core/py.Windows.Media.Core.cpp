@@ -12341,7 +12341,18 @@ namespace py::cpp::Windows::Media::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MseSourceBuffer_AppendStreamMaxSize(py::wrapper::Windows::Media::Core::MseSourceBuffer* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -13026,6 +13037,7 @@ namespace py::cpp::Windows::Media::Core
         { "abort", reinterpret_cast<PyCFunction>(MseSourceBuffer_Abort), METH_VARARGS, nullptr },
         { "append_buffer", reinterpret_cast<PyCFunction>(MseSourceBuffer_AppendBuffer), METH_VARARGS, nullptr },
         { "append_stream", reinterpret_cast<PyCFunction>(MseSourceBuffer_AppendStream), METH_VARARGS, nullptr },
+        { "append_stream_max_size", reinterpret_cast<PyCFunction>(MseSourceBuffer_AppendStreamMaxSize), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(MseSourceBuffer_Remove), METH_VARARGS, nullptr },
         { "add_aborted", reinterpret_cast<PyCFunction>(MseSourceBuffer_add_Aborted), METH_O, nullptr },
         { "remove_aborted", reinterpret_cast<PyCFunction>(MseSourceBuffer_remove_Aborted), METH_O, nullptr },
@@ -18697,34 +18709,6 @@ namespace py::cpp::Windows::Media::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedTextSource", L"CreateFromStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromStream(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -18764,7 +18748,18 @@ namespace py::cpp::Windows::Media::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimedTextSource_CreateFromStreamWithIndexAndLanguage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -18786,6 +18781,45 @@ namespace py::cpp::Windows::Media::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromStreamWithIndex(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimedTextSource_CreateFromStreamWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedTextSource", L"CreateFromStream", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromStream(param0, param1));
             }
             catch (...)
             {
@@ -18824,34 +18858,6 @@ namespace py::cpp::Windows::Media::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
 
                 return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromUri(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedTextSource", L"CreateFromUri", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromUri(param0, param1));
             }
             catch (...)
             {
@@ -18898,7 +18904,18 @@ namespace py::cpp::Windows::Media::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimedTextSource_CreateFromUriWithIndexAndLanguage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -18920,6 +18937,45 @@ namespace py::cpp::Windows::Media::Core
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromUriWithIndex(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimedTextSource_CreateFromUriWithLanguage(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Media.Core.TimedTextSource", L"CreateFromUri", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(winrt::Windows::Media::Core::TimedTextSource::CreateFromUri(param0, param1));
             }
             catch (...)
             {
@@ -19049,8 +19105,12 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_TimedTextSource_Static[] = {
         { "create_from_stream", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStream), METH_VARARGS, nullptr },
         { "create_from_stream_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStreamWithIndex), METH_VARARGS, nullptr },
+        { "create_from_stream_with_index_and_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStreamWithIndexAndLanguage), METH_VARARGS, nullptr },
+        { "create_from_stream_with_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromStreamWithLanguage), METH_VARARGS, nullptr },
         { "create_from_uri", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUri), METH_VARARGS, nullptr },
         { "create_from_uri_with_index", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndex), METH_VARARGS, nullptr },
+        { "create_from_uri_with_index_and_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithIndexAndLanguage), METH_VARARGS, nullptr },
+        { "create_from_uri_with_language", reinterpret_cast<PyCFunction>(TimedTextSource_CreateFromUriWithLanguage), METH_VARARGS, nullptr },
         { }
     };
 

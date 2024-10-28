@@ -45,7 +45,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_AcceptPhoneCallOnEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -113,7 +124,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_AcceptPhoneCallWithVideoOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1174,7 +1196,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_MakePhoneCallOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1244,7 +1277,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_MakePhoneCallWithVideoOnAudioEndpoint(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1427,7 +1471,18 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_RejectPhoneCallWithText(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1611,35 +1666,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::guid>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
-
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1671,6 +1697,46 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarmByInstanceId(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_SnoozeAlarmForSpecifiedTime(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeAlarm", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
+
+                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeAlarm(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1718,35 +1784,6 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::guid>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
-
-                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1778,6 +1815,46 @@ namespace py::cpp::Windows::Phone::Notification::Management
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminderByInstanceId(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AccessoryManager_SnoozeReminderForSpecifiedTime(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Phone.Notification.Management.AccessoryManager", L"SnoozeReminder", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
+
+                winrt::Windows::Phone::Notification::Management::AccessoryManager::SnoozeReminder(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2268,7 +2345,9 @@ namespace py::cpp::Windows::Phone::Notification::Management
 
     static PyMethodDef methods_AccessoryManager_Static[] = {
         { "accept_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCall), METH_VARARGS, nullptr },
+        { "accept_phone_call_on_endpoint", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCallOnEndpoint), METH_VARARGS, nullptr },
         { "accept_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCallWithVideo), METH_VARARGS, nullptr },
+        { "accept_phone_call_with_video_on_audio_endpoint", reinterpret_cast<PyCFunction>(AccessoryManager_AcceptPhoneCallWithVideoOnAudioEndpoint), METH_VARARGS, nullptr },
         { "clear_toast", reinterpret_cast<PyCFunction>(AccessoryManager_ClearToast), METH_VARARGS, nullptr },
         { "decrease_volume", reinterpret_cast<PyCFunction>(AccessoryManager_DecreaseVolume), METH_VARARGS, nullptr },
         { "disable_all_accessory_notification_types", reinterpret_cast<PyCFunction>(AccessoryManager_DisableAllAccessoryNotificationTypes), METH_VARARGS, nullptr },
@@ -2296,18 +2375,23 @@ namespace py::cpp::Windows::Phone::Notification::Management
         { "increase_volume", reinterpret_cast<PyCFunction>(AccessoryManager_IncreaseVolume), METH_VARARGS, nullptr },
         { "is_notification_enabled_for_application", reinterpret_cast<PyCFunction>(AccessoryManager_IsNotificationEnabledForApplication), METH_VARARGS, nullptr },
         { "make_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCall), METH_VARARGS, nullptr },
+        { "make_phone_call_on_audio_endpoint", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCallOnAudioEndpoint), METH_VARARGS, nullptr },
         { "make_phone_call_with_video", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCallWithVideo), METH_VARARGS, nullptr },
+        { "make_phone_call_with_video_on_audio_endpoint", reinterpret_cast<PyCFunction>(AccessoryManager_MakePhoneCallWithVideoOnAudioEndpoint), METH_VARARGS, nullptr },
         { "perform_media_playback_command", reinterpret_cast<PyCFunction>(AccessoryManager_PerformMediaPlaybackCommand), METH_VARARGS, nullptr },
         { "process_trigger_details", reinterpret_cast<PyCFunction>(AccessoryManager_ProcessTriggerDetails), METH_VARARGS, nullptr },
         { "register_accessory_app", reinterpret_cast<PyCFunction>(AccessoryManager_RegisterAccessoryApp), METH_VARARGS, nullptr },
         { "reject_phone_call", reinterpret_cast<PyCFunction>(AccessoryManager_RejectPhoneCall), METH_VARARGS, nullptr },
+        { "reject_phone_call_with_text", reinterpret_cast<PyCFunction>(AccessoryManager_RejectPhoneCallWithText), METH_VARARGS, nullptr },
         { "ring_device", reinterpret_cast<PyCFunction>(AccessoryManager_RingDevice), METH_VARARGS, nullptr },
         { "set_mute", reinterpret_cast<PyCFunction>(AccessoryManager_SetMute), METH_VARARGS, nullptr },
         { "set_ringer_vibrate", reinterpret_cast<PyCFunction>(AccessoryManager_SetRingerVibrate), METH_VARARGS, nullptr },
         { "snooze_alarm", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarm), METH_VARARGS, nullptr },
         { "snooze_alarm_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarmByInstanceId), METH_VARARGS, nullptr },
+        { "snooze_alarm_for_specified_time", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeAlarmForSpecifiedTime), METH_VARARGS, nullptr },
         { "snooze_reminder", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminder), METH_VARARGS, nullptr },
         { "snooze_reminder_by_instance_id", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminderByInstanceId), METH_VARARGS, nullptr },
+        { "snooze_reminder_for_specified_time", reinterpret_cast<PyCFunction>(AccessoryManager_SnoozeReminderForSpecifiedTime), METH_VARARGS, nullptr },
         { "swap_phone_calls", reinterpret_cast<PyCFunction>(AccessoryManager_SwapPhoneCalls), METH_VARARGS, nullptr },
         { "update_email_read_status", reinterpret_cast<PyCFunction>(AccessoryManager_UpdateEmailReadStatus), METH_VARARGS, nullptr },
         { }

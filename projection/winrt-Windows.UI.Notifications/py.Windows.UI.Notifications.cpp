@@ -487,7 +487,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BadgeUpdateManager_CreateBadgeUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -663,6 +674,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef methods_BadgeUpdateManager_Static[] = {
         { "create_badge_updater_for_application", reinterpret_cast<PyCFunction>(BadgeUpdateManager_CreateBadgeUpdaterForApplication), METH_VARARGS, nullptr },
+        { "create_badge_updater_for_application_with_id", reinterpret_cast<PyCFunction>(BadgeUpdateManager_CreateBadgeUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_badge_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(BadgeUpdateManager_CreateBadgeUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(BadgeUpdateManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(BadgeUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
@@ -732,7 +744,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BadgeUpdateManagerForUser_CreateBadgeUpdaterForApplicationWithId(py::wrapper::Windows::UI::Notifications::BadgeUpdateManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -856,6 +879,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef _methods_BadgeUpdateManagerForUser[] = {
         { "create_badge_updater_for_application", reinterpret_cast<PyCFunction>(BadgeUpdateManagerForUser_CreateBadgeUpdaterForApplication), METH_VARARGS, nullptr },
+        { "create_badge_updater_for_application_with_id", reinterpret_cast<PyCFunction>(BadgeUpdateManagerForUser_CreateBadgeUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_badge_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(BadgeUpdateManagerForUser_CreateBadgeUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BadgeUpdateManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_BadgeUpdateManagerForUser), METH_O | METH_STATIC, nullptr },
@@ -969,7 +993,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BadgeUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::BadgeUpdater* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1109,6 +1144,7 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_BadgeUpdater[] = {
         { "clear", reinterpret_cast<PyCFunction>(BadgeUpdater_Clear), METH_VARARGS, nullptr },
         { "start_periodic_update", reinterpret_cast<PyCFunction>(BadgeUpdater_StartPeriodicUpdate), METH_VARARGS, nullptr },
+        { "start_periodic_update_at_time", reinterpret_cast<PyCFunction>(BadgeUpdater_StartPeriodicUpdateAtTime), METH_VARARGS, nullptr },
         { "stop_periodic_update", reinterpret_cast<PyCFunction>(BadgeUpdater_StopPeriodicUpdate), METH_VARARGS, nullptr },
         { "update", reinterpret_cast<PyCFunction>(BadgeUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_BadgeUpdater, METH_O | METH_STATIC, nullptr },
@@ -4357,7 +4393,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4495,6 +4542,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef methods_TileFlyoutUpdateManager_Static[] = {
         { "create_tile_flyout_updater_for_application", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplication), METH_VARARGS, nullptr },
+        { "create_tile_flyout_updater_for_application_with_id", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_tile_flyout_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_CreateTileFlyoutUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(TileFlyoutUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
         { }
@@ -4604,7 +4652,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileFlyoutUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::TileFlyoutUpdater* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4770,6 +4829,7 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef _methods_TileFlyoutUpdater[] = {
         { "clear", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_Clear), METH_VARARGS, nullptr },
         { "start_periodic_update", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_StartPeriodicUpdate), METH_VARARGS, nullptr },
+        { "start_periodic_update_at_time", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_StartPeriodicUpdateAtTime), METH_VARARGS, nullptr },
         { "stop_periodic_update", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_StopPeriodicUpdate), METH_VARARGS, nullptr },
         { "update", reinterpret_cast<PyCFunction>(TileFlyoutUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileFlyoutUpdater, METH_O | METH_STATIC, nullptr },
@@ -5076,7 +5136,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileUpdateManager_CreateTileUpdaterForApplicationWithId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5252,6 +5323,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef methods_TileUpdateManager_Static[] = {
         { "create_tile_updater_for_application", reinterpret_cast<PyCFunction>(TileUpdateManager_CreateTileUpdaterForApplication), METH_VARARGS, nullptr },
+        { "create_tile_updater_for_application_with_id", reinterpret_cast<PyCFunction>(TileUpdateManager_CreateTileUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_tile_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileUpdateManager_CreateTileUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(TileUpdateManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(TileUpdateManager_GetTemplateContent), METH_VARARGS, nullptr },
@@ -5296,6 +5368,42 @@ namespace py::cpp::Windows::UI::Notifications
     {
         auto arg_count = PyTuple_Size(args);
 
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"CreateTileUpdaterForApplicationForUser", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.CreateTileUpdaterForApplicationForUser());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileUpdateManagerForUser_CreateTileUpdaterForApplicationWithId(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
         if (arg_count == 1)
         {
             try
@@ -5316,42 +5424,6 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.CreateTileUpdaterForApplication(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* TileUpdateManagerForUser_CreateTileUpdaterForApplicationForUser(py::wrapper::Windows::UI::Notifications::TileUpdateManagerForUser* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.TileUpdateManagerForUser", L"CreateTileUpdaterForApplicationForUser", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.CreateTileUpdaterForApplicationForUser());
             }
             catch (...)
             {
@@ -5456,7 +5528,7 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef _methods_TileUpdateManagerForUser[] = {
         { "create_tile_updater_for_application", reinterpret_cast<PyCFunction>(TileUpdateManagerForUser_CreateTileUpdaterForApplication), METH_VARARGS, nullptr },
-        { "create_tile_updater_for_application_for_user", reinterpret_cast<PyCFunction>(TileUpdateManagerForUser_CreateTileUpdaterForApplicationForUser), METH_VARARGS, nullptr },
+        { "create_tile_updater_for_application_with_id", reinterpret_cast<PyCFunction>(TileUpdateManagerForUser_CreateTileUpdaterForApplicationWithId), METH_VARARGS, nullptr },
         { "create_tile_updater_for_secondary_tile", reinterpret_cast<PyCFunction>(TileUpdateManagerForUser_CreateTileUpdaterForSecondaryTile), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileUpdateManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TileUpdateManagerForUser), METH_O | METH_STATIC, nullptr },
@@ -5840,7 +5912,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileUpdater_StartPeriodicUpdateAtTime(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5910,7 +5993,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TileUpdater_StartPeriodicUpdateBatchAtTime(py::wrapper::Windows::UI::Notifications::TileUpdater* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6083,7 +6177,9 @@ namespace py::cpp::Windows::UI::Notifications
         { "get_scheduled_tile_notifications", reinterpret_cast<PyCFunction>(TileUpdater_GetScheduledTileNotifications), METH_VARARGS, nullptr },
         { "remove_from_schedule", reinterpret_cast<PyCFunction>(TileUpdater_RemoveFromSchedule), METH_VARARGS, nullptr },
         { "start_periodic_update", reinterpret_cast<PyCFunction>(TileUpdater_StartPeriodicUpdate), METH_VARARGS, nullptr },
+        { "start_periodic_update_at_time", reinterpret_cast<PyCFunction>(TileUpdater_StartPeriodicUpdateAtTime), METH_VARARGS, nullptr },
         { "start_periodic_update_batch", reinterpret_cast<PyCFunction>(TileUpdater_StartPeriodicUpdateBatch), METH_VARARGS, nullptr },
+        { "start_periodic_update_batch_at_time", reinterpret_cast<PyCFunction>(TileUpdater_StartPeriodicUpdateBatchAtTime), METH_VARARGS, nullptr },
         { "stop_periodic_update", reinterpret_cast<PyCFunction>(TileUpdater_StopPeriodicUpdate), METH_VARARGS, nullptr },
         { "update", reinterpret_cast<PyCFunction>(TileUpdater_Update), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TileUpdater, METH_O | METH_STATIC, nullptr },
@@ -8053,7 +8149,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationHistory_ClearWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8117,7 +8224,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationHistory_GetHistoryWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8183,65 +8301,6 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                self->obj.Remove(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-
-                self->obj.Remove(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -8281,7 +8340,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationHistory_RemoveGroupWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8302,6 +8372,87 @@ namespace py::cpp::Windows::UI::Notifications
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 self->obj.RemoveGroup(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationHistory_RemoveGroupedTag(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                self->obj.Remove(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationHistory_RemoveGroupedTagWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationHistory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.UI.Notifications.ToastNotificationHistory", L"Remove", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+
+                self->obj.Remove(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8343,9 +8494,14 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef _methods_ToastNotificationHistory[] = {
         { "clear", reinterpret_cast<PyCFunction>(ToastNotificationHistory_Clear), METH_VARARGS, nullptr },
+        { "clear_with_id", reinterpret_cast<PyCFunction>(ToastNotificationHistory_ClearWithId), METH_VARARGS, nullptr },
         { "get_history", reinterpret_cast<PyCFunction>(ToastNotificationHistory_GetHistory), METH_VARARGS, nullptr },
+        { "get_history_with_id", reinterpret_cast<PyCFunction>(ToastNotificationHistory_GetHistoryWithId), METH_VARARGS, nullptr },
         { "remove", reinterpret_cast<PyCFunction>(ToastNotificationHistory_Remove), METH_VARARGS, nullptr },
         { "remove_group", reinterpret_cast<PyCFunction>(ToastNotificationHistory_RemoveGroup), METH_VARARGS, nullptr },
+        { "remove_group_with_id", reinterpret_cast<PyCFunction>(ToastNotificationHistory_RemoveGroupWithId), METH_VARARGS, nullptr },
+        { "remove_grouped_tag", reinterpret_cast<PyCFunction>(ToastNotificationHistory_RemoveGroupedTag), METH_VARARGS, nullptr },
+        { "remove_grouped_tag_with_id", reinterpret_cast<PyCFunction>(ToastNotificationHistory_RemoveGroupedTagWithId), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ToastNotificationHistory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ToastNotificationHistory), METH_O | METH_STATIC, nullptr },
         { }
@@ -8567,7 +8723,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationManager_CreateToastNotifierWithId(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8769,6 +8936,7 @@ namespace py::cpp::Windows::UI::Notifications
     static PyMethodDef methods_ToastNotificationManager_Static[] = {
         { "configure_notification_mirroring", reinterpret_cast<PyCFunction>(ToastNotificationManager_ConfigureNotificationMirroring), METH_VARARGS, nullptr },
         { "create_toast_notifier", reinterpret_cast<PyCFunction>(ToastNotificationManager_CreateToastNotifier), METH_VARARGS, nullptr },
+        { "create_toast_notifier_with_id", reinterpret_cast<PyCFunction>(ToastNotificationManager_CreateToastNotifierWithId), METH_VARARGS, nullptr },
         { "get_default", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetDefault), METH_VARARGS, nullptr },
         { "get_for_user", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetForUser), METH_VARARGS, nullptr },
         { "get_template_content", reinterpret_cast<PyCFunction>(ToastNotificationManager_GetTemplateContent), METH_VARARGS, nullptr },
@@ -8838,7 +9006,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationManagerForUser_CreateToastNotifierWithId(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8939,7 +9118,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotificationManagerForUser_GetToastCollectionManagerWithAppId(py::wrapper::Windows::UI::Notifications::ToastNotificationManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9172,8 +9362,10 @@ namespace py::cpp::Windows::UI::Notifications
 
     static PyMethodDef _methods_ToastNotificationManagerForUser[] = {
         { "create_toast_notifier", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_CreateToastNotifier), METH_VARARGS, nullptr },
+        { "create_toast_notifier_with_id", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_CreateToastNotifierWithId), METH_VARARGS, nullptr },
         { "get_history_for_toast_collection_id_async", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_GetHistoryForToastCollectionIdAsync), METH_VARARGS, nullptr },
         { "get_toast_collection_manager", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_GetToastCollectionManager), METH_VARARGS, nullptr },
+        { "get_toast_collection_manager_with_app_id", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_GetToastCollectionManagerWithAppId), METH_VARARGS, nullptr },
         { "get_toast_notifier_for_toast_collection_id_async", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_GetToastNotifierForToastCollectionIdAsync), METH_VARARGS, nullptr },
         { "add_notification_mode_changed", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_add_NotificationModeChanged), METH_O, nullptr },
         { "remove_notification_mode_changed", reinterpret_cast<PyCFunction>(ToastNotificationManagerForUser_remove_NotificationModeChanged), METH_O, nullptr },
@@ -9413,7 +9605,7 @@ namespace py::cpp::Windows::UI::Notifications
         }
     }
 
-    static PyObject* ToastNotifier_Update(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
+    static PyObject* ToastNotifier_UpdateWithTag(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -9445,7 +9637,18 @@ namespace py::cpp::Windows::UI::Notifications
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ToastNotifier_UpdateWithTagAndGroup(py::wrapper::Windows::UI::Notifications::ToastNotifier* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -9594,7 +9797,8 @@ namespace py::cpp::Windows::UI::Notifications
         { "hide", reinterpret_cast<PyCFunction>(ToastNotifier_Hide), METH_VARARGS, nullptr },
         { "remove_from_schedule", reinterpret_cast<PyCFunction>(ToastNotifier_RemoveFromSchedule), METH_VARARGS, nullptr },
         { "show", reinterpret_cast<PyCFunction>(ToastNotifier_Show), METH_VARARGS, nullptr },
-        { "update", reinterpret_cast<PyCFunction>(ToastNotifier_Update), METH_VARARGS, nullptr },
+        { "update_with_tag", reinterpret_cast<PyCFunction>(ToastNotifier_UpdateWithTag), METH_VARARGS, nullptr },
+        { "update_with_tag_and_group", reinterpret_cast<PyCFunction>(ToastNotifier_UpdateWithTagAndGroup), METH_VARARGS, nullptr },
         { "add_scheduled_toast_notification_showing", reinterpret_cast<PyCFunction>(ToastNotifier_add_ScheduledToastNotificationShowing), METH_O, nullptr },
         { "remove_scheduled_toast_notification_showing", reinterpret_cast<PyCFunction>(ToastNotifier_remove_ScheduledToastNotificationShowing), METH_O, nullptr },
         { "_assign_array_", _assign_array_ToastNotifier, METH_O | METH_STATIC, nullptr },

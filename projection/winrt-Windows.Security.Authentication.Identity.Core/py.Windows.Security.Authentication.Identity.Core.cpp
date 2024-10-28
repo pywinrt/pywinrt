@@ -65,35 +65,7 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 1);
-
-                return py::convert(self->obj.ApproveSessionAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
+        if (arg_count == 4)
         {
             try
             {
@@ -130,7 +102,86 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
         }
     }
 
+    static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionUsingAuthSessionInfoAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"ApproveSessionAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionAuthenticationStatus>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 1);
+
+                return py::convert(self->obj.ApproveSessionAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_DenySessionAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>(args, 2);
+
+                return py::convert(self->obj.DenySessionAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MicrosoftAccountMultiFactorAuthenticationManager_DenySessionUsingAuthSessionInfoAsync(py::wrapper::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationManager* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -154,35 +205,6 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
                 auto param0 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorSessionInfo>(args, 0);
 
                 return py::convert(self->obj.DenySessionAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Security.Authentication.Identity.Core.MicrosoftAccountMultiFactorAuthenticationManager", L"DenySessionAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Security::Authentication::Identity::Core::MicrosoftAccountMultiFactorAuthenticationType>(args, 2);
-
-                return py::convert(self->obj.DenySessionAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -442,7 +464,9 @@ namespace py::cpp::Windows::Security::Authentication::Identity::Core
     static PyMethodDef _methods_MicrosoftAccountMultiFactorAuthenticationManager[] = {
         { "add_device_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_AddDeviceAsync), METH_VARARGS, nullptr },
         { "approve_session_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionAsync), METH_VARARGS, nullptr },
+        { "approve_session_using_auth_session_info_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_ApproveSessionUsingAuthSessionInfoAsync), METH_VARARGS, nullptr },
         { "deny_session_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_DenySessionAsync), METH_VARARGS, nullptr },
+        { "deny_session_using_auth_session_info_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_DenySessionUsingAuthSessionInfoAsync), METH_VARARGS, nullptr },
         { "get_one_time_pass_code_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_GetOneTimePassCodeAsync), METH_VARARGS, nullptr },
         { "get_sessions_and_unregistered_accounts_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAndUnregisteredAccountsAsync), METH_VARARGS, nullptr },
         { "get_sessions_async", reinterpret_cast<PyCFunction>(MicrosoftAccountMultiFactorAuthenticationManager_GetSessionsAsync), METH_VARARGS, nullptr },

@@ -4,6 +4,11 @@
 
 ## [Unreleased]
 
+### Changed
+- [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method
+  names when available. This exposes some APIs that otherwise could not be called
+  but also renames many existing methods.
+
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
 - Fixed missing `Microsoft.Web.WebView2.Core.dll`.

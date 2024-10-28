@@ -162,34 +162,6 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
-
-                return py::convert(self->obj.ShowInsightsAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -228,7 +200,18 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CortanaActionableInsights_ShowInsightsForImageWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -294,7 +277,18 @@ namespace py::cpp::Windows::Services::Cortana
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CortanaActionableInsights_ShowInsightsForTextWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -315,6 +309,45 @@ namespace py::cpp::Windows::Services::Cortana
                 auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
 
                 return py::convert(self->obj.ShowInsightsForTextAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CortanaActionableInsights_ShowInsightsWithOptionsAsync(py::wrapper::Windows::Services::Cortana::CortanaActionableInsights* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Cortana.CortanaActionableInsights", L"ShowInsightsAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::DataTransfer::DataPackage>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Services::Cortana::CortanaActionableInsightsOptions>(args, 1);
+
+                return py::convert(self->obj.ShowInsightsAsync(param0, param1));
             }
             catch (...)
             {
@@ -383,7 +416,10 @@ namespace py::cpp::Windows::Services::Cortana
         { "is_available_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_IsAvailableAsync), METH_VARARGS, nullptr },
         { "show_insights_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsAsync), METH_VARARGS, nullptr },
         { "show_insights_for_image_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsForImageAsync), METH_VARARGS, nullptr },
+        { "show_insights_for_image_with_options_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsForImageWithOptionsAsync), METH_VARARGS, nullptr },
         { "show_insights_for_text_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsForTextAsync), METH_VARARGS, nullptr },
+        { "show_insights_for_text_with_options_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsForTextWithOptionsAsync), METH_VARARGS, nullptr },
+        { "show_insights_with_options_async", reinterpret_cast<PyCFunction>(CortanaActionableInsights_ShowInsightsWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CortanaActionableInsights, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CortanaActionableInsights), METH_O | METH_STATIC, nullptr },
         { }

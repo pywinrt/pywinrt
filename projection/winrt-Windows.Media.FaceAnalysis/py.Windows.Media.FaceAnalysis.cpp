@@ -181,7 +181,18 @@ namespace py::cpp::Windows::Media::FaceAnalysis
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FaceDetector_DetectFacesWithSearchAreaAsync(py::wrapper::Windows::Media::FaceAnalysis::FaceDetector* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -464,6 +475,7 @@ namespace py::cpp::Windows::Media::FaceAnalysis
 
     static PyMethodDef _methods_FaceDetector[] = {
         { "detect_faces_async", reinterpret_cast<PyCFunction>(FaceDetector_DetectFacesAsync), METH_VARARGS, nullptr },
+        { "detect_faces_with_search_area_async", reinterpret_cast<PyCFunction>(FaceDetector_DetectFacesWithSearchAreaAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_FaceDetector, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_FaceDetector), METH_O | METH_STATIC, nullptr },
         { }

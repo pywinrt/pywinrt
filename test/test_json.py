@@ -234,7 +234,7 @@ class TestJson(unittest.TestCase):
         v = o.get_view()
 
         self.assertEqual(v.size, 6)
-        
+
         self.assertTrue(v.lookup("bool").get_boolean())
         self.assertEqual(v.lookup("null").value_type, wdj.JsonValueType.NULL)
         self.assertEqual(v.lookup("number").get_number(), 42)
@@ -307,7 +307,7 @@ class TestJson(unittest.TestCase):
 
     def test_invalid_param_count_static(self):
         with self.assertRaises(TypeError):
-            wdj.JsonArray.parse(10, 20)        
+            wdj.JsonArray.parse(10, 20)
 
     def test_IJsonvalue_get_boolean(self):
         a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
@@ -361,7 +361,7 @@ class TestJson(unittest.TestCase):
 
     def test_JsonObject_get_named_boolean_default(self):
         o = wdj.JsonObject.parse("{ \"spam\": true }")
-        v = o.get_named_boolean("more-spam", True)
+        v = o.get_named_boolean_or_default("more-spam", True)
         self.assertTrue(v)
 
     def test_JsonObject_get_named_number(self):
@@ -371,7 +371,7 @@ class TestJson(unittest.TestCase):
 
     def test_JsonObject_get_named_number_default(self):
         o = wdj.JsonObject.parse("{ \"spam\": true }")
-        v = o.get_named_number("more-spam", 16)
+        v = o.get_named_number_or_default("more-spam", 16)
         self.assertEqual(v, 16)
 
 # todo: GetMany, iterator, sequence

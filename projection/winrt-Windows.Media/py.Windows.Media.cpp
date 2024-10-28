@@ -2167,7 +2167,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterAudioDecoderWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2239,7 +2250,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterAudioEncoderWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2311,7 +2333,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterByteStreamHandlerWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2422,7 +2455,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterSchemeHandlerWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2493,7 +2537,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterVideoDecoderWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2565,7 +2620,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MediaExtensionManager_RegisterVideoEncoderWithSettings(py::wrapper::Windows::Media::MediaExtensionManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2629,12 +2695,18 @@ namespace py::cpp::Windows::Media
 
     static PyMethodDef _methods_MediaExtensionManager[] = {
         { "register_audio_decoder", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterAudioDecoder), METH_VARARGS, nullptr },
+        { "register_audio_decoder_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterAudioDecoderWithSettings), METH_VARARGS, nullptr },
         { "register_audio_encoder", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterAudioEncoder), METH_VARARGS, nullptr },
+        { "register_audio_encoder_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterAudioEncoderWithSettings), METH_VARARGS, nullptr },
         { "register_byte_stream_handler", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterByteStreamHandler), METH_VARARGS, nullptr },
+        { "register_byte_stream_handler_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterByteStreamHandlerWithSettings), METH_VARARGS, nullptr },
         { "register_media_extension_for_app_service", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterMediaExtensionForAppService), METH_VARARGS, nullptr },
         { "register_scheme_handler", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterSchemeHandler), METH_VARARGS, nullptr },
+        { "register_scheme_handler_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterSchemeHandlerWithSettings), METH_VARARGS, nullptr },
         { "register_video_decoder", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterVideoDecoder), METH_VARARGS, nullptr },
+        { "register_video_decoder_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterVideoDecoderWithSettings), METH_VARARGS, nullptr },
         { "register_video_encoder", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterVideoEncoder), METH_VARARGS, nullptr },
+        { "register_video_encoder_with_settings", reinterpret_cast<PyCFunction>(MediaExtensionManager_RegisterVideoEncoderWithSettings), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MediaExtensionManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MediaExtensionManager), METH_O | METH_STATIC, nullptr },
         { }
@@ -7353,7 +7425,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VideoFrame_CopyToWithBoundsAsync(py::wrapper::Windows::Media::VideoFrame* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -7422,7 +7505,18 @@ namespace py::cpp::Windows::Media
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VideoFrame_CreateAsDirect3D11SurfaceBackedWithDevice(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -7955,6 +8049,7 @@ namespace py::cpp::Windows::Media
     static PyMethodDef _methods_VideoFrame[] = {
         { "close", reinterpret_cast<PyCFunction>(VideoFrame_Close), METH_VARARGS, nullptr },
         { "copy_to_async", reinterpret_cast<PyCFunction>(VideoFrame_CopyToAsync), METH_VARARGS, nullptr },
+        { "copy_to_with_bounds_async", reinterpret_cast<PyCFunction>(VideoFrame_CopyToWithBoundsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_VideoFrame, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_VideoFrame), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_VideoFrame), METH_NOARGS, nullptr },
@@ -7996,6 +8091,7 @@ namespace py::cpp::Windows::Media
 
     static PyMethodDef methods_VideoFrame_Static[] = {
         { "create_as_direct3_d11_surface_backed", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBacked), METH_VARARGS, nullptr },
+        { "create_as_direct3_d11_surface_backed_with_device", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBackedWithDevice), METH_VARARGS, nullptr },
         { "create_with_direct3_d11_surface", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithDirect3D11Surface), METH_VARARGS, nullptr },
         { "create_with_software_bitmap", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithSoftwareBitmap), METH_VARARGS, nullptr },
         { }

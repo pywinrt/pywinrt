@@ -506,7 +506,18 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreAvailability_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreAvailability* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -670,6 +681,7 @@ namespace py::cpp::Windows::Services::Store
 
     static PyMethodDef _methods_StoreAvailability[] = {
         { "request_purchase_async", reinterpret_cast<PyCFunction>(StoreAvailability_RequestPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_purchase_with_purchase_properties_async", reinterpret_cast<PyCFunction>(StoreAvailability_RequestPurchaseWithPurchasePropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StoreAvailability, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StoreAvailability), METH_O | METH_STATIC, nullptr },
         { }
@@ -1990,7 +2002,18 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreContext_GetStoreProductsWithOptionsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2288,7 +2311,18 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreContext_RequestDownloadAndInstallStorePackagesWithInstallOptionsAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2392,34 +2426,6 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 1);
-
-                return py::convert(self->obj.RequestPurchaseAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2451,6 +2457,45 @@ namespace py::cpp::Windows::Services::Store
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.RequestPurchaseByInAppOfferTokenAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreContext_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Services.Store.StoreContext", L"RequestPurchaseAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Services::Store::StorePurchaseProperties>(args, 1);
+
+                return py::convert(self->obj.RequestPurchaseAsync(param0, param1));
             }
             catch (...)
             {
@@ -2917,6 +2962,7 @@ namespace py::cpp::Windows::Services::Store
         { "get_customer_purchase_id_async", reinterpret_cast<PyCFunction>(StoreContext_GetCustomerPurchaseIdAsync), METH_VARARGS, nullptr },
         { "get_store_product_for_current_app_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreProductForCurrentAppAsync), METH_VARARGS, nullptr },
         { "get_store_products_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreProductsAsync), METH_VARARGS, nullptr },
+        { "get_store_products_with_options_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreProductsWithOptionsAsync), METH_VARARGS, nullptr },
         { "get_store_queue_items_async", reinterpret_cast<PyCFunction>(StoreContext_GetStoreQueueItemsAsync), METH_VARARGS, nullptr },
         { "get_user_collection_async", reinterpret_cast<PyCFunction>(StoreContext_GetUserCollectionAsync), METH_VARARGS, nullptr },
         { "get_user_collection_with_paging_async", reinterpret_cast<PyCFunction>(StoreContext_GetUserCollectionWithPagingAsync), METH_VARARGS, nullptr },
@@ -2924,9 +2970,11 @@ namespace py::cpp::Windows::Services::Store
         { "report_consumable_fulfillment_async", reinterpret_cast<PyCFunction>(StoreContext_ReportConsumableFulfillmentAsync), METH_VARARGS, nullptr },
         { "request_download_and_install_store_package_updates_async", reinterpret_cast<PyCFunction>(StoreContext_RequestDownloadAndInstallStorePackageUpdatesAsync), METH_VARARGS, nullptr },
         { "request_download_and_install_store_packages_async", reinterpret_cast<PyCFunction>(StoreContext_RequestDownloadAndInstallStorePackagesAsync), METH_VARARGS, nullptr },
+        { "request_download_and_install_store_packages_with_install_options_async", reinterpret_cast<PyCFunction>(StoreContext_RequestDownloadAndInstallStorePackagesWithInstallOptionsAsync), METH_VARARGS, nullptr },
         { "request_download_store_package_updates_async", reinterpret_cast<PyCFunction>(StoreContext_RequestDownloadStorePackageUpdatesAsync), METH_VARARGS, nullptr },
         { "request_purchase_async", reinterpret_cast<PyCFunction>(StoreContext_RequestPurchaseAsync), METH_VARARGS, nullptr },
         { "request_purchase_by_in_app_offer_token_async", reinterpret_cast<PyCFunction>(StoreContext_RequestPurchaseByInAppOfferTokenAsync), METH_VARARGS, nullptr },
+        { "request_purchase_with_purchase_properties_async", reinterpret_cast<PyCFunction>(StoreContext_RequestPurchaseWithPurchasePropertiesAsync), METH_VARARGS, nullptr },
         { "request_rate_and_review_app_async", reinterpret_cast<PyCFunction>(StoreContext_RequestRateAndReviewAppAsync), METH_VARARGS, nullptr },
         { "request_uninstall_store_package_async", reinterpret_cast<PyCFunction>(StoreContext_RequestUninstallStorePackageAsync), METH_VARARGS, nullptr },
         { "request_uninstall_store_package_by_store_id_async", reinterpret_cast<PyCFunction>(StoreContext_RequestUninstallStorePackageByStoreIdAsync), METH_VARARGS, nullptr },
@@ -4476,7 +4524,18 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreProduct_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreProduct* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4927,6 +4986,7 @@ namespace py::cpp::Windows::Services::Store
     static PyMethodDef _methods_StoreProduct[] = {
         { "get_is_any_sku_installed_async", reinterpret_cast<PyCFunction>(StoreProduct_GetIsAnySkuInstalledAsync), METH_VARARGS, nullptr },
         { "request_purchase_async", reinterpret_cast<PyCFunction>(StoreProduct_RequestPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_purchase_with_purchase_properties_async", reinterpret_cast<PyCFunction>(StoreProduct_RequestPurchaseWithPurchasePropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StoreProduct, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StoreProduct), METH_O | METH_STATIC, nullptr },
         { }
@@ -7032,7 +7092,18 @@ namespace py::cpp::Windows::Services::Store
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StoreSku_RequestPurchaseWithPurchasePropertiesAsync(py::wrapper::Windows::Services::Store::StoreSku* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7509,6 +7580,7 @@ namespace py::cpp::Windows::Services::Store
     static PyMethodDef _methods_StoreSku[] = {
         { "get_is_installed_async", reinterpret_cast<PyCFunction>(StoreSku_GetIsInstalledAsync), METH_VARARGS, nullptr },
         { "request_purchase_async", reinterpret_cast<PyCFunction>(StoreSku_RequestPurchaseAsync), METH_VARARGS, nullptr },
+        { "request_purchase_with_purchase_properties_async", reinterpret_cast<PyCFunction>(StoreSku_RequestPurchaseWithPurchasePropertiesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StoreSku, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StoreSku), METH_O | METH_STATIC, nullptr },
         { }

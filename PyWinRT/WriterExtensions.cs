@@ -865,7 +865,7 @@ static class WriterExtensions
                     w.WriteLine("{");
                     w.Indent++;
                     w.WriteLine(
-                        $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{methodName}\", {inParamCount});"
+                        $"is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L\"{method.Method.DeclaringType.Namespace}.{method.Method.DeclaringType.Name}\", L\"{method.CppName}\", {inParamCount});"
                     );
                     w.Indent--;
                     w.WriteLine("}");
@@ -928,7 +928,7 @@ static class WriterExtensions
             if (method.Method.ReturnType.FullName == "System.Void")
             {
                 var invoke =
-                    $"{type.GetMethodInvokeContext(method.Method)}{method.Method.ToCppMethodName()}({method.Method.Parameters.ToParameterList()});";
+                    $"{type.GetMethodInvokeContext(method.Method)}{method.CppName}({method.Method.Parameters.ToParameterList()});";
 
                 // HACK: WinRT APIs are generally non-blocking, but some are
                 // long-running and block other threads in the Python interpreter.
@@ -960,7 +960,7 @@ static class WriterExtensions
             else
             {
                 var context = type.GetMethodInvokeContext(method.Method);
-                var cppMethod = method.Method.ToCppMethodName();
+                var cppMethod = method.CppName;
                 var paramList = method.Method.Parameters.ToParameterList();
 
                 w.WriteLine($"return py::convert({context}{cppMethod}({paramList}));");
@@ -977,7 +977,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"{type.GetMethodInvokeContext(method.Method)}{method.Method.ToCppMethodName()}({method.Method.Parameters.ToParameterList()});"
+            $"{type.GetMethodInvokeContext(method.Method)}{method.CppName}({method.Method.Parameters.ToParameterList()});"
         );
         w.WriteBlankLine();
 

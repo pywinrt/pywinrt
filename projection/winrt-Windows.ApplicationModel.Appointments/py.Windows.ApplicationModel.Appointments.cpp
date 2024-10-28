@@ -1781,7 +1781,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentCalendar_FindAllInstancesAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1850,7 +1861,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentCalendar_FindAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1953,7 +1975,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentCalendar_FindUnexpandedAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentCalendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3367,9 +3400,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { "delete_appointment_instance_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_DeleteAppointmentInstanceAsync), METH_VARARGS, nullptr },
         { "delete_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_DeleteAsync), METH_VARARGS, nullptr },
         { "find_all_instances_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindAllInstancesAsync), METH_VARARGS, nullptr },
+        { "find_all_instances_async_with_options", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindAllInstancesAsyncWithOptions), METH_VARARGS, nullptr },
         { "find_appointments_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindAppointmentsAsync), METH_VARARGS, nullptr },
+        { "find_appointments_async_with_options", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindAppointmentsAsyncWithOptions), METH_VARARGS, nullptr },
         { "find_exceptions_from_master_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindExceptionsFromMasterAsync), METH_VARARGS, nullptr },
         { "find_unexpanded_appointments_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindUnexpandedAppointmentsAsync), METH_VARARGS, nullptr },
+        { "find_unexpanded_appointments_async_with_options", reinterpret_cast<PyCFunction>(AppointmentCalendar_FindUnexpandedAppointmentsAsyncWithOptions), METH_VARARGS, nullptr },
         { "get_appointment_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_GetAppointmentAsync), METH_VARARGS, nullptr },
         { "get_appointment_instance_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_GetAppointmentInstanceAsync), METH_VARARGS, nullptr },
         { "register_sync_manager_async", reinterpret_cast<PyCFunction>(AppointmentCalendar_RegisterSyncManagerAsync), METH_VARARGS, nullptr },
@@ -4490,7 +4526,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManager_ShowAddAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4557,7 +4604,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManager_ShowAppointmentDetailsWithDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4662,36 +4720,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManager", L"ShowRemoveAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
-
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* AppointmentManager_ShowRemoveAppointmentWithPlacementAndDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4714,6 +4754,46 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 3);
 
                 return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManager_ShowRemoveAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManager", L"ShowRemoveAppointmentAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
+
+                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowRemoveAppointmentAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -4761,37 +4841,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManager", L"ShowReplaceAppointmentAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
-
-                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 5)
+    }
+
+    static PyObject* AppointmentManager_ShowReplaceAppointmentWithPlacementAndDateAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -4815,6 +4876,47 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param4 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 4);
 
                 return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManager_ShowReplaceAppointmentWithPlacementAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManager", L"ShowReplaceAppointmentAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
+
+                return py::convert(winrt::Windows::ApplicationModel::Appointments::AppointmentManager::ShowReplaceAppointmentAsync(param0, param1, param2, param3));
             }
             catch (...)
             {
@@ -4898,10 +5000,16 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { "get_for_user", reinterpret_cast<PyCFunction>(AppointmentManager_GetForUser), METH_VARARGS, nullptr },
         { "request_store_async", reinterpret_cast<PyCFunction>(AppointmentManager_RequestStoreAsync), METH_VARARGS, nullptr },
         { "show_add_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAddAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_add_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAddAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_appointment_details_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAppointmentDetailsAsync), METH_VARARGS, nullptr },
+        { "show_appointment_details_with_date_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowAppointmentDetailsWithDateAsync), METH_VARARGS, nullptr },
         { "show_edit_new_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowEditNewAppointmentAsync), METH_VARARGS, nullptr },
         { "show_remove_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowRemoveAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowRemoveAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowRemoveAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_replace_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowReplaceAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowReplaceAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowReplaceAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_time_frame_async", reinterpret_cast<PyCFunction>(AppointmentManager_ShowTimeFrameAsync), METH_VARARGS, nullptr },
         { }
     };
@@ -5010,7 +5118,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowAddAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5077,7 +5196,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowAppointmentDetailsWithDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5182,36 +5312,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowRemoveAppointmentAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
-
-                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 4)
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5234,6 +5346,46 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param3 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 3);
 
                 return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowRemoveAppointmentAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 2);
+
+                return py::convert(self->obj.ShowRemoveAppointmentAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -5281,37 +5433,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowReplaceAppointmentAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
-                auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
-
-                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 5)
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -5335,6 +5468,47 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 auto param4 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 4);
 
                 return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentManagerForUser* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Appointments.AppointmentManagerForUser", L"ShowReplaceAppointmentAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::ApplicationModel::Appointments::Appointment>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 2);
+                auto param3 = py::convert_to<winrt::Windows::UI::Popups::Placement>(args, 3);
+
+                return py::convert(self->obj.ShowReplaceAppointmentAsync(param0, param1, param2, param3));
             }
             catch (...)
             {
@@ -5441,10 +5615,16 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
     static PyMethodDef _methods_AppointmentManagerForUser[] = {
         { "request_store_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_RequestStoreAsync), METH_VARARGS, nullptr },
         { "show_add_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowAddAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_add_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowAddAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_appointment_details_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowAppointmentDetailsAsync), METH_VARARGS, nullptr },
+        { "show_appointment_details_with_date_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowAppointmentDetailsWithDateAsync), METH_VARARGS, nullptr },
         { "show_edit_new_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowEditNewAppointmentAsync), METH_VARARGS, nullptr },
         { "show_remove_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowRemoveAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowRemoveAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_replace_appointment_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowReplaceAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_with_placement_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowReplaceAppointmentWithPlacementAsync), METH_VARARGS, nullptr },
         { "show_time_frame_async", reinterpret_cast<PyCFunction>(AppointmentManagerForUser_ShowTimeFrameAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppointmentManagerForUser, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppointmentManagerForUser), METH_O | METH_STATIC, nullptr },
@@ -7189,7 +7369,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_CreateAppointmentCalendarInAccountAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7253,7 +7444,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_FindAppointmentCalendarsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7319,7 +7521,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_FindAppointmentsAsyncWithOptions(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -7386,7 +7599,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_FindConflictAsyncWithInstanceStart(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7721,7 +7945,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_ShowAppointmentDetailsWithDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7826,7 +8061,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_ShowRemoveAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -7896,7 +8142,18 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
                 return nullptr;
             }
         }
-        else if (arg_count == 5)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppointmentStore_ShowReplaceAppointmentWithPlacementAndDateAsync(py::wrapper::Windows::ApplicationModel::Appointments::AppointmentStore* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
         {
             try
             {
@@ -8043,9 +8300,13 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
 
     static PyMethodDef _methods_AppointmentStore[] = {
         { "create_appointment_calendar_async", reinterpret_cast<PyCFunction>(AppointmentStore_CreateAppointmentCalendarAsync), METH_VARARGS, nullptr },
+        { "create_appointment_calendar_in_account_async", reinterpret_cast<PyCFunction>(AppointmentStore_CreateAppointmentCalendarInAccountAsync), METH_VARARGS, nullptr },
         { "find_appointment_calendars_async", reinterpret_cast<PyCFunction>(AppointmentStore_FindAppointmentCalendarsAsync), METH_VARARGS, nullptr },
+        { "find_appointment_calendars_async_with_options", reinterpret_cast<PyCFunction>(AppointmentStore_FindAppointmentCalendarsAsyncWithOptions), METH_VARARGS, nullptr },
         { "find_appointments_async", reinterpret_cast<PyCFunction>(AppointmentStore_FindAppointmentsAsync), METH_VARARGS, nullptr },
+        { "find_appointments_async_with_options", reinterpret_cast<PyCFunction>(AppointmentStore_FindAppointmentsAsyncWithOptions), METH_VARARGS, nullptr },
         { "find_conflict_async", reinterpret_cast<PyCFunction>(AppointmentStore_FindConflictAsync), METH_VARARGS, nullptr },
+        { "find_conflict_async_with_instance_start", reinterpret_cast<PyCFunction>(AppointmentStore_FindConflictAsyncWithInstanceStart), METH_VARARGS, nullptr },
         { "find_local_ids_from_roaming_id_async", reinterpret_cast<PyCFunction>(AppointmentStore_FindLocalIdsFromRoamingIdAsync), METH_VARARGS, nullptr },
         { "get_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_GetAppointmentAsync), METH_VARARGS, nullptr },
         { "get_appointment_calendar_async", reinterpret_cast<PyCFunction>(AppointmentStore_GetAppointmentCalendarAsync), METH_VARARGS, nullptr },
@@ -8054,9 +8315,12 @@ namespace py::cpp::Windows::ApplicationModel::Appointments
         { "move_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_MoveAppointmentAsync), METH_VARARGS, nullptr },
         { "show_add_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowAddAppointmentAsync), METH_VARARGS, nullptr },
         { "show_appointment_details_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowAppointmentDetailsAsync), METH_VARARGS, nullptr },
+        { "show_appointment_details_with_date_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowAppointmentDetailsWithDateAsync), METH_VARARGS, nullptr },
         { "show_edit_new_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowEditNewAppointmentAsync), METH_VARARGS, nullptr },
         { "show_remove_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowRemoveAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_remove_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowRemoveAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
         { "show_replace_appointment_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowReplaceAppointmentAsync), METH_VARARGS, nullptr },
+        { "show_replace_appointment_with_placement_and_date_async", reinterpret_cast<PyCFunction>(AppointmentStore_ShowReplaceAppointmentWithPlacementAndDateAsync), METH_VARARGS, nullptr },
         { "add_store_changed", reinterpret_cast<PyCFunction>(AppointmentStore_add_StoreChanged), METH_O, nullptr },
         { "remove_store_changed", reinterpret_cast<PyCFunction>(AppointmentStore_remove_StoreChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AppointmentStore, METH_O | METH_STATIC, nullptr },

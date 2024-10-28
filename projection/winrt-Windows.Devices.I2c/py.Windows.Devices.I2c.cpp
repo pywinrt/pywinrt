@@ -608,7 +608,18 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* I2cDevice_GetDeviceSelectorFromFriendlyName(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1013,6 +1024,7 @@ namespace py::cpp::Windows::Devices::I2c
     static PyMethodDef methods_I2cDevice_Static[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(I2cDevice_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(I2cDevice_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1118,7 +1130,18 @@ namespace py::cpp::Windows::Devices::I2c
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* II2cDeviceStatics_GetDeviceSelectorFromFriendlyName(py::wrapper::Windows::Devices::I2c::II2cDeviceStatics* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1179,6 +1202,7 @@ namespace py::cpp::Windows::Devices::I2c
     static PyMethodDef _methods_II2cDeviceStatics[] = {
         { "from_id_async", reinterpret_cast<PyCFunction>(II2cDeviceStatics_FromIdAsync), METH_VARARGS, nullptr },
         { "get_device_selector", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelector), METH_VARARGS, nullptr },
+        { "get_device_selector_from_friendly_name", reinterpret_cast<PyCFunction>(II2cDeviceStatics_GetDeviceSelectorFromFriendlyName), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_II2cDeviceStatics, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_II2cDeviceStatics), METH_O | METH_STATIC, nullptr },
         { }

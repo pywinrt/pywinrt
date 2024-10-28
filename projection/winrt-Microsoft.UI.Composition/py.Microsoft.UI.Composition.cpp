@@ -131,36 +131,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -192,6 +162,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AmbientLight_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::AmbientLight* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -787,6 +798,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(AmbientLight_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(AmbientLight_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(AmbientLight_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(AmbientLight_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(AmbientLight_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(AmbientLight_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(AmbientLight_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -1025,36 +1037,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1086,6 +1068,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AnimationController_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::AnimationController* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1683,6 +1706,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "resume", reinterpret_cast<PyCFunction>(AnimationController_Resume), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(AnimationController_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(AnimationController_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(AnimationController_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(AnimationController_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(AnimationController_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(AnimationController_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -1944,36 +1968,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2005,6 +1999,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AnimationPropertyInfo_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::AnimationPropertyInfo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2428,6 +2463,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(AnimationPropertyInfo_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -2588,36 +2624,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2649,6 +2655,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BackEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BackEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3061,6 +3108,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(BackEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BackEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BackEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BackEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BackEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BackEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BackEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -3258,7 +3306,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BooleanKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::BooleanKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3848,36 +3907,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3909,6 +3938,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BooleanKeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BooleanKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4809,6 +4879,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
@@ -4824,6 +4895,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BooleanKeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -4993,36 +5065,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5054,6 +5096,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BounceEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5492,6 +5575,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(BounceEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BounceEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BounceEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BounceEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BounceEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BounceEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BounceEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -6170,36 +6254,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6231,6 +6285,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceScalarNaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BounceScalarNaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7179,6 +7274,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BounceScalarNaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -7864,36 +7960,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -7925,6 +7991,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceVector2NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BounceVector2NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8873,6 +8980,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BounceVector2NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -9558,36 +9666,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -9619,6 +9697,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* BounceVector3NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::BounceVector3NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10567,6 +10686,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(BounceVector3NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -10736,36 +10856,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -10797,6 +10887,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CircleEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CircleEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11183,6 +11314,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CircleEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CircleEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CircleEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CircleEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CircleEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CircleEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CircleEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -11379,7 +11511,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -11449,7 +11592,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -11999,36 +12153,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -12060,6 +12184,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ColorKeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ColorKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13021,7 +13186,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -13036,6 +13203,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ColorKeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -13722,36 +13890,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -13783,6 +13921,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14243,6 +14422,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(CompositionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -14555,36 +14735,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -14616,6 +14766,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionAnimationGroup_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionAnimationGroup* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15019,6 +15210,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_RemoveAll), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionAnimationGroup_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -15263,36 +15455,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -15324,6 +15486,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionBackdropBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionBackdropBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15684,6 +15887,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionBackdropBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -15843,36 +16047,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -15904,6 +16078,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionBatchCompletedEventArgs_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionBatchCompletedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16264,6 +16479,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionBatchCompletedEventArgs_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -16423,36 +16639,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -16484,6 +16670,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16844,6 +17071,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -17224,36 +17452,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -17285,6 +17483,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionClip_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionClip* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18072,6 +18311,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionClip_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionClip_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionClip_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionClip_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionClip_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionClip_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionClip_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -18238,36 +18478,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -18299,6 +18509,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionColorBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionColorBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18720,6 +18971,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionColorBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionColorBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionColorBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionColorBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionColorBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionColorBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionColorBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -18880,36 +19132,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -18941,6 +19163,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionColorGradientStop_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionColorGradientStop* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19423,6 +19686,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionColorGradientStop_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -20286,36 +20550,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -20347,6 +20581,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionCommitBatch_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionCommitBatch* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -20816,6 +21091,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionCommitBatch_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionCommitBatch_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionCommitBatch_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionCommitBatch_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionCommitBatch_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionCommitBatch_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionCommitBatch_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -20979,36 +21255,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -21040,6 +21286,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionContainerShape_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionContainerShape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -21792,6 +22079,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionContainerShape_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionContainerShape_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionContainerShape_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionContainerShape_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionContainerShape_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionContainerShape_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionContainerShape_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -21996,7 +22284,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionDrawingSurface_ScrollRect(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -22017,6 +22316,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
                 self->obj.Scroll(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionDrawingSurface_ScrollRectWithClip(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
+
+                self->obj.ScrollWithClip(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22065,36 +22405,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
-
-                self->obj.ScrollWithClip(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -22135,36 +22445,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -22196,6 +22476,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionDrawingSurface_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22660,9 +22981,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_Resize), METH_VARARGS, nullptr },
         { "scroll", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_Scroll), METH_VARARGS, nullptr },
+        { "scroll_rect", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollRect), METH_VARARGS, nullptr },
+        { "scroll_rect_with_clip", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollRectWithClip), METH_VARARGS, nullptr },
         { "scroll_with_clip", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_ScrollWithClip), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionDrawingSurface_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -23142,7 +23466,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionEasingFunction_CreateStepEasingFunctionWithStepCount(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -23250,36 +23585,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -23311,6 +23616,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -23671,6 +24017,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -23718,6 +24065,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_power_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreatePowerEasingFunction), METH_VARARGS, nullptr },
         { "create_sine_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateSineEasingFunction), METH_VARARGS, nullptr },
         { "create_step_easing_function", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunction), METH_VARARGS, nullptr },
+        { "create_step_easing_function_with_step_count", reinterpret_cast<PyCFunction>(CompositionEasingFunction_CreateStepEasingFunctionWithStepCount), METH_VARARGS, nullptr },
         { }
     };
 
@@ -23943,36 +24291,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -24004,6 +24322,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionEffectBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionEffectBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -24366,6 +24725,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_source_parameter", reinterpret_cast<PyCFunction>(CompositionEffectBrush_SetSourceParameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionEffectBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionEffectBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionEffectBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionEffectBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionEffectBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionEffectBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -24561,36 +24921,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -24622,6 +24952,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionEffectFactory_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionEffectFactory* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25035,6 +25406,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionEffectFactory_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionEffectFactory_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionEffectFactory_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionEffectFactory_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionEffectFactory_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionEffectFactory_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionEffectFactory_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -25313,36 +25685,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -25374,6 +25716,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionEllipseGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionEllipseGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -26039,6 +26422,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionEllipseGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -26203,36 +26587,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -26264,6 +26618,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionGeometricClip_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionGeometricClip* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -27173,6 +27568,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionGeometricClip_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionGeometricClip_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionGeometricClip_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionGeometricClip_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionGeometricClip_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionGeometricClip_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionGeometricClip_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -27341,36 +27737,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -27402,6 +27768,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -27945,6 +28352,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -28107,36 +28515,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -28168,6 +28546,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionGradientBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -29164,6 +29583,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionGradientBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionGradientBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionGradientBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionGradientBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionGradientBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionGradientBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionGradientBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -29536,36 +29956,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -29597,6 +29987,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionGraphicsDevice_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionGraphicsDevice* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -30056,6 +30487,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_StopAnimationGroup), METH_VARARGS, nullptr },
         { "trim", reinterpret_cast<PyCFunction>(CompositionGraphicsDevice_Trim), METH_VARARGS, nullptr },
@@ -30218,36 +30650,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -30279,6 +30681,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionLight_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionLight* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -30752,6 +31195,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionLight_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionLight_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionLight_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionLight_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionLight_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionLight_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionLight_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -30914,36 +31358,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -30975,6 +31389,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionLineGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionLineGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -31640,6 +32095,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionLineGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionLineGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionLineGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionLineGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionLineGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionLineGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionLineGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -31804,36 +32260,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -31865,6 +32291,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionLinearGradientBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionLinearGradientBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -32983,6 +33450,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionLinearGradientBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -33155,36 +33623,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -33216,6 +33654,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionMaskBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionMaskBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -33698,6 +34177,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionMaskBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionMaskBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionMaskBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionMaskBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionMaskBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionMaskBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionMaskBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -33897,36 +34377,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -33958,6 +34408,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionMipmapSurface_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionMipmapSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -34423,6 +34914,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionMipmapSurface_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -34585,7 +35077,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionNineGridBrush_SetInsetScalesWithValues(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -34655,7 +35158,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionNineGridBrush_SetInsetsWithValues(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -34726,36 +35240,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -34787,6 +35271,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionNineGridBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionNineGridBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -35756,9 +36281,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { "close", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_Close), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_inset_scales", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetScales), METH_VARARGS, nullptr },
+        { "set_inset_scales_with_values", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetScalesWithValues), METH_VARARGS, nullptr },
         { "set_insets", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsets), METH_VARARGS, nullptr },
+        { "set_insets_with_values", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_SetInsetsWithValues), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionNineGridBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -35928,36 +36456,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -36029,6 +36527,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 1);
 
                 winrt::Microsoft::UI::Composition::CompositionObject::StartAnimationGroupWithIAnimationObject(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionObject_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionObject* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -36449,6 +36988,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionObject_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionObject_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionObject_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -36727,36 +37267,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -36788,6 +37298,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionPathGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionPathGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -37392,6 +37943,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionPathGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionPathGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionPathGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionPathGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionPathGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionPathGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionPathGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -37555,36 +38107,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -37616,6 +38138,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadow_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -38272,6 +38835,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadow_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -38437,36 +39001,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -38498,6 +39032,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowCaster_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCaster* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -38980,6 +39555,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCaster_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -39411,36 +39987,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -39472,6 +40018,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowCasterCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowCasterCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -39904,6 +40491,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_RemoveAll), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowCasterCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -40091,36 +40679,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -40152,6 +40710,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowReceiver_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiver* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -40573,6 +41172,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiver_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -40884,36 +41484,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -40945,6 +41515,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionProjectedShadowReceiverUnorderedCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionProjectedShadowReceiverUnorderedCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -41348,6 +41959,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_RemoveAll), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionProjectedShadowReceiverUnorderedCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -41869,36 +42481,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -41930,6 +42512,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionPropertySet_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionPropertySet* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -42758,6 +43381,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionPropertySet_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionPropertySet_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionPropertySet_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionPropertySet_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionPropertySet_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionPropertySet_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionPropertySet_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -42926,36 +43550,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -42987,6 +43581,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionRadialGradientBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionRadialGradientBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -44166,6 +44801,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionRadialGradientBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -44339,36 +44975,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -44400,6 +45006,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionRectangleGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionRectangleGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -45065,6 +45712,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionRectangleGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -45229,36 +45877,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -45290,6 +45908,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionRoundedRectangleGeometry_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionRoundedRectangleGeometry* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -46016,6 +46675,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionRoundedRectangleGeometry_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -46255,36 +46915,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -46316,6 +46946,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionScopedBatch_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionScopedBatch* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -46824,6 +47495,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "resume", reinterpret_cast<PyCFunction>(CompositionScopedBatch_Resume), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionScopedBatch_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionScopedBatch_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionScopedBatch_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionScopedBatch_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionScopedBatch_StopAnimationGroup), METH_VARARGS, nullptr },
         { "suspend", reinterpret_cast<PyCFunction>(CompositionScopedBatch_Suspend), METH_VARARGS, nullptr },
@@ -46988,36 +47660,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -47049,6 +47691,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionShadow_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionShadow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -47409,6 +48092,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionShadow_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionShadow_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionShadow_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionShadow_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionShadow_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionShadow_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionShadow_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -47568,36 +48252,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -47629,6 +48283,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionShape_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionShape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -48355,6 +49050,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionShape_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionShape_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionShape_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionShape_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionShape_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionShape_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionShape_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -48991,36 +49687,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -49052,6 +49718,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionShapeCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionShapeCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -49571,6 +50278,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_at", reinterpret_cast<PyCFunction>(CompositionShapeCollection_SetAt), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionShapeCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionShapeCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionShapeCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionShapeCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionShapeCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionShapeCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -49736,36 +50444,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -49797,6 +50475,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionSpriteShape_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionSpriteShape* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -51220,6 +51939,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionSpriteShape_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionSpriteShape_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionSpriteShape_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionSpriteShape_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionSpriteShape_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionSpriteShape_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionSpriteShape_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -51868,36 +52588,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -51929,6 +52619,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionStrokeDashArray_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionStrokeDashArray* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -52448,6 +53179,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_at", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_SetAt), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionStrokeDashArray_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -52613,36 +53345,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -52674,6 +53376,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionSurfaceBrush_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionSurfaceBrush* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -53827,6 +54570,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionSurfaceBrush_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -53999,36 +54743,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -54060,6 +54774,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionTransform_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionTransform* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -54420,6 +55175,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionTransform_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionTransform_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionTransform_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionTransform_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionTransform_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionTransform_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionTransform_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -54579,36 +55335,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -54640,6 +55366,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionViewBox_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionViewBox* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -55305,6 +56072,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionViewBox_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionViewBox_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionViewBox_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionViewBox_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionViewBox_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionViewBox_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionViewBox_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -55507,7 +56275,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionVirtualDrawingSurface_ScrollRect(py::wrapper::Microsoft::UI::Composition::CompositionVirtualDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -55528,6 +56307,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
                 self->obj.Scroll(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionVirtualDrawingSurface_ScrollRectWithClip(py::wrapper::Microsoft::UI::Composition::CompositionVirtualDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
+
+                self->obj.ScrollWithClip(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -55576,36 +56396,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionDrawingSurface", L"ScrollWithClip", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
-
-                self->obj.ScrollWithClip(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -55646,36 +56436,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -55707,6 +56467,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionVirtualDrawingSurface_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionVirtualDrawingSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -56210,9 +57011,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "resize", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_Resize), METH_VARARGS, nullptr },
         { "scroll", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_Scroll), METH_VARARGS, nullptr },
+        { "scroll_rect", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_ScrollRect), METH_VARARGS, nullptr },
+        { "scroll_rect_with_clip", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_ScrollRectWithClip), METH_VARARGS, nullptr },
         { "scroll_with_clip", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_ScrollWithClip), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_StopAnimationGroup), METH_VARARGS, nullptr },
         { "trim", reinterpret_cast<PyCFunction>(CompositionVirtualDrawingSurface_Trim), METH_VARARGS, nullptr },
@@ -56377,36 +57181,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -56438,6 +57212,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CompositionVisualSurface_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CompositionVisualSurface* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -56981,6 +57796,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CompositionVisualSurface_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CompositionVisualSurface_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CompositionVisualSurface_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CompositionVisualSurface_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CompositionVisualSurface_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CompositionVisualSurface_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CompositionVisualSurface_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -57445,7 +58261,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateColorBrushWithColor(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -57508,7 +58335,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateColorGradientStopWithOffsetAndColor(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -57793,7 +58631,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateEffectFactoryWithProperties(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -57893,7 +58742,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateExpressionAnimationWithExpression(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -57956,7 +58816,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateGeometricClipWithGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -58055,7 +58926,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateInsetClipWithInsets(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -58337,7 +59219,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreatePathGeometryWithPath(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -58688,7 +59581,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateRectangleClipWithSides(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -58718,7 +59622,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 8)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateRectangleClipWithSidesAndRadius(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 8)
         {
             try
             {
@@ -58824,7 +59739,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateRedirectVisualWithSourceVisual(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -59177,7 +60103,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateSpriteShapeWithGeometry(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -59276,7 +60213,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateStepEasingFunctionWithStepCount(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -59339,7 +60287,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Compositor_CreateSurfaceBrushWithSurface(py::wrapper::Microsoft::UI::Composition::Compositor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -59882,7 +60841,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_bounce_vector2_animation", reinterpret_cast<PyCFunction>(Compositor_CreateBounceVector2Animation), METH_VARARGS, nullptr },
         { "create_bounce_vector3_animation", reinterpret_cast<PyCFunction>(Compositor_CreateBounceVector3Animation), METH_VARARGS, nullptr },
         { "create_color_brush", reinterpret_cast<PyCFunction>(Compositor_CreateColorBrush), METH_VARARGS, nullptr },
+        { "create_color_brush_with_color", reinterpret_cast<PyCFunction>(Compositor_CreateColorBrushWithColor), METH_VARARGS, nullptr },
         { "create_color_gradient_stop", reinterpret_cast<PyCFunction>(Compositor_CreateColorGradientStop), METH_VARARGS, nullptr },
+        { "create_color_gradient_stop_with_offset_and_color", reinterpret_cast<PyCFunction>(Compositor_CreateColorGradientStopWithOffsetAndColor), METH_VARARGS, nullptr },
         { "create_color_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateColorKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_container_shape", reinterpret_cast<PyCFunction>(Compositor_CreateContainerShape), METH_VARARGS, nullptr },
         { "create_container_visual", reinterpret_cast<PyCFunction>(Compositor_CreateContainerVisual), METH_VARARGS, nullptr },
@@ -59890,11 +60851,15 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_distant_light", reinterpret_cast<PyCFunction>(Compositor_CreateDistantLight), METH_VARARGS, nullptr },
         { "create_drop_shadow", reinterpret_cast<PyCFunction>(Compositor_CreateDropShadow), METH_VARARGS, nullptr },
         { "create_effect_factory", reinterpret_cast<PyCFunction>(Compositor_CreateEffectFactory), METH_VARARGS, nullptr },
+        { "create_effect_factory_with_properties", reinterpret_cast<PyCFunction>(Compositor_CreateEffectFactoryWithProperties), METH_VARARGS, nullptr },
         { "create_ellipse_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateEllipseGeometry), METH_VARARGS, nullptr },
         { "create_expression_animation", reinterpret_cast<PyCFunction>(Compositor_CreateExpressionAnimation), METH_VARARGS, nullptr },
+        { "create_expression_animation_with_expression", reinterpret_cast<PyCFunction>(Compositor_CreateExpressionAnimationWithExpression), METH_VARARGS, nullptr },
         { "create_geometric_clip", reinterpret_cast<PyCFunction>(Compositor_CreateGeometricClip), METH_VARARGS, nullptr },
+        { "create_geometric_clip_with_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateGeometricClipWithGeometry), METH_VARARGS, nullptr },
         { "create_implicit_animation_collection", reinterpret_cast<PyCFunction>(Compositor_CreateImplicitAnimationCollection), METH_VARARGS, nullptr },
         { "create_inset_clip", reinterpret_cast<PyCFunction>(Compositor_CreateInsetClip), METH_VARARGS, nullptr },
+        { "create_inset_clip_with_insets", reinterpret_cast<PyCFunction>(Compositor_CreateInsetClipWithInsets), METH_VARARGS, nullptr },
         { "create_layer_visual", reinterpret_cast<PyCFunction>(Compositor_CreateLayerVisual), METH_VARARGS, nullptr },
         { "create_line_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateLineGeometry), METH_VARARGS, nullptr },
         { "create_linear_easing_function", reinterpret_cast<PyCFunction>(Compositor_CreateLinearEasingFunction), METH_VARARGS, nullptr },
@@ -59902,6 +60867,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_mask_brush", reinterpret_cast<PyCFunction>(Compositor_CreateMaskBrush), METH_VARARGS, nullptr },
         { "create_nine_grid_brush", reinterpret_cast<PyCFunction>(Compositor_CreateNineGridBrush), METH_VARARGS, nullptr },
         { "create_path_geometry", reinterpret_cast<PyCFunction>(Compositor_CreatePathGeometry), METH_VARARGS, nullptr },
+        { "create_path_geometry_with_path", reinterpret_cast<PyCFunction>(Compositor_CreatePathGeometryWithPath), METH_VARARGS, nullptr },
         { "create_path_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreatePathKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_point_light", reinterpret_cast<PyCFunction>(Compositor_CreatePointLight), METH_VARARGS, nullptr },
         { "create_projected_shadow", reinterpret_cast<PyCFunction>(Compositor_CreateProjectedShadow), METH_VARARGS, nullptr },
@@ -59911,8 +60877,11 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_quaternion_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateQuaternionKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_radial_gradient_brush", reinterpret_cast<PyCFunction>(Compositor_CreateRadialGradientBrush), METH_VARARGS, nullptr },
         { "create_rectangle_clip", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClip), METH_VARARGS, nullptr },
+        { "create_rectangle_clip_with_sides", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClipWithSides), METH_VARARGS, nullptr },
+        { "create_rectangle_clip_with_sides_and_radius", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleClipWithSidesAndRadius), METH_VARARGS, nullptr },
         { "create_rectangle_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateRectangleGeometry), METH_VARARGS, nullptr },
         { "create_redirect_visual", reinterpret_cast<PyCFunction>(Compositor_CreateRedirectVisual), METH_VARARGS, nullptr },
+        { "create_redirect_visual_with_source_visual", reinterpret_cast<PyCFunction>(Compositor_CreateRedirectVisualWithSourceVisual), METH_VARARGS, nullptr },
         { "create_rounded_rectangle_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateRoundedRectangleGeometry), METH_VARARGS, nullptr },
         { "create_scalar_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateScalarKeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_scoped_batch", reinterpret_cast<PyCFunction>(Compositor_CreateScopedBatch), METH_VARARGS, nullptr },
@@ -59922,9 +60891,12 @@ namespace py::cpp::Microsoft::UI::Composition
         { "create_spring_vector2_animation", reinterpret_cast<PyCFunction>(Compositor_CreateSpringVector2Animation), METH_VARARGS, nullptr },
         { "create_spring_vector3_animation", reinterpret_cast<PyCFunction>(Compositor_CreateSpringVector3Animation), METH_VARARGS, nullptr },
         { "create_sprite_shape", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteShape), METH_VARARGS, nullptr },
+        { "create_sprite_shape_with_geometry", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteShapeWithGeometry), METH_VARARGS, nullptr },
         { "create_sprite_visual", reinterpret_cast<PyCFunction>(Compositor_CreateSpriteVisual), METH_VARARGS, nullptr },
         { "create_step_easing_function", reinterpret_cast<PyCFunction>(Compositor_CreateStepEasingFunction), METH_VARARGS, nullptr },
+        { "create_step_easing_function_with_step_count", reinterpret_cast<PyCFunction>(Compositor_CreateStepEasingFunctionWithStepCount), METH_VARARGS, nullptr },
         { "create_surface_brush", reinterpret_cast<PyCFunction>(Compositor_CreateSurfaceBrush), METH_VARARGS, nullptr },
+        { "create_surface_brush_with_surface", reinterpret_cast<PyCFunction>(Compositor_CreateSurfaceBrushWithSurface), METH_VARARGS, nullptr },
         { "create_vector2_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateVector2KeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_vector3_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateVector3KeyFrameAnimation), METH_VARARGS, nullptr },
         { "create_vector4_key_frame_animation", reinterpret_cast<PyCFunction>(Compositor_CreateVector4KeyFrameAnimation), METH_VARARGS, nullptr },
@@ -60115,36 +61087,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -60176,6 +61118,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ContainerVisual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ContainerVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -61869,6 +62852,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(ContainerVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ContainerVisual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ContainerVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ContainerVisual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ContainerVisual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ContainerVisual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ContainerVisual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -62051,36 +63035,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -62112,6 +63066,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CubicBezierEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::CubicBezierEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -62524,6 +63519,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(CubicBezierEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -62685,36 +63681,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -62746,6 +63712,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DistantLight_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::DistantLight* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -63463,6 +64470,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(DistantLight_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(DistantLight_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(DistantLight_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(DistantLight_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(DistantLight_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(DistantLight_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(DistantLight_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -63629,36 +64637,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -63690,6 +64668,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DropShadow_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::DropShadow* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -64416,6 +65435,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(DropShadow_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(DropShadow_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(DropShadow_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(DropShadow_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(DropShadow_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(DropShadow_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(DropShadow_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -64581,36 +65601,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -64642,6 +65632,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ElasticEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ElasticEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -65080,6 +66111,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(ElasticEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ElasticEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ElasticEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ElasticEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ElasticEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ElasticEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ElasticEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -65242,36 +66274,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -65303,6 +66305,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExponentialEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ExponentialEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -65715,6 +66758,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ExponentialEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -66392,36 +67436,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -66453,6 +67467,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ExpressionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ExpressionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -66974,6 +68029,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(ExpressionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ExpressionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ExpressionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ExpressionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ExpressionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ExpressionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ExpressionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -67399,36 +68455,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -67460,6 +68486,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ImplicitAnimationCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ImplicitAnimationCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -67954,6 +69021,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_Remove), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ImplicitAnimationCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -68382,36 +69450,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -68443,6 +69481,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InitialValueExpressionCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::InitialValueExpressionCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -68937,6 +70016,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_Remove), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(InitialValueExpressionCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -69102,36 +70182,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -69163,6 +70213,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* InsetClip_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::InsetClip* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -70194,6 +71285,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(InsetClip_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(InsetClip_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(InsetClip_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(InsetClip_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(InsetClip_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(InsetClip_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(InsetClip_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -70400,7 +71492,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -70950,36 +72053,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -71011,6 +72084,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* KeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -71911,6 +73025,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(KeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(KeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(KeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(KeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(KeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(KeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -71925,6 +73040,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(KeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(KeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(KeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(KeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(KeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(KeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(KeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -72094,36 +73210,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -72155,6 +73241,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LayerVisual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::LayerVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -73970,6 +75097,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(LayerVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(LayerVisual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(LayerVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(LayerVisual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(LayerVisual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(LayerVisual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(LayerVisual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -74154,36 +75282,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -74215,6 +75313,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LinearEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::LinearEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -74575,6 +75714,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(LinearEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(LinearEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(LinearEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(LinearEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(LinearEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(LinearEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(LinearEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -75250,36 +76390,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -75311,6 +76421,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -75954,6 +77105,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -76154,7 +77306,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -76224,7 +77387,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -76774,36 +77948,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -76835,6 +77979,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PathKeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::PathKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -77735,7 +78920,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -77750,6 +78937,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(PathKeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -77919,36 +79107,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -77980,6 +79138,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PointLight_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::PointLight* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79002,6 +80201,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(PointLight_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(PointLight_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(PointLight_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(PointLight_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(PointLight_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(PointLight_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(PointLight_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -79173,36 +80373,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -79234,6 +80404,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PowerEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::PowerEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -79646,6 +80857,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(PowerEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(PowerEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(PowerEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(PowerEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(PowerEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(PowerEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(PowerEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -79843,7 +81055,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuaternionKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -79913,7 +81136,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -80463,36 +81697,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -80524,6 +81728,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* QuaternionKeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::QuaternionKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -81424,7 +82669,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -81439,6 +82686,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(QuaternionKeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -81608,36 +82856,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -81669,6 +82887,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RectangleClip_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::RectangleClip* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -82944,6 +84203,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(RectangleClip_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(RectangleClip_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(RectangleClip_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(RectangleClip_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(RectangleClip_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(RectangleClip_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(RectangleClip_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -83118,36 +84378,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -83179,6 +84409,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RedirectVisual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::RedirectVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -84933,6 +86204,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(RedirectVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(RedirectVisual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(RedirectVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(RedirectVisual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(RedirectVisual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(RedirectVisual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(RedirectVisual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -85116,36 +86388,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -85177,6 +86419,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* RenderingDeviceReplacedEventArgs_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::RenderingDeviceReplacedEventArgs* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -85563,6 +86846,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(RenderingDeviceReplacedEventArgs_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -85759,7 +87043,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScalarKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -85829,7 +87124,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -86379,36 +87685,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -86440,6 +87716,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScalarKeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ScalarKeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -87340,7 +88657,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -87355,6 +88674,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ScalarKeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -88040,36 +89360,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -88101,6 +89391,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ScalarNaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -88927,6 +90258,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ScalarNaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -89094,36 +90426,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -89155,6 +90457,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ShapeVisual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::ShapeVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -90935,6 +92278,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(ShapeVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(ShapeVisual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(ShapeVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(ShapeVisual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(ShapeVisual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(ShapeVisual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(ShapeVisual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -91119,36 +92463,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -91180,6 +92494,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SineEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SineEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -91566,6 +92921,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(SineEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SineEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SineEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SineEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SineEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SineEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SineEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -91726,36 +93082,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -91787,6 +93113,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpotLight_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SpotLight* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -93236,6 +94603,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(SpotLight_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SpotLight_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SpotLight_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SpotLight_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SpotLight_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SpotLight_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SpotLight_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -93930,36 +95298,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -93991,6 +95329,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpringScalarNaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SpringScalarNaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -94939,6 +96318,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SpringScalarNaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -95624,36 +97004,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -95685,6 +97035,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpringVector2NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SpringVector2NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -96633,6 +98024,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SpringVector2NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -97318,36 +98710,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -97379,6 +98741,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpringVector3NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SpringVector3NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -98327,6 +99730,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SpringVector3NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -98496,36 +99900,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -98557,6 +99931,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpriteVisual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::SpriteVisual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -100372,6 +101787,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(SpriteVisual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(SpriteVisual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(SpriteVisual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(SpriteVisual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(SpriteVisual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(SpriteVisual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(SpriteVisual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -100556,36 +101972,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -100617,6 +102003,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StepEasingFunction_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::StepEasingFunction* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -101282,6 +102709,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(StepEasingFunction_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(StepEasingFunction_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(StepEasingFunction_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(StepEasingFunction_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(StepEasingFunction_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(StepEasingFunction_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(StepEasingFunction_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -101482,7 +102910,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector2KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -101552,7 +102991,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -102102,36 +103552,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -102163,6 +103583,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector2KeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Vector2KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103063,7 +104524,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -103078,6 +104541,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Vector2KeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -103763,36 +105227,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -103824,6 +105258,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector2NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -104650,6 +106125,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Vector2NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -104853,7 +106329,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector3KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -104923,7 +106410,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -105473,36 +106971,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -105534,6 +107002,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector3KeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Vector3KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -106434,7 +107943,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -106449,6 +107960,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Vector3KeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -107134,36 +108646,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -107195,6 +108677,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector3NaturalMotionAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -108021,6 +109544,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Vector3NaturalMotionAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -108224,7 +109748,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector4KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -108294,7 +109829,18 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction(py::wrapper::Microsoft::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -108844,36 +110390,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -108905,6 +110421,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Vector4KeyFrameAnimation_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Vector4KeyFrameAnimation* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -109805,7 +111362,9 @@ namespace py::cpp::Microsoft::UI::Composition
         { "clear_parameter", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_ClearParameter), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_Close), METH_VARARGS, nullptr },
         { "insert_expression_key_frame", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertExpressionKeyFrame), METH_VARARGS, nullptr },
+        { "insert_expression_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertExpressionKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "insert_key_frame", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertKeyFrame), METH_VARARGS, nullptr },
+        { "insert_key_frame_with_easing_function", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_InsertKeyFrameWithEasingFunction), METH_VARARGS, nullptr },
         { "populate_property_info", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "set_boolean_parameter", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_SetBooleanParameter), METH_VARARGS, nullptr },
         { "set_color_parameter", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_SetColorParameter), METH_VARARGS, nullptr },
@@ -109820,6 +111379,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "set_vector4_parameter", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_SetVector4Parameter), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Vector4KeyFrameAnimation_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -109989,36 +111549,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -110050,6 +111580,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Visual_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::Visual* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -111717,6 +113288,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "populate_property_info", reinterpret_cast<PyCFunction>(Visual_PopulatePropertyInfo), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(Visual_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(Visual_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(Visual_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(Visual_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(Visual_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(Visual_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -112168,36 +113740,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -112229,6 +113771,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::VisualCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -112635,6 +114218,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(VisualCollection_RemoveAll), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(VisualCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(VisualCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(VisualCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(VisualCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(VisualCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(VisualCollection_TryGetAnimationController), METH_VARARGS, nullptr },
@@ -112947,36 +114531,6 @@ namespace py::cpp::Microsoft::UI::Composition
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
-                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
-
-                self->obj.StartAnimation(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -113008,6 +114562,47 @@ namespace py::cpp::Microsoft::UI::Composition
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionAnimationBase>(args, 0);
 
                 self->obj.StartAnimationGroup(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* VisualUnorderedCollection_StartAnimationWithController(py::wrapper::Microsoft::UI::Composition::VisualUnorderedCollection* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Composition.CompositionObject", L"StartAnimation", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionAnimation>(args, 1);
+                auto param2 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationController>(args, 2);
+
+                self->obj.StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -113411,6 +115006,7 @@ namespace py::cpp::Microsoft::UI::Composition
         { "remove_all", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_RemoveAll), METH_VARARGS, nullptr },
         { "start_animation", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_StartAnimation), METH_VARARGS, nullptr },
         { "start_animation_group", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_StartAnimationGroup), METH_VARARGS, nullptr },
+        { "start_animation_with_controller", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_StartAnimationWithController), METH_VARARGS, nullptr },
         { "stop_animation", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_StopAnimation), METH_VARARGS, nullptr },
         { "stop_animation_group", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_StopAnimationGroup), METH_VARARGS, nullptr },
         { "try_get_animation_controller", reinterpret_cast<PyCFunction>(VisualUnorderedCollection_TryGetAnimationController), METH_VARARGS, nullptr },

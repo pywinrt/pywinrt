@@ -1036,7 +1036,7 @@ namespace py::cpp::Windows::Globalization
         }
     }
 
-    static PyObject* Calendar_DayOfWeekAsSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    static PyObject* Calendar_DayOfWeekAsFullSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1065,7 +1065,54 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_DayOfWeekAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.DayOfWeekAsString());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_DayOfWeekAsSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1103,32 +1150,7 @@ namespace py::cpp::Windows::Globalization
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"DayOfWeekAsString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.DayOfWeekAsString());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -1162,7 +1184,7 @@ namespace py::cpp::Windows::Globalization
         }
     }
 
-    static PyObject* Calendar_EraAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    static PyObject* Calendar_EraAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1191,7 +1213,18 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_EraAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1517,6 +1550,78 @@ namespace py::cpp::Windows::Globalization
         }
     }
 
+    static PyObject* Calendar_MonthAsFullSoloString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.MonthAsSoloString());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_MonthAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 0);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(0);
+                    return nullptr;
+                }
+
+                return py::convert(self->obj.MonthAsString());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* Calendar_MonthAsNumericString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1595,32 +1700,7 @@ namespace py::cpp::Windows::Globalization
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsSoloString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.MonthAsSoloString());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -1658,32 +1738,7 @@ namespace py::cpp::Windows::Globalization
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 0)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Globalization.Calendar", L"MonthAsString", 0);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(0);
-                    return nullptr;
-                }
-
-                return py::convert(self->obj.MonthAsString());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 1)
+        if (arg_count == 1)
         {
             try
             {
@@ -1791,7 +1846,7 @@ namespace py::cpp::Windows::Globalization
         }
     }
 
-    static PyObject* Calendar_PeriodAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    static PyObject* Calendar_PeriodAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -1820,7 +1875,18 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_PeriodAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -2078,7 +2144,7 @@ namespace py::cpp::Windows::Globalization
         }
     }
 
-    static PyObject* Calendar_TimeZoneAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    static PyObject* Calendar_TimeZoneAsFullString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
 
@@ -2107,7 +2173,18 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Calendar_TimeZoneAsString(py::wrapper::Windows::Globalization::Calendar* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3635,8 +3712,11 @@ namespace py::cpp::Windows::Globalization
         { "copy_to", reinterpret_cast<PyCFunction>(Calendar_CopyTo), METH_VARARGS, nullptr },
         { "day_as_padded_string", reinterpret_cast<PyCFunction>(Calendar_DayAsPaddedString), METH_VARARGS, nullptr },
         { "day_as_string", reinterpret_cast<PyCFunction>(Calendar_DayAsString), METH_VARARGS, nullptr },
+        { "day_of_week_as_full_solo_string", reinterpret_cast<PyCFunction>(Calendar_DayOfWeekAsFullSoloString), METH_VARARGS, nullptr },
+        { "day_of_week_as_full_string", reinterpret_cast<PyCFunction>(Calendar_DayOfWeekAsFullString), METH_VARARGS, nullptr },
         { "day_of_week_as_solo_string", reinterpret_cast<PyCFunction>(Calendar_DayOfWeekAsSoloString), METH_VARARGS, nullptr },
         { "day_of_week_as_string", reinterpret_cast<PyCFunction>(Calendar_DayOfWeekAsString), METH_VARARGS, nullptr },
+        { "era_as_full_string", reinterpret_cast<PyCFunction>(Calendar_EraAsFullString), METH_VARARGS, nullptr },
         { "era_as_string", reinterpret_cast<PyCFunction>(Calendar_EraAsString), METH_VARARGS, nullptr },
         { "get_calendar_system", reinterpret_cast<PyCFunction>(Calendar_GetCalendarSystem), METH_VARARGS, nullptr },
         { "get_clock", reinterpret_cast<PyCFunction>(Calendar_GetClock), METH_VARARGS, nullptr },
@@ -3646,12 +3726,15 @@ namespace py::cpp::Windows::Globalization
         { "hour_as_string", reinterpret_cast<PyCFunction>(Calendar_HourAsString), METH_VARARGS, nullptr },
         { "minute_as_padded_string", reinterpret_cast<PyCFunction>(Calendar_MinuteAsPaddedString), METH_VARARGS, nullptr },
         { "minute_as_string", reinterpret_cast<PyCFunction>(Calendar_MinuteAsString), METH_VARARGS, nullptr },
+        { "month_as_full_solo_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsFullSoloString), METH_VARARGS, nullptr },
+        { "month_as_full_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsFullString), METH_VARARGS, nullptr },
         { "month_as_numeric_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsNumericString), METH_VARARGS, nullptr },
         { "month_as_padded_numeric_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsPaddedNumericString), METH_VARARGS, nullptr },
         { "month_as_solo_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsSoloString), METH_VARARGS, nullptr },
         { "month_as_string", reinterpret_cast<PyCFunction>(Calendar_MonthAsString), METH_VARARGS, nullptr },
         { "nanosecond_as_padded_string", reinterpret_cast<PyCFunction>(Calendar_NanosecondAsPaddedString), METH_VARARGS, nullptr },
         { "nanosecond_as_string", reinterpret_cast<PyCFunction>(Calendar_NanosecondAsString), METH_VARARGS, nullptr },
+        { "period_as_full_string", reinterpret_cast<PyCFunction>(Calendar_PeriodAsFullString), METH_VARARGS, nullptr },
         { "period_as_string", reinterpret_cast<PyCFunction>(Calendar_PeriodAsString), METH_VARARGS, nullptr },
         { "second_as_padded_string", reinterpret_cast<PyCFunction>(Calendar_SecondAsPaddedString), METH_VARARGS, nullptr },
         { "second_as_string", reinterpret_cast<PyCFunction>(Calendar_SecondAsString), METH_VARARGS, nullptr },
@@ -3659,6 +3742,7 @@ namespace py::cpp::Windows::Globalization
         { "set_to_max", reinterpret_cast<PyCFunction>(Calendar_SetToMax), METH_VARARGS, nullptr },
         { "set_to_min", reinterpret_cast<PyCFunction>(Calendar_SetToMin), METH_VARARGS, nullptr },
         { "set_to_now", reinterpret_cast<PyCFunction>(Calendar_SetToNow), METH_VARARGS, nullptr },
+        { "time_zone_as_full_string", reinterpret_cast<PyCFunction>(Calendar_TimeZoneAsFullString), METH_VARARGS, nullptr },
         { "time_zone_as_string", reinterpret_cast<PyCFunction>(Calendar_TimeZoneAsString), METH_VARARGS, nullptr },
         { "year_as_padded_string", reinterpret_cast<PyCFunction>(Calendar_YearAsPaddedString), METH_VARARGS, nullptr },
         { "year_as_string", reinterpret_cast<PyCFunction>(Calendar_YearAsString), METH_VARARGS, nullptr },
@@ -9414,7 +9498,18 @@ namespace py::cpp::Windows::Globalization
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* JapanesePhoneticAnalyzer_GetWordsWithMonoRubyOption(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -9477,6 +9572,7 @@ namespace py::cpp::Windows::Globalization
 
     static PyMethodDef methods_JapanesePhoneticAnalyzer_Static[] = {
         { "get_words", reinterpret_cast<PyCFunction>(JapanesePhoneticAnalyzer_GetWords), METH_VARARGS, nullptr },
+        { "get_words_with_mono_ruby_option", reinterpret_cast<PyCFunction>(JapanesePhoneticAnalyzer_GetWordsWithMonoRubyOption), METH_VARARGS, nullptr },
         { }
     };
 

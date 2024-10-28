@@ -582,7 +582,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModel_LoadFromFilePathWithOperatorProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -648,7 +659,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModel_LoadFromStorageFileWithOperatorProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -714,34 +736,6 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
-
-                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -780,7 +774,57 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModel_LoadFromStreamWithOperatorProvider(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.AI.MachineLearning.LearningModel", L"LoadFromStream", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStreamReference>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::AI::MachineLearning::ILearningModelOperatorProvider>(args, 1);
+
+                return py::convert(winrt::Windows::AI::MachineLearning::LearningModel::LoadFromStream(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModel_LoadFromStreamWithOperatorProviderAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1108,9 +1152,13 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_LearningModel_Static[] = {
         { "load_from_file_path", reinterpret_cast<PyCFunction>(LearningModel_LoadFromFilePath), METH_VARARGS, nullptr },
+        { "load_from_file_path_with_operator_provider", reinterpret_cast<PyCFunction>(LearningModel_LoadFromFilePathWithOperatorProvider), METH_VARARGS, nullptr },
         { "load_from_storage_file_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStorageFileAsync), METH_VARARGS, nullptr },
+        { "load_from_storage_file_with_operator_provider_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStorageFileWithOperatorProviderAsync), METH_VARARGS, nullptr },
         { "load_from_stream", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStream), METH_VARARGS, nullptr },
         { "load_from_stream_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamAsync), METH_VARARGS, nullptr },
+        { "load_from_stream_with_operator_provider", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamWithOperatorProvider), METH_VARARGS, nullptr },
+        { "load_from_stream_with_operator_provider_async", reinterpret_cast<PyCFunction>(LearningModel_LoadFromStreamWithOperatorProviderAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1205,7 +1253,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LearningModelBinding_BindWithProperties(py::wrapper::Windows::AI::MachineLearning::LearningModelBinding* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1569,6 +1628,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef _methods_LearningModelBinding[] = {
         { "bind", reinterpret_cast<PyCFunction>(LearningModelBinding_Bind), METH_VARARGS, nullptr },
+        { "bind_with_properties", reinterpret_cast<PyCFunction>(LearningModelBinding_BindWithProperties), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(LearningModelBinding_Clear), METH_VARARGS, nullptr },
         { "first", reinterpret_cast<PyCFunction>(LearningModelBinding_First), METH_VARARGS, nullptr },
         { "has_key", reinterpret_cast<PyCFunction>(LearningModelBinding_HasKey), METH_VARARGS, nullptr },
@@ -3173,7 +3233,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorBoolean_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3595,6 +3666,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorBoolean_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorBoolean_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorBoolean_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorBoolean_CreateFromIterable), METH_VARARGS, nullptr },
@@ -3702,7 +3774,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorDouble_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4124,6 +4207,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorDouble_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorDouble_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorDouble_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorDouble_CreateFromIterable), METH_VARARGS, nullptr },
@@ -4459,7 +4543,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorFloat_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -4881,6 +4976,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorFloat_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorFloat_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorFloat_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorFloat_CreateFromIterable), METH_VARARGS, nullptr },
@@ -4988,7 +5084,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorFloat16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5410,6 +5517,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorFloat16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorFloat16Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorFloat16Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorFloat16Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -5517,7 +5625,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorInt16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5939,6 +6058,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorInt16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt16Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorInt16Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt16Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -6046,7 +6166,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorInt32Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -6468,6 +6599,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorInt32Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt32Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorInt32Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt32Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -6575,7 +6707,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorInt64Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -6997,6 +7140,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorInt64Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt64Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorInt64Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt64Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -7104,7 +7248,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorInt8Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -7526,6 +7681,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorInt8Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorInt8Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorInt8Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorInt8Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -7633,7 +7789,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorString_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8016,6 +8183,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorString_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorString_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorString_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorString_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorString_CreateFromIterable), METH_VARARGS, nullptr },
         { "create_from_shape_array_and_data_array", reinterpret_cast<PyCFunction>(TensorString_CreateFromShapeArrayAndDataArray), METH_VARARGS, nullptr },
@@ -8122,7 +8290,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorUInt16Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -8544,6 +8723,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorUInt16Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt16Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorUInt16Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt16Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -8651,7 +8831,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorUInt32Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9073,6 +9264,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorUInt32Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt32Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorUInt32Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt32Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -9180,7 +9372,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorUInt64Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9602,6 +9805,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorUInt64Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt64Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorUInt64Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt64Bit_CreateFromIterable), METH_VARARGS, nullptr },
@@ -9709,7 +9913,18 @@ namespace py::cpp::Windows::AI::MachineLearning
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TensorUInt8Bit_Create2(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -10131,6 +10346,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyMethodDef methods_TensorUInt8Bit_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(TensorUInt8Bit_Create), METH_VARARGS, nullptr },
+        { "create2", reinterpret_cast<PyCFunction>(TensorUInt8Bit_Create2), METH_VARARGS, nullptr },
         { "create_from_array", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromArray), METH_VARARGS, nullptr },
         { "create_from_buffer", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromBuffer), METH_VARARGS, nullptr },
         { "create_from_iterable", reinterpret_cast<PyCFunction>(TensorUInt8Bit_CreateFromIterable), METH_VARARGS, nullptr },

@@ -3323,7 +3323,18 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PackageRuntimeManager_AddPackageSetWithOptions(py::wrapper::Microsoft::Windows::Management::Deployment::PackageRuntimeManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3460,6 +3471,7 @@ namespace py::cpp::Microsoft::Windows::Management::Deployment
 
     static PyMethodDef _methods_PackageRuntimeManager[] = {
         { "add_package_set", reinterpret_cast<PyCFunction>(PackageRuntimeManager_AddPackageSet), METH_VARARGS, nullptr },
+        { "add_package_set_with_options", reinterpret_cast<PyCFunction>(PackageRuntimeManager_AddPackageSetWithOptions), METH_VARARGS, nullptr },
         { "remove_package_set", reinterpret_cast<PyCFunction>(PackageRuntimeManager_RemovePackageSet), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageRuntimeManager, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageRuntimeManager), METH_O | METH_STATIC, nullptr },

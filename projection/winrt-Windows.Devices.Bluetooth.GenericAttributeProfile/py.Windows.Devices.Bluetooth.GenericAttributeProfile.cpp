@@ -162,33 +162,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
-
-                return py::convert(self->obj.GetDescriptorsAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -227,7 +200,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattCharacteristic_GetDescriptorsForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -248,6 +232,44 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert(self->obj.GetDescriptorsForUuidAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattCharacteristic_GetDescriptorsWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"GetDescriptorsAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
+
+                return py::convert(self->obj.GetDescriptorsAsync(param0));
             }
             catch (...)
             {
@@ -327,7 +349,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattCharacteristic_ReadValueWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -468,7 +501,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattCharacteristic_WriteValueWithOptionAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -489,6 +533,45 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
 
                 return py::convert(self->obj.WriteValueAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattCharacteristic_WriteValueWithResultAndOptionAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueWithResultAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
+
+                return py::convert(self->obj.WriteValueWithResultAsync(param0, param1));
             }
             catch (...)
             {
@@ -527,34 +610,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
 
                 return py::convert(self->obj.WriteValueWithResultAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic", L"WriteValueWithResultAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IBuffer>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattWriteOption>(args, 1);
-
-                return py::convert(self->obj.WriteValueWithResultAsync(param0, param1));
             }
             catch (...)
             {
@@ -872,11 +927,16 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "get_descriptors", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptors), METH_VARARGS, nullptr },
         { "get_descriptors_async", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptorsAsync), METH_VARARGS, nullptr },
         { "get_descriptors_for_uuid_async", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptorsForUuidAsync), METH_VARARGS, nullptr },
+        { "get_descriptors_for_uuid_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptorsForUuidWithCacheModeAsync), METH_VARARGS, nullptr },
+        { "get_descriptors_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattCharacteristic_GetDescriptorsWithCacheModeAsync), METH_VARARGS, nullptr },
         { "read_client_characteristic_configuration_descriptor_async", reinterpret_cast<PyCFunction>(GattCharacteristic_ReadClientCharacteristicConfigurationDescriptorAsync), METH_VARARGS, nullptr },
         { "read_value_async", reinterpret_cast<PyCFunction>(GattCharacteristic_ReadValueAsync), METH_VARARGS, nullptr },
+        { "read_value_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattCharacteristic_ReadValueWithCacheModeAsync), METH_VARARGS, nullptr },
         { "write_client_characteristic_configuration_descriptor_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteClientCharacteristicConfigurationDescriptorAsync), METH_VARARGS, nullptr },
         { "write_client_characteristic_configuration_descriptor_with_result_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteClientCharacteristicConfigurationDescriptorWithResultAsync), METH_VARARGS, nullptr },
         { "write_value_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteValueAsync), METH_VARARGS, nullptr },
+        { "write_value_with_option_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteValueWithOptionAsync), METH_VARARGS, nullptr },
+        { "write_value_with_result_and_option_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteValueWithResultAndOptionAsync), METH_VARARGS, nullptr },
         { "write_value_with_result_async", reinterpret_cast<PyCFunction>(GattCharacteristic_WriteValueWithResultAsync), METH_VARARGS, nullptr },
         { "add_value_changed", reinterpret_cast<PyCFunction>(GattCharacteristic_add_ValueChanged), METH_O, nullptr },
         { "remove_value_changed", reinterpret_cast<PyCFunction>(GattCharacteristic_remove_ValueChanged), METH_O, nullptr },
@@ -3585,7 +3645,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDescriptor_ReadValueWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDescriptor* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -3834,6 +3905,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyMethodDef _methods_GattDescriptor[] = {
         { "read_value_async", reinterpret_cast<PyCFunction>(GattDescriptor_ReadValueAsync), METH_VARARGS, nullptr },
+        { "read_value_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattDescriptor_ReadValueWithCacheModeAsync), METH_VARARGS, nullptr },
         { "write_value_async", reinterpret_cast<PyCFunction>(GattDescriptor_WriteValueAsync), METH_VARARGS, nullptr },
         { "write_value_with_result_async", reinterpret_cast<PyCFunction>(GattDescriptor_WriteValueWithResultAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GattDescriptor, METH_O | METH_STATIC, nullptr },
@@ -4377,7 +4449,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_FromIdWithSharingModeAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4551,33 +4634,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
-
-                return py::convert(self->obj.GetCharacteristicsAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4616,7 +4672,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetCharacteristicsForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4637,6 +4704,44 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert(self->obj.GetCharacteristicsForUuidAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetCharacteristicsWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetCharacteristicsAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
+
+                return py::convert(self->obj.GetCharacteristicsAsync(param0));
             }
             catch (...)
             {
@@ -4675,34 +4780,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetDeviceSelectorForBluetoothDeviceId", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
-
-                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0, param1));
             }
             catch (...)
             {
@@ -4749,7 +4826,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuidWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4771,6 +4859,45 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param2 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 2);
 
                 return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceIdAndUuid(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdWithCacheMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetDeviceSelectorForBluetoothDeviceId", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothDeviceId>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
+
+                return py::convert(winrt::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService::GetDeviceSelectorForBluetoothDeviceId(param0, param1));
             }
             catch (...)
             {
@@ -4928,33 +5055,6 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
-
-                return py::convert(self->obj.GetIncludedServicesAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4993,7 +5093,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetIncludedServicesForUuidWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5014,6 +5125,44 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 auto param1 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 1);
 
                 return py::convert(self->obj.GetIncludedServicesForUuidAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattDeviceService_GetIncludedServicesWithCacheModeAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattDeviceService* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService", L"GetIncludedServicesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Devices::Bluetooth::BluetoothCacheMode>(args, 0);
+
+                return py::convert(self->obj.GetIncludedServicesAsync(param0));
             }
             catch (...)
             {
@@ -5360,9 +5509,13 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
         { "get_characteristics", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristics), METH_VARARGS, nullptr },
         { "get_characteristics_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsAsync), METH_VARARGS, nullptr },
         { "get_characteristics_for_uuid_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsForUuidAsync), METH_VARARGS, nullptr },
+        { "get_characteristics_for_uuid_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsForUuidWithCacheModeAsync), METH_VARARGS, nullptr },
+        { "get_characteristics_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetCharacteristicsWithCacheModeAsync), METH_VARARGS, nullptr },
         { "get_included_services", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServices), METH_VARARGS, nullptr },
         { "get_included_services_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesAsync), METH_VARARGS, nullptr },
         { "get_included_services_for_uuid_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesForUuidAsync), METH_VARARGS, nullptr },
+        { "get_included_services_for_uuid_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesForUuidWithCacheModeAsync), METH_VARARGS, nullptr },
+        { "get_included_services_with_cache_mode_async", reinterpret_cast<PyCFunction>(GattDeviceService_GetIncludedServicesWithCacheModeAsync), METH_VARARGS, nullptr },
         { "open_async", reinterpret_cast<PyCFunction>(GattDeviceService_OpenAsync), METH_VARARGS, nullptr },
         { "request_access_async", reinterpret_cast<PyCFunction>(GattDeviceService_RequestAccessAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_GattDeviceService, METH_O | METH_STATIC, nullptr },
@@ -5406,8 +5559,11 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static PyMethodDef methods_GattDeviceService_Static[] = {
         { "convert_short_id_to_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_ConvertShortIdToUuid), METH_VARARGS, nullptr },
         { "from_id_async", reinterpret_cast<PyCFunction>(GattDeviceService_FromIdAsync), METH_VARARGS, nullptr },
+        { "from_id_with_sharing_mode_async", reinterpret_cast<PyCFunction>(GattDeviceService_FromIdWithSharingModeAsync), METH_VARARGS, nullptr },
         { "get_device_selector_for_bluetooth_device_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceId), METH_VARARGS, nullptr },
         { "get_device_selector_for_bluetooth_device_id_and_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuid), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_id_and_uuid_with_cache_mode", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdAndUuidWithCacheMode), METH_VARARGS, nullptr },
+        { "get_device_selector_for_bluetooth_device_id_with_cache_mode", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorForBluetoothDeviceIdWithCacheMode), METH_VARARGS, nullptr },
         { "get_device_selector_from_short_id", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromShortId), METH_VARARGS, nullptr },
         { "get_device_selector_from_uuid", reinterpret_cast<PyCFunction>(GattDeviceService_GetDeviceSelectorFromUuid), METH_VARARGS, nullptr },
         { }
@@ -5664,7 +5820,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattLocalCharacteristic_NotifyValueForSubscribedClientAsync(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattLocalCharacteristic* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6131,6 +6298,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
     static PyMethodDef _methods_GattLocalCharacteristic[] = {
         { "create_descriptor_async", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_CreateDescriptorAsync), METH_VARARGS, nullptr },
         { "notify_value_async", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_NotifyValueAsync), METH_VARARGS, nullptr },
+        { "notify_value_for_subscribed_client_async", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_NotifyValueForSubscribedClientAsync), METH_VARARGS, nullptr },
         { "add_read_requested", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_add_ReadRequested), METH_O, nullptr },
         { "remove_read_requested", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_remove_ReadRequested), METH_O, nullptr },
         { "add_subscribed_clients_changed", reinterpret_cast<PyCFunction>(GattLocalCharacteristic_add_SubscribedClientsChanged), METH_O, nullptr },
@@ -10312,7 +10480,18 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* GattServiceProvider_StartAdvertisingWithParameters(py::wrapper::Windows::Devices::Bluetooth::GenericAttributeProfile::GattServiceProvider* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -10519,6 +10698,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::GenericAttributeProfile
 
     static PyMethodDef _methods_GattServiceProvider[] = {
         { "start_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StartAdvertising), METH_VARARGS, nullptr },
+        { "start_advertising_with_parameters", reinterpret_cast<PyCFunction>(GattServiceProvider_StartAdvertisingWithParameters), METH_VARARGS, nullptr },
         { "stop_advertising", reinterpret_cast<PyCFunction>(GattServiceProvider_StopAdvertising), METH_VARARGS, nullptr },
         { "add_advertisement_status_changed", reinterpret_cast<PyCFunction>(GattServiceProvider_add_AdvertisementStatusChanged), METH_O, nullptr },
         { "remove_advertisement_status_changed", reinterpret_cast<PyCFunction>(GattServiceProvider_remove_AdvertisementStatusChanged), METH_O, nullptr },

@@ -626,6 +626,45 @@ namespace py::cpp::Windows::Networking::Sockets
         }
     }
 
+    static PyObject* DatagramSocket_BindServiceNameAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"BindServiceNameAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
+
+                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* DatagramSocket_BindServiceNameAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -650,34 +689,6 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
                 return py::convert(self->obj.BindServiceNameAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"BindServiceNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 1);
-
-                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
             }
             catch (...)
             {
@@ -769,34 +780,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
-
-                return py::convert(self->obj.ConnectAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -817,6 +801,44 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert(self->obj.ConnectAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_ConnectWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"ConnectAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
+
+                return py::convert(self->obj.ConnectAsync(param0));
             }
             catch (...)
             {
@@ -863,7 +885,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -931,7 +964,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_GetEndpointPairsWithSortOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -971,34 +1015,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"GetOutputStreamAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
-
-                return py::convert(self->obj.GetOutputStreamAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -1019,6 +1036,44 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
                 return py::convert(self->obj.GetOutputStreamAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_GetOutputStreamWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.DatagramSocket", L"GetOutputStreamAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
+
+                return py::convert(self->obj.GetOutputStreamAsync(param0));
             }
             catch (...)
             {
@@ -1104,7 +1159,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1133,7 +1199,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatagramSocket_TransferOwnershipWithContextAndKeepAliveTime(py::wrapper::Windows::Networking::Sockets::DatagramSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1350,14 +1427,20 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_DatagramSocket[] = {
         { "bind_endpoint_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindEndpointAsync), METH_VARARGS, nullptr },
+        { "bind_service_name_and_adapter_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindServiceNameAndAdapterAsync), METH_VARARGS, nullptr },
         { "bind_service_name_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindServiceNameAsync), METH_VARARGS, nullptr },
         { "cancel_i_o_async", reinterpret_cast<PyCFunction>(DatagramSocket_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DatagramSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(DatagramSocket_ConnectAsync), METH_VARARGS, nullptr },
+        { "connect_with_endpoint_pair_async", reinterpret_cast<PyCFunction>(DatagramSocket_ConnectWithEndpointPairAsync), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(DatagramSocket_EnableTransferOwnership), METH_VARARGS, nullptr },
+        { "enable_transfer_ownership_with_connected_standby_action", reinterpret_cast<PyCFunction>(DatagramSocket_EnableTransferOwnershipWithConnectedStandbyAction), METH_VARARGS, nullptr },
         { "get_output_stream_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetOutputStreamAsync), METH_VARARGS, nullptr },
+        { "get_output_stream_with_endpoint_pair_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetOutputStreamWithEndpointPairAsync), METH_VARARGS, nullptr },
         { "join_multicast_group", reinterpret_cast<PyCFunction>(DatagramSocket_JoinMulticastGroup), METH_VARARGS, nullptr },
         { "transfer_ownership", reinterpret_cast<PyCFunction>(DatagramSocket_TransferOwnership), METH_VARARGS, nullptr },
+        { "transfer_ownership_with_context", reinterpret_cast<PyCFunction>(DatagramSocket_TransferOwnershipWithContext), METH_VARARGS, nullptr },
+        { "transfer_ownership_with_context_and_keep_alive_time", reinterpret_cast<PyCFunction>(DatagramSocket_TransferOwnershipWithContextAndKeepAliveTime), METH_VARARGS, nullptr },
         { "add_message_received", reinterpret_cast<PyCFunction>(DatagramSocket_add_MessageReceived), METH_O, nullptr },
         { "remove_message_received", reinterpret_cast<PyCFunction>(DatagramSocket_remove_MessageReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_DatagramSocket, METH_O | METH_STATIC, nullptr },
@@ -1395,6 +1478,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef methods_DatagramSocket_Static[] = {
         { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetEndpointPairsAsync), METH_VARARGS, nullptr },
+        { "get_endpoint_pairs_with_sort_options_async", reinterpret_cast<PyCFunction>(DatagramSocket_GetEndpointPairsWithSortOptionsAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2255,7 +2339,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MessageWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::MessageWebSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2739,6 +2834,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_MessageWebSocket[] = {
         { "close", reinterpret_cast<PyCFunction>(MessageWebSocket_Close), METH_VARARGS, nullptr },
+        { "close_with_status", reinterpret_cast<PyCFunction>(MessageWebSocket_CloseWithStatus), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(MessageWebSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "send_final_frame_async", reinterpret_cast<PyCFunction>(MessageWebSocket_SendFinalFrameAsync), METH_VARARGS, nullptr },
         { "send_nonfinal_frame_async", reinterpret_cast<PyCFunction>(MessageWebSocket_SendNonfinalFrameAsync), METH_VARARGS, nullptr },
@@ -3917,7 +4013,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ServerMessageWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::ServerMessageWebSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4190,6 +4297,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_ServerMessageWebSocket[] = {
         { "close", reinterpret_cast<PyCFunction>(ServerMessageWebSocket_Close), METH_VARARGS, nullptr },
+        { "close_with_status", reinterpret_cast<PyCFunction>(ServerMessageWebSocket_CloseWithStatus), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(ServerMessageWebSocket_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(ServerMessageWebSocket_remove_Closed), METH_O, nullptr },
         { "add_message_received", reinterpret_cast<PyCFunction>(ServerMessageWebSocket_add_MessageReceived), METH_O, nullptr },
@@ -4545,7 +4653,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ServerStreamWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::ServerStreamWebSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -4761,6 +4880,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_ServerStreamWebSocket[] = {
         { "close", reinterpret_cast<PyCFunction>(ServerStreamWebSocket_Close), METH_VARARGS, nullptr },
+        { "close_with_status", reinterpret_cast<PyCFunction>(ServerStreamWebSocket_CloseWithStatus), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(ServerStreamWebSocket_add_Closed), METH_O, nullptr },
         { "remove_closed", reinterpret_cast<PyCFunction>(ServerStreamWebSocket_remove_Closed), METH_O, nullptr },
         { "_assign_array_", _assign_array_ServerStreamWebSocket, METH_O | METH_STATIC, nullptr },
@@ -5694,34 +5814,7 @@ namespace py::cpp::Windows::Networking::Sockets
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
-
-                return py::convert(self->obj.ConnectAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 2)
+        if (arg_count == 2)
         {
             try
             {
@@ -5749,7 +5842,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_ConnectWithEndpointPairAndProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5757,20 +5861,19 @@ namespace py::cpp::Windows::Networking::Sockets
 
                 if (!is_overload_present.has_value())
                 {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 3);
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 2);
                 }
 
                 if (!is_overload_present.value())
                 {
-                    py::set_arg_count_version_error(3);
+                    py::set_arg_count_version_error(2);
                     return nullptr;
                 }
 
-                auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
+                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
 
-                return py::convert(self->obj.ConnectAsync(param0, param1, param2));
+                return py::convert(self->obj.ConnectAsync(param0, param1));
             }
             catch (...)
             {
@@ -5778,7 +5881,56 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_ConnectWithEndpointPairAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::EndpointPair>(args, 0);
+
+                return py::convert(self->obj.ConnectAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_ConnectWithProtectionLevelAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5801,6 +5953,46 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param3 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 3);
 
                 return py::convert(self->obj.ConnectAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_ConnectWithProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocket", L"ConnectAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Networking::HostName>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 2);
+
+                return py::convert(self->obj.ConnectAsync(param0, param1, param2));
             }
             catch (...)
             {
@@ -5847,7 +6039,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5915,7 +6118,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_GetEndpointPairsWithSortOptionsAsync(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5983,7 +6197,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6012,7 +6237,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocket_TransferOwnershipWithContextAndKeepAliveTime(py::wrapper::Windows::Networking::Sockets::StreamSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6239,8 +6475,15 @@ namespace py::cpp::Windows::Networking::Sockets
         { "cancel_i_o_async", reinterpret_cast<PyCFunction>(StreamSocket_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(StreamSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectAsync), METH_VARARGS, nullptr },
+        { "connect_with_endpoint_pair_and_protection_level_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectWithEndpointPairAndProtectionLevelAsync), METH_VARARGS, nullptr },
+        { "connect_with_endpoint_pair_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectWithEndpointPairAsync), METH_VARARGS, nullptr },
+        { "connect_with_protection_level_and_adapter_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectWithProtectionLevelAndAdapterAsync), METH_VARARGS, nullptr },
+        { "connect_with_protection_level_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectWithProtectionLevelAsync), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocket_EnableTransferOwnership), METH_VARARGS, nullptr },
+        { "enable_transfer_ownership_with_connected_standby_action", reinterpret_cast<PyCFunction>(StreamSocket_EnableTransferOwnershipWithConnectedStandbyAction), METH_VARARGS, nullptr },
         { "transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocket_TransferOwnership), METH_VARARGS, nullptr },
+        { "transfer_ownership_with_context", reinterpret_cast<PyCFunction>(StreamSocket_TransferOwnershipWithContext), METH_VARARGS, nullptr },
+        { "transfer_ownership_with_context_and_keep_alive_time", reinterpret_cast<PyCFunction>(StreamSocket_TransferOwnershipWithContextAndKeepAliveTime), METH_VARARGS, nullptr },
         { "upgrade_to_ssl_async", reinterpret_cast<PyCFunction>(StreamSocket_UpgradeToSslAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_StreamSocket, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_StreamSocket), METH_O | METH_STATIC, nullptr },
@@ -6278,6 +6521,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef methods_StreamSocket_Static[] = {
         { "get_endpoint_pairs_async", reinterpret_cast<PyCFunction>(StreamSocket_GetEndpointPairsAsync), METH_VARARGS, nullptr },
+        { "get_endpoint_pairs_with_sort_options_async", reinterpret_cast<PyCFunction>(StreamSocket_GetEndpointPairsWithSortOptionsAsync), METH_VARARGS, nullptr },
         { }
     };
 
@@ -7440,35 +7684,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindServiceNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
-
-                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 3)
+    }
+
+    static PyObject* StreamSocketListener_BindServiceNameWithProtectionLevelAndAdapterAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -7490,6 +7717,45 @@ namespace py::cpp::Windows::Networking::Sockets
                 auto param2 = py::convert_to<winrt::Windows::Networking::Connectivity::NetworkAdapter>(args, 2);
 
                 return py::convert(self->obj.BindServiceNameAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocketListener_BindServiceNameWithProtectionLevelAsync(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Networking.Sockets.StreamSocketListener", L"BindServiceNameAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Networking::Sockets::SocketProtectionLevel>(args, 1);
+
+                return py::convert(self->obj.BindServiceNameAsync(param0, param1));
             }
             catch (...)
             {
@@ -7609,7 +7875,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocketListener_EnableTransferOwnershipWithConnectedStandbyAction(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7677,7 +7954,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamSocketListener_TransferOwnershipWithContext(py::wrapper::Windows::Networking::Sockets::StreamSocketListener* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7868,10 +8156,14 @@ namespace py::cpp::Windows::Networking::Sockets
     static PyMethodDef _methods_StreamSocketListener[] = {
         { "bind_endpoint_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindEndpointAsync), METH_VARARGS, nullptr },
         { "bind_service_name_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameAsync), METH_VARARGS, nullptr },
+        { "bind_service_name_with_protection_level_and_adapter_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameWithProtectionLevelAndAdapterAsync), METH_VARARGS, nullptr },
+        { "bind_service_name_with_protection_level_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameWithProtectionLevelAsync), METH_VARARGS, nullptr },
         { "cancel_i_o_async", reinterpret_cast<PyCFunction>(StreamSocketListener_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(StreamSocketListener_Close), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocketListener_EnableTransferOwnership), METH_VARARGS, nullptr },
+        { "enable_transfer_ownership_with_connected_standby_action", reinterpret_cast<PyCFunction>(StreamSocketListener_EnableTransferOwnershipWithConnectedStandbyAction), METH_VARARGS, nullptr },
         { "transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocketListener_TransferOwnership), METH_VARARGS, nullptr },
+        { "transfer_ownership_with_context", reinterpret_cast<PyCFunction>(StreamSocketListener_TransferOwnershipWithContext), METH_VARARGS, nullptr },
         { "add_connection_received", reinterpret_cast<PyCFunction>(StreamSocketListener_add_ConnectionReceived), METH_O, nullptr },
         { "remove_connection_received", reinterpret_cast<PyCFunction>(StreamSocketListener_remove_ConnectionReceived), METH_O, nullptr },
         { "_assign_array_", _assign_array_StreamSocketListener, METH_O | METH_STATIC, nullptr },
@@ -8533,7 +8825,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* StreamWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::StreamWebSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8910,6 +9213,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_StreamWebSocket[] = {
         { "close", reinterpret_cast<PyCFunction>(StreamWebSocket_Close), METH_VARARGS, nullptr },
+        { "close_with_status", reinterpret_cast<PyCFunction>(StreamWebSocket_CloseWithStatus), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(StreamWebSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "set_request_header", reinterpret_cast<PyCFunction>(StreamWebSocket_SetRequestHeader), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(StreamWebSocket_add_Closed), METH_O, nullptr },
@@ -10599,7 +10903,18 @@ namespace py::cpp::Windows::Networking::Sockets
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IWebSocket_CloseWithStatus(py::wrapper::Windows::Networking::Sockets::IWebSocket* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -10841,6 +11156,7 @@ namespace py::cpp::Windows::Networking::Sockets
 
     static PyMethodDef _methods_IWebSocket[] = {
         { "close", reinterpret_cast<PyCFunction>(IWebSocket_Close), METH_VARARGS, nullptr },
+        { "close_with_status", reinterpret_cast<PyCFunction>(IWebSocket_CloseWithStatus), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(IWebSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "set_request_header", reinterpret_cast<PyCFunction>(IWebSocket_SetRequestHeader), METH_VARARGS, nullptr },
         { "add_closed", reinterpret_cast<PyCFunction>(IWebSocket_add_Closed), METH_O, nullptr },

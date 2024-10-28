@@ -50,33 +50,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Resolve", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
-
-                return py::convert(self->obj.Resolve(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -113,7 +86,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NamedResource_ResolveAllForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -133,6 +117,44 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
 
                 return py::convert(self->obj.ResolveAll(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* NamedResource_ResolveForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::NamedResource* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.NamedResource", L"Resolve", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::ApplicationModel::Resources::Core::ResourceContext>(args, 0);
+
+                return py::convert(self->obj.Resolve(param0));
             }
             catch (...)
             {
@@ -226,6 +248,8 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static PyMethodDef _methods_NamedResource[] = {
         { "resolve", reinterpret_cast<PyCFunction>(NamedResource_Resolve), METH_VARARGS, nullptr },
         { "resolve_all", reinterpret_cast<PyCFunction>(NamedResource_ResolveAll), METH_VARARGS, nullptr },
+        { "resolve_all_for_context", reinterpret_cast<PyCFunction>(NamedResource_ResolveAllForContext), METH_VARARGS, nullptr },
+        { "resolve_for_context", reinterpret_cast<PyCFunction>(NamedResource_ResolveForContext), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NamedResource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_NamedResource), METH_O | METH_STATIC, nullptr },
         { }
@@ -1249,34 +1273,6 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Reset", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
-
-                self->obj.Reset(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1314,7 +1310,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceContext_ResetGlobalQualifierValuesForSpecifiedQualifiers(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1334,6 +1341,45 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
 
                 winrt::Windows::ApplicationModel::Resources::Core::ResourceContext::ResetGlobalQualifierValues(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceContext_ResetQualifierValues(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Resources.Core.ResourceContext", L"Reset", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::hstring>>(args, 0);
+
+                self->obj.Reset(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1382,7 +1428,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceContext_SetGlobalQualifierValueWithPersistence(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1534,6 +1591,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { "clone", reinterpret_cast<PyCFunction>(ResourceContext_Clone), METH_VARARGS, nullptr },
         { "override_to_match", reinterpret_cast<PyCFunction>(ResourceContext_OverrideToMatch), METH_VARARGS, nullptr },
         { "reset", reinterpret_cast<PyCFunction>(ResourceContext_Reset), METH_VARARGS, nullptr },
+        { "reset_qualifier_values", reinterpret_cast<PyCFunction>(ResourceContext_ResetQualifierValues), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ResourceContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ResourceContext), METH_O | METH_STATIC, nullptr },
         { }
@@ -1570,7 +1628,9 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceContext_GetForUIContext), METH_VARARGS, nullptr },
         { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceContext_GetForViewIndependentUse), METH_VARARGS, nullptr },
         { "reset_global_qualifier_values", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValues), METH_VARARGS, nullptr },
+        { "reset_global_qualifier_values_for_specified_qualifiers", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValuesForSpecifiedQualifiers), METH_VARARGS, nullptr },
         { "set_global_qualifier_value", reinterpret_cast<PyCFunction>(ResourceContext_SetGlobalQualifierValue), METH_VARARGS, nullptr },
+        { "set_global_qualifier_value_with_persistence", reinterpret_cast<PyCFunction>(ResourceContext_SetGlobalQualifierValueWithPersistence), METH_VARARGS, nullptr },
         { }
     };
 
@@ -2475,7 +2535,18 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ResourceMap_GetValueForContext(py::wrapper::Windows::ApplicationModel::Resources::Core::ResourceMap* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2792,6 +2863,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
         { "first", reinterpret_cast<PyCFunction>(ResourceMap_First), METH_VARARGS, nullptr },
         { "get_subtree", reinterpret_cast<PyCFunction>(ResourceMap_GetSubtree), METH_VARARGS, nullptr },
         { "get_value", reinterpret_cast<PyCFunction>(ResourceMap_GetValue), METH_VARARGS, nullptr },
+        { "get_value_for_context", reinterpret_cast<PyCFunction>(ResourceMap_GetValueForContext), METH_VARARGS, nullptr },
         { "has_key", reinterpret_cast<PyCFunction>(ResourceMap_HasKey), METH_VARARGS, nullptr },
         { "lookup", reinterpret_cast<PyCFunction>(ResourceMap_Lookup), METH_VARARGS, nullptr },
         { "split", reinterpret_cast<PyCFunction>(ResourceMap_Split), METH_VARARGS, nullptr },

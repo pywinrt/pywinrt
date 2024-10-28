@@ -781,7 +781,18 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* CoreAutomationRemoteOperationContext_SetOperand2(py::wrapper::Windows::UI::UIAutomation::Core::CoreAutomationRemoteOperationContext* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -845,6 +856,7 @@ namespace py::cpp::Windows::UI::UIAutomation::Core
     static PyMethodDef _methods_CoreAutomationRemoteOperationContext[] = {
         { "get_operand", reinterpret_cast<PyCFunction>(CoreAutomationRemoteOperationContext_GetOperand), METH_VARARGS, nullptr },
         { "set_operand", reinterpret_cast<PyCFunction>(CoreAutomationRemoteOperationContext_SetOperand), METH_VARARGS, nullptr },
+        { "set_operand2", reinterpret_cast<PyCFunction>(CoreAutomationRemoteOperationContext_SetOperand2), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CoreAutomationRemoteOperationContext, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CoreAutomationRemoteOperationContext), METH_O | METH_STATIC, nullptr },
         { }

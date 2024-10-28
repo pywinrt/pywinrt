@@ -51,7 +51,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallItem_CancelWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -152,7 +163,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallItem_PauseWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -217,7 +239,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallItem_RestartWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallItem* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -914,9 +947,12 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyMethodDef _methods_AppInstallItem[] = {
         { "cancel", reinterpret_cast<PyCFunction>(AppInstallItem_Cancel), METH_VARARGS, nullptr },
+        { "cancel_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallItem_CancelWithTelemetry), METH_VARARGS, nullptr },
         { "get_current_status", reinterpret_cast<PyCFunction>(AppInstallItem_GetCurrentStatus), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(AppInstallItem_Pause), METH_VARARGS, nullptr },
+        { "pause_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallItem_PauseWithTelemetry), METH_VARARGS, nullptr },
         { "restart", reinterpret_cast<PyCFunction>(AppInstallItem_Restart), METH_VARARGS, nullptr },
+        { "restart_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallItem_RestartWithTelemetry), METH_VARARGS, nullptr },
         { "add_completed", reinterpret_cast<PyCFunction>(AppInstallItem_add_Completed), METH_O, nullptr },
         { "remove_completed", reinterpret_cast<PyCFunction>(AppInstallItem_remove_Completed), METH_O, nullptr },
         { "add_status_changed", reinterpret_cast<PyCFunction>(AppInstallItem_add_StatusChanged), METH_O, nullptr },
@@ -1028,7 +1064,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_CancelWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1216,36 +1263,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert(self->obj.GetIsAppAllowedToInstallAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1281,6 +1298,47 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param4 = py::convert_to<winrt::hstring>(args, 4);
 
                 return py::convert(self->obj.GetIsAppAllowedToInstallForUserAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_GetIsAppAllowedToInstallWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"GetIsAppAllowedToInstallAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+
+                return py::convert(self->obj.GetIsAppAllowedToInstallAsync(param0, param1, param2, param3));
             }
             catch (...)
             {
@@ -1566,7 +1624,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_PauseWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1634,7 +1703,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_RestartWithTelemetry(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1699,62 +1779,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-
-                return py::convert(self->obj.SearchForAllUpdatesAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 2);
-
-                return py::convert(self->obj.SearchForAllUpdatesAsync(param0, param1, param2));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1794,7 +1818,96 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForAllUpdatesWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+
+                return py::convert(self->obj.SearchForAllUpdatesAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForAllUpdatesWithUpdateOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForAllUpdatesAsync", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 2);
+
+                return py::convert(self->obj.SearchForAllUpdatesAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForAllUpdatesWithUpdateOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1863,67 +1976,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-
-                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 4);
-
-                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3, param4));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -1966,7 +2018,101 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 6)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForUpdatesWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+
+                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForUpdatesWithUpdateOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"SearchForUpdatesAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppUpdateOptions>(args, 4);
+
+                return py::convert(self->obj.SearchForUpdatesAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_SearchForUpdatesWithUpdateOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
         {
             try
             {
@@ -2039,7 +2185,18 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 7)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_StartAppInstallWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 7)
         {
             try
             {
@@ -2083,38 +2240,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 5)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 5);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(5);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 4);
-
-                return py::convert(self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 8)
+        if (arg_count == 8)
         {
             try
             {
@@ -2159,39 +2285,7 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
     {
         auto arg_count = PyTuple_Size(args);
 
-        if (arg_count == 6)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 6);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(6);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::hstring>(args, 2);
-                auto param3 = py::convert_to<winrt::hstring>(args, 3);
-                auto param4 = py::convert_to<winrt::hstring>(args, 4);
-                auto param5 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 5);
-
-                return py::convert(self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 9)
+        if (arg_count == 9)
         {
             try
             {
@@ -2219,6 +2313,91 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param8 = py::convert_to<winrt::Windows::Management::Deployment::PackageVolume>(args, 8);
 
                 return py::convert(self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5, param6, param7, param8));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_StartProductInstallWithOptionsAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 5)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallAsync", 5);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(5);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 4);
+
+                return py::convert(self->obj.StartProductInstallAsync(param0, param1, param2, param3, param4));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_StartProductInstallWithOptionsForUserAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 6)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"StartProductInstallForUserAsync", 6);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(6);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::System::User>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::hstring>(args, 2);
+                auto param3 = py::convert_to<winrt::hstring>(args, 3);
+                auto param4 = py::convert_to<winrt::hstring>(args, 4);
+                auto param5 = py::convert_to<winrt::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallOptions>(args, 5);
+
+                return py::convert(self->obj.StartProductInstallForUserAsync(param0, param1, param2, param3, param4, param5));
             }
             catch (...)
             {
@@ -2264,34 +2443,6 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-
-                return py::convert(self->obj.UpdateAppByPackageFamilyNameAsync(param0, param1));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2325,6 +2476,45 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
 
                 return py::convert(self->obj.UpdateAppByPackageFamilyNameForUserAsync(param0, param1, param2));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AppInstallManager_UpdateAppByPackageFamilyNameWithTelemetryAsync(py::wrapper::Windows::ApplicationModel::Store::Preview::InstallControl::AppInstallManager* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.ApplicationModel.Store.Preview.InstallControl.AppInstallManager", L"UpdateAppByPackageFamilyNameAsync", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+
+                return py::convert(self->obj.UpdateAppByPackageFamilyNameAsync(param0, param1));
             }
             catch (...)
             {
@@ -2679,11 +2869,13 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
 
     static PyMethodDef _methods_AppInstallManager[] = {
         { "cancel", reinterpret_cast<PyCFunction>(AppInstallManager_Cancel), METH_VARARGS, nullptr },
+        { "cancel_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallManager_CancelWithTelemetry), METH_VARARGS, nullptr },
         { "get_free_device_entitlement_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetFreeDeviceEntitlementAsync), METH_VARARGS, nullptr },
         { "get_free_user_entitlement_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetFreeUserEntitlementAsync), METH_VARARGS, nullptr },
         { "get_free_user_entitlement_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetFreeUserEntitlementForUserAsync), METH_VARARGS, nullptr },
         { "get_is_app_allowed_to_install_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsAppAllowedToInstallAsync), METH_VARARGS, nullptr },
         { "get_is_app_allowed_to_install_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsAppAllowedToInstallForUserAsync), METH_VARARGS, nullptr },
+        { "get_is_app_allowed_to_install_with_telemetry_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsAppAllowedToInstallWithTelemetryAsync), METH_VARARGS, nullptr },
         { "get_is_applicable_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsApplicableAsync), METH_VARARGS, nullptr },
         { "get_is_applicable_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsApplicableForUserAsync), METH_VARARGS, nullptr },
         { "get_is_package_identity_allowed_to_install_async", reinterpret_cast<PyCFunction>(AppInstallManager_GetIsPackageIdentityAllowedToInstallAsync), METH_VARARGS, nullptr },
@@ -2691,16 +2883,28 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview::InstallControl
         { "is_store_blocked_by_policy_async", reinterpret_cast<PyCFunction>(AppInstallManager_IsStoreBlockedByPolicyAsync), METH_VARARGS, nullptr },
         { "move_to_front_of_download_queue", reinterpret_cast<PyCFunction>(AppInstallManager_MoveToFrontOfDownloadQueue), METH_VARARGS, nullptr },
         { "pause", reinterpret_cast<PyCFunction>(AppInstallManager_Pause), METH_VARARGS, nullptr },
+        { "pause_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallManager_PauseWithTelemetry), METH_VARARGS, nullptr },
         { "restart", reinterpret_cast<PyCFunction>(AppInstallManager_Restart), METH_VARARGS, nullptr },
+        { "restart_with_telemetry", reinterpret_cast<PyCFunction>(AppInstallManager_RestartWithTelemetry), METH_VARARGS, nullptr },
         { "search_for_all_updates_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForAllUpdatesAsync), METH_VARARGS, nullptr },
         { "search_for_all_updates_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForAllUpdatesForUserAsync), METH_VARARGS, nullptr },
+        { "search_for_all_updates_with_telemetry_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForAllUpdatesWithTelemetryAsync), METH_VARARGS, nullptr },
+        { "search_for_all_updates_with_update_options_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForAllUpdatesWithUpdateOptionsAsync), METH_VARARGS, nullptr },
+        { "search_for_all_updates_with_update_options_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForAllUpdatesWithUpdateOptionsForUserAsync), METH_VARARGS, nullptr },
         { "search_for_updates_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForUpdatesAsync), METH_VARARGS, nullptr },
         { "search_for_updates_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForUpdatesForUserAsync), METH_VARARGS, nullptr },
+        { "search_for_updates_with_telemetry_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForUpdatesWithTelemetryAsync), METH_VARARGS, nullptr },
+        { "search_for_updates_with_update_options_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForUpdatesWithUpdateOptionsAsync), METH_VARARGS, nullptr },
+        { "search_for_updates_with_update_options_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_SearchForUpdatesWithUpdateOptionsForUserAsync), METH_VARARGS, nullptr },
         { "start_app_install_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartAppInstallAsync), METH_VARARGS, nullptr },
+        { "start_app_install_with_telemetry_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartAppInstallWithTelemetryAsync), METH_VARARGS, nullptr },
         { "start_product_install_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartProductInstallAsync), METH_VARARGS, nullptr },
         { "start_product_install_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartProductInstallForUserAsync), METH_VARARGS, nullptr },
+        { "start_product_install_with_options_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartProductInstallWithOptionsAsync), METH_VARARGS, nullptr },
+        { "start_product_install_with_options_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_StartProductInstallWithOptionsForUserAsync), METH_VARARGS, nullptr },
         { "update_app_by_package_family_name_async", reinterpret_cast<PyCFunction>(AppInstallManager_UpdateAppByPackageFamilyNameAsync), METH_VARARGS, nullptr },
         { "update_app_by_package_family_name_for_user_async", reinterpret_cast<PyCFunction>(AppInstallManager_UpdateAppByPackageFamilyNameForUserAsync), METH_VARARGS, nullptr },
+        { "update_app_by_package_family_name_with_telemetry_async", reinterpret_cast<PyCFunction>(AppInstallManager_UpdateAppByPackageFamilyNameWithTelemetryAsync), METH_VARARGS, nullptr },
         { "add_item_completed", reinterpret_cast<PyCFunction>(AppInstallManager_add_ItemCompleted), METH_O, nullptr },
         { "remove_item_completed", reinterpret_cast<PyCFunction>(AppInstallManager_remove_ItemCompleted), METH_O, nullptr },
         { "add_item_status_changed", reinterpret_cast<PyCFunction>(AppInstallManager_add_ItemStatusChanged), METH_O, nullptr },

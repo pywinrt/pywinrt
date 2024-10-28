@@ -277,12 +277,12 @@ class ProjectedType
         {
             foreach (var method in methods.Where(m => !m.IsSpecialName && m.IsPublic))
             {
-                var name = method.Name;
+                var projected = new ProjectedMethod(method, inheritance, map);
 
-                if (!collectedMethods.TryGetValue(name, out var dict))
+                if (!collectedMethods.TryGetValue(projected.Name, out var dict))
                 {
                     dict = [];
-                    collectedMethods[name] = dict;
+                    collectedMethods[projected.Name] = dict;
                 }
 
                 if (!dict.TryGetValue(method.Parameters.Count, out var list))
@@ -291,7 +291,7 @@ class ProjectedType
                     dict[method.Parameters.Count] = list;
                 }
 
-                list.Add(new ProjectedMethod(method, inheritance, map));
+                list.Add(projected);
             }
         }
 

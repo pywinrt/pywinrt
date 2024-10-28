@@ -687,7 +687,18 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsManager_CreateAudioCaptureEffectsManagerWithMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -755,7 +766,18 @@ namespace py::cpp::Windows::Media::Effects
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* AudioEffectsManager_CreateAudioRenderEffectsManagerWithMode(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -819,7 +841,9 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyMethodDef methods_AudioEffectsManager_Static[] = {
         { "create_audio_capture_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManager), METH_VARARGS, nullptr },
+        { "create_audio_capture_effects_manager_with_mode", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioCaptureEffectsManagerWithMode), METH_VARARGS, nullptr },
         { "create_audio_render_effects_manager", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManager), METH_VARARGS, nullptr },
+        { "create_audio_render_effects_manager_with_mode", reinterpret_cast<PyCFunction>(AudioEffectsManager_CreateAudioRenderEffectsManagerWithMode), METH_VARARGS, nullptr },
         { }
     };
 

@@ -766,7 +766,18 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TextConversionGenerator_GetCandidatesWithMaxCountAsync(py::wrapper::Windows::Data::Text::TextConversionGenerator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -879,6 +890,7 @@ namespace py::cpp::Windows::Data::Text
 
     static PyMethodDef _methods_TextConversionGenerator[] = {
         { "get_candidates_async", reinterpret_cast<PyCFunction>(TextConversionGenerator_GetCandidatesAsync), METH_VARARGS, nullptr },
+        { "get_candidates_with_max_count_async", reinterpret_cast<PyCFunction>(TextConversionGenerator_GetCandidatesWithMaxCountAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextConversionGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextConversionGenerator), METH_O | METH_STATIC, nullptr },
         { }
@@ -1097,7 +1109,18 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TextPredictionGenerator_GetCandidatesWithMaxCountAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1125,7 +1148,18 @@ namespace py::cpp::Windows::Data::Text
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TextPredictionGenerator_GetCandidatesWithParametersAsync(py::wrapper::Windows::Data::Text::TextPredictionGenerator* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1340,6 +1374,8 @@ namespace py::cpp::Windows::Data::Text
 
     static PyMethodDef _methods_TextPredictionGenerator[] = {
         { "get_candidates_async", reinterpret_cast<PyCFunction>(TextPredictionGenerator_GetCandidatesAsync), METH_VARARGS, nullptr },
+        { "get_candidates_with_max_count_async", reinterpret_cast<PyCFunction>(TextPredictionGenerator_GetCandidatesWithMaxCountAsync), METH_VARARGS, nullptr },
+        { "get_candidates_with_parameters_async", reinterpret_cast<PyCFunction>(TextPredictionGenerator_GetCandidatesWithParametersAsync), METH_VARARGS, nullptr },
         { "get_next_word_candidates_async", reinterpret_cast<PyCFunction>(TextPredictionGenerator_GetNextWordCandidatesAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_TextPredictionGenerator, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_TextPredictionGenerator), METH_O | METH_STATIC, nullptr },

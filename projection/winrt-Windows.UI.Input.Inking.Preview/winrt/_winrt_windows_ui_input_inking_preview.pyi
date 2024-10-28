@@ -16,10 +16,8 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class PalmRejectionDelayZonePreview_Static(type):
-    @typing.overload
     def create_for_visual(cls, input_panel_visual: typing.Optional[windows_ui_composition.Visual], input_panel_rect: windows_foundation.Rect, /) -> typing.Optional[PalmRejectionDelayZonePreview]: ...
-    @typing.overload
-    def create_for_visual(cls, input_panel_visual: typing.Optional[windows_ui_composition.Visual], input_panel_rect: windows_foundation.Rect, viewport_visual: typing.Optional[windows_ui_composition.Visual], viewport_rect: windows_foundation.Rect, /) -> typing.Optional[PalmRejectionDelayZonePreview]: ...
+    def create_for_visual_with_viewport_clip(cls, input_panel_visual: typing.Optional[windows_ui_composition.Visual], input_panel_rect: windows_foundation.Rect, viewport_visual: typing.Optional[windows_ui_composition.Visual], viewport_rect: windows_foundation.Rect, /) -> typing.Optional[PalmRejectionDelayZonePreview]: ...
 
 @typing.final
 class PalmRejectionDelayZonePreview(winrt.system.Object, metaclass=PalmRejectionDelayZonePreview_Static):

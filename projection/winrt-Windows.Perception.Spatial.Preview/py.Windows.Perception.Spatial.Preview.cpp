@@ -191,7 +191,18 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPosition(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -219,7 +230,18 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPositionAndOrientation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -324,7 +346,18 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPosition(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -352,7 +385,18 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPositionAndOrientation(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -416,8 +460,12 @@ namespace py::cpp::Windows::Perception::Spatial::Preview
 
     static PyMethodDef methods_SpatialGraphInteropPreview_Static[] = {
         { "create_coordinate_system_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateCoordinateSystemForNode), METH_VARARGS, nullptr },
+        { "create_coordinate_system_for_node_with_position", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPosition), METH_VARARGS, nullptr },
+        { "create_coordinate_system_for_node_with_position_and_orientation", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateCoordinateSystemForNodeWithPositionAndOrientation), METH_VARARGS, nullptr },
         { "create_locator_for_node", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_CreateLocatorForNode), METH_VARARGS, nullptr },
         { "try_create_frame_of_reference", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_TryCreateFrameOfReference), METH_VARARGS, nullptr },
+        { "try_create_frame_of_reference_with_position", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPosition), METH_VARARGS, nullptr },
+        { "try_create_frame_of_reference_with_position_and_orientation", reinterpret_cast<PyCFunction>(SpatialGraphInteropPreview_TryCreateFrameOfReferenceWithPositionAndOrientation), METH_VARARGS, nullptr },
         { }
     };
 

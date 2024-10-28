@@ -622,7 +622,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* FileLoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::FileLoggingSession* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -898,6 +909,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyMethodDef _methods_FileLoggingSession[] = {
         { "add_logging_channel", reinterpret_cast<PyCFunction>(FileLoggingSession_AddLoggingChannel), METH_VARARGS, nullptr },
+        { "add_logging_channel_with_level", reinterpret_cast<PyCFunction>(FileLoggingSession_AddLoggingChannelWithLevel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(FileLoggingSession_Close), METH_VARARGS, nullptr },
         { "close_and_save_to_file_async", reinterpret_cast<PyCFunction>(FileLoggingSession_CloseAndSaveToFileAsync), METH_VARARGS, nullptr },
         { "remove_logging_channel", reinterpret_cast<PyCFunction>(FileLoggingSession_RemoveLoggingChannel), METH_VARARGS, nullptr },
@@ -1148,7 +1160,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1175,7 +1198,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1242,7 +1276,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1271,7 +1316,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1301,7 +1357,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1370,7 +1437,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1398,7 +1476,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1427,7 +1516,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -1496,7 +1596,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_StopActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1525,7 +1636,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingActivity_StopActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingActivity* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -1686,9 +1808,19 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LoggingActivity[] = {
         { "close", reinterpret_cast<PyCFunction>(LoggingActivity_Close), METH_VARARGS, nullptr },
         { "is_enabled", reinterpret_cast<PyCFunction>(LoggingActivity_IsEnabled), METH_VARARGS, nullptr },
+        { "is_enabled_with_level", reinterpret_cast<PyCFunction>(LoggingActivity_IsEnabledWithLevel), METH_VARARGS, nullptr },
+        { "is_enabled_with_level_and_keywords", reinterpret_cast<PyCFunction>(LoggingActivity_IsEnabledWithLevelAndKeywords), METH_VARARGS, nullptr },
         { "log_event", reinterpret_cast<PyCFunction>(LoggingActivity_LogEvent), METH_VARARGS, nullptr },
+        { "log_event_with_fields", reinterpret_cast<PyCFunction>(LoggingActivity_LogEventWithFields), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_level", reinterpret_cast<PyCFunction>(LoggingActivity_LogEventWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_options", reinterpret_cast<PyCFunction>(LoggingActivity_LogEventWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "start_activity", reinterpret_cast<PyCFunction>(LoggingActivity_StartActivity), METH_VARARGS, nullptr },
+        { "start_activity_with_fields", reinterpret_cast<PyCFunction>(LoggingActivity_StartActivityWithFields), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_level", reinterpret_cast<PyCFunction>(LoggingActivity_StartActivityWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(LoggingActivity_StartActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "stop_activity", reinterpret_cast<PyCFunction>(LoggingActivity_StopActivity), METH_VARARGS, nullptr },
+        { "stop_activity_with_fields", reinterpret_cast<PyCFunction>(LoggingActivity_StopActivityWithFields), METH_VARARGS, nullptr },
+        { "stop_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(LoggingActivity_StopActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LoggingActivity, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_LoggingActivity), METH_O | METH_STATIC, nullptr },
         { "__enter__", reinterpret_cast<PyCFunction>(_enter_LoggingActivity), METH_NOARGS, nullptr },
@@ -1858,7 +1990,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -1885,7 +2028,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1952,7 +2106,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -1981,7 +2146,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2011,7 +2187,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2081,7 +2268,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_LogMessageWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2150,7 +2348,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_LogValuePairWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2218,7 +2427,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -2246,7 +2466,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2275,7 +2506,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingChannel_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::LoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2519,10 +2761,20 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LoggingChannel[] = {
         { "close", reinterpret_cast<PyCFunction>(LoggingChannel_Close), METH_VARARGS, nullptr },
         { "is_enabled", reinterpret_cast<PyCFunction>(LoggingChannel_IsEnabled), METH_VARARGS, nullptr },
+        { "is_enabled_with_level", reinterpret_cast<PyCFunction>(LoggingChannel_IsEnabledWithLevel), METH_VARARGS, nullptr },
+        { "is_enabled_with_level_and_keywords", reinterpret_cast<PyCFunction>(LoggingChannel_IsEnabledWithLevelAndKeywords), METH_VARARGS, nullptr },
         { "log_event", reinterpret_cast<PyCFunction>(LoggingChannel_LogEvent), METH_VARARGS, nullptr },
+        { "log_event_with_fields", reinterpret_cast<PyCFunction>(LoggingChannel_LogEventWithFields), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_level", reinterpret_cast<PyCFunction>(LoggingChannel_LogEventWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_options", reinterpret_cast<PyCFunction>(LoggingChannel_LogEventWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "log_message", reinterpret_cast<PyCFunction>(LoggingChannel_LogMessage), METH_VARARGS, nullptr },
+        { "log_message_with_level", reinterpret_cast<PyCFunction>(LoggingChannel_LogMessageWithLevel), METH_VARARGS, nullptr },
         { "log_value_pair", reinterpret_cast<PyCFunction>(LoggingChannel_LogValuePair), METH_VARARGS, nullptr },
+        { "log_value_pair_with_level", reinterpret_cast<PyCFunction>(LoggingChannel_LogValuePairWithLevel), METH_VARARGS, nullptr },
         { "start_activity", reinterpret_cast<PyCFunction>(LoggingChannel_StartActivity), METH_VARARGS, nullptr },
+        { "start_activity_with_fields", reinterpret_cast<PyCFunction>(LoggingChannel_StartActivityWithFields), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_level", reinterpret_cast<PyCFunction>(LoggingChannel_StartActivityWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(LoggingChannel_StartActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "add_logging_enabled", reinterpret_cast<PyCFunction>(LoggingChannel_add_LoggingEnabled), METH_O, nullptr },
         { "remove_logging_enabled", reinterpret_cast<PyCFunction>(LoggingChannel_remove_LoggingEnabled), METH_O, nullptr },
         { "_assign_array_", _assign_array_LoggingChannel, METH_O | METH_STATIC, nullptr },
@@ -2792,67 +3044,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<bool>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddBoolean(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<bool>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddBoolean(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -2893,7 +3084,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddBooleanArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -2923,7 +3125,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddBooleanArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -2946,6 +3159,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddBooleanArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddBooleanWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<bool>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddBoolean(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddBooleanWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddBoolean", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<bool>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddBoolean(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2994,67 +3290,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<char16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddChar16(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<char16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddChar16(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3095,7 +3330,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddChar16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3125,7 +3371,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddChar16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -3148,6 +3405,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddChar16Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddChar16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<char16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddChar16(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddChar16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddChar16", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<char16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddChar16(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3196,67 +3536,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddDateTime(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddDateTime(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3297,7 +3576,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDateTimeArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3327,7 +3617,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDateTimeArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -3350,6 +3651,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddDateTimeArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDateTimeWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddDateTime(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDateTimeWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDateTime", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddDateTime(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3398,67 +3782,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddDouble(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<double>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddDouble(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3499,7 +3822,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDoubleArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3529,7 +3863,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDoubleArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -3552,6 +3897,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddDoubleArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDoubleWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddDouble(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddDoubleWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddDouble", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<double>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddDouble(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3599,7 +4027,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddEmptyWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -3628,7 +4067,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddEmptyWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3698,67 +4148,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::guid>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddGuid(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::guid>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddGuid(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -3799,7 +4188,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddGuidArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -3829,7 +4229,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddGuidArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -3852,6 +4263,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddGuidArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddGuidWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::guid>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddGuid(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddGuidWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddGuid", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::guid>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddGuid(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3900,67 +4394,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddInt16(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddInt16(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4001,7 +4434,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4031,7 +4475,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4054,6 +4509,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddInt16Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddInt16(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt16", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddInt16(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4102,67 +4640,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddInt32(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddInt32(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4203,7 +4680,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt32ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4233,7 +4721,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt32ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4256,6 +4755,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddInt32Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt32WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddInt32(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt32WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt32", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddInt32(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4304,67 +4886,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int64_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddInt64(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<int64_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddInt64(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4405,7 +4926,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt64ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4435,7 +4967,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt64ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4458,6 +5001,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddInt64Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt64WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddInt64(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddInt64WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddInt64", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<int64_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddInt64(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4506,67 +5132,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddPoint(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddPoint(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4607,7 +5172,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddPointArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4637,7 +5213,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddPointArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4660,6 +5247,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddPointArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddPointWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddPoint(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddPointWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddPoint", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddPoint(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4708,67 +5378,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddRect(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddRect(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -4809,7 +5418,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddRectArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -4839,7 +5459,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddRectArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -4862,6 +5493,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddRectArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddRectWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddRect(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddRectWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddRect", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddRect(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4910,67 +5624,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<float>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddSingle(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<float>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddSingle(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5011,7 +5664,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSingleArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5041,7 +5705,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSingleArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5064,6 +5739,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddSingleArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSingleWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<float>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddSingle(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSingleWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSingle", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<float>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddSingle(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5112,67 +5870,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddSize(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddSize(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5213,7 +5910,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSizeArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5243,7 +5951,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSizeArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5266,6 +5985,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddSizeArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSizeWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddSize(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddSizeWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddSize", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Size>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddSize(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5314,67 +6116,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddString(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::hstring>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddString(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5415,7 +6156,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddStringArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5445,7 +6197,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddStringArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5468,6 +6231,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddStringArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddStringWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddString(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddStringWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddString", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::hstring>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddString(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5516,67 +6362,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddTimeSpan(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddTimeSpan(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5617,7 +6402,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddTimeSpanArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5647,7 +6443,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddTimeSpanArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5670,6 +6477,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddTimeSpanArray(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddTimeSpanWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddTimeSpan(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddTimeSpanWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddTimeSpan", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddTimeSpan(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5718,67 +6608,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddUInt16(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint16_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddUInt16(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -5819,7 +6648,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt16ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -5849,7 +6689,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt16ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -5872,6 +6723,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddUInt16Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt16WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddUInt16(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt16WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt16", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint16_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddUInt16(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5920,67 +6854,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddUInt32(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint32_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddUInt32(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6021,7 +6894,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt32ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6051,7 +6935,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt32ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6074,6 +6969,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddUInt32Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt32WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddUInt32(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt32WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt32", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint32_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddUInt32(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6122,67 +7100,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint64_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddUInt64(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint64_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddUInt64(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6223,7 +7140,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt64ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6253,7 +7181,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt64ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6276,6 +7215,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddUInt64Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt64WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint64_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddUInt64(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt64WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt64", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint64_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddUInt64(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6324,67 +7346,6 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 3);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(3);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint8_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-
-                self->obj.AddUInt8(param0, param1, param2);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else if (arg_count == 4)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 4);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(4);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::hstring>(args, 0);
-                auto param1 = py::convert_to<uint8_t>(args, 1);
-                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
-                auto param3 = py::convert_to<int32_t>(args, 3);
-
-                self->obj.AddUInt8(param0, param1, param2, param3);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
         else
         {
             py::set_invalid_arg_count_error(arg_count);
@@ -6425,7 +7386,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt8ArrayWithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -6455,7 +7427,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt8ArrayWithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -6478,6 +7461,89 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 auto param3 = py::convert_to<int32_t>(args, 3);
 
                 self->obj.AddUInt8Array(param0, param1, param2, param3);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt8WithFormat(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 3);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(3);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint8_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+
+                self->obj.AddUInt8(param0, param1, param2);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_AddUInt8WithFormatAndTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Foundation.Diagnostics.LoggingFields", L"AddUInt8", 4);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(4);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<uint8_t>(args, 1);
+                auto param2 = py::convert_to<winrt::Windows::Foundation::Diagnostics::LoggingFieldFormat>(args, 2);
+                auto param3 = py::convert_to<int32_t>(args, 3);
+
+                self->obj.AddUInt8(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6525,7 +7591,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingFields_BeginStructWithTags(py::wrapper::Windows::Foundation::Diagnostics::LoggingFields* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -6662,42 +7739,117 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_LoggingFields[] = {
         { "add_boolean", reinterpret_cast<PyCFunction>(LoggingFields_AddBoolean), METH_VARARGS, nullptr },
         { "add_boolean_array", reinterpret_cast<PyCFunction>(LoggingFields_AddBooleanArray), METH_VARARGS, nullptr },
+        { "add_boolean_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddBooleanArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_boolean_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddBooleanArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_boolean_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddBooleanWithFormat), METH_VARARGS, nullptr },
+        { "add_boolean_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddBooleanWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_char16", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16), METH_VARARGS, nullptr },
         { "add_char16_array", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16Array), METH_VARARGS, nullptr },
+        { "add_char16_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_char16_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_char16_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16WithFormat), METH_VARARGS, nullptr },
+        { "add_char16_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddChar16WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_date_time", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTime), METH_VARARGS, nullptr },
         { "add_date_time_array", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTimeArray), METH_VARARGS, nullptr },
+        { "add_date_time_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTimeArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_date_time_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTimeArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_date_time_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTimeWithFormat), METH_VARARGS, nullptr },
+        { "add_date_time_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddDateTimeWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_double", reinterpret_cast<PyCFunction>(LoggingFields_AddDouble), METH_VARARGS, nullptr },
         { "add_double_array", reinterpret_cast<PyCFunction>(LoggingFields_AddDoubleArray), METH_VARARGS, nullptr },
+        { "add_double_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddDoubleArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_double_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddDoubleArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_double_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddDoubleWithFormat), METH_VARARGS, nullptr },
+        { "add_double_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddDoubleWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_empty", reinterpret_cast<PyCFunction>(LoggingFields_AddEmpty), METH_VARARGS, nullptr },
+        { "add_empty_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddEmptyWithFormat), METH_VARARGS, nullptr },
+        { "add_empty_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddEmptyWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_guid", reinterpret_cast<PyCFunction>(LoggingFields_AddGuid), METH_VARARGS, nullptr },
         { "add_guid_array", reinterpret_cast<PyCFunction>(LoggingFields_AddGuidArray), METH_VARARGS, nullptr },
+        { "add_guid_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddGuidArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_guid_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddGuidArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_guid_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddGuidWithFormat), METH_VARARGS, nullptr },
+        { "add_guid_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddGuidWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_int16", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16), METH_VARARGS, nullptr },
         { "add_int16_array", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16Array), METH_VARARGS, nullptr },
+        { "add_int16_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_int16_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_int16_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16WithFormat), METH_VARARGS, nullptr },
+        { "add_int16_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt16WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_int32", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32), METH_VARARGS, nullptr },
         { "add_int32_array", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32Array), METH_VARARGS, nullptr },
+        { "add_int32_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_int32_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_int32_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32WithFormat), METH_VARARGS, nullptr },
+        { "add_int32_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt32WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_int64", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64), METH_VARARGS, nullptr },
         { "add_int64_array", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64Array), METH_VARARGS, nullptr },
+        { "add_int64_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_int64_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_int64_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64WithFormat), METH_VARARGS, nullptr },
+        { "add_int64_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddInt64WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_point", reinterpret_cast<PyCFunction>(LoggingFields_AddPoint), METH_VARARGS, nullptr },
         { "add_point_array", reinterpret_cast<PyCFunction>(LoggingFields_AddPointArray), METH_VARARGS, nullptr },
+        { "add_point_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddPointArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_point_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddPointArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_point_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddPointWithFormat), METH_VARARGS, nullptr },
+        { "add_point_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddPointWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_rect", reinterpret_cast<PyCFunction>(LoggingFields_AddRect), METH_VARARGS, nullptr },
         { "add_rect_array", reinterpret_cast<PyCFunction>(LoggingFields_AddRectArray), METH_VARARGS, nullptr },
+        { "add_rect_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddRectArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_rect_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddRectArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_rect_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddRectWithFormat), METH_VARARGS, nullptr },
+        { "add_rect_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddRectWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_single", reinterpret_cast<PyCFunction>(LoggingFields_AddSingle), METH_VARARGS, nullptr },
         { "add_single_array", reinterpret_cast<PyCFunction>(LoggingFields_AddSingleArray), METH_VARARGS, nullptr },
+        { "add_single_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddSingleArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_single_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddSingleArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_single_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddSingleWithFormat), METH_VARARGS, nullptr },
+        { "add_single_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddSingleWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_size", reinterpret_cast<PyCFunction>(LoggingFields_AddSize), METH_VARARGS, nullptr },
         { "add_size_array", reinterpret_cast<PyCFunction>(LoggingFields_AddSizeArray), METH_VARARGS, nullptr },
+        { "add_size_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddSizeArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_size_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddSizeArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_size_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddSizeWithFormat), METH_VARARGS, nullptr },
+        { "add_size_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddSizeWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_string", reinterpret_cast<PyCFunction>(LoggingFields_AddString), METH_VARARGS, nullptr },
         { "add_string_array", reinterpret_cast<PyCFunction>(LoggingFields_AddStringArray), METH_VARARGS, nullptr },
+        { "add_string_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddStringArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_string_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddStringArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_string_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddStringWithFormat), METH_VARARGS, nullptr },
+        { "add_string_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddStringWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_time_span", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpan), METH_VARARGS, nullptr },
         { "add_time_span_array", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpanArray), METH_VARARGS, nullptr },
+        { "add_time_span_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpanArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_time_span_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpanArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_time_span_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpanWithFormat), METH_VARARGS, nullptr },
+        { "add_time_span_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddTimeSpanWithFormatAndTags), METH_VARARGS, nullptr },
         { "add_uint16", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16), METH_VARARGS, nullptr },
         { "add_uint16_array", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16Array), METH_VARARGS, nullptr },
+        { "add_uint16_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_uint16_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_uint16_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16WithFormat), METH_VARARGS, nullptr },
+        { "add_uint16_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt16WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_uint32", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32), METH_VARARGS, nullptr },
         { "add_uint32_array", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32Array), METH_VARARGS, nullptr },
+        { "add_uint32_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_uint32_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_uint32_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32WithFormat), METH_VARARGS, nullptr },
+        { "add_uint32_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt32WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_uint64", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64), METH_VARARGS, nullptr },
         { "add_uint64_array", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64Array), METH_VARARGS, nullptr },
+        { "add_uint64_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_uint64_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_uint64_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64WithFormat), METH_VARARGS, nullptr },
+        { "add_uint64_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt64WithFormatAndTags), METH_VARARGS, nullptr },
         { "add_uint8", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8), METH_VARARGS, nullptr },
         { "add_uint8_array", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8Array), METH_VARARGS, nullptr },
+        { "add_uint8_array_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8ArrayWithFormat), METH_VARARGS, nullptr },
+        { "add_uint8_array_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8ArrayWithFormatAndTags), METH_VARARGS, nullptr },
+        { "add_uint8_with_format", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8WithFormat), METH_VARARGS, nullptr },
+        { "add_uint8_with_format_and_tags", reinterpret_cast<PyCFunction>(LoggingFields_AddUInt8WithFormatAndTags), METH_VARARGS, nullptr },
         { "begin_struct", reinterpret_cast<PyCFunction>(LoggingFields_BeginStruct), METH_VARARGS, nullptr },
+        { "begin_struct_with_tags", reinterpret_cast<PyCFunction>(LoggingFields_BeginStructWithTags), METH_VARARGS, nullptr },
         { "clear", reinterpret_cast<PyCFunction>(LoggingFields_Clear), METH_VARARGS, nullptr },
         { "end_struct", reinterpret_cast<PyCFunction>(LoggingFields_EndStruct), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_LoggingFields, METH_O | METH_STATIC, nullptr },
@@ -7272,7 +8424,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* LoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::LoggingSession* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -7494,6 +8657,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyMethodDef _methods_LoggingSession[] = {
         { "add_logging_channel", reinterpret_cast<PyCFunction>(LoggingSession_AddLoggingChannel), METH_VARARGS, nullptr },
+        { "add_logging_channel_with_level", reinterpret_cast<PyCFunction>(LoggingSession_AddLoggingChannelWithLevel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(LoggingSession_Close), METH_VARARGS, nullptr },
         { "remove_logging_channel", reinterpret_cast<PyCFunction>(LoggingSession_RemoveLoggingChannel), METH_VARARGS, nullptr },
         { "save_to_file_async", reinterpret_cast<PyCFunction>(LoggingSession_SaveToFileAsync), METH_VARARGS, nullptr },
@@ -8001,7 +9165,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IFileLoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::IFileLoggingSession* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8277,6 +9452,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyMethodDef _methods_IFileLoggingSession[] = {
         { "add_logging_channel", reinterpret_cast<PyCFunction>(IFileLoggingSession_AddLoggingChannel), METH_VARARGS, nullptr },
+        { "add_logging_channel_with_level", reinterpret_cast<PyCFunction>(IFileLoggingSession_AddLoggingChannelWithLevel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(IFileLoggingSession_Close), METH_VARARGS, nullptr },
         { "close_and_save_to_file_async", reinterpret_cast<PyCFunction>(IFileLoggingSession_CloseAndSaveToFileAsync), METH_VARARGS, nullptr },
         { "remove_logging_channel", reinterpret_cast<PyCFunction>(IFileLoggingSession_RemoveLoggingChannel), METH_VARARGS, nullptr },
@@ -8395,7 +9571,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingChannel_LogMessageWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8464,7 +9651,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingChannel_LogValuePairWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingChannel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -8682,7 +9880,9 @@ namespace py::cpp::Windows::Foundation::Diagnostics
     static PyMethodDef _methods_ILoggingChannel[] = {
         { "close", reinterpret_cast<PyCFunction>(ILoggingChannel_Close), METH_VARARGS, nullptr },
         { "log_message", reinterpret_cast<PyCFunction>(ILoggingChannel_LogMessage), METH_VARARGS, nullptr },
+        { "log_message_with_level", reinterpret_cast<PyCFunction>(ILoggingChannel_LogMessageWithLevel), METH_VARARGS, nullptr },
         { "log_value_pair", reinterpret_cast<PyCFunction>(ILoggingChannel_LogValuePair), METH_VARARGS, nullptr },
+        { "log_value_pair_with_level", reinterpret_cast<PyCFunction>(ILoggingChannel_LogValuePairWithLevel), METH_VARARGS, nullptr },
         { "add_logging_enabled", reinterpret_cast<PyCFunction>(ILoggingChannel_add_LoggingEnabled), METH_O, nullptr },
         { "remove_logging_enabled", reinterpret_cast<PyCFunction>(ILoggingChannel_remove_LoggingEnabled), METH_O, nullptr },
         { "_assign_array_", _assign_array_ILoggingChannel, METH_O | METH_STATIC, nullptr },
@@ -8763,7 +9963,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingSession_AddLoggingChannelWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingSession* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -8985,6 +10196,7 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyMethodDef _methods_ILoggingSession[] = {
         { "add_logging_channel", reinterpret_cast<PyCFunction>(ILoggingSession_AddLoggingChannel), METH_VARARGS, nullptr },
+        { "add_logging_channel_with_level", reinterpret_cast<PyCFunction>(ILoggingSession_AddLoggingChannelWithLevel), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(ILoggingSession_Close), METH_VARARGS, nullptr },
         { "remove_logging_channel", reinterpret_cast<PyCFunction>(ILoggingSession_RemoveLoggingChannel), METH_VARARGS, nullptr },
         { "save_to_file_async", reinterpret_cast<PyCFunction>(ILoggingSession_SaveToFileAsync), METH_VARARGS, nullptr },
@@ -9061,7 +10273,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_IsEnabledWithLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -9088,7 +10311,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_IsEnabledWithLevelAndKeywords(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -9155,7 +10389,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_LogEventWithFields(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -9184,7 +10429,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_LogEventWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -9214,7 +10470,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_LogEventWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -9283,7 +10550,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 2)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_StartActivityWithFields(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -9311,7 +10589,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 3)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_StartActivityWithFieldsAndLevel(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 3)
         {
             try
             {
@@ -9340,7 +10629,18 @@ namespace py::cpp::Windows::Foundation::Diagnostics
                 return nullptr;
             }
         }
-        else if (arg_count == 4)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ILoggingTarget_StartActivityWithFieldsAndOptions(py::wrapper::Windows::Foundation::Diagnostics::ILoggingTarget* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 4)
         {
             try
             {
@@ -9403,8 +10703,16 @@ namespace py::cpp::Windows::Foundation::Diagnostics
 
     static PyMethodDef _methods_ILoggingTarget[] = {
         { "is_enabled", reinterpret_cast<PyCFunction>(ILoggingTarget_IsEnabled), METH_VARARGS, nullptr },
+        { "is_enabled_with_level", reinterpret_cast<PyCFunction>(ILoggingTarget_IsEnabledWithLevel), METH_VARARGS, nullptr },
+        { "is_enabled_with_level_and_keywords", reinterpret_cast<PyCFunction>(ILoggingTarget_IsEnabledWithLevelAndKeywords), METH_VARARGS, nullptr },
         { "log_event", reinterpret_cast<PyCFunction>(ILoggingTarget_LogEvent), METH_VARARGS, nullptr },
+        { "log_event_with_fields", reinterpret_cast<PyCFunction>(ILoggingTarget_LogEventWithFields), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_level", reinterpret_cast<PyCFunction>(ILoggingTarget_LogEventWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "log_event_with_fields_and_options", reinterpret_cast<PyCFunction>(ILoggingTarget_LogEventWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "start_activity", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivity), METH_VARARGS, nullptr },
+        { "start_activity_with_fields", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFields), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_level", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFieldsAndLevel), METH_VARARGS, nullptr },
+        { "start_activity_with_fields_and_options", reinterpret_cast<PyCFunction>(ILoggingTarget_StartActivityWithFieldsAndOptions), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_ILoggingTarget, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_ILoggingTarget), METH_O | METH_STATIC, nullptr },
         { }

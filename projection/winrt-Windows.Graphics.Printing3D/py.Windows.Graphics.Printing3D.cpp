@@ -5016,7 +5016,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Printing3DModel_TryPartialRepairWithTimeAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
         {
             try
             {
@@ -5079,34 +5090,18 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 return nullptr;
             }
         }
-        else if (arg_count == 1)
+        else
         {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
-
-                return py::convert(self->obj.TryReduceFacesAsync(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
         }
-        else if (arg_count == 2)
+    }
+
+    static PyObject* Printing3DModel_TryReduceFacesWithOptionsAndTimeAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
         {
             try
             {
@@ -5127,6 +5122,44 @@ namespace py::cpp::Windows::Graphics::Printing3D
                 auto param1 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 1);
 
                 return py::convert(self->obj.TryReduceFacesAsync(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Printing3DModel_TryReduceFacesWithOptionsAsync(py::wrapper::Windows::Graphics::Printing3D::Printing3DModel* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Windows.Graphics.Printing3D.Printing3DModel", L"TryReduceFacesAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Windows::Graphics::Printing3D::Printing3DFaceReductionOptions>(args, 0);
+
+                return py::convert(self->obj.TryReduceFacesAsync(param0));
             }
             catch (...)
             {
@@ -5544,7 +5577,10 @@ namespace py::cpp::Windows::Graphics::Printing3D
         { "repair_async", reinterpret_cast<PyCFunction>(Printing3DModel_RepairAsync), METH_VARARGS, nullptr },
         { "repair_with_progress_async", reinterpret_cast<PyCFunction>(Printing3DModel_RepairWithProgressAsync), METH_VARARGS, nullptr },
         { "try_partial_repair_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryPartialRepairAsync), METH_VARARGS, nullptr },
+        { "try_partial_repair_with_time_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryPartialRepairWithTimeAsync), METH_VARARGS, nullptr },
         { "try_reduce_faces_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryReduceFacesAsync), METH_VARARGS, nullptr },
+        { "try_reduce_faces_with_options_and_time_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryReduceFacesWithOptionsAndTimeAsync), METH_VARARGS, nullptr },
+        { "try_reduce_faces_with_options_async", reinterpret_cast<PyCFunction>(Printing3DModel_TryReduceFacesWithOptionsAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Printing3DModel, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Printing3DModel), METH_O | METH_STATIC, nullptr },
         { }
