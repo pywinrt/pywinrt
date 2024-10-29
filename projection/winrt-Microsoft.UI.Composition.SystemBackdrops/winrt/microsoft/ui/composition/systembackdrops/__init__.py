@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_composition_systembackdrops
+from winrt._winrt_microsoft_ui_composition_systembackdrops import (
+    DesktopAcrylicController,
+    MicaController,
+    SystemBackdropConfiguration,
+    ISystemBackdropController,
+    ISystemBackdropControllerWithTargets,
+)
 
 __all__ = [
     "DesktopAcrylicKind",
@@ -36,8 +42,3 @@ class SystemBackdropTheme(enum.IntEnum):
     LIGHT = 1
     DARK = 2
 
-DesktopAcrylicController = _winrt_microsoft_ui_composition_systembackdrops.DesktopAcrylicController
-MicaController = _winrt_microsoft_ui_composition_systembackdrops.MicaController
-SystemBackdropConfiguration = _winrt_microsoft_ui_composition_systembackdrops.SystemBackdropConfiguration
-ISystemBackdropController = _winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropController
-ISystemBackdropControllerWithTargets = _winrt_microsoft_ui_composition_systembackdrops.ISystemBackdropControllerWithTargets

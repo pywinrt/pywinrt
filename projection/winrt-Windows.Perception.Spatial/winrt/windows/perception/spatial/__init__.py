@@ -3,7 +3,34 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_perception_spatial
+from winrt._winrt_windows_perception_spatial import (
+    SpatialBoundingBox,
+    SpatialBoundingFrustum,
+    SpatialBoundingOrientedBox,
+    SpatialBoundingSphere,
+    SpatialRay,
+    SpatialAnchor,
+    SpatialAnchorExportSufficiency,
+    SpatialAnchorExporter,
+    SpatialAnchorManager,
+    SpatialAnchorRawCoordinateSystemAdjustedEventArgs,
+    SpatialAnchorStore,
+    SpatialAnchorTransferManager,
+    SpatialBoundingVolume,
+    SpatialCoordinateSystem,
+    SpatialEntity,
+    SpatialEntityAddedEventArgs,
+    SpatialEntityRemovedEventArgs,
+    SpatialEntityStore,
+    SpatialEntityUpdatedEventArgs,
+    SpatialEntityWatcher,
+    SpatialLocation,
+    SpatialLocator,
+    SpatialLocatorAttachedFrameOfReference,
+    SpatialLocatorPositionalTrackingDeactivatingEventArgs,
+    SpatialStageFrameOfReference,
+    SpatialStationaryFrameOfReference,
+)
 
 __all__ = [
     "SpatialAnchorExportPurpose",
@@ -73,29 +100,3 @@ class SpatialPerceptionAccessStatus(enum.IntEnum):
     DENIED_BY_USER = 2
     DENIED_BY_SYSTEM = 3
 
-SpatialBoundingBox = _winrt_windows_perception_spatial.SpatialBoundingBox
-SpatialBoundingFrustum = _winrt_windows_perception_spatial.SpatialBoundingFrustum
-SpatialBoundingOrientedBox = _winrt_windows_perception_spatial.SpatialBoundingOrientedBox
-SpatialBoundingSphere = _winrt_windows_perception_spatial.SpatialBoundingSphere
-SpatialRay = _winrt_windows_perception_spatial.SpatialRay
-SpatialAnchor = _winrt_windows_perception_spatial.SpatialAnchor
-SpatialAnchorExportSufficiency = _winrt_windows_perception_spatial.SpatialAnchorExportSufficiency
-SpatialAnchorExporter = _winrt_windows_perception_spatial.SpatialAnchorExporter
-SpatialAnchorManager = _winrt_windows_perception_spatial.SpatialAnchorManager
-SpatialAnchorRawCoordinateSystemAdjustedEventArgs = _winrt_windows_perception_spatial.SpatialAnchorRawCoordinateSystemAdjustedEventArgs
-SpatialAnchorStore = _winrt_windows_perception_spatial.SpatialAnchorStore
-SpatialAnchorTransferManager = _winrt_windows_perception_spatial.SpatialAnchorTransferManager
-SpatialBoundingVolume = _winrt_windows_perception_spatial.SpatialBoundingVolume
-SpatialCoordinateSystem = _winrt_windows_perception_spatial.SpatialCoordinateSystem
-SpatialEntity = _winrt_windows_perception_spatial.SpatialEntity
-SpatialEntityAddedEventArgs = _winrt_windows_perception_spatial.SpatialEntityAddedEventArgs
-SpatialEntityRemovedEventArgs = _winrt_windows_perception_spatial.SpatialEntityRemovedEventArgs
-SpatialEntityStore = _winrt_windows_perception_spatial.SpatialEntityStore
-SpatialEntityUpdatedEventArgs = _winrt_windows_perception_spatial.SpatialEntityUpdatedEventArgs
-SpatialEntityWatcher = _winrt_windows_perception_spatial.SpatialEntityWatcher
-SpatialLocation = _winrt_windows_perception_spatial.SpatialLocation
-SpatialLocator = _winrt_windows_perception_spatial.SpatialLocator
-SpatialLocatorAttachedFrameOfReference = _winrt_windows_perception_spatial.SpatialLocatorAttachedFrameOfReference
-SpatialLocatorPositionalTrackingDeactivatingEventArgs = _winrt_windows_perception_spatial.SpatialLocatorPositionalTrackingDeactivatingEventArgs
-SpatialStageFrameOfReference = _winrt_windows_perception_spatial.SpatialStageFrameOfReference
-SpatialStationaryFrameOfReference = _winrt_windows_perception_spatial.SpatialStationaryFrameOfReference

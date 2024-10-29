@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_spi
+from winrt._winrt_windows_devices_spi import (
+    SpiBusInfo,
+    SpiConnectionSettings,
+    SpiController,
+    SpiDevice,
+    ISpiDeviceStatics,
+)
 
 __all__ = [
     "SpiMode",
@@ -25,8 +31,3 @@ class SpiSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED = 1
 
-SpiBusInfo = _winrt_windows_devices_spi.SpiBusInfo
-SpiConnectionSettings = _winrt_windows_devices_spi.SpiConnectionSettings
-SpiController = _winrt_windows_devices_spi.SpiController
-SpiDevice = _winrt_windows_devices_spi.SpiDevice
-ISpiDeviceStatics = _winrt_windows_devices_spi.ISpiDeviceStatics

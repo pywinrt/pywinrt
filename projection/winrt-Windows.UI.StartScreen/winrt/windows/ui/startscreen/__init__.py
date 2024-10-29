@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_startscreen
+from winrt._winrt_windows_ui_startscreen import (
+    JumpList,
+    JumpListItem,
+    SecondaryTile,
+    SecondaryTileVisualElements,
+    StartScreenManager,
+    TileMixedRealityModel,
+    VisualElementsRequest,
+    VisualElementsRequestDeferral,
+    VisualElementsRequestedEventArgs,
+)
 
 __all__ = [
     "ForegroundText",
@@ -56,12 +66,3 @@ class TileSize(enum.IntEnum):
     SQUARE71X71 = 6
     SQUARE44X44 = 7
 
-JumpList = _winrt_windows_ui_startscreen.JumpList
-JumpListItem = _winrt_windows_ui_startscreen.JumpListItem
-SecondaryTile = _winrt_windows_ui_startscreen.SecondaryTile
-SecondaryTileVisualElements = _winrt_windows_ui_startscreen.SecondaryTileVisualElements
-StartScreenManager = _winrt_windows_ui_startscreen.StartScreenManager
-TileMixedRealityModel = _winrt_windows_ui_startscreen.TileMixedRealityModel
-VisualElementsRequest = _winrt_windows_ui_startscreen.VisualElementsRequest
-VisualElementsRequestDeferral = _winrt_windows_ui_startscreen.VisualElementsRequestDeferral
-VisualElementsRequestedEventArgs = _winrt_windows_ui_startscreen.VisualElementsRequestedEventArgs

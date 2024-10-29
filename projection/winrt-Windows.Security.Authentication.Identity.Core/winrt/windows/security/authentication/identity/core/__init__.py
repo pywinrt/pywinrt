@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_authentication_identity_core
+from winrt._winrt_windows_security_authentication_identity_core import (
+    MicrosoftAccountMultiFactorAuthenticationManager,
+    MicrosoftAccountMultiFactorGetSessionsResult,
+    MicrosoftAccountMultiFactorOneTimeCodedInfo,
+    MicrosoftAccountMultiFactorSessionInfo,
+    MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo,
+)
 
 __all__ = [
     "MicrosoftAccountMultiFactorAuthenticationType",
@@ -54,8 +60,3 @@ class MicrosoftAccountMultiFactorSessionAuthenticationStatus(enum.IntEnum):
     AUTHENTICATED = 0
     UNAUTHENTICATED = 1
 
-MicrosoftAccountMultiFactorAuthenticationManager = _winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorAuthenticationManager
-MicrosoftAccountMultiFactorGetSessionsResult = _winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorGetSessionsResult
-MicrosoftAccountMultiFactorOneTimeCodedInfo = _winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorOneTimeCodedInfo
-MicrosoftAccountMultiFactorSessionInfo = _winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorSessionInfo
-MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo = _winrt_windows_security_authentication_identity_core.MicrosoftAccountMultiFactorUnregisteredAccountsAndSessionInfo

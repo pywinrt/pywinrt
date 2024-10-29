@@ -564,7 +564,25 @@ static class FileWriters
         }
 
         w.WriteLine("import winrt.system");
-        w.WriteLine($"from winrt import {ns.ToNsModuleName()}");
+
+        var allExtensionTypes = members
+            .Structs.Where(s => !s.Type.IsCustomizedStruct())
+            .Concat(members.Classes)
+            .Concat(members.Interfaces);
+
+        if (allExtensionTypes.Any())
+        {
+            w.WriteLine($"from winrt.{ns.ToNsModuleName()} import (");
+            w.Indent++;
+
+            foreach (var type in allExtensionTypes)
+            {
+                w.WriteLine($"{type.Name},");
+            }
+
+            w.Indent--;
+            w.WriteLine(")");
+        }
 
         // Since not all packages may be installed, delegates can't safely
         // import their parameter types at runtime. So we conditionally import
@@ -617,13 +635,7 @@ static class FileWriters
         w.WriteLine($"__all__ = [");
         w.Indent++;
 
-        foreach (
-            var type in members
-                .Enums.Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
-                .Concat(members.Classes)
-                .Concat(members.Interfaces)
-                .Concat(members.Delegates)
-        )
+        foreach (var type in members.Enums.Concat(allExtensionTypes).Concat(members.Delegates))
         {
             w.WriteLine($"\"{type.Name}\",");
         }
@@ -666,15 +678,8 @@ static class FileWriters
 
         w.WriteBlankLine();
 
-        foreach (
-            var type in members
-                .Structs.Where(s => !s.Type.IsCustomizedStruct())
-                .Concat(members.Classes)
-                .Concat(members.Interfaces)
-        )
+        foreach (var type in allExtensionTypes)
         {
-            w.WriteLine($"{type.Name} = {ns.ToNsModuleName()}.{type.Name}");
-
             if (type.IsPyMutableMapping)
             {
                 w.WriteLine($"winrt.system._mixin_mutable_mapping({type.Name})");

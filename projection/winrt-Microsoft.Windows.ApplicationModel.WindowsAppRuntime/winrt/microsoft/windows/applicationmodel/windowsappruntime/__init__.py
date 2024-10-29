@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_applicationmodel_windowsappruntime
+from winrt._winrt_microsoft_windows_applicationmodel_windowsappruntime import (
+    DeploymentInitializeOptions,
+    DeploymentManager,
+    DeploymentResult,
+)
 
 __all__ = [
     "DeploymentStatus",
@@ -18,6 +22,3 @@ class DeploymentStatus(enum.IntEnum):
     PACKAGE_INSTALL_REQUIRED = 2
     PACKAGE_INSTALL_FAILED = 3
 
-DeploymentInitializeOptions = _winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentInitializeOptions
-DeploymentManager = _winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentManager
-DeploymentResult = _winrt_microsoft_windows_applicationmodel_windowsappruntime.DeploymentResult

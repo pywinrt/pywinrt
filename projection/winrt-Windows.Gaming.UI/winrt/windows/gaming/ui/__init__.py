@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_ui
+from winrt._winrt_windows_gaming_ui import (
+    GameBar,
+    GameChatMessageReceivedEventArgs,
+    GameChatOverlay,
+    GameChatOverlayMessageSource,
+    GameUIProviderActivatedEventArgs,
+)
 
 __all__ = [
     "GameChatMessageOrigin",
@@ -29,8 +35,3 @@ class GameChatOverlayPosition(enum.IntEnum):
     TOP_LEFT = 6
     TOP_RIGHT = 7
 
-GameBar = _winrt_windows_gaming_ui.GameBar
-GameChatMessageReceivedEventArgs = _winrt_windows_gaming_ui.GameChatMessageReceivedEventArgs
-GameChatOverlay = _winrt_windows_gaming_ui.GameChatOverlay
-GameChatOverlayMessageSource = _winrt_windows_gaming_ui.GameChatOverlayMessageSource
-GameUIProviderActivatedEventArgs = _winrt_windows_gaming_ui.GameUIProviderActivatedEventArgs

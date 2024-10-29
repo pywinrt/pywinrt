@@ -3,7 +3,79 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_sensors
+from winrt._winrt_windows_devices_sensors import (
+    Accelerometer,
+    AccelerometerDataThreshold,
+    AccelerometerReading,
+    AccelerometerReadingChangedEventArgs,
+    AccelerometerShakenEventArgs,
+    ActivitySensor,
+    ActivitySensorReading,
+    ActivitySensorReadingChangeReport,
+    ActivitySensorReadingChangedEventArgs,
+    ActivitySensorTriggerDetails,
+    AdaptiveDimmingOptions,
+    Altimeter,
+    AltimeterReading,
+    AltimeterReadingChangedEventArgs,
+    Barometer,
+    BarometerDataThreshold,
+    BarometerReading,
+    BarometerReadingChangedEventArgs,
+    Compass,
+    CompassDataThreshold,
+    CompassReading,
+    CompassReadingChangedEventArgs,
+    DetectedPerson,
+    Gyrometer,
+    GyrometerDataThreshold,
+    GyrometerReading,
+    GyrometerReadingChangedEventArgs,
+    HeadOrientation,
+    HeadPosition,
+    HingeAngleReading,
+    HingeAngleSensor,
+    HingeAngleSensorReadingChangedEventArgs,
+    HumanPresenceFeatures,
+    HumanPresenceSensor,
+    HumanPresenceSensorReading,
+    HumanPresenceSensorReadingChangedEventArgs,
+    HumanPresenceSensorReadingUpdate,
+    HumanPresenceSettings,
+    Inclinometer,
+    InclinometerDataThreshold,
+    InclinometerReading,
+    InclinometerReadingChangedEventArgs,
+    LightSensor,
+    LightSensorDataThreshold,
+    LightSensorReading,
+    LightSensorReadingChangedEventArgs,
+    LockOnLeaveOptions,
+    Magnetometer,
+    MagnetometerDataThreshold,
+    MagnetometerReading,
+    MagnetometerReadingChangedEventArgs,
+    OrientationSensor,
+    OrientationSensorReading,
+    OrientationSensorReadingChangedEventArgs,
+    Pedometer,
+    PedometerDataThreshold,
+    PedometerReading,
+    PedometerReadingChangedEventArgs,
+    ProximitySensor,
+    ProximitySensorDataThreshold,
+    ProximitySensorDisplayOnOffController,
+    ProximitySensorReading,
+    ProximitySensorReadingChangedEventArgs,
+    SensorDataThresholdTriggerDetails,
+    SensorQuaternion,
+    SensorRotationMatrix,
+    SimpleOrientationSensor,
+    SimpleOrientationSensorOrientationChangedEventArgs,
+    WakeOnApproachOptions,
+    IHumanPresenceSensorExtension,
+    ISensorDataThreshold,
+)
 
 __all__ = [
     "AccelerometerReadingType",
@@ -162,74 +234,3 @@ class SimpleOrientation(enum.IntEnum):
     FACEUP = 4
     FACEDOWN = 5
 
-Accelerometer = _winrt_windows_devices_sensors.Accelerometer
-AccelerometerDataThreshold = _winrt_windows_devices_sensors.AccelerometerDataThreshold
-AccelerometerReading = _winrt_windows_devices_sensors.AccelerometerReading
-AccelerometerReadingChangedEventArgs = _winrt_windows_devices_sensors.AccelerometerReadingChangedEventArgs
-AccelerometerShakenEventArgs = _winrt_windows_devices_sensors.AccelerometerShakenEventArgs
-ActivitySensor = _winrt_windows_devices_sensors.ActivitySensor
-ActivitySensorReading = _winrt_windows_devices_sensors.ActivitySensorReading
-ActivitySensorReadingChangeReport = _winrt_windows_devices_sensors.ActivitySensorReadingChangeReport
-ActivitySensorReadingChangedEventArgs = _winrt_windows_devices_sensors.ActivitySensorReadingChangedEventArgs
-ActivitySensorTriggerDetails = _winrt_windows_devices_sensors.ActivitySensorTriggerDetails
-AdaptiveDimmingOptions = _winrt_windows_devices_sensors.AdaptiveDimmingOptions
-Altimeter = _winrt_windows_devices_sensors.Altimeter
-AltimeterReading = _winrt_windows_devices_sensors.AltimeterReading
-AltimeterReadingChangedEventArgs = _winrt_windows_devices_sensors.AltimeterReadingChangedEventArgs
-Barometer = _winrt_windows_devices_sensors.Barometer
-BarometerDataThreshold = _winrt_windows_devices_sensors.BarometerDataThreshold
-BarometerReading = _winrt_windows_devices_sensors.BarometerReading
-BarometerReadingChangedEventArgs = _winrt_windows_devices_sensors.BarometerReadingChangedEventArgs
-Compass = _winrt_windows_devices_sensors.Compass
-CompassDataThreshold = _winrt_windows_devices_sensors.CompassDataThreshold
-CompassReading = _winrt_windows_devices_sensors.CompassReading
-CompassReadingChangedEventArgs = _winrt_windows_devices_sensors.CompassReadingChangedEventArgs
-DetectedPerson = _winrt_windows_devices_sensors.DetectedPerson
-Gyrometer = _winrt_windows_devices_sensors.Gyrometer
-GyrometerDataThreshold = _winrt_windows_devices_sensors.GyrometerDataThreshold
-GyrometerReading = _winrt_windows_devices_sensors.GyrometerReading
-GyrometerReadingChangedEventArgs = _winrt_windows_devices_sensors.GyrometerReadingChangedEventArgs
-HeadOrientation = _winrt_windows_devices_sensors.HeadOrientation
-HeadPosition = _winrt_windows_devices_sensors.HeadPosition
-HingeAngleReading = _winrt_windows_devices_sensors.HingeAngleReading
-HingeAngleSensor = _winrt_windows_devices_sensors.HingeAngleSensor
-HingeAngleSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.HingeAngleSensorReadingChangedEventArgs
-HumanPresenceFeatures = _winrt_windows_devices_sensors.HumanPresenceFeatures
-HumanPresenceSensor = _winrt_windows_devices_sensors.HumanPresenceSensor
-HumanPresenceSensorReading = _winrt_windows_devices_sensors.HumanPresenceSensorReading
-HumanPresenceSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.HumanPresenceSensorReadingChangedEventArgs
-HumanPresenceSensorReadingUpdate = _winrt_windows_devices_sensors.HumanPresenceSensorReadingUpdate
-HumanPresenceSettings = _winrt_windows_devices_sensors.HumanPresenceSettings
-Inclinometer = _winrt_windows_devices_sensors.Inclinometer
-InclinometerDataThreshold = _winrt_windows_devices_sensors.InclinometerDataThreshold
-InclinometerReading = _winrt_windows_devices_sensors.InclinometerReading
-InclinometerReadingChangedEventArgs = _winrt_windows_devices_sensors.InclinometerReadingChangedEventArgs
-LightSensor = _winrt_windows_devices_sensors.LightSensor
-LightSensorDataThreshold = _winrt_windows_devices_sensors.LightSensorDataThreshold
-LightSensorReading = _winrt_windows_devices_sensors.LightSensorReading
-LightSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.LightSensorReadingChangedEventArgs
-LockOnLeaveOptions = _winrt_windows_devices_sensors.LockOnLeaveOptions
-Magnetometer = _winrt_windows_devices_sensors.Magnetometer
-MagnetometerDataThreshold = _winrt_windows_devices_sensors.MagnetometerDataThreshold
-MagnetometerReading = _winrt_windows_devices_sensors.MagnetometerReading
-MagnetometerReadingChangedEventArgs = _winrt_windows_devices_sensors.MagnetometerReadingChangedEventArgs
-OrientationSensor = _winrt_windows_devices_sensors.OrientationSensor
-OrientationSensorReading = _winrt_windows_devices_sensors.OrientationSensorReading
-OrientationSensorReadingChangedEventArgs = _winrt_windows_devices_sensors.OrientationSensorReadingChangedEventArgs
-Pedometer = _winrt_windows_devices_sensors.Pedometer
-PedometerDataThreshold = _winrt_windows_devices_sensors.PedometerDataThreshold
-PedometerReading = _winrt_windows_devices_sensors.PedometerReading
-PedometerReadingChangedEventArgs = _winrt_windows_devices_sensors.PedometerReadingChangedEventArgs
-ProximitySensor = _winrt_windows_devices_sensors.ProximitySensor
-ProximitySensorDataThreshold = _winrt_windows_devices_sensors.ProximitySensorDataThreshold
-ProximitySensorDisplayOnOffController = _winrt_windows_devices_sensors.ProximitySensorDisplayOnOffController
-ProximitySensorReading = _winrt_windows_devices_sensors.ProximitySensorReading
-ProximitySensorReadingChangedEventArgs = _winrt_windows_devices_sensors.ProximitySensorReadingChangedEventArgs
-SensorDataThresholdTriggerDetails = _winrt_windows_devices_sensors.SensorDataThresholdTriggerDetails
-SensorQuaternion = _winrt_windows_devices_sensors.SensorQuaternion
-SensorRotationMatrix = _winrt_windows_devices_sensors.SensorRotationMatrix
-SimpleOrientationSensor = _winrt_windows_devices_sensors.SimpleOrientationSensor
-SimpleOrientationSensorOrientationChangedEventArgs = _winrt_windows_devices_sensors.SimpleOrientationSensorOrientationChangedEventArgs
-WakeOnApproachOptions = _winrt_windows_devices_sensors.WakeOnApproachOptions
-IHumanPresenceSensorExtension = _winrt_windows_devices_sensors.IHumanPresenceSensorExtension
-ISensorDataThreshold = _winrt_windows_devices_sensors.ISensorDataThreshold

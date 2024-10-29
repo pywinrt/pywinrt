@@ -5,7 +5,31 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_data
+from winrt._winrt_microsoft_ui_xaml_data import (
+    LoadMoreItemsResult,
+    Binding,
+    BindingBase,
+    BindingExpression,
+    BindingExpressionBase,
+    BindingOperations,
+    CollectionViewSource,
+    CurrentChangingEventArgs,
+    DataErrorsChangedEventArgs,
+    ItemIndexRange,
+    PropertyChangedEventArgs,
+    RelativeSource,
+    ICollectionView,
+    ICollectionViewFactory,
+    ICollectionViewGroup,
+    ICustomProperty,
+    ICustomPropertyProvider,
+    IItemsRangeInfo,
+    INotifyDataErrorInfo,
+    INotifyPropertyChanged,
+    ISelectionInfo,
+    ISupportIncrementalLoading,
+    IValueConverter,
+)
 
 __all__ = [
     "BindingMode",
@@ -54,29 +78,6 @@ class UpdateSourceTrigger(enum.IntEnum):
     EXPLICIT = 2
     LOST_FOCUS = 3
 
-LoadMoreItemsResult = _winrt_microsoft_ui_xaml_data.LoadMoreItemsResult
-Binding = _winrt_microsoft_ui_xaml_data.Binding
-BindingBase = _winrt_microsoft_ui_xaml_data.BindingBase
-BindingExpression = _winrt_microsoft_ui_xaml_data.BindingExpression
-BindingExpressionBase = _winrt_microsoft_ui_xaml_data.BindingExpressionBase
-BindingOperations = _winrt_microsoft_ui_xaml_data.BindingOperations
-CollectionViewSource = _winrt_microsoft_ui_xaml_data.CollectionViewSource
-CurrentChangingEventArgs = _winrt_microsoft_ui_xaml_data.CurrentChangingEventArgs
-DataErrorsChangedEventArgs = _winrt_microsoft_ui_xaml_data.DataErrorsChangedEventArgs
-ItemIndexRange = _winrt_microsoft_ui_xaml_data.ItemIndexRange
-PropertyChangedEventArgs = _winrt_microsoft_ui_xaml_data.PropertyChangedEventArgs
-RelativeSource = _winrt_microsoft_ui_xaml_data.RelativeSource
-ICollectionView = _winrt_microsoft_ui_xaml_data.ICollectionView
 winrt.system._mixin_mutable_sequence(ICollectionView)
-ICollectionViewFactory = _winrt_microsoft_ui_xaml_data.ICollectionViewFactory
-ICollectionViewGroup = _winrt_microsoft_ui_xaml_data.ICollectionViewGroup
-ICustomProperty = _winrt_microsoft_ui_xaml_data.ICustomProperty
-ICustomPropertyProvider = _winrt_microsoft_ui_xaml_data.ICustomPropertyProvider
-IItemsRangeInfo = _winrt_microsoft_ui_xaml_data.IItemsRangeInfo
-INotifyDataErrorInfo = _winrt_microsoft_ui_xaml_data.INotifyDataErrorInfo
-INotifyPropertyChanged = _winrt_microsoft_ui_xaml_data.INotifyPropertyChanged
-ISelectionInfo = _winrt_microsoft_ui_xaml_data.ISelectionInfo
-ISupportIncrementalLoading = _winrt_microsoft_ui_xaml_data.ISupportIncrementalLoading
-IValueConverter = _winrt_microsoft_ui_xaml_data.IValueConverter
 CurrentChangingEventHandler = typing.Callable[[winrt.system.Object, CurrentChangingEventArgs], None]
 PropertyChangedEventHandler = typing.Callable[[winrt.system.Object, PropertyChangedEventArgs], None]

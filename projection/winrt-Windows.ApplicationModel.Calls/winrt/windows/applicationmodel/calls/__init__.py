@@ -3,7 +3,45 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_calls
+from winrt._winrt_windows_applicationmodel_calls import (
+    AcceptedVoipPhoneCallOptions,
+    AppInitiatedVoipPhoneCallOptions,
+    CallAnswerEventArgs,
+    CallRejectEventArgs,
+    CallStateChangeEventArgs,
+    IncomingVoipPhoneCallOptions,
+    LockScreenCallEndCallDeferral,
+    LockScreenCallEndRequestedEventArgs,
+    LockScreenCallUI,
+    MuteChangeEventArgs,
+    OutgoingVoipPhoneCallOptions,
+    PhoneCall,
+    PhoneCallBlocking,
+    PhoneCallHistoryEntry,
+    PhoneCallHistoryEntryAddress,
+    PhoneCallHistoryEntryQueryOptions,
+    PhoneCallHistoryEntryReader,
+    PhoneCallHistoryManager,
+    PhoneCallHistoryManagerForUser,
+    PhoneCallHistoryStore,
+    PhoneCallInfo,
+    PhoneCallManager,
+    PhoneCallStore,
+    PhoneCallVideoCapabilities,
+    PhoneCallVideoCapabilitiesManager,
+    PhoneCallsResult,
+    PhoneDialOptions,
+    PhoneLine,
+    PhoneLineCellularDetails,
+    PhoneLineConfiguration,
+    PhoneLineDialResult,
+    PhoneLineTransportDevice,
+    PhoneLineWatcher,
+    PhoneLineWatcherEventArgs,
+    PhoneVoicemail,
+    VoipCallCoordinator,
+    VoipPhoneCall,
+)
 
 __all__ = [
     "CellularDtmfMode",
@@ -238,40 +276,3 @@ class VoipPhoneCallState(enum.IntEnum):
     INCOMING = 3
     OUTGOING = 4
 
-AcceptedVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.AcceptedVoipPhoneCallOptions
-AppInitiatedVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.AppInitiatedVoipPhoneCallOptions
-CallAnswerEventArgs = _winrt_windows_applicationmodel_calls.CallAnswerEventArgs
-CallRejectEventArgs = _winrt_windows_applicationmodel_calls.CallRejectEventArgs
-CallStateChangeEventArgs = _winrt_windows_applicationmodel_calls.CallStateChangeEventArgs
-IncomingVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.IncomingVoipPhoneCallOptions
-LockScreenCallEndCallDeferral = _winrt_windows_applicationmodel_calls.LockScreenCallEndCallDeferral
-LockScreenCallEndRequestedEventArgs = _winrt_windows_applicationmodel_calls.LockScreenCallEndRequestedEventArgs
-LockScreenCallUI = _winrt_windows_applicationmodel_calls.LockScreenCallUI
-MuteChangeEventArgs = _winrt_windows_applicationmodel_calls.MuteChangeEventArgs
-OutgoingVoipPhoneCallOptions = _winrt_windows_applicationmodel_calls.OutgoingVoipPhoneCallOptions
-PhoneCall = _winrt_windows_applicationmodel_calls.PhoneCall
-PhoneCallBlocking = _winrt_windows_applicationmodel_calls.PhoneCallBlocking
-PhoneCallHistoryEntry = _winrt_windows_applicationmodel_calls.PhoneCallHistoryEntry
-PhoneCallHistoryEntryAddress = _winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryAddress
-PhoneCallHistoryEntryQueryOptions = _winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryQueryOptions
-PhoneCallHistoryEntryReader = _winrt_windows_applicationmodel_calls.PhoneCallHistoryEntryReader
-PhoneCallHistoryManager = _winrt_windows_applicationmodel_calls.PhoneCallHistoryManager
-PhoneCallHistoryManagerForUser = _winrt_windows_applicationmodel_calls.PhoneCallHistoryManagerForUser
-PhoneCallHistoryStore = _winrt_windows_applicationmodel_calls.PhoneCallHistoryStore
-PhoneCallInfo = _winrt_windows_applicationmodel_calls.PhoneCallInfo
-PhoneCallManager = _winrt_windows_applicationmodel_calls.PhoneCallManager
-PhoneCallStore = _winrt_windows_applicationmodel_calls.PhoneCallStore
-PhoneCallVideoCapabilities = _winrt_windows_applicationmodel_calls.PhoneCallVideoCapabilities
-PhoneCallVideoCapabilitiesManager = _winrt_windows_applicationmodel_calls.PhoneCallVideoCapabilitiesManager
-PhoneCallsResult = _winrt_windows_applicationmodel_calls.PhoneCallsResult
-PhoneDialOptions = _winrt_windows_applicationmodel_calls.PhoneDialOptions
-PhoneLine = _winrt_windows_applicationmodel_calls.PhoneLine
-PhoneLineCellularDetails = _winrt_windows_applicationmodel_calls.PhoneLineCellularDetails
-PhoneLineConfiguration = _winrt_windows_applicationmodel_calls.PhoneLineConfiguration
-PhoneLineDialResult = _winrt_windows_applicationmodel_calls.PhoneLineDialResult
-PhoneLineTransportDevice = _winrt_windows_applicationmodel_calls.PhoneLineTransportDevice
-PhoneLineWatcher = _winrt_windows_applicationmodel_calls.PhoneLineWatcher
-PhoneLineWatcherEventArgs = _winrt_windows_applicationmodel_calls.PhoneLineWatcherEventArgs
-PhoneVoicemail = _winrt_windows_applicationmodel_calls.PhoneVoicemail
-VoipCallCoordinator = _winrt_windows_applicationmodel_calls.VoipCallCoordinator
-VoipPhoneCall = _winrt_windows_applicationmodel_calls.VoipPhoneCall

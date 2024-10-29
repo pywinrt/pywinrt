@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_management_deployment
+from winrt._winrt_microsoft_windows_management_deployment import (
+    PackageDeploymentProgress,
+    AddPackageOptions,
+    EnsureReadyOptions,
+    PackageDeploymentManager,
+    PackageDeploymentResult,
+    PackageRuntimeManager,
+    PackageSet,
+    PackageSetItem,
+    PackageSetItemRuntimeDisposition,
+    PackageSetRuntimeDisposition,
+    PackageVolume,
+    ProvisionPackageOptions,
+    RegisterPackageOptions,
+    RemovePackageOptions,
+    StagePackageOptions,
+)
 
 __all__ = [
     "PackageDeploymentFeature",
@@ -58,18 +74,3 @@ class StubPackageOption(enum.IntEnum):
     INSTALL_STUB = 2
     USE_PREFERENCE = 3
 
-PackageDeploymentProgress = _winrt_microsoft_windows_management_deployment.PackageDeploymentProgress
-AddPackageOptions = _winrt_microsoft_windows_management_deployment.AddPackageOptions
-EnsureReadyOptions = _winrt_microsoft_windows_management_deployment.EnsureReadyOptions
-PackageDeploymentManager = _winrt_microsoft_windows_management_deployment.PackageDeploymentManager
-PackageDeploymentResult = _winrt_microsoft_windows_management_deployment.PackageDeploymentResult
-PackageRuntimeManager = _winrt_microsoft_windows_management_deployment.PackageRuntimeManager
-PackageSet = _winrt_microsoft_windows_management_deployment.PackageSet
-PackageSetItem = _winrt_microsoft_windows_management_deployment.PackageSetItem
-PackageSetItemRuntimeDisposition = _winrt_microsoft_windows_management_deployment.PackageSetItemRuntimeDisposition
-PackageSetRuntimeDisposition = _winrt_microsoft_windows_management_deployment.PackageSetRuntimeDisposition
-PackageVolume = _winrt_microsoft_windows_management_deployment.PackageVolume
-ProvisionPackageOptions = _winrt_microsoft_windows_management_deployment.ProvisionPackageOptions
-RegisterPackageOptions = _winrt_microsoft_windows_management_deployment.RegisterPackageOptions
-RemovePackageOptions = _winrt_microsoft_windows_management_deployment.RemovePackageOptions
-StagePackageOptions = _winrt_microsoft_windows_management_deployment.StagePackageOptions

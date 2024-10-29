@@ -3,7 +3,53 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_playback
+from winrt._winrt_windows_media_playback import (
+    BackgroundMediaPlayer,
+    CurrentMediaPlaybackItemChangedEventArgs,
+    MediaBreak,
+    MediaBreakEndedEventArgs,
+    MediaBreakManager,
+    MediaBreakSchedule,
+    MediaBreakSeekedOverEventArgs,
+    MediaBreakSkippedEventArgs,
+    MediaBreakStartedEventArgs,
+    MediaItemDisplayProperties,
+    MediaPlaybackAudioTrackList,
+    MediaPlaybackCommandManager,
+    MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs,
+    MediaPlaybackCommandManagerCommandBehavior,
+    MediaPlaybackCommandManagerFastForwardReceivedEventArgs,
+    MediaPlaybackCommandManagerNextReceivedEventArgs,
+    MediaPlaybackCommandManagerPauseReceivedEventArgs,
+    MediaPlaybackCommandManagerPlayReceivedEventArgs,
+    MediaPlaybackCommandManagerPositionReceivedEventArgs,
+    MediaPlaybackCommandManagerPreviousReceivedEventArgs,
+    MediaPlaybackCommandManagerRateReceivedEventArgs,
+    MediaPlaybackCommandManagerRewindReceivedEventArgs,
+    MediaPlaybackCommandManagerShuffleReceivedEventArgs,
+    MediaPlaybackItem,
+    MediaPlaybackItemError,
+    MediaPlaybackItemFailedEventArgs,
+    MediaPlaybackItemOpenedEventArgs,
+    MediaPlaybackList,
+    MediaPlaybackSession,
+    MediaPlaybackSessionBufferingStartedEventArgs,
+    MediaPlaybackSessionOutputDegradationPolicyState,
+    MediaPlaybackSphericalVideoProjection,
+    MediaPlaybackTimedMetadataTrackList,
+    MediaPlaybackVideoTrackList,
+    MediaPlayer,
+    MediaPlayerDataReceivedEventArgs,
+    MediaPlayerFailedEventArgs,
+    MediaPlayerRateChangedEventArgs,
+    MediaPlayerSurface,
+    PlaybackMediaMarker,
+    PlaybackMediaMarkerReachedEventArgs,
+    PlaybackMediaMarkerSequence,
+    TimedMetadataPresentationModeChangedEventArgs,
+    IMediaEnginePlaybackSource,
+    IMediaPlaybackSource,
+)
 
 __all__ = [
     "AutoLoadedDisplayPropertyKind",
@@ -164,51 +210,6 @@ class TimedMetadataTrackPresentationMode(enum.IntEnum):
     APPLICATION_PRESENTED = 2
     PLATFORM_PRESENTED = 3
 
-BackgroundMediaPlayer = _winrt_windows_media_playback.BackgroundMediaPlayer
-CurrentMediaPlaybackItemChangedEventArgs = _winrt_windows_media_playback.CurrentMediaPlaybackItemChangedEventArgs
-MediaBreak = _winrt_windows_media_playback.MediaBreak
-MediaBreakEndedEventArgs = _winrt_windows_media_playback.MediaBreakEndedEventArgs
-MediaBreakManager = _winrt_windows_media_playback.MediaBreakManager
-MediaBreakSchedule = _winrt_windows_media_playback.MediaBreakSchedule
-MediaBreakSeekedOverEventArgs = _winrt_windows_media_playback.MediaBreakSeekedOverEventArgs
-MediaBreakSkippedEventArgs = _winrt_windows_media_playback.MediaBreakSkippedEventArgs
-MediaBreakStartedEventArgs = _winrt_windows_media_playback.MediaBreakStartedEventArgs
-MediaItemDisplayProperties = _winrt_windows_media_playback.MediaItemDisplayProperties
-MediaPlaybackAudioTrackList = _winrt_windows_media_playback.MediaPlaybackAudioTrackList
 winrt.system._mixin_sequence(MediaPlaybackAudioTrackList)
-MediaPlaybackCommandManager = _winrt_windows_media_playback.MediaPlaybackCommandManager
-MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerAutoRepeatModeReceivedEventArgs
-MediaPlaybackCommandManagerCommandBehavior = _winrt_windows_media_playback.MediaPlaybackCommandManagerCommandBehavior
-MediaPlaybackCommandManagerFastForwardReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerFastForwardReceivedEventArgs
-MediaPlaybackCommandManagerNextReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerNextReceivedEventArgs
-MediaPlaybackCommandManagerPauseReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerPauseReceivedEventArgs
-MediaPlaybackCommandManagerPlayReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerPlayReceivedEventArgs
-MediaPlaybackCommandManagerPositionReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerPositionReceivedEventArgs
-MediaPlaybackCommandManagerPreviousReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerPreviousReceivedEventArgs
-MediaPlaybackCommandManagerRateReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerRateReceivedEventArgs
-MediaPlaybackCommandManagerRewindReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerRewindReceivedEventArgs
-MediaPlaybackCommandManagerShuffleReceivedEventArgs = _winrt_windows_media_playback.MediaPlaybackCommandManagerShuffleReceivedEventArgs
-MediaPlaybackItem = _winrt_windows_media_playback.MediaPlaybackItem
-MediaPlaybackItemError = _winrt_windows_media_playback.MediaPlaybackItemError
-MediaPlaybackItemFailedEventArgs = _winrt_windows_media_playback.MediaPlaybackItemFailedEventArgs
-MediaPlaybackItemOpenedEventArgs = _winrt_windows_media_playback.MediaPlaybackItemOpenedEventArgs
-MediaPlaybackList = _winrt_windows_media_playback.MediaPlaybackList
-MediaPlaybackSession = _winrt_windows_media_playback.MediaPlaybackSession
-MediaPlaybackSessionBufferingStartedEventArgs = _winrt_windows_media_playback.MediaPlaybackSessionBufferingStartedEventArgs
-MediaPlaybackSessionOutputDegradationPolicyState = _winrt_windows_media_playback.MediaPlaybackSessionOutputDegradationPolicyState
-MediaPlaybackSphericalVideoProjection = _winrt_windows_media_playback.MediaPlaybackSphericalVideoProjection
-MediaPlaybackTimedMetadataTrackList = _winrt_windows_media_playback.MediaPlaybackTimedMetadataTrackList
 winrt.system._mixin_sequence(MediaPlaybackTimedMetadataTrackList)
-MediaPlaybackVideoTrackList = _winrt_windows_media_playback.MediaPlaybackVideoTrackList
 winrt.system._mixin_sequence(MediaPlaybackVideoTrackList)
-MediaPlayer = _winrt_windows_media_playback.MediaPlayer
-MediaPlayerDataReceivedEventArgs = _winrt_windows_media_playback.MediaPlayerDataReceivedEventArgs
-MediaPlayerFailedEventArgs = _winrt_windows_media_playback.MediaPlayerFailedEventArgs
-MediaPlayerRateChangedEventArgs = _winrt_windows_media_playback.MediaPlayerRateChangedEventArgs
-MediaPlayerSurface = _winrt_windows_media_playback.MediaPlayerSurface
-PlaybackMediaMarker = _winrt_windows_media_playback.PlaybackMediaMarker
-PlaybackMediaMarkerReachedEventArgs = _winrt_windows_media_playback.PlaybackMediaMarkerReachedEventArgs
-PlaybackMediaMarkerSequence = _winrt_windows_media_playback.PlaybackMediaMarkerSequence
-TimedMetadataPresentationModeChangedEventArgs = _winrt_windows_media_playback.TimedMetadataPresentationModeChangedEventArgs
-IMediaEnginePlaybackSource = _winrt_windows_media_playback.IMediaEnginePlaybackSource
-IMediaPlaybackSource = _winrt_windows_media_playback.IMediaPlaybackSource

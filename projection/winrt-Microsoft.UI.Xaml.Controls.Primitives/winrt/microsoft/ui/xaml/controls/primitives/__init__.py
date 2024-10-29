@@ -5,7 +5,87 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_controls_primitives
+from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
+    GeneratorPosition,
+    AppBarButtonTemplateSettings,
+    AppBarTemplateSettings,
+    AppBarToggleButtonTemplateSettings,
+    AutoSuggestBoxHelper,
+    ButtonBase,
+    CalendarPanel,
+    CalendarViewTemplateSettings,
+    CarouselPanel,
+    ColorPickerSlider,
+    ColorSpectrum,
+    ColumnMajorUniformToLargestGridLayout,
+    ComboBoxHelper,
+    ComboBoxTemplateSettings,
+    CommandBarFlyoutCommandBar,
+    CommandBarFlyoutCommandBarAutomationProperties,
+    CommandBarFlyoutCommandBarTemplateSettings,
+    CommandBarTemplateSettings,
+    CornerRadiusFilterConverter,
+    CornerRadiusToThicknessConverter,
+    DragCompletedEventArgs,
+    DragDeltaEventArgs,
+    DragStartedEventArgs,
+    FlyoutBase,
+    FlyoutBaseClosingEventArgs,
+    FlyoutShowOptions,
+    GeneratorPositionHelper,
+    GridViewItemPresenter,
+    GridViewItemTemplateSettings,
+    InfoBarPanel,
+    ItemsChangedEventArgs,
+    JumpListItemBackgroundConverter,
+    JumpListItemForegroundConverter,
+    LayoutInformation,
+    ListViewItemPresenter,
+    ListViewItemTemplateSettings,
+    LoopingSelector,
+    LoopingSelectorItem,
+    LoopingSelectorPanel,
+    MenuFlyoutItemTemplateSettings,
+    MenuFlyoutPresenterTemplateSettings,
+    MonochromaticOverlayPresenter,
+    NavigationViewItemPresenter,
+    NavigationViewItemPresenterTemplateSettings,
+    OrientedVirtualizingPanel,
+    PickerFlyoutBase,
+    PivotHeaderItem,
+    PivotHeaderPanel,
+    PivotPanel,
+    Popup,
+    RangeBase,
+    RangeBaseValueChangedEventArgs,
+    RepeatButton,
+    RepeatedScrollSnapPoint,
+    RepeatedZoomSnapPoint,
+    ScrollBar,
+    ScrollControllerAddScrollVelocityRequestedEventArgs,
+    ScrollControllerPanRequestedEventArgs,
+    ScrollControllerScrollByRequestedEventArgs,
+    ScrollControllerScrollToRequestedEventArgs,
+    ScrollEventArgs,
+    ScrollPresenter,
+    ScrollSnapPoint,
+    ScrollSnapPointBase,
+    Selector,
+    SelectorItem,
+    SnapPointBase,
+    SplitViewTemplateSettings,
+    TabViewListView,
+    Thumb,
+    TickBar,
+    ToggleButton,
+    ToggleSwitchTemplateSettings,
+    ToolTipTemplateSettings,
+    ZoomSnapPoint,
+    ZoomSnapPointBase,
+    IScrollController,
+    IScrollControllerPanningInfo,
+    IScrollSnapPointsInfo,
+)
 
 __all__ = [
     "AnimationDirection",
@@ -250,85 +330,6 @@ class TickPlacement(enum.IntEnum):
     OUTSIDE = 3
     INLINE = 4
 
-GeneratorPosition = _winrt_microsoft_ui_xaml_controls_primitives.GeneratorPosition
-AppBarButtonTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.AppBarButtonTemplateSettings
-AppBarTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.AppBarTemplateSettings
-AppBarToggleButtonTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.AppBarToggleButtonTemplateSettings
-AutoSuggestBoxHelper = _winrt_microsoft_ui_xaml_controls_primitives.AutoSuggestBoxHelper
-ButtonBase = _winrt_microsoft_ui_xaml_controls_primitives.ButtonBase
-CalendarPanel = _winrt_microsoft_ui_xaml_controls_primitives.CalendarPanel
-CalendarViewTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.CalendarViewTemplateSettings
-CarouselPanel = _winrt_microsoft_ui_xaml_controls_primitives.CarouselPanel
-ColorPickerSlider = _winrt_microsoft_ui_xaml_controls_primitives.ColorPickerSlider
-ColorSpectrum = _winrt_microsoft_ui_xaml_controls_primitives.ColorSpectrum
-ColumnMajorUniformToLargestGridLayout = _winrt_microsoft_ui_xaml_controls_primitives.ColumnMajorUniformToLargestGridLayout
-ComboBoxHelper = _winrt_microsoft_ui_xaml_controls_primitives.ComboBoxHelper
-ComboBoxTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.ComboBoxTemplateSettings
-CommandBarFlyoutCommandBar = _winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar
-CommandBarFlyoutCommandBarAutomationProperties = _winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarAutomationProperties
-CommandBarFlyoutCommandBarTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.CommandBarFlyoutCommandBarTemplateSettings
-CommandBarTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.CommandBarTemplateSettings
-CornerRadiusFilterConverter = _winrt_microsoft_ui_xaml_controls_primitives.CornerRadiusFilterConverter
-CornerRadiusToThicknessConverter = _winrt_microsoft_ui_xaml_controls_primitives.CornerRadiusToThicknessConverter
-DragCompletedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.DragCompletedEventArgs
-DragDeltaEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.DragDeltaEventArgs
-DragStartedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.DragStartedEventArgs
-FlyoutBase = _winrt_microsoft_ui_xaml_controls_primitives.FlyoutBase
-FlyoutBaseClosingEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.FlyoutBaseClosingEventArgs
-FlyoutShowOptions = _winrt_microsoft_ui_xaml_controls_primitives.FlyoutShowOptions
-GeneratorPositionHelper = _winrt_microsoft_ui_xaml_controls_primitives.GeneratorPositionHelper
-GridViewItemPresenter = _winrt_microsoft_ui_xaml_controls_primitives.GridViewItemPresenter
-GridViewItemTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.GridViewItemTemplateSettings
-InfoBarPanel = _winrt_microsoft_ui_xaml_controls_primitives.InfoBarPanel
-ItemsChangedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ItemsChangedEventArgs
-JumpListItemBackgroundConverter = _winrt_microsoft_ui_xaml_controls_primitives.JumpListItemBackgroundConverter
-JumpListItemForegroundConverter = _winrt_microsoft_ui_xaml_controls_primitives.JumpListItemForegroundConverter
-LayoutInformation = _winrt_microsoft_ui_xaml_controls_primitives.LayoutInformation
-ListViewItemPresenter = _winrt_microsoft_ui_xaml_controls_primitives.ListViewItemPresenter
-ListViewItemTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.ListViewItemTemplateSettings
-LoopingSelector = _winrt_microsoft_ui_xaml_controls_primitives.LoopingSelector
-LoopingSelectorItem = _winrt_microsoft_ui_xaml_controls_primitives.LoopingSelectorItem
-LoopingSelectorPanel = _winrt_microsoft_ui_xaml_controls_primitives.LoopingSelectorPanel
-MenuFlyoutItemTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings
-MenuFlyoutPresenterTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.MenuFlyoutPresenterTemplateSettings
-MonochromaticOverlayPresenter = _winrt_microsoft_ui_xaml_controls_primitives.MonochromaticOverlayPresenter
-NavigationViewItemPresenter = _winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenter
-NavigationViewItemPresenterTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.NavigationViewItemPresenterTemplateSettings
-OrientedVirtualizingPanel = _winrt_microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel
-PickerFlyoutBase = _winrt_microsoft_ui_xaml_controls_primitives.PickerFlyoutBase
-PivotHeaderItem = _winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderItem
-PivotHeaderPanel = _winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderPanel
-PivotPanel = _winrt_microsoft_ui_xaml_controls_primitives.PivotPanel
-Popup = _winrt_microsoft_ui_xaml_controls_primitives.Popup
-RangeBase = _winrt_microsoft_ui_xaml_controls_primitives.RangeBase
-RangeBaseValueChangedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.RangeBaseValueChangedEventArgs
-RepeatButton = _winrt_microsoft_ui_xaml_controls_primitives.RepeatButton
-RepeatedScrollSnapPoint = _winrt_microsoft_ui_xaml_controls_primitives.RepeatedScrollSnapPoint
-RepeatedZoomSnapPoint = _winrt_microsoft_ui_xaml_controls_primitives.RepeatedZoomSnapPoint
-ScrollBar = _winrt_microsoft_ui_xaml_controls_primitives.ScrollBar
-ScrollControllerAddScrollVelocityRequestedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerAddScrollVelocityRequestedEventArgs
-ScrollControllerPanRequestedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerPanRequestedEventArgs
-ScrollControllerScrollByRequestedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerScrollByRequestedEventArgs
-ScrollControllerScrollToRequestedEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ScrollControllerScrollToRequestedEventArgs
-ScrollEventArgs = _winrt_microsoft_ui_xaml_controls_primitives.ScrollEventArgs
-ScrollPresenter = _winrt_microsoft_ui_xaml_controls_primitives.ScrollPresenter
-ScrollSnapPoint = _winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPoint
-ScrollSnapPointBase = _winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPointBase
-Selector = _winrt_microsoft_ui_xaml_controls_primitives.Selector
-SelectorItem = _winrt_microsoft_ui_xaml_controls_primitives.SelectorItem
-SnapPointBase = _winrt_microsoft_ui_xaml_controls_primitives.SnapPointBase
-SplitViewTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.SplitViewTemplateSettings
-TabViewListView = _winrt_microsoft_ui_xaml_controls_primitives.TabViewListView
-Thumb = _winrt_microsoft_ui_xaml_controls_primitives.Thumb
-TickBar = _winrt_microsoft_ui_xaml_controls_primitives.TickBar
-ToggleButton = _winrt_microsoft_ui_xaml_controls_primitives.ToggleButton
-ToggleSwitchTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings
-ToolTipTemplateSettings = _winrt_microsoft_ui_xaml_controls_primitives.ToolTipTemplateSettings
-ZoomSnapPoint = _winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPoint
-ZoomSnapPointBase = _winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPointBase
-IScrollController = _winrt_microsoft_ui_xaml_controls_primitives.IScrollController
-IScrollControllerPanningInfo = _winrt_microsoft_ui_xaml_controls_primitives.IScrollControllerPanningInfo
-IScrollSnapPointsInfo = _winrt_microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo
 DragCompletedEventHandler = typing.Callable[[winrt.system.Object, DragCompletedEventArgs], None]
 DragDeltaEventHandler = typing.Callable[[winrt.system.Object, DragDeltaEventArgs], None]
 DragStartedEventHandler = typing.Callable[[winrt.system.Object, DragStartedEventArgs], None]

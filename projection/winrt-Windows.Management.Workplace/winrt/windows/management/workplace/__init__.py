@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_management_workplace
+from winrt._winrt_windows_management_workplace import (
+    MdmPolicy,
+    WorkplaceSettings,
+)
 
 __all__ = [
     "MessagingSyncPolicy",
@@ -16,5 +19,3 @@ class MessagingSyncPolicy(enum.IntEnum):
     ALLOWED = 1
     REQUIRED = 2
 
-MdmPolicy = _winrt_windows_management_workplace.MdmPolicy
-WorkplaceSettings = _winrt_windows_management_workplace.WorkplaceSettings

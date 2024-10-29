@@ -3,7 +3,33 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_display_core
+from winrt._winrt_windows_devices_display_core import (
+    DisplayPresentationRate,
+    DisplayAdapter,
+    DisplayDevice,
+    DisplayFence,
+    DisplayManager,
+    DisplayManagerChangedEventArgs,
+    DisplayManagerDisabledEventArgs,
+    DisplayManagerEnabledEventArgs,
+    DisplayManagerPathsFailedOrInvalidatedEventArgs,
+    DisplayManagerResultWithState,
+    DisplayModeInfo,
+    DisplayMuxDevice,
+    DisplayPath,
+    DisplayPrimaryDescription,
+    DisplayScanout,
+    DisplaySource,
+    DisplayState,
+    DisplayStateOperationResult,
+    DisplaySurface,
+    DisplayTarget,
+    DisplayTask,
+    DisplayTaskPool,
+    DisplayTaskResult,
+    DisplayView,
+    DisplayWireFormat,
+)
 
 __all__ = [
     "DisplayBitsPerChannel",
@@ -175,28 +201,3 @@ class DisplayWireFormatPixelEncoding(enum.IntEnum):
     YCC420 = 3
     INTENSITY = 4
 
-DisplayPresentationRate = _winrt_windows_devices_display_core.DisplayPresentationRate
-DisplayAdapter = _winrt_windows_devices_display_core.DisplayAdapter
-DisplayDevice = _winrt_windows_devices_display_core.DisplayDevice
-DisplayFence = _winrt_windows_devices_display_core.DisplayFence
-DisplayManager = _winrt_windows_devices_display_core.DisplayManager
-DisplayManagerChangedEventArgs = _winrt_windows_devices_display_core.DisplayManagerChangedEventArgs
-DisplayManagerDisabledEventArgs = _winrt_windows_devices_display_core.DisplayManagerDisabledEventArgs
-DisplayManagerEnabledEventArgs = _winrt_windows_devices_display_core.DisplayManagerEnabledEventArgs
-DisplayManagerPathsFailedOrInvalidatedEventArgs = _winrt_windows_devices_display_core.DisplayManagerPathsFailedOrInvalidatedEventArgs
-DisplayManagerResultWithState = _winrt_windows_devices_display_core.DisplayManagerResultWithState
-DisplayModeInfo = _winrt_windows_devices_display_core.DisplayModeInfo
-DisplayMuxDevice = _winrt_windows_devices_display_core.DisplayMuxDevice
-DisplayPath = _winrt_windows_devices_display_core.DisplayPath
-DisplayPrimaryDescription = _winrt_windows_devices_display_core.DisplayPrimaryDescription
-DisplayScanout = _winrt_windows_devices_display_core.DisplayScanout
-DisplaySource = _winrt_windows_devices_display_core.DisplaySource
-DisplayState = _winrt_windows_devices_display_core.DisplayState
-DisplayStateOperationResult = _winrt_windows_devices_display_core.DisplayStateOperationResult
-DisplaySurface = _winrt_windows_devices_display_core.DisplaySurface
-DisplayTarget = _winrt_windows_devices_display_core.DisplayTarget
-DisplayTask = _winrt_windows_devices_display_core.DisplayTask
-DisplayTaskPool = _winrt_windows_devices_display_core.DisplayTaskPool
-DisplayTaskResult = _winrt_windows_devices_display_core.DisplayTaskResult
-DisplayView = _winrt_windows_devices_display_core.DisplayView
-DisplayWireFormat = _winrt_windows_devices_display_core.DisplayWireFormat

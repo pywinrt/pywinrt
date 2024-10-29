@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_maps_offlinemaps
+from winrt._winrt_windows_services_maps_offlinemaps import (
+    OfflineMapPackage,
+    OfflineMapPackageQueryResult,
+    OfflineMapPackageStartDownloadResult,
+)
 
 __all__ = [
     "OfflineMapPackageQueryStatus",
@@ -32,6 +36,3 @@ class OfflineMapPackageStatus(enum.IntEnum):
     DOWNLOADED = 2
     DELETING = 3
 
-OfflineMapPackage = _winrt_windows_services_maps_offlinemaps.OfflineMapPackage
-OfflineMapPackageQueryResult = _winrt_windows_services_maps_offlinemaps.OfflineMapPackageQueryResult
-OfflineMapPackageStartDownloadResult = _winrt_windows_services_maps_offlinemaps.OfflineMapPackageStartDownloadResult

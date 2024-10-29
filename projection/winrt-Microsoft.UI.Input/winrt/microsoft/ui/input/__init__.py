@@ -3,7 +3,58 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_input
+from winrt._winrt_microsoft_ui_input import (
+    CrossSlideThresholds,
+    ManipulationDelta,
+    ManipulationVelocities,
+    PhysicalKeyStatus,
+    CharacterReceivedEventArgs,
+    ContextMenuKeyEventArgs,
+    CrossSlidingEventArgs,
+    DraggingEventArgs,
+    EnteredMoveSizeEventArgs,
+    EnteringMoveSizeEventArgs,
+    ExitedMoveSizeEventArgs,
+    FocusChangedEventArgs,
+    FocusNavigationRequest,
+    FocusNavigationRequestEventArgs,
+    GestureRecognizer,
+    HoldingEventArgs,
+    InputActivationListener,
+    InputActivationListenerActivationChangedEventArgs,
+    InputCursor,
+    InputCustomCursor,
+    InputDesktopNamedResourceCursor,
+    InputDesktopResourceCursor,
+    InputFocusController,
+    InputFocusNavigationHost,
+    InputKeyboardSource,
+    InputLightDismissAction,
+    InputLightDismissEventArgs,
+    InputNonClientPointerSource,
+    InputObject,
+    InputPointerSource,
+    InputPreTranslateKeyboardSource,
+    InputSystemCursor,
+    KeyEventArgs,
+    ManipulationCompletedEventArgs,
+    ManipulationInertiaStartingEventArgs,
+    ManipulationStartedEventArgs,
+    ManipulationUpdatedEventArgs,
+    MouseWheelParameters,
+    NonClientCaptionTappedEventArgs,
+    NonClientPointerEventArgs,
+    NonClientRegionsChangedEventArgs,
+    PointerEventArgs,
+    PointerPoint,
+    PointerPointProperties,
+    PointerPredictor,
+    RightTappedEventArgs,
+    TappedEventArgs,
+    WindowRectChangedEventArgs,
+    WindowRectChangingEventArgs,
+    IPointerPointTransform,
+)
 
 __all__ = [
     "CrossSlidingState",
@@ -202,53 +253,3 @@ class VirtualKeyStates(enum.IntFlag):
     DOWN = 0x1
     LOCKED = 0x2
 
-CrossSlideThresholds = _winrt_microsoft_ui_input.CrossSlideThresholds
-ManipulationDelta = _winrt_microsoft_ui_input.ManipulationDelta
-ManipulationVelocities = _winrt_microsoft_ui_input.ManipulationVelocities
-PhysicalKeyStatus = _winrt_microsoft_ui_input.PhysicalKeyStatus
-CharacterReceivedEventArgs = _winrt_microsoft_ui_input.CharacterReceivedEventArgs
-ContextMenuKeyEventArgs = _winrt_microsoft_ui_input.ContextMenuKeyEventArgs
-CrossSlidingEventArgs = _winrt_microsoft_ui_input.CrossSlidingEventArgs
-DraggingEventArgs = _winrt_microsoft_ui_input.DraggingEventArgs
-EnteredMoveSizeEventArgs = _winrt_microsoft_ui_input.EnteredMoveSizeEventArgs
-EnteringMoveSizeEventArgs = _winrt_microsoft_ui_input.EnteringMoveSizeEventArgs
-ExitedMoveSizeEventArgs = _winrt_microsoft_ui_input.ExitedMoveSizeEventArgs
-FocusChangedEventArgs = _winrt_microsoft_ui_input.FocusChangedEventArgs
-FocusNavigationRequest = _winrt_microsoft_ui_input.FocusNavigationRequest
-FocusNavigationRequestEventArgs = _winrt_microsoft_ui_input.FocusNavigationRequestEventArgs
-GestureRecognizer = _winrt_microsoft_ui_input.GestureRecognizer
-HoldingEventArgs = _winrt_microsoft_ui_input.HoldingEventArgs
-InputActivationListener = _winrt_microsoft_ui_input.InputActivationListener
-InputActivationListenerActivationChangedEventArgs = _winrt_microsoft_ui_input.InputActivationListenerActivationChangedEventArgs
-InputCursor = _winrt_microsoft_ui_input.InputCursor
-InputCustomCursor = _winrt_microsoft_ui_input.InputCustomCursor
-InputDesktopNamedResourceCursor = _winrt_microsoft_ui_input.InputDesktopNamedResourceCursor
-InputDesktopResourceCursor = _winrt_microsoft_ui_input.InputDesktopResourceCursor
-InputFocusController = _winrt_microsoft_ui_input.InputFocusController
-InputFocusNavigationHost = _winrt_microsoft_ui_input.InputFocusNavigationHost
-InputKeyboardSource = _winrt_microsoft_ui_input.InputKeyboardSource
-InputLightDismissAction = _winrt_microsoft_ui_input.InputLightDismissAction
-InputLightDismissEventArgs = _winrt_microsoft_ui_input.InputLightDismissEventArgs
-InputNonClientPointerSource = _winrt_microsoft_ui_input.InputNonClientPointerSource
-InputObject = _winrt_microsoft_ui_input.InputObject
-InputPointerSource = _winrt_microsoft_ui_input.InputPointerSource
-InputPreTranslateKeyboardSource = _winrt_microsoft_ui_input.InputPreTranslateKeyboardSource
-InputSystemCursor = _winrt_microsoft_ui_input.InputSystemCursor
-KeyEventArgs = _winrt_microsoft_ui_input.KeyEventArgs
-ManipulationCompletedEventArgs = _winrt_microsoft_ui_input.ManipulationCompletedEventArgs
-ManipulationInertiaStartingEventArgs = _winrt_microsoft_ui_input.ManipulationInertiaStartingEventArgs
-ManipulationStartedEventArgs = _winrt_microsoft_ui_input.ManipulationStartedEventArgs
-ManipulationUpdatedEventArgs = _winrt_microsoft_ui_input.ManipulationUpdatedEventArgs
-MouseWheelParameters = _winrt_microsoft_ui_input.MouseWheelParameters
-NonClientCaptionTappedEventArgs = _winrt_microsoft_ui_input.NonClientCaptionTappedEventArgs
-NonClientPointerEventArgs = _winrt_microsoft_ui_input.NonClientPointerEventArgs
-NonClientRegionsChangedEventArgs = _winrt_microsoft_ui_input.NonClientRegionsChangedEventArgs
-PointerEventArgs = _winrt_microsoft_ui_input.PointerEventArgs
-PointerPoint = _winrt_microsoft_ui_input.PointerPoint
-PointerPointProperties = _winrt_microsoft_ui_input.PointerPointProperties
-PointerPredictor = _winrt_microsoft_ui_input.PointerPredictor
-RightTappedEventArgs = _winrt_microsoft_ui_input.RightTappedEventArgs
-TappedEventArgs = _winrt_microsoft_ui_input.TappedEventArgs
-WindowRectChangedEventArgs = _winrt_microsoft_ui_input.WindowRectChangedEventArgs
-WindowRectChangingEventArgs = _winrt_microsoft_ui_input.WindowRectChangingEventArgs
-IPointerPointTransform = _winrt_microsoft_ui_input.IPointerPointTransform

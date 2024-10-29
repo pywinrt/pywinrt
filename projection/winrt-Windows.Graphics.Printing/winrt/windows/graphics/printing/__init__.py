@@ -5,7 +5,27 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_graphics_printing
+from winrt._winrt_windows_graphics_printing import (
+    PrintPageDescription,
+    PrintManager,
+    PrintPageInfo,
+    PrintPageRange,
+    PrintPageRangeOptions,
+    PrintTask,
+    PrintTaskCompletedEventArgs,
+    PrintTaskOptions,
+    PrintTaskProgressingEventArgs,
+    PrintTaskRequest,
+    PrintTaskRequestedDeferral,
+    PrintTaskRequestedEventArgs,
+    PrintTaskSourceRequestedArgs,
+    PrintTaskSourceRequestedDeferral,
+    StandardPrintTaskOptions,
+    IPrintDocumentSource,
+    IPrintTaskOptionsCore,
+    IPrintTaskOptionsCoreProperties,
+    IPrintTaskOptionsCoreUIConfiguration,
+)
 
 __all__ = [
     "PrintBinding",
@@ -353,23 +373,4 @@ class PrintTaskCompletion(enum.IntEnum):
     FAILED = 2
     SUBMITTED = 3
 
-PrintPageDescription = _winrt_windows_graphics_printing.PrintPageDescription
-PrintManager = _winrt_windows_graphics_printing.PrintManager
-PrintPageInfo = _winrt_windows_graphics_printing.PrintPageInfo
-PrintPageRange = _winrt_windows_graphics_printing.PrintPageRange
-PrintPageRangeOptions = _winrt_windows_graphics_printing.PrintPageRangeOptions
-PrintTask = _winrt_windows_graphics_printing.PrintTask
-PrintTaskCompletedEventArgs = _winrt_windows_graphics_printing.PrintTaskCompletedEventArgs
-PrintTaskOptions = _winrt_windows_graphics_printing.PrintTaskOptions
-PrintTaskProgressingEventArgs = _winrt_windows_graphics_printing.PrintTaskProgressingEventArgs
-PrintTaskRequest = _winrt_windows_graphics_printing.PrintTaskRequest
-PrintTaskRequestedDeferral = _winrt_windows_graphics_printing.PrintTaskRequestedDeferral
-PrintTaskRequestedEventArgs = _winrt_windows_graphics_printing.PrintTaskRequestedEventArgs
-PrintTaskSourceRequestedArgs = _winrt_windows_graphics_printing.PrintTaskSourceRequestedArgs
-PrintTaskSourceRequestedDeferral = _winrt_windows_graphics_printing.PrintTaskSourceRequestedDeferral
-StandardPrintTaskOptions = _winrt_windows_graphics_printing.StandardPrintTaskOptions
-IPrintDocumentSource = _winrt_windows_graphics_printing.IPrintDocumentSource
-IPrintTaskOptionsCore = _winrt_windows_graphics_printing.IPrintTaskOptionsCore
-IPrintTaskOptionsCoreProperties = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreProperties
-IPrintTaskOptionsCoreUIConfiguration = _winrt_windows_graphics_printing.IPrintTaskOptionsCoreUIConfiguration
 PrintTaskSourceRequestedHandler = typing.Callable[[PrintTaskSourceRequestedArgs], None]

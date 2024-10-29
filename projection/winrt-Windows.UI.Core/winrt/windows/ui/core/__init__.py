@@ -5,7 +5,44 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_core
+from winrt._winrt_windows_ui_core import (
+    CorePhysicalKeyStatus,
+    CoreProximityEvaluation,
+    AcceleratorKeyEventArgs,
+    AutomationProviderRequestedEventArgs,
+    BackRequestedEventArgs,
+    CharacterReceivedEventArgs,
+    ClosestInteractiveBoundsRequestedEventArgs,
+    CoreAcceleratorKeys,
+    CoreComponentInputSource,
+    CoreCursor,
+    CoreDispatcher,
+    CoreIndependentInputSource,
+    CoreIndependentInputSourceController,
+    CoreWindow,
+    CoreWindowDialog,
+    CoreWindowEventArgs,
+    CoreWindowFlyout,
+    CoreWindowPopupShowingEventArgs,
+    CoreWindowResizeManager,
+    IdleDispatchedHandlerArgs,
+    InputEnabledEventArgs,
+    KeyEventArgs,
+    PointerEventArgs,
+    SystemNavigationManager,
+    TouchHitTestingEventArgs,
+    VisibilityChangedEventArgs,
+    WindowActivatedEventArgs,
+    WindowSizeChangedEventArgs,
+    ICoreAcceleratorKeys,
+    ICoreInputSourceBase,
+    ICorePointerInputSource,
+    ICorePointerInputSource2,
+    ICorePointerRedirector,
+    ICoreWindow,
+    ICoreWindowEventArgs,
+    IInitializeWithCoreWindow,
+)
 
 __all__ = [
     "AppViewBackButtonVisibility",
@@ -144,41 +181,5 @@ class CoreWindowFlowDirection(enum.IntEnum):
     LEFT_TO_RIGHT = 0
     RIGHT_TO_LEFT = 1
 
-CorePhysicalKeyStatus = _winrt_windows_ui_core.CorePhysicalKeyStatus
-CoreProximityEvaluation = _winrt_windows_ui_core.CoreProximityEvaluation
-AcceleratorKeyEventArgs = _winrt_windows_ui_core.AcceleratorKeyEventArgs
-AutomationProviderRequestedEventArgs = _winrt_windows_ui_core.AutomationProviderRequestedEventArgs
-BackRequestedEventArgs = _winrt_windows_ui_core.BackRequestedEventArgs
-CharacterReceivedEventArgs = _winrt_windows_ui_core.CharacterReceivedEventArgs
-ClosestInteractiveBoundsRequestedEventArgs = _winrt_windows_ui_core.ClosestInteractiveBoundsRequestedEventArgs
-CoreAcceleratorKeys = _winrt_windows_ui_core.CoreAcceleratorKeys
-CoreComponentInputSource = _winrt_windows_ui_core.CoreComponentInputSource
-CoreCursor = _winrt_windows_ui_core.CoreCursor
-CoreDispatcher = _winrt_windows_ui_core.CoreDispatcher
-CoreIndependentInputSource = _winrt_windows_ui_core.CoreIndependentInputSource
-CoreIndependentInputSourceController = _winrt_windows_ui_core.CoreIndependentInputSourceController
-CoreWindow = _winrt_windows_ui_core.CoreWindow
-CoreWindowDialog = _winrt_windows_ui_core.CoreWindowDialog
-CoreWindowEventArgs = _winrt_windows_ui_core.CoreWindowEventArgs
-CoreWindowFlyout = _winrt_windows_ui_core.CoreWindowFlyout
-CoreWindowPopupShowingEventArgs = _winrt_windows_ui_core.CoreWindowPopupShowingEventArgs
-CoreWindowResizeManager = _winrt_windows_ui_core.CoreWindowResizeManager
-IdleDispatchedHandlerArgs = _winrt_windows_ui_core.IdleDispatchedHandlerArgs
-InputEnabledEventArgs = _winrt_windows_ui_core.InputEnabledEventArgs
-KeyEventArgs = _winrt_windows_ui_core.KeyEventArgs
-PointerEventArgs = _winrt_windows_ui_core.PointerEventArgs
-SystemNavigationManager = _winrt_windows_ui_core.SystemNavigationManager
-TouchHitTestingEventArgs = _winrt_windows_ui_core.TouchHitTestingEventArgs
-VisibilityChangedEventArgs = _winrt_windows_ui_core.VisibilityChangedEventArgs
-WindowActivatedEventArgs = _winrt_windows_ui_core.WindowActivatedEventArgs
-WindowSizeChangedEventArgs = _winrt_windows_ui_core.WindowSizeChangedEventArgs
-ICoreAcceleratorKeys = _winrt_windows_ui_core.ICoreAcceleratorKeys
-ICoreInputSourceBase = _winrt_windows_ui_core.ICoreInputSourceBase
-ICorePointerInputSource = _winrt_windows_ui_core.ICorePointerInputSource
-ICorePointerInputSource2 = _winrt_windows_ui_core.ICorePointerInputSource2
-ICorePointerRedirector = _winrt_windows_ui_core.ICorePointerRedirector
-ICoreWindow = _winrt_windows_ui_core.ICoreWindow
-ICoreWindowEventArgs = _winrt_windows_ui_core.ICoreWindowEventArgs
-IInitializeWithCoreWindow = _winrt_windows_ui_core.IInitializeWithCoreWindow
 DispatchedHandler = typing.Callable[[], None]
 IdleDispatchedHandler = typing.Callable[[IdleDispatchedHandlerArgs], None]

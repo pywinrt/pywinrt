@@ -3,7 +3,25 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_foundation_diagnostics
+from winrt._winrt_windows_foundation_diagnostics import (
+    AsyncCausalityTracer,
+    ErrorDetails,
+    FileLoggingSession,
+    LogFileGeneratedEventArgs,
+    LoggingActivity,
+    LoggingChannel,
+    LoggingChannelOptions,
+    LoggingFields,
+    LoggingOptions,
+    LoggingSession,
+    RuntimeBrokerErrorSettings,
+    TracingStatusChangedEventArgs,
+    IErrorReportingSettings,
+    IFileLoggingSession,
+    ILoggingChannel,
+    ILoggingSession,
+    ILoggingTarget,
+)
 
 __all__ = [
     "CausalityRelation",
@@ -99,20 +117,3 @@ class LoggingOpcode(enum.IntEnum):
     SUSPEND = 8
     SEND = 9
 
-AsyncCausalityTracer = _winrt_windows_foundation_diagnostics.AsyncCausalityTracer
-ErrorDetails = _winrt_windows_foundation_diagnostics.ErrorDetails
-FileLoggingSession = _winrt_windows_foundation_diagnostics.FileLoggingSession
-LogFileGeneratedEventArgs = _winrt_windows_foundation_diagnostics.LogFileGeneratedEventArgs
-LoggingActivity = _winrt_windows_foundation_diagnostics.LoggingActivity
-LoggingChannel = _winrt_windows_foundation_diagnostics.LoggingChannel
-LoggingChannelOptions = _winrt_windows_foundation_diagnostics.LoggingChannelOptions
-LoggingFields = _winrt_windows_foundation_diagnostics.LoggingFields
-LoggingOptions = _winrt_windows_foundation_diagnostics.LoggingOptions
-LoggingSession = _winrt_windows_foundation_diagnostics.LoggingSession
-RuntimeBrokerErrorSettings = _winrt_windows_foundation_diagnostics.RuntimeBrokerErrorSettings
-TracingStatusChangedEventArgs = _winrt_windows_foundation_diagnostics.TracingStatusChangedEventArgs
-IErrorReportingSettings = _winrt_windows_foundation_diagnostics.IErrorReportingSettings
-IFileLoggingSession = _winrt_windows_foundation_diagnostics.IFileLoggingSession
-ILoggingChannel = _winrt_windows_foundation_diagnostics.ILoggingChannel
-ILoggingSession = _winrt_windows_foundation_diagnostics.ILoggingSession
-ILoggingTarget = _winrt_windows_foundation_diagnostics.ILoggingTarget

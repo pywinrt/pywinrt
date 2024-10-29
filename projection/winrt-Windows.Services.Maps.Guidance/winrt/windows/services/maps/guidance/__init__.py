@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_maps_guidance
+from winrt._winrt_windows_services_maps_guidance import (
+    GuidanceAudioNotificationRequestedEventArgs,
+    GuidanceLaneInfo,
+    GuidanceManeuver,
+    GuidanceMapMatchedCoordinate,
+    GuidanceNavigator,
+    GuidanceReroutedEventArgs,
+    GuidanceRoadSegment,
+    GuidanceRoadSignpost,
+    GuidanceRoute,
+    GuidanceTelemetryCollector,
+    GuidanceUpdatedEventArgs,
+)
 
 __all__ = [
     "GuidanceAudioMeasurementSystem",
@@ -116,14 +128,3 @@ class GuidanceMode(enum.IntEnum):
     NAVIGATION = 2
     TRACKING = 3
 
-GuidanceAudioNotificationRequestedEventArgs = _winrt_windows_services_maps_guidance.GuidanceAudioNotificationRequestedEventArgs
-GuidanceLaneInfo = _winrt_windows_services_maps_guidance.GuidanceLaneInfo
-GuidanceManeuver = _winrt_windows_services_maps_guidance.GuidanceManeuver
-GuidanceMapMatchedCoordinate = _winrt_windows_services_maps_guidance.GuidanceMapMatchedCoordinate
-GuidanceNavigator = _winrt_windows_services_maps_guidance.GuidanceNavigator
-GuidanceReroutedEventArgs = _winrt_windows_services_maps_guidance.GuidanceReroutedEventArgs
-GuidanceRoadSegment = _winrt_windows_services_maps_guidance.GuidanceRoadSegment
-GuidanceRoadSignpost = _winrt_windows_services_maps_guidance.GuidanceRoadSignpost
-GuidanceRoute = _winrt_windows_services_maps_guidance.GuidanceRoute
-GuidanceTelemetryCollector = _winrt_windows_services_maps_guidance.GuidanceTelemetryCollector
-GuidanceUpdatedEventArgs = _winrt_windows_services_maps_guidance.GuidanceUpdatedEventArgs

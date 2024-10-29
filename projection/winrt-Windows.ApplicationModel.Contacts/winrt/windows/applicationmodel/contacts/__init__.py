@@ -3,7 +3,60 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_contacts
+from winrt._winrt_windows_applicationmodel_contacts import (
+    AggregateContactManager,
+    Contact,
+    ContactAddress,
+    ContactAnnotation,
+    ContactAnnotationList,
+    ContactAnnotationStore,
+    ContactBatch,
+    ContactCardDelayedDataLoader,
+    ContactCardOptions,
+    ContactChange,
+    ContactChangeReader,
+    ContactChangeTracker,
+    ContactChangedDeferral,
+    ContactChangedEventArgs,
+    ContactConnectedServiceAccount,
+    ContactDate,
+    ContactEmail,
+    ContactField,
+    ContactFieldFactory,
+    ContactGroup,
+    ContactInformation,
+    ContactInstantMessageField,
+    ContactJobInfo,
+    ContactLaunchActionVerbs,
+    ContactList,
+    ContactListLimitedWriteOperations,
+    ContactListSyncConstraints,
+    ContactListSyncManager,
+    ContactLocationField,
+    ContactManager,
+    ContactManagerForUser,
+    ContactMatchReason,
+    ContactPanel,
+    ContactPanelClosingEventArgs,
+    ContactPanelLaunchFullAppRequestedEventArgs,
+    ContactPhone,
+    ContactPicker,
+    ContactQueryOptions,
+    ContactQueryTextSearch,
+    ContactReader,
+    ContactSignificantOther,
+    ContactStore,
+    ContactStoreNotificationTriggerDetails,
+    ContactWebsite,
+    FullContactCardOptions,
+    KnownContactField,
+    PinnedContactIdsQueryResult,
+    PinnedContactManager,
+    IContactField,
+    IContactFieldFactory,
+    IContactInstantMessageFieldFactory,
+    IContactLocationFieldFactory,
+)
 
 __all__ = [
     "ContactAddressKind",
@@ -239,55 +292,3 @@ class PinnedContactSurface(enum.IntEnum):
     START_MENU = 0
     TASKBAR = 1
 
-AggregateContactManager = _winrt_windows_applicationmodel_contacts.AggregateContactManager
-Contact = _winrt_windows_applicationmodel_contacts.Contact
-ContactAddress = _winrt_windows_applicationmodel_contacts.ContactAddress
-ContactAnnotation = _winrt_windows_applicationmodel_contacts.ContactAnnotation
-ContactAnnotationList = _winrt_windows_applicationmodel_contacts.ContactAnnotationList
-ContactAnnotationStore = _winrt_windows_applicationmodel_contacts.ContactAnnotationStore
-ContactBatch = _winrt_windows_applicationmodel_contacts.ContactBatch
-ContactCardDelayedDataLoader = _winrt_windows_applicationmodel_contacts.ContactCardDelayedDataLoader
-ContactCardOptions = _winrt_windows_applicationmodel_contacts.ContactCardOptions
-ContactChange = _winrt_windows_applicationmodel_contacts.ContactChange
-ContactChangeReader = _winrt_windows_applicationmodel_contacts.ContactChangeReader
-ContactChangeTracker = _winrt_windows_applicationmodel_contacts.ContactChangeTracker
-ContactChangedDeferral = _winrt_windows_applicationmodel_contacts.ContactChangedDeferral
-ContactChangedEventArgs = _winrt_windows_applicationmodel_contacts.ContactChangedEventArgs
-ContactConnectedServiceAccount = _winrt_windows_applicationmodel_contacts.ContactConnectedServiceAccount
-ContactDate = _winrt_windows_applicationmodel_contacts.ContactDate
-ContactEmail = _winrt_windows_applicationmodel_contacts.ContactEmail
-ContactField = _winrt_windows_applicationmodel_contacts.ContactField
-ContactFieldFactory = _winrt_windows_applicationmodel_contacts.ContactFieldFactory
-ContactGroup = _winrt_windows_applicationmodel_contacts.ContactGroup
-ContactInformation = _winrt_windows_applicationmodel_contacts.ContactInformation
-ContactInstantMessageField = _winrt_windows_applicationmodel_contacts.ContactInstantMessageField
-ContactJobInfo = _winrt_windows_applicationmodel_contacts.ContactJobInfo
-ContactLaunchActionVerbs = _winrt_windows_applicationmodel_contacts.ContactLaunchActionVerbs
-ContactList = _winrt_windows_applicationmodel_contacts.ContactList
-ContactListLimitedWriteOperations = _winrt_windows_applicationmodel_contacts.ContactListLimitedWriteOperations
-ContactListSyncConstraints = _winrt_windows_applicationmodel_contacts.ContactListSyncConstraints
-ContactListSyncManager = _winrt_windows_applicationmodel_contacts.ContactListSyncManager
-ContactLocationField = _winrt_windows_applicationmodel_contacts.ContactLocationField
-ContactManager = _winrt_windows_applicationmodel_contacts.ContactManager
-ContactManagerForUser = _winrt_windows_applicationmodel_contacts.ContactManagerForUser
-ContactMatchReason = _winrt_windows_applicationmodel_contacts.ContactMatchReason
-ContactPanel = _winrt_windows_applicationmodel_contacts.ContactPanel
-ContactPanelClosingEventArgs = _winrt_windows_applicationmodel_contacts.ContactPanelClosingEventArgs
-ContactPanelLaunchFullAppRequestedEventArgs = _winrt_windows_applicationmodel_contacts.ContactPanelLaunchFullAppRequestedEventArgs
-ContactPhone = _winrt_windows_applicationmodel_contacts.ContactPhone
-ContactPicker = _winrt_windows_applicationmodel_contacts.ContactPicker
-ContactQueryOptions = _winrt_windows_applicationmodel_contacts.ContactQueryOptions
-ContactQueryTextSearch = _winrt_windows_applicationmodel_contacts.ContactQueryTextSearch
-ContactReader = _winrt_windows_applicationmodel_contacts.ContactReader
-ContactSignificantOther = _winrt_windows_applicationmodel_contacts.ContactSignificantOther
-ContactStore = _winrt_windows_applicationmodel_contacts.ContactStore
-ContactStoreNotificationTriggerDetails = _winrt_windows_applicationmodel_contacts.ContactStoreNotificationTriggerDetails
-ContactWebsite = _winrt_windows_applicationmodel_contacts.ContactWebsite
-FullContactCardOptions = _winrt_windows_applicationmodel_contacts.FullContactCardOptions
-KnownContactField = _winrt_windows_applicationmodel_contacts.KnownContactField
-PinnedContactIdsQueryResult = _winrt_windows_applicationmodel_contacts.PinnedContactIdsQueryResult
-PinnedContactManager = _winrt_windows_applicationmodel_contacts.PinnedContactManager
-IContactField = _winrt_windows_applicationmodel_contacts.IContactField
-IContactFieldFactory = _winrt_windows_applicationmodel_contacts.IContactFieldFactory
-IContactInstantMessageFieldFactory = _winrt_windows_applicationmodel_contacts.IContactInstantMessageFieldFactory
-IContactLocationFieldFactory = _winrt_windows_applicationmodel_contacts.IContactLocationFieldFactory

@@ -3,7 +3,118 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_composition
+from winrt._winrt_microsoft_ui_composition import (
+    AmbientLight,
+    AnimationController,
+    AnimationPropertyInfo,
+    BackEasingFunction,
+    BooleanKeyFrameAnimation,
+    BounceEasingFunction,
+    BounceScalarNaturalMotionAnimation,
+    BounceVector2NaturalMotionAnimation,
+    BounceVector3NaturalMotionAnimation,
+    CircleEasingFunction,
+    ColorKeyFrameAnimation,
+    CompositionAnimation,
+    CompositionAnimationGroup,
+    CompositionApiInformation,
+    CompositionBackdropBrush,
+    CompositionBatchCompletedEventArgs,
+    CompositionBrush,
+    CompositionCapabilities,
+    CompositionClip,
+    CompositionColorBrush,
+    CompositionColorGradientStop,
+    CompositionColorGradientStopCollection,
+    CompositionCommitBatch,
+    CompositionContainerShape,
+    CompositionDrawingSurface,
+    CompositionEasingFunction,
+    CompositionEffectBrush,
+    CompositionEffectFactory,
+    CompositionEffectSourceParameter,
+    CompositionEllipseGeometry,
+    CompositionGeometricClip,
+    CompositionGeometry,
+    CompositionGradientBrush,
+    CompositionGraphicsDevice,
+    CompositionLight,
+    CompositionLineGeometry,
+    CompositionLinearGradientBrush,
+    CompositionMaskBrush,
+    CompositionMipmapSurface,
+    CompositionNineGridBrush,
+    CompositionObject,
+    CompositionPath,
+    CompositionPathGeometry,
+    CompositionProjectedShadow,
+    CompositionProjectedShadowCaster,
+    CompositionProjectedShadowCasterCollection,
+    CompositionProjectedShadowReceiver,
+    CompositionProjectedShadowReceiverUnorderedCollection,
+    CompositionPropertySet,
+    CompositionRadialGradientBrush,
+    CompositionRectangleGeometry,
+    CompositionRoundedRectangleGeometry,
+    CompositionScopedBatch,
+    CompositionShadow,
+    CompositionShape,
+    CompositionShapeCollection,
+    CompositionSpriteShape,
+    CompositionStrokeDashArray,
+    CompositionSurfaceBrush,
+    CompositionTransform,
+    CompositionViewBox,
+    CompositionVirtualDrawingSurface,
+    CompositionVisualSurface,
+    Compositor,
+    ContainerVisual,
+    CubicBezierEasingFunction,
+    DistantLight,
+    DropShadow,
+    ElasticEasingFunction,
+    ExponentialEasingFunction,
+    ExpressionAnimation,
+    ImplicitAnimationCollection,
+    InitialValueExpressionCollection,
+    InsetClip,
+    KeyFrameAnimation,
+    LayerVisual,
+    LinearEasingFunction,
+    NaturalMotionAnimation,
+    PathKeyFrameAnimation,
+    PointLight,
+    PowerEasingFunction,
+    QuaternionKeyFrameAnimation,
+    RectangleClip,
+    RedirectVisual,
+    RenderingDeviceReplacedEventArgs,
+    ScalarKeyFrameAnimation,
+    ScalarNaturalMotionAnimation,
+    ShapeVisual,
+    SineEasingFunction,
+    SpotLight,
+    SpringScalarNaturalMotionAnimation,
+    SpringVector2NaturalMotionAnimation,
+    SpringVector3NaturalMotionAnimation,
+    SpriteVisual,
+    StepEasingFunction,
+    Vector2KeyFrameAnimation,
+    Vector2NaturalMotionAnimation,
+    Vector3KeyFrameAnimation,
+    Vector3NaturalMotionAnimation,
+    Vector4KeyFrameAnimation,
+    Visual,
+    VisualCollection,
+    VisualUnorderedCollection,
+    IAnimationObject,
+    ICompositionAnimationBase,
+    ICompositionSupportsSystemBackdrop,
+    ICompositionSurface,
+    ICompositionSurfaceFacade,
+    IVisualElement,
+    IVisualElement2,
+)
 
 __all__ = [
     "AnimationControllerProgressBehavior",
@@ -257,118 +368,8 @@ class CompositionStrokeLineJoin(enum.IntEnum):
     ROUND = 2
     MITER_OR_BEVEL = 3
 
-AmbientLight = _winrt_microsoft_ui_composition.AmbientLight
-AnimationController = _winrt_microsoft_ui_composition.AnimationController
-AnimationPropertyInfo = _winrt_microsoft_ui_composition.AnimationPropertyInfo
-BackEasingFunction = _winrt_microsoft_ui_composition.BackEasingFunction
-BooleanKeyFrameAnimation = _winrt_microsoft_ui_composition.BooleanKeyFrameAnimation
-BounceEasingFunction = _winrt_microsoft_ui_composition.BounceEasingFunction
-BounceScalarNaturalMotionAnimation = _winrt_microsoft_ui_composition.BounceScalarNaturalMotionAnimation
-BounceVector2NaturalMotionAnimation = _winrt_microsoft_ui_composition.BounceVector2NaturalMotionAnimation
-BounceVector3NaturalMotionAnimation = _winrt_microsoft_ui_composition.BounceVector3NaturalMotionAnimation
-CircleEasingFunction = _winrt_microsoft_ui_composition.CircleEasingFunction
-ColorKeyFrameAnimation = _winrt_microsoft_ui_composition.ColorKeyFrameAnimation
-CompositionAnimation = _winrt_microsoft_ui_composition.CompositionAnimation
-CompositionAnimationGroup = _winrt_microsoft_ui_composition.CompositionAnimationGroup
-CompositionApiInformation = _winrt_microsoft_ui_composition.CompositionApiInformation
-CompositionBackdropBrush = _winrt_microsoft_ui_composition.CompositionBackdropBrush
-CompositionBatchCompletedEventArgs = _winrt_microsoft_ui_composition.CompositionBatchCompletedEventArgs
-CompositionBrush = _winrt_microsoft_ui_composition.CompositionBrush
-CompositionCapabilities = _winrt_microsoft_ui_composition.CompositionCapabilities
-CompositionClip = _winrt_microsoft_ui_composition.CompositionClip
-CompositionColorBrush = _winrt_microsoft_ui_composition.CompositionColorBrush
-CompositionColorGradientStop = _winrt_microsoft_ui_composition.CompositionColorGradientStop
-CompositionColorGradientStopCollection = _winrt_microsoft_ui_composition.CompositionColorGradientStopCollection
 winrt.system._mixin_mutable_sequence(CompositionColorGradientStopCollection)
-CompositionCommitBatch = _winrt_microsoft_ui_composition.CompositionCommitBatch
-CompositionContainerShape = _winrt_microsoft_ui_composition.CompositionContainerShape
-CompositionDrawingSurface = _winrt_microsoft_ui_composition.CompositionDrawingSurface
-CompositionEasingFunction = _winrt_microsoft_ui_composition.CompositionEasingFunction
-CompositionEffectBrush = _winrt_microsoft_ui_composition.CompositionEffectBrush
-CompositionEffectFactory = _winrt_microsoft_ui_composition.CompositionEffectFactory
-CompositionEffectSourceParameter = _winrt_microsoft_ui_composition.CompositionEffectSourceParameter
-CompositionEllipseGeometry = _winrt_microsoft_ui_composition.CompositionEllipseGeometry
-CompositionGeometricClip = _winrt_microsoft_ui_composition.CompositionGeometricClip
-CompositionGeometry = _winrt_microsoft_ui_composition.CompositionGeometry
-CompositionGradientBrush = _winrt_microsoft_ui_composition.CompositionGradientBrush
-CompositionGraphicsDevice = _winrt_microsoft_ui_composition.CompositionGraphicsDevice
-CompositionLight = _winrt_microsoft_ui_composition.CompositionLight
-CompositionLineGeometry = _winrt_microsoft_ui_composition.CompositionLineGeometry
-CompositionLinearGradientBrush = _winrt_microsoft_ui_composition.CompositionLinearGradientBrush
-CompositionMaskBrush = _winrt_microsoft_ui_composition.CompositionMaskBrush
-CompositionMipmapSurface = _winrt_microsoft_ui_composition.CompositionMipmapSurface
-CompositionNineGridBrush = _winrt_microsoft_ui_composition.CompositionNineGridBrush
-CompositionObject = _winrt_microsoft_ui_composition.CompositionObject
-CompositionPath = _winrt_microsoft_ui_composition.CompositionPath
-CompositionPathGeometry = _winrt_microsoft_ui_composition.CompositionPathGeometry
-CompositionProjectedShadow = _winrt_microsoft_ui_composition.CompositionProjectedShadow
-CompositionProjectedShadowCaster = _winrt_microsoft_ui_composition.CompositionProjectedShadowCaster
-CompositionProjectedShadowCasterCollection = _winrt_microsoft_ui_composition.CompositionProjectedShadowCasterCollection
-CompositionProjectedShadowReceiver = _winrt_microsoft_ui_composition.CompositionProjectedShadowReceiver
-CompositionProjectedShadowReceiverUnorderedCollection = _winrt_microsoft_ui_composition.CompositionProjectedShadowReceiverUnorderedCollection
-CompositionPropertySet = _winrt_microsoft_ui_composition.CompositionPropertySet
-CompositionRadialGradientBrush = _winrt_microsoft_ui_composition.CompositionRadialGradientBrush
-CompositionRectangleGeometry = _winrt_microsoft_ui_composition.CompositionRectangleGeometry
-CompositionRoundedRectangleGeometry = _winrt_microsoft_ui_composition.CompositionRoundedRectangleGeometry
-CompositionScopedBatch = _winrt_microsoft_ui_composition.CompositionScopedBatch
-CompositionShadow = _winrt_microsoft_ui_composition.CompositionShadow
-CompositionShape = _winrt_microsoft_ui_composition.CompositionShape
-CompositionShapeCollection = _winrt_microsoft_ui_composition.CompositionShapeCollection
 winrt.system._mixin_mutable_sequence(CompositionShapeCollection)
-CompositionSpriteShape = _winrt_microsoft_ui_composition.CompositionSpriteShape
-CompositionStrokeDashArray = _winrt_microsoft_ui_composition.CompositionStrokeDashArray
 winrt.system._mixin_mutable_sequence(CompositionStrokeDashArray)
-CompositionSurfaceBrush = _winrt_microsoft_ui_composition.CompositionSurfaceBrush
-CompositionTransform = _winrt_microsoft_ui_composition.CompositionTransform
-CompositionViewBox = _winrt_microsoft_ui_composition.CompositionViewBox
-CompositionVirtualDrawingSurface = _winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface
-CompositionVisualSurface = _winrt_microsoft_ui_composition.CompositionVisualSurface
-Compositor = _winrt_microsoft_ui_composition.Compositor
-ContainerVisual = _winrt_microsoft_ui_composition.ContainerVisual
-CubicBezierEasingFunction = _winrt_microsoft_ui_composition.CubicBezierEasingFunction
-DistantLight = _winrt_microsoft_ui_composition.DistantLight
-DropShadow = _winrt_microsoft_ui_composition.DropShadow
-ElasticEasingFunction = _winrt_microsoft_ui_composition.ElasticEasingFunction
-ExponentialEasingFunction = _winrt_microsoft_ui_composition.ExponentialEasingFunction
-ExpressionAnimation = _winrt_microsoft_ui_composition.ExpressionAnimation
-ImplicitAnimationCollection = _winrt_microsoft_ui_composition.ImplicitAnimationCollection
 winrt.system._mixin_mutable_mapping(ImplicitAnimationCollection)
-InitialValueExpressionCollection = _winrt_microsoft_ui_composition.InitialValueExpressionCollection
 winrt.system._mixin_mutable_mapping(InitialValueExpressionCollection)
-InsetClip = _winrt_microsoft_ui_composition.InsetClip
-KeyFrameAnimation = _winrt_microsoft_ui_composition.KeyFrameAnimation
-LayerVisual = _winrt_microsoft_ui_composition.LayerVisual
-LinearEasingFunction = _winrt_microsoft_ui_composition.LinearEasingFunction
-NaturalMotionAnimation = _winrt_microsoft_ui_composition.NaturalMotionAnimation
-PathKeyFrameAnimation = _winrt_microsoft_ui_composition.PathKeyFrameAnimation
-PointLight = _winrt_microsoft_ui_composition.PointLight
-PowerEasingFunction = _winrt_microsoft_ui_composition.PowerEasingFunction
-QuaternionKeyFrameAnimation = _winrt_microsoft_ui_composition.QuaternionKeyFrameAnimation
-RectangleClip = _winrt_microsoft_ui_composition.RectangleClip
-RedirectVisual = _winrt_microsoft_ui_composition.RedirectVisual
-RenderingDeviceReplacedEventArgs = _winrt_microsoft_ui_composition.RenderingDeviceReplacedEventArgs
-ScalarKeyFrameAnimation = _winrt_microsoft_ui_composition.ScalarKeyFrameAnimation
-ScalarNaturalMotionAnimation = _winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation
-ShapeVisual = _winrt_microsoft_ui_composition.ShapeVisual
-SineEasingFunction = _winrt_microsoft_ui_composition.SineEasingFunction
-SpotLight = _winrt_microsoft_ui_composition.SpotLight
-SpringScalarNaturalMotionAnimation = _winrt_microsoft_ui_composition.SpringScalarNaturalMotionAnimation
-SpringVector2NaturalMotionAnimation = _winrt_microsoft_ui_composition.SpringVector2NaturalMotionAnimation
-SpringVector3NaturalMotionAnimation = _winrt_microsoft_ui_composition.SpringVector3NaturalMotionAnimation
-SpriteVisual = _winrt_microsoft_ui_composition.SpriteVisual
-StepEasingFunction = _winrt_microsoft_ui_composition.StepEasingFunction
-Vector2KeyFrameAnimation = _winrt_microsoft_ui_composition.Vector2KeyFrameAnimation
-Vector2NaturalMotionAnimation = _winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation
-Vector3KeyFrameAnimation = _winrt_microsoft_ui_composition.Vector3KeyFrameAnimation
-Vector3NaturalMotionAnimation = _winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation
-Vector4KeyFrameAnimation = _winrt_microsoft_ui_composition.Vector4KeyFrameAnimation
-Visual = _winrt_microsoft_ui_composition.Visual
-VisualCollection = _winrt_microsoft_ui_composition.VisualCollection
-VisualUnorderedCollection = _winrt_microsoft_ui_composition.VisualUnorderedCollection
-IAnimationObject = _winrt_microsoft_ui_composition.IAnimationObject
-ICompositionAnimationBase = _winrt_microsoft_ui_composition.ICompositionAnimationBase
-ICompositionSupportsSystemBackdrop = _winrt_microsoft_ui_composition.ICompositionSupportsSystemBackdrop
-ICompositionSurface = _winrt_microsoft_ui_composition.ICompositionSurface
-ICompositionSurfaceFacade = _winrt_microsoft_ui_composition.ICompositionSurfaceFacade
-IVisualElement = _winrt_microsoft_ui_composition.IVisualElement
-IVisualElement2 = _winrt_microsoft_ui_composition.IVisualElement2

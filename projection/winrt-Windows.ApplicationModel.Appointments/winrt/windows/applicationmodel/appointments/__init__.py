@@ -3,7 +3,28 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_appointments
+from winrt._winrt_windows_applicationmodel_appointments import (
+    Appointment,
+    AppointmentCalendar,
+    AppointmentCalendarSyncManager,
+    AppointmentConflictResult,
+    AppointmentException,
+    AppointmentInvitee,
+    AppointmentManager,
+    AppointmentManagerForUser,
+    AppointmentOrganizer,
+    AppointmentProperties,
+    AppointmentRecurrence,
+    AppointmentStore,
+    AppointmentStoreChange,
+    AppointmentStoreChangeReader,
+    AppointmentStoreChangeTracker,
+    AppointmentStoreChangedDeferral,
+    AppointmentStoreChangedEventArgs,
+    AppointmentStoreNotificationTriggerDetails,
+    FindAppointmentsOptions,
+    IAppointmentParticipant,
+)
 
 __all__ = [
     "AppointmentBusyStatus",
@@ -149,23 +170,3 @@ class RecurrenceType(enum.IntEnum):
     INSTANCE = 1
     EXCEPTION_INSTANCE = 2
 
-Appointment = _winrt_windows_applicationmodel_appointments.Appointment
-AppointmentCalendar = _winrt_windows_applicationmodel_appointments.AppointmentCalendar
-AppointmentCalendarSyncManager = _winrt_windows_applicationmodel_appointments.AppointmentCalendarSyncManager
-AppointmentConflictResult = _winrt_windows_applicationmodel_appointments.AppointmentConflictResult
-AppointmentException = _winrt_windows_applicationmodel_appointments.AppointmentException
-AppointmentInvitee = _winrt_windows_applicationmodel_appointments.AppointmentInvitee
-AppointmentManager = _winrt_windows_applicationmodel_appointments.AppointmentManager
-AppointmentManagerForUser = _winrt_windows_applicationmodel_appointments.AppointmentManagerForUser
-AppointmentOrganizer = _winrt_windows_applicationmodel_appointments.AppointmentOrganizer
-AppointmentProperties = _winrt_windows_applicationmodel_appointments.AppointmentProperties
-AppointmentRecurrence = _winrt_windows_applicationmodel_appointments.AppointmentRecurrence
-AppointmentStore = _winrt_windows_applicationmodel_appointments.AppointmentStore
-AppointmentStoreChange = _winrt_windows_applicationmodel_appointments.AppointmentStoreChange
-AppointmentStoreChangeReader = _winrt_windows_applicationmodel_appointments.AppointmentStoreChangeReader
-AppointmentStoreChangeTracker = _winrt_windows_applicationmodel_appointments.AppointmentStoreChangeTracker
-AppointmentStoreChangedDeferral = _winrt_windows_applicationmodel_appointments.AppointmentStoreChangedDeferral
-AppointmentStoreChangedEventArgs = _winrt_windows_applicationmodel_appointments.AppointmentStoreChangedEventArgs
-AppointmentStoreNotificationTriggerDetails = _winrt_windows_applicationmodel_appointments.AppointmentStoreNotificationTriggerDetails
-FindAppointmentsOptions = _winrt_windows_applicationmodel_appointments.FindAppointmentsOptions
-IAppointmentParticipant = _winrt_windows_applicationmodel_appointments.IAppointmentParticipant

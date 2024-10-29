@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_http_filters
+from winrt._winrt_windows_web_http_filters import (
+    HttpBaseProtocolFilter,
+    HttpCacheControl,
+    HttpServerCustomValidationRequestedEventArgs,
+    IHttpFilter,
+)
 
 __all__ = [
     "HttpCacheReadBehavior",
@@ -29,7 +34,3 @@ class HttpCookieUsageBehavior(enum.IntEnum):
     DEFAULT = 0
     NO_COOKIES = 1
 
-HttpBaseProtocolFilter = _winrt_windows_web_http_filters.HttpBaseProtocolFilter
-HttpCacheControl = _winrt_windows_web_http_filters.HttpCacheControl
-HttpServerCustomValidationRequestedEventArgs = _winrt_windows_web_http_filters.HttpServerCustomValidationRequestedEventArgs
-IHttpFilter = _winrt_windows_web_http_filters.IHttpFilter

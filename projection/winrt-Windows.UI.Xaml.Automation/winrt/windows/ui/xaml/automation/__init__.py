@@ -3,7 +3,33 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_automation
+from winrt._winrt_windows_ui_xaml_automation import (
+    AnnotationPatternIdentifiers,
+    AutomationAnnotation,
+    AutomationElementIdentifiers,
+    AutomationProperties,
+    AutomationProperty,
+    DockPatternIdentifiers,
+    DragPatternIdentifiers,
+    DropTargetPatternIdentifiers,
+    ExpandCollapsePatternIdentifiers,
+    GridItemPatternIdentifiers,
+    GridPatternIdentifiers,
+    MultipleViewPatternIdentifiers,
+    RangeValuePatternIdentifiers,
+    ScrollPatternIdentifiers,
+    SelectionItemPatternIdentifiers,
+    SelectionPatternIdentifiers,
+    SpreadsheetItemPatternIdentifiers,
+    StylesPatternIdentifiers,
+    TableItemPatternIdentifiers,
+    TablePatternIdentifiers,
+    TogglePatternIdentifiers,
+    TransformPattern2Identifiers,
+    TransformPatternIdentifiers,
+    ValuePatternIdentifiers,
+    WindowPatternIdentifiers,
+)
 
 __all__ = [
     "AnnotationType",
@@ -232,28 +258,3 @@ class ZoomUnit(enum.IntEnum):
     LARGE_INCREMENT = 3
     SMALL_INCREMENT = 4
 
-AnnotationPatternIdentifiers = _winrt_windows_ui_xaml_automation.AnnotationPatternIdentifiers
-AutomationAnnotation = _winrt_windows_ui_xaml_automation.AutomationAnnotation
-AutomationElementIdentifiers = _winrt_windows_ui_xaml_automation.AutomationElementIdentifiers
-AutomationProperties = _winrt_windows_ui_xaml_automation.AutomationProperties
-AutomationProperty = _winrt_windows_ui_xaml_automation.AutomationProperty
-DockPatternIdentifiers = _winrt_windows_ui_xaml_automation.DockPatternIdentifiers
-DragPatternIdentifiers = _winrt_windows_ui_xaml_automation.DragPatternIdentifiers
-DropTargetPatternIdentifiers = _winrt_windows_ui_xaml_automation.DropTargetPatternIdentifiers
-ExpandCollapsePatternIdentifiers = _winrt_windows_ui_xaml_automation.ExpandCollapsePatternIdentifiers
-GridItemPatternIdentifiers = _winrt_windows_ui_xaml_automation.GridItemPatternIdentifiers
-GridPatternIdentifiers = _winrt_windows_ui_xaml_automation.GridPatternIdentifiers
-MultipleViewPatternIdentifiers = _winrt_windows_ui_xaml_automation.MultipleViewPatternIdentifiers
-RangeValuePatternIdentifiers = _winrt_windows_ui_xaml_automation.RangeValuePatternIdentifiers
-ScrollPatternIdentifiers = _winrt_windows_ui_xaml_automation.ScrollPatternIdentifiers
-SelectionItemPatternIdentifiers = _winrt_windows_ui_xaml_automation.SelectionItemPatternIdentifiers
-SelectionPatternIdentifiers = _winrt_windows_ui_xaml_automation.SelectionPatternIdentifiers
-SpreadsheetItemPatternIdentifiers = _winrt_windows_ui_xaml_automation.SpreadsheetItemPatternIdentifiers
-StylesPatternIdentifiers = _winrt_windows_ui_xaml_automation.StylesPatternIdentifiers
-TableItemPatternIdentifiers = _winrt_windows_ui_xaml_automation.TableItemPatternIdentifiers
-TablePatternIdentifiers = _winrt_windows_ui_xaml_automation.TablePatternIdentifiers
-TogglePatternIdentifiers = _winrt_windows_ui_xaml_automation.TogglePatternIdentifiers
-TransformPattern2Identifiers = _winrt_windows_ui_xaml_automation.TransformPattern2Identifiers
-TransformPatternIdentifiers = _winrt_windows_ui_xaml_automation.TransformPatternIdentifiers
-ValuePatternIdentifiers = _winrt_windows_ui_xaml_automation.ValuePatternIdentifiers
-WindowPatternIdentifiers = _winrt_windows_ui_xaml_automation.WindowPatternIdentifiers

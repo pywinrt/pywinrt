@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_cryptography
+from winrt._winrt_windows_security_cryptography import (
+    CryptographicBuffer,
+)
 
 __all__ = [
     "BinaryStringEncoding",
@@ -15,4 +17,3 @@ class BinaryStringEncoding(enum.IntEnum):
     UTF16_L_E = 1
     UTF16_B_E = 2
 
-CryptographicBuffer = _winrt_windows_security_cryptography.CryptographicBuffer

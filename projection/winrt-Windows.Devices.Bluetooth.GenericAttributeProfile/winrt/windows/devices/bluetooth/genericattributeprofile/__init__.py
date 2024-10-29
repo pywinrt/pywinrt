@@ -3,7 +3,45 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_bluetooth_genericattributeprofile
+from winrt._winrt_windows_devices_bluetooth_genericattributeprofile import (
+    GattCharacteristic,
+    GattCharacteristicUuids,
+    GattCharacteristicsResult,
+    GattClientNotificationResult,
+    GattDescriptor,
+    GattDescriptorUuids,
+    GattDescriptorsResult,
+    GattDeviceService,
+    GattDeviceServicesResult,
+    GattLocalCharacteristic,
+    GattLocalCharacteristicParameters,
+    GattLocalCharacteristicResult,
+    GattLocalDescriptor,
+    GattLocalDescriptorParameters,
+    GattLocalDescriptorResult,
+    GattLocalService,
+    GattPresentationFormat,
+    GattPresentationFormatTypes,
+    GattProtocolError,
+    GattReadClientCharacteristicConfigurationDescriptorResult,
+    GattReadRequest,
+    GattReadRequestedEventArgs,
+    GattReadResult,
+    GattReliableWriteTransaction,
+    GattRequestStateChangedEventArgs,
+    GattServiceProvider,
+    GattServiceProviderAdvertisementStatusChangedEventArgs,
+    GattServiceProviderAdvertisingParameters,
+    GattServiceProviderResult,
+    GattServiceUuids,
+    GattSession,
+    GattSessionStatusChangedEventArgs,
+    GattSubscribedClient,
+    GattValueChangedEventArgs,
+    GattWriteRequest,
+    GattWriteRequestedEventArgs,
+    GattWriteResult,
+)
 
 __all__ = [
     "GattCharacteristicProperties",
@@ -119,40 +157,3 @@ class GattWriteOption(enum.IntEnum):
     WRITE_WITH_RESPONSE = 0
     WRITE_WITHOUT_RESPONSE = 1
 
-GattCharacteristic = _winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristic
-GattCharacteristicUuids = _winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicUuids
-GattCharacteristicsResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattCharacteristicsResult
-GattClientNotificationResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattClientNotificationResult
-GattDescriptor = _winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptor
-GattDescriptorUuids = _winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorUuids
-GattDescriptorsResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattDescriptorsResult
-GattDeviceService = _winrt_windows_devices_bluetooth_genericattributeprofile.GattDeviceService
-GattDeviceServicesResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattDeviceServicesResult
-GattLocalCharacteristic = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristic
-GattLocalCharacteristicParameters = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristicParameters
-GattLocalCharacteristicResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalCharacteristicResult
-GattLocalDescriptor = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptor
-GattLocalDescriptorParameters = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptorParameters
-GattLocalDescriptorResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalDescriptorResult
-GattLocalService = _winrt_windows_devices_bluetooth_genericattributeprofile.GattLocalService
-GattPresentationFormat = _winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormat
-GattPresentationFormatTypes = _winrt_windows_devices_bluetooth_genericattributeprofile.GattPresentationFormatTypes
-GattProtocolError = _winrt_windows_devices_bluetooth_genericattributeprofile.GattProtocolError
-GattReadClientCharacteristicConfigurationDescriptorResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattReadClientCharacteristicConfigurationDescriptorResult
-GattReadRequest = _winrt_windows_devices_bluetooth_genericattributeprofile.GattReadRequest
-GattReadRequestedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattReadRequestedEventArgs
-GattReadResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattReadResult
-GattReliableWriteTransaction = _winrt_windows_devices_bluetooth_genericattributeprofile.GattReliableWriteTransaction
-GattRequestStateChangedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattRequestStateChangedEventArgs
-GattServiceProvider = _winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProvider
-GattServiceProviderAdvertisementStatusChangedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderAdvertisementStatusChangedEventArgs
-GattServiceProviderAdvertisingParameters = _winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderAdvertisingParameters
-GattServiceProviderResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceProviderResult
-GattServiceUuids = _winrt_windows_devices_bluetooth_genericattributeprofile.GattServiceUuids
-GattSession = _winrt_windows_devices_bluetooth_genericattributeprofile.GattSession
-GattSessionStatusChangedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattSessionStatusChangedEventArgs
-GattSubscribedClient = _winrt_windows_devices_bluetooth_genericattributeprofile.GattSubscribedClient
-GattValueChangedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattValueChangedEventArgs
-GattWriteRequest = _winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteRequest
-GattWriteRequestedEventArgs = _winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteRequestedEventArgs
-GattWriteResult = _winrt_windows_devices_bluetooth_genericattributeprofile.GattWriteResult

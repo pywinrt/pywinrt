@@ -5,7 +5,19 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_applicationsettings
+from winrt._winrt_windows_ui_applicationsettings import (
+    AccountsSettingsPane,
+    AccountsSettingsPaneCommandsRequestedEventArgs,
+    AccountsSettingsPaneEventDeferral,
+    CredentialCommand,
+    SettingsCommand,
+    SettingsPane,
+    SettingsPaneCommandsRequest,
+    SettingsPaneCommandsRequestedEventArgs,
+    WebAccountCommand,
+    WebAccountInvokedArgs,
+    WebAccountProviderCommand,
+)
 
 __all__ = [
     "SettingsEdgeLocation",
@@ -46,17 +58,6 @@ class WebAccountAction(enum.IntEnum):
     MANAGE = 3
     MORE = 4
 
-AccountsSettingsPane = _winrt_windows_ui_applicationsettings.AccountsSettingsPane
-AccountsSettingsPaneCommandsRequestedEventArgs = _winrt_windows_ui_applicationsettings.AccountsSettingsPaneCommandsRequestedEventArgs
-AccountsSettingsPaneEventDeferral = _winrt_windows_ui_applicationsettings.AccountsSettingsPaneEventDeferral
-CredentialCommand = _winrt_windows_ui_applicationsettings.CredentialCommand
-SettingsCommand = _winrt_windows_ui_applicationsettings.SettingsCommand
-SettingsPane = _winrt_windows_ui_applicationsettings.SettingsPane
-SettingsPaneCommandsRequest = _winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequest
-SettingsPaneCommandsRequestedEventArgs = _winrt_windows_ui_applicationsettings.SettingsPaneCommandsRequestedEventArgs
-WebAccountCommand = _winrt_windows_ui_applicationsettings.WebAccountCommand
-WebAccountInvokedArgs = _winrt_windows_ui_applicationsettings.WebAccountInvokedArgs
-WebAccountProviderCommand = _winrt_windows_ui_applicationsettings.WebAccountProviderCommand
 CredentialCommandCredentialDeletedHandler = typing.Callable[[CredentialCommand], None]
 WebAccountCommandInvokedHandler = typing.Callable[[WebAccountCommand, WebAccountInvokedArgs], None]
 WebAccountProviderCommandInvokedHandler = typing.Callable[[WebAccountProviderCommand], None]

@@ -5,7 +5,28 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_security_isolation
+from winrt._winrt_windows_security_isolation import (
+    IsolatedWindowsEnvironmentCreateProgress,
+    IsolatedWindowsEnvironment,
+    IsolatedWindowsEnvironmentCreateResult,
+    IsolatedWindowsEnvironmentFile,
+    IsolatedWindowsEnvironmentHost,
+    IsolatedWindowsEnvironmentLaunchFileResult,
+    IsolatedWindowsEnvironmentOptions,
+    IsolatedWindowsEnvironmentOwnerRegistration,
+    IsolatedWindowsEnvironmentOwnerRegistrationData,
+    IsolatedWindowsEnvironmentOwnerRegistrationResult,
+    IsolatedWindowsEnvironmentPostMessageResult,
+    IsolatedWindowsEnvironmentProcess,
+    IsolatedWindowsEnvironmentShareFileRequestOptions,
+    IsolatedWindowsEnvironmentShareFileResult,
+    IsolatedWindowsEnvironmentShareFolderRequestOptions,
+    IsolatedWindowsEnvironmentShareFolderResult,
+    IsolatedWindowsEnvironmentStartProcessResult,
+    IsolatedWindowsEnvironmentTelemetryParameters,
+    IsolatedWindowsEnvironmentUserInfo,
+    IsolatedWindowsHostMessenger,
+)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation.collections as windows_foundation_collections
@@ -153,25 +174,5 @@ class IsolatedWindowsEnvironmentStartProcessStatus(enum.IntEnum):
     FILE_NOT_FOUND = 3
     APP_NOT_REGISTERED = 4
 
-IsolatedWindowsEnvironmentCreateProgress = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateProgress
-IsolatedWindowsEnvironment = _winrt_windows_security_isolation.IsolatedWindowsEnvironment
-IsolatedWindowsEnvironmentCreateResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentCreateResult
-IsolatedWindowsEnvironmentFile = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentFile
-IsolatedWindowsEnvironmentHost = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentHost
-IsolatedWindowsEnvironmentLaunchFileResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentLaunchFileResult
-IsolatedWindowsEnvironmentOptions = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentOptions
-IsolatedWindowsEnvironmentOwnerRegistration = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistration
-IsolatedWindowsEnvironmentOwnerRegistrationData = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationData
-IsolatedWindowsEnvironmentOwnerRegistrationResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentOwnerRegistrationResult
-IsolatedWindowsEnvironmentPostMessageResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentPostMessageResult
-IsolatedWindowsEnvironmentProcess = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentProcess
-IsolatedWindowsEnvironmentShareFileRequestOptions = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileRequestOptions
-IsolatedWindowsEnvironmentShareFileResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFileResult
-IsolatedWindowsEnvironmentShareFolderRequestOptions = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderRequestOptions
-IsolatedWindowsEnvironmentShareFolderResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentShareFolderResult
-IsolatedWindowsEnvironmentStartProcessResult = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentStartProcessResult
-IsolatedWindowsEnvironmentTelemetryParameters = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentTelemetryParameters
-IsolatedWindowsEnvironmentUserInfo = _winrt_windows_security_isolation.IsolatedWindowsEnvironmentUserInfo
-IsolatedWindowsHostMessenger = _winrt_windows_security_isolation.IsolatedWindowsHostMessenger
 HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]
 MessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]

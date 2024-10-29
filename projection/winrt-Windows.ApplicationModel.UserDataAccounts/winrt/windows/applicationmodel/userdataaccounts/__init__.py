@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_userdataaccounts
+from winrt._winrt_windows_applicationmodel_userdataaccounts import (
+    UserDataAccount,
+    UserDataAccountManager,
+    UserDataAccountManagerForUser,
+    UserDataAccountStore,
+    UserDataAccountStoreChangedEventArgs,
+)
 
 __all__ = [
     "UserDataAccountContentKinds",
@@ -30,8 +36,3 @@ class UserDataAccountStoreAccessType(enum.IntEnum):
     ALL_ACCOUNTS_READ_ONLY = 0
     APP_ACCOUNTS_READ_WRITE = 1
 
-UserDataAccount = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccount
-UserDataAccountManager = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManager
-UserDataAccountManagerForUser = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountManagerForUser
-UserDataAccountStore = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStore
-UserDataAccountStoreChangedEventArgs = _winrt_windows_applicationmodel_userdataaccounts.UserDataAccountStoreChangedEventArgs

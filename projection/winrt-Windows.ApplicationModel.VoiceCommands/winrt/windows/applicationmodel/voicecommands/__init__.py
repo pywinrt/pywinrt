@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_voicecommands
+from winrt._winrt_windows_applicationmodel_voicecommands import (
+    VoiceCommand,
+    VoiceCommandCompletedEventArgs,
+    VoiceCommandConfirmationResult,
+    VoiceCommandContentTile,
+    VoiceCommandDefinition,
+    VoiceCommandDefinitionManager,
+    VoiceCommandDisambiguationResult,
+    VoiceCommandResponse,
+    VoiceCommandServiceConnection,
+    VoiceCommandUserMessage,
+)
 
 __all__ = [
     "VoiceCommandCompletionReason",
@@ -39,13 +50,3 @@ class VoiceCommandContentTileType(enum.IntEnum):
     TITLE_WITH280X140_ICON = 6
     TITLE_WITH280X140_ICON_AND_TEXT = 7
 
-VoiceCommand = _winrt_windows_applicationmodel_voicecommands.VoiceCommand
-VoiceCommandCompletedEventArgs = _winrt_windows_applicationmodel_voicecommands.VoiceCommandCompletedEventArgs
-VoiceCommandConfirmationResult = _winrt_windows_applicationmodel_voicecommands.VoiceCommandConfirmationResult
-VoiceCommandContentTile = _winrt_windows_applicationmodel_voicecommands.VoiceCommandContentTile
-VoiceCommandDefinition = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinition
-VoiceCommandDefinitionManager = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDefinitionManager
-VoiceCommandDisambiguationResult = _winrt_windows_applicationmodel_voicecommands.VoiceCommandDisambiguationResult
-VoiceCommandResponse = _winrt_windows_applicationmodel_voicecommands.VoiceCommandResponse
-VoiceCommandServiceConnection = _winrt_windows_applicationmodel_voicecommands.VoiceCommandServiceConnection
-VoiceCommandUserMessage = _winrt_windows_applicationmodel_voicecommands.VoiceCommandUserMessage

@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_extendedexecution_foreground
+from winrt._winrt_windows_applicationmodel_extendedexecution_foreground import (
+    ExtendedExecutionForegroundRevokedEventArgs,
+    ExtendedExecutionForegroundSession,
+)
 
 __all__ = [
     "ExtendedExecutionForegroundReason",
@@ -27,5 +30,3 @@ class ExtendedExecutionForegroundRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-ExtendedExecutionForegroundRevokedEventArgs = _winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundRevokedEventArgs
-ExtendedExecutionForegroundSession = _winrt_windows_applicationmodel_extendedexecution_foreground.ExtendedExecutionForegroundSession

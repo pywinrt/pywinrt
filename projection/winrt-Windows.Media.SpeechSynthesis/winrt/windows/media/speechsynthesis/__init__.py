@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_speechsynthesis
+from winrt._winrt_windows_media_speechsynthesis import (
+    SpeechSynthesisStream,
+    SpeechSynthesizer,
+    SpeechSynthesizerOptions,
+    VoiceInformation,
+)
 
 __all__ = [
     "SpeechAppendedSilence",
@@ -27,7 +32,3 @@ class VoiceGender(enum.IntEnum):
     MALE = 0
     FEMALE = 1
 
-SpeechSynthesisStream = _winrt_windows_media_speechsynthesis.SpeechSynthesisStream
-SpeechSynthesizer = _winrt_windows_media_speechsynthesis.SpeechSynthesizer
-SpeechSynthesizerOptions = _winrt_windows_media_speechsynthesis.SpeechSynthesizerOptions
-VoiceInformation = _winrt_windows_media_speechsynthesis.VoiceInformation

@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_gpio
+from winrt._winrt_windows_devices_gpio import (
+    GpioChangeCount,
+    GpioChangeRecord,
+    GpioChangeCounter,
+    GpioChangeReader,
+    GpioController,
+    GpioPin,
+    GpioPinValueChangedEventArgs,
+)
 
 __all__ = [
     "GpioChangePolarity",
@@ -55,10 +63,3 @@ class GpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
-GpioChangeCount = _winrt_windows_devices_gpio.GpioChangeCount
-GpioChangeRecord = _winrt_windows_devices_gpio.GpioChangeRecord
-GpioChangeCounter = _winrt_windows_devices_gpio.GpioChangeCounter
-GpioChangeReader = _winrt_windows_devices_gpio.GpioChangeReader
-GpioController = _winrt_windows_devices_gpio.GpioController
-GpioPin = _winrt_windows_devices_gpio.GpioPin
-GpioPinValueChangedEventArgs = _winrt_windows_devices_gpio.GpioPinValueChangedEventArgs

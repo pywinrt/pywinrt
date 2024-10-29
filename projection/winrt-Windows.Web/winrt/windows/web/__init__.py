@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web
+from winrt._winrt_windows_web import (
+    WebError,
+    IUriToStreamResolver,
+)
 
 __all__ = [
     "WebErrorStatus",
@@ -68,5 +71,3 @@ class WebErrorStatus(enum.IntEnum):
     GATEWAY_TIMEOUT = 504
     HTTP_VERSION_NOT_SUPPORTED = 505
 
-WebError = _winrt_windows_web.WebError
-IUriToStreamResolver = _winrt_windows_web.IUriToStreamResolver

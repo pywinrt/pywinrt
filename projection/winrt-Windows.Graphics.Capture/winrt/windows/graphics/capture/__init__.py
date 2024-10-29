@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_capture
+from winrt._winrt_windows_graphics_capture import (
+    Direct3D11CaptureFrame,
+    Direct3D11CaptureFramePool,
+    GraphicsCaptureAccess,
+    GraphicsCaptureItem,
+    GraphicsCapturePicker,
+    GraphicsCaptureSession,
+)
 
 __all__ = [
     "GraphicsCaptureAccessKind",
@@ -24,9 +31,3 @@ class GraphicsCaptureDirtyRegionMode(enum.IntEnum):
     REPORT_ONLY = 0
     REPORT_AND_RENDER = 1
 
-Direct3D11CaptureFrame = _winrt_windows_graphics_capture.Direct3D11CaptureFrame
-Direct3D11CaptureFramePool = _winrt_windows_graphics_capture.Direct3D11CaptureFramePool
-GraphicsCaptureAccess = _winrt_windows_graphics_capture.GraphicsCaptureAccess
-GraphicsCaptureItem = _winrt_windows_graphics_capture.GraphicsCaptureItem
-GraphicsCapturePicker = _winrt_windows_graphics_capture.GraphicsCapturePicker
-GraphicsCaptureSession = _winrt_windows_graphics_capture.GraphicsCaptureSession

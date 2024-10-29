@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_input_forcefeedback
+from winrt._winrt_windows_gaming_input_forcefeedback import (
+    ConditionForceEffect,
+    ConstantForceEffect,
+    ForceFeedbackMotor,
+    PeriodicForceEffect,
+    RampForceEffect,
+    IForceFeedbackEffect,
+)
 
 __all__ = [
     "ConditionForceEffectKind",
@@ -49,9 +56,3 @@ class PeriodicForceEffectKind(enum.IntEnum):
     SAWTOOTH_WAVE_UP = 3
     SAWTOOTH_WAVE_DOWN = 4
 
-ConditionForceEffect = _winrt_windows_gaming_input_forcefeedback.ConditionForceEffect
-ConstantForceEffect = _winrt_windows_gaming_input_forcefeedback.ConstantForceEffect
-ForceFeedbackMotor = _winrt_windows_gaming_input_forcefeedback.ForceFeedbackMotor
-PeriodicForceEffect = _winrt_windows_gaming_input_forcefeedback.PeriodicForceEffect
-RampForceEffect = _winrt_windows_gaming_input_forcefeedback.RampForceEffect
-IForceFeedbackEffect = _winrt_windows_gaming_input_forcefeedback.IForceFeedbackEffect

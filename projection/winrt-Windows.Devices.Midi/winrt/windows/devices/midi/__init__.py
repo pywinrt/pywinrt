@@ -3,7 +3,32 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_midi
+from winrt._winrt_windows_devices_midi import (
+    MidiActiveSensingMessage,
+    MidiChannelPressureMessage,
+    MidiContinueMessage,
+    MidiControlChangeMessage,
+    MidiInPort,
+    MidiMessageReceivedEventArgs,
+    MidiNoteOffMessage,
+    MidiNoteOnMessage,
+    MidiOutPort,
+    MidiPitchBendChangeMessage,
+    MidiPolyphonicKeyPressureMessage,
+    MidiProgramChangeMessage,
+    MidiSongPositionPointerMessage,
+    MidiSongSelectMessage,
+    MidiStartMessage,
+    MidiStopMessage,
+    MidiSynthesizer,
+    MidiSystemExclusiveMessage,
+    MidiSystemResetMessage,
+    MidiTimeCodeMessage,
+    MidiTimingClockMessage,
+    MidiTuneRequestMessage,
+    IMidiMessage,
+    IMidiOutPort,
+)
 
 __all__ = [
     "MidiMessageType",
@@ -55,27 +80,3 @@ class MidiMessageType(enum.IntEnum):
     ACTIVE_SENSING = 254
     SYSTEM_RESET = 255
 
-MidiActiveSensingMessage = _winrt_windows_devices_midi.MidiActiveSensingMessage
-MidiChannelPressureMessage = _winrt_windows_devices_midi.MidiChannelPressureMessage
-MidiContinueMessage = _winrt_windows_devices_midi.MidiContinueMessage
-MidiControlChangeMessage = _winrt_windows_devices_midi.MidiControlChangeMessage
-MidiInPort = _winrt_windows_devices_midi.MidiInPort
-MidiMessageReceivedEventArgs = _winrt_windows_devices_midi.MidiMessageReceivedEventArgs
-MidiNoteOffMessage = _winrt_windows_devices_midi.MidiNoteOffMessage
-MidiNoteOnMessage = _winrt_windows_devices_midi.MidiNoteOnMessage
-MidiOutPort = _winrt_windows_devices_midi.MidiOutPort
-MidiPitchBendChangeMessage = _winrt_windows_devices_midi.MidiPitchBendChangeMessage
-MidiPolyphonicKeyPressureMessage = _winrt_windows_devices_midi.MidiPolyphonicKeyPressureMessage
-MidiProgramChangeMessage = _winrt_windows_devices_midi.MidiProgramChangeMessage
-MidiSongPositionPointerMessage = _winrt_windows_devices_midi.MidiSongPositionPointerMessage
-MidiSongSelectMessage = _winrt_windows_devices_midi.MidiSongSelectMessage
-MidiStartMessage = _winrt_windows_devices_midi.MidiStartMessage
-MidiStopMessage = _winrt_windows_devices_midi.MidiStopMessage
-MidiSynthesizer = _winrt_windows_devices_midi.MidiSynthesizer
-MidiSystemExclusiveMessage = _winrt_windows_devices_midi.MidiSystemExclusiveMessage
-MidiSystemResetMessage = _winrt_windows_devices_midi.MidiSystemResetMessage
-MidiTimeCodeMessage = _winrt_windows_devices_midi.MidiTimeCodeMessage
-MidiTimingClockMessage = _winrt_windows_devices_midi.MidiTimingClockMessage
-MidiTuneRequestMessage = _winrt_windows_devices_midi.MidiTuneRequestMessage
-IMidiMessage = _winrt_windows_devices_midi.IMidiMessage
-IMidiOutPort = _winrt_windows_devices_midi.IMidiOutPort

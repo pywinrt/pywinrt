@@ -5,7 +5,303 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_controls
+from winrt._winrt_windows_ui_xaml_controls import (
+    AnchorRequestedEventArgs,
+    AppBar,
+    AppBarButton,
+    AppBarElementContainer,
+    AppBarSeparator,
+    AppBarToggleButton,
+    AutoSuggestBox,
+    AutoSuggestBoxQuerySubmittedEventArgs,
+    AutoSuggestBoxSuggestionChosenEventArgs,
+    AutoSuggestBoxTextChangedEventArgs,
+    BackClickEventArgs,
+    BitmapIcon,
+    BitmapIconSource,
+    Border,
+    Button,
+    CalendarDatePicker,
+    CalendarDatePickerDateChangedEventArgs,
+    CalendarView,
+    CalendarViewDayItem,
+    CalendarViewDayItemChangingEventArgs,
+    CalendarViewSelectedDatesChangedEventArgs,
+    CandidateWindowBoundsChangedEventArgs,
+    Canvas,
+    CaptureElement,
+    CheckBox,
+    ChoosingGroupHeaderContainerEventArgs,
+    ChoosingItemContainerEventArgs,
+    CleanUpVirtualizedItemEventArgs,
+    ColorChangedEventArgs,
+    ColorPicker,
+    ColumnDefinition,
+    ColumnDefinitionCollection,
+    ComboBox,
+    ComboBoxItem,
+    ComboBoxTextSubmittedEventArgs,
+    CommandBar,
+    CommandBarFlyout,
+    CommandBarOverflowPresenter,
+    ContainerContentChangingEventArgs,
+    ContentControl,
+    ContentDialog,
+    ContentDialogButtonClickDeferral,
+    ContentDialogButtonClickEventArgs,
+    ContentDialogClosedEventArgs,
+    ContentDialogClosingDeferral,
+    ContentDialogClosingEventArgs,
+    ContentDialogOpenedEventArgs,
+    ContentLinkChangedEventArgs,
+    ContentPresenter,
+    ContextMenuEventArgs,
+    Control,
+    ControlTemplate,
+    DataTemplateSelector,
+    DatePickedEventArgs,
+    DatePicker,
+    DatePickerFlyout,
+    DatePickerFlyoutItem,
+    DatePickerFlyoutPresenter,
+    DatePickerSelectedValueChangedEventArgs,
+    DatePickerValueChangedEventArgs,
+    DragItemsCompletedEventArgs,
+    DragItemsStartingEventArgs,
+    DropDownButton,
+    DropDownButtonAutomationPeer,
+    DynamicOverflowItemsChangingEventArgs,
+    FlipView,
+    FlipViewItem,
+    Flyout,
+    FlyoutPresenter,
+    FocusDisengagedEventArgs,
+    FocusEngagedEventArgs,
+    FontIcon,
+    FontIconSource,
+    Frame,
+    Grid,
+    GridView,
+    GridViewHeaderItem,
+    GridViewItem,
+    GroupItem,
+    GroupStyle,
+    GroupStyleSelector,
+    HandwritingPanelClosedEventArgs,
+    HandwritingPanelOpenedEventArgs,
+    HandwritingView,
+    HandwritingViewCandidatesChangedEventArgs,
+    HandwritingViewTextSubmittedEventArgs,
+    Hub,
+    HubSection,
+    HubSectionCollection,
+    HubSectionHeaderClickEventArgs,
+    HyperlinkButton,
+    IconElement,
+    IconSource,
+    IconSourceElement,
+    Image,
+    InkCanvas,
+    InkToolbar,
+    InkToolbarBallpointPenButton,
+    InkToolbarCustomPen,
+    InkToolbarCustomPenButton,
+    InkToolbarCustomToggleButton,
+    InkToolbarCustomToolButton,
+    InkToolbarEraserButton,
+    InkToolbarFlyoutItem,
+    InkToolbarHighlighterButton,
+    InkToolbarIsStencilButtonCheckedChangedEventArgs,
+    InkToolbarMenuButton,
+    InkToolbarPenButton,
+    InkToolbarPenConfigurationControl,
+    InkToolbarPencilButton,
+    InkToolbarRulerButton,
+    InkToolbarStencilButton,
+    InkToolbarToggleButton,
+    InkToolbarToolButton,
+    IsTextTrimmedChangedEventArgs,
+    ItemClickEventArgs,
+    ItemCollection,
+    ItemContainerGenerator,
+    ItemsControl,
+    ItemsPanelTemplate,
+    ItemsPickedEventArgs,
+    ItemsPresenter,
+    ItemsStackPanel,
+    ItemsWrapGrid,
+    ListBox,
+    ListBoxItem,
+    ListPickerFlyout,
+    ListPickerFlyoutPresenter,
+    ListView,
+    ListViewBase,
+    ListViewBaseHeaderItem,
+    ListViewHeaderItem,
+    ListViewItem,
+    ListViewPersistenceHelper,
+    MediaElement,
+    MediaPlayerElement,
+    MediaPlayerPresenter,
+    MediaTransportControls,
+    MediaTransportControlsHelper,
+    MenuBar,
+    MenuBarItem,
+    MenuBarItemFlyout,
+    MenuFlyout,
+    MenuFlyoutItem,
+    MenuFlyoutItemBase,
+    MenuFlyoutPresenter,
+    MenuFlyoutSeparator,
+    MenuFlyoutSubItem,
+    NavigationView,
+    NavigationViewBackRequestedEventArgs,
+    NavigationViewDisplayModeChangedEventArgs,
+    NavigationViewItem,
+    NavigationViewItemBase,
+    NavigationViewItemHeader,
+    NavigationViewItemInvokedEventArgs,
+    NavigationViewItemSeparator,
+    NavigationViewList,
+    NavigationViewPaneClosingEventArgs,
+    NavigationViewSelectionChangedEventArgs,
+    NavigationViewTemplateSettings,
+    NotifyEventArgs,
+    Page,
+    Panel,
+    ParallaxView,
+    PasswordBox,
+    PasswordBoxPasswordChangingEventArgs,
+    PathIcon,
+    PathIconSource,
+    PersonPicture,
+    PickerConfirmedEventArgs,
+    PickerFlyout,
+    PickerFlyoutPresenter,
+    Pivot,
+    PivotItem,
+    PivotItemEventArgs,
+    ProgressBar,
+    ProgressRing,
+    RadioButton,
+    RatingControl,
+    RatingItemFontInfo,
+    RatingItemImageInfo,
+    RatingItemInfo,
+    RefreshContainer,
+    RefreshInteractionRatioChangedEventArgs,
+    RefreshRequestedEventArgs,
+    RefreshStateChangedEventArgs,
+    RefreshVisualizer,
+    RelativePanel,
+    RichEditBox,
+    RichEditBoxSelectionChangingEventArgs,
+    RichEditBoxTextChangingEventArgs,
+    RichTextBlock,
+    RichTextBlockOverflow,
+    RowDefinition,
+    RowDefinitionCollection,
+    ScrollContentPresenter,
+    ScrollViewer,
+    ScrollViewerView,
+    ScrollViewerViewChangedEventArgs,
+    ScrollViewerViewChangingEventArgs,
+    SearchBox,
+    SearchBoxQueryChangedEventArgs,
+    SearchBoxQuerySubmittedEventArgs,
+    SearchBoxResultSuggestionChosenEventArgs,
+    SearchBoxSuggestionsRequestedEventArgs,
+    SectionsInViewChangedEventArgs,
+    SelectionChangedEventArgs,
+    SemanticZoom,
+    SemanticZoomLocation,
+    SemanticZoomViewChangedEventArgs,
+    SettingsFlyout,
+    Slider,
+    SplitButton,
+    SplitButtonAutomationPeer,
+    SplitButtonClickEventArgs,
+    SplitView,
+    SplitViewPaneClosingEventArgs,
+    StackPanel,
+    StyleSelector,
+    SwapChainBackgroundPanel,
+    SwapChainPanel,
+    SwipeControl,
+    SwipeItem,
+    SwipeItemInvokedEventArgs,
+    SwipeItems,
+    SymbolIcon,
+    SymbolIconSource,
+    TextBlock,
+    TextBox,
+    TextBoxBeforeTextChangingEventArgs,
+    TextBoxSelectionChangingEventArgs,
+    TextBoxTextChangingEventArgs,
+    TextChangedEventArgs,
+    TextCommandBarFlyout,
+    TextCompositionChangedEventArgs,
+    TextCompositionEndedEventArgs,
+    TextCompositionStartedEventArgs,
+    TextControlCopyingToClipboardEventArgs,
+    TextControlCuttingToClipboardEventArgs,
+    TextControlPasteEventArgs,
+    TimePickedEventArgs,
+    TimePicker,
+    TimePickerFlyout,
+    TimePickerFlyoutPresenter,
+    TimePickerSelectedValueChangedEventArgs,
+    TimePickerValueChangedEventArgs,
+    ToggleMenuFlyoutItem,
+    ToggleSplitButton,
+    ToggleSplitButtonAutomationPeer,
+    ToggleSplitButtonIsCheckedChangedEventArgs,
+    ToggleSwitch,
+    ToolTip,
+    ToolTipService,
+    TreeView,
+    TreeViewCollapsedEventArgs,
+    TreeViewDragItemsCompletedEventArgs,
+    TreeViewDragItemsStartingEventArgs,
+    TreeViewExpandingEventArgs,
+    TreeViewItem,
+    TreeViewItemInvokedEventArgs,
+    TreeViewItemTemplateSettings,
+    TreeViewList,
+    TreeViewNode,
+    TwoPaneView,
+    UIElementCollection,
+    UserControl,
+    VariableSizedWrapGrid,
+    Viewbox,
+    VirtualizingPanel,
+    VirtualizingStackPanel,
+    WebView,
+    WebViewBrush,
+    WebViewContentLoadingEventArgs,
+    WebViewDOMContentLoadedEventArgs,
+    WebViewDeferredPermissionRequest,
+    WebViewLongRunningScriptDetectedEventArgs,
+    WebViewNavigationCompletedEventArgs,
+    WebViewNavigationFailedEventArgs,
+    WebViewNavigationStartingEventArgs,
+    WebViewNewWindowRequestedEventArgs,
+    WebViewPermissionRequest,
+    WebViewPermissionRequestedEventArgs,
+    WebViewSeparateProcessLostEventArgs,
+    WebViewSettings,
+    WebViewUnsupportedUriSchemeIdentifiedEventArgs,
+    WebViewUnviewableContentIdentifiedEventArgs,
+    WebViewWebResourceRequestedEventArgs,
+    WrapGrid,
+    ICommandBarElement,
+    ICommandBarElement2,
+    IInsertionPanel,
+    IItemContainerMapping,
+    INavigate,
+    IScrollAnchorProvider,
+    ISemanticZoomInformation,
+)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
@@ -963,307 +1259,12 @@ class ZoomMode(enum.IntEnum):
     DISABLED = 0
     ENABLED = 1
 
-AnchorRequestedEventArgs = _winrt_windows_ui_xaml_controls.AnchorRequestedEventArgs
-AppBar = _winrt_windows_ui_xaml_controls.AppBar
-AppBarButton = _winrt_windows_ui_xaml_controls.AppBarButton
-AppBarElementContainer = _winrt_windows_ui_xaml_controls.AppBarElementContainer
-AppBarSeparator = _winrt_windows_ui_xaml_controls.AppBarSeparator
-AppBarToggleButton = _winrt_windows_ui_xaml_controls.AppBarToggleButton
-AutoSuggestBox = _winrt_windows_ui_xaml_controls.AutoSuggestBox
-AutoSuggestBoxQuerySubmittedEventArgs = _winrt_windows_ui_xaml_controls.AutoSuggestBoxQuerySubmittedEventArgs
-AutoSuggestBoxSuggestionChosenEventArgs = _winrt_windows_ui_xaml_controls.AutoSuggestBoxSuggestionChosenEventArgs
-AutoSuggestBoxTextChangedEventArgs = _winrt_windows_ui_xaml_controls.AutoSuggestBoxTextChangedEventArgs
-BackClickEventArgs = _winrt_windows_ui_xaml_controls.BackClickEventArgs
-BitmapIcon = _winrt_windows_ui_xaml_controls.BitmapIcon
-BitmapIconSource = _winrt_windows_ui_xaml_controls.BitmapIconSource
-Border = _winrt_windows_ui_xaml_controls.Border
-Button = _winrt_windows_ui_xaml_controls.Button
-CalendarDatePicker = _winrt_windows_ui_xaml_controls.CalendarDatePicker
-CalendarDatePickerDateChangedEventArgs = _winrt_windows_ui_xaml_controls.CalendarDatePickerDateChangedEventArgs
-CalendarView = _winrt_windows_ui_xaml_controls.CalendarView
-CalendarViewDayItem = _winrt_windows_ui_xaml_controls.CalendarViewDayItem
-CalendarViewDayItemChangingEventArgs = _winrt_windows_ui_xaml_controls.CalendarViewDayItemChangingEventArgs
-CalendarViewSelectedDatesChangedEventArgs = _winrt_windows_ui_xaml_controls.CalendarViewSelectedDatesChangedEventArgs
-CandidateWindowBoundsChangedEventArgs = _winrt_windows_ui_xaml_controls.CandidateWindowBoundsChangedEventArgs
-Canvas = _winrt_windows_ui_xaml_controls.Canvas
-CaptureElement = _winrt_windows_ui_xaml_controls.CaptureElement
-CheckBox = _winrt_windows_ui_xaml_controls.CheckBox
-ChoosingGroupHeaderContainerEventArgs = _winrt_windows_ui_xaml_controls.ChoosingGroupHeaderContainerEventArgs
-ChoosingItemContainerEventArgs = _winrt_windows_ui_xaml_controls.ChoosingItemContainerEventArgs
-CleanUpVirtualizedItemEventArgs = _winrt_windows_ui_xaml_controls.CleanUpVirtualizedItemEventArgs
-ColorChangedEventArgs = _winrt_windows_ui_xaml_controls.ColorChangedEventArgs
-ColorPicker = _winrt_windows_ui_xaml_controls.ColorPicker
-ColumnDefinition = _winrt_windows_ui_xaml_controls.ColumnDefinition
-ColumnDefinitionCollection = _winrt_windows_ui_xaml_controls.ColumnDefinitionCollection
 winrt.system._mixin_mutable_sequence(ColumnDefinitionCollection)
-ComboBox = _winrt_windows_ui_xaml_controls.ComboBox
-ComboBoxItem = _winrt_windows_ui_xaml_controls.ComboBoxItem
-ComboBoxTextSubmittedEventArgs = _winrt_windows_ui_xaml_controls.ComboBoxTextSubmittedEventArgs
-CommandBar = _winrt_windows_ui_xaml_controls.CommandBar
-CommandBarFlyout = _winrt_windows_ui_xaml_controls.CommandBarFlyout
-CommandBarOverflowPresenter = _winrt_windows_ui_xaml_controls.CommandBarOverflowPresenter
-ContainerContentChangingEventArgs = _winrt_windows_ui_xaml_controls.ContainerContentChangingEventArgs
-ContentControl = _winrt_windows_ui_xaml_controls.ContentControl
-ContentDialog = _winrt_windows_ui_xaml_controls.ContentDialog
-ContentDialogButtonClickDeferral = _winrt_windows_ui_xaml_controls.ContentDialogButtonClickDeferral
-ContentDialogButtonClickEventArgs = _winrt_windows_ui_xaml_controls.ContentDialogButtonClickEventArgs
-ContentDialogClosedEventArgs = _winrt_windows_ui_xaml_controls.ContentDialogClosedEventArgs
-ContentDialogClosingDeferral = _winrt_windows_ui_xaml_controls.ContentDialogClosingDeferral
-ContentDialogClosingEventArgs = _winrt_windows_ui_xaml_controls.ContentDialogClosingEventArgs
-ContentDialogOpenedEventArgs = _winrt_windows_ui_xaml_controls.ContentDialogOpenedEventArgs
-ContentLinkChangedEventArgs = _winrt_windows_ui_xaml_controls.ContentLinkChangedEventArgs
-ContentPresenter = _winrt_windows_ui_xaml_controls.ContentPresenter
-ContextMenuEventArgs = _winrt_windows_ui_xaml_controls.ContextMenuEventArgs
-Control = _winrt_windows_ui_xaml_controls.Control
-ControlTemplate = _winrt_windows_ui_xaml_controls.ControlTemplate
-DataTemplateSelector = _winrt_windows_ui_xaml_controls.DataTemplateSelector
-DatePickedEventArgs = _winrt_windows_ui_xaml_controls.DatePickedEventArgs
-DatePicker = _winrt_windows_ui_xaml_controls.DatePicker
-DatePickerFlyout = _winrt_windows_ui_xaml_controls.DatePickerFlyout
-DatePickerFlyoutItem = _winrt_windows_ui_xaml_controls.DatePickerFlyoutItem
-DatePickerFlyoutPresenter = _winrt_windows_ui_xaml_controls.DatePickerFlyoutPresenter
-DatePickerSelectedValueChangedEventArgs = _winrt_windows_ui_xaml_controls.DatePickerSelectedValueChangedEventArgs
-DatePickerValueChangedEventArgs = _winrt_windows_ui_xaml_controls.DatePickerValueChangedEventArgs
-DragItemsCompletedEventArgs = _winrt_windows_ui_xaml_controls.DragItemsCompletedEventArgs
-DragItemsStartingEventArgs = _winrt_windows_ui_xaml_controls.DragItemsStartingEventArgs
-DropDownButton = _winrt_windows_ui_xaml_controls.DropDownButton
-DropDownButtonAutomationPeer = _winrt_windows_ui_xaml_controls.DropDownButtonAutomationPeer
-DynamicOverflowItemsChangingEventArgs = _winrt_windows_ui_xaml_controls.DynamicOverflowItemsChangingEventArgs
-FlipView = _winrt_windows_ui_xaml_controls.FlipView
-FlipViewItem = _winrt_windows_ui_xaml_controls.FlipViewItem
-Flyout = _winrt_windows_ui_xaml_controls.Flyout
-FlyoutPresenter = _winrt_windows_ui_xaml_controls.FlyoutPresenter
-FocusDisengagedEventArgs = _winrt_windows_ui_xaml_controls.FocusDisengagedEventArgs
-FocusEngagedEventArgs = _winrt_windows_ui_xaml_controls.FocusEngagedEventArgs
-FontIcon = _winrt_windows_ui_xaml_controls.FontIcon
-FontIconSource = _winrt_windows_ui_xaml_controls.FontIconSource
-Frame = _winrt_windows_ui_xaml_controls.Frame
-Grid = _winrt_windows_ui_xaml_controls.Grid
-GridView = _winrt_windows_ui_xaml_controls.GridView
-GridViewHeaderItem = _winrt_windows_ui_xaml_controls.GridViewHeaderItem
-GridViewItem = _winrt_windows_ui_xaml_controls.GridViewItem
-GroupItem = _winrt_windows_ui_xaml_controls.GroupItem
-GroupStyle = _winrt_windows_ui_xaml_controls.GroupStyle
-GroupStyleSelector = _winrt_windows_ui_xaml_controls.GroupStyleSelector
-HandwritingPanelClosedEventArgs = _winrt_windows_ui_xaml_controls.HandwritingPanelClosedEventArgs
-HandwritingPanelOpenedEventArgs = _winrt_windows_ui_xaml_controls.HandwritingPanelOpenedEventArgs
-HandwritingView = _winrt_windows_ui_xaml_controls.HandwritingView
-HandwritingViewCandidatesChangedEventArgs = _winrt_windows_ui_xaml_controls.HandwritingViewCandidatesChangedEventArgs
-HandwritingViewTextSubmittedEventArgs = _winrt_windows_ui_xaml_controls.HandwritingViewTextSubmittedEventArgs
-Hub = _winrt_windows_ui_xaml_controls.Hub
-HubSection = _winrt_windows_ui_xaml_controls.HubSection
-HubSectionCollection = _winrt_windows_ui_xaml_controls.HubSectionCollection
 winrt.system._mixin_mutable_sequence(HubSectionCollection)
-HubSectionHeaderClickEventArgs = _winrt_windows_ui_xaml_controls.HubSectionHeaderClickEventArgs
-HyperlinkButton = _winrt_windows_ui_xaml_controls.HyperlinkButton
-IconElement = _winrt_windows_ui_xaml_controls.IconElement
-IconSource = _winrt_windows_ui_xaml_controls.IconSource
-IconSourceElement = _winrt_windows_ui_xaml_controls.IconSourceElement
-Image = _winrt_windows_ui_xaml_controls.Image
-InkCanvas = _winrt_windows_ui_xaml_controls.InkCanvas
-InkToolbar = _winrt_windows_ui_xaml_controls.InkToolbar
-InkToolbarBallpointPenButton = _winrt_windows_ui_xaml_controls.InkToolbarBallpointPenButton
-InkToolbarCustomPen = _winrt_windows_ui_xaml_controls.InkToolbarCustomPen
-InkToolbarCustomPenButton = _winrt_windows_ui_xaml_controls.InkToolbarCustomPenButton
-InkToolbarCustomToggleButton = _winrt_windows_ui_xaml_controls.InkToolbarCustomToggleButton
-InkToolbarCustomToolButton = _winrt_windows_ui_xaml_controls.InkToolbarCustomToolButton
-InkToolbarEraserButton = _winrt_windows_ui_xaml_controls.InkToolbarEraserButton
-InkToolbarFlyoutItem = _winrt_windows_ui_xaml_controls.InkToolbarFlyoutItem
-InkToolbarHighlighterButton = _winrt_windows_ui_xaml_controls.InkToolbarHighlighterButton
-InkToolbarIsStencilButtonCheckedChangedEventArgs = _winrt_windows_ui_xaml_controls.InkToolbarIsStencilButtonCheckedChangedEventArgs
-InkToolbarMenuButton = _winrt_windows_ui_xaml_controls.InkToolbarMenuButton
-InkToolbarPenButton = _winrt_windows_ui_xaml_controls.InkToolbarPenButton
-InkToolbarPenConfigurationControl = _winrt_windows_ui_xaml_controls.InkToolbarPenConfigurationControl
-InkToolbarPencilButton = _winrt_windows_ui_xaml_controls.InkToolbarPencilButton
-InkToolbarRulerButton = _winrt_windows_ui_xaml_controls.InkToolbarRulerButton
-InkToolbarStencilButton = _winrt_windows_ui_xaml_controls.InkToolbarStencilButton
-InkToolbarToggleButton = _winrt_windows_ui_xaml_controls.InkToolbarToggleButton
-InkToolbarToolButton = _winrt_windows_ui_xaml_controls.InkToolbarToolButton
-IsTextTrimmedChangedEventArgs = _winrt_windows_ui_xaml_controls.IsTextTrimmedChangedEventArgs
-ItemClickEventArgs = _winrt_windows_ui_xaml_controls.ItemClickEventArgs
-ItemCollection = _winrt_windows_ui_xaml_controls.ItemCollection
 winrt.system._mixin_mutable_sequence(ItemCollection)
-ItemContainerGenerator = _winrt_windows_ui_xaml_controls.ItemContainerGenerator
-ItemsControl = _winrt_windows_ui_xaml_controls.ItemsControl
-ItemsPanelTemplate = _winrt_windows_ui_xaml_controls.ItemsPanelTemplate
-ItemsPickedEventArgs = _winrt_windows_ui_xaml_controls.ItemsPickedEventArgs
-ItemsPresenter = _winrt_windows_ui_xaml_controls.ItemsPresenter
-ItemsStackPanel = _winrt_windows_ui_xaml_controls.ItemsStackPanel
-ItemsWrapGrid = _winrt_windows_ui_xaml_controls.ItemsWrapGrid
-ListBox = _winrt_windows_ui_xaml_controls.ListBox
-ListBoxItem = _winrt_windows_ui_xaml_controls.ListBoxItem
-ListPickerFlyout = _winrt_windows_ui_xaml_controls.ListPickerFlyout
-ListPickerFlyoutPresenter = _winrt_windows_ui_xaml_controls.ListPickerFlyoutPresenter
-ListView = _winrt_windows_ui_xaml_controls.ListView
-ListViewBase = _winrt_windows_ui_xaml_controls.ListViewBase
-ListViewBaseHeaderItem = _winrt_windows_ui_xaml_controls.ListViewBaseHeaderItem
-ListViewHeaderItem = _winrt_windows_ui_xaml_controls.ListViewHeaderItem
-ListViewItem = _winrt_windows_ui_xaml_controls.ListViewItem
-ListViewPersistenceHelper = _winrt_windows_ui_xaml_controls.ListViewPersistenceHelper
-MediaElement = _winrt_windows_ui_xaml_controls.MediaElement
-MediaPlayerElement = _winrt_windows_ui_xaml_controls.MediaPlayerElement
-MediaPlayerPresenter = _winrt_windows_ui_xaml_controls.MediaPlayerPresenter
-MediaTransportControls = _winrt_windows_ui_xaml_controls.MediaTransportControls
-MediaTransportControlsHelper = _winrt_windows_ui_xaml_controls.MediaTransportControlsHelper
-MenuBar = _winrt_windows_ui_xaml_controls.MenuBar
-MenuBarItem = _winrt_windows_ui_xaml_controls.MenuBarItem
-MenuBarItemFlyout = _winrt_windows_ui_xaml_controls.MenuBarItemFlyout
-MenuFlyout = _winrt_windows_ui_xaml_controls.MenuFlyout
-MenuFlyoutItem = _winrt_windows_ui_xaml_controls.MenuFlyoutItem
-MenuFlyoutItemBase = _winrt_windows_ui_xaml_controls.MenuFlyoutItemBase
-MenuFlyoutPresenter = _winrt_windows_ui_xaml_controls.MenuFlyoutPresenter
-MenuFlyoutSeparator = _winrt_windows_ui_xaml_controls.MenuFlyoutSeparator
-MenuFlyoutSubItem = _winrt_windows_ui_xaml_controls.MenuFlyoutSubItem
-NavigationView = _winrt_windows_ui_xaml_controls.NavigationView
-NavigationViewBackRequestedEventArgs = _winrt_windows_ui_xaml_controls.NavigationViewBackRequestedEventArgs
-NavigationViewDisplayModeChangedEventArgs = _winrt_windows_ui_xaml_controls.NavigationViewDisplayModeChangedEventArgs
-NavigationViewItem = _winrt_windows_ui_xaml_controls.NavigationViewItem
-NavigationViewItemBase = _winrt_windows_ui_xaml_controls.NavigationViewItemBase
-NavigationViewItemHeader = _winrt_windows_ui_xaml_controls.NavigationViewItemHeader
-NavigationViewItemInvokedEventArgs = _winrt_windows_ui_xaml_controls.NavigationViewItemInvokedEventArgs
-NavigationViewItemSeparator = _winrt_windows_ui_xaml_controls.NavigationViewItemSeparator
-NavigationViewList = _winrt_windows_ui_xaml_controls.NavigationViewList
-NavigationViewPaneClosingEventArgs = _winrt_windows_ui_xaml_controls.NavigationViewPaneClosingEventArgs
-NavigationViewSelectionChangedEventArgs = _winrt_windows_ui_xaml_controls.NavigationViewSelectionChangedEventArgs
-NavigationViewTemplateSettings = _winrt_windows_ui_xaml_controls.NavigationViewTemplateSettings
-NotifyEventArgs = _winrt_windows_ui_xaml_controls.NotifyEventArgs
-Page = _winrt_windows_ui_xaml_controls.Page
-Panel = _winrt_windows_ui_xaml_controls.Panel
-ParallaxView = _winrt_windows_ui_xaml_controls.ParallaxView
-PasswordBox = _winrt_windows_ui_xaml_controls.PasswordBox
-PasswordBoxPasswordChangingEventArgs = _winrt_windows_ui_xaml_controls.PasswordBoxPasswordChangingEventArgs
-PathIcon = _winrt_windows_ui_xaml_controls.PathIcon
-PathIconSource = _winrt_windows_ui_xaml_controls.PathIconSource
-PersonPicture = _winrt_windows_ui_xaml_controls.PersonPicture
-PickerConfirmedEventArgs = _winrt_windows_ui_xaml_controls.PickerConfirmedEventArgs
-PickerFlyout = _winrt_windows_ui_xaml_controls.PickerFlyout
-PickerFlyoutPresenter = _winrt_windows_ui_xaml_controls.PickerFlyoutPresenter
-Pivot = _winrt_windows_ui_xaml_controls.Pivot
-PivotItem = _winrt_windows_ui_xaml_controls.PivotItem
-PivotItemEventArgs = _winrt_windows_ui_xaml_controls.PivotItemEventArgs
-ProgressBar = _winrt_windows_ui_xaml_controls.ProgressBar
-ProgressRing = _winrt_windows_ui_xaml_controls.ProgressRing
-RadioButton = _winrt_windows_ui_xaml_controls.RadioButton
-RatingControl = _winrt_windows_ui_xaml_controls.RatingControl
-RatingItemFontInfo = _winrt_windows_ui_xaml_controls.RatingItemFontInfo
-RatingItemImageInfo = _winrt_windows_ui_xaml_controls.RatingItemImageInfo
-RatingItemInfo = _winrt_windows_ui_xaml_controls.RatingItemInfo
-RefreshContainer = _winrt_windows_ui_xaml_controls.RefreshContainer
-RefreshInteractionRatioChangedEventArgs = _winrt_windows_ui_xaml_controls.RefreshInteractionRatioChangedEventArgs
-RefreshRequestedEventArgs = _winrt_windows_ui_xaml_controls.RefreshRequestedEventArgs
-RefreshStateChangedEventArgs = _winrt_windows_ui_xaml_controls.RefreshStateChangedEventArgs
-RefreshVisualizer = _winrt_windows_ui_xaml_controls.RefreshVisualizer
-RelativePanel = _winrt_windows_ui_xaml_controls.RelativePanel
-RichEditBox = _winrt_windows_ui_xaml_controls.RichEditBox
-RichEditBoxSelectionChangingEventArgs = _winrt_windows_ui_xaml_controls.RichEditBoxSelectionChangingEventArgs
-RichEditBoxTextChangingEventArgs = _winrt_windows_ui_xaml_controls.RichEditBoxTextChangingEventArgs
-RichTextBlock = _winrt_windows_ui_xaml_controls.RichTextBlock
-RichTextBlockOverflow = _winrt_windows_ui_xaml_controls.RichTextBlockOverflow
-RowDefinition = _winrt_windows_ui_xaml_controls.RowDefinition
-RowDefinitionCollection = _winrt_windows_ui_xaml_controls.RowDefinitionCollection
 winrt.system._mixin_mutable_sequence(RowDefinitionCollection)
-ScrollContentPresenter = _winrt_windows_ui_xaml_controls.ScrollContentPresenter
-ScrollViewer = _winrt_windows_ui_xaml_controls.ScrollViewer
-ScrollViewerView = _winrt_windows_ui_xaml_controls.ScrollViewerView
-ScrollViewerViewChangedEventArgs = _winrt_windows_ui_xaml_controls.ScrollViewerViewChangedEventArgs
-ScrollViewerViewChangingEventArgs = _winrt_windows_ui_xaml_controls.ScrollViewerViewChangingEventArgs
-SearchBox = _winrt_windows_ui_xaml_controls.SearchBox
-SearchBoxQueryChangedEventArgs = _winrt_windows_ui_xaml_controls.SearchBoxQueryChangedEventArgs
-SearchBoxQuerySubmittedEventArgs = _winrt_windows_ui_xaml_controls.SearchBoxQuerySubmittedEventArgs
-SearchBoxResultSuggestionChosenEventArgs = _winrt_windows_ui_xaml_controls.SearchBoxResultSuggestionChosenEventArgs
-SearchBoxSuggestionsRequestedEventArgs = _winrt_windows_ui_xaml_controls.SearchBoxSuggestionsRequestedEventArgs
-SectionsInViewChangedEventArgs = _winrt_windows_ui_xaml_controls.SectionsInViewChangedEventArgs
-SelectionChangedEventArgs = _winrt_windows_ui_xaml_controls.SelectionChangedEventArgs
-SemanticZoom = _winrt_windows_ui_xaml_controls.SemanticZoom
-SemanticZoomLocation = _winrt_windows_ui_xaml_controls.SemanticZoomLocation
-SemanticZoomViewChangedEventArgs = _winrt_windows_ui_xaml_controls.SemanticZoomViewChangedEventArgs
-SettingsFlyout = _winrt_windows_ui_xaml_controls.SettingsFlyout
-Slider = _winrt_windows_ui_xaml_controls.Slider
-SplitButton = _winrt_windows_ui_xaml_controls.SplitButton
-SplitButtonAutomationPeer = _winrt_windows_ui_xaml_controls.SplitButtonAutomationPeer
-SplitButtonClickEventArgs = _winrt_windows_ui_xaml_controls.SplitButtonClickEventArgs
-SplitView = _winrt_windows_ui_xaml_controls.SplitView
-SplitViewPaneClosingEventArgs = _winrt_windows_ui_xaml_controls.SplitViewPaneClosingEventArgs
-StackPanel = _winrt_windows_ui_xaml_controls.StackPanel
-StyleSelector = _winrt_windows_ui_xaml_controls.StyleSelector
-SwapChainBackgroundPanel = _winrt_windows_ui_xaml_controls.SwapChainBackgroundPanel
-SwapChainPanel = _winrt_windows_ui_xaml_controls.SwapChainPanel
-SwipeControl = _winrt_windows_ui_xaml_controls.SwipeControl
-SwipeItem = _winrt_windows_ui_xaml_controls.SwipeItem
-SwipeItemInvokedEventArgs = _winrt_windows_ui_xaml_controls.SwipeItemInvokedEventArgs
-SwipeItems = _winrt_windows_ui_xaml_controls.SwipeItems
 winrt.system._mixin_mutable_sequence(SwipeItems)
-SymbolIcon = _winrt_windows_ui_xaml_controls.SymbolIcon
-SymbolIconSource = _winrt_windows_ui_xaml_controls.SymbolIconSource
-TextBlock = _winrt_windows_ui_xaml_controls.TextBlock
-TextBox = _winrt_windows_ui_xaml_controls.TextBox
-TextBoxBeforeTextChangingEventArgs = _winrt_windows_ui_xaml_controls.TextBoxBeforeTextChangingEventArgs
-TextBoxSelectionChangingEventArgs = _winrt_windows_ui_xaml_controls.TextBoxSelectionChangingEventArgs
-TextBoxTextChangingEventArgs = _winrt_windows_ui_xaml_controls.TextBoxTextChangingEventArgs
-TextChangedEventArgs = _winrt_windows_ui_xaml_controls.TextChangedEventArgs
-TextCommandBarFlyout = _winrt_windows_ui_xaml_controls.TextCommandBarFlyout
-TextCompositionChangedEventArgs = _winrt_windows_ui_xaml_controls.TextCompositionChangedEventArgs
-TextCompositionEndedEventArgs = _winrt_windows_ui_xaml_controls.TextCompositionEndedEventArgs
-TextCompositionStartedEventArgs = _winrt_windows_ui_xaml_controls.TextCompositionStartedEventArgs
-TextControlCopyingToClipboardEventArgs = _winrt_windows_ui_xaml_controls.TextControlCopyingToClipboardEventArgs
-TextControlCuttingToClipboardEventArgs = _winrt_windows_ui_xaml_controls.TextControlCuttingToClipboardEventArgs
-TextControlPasteEventArgs = _winrt_windows_ui_xaml_controls.TextControlPasteEventArgs
-TimePickedEventArgs = _winrt_windows_ui_xaml_controls.TimePickedEventArgs
-TimePicker = _winrt_windows_ui_xaml_controls.TimePicker
-TimePickerFlyout = _winrt_windows_ui_xaml_controls.TimePickerFlyout
-TimePickerFlyoutPresenter = _winrt_windows_ui_xaml_controls.TimePickerFlyoutPresenter
-TimePickerSelectedValueChangedEventArgs = _winrt_windows_ui_xaml_controls.TimePickerSelectedValueChangedEventArgs
-TimePickerValueChangedEventArgs = _winrt_windows_ui_xaml_controls.TimePickerValueChangedEventArgs
-ToggleMenuFlyoutItem = _winrt_windows_ui_xaml_controls.ToggleMenuFlyoutItem
-ToggleSplitButton = _winrt_windows_ui_xaml_controls.ToggleSplitButton
-ToggleSplitButtonAutomationPeer = _winrt_windows_ui_xaml_controls.ToggleSplitButtonAutomationPeer
-ToggleSplitButtonIsCheckedChangedEventArgs = _winrt_windows_ui_xaml_controls.ToggleSplitButtonIsCheckedChangedEventArgs
-ToggleSwitch = _winrt_windows_ui_xaml_controls.ToggleSwitch
-ToolTip = _winrt_windows_ui_xaml_controls.ToolTip
-ToolTipService = _winrt_windows_ui_xaml_controls.ToolTipService
-TreeView = _winrt_windows_ui_xaml_controls.TreeView
-TreeViewCollapsedEventArgs = _winrt_windows_ui_xaml_controls.TreeViewCollapsedEventArgs
-TreeViewDragItemsCompletedEventArgs = _winrt_windows_ui_xaml_controls.TreeViewDragItemsCompletedEventArgs
-TreeViewDragItemsStartingEventArgs = _winrt_windows_ui_xaml_controls.TreeViewDragItemsStartingEventArgs
-TreeViewExpandingEventArgs = _winrt_windows_ui_xaml_controls.TreeViewExpandingEventArgs
-TreeViewItem = _winrt_windows_ui_xaml_controls.TreeViewItem
-TreeViewItemInvokedEventArgs = _winrt_windows_ui_xaml_controls.TreeViewItemInvokedEventArgs
-TreeViewItemTemplateSettings = _winrt_windows_ui_xaml_controls.TreeViewItemTemplateSettings
-TreeViewList = _winrt_windows_ui_xaml_controls.TreeViewList
-TreeViewNode = _winrt_windows_ui_xaml_controls.TreeViewNode
-TwoPaneView = _winrt_windows_ui_xaml_controls.TwoPaneView
-UIElementCollection = _winrt_windows_ui_xaml_controls.UIElementCollection
 winrt.system._mixin_mutable_sequence(UIElementCollection)
-UserControl = _winrt_windows_ui_xaml_controls.UserControl
-VariableSizedWrapGrid = _winrt_windows_ui_xaml_controls.VariableSizedWrapGrid
-Viewbox = _winrt_windows_ui_xaml_controls.Viewbox
-VirtualizingPanel = _winrt_windows_ui_xaml_controls.VirtualizingPanel
-VirtualizingStackPanel = _winrt_windows_ui_xaml_controls.VirtualizingStackPanel
-WebView = _winrt_windows_ui_xaml_controls.WebView
-WebViewBrush = _winrt_windows_ui_xaml_controls.WebViewBrush
-WebViewContentLoadingEventArgs = _winrt_windows_ui_xaml_controls.WebViewContentLoadingEventArgs
-WebViewDOMContentLoadedEventArgs = _winrt_windows_ui_xaml_controls.WebViewDOMContentLoadedEventArgs
-WebViewDeferredPermissionRequest = _winrt_windows_ui_xaml_controls.WebViewDeferredPermissionRequest
-WebViewLongRunningScriptDetectedEventArgs = _winrt_windows_ui_xaml_controls.WebViewLongRunningScriptDetectedEventArgs
-WebViewNavigationCompletedEventArgs = _winrt_windows_ui_xaml_controls.WebViewNavigationCompletedEventArgs
-WebViewNavigationFailedEventArgs = _winrt_windows_ui_xaml_controls.WebViewNavigationFailedEventArgs
-WebViewNavigationStartingEventArgs = _winrt_windows_ui_xaml_controls.WebViewNavigationStartingEventArgs
-WebViewNewWindowRequestedEventArgs = _winrt_windows_ui_xaml_controls.WebViewNewWindowRequestedEventArgs
-WebViewPermissionRequest = _winrt_windows_ui_xaml_controls.WebViewPermissionRequest
-WebViewPermissionRequestedEventArgs = _winrt_windows_ui_xaml_controls.WebViewPermissionRequestedEventArgs
-WebViewSeparateProcessLostEventArgs = _winrt_windows_ui_xaml_controls.WebViewSeparateProcessLostEventArgs
-WebViewSettings = _winrt_windows_ui_xaml_controls.WebViewSettings
-WebViewUnsupportedUriSchemeIdentifiedEventArgs = _winrt_windows_ui_xaml_controls.WebViewUnsupportedUriSchemeIdentifiedEventArgs
-WebViewUnviewableContentIdentifiedEventArgs = _winrt_windows_ui_xaml_controls.WebViewUnviewableContentIdentifiedEventArgs
-WebViewWebResourceRequestedEventArgs = _winrt_windows_ui_xaml_controls.WebViewWebResourceRequestedEventArgs
-WrapGrid = _winrt_windows_ui_xaml_controls.WrapGrid
-ICommandBarElement = _winrt_windows_ui_xaml_controls.ICommandBarElement
-ICommandBarElement2 = _winrt_windows_ui_xaml_controls.ICommandBarElement2
-IInsertionPanel = _winrt_windows_ui_xaml_controls.IInsertionPanel
-IItemContainerMapping = _winrt_windows_ui_xaml_controls.IItemContainerMapping
-INavigate = _winrt_windows_ui_xaml_controls.INavigate
-IScrollAnchorProvider = _winrt_windows_ui_xaml_controls.IScrollAnchorProvider
-ISemanticZoomInformation = _winrt_windows_ui_xaml_controls.ISemanticZoomInformation
 BackClickEventHandler = typing.Callable[[winrt.system.Object, BackClickEventArgs], None]
 CalendarViewDayItemChangingEventHandler = typing.Callable[[CalendarView, CalendarViewDayItemChangingEventArgs], None]
 CleanUpVirtualizedItemEventHandler = typing.Callable[[winrt.system.Object, CleanUpVirtualizedItemEventArgs], None]

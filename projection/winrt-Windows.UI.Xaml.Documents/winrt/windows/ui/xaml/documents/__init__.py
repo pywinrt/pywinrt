@@ -3,7 +3,35 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_documents
+from winrt._winrt_windows_ui_xaml_documents import (
+    TextRange,
+    Block,
+    BlockCollection,
+    Bold,
+    ContactContentLinkProvider,
+    ContentLink,
+    ContentLinkInvokedEventArgs,
+    ContentLinkProvider,
+    ContentLinkProviderCollection,
+    Glyphs,
+    Hyperlink,
+    HyperlinkClickEventArgs,
+    Inline,
+    InlineCollection,
+    InlineUIContainer,
+    Italic,
+    LineBreak,
+    Paragraph,
+    PlaceContentLinkProvider,
+    Run,
+    Span,
+    TextElement,
+    TextHighlighter,
+    TextHighlighterBase,
+    TextPointer,
+    Typography,
+    Underline,
+)
 
 __all__ = [
     "LogicalDirection",
@@ -45,33 +73,6 @@ class UnderlineStyle(enum.IntEnum):
     NONE = 0
     SINGLE = 1
 
-TextRange = _winrt_windows_ui_xaml_documents.TextRange
-Block = _winrt_windows_ui_xaml_documents.Block
-BlockCollection = _winrt_windows_ui_xaml_documents.BlockCollection
 winrt.system._mixin_mutable_sequence(BlockCollection)
-Bold = _winrt_windows_ui_xaml_documents.Bold
-ContactContentLinkProvider = _winrt_windows_ui_xaml_documents.ContactContentLinkProvider
-ContentLink = _winrt_windows_ui_xaml_documents.ContentLink
-ContentLinkInvokedEventArgs = _winrt_windows_ui_xaml_documents.ContentLinkInvokedEventArgs
-ContentLinkProvider = _winrt_windows_ui_xaml_documents.ContentLinkProvider
-ContentLinkProviderCollection = _winrt_windows_ui_xaml_documents.ContentLinkProviderCollection
 winrt.system._mixin_mutable_sequence(ContentLinkProviderCollection)
-Glyphs = _winrt_windows_ui_xaml_documents.Glyphs
-Hyperlink = _winrt_windows_ui_xaml_documents.Hyperlink
-HyperlinkClickEventArgs = _winrt_windows_ui_xaml_documents.HyperlinkClickEventArgs
-Inline = _winrt_windows_ui_xaml_documents.Inline
-InlineCollection = _winrt_windows_ui_xaml_documents.InlineCollection
 winrt.system._mixin_mutable_sequence(InlineCollection)
-InlineUIContainer = _winrt_windows_ui_xaml_documents.InlineUIContainer
-Italic = _winrt_windows_ui_xaml_documents.Italic
-LineBreak = _winrt_windows_ui_xaml_documents.LineBreak
-Paragraph = _winrt_windows_ui_xaml_documents.Paragraph
-PlaceContentLinkProvider = _winrt_windows_ui_xaml_documents.PlaceContentLinkProvider
-Run = _winrt_windows_ui_xaml_documents.Run
-Span = _winrt_windows_ui_xaml_documents.Span
-TextElement = _winrt_windows_ui_xaml_documents.TextElement
-TextHighlighter = _winrt_windows_ui_xaml_documents.TextHighlighter
-TextHighlighterBase = _winrt_windows_ui_xaml_documents.TextHighlighterBase
-TextPointer = _winrt_windows_ui_xaml_documents.TextPointer
-Typography = _winrt_windows_ui_xaml_documents.Typography
-Underline = _winrt_windows_ui_xaml_documents.Underline

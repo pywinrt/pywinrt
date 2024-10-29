@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_exchangeactivesyncprovisioning
+from winrt._winrt_windows_security_exchangeactivesyncprovisioning import (
+    EasClientDeviceInformation,
+    EasClientSecurityPolicy,
+    EasComplianceResults,
+)
 
 __all__ = [
     "EasDisallowConvenienceLogonResult",
@@ -118,6 +122,3 @@ class EasRequireEncryptionResult(enum.IntEnum):
     OS_NOT_PROTECTED = 11
     UNEXPECTED_FAILURE = 12
 
-EasClientDeviceInformation = _winrt_windows_security_exchangeactivesyncprovisioning.EasClientDeviceInformation
-EasClientSecurityPolicy = _winrt_windows_security_exchangeactivesyncprovisioning.EasClientSecurityPolicy
-EasComplianceResults = _winrt_windows_security_exchangeactivesyncprovisioning.EasComplianceResults

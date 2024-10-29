@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_playto
+from winrt._winrt_windows_media_playto import (
+    CurrentTimeChangeRequestedEventArgs,
+    MuteChangeRequestedEventArgs,
+    PlayToConnection,
+    PlayToConnectionErrorEventArgs,
+    PlayToConnectionStateChangedEventArgs,
+    PlayToConnectionTransferredEventArgs,
+    PlayToManager,
+    PlayToReceiver,
+    PlayToSource,
+    PlayToSourceDeferral,
+    PlayToSourceRequest,
+    PlayToSourceRequestedEventArgs,
+    PlayToSourceSelectedEventArgs,
+    PlaybackRateChangeRequestedEventArgs,
+    SourceChangeRequestedEventArgs,
+    VolumeChangeRequestedEventArgs,
+)
 
 __all__ = [
     "PlayToConnectionError",
@@ -38,19 +55,3 @@ class PlayToConnectionState(enum.IntEnum):
     CONNECTED = 1
     RENDERING = 2
 
-CurrentTimeChangeRequestedEventArgs = _winrt_windows_media_playto.CurrentTimeChangeRequestedEventArgs
-MuteChangeRequestedEventArgs = _winrt_windows_media_playto.MuteChangeRequestedEventArgs
-PlayToConnection = _winrt_windows_media_playto.PlayToConnection
-PlayToConnectionErrorEventArgs = _winrt_windows_media_playto.PlayToConnectionErrorEventArgs
-PlayToConnectionStateChangedEventArgs = _winrt_windows_media_playto.PlayToConnectionStateChangedEventArgs
-PlayToConnectionTransferredEventArgs = _winrt_windows_media_playto.PlayToConnectionTransferredEventArgs
-PlayToManager = _winrt_windows_media_playto.PlayToManager
-PlayToReceiver = _winrt_windows_media_playto.PlayToReceiver
-PlayToSource = _winrt_windows_media_playto.PlayToSource
-PlayToSourceDeferral = _winrt_windows_media_playto.PlayToSourceDeferral
-PlayToSourceRequest = _winrt_windows_media_playto.PlayToSourceRequest
-PlayToSourceRequestedEventArgs = _winrt_windows_media_playto.PlayToSourceRequestedEventArgs
-PlayToSourceSelectedEventArgs = _winrt_windows_media_playto.PlayToSourceSelectedEventArgs
-PlaybackRateChangeRequestedEventArgs = _winrt_windows_media_playto.PlaybackRateChangeRequestedEventArgs
-SourceChangeRequestedEventArgs = _winrt_windows_media_playto.SourceChangeRequestedEventArgs
-VolumeChangeRequestedEventArgs = _winrt_windows_media_playto.VolumeChangeRequestedEventArgs

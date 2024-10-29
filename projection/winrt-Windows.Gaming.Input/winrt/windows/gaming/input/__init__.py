@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_input
+from winrt._winrt_windows_gaming_input import (
+    ArcadeStickReading,
+    FlightStickReading,
+    GamepadReading,
+    GamepadVibration,
+    RacingWheelReading,
+    UINavigationReading,
+    ArcadeStick,
+    FlightStick,
+    Gamepad,
+    Headset,
+    RacingWheel,
+    RawGameController,
+    UINavigationController,
+    IGameController,
+    IGameControllerBatteryInfo,
+)
 
 __all__ = [
     "ArcadeStickButtons",
@@ -211,18 +227,3 @@ class RequiredUINavigationButtons(enum.IntFlag):
     LEFT = 0x40
     RIGHT = 0x80
 
-ArcadeStickReading = _winrt_windows_gaming_input.ArcadeStickReading
-FlightStickReading = _winrt_windows_gaming_input.FlightStickReading
-GamepadReading = _winrt_windows_gaming_input.GamepadReading
-GamepadVibration = _winrt_windows_gaming_input.GamepadVibration
-RacingWheelReading = _winrt_windows_gaming_input.RacingWheelReading
-UINavigationReading = _winrt_windows_gaming_input.UINavigationReading
-ArcadeStick = _winrt_windows_gaming_input.ArcadeStick
-FlightStick = _winrt_windows_gaming_input.FlightStick
-Gamepad = _winrt_windows_gaming_input.Gamepad
-Headset = _winrt_windows_gaming_input.Headset
-RacingWheel = _winrt_windows_gaming_input.RacingWheel
-RawGameController = _winrt_windows_gaming_input.RawGameController
-UINavigationController = _winrt_windows_gaming_input.UINavigationController
-IGameController = _winrt_windows_gaming_input.IGameController
-IGameControllerBatteryInfo = _winrt_windows_gaming_input.IGameControllerBatteryInfo

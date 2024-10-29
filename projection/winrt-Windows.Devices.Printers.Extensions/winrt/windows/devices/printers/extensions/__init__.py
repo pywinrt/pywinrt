@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_printers_extensions
+from winrt._winrt_windows_devices_printers_extensions import (
+    Print3DWorkflow,
+    Print3DWorkflowPrintRequestedEventArgs,
+    Print3DWorkflowPrinterChangedEventArgs,
+    PrintExtensionContext,
+    PrintNotificationEventDetails,
+    PrintTaskConfiguration,
+    PrintTaskConfigurationSaveRequest,
+    PrintTaskConfigurationSaveRequestedDeferral,
+    PrintTaskConfigurationSaveRequestedEventArgs,
+)
 
 __all__ = [
     "Print3DWorkflowDetail",
@@ -35,12 +45,3 @@ class Print3DWorkflowStatus(enum.IntEnum):
     SLICING = 3
     SUBMITTED = 4
 
-Print3DWorkflow = _winrt_windows_devices_printers_extensions.Print3DWorkflow
-Print3DWorkflowPrintRequestedEventArgs = _winrt_windows_devices_printers_extensions.Print3DWorkflowPrintRequestedEventArgs
-Print3DWorkflowPrinterChangedEventArgs = _winrt_windows_devices_printers_extensions.Print3DWorkflowPrinterChangedEventArgs
-PrintExtensionContext = _winrt_windows_devices_printers_extensions.PrintExtensionContext
-PrintNotificationEventDetails = _winrt_windows_devices_printers_extensions.PrintNotificationEventDetails
-PrintTaskConfiguration = _winrt_windows_devices_printers_extensions.PrintTaskConfiguration
-PrintTaskConfigurationSaveRequest = _winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequest
-PrintTaskConfigurationSaveRequestedDeferral = _winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedDeferral
-PrintTaskConfigurationSaveRequestedEventArgs = _winrt_windows_devices_printers_extensions.PrintTaskConfigurationSaveRequestedEventArgs

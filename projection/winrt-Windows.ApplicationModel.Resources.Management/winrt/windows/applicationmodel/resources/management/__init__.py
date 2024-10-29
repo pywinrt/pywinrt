@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_resources_management
+from winrt._winrt_windows_applicationmodel_resources_management import (
+    IndexedResourceCandidate,
+    IndexedResourceQualifier,
+    ResourceIndexer,
+)
 
 __all__ = [
     "IndexedResourceType",
@@ -17,6 +21,3 @@ class IndexedResourceType(enum.IntEnum):
     PATH = 1
     EMBEDDED_DATA = 2
 
-IndexedResourceCandidate = _winrt_windows_applicationmodel_resources_management.IndexedResourceCandidate
-IndexedResourceQualifier = _winrt_windows_applicationmodel_resources_management.IndexedResourceQualifier
-ResourceIndexer = _winrt_windows_applicationmodel_resources_management.ResourceIndexer

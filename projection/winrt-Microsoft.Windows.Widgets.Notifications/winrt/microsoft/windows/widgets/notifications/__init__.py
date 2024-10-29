@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_widgets_notifications
+from winrt._winrt_microsoft_windows_widgets_notifications import (
+    FeedAnnouncement,
+    FeedAnnouncementInvokedArgs,
+)
 
 __all__ = [
     "AnnouncementActionKind",
@@ -25,5 +28,3 @@ class AnnouncementTextColor(enum.IntEnum):
     WARNING = 5
     ATTENTION = 6
 
-FeedAnnouncement = _winrt_microsoft_windows_widgets_notifications.FeedAnnouncement
-FeedAnnouncementInvokedArgs = _winrt_microsoft_windows_widgets_notifications.FeedAnnouncementInvokedArgs

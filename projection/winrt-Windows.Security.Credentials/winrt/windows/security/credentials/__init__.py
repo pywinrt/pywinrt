@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_credentials
+from winrt._winrt_windows_security_credentials import (
+    KeyCredential,
+    KeyCredentialAttestationResult,
+    KeyCredentialManager,
+    KeyCredentialOperationResult,
+    KeyCredentialRetrievalResult,
+    PasswordCredential,
+    PasswordCredentialPropertyStore,
+    PasswordVault,
+    WebAccount,
+    WebAccountProvider,
+    IWebAccount,
+)
 
 __all__ = [
     "KeyCredentialAttestationStatus",
@@ -54,15 +66,4 @@ class WebAccountState(enum.IntEnum):
     CONNECTED = 1
     ERROR = 2
 
-KeyCredential = _winrt_windows_security_credentials.KeyCredential
-KeyCredentialAttestationResult = _winrt_windows_security_credentials.KeyCredentialAttestationResult
-KeyCredentialManager = _winrt_windows_security_credentials.KeyCredentialManager
-KeyCredentialOperationResult = _winrt_windows_security_credentials.KeyCredentialOperationResult
-KeyCredentialRetrievalResult = _winrt_windows_security_credentials.KeyCredentialRetrievalResult
-PasswordCredential = _winrt_windows_security_credentials.PasswordCredential
-PasswordCredentialPropertyStore = _winrt_windows_security_credentials.PasswordCredentialPropertyStore
 winrt.system._mixin_mutable_mapping(PasswordCredentialPropertyStore)
-PasswordVault = _winrt_windows_security_credentials.PasswordVault
-WebAccount = _winrt_windows_security_credentials.WebAccount
-WebAccountProvider = _winrt_windows_security_credentials.WebAccountProvider
-IWebAccount = _winrt_windows_security_credentials.IWebAccount

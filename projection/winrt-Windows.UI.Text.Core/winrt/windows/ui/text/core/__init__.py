@@ -3,7 +3,25 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_text_core
+from winrt._winrt_windows_ui_text_core import (
+    CoreTextRange,
+    CoreTextCompositionCompletedEventArgs,
+    CoreTextCompositionSegment,
+    CoreTextCompositionStartedEventArgs,
+    CoreTextEditContext,
+    CoreTextFormatUpdatingEventArgs,
+    CoreTextLayoutBounds,
+    CoreTextLayoutRequest,
+    CoreTextLayoutRequestedEventArgs,
+    CoreTextSelectionRequest,
+    CoreTextSelectionRequestedEventArgs,
+    CoreTextSelectionUpdatingEventArgs,
+    CoreTextServicesConstants,
+    CoreTextServicesManager,
+    CoreTextTextRequest,
+    CoreTextTextRequestedEventArgs,
+    CoreTextTextUpdatingEventArgs,
+)
 
 __all__ = [
     "CoreTextFormatUpdatingReason",
@@ -123,20 +141,3 @@ class CoreTextTextUpdatingResult(enum.IntEnum):
     SUCCEEDED = 0
     FAILED = 1
 
-CoreTextRange = _winrt_windows_ui_text_core.CoreTextRange
-CoreTextCompositionCompletedEventArgs = _winrt_windows_ui_text_core.CoreTextCompositionCompletedEventArgs
-CoreTextCompositionSegment = _winrt_windows_ui_text_core.CoreTextCompositionSegment
-CoreTextCompositionStartedEventArgs = _winrt_windows_ui_text_core.CoreTextCompositionStartedEventArgs
-CoreTextEditContext = _winrt_windows_ui_text_core.CoreTextEditContext
-CoreTextFormatUpdatingEventArgs = _winrt_windows_ui_text_core.CoreTextFormatUpdatingEventArgs
-CoreTextLayoutBounds = _winrt_windows_ui_text_core.CoreTextLayoutBounds
-CoreTextLayoutRequest = _winrt_windows_ui_text_core.CoreTextLayoutRequest
-CoreTextLayoutRequestedEventArgs = _winrt_windows_ui_text_core.CoreTextLayoutRequestedEventArgs
-CoreTextSelectionRequest = _winrt_windows_ui_text_core.CoreTextSelectionRequest
-CoreTextSelectionRequestedEventArgs = _winrt_windows_ui_text_core.CoreTextSelectionRequestedEventArgs
-CoreTextSelectionUpdatingEventArgs = _winrt_windows_ui_text_core.CoreTextSelectionUpdatingEventArgs
-CoreTextServicesConstants = _winrt_windows_ui_text_core.CoreTextServicesConstants
-CoreTextServicesManager = _winrt_windows_ui_text_core.CoreTextServicesManager
-CoreTextTextRequest = _winrt_windows_ui_text_core.CoreTextTextRequest
-CoreTextTextRequestedEventArgs = _winrt_windows_ui_text_core.CoreTextTextRequestedEventArgs
-CoreTextTextUpdatingEventArgs = _winrt_windows_ui_text_core.CoreTextTextUpdatingEventArgs

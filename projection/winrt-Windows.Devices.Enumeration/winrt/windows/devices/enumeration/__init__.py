@@ -3,7 +3,32 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_enumeration
+from winrt._winrt_windows_devices_enumeration import (
+    DeviceAccessChangedEventArgs,
+    DeviceAccessInformation,
+    DeviceConnectionChangeTriggerDetails,
+    DeviceDisconnectButtonClickedEventArgs,
+    DeviceInformation,
+    DeviceInformationCollection,
+    DeviceInformationCustomPairing,
+    DeviceInformationPairing,
+    DeviceInformationUpdate,
+    DevicePairingRequestedEventArgs,
+    DevicePairingResult,
+    DevicePairingSetMembersRequestedEventArgs,
+    DevicePicker,
+    DevicePickerAppearance,
+    DevicePickerFilter,
+    DeviceSelectedEventArgs,
+    DeviceThumbnail,
+    DeviceUnpairingResult,
+    DeviceWatcher,
+    DeviceWatcherEvent,
+    DeviceWatcherTriggerDetails,
+    EnclosureLocation,
+    IDeviceEnumerationSettings,
+    IDevicePairingSettings,
+)
 
 __all__ = [
     "DeviceAccessStatus",
@@ -151,28 +176,4 @@ class Panel(enum.IntEnum):
     LEFT = 5
     RIGHT = 6
 
-DeviceAccessChangedEventArgs = _winrt_windows_devices_enumeration.DeviceAccessChangedEventArgs
-DeviceAccessInformation = _winrt_windows_devices_enumeration.DeviceAccessInformation
-DeviceConnectionChangeTriggerDetails = _winrt_windows_devices_enumeration.DeviceConnectionChangeTriggerDetails
-DeviceDisconnectButtonClickedEventArgs = _winrt_windows_devices_enumeration.DeviceDisconnectButtonClickedEventArgs
-DeviceInformation = _winrt_windows_devices_enumeration.DeviceInformation
-DeviceInformationCollection = _winrt_windows_devices_enumeration.DeviceInformationCollection
 winrt.system._mixin_sequence(DeviceInformationCollection)
-DeviceInformationCustomPairing = _winrt_windows_devices_enumeration.DeviceInformationCustomPairing
-DeviceInformationPairing = _winrt_windows_devices_enumeration.DeviceInformationPairing
-DeviceInformationUpdate = _winrt_windows_devices_enumeration.DeviceInformationUpdate
-DevicePairingRequestedEventArgs = _winrt_windows_devices_enumeration.DevicePairingRequestedEventArgs
-DevicePairingResult = _winrt_windows_devices_enumeration.DevicePairingResult
-DevicePairingSetMembersRequestedEventArgs = _winrt_windows_devices_enumeration.DevicePairingSetMembersRequestedEventArgs
-DevicePicker = _winrt_windows_devices_enumeration.DevicePicker
-DevicePickerAppearance = _winrt_windows_devices_enumeration.DevicePickerAppearance
-DevicePickerFilter = _winrt_windows_devices_enumeration.DevicePickerFilter
-DeviceSelectedEventArgs = _winrt_windows_devices_enumeration.DeviceSelectedEventArgs
-DeviceThumbnail = _winrt_windows_devices_enumeration.DeviceThumbnail
-DeviceUnpairingResult = _winrt_windows_devices_enumeration.DeviceUnpairingResult
-DeviceWatcher = _winrt_windows_devices_enumeration.DeviceWatcher
-DeviceWatcherEvent = _winrt_windows_devices_enumeration.DeviceWatcherEvent
-DeviceWatcherTriggerDetails = _winrt_windows_devices_enumeration.DeviceWatcherTriggerDetails
-EnclosureLocation = _winrt_windows_devices_enumeration.EnclosureLocation
-IDeviceEnumerationSettings = _winrt_windows_devices_enumeration.IDeviceEnumerationSettings
-IDevicePairingSettings = _winrt_windows_devices_enumeration.IDevicePairingSettings

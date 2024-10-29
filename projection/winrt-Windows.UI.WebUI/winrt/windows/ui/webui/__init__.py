@@ -5,7 +5,73 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_webui
+from winrt._winrt_windows_ui_webui import (
+    ActivatedDeferral,
+    ActivatedOperation,
+    BackgroundActivatedEventArgs,
+    EnteredBackgroundEventArgs,
+    HtmlPrintDocumentSource,
+    LeavingBackgroundEventArgs,
+    NewWebUIViewCreatedEventArgs,
+    SuspendingDeferral,
+    SuspendingEventArgs,
+    SuspendingOperation,
+    WebUIApplication,
+    WebUIAppointmentsProviderAddAppointmentActivatedEventArgs,
+    WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs,
+    WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs,
+    WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs,
+    WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs,
+    WebUIBackgroundTaskInstance,
+    WebUIBackgroundTaskInstanceRuntimeClass,
+    WebUIBarcodeScannerPreviewActivatedEventArgs,
+    WebUICachedFileUpdaterActivatedEventArgs,
+    WebUICameraSettingsActivatedEventArgs,
+    WebUICommandLineActivatedEventArgs,
+    WebUIContactCallActivatedEventArgs,
+    WebUIContactMapActivatedEventArgs,
+    WebUIContactMessageActivatedEventArgs,
+    WebUIContactPanelActivatedEventArgs,
+    WebUIContactPickerActivatedEventArgs,
+    WebUIContactPostActivatedEventArgs,
+    WebUIContactVideoCallActivatedEventArgs,
+    WebUIDeviceActivatedEventArgs,
+    WebUIDevicePairingActivatedEventArgs,
+    WebUIDialReceiverActivatedEventArgs,
+    WebUIFileActivatedEventArgs,
+    WebUIFileOpenPickerActivatedEventArgs,
+    WebUIFileOpenPickerContinuationEventArgs,
+    WebUIFileSavePickerActivatedEventArgs,
+    WebUIFileSavePickerContinuationEventArgs,
+    WebUIFolderPickerContinuationEventArgs,
+    WebUILaunchActivatedEventArgs,
+    WebUILockScreenActivatedEventArgs,
+    WebUILockScreenCallActivatedEventArgs,
+    WebUILockScreenComponentActivatedEventArgs,
+    WebUINavigatedDeferral,
+    WebUINavigatedEventArgs,
+    WebUINavigatedOperation,
+    WebUIPhoneCallActivatedEventArgs,
+    WebUIPrint3DWorkflowActivatedEventArgs,
+    WebUIPrintTaskSettingsActivatedEventArgs,
+    WebUIPrintWorkflowForegroundTaskActivatedEventArgs,
+    WebUIProtocolActivatedEventArgs,
+    WebUIProtocolForResultsActivatedEventArgs,
+    WebUIRestrictedLaunchActivatedEventArgs,
+    WebUISearchActivatedEventArgs,
+    WebUIShareTargetActivatedEventArgs,
+    WebUIStartupTaskActivatedEventArgs,
+    WebUIToastNotificationActivatedEventArgs,
+    WebUIUserDataAccountProviderActivatedEventArgs,
+    WebUIView,
+    WebUIVoiceCommandActivatedEventArgs,
+    WebUIWalletActionActivatedEventArgs,
+    WebUIWebAccountProviderActivatedEventArgs,
+    WebUIWebAuthenticationBrokerContinuationEventArgs,
+    IActivatedEventArgsDeferral,
+    IWebUIBackgroundTaskInstance,
+    IWebUINavigatedEventArgs,
+)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel
@@ -93,71 +159,6 @@ class PrintContent(enum.IntEnum):
     CUSTOM_PAGE_RANGE = 2
     CURRENT_SELECTION = 3
 
-ActivatedDeferral = _winrt_windows_ui_webui.ActivatedDeferral
-ActivatedOperation = _winrt_windows_ui_webui.ActivatedOperation
-BackgroundActivatedEventArgs = _winrt_windows_ui_webui.BackgroundActivatedEventArgs
-EnteredBackgroundEventArgs = _winrt_windows_ui_webui.EnteredBackgroundEventArgs
-HtmlPrintDocumentSource = _winrt_windows_ui_webui.HtmlPrintDocumentSource
-LeavingBackgroundEventArgs = _winrt_windows_ui_webui.LeavingBackgroundEventArgs
-NewWebUIViewCreatedEventArgs = _winrt_windows_ui_webui.NewWebUIViewCreatedEventArgs
-SuspendingDeferral = _winrt_windows_ui_webui.SuspendingDeferral
-SuspendingEventArgs = _winrt_windows_ui_webui.SuspendingEventArgs
-SuspendingOperation = _winrt_windows_ui_webui.SuspendingOperation
-WebUIApplication = _winrt_windows_ui_webui.WebUIApplication
-WebUIAppointmentsProviderAddAppointmentActivatedEventArgs = _winrt_windows_ui_webui.WebUIAppointmentsProviderAddAppointmentActivatedEventArgs
-WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs = _winrt_windows_ui_webui.WebUIAppointmentsProviderRemoveAppointmentActivatedEventArgs
-WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs = _winrt_windows_ui_webui.WebUIAppointmentsProviderReplaceAppointmentActivatedEventArgs
-WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs = _winrt_windows_ui_webui.WebUIAppointmentsProviderShowAppointmentDetailsActivatedEventArgs
-WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs = _winrt_windows_ui_webui.WebUIAppointmentsProviderShowTimeFrameActivatedEventArgs
-WebUIBackgroundTaskInstance = _winrt_windows_ui_webui.WebUIBackgroundTaskInstance
-WebUIBackgroundTaskInstanceRuntimeClass = _winrt_windows_ui_webui.WebUIBackgroundTaskInstanceRuntimeClass
-WebUIBarcodeScannerPreviewActivatedEventArgs = _winrt_windows_ui_webui.WebUIBarcodeScannerPreviewActivatedEventArgs
-WebUICachedFileUpdaterActivatedEventArgs = _winrt_windows_ui_webui.WebUICachedFileUpdaterActivatedEventArgs
-WebUICameraSettingsActivatedEventArgs = _winrt_windows_ui_webui.WebUICameraSettingsActivatedEventArgs
-WebUICommandLineActivatedEventArgs = _winrt_windows_ui_webui.WebUICommandLineActivatedEventArgs
-WebUIContactCallActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactCallActivatedEventArgs
-WebUIContactMapActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactMapActivatedEventArgs
-WebUIContactMessageActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactMessageActivatedEventArgs
-WebUIContactPanelActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactPanelActivatedEventArgs
-WebUIContactPickerActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactPickerActivatedEventArgs
-WebUIContactPostActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactPostActivatedEventArgs
-WebUIContactVideoCallActivatedEventArgs = _winrt_windows_ui_webui.WebUIContactVideoCallActivatedEventArgs
-WebUIDeviceActivatedEventArgs = _winrt_windows_ui_webui.WebUIDeviceActivatedEventArgs
-WebUIDevicePairingActivatedEventArgs = _winrt_windows_ui_webui.WebUIDevicePairingActivatedEventArgs
-WebUIDialReceiverActivatedEventArgs = _winrt_windows_ui_webui.WebUIDialReceiverActivatedEventArgs
-WebUIFileActivatedEventArgs = _winrt_windows_ui_webui.WebUIFileActivatedEventArgs
-WebUIFileOpenPickerActivatedEventArgs = _winrt_windows_ui_webui.WebUIFileOpenPickerActivatedEventArgs
-WebUIFileOpenPickerContinuationEventArgs = _winrt_windows_ui_webui.WebUIFileOpenPickerContinuationEventArgs
-WebUIFileSavePickerActivatedEventArgs = _winrt_windows_ui_webui.WebUIFileSavePickerActivatedEventArgs
-WebUIFileSavePickerContinuationEventArgs = _winrt_windows_ui_webui.WebUIFileSavePickerContinuationEventArgs
-WebUIFolderPickerContinuationEventArgs = _winrt_windows_ui_webui.WebUIFolderPickerContinuationEventArgs
-WebUILaunchActivatedEventArgs = _winrt_windows_ui_webui.WebUILaunchActivatedEventArgs
-WebUILockScreenActivatedEventArgs = _winrt_windows_ui_webui.WebUILockScreenActivatedEventArgs
-WebUILockScreenCallActivatedEventArgs = _winrt_windows_ui_webui.WebUILockScreenCallActivatedEventArgs
-WebUILockScreenComponentActivatedEventArgs = _winrt_windows_ui_webui.WebUILockScreenComponentActivatedEventArgs
-WebUINavigatedDeferral = _winrt_windows_ui_webui.WebUINavigatedDeferral
-WebUINavigatedEventArgs = _winrt_windows_ui_webui.WebUINavigatedEventArgs
-WebUINavigatedOperation = _winrt_windows_ui_webui.WebUINavigatedOperation
-WebUIPhoneCallActivatedEventArgs = _winrt_windows_ui_webui.WebUIPhoneCallActivatedEventArgs
-WebUIPrint3DWorkflowActivatedEventArgs = _winrt_windows_ui_webui.WebUIPrint3DWorkflowActivatedEventArgs
-WebUIPrintTaskSettingsActivatedEventArgs = _winrt_windows_ui_webui.WebUIPrintTaskSettingsActivatedEventArgs
-WebUIPrintWorkflowForegroundTaskActivatedEventArgs = _winrt_windows_ui_webui.WebUIPrintWorkflowForegroundTaskActivatedEventArgs
-WebUIProtocolActivatedEventArgs = _winrt_windows_ui_webui.WebUIProtocolActivatedEventArgs
-WebUIProtocolForResultsActivatedEventArgs = _winrt_windows_ui_webui.WebUIProtocolForResultsActivatedEventArgs
-WebUIRestrictedLaunchActivatedEventArgs = _winrt_windows_ui_webui.WebUIRestrictedLaunchActivatedEventArgs
-WebUISearchActivatedEventArgs = _winrt_windows_ui_webui.WebUISearchActivatedEventArgs
-WebUIShareTargetActivatedEventArgs = _winrt_windows_ui_webui.WebUIShareTargetActivatedEventArgs
-WebUIStartupTaskActivatedEventArgs = _winrt_windows_ui_webui.WebUIStartupTaskActivatedEventArgs
-WebUIToastNotificationActivatedEventArgs = _winrt_windows_ui_webui.WebUIToastNotificationActivatedEventArgs
-WebUIUserDataAccountProviderActivatedEventArgs = _winrt_windows_ui_webui.WebUIUserDataAccountProviderActivatedEventArgs
-WebUIView = _winrt_windows_ui_webui.WebUIView
-WebUIVoiceCommandActivatedEventArgs = _winrt_windows_ui_webui.WebUIVoiceCommandActivatedEventArgs
-WebUIWalletActionActivatedEventArgs = _winrt_windows_ui_webui.WebUIWalletActionActivatedEventArgs
-WebUIWebAccountProviderActivatedEventArgs = _winrt_windows_ui_webui.WebUIWebAccountProviderActivatedEventArgs
-WebUIWebAuthenticationBrokerContinuationEventArgs = _winrt_windows_ui_webui.WebUIWebAuthenticationBrokerContinuationEventArgs
-IActivatedEventArgsDeferral = _winrt_windows_ui_webui.IActivatedEventArgsDeferral
-IWebUIBackgroundTaskInstance = _winrt_windows_ui_webui.IWebUIBackgroundTaskInstance
-IWebUINavigatedEventArgs = _winrt_windows_ui_webui.IWebUINavigatedEventArgs
 ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IActivatedEventArgs"], None]
 BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IBackgroundActivatedEventArgs"], None]
 EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.IEnteredBackgroundEventArgs"], None]

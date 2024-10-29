@@ -3,7 +3,22 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_import_
+from winrt._winrt_windows_media_import_ import (
+    PhotoImportProgress,
+    PhotoImportDeleteImportedItemsFromSourceResult,
+    PhotoImportFindItemsResult,
+    PhotoImportImportItemsResult,
+    PhotoImportItem,
+    PhotoImportItemImportedEventArgs,
+    PhotoImportManager,
+    PhotoImportOperation,
+    PhotoImportSelectionChangedEventArgs,
+    PhotoImportSession,
+    PhotoImportSidecar,
+    PhotoImportSource,
+    PhotoImportStorageMedium,
+    PhotoImportVideoSegment,
+)
 
 __all__ = [
     "PhotoImportAccessMode",
@@ -103,17 +118,3 @@ class PhotoImportSubfolderDateFormat(enum.IntEnum):
     YEAR_MONTH = 1
     YEAR_MONTH_DAY = 2
 
-PhotoImportProgress = _winrt_windows_media_import_.PhotoImportProgress
-PhotoImportDeleteImportedItemsFromSourceResult = _winrt_windows_media_import_.PhotoImportDeleteImportedItemsFromSourceResult
-PhotoImportFindItemsResult = _winrt_windows_media_import_.PhotoImportFindItemsResult
-PhotoImportImportItemsResult = _winrt_windows_media_import_.PhotoImportImportItemsResult
-PhotoImportItem = _winrt_windows_media_import_.PhotoImportItem
-PhotoImportItemImportedEventArgs = _winrt_windows_media_import_.PhotoImportItemImportedEventArgs
-PhotoImportManager = _winrt_windows_media_import_.PhotoImportManager
-PhotoImportOperation = _winrt_windows_media_import_.PhotoImportOperation
-PhotoImportSelectionChangedEventArgs = _winrt_windows_media_import_.PhotoImportSelectionChangedEventArgs
-PhotoImportSession = _winrt_windows_media_import_.PhotoImportSession
-PhotoImportSidecar = _winrt_windows_media_import_.PhotoImportSidecar
-PhotoImportSource = _winrt_windows_media_import_.PhotoImportSource
-PhotoImportStorageMedium = _winrt_windows_media_import_.PhotoImportStorageMedium
-PhotoImportVideoSegment = _winrt_windows_media_import_.PhotoImportVideoSegment

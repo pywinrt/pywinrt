@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_authentication_web_core
+from winrt._winrt_windows_security_authentication_web_core import (
+    FindAllAccountsResult,
+    WebAccountEventArgs,
+    WebAccountMonitor,
+    WebAuthenticationAddAccountResponse,
+    WebAuthenticationAddAccountResult,
+    WebAuthenticationCoreManager,
+    WebAuthenticationTransferTokenRequest,
+    WebProviderError,
+    WebTokenRequest,
+    WebTokenRequestResult,
+    WebTokenResponse,
+)
 
 __all__ = [
     "FindAllWebAccountsStatus",
@@ -48,14 +60,3 @@ class WebTokenRequestStatus(enum.IntEnum):
     ACCOUNT_PROVIDER_NOT_AVAILABLE = 4
     PROVIDER_ERROR = 5
 
-FindAllAccountsResult = _winrt_windows_security_authentication_web_core.FindAllAccountsResult
-WebAccountEventArgs = _winrt_windows_security_authentication_web_core.WebAccountEventArgs
-WebAccountMonitor = _winrt_windows_security_authentication_web_core.WebAccountMonitor
-WebAuthenticationAddAccountResponse = _winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResponse
-WebAuthenticationAddAccountResult = _winrt_windows_security_authentication_web_core.WebAuthenticationAddAccountResult
-WebAuthenticationCoreManager = _winrt_windows_security_authentication_web_core.WebAuthenticationCoreManager
-WebAuthenticationTransferTokenRequest = _winrt_windows_security_authentication_web_core.WebAuthenticationTransferTokenRequest
-WebProviderError = _winrt_windows_security_authentication_web_core.WebProviderError
-WebTokenRequest = _winrt_windows_security_authentication_web_core.WebTokenRequest
-WebTokenRequestResult = _winrt_windows_security_authentication_web_core.WebTokenRequestResult
-WebTokenResponse = _winrt_windows_security_authentication_web_core.WebTokenResponse

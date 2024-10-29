@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_foundation_metadata
+from winrt._winrt_windows_foundation_metadata import (
+    ApiInformation,
+)
 
 __all__ = [
     "AttributeTargets",
@@ -67,4 +69,3 @@ class ThreadingModel(enum.IntEnum):
     BOTH = 3
     INVALID_THREADING = 0
 
-ApiInformation = _winrt_windows_foundation_metadata.ApiInformation

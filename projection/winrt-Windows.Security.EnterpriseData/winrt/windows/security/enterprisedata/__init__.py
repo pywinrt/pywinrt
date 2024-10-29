@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_enterprisedata
+from winrt._winrt_windows_security_enterprisedata import (
+    BufferProtectUnprotectResult,
+    DataProtectionInfo,
+    DataProtectionManager,
+    FileProtectionInfo,
+    FileProtectionManager,
+    FileRevocationManager,
+    FileUnprotectOptions,
+    ProtectedAccessResumedEventArgs,
+    ProtectedAccessSuspendingEventArgs,
+    ProtectedContainerExportResult,
+    ProtectedContainerImportResult,
+    ProtectedContentRevokedEventArgs,
+    ProtectedFileCreateResult,
+    ProtectionPolicyAuditInfo,
+    ProtectionPolicyManager,
+    ThreadNetworkContext,
+)
 
 __all__ = [
     "DataProtectionStatus",
@@ -84,19 +101,3 @@ class ProtectionPolicyRequestAccessBehavior(enum.IntEnum):
     DECRYPT = 0
     TREAT_OVERRIDE_POLICY_AS_BLOCK = 1
 
-BufferProtectUnprotectResult = _winrt_windows_security_enterprisedata.BufferProtectUnprotectResult
-DataProtectionInfo = _winrt_windows_security_enterprisedata.DataProtectionInfo
-DataProtectionManager = _winrt_windows_security_enterprisedata.DataProtectionManager
-FileProtectionInfo = _winrt_windows_security_enterprisedata.FileProtectionInfo
-FileProtectionManager = _winrt_windows_security_enterprisedata.FileProtectionManager
-FileRevocationManager = _winrt_windows_security_enterprisedata.FileRevocationManager
-FileUnprotectOptions = _winrt_windows_security_enterprisedata.FileUnprotectOptions
-ProtectedAccessResumedEventArgs = _winrt_windows_security_enterprisedata.ProtectedAccessResumedEventArgs
-ProtectedAccessSuspendingEventArgs = _winrt_windows_security_enterprisedata.ProtectedAccessSuspendingEventArgs
-ProtectedContainerExportResult = _winrt_windows_security_enterprisedata.ProtectedContainerExportResult
-ProtectedContainerImportResult = _winrt_windows_security_enterprisedata.ProtectedContainerImportResult
-ProtectedContentRevokedEventArgs = _winrt_windows_security_enterprisedata.ProtectedContentRevokedEventArgs
-ProtectedFileCreateResult = _winrt_windows_security_enterprisedata.ProtectedFileCreateResult
-ProtectionPolicyAuditInfo = _winrt_windows_security_enterprisedata.ProtectionPolicyAuditInfo
-ProtectionPolicyManager = _winrt_windows_security_enterprisedata.ProtectionPolicyManager
-ThreadNetworkContext = _winrt_windows_security_enterprisedata.ThreadNetworkContext

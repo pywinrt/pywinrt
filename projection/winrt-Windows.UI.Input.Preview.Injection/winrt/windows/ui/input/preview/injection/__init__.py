@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_input_preview_injection
+from winrt._winrt_windows_ui_input_preview_injection import (
+    InjectedInputPoint,
+    InjectedInputPointerInfo,
+    InjectedInputRectangle,
+    InjectedInputGamepadInfo,
+    InjectedInputKeyboardInfo,
+    InjectedInputMouseInfo,
+    InjectedInputPenInfo,
+    InjectedInputTouchInfo,
+    InputInjector,
+)
 
 __all__ = [
     "InjectedInputButtonChangeKind",
@@ -107,12 +117,3 @@ class InjectedInputVisualizationMode(enum.IntEnum):
     DEFAULT = 1
     INDIRECT = 2
 
-InjectedInputPoint = _winrt_windows_ui_input_preview_injection.InjectedInputPoint
-InjectedInputPointerInfo = _winrt_windows_ui_input_preview_injection.InjectedInputPointerInfo
-InjectedInputRectangle = _winrt_windows_ui_input_preview_injection.InjectedInputRectangle
-InjectedInputGamepadInfo = _winrt_windows_ui_input_preview_injection.InjectedInputGamepadInfo
-InjectedInputKeyboardInfo = _winrt_windows_ui_input_preview_injection.InjectedInputKeyboardInfo
-InjectedInputMouseInfo = _winrt_windows_ui_input_preview_injection.InjectedInputMouseInfo
-InjectedInputPenInfo = _winrt_windows_ui_input_preview_injection.InjectedInputPenInfo
-InjectedInputTouchInfo = _winrt_windows_ui_input_preview_injection.InjectedInputTouchInfo
-InputInjector = _winrt_windows_ui_input_preview_injection.InputInjector

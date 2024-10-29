@@ -3,7 +3,29 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_data_xml_dom
+from winrt._winrt_windows_data_xml_dom import (
+    DtdEntity,
+    DtdNotation,
+    XmlAttribute,
+    XmlCDataSection,
+    XmlComment,
+    XmlDocument,
+    XmlDocumentFragment,
+    XmlDocumentType,
+    XmlDomImplementation,
+    XmlElement,
+    XmlEntityReference,
+    XmlLoadSettings,
+    XmlNamedNodeMap,
+    XmlNodeList,
+    XmlProcessingInstruction,
+    XmlText,
+    IXmlCharacterData,
+    IXmlNode,
+    IXmlNodeSelector,
+    IXmlNodeSerializer,
+    IXmlText,
+)
 
 __all__ = [
     "NodeType",
@@ -45,26 +67,5 @@ class NodeType(enum.IntEnum):
     DOCUMENT_FRAGMENT_NODE = 11
     NOTATION_NODE = 12
 
-DtdEntity = _winrt_windows_data_xml_dom.DtdEntity
-DtdNotation = _winrt_windows_data_xml_dom.DtdNotation
-XmlAttribute = _winrt_windows_data_xml_dom.XmlAttribute
-XmlCDataSection = _winrt_windows_data_xml_dom.XmlCDataSection
-XmlComment = _winrt_windows_data_xml_dom.XmlComment
-XmlDocument = _winrt_windows_data_xml_dom.XmlDocument
-XmlDocumentFragment = _winrt_windows_data_xml_dom.XmlDocumentFragment
-XmlDocumentType = _winrt_windows_data_xml_dom.XmlDocumentType
-XmlDomImplementation = _winrt_windows_data_xml_dom.XmlDomImplementation
-XmlElement = _winrt_windows_data_xml_dom.XmlElement
-XmlEntityReference = _winrt_windows_data_xml_dom.XmlEntityReference
-XmlLoadSettings = _winrt_windows_data_xml_dom.XmlLoadSettings
-XmlNamedNodeMap = _winrt_windows_data_xml_dom.XmlNamedNodeMap
 winrt.system._mixin_sequence(XmlNamedNodeMap)
-XmlNodeList = _winrt_windows_data_xml_dom.XmlNodeList
 winrt.system._mixin_sequence(XmlNodeList)
-XmlProcessingInstruction = _winrt_windows_data_xml_dom.XmlProcessingInstruction
-XmlText = _winrt_windows_data_xml_dom.XmlText
-IXmlCharacterData = _winrt_windows_data_xml_dom.IXmlCharacterData
-IXmlNode = _winrt_windows_data_xml_dom.IXmlNode
-IXmlNodeSelector = _winrt_windows_data_xml_dom.IXmlNodeSelector
-IXmlNodeSerializer = _winrt_windows_data_xml_dom.IXmlNodeSerializer
-IXmlText = _winrt_windows_data_xml_dom.IXmlText

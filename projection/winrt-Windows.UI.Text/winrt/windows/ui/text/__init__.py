@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_text
+from winrt._winrt_windows_ui_text import (
+    FontWeight,
+    ContentLinkInfo,
+    FontWeights,
+    RichEditTextDocument,
+    RichEditTextRange,
+    TextConstants,
+    ITextCharacterFormat,
+    ITextDocument,
+    ITextParagraphFormat,
+    ITextRange,
+    ITextSelection,
+)
 
 __all__ = [
     "CaretType",
@@ -375,14 +387,3 @@ class VerticalCharacterAlignment(enum.IntEnum):
     BASELINE = 1
     BOTTOM = 2
 
-FontWeight = _winrt_windows_ui_text.FontWeight
-ContentLinkInfo = _winrt_windows_ui_text.ContentLinkInfo
-FontWeights = _winrt_windows_ui_text.FontWeights
-RichEditTextDocument = _winrt_windows_ui_text.RichEditTextDocument
-RichEditTextRange = _winrt_windows_ui_text.RichEditTextRange
-TextConstants = _winrt_windows_ui_text.TextConstants
-ITextCharacterFormat = _winrt_windows_ui_text.ITextCharacterFormat
-ITextDocument = _winrt_windows_ui_text.ITextDocument
-ITextParagraphFormat = _winrt_windows_ui_text.ITextParagraphFormat
-ITextRange = _winrt_windows_ui_text.ITextRange
-ITextSelection = _winrt_windows_ui_text.ITextSelection

@@ -3,7 +3,26 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_miracast
+from winrt._winrt_windows_media_miracast import (
+    MiracastReceiver,
+    MiracastReceiverApplySettingsResult,
+    MiracastReceiverConnection,
+    MiracastReceiverConnectionCreatedEventArgs,
+    MiracastReceiverCursorImageChannel,
+    MiracastReceiverCursorImageChannelSettings,
+    MiracastReceiverDisconnectedEventArgs,
+    MiracastReceiverGameControllerDevice,
+    MiracastReceiverInputDevices,
+    MiracastReceiverKeyboardDevice,
+    MiracastReceiverMediaSourceCreatedEventArgs,
+    MiracastReceiverSession,
+    MiracastReceiverSessionStartResult,
+    MiracastReceiverSettings,
+    MiracastReceiverStatus,
+    MiracastReceiverStreamControl,
+    MiracastReceiverVideoStreamSettings,
+    MiracastTransmitter,
+)
 
 __all__ = [
     "MiracastReceiverApplySettingsStatus",
@@ -90,21 +109,3 @@ class MiracastTransmitterAuthorizationStatus(enum.IntEnum):
     ALWAYS_PROMPT = 2
     BLOCKED = 3
 
-MiracastReceiver = _winrt_windows_media_miracast.MiracastReceiver
-MiracastReceiverApplySettingsResult = _winrt_windows_media_miracast.MiracastReceiverApplySettingsResult
-MiracastReceiverConnection = _winrt_windows_media_miracast.MiracastReceiverConnection
-MiracastReceiverConnectionCreatedEventArgs = _winrt_windows_media_miracast.MiracastReceiverConnectionCreatedEventArgs
-MiracastReceiverCursorImageChannel = _winrt_windows_media_miracast.MiracastReceiverCursorImageChannel
-MiracastReceiverCursorImageChannelSettings = _winrt_windows_media_miracast.MiracastReceiverCursorImageChannelSettings
-MiracastReceiverDisconnectedEventArgs = _winrt_windows_media_miracast.MiracastReceiverDisconnectedEventArgs
-MiracastReceiverGameControllerDevice = _winrt_windows_media_miracast.MiracastReceiverGameControllerDevice
-MiracastReceiverInputDevices = _winrt_windows_media_miracast.MiracastReceiverInputDevices
-MiracastReceiverKeyboardDevice = _winrt_windows_media_miracast.MiracastReceiverKeyboardDevice
-MiracastReceiverMediaSourceCreatedEventArgs = _winrt_windows_media_miracast.MiracastReceiverMediaSourceCreatedEventArgs
-MiracastReceiverSession = _winrt_windows_media_miracast.MiracastReceiverSession
-MiracastReceiverSessionStartResult = _winrt_windows_media_miracast.MiracastReceiverSessionStartResult
-MiracastReceiverSettings = _winrt_windows_media_miracast.MiracastReceiverSettings
-MiracastReceiverStatus = _winrt_windows_media_miracast.MiracastReceiverStatus
-MiracastReceiverStreamControl = _winrt_windows_media_miracast.MiracastReceiverStreamControl
-MiracastReceiverVideoStreamSettings = _winrt_windows_media_miracast.MiracastReceiverVideoStreamSettings
-MiracastTransmitter = _winrt_windows_media_miracast.MiracastTransmitter

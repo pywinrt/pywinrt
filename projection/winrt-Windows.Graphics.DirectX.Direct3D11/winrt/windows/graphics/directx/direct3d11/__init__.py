@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_directx_direct3d11
+from winrt._winrt_windows_graphics_directx_direct3d11 import (
+    Direct3DMultisampleDescription,
+    Direct3DSurfaceDescription,
+    IDirect3DDevice,
+    IDirect3DSurface,
+)
 
 __all__ = [
     "Direct3DBindings",
@@ -32,7 +37,3 @@ class Direct3DUsage(enum.IntEnum):
     DYNAMIC = 2
     STAGING = 3
 
-Direct3DMultisampleDescription = _winrt_windows_graphics_directx_direct3d11.Direct3DMultisampleDescription
-Direct3DSurfaceDescription = _winrt_windows_graphics_directx_direct3d11.Direct3DSurfaceDescription
-IDirect3DDevice = _winrt_windows_graphics_directx_direct3d11.IDirect3DDevice
-IDirect3DSurface = _winrt_windows_graphics_directx_direct3d11.IDirect3DSurface

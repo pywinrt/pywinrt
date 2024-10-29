@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_geolocation_geofencing
+from winrt._winrt_windows_devices_geolocation_geofencing import (
+    Geofence,
+    GeofenceMonitor,
+    GeofenceStateChangeReport,
+)
 
 __all__ = [
     "GeofenceMonitorStatus",
@@ -39,6 +43,3 @@ class MonitoredGeofenceStates(enum.IntFlag):
     EXITED = 0x2
     REMOVED = 0x4
 
-Geofence = _winrt_windows_devices_geolocation_geofencing.Geofence
-GeofenceMonitor = _winrt_windows_devices_geolocation_geofencing.GeofenceMonitor
-GeofenceStateChangeReport = _winrt_windows_devices_geolocation_geofencing.GeofenceStateChangeReport

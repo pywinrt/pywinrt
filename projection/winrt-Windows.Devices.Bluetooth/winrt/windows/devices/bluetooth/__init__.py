@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_bluetooth
+from winrt._winrt_windows_devices_bluetooth import (
+    BluetoothAdapter,
+    BluetoothClassOfDevice,
+    BluetoothDevice,
+    BluetoothDeviceId,
+    BluetoothLEAppearance,
+    BluetoothLEAppearanceCategories,
+    BluetoothLEAppearanceSubcategories,
+    BluetoothLEConnectionParameters,
+    BluetoothLEConnectionPhy,
+    BluetoothLEConnectionPhyInfo,
+    BluetoothLEDevice,
+    BluetoothLEPreferredConnectionParameters,
+    BluetoothLEPreferredConnectionParametersRequest,
+    BluetoothSignalStrengthFilter,
+    BluetoothUuidHelper,
+)
 
 __all__ = [
     "BluetoothAddressType",
@@ -159,18 +175,3 @@ class BluetoothServiceCapabilities(enum.IntFlag):
     TELEPHONE_SERVICE = 0x200
     INFORMATION_SERVICE = 0x400
 
-BluetoothAdapter = _winrt_windows_devices_bluetooth.BluetoothAdapter
-BluetoothClassOfDevice = _winrt_windows_devices_bluetooth.BluetoothClassOfDevice
-BluetoothDevice = _winrt_windows_devices_bluetooth.BluetoothDevice
-BluetoothDeviceId = _winrt_windows_devices_bluetooth.BluetoothDeviceId
-BluetoothLEAppearance = _winrt_windows_devices_bluetooth.BluetoothLEAppearance
-BluetoothLEAppearanceCategories = _winrt_windows_devices_bluetooth.BluetoothLEAppearanceCategories
-BluetoothLEAppearanceSubcategories = _winrt_windows_devices_bluetooth.BluetoothLEAppearanceSubcategories
-BluetoothLEConnectionParameters = _winrt_windows_devices_bluetooth.BluetoothLEConnectionParameters
-BluetoothLEConnectionPhy = _winrt_windows_devices_bluetooth.BluetoothLEConnectionPhy
-BluetoothLEConnectionPhyInfo = _winrt_windows_devices_bluetooth.BluetoothLEConnectionPhyInfo
-BluetoothLEDevice = _winrt_windows_devices_bluetooth.BluetoothLEDevice
-BluetoothLEPreferredConnectionParameters = _winrt_windows_devices_bluetooth.BluetoothLEPreferredConnectionParameters
-BluetoothLEPreferredConnectionParametersRequest = _winrt_windows_devices_bluetooth.BluetoothLEPreferredConnectionParametersRequest
-BluetoothSignalStrengthFilter = _winrt_windows_devices_bluetooth.BluetoothSignalStrengthFilter
-BluetoothUuidHelper = _winrt_windows_devices_bluetooth.BluetoothUuidHelper

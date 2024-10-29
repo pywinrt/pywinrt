@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking_xboxlive
+from winrt._winrt_windows_networking_xboxlive import (
+    XboxLiveDeviceAddress,
+    XboxLiveEndpointPair,
+    XboxLiveEndpointPairCreationResult,
+    XboxLiveEndpointPairStateChangedEventArgs,
+    XboxLiveEndpointPairTemplate,
+    XboxLiveInboundEndpointPairCreatedEventArgs,
+    XboxLiveQualityOfServiceMeasurement,
+    XboxLiveQualityOfServiceMetricResult,
+    XboxLiveQualityOfServicePrivatePayloadResult,
+)
 
 __all__ = [
     "XboxLiveEndpointPairCreationBehaviors",
@@ -83,12 +93,3 @@ class XboxLiveSocketKind(enum.IntEnum):
     DATAGRAM = 1
     STREAM = 2
 
-XboxLiveDeviceAddress = _winrt_windows_networking_xboxlive.XboxLiveDeviceAddress
-XboxLiveEndpointPair = _winrt_windows_networking_xboxlive.XboxLiveEndpointPair
-XboxLiveEndpointPairCreationResult = _winrt_windows_networking_xboxlive.XboxLiveEndpointPairCreationResult
-XboxLiveEndpointPairStateChangedEventArgs = _winrt_windows_networking_xboxlive.XboxLiveEndpointPairStateChangedEventArgs
-XboxLiveEndpointPairTemplate = _winrt_windows_networking_xboxlive.XboxLiveEndpointPairTemplate
-XboxLiveInboundEndpointPairCreatedEventArgs = _winrt_windows_networking_xboxlive.XboxLiveInboundEndpointPairCreatedEventArgs
-XboxLiveQualityOfServiceMeasurement = _winrt_windows_networking_xboxlive.XboxLiveQualityOfServiceMeasurement
-XboxLiveQualityOfServiceMetricResult = _winrt_windows_networking_xboxlive.XboxLiveQualityOfServiceMetricResult
-XboxLiveQualityOfServicePrivatePayloadResult = _winrt_windows_networking_xboxlive.XboxLiveQualityOfServicePrivatePayloadResult

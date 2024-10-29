@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_useractivities
+from winrt._winrt_windows_applicationmodel_useractivities import (
+    UserActivity,
+    UserActivityAttribution,
+    UserActivityChannel,
+    UserActivityContentInfo,
+    UserActivityRequest,
+    UserActivityRequestManager,
+    UserActivityRequestedEventArgs,
+    UserActivitySession,
+    UserActivitySessionHistoryItem,
+    UserActivityVisualElements,
+    IUserActivityContentInfo,
+)
 
 __all__ = [
     "UserActivityState",
@@ -24,14 +36,3 @@ class UserActivityState(enum.IntEnum):
     NEW = 0
     PUBLISHED = 1
 
-UserActivity = _winrt_windows_applicationmodel_useractivities.UserActivity
-UserActivityAttribution = _winrt_windows_applicationmodel_useractivities.UserActivityAttribution
-UserActivityChannel = _winrt_windows_applicationmodel_useractivities.UserActivityChannel
-UserActivityContentInfo = _winrt_windows_applicationmodel_useractivities.UserActivityContentInfo
-UserActivityRequest = _winrt_windows_applicationmodel_useractivities.UserActivityRequest
-UserActivityRequestManager = _winrt_windows_applicationmodel_useractivities.UserActivityRequestManager
-UserActivityRequestedEventArgs = _winrt_windows_applicationmodel_useractivities.UserActivityRequestedEventArgs
-UserActivitySession = _winrt_windows_applicationmodel_useractivities.UserActivitySession
-UserActivitySessionHistoryItem = _winrt_windows_applicationmodel_useractivities.UserActivitySessionHistoryItem
-UserActivityVisualElements = _winrt_windows_applicationmodel_useractivities.UserActivityVisualElements
-IUserActivityContentInfo = _winrt_windows_applicationmodel_useractivities.IUserActivityContentInfo

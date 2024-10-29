@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ai_machinelearning_preview
+from winrt._winrt_windows_ai_machinelearning_preview import (
+    ImageVariableDescriptorPreview,
+    InferencingOptionsPreview,
+    LearningModelBindingPreview,
+    LearningModelDescriptionPreview,
+    LearningModelEvaluationResultPreview,
+    LearningModelPreview,
+    LearningModelVariableDescriptorPreview,
+    MapVariableDescriptorPreview,
+    SequenceVariableDescriptorPreview,
+    TensorVariableDescriptorPreview,
+    ILearningModelVariableDescriptorPreview,
+)
 
 __all__ = [
     "FeatureElementKindPreview",
@@ -55,15 +67,4 @@ class LearningModelFeatureKindPreview(enum.IntEnum):
     MAP = 3
     IMAGE = 4
 
-ImageVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.ImageVariableDescriptorPreview
-InferencingOptionsPreview = _winrt_windows_ai_machinelearning_preview.InferencingOptionsPreview
-LearningModelBindingPreview = _winrt_windows_ai_machinelearning_preview.LearningModelBindingPreview
 winrt.system._mixin_mapping(LearningModelBindingPreview)
-LearningModelDescriptionPreview = _winrt_windows_ai_machinelearning_preview.LearningModelDescriptionPreview
-LearningModelEvaluationResultPreview = _winrt_windows_ai_machinelearning_preview.LearningModelEvaluationResultPreview
-LearningModelPreview = _winrt_windows_ai_machinelearning_preview.LearningModelPreview
-LearningModelVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.LearningModelVariableDescriptorPreview
-MapVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.MapVariableDescriptorPreview
-SequenceVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.SequenceVariableDescriptorPreview
-TensorVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.TensorVariableDescriptorPreview
-ILearningModelVariableDescriptorPreview = _winrt_windows_ai_machinelearning_preview.ILearningModelVariableDescriptorPreview

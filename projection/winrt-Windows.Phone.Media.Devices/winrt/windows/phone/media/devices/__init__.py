@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_media_devices
+from winrt._winrt_windows_phone_media_devices import (
+    AudioRoutingManager,
+)
 
 __all__ = [
     "AudioRoutingEndpoint",
@@ -27,4 +29,3 @@ class AvailableAudioRoutingEndpoints(enum.IntFlag):
     SPEAKERPHONE = 0x2
     BLUETOOTH = 0x4
 
-AudioRoutingManager = _winrt_windows_phone_media_devices.AudioRoutingManager

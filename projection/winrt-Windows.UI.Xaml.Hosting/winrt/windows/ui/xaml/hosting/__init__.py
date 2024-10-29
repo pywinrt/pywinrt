@@ -3,7 +3,22 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_hosting
+from winrt._winrt_windows_ui_xaml_hosting import (
+    DesignerAppExitedEventArgs,
+    DesignerAppManager,
+    DesignerAppView,
+    DesktopWindowXamlSource,
+    DesktopWindowXamlSourceGotFocusEventArgs,
+    DesktopWindowXamlSourceTakeFocusRequestedEventArgs,
+    ElementCompositionPreview,
+    WindowsXamlManager,
+    XamlSourceFocusNavigationRequest,
+    XamlSourceFocusNavigationResult,
+    XamlUIPresenter,
+    IXamlUIPresenterHost,
+    IXamlUIPresenterHost2,
+    IXamlUIPresenterHost3,
+)
 
 __all__ = [
     "DesignerAppViewState",
@@ -38,17 +53,3 @@ class XamlSourceFocusNavigationReason(enum.IntEnum):
     RIGHT = 9
     DOWN = 10
 
-DesignerAppExitedEventArgs = _winrt_windows_ui_xaml_hosting.DesignerAppExitedEventArgs
-DesignerAppManager = _winrt_windows_ui_xaml_hosting.DesignerAppManager
-DesignerAppView = _winrt_windows_ui_xaml_hosting.DesignerAppView
-DesktopWindowXamlSource = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSource
-DesktopWindowXamlSourceGotFocusEventArgs = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs
-DesktopWindowXamlSourceTakeFocusRequestedEventArgs = _winrt_windows_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
-ElementCompositionPreview = _winrt_windows_ui_xaml_hosting.ElementCompositionPreview
-WindowsXamlManager = _winrt_windows_ui_xaml_hosting.WindowsXamlManager
-XamlSourceFocusNavigationRequest = _winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationRequest
-XamlSourceFocusNavigationResult = _winrt_windows_ui_xaml_hosting.XamlSourceFocusNavigationResult
-XamlUIPresenter = _winrt_windows_ui_xaml_hosting.XamlUIPresenter
-IXamlUIPresenterHost = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost
-IXamlUIPresenterHost2 = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost2
-IXamlUIPresenterHost3 = _winrt_windows_ui_xaml_hosting.IXamlUIPresenterHost3

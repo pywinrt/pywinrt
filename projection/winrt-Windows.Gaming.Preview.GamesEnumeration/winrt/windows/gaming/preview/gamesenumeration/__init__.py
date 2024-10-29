@@ -5,7 +5,13 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_gaming_preview_gamesenumeration
+from winrt._winrt_windows_gaming_preview_gamesenumeration import (
+    GameList,
+    GameListEntry,
+    GameModeConfiguration,
+    GameModeUserConfiguration,
+    IGameListEntry,
+)
 
 __all__ = [
     "GameListCategory",
@@ -30,10 +36,5 @@ class GameListEntryLaunchableState(enum.IntEnum):
     BY_USER_PROVIDED_PATH = 2
     BY_TILE = 3
 
-GameList = _winrt_windows_gaming_preview_gamesenumeration.GameList
-GameListEntry = _winrt_windows_gaming_preview_gamesenumeration.GameListEntry
-GameModeConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeConfiguration
-GameModeUserConfiguration = _winrt_windows_gaming_preview_gamesenumeration.GameModeUserConfiguration
-IGameListEntry = _winrt_windows_gaming_preview_gamesenumeration.IGameListEntry
 GameListChangedEventHandler = typing.Callable[[GameListEntry], None]
 GameListRemovedEventHandler = typing.Callable[[str], None]

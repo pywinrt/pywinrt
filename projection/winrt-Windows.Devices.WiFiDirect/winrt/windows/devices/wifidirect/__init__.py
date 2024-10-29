@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_wifidirect
+from winrt._winrt_windows_devices_wifidirect import (
+    WiFiDirectAdvertisement,
+    WiFiDirectAdvertisementPublisher,
+    WiFiDirectAdvertisementPublisherStatusChangedEventArgs,
+    WiFiDirectConnectionListener,
+    WiFiDirectConnectionParameters,
+    WiFiDirectConnectionRequest,
+    WiFiDirectConnectionRequestedEventArgs,
+    WiFiDirectDevice,
+    WiFiDirectInformationElement,
+    WiFiDirectLegacySettings,
+)
 
 __all__ = [
     "WiFiDirectAdvertisementListenStateDiscoverability",
@@ -58,13 +69,3 @@ class WiFiDirectPairingProcedure(enum.IntEnum):
     GROUP_OWNER_NEGOTIATION = 0
     INVITATION = 1
 
-WiFiDirectAdvertisement = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisement
-WiFiDirectAdvertisementPublisher = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisher
-WiFiDirectAdvertisementPublisherStatusChangedEventArgs = _winrt_windows_devices_wifidirect.WiFiDirectAdvertisementPublisherStatusChangedEventArgs
-WiFiDirectConnectionListener = _winrt_windows_devices_wifidirect.WiFiDirectConnectionListener
-WiFiDirectConnectionParameters = _winrt_windows_devices_wifidirect.WiFiDirectConnectionParameters
-WiFiDirectConnectionRequest = _winrt_windows_devices_wifidirect.WiFiDirectConnectionRequest
-WiFiDirectConnectionRequestedEventArgs = _winrt_windows_devices_wifidirect.WiFiDirectConnectionRequestedEventArgs
-WiFiDirectDevice = _winrt_windows_devices_wifidirect.WiFiDirectDevice
-WiFiDirectInformationElement = _winrt_windows_devices_wifidirect.WiFiDirectInformationElement
-WiFiDirectLegacySettings = _winrt_windows_devices_wifidirect.WiFiDirectLegacySettings

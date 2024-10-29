@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_globalization_numberformatting
+from winrt._winrt_windows_globalization_numberformatting import (
+    CurrencyFormatter,
+    DecimalFormatter,
+    IncrementNumberRounder,
+    NumeralSystemTranslator,
+    PercentFormatter,
+    PermilleFormatter,
+    SignificantDigitsNumberRounder,
+    INumberFormatter,
+    INumberFormatter2,
+    INumberFormatterOptions,
+    INumberParser,
+    INumberRounder,
+    INumberRounderOption,
+    ISignedZeroOption,
+    ISignificantDigitsOption,
+)
 
 __all__ = [
     "CurrencyFormatterMode",
@@ -42,18 +58,3 @@ class RoundingAlgorithm(enum.IntEnum):
     ROUND_HALF_TO_EVEN = 9
     ROUND_HALF_TO_ODD = 10
 
-CurrencyFormatter = _winrt_windows_globalization_numberformatting.CurrencyFormatter
-DecimalFormatter = _winrt_windows_globalization_numberformatting.DecimalFormatter
-IncrementNumberRounder = _winrt_windows_globalization_numberformatting.IncrementNumberRounder
-NumeralSystemTranslator = _winrt_windows_globalization_numberformatting.NumeralSystemTranslator
-PercentFormatter = _winrt_windows_globalization_numberformatting.PercentFormatter
-PermilleFormatter = _winrt_windows_globalization_numberformatting.PermilleFormatter
-SignificantDigitsNumberRounder = _winrt_windows_globalization_numberformatting.SignificantDigitsNumberRounder
-INumberFormatter = _winrt_windows_globalization_numberformatting.INumberFormatter
-INumberFormatter2 = _winrt_windows_globalization_numberformatting.INumberFormatter2
-INumberFormatterOptions = _winrt_windows_globalization_numberformatting.INumberFormatterOptions
-INumberParser = _winrt_windows_globalization_numberformatting.INumberParser
-INumberRounder = _winrt_windows_globalization_numberformatting.INumberRounder
-INumberRounderOption = _winrt_windows_globalization_numberformatting.INumberRounderOption
-ISignedZeroOption = _winrt_windows_globalization_numberformatting.ISignedZeroOption
-ISignificantDigitsOption = _winrt_windows_globalization_numberformatting.ISignificantDigitsOption

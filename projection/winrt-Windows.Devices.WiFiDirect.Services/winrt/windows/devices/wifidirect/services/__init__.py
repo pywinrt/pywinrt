@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_wifidirect_services
+from winrt._winrt_windows_devices_wifidirect_services import (
+    WiFiDirectService,
+    WiFiDirectServiceAdvertiser,
+    WiFiDirectServiceAutoAcceptSessionConnectedEventArgs,
+    WiFiDirectServiceProvisioningInfo,
+    WiFiDirectServiceRemotePortAddedEventArgs,
+    WiFiDirectServiceSession,
+    WiFiDirectServiceSessionDeferredEventArgs,
+    WiFiDirectServiceSessionRequest,
+    WiFiDirectServiceSessionRequestedEventArgs,
+)
 
 __all__ = [
     "WiFiDirectServiceAdvertisementStatus",
@@ -65,12 +75,3 @@ class WiFiDirectServiceStatus(enum.IntEnum):
     BUSY = 1
     CUSTOM = 2
 
-WiFiDirectService = _winrt_windows_devices_wifidirect_services.WiFiDirectService
-WiFiDirectServiceAdvertiser = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceAdvertiser
-WiFiDirectServiceAutoAcceptSessionConnectedEventArgs = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceAutoAcceptSessionConnectedEventArgs
-WiFiDirectServiceProvisioningInfo = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceProvisioningInfo
-WiFiDirectServiceRemotePortAddedEventArgs = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceRemotePortAddedEventArgs
-WiFiDirectServiceSession = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceSession
-WiFiDirectServiceSessionDeferredEventArgs = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionDeferredEventArgs
-WiFiDirectServiceSessionRequest = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequest
-WiFiDirectServiceSessionRequestedEventArgs = _winrt_windows_devices_wifidirect_services.WiFiDirectServiceSessionRequestedEventArgs

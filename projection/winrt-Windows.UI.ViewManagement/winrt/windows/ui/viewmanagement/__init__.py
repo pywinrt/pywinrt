@@ -3,7 +3,27 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_viewmanagement
+from winrt._winrt_windows_ui_viewmanagement import (
+    AccessibilitySettings,
+    ActivationViewSwitcher,
+    ApplicationView,
+    ApplicationViewConsolidatedEventArgs,
+    ApplicationViewScaling,
+    ApplicationViewSwitcher,
+    ApplicationViewTitleBar,
+    ApplicationViewTransferContext,
+    InputPane,
+    InputPaneVisibilityEventArgs,
+    ProjectionManager,
+    StatusBar,
+    StatusBarProgressIndicator,
+    UISettings,
+    UISettingsAnimationsEnabledChangedEventArgs,
+    UISettingsAutoHideScrollBarsChangedEventArgs,
+    UISettingsMessageDurationChangedEventArgs,
+    UIViewSettings,
+    ViewModePreferences,
+)
 
 __all__ = [
     "ApplicationViewBoundsMode",
@@ -135,22 +155,3 @@ class ViewSizePreference(enum.IntEnum):
     USE_NONE = 5
     CUSTOM = 6
 
-AccessibilitySettings = _winrt_windows_ui_viewmanagement.AccessibilitySettings
-ActivationViewSwitcher = _winrt_windows_ui_viewmanagement.ActivationViewSwitcher
-ApplicationView = _winrt_windows_ui_viewmanagement.ApplicationView
-ApplicationViewConsolidatedEventArgs = _winrt_windows_ui_viewmanagement.ApplicationViewConsolidatedEventArgs
-ApplicationViewScaling = _winrt_windows_ui_viewmanagement.ApplicationViewScaling
-ApplicationViewSwitcher = _winrt_windows_ui_viewmanagement.ApplicationViewSwitcher
-ApplicationViewTitleBar = _winrt_windows_ui_viewmanagement.ApplicationViewTitleBar
-ApplicationViewTransferContext = _winrt_windows_ui_viewmanagement.ApplicationViewTransferContext
-InputPane = _winrt_windows_ui_viewmanagement.InputPane
-InputPaneVisibilityEventArgs = _winrt_windows_ui_viewmanagement.InputPaneVisibilityEventArgs
-ProjectionManager = _winrt_windows_ui_viewmanagement.ProjectionManager
-StatusBar = _winrt_windows_ui_viewmanagement.StatusBar
-StatusBarProgressIndicator = _winrt_windows_ui_viewmanagement.StatusBarProgressIndicator
-UISettings = _winrt_windows_ui_viewmanagement.UISettings
-UISettingsAnimationsEnabledChangedEventArgs = _winrt_windows_ui_viewmanagement.UISettingsAnimationsEnabledChangedEventArgs
-UISettingsAutoHideScrollBarsChangedEventArgs = _winrt_windows_ui_viewmanagement.UISettingsAutoHideScrollBarsChangedEventArgs
-UISettingsMessageDurationChangedEventArgs = _winrt_windows_ui_viewmanagement.UISettingsMessageDurationChangedEventArgs
-UIViewSettings = _winrt_windows_ui_viewmanagement.UIViewSettings
-ViewModePreferences = _winrt_windows_ui_viewmanagement.ViewModePreferences

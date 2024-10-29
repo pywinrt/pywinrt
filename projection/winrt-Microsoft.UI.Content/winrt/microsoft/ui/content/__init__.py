@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_content
+from winrt._winrt_microsoft_ui_content import (
+    ContentCoordinateConverter,
+    ContentDeferral,
+    ContentEnvironmentSettingChangedEventArgs,
+    ContentEnvironmentStateChangedEventArgs,
+    ContentIsland,
+    ContentIslandAutomationProviderRequestedEventArgs,
+    ContentIslandEnvironment,
+    ContentIslandStateChangedEventArgs,
+    ContentSite,
+    ContentSiteEnvironment,
+    ContentSiteEnvironmentView,
+    ContentSiteRequestedStateChangedEventArgs,
+    ContentSiteView,
+    DesktopChildSiteBridge,
+    DesktopSiteBridge,
+    IContentSiteBridge,
+)
 
 __all__ = [
     "ContentCoordinateRoundingMode",
@@ -42,19 +59,3 @@ class ContentSizePolicy(enum.IntEnum):
     RESIZE_CONTENT_TO_PARENT_WINDOW = 1
     RESIZE_PARENT_WINDOW_TO_CONTENT = 2
 
-ContentCoordinateConverter = _winrt_microsoft_ui_content.ContentCoordinateConverter
-ContentDeferral = _winrt_microsoft_ui_content.ContentDeferral
-ContentEnvironmentSettingChangedEventArgs = _winrt_microsoft_ui_content.ContentEnvironmentSettingChangedEventArgs
-ContentEnvironmentStateChangedEventArgs = _winrt_microsoft_ui_content.ContentEnvironmentStateChangedEventArgs
-ContentIsland = _winrt_microsoft_ui_content.ContentIsland
-ContentIslandAutomationProviderRequestedEventArgs = _winrt_microsoft_ui_content.ContentIslandAutomationProviderRequestedEventArgs
-ContentIslandEnvironment = _winrt_microsoft_ui_content.ContentIslandEnvironment
-ContentIslandStateChangedEventArgs = _winrt_microsoft_ui_content.ContentIslandStateChangedEventArgs
-ContentSite = _winrt_microsoft_ui_content.ContentSite
-ContentSiteEnvironment = _winrt_microsoft_ui_content.ContentSiteEnvironment
-ContentSiteEnvironmentView = _winrt_microsoft_ui_content.ContentSiteEnvironmentView
-ContentSiteRequestedStateChangedEventArgs = _winrt_microsoft_ui_content.ContentSiteRequestedStateChangedEventArgs
-ContentSiteView = _winrt_microsoft_ui_content.ContentSiteView
-DesktopChildSiteBridge = _winrt_microsoft_ui_content.DesktopChildSiteBridge
-DesktopSiteBridge = _winrt_microsoft_ui_content.DesktopSiteBridge
-IContentSiteBridge = _winrt_microsoft_ui_content.IContentSiteBridge

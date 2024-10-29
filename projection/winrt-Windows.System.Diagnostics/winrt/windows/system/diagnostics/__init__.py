@@ -3,7 +3,22 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_diagnostics
+from winrt._winrt_windows_system_diagnostics import (
+    DiagnosticActionResult,
+    DiagnosticInvoker,
+    ProcessCpuUsage,
+    ProcessCpuUsageReport,
+    ProcessDiagnosticInfo,
+    ProcessDiskUsage,
+    ProcessDiskUsageReport,
+    ProcessMemoryUsage,
+    ProcessMemoryUsageReport,
+    SystemCpuUsage,
+    SystemCpuUsageReport,
+    SystemDiagnosticInfo,
+    SystemMemoryUsage,
+    SystemMemoryUsageReport,
+)
 
 __all__ = [
     "DiagnosticActionState",
@@ -32,17 +47,3 @@ class DiagnosticActionState(enum.IntEnum):
     VERIFYING_RESOLUTION = 5
     EXECUTING = 6
 
-DiagnosticActionResult = _winrt_windows_system_diagnostics.DiagnosticActionResult
-DiagnosticInvoker = _winrt_windows_system_diagnostics.DiagnosticInvoker
-ProcessCpuUsage = _winrt_windows_system_diagnostics.ProcessCpuUsage
-ProcessCpuUsageReport = _winrt_windows_system_diagnostics.ProcessCpuUsageReport
-ProcessDiagnosticInfo = _winrt_windows_system_diagnostics.ProcessDiagnosticInfo
-ProcessDiskUsage = _winrt_windows_system_diagnostics.ProcessDiskUsage
-ProcessDiskUsageReport = _winrt_windows_system_diagnostics.ProcessDiskUsageReport
-ProcessMemoryUsage = _winrt_windows_system_diagnostics.ProcessMemoryUsage
-ProcessMemoryUsageReport = _winrt_windows_system_diagnostics.ProcessMemoryUsageReport
-SystemCpuUsage = _winrt_windows_system_diagnostics.SystemCpuUsage
-SystemCpuUsageReport = _winrt_windows_system_diagnostics.SystemCpuUsageReport
-SystemDiagnosticInfo = _winrt_windows_system_diagnostics.SystemDiagnosticInfo
-SystemMemoryUsage = _winrt_windows_system_diagnostics.SystemMemoryUsage
-SystemMemoryUsageReport = _winrt_windows_system_diagnostics.SystemMemoryUsageReport

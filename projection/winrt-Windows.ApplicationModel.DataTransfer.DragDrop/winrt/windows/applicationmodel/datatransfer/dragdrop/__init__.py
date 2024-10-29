@@ -3,7 +3,6 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_datatransfer_dragdrop
 
 __all__ = [
     "DragDropModifiers",

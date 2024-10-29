@@ -5,7 +5,12 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_printing
+from winrt._winrt_microsoft_ui_xaml_printing import (
+    AddPagesEventArgs,
+    GetPreviewPageEventArgs,
+    PaginateEventArgs,
+    PrintDocument,
+)
 
 __all__ = [
     "PreviewPageCountType",
@@ -22,10 +27,6 @@ class PreviewPageCountType(enum.IntEnum):
     FINAL = 0
     INTERMEDIATE = 1
 
-AddPagesEventArgs = _winrt_microsoft_ui_xaml_printing.AddPagesEventArgs
-GetPreviewPageEventArgs = _winrt_microsoft_ui_xaml_printing.GetPreviewPageEventArgs
-PaginateEventArgs = _winrt_microsoft_ui_xaml_printing.PaginateEventArgs
-PrintDocument = _winrt_microsoft_ui_xaml_printing.PrintDocument
 AddPagesEventHandler = typing.Callable[[winrt.system.Object, AddPagesEventArgs], None]
 GetPreviewPageEventHandler = typing.Callable[[winrt.system.Object, GetPreviewPageEventArgs], None]
 PaginateEventHandler = typing.Callable[[winrt.system.Object, PaginateEventArgs], None]

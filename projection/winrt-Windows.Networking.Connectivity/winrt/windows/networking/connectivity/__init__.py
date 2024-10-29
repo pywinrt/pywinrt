@@ -5,7 +5,34 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_networking_connectivity
+from winrt._winrt_windows_networking_connectivity import (
+    NetworkUsageStates,
+    AttributedNetworkUsage,
+    CellularApnContext,
+    ConnectionCost,
+    ConnectionProfile,
+    ConnectionProfileFilter,
+    ConnectionSession,
+    ConnectivityInterval,
+    ConnectivityManager,
+    DataPlanStatus,
+    DataPlanUsage,
+    DataUsage,
+    IPInformation,
+    LanIdentifier,
+    LanIdentifierData,
+    NetworkAdapter,
+    NetworkInformation,
+    NetworkItem,
+    NetworkSecuritySettings,
+    NetworkStateChangeEventDetails,
+    NetworkUsage,
+    ProviderNetworkUsage,
+    ProxyConfiguration,
+    RoutePolicy,
+    WlanConnectionProfileDetails,
+    WwanConnectionProfileDetails,
+)
 
 __all__ = [
     "CellularApnAuthenticationType",
@@ -173,30 +200,4 @@ class WwanNetworkRegistrationState(enum.IntEnum):
     PARTNER = 5
     DENIED = 6
 
-NetworkUsageStates = _winrt_windows_networking_connectivity.NetworkUsageStates
-AttributedNetworkUsage = _winrt_windows_networking_connectivity.AttributedNetworkUsage
-CellularApnContext = _winrt_windows_networking_connectivity.CellularApnContext
-ConnectionCost = _winrt_windows_networking_connectivity.ConnectionCost
-ConnectionProfile = _winrt_windows_networking_connectivity.ConnectionProfile
-ConnectionProfileFilter = _winrt_windows_networking_connectivity.ConnectionProfileFilter
-ConnectionSession = _winrt_windows_networking_connectivity.ConnectionSession
-ConnectivityInterval = _winrt_windows_networking_connectivity.ConnectivityInterval
-ConnectivityManager = _winrt_windows_networking_connectivity.ConnectivityManager
-DataPlanStatus = _winrt_windows_networking_connectivity.DataPlanStatus
-DataPlanUsage = _winrt_windows_networking_connectivity.DataPlanUsage
-DataUsage = _winrt_windows_networking_connectivity.DataUsage
-IPInformation = _winrt_windows_networking_connectivity.IPInformation
-LanIdentifier = _winrt_windows_networking_connectivity.LanIdentifier
-LanIdentifierData = _winrt_windows_networking_connectivity.LanIdentifierData
-NetworkAdapter = _winrt_windows_networking_connectivity.NetworkAdapter
-NetworkInformation = _winrt_windows_networking_connectivity.NetworkInformation
-NetworkItem = _winrt_windows_networking_connectivity.NetworkItem
-NetworkSecuritySettings = _winrt_windows_networking_connectivity.NetworkSecuritySettings
-NetworkStateChangeEventDetails = _winrt_windows_networking_connectivity.NetworkStateChangeEventDetails
-NetworkUsage = _winrt_windows_networking_connectivity.NetworkUsage
-ProviderNetworkUsage = _winrt_windows_networking_connectivity.ProviderNetworkUsage
-ProxyConfiguration = _winrt_windows_networking_connectivity.ProxyConfiguration
-RoutePolicy = _winrt_windows_networking_connectivity.RoutePolicy
-WlanConnectionProfileDetails = _winrt_windows_networking_connectivity.WlanConnectionProfileDetails
-WwanConnectionProfileDetails = _winrt_windows_networking_connectivity.WwanConnectionProfileDetails
 NetworkStatusChangedEventHandler = typing.Callable[[winrt.system.Object], None]

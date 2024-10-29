@@ -5,7 +5,20 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_data_text
+from winrt._winrt_windows_data_text import (
+    TextSegment,
+    AlternateWordForm,
+    SelectableWordSegment,
+    SelectableWordsSegmenter,
+    SemanticTextQuery,
+    TextConversionGenerator,
+    TextPhoneme,
+    TextPredictionGenerator,
+    TextReverseConversionGenerator,
+    UnicodeCharacters,
+    WordSegment,
+    WordsSegmenter,
+)
 
 __all__ = [
     "AlternateNormalizationFormat",
@@ -78,17 +91,5 @@ class UnicodeNumericType(enum.IntEnum):
     DIGIT = 2
     NUMERIC = 3
 
-TextSegment = _winrt_windows_data_text.TextSegment
-AlternateWordForm = _winrt_windows_data_text.AlternateWordForm
-SelectableWordSegment = _winrt_windows_data_text.SelectableWordSegment
-SelectableWordsSegmenter = _winrt_windows_data_text.SelectableWordsSegmenter
-SemanticTextQuery = _winrt_windows_data_text.SemanticTextQuery
-TextConversionGenerator = _winrt_windows_data_text.TextConversionGenerator
-TextPhoneme = _winrt_windows_data_text.TextPhoneme
-TextPredictionGenerator = _winrt_windows_data_text.TextPredictionGenerator
-TextReverseConversionGenerator = _winrt_windows_data_text.TextReverseConversionGenerator
-UnicodeCharacters = _winrt_windows_data_text.UnicodeCharacters
-WordSegment = _winrt_windows_data_text.WordSegment
-WordsSegmenter = _winrt_windows_data_text.WordsSegmenter
 SelectableWordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[SelectableWordSegment], typing.Iterable[SelectableWordSegment]], None]
 WordSegmentsTokenizingHandler = typing.Callable[[typing.Iterable[WordSegment], typing.Iterable[WordSegment]], None]

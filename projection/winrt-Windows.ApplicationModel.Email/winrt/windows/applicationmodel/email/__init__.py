@@ -3,7 +3,41 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_email
+from winrt._winrt_windows_applicationmodel_email import (
+    EmailAttachment,
+    EmailConversation,
+    EmailConversationBatch,
+    EmailConversationReader,
+    EmailFolder,
+    EmailIrmInfo,
+    EmailIrmTemplate,
+    EmailItemCounts,
+    EmailMailbox,
+    EmailMailboxAction,
+    EmailMailboxAutoReply,
+    EmailMailboxAutoReplySettings,
+    EmailMailboxCapabilities,
+    EmailMailboxChange,
+    EmailMailboxChangeReader,
+    EmailMailboxChangeTracker,
+    EmailMailboxChangedDeferral,
+    EmailMailboxChangedEventArgs,
+    EmailMailboxCreateFolderResult,
+    EmailMailboxPolicies,
+    EmailMailboxSyncManager,
+    EmailManager,
+    EmailManagerForUser,
+    EmailMeetingInfo,
+    EmailMessage,
+    EmailMessageBatch,
+    EmailMessageReader,
+    EmailQueryOptions,
+    EmailQueryTextSearch,
+    EmailRecipient,
+    EmailRecipientResolutionResult,
+    EmailStore,
+    EmailStoreNotificationTriggerDetails,
+)
 
 __all__ = [
     "EmailAttachmentDownloadState",
@@ -270,36 +304,3 @@ class EmailStoreAccessType(enum.IntEnum):
     APP_MAILBOXES_READ_WRITE = 0
     ALL_MAILBOXES_LIMITED_READ_WRITE = 1
 
-EmailAttachment = _winrt_windows_applicationmodel_email.EmailAttachment
-EmailConversation = _winrt_windows_applicationmodel_email.EmailConversation
-EmailConversationBatch = _winrt_windows_applicationmodel_email.EmailConversationBatch
-EmailConversationReader = _winrt_windows_applicationmodel_email.EmailConversationReader
-EmailFolder = _winrt_windows_applicationmodel_email.EmailFolder
-EmailIrmInfo = _winrt_windows_applicationmodel_email.EmailIrmInfo
-EmailIrmTemplate = _winrt_windows_applicationmodel_email.EmailIrmTemplate
-EmailItemCounts = _winrt_windows_applicationmodel_email.EmailItemCounts
-EmailMailbox = _winrt_windows_applicationmodel_email.EmailMailbox
-EmailMailboxAction = _winrt_windows_applicationmodel_email.EmailMailboxAction
-EmailMailboxAutoReply = _winrt_windows_applicationmodel_email.EmailMailboxAutoReply
-EmailMailboxAutoReplySettings = _winrt_windows_applicationmodel_email.EmailMailboxAutoReplySettings
-EmailMailboxCapabilities = _winrt_windows_applicationmodel_email.EmailMailboxCapabilities
-EmailMailboxChange = _winrt_windows_applicationmodel_email.EmailMailboxChange
-EmailMailboxChangeReader = _winrt_windows_applicationmodel_email.EmailMailboxChangeReader
-EmailMailboxChangeTracker = _winrt_windows_applicationmodel_email.EmailMailboxChangeTracker
-EmailMailboxChangedDeferral = _winrt_windows_applicationmodel_email.EmailMailboxChangedDeferral
-EmailMailboxChangedEventArgs = _winrt_windows_applicationmodel_email.EmailMailboxChangedEventArgs
-EmailMailboxCreateFolderResult = _winrt_windows_applicationmodel_email.EmailMailboxCreateFolderResult
-EmailMailboxPolicies = _winrt_windows_applicationmodel_email.EmailMailboxPolicies
-EmailMailboxSyncManager = _winrt_windows_applicationmodel_email.EmailMailboxSyncManager
-EmailManager = _winrt_windows_applicationmodel_email.EmailManager
-EmailManagerForUser = _winrt_windows_applicationmodel_email.EmailManagerForUser
-EmailMeetingInfo = _winrt_windows_applicationmodel_email.EmailMeetingInfo
-EmailMessage = _winrt_windows_applicationmodel_email.EmailMessage
-EmailMessageBatch = _winrt_windows_applicationmodel_email.EmailMessageBatch
-EmailMessageReader = _winrt_windows_applicationmodel_email.EmailMessageReader
-EmailQueryOptions = _winrt_windows_applicationmodel_email.EmailQueryOptions
-EmailQueryTextSearch = _winrt_windows_applicationmodel_email.EmailQueryTextSearch
-EmailRecipient = _winrt_windows_applicationmodel_email.EmailRecipient
-EmailRecipientResolutionResult = _winrt_windows_applicationmodel_email.EmailRecipientResolutionResult
-EmailStore = _winrt_windows_applicationmodel_email.EmailStore
-EmailStoreNotificationTriggerDetails = _winrt_windows_applicationmodel_email.EmailStoreNotificationTriggerDetails

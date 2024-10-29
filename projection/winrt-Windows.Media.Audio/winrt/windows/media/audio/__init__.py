@@ -3,7 +3,52 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_audio
+from winrt._winrt_windows_media_audio import (
+    AudioDeviceInputNode,
+    AudioDeviceOutputNode,
+    AudioEffectsPackConfiguration,
+    AudioFileInputNode,
+    AudioFileOutputNode,
+    AudioFrameCompletedEventArgs,
+    AudioFrameInputNode,
+    AudioFrameOutputNode,
+    AudioGraph,
+    AudioGraphBatchUpdater,
+    AudioGraphConnection,
+    AudioGraphSettings,
+    AudioGraphUnrecoverableErrorOccurredEventArgs,
+    AudioNodeEmitter,
+    AudioNodeEmitterConeProperties,
+    AudioNodeEmitterDecayModel,
+    AudioNodeEmitterNaturalDecayModelProperties,
+    AudioNodeEmitterShape,
+    AudioNodeListener,
+    AudioPlaybackConnection,
+    AudioPlaybackConnectionOpenResult,
+    AudioStateMonitor,
+    AudioSubmixNode,
+    CreateAudioDeviceInputNodeResult,
+    CreateAudioDeviceOutputNodeResult,
+    CreateAudioFileInputNodeResult,
+    CreateAudioFileOutputNodeResult,
+    CreateAudioGraphResult,
+    CreateMediaSourceAudioInputNodeResult,
+    EchoEffectDefinition,
+    EqualizerBand,
+    EqualizerEffectDefinition,
+    FrameInputNodeQuantumStartedEventArgs,
+    LimiterEffectDefinition,
+    MediaSourceAudioInputNode,
+    ReverbEffectDefinition,
+    SetDefaultSpatialAudioFormatResult,
+    SpatialAudioDeviceConfiguration,
+    SpatialAudioFormatConfiguration,
+    SpatialAudioFormatSubtype,
+    IAudioInputNode,
+    IAudioInputNode2,
+    IAudioNode,
+    IAudioNodeWithListener,
+)
 
 __all__ = [
     "AudioDeviceNodeCreationStatus",
@@ -147,47 +192,3 @@ class SpatialAudioModel(enum.IntEnum):
     OBJECT_BASED = 0
     FOLD_DOWN = 1
 
-AudioDeviceInputNode = _winrt_windows_media_audio.AudioDeviceInputNode
-AudioDeviceOutputNode = _winrt_windows_media_audio.AudioDeviceOutputNode
-AudioEffectsPackConfiguration = _winrt_windows_media_audio.AudioEffectsPackConfiguration
-AudioFileInputNode = _winrt_windows_media_audio.AudioFileInputNode
-AudioFileOutputNode = _winrt_windows_media_audio.AudioFileOutputNode
-AudioFrameCompletedEventArgs = _winrt_windows_media_audio.AudioFrameCompletedEventArgs
-AudioFrameInputNode = _winrt_windows_media_audio.AudioFrameInputNode
-AudioFrameOutputNode = _winrt_windows_media_audio.AudioFrameOutputNode
-AudioGraph = _winrt_windows_media_audio.AudioGraph
-AudioGraphBatchUpdater = _winrt_windows_media_audio.AudioGraphBatchUpdater
-AudioGraphConnection = _winrt_windows_media_audio.AudioGraphConnection
-AudioGraphSettings = _winrt_windows_media_audio.AudioGraphSettings
-AudioGraphUnrecoverableErrorOccurredEventArgs = _winrt_windows_media_audio.AudioGraphUnrecoverableErrorOccurredEventArgs
-AudioNodeEmitter = _winrt_windows_media_audio.AudioNodeEmitter
-AudioNodeEmitterConeProperties = _winrt_windows_media_audio.AudioNodeEmitterConeProperties
-AudioNodeEmitterDecayModel = _winrt_windows_media_audio.AudioNodeEmitterDecayModel
-AudioNodeEmitterNaturalDecayModelProperties = _winrt_windows_media_audio.AudioNodeEmitterNaturalDecayModelProperties
-AudioNodeEmitterShape = _winrt_windows_media_audio.AudioNodeEmitterShape
-AudioNodeListener = _winrt_windows_media_audio.AudioNodeListener
-AudioPlaybackConnection = _winrt_windows_media_audio.AudioPlaybackConnection
-AudioPlaybackConnectionOpenResult = _winrt_windows_media_audio.AudioPlaybackConnectionOpenResult
-AudioStateMonitor = _winrt_windows_media_audio.AudioStateMonitor
-AudioSubmixNode = _winrt_windows_media_audio.AudioSubmixNode
-CreateAudioDeviceInputNodeResult = _winrt_windows_media_audio.CreateAudioDeviceInputNodeResult
-CreateAudioDeviceOutputNodeResult = _winrt_windows_media_audio.CreateAudioDeviceOutputNodeResult
-CreateAudioFileInputNodeResult = _winrt_windows_media_audio.CreateAudioFileInputNodeResult
-CreateAudioFileOutputNodeResult = _winrt_windows_media_audio.CreateAudioFileOutputNodeResult
-CreateAudioGraphResult = _winrt_windows_media_audio.CreateAudioGraphResult
-CreateMediaSourceAudioInputNodeResult = _winrt_windows_media_audio.CreateMediaSourceAudioInputNodeResult
-EchoEffectDefinition = _winrt_windows_media_audio.EchoEffectDefinition
-EqualizerBand = _winrt_windows_media_audio.EqualizerBand
-EqualizerEffectDefinition = _winrt_windows_media_audio.EqualizerEffectDefinition
-FrameInputNodeQuantumStartedEventArgs = _winrt_windows_media_audio.FrameInputNodeQuantumStartedEventArgs
-LimiterEffectDefinition = _winrt_windows_media_audio.LimiterEffectDefinition
-MediaSourceAudioInputNode = _winrt_windows_media_audio.MediaSourceAudioInputNode
-ReverbEffectDefinition = _winrt_windows_media_audio.ReverbEffectDefinition
-SetDefaultSpatialAudioFormatResult = _winrt_windows_media_audio.SetDefaultSpatialAudioFormatResult
-SpatialAudioDeviceConfiguration = _winrt_windows_media_audio.SpatialAudioDeviceConfiguration
-SpatialAudioFormatConfiguration = _winrt_windows_media_audio.SpatialAudioFormatConfiguration
-SpatialAudioFormatSubtype = _winrt_windows_media_audio.SpatialAudioFormatSubtype
-IAudioInputNode = _winrt_windows_media_audio.IAudioInputNode
-IAudioInputNode2 = _winrt_windows_media_audio.IAudioInputNode2
-IAudioNode = _winrt_windows_media_audio.IAudioNode
-IAudioNodeWithListener = _winrt_windows_media_audio.IAudioNodeWithListener

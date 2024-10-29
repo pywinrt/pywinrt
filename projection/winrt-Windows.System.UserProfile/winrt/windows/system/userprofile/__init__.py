@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_userprofile
+from winrt._winrt_windows_system_userprofile import (
+    AdvertisingManager,
+    AdvertisingManagerForUser,
+    AssignedAccessSettings,
+    DiagnosticsSettings,
+    FirstSignInSettings,
+    GlobalizationPreferences,
+    GlobalizationPreferencesForUser,
+    LockScreen,
+    UserInformation,
+    UserProfilePersonalizationSettings,
+)
 
 __all__ = [
     "AccountPictureKind",
@@ -39,14 +50,4 @@ class SetImageFeedResult(enum.IntEnum):
     CHANGE_DISABLED = 1
     USER_CANCELED = 2
 
-AdvertisingManager = _winrt_windows_system_userprofile.AdvertisingManager
-AdvertisingManagerForUser = _winrt_windows_system_userprofile.AdvertisingManagerForUser
-AssignedAccessSettings = _winrt_windows_system_userprofile.AssignedAccessSettings
-DiagnosticsSettings = _winrt_windows_system_userprofile.DiagnosticsSettings
-FirstSignInSettings = _winrt_windows_system_userprofile.FirstSignInSettings
 winrt.system._mixin_mapping(FirstSignInSettings)
-GlobalizationPreferences = _winrt_windows_system_userprofile.GlobalizationPreferences
-GlobalizationPreferencesForUser = _winrt_windows_system_userprofile.GlobalizationPreferencesForUser
-LockScreen = _winrt_windows_system_userprofile.LockScreen
-UserInformation = _winrt_windows_system_userprofile.UserInformation
-UserProfilePersonalizationSettings = _winrt_windows_system_userprofile.UserProfilePersonalizationSettings

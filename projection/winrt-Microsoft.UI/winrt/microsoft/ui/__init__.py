@@ -4,7 +4,14 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui
+from winrt._winrt_microsoft_ui import (
+    DisplayId,
+    IconId,
+    WindowId,
+    ColorHelper,
+    Colors,
+    IClosableNotifier,
+)
 
 __all__ = [
     "DisplayId",
@@ -16,10 +23,4 @@ __all__ = [
     "ClosableNotifierHandler",
 ]
 
-DisplayId = _winrt_microsoft_ui.DisplayId
-IconId = _winrt_microsoft_ui.IconId
-WindowId = _winrt_microsoft_ui.WindowId
-ColorHelper = _winrt_microsoft_ui.ColorHelper
-Colors = _winrt_microsoft_ui.Colors
-IClosableNotifier = _winrt_microsoft_ui.IClosableNotifier
 ClosableNotifierHandler = typing.Callable[[], None]

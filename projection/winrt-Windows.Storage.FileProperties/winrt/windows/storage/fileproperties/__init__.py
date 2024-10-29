@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_storage_fileproperties
+from winrt._winrt_windows_storage_fileproperties import (
+    BasicProperties,
+    DocumentProperties,
+    GeotagHelper,
+    ImageProperties,
+    MusicProperties,
+    StorageItemContentProperties,
+    StorageItemThumbnail,
+    VideoProperties,
+    IStorageItemExtraProperties,
+)
 
 __all__ = [
     "PhotoOrientation",
@@ -66,12 +76,3 @@ class VideoOrientation(enum.IntEnum):
     ROTATE180 = 180
     ROTATE270 = 270
 
-BasicProperties = _winrt_windows_storage_fileproperties.BasicProperties
-DocumentProperties = _winrt_windows_storage_fileproperties.DocumentProperties
-GeotagHelper = _winrt_windows_storage_fileproperties.GeotagHelper
-ImageProperties = _winrt_windows_storage_fileproperties.ImageProperties
-MusicProperties = _winrt_windows_storage_fileproperties.MusicProperties
-StorageItemContentProperties = _winrt_windows_storage_fileproperties.StorageItemContentProperties
-StorageItemThumbnail = _winrt_windows_storage_fileproperties.StorageItemThumbnail
-VideoProperties = _winrt_windows_storage_fileproperties.VideoProperties
-IStorageItemExtraProperties = _winrt_windows_storage_fileproperties.IStorageItemExtraProperties

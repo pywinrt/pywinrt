@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_input_dragdrop
+from winrt._winrt_microsoft_ui_input_dragdrop import (
+    DragDropManager,
+    DragInfo,
+    DragOperation,
+    DragUIOverride,
+    DropOperationTargetRequestedEventArgs,
+    IDropOperationTarget,
+)
 
 __all__ = [
     "DragDropModifiers",
@@ -29,9 +36,3 @@ class DragUIContentMode(enum.IntEnum):
     AUTO = 0
     DEFERRED = 1
 
-DragDropManager = _winrt_microsoft_ui_input_dragdrop.DragDropManager
-DragInfo = _winrt_microsoft_ui_input_dragdrop.DragInfo
-DragOperation = _winrt_microsoft_ui_input_dragdrop.DragOperation
-DragUIOverride = _winrt_microsoft_ui_input_dragdrop.DragUIOverride
-DropOperationTargetRequestedEventArgs = _winrt_microsoft_ui_input_dragdrop.DropOperationTargetRequestedEventArgs
-IDropOperationTarget = _winrt_microsoft_ui_input_dragdrop.IDropOperationTarget

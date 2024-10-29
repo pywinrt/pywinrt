@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_data_json
+from winrt._winrt_windows_data_json import (
+    JsonArray,
+    JsonError,
+    JsonObject,
+    JsonValue,
+    IJsonValue,
+)
 
 __all__ = [
     "JsonErrorStatus",
@@ -30,10 +36,5 @@ class JsonValueType(enum.IntEnum):
     ARRAY = 4
     OBJECT = 5
 
-JsonArray = _winrt_windows_data_json.JsonArray
 winrt.system._mixin_mutable_sequence(JsonArray)
-JsonError = _winrt_windows_data_json.JsonError
-JsonObject = _winrt_windows_data_json.JsonObject
 winrt.system._mixin_mutable_mapping(JsonObject)
-JsonValue = _winrt_windows_data_json.JsonValue
-IJsonValue = _winrt_windows_data_json.IJsonValue

@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_haptics
+from winrt._winrt_windows_devices_haptics import (
+    KnownSimpleHapticsControllerWaveforms,
+    SimpleHapticsController,
+    SimpleHapticsControllerFeedback,
+    VibrationDevice,
+)
 
 __all__ = [
     "VibrationAccessStatus",
@@ -19,7 +24,3 @@ class VibrationAccessStatus(enum.IntEnum):
     DENIED_BY_SYSTEM = 2
     DENIED_BY_ENERGY_SAVER = 3
 
-KnownSimpleHapticsControllerWaveforms = _winrt_windows_devices_haptics.KnownSimpleHapticsControllerWaveforms
-SimpleHapticsController = _winrt_windows_devices_haptics.SimpleHapticsController
-SimpleHapticsControllerFeedback = _winrt_windows_devices_haptics.SimpleHapticsControllerFeedback
-VibrationDevice = _winrt_windows_devices_haptics.VibrationDevice

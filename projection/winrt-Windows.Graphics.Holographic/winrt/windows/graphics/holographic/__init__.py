@@ -3,7 +3,29 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_holographic
+from winrt._winrt_windows_graphics_holographic import (
+    HolographicAdapterId,
+    HolographicFrameId,
+    HolographicStereoTransform,
+    HolographicCamera,
+    HolographicCameraPose,
+    HolographicCameraRenderingParameters,
+    HolographicCameraViewportParameters,
+    HolographicDisplay,
+    HolographicFrame,
+    HolographicFramePrediction,
+    HolographicFramePresentationMonitor,
+    HolographicFramePresentationReport,
+    HolographicFrameRenderingReport,
+    HolographicFrameScanoutMonitor,
+    HolographicFrameScanoutReport,
+    HolographicQuadLayer,
+    HolographicQuadLayerUpdateParameters,
+    HolographicSpace,
+    HolographicSpaceCameraAddedEventArgs,
+    HolographicSpaceCameraRemovedEventArgs,
+    HolographicViewConfiguration,
+)
 
 __all__ = [
     "HolographicDepthReprojectionMethod",
@@ -61,24 +83,3 @@ class HolographicViewConfigurationKind(enum.IntEnum):
     DISPLAY = 0
     PHOTO_VIDEO_CAMERA = 1
 
-HolographicAdapterId = _winrt_windows_graphics_holographic.HolographicAdapterId
-HolographicFrameId = _winrt_windows_graphics_holographic.HolographicFrameId
-HolographicStereoTransform = _winrt_windows_graphics_holographic.HolographicStereoTransform
-HolographicCamera = _winrt_windows_graphics_holographic.HolographicCamera
-HolographicCameraPose = _winrt_windows_graphics_holographic.HolographicCameraPose
-HolographicCameraRenderingParameters = _winrt_windows_graphics_holographic.HolographicCameraRenderingParameters
-HolographicCameraViewportParameters = _winrt_windows_graphics_holographic.HolographicCameraViewportParameters
-HolographicDisplay = _winrt_windows_graphics_holographic.HolographicDisplay
-HolographicFrame = _winrt_windows_graphics_holographic.HolographicFrame
-HolographicFramePrediction = _winrt_windows_graphics_holographic.HolographicFramePrediction
-HolographicFramePresentationMonitor = _winrt_windows_graphics_holographic.HolographicFramePresentationMonitor
-HolographicFramePresentationReport = _winrt_windows_graphics_holographic.HolographicFramePresentationReport
-HolographicFrameRenderingReport = _winrt_windows_graphics_holographic.HolographicFrameRenderingReport
-HolographicFrameScanoutMonitor = _winrt_windows_graphics_holographic.HolographicFrameScanoutMonitor
-HolographicFrameScanoutReport = _winrt_windows_graphics_holographic.HolographicFrameScanoutReport
-HolographicQuadLayer = _winrt_windows_graphics_holographic.HolographicQuadLayer
-HolographicQuadLayerUpdateParameters = _winrt_windows_graphics_holographic.HolographicQuadLayerUpdateParameters
-HolographicSpace = _winrt_windows_graphics_holographic.HolographicSpace
-HolographicSpaceCameraAddedEventArgs = _winrt_windows_graphics_holographic.HolographicSpaceCameraAddedEventArgs
-HolographicSpaceCameraRemovedEventArgs = _winrt_windows_graphics_holographic.HolographicSpaceCameraRemovedEventArgs
-HolographicViewConfiguration = _winrt_windows_graphics_holographic.HolographicViewConfiguration

@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_windowing
+from winrt._winrt_microsoft_ui_windowing import (
+    AppWindow,
+    AppWindowChangedEventArgs,
+    AppWindowClosingEventArgs,
+    AppWindowPresenter,
+    AppWindowTitleBar,
+    CompactOverlayPresenter,
+    DisplayArea,
+    DisplayAreaWatcher,
+    FullScreenPresenter,
+    OverlappedPresenter,
+)
 
 __all__ = [
     "AppWindowPresenterKind",
@@ -63,13 +74,3 @@ class TitleBarHeightOption(enum.IntEnum):
     TALL = 1
     COLLAPSED = 2
 
-AppWindow = _winrt_microsoft_ui_windowing.AppWindow
-AppWindowChangedEventArgs = _winrt_microsoft_ui_windowing.AppWindowChangedEventArgs
-AppWindowClosingEventArgs = _winrt_microsoft_ui_windowing.AppWindowClosingEventArgs
-AppWindowPresenter = _winrt_microsoft_ui_windowing.AppWindowPresenter
-AppWindowTitleBar = _winrt_microsoft_ui_windowing.AppWindowTitleBar
-CompactOverlayPresenter = _winrt_microsoft_ui_windowing.CompactOverlayPresenter
-DisplayArea = _winrt_microsoft_ui_windowing.DisplayArea
-DisplayAreaWatcher = _winrt_microsoft_ui_windowing.DisplayAreaWatcher
-FullScreenPresenter = _winrt_microsoft_ui_windowing.FullScreenPresenter
-OverlappedPresenter = _winrt_microsoft_ui_windowing.OverlappedPresenter

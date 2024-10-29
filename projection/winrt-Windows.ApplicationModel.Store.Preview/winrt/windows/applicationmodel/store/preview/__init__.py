@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_store_preview
+from winrt._winrt_windows_applicationmodel_store_preview import (
+    DeliveryOptimizationSettings,
+    StoreConfiguration,
+    StoreHardwareManufacturerInfo,
+    StorePreview,
+    StorePreviewProductInfo,
+    StorePreviewPurchaseResults,
+    StorePreviewSkuInfo,
+    WebAuthenticationCoreManagerHelper,
+)
 
 __all__ = [
     "DeliveryOptimizationDownloadMode",
@@ -80,11 +89,3 @@ class StoreSystemFeature(enum.IntEnum):
     VIDEO_MEMORY1_G_B = 33
     ARCHITECTURE_ARM64 = 34
 
-DeliveryOptimizationSettings = _winrt_windows_applicationmodel_store_preview.DeliveryOptimizationSettings
-StoreConfiguration = _winrt_windows_applicationmodel_store_preview.StoreConfiguration
-StoreHardwareManufacturerInfo = _winrt_windows_applicationmodel_store_preview.StoreHardwareManufacturerInfo
-StorePreview = _winrt_windows_applicationmodel_store_preview.StorePreview
-StorePreviewProductInfo = _winrt_windows_applicationmodel_store_preview.StorePreviewProductInfo
-StorePreviewPurchaseResults = _winrt_windows_applicationmodel_store_preview.StorePreviewPurchaseResults
-StorePreviewSkuInfo = _winrt_windows_applicationmodel_store_preview.StorePreviewSkuInfo
-WebAuthenticationCoreManagerHelper = _winrt_windows_applicationmodel_store_preview.WebAuthenticationCoreManagerHelper

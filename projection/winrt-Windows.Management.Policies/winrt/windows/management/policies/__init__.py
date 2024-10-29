@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_management_policies
+from winrt._winrt_windows_management_policies import (
+    NamedPolicy,
+    NamedPolicyData,
+)
 
 __all__ = [
     "NamedPolicyKind",
@@ -19,5 +22,3 @@ class NamedPolicyKind(enum.IntEnum):
     INT64 = 4
     STRING = 5
 
-NamedPolicy = _winrt_windows_management_policies.NamedPolicy
-NamedPolicyData = _winrt_windows_management_policies.NamedPolicyData

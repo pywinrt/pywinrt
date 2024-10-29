@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_globalization
+from winrt._winrt_windows_globalization import (
+    ApplicationLanguages,
+    Calendar,
+    CalendarIdentifiers,
+    ClockIdentifiers,
+    CurrencyAmount,
+    CurrencyIdentifiers,
+    GeographicRegion,
+    JapanesePhoneme,
+    JapanesePhoneticAnalyzer,
+    Language,
+    NumeralSystemIdentifiers,
+)
 
 __all__ = [
     "DayOfWeek",
@@ -36,14 +48,3 @@ class LanguageLayoutDirection(enum.IntEnum):
     TTB_LTR = 2
     TTB_RTL = 3
 
-ApplicationLanguages = _winrt_windows_globalization.ApplicationLanguages
-Calendar = _winrt_windows_globalization.Calendar
-CalendarIdentifiers = _winrt_windows_globalization.CalendarIdentifiers
-ClockIdentifiers = _winrt_windows_globalization.ClockIdentifiers
-CurrencyAmount = _winrt_windows_globalization.CurrencyAmount
-CurrencyIdentifiers = _winrt_windows_globalization.CurrencyIdentifiers
-GeographicRegion = _winrt_windows_globalization.GeographicRegion
-JapanesePhoneme = _winrt_windows_globalization.JapanesePhoneme
-JapanesePhoneticAnalyzer = _winrt_windows_globalization.JapanesePhoneticAnalyzer
-Language = _winrt_windows_globalization.Language
-NumeralSystemIdentifiers = _winrt_windows_globalization.NumeralSystemIdentifiers

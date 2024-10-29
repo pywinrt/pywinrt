@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_authentication_web
+from winrt._winrt_windows_security_authentication_web import (
+    WebAuthenticationBroker,
+    WebAuthenticationResult,
+)
 
 __all__ = [
     "TokenBindingKeyType",
@@ -30,5 +33,3 @@ class WebAuthenticationStatus(enum.IntEnum):
     USER_CANCEL = 1
     ERROR_HTTP = 2
 
-WebAuthenticationBroker = _winrt_windows_security_authentication_web.WebAuthenticationBroker
-WebAuthenticationResult = _winrt_windows_security_authentication_web.WebAuthenticationResult

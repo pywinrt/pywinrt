@@ -5,7 +5,25 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_payments
+from winrt._winrt_windows_applicationmodel_payments import (
+    PaymentAddress,
+    PaymentCanMakePaymentResult,
+    PaymentCurrencyAmount,
+    PaymentDetails,
+    PaymentDetailsModifier,
+    PaymentItem,
+    PaymentMediator,
+    PaymentMerchantInfo,
+    PaymentMethodData,
+    PaymentOptions,
+    PaymentRequest,
+    PaymentRequestChangedArgs,
+    PaymentRequestChangedResult,
+    PaymentRequestSubmitResult,
+    PaymentResponse,
+    PaymentShippingOption,
+    PaymentToken,
+)
 
 __all__ = [
     "PaymentCanMakePaymentResultStatus",
@@ -67,21 +85,4 @@ class PaymentShippingType(enum.IntEnum):
     DELIVERY = 1
     PICKUP = 2
 
-PaymentAddress = _winrt_windows_applicationmodel_payments.PaymentAddress
-PaymentCanMakePaymentResult = _winrt_windows_applicationmodel_payments.PaymentCanMakePaymentResult
-PaymentCurrencyAmount = _winrt_windows_applicationmodel_payments.PaymentCurrencyAmount
-PaymentDetails = _winrt_windows_applicationmodel_payments.PaymentDetails
-PaymentDetailsModifier = _winrt_windows_applicationmodel_payments.PaymentDetailsModifier
-PaymentItem = _winrt_windows_applicationmodel_payments.PaymentItem
-PaymentMediator = _winrt_windows_applicationmodel_payments.PaymentMediator
-PaymentMerchantInfo = _winrt_windows_applicationmodel_payments.PaymentMerchantInfo
-PaymentMethodData = _winrt_windows_applicationmodel_payments.PaymentMethodData
-PaymentOptions = _winrt_windows_applicationmodel_payments.PaymentOptions
-PaymentRequest = _winrt_windows_applicationmodel_payments.PaymentRequest
-PaymentRequestChangedArgs = _winrt_windows_applicationmodel_payments.PaymentRequestChangedArgs
-PaymentRequestChangedResult = _winrt_windows_applicationmodel_payments.PaymentRequestChangedResult
-PaymentRequestSubmitResult = _winrt_windows_applicationmodel_payments.PaymentRequestSubmitResult
-PaymentResponse = _winrt_windows_applicationmodel_payments.PaymentResponse
-PaymentShippingOption = _winrt_windows_applicationmodel_payments.PaymentShippingOption
-PaymentToken = _winrt_windows_applicationmodel_payments.PaymentToken
 PaymentRequestChangedHandler = typing.Callable[[PaymentRequest, PaymentRequestChangedArgs], None]

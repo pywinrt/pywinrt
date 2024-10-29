@@ -5,7 +5,36 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_graphics_printing3d
+from winrt._winrt_windows_graphics_printing3d import (
+    Printing3DBufferDescription,
+    Print3DManager,
+    Print3DTask,
+    Print3DTaskCompletedEventArgs,
+    Print3DTaskRequest,
+    Print3DTaskRequestedEventArgs,
+    Print3DTaskSourceChangedEventArgs,
+    Print3DTaskSourceRequestedArgs,
+    Printing3D3MFPackage,
+    Printing3DBaseMaterial,
+    Printing3DBaseMaterialGroup,
+    Printing3DColorMaterial,
+    Printing3DColorMaterialGroup,
+    Printing3DComponent,
+    Printing3DComponentWithMatrix,
+    Printing3DCompositeMaterial,
+    Printing3DCompositeMaterialGroup,
+    Printing3DFaceReductionOptions,
+    Printing3DMaterial,
+    Printing3DMesh,
+    Printing3DMeshVerificationResult,
+    Printing3DModel,
+    Printing3DModelTexture,
+    Printing3DMultiplePropertyMaterial,
+    Printing3DMultiplePropertyMaterialGroup,
+    Printing3DTexture2CoordMaterial,
+    Printing3DTexture2CoordMaterialGroup,
+    Printing3DTextureResource,
+)
 
 __all__ = [
     "Print3DTaskCompletion",
@@ -100,32 +129,4 @@ class Printing3DTextureEdgeBehavior(enum.IntEnum):
     MIRROR = 2
     CLAMP = 3
 
-Printing3DBufferDescription = _winrt_windows_graphics_printing3d.Printing3DBufferDescription
-Print3DManager = _winrt_windows_graphics_printing3d.Print3DManager
-Print3DTask = _winrt_windows_graphics_printing3d.Print3DTask
-Print3DTaskCompletedEventArgs = _winrt_windows_graphics_printing3d.Print3DTaskCompletedEventArgs
-Print3DTaskRequest = _winrt_windows_graphics_printing3d.Print3DTaskRequest
-Print3DTaskRequestedEventArgs = _winrt_windows_graphics_printing3d.Print3DTaskRequestedEventArgs
-Print3DTaskSourceChangedEventArgs = _winrt_windows_graphics_printing3d.Print3DTaskSourceChangedEventArgs
-Print3DTaskSourceRequestedArgs = _winrt_windows_graphics_printing3d.Print3DTaskSourceRequestedArgs
-Printing3D3MFPackage = _winrt_windows_graphics_printing3d.Printing3D3MFPackage
-Printing3DBaseMaterial = _winrt_windows_graphics_printing3d.Printing3DBaseMaterial
-Printing3DBaseMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DBaseMaterialGroup
-Printing3DColorMaterial = _winrt_windows_graphics_printing3d.Printing3DColorMaterial
-Printing3DColorMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DColorMaterialGroup
-Printing3DComponent = _winrt_windows_graphics_printing3d.Printing3DComponent
-Printing3DComponentWithMatrix = _winrt_windows_graphics_printing3d.Printing3DComponentWithMatrix
-Printing3DCompositeMaterial = _winrt_windows_graphics_printing3d.Printing3DCompositeMaterial
-Printing3DCompositeMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DCompositeMaterialGroup
-Printing3DFaceReductionOptions = _winrt_windows_graphics_printing3d.Printing3DFaceReductionOptions
-Printing3DMaterial = _winrt_windows_graphics_printing3d.Printing3DMaterial
-Printing3DMesh = _winrt_windows_graphics_printing3d.Printing3DMesh
-Printing3DMeshVerificationResult = _winrt_windows_graphics_printing3d.Printing3DMeshVerificationResult
-Printing3DModel = _winrt_windows_graphics_printing3d.Printing3DModel
-Printing3DModelTexture = _winrt_windows_graphics_printing3d.Printing3DModelTexture
-Printing3DMultiplePropertyMaterial = _winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterial
-Printing3DMultiplePropertyMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DMultiplePropertyMaterialGroup
-Printing3DTexture2CoordMaterial = _winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterial
-Printing3DTexture2CoordMaterialGroup = _winrt_windows_graphics_printing3d.Printing3DTexture2CoordMaterialGroup
-Printing3DTextureResource = _winrt_windows_graphics_printing3d.Printing3DTextureResource
 Print3DTaskSourceRequestedHandler = typing.Callable[[Print3DTaskSourceRequestedArgs], None]

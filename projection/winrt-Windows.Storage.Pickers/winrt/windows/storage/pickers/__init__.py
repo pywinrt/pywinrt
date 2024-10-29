@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_storage_pickers
+from winrt._winrt_windows_storage_pickers import (
+    FileExtensionVector,
+    FileOpenPicker,
+    FilePickerFileTypesOrderedMap,
+    FilePickerSelectedFilesArray,
+    FileSavePicker,
+    FolderPicker,
+)
 
 __all__ = [
     "PickerLocationId",
@@ -32,12 +39,6 @@ class PickerViewMode(enum.IntEnum):
     LIST = 0
     THUMBNAIL = 1
 
-FileExtensionVector = _winrt_windows_storage_pickers.FileExtensionVector
 winrt.system._mixin_mutable_sequence(FileExtensionVector)
-FileOpenPicker = _winrt_windows_storage_pickers.FileOpenPicker
-FilePickerFileTypesOrderedMap = _winrt_windows_storage_pickers.FilePickerFileTypesOrderedMap
 winrt.system._mixin_mutable_mapping(FilePickerFileTypesOrderedMap)
-FilePickerSelectedFilesArray = _winrt_windows_storage_pickers.FilePickerSelectedFilesArray
 winrt.system._mixin_sequence(FilePickerSelectedFilesArray)
-FileSavePicker = _winrt_windows_storage_pickers.FileSavePicker
-FolderPicker = _winrt_windows_storage_pickers.FolderPicker

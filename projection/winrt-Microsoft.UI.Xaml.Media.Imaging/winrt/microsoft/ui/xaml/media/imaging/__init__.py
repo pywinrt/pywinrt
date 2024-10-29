@@ -5,7 +5,20 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_media_imaging
+from winrt._winrt_microsoft_ui_xaml_media_imaging import (
+    BitmapImage,
+    BitmapSource,
+    DownloadProgressEventArgs,
+    RenderTargetBitmap,
+    SoftwareBitmapSource,
+    SurfaceImageSource,
+    SvgImageSource,
+    SvgImageSourceFailedEventArgs,
+    SvgImageSourceOpenedEventArgs,
+    VirtualSurfaceImageSource,
+    WriteableBitmap,
+    XamlRenderingBackgroundTask,
+)
 
 __all__ = [
     "BitmapCreateOptions",
@@ -40,16 +53,4 @@ class SvgImageSourceLoadStatus(enum.IntEnum):
     INVALID_FORMAT = 2
     OTHER = 3
 
-BitmapImage = _winrt_microsoft_ui_xaml_media_imaging.BitmapImage
-BitmapSource = _winrt_microsoft_ui_xaml_media_imaging.BitmapSource
-DownloadProgressEventArgs = _winrt_microsoft_ui_xaml_media_imaging.DownloadProgressEventArgs
-RenderTargetBitmap = _winrt_microsoft_ui_xaml_media_imaging.RenderTargetBitmap
-SoftwareBitmapSource = _winrt_microsoft_ui_xaml_media_imaging.SoftwareBitmapSource
-SurfaceImageSource = _winrt_microsoft_ui_xaml_media_imaging.SurfaceImageSource
-SvgImageSource = _winrt_microsoft_ui_xaml_media_imaging.SvgImageSource
-SvgImageSourceFailedEventArgs = _winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceFailedEventArgs
-SvgImageSourceOpenedEventArgs = _winrt_microsoft_ui_xaml_media_imaging.SvgImageSourceOpenedEventArgs
-VirtualSurfaceImageSource = _winrt_microsoft_ui_xaml_media_imaging.VirtualSurfaceImageSource
-WriteableBitmap = _winrt_microsoft_ui_xaml_media_imaging.WriteableBitmap
-XamlRenderingBackgroundTask = _winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask
 DownloadProgressEventHandler = typing.Callable[[winrt.system.Object, DownloadProgressEventArgs], None]

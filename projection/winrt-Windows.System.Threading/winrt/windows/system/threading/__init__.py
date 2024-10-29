@@ -5,7 +5,10 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_system_threading
+from winrt._winrt_windows_system_threading import (
+    ThreadPool,
+    ThreadPoolTimer,
+)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
@@ -29,8 +32,6 @@ class WorkItemPriority(enum.IntEnum):
     NORMAL = 0
     HIGH = 1
 
-ThreadPool = _winrt_windows_system_threading.ThreadPool
-ThreadPoolTimer = _winrt_windows_system_threading.ThreadPoolTimer
 TimerDestroyedHandler = typing.Callable[[ThreadPoolTimer], None]
 TimerElapsedHandler = typing.Callable[[ThreadPoolTimer], None]
 WorkItemHandler = typing.Callable[["windows_foundation.IAsyncAction"], None]

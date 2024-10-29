@@ -5,7 +5,13 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_popups
+from winrt._winrt_windows_ui_popups import (
+    MessageDialog,
+    PopupMenu,
+    UICommand,
+    UICommandSeparator,
+    IUICommand,
+)
 
 __all__ = [
     "MessageDialogOptions",
@@ -29,9 +35,4 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
-MessageDialog = _winrt_windows_ui_popups.MessageDialog
-PopupMenu = _winrt_windows_ui_popups.PopupMenu
-UICommand = _winrt_windows_ui_popups.UICommand
-UICommandSeparator = _winrt_windows_ui_popups.UICommandSeparator
-IUICommand = _winrt_windows_ui_popups.IUICommand
 UICommandInvokedHandler = typing.Callable[[IUICommand], None]

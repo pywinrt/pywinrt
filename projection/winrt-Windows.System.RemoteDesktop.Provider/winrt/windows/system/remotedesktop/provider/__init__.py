@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_remotedesktop_provider
+from winrt._winrt_windows_system_remotedesktop_provider import (
+    PerformLocalActionRequestedEventArgs,
+    RemoteDesktopConnectionInfo,
+    RemoteDesktopConnectionRemoteInfo,
+    RemoteDesktopInfo,
+    RemoteDesktopRegistrar,
+)
 
 __all__ = [
     "RemoteDesktopConnectionStatus",
@@ -28,8 +34,3 @@ class RemoteDesktopLocalAction(enum.IntEnum):
     SHOW_SYSTEM_ACCOUNT_SETTINGS = 3
     SHOW_LOCAL_SETTINGS = 4
 
-PerformLocalActionRequestedEventArgs = _winrt_windows_system_remotedesktop_provider.PerformLocalActionRequestedEventArgs
-RemoteDesktopConnectionInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionInfo
-RemoteDesktopConnectionRemoteInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopConnectionRemoteInfo
-RemoteDesktopInfo = _winrt_windows_system_remotedesktop_provider.RemoteDesktopInfo
-RemoteDesktopRegistrar = _winrt_windows_system_remotedesktop_provider.RemoteDesktopRegistrar

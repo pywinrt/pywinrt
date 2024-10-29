@@ -3,7 +3,99 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_automation_peers
+from winrt._winrt_windows_ui_xaml_automation_peers import (
+    RawElementProviderRuntimeId,
+    AppBarAutomationPeer,
+    AppBarButtonAutomationPeer,
+    AppBarToggleButtonAutomationPeer,
+    AutoSuggestBoxAutomationPeer,
+    AutomationPeer,
+    AutomationPeerAnnotation,
+    ButtonAutomationPeer,
+    ButtonBaseAutomationPeer,
+    CalendarDatePickerAutomationPeer,
+    CaptureElementAutomationPeer,
+    CheckBoxAutomationPeer,
+    ColorPickerSliderAutomationPeer,
+    ColorSpectrumAutomationPeer,
+    ComboBoxAutomationPeer,
+    ComboBoxItemAutomationPeer,
+    ComboBoxItemDataAutomationPeer,
+    DatePickerAutomationPeer,
+    DatePickerFlyoutPresenterAutomationPeer,
+    FlipViewAutomationPeer,
+    FlipViewItemAutomationPeer,
+    FlipViewItemDataAutomationPeer,
+    FlyoutPresenterAutomationPeer,
+    FrameworkElementAutomationPeer,
+    GridViewAutomationPeer,
+    GridViewHeaderItemAutomationPeer,
+    GridViewItemAutomationPeer,
+    GridViewItemDataAutomationPeer,
+    GroupItemAutomationPeer,
+    HubAutomationPeer,
+    HubSectionAutomationPeer,
+    HyperlinkButtonAutomationPeer,
+    ImageAutomationPeer,
+    InkToolbarAutomationPeer,
+    ItemAutomationPeer,
+    ItemsControlAutomationPeer,
+    ListBoxAutomationPeer,
+    ListBoxItemAutomationPeer,
+    ListBoxItemDataAutomationPeer,
+    ListPickerFlyoutPresenterAutomationPeer,
+    ListViewAutomationPeer,
+    ListViewBaseAutomationPeer,
+    ListViewBaseHeaderItemAutomationPeer,
+    ListViewHeaderItemAutomationPeer,
+    ListViewItemAutomationPeer,
+    ListViewItemDataAutomationPeer,
+    LoopingSelectorAutomationPeer,
+    LoopingSelectorItemAutomationPeer,
+    LoopingSelectorItemDataAutomationPeer,
+    MapControlAutomationPeer,
+    MediaElementAutomationPeer,
+    MediaPlayerElementAutomationPeer,
+    MediaTransportControlsAutomationPeer,
+    MenuBarAutomationPeer,
+    MenuBarItemAutomationPeer,
+    MenuFlyoutItemAutomationPeer,
+    MenuFlyoutPresenterAutomationPeer,
+    NavigationViewItemAutomationPeer,
+    PasswordBoxAutomationPeer,
+    PersonPictureAutomationPeer,
+    PickerFlyoutPresenterAutomationPeer,
+    PivotAutomationPeer,
+    PivotItemAutomationPeer,
+    PivotItemDataAutomationPeer,
+    ProgressBarAutomationPeer,
+    ProgressRingAutomationPeer,
+    RadioButtonAutomationPeer,
+    RangeBaseAutomationPeer,
+    RatingControlAutomationPeer,
+    RepeatButtonAutomationPeer,
+    RichEditBoxAutomationPeer,
+    RichTextBlockAutomationPeer,
+    RichTextBlockOverflowAutomationPeer,
+    ScrollBarAutomationPeer,
+    ScrollViewerAutomationPeer,
+    SearchBoxAutomationPeer,
+    SelectorAutomationPeer,
+    SelectorItemAutomationPeer,
+    SemanticZoomAutomationPeer,
+    SettingsFlyoutAutomationPeer,
+    SliderAutomationPeer,
+    TextBlockAutomationPeer,
+    TextBoxAutomationPeer,
+    ThumbAutomationPeer,
+    TimePickerAutomationPeer,
+    TimePickerFlyoutPresenterAutomationPeer,
+    ToggleButtonAutomationPeer,
+    ToggleMenuFlyoutItemAutomationPeer,
+    ToggleSwitchAutomationPeer,
+    TreeViewItemAutomationPeer,
+    TreeViewListAutomationPeer,
+)
 
 __all__ = [
     "AccessibilityView",
@@ -286,94 +378,3 @@ class PatternInterface(enum.IntEnum):
     TEXT_EDIT = 32
     CUSTOM_NAVIGATION = 33
 
-RawElementProviderRuntimeId = _winrt_windows_ui_xaml_automation_peers.RawElementProviderRuntimeId
-AppBarAutomationPeer = _winrt_windows_ui_xaml_automation_peers.AppBarAutomationPeer
-AppBarButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.AppBarButtonAutomationPeer
-AppBarToggleButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer
-AutoSuggestBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.AutoSuggestBoxAutomationPeer
-AutomationPeer = _winrt_windows_ui_xaml_automation_peers.AutomationPeer
-AutomationPeerAnnotation = _winrt_windows_ui_xaml_automation_peers.AutomationPeerAnnotation
-ButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ButtonAutomationPeer
-ButtonBaseAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ButtonBaseAutomationPeer
-CalendarDatePickerAutomationPeer = _winrt_windows_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer
-CaptureElementAutomationPeer = _winrt_windows_ui_xaml_automation_peers.CaptureElementAutomationPeer
-CheckBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.CheckBoxAutomationPeer
-ColorPickerSliderAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer
-ColorSpectrumAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ColorSpectrumAutomationPeer
-ComboBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ComboBoxAutomationPeer
-ComboBoxItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ComboBoxItemAutomationPeer
-ComboBoxItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer
-DatePickerAutomationPeer = _winrt_windows_ui_xaml_automation_peers.DatePickerAutomationPeer
-DatePickerFlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.DatePickerFlyoutPresenterAutomationPeer
-FlipViewAutomationPeer = _winrt_windows_ui_xaml_automation_peers.FlipViewAutomationPeer
-FlipViewItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.FlipViewItemAutomationPeer
-FlipViewItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer
-FlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer
-FrameworkElementAutomationPeer = _winrt_windows_ui_xaml_automation_peers.FrameworkElementAutomationPeer
-GridViewAutomationPeer = _winrt_windows_ui_xaml_automation_peers.GridViewAutomationPeer
-GridViewHeaderItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer
-GridViewItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.GridViewItemAutomationPeer
-GridViewItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.GridViewItemDataAutomationPeer
-GroupItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.GroupItemAutomationPeer
-HubAutomationPeer = _winrt_windows_ui_xaml_automation_peers.HubAutomationPeer
-HubSectionAutomationPeer = _winrt_windows_ui_xaml_automation_peers.HubSectionAutomationPeer
-HyperlinkButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer
-ImageAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ImageAutomationPeer
-InkToolbarAutomationPeer = _winrt_windows_ui_xaml_automation_peers.InkToolbarAutomationPeer
-ItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ItemAutomationPeer
-ItemsControlAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ItemsControlAutomationPeer
-ListBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListBoxAutomationPeer
-ListBoxItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListBoxItemAutomationPeer
-ListBoxItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer
-ListPickerFlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListPickerFlyoutPresenterAutomationPeer
-ListViewAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewAutomationPeer
-ListViewBaseAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewBaseAutomationPeer
-ListViewBaseHeaderItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer
-ListViewHeaderItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer
-ListViewItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewItemAutomationPeer
-ListViewItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ListViewItemDataAutomationPeer
-LoopingSelectorAutomationPeer = _winrt_windows_ui_xaml_automation_peers.LoopingSelectorAutomationPeer
-LoopingSelectorItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.LoopingSelectorItemAutomationPeer
-LoopingSelectorItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.LoopingSelectorItemDataAutomationPeer
-MapControlAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MapControlAutomationPeer
-MediaElementAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MediaElementAutomationPeer
-MediaPlayerElementAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer
-MediaTransportControlsAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer
-MenuBarAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MenuBarAutomationPeer
-MenuBarItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MenuBarItemAutomationPeer
-MenuFlyoutItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer
-MenuFlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer
-NavigationViewItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.NavigationViewItemAutomationPeer
-PasswordBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PasswordBoxAutomationPeer
-PersonPictureAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PersonPictureAutomationPeer
-PickerFlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PickerFlyoutPresenterAutomationPeer
-PivotAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PivotAutomationPeer
-PivotItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PivotItemAutomationPeer
-PivotItemDataAutomationPeer = _winrt_windows_ui_xaml_automation_peers.PivotItemDataAutomationPeer
-ProgressBarAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ProgressBarAutomationPeer
-ProgressRingAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ProgressRingAutomationPeer
-RadioButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RadioButtonAutomationPeer
-RangeBaseAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RangeBaseAutomationPeer
-RatingControlAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RatingControlAutomationPeer
-RepeatButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RepeatButtonAutomationPeer
-RichEditBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RichEditBoxAutomationPeer
-RichTextBlockAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RichTextBlockAutomationPeer
-RichTextBlockOverflowAutomationPeer = _winrt_windows_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer
-ScrollBarAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ScrollBarAutomationPeer
-ScrollViewerAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ScrollViewerAutomationPeer
-SearchBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SearchBoxAutomationPeer
-SelectorAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SelectorAutomationPeer
-SelectorItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SelectorItemAutomationPeer
-SemanticZoomAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SemanticZoomAutomationPeer
-SettingsFlyoutAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SettingsFlyoutAutomationPeer
-SliderAutomationPeer = _winrt_windows_ui_xaml_automation_peers.SliderAutomationPeer
-TextBlockAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TextBlockAutomationPeer
-TextBoxAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TextBoxAutomationPeer
-ThumbAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ThumbAutomationPeer
-TimePickerAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TimePickerAutomationPeer
-TimePickerFlyoutPresenterAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TimePickerFlyoutPresenterAutomationPeer
-ToggleButtonAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ToggleButtonAutomationPeer
-ToggleMenuFlyoutItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer
-ToggleSwitchAutomationPeer = _winrt_windows_ui_xaml_automation_peers.ToggleSwitchAutomationPeer
-TreeViewItemAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TreeViewItemAutomationPeer
-TreeViewListAutomationPeer = _winrt_windows_ui_xaml_automation_peers.TreeViewListAutomationPeer

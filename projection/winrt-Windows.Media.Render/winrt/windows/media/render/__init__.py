@@ -3,7 +3,6 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_render
 
 __all__ = [
     "AudioRenderCategory",

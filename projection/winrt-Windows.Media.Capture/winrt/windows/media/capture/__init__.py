@@ -5,7 +5,83 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_media_capture
+from winrt._winrt_windows_media_capture import (
+    WhiteBalanceGain,
+    AdvancedCapturedPhoto,
+    AdvancedPhotoCapture,
+    AppBroadcastBackgroundService,
+    AppBroadcastBackgroundServiceSignInInfo,
+    AppBroadcastBackgroundServiceStreamInfo,
+    AppBroadcastCameraCaptureStateChangedEventArgs,
+    AppBroadcastGlobalSettings,
+    AppBroadcastHeartbeatRequestedEventArgs,
+    AppBroadcastManager,
+    AppBroadcastMicrophoneCaptureStateChangedEventArgs,
+    AppBroadcastPlugIn,
+    AppBroadcastPlugInManager,
+    AppBroadcastPlugInStateChangedEventArgs,
+    AppBroadcastPreview,
+    AppBroadcastPreviewStateChangedEventArgs,
+    AppBroadcastPreviewStreamReader,
+    AppBroadcastPreviewStreamVideoFrame,
+    AppBroadcastPreviewStreamVideoHeader,
+    AppBroadcastProviderSettings,
+    AppBroadcastServices,
+    AppBroadcastSignInStateChangedEventArgs,
+    AppBroadcastState,
+    AppBroadcastStreamAudioFrame,
+    AppBroadcastStreamAudioHeader,
+    AppBroadcastStreamReader,
+    AppBroadcastStreamStateChangedEventArgs,
+    AppBroadcastStreamVideoFrame,
+    AppBroadcastStreamVideoHeader,
+    AppBroadcastTriggerDetails,
+    AppBroadcastViewerCountChangedEventArgs,
+    AppCapture,
+    AppCaptureAlternateShortcutKeys,
+    AppCaptureDurationGeneratedEventArgs,
+    AppCaptureFileGeneratedEventArgs,
+    AppCaptureManager,
+    AppCaptureMetadataWriter,
+    AppCaptureMicrophoneCaptureStateChangedEventArgs,
+    AppCaptureRecordOperation,
+    AppCaptureRecordingStateChangedEventArgs,
+    AppCaptureServices,
+    AppCaptureSettings,
+    AppCaptureState,
+    CameraCaptureUI,
+    CameraCaptureUIPhotoCaptureSettings,
+    CameraCaptureUIVideoCaptureSettings,
+    CameraOptionsUI,
+    CapturedFrame,
+    CapturedFrameControlValues,
+    CapturedPhoto,
+    GameBarServices,
+    GameBarServicesCommandEventArgs,
+    GameBarServicesManager,
+    GameBarServicesManagerGameBarServicesCreatedEventArgs,
+    GameBarServicesTargetInfo,
+    LowLagMediaRecording,
+    LowLagPhotoCapture,
+    LowLagPhotoSequenceCapture,
+    MediaCapture,
+    MediaCaptureDeviceExclusiveControlStatusChangedEventArgs,
+    MediaCaptureFailedEventArgs,
+    MediaCaptureFocusChangedEventArgs,
+    MediaCaptureInitializationSettings,
+    MediaCapturePauseResult,
+    MediaCaptureRelativePanelWatcher,
+    MediaCaptureSettings,
+    MediaCaptureStopResult,
+    MediaCaptureVideoProfile,
+    MediaCaptureVideoProfileMediaDescription,
+    OptionalReferencePhotoCapturedEventArgs,
+    PhotoCapturedEventArgs,
+    PhotoConfirmationCapturedEventArgs,
+    ScreenCapture,
+    SourceSuspensionChangedEventArgs,
+    VideoStreamConfiguration,
+)
 
 __all__ = [
     "AppBroadcastCameraCaptureState",
@@ -397,80 +473,5 @@ class VideoRotation(enum.IntEnum):
     CLOCKWISE180_DEGREES = 2
     CLOCKWISE270_DEGREES = 3
 
-WhiteBalanceGain = _winrt_windows_media_capture.WhiteBalanceGain
-AdvancedCapturedPhoto = _winrt_windows_media_capture.AdvancedCapturedPhoto
-AdvancedPhotoCapture = _winrt_windows_media_capture.AdvancedPhotoCapture
-AppBroadcastBackgroundService = _winrt_windows_media_capture.AppBroadcastBackgroundService
-AppBroadcastBackgroundServiceSignInInfo = _winrt_windows_media_capture.AppBroadcastBackgroundServiceSignInInfo
-AppBroadcastBackgroundServiceStreamInfo = _winrt_windows_media_capture.AppBroadcastBackgroundServiceStreamInfo
-AppBroadcastCameraCaptureStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastCameraCaptureStateChangedEventArgs
-AppBroadcastGlobalSettings = _winrt_windows_media_capture.AppBroadcastGlobalSettings
-AppBroadcastHeartbeatRequestedEventArgs = _winrt_windows_media_capture.AppBroadcastHeartbeatRequestedEventArgs
-AppBroadcastManager = _winrt_windows_media_capture.AppBroadcastManager
-AppBroadcastMicrophoneCaptureStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastMicrophoneCaptureStateChangedEventArgs
-AppBroadcastPlugIn = _winrt_windows_media_capture.AppBroadcastPlugIn
-AppBroadcastPlugInManager = _winrt_windows_media_capture.AppBroadcastPlugInManager
-AppBroadcastPlugInStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastPlugInStateChangedEventArgs
-AppBroadcastPreview = _winrt_windows_media_capture.AppBroadcastPreview
-AppBroadcastPreviewStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastPreviewStateChangedEventArgs
-AppBroadcastPreviewStreamReader = _winrt_windows_media_capture.AppBroadcastPreviewStreamReader
-AppBroadcastPreviewStreamVideoFrame = _winrt_windows_media_capture.AppBroadcastPreviewStreamVideoFrame
-AppBroadcastPreviewStreamVideoHeader = _winrt_windows_media_capture.AppBroadcastPreviewStreamVideoHeader
-AppBroadcastProviderSettings = _winrt_windows_media_capture.AppBroadcastProviderSettings
-AppBroadcastServices = _winrt_windows_media_capture.AppBroadcastServices
-AppBroadcastSignInStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastSignInStateChangedEventArgs
-AppBroadcastState = _winrt_windows_media_capture.AppBroadcastState
-AppBroadcastStreamAudioFrame = _winrt_windows_media_capture.AppBroadcastStreamAudioFrame
-AppBroadcastStreamAudioHeader = _winrt_windows_media_capture.AppBroadcastStreamAudioHeader
-AppBroadcastStreamReader = _winrt_windows_media_capture.AppBroadcastStreamReader
-AppBroadcastStreamStateChangedEventArgs = _winrt_windows_media_capture.AppBroadcastStreamStateChangedEventArgs
-AppBroadcastStreamVideoFrame = _winrt_windows_media_capture.AppBroadcastStreamVideoFrame
-AppBroadcastStreamVideoHeader = _winrt_windows_media_capture.AppBroadcastStreamVideoHeader
-AppBroadcastTriggerDetails = _winrt_windows_media_capture.AppBroadcastTriggerDetails
-AppBroadcastViewerCountChangedEventArgs = _winrt_windows_media_capture.AppBroadcastViewerCountChangedEventArgs
-AppCapture = _winrt_windows_media_capture.AppCapture
-AppCaptureAlternateShortcutKeys = _winrt_windows_media_capture.AppCaptureAlternateShortcutKeys
-AppCaptureDurationGeneratedEventArgs = _winrt_windows_media_capture.AppCaptureDurationGeneratedEventArgs
-AppCaptureFileGeneratedEventArgs = _winrt_windows_media_capture.AppCaptureFileGeneratedEventArgs
-AppCaptureManager = _winrt_windows_media_capture.AppCaptureManager
-AppCaptureMetadataWriter = _winrt_windows_media_capture.AppCaptureMetadataWriter
-AppCaptureMicrophoneCaptureStateChangedEventArgs = _winrt_windows_media_capture.AppCaptureMicrophoneCaptureStateChangedEventArgs
-AppCaptureRecordOperation = _winrt_windows_media_capture.AppCaptureRecordOperation
-AppCaptureRecordingStateChangedEventArgs = _winrt_windows_media_capture.AppCaptureRecordingStateChangedEventArgs
-AppCaptureServices = _winrt_windows_media_capture.AppCaptureServices
-AppCaptureSettings = _winrt_windows_media_capture.AppCaptureSettings
-AppCaptureState = _winrt_windows_media_capture.AppCaptureState
-CameraCaptureUI = _winrt_windows_media_capture.CameraCaptureUI
-CameraCaptureUIPhotoCaptureSettings = _winrt_windows_media_capture.CameraCaptureUIPhotoCaptureSettings
-CameraCaptureUIVideoCaptureSettings = _winrt_windows_media_capture.CameraCaptureUIVideoCaptureSettings
-CameraOptionsUI = _winrt_windows_media_capture.CameraOptionsUI
-CapturedFrame = _winrt_windows_media_capture.CapturedFrame
-CapturedFrameControlValues = _winrt_windows_media_capture.CapturedFrameControlValues
-CapturedPhoto = _winrt_windows_media_capture.CapturedPhoto
-GameBarServices = _winrt_windows_media_capture.GameBarServices
-GameBarServicesCommandEventArgs = _winrt_windows_media_capture.GameBarServicesCommandEventArgs
-GameBarServicesManager = _winrt_windows_media_capture.GameBarServicesManager
-GameBarServicesManagerGameBarServicesCreatedEventArgs = _winrt_windows_media_capture.GameBarServicesManagerGameBarServicesCreatedEventArgs
-GameBarServicesTargetInfo = _winrt_windows_media_capture.GameBarServicesTargetInfo
-LowLagMediaRecording = _winrt_windows_media_capture.LowLagMediaRecording
-LowLagPhotoCapture = _winrt_windows_media_capture.LowLagPhotoCapture
-LowLagPhotoSequenceCapture = _winrt_windows_media_capture.LowLagPhotoSequenceCapture
-MediaCapture = _winrt_windows_media_capture.MediaCapture
-MediaCaptureDeviceExclusiveControlStatusChangedEventArgs = _winrt_windows_media_capture.MediaCaptureDeviceExclusiveControlStatusChangedEventArgs
-MediaCaptureFailedEventArgs = _winrt_windows_media_capture.MediaCaptureFailedEventArgs
-MediaCaptureFocusChangedEventArgs = _winrt_windows_media_capture.MediaCaptureFocusChangedEventArgs
-MediaCaptureInitializationSettings = _winrt_windows_media_capture.MediaCaptureInitializationSettings
-MediaCapturePauseResult = _winrt_windows_media_capture.MediaCapturePauseResult
-MediaCaptureRelativePanelWatcher = _winrt_windows_media_capture.MediaCaptureRelativePanelWatcher
-MediaCaptureSettings = _winrt_windows_media_capture.MediaCaptureSettings
-MediaCaptureStopResult = _winrt_windows_media_capture.MediaCaptureStopResult
-MediaCaptureVideoProfile = _winrt_windows_media_capture.MediaCaptureVideoProfile
-MediaCaptureVideoProfileMediaDescription = _winrt_windows_media_capture.MediaCaptureVideoProfileMediaDescription
-OptionalReferencePhotoCapturedEventArgs = _winrt_windows_media_capture.OptionalReferencePhotoCapturedEventArgs
-PhotoCapturedEventArgs = _winrt_windows_media_capture.PhotoCapturedEventArgs
-PhotoConfirmationCapturedEventArgs = _winrt_windows_media_capture.PhotoConfirmationCapturedEventArgs
-ScreenCapture = _winrt_windows_media_capture.ScreenCapture
-SourceSuspensionChangedEventArgs = _winrt_windows_media_capture.SourceSuspensionChangedEventArgs
-VideoStreamConfiguration = _winrt_windows_media_capture.VideoStreamConfiguration
 MediaCaptureFailedEventHandler = typing.Callable[[MediaCapture, MediaCaptureFailedEventArgs], None]
 RecordLimitationExceededEventHandler = typing.Callable[[MediaCapture], None]

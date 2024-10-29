@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_datatransfer_dragdrop_core
+from winrt._winrt_windows_applicationmodel_datatransfer_dragdrop_core import (
+    CoreDragDropManager,
+    CoreDragInfo,
+    CoreDragOperation,
+    CoreDragUIOverride,
+    CoreDropOperationTargetRequestedEventArgs,
+    ICoreDropOperationTarget,
+)
 
 __all__ = [
     "CoreDragUIContentMode",
@@ -19,9 +26,3 @@ class CoreDragUIContentMode(enum.IntFlag):
     AUTO = 0x0
     DEFERRED = 0x1
 
-CoreDragDropManager = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragDropManager
-CoreDragInfo = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragInfo
-CoreDragOperation = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragOperation
-CoreDragUIOverride = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDragUIOverride
-CoreDropOperationTargetRequestedEventArgs = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.CoreDropOperationTargetRequestedEventArgs
-ICoreDropOperationTarget = _winrt_windows_applicationmodel_datatransfer_dragdrop_core.ICoreDropOperationTarget

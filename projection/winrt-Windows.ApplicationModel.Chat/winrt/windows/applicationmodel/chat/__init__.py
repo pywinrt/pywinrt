@@ -3,7 +3,45 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_chat
+from winrt._winrt_windows_applicationmodel_chat import (
+    ChatCapabilities,
+    ChatCapabilitiesManager,
+    ChatConversation,
+    ChatConversationReader,
+    ChatConversationThreadingInfo,
+    ChatMessage,
+    ChatMessageAttachment,
+    ChatMessageBlocking,
+    ChatMessageChange,
+    ChatMessageChangeReader,
+    ChatMessageChangeTracker,
+    ChatMessageChangedDeferral,
+    ChatMessageChangedEventArgs,
+    ChatMessageManager,
+    ChatMessageNotificationTriggerDetails,
+    ChatMessageReader,
+    ChatMessageStore,
+    ChatMessageStoreChangedEventArgs,
+    ChatMessageTransport,
+    ChatMessageTransportConfiguration,
+    ChatMessageValidationResult,
+    ChatQueryOptions,
+    ChatRecipientDeliveryInfo,
+    ChatSearchReader,
+    ChatSyncConfiguration,
+    ChatSyncManager,
+    RcsEndUserMessage,
+    RcsEndUserMessageAction,
+    RcsEndUserMessageAvailableEventArgs,
+    RcsEndUserMessageAvailableTriggerDetails,
+    RcsEndUserMessageManager,
+    RcsManager,
+    RcsServiceKindSupportedChangedEventArgs,
+    RcsTransport,
+    RcsTransportConfiguration,
+    RemoteParticipantComposingChangedEventArgs,
+    IChatItem,
+)
 
 __all__ = [
     "ChatConversationThreadingKind",
@@ -162,40 +200,3 @@ class RcsServiceKind(enum.IntEnum):
     FILE_TRANSFER = 2
     CAPABILITY = 3
 
-ChatCapabilities = _winrt_windows_applicationmodel_chat.ChatCapabilities
-ChatCapabilitiesManager = _winrt_windows_applicationmodel_chat.ChatCapabilitiesManager
-ChatConversation = _winrt_windows_applicationmodel_chat.ChatConversation
-ChatConversationReader = _winrt_windows_applicationmodel_chat.ChatConversationReader
-ChatConversationThreadingInfo = _winrt_windows_applicationmodel_chat.ChatConversationThreadingInfo
-ChatMessage = _winrt_windows_applicationmodel_chat.ChatMessage
-ChatMessageAttachment = _winrt_windows_applicationmodel_chat.ChatMessageAttachment
-ChatMessageBlocking = _winrt_windows_applicationmodel_chat.ChatMessageBlocking
-ChatMessageChange = _winrt_windows_applicationmodel_chat.ChatMessageChange
-ChatMessageChangeReader = _winrt_windows_applicationmodel_chat.ChatMessageChangeReader
-ChatMessageChangeTracker = _winrt_windows_applicationmodel_chat.ChatMessageChangeTracker
-ChatMessageChangedDeferral = _winrt_windows_applicationmodel_chat.ChatMessageChangedDeferral
-ChatMessageChangedEventArgs = _winrt_windows_applicationmodel_chat.ChatMessageChangedEventArgs
-ChatMessageManager = _winrt_windows_applicationmodel_chat.ChatMessageManager
-ChatMessageNotificationTriggerDetails = _winrt_windows_applicationmodel_chat.ChatMessageNotificationTriggerDetails
-ChatMessageReader = _winrt_windows_applicationmodel_chat.ChatMessageReader
-ChatMessageStore = _winrt_windows_applicationmodel_chat.ChatMessageStore
-ChatMessageStoreChangedEventArgs = _winrt_windows_applicationmodel_chat.ChatMessageStoreChangedEventArgs
-ChatMessageTransport = _winrt_windows_applicationmodel_chat.ChatMessageTransport
-ChatMessageTransportConfiguration = _winrt_windows_applicationmodel_chat.ChatMessageTransportConfiguration
-ChatMessageValidationResult = _winrt_windows_applicationmodel_chat.ChatMessageValidationResult
-ChatQueryOptions = _winrt_windows_applicationmodel_chat.ChatQueryOptions
-ChatRecipientDeliveryInfo = _winrt_windows_applicationmodel_chat.ChatRecipientDeliveryInfo
-ChatSearchReader = _winrt_windows_applicationmodel_chat.ChatSearchReader
-ChatSyncConfiguration = _winrt_windows_applicationmodel_chat.ChatSyncConfiguration
-ChatSyncManager = _winrt_windows_applicationmodel_chat.ChatSyncManager
-RcsEndUserMessage = _winrt_windows_applicationmodel_chat.RcsEndUserMessage
-RcsEndUserMessageAction = _winrt_windows_applicationmodel_chat.RcsEndUserMessageAction
-RcsEndUserMessageAvailableEventArgs = _winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableEventArgs
-RcsEndUserMessageAvailableTriggerDetails = _winrt_windows_applicationmodel_chat.RcsEndUserMessageAvailableTriggerDetails
-RcsEndUserMessageManager = _winrt_windows_applicationmodel_chat.RcsEndUserMessageManager
-RcsManager = _winrt_windows_applicationmodel_chat.RcsManager
-RcsServiceKindSupportedChangedEventArgs = _winrt_windows_applicationmodel_chat.RcsServiceKindSupportedChangedEventArgs
-RcsTransport = _winrt_windows_applicationmodel_chat.RcsTransport
-RcsTransportConfiguration = _winrt_windows_applicationmodel_chat.RcsTransportConfiguration
-RemoteParticipantComposingChangedEventArgs = _winrt_windows_applicationmodel_chat.RemoteParticipantComposingChangedEventArgs
-IChatItem = _winrt_windows_applicationmodel_chat.IChatItem

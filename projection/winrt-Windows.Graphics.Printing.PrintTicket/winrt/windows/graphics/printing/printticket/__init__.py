@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_printing_printticket
+from winrt._winrt_windows_graphics_printing_printticket import (
+    PrintTicketCapabilities,
+    PrintTicketFeature,
+    PrintTicketOption,
+    PrintTicketParameterDefinition,
+    PrintTicketParameterInitializer,
+    PrintTicketValue,
+    WorkflowPrintTicket,
+    WorkflowPrintTicketValidationResult,
+)
 
 __all__ = [
     "PrintTicketFeatureSelectionType",
@@ -33,11 +42,3 @@ class PrintTicketValueType(enum.IntEnum):
     STRING = 1
     UNKNOWN = 2
 
-PrintTicketCapabilities = _winrt_windows_graphics_printing_printticket.PrintTicketCapabilities
-PrintTicketFeature = _winrt_windows_graphics_printing_printticket.PrintTicketFeature
-PrintTicketOption = _winrt_windows_graphics_printing_printticket.PrintTicketOption
-PrintTicketParameterDefinition = _winrt_windows_graphics_printing_printticket.PrintTicketParameterDefinition
-PrintTicketParameterInitializer = _winrt_windows_graphics_printing_printticket.PrintTicketParameterInitializer
-PrintTicketValue = _winrt_windows_graphics_printing_printticket.PrintTicketValue
-WorkflowPrintTicket = _winrt_windows_graphics_printing_printticket.WorkflowPrintTicket
-WorkflowPrintTicketValidationResult = _winrt_windows_graphics_printing_printticket.WorkflowPrintTicketValidationResult

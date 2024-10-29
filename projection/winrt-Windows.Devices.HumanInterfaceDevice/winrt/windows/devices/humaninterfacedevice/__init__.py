@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_humaninterfacedevice
+from winrt._winrt_windows_devices_humaninterfacedevice import (
+    HidBooleanControl,
+    HidBooleanControlDescription,
+    HidCollection,
+    HidDevice,
+    HidFeatureReport,
+    HidInputReport,
+    HidInputReportReceivedEventArgs,
+    HidNumericControl,
+    HidNumericControlDescription,
+    HidOutputReport,
+)
 
 __all__ = [
     "HidCollectionType",
@@ -35,13 +46,3 @@ class HidReportType(enum.IntEnum):
     OUTPUT = 1
     FEATURE = 2
 
-HidBooleanControl = _winrt_windows_devices_humaninterfacedevice.HidBooleanControl
-HidBooleanControlDescription = _winrt_windows_devices_humaninterfacedevice.HidBooleanControlDescription
-HidCollection = _winrt_windows_devices_humaninterfacedevice.HidCollection
-HidDevice = _winrt_windows_devices_humaninterfacedevice.HidDevice
-HidFeatureReport = _winrt_windows_devices_humaninterfacedevice.HidFeatureReport
-HidInputReport = _winrt_windows_devices_humaninterfacedevice.HidInputReport
-HidInputReportReceivedEventArgs = _winrt_windows_devices_humaninterfacedevice.HidInputReportReceivedEventArgs
-HidNumericControl = _winrt_windows_devices_humaninterfacedevice.HidNumericControl
-HidNumericControlDescription = _winrt_windows_devices_humaninterfacedevice.HidNumericControlDescription
-HidOutputReport = _winrt_windows_devices_humaninterfacedevice.HidOutputReport

@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking_servicediscovery_dnssd
+from winrt._winrt_windows_networking_servicediscovery_dnssd import (
+    DnssdRegistrationResult,
+    DnssdServiceInstance,
+    DnssdServiceInstanceCollection,
+    DnssdServiceWatcher,
+)
 
 __all__ = [
     "DnssdRegistrationStatus",
@@ -28,8 +33,4 @@ class DnssdServiceWatcherStatus(enum.IntEnum):
     STOPPED = 4
     ABORTED = 5
 
-DnssdRegistrationResult = _winrt_windows_networking_servicediscovery_dnssd.DnssdRegistrationResult
-DnssdServiceInstance = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstance
-DnssdServiceInstanceCollection = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceInstanceCollection
 winrt.system._mixin_sequence(DnssdServiceInstanceCollection)
-DnssdServiceWatcher = _winrt_windows_networking_servicediscovery_dnssd.DnssdServiceWatcher

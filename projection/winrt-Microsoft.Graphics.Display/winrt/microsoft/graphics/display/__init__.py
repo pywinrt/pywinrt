@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_graphics_display
+from winrt._winrt_microsoft_graphics_display import (
+    DisplayAdvancedColorInfo,
+    DisplayInformation,
+)
 
 __all__ = [
     "DisplayAdvancedColorKind",
@@ -21,5 +24,3 @@ class DisplayHdrMetadataFormat(enum.IntEnum):
     HDR10 = 0
     HDR10_PLUS = 1
 
-DisplayAdvancedColorInfo = _winrt_microsoft_graphics_display.DisplayAdvancedColorInfo
-DisplayInformation = _winrt_microsoft_graphics_display.DisplayInformation

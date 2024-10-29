@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_wallet
+from winrt._winrt_windows_applicationmodel_wallet import (
+    WalletBarcode,
+    WalletItem,
+    WalletItemCustomProperty,
+    WalletItemStore,
+    WalletManager,
+    WalletRelevantLocation,
+    WalletTransaction,
+    WalletVerb,
+)
 
 __all__ = [
     "WalletActionKind",
@@ -73,11 +82,3 @@ class WalletSummaryViewPosition(enum.IntEnum):
     FIELD1 = 1
     FIELD2 = 2
 
-WalletBarcode = _winrt_windows_applicationmodel_wallet.WalletBarcode
-WalletItem = _winrt_windows_applicationmodel_wallet.WalletItem
-WalletItemCustomProperty = _winrt_windows_applicationmodel_wallet.WalletItemCustomProperty
-WalletItemStore = _winrt_windows_applicationmodel_wallet.WalletItemStore
-WalletManager = _winrt_windows_applicationmodel_wallet.WalletManager
-WalletRelevantLocation = _winrt_windows_applicationmodel_wallet.WalletRelevantLocation
-WalletTransaction = _winrt_windows_applicationmodel_wallet.WalletTransaction
-WalletVerb = _winrt_windows_applicationmodel_wallet.WalletVerb

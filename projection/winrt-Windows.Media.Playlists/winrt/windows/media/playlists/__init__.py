@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_playlists
+from winrt._winrt_windows_media_playlists import (
+    Playlist,
+)
 
 __all__ = [
     "PlaylistFormat",
@@ -15,4 +17,3 @@ class PlaylistFormat(enum.IntEnum):
     ZUNE = 1
     M3U = 2
 
-Playlist = _winrt_windows_media_playlists.Playlist

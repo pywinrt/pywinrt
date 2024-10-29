@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_input_preview
+from winrt._winrt_windows_devices_input_preview import (
+    GazeDevicePreview,
+    GazeDeviceWatcherAddedPreviewEventArgs,
+    GazeDeviceWatcherPreview,
+    GazeDeviceWatcherRemovedPreviewEventArgs,
+    GazeDeviceWatcherUpdatedPreviewEventArgs,
+    GazeEnteredPreviewEventArgs,
+    GazeExitedPreviewEventArgs,
+    GazeInputSourcePreview,
+    GazeMovedPreviewEventArgs,
+    GazePointPreview,
+)
 
 __all__ = [
     "GazeDeviceConfigurationStatePreview",
@@ -26,13 +37,3 @@ class GazeDeviceConfigurationStatePreview(enum.IntEnum):
     SCREEN_SETUP_NEEDED = 3
     USER_CALIBRATION_NEEDED = 4
 
-GazeDevicePreview = _winrt_windows_devices_input_preview.GazeDevicePreview
-GazeDeviceWatcherAddedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherAddedPreviewEventArgs
-GazeDeviceWatcherPreview = _winrt_windows_devices_input_preview.GazeDeviceWatcherPreview
-GazeDeviceWatcherRemovedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherRemovedPreviewEventArgs
-GazeDeviceWatcherUpdatedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeDeviceWatcherUpdatedPreviewEventArgs
-GazeEnteredPreviewEventArgs = _winrt_windows_devices_input_preview.GazeEnteredPreviewEventArgs
-GazeExitedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeExitedPreviewEventArgs
-GazeInputSourcePreview = _winrt_windows_devices_input_preview.GazeInputSourcePreview
-GazeMovedPreviewEventArgs = _winrt_windows_devices_input_preview.GazeMovedPreviewEventArgs
-GazePointPreview = _winrt_windows_devices_input_preview.GazePointPreview

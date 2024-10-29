@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_http_diagnostics
+from winrt._winrt_windows_web_http_diagnostics import (
+    HttpDiagnosticProvider,
+    HttpDiagnosticProviderRequestResponseCompletedEventArgs,
+    HttpDiagnosticProviderRequestResponseTimestamps,
+    HttpDiagnosticProviderRequestSentEventArgs,
+    HttpDiagnosticProviderResponseReceivedEventArgs,
+    HttpDiagnosticSourceLocation,
+)
 
 __all__ = [
     "HttpDiagnosticRequestInitiator",
@@ -30,9 +37,3 @@ class HttpDiagnosticRequestInitiator(enum.IntEnum):
     FETCH = 11
     BEACON = 12
 
-HttpDiagnosticProvider = _winrt_windows_web_http_diagnostics.HttpDiagnosticProvider
-HttpDiagnosticProviderRequestResponseCompletedEventArgs = _winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs
-HttpDiagnosticProviderRequestResponseTimestamps = _winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestResponseTimestamps
-HttpDiagnosticProviderRequestSentEventArgs = _winrt_windows_web_http_diagnostics.HttpDiagnosticProviderRequestSentEventArgs
-HttpDiagnosticProviderResponseReceivedEventArgs = _winrt_windows_web_http_diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs
-HttpDiagnosticSourceLocation = _winrt_windows_web_http_diagnostics.HttpDiagnosticSourceLocation

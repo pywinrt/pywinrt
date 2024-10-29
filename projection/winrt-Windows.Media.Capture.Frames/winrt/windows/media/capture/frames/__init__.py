@@ -3,7 +3,27 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_capture_frames
+from winrt._winrt_windows_media_capture_frames import (
+    AudioMediaFrame,
+    BufferMediaFrame,
+    DepthMediaFrame,
+    DepthMediaFrameFormat,
+    InfraredMediaFrame,
+    MediaFrameArrivedEventArgs,
+    MediaFrameFormat,
+    MediaFrameReader,
+    MediaFrameReference,
+    MediaFrameSource,
+    MediaFrameSourceController,
+    MediaFrameSourceGetPropertyResult,
+    MediaFrameSourceGroup,
+    MediaFrameSourceInfo,
+    MultiSourceMediaFrameArrivedEventArgs,
+    MultiSourceMediaFrameReader,
+    MultiSourceMediaFrameReference,
+    VideoMediaFrame,
+    VideoMediaFrameFormat,
+)
 
 __all__ = [
     "MediaFrameReaderAcquisitionMode",
@@ -76,22 +96,3 @@ class MultiSourceMediaFrameReaderStartStatus(enum.IntEnum):
     DEVICE_NOT_AVAILABLE = 3
     UNKNOWN_FAILURE = 4
 
-AudioMediaFrame = _winrt_windows_media_capture_frames.AudioMediaFrame
-BufferMediaFrame = _winrt_windows_media_capture_frames.BufferMediaFrame
-DepthMediaFrame = _winrt_windows_media_capture_frames.DepthMediaFrame
-DepthMediaFrameFormat = _winrt_windows_media_capture_frames.DepthMediaFrameFormat
-InfraredMediaFrame = _winrt_windows_media_capture_frames.InfraredMediaFrame
-MediaFrameArrivedEventArgs = _winrt_windows_media_capture_frames.MediaFrameArrivedEventArgs
-MediaFrameFormat = _winrt_windows_media_capture_frames.MediaFrameFormat
-MediaFrameReader = _winrt_windows_media_capture_frames.MediaFrameReader
-MediaFrameReference = _winrt_windows_media_capture_frames.MediaFrameReference
-MediaFrameSource = _winrt_windows_media_capture_frames.MediaFrameSource
-MediaFrameSourceController = _winrt_windows_media_capture_frames.MediaFrameSourceController
-MediaFrameSourceGetPropertyResult = _winrt_windows_media_capture_frames.MediaFrameSourceGetPropertyResult
-MediaFrameSourceGroup = _winrt_windows_media_capture_frames.MediaFrameSourceGroup
-MediaFrameSourceInfo = _winrt_windows_media_capture_frames.MediaFrameSourceInfo
-MultiSourceMediaFrameArrivedEventArgs = _winrt_windows_media_capture_frames.MultiSourceMediaFrameArrivedEventArgs
-MultiSourceMediaFrameReader = _winrt_windows_media_capture_frames.MultiSourceMediaFrameReader
-MultiSourceMediaFrameReference = _winrt_windows_media_capture_frames.MultiSourceMediaFrameReference
-VideoMediaFrame = _winrt_windows_media_capture_frames.VideoMediaFrame
-VideoMediaFrameFormat = _winrt_windows_media_capture_frames.VideoMediaFrameFormat

@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_appnotifications_builder
+from winrt._winrt_microsoft_windows_appnotifications_builder import (
+    AppNotificationBuilder,
+    AppNotificationButton,
+    AppNotificationComboBox,
+    AppNotificationProgressBar,
+    AppNotificationTextProperties,
+)
 
 __all__ = [
     "AppNotificationAudioLooping",
@@ -70,8 +76,3 @@ class AppNotificationSoundEvent(enum.IntEnum):
     CALL9 = 23
     CALL10 = 24
 
-AppNotificationBuilder = _winrt_microsoft_windows_appnotifications_builder.AppNotificationBuilder
-AppNotificationButton = _winrt_microsoft_windows_appnotifications_builder.AppNotificationButton
-AppNotificationComboBox = _winrt_microsoft_windows_appnotifications_builder.AppNotificationComboBox
-AppNotificationProgressBar = _winrt_microsoft_windows_appnotifications_builder.AppNotificationProgressBar
-AppNotificationTextProperties = _winrt_microsoft_windows_appnotifications_builder.AppNotificationTextProperties

@@ -5,7 +5,9 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_system_remotedesktop_input
+from winrt._winrt_windows_system_remotedesktop_input import (
+    RemoteTextConnection,
+)
 
 __all__ = [
     "RemoteKeyEventAttributes",
@@ -25,5 +27,4 @@ class RemoteTextConnectionOptions(enum.IntFlag):
     NONE = 0x0
     ENABLE_PREDICTED_KEY_REPORTING = 0x1
 
-RemoteTextConnection = _winrt_windows_system_remotedesktop_input.RemoteTextConnection
 RemoteTextConnectionDataHandler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer]], bool]

@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_mediaproperties
+from winrt._winrt_windows_media_mediaproperties import (
+    AudioEncodingProperties,
+    Av1ProfileIds,
+    ContainerEncodingProperties,
+    H264ProfileIds,
+    HevcProfileIds,
+    ImageEncodingProperties,
+    MediaEncodingProfile,
+    MediaEncodingSubtypes,
+    MediaPropertySet,
+    MediaRatio,
+    Mpeg2ProfileIds,
+    TimedMetadataEncodingProperties,
+    VideoEncodingProperties,
+    Vp9ProfileIds,
+    IMediaEncodingProperties,
+)
 
 __all__ = [
     "AudioEncodingQuality",
@@ -79,19 +95,4 @@ class VideoEncodingQuality(enum.IntEnum):
     UHD2160P = 8
     UHD4320P = 9
 
-AudioEncodingProperties = _winrt_windows_media_mediaproperties.AudioEncodingProperties
-Av1ProfileIds = _winrt_windows_media_mediaproperties.Av1ProfileIds
-ContainerEncodingProperties = _winrt_windows_media_mediaproperties.ContainerEncodingProperties
-H264ProfileIds = _winrt_windows_media_mediaproperties.H264ProfileIds
-HevcProfileIds = _winrt_windows_media_mediaproperties.HevcProfileIds
-ImageEncodingProperties = _winrt_windows_media_mediaproperties.ImageEncodingProperties
-MediaEncodingProfile = _winrt_windows_media_mediaproperties.MediaEncodingProfile
-MediaEncodingSubtypes = _winrt_windows_media_mediaproperties.MediaEncodingSubtypes
-MediaPropertySet = _winrt_windows_media_mediaproperties.MediaPropertySet
 winrt.system._mixin_mutable_mapping(MediaPropertySet)
-MediaRatio = _winrt_windows_media_mediaproperties.MediaRatio
-Mpeg2ProfileIds = _winrt_windows_media_mediaproperties.Mpeg2ProfileIds
-TimedMetadataEncodingProperties = _winrt_windows_media_mediaproperties.TimedMetadataEncodingProperties
-VideoEncodingProperties = _winrt_windows_media_mediaproperties.VideoEncodingProperties
-Vp9ProfileIds = _winrt_windows_media_mediaproperties.Vp9ProfileIds
-IMediaEncodingProperties = _winrt_windows_media_mediaproperties.IMediaEncodingProperties

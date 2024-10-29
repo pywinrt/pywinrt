@@ -5,7 +5,15 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_networking_proximity
+from winrt._winrt_windows_networking_proximity import (
+    ConnectionRequestedEventArgs,
+    PeerFinder,
+    PeerInformation,
+    PeerWatcher,
+    ProximityDevice,
+    ProximityMessage,
+    TriggeredConnectionStateChangedEventArgs,
+)
 
 __all__ = [
     "PeerDiscoveryTypes",
@@ -51,13 +59,6 @@ class TriggeredConnectState(enum.IntEnum):
     CANCELED = 4
     FAILED = 5
 
-ConnectionRequestedEventArgs = _winrt_windows_networking_proximity.ConnectionRequestedEventArgs
-PeerFinder = _winrt_windows_networking_proximity.PeerFinder
-PeerInformation = _winrt_windows_networking_proximity.PeerInformation
-PeerWatcher = _winrt_windows_networking_proximity.PeerWatcher
-ProximityDevice = _winrt_windows_networking_proximity.ProximityDevice
-ProximityMessage = _winrt_windows_networking_proximity.ProximityMessage
-TriggeredConnectionStateChangedEventArgs = _winrt_windows_networking_proximity.TriggeredConnectionStateChangedEventArgs
 DeviceArrivedEventHandler = typing.Callable[[ProximityDevice], None]
 DeviceDepartedEventHandler = typing.Callable[[ProximityDevice], None]
 MessageReceivedHandler = typing.Callable[[ProximityDevice, ProximityMessage], None]

@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_composition_diagnostics
+from winrt._winrt_windows_ui_composition_diagnostics import (
+    CompositionDebugHeatMaps,
+    CompositionDebugSettings,
+)
 
 __all__ = [
     "CompositionDebugOverdrawContentKinds",
@@ -22,5 +25,3 @@ class CompositionDebugOverdrawContentKinds(enum.IntFlag):
     SWAP_CHAINS = 0x40
     ALL = 0xFFFFFFFF
 
-CompositionDebugHeatMaps = _winrt_windows_ui_composition_diagnostics.CompositionDebugHeatMaps
-CompositionDebugSettings = _winrt_windows_ui_composition_diagnostics.CompositionDebugSettings

@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_core
+from winrt._winrt_windows_applicationmodel_core import (
+    AppListEntry,
+    CoreApplication,
+    CoreApplicationView,
+    CoreApplicationViewTitleBar,
+    HostedViewClosingEventArgs,
+    UnhandledError,
+    UnhandledErrorDetectedEventArgs,
+    ICoreApplicationUnhandledError,
+    IFrameworkView,
+    IFrameworkViewSource,
+)
 
 __all__ = [
     "AppRestartFailureReason",
@@ -25,13 +36,3 @@ class AppRestartFailureReason(enum.IntEnum):
     INVALID_USER = 2
     OTHER = 3
 
-AppListEntry = _winrt_windows_applicationmodel_core.AppListEntry
-CoreApplication = _winrt_windows_applicationmodel_core.CoreApplication
-CoreApplicationView = _winrt_windows_applicationmodel_core.CoreApplicationView
-CoreApplicationViewTitleBar = _winrt_windows_applicationmodel_core.CoreApplicationViewTitleBar
-HostedViewClosingEventArgs = _winrt_windows_applicationmodel_core.HostedViewClosingEventArgs
-UnhandledError = _winrt_windows_applicationmodel_core.UnhandledError
-UnhandledErrorDetectedEventArgs = _winrt_windows_applicationmodel_core.UnhandledErrorDetectedEventArgs
-ICoreApplicationUnhandledError = _winrt_windows_applicationmodel_core.ICoreApplicationUnhandledError
-IFrameworkView = _winrt_windows_applicationmodel_core.IFrameworkView
-IFrameworkViewSource = _winrt_windows_applicationmodel_core.IFrameworkViewSource

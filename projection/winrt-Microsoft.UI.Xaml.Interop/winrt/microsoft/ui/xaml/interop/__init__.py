@@ -5,7 +5,15 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_interop
+from winrt._winrt_microsoft_ui_xaml_interop import (
+    NotifyCollectionChangedEventArgs,
+    IBindableIterable,
+    IBindableIterator,
+    IBindableObservableVector,
+    IBindableVector,
+    IBindableVectorView,
+    INotifyCollectionChanged,
+)
 
 __all__ = [
     "NotifyCollectionChangedAction",
@@ -27,12 +35,5 @@ class NotifyCollectionChangedAction(enum.IntEnum):
     MOVE = 3
     RESET = 4
 
-NotifyCollectionChangedEventArgs = _winrt_microsoft_ui_xaml_interop.NotifyCollectionChangedEventArgs
-IBindableIterable = _winrt_microsoft_ui_xaml_interop.IBindableIterable
-IBindableIterator = _winrt_microsoft_ui_xaml_interop.IBindableIterator
-IBindableObservableVector = _winrt_microsoft_ui_xaml_interop.IBindableObservableVector
-IBindableVector = _winrt_microsoft_ui_xaml_interop.IBindableVector
-IBindableVectorView = _winrt_microsoft_ui_xaml_interop.IBindableVectorView
-INotifyCollectionChanged = _winrt_microsoft_ui_xaml_interop.INotifyCollectionChanged
 BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
 NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]

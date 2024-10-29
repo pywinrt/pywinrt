@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_maps_localsearch
+from winrt._winrt_windows_services_maps_localsearch import (
+    LocalCategories,
+    LocalLocation,
+    LocalLocationFinder,
+    LocalLocationFinderResult,
+    LocalLocationHoursOfOperationItem,
+    LocalLocationRatingInfo,
+    PlaceInfoHelper,
+)
 
 __all__ = [
     "LocalLocationFinderStatus",
@@ -26,10 +34,3 @@ class LocalLocationFinderStatus(enum.IntEnum):
     NETWORK_FAILURE = 6
     NOT_SUPPORTED = 7
 
-LocalCategories = _winrt_windows_services_maps_localsearch.LocalCategories
-LocalLocation = _winrt_windows_services_maps_localsearch.LocalLocation
-LocalLocationFinder = _winrt_windows_services_maps_localsearch.LocalLocationFinder
-LocalLocationFinderResult = _winrt_windows_services_maps_localsearch.LocalLocationFinderResult
-LocalLocationHoursOfOperationItem = _winrt_windows_services_maps_localsearch.LocalLocationHoursOfOperationItem
-LocalLocationRatingInfo = _winrt_windows_services_maps_localsearch.LocalLocationRatingInfo
-PlaceInfoHelper = _winrt_windows_services_maps_localsearch.PlaceInfoHelper
