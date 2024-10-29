@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 class CoreTextRange:
     start_caret_position: winrt.system.Int32
     end_caret_position: winrt.system.Int32
-    def __init__(self, start_caret_position: winrt.system.Int32, end_caret_position: winrt.system.Int32) -> None: ...
+    def __init__(self, start_caret_position: winrt.system.Int32 = 0, end_caret_position: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class CoreTextCompositionCompletedEventArgs(winrt.system.Object):

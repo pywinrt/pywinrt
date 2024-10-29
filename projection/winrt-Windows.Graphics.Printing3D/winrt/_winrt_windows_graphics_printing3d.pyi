@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class Printing3DBufferDescription:
     format: Printing3DBufferFormat
     stride: winrt.system.UInt32
-    def __init__(self, format: Printing3DBufferFormat, stride: winrt.system.UInt32) -> None: ...
+    def __init__(self, format: Printing3DBufferFormat = Printing3DBufferFormat(0), stride: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class Print3DManager_Static(type):

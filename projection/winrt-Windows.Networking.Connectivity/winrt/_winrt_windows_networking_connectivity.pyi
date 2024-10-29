@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 class NetworkUsageStates:
     roaming: TriStates
     shared: TriStates
-    def __init__(self, roaming: TriStates, shared: TriStates) -> None: ...
+    def __init__(self, roaming: TriStates = TriStates(0), shared: TriStates = TriStates(0)) -> None: ...
 
 @typing.final
 class AttributedNetworkUsage(winrt.system.Object):

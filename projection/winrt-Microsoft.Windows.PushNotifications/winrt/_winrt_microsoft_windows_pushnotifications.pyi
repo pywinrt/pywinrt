@@ -21,7 +21,7 @@ class PushNotificationCreateChannelStatus:
     status: PushNotificationChannelStatus
     extended_error: windows_foundation.HResult
     retry_count: winrt.system.UInt32
-    def __init__(self, status: PushNotificationChannelStatus, extended_error: windows_foundation.HResult, retry_count: winrt.system.UInt32) -> None: ...
+    def __init__(self, status: PushNotificationChannelStatus = PushNotificationChannelStatus(0), extended_error: windows_foundation.HResult = windows_foundation.HResult(), retry_count: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class PushNotificationChannel(winrt.system.Object):

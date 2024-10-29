@@ -22,7 +22,7 @@ Self = typing.TypeVar('Self')
 class PackageDeploymentProgress:
     status: PackageDeploymentProgressStatus
     progress: winrt.system.Double
-    def __init__(self, status: PackageDeploymentProgressStatus, progress: winrt.system.Double) -> None: ...
+    def __init__(self, status: PackageDeploymentProgressStatus = PackageDeploymentProgressStatus(0), progress: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class AddPackageOptions(winrt.system.Object):

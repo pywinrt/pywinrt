@@ -30,13 +30,13 @@ class CorePhysicalKeyStatus:
     is_menu_key_down: bool
     was_key_down: bool
     is_key_released: bool
-    def __init__(self, repeat_count: winrt.system.UInt32, scan_code: winrt.system.UInt32, is_extended_key: bool, is_menu_key_down: bool, was_key_down: bool, is_key_released: bool) -> None: ...
+    def __init__(self, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: bool = False, is_menu_key_down: bool = False, was_key_down: bool = False, is_key_released: bool = False) -> None: ...
 
 @typing.final
 class CoreProximityEvaluation:
     score: winrt.system.Int32
     adjusted_point: windows_foundation.Point
-    def __init__(self, score: winrt.system.Int32, adjusted_point: windows_foundation.Point) -> None: ...
+    def __init__(self, score: winrt.system.Int32 = 0, adjusted_point: windows_foundation.Point = windows_foundation.Point()) -> None: ...
 
 @typing.final
 class AcceleratorKeyEventArgs(winrt.system.Object):

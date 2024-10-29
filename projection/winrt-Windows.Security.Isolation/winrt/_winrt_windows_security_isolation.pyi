@@ -21,7 +21,7 @@ Self = typing.TypeVar('Self')
 class IsolatedWindowsEnvironmentCreateProgress:
     state: IsolatedWindowsEnvironmentProgressState
     percent_complete: winrt.system.UInt32
-    def __init__(self, state: IsolatedWindowsEnvironmentProgressState, percent_complete: winrt.system.UInt32) -> None: ...
+    def __init__(self, state: IsolatedWindowsEnvironmentProgressState = IsolatedWindowsEnvironmentProgressState(0), percent_complete: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class IsolatedWindowsEnvironment_Static(type):

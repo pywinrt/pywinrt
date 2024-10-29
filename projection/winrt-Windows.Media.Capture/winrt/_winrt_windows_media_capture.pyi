@@ -38,7 +38,7 @@ class WhiteBalanceGain:
     r: winrt.system.Double
     g: winrt.system.Double
     b: winrt.system.Double
-    def __init__(self, r: winrt.system.Double, g: winrt.system.Double, b: winrt.system.Double) -> None: ...
+    def __init__(self, r: winrt.system.Double = 0, g: winrt.system.Double = 0, b: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class AdvancedCapturedPhoto(winrt.system.Object):

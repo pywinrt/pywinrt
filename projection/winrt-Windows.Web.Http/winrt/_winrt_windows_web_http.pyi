@@ -29,7 +29,7 @@ class HttpProgress:
     bytes_received: winrt.system.UInt64
     total_bytes_to_receive: typing.Optional[winrt.system.UInt64]
     retries: winrt.system.UInt32
-    def __init__(self, stage: HttpProgressStage, bytes_sent: winrt.system.UInt64, total_bytes_to_send: typing.Optional[winrt.system.UInt64], bytes_received: winrt.system.UInt64, total_bytes_to_receive: typing.Optional[winrt.system.UInt64], retries: winrt.system.UInt32) -> None: ...
+    def __init__(self, stage: HttpProgressStage = HttpProgressStage(0), bytes_sent: winrt.system.UInt64 = 0, total_bytes_to_send: typing.Optional[winrt.system.UInt64] = None, bytes_received: winrt.system.UInt64 = 0, total_bytes_to_receive: typing.Optional[winrt.system.UInt64] = None, retries: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class HttpBufferContent(winrt.system.Object):

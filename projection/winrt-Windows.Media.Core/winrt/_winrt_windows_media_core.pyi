@@ -37,13 +37,13 @@ Self = typing.TypeVar('Self')
 class MseTimeRange:
     start: datetime.timedelta
     end: datetime.timedelta
-    def __init__(self, start: datetime.timedelta, end: datetime.timedelta) -> None: ...
+    def __init__(self, start: datetime.timedelta = datetime.timedelta(0), end: datetime.timedelta = datetime.timedelta(0)) -> None: ...
 
 @typing.final
 class TimedTextDouble:
     value: winrt.system.Double
     unit: TimedTextUnit
-    def __init__(self, value: winrt.system.Double, unit: TimedTextUnit) -> None: ...
+    def __init__(self, value: winrt.system.Double = 0, unit: TimedTextUnit = TimedTextUnit(0)) -> None: ...
 
 @typing.final
 class TimedTextPadding:
@@ -52,21 +52,21 @@ class TimedTextPadding:
     start: winrt.system.Double
     end: winrt.system.Double
     unit: TimedTextUnit
-    def __init__(self, before: winrt.system.Double, after: winrt.system.Double, start: winrt.system.Double, end: winrt.system.Double, unit: TimedTextUnit) -> None: ...
+    def __init__(self, before: winrt.system.Double = 0, after: winrt.system.Double = 0, start: winrt.system.Double = 0, end: winrt.system.Double = 0, unit: TimedTextUnit = TimedTextUnit(0)) -> None: ...
 
 @typing.final
 class TimedTextPoint:
     x: winrt.system.Double
     y: winrt.system.Double
     unit: TimedTextUnit
-    def __init__(self, x: winrt.system.Double, y: winrt.system.Double, unit: TimedTextUnit) -> None: ...
+    def __init__(self, x: winrt.system.Double = 0, y: winrt.system.Double = 0, unit: TimedTextUnit = TimedTextUnit(0)) -> None: ...
 
 @typing.final
 class TimedTextSize:
     height: winrt.system.Double
     width: winrt.system.Double
     unit: TimedTextUnit
-    def __init__(self, height: winrt.system.Double, width: winrt.system.Double, unit: TimedTextUnit) -> None: ...
+    def __init__(self, height: winrt.system.Double = 0, width: winrt.system.Double = 0, unit: TimedTextUnit = TimedTextUnit(0)) -> None: ...
 
 @typing.final
 class AudioStreamDescriptor(winrt.system.Object):

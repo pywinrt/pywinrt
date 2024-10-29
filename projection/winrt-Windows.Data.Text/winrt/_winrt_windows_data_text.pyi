@@ -22,7 +22,7 @@ Self = typing.TypeVar('Self')
 class TextSegment:
     start_position: winrt.system.UInt32
     length: winrt.system.UInt32
-    def __init__(self, start_position: winrt.system.UInt32, length: winrt.system.UInt32) -> None: ...
+    def __init__(self, start_position: winrt.system.UInt32 = 0, length: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class AlternateWordForm(winrt.system.Object):

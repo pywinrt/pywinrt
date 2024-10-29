@@ -30,7 +30,7 @@ class CoreWebView2PhysicalKeyStatus:
     is_menu_key_down: winrt.system.Int32
     was_key_down: winrt.system.Int32
     is_key_released: winrt.system.Int32
-    def __init__(self, repeat_count: winrt.system.UInt32, scan_code: winrt.system.UInt32, is_extended_key: winrt.system.Int32, is_menu_key_down: winrt.system.Int32, was_key_down: winrt.system.Int32, is_key_released: winrt.system.Int32) -> None: ...
+    def __init__(self, repeat_count: winrt.system.UInt32 = 0, scan_code: winrt.system.UInt32 = 0, is_extended_key: winrt.system.Int32 = 0, is_menu_key_down: winrt.system.Int32 = 0, was_key_down: winrt.system.Int32 = 0, is_key_released: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class CoreWebView2(winrt.system.Object):

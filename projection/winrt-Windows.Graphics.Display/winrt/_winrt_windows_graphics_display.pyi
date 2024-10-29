@@ -24,7 +24,7 @@ class NitRange:
     min_nits: winrt.system.Single
     max_nits: winrt.system.Single
     step_size_nits: winrt.system.Single
-    def __init__(self, min_nits: winrt.system.Single, max_nits: winrt.system.Single, step_size_nits: winrt.system.Single) -> None: ...
+    def __init__(self, min_nits: winrt.system.Single = 0, max_nits: winrt.system.Single = 0, step_size_nits: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class AdvancedColorInfo(winrt.system.Object):

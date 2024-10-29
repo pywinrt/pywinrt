@@ -22,18 +22,18 @@ TResult = typing.TypeVar('TResult')
 @typing.final
 class EventRegistrationToken:
     value: winrt.system.Int64
-    def __init__(self, value: winrt.system.Int64) -> None: ...
+    def __init__(self, value: winrt.system.Int64 = 0) -> None: ...
 
 @typing.final
 class HResult:
     value: winrt.system.Int32
-    def __init__(self, value: winrt.system.Int32) -> None: ...
+    def __init__(self, value: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class Point:
     x: winrt.system.Single
     y: winrt.system.Single
-    def __init__(self, x: winrt.system.Single, y: winrt.system.Single) -> None: ...
+    def __init__(self, x: winrt.system.Single = 0, y: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class Rect:
@@ -41,13 +41,13 @@ class Rect:
     y: winrt.system.Single
     width: winrt.system.Single
     height: winrt.system.Single
-    def __init__(self, x: winrt.system.Single, y: winrt.system.Single, width: winrt.system.Single, height: winrt.system.Single) -> None: ...
+    def __init__(self, x: winrt.system.Single = 0, y: winrt.system.Single = 0, width: winrt.system.Single = 0, height: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class Size:
     width: winrt.system.Single
     height: winrt.system.Single
-    def __init__(self, width: winrt.system.Single, height: winrt.system.Single) -> None: ...
+    def __init__(self, width: winrt.system.Single = 0, height: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class Deferral(winrt.system.Object):

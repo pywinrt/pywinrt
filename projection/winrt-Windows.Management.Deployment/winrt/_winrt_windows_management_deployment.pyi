@@ -21,7 +21,7 @@ Self = typing.TypeVar('Self')
 class DeploymentProgress:
     state: DeploymentProgressState
     percentage: winrt.system.UInt32
-    def __init__(self, state: DeploymentProgressState, percentage: winrt.system.UInt32) -> None: ...
+    def __init__(self, state: DeploymentProgressState = DeploymentProgressState(0), percentage: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class AddPackageOptions(winrt.system.Object):

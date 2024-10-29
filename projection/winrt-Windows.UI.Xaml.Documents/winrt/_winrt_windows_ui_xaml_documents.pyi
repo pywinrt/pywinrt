@@ -34,7 +34,7 @@ Self = typing.TypeVar('Self')
 class TextRange:
     start_index: winrt.system.Int32
     length: winrt.system.Int32
-    def __init__(self, start_index: winrt.system.Int32, length: winrt.system.Int32) -> None: ...
+    def __init__(self, start_index: winrt.system.Int32 = 0, length: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class Block_Static(type):

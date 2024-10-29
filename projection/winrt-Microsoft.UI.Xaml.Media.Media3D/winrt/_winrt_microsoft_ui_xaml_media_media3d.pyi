@@ -33,7 +33,7 @@ class Matrix3D:
     offset_y: winrt.system.Double
     offset_z: winrt.system.Double
     m44: winrt.system.Double
-    def __init__(self, m11: winrt.system.Double, m12: winrt.system.Double, m13: winrt.system.Double, m14: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, m23: winrt.system.Double, m24: winrt.system.Double, m31: winrt.system.Double, m32: winrt.system.Double, m33: winrt.system.Double, m34: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double, offset_z: winrt.system.Double, m44: winrt.system.Double) -> None: ...
+    def __init__(self, m11: winrt.system.Double = 0, m12: winrt.system.Double = 0, m13: winrt.system.Double = 0, m14: winrt.system.Double = 0, m21: winrt.system.Double = 0, m22: winrt.system.Double = 0, m23: winrt.system.Double = 0, m24: winrt.system.Double = 0, m31: winrt.system.Double = 0, m32: winrt.system.Double = 0, m33: winrt.system.Double = 0, m34: winrt.system.Double = 0, offset_x: winrt.system.Double = 0, offset_y: winrt.system.Double = 0, offset_z: winrt.system.Double = 0, m44: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class CompositeTransform3D_Static(type):

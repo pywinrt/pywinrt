@@ -21,7 +21,7 @@ Self = typing.TypeVar('Self')
 class I2cTransferResult:
     status: I2cTransferStatus
     bytes_transferred: winrt.system.UInt32
-    def __init__(self, status: I2cTransferStatus, bytes_transferred: winrt.system.UInt32) -> None: ...
+    def __init__(self, status: I2cTransferStatus = I2cTransferStatus(0), bytes_transferred: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class I2cConnectionSettings(winrt.system.Object):

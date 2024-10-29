@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 @typing.final
 class LoadMoreItemsResult:
     count: winrt.system.UInt32
-    def __init__(self, count: winrt.system.UInt32) -> None: ...
+    def __init__(self, count: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class Binding(winrt.system.Object):

@@ -25,7 +25,7 @@ class HeadsetGeqGains:
     band3_gain: winrt.system.Int32
     band4_gain: winrt.system.Int32
     band5_gain: winrt.system.Int32
-    def __init__(self, band1_gain: winrt.system.Int32, band2_gain: winrt.system.Int32, band3_gain: winrt.system.Int32, band4_gain: winrt.system.Int32, band5_gain: winrt.system.Int32) -> None: ...
+    def __init__(self, band1_gain: winrt.system.Int32 = 0, band2_gain: winrt.system.Int32 = 0, band3_gain: winrt.system.Int32 = 0, band4_gain: winrt.system.Int32 = 0, band5_gain: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class GameControllerProviderInfo_Static(type):
