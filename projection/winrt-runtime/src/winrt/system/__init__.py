@@ -5,12 +5,22 @@ from typing import Annotated
 
 if sys.version_info >= (3, 12):
     from collections.abc import Buffer as _buffer
+    from typing import TypeAlias
 else:
     from array import array as _array
     from typing import Union
 
     # Before PEP 688, this was the best we could do
-    _buffer = Union[bytes, bytearray, memoryview, _array[int] | _array[float]]
+    if sys.version_info >= (3, 10):
+        from typing import TypeAlias
+
+        _buffer: TypeAlias = Union[
+            bytes, bytearray, memoryview, _array[int], _array[float]
+        ]
+    else:
+        _buffer = Union[
+            bytes, bytearray, memoryview, _array[int], _array[float]
+        ]
 
 from .._winrt import Array, Object, _add_dll_directory, _remove_dll_directory
 
@@ -186,8 +196,13 @@ _mixin_mutable_sequence(Array)
 
 # Type hints for Python buffer protocol - can use standard Python types in
 # addition to the WinRT Array.
-ReadableBuffer = _buffer  # WinRT PassArray
-WriteableBuffer = _buffer  # WinRT FillArray
+# REVISIT: can be replaced with type statement when 3.12 is the minimum version
+if sys.version_info >= (3, 10):
+    ReadableBuffer: TypeAlias = _buffer  # WinRT PassArray
+    WriteableBuffer: TypeAlias = _buffer  # WinRT FillArray
+else:
+    ReadableBuffer = _buffer  # WinRT PassArray
+    WriteableBuffer = _buffer  # WinRT FillArray
 
 __all__ = [
     "Int8",
