@@ -47,9 +47,9 @@ class TestGeolocation(unittest.TestCase):
     @unittest.skipIf(ON_CI, "Geolocation service not available on CI")
     def test_GetGeopositionAsync(self):
         """test async method using IAsyncOperation Completed callback"""
-        op_future = Future()
+        op_future = Future[wdg.Geoposition]()
 
-        def callback(operation: wf.IAsyncOperation, status: wf.AsyncStatus):
+        def callback(operation: wf.IAsyncOperation[wdg.Geoposition], status: wf.AsyncStatus):
             if status == wf.AsyncStatus.COMPLETED:
                 op_future.set_result(operation.get_results())
             elif status == wf.AsyncStatus.CANCELED:
@@ -68,7 +68,7 @@ class TestGeolocation(unittest.TestCase):
         assert len(done) == 1
         assert not any(not_done)
 
-        pos: wdg.Geoposition = op_future.result()
+        pos = op_future.result()
 
         self.assertEqual(type(pos), wdg.Geoposition)
 
