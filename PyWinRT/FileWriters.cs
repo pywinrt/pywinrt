@@ -347,8 +347,8 @@ static class FileWriters
 
             if (type.IsPyBuffer)
             {
-                w.WriteLine("def __buffer__(self, flags: int) -> memoryview: ...");
-                w.WriteLine("def __release_buffer__(self, view: memoryview) -> None: ...");
+                w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
+                w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
             }
 
             if (type.IsPyMapping)
