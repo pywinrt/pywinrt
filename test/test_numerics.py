@@ -371,7 +371,7 @@ class TestNumerics(unittest.TestCase):
         self.assertAlmostEqual(m.m43, -0.100100, places=5)
         self.assertEqual(m.m44, 0)
 
-        m = wfn.Matrix4x4.make_orthographic(1, 2, 3, 4, 0.1, 100)
+        m = wfn.Matrix4x4.make_orthographic(1, 2, 3, 4)
         self.assertEqual(m.m11, 2)
         self.assertEqual(m.m12, 0)
         self.assertEqual(m.m13, 0)
