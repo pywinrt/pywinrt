@@ -51,16 +51,16 @@ class TestTestComponent(unittest.TestCase):
         b2 = tc.Blittable()
 
         with self.assertRaisesRegex(TypeError, "'<' not supported"):
-            b1 < b2
+            b1 < b2  # type: ignore
 
         with self.assertRaisesRegex(TypeError, "'>' not supported"):
-            b1 > b2
+            b1 > b2  # type: ignore
 
         with self.assertRaisesRegex(TypeError, "'<=' not supported"):
-            b1 <= b2
+            b1 <= b2  # type: ignore
 
         with self.assertRaisesRegex(TypeError, "'>=' not supported"):
-            b1 >= b2
+            b1 >= b2  # type: ignore
 
     def test_struct_repr(self):
         nb = tc.NonBlittable(True, "b", "c", 4)
