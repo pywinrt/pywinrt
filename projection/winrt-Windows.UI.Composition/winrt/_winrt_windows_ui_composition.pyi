@@ -27,7 +27,7 @@ Self = typing.TypeVar('Self')
 class InkTrailPoint:
     point: windows_foundation.Point
     radius: winrt.system.Single
-    def __init__(self, point: windows_foundation.Point, radius: winrt.system.Single) -> None: ...
+    def __init__(self, point: windows_foundation.Point = windows_foundation.Point(), radius: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class AmbientLight(winrt.system.Object):

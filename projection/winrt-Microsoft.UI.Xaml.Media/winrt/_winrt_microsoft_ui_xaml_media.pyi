@@ -33,7 +33,7 @@ class Matrix:
     m22: winrt.system.Double
     offset_x: winrt.system.Double
     offset_y: winrt.system.Double
-    def __init__(self, m11: winrt.system.Double, m12: winrt.system.Double, m21: winrt.system.Double, m22: winrt.system.Double, offset_x: winrt.system.Double, offset_y: winrt.system.Double) -> None: ...
+    def __init__(self, m11: winrt.system.Double = 0, m12: winrt.system.Double = 0, m21: winrt.system.Double = 0, m22: winrt.system.Double = 0, offset_x: winrt.system.Double = 0, offset_y: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class AcrylicBrush_Static(type):

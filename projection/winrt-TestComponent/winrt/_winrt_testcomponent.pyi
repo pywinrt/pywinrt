@@ -28,13 +28,13 @@ class Blittable:
     h: winrt.system.Single
     i: winrt.system.Double
     j: _uuid.UUID
-    def __init__(self, a: winrt.system.UInt8, b: winrt.system.UInt16, c: winrt.system.UInt32, d: winrt.system.UInt64, e: winrt.system.Int16, f: winrt.system.Int32, g: winrt.system.Int64, h: winrt.system.Single, i: winrt.system.Double, j: _uuid.UUID) -> None: ...
+    def __init__(self, a: winrt.system.UInt8 = 0, b: winrt.system.UInt16 = 0, c: winrt.system.UInt32 = 0, d: winrt.system.UInt64 = 0, e: winrt.system.Int16 = 0, f: winrt.system.Int32 = 0, g: winrt.system.Int64 = 0, h: winrt.system.Single = 0, i: winrt.system.Double = 0, j: _uuid.UUID = _uuid.UUID(int=0)) -> None: ...
 
 @typing.final
 class Nested:
     blittable: Blittable
     non_blittable: NonBlittable
-    def __init__(self, blittable: Blittable, non_blittable: NonBlittable) -> None: ...
+    def __init__(self, blittable: Blittable = Blittable(), non_blittable: NonBlittable = NonBlittable()) -> None: ...
 
 @typing.final
 class NonBlittable:
@@ -42,7 +42,7 @@ class NonBlittable:
     b: winrt.system.Char16
     c: str
     d: typing.Optional[winrt.system.Int64]
-    def __init__(self, a: bool, b: winrt.system.Char16, c: str, d: typing.Optional[winrt.system.Int64]) -> None: ...
+    def __init__(self, a: bool = False, b: winrt.system.Char16 = "", c: str = "", d: typing.Optional[winrt.system.Int64] = None) -> None: ...
 
 @typing.final
 class TestRunner_Static(type):

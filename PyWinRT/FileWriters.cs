@@ -209,7 +209,7 @@ static class FileWriters
             }
 
             w.WriteLine(
-                $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)}"))}) -> None: ..."
+                $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
             );
 
             if (type.Type.IsCustomNumeric())

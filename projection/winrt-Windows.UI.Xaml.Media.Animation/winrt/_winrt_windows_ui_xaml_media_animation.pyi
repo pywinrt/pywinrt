@@ -25,14 +25,14 @@ Self = typing.TypeVar('Self')
 @typing.final
 class KeyTime:
     time_span: datetime.timedelta
-    def __init__(self, time_span: datetime.timedelta) -> None: ...
+    def __init__(self, time_span: datetime.timedelta = datetime.timedelta(0)) -> None: ...
 
 @typing.final
 class RepeatBehavior:
     count: winrt.system.Double
     duration: datetime.timedelta
     type: RepeatBehaviorType
-    def __init__(self, count: winrt.system.Double, duration: datetime.timedelta, type: RepeatBehaviorType) -> None: ...
+    def __init__(self, count: winrt.system.Double = 0, duration: datetime.timedelta = datetime.timedelta(0), type: RepeatBehaviorType = RepeatBehaviorType(0)) -> None: ...
 
 @typing.final
 class AddDeleteThemeTransition(winrt.system.Object):

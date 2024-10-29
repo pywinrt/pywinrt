@@ -22,13 +22,13 @@ class XamlBinaryWriterErrorInformation:
     input_stream_index: winrt.system.UInt32
     line_number: winrt.system.UInt32
     line_position: winrt.system.UInt32
-    def __init__(self, input_stream_index: winrt.system.UInt32, line_number: winrt.system.UInt32, line_position: winrt.system.UInt32) -> None: ...
+    def __init__(self, input_stream_index: winrt.system.UInt32 = 0, line_number: winrt.system.UInt32 = 0, line_position: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class XmlnsDefinition:
     xml_namespace: str
     namespace: str
-    def __init__(self, xml_namespace: str, namespace: str) -> None: ...
+    def __init__(self, xml_namespace: str = "", namespace: str = "") -> None: ...
 
 @typing.final
 class MarkupExtension(winrt.system.Object):

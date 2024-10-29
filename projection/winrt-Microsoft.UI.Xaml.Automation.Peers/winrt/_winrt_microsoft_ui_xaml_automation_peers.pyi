@@ -27,7 +27,7 @@ Self = typing.TypeVar('Self')
 class RawElementProviderRuntimeId:
     part1: winrt.system.UInt32
     part2: winrt.system.UInt32
-    def __init__(self, part1: winrt.system.UInt32, part2: winrt.system.UInt32) -> None: ...
+    def __init__(self, part1: winrt.system.UInt32 = 0, part2: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class AnimatedVisualPlayerAutomationPeer(winrt.system.Object):

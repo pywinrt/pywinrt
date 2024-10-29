@@ -21,7 +21,7 @@ class BasicGeoposition:
     latitude: winrt.system.Double
     longitude: winrt.system.Double
     altitude: winrt.system.Double
-    def __init__(self, latitude: winrt.system.Double, longitude: winrt.system.Double, altitude: winrt.system.Double) -> None: ...
+    def __init__(self, latitude: winrt.system.Double = 0, longitude: winrt.system.Double = 0, altitude: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class CivicAddress(winrt.system.Object):

@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class SpatialBoundingBox:
     center: windows_foundation_numerics.Vector3
     extents: windows_foundation_numerics.Vector3
-    def __init__(self, center: windows_foundation_numerics.Vector3, extents: windows_foundation_numerics.Vector3) -> None: ...
+    def __init__(self, center: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), extents: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3()) -> None: ...
 
 @typing.final
 class SpatialBoundingFrustum:
@@ -34,26 +34,26 @@ class SpatialBoundingFrustum:
     left: windows_foundation_numerics.Plane
     top: windows_foundation_numerics.Plane
     bottom: windows_foundation_numerics.Plane
-    def __init__(self, near: windows_foundation_numerics.Plane, far: windows_foundation_numerics.Plane, right: windows_foundation_numerics.Plane, left: windows_foundation_numerics.Plane, top: windows_foundation_numerics.Plane, bottom: windows_foundation_numerics.Plane) -> None: ...
+    def __init__(self, near: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane(), far: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane(), right: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane(), left: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane(), top: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane(), bottom: windows_foundation_numerics.Plane = windows_foundation_numerics.Plane()) -> None: ...
 
 @typing.final
 class SpatialBoundingOrientedBox:
     center: windows_foundation_numerics.Vector3
     extents: windows_foundation_numerics.Vector3
     orientation: windows_foundation_numerics.Quaternion
-    def __init__(self, center: windows_foundation_numerics.Vector3, extents: windows_foundation_numerics.Vector3, orientation: windows_foundation_numerics.Quaternion) -> None: ...
+    def __init__(self, center: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), extents: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), orientation: windows_foundation_numerics.Quaternion = windows_foundation_numerics.Quaternion()) -> None: ...
 
 @typing.final
 class SpatialBoundingSphere:
     center: windows_foundation_numerics.Vector3
     radius: winrt.system.Single
-    def __init__(self, center: windows_foundation_numerics.Vector3, radius: winrt.system.Single) -> None: ...
+    def __init__(self, center: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), radius: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class SpatialRay:
     origin: windows_foundation_numerics.Vector3
     direction: windows_foundation_numerics.Vector3
-    def __init__(self, origin: windows_foundation_numerics.Vector3, direction: windows_foundation_numerics.Vector3) -> None: ...
+    def __init__(self, origin: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), direction: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3()) -> None: ...
 
 @typing.final
 class SpatialAnchor_Static(type):

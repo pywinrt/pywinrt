@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class SortEntry:
     property_name: str
     ascending_order: bool
-    def __init__(self, property_name: str, ascending_order: bool) -> None: ...
+    def __init__(self, property_name: str = "", ascending_order: bool = False) -> None: ...
 
 @typing.final
 class ContentIndexer_Static(type):

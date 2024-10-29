@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class HandMeshVertex:
     position: windows_foundation_numerics.Vector3
     normal: windows_foundation_numerics.Vector3
-    def __init__(self, position: windows_foundation_numerics.Vector3, normal: windows_foundation_numerics.Vector3) -> None: ...
+    def __init__(self, position: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), normal: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3()) -> None: ...
 
 @typing.final
 class JointPose:
@@ -32,7 +32,7 @@ class JointPose:
     position: windows_foundation_numerics.Vector3
     radius: winrt.system.Single
     accuracy: JointPoseAccuracy
-    def __init__(self, orientation: windows_foundation_numerics.Quaternion, position: windows_foundation_numerics.Vector3, radius: winrt.system.Single, accuracy: JointPoseAccuracy) -> None: ...
+    def __init__(self, orientation: windows_foundation_numerics.Quaternion = windows_foundation_numerics.Quaternion(), position: windows_foundation_numerics.Vector3 = windows_foundation_numerics.Vector3(), radius: winrt.system.Single = 0, accuracy: JointPoseAccuracy = JointPoseAccuracy(0)) -> None: ...
 
 @typing.final
 class EyesPose_Static(type):

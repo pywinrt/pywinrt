@@ -23,7 +23,7 @@ Self = typing.TypeVar('Self')
 class SizeUInt32:
     width: winrt.system.UInt32
     height: winrt.system.UInt32
-    def __init__(self, width: winrt.system.UInt32, height: winrt.system.UInt32) -> None: ...
+    def __init__(self, width: winrt.system.UInt32 = 0, height: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class BarcodeScanner_Static(type):

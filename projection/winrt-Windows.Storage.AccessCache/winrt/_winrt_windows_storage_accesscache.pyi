@@ -22,7 +22,7 @@ Self = typing.TypeVar('Self')
 class AccessListEntry:
     token: str
     metadata: str
-    def __init__(self, token: str, metadata: str) -> None: ...
+    def __init__(self, token: str = "", metadata: str = "") -> None: ...
 
 @typing.final
 class AccessListEntryView(winrt.system.Object, winrt._winrt.Sequence[AccessListEntry]):

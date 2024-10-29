@@ -31,7 +31,7 @@ class BandwidthStatistics:
     inbound_bits_per_second_instability: winrt.system.UInt64
     outbound_bandwidth_peaked: bool
     inbound_bandwidth_peaked: bool
-    def __init__(self, outbound_bits_per_second: winrt.system.UInt64, inbound_bits_per_second: winrt.system.UInt64, outbound_bits_per_second_instability: winrt.system.UInt64, inbound_bits_per_second_instability: winrt.system.UInt64, outbound_bandwidth_peaked: bool, inbound_bandwidth_peaked: bool) -> None: ...
+    def __init__(self, outbound_bits_per_second: winrt.system.UInt64 = 0, inbound_bits_per_second: winrt.system.UInt64 = 0, outbound_bits_per_second_instability: winrt.system.UInt64 = 0, inbound_bits_per_second_instability: winrt.system.UInt64 = 0, outbound_bandwidth_peaked: bool = False, inbound_bandwidth_peaked: bool = False) -> None: ...
 
 @typing.final
 class RoundTripTimeStatistics:
@@ -39,7 +39,7 @@ class RoundTripTimeStatistics:
     max: winrt.system.UInt32
     min: winrt.system.UInt32
     sum: winrt.system.UInt32
-    def __init__(self, variance: winrt.system.UInt32, max: winrt.system.UInt32, min: winrt.system.UInt32, sum: winrt.system.UInt32) -> None: ...
+    def __init__(self, variance: winrt.system.UInt32 = 0, max: winrt.system.UInt32 = 0, min: winrt.system.UInt32 = 0, sum: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class ControlChannelTrigger(winrt.system.Object):

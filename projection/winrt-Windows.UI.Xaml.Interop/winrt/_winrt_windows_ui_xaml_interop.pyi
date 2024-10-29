@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 class TypeName:
     name: str
     kind: TypeKind
-    def __init__(self, name: str, kind: TypeKind) -> None: ...
+    def __init__(self, name: str = "", kind: TypeKind = TypeKind(0)) -> None: ...
 
 @typing.final
 class NotifyCollectionChangedEventArgs(winrt.system.Object):

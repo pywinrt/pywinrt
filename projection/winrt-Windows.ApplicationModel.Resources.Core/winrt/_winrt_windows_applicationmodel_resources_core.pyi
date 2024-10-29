@@ -26,7 +26,7 @@ class ResourceLayoutInfo:
     resource_subtree_count: winrt.system.UInt32
     named_resource_count: winrt.system.UInt32
     checksum: winrt.system.Int32
-    def __init__(self, major_version: winrt.system.UInt32, minor_version: winrt.system.UInt32, resource_subtree_count: winrt.system.UInt32, named_resource_count: winrt.system.UInt32, checksum: winrt.system.Int32) -> None: ...
+    def __init__(self, major_version: winrt.system.UInt32 = 0, minor_version: winrt.system.UInt32 = 0, resource_subtree_count: winrt.system.UInt32 = 0, named_resource_count: winrt.system.UInt32 = 0, checksum: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class NamedResource(winrt.system.Object):

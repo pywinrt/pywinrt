@@ -41,19 +41,19 @@ class CornerRadius:
     top_right: winrt.system.Double
     bottom_right: winrt.system.Double
     bottom_left: winrt.system.Double
-    def __init__(self, top_left: winrt.system.Double, top_right: winrt.system.Double, bottom_right: winrt.system.Double, bottom_left: winrt.system.Double) -> None: ...
+    def __init__(self, top_left: winrt.system.Double = 0, top_right: winrt.system.Double = 0, bottom_right: winrt.system.Double = 0, bottom_left: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class Duration:
     time_span: datetime.timedelta
     type: DurationType
-    def __init__(self, time_span: datetime.timedelta, type: DurationType) -> None: ...
+    def __init__(self, time_span: datetime.timedelta = datetime.timedelta(0), type: DurationType = DurationType(0)) -> None: ...
 
 @typing.final
 class GridLength:
     value: winrt.system.Double
     grid_unit_type: GridUnitType
-    def __init__(self, value: winrt.system.Double, grid_unit_type: GridUnitType) -> None: ...
+    def __init__(self, value: winrt.system.Double = 0, grid_unit_type: GridUnitType = GridUnitType(0)) -> None: ...
 
 @typing.final
 class Thickness:
@@ -61,7 +61,7 @@ class Thickness:
     top: winrt.system.Double
     right: winrt.system.Double
     bottom: winrt.system.Double
-    def __init__(self, left: winrt.system.Double, top: winrt.system.Double, right: winrt.system.Double, bottom: winrt.system.Double) -> None: ...
+    def __init__(self, left: winrt.system.Double = 0, top: winrt.system.Double = 0, right: winrt.system.Double = 0, bottom: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class AdaptiveTrigger_Static(type):

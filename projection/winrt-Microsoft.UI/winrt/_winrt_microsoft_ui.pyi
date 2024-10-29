@@ -19,17 +19,17 @@ Self = typing.TypeVar('Self')
 @typing.final
 class DisplayId:
     value: winrt.system.UInt64
-    def __init__(self, value: winrt.system.UInt64) -> None: ...
+    def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class IconId:
     value: winrt.system.UInt64
-    def __init__(self, value: winrt.system.UInt64) -> None: ...
+    def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class WindowId:
     value: winrt.system.UInt64
-    def __init__(self, value: winrt.system.UInt64) -> None: ...
+    def __init__(self, value: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class ColorHelper_Static(type):

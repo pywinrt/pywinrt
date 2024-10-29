@@ -288,6 +288,42 @@ static class TypeExtensions
             _ => $"winrt::{type.FullName.ToCppNamespace()}"
         };
 
+    public static string GetDefaultPyValue(this TypeReference type, string ns) =>
+        type switch
+        {
+            { FullName: "System.Boolean" } => "False",
+            { FullName: "System.SByte" } => "0",
+            { FullName: "System.Byte" } => "0",
+            { FullName: "System.Char" } => "\"\"",
+            { FullName: "System.Double" } => "0",
+            { FullName: "System.Int16" } => "0",
+            { FullName: "System.Int32" } => "0",
+            { FullName: "System.Int64" } => "0",
+            { FullName: "System.Single" } => "0",
+            { FullName: "System.UInt16" } => "0",
+            { FullName: "System.UInt32" } => "0",
+            { FullName: "System.UInt64" } => "0",
+            { FullName: "System.String" } => "\"\"",
+            { FullName: "System.Guid" } => "_uuid.UUID(int=0)",
+            { FullName: "Windows.Foundation.DateTime" }
+                => "datetime.datetime(1601, 1, 1, tzinfo=datetime.timezone.utc)",
+            { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta(0)",
+            GenericInstanceType gen
+                when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
+                => "None",
+            { IsValueType: true }
+                => type.Resolve() switch
+                {
+                    TypeDefinition t
+                        => t switch
+                        {
+                            { IsEnum: true } => $"{type.ToPyTypeName(ns)}(0)",
+                            _ => $"{type.ToPyTypeName(ns)}()",
+                        }
+                },
+            _ => throw new NotImplementedException(),
+        };
+
     public static string ToPyTypeName(
         this TypeReference type,
         string ns,

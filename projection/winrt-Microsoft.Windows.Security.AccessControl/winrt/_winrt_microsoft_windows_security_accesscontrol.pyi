@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 class AppContainerNameAndAccess:
     app_container_name: str
     access_mask: winrt.system.UInt32
-    def __init__(self, app_container_name: str, access_mask: winrt.system.UInt32) -> None: ...
+    def __init__(self, app_container_name: str = "", access_mask: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
 class SecurityDescriptorHelpers_Static(type):

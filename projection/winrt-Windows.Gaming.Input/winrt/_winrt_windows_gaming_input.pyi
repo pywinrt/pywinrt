@@ -24,7 +24,7 @@ Self = typing.TypeVar('Self')
 class ArcadeStickReading:
     timestamp: winrt.system.UInt64
     buttons: ArcadeStickButtons
-    def __init__(self, timestamp: winrt.system.UInt64, buttons: ArcadeStickButtons) -> None: ...
+    def __init__(self, timestamp: winrt.system.UInt64 = 0, buttons: ArcadeStickButtons = ArcadeStickButtons(0)) -> None: ...
 
 @typing.final
 class FlightStickReading:
@@ -35,7 +35,7 @@ class FlightStickReading:
     pitch: winrt.system.Double
     yaw: winrt.system.Double
     throttle: winrt.system.Double
-    def __init__(self, timestamp: winrt.system.UInt64, buttons: FlightStickButtons, hat_switch: GameControllerSwitchPosition, roll: winrt.system.Double, pitch: winrt.system.Double, yaw: winrt.system.Double, throttle: winrt.system.Double) -> None: ...
+    def __init__(self, timestamp: winrt.system.UInt64 = 0, buttons: FlightStickButtons = FlightStickButtons(0), hat_switch: GameControllerSwitchPosition = GameControllerSwitchPosition(0), roll: winrt.system.Double = 0, pitch: winrt.system.Double = 0, yaw: winrt.system.Double = 0, throttle: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class GamepadReading:
@@ -47,7 +47,7 @@ class GamepadReading:
     left_thumbstick_y: winrt.system.Double
     right_thumbstick_x: winrt.system.Double
     right_thumbstick_y: winrt.system.Double
-    def __init__(self, timestamp: winrt.system.UInt64, buttons: GamepadButtons, left_trigger: winrt.system.Double, right_trigger: winrt.system.Double, left_thumbstick_x: winrt.system.Double, left_thumbstick_y: winrt.system.Double, right_thumbstick_x: winrt.system.Double, right_thumbstick_y: winrt.system.Double) -> None: ...
+    def __init__(self, timestamp: winrt.system.UInt64 = 0, buttons: GamepadButtons = GamepadButtons(0), left_trigger: winrt.system.Double = 0, right_trigger: winrt.system.Double = 0, left_thumbstick_x: winrt.system.Double = 0, left_thumbstick_y: winrt.system.Double = 0, right_thumbstick_x: winrt.system.Double = 0, right_thumbstick_y: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class GamepadVibration:
@@ -55,7 +55,7 @@ class GamepadVibration:
     right_motor: winrt.system.Double
     left_trigger: winrt.system.Double
     right_trigger: winrt.system.Double
-    def __init__(self, left_motor: winrt.system.Double, right_motor: winrt.system.Double, left_trigger: winrt.system.Double, right_trigger: winrt.system.Double) -> None: ...
+    def __init__(self, left_motor: winrt.system.Double = 0, right_motor: winrt.system.Double = 0, left_trigger: winrt.system.Double = 0, right_trigger: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class RacingWheelReading:
@@ -67,14 +67,14 @@ class RacingWheelReading:
     brake: winrt.system.Double
     clutch: winrt.system.Double
     handbrake: winrt.system.Double
-    def __init__(self, timestamp: winrt.system.UInt64, buttons: RacingWheelButtons, pattern_shifter_gear: winrt.system.Int32, wheel: winrt.system.Double, throttle: winrt.system.Double, brake: winrt.system.Double, clutch: winrt.system.Double, handbrake: winrt.system.Double) -> None: ...
+    def __init__(self, timestamp: winrt.system.UInt64 = 0, buttons: RacingWheelButtons = RacingWheelButtons(0), pattern_shifter_gear: winrt.system.Int32 = 0, wheel: winrt.system.Double = 0, throttle: winrt.system.Double = 0, brake: winrt.system.Double = 0, clutch: winrt.system.Double = 0, handbrake: winrt.system.Double = 0) -> None: ...
 
 @typing.final
 class UINavigationReading:
     timestamp: winrt.system.UInt64
     required_buttons: RequiredUINavigationButtons
     optional_buttons: OptionalUINavigationButtons
-    def __init__(self, timestamp: winrt.system.UInt64, required_buttons: RequiredUINavigationButtons, optional_buttons: OptionalUINavigationButtons) -> None: ...
+    def __init__(self, timestamp: winrt.system.UInt64 = 0, required_buttons: RequiredUINavigationButtons = RequiredUINavigationButtons(0), optional_buttons: OptionalUINavigationButtons = OptionalUINavigationButtons(0)) -> None: ...
 
 @typing.final
 class ArcadeStick_Static(type):

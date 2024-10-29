@@ -26,7 +26,7 @@ Self = typing.TypeVar('Self')
 class MediaTimeRange:
     start: datetime.timedelta
     end: datetime.timedelta
-    def __init__(self, start: datetime.timedelta, end: datetime.timedelta) -> None: ...
+    def __init__(self, start: datetime.timedelta = datetime.timedelta(0), end: datetime.timedelta = datetime.timedelta(0)) -> None: ...
 
 @typing.final
 class AudioBuffer(winrt.system.Object):

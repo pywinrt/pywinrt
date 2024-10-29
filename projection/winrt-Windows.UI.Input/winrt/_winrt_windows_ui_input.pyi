@@ -27,7 +27,7 @@ class CrossSlideThresholds:
     speed_bump_start: winrt.system.Single
     speed_bump_end: winrt.system.Single
     rearrange_start: winrt.system.Single
-    def __init__(self, selection_start: winrt.system.Single, speed_bump_start: winrt.system.Single, speed_bump_end: winrt.system.Single, rearrange_start: winrt.system.Single) -> None: ...
+    def __init__(self, selection_start: winrt.system.Single = 0, speed_bump_start: winrt.system.Single = 0, speed_bump_end: winrt.system.Single = 0, rearrange_start: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class ManipulationDelta:
@@ -35,14 +35,14 @@ class ManipulationDelta:
     scale: winrt.system.Single
     rotation: winrt.system.Single
     expansion: winrt.system.Single
-    def __init__(self, translation: windows_foundation.Point, scale: winrt.system.Single, rotation: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
+    def __init__(self, translation: windows_foundation.Point = windows_foundation.Point(), scale: winrt.system.Single = 0, rotation: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class ManipulationVelocities:
     linear: windows_foundation.Point
     angular: winrt.system.Single
     expansion: winrt.system.Single
-    def __init__(self, linear: windows_foundation.Point, angular: winrt.system.Single, expansion: winrt.system.Single) -> None: ...
+    def __init__(self, linear: windows_foundation.Point = windows_foundation.Point(), angular: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
 @typing.final
 class AttachableInputObject(winrt.system.Object):

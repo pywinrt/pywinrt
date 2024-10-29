@@ -20,7 +20,7 @@ Self = typing.TypeVar('Self')
 class InjectedInputPoint:
     position_x: winrt.system.Int32
     position_y: winrt.system.Int32
-    def __init__(self, position_x: winrt.system.Int32, position_y: winrt.system.Int32) -> None: ...
+    def __init__(self, position_x: winrt.system.Int32 = 0, position_y: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class InjectedInputPointerInfo:
@@ -29,7 +29,7 @@ class InjectedInputPointerInfo:
     pixel_location: InjectedInputPoint
     time_offset_in_milliseconds: winrt.system.UInt32
     performance_count: winrt.system.UInt64
-    def __init__(self, pointer_id: winrt.system.UInt32, pointer_options: InjectedInputPointerOptions, pixel_location: InjectedInputPoint, time_offset_in_milliseconds: winrt.system.UInt32, performance_count: winrt.system.UInt64) -> None: ...
+    def __init__(self, pointer_id: winrt.system.UInt32 = 0, pointer_options: InjectedInputPointerOptions = InjectedInputPointerOptions(0), pixel_location: InjectedInputPoint = InjectedInputPoint(), time_offset_in_milliseconds: winrt.system.UInt32 = 0, performance_count: winrt.system.UInt64 = 0) -> None: ...
 
 @typing.final
 class InjectedInputRectangle:
@@ -37,7 +37,7 @@ class InjectedInputRectangle:
     top: winrt.system.Int32
     bottom: winrt.system.Int32
     right: winrt.system.Int32
-    def __init__(self, left: winrt.system.Int32, top: winrt.system.Int32, bottom: winrt.system.Int32, right: winrt.system.Int32) -> None: ...
+    def __init__(self, left: winrt.system.Int32 = 0, top: winrt.system.Int32 = 0, bottom: winrt.system.Int32 = 0, right: winrt.system.Int32 = 0) -> None: ...
 
 @typing.final
 class InjectedInputGamepadInfo(winrt.system.Object):
