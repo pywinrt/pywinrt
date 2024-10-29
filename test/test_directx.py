@@ -15,9 +15,9 @@ class TestDirectX(unittest.TestCase):
         self.assertEqual(sd.format, wgd.DirectXPixelFormat.R16_G16_B16_A16_FLOAT)
 
         msd2 = sd.multisample_description
-        self.assertEqual(msd.count, 1)
-        self.assertEqual(msd.quality, 2)
-    
+        self.assertEqual(msd2.count, 1)
+        self.assertEqual(msd2.quality, 2)
+
     def test_struct_containing_enum_kwd(self):
         msd = wgdd.Direct3DMultisampleDescription(1, 2)
         sd = wgdd.Direct3DSurfaceDescription(format=wgd.DirectXPixelFormat.R16_G16_B16_A16_FLOAT, width=4, multisample_description=msd, height=8)
@@ -27,5 +27,5 @@ class TestDirectX(unittest.TestCase):
         self.assertEqual(sd.format, wgd.DirectXPixelFormat.R16_G16_B16_A16_FLOAT)
 
         msd2 = sd.multisample_description
-        self.assertEqual(msd.count, 1)
-        self.assertEqual(msd.quality, 2)
+        self.assertEqual(msd2.count, 1)
+        self.assertEqual(msd2.quality, 2)
