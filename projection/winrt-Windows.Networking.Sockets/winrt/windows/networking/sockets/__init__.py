@@ -3,7 +3,49 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking_sockets
+from winrt._winrt_windows_networking_sockets import (
+    BandwidthStatistics,
+    RoundTripTimeStatistics,
+    ControlChannelTrigger,
+    DatagramSocket,
+    DatagramSocketControl,
+    DatagramSocketInformation,
+    DatagramSocketMessageReceivedEventArgs,
+    MessageWebSocket,
+    MessageWebSocketControl,
+    MessageWebSocketInformation,
+    MessageWebSocketMessageReceivedEventArgs,
+    ServerMessageWebSocket,
+    ServerMessageWebSocketControl,
+    ServerMessageWebSocketInformation,
+    ServerStreamWebSocket,
+    ServerStreamWebSocketInformation,
+    SocketActivityContext,
+    SocketActivityInformation,
+    SocketActivityTriggerDetails,
+    SocketError,
+    StreamSocket,
+    StreamSocketControl,
+    StreamSocketInformation,
+    StreamSocketListener,
+    StreamSocketListenerConnectionReceivedEventArgs,
+    StreamSocketListenerControl,
+    StreamSocketListenerInformation,
+    StreamWebSocket,
+    StreamWebSocketControl,
+    StreamWebSocketInformation,
+    WebSocketClosedEventArgs,
+    WebSocketError,
+    WebSocketKeepAlive,
+    WebSocketServerCustomValidationRequestedEventArgs,
+    IControlChannelTriggerEventDetails,
+    IControlChannelTriggerResetEventDetails,
+    IWebSocket,
+    IWebSocketControl,
+    IWebSocketControl2,
+    IWebSocketInformation,
+    IWebSocketInformation2,
+)
 
 __all__ = [
     "ControlChannelTriggerResetReason",
@@ -160,44 +202,3 @@ class SocketSslErrorSeverity(enum.IntEnum):
     IGNORABLE = 1
     FATAL = 2
 
-BandwidthStatistics = _winrt_windows_networking_sockets.BandwidthStatistics
-RoundTripTimeStatistics = _winrt_windows_networking_sockets.RoundTripTimeStatistics
-ControlChannelTrigger = _winrt_windows_networking_sockets.ControlChannelTrigger
-DatagramSocket = _winrt_windows_networking_sockets.DatagramSocket
-DatagramSocketControl = _winrt_windows_networking_sockets.DatagramSocketControl
-DatagramSocketInformation = _winrt_windows_networking_sockets.DatagramSocketInformation
-DatagramSocketMessageReceivedEventArgs = _winrt_windows_networking_sockets.DatagramSocketMessageReceivedEventArgs
-MessageWebSocket = _winrt_windows_networking_sockets.MessageWebSocket
-MessageWebSocketControl = _winrt_windows_networking_sockets.MessageWebSocketControl
-MessageWebSocketInformation = _winrt_windows_networking_sockets.MessageWebSocketInformation
-MessageWebSocketMessageReceivedEventArgs = _winrt_windows_networking_sockets.MessageWebSocketMessageReceivedEventArgs
-ServerMessageWebSocket = _winrt_windows_networking_sockets.ServerMessageWebSocket
-ServerMessageWebSocketControl = _winrt_windows_networking_sockets.ServerMessageWebSocketControl
-ServerMessageWebSocketInformation = _winrt_windows_networking_sockets.ServerMessageWebSocketInformation
-ServerStreamWebSocket = _winrt_windows_networking_sockets.ServerStreamWebSocket
-ServerStreamWebSocketInformation = _winrt_windows_networking_sockets.ServerStreamWebSocketInformation
-SocketActivityContext = _winrt_windows_networking_sockets.SocketActivityContext
-SocketActivityInformation = _winrt_windows_networking_sockets.SocketActivityInformation
-SocketActivityTriggerDetails = _winrt_windows_networking_sockets.SocketActivityTriggerDetails
-SocketError = _winrt_windows_networking_sockets.SocketError
-StreamSocket = _winrt_windows_networking_sockets.StreamSocket
-StreamSocketControl = _winrt_windows_networking_sockets.StreamSocketControl
-StreamSocketInformation = _winrt_windows_networking_sockets.StreamSocketInformation
-StreamSocketListener = _winrt_windows_networking_sockets.StreamSocketListener
-StreamSocketListenerConnectionReceivedEventArgs = _winrt_windows_networking_sockets.StreamSocketListenerConnectionReceivedEventArgs
-StreamSocketListenerControl = _winrt_windows_networking_sockets.StreamSocketListenerControl
-StreamSocketListenerInformation = _winrt_windows_networking_sockets.StreamSocketListenerInformation
-StreamWebSocket = _winrt_windows_networking_sockets.StreamWebSocket
-StreamWebSocketControl = _winrt_windows_networking_sockets.StreamWebSocketControl
-StreamWebSocketInformation = _winrt_windows_networking_sockets.StreamWebSocketInformation
-WebSocketClosedEventArgs = _winrt_windows_networking_sockets.WebSocketClosedEventArgs
-WebSocketError = _winrt_windows_networking_sockets.WebSocketError
-WebSocketKeepAlive = _winrt_windows_networking_sockets.WebSocketKeepAlive
-WebSocketServerCustomValidationRequestedEventArgs = _winrt_windows_networking_sockets.WebSocketServerCustomValidationRequestedEventArgs
-IControlChannelTriggerEventDetails = _winrt_windows_networking_sockets.IControlChannelTriggerEventDetails
-IControlChannelTriggerResetEventDetails = _winrt_windows_networking_sockets.IControlChannelTriggerResetEventDetails
-IWebSocket = _winrt_windows_networking_sockets.IWebSocket
-IWebSocketControl = _winrt_windows_networking_sockets.IWebSocketControl
-IWebSocketControl2 = _winrt_windows_networking_sockets.IWebSocketControl2
-IWebSocketInformation = _winrt_windows_networking_sockets.IWebSocketInformation
-IWebSocketInformation2 = _winrt_windows_networking_sockets.IWebSocketInformation2

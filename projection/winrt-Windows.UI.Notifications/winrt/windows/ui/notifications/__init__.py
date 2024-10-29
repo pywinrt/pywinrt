@@ -3,7 +3,46 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_notifications
+from winrt._winrt_windows_ui_notifications import (
+    AdaptiveNotificationText,
+    BadgeNotification,
+    BadgeUpdateManager,
+    BadgeUpdateManagerForUser,
+    BadgeUpdater,
+    KnownAdaptiveNotificationHints,
+    KnownAdaptiveNotificationTextStyles,
+    KnownNotificationBindings,
+    Notification,
+    NotificationBinding,
+    NotificationData,
+    NotificationVisual,
+    ScheduledTileNotification,
+    ScheduledToastNotification,
+    ScheduledToastNotificationShowingEventArgs,
+    ShownTileNotification,
+    TileFlyoutNotification,
+    TileFlyoutUpdateManager,
+    TileFlyoutUpdater,
+    TileNotification,
+    TileUpdateManager,
+    TileUpdateManagerForUser,
+    TileUpdater,
+    ToastActivatedEventArgs,
+    ToastCollection,
+    ToastCollectionManager,
+    ToastDismissedEventArgs,
+    ToastFailedEventArgs,
+    ToastNotification,
+    ToastNotificationActionTriggerDetail,
+    ToastNotificationHistory,
+    ToastNotificationHistoryChangedTriggerDetail,
+    ToastNotificationManager,
+    ToastNotificationManagerForUser,
+    ToastNotifier,
+    UserNotification,
+    UserNotificationChangedEventArgs,
+    IAdaptiveNotificationContent,
+)
 
 __all__ = [
     "AdaptiveNotificationContentKind",
@@ -260,41 +299,3 @@ class UserNotificationChangedKind(enum.IntEnum):
     ADDED = 0
     REMOVED = 1
 
-AdaptiveNotificationText = _winrt_windows_ui_notifications.AdaptiveNotificationText
-BadgeNotification = _winrt_windows_ui_notifications.BadgeNotification
-BadgeUpdateManager = _winrt_windows_ui_notifications.BadgeUpdateManager
-BadgeUpdateManagerForUser = _winrt_windows_ui_notifications.BadgeUpdateManagerForUser
-BadgeUpdater = _winrt_windows_ui_notifications.BadgeUpdater
-KnownAdaptiveNotificationHints = _winrt_windows_ui_notifications.KnownAdaptiveNotificationHints
-KnownAdaptiveNotificationTextStyles = _winrt_windows_ui_notifications.KnownAdaptiveNotificationTextStyles
-KnownNotificationBindings = _winrt_windows_ui_notifications.KnownNotificationBindings
-Notification = _winrt_windows_ui_notifications.Notification
-NotificationBinding = _winrt_windows_ui_notifications.NotificationBinding
-NotificationData = _winrt_windows_ui_notifications.NotificationData
-NotificationVisual = _winrt_windows_ui_notifications.NotificationVisual
-ScheduledTileNotification = _winrt_windows_ui_notifications.ScheduledTileNotification
-ScheduledToastNotification = _winrt_windows_ui_notifications.ScheduledToastNotification
-ScheduledToastNotificationShowingEventArgs = _winrt_windows_ui_notifications.ScheduledToastNotificationShowingEventArgs
-ShownTileNotification = _winrt_windows_ui_notifications.ShownTileNotification
-TileFlyoutNotification = _winrt_windows_ui_notifications.TileFlyoutNotification
-TileFlyoutUpdateManager = _winrt_windows_ui_notifications.TileFlyoutUpdateManager
-TileFlyoutUpdater = _winrt_windows_ui_notifications.TileFlyoutUpdater
-TileNotification = _winrt_windows_ui_notifications.TileNotification
-TileUpdateManager = _winrt_windows_ui_notifications.TileUpdateManager
-TileUpdateManagerForUser = _winrt_windows_ui_notifications.TileUpdateManagerForUser
-TileUpdater = _winrt_windows_ui_notifications.TileUpdater
-ToastActivatedEventArgs = _winrt_windows_ui_notifications.ToastActivatedEventArgs
-ToastCollection = _winrt_windows_ui_notifications.ToastCollection
-ToastCollectionManager = _winrt_windows_ui_notifications.ToastCollectionManager
-ToastDismissedEventArgs = _winrt_windows_ui_notifications.ToastDismissedEventArgs
-ToastFailedEventArgs = _winrt_windows_ui_notifications.ToastFailedEventArgs
-ToastNotification = _winrt_windows_ui_notifications.ToastNotification
-ToastNotificationActionTriggerDetail = _winrt_windows_ui_notifications.ToastNotificationActionTriggerDetail
-ToastNotificationHistory = _winrt_windows_ui_notifications.ToastNotificationHistory
-ToastNotificationHistoryChangedTriggerDetail = _winrt_windows_ui_notifications.ToastNotificationHistoryChangedTriggerDetail
-ToastNotificationManager = _winrt_windows_ui_notifications.ToastNotificationManager
-ToastNotificationManagerForUser = _winrt_windows_ui_notifications.ToastNotificationManagerForUser
-ToastNotifier = _winrt_windows_ui_notifications.ToastNotifier
-UserNotification = _winrt_windows_ui_notifications.UserNotification
-UserNotificationChangedEventArgs = _winrt_windows_ui_notifications.UserNotificationChangedEventArgs
-IAdaptiveNotificationContent = _winrt_windows_ui_notifications.IAdaptiveNotificationContent

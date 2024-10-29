@@ -3,7 +3,21 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_input_custom
+from winrt._winrt_windows_gaming_input_custom import (
+    GameControllerVersionInfo,
+    GipFirmwareUpdateProgress,
+    GameControllerFactoryManager,
+    GipFirmwareUpdateResult,
+    GipGameControllerProvider,
+    HidGameControllerProvider,
+    XusbGameControllerProvider,
+    ICustomGameControllerFactory,
+    IGameControllerInputSink,
+    IGameControllerProvider,
+    IGipGameControllerInputSink,
+    IHidGameControllerInputSink,
+    IXusbGameControllerInputSink,
+)
 
 __all__ = [
     "GipFirmwareUpdateStatus",
@@ -52,16 +66,3 @@ class XusbDeviceType(enum.IntEnum):
     UNKNOWN = 0
     GAMEPAD = 1
 
-GameControllerVersionInfo = _winrt_windows_gaming_input_custom.GameControllerVersionInfo
-GipFirmwareUpdateProgress = _winrt_windows_gaming_input_custom.GipFirmwareUpdateProgress
-GameControllerFactoryManager = _winrt_windows_gaming_input_custom.GameControllerFactoryManager
-GipFirmwareUpdateResult = _winrt_windows_gaming_input_custom.GipFirmwareUpdateResult
-GipGameControllerProvider = _winrt_windows_gaming_input_custom.GipGameControllerProvider
-HidGameControllerProvider = _winrt_windows_gaming_input_custom.HidGameControllerProvider
-XusbGameControllerProvider = _winrt_windows_gaming_input_custom.XusbGameControllerProvider
-ICustomGameControllerFactory = _winrt_windows_gaming_input_custom.ICustomGameControllerFactory
-IGameControllerInputSink = _winrt_windows_gaming_input_custom.IGameControllerInputSink
-IGameControllerProvider = _winrt_windows_gaming_input_custom.IGameControllerProvider
-IGipGameControllerInputSink = _winrt_windows_gaming_input_custom.IGipGameControllerInputSink
-IHidGameControllerInputSink = _winrt_windows_gaming_input_custom.IHidGameControllerInputSink
-IXusbGameControllerInputSink = _winrt_windows_gaming_input_custom.IXusbGameControllerInputSink

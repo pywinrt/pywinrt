@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_power
+from winrt._winrt_windows_system_power import (
+    BackgroundEnergyManager,
+    ForegroundEnergyManager,
+    PowerManager,
+)
 
 __all__ = [
     "BatteryStatus",
@@ -30,6 +34,3 @@ class PowerSupplyStatus(enum.IntEnum):
     INADEQUATE = 1
     ADEQUATE = 2
 
-BackgroundEnergyManager = _winrt_windows_system_power.BackgroundEnergyManager
-ForegroundEnergyManager = _winrt_windows_system_power.ForegroundEnergyManager
-PowerManager = _winrt_windows_system_power.PowerManager

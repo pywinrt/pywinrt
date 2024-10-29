@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_core_direct
+from winrt._winrt_windows_ui_xaml_core_direct import (
+    XamlDirect,
+    IXamlDirectObject,
+)
 
 __all__ = [
     "XamlEventIndex",
@@ -2076,5 +2079,3 @@ class XamlTypeIndex(enum.IntEnum):
     THEME_SHADOW = 964
     XAML_U_I_COMMAND = 969
 
-XamlDirect = _winrt_windows_ui_xaml_core_direct.XamlDirect
-IXamlDirectObject = _winrt_windows_ui_xaml_core_direct.IXamlDirectObject

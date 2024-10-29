@@ -5,7 +5,38 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_devices_sms
+from winrt._winrt_windows_devices_sms import (
+    SmsEncodedLength,
+    DeleteSmsMessageOperation,
+    DeleteSmsMessagesOperation,
+    GetSmsDeviceOperation,
+    GetSmsMessageOperation,
+    GetSmsMessagesOperation,
+    SendSmsMessageOperation,
+    SmsAppMessage,
+    SmsBinaryMessage,
+    SmsBroadcastMessage,
+    SmsDevice,
+    SmsDevice2,
+    SmsDeviceMessageStore,
+    SmsFilterRule,
+    SmsFilterRules,
+    SmsMessageReceivedEventArgs,
+    SmsMessageReceivedTriggerDetails,
+    SmsMessageRegistration,
+    SmsReceivedEventDetails,
+    SmsSendMessageResult,
+    SmsStatusMessage,
+    SmsTextMessage,
+    SmsTextMessage2,
+    SmsVoicemailMessage,
+    SmsWapMessage,
+    ISmsBinaryMessage,
+    ISmsDevice,
+    ISmsMessage,
+    ISmsMessageBase,
+    ISmsTextMessage,
+)
 
 __all__ = [
     "CellularClass",
@@ -155,35 +186,5 @@ class SmsModemErrorCode(enum.IntEnum):
     NETWORK_FAILURE = 10
     FIXED_DIALING_NUMBER_RESTRICTED = 11
 
-SmsEncodedLength = _winrt_windows_devices_sms.SmsEncodedLength
-DeleteSmsMessageOperation = _winrt_windows_devices_sms.DeleteSmsMessageOperation
-DeleteSmsMessagesOperation = _winrt_windows_devices_sms.DeleteSmsMessagesOperation
-GetSmsDeviceOperation = _winrt_windows_devices_sms.GetSmsDeviceOperation
-GetSmsMessageOperation = _winrt_windows_devices_sms.GetSmsMessageOperation
-GetSmsMessagesOperation = _winrt_windows_devices_sms.GetSmsMessagesOperation
-SendSmsMessageOperation = _winrt_windows_devices_sms.SendSmsMessageOperation
-SmsAppMessage = _winrt_windows_devices_sms.SmsAppMessage
-SmsBinaryMessage = _winrt_windows_devices_sms.SmsBinaryMessage
-SmsBroadcastMessage = _winrt_windows_devices_sms.SmsBroadcastMessage
-SmsDevice = _winrt_windows_devices_sms.SmsDevice
-SmsDevice2 = _winrt_windows_devices_sms.SmsDevice2
-SmsDeviceMessageStore = _winrt_windows_devices_sms.SmsDeviceMessageStore
-SmsFilterRule = _winrt_windows_devices_sms.SmsFilterRule
-SmsFilterRules = _winrt_windows_devices_sms.SmsFilterRules
-SmsMessageReceivedEventArgs = _winrt_windows_devices_sms.SmsMessageReceivedEventArgs
-SmsMessageReceivedTriggerDetails = _winrt_windows_devices_sms.SmsMessageReceivedTriggerDetails
-SmsMessageRegistration = _winrt_windows_devices_sms.SmsMessageRegistration
-SmsReceivedEventDetails = _winrt_windows_devices_sms.SmsReceivedEventDetails
-SmsSendMessageResult = _winrt_windows_devices_sms.SmsSendMessageResult
-SmsStatusMessage = _winrt_windows_devices_sms.SmsStatusMessage
-SmsTextMessage = _winrt_windows_devices_sms.SmsTextMessage
-SmsTextMessage2 = _winrt_windows_devices_sms.SmsTextMessage2
-SmsVoicemailMessage = _winrt_windows_devices_sms.SmsVoicemailMessage
-SmsWapMessage = _winrt_windows_devices_sms.SmsWapMessage
-ISmsBinaryMessage = _winrt_windows_devices_sms.ISmsBinaryMessage
-ISmsDevice = _winrt_windows_devices_sms.ISmsDevice
-ISmsMessage = _winrt_windows_devices_sms.ISmsMessage
-ISmsMessageBase = _winrt_windows_devices_sms.ISmsMessageBase
-ISmsTextMessage = _winrt_windows_devices_sms.ISmsTextMessage
 SmsDeviceStatusChangedEventHandler = typing.Callable[[SmsDevice], None]
 SmsMessageReceivedEventHandler = typing.Callable[[SmsDevice, SmsMessageReceivedEventArgs], None]

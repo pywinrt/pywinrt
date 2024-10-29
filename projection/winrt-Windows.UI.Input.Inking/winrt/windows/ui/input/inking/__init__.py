@@ -3,7 +3,36 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_input_inking
+from winrt._winrt_windows_ui_input_inking import (
+    InkDrawingAttributes,
+    InkDrawingAttributesPencilProperties,
+    InkInputConfiguration,
+    InkInputProcessingConfiguration,
+    InkManager,
+    InkModelerAttributes,
+    InkPoint,
+    InkPresenter,
+    InkPresenterProtractor,
+    InkPresenterRuler,
+    InkRecognitionResult,
+    InkRecognizer,
+    InkRecognizerContainer,
+    InkStroke,
+    InkStrokeBuilder,
+    InkStrokeContainer,
+    InkStrokeInput,
+    InkStrokeRenderingSegment,
+    InkStrokesCollectedEventArgs,
+    InkStrokesErasedEventArgs,
+    InkSynchronizer,
+    InkUnprocessedInput,
+    PenAndInkSettings,
+    IInkPointFactory,
+    IInkPresenterRulerFactory,
+    IInkPresenterStencil,
+    IInkRecognizerContainer,
+    IInkStrokeContainer,
+)
 
 __all__ = [
     "HandwritingLineHeight",
@@ -102,31 +131,3 @@ class PenTipShape(enum.IntEnum):
     CIRCLE = 0
     RECTANGLE = 1
 
-InkDrawingAttributes = _winrt_windows_ui_input_inking.InkDrawingAttributes
-InkDrawingAttributesPencilProperties = _winrt_windows_ui_input_inking.InkDrawingAttributesPencilProperties
-InkInputConfiguration = _winrt_windows_ui_input_inking.InkInputConfiguration
-InkInputProcessingConfiguration = _winrt_windows_ui_input_inking.InkInputProcessingConfiguration
-InkManager = _winrt_windows_ui_input_inking.InkManager
-InkModelerAttributes = _winrt_windows_ui_input_inking.InkModelerAttributes
-InkPoint = _winrt_windows_ui_input_inking.InkPoint
-InkPresenter = _winrt_windows_ui_input_inking.InkPresenter
-InkPresenterProtractor = _winrt_windows_ui_input_inking.InkPresenterProtractor
-InkPresenterRuler = _winrt_windows_ui_input_inking.InkPresenterRuler
-InkRecognitionResult = _winrt_windows_ui_input_inking.InkRecognitionResult
-InkRecognizer = _winrt_windows_ui_input_inking.InkRecognizer
-InkRecognizerContainer = _winrt_windows_ui_input_inking.InkRecognizerContainer
-InkStroke = _winrt_windows_ui_input_inking.InkStroke
-InkStrokeBuilder = _winrt_windows_ui_input_inking.InkStrokeBuilder
-InkStrokeContainer = _winrt_windows_ui_input_inking.InkStrokeContainer
-InkStrokeInput = _winrt_windows_ui_input_inking.InkStrokeInput
-InkStrokeRenderingSegment = _winrt_windows_ui_input_inking.InkStrokeRenderingSegment
-InkStrokesCollectedEventArgs = _winrt_windows_ui_input_inking.InkStrokesCollectedEventArgs
-InkStrokesErasedEventArgs = _winrt_windows_ui_input_inking.InkStrokesErasedEventArgs
-InkSynchronizer = _winrt_windows_ui_input_inking.InkSynchronizer
-InkUnprocessedInput = _winrt_windows_ui_input_inking.InkUnprocessedInput
-PenAndInkSettings = _winrt_windows_ui_input_inking.PenAndInkSettings
-IInkPointFactory = _winrt_windows_ui_input_inking.IInkPointFactory
-IInkPresenterRulerFactory = _winrt_windows_ui_input_inking.IInkPresenterRulerFactory
-IInkPresenterStencil = _winrt_windows_ui_input_inking.IInkPresenterStencil
-IInkRecognizerContainer = _winrt_windows_ui_input_inking.IInkRecognizerContainer
-IInkStrokeContainer = _winrt_windows_ui_input_inking.IInkStrokeContainer

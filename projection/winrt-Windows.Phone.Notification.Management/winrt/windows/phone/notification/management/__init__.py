@@ -3,7 +3,29 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_notification_management
+from winrt._winrt_windows_phone_notification_management import (
+    AccessoryManager,
+    AlarmNotificationTriggerDetails,
+    AppNotificationInfo,
+    BinaryId,
+    CalendarChangedNotificationTriggerDetails,
+    CortanaTileNotificationTriggerDetails,
+    EmailAccountInfo,
+    EmailFolderInfo,
+    EmailNotificationTriggerDetails,
+    EmailReadNotificationTriggerDetails,
+    MediaControlsTriggerDetails,
+    MediaMetadata,
+    PhoneCallDetails,
+    PhoneLineDetails,
+    PhoneNotificationTriggerDetails,
+    ReminderNotificationTriggerDetails,
+    SpeedDialEntry,
+    TextResponse,
+    ToastNotificationTriggerDetails,
+    VolumeInfo,
+    IAccessoryNotificationTriggerDetails,
+)
 
 __all__ = [
     "AccessoryNotificationType",
@@ -149,24 +171,3 @@ class VibrateState(enum.IntEnum):
     RINGER_ON_VIBRATE_OFF = 2
     RINGER_ON_VIBRATE_ON = 3
 
-AccessoryManager = _winrt_windows_phone_notification_management.AccessoryManager
-AlarmNotificationTriggerDetails = _winrt_windows_phone_notification_management.AlarmNotificationTriggerDetails
-AppNotificationInfo = _winrt_windows_phone_notification_management.AppNotificationInfo
-BinaryId = _winrt_windows_phone_notification_management.BinaryId
-CalendarChangedNotificationTriggerDetails = _winrt_windows_phone_notification_management.CalendarChangedNotificationTriggerDetails
-CortanaTileNotificationTriggerDetails = _winrt_windows_phone_notification_management.CortanaTileNotificationTriggerDetails
-EmailAccountInfo = _winrt_windows_phone_notification_management.EmailAccountInfo
-EmailFolderInfo = _winrt_windows_phone_notification_management.EmailFolderInfo
-EmailNotificationTriggerDetails = _winrt_windows_phone_notification_management.EmailNotificationTriggerDetails
-EmailReadNotificationTriggerDetails = _winrt_windows_phone_notification_management.EmailReadNotificationTriggerDetails
-MediaControlsTriggerDetails = _winrt_windows_phone_notification_management.MediaControlsTriggerDetails
-MediaMetadata = _winrt_windows_phone_notification_management.MediaMetadata
-PhoneCallDetails = _winrt_windows_phone_notification_management.PhoneCallDetails
-PhoneLineDetails = _winrt_windows_phone_notification_management.PhoneLineDetails
-PhoneNotificationTriggerDetails = _winrt_windows_phone_notification_management.PhoneNotificationTriggerDetails
-ReminderNotificationTriggerDetails = _winrt_windows_phone_notification_management.ReminderNotificationTriggerDetails
-SpeedDialEntry = _winrt_windows_phone_notification_management.SpeedDialEntry
-TextResponse = _winrt_windows_phone_notification_management.TextResponse
-ToastNotificationTriggerDetails = _winrt_windows_phone_notification_management.ToastNotificationTriggerDetails
-VolumeInfo = _winrt_windows_phone_notification_management.VolumeInfo
-IAccessoryNotificationTriggerDetails = _winrt_windows_phone_notification_management.IAccessoryNotificationTriggerDetails

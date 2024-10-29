@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_management
+from winrt._winrt_windows_management import (
+    MdmAlert,
+    MdmSession,
+    MdmSessionManager,
+)
 
 __all__ = [
     "MdmAlertDataType",
@@ -36,6 +40,3 @@ class MdmSessionState(enum.IntEnum):
     RETRYING = 5
     COMPLETED = 6
 
-MdmAlert = _winrt_windows_management.MdmAlert
-MdmSession = _winrt_windows_management.MdmSession
-MdmSessionManager = _winrt_windows_management.MdmSessionManager

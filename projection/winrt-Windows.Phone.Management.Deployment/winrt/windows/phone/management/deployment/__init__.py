@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_management_deployment
+from winrt._winrt_windows_phone_management_deployment import (
+    Enterprise,
+    EnterpriseEnrollmentManager,
+    EnterpriseEnrollmentResult,
+    InstallationManager,
+    PackageInstallResult,
+)
 
 __all__ = [
     "EnterpriseEnrollmentStatus",
@@ -26,8 +32,3 @@ class EnterpriseStatus(enum.IntEnum):
     REVOKED = 2
     EXPIRED = 3
 
-Enterprise = _winrt_windows_phone_management_deployment.Enterprise
-EnterpriseEnrollmentManager = _winrt_windows_phone_management_deployment.EnterpriseEnrollmentManager
-EnterpriseEnrollmentResult = _winrt_windows_phone_management_deployment.EnterpriseEnrollmentResult
-InstallationManager = _winrt_windows_phone_management_deployment.InstallationManager
-PackageInstallResult = _winrt_windows_phone_management_deployment.PackageInstallResult

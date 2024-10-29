@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_store_licensemanagement
+from winrt._winrt_windows_applicationmodel_store_licensemanagement import (
+    LicenseManager,
+    LicenseSatisfactionInfo,
+    LicenseSatisfactionResult,
+)
 
 __all__ = [
     "LicenseRefreshOption",
@@ -16,6 +20,3 @@ class LicenseRefreshOption(enum.IntEnum):
     RUNNING_LICENSES = 0
     ALL_LICENSES = 1
 
-LicenseManager = _winrt_windows_applicationmodel_store_licensemanagement.LicenseManager
-LicenseSatisfactionInfo = _winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionInfo
-LicenseSatisfactionResult = _winrt_windows_applicationmodel_store_licensemanagement.LicenseSatisfactionResult

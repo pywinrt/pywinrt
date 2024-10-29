@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_storage
+from winrt._winrt_microsoft_windows_storage import (
+    ApplicationData,
+    ApplicationDataContainer,
+)
 
 __all__ = [
     "ApplicationDataCreateDisposition",
@@ -23,5 +26,3 @@ class ApplicationDataLocality(enum.IntEnum):
     TEMPORARY = 2
     MACHINE = 1000
 
-ApplicationData = _winrt_microsoft_windows_storage.ApplicationData
-ApplicationDataContainer = _winrt_microsoft_windows_storage.ApplicationDataContainer

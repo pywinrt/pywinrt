@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_dialprotocol
+from winrt._winrt_windows_media_dialprotocol import (
+    DialApp,
+    DialAppStateDetails,
+    DialDevice,
+    DialDevicePicker,
+    DialDevicePickerFilter,
+    DialDeviceSelectedEventArgs,
+    DialDisconnectButtonClickedEventArgs,
+    DialReceiverApp,
+)
 
 __all__ = [
     "DialAppLaunchResult",
@@ -46,11 +55,3 @@ class DialDeviceDisplayStatus(enum.IntEnum):
     DISCONNECTED = 4
     ERROR = 5
 
-DialApp = _winrt_windows_media_dialprotocol.DialApp
-DialAppStateDetails = _winrt_windows_media_dialprotocol.DialAppStateDetails
-DialDevice = _winrt_windows_media_dialprotocol.DialDevice
-DialDevicePicker = _winrt_windows_media_dialprotocol.DialDevicePicker
-DialDevicePickerFilter = _winrt_windows_media_dialprotocol.DialDevicePickerFilter
-DialDeviceSelectedEventArgs = _winrt_windows_media_dialprotocol.DialDeviceSelectedEventArgs
-DialDisconnectButtonClickedEventArgs = _winrt_windows_media_dialprotocol.DialDisconnectButtonClickedEventArgs
-DialReceiverApp = _winrt_windows_media_dialprotocol.DialReceiverApp

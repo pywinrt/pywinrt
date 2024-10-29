@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_update
+from winrt._winrt_windows_system_update import (
+    SystemUpdateItem,
+    SystemUpdateLastErrorInfo,
+    SystemUpdateManager,
+)
 
 __all__ = [
     "SystemUpdateAttentionRequiredReason",
@@ -51,6 +55,3 @@ class SystemUpdateStartInstallAction(enum.IntEnum):
     UP_TO_REBOOT = 0
     ALLOW_REBOOT = 1
 
-SystemUpdateItem = _winrt_windows_system_update.SystemUpdateItem
-SystemUpdateLastErrorInfo = _winrt_windows_system_update.SystemUpdateLastErrorInfo
-SystemUpdateManager = _winrt_windows_system_update.SystemUpdateManager

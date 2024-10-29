@@ -3,7 +3,53 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_input
+from winrt._winrt_windows_ui_input import (
+    CrossSlideThresholds,
+    ManipulationDelta,
+    ManipulationVelocities,
+    AttachableInputObject,
+    CrossSlidingEventArgs,
+    DraggingEventArgs,
+    EdgeGesture,
+    EdgeGestureEventArgs,
+    GestureRecognizer,
+    HoldingEventArgs,
+    InputActivationListener,
+    InputActivationListenerActivationChangedEventArgs,
+    KeyboardDeliveryInterceptor,
+    ManipulationCompletedEventArgs,
+    ManipulationInertiaStartingEventArgs,
+    ManipulationStartedEventArgs,
+    ManipulationUpdatedEventArgs,
+    MouseWheelParameters,
+    PhysicalGestureRecognizer,
+    PointerPoint,
+    PointerPointProperties,
+    PointerVisualizationSettings,
+    RadialController,
+    RadialControllerButtonClickedEventArgs,
+    RadialControllerButtonHoldingEventArgs,
+    RadialControllerButtonPressedEventArgs,
+    RadialControllerButtonReleasedEventArgs,
+    RadialControllerConfiguration,
+    RadialControllerControlAcquiredEventArgs,
+    RadialControllerMenu,
+    RadialControllerMenuItem,
+    RadialControllerRotationChangedEventArgs,
+    RadialControllerScreenContact,
+    RadialControllerScreenContactContinuedEventArgs,
+    RadialControllerScreenContactEndedEventArgs,
+    RadialControllerScreenContactStartedEventArgs,
+    RightTappedEventArgs,
+    SystemButtonEventController,
+    SystemFunctionButtonEventArgs,
+    SystemFunctionLockChangedEventArgs,
+    SystemFunctionLockIndicatorChangedEventArgs,
+    TappedEventArgs,
+    TouchpadGesturesController,
+    TouchpadGlobalActionEventArgs,
+    IPointerPointTransform,
+)
 
 __all__ = [
     "CrossSlidingState",
@@ -172,48 +218,3 @@ class TouchpadGlobalGestureKinds(enum.IntFlag):
     FOUR_FINGER_ACTIONS = 0x10
     FIVE_FINGER_ACTIONS = 0x20
 
-CrossSlideThresholds = _winrt_windows_ui_input.CrossSlideThresholds
-ManipulationDelta = _winrt_windows_ui_input.ManipulationDelta
-ManipulationVelocities = _winrt_windows_ui_input.ManipulationVelocities
-AttachableInputObject = _winrt_windows_ui_input.AttachableInputObject
-CrossSlidingEventArgs = _winrt_windows_ui_input.CrossSlidingEventArgs
-DraggingEventArgs = _winrt_windows_ui_input.DraggingEventArgs
-EdgeGesture = _winrt_windows_ui_input.EdgeGesture
-EdgeGestureEventArgs = _winrt_windows_ui_input.EdgeGestureEventArgs
-GestureRecognizer = _winrt_windows_ui_input.GestureRecognizer
-HoldingEventArgs = _winrt_windows_ui_input.HoldingEventArgs
-InputActivationListener = _winrt_windows_ui_input.InputActivationListener
-InputActivationListenerActivationChangedEventArgs = _winrt_windows_ui_input.InputActivationListenerActivationChangedEventArgs
-KeyboardDeliveryInterceptor = _winrt_windows_ui_input.KeyboardDeliveryInterceptor
-ManipulationCompletedEventArgs = _winrt_windows_ui_input.ManipulationCompletedEventArgs
-ManipulationInertiaStartingEventArgs = _winrt_windows_ui_input.ManipulationInertiaStartingEventArgs
-ManipulationStartedEventArgs = _winrt_windows_ui_input.ManipulationStartedEventArgs
-ManipulationUpdatedEventArgs = _winrt_windows_ui_input.ManipulationUpdatedEventArgs
-MouseWheelParameters = _winrt_windows_ui_input.MouseWheelParameters
-PhysicalGestureRecognizer = _winrt_windows_ui_input.PhysicalGestureRecognizer
-PointerPoint = _winrt_windows_ui_input.PointerPoint
-PointerPointProperties = _winrt_windows_ui_input.PointerPointProperties
-PointerVisualizationSettings = _winrt_windows_ui_input.PointerVisualizationSettings
-RadialController = _winrt_windows_ui_input.RadialController
-RadialControllerButtonClickedEventArgs = _winrt_windows_ui_input.RadialControllerButtonClickedEventArgs
-RadialControllerButtonHoldingEventArgs = _winrt_windows_ui_input.RadialControllerButtonHoldingEventArgs
-RadialControllerButtonPressedEventArgs = _winrt_windows_ui_input.RadialControllerButtonPressedEventArgs
-RadialControllerButtonReleasedEventArgs = _winrt_windows_ui_input.RadialControllerButtonReleasedEventArgs
-RadialControllerConfiguration = _winrt_windows_ui_input.RadialControllerConfiguration
-RadialControllerControlAcquiredEventArgs = _winrt_windows_ui_input.RadialControllerControlAcquiredEventArgs
-RadialControllerMenu = _winrt_windows_ui_input.RadialControllerMenu
-RadialControllerMenuItem = _winrt_windows_ui_input.RadialControllerMenuItem
-RadialControllerRotationChangedEventArgs = _winrt_windows_ui_input.RadialControllerRotationChangedEventArgs
-RadialControllerScreenContact = _winrt_windows_ui_input.RadialControllerScreenContact
-RadialControllerScreenContactContinuedEventArgs = _winrt_windows_ui_input.RadialControllerScreenContactContinuedEventArgs
-RadialControllerScreenContactEndedEventArgs = _winrt_windows_ui_input.RadialControllerScreenContactEndedEventArgs
-RadialControllerScreenContactStartedEventArgs = _winrt_windows_ui_input.RadialControllerScreenContactStartedEventArgs
-RightTappedEventArgs = _winrt_windows_ui_input.RightTappedEventArgs
-SystemButtonEventController = _winrt_windows_ui_input.SystemButtonEventController
-SystemFunctionButtonEventArgs = _winrt_windows_ui_input.SystemFunctionButtonEventArgs
-SystemFunctionLockChangedEventArgs = _winrt_windows_ui_input.SystemFunctionLockChangedEventArgs
-SystemFunctionLockIndicatorChangedEventArgs = _winrt_windows_ui_input.SystemFunctionLockIndicatorChangedEventArgs
-TappedEventArgs = _winrt_windows_ui_input.TappedEventArgs
-TouchpadGesturesController = _winrt_windows_ui_input.TouchpadGesturesController
-TouchpadGlobalActionEventArgs = _winrt_windows_ui_input.TouchpadGlobalActionEventArgs
-IPointerPointTransform = _winrt_windows_ui_input.IPointerPointTransform

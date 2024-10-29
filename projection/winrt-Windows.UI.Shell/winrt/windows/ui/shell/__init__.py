@@ -3,7 +3,26 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_shell
+from winrt._winrt_windows_ui_shell import (
+    AdaptiveCardBuilder,
+    FocusSession,
+    FocusSessionManager,
+    SecurityAppManager,
+    ShareWindowCommandEventArgs,
+    ShareWindowCommandSource,
+    TaskbarManager,
+    WindowTab,
+    WindowTabCloseRequestedEventArgs,
+    WindowTabCollection,
+    WindowTabGroup,
+    WindowTabIcon,
+    WindowTabManager,
+    WindowTabSwitchRequestedEventArgs,
+    WindowTabTearOutRequestedEventArgs,
+    WindowTabThumbnailRequestedEventArgs,
+    IAdaptiveCard,
+    IAdaptiveCardBuilderStatics,
+)
 
 __all__ = [
     "SecurityAppKind",
@@ -48,22 +67,4 @@ class ShareWindowCommand(enum.IntEnum):
     START_SHARING = 1
     STOP_SHARING = 2
 
-AdaptiveCardBuilder = _winrt_windows_ui_shell.AdaptiveCardBuilder
-FocusSession = _winrt_windows_ui_shell.FocusSession
-FocusSessionManager = _winrt_windows_ui_shell.FocusSessionManager
-SecurityAppManager = _winrt_windows_ui_shell.SecurityAppManager
-ShareWindowCommandEventArgs = _winrt_windows_ui_shell.ShareWindowCommandEventArgs
-ShareWindowCommandSource = _winrt_windows_ui_shell.ShareWindowCommandSource
-TaskbarManager = _winrt_windows_ui_shell.TaskbarManager
-WindowTab = _winrt_windows_ui_shell.WindowTab
-WindowTabCloseRequestedEventArgs = _winrt_windows_ui_shell.WindowTabCloseRequestedEventArgs
-WindowTabCollection = _winrt_windows_ui_shell.WindowTabCollection
 winrt.system._mixin_mutable_sequence(WindowTabCollection)
-WindowTabGroup = _winrt_windows_ui_shell.WindowTabGroup
-WindowTabIcon = _winrt_windows_ui_shell.WindowTabIcon
-WindowTabManager = _winrt_windows_ui_shell.WindowTabManager
-WindowTabSwitchRequestedEventArgs = _winrt_windows_ui_shell.WindowTabSwitchRequestedEventArgs
-WindowTabTearOutRequestedEventArgs = _winrt_windows_ui_shell.WindowTabTearOutRequestedEventArgs
-WindowTabThumbnailRequestedEventArgs = _winrt_windows_ui_shell.WindowTabThumbnailRequestedEventArgs
-IAdaptiveCard = _winrt_windows_ui_shell.IAdaptiveCard
-IAdaptiveCardBuilderStatics = _winrt_windows_ui_shell.IAdaptiveCardBuilderStatics

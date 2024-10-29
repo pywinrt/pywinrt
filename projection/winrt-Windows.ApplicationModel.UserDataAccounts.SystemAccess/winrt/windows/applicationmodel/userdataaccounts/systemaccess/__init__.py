@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_userdataaccounts_systemaccess
+from winrt._winrt_windows_applicationmodel_userdataaccounts_systemaccess import (
+    DeviceAccountConfiguration,
+    UserDataAccountSystemAccessManager,
+)
 
 __all__ = [
     "DeviceAccountAuthenticationType",
@@ -49,5 +52,3 @@ class DeviceAccountSyncScheduleKind(enum.IntEnum):
     DAILY = 5
     AS_ITEMS_ARRIVE = 6
 
-DeviceAccountConfiguration = _winrt_windows_applicationmodel_userdataaccounts_systemaccess.DeviceAccountConfiguration
-UserDataAccountSystemAccessManager = _winrt_windows_applicationmodel_userdataaccounts_systemaccess.UserDataAccountSystemAccessManager

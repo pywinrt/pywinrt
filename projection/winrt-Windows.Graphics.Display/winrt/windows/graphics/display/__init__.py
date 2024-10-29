@@ -5,7 +5,19 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_graphics_display
+from winrt._winrt_windows_graphics_display import (
+    NitRange,
+    AdvancedColorInfo,
+    BrightnessOverride,
+    BrightnessOverrideSettings,
+    ColorOverrideSettings,
+    DisplayEnhancementOverride,
+    DisplayEnhancementOverrideCapabilities,
+    DisplayEnhancementOverrideCapabilitiesChangedEventArgs,
+    DisplayInformation,
+    DisplayProperties,
+    DisplayServices,
+)
 
 __all__ = [
     "AdvancedColorKind",
@@ -83,15 +95,4 @@ class ResolutionScale(enum.IntEnum):
     SCALE450_PERCENT = 450
     SCALE500_PERCENT = 500
 
-NitRange = _winrt_windows_graphics_display.NitRange
-AdvancedColorInfo = _winrt_windows_graphics_display.AdvancedColorInfo
-BrightnessOverride = _winrt_windows_graphics_display.BrightnessOverride
-BrightnessOverrideSettings = _winrt_windows_graphics_display.BrightnessOverrideSettings
-ColorOverrideSettings = _winrt_windows_graphics_display.ColorOverrideSettings
-DisplayEnhancementOverride = _winrt_windows_graphics_display.DisplayEnhancementOverride
-DisplayEnhancementOverrideCapabilities = _winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilities
-DisplayEnhancementOverrideCapabilitiesChangedEventArgs = _winrt_windows_graphics_display.DisplayEnhancementOverrideCapabilitiesChangedEventArgs
-DisplayInformation = _winrt_windows_graphics_display.DisplayInformation
-DisplayProperties = _winrt_windows_graphics_display.DisplayProperties
-DisplayServices = _winrt_windows_graphics_display.DisplayServices
 DisplayPropertiesEventHandler = typing.Callable[[winrt.system.Object], None]

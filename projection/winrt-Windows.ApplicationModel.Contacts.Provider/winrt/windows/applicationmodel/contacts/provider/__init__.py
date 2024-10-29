@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_contacts_provider
+from winrt._winrt_windows_applicationmodel_contacts_provider import (
+    ContactPickerUI,
+    ContactRemovedEventArgs,
+)
 
 __all__ = [
     "AddContactResult",
@@ -16,5 +19,3 @@ class AddContactResult(enum.IntEnum):
     ALREADY_ADDED = 1
     UNAVAILABLE = 2
 
-ContactPickerUI = _winrt_windows_applicationmodel_contacts_provider.ContactPickerUI
-ContactRemovedEventArgs = _winrt_windows_applicationmodel_contacts_provider.ContactRemovedEventArgs

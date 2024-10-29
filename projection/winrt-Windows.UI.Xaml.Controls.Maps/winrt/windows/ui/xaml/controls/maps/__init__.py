@@ -3,7 +3,63 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_xaml_controls_maps
+from winrt._winrt_windows_ui_xaml_controls_maps import (
+    MapZoomLevelRange,
+    CustomMapTileDataSource,
+    HttpMapTileDataSource,
+    LocalMapTileDataSource,
+    MapActualCameraChangedEventArgs,
+    MapActualCameraChangingEventArgs,
+    MapBillboard,
+    MapCamera,
+    MapContextRequestedEventArgs,
+    MapControl,
+    MapControlBusinessLandmarkClickEventArgs,
+    MapControlBusinessLandmarkPointerEnteredEventArgs,
+    MapControlBusinessLandmarkPointerExitedEventArgs,
+    MapControlBusinessLandmarkRightTappedEventArgs,
+    MapControlDataHelper,
+    MapControlTransitFeatureClickEventArgs,
+    MapControlTransitFeaturePointerEnteredEventArgs,
+    MapControlTransitFeaturePointerExitedEventArgs,
+    MapControlTransitFeatureRightTappedEventArgs,
+    MapCustomExperience,
+    MapCustomExperienceChangedEventArgs,
+    MapElement,
+    MapElement3D,
+    MapElementClickEventArgs,
+    MapElementPointerEnteredEventArgs,
+    MapElementPointerExitedEventArgs,
+    MapElementsLayer,
+    MapElementsLayerClickEventArgs,
+    MapElementsLayerContextRequestedEventArgs,
+    MapElementsLayerPointerEnteredEventArgs,
+    MapElementsLayerPointerExitedEventArgs,
+    MapIcon,
+    MapInputEventArgs,
+    MapItemsControl,
+    MapLayer,
+    MapModel3D,
+    MapPolygon,
+    MapPolyline,
+    MapRightTappedEventArgs,
+    MapRouteView,
+    MapScene,
+    MapStyleSheet,
+    MapStyleSheetEntries,
+    MapStyleSheetEntryStates,
+    MapTargetCameraChangedEventArgs,
+    MapTileBitmapRequest,
+    MapTileBitmapRequestDeferral,
+    MapTileBitmapRequestedEventArgs,
+    MapTileDataSource,
+    MapTileSource,
+    MapTileUriRequest,
+    MapTileUriRequestDeferral,
+    MapTileUriRequestedEventArgs,
+    StreetsideExperience,
+    StreetsidePanorama,
+)
 
 __all__ = [
     "MapAnimationKind",
@@ -155,58 +211,3 @@ class MapWatermarkMode(enum.IntEnum):
     AUTOMATIC = 0
     ON = 1
 
-MapZoomLevelRange = _winrt_windows_ui_xaml_controls_maps.MapZoomLevelRange
-CustomMapTileDataSource = _winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource
-HttpMapTileDataSource = _winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource
-LocalMapTileDataSource = _winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource
-MapActualCameraChangedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapActualCameraChangedEventArgs
-MapActualCameraChangingEventArgs = _winrt_windows_ui_xaml_controls_maps.MapActualCameraChangingEventArgs
-MapBillboard = _winrt_windows_ui_xaml_controls_maps.MapBillboard
-MapCamera = _winrt_windows_ui_xaml_controls_maps.MapCamera
-MapContextRequestedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapContextRequestedEventArgs
-MapControl = _winrt_windows_ui_xaml_controls_maps.MapControl
-MapControlBusinessLandmarkClickEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkClickEventArgs
-MapControlBusinessLandmarkPointerEnteredEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerEnteredEventArgs
-MapControlBusinessLandmarkPointerExitedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkPointerExitedEventArgs
-MapControlBusinessLandmarkRightTappedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlBusinessLandmarkRightTappedEventArgs
-MapControlDataHelper = _winrt_windows_ui_xaml_controls_maps.MapControlDataHelper
-MapControlTransitFeatureClickEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureClickEventArgs
-MapControlTransitFeaturePointerEnteredEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerEnteredEventArgs
-MapControlTransitFeaturePointerExitedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlTransitFeaturePointerExitedEventArgs
-MapControlTransitFeatureRightTappedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapControlTransitFeatureRightTappedEventArgs
-MapCustomExperience = _winrt_windows_ui_xaml_controls_maps.MapCustomExperience
-MapCustomExperienceChangedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapCustomExperienceChangedEventArgs
-MapElement = _winrt_windows_ui_xaml_controls_maps.MapElement
-MapElement3D = _winrt_windows_ui_xaml_controls_maps.MapElement3D
-MapElementClickEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementClickEventArgs
-MapElementPointerEnteredEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementPointerEnteredEventArgs
-MapElementPointerExitedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementPointerExitedEventArgs
-MapElementsLayer = _winrt_windows_ui_xaml_controls_maps.MapElementsLayer
-MapElementsLayerClickEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementsLayerClickEventArgs
-MapElementsLayerContextRequestedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementsLayerContextRequestedEventArgs
-MapElementsLayerPointerEnteredEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerEnteredEventArgs
-MapElementsLayerPointerExitedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapElementsLayerPointerExitedEventArgs
-MapIcon = _winrt_windows_ui_xaml_controls_maps.MapIcon
-MapInputEventArgs = _winrt_windows_ui_xaml_controls_maps.MapInputEventArgs
-MapItemsControl = _winrt_windows_ui_xaml_controls_maps.MapItemsControl
-MapLayer = _winrt_windows_ui_xaml_controls_maps.MapLayer
-MapModel3D = _winrt_windows_ui_xaml_controls_maps.MapModel3D
-MapPolygon = _winrt_windows_ui_xaml_controls_maps.MapPolygon
-MapPolyline = _winrt_windows_ui_xaml_controls_maps.MapPolyline
-MapRightTappedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapRightTappedEventArgs
-MapRouteView = _winrt_windows_ui_xaml_controls_maps.MapRouteView
-MapScene = _winrt_windows_ui_xaml_controls_maps.MapScene
-MapStyleSheet = _winrt_windows_ui_xaml_controls_maps.MapStyleSheet
-MapStyleSheetEntries = _winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntries
-MapStyleSheetEntryStates = _winrt_windows_ui_xaml_controls_maps.MapStyleSheetEntryStates
-MapTargetCameraChangedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapTargetCameraChangedEventArgs
-MapTileBitmapRequest = _winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequest
-MapTileBitmapRequestDeferral = _winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestDeferral
-MapTileBitmapRequestedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapTileBitmapRequestedEventArgs
-MapTileDataSource = _winrt_windows_ui_xaml_controls_maps.MapTileDataSource
-MapTileSource = _winrt_windows_ui_xaml_controls_maps.MapTileSource
-MapTileUriRequest = _winrt_windows_ui_xaml_controls_maps.MapTileUriRequest
-MapTileUriRequestDeferral = _winrt_windows_ui_xaml_controls_maps.MapTileUriRequestDeferral
-MapTileUriRequestedEventArgs = _winrt_windows_ui_xaml_controls_maps.MapTileUriRequestedEventArgs
-StreetsideExperience = _winrt_windows_ui_xaml_controls_maps.StreetsideExperience
-StreetsidePanorama = _winrt_windows_ui_xaml_controls_maps.StreetsidePanorama

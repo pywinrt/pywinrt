@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_closedcaptioning
+from winrt._winrt_windows_media_closedcaptioning import (
+    ClosedCaptionProperties,
+)
 
 __all__ = [
     "ClosedCaptionColor",
@@ -57,4 +59,3 @@ class ClosedCaptionStyle(enum.IntEnum):
     CURSIVE = 6
     SMALL_CAPITALS = 7
 
-ClosedCaptionProperties = _winrt_windows_media_closedcaptioning.ClosedCaptionProperties

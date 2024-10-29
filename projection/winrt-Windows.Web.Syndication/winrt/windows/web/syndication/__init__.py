@@ -3,7 +3,25 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_syndication
+from winrt._winrt_windows_web_syndication import (
+    RetrievalProgress,
+    TransferProgress,
+    SyndicationAttribute,
+    SyndicationCategory,
+    SyndicationClient,
+    SyndicationContent,
+    SyndicationError,
+    SyndicationFeed,
+    SyndicationGenerator,
+    SyndicationItem,
+    SyndicationLink,
+    SyndicationNode,
+    SyndicationPerson,
+    SyndicationText,
+    ISyndicationClient,
+    ISyndicationNode,
+    ISyndicationText,
+)
 
 __all__ = [
     "SyndicationErrorStatus",
@@ -49,20 +67,3 @@ class SyndicationTextType(enum.IntEnum):
     HTML = 1
     XHTML = 2
 
-RetrievalProgress = _winrt_windows_web_syndication.RetrievalProgress
-TransferProgress = _winrt_windows_web_syndication.TransferProgress
-SyndicationAttribute = _winrt_windows_web_syndication.SyndicationAttribute
-SyndicationCategory = _winrt_windows_web_syndication.SyndicationCategory
-SyndicationClient = _winrt_windows_web_syndication.SyndicationClient
-SyndicationContent = _winrt_windows_web_syndication.SyndicationContent
-SyndicationError = _winrt_windows_web_syndication.SyndicationError
-SyndicationFeed = _winrt_windows_web_syndication.SyndicationFeed
-SyndicationGenerator = _winrt_windows_web_syndication.SyndicationGenerator
-SyndicationItem = _winrt_windows_web_syndication.SyndicationItem
-SyndicationLink = _winrt_windows_web_syndication.SyndicationLink
-SyndicationNode = _winrt_windows_web_syndication.SyndicationNode
-SyndicationPerson = _winrt_windows_web_syndication.SyndicationPerson
-SyndicationText = _winrt_windows_web_syndication.SyndicationText
-ISyndicationClient = _winrt_windows_web_syndication.ISyndicationClient
-ISyndicationNode = _winrt_windows_web_syndication.ISyndicationNode
-ISyndicationText = _winrt_windows_web_syndication.ISyndicationText

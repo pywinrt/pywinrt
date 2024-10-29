@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_userdataaccounts_provider
+from winrt._winrt_windows_applicationmodel_userdataaccounts_provider import (
+    UserDataAccountPartnerAccountInfo,
+    UserDataAccountProviderAddAccountOperation,
+    UserDataAccountProviderResolveErrorsOperation,
+    UserDataAccountProviderSettingsOperation,
+    IUserDataAccountProviderOperation,
+)
 
 __all__ = [
     "UserDataAccountProviderOperationKind",
@@ -24,8 +30,3 @@ class UserDataAccountProviderPartnerAccountKind(enum.IntEnum):
     EXCHANGE = 0
     POP_OR_IMAP = 1
 
-UserDataAccountPartnerAccountInfo = _winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountPartnerAccountInfo
-UserDataAccountProviderAddAccountOperation = _winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderAddAccountOperation
-UserDataAccountProviderResolveErrorsOperation = _winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderResolveErrorsOperation
-UserDataAccountProviderSettingsOperation = _winrt_windows_applicationmodel_userdataaccounts_provider.UserDataAccountProviderSettingsOperation
-IUserDataAccountProviderOperation = _winrt_windows_applicationmodel_userdataaccounts_provider.IUserDataAccountProviderOperation

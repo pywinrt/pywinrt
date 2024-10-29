@@ -3,7 +3,22 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_streaming_adaptive
+from winrt._winrt_windows_media_streaming_adaptive import (
+    AdaptiveMediaSource,
+    AdaptiveMediaSourceAdvancedSettings,
+    AdaptiveMediaSourceCorrelatedTimes,
+    AdaptiveMediaSourceCreationResult,
+    AdaptiveMediaSourceDiagnosticAvailableEventArgs,
+    AdaptiveMediaSourceDiagnostics,
+    AdaptiveMediaSourceDownloadBitrateChangedEventArgs,
+    AdaptiveMediaSourceDownloadCompletedEventArgs,
+    AdaptiveMediaSourceDownloadFailedEventArgs,
+    AdaptiveMediaSourceDownloadRequestedDeferral,
+    AdaptiveMediaSourceDownloadRequestedEventArgs,
+    AdaptiveMediaSourceDownloadResult,
+    AdaptiveMediaSourceDownloadStatistics,
+    AdaptiveMediaSourcePlaybackBitrateChangedEventArgs,
+)
 
 __all__ = [
     "AdaptiveMediaSourceCreationStatus",
@@ -63,17 +78,3 @@ class AdaptiveMediaSourceResourceType(enum.IntEnum):
     INITIALIZATION_VECTOR = 4
     MEDIA_SEGMENT_INDEX = 5
 
-AdaptiveMediaSource = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSource
-AdaptiveMediaSourceAdvancedSettings = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceAdvancedSettings
-AdaptiveMediaSourceCorrelatedTimes = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCorrelatedTimes
-AdaptiveMediaSourceCreationResult = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceCreationResult
-AdaptiveMediaSourceDiagnosticAvailableEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnosticAvailableEventArgs
-AdaptiveMediaSourceDiagnostics = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDiagnostics
-AdaptiveMediaSourceDownloadBitrateChangedEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadBitrateChangedEventArgs
-AdaptiveMediaSourceDownloadCompletedEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadCompletedEventArgs
-AdaptiveMediaSourceDownloadFailedEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadFailedEventArgs
-AdaptiveMediaSourceDownloadRequestedDeferral = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedDeferral
-AdaptiveMediaSourceDownloadRequestedEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadRequestedEventArgs
-AdaptiveMediaSourceDownloadResult = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadResult
-AdaptiveMediaSourceDownloadStatistics = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourceDownloadStatistics
-AdaptiveMediaSourcePlaybackBitrateChangedEventArgs = _winrt_windows_media_streaming_adaptive.AdaptiveMediaSourcePlaybackBitrateChangedEventArgs

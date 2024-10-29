@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_appnotifications
+from winrt._winrt_microsoft_windows_appnotifications import (
+    AppNotification,
+    AppNotificationActivatedEventArgs,
+    AppNotificationManager,
+    AppNotificationProgressData,
+)
 
 __all__ = [
     "AppNotificationPriority",
@@ -32,7 +37,3 @@ class AppNotificationSetting(enum.IntEnum):
     DISABLED_BY_MANIFEST = 4
     UNSUPPORTED = 5
 
-AppNotification = _winrt_microsoft_windows_appnotifications.AppNotification
-AppNotificationActivatedEventArgs = _winrt_microsoft_windows_appnotifications.AppNotificationActivatedEventArgs
-AppNotificationManager = _winrt_microsoft_windows_appnotifications.AppNotificationManager
-AppNotificationProgressData = _winrt_microsoft_windows_appnotifications.AppNotificationProgressData

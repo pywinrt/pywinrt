@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_management_update
+from winrt._winrt_windows_management_update import (
+    PreviewBuildsManager,
+    PreviewBuildsState,
+    WindowsUpdate,
+    WindowsUpdateActionCompletedEventArgs,
+    WindowsUpdateActionProgress,
+    WindowsUpdateActionResult,
+    WindowsUpdateAdministrator,
+    WindowsUpdateApprovalData,
+    WindowsUpdateAttentionRequiredInfo,
+    WindowsUpdateAttentionRequiredReasonChangedEventArgs,
+    WindowsUpdateGetAdministratorResult,
+    WindowsUpdateItem,
+    WindowsUpdateManager,
+    WindowsUpdateProgressChangedEventArgs,
+    WindowsUpdateRestartRequestOptions,
+    WindowsUpdateScanCompletedEventArgs,
+)
 
 __all__ = [
     "WindowsUpdateAdministratorOptions",
@@ -73,19 +90,3 @@ class WindowsUpdateAttentionRequiredReason(enum.IntEnum):
     DEFERRED_DURING_OOBE = 31
     DEFERRED_FOR_SUSTAINABLE_TIME = 32
 
-PreviewBuildsManager = _winrt_windows_management_update.PreviewBuildsManager
-PreviewBuildsState = _winrt_windows_management_update.PreviewBuildsState
-WindowsUpdate = _winrt_windows_management_update.WindowsUpdate
-WindowsUpdateActionCompletedEventArgs = _winrt_windows_management_update.WindowsUpdateActionCompletedEventArgs
-WindowsUpdateActionProgress = _winrt_windows_management_update.WindowsUpdateActionProgress
-WindowsUpdateActionResult = _winrt_windows_management_update.WindowsUpdateActionResult
-WindowsUpdateAdministrator = _winrt_windows_management_update.WindowsUpdateAdministrator
-WindowsUpdateApprovalData = _winrt_windows_management_update.WindowsUpdateApprovalData
-WindowsUpdateAttentionRequiredInfo = _winrt_windows_management_update.WindowsUpdateAttentionRequiredInfo
-WindowsUpdateAttentionRequiredReasonChangedEventArgs = _winrt_windows_management_update.WindowsUpdateAttentionRequiredReasonChangedEventArgs
-WindowsUpdateGetAdministratorResult = _winrt_windows_management_update.WindowsUpdateGetAdministratorResult
-WindowsUpdateItem = _winrt_windows_management_update.WindowsUpdateItem
-WindowsUpdateManager = _winrt_windows_management_update.WindowsUpdateManager
-WindowsUpdateProgressChangedEventArgs = _winrt_windows_management_update.WindowsUpdateProgressChangedEventArgs
-WindowsUpdateRestartRequestOptions = _winrt_windows_management_update.WindowsUpdateRestartRequestOptions
-WindowsUpdateScanCompletedEventArgs = _winrt_windows_management_update.WindowsUpdateScanCompletedEventArgs

@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_viewmanagement_core
+from winrt._winrt_windows_ui_viewmanagement_core import (
+    CoreFrameworkInputView,
+    CoreFrameworkInputViewAnimationStartingEventArgs,
+    CoreFrameworkInputViewOcclusionsChangedEventArgs,
+    CoreInputView,
+    CoreInputViewAnimationStartingEventArgs,
+    CoreInputViewHidingEventArgs,
+    CoreInputViewOcclusion,
+    CoreInputViewOcclusionsChangedEventArgs,
+    CoreInputViewShowingEventArgs,
+    CoreInputViewTransferringXYFocusEventArgs,
+    UISettingsController,
+)
 
 __all__ = [
     "CoreInputViewKind",
@@ -42,14 +54,3 @@ class CoreInputViewXYFocusTransferDirection(enum.IntEnum):
     DOWN = 2
     LEFT = 3
 
-CoreFrameworkInputView = _winrt_windows_ui_viewmanagement_core.CoreFrameworkInputView
-CoreFrameworkInputViewAnimationStartingEventArgs = _winrt_windows_ui_viewmanagement_core.CoreFrameworkInputViewAnimationStartingEventArgs
-CoreFrameworkInputViewOcclusionsChangedEventArgs = _winrt_windows_ui_viewmanagement_core.CoreFrameworkInputViewOcclusionsChangedEventArgs
-CoreInputView = _winrt_windows_ui_viewmanagement_core.CoreInputView
-CoreInputViewAnimationStartingEventArgs = _winrt_windows_ui_viewmanagement_core.CoreInputViewAnimationStartingEventArgs
-CoreInputViewHidingEventArgs = _winrt_windows_ui_viewmanagement_core.CoreInputViewHidingEventArgs
-CoreInputViewOcclusion = _winrt_windows_ui_viewmanagement_core.CoreInputViewOcclusion
-CoreInputViewOcclusionsChangedEventArgs = _winrt_windows_ui_viewmanagement_core.CoreInputViewOcclusionsChangedEventArgs
-CoreInputViewShowingEventArgs = _winrt_windows_ui_viewmanagement_core.CoreInputViewShowingEventArgs
-CoreInputViewTransferringXYFocusEventArgs = _winrt_windows_ui_viewmanagement_core.CoreInputViewTransferringXYFocusEventArgs
-UISettingsController = _winrt_windows_ui_viewmanagement_core.UISettingsController

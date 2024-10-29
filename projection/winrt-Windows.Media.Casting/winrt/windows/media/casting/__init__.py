@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_casting
+from winrt._winrt_windows_media_casting import (
+    CastingConnection,
+    CastingConnectionErrorOccurredEventArgs,
+    CastingDevice,
+    CastingDevicePicker,
+    CastingDevicePickerFilter,
+    CastingDeviceSelectedEventArgs,
+    CastingSource,
+)
 
 __all__ = [
     "CastingConnectionErrorStatus",
@@ -40,10 +48,3 @@ class CastingPlaybackTypes(enum.IntFlag):
     VIDEO = 0x2
     PICTURE = 0x4
 
-CastingConnection = _winrt_windows_media_casting.CastingConnection
-CastingConnectionErrorOccurredEventArgs = _winrt_windows_media_casting.CastingConnectionErrorOccurredEventArgs
-CastingDevice = _winrt_windows_media_casting.CastingDevice
-CastingDevicePicker = _winrt_windows_media_casting.CastingDevicePicker
-CastingDevicePickerFilter = _winrt_windows_media_casting.CastingDevicePickerFilter
-CastingDeviceSelectedEventArgs = _winrt_windows_media_casting.CastingDeviceSelectedEventArgs
-CastingSource = _winrt_windows_media_casting.CastingSource

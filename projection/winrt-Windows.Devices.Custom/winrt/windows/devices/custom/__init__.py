@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_custom
+from winrt._winrt_windows_devices_custom import (
+    CustomDevice,
+    IOControlCode,
+    KnownDeviceTypes,
+    IIOControlCode,
+)
 
 __all__ = [
     "DeviceAccessMode",
@@ -37,7 +42,3 @@ class IOControlBufferingMethod(enum.IntEnum):
     DIRECT_OUTPUT = 2
     NEITHER = 3
 
-CustomDevice = _winrt_windows_devices_custom.CustomDevice
-IOControlCode = _winrt_windows_devices_custom.IOControlCode
-KnownDeviceTypes = _winrt_windows_devices_custom.KnownDeviceTypes
-IIOControlCode = _winrt_windows_devices_custom.IIOControlCode

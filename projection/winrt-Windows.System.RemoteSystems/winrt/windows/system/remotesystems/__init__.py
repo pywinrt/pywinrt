@@ -3,7 +3,49 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_remotesystems
+from winrt._winrt_windows_system_remotesystems import (
+    KnownRemoteSystemCapabilities,
+    RemoteSystem,
+    RemoteSystemAddedEventArgs,
+    RemoteSystemApp,
+    RemoteSystemAppRegistration,
+    RemoteSystemAuthorizationKindFilter,
+    RemoteSystemConnectionInfo,
+    RemoteSystemConnectionRequest,
+    RemoteSystemDiscoveryTypeFilter,
+    RemoteSystemEnumerationCompletedEventArgs,
+    RemoteSystemKindFilter,
+    RemoteSystemKinds,
+    RemoteSystemRemovedEventArgs,
+    RemoteSystemSession,
+    RemoteSystemSessionAddedEventArgs,
+    RemoteSystemSessionController,
+    RemoteSystemSessionCreationResult,
+    RemoteSystemSessionDisconnectedEventArgs,
+    RemoteSystemSessionInfo,
+    RemoteSystemSessionInvitation,
+    RemoteSystemSessionInvitationListener,
+    RemoteSystemSessionInvitationReceivedEventArgs,
+    RemoteSystemSessionJoinRequest,
+    RemoteSystemSessionJoinRequestedEventArgs,
+    RemoteSystemSessionJoinResult,
+    RemoteSystemSessionMessageChannel,
+    RemoteSystemSessionOptions,
+    RemoteSystemSessionParticipant,
+    RemoteSystemSessionParticipantAddedEventArgs,
+    RemoteSystemSessionParticipantRemovedEventArgs,
+    RemoteSystemSessionParticipantWatcher,
+    RemoteSystemSessionRemovedEventArgs,
+    RemoteSystemSessionUpdatedEventArgs,
+    RemoteSystemSessionValueSetReceivedEventArgs,
+    RemoteSystemSessionWatcher,
+    RemoteSystemStatusTypeFilter,
+    RemoteSystemUpdatedEventArgs,
+    RemoteSystemWatcher,
+    RemoteSystemWatcherErrorOccurredEventArgs,
+    RemoteSystemWebAccountFilter,
+    IRemoteSystemFilter,
+)
 
 __all__ = [
     "RemoteSystemAccessStatus",
@@ -137,44 +179,3 @@ class RemoteSystemWatcherError(enum.IntEnum):
     INTERNET_NOT_AVAILABLE = 1
     AUTHENTICATION_ERROR = 2
 
-KnownRemoteSystemCapabilities = _winrt_windows_system_remotesystems.KnownRemoteSystemCapabilities
-RemoteSystem = _winrt_windows_system_remotesystems.RemoteSystem
-RemoteSystemAddedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemAddedEventArgs
-RemoteSystemApp = _winrt_windows_system_remotesystems.RemoteSystemApp
-RemoteSystemAppRegistration = _winrt_windows_system_remotesystems.RemoteSystemAppRegistration
-RemoteSystemAuthorizationKindFilter = _winrt_windows_system_remotesystems.RemoteSystemAuthorizationKindFilter
-RemoteSystemConnectionInfo = _winrt_windows_system_remotesystems.RemoteSystemConnectionInfo
-RemoteSystemConnectionRequest = _winrt_windows_system_remotesystems.RemoteSystemConnectionRequest
-RemoteSystemDiscoveryTypeFilter = _winrt_windows_system_remotesystems.RemoteSystemDiscoveryTypeFilter
-RemoteSystemEnumerationCompletedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemEnumerationCompletedEventArgs
-RemoteSystemKindFilter = _winrt_windows_system_remotesystems.RemoteSystemKindFilter
-RemoteSystemKinds = _winrt_windows_system_remotesystems.RemoteSystemKinds
-RemoteSystemRemovedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemRemovedEventArgs
-RemoteSystemSession = _winrt_windows_system_remotesystems.RemoteSystemSession
-RemoteSystemSessionAddedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionAddedEventArgs
-RemoteSystemSessionController = _winrt_windows_system_remotesystems.RemoteSystemSessionController
-RemoteSystemSessionCreationResult = _winrt_windows_system_remotesystems.RemoteSystemSessionCreationResult
-RemoteSystemSessionDisconnectedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionDisconnectedEventArgs
-RemoteSystemSessionInfo = _winrt_windows_system_remotesystems.RemoteSystemSessionInfo
-RemoteSystemSessionInvitation = _winrt_windows_system_remotesystems.RemoteSystemSessionInvitation
-RemoteSystemSessionInvitationListener = _winrt_windows_system_remotesystems.RemoteSystemSessionInvitationListener
-RemoteSystemSessionInvitationReceivedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionInvitationReceivedEventArgs
-RemoteSystemSessionJoinRequest = _winrt_windows_system_remotesystems.RemoteSystemSessionJoinRequest
-RemoteSystemSessionJoinRequestedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionJoinRequestedEventArgs
-RemoteSystemSessionJoinResult = _winrt_windows_system_remotesystems.RemoteSystemSessionJoinResult
-RemoteSystemSessionMessageChannel = _winrt_windows_system_remotesystems.RemoteSystemSessionMessageChannel
-RemoteSystemSessionOptions = _winrt_windows_system_remotesystems.RemoteSystemSessionOptions
-RemoteSystemSessionParticipant = _winrt_windows_system_remotesystems.RemoteSystemSessionParticipant
-RemoteSystemSessionParticipantAddedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionParticipantAddedEventArgs
-RemoteSystemSessionParticipantRemovedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionParticipantRemovedEventArgs
-RemoteSystemSessionParticipantWatcher = _winrt_windows_system_remotesystems.RemoteSystemSessionParticipantWatcher
-RemoteSystemSessionRemovedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionRemovedEventArgs
-RemoteSystemSessionUpdatedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionUpdatedEventArgs
-RemoteSystemSessionValueSetReceivedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemSessionValueSetReceivedEventArgs
-RemoteSystemSessionWatcher = _winrt_windows_system_remotesystems.RemoteSystemSessionWatcher
-RemoteSystemStatusTypeFilter = _winrt_windows_system_remotesystems.RemoteSystemStatusTypeFilter
-RemoteSystemUpdatedEventArgs = _winrt_windows_system_remotesystems.RemoteSystemUpdatedEventArgs
-RemoteSystemWatcher = _winrt_windows_system_remotesystems.RemoteSystemWatcher
-RemoteSystemWatcherErrorOccurredEventArgs = _winrt_windows_system_remotesystems.RemoteSystemWatcherErrorOccurredEventArgs
-RemoteSystemWebAccountFilter = _winrt_windows_system_remotesystems.RemoteSystemWebAccountFilter
-IRemoteSystemFilter = _winrt_windows_system_remotesystems.IRemoteSystemFilter

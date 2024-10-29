@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_serialcommunication
+from winrt._winrt_windows_devices_serialcommunication import (
+    ErrorReceivedEventArgs,
+    PinChangedEventArgs,
+    SerialDevice,
+)
 
 __all__ = [
     "SerialError",
@@ -48,6 +52,3 @@ class SerialStopBitCount(enum.IntEnum):
     ONE_POINT_FIVE = 1
     TWO = 2
 
-ErrorReceivedEventArgs = _winrt_windows_devices_serialcommunication.ErrorReceivedEventArgs
-PinChangedEventArgs = _winrt_windows_devices_serialcommunication.PinChangedEventArgs
-SerialDevice = _winrt_windows_devices_serialcommunication.SerialDevice

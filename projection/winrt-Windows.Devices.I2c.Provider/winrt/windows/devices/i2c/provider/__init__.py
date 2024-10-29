@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_i2c_provider
+from winrt._winrt_windows_devices_i2c_provider import (
+    ProviderI2cTransferResult,
+    ProviderI2cConnectionSettings,
+    II2cControllerProvider,
+    II2cDeviceProvider,
+    II2cProvider,
+)
 
 __all__ = [
     "ProviderI2cBusSpeed",
@@ -29,8 +35,3 @@ class ProviderI2cTransferStatus(enum.IntEnum):
     PARTIAL_TRANSFER = 1
     SLAVE_ADDRESS_NOT_ACKNOWLEDGED = 2
 
-ProviderI2cTransferResult = _winrt_windows_devices_i2c_provider.ProviderI2cTransferResult
-ProviderI2cConnectionSettings = _winrt_windows_devices_i2c_provider.ProviderI2cConnectionSettings
-II2cControllerProvider = _winrt_windows_devices_i2c_provider.II2cControllerProvider
-II2cDeviceProvider = _winrt_windows_devices_i2c_provider.II2cDeviceProvider
-II2cProvider = _winrt_windows_devices_i2c_provider.II2cProvider

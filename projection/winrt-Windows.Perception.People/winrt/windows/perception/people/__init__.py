@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_perception_people
+from winrt._winrt_windows_perception_people import (
+    HandMeshVertex,
+    JointPose,
+    EyesPose,
+    HandMeshObserver,
+    HandMeshVertexState,
+    HandPose,
+    HeadPose,
+)
 
 __all__ = [
     "HandJointKind",
@@ -49,10 +57,3 @@ class JointPoseAccuracy(enum.IntEnum):
     HIGH = 0
     APPROXIMATE = 1
 
-HandMeshVertex = _winrt_windows_perception_people.HandMeshVertex
-JointPose = _winrt_windows_perception_people.JointPose
-EyesPose = _winrt_windows_perception_people.EyesPose
-HandMeshObserver = _winrt_windows_perception_people.HandMeshObserver
-HandMeshVertexState = _winrt_windows_perception_people.HandMeshVertexState
-HandPose = _winrt_windows_perception_people.HandPose
-HeadPose = _winrt_windows_perception_people.HeadPose

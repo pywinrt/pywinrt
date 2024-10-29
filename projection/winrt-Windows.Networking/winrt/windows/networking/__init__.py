@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking
+from winrt._winrt_windows_networking import (
+    EndpointPair,
+    HostName,
+)
 
 __all__ = [
     "DomainNameType",
@@ -27,5 +30,3 @@ class HostNameType(enum.IntEnum):
     IPV6 = 2
     BLUETOOTH = 3
 
-EndpointPair = _winrt_windows_networking.EndpointPair
-HostName = _winrt_windows_networking.HostName

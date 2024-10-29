@@ -3,7 +3,31 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_cryptography_certificates
+from winrt._winrt_windows_security_cryptography_certificates import (
+    Certificate,
+    CertificateChain,
+    CertificateEnrollmentManager,
+    CertificateExtension,
+    CertificateKeyUsages,
+    CertificateQuery,
+    CertificateRequestProperties,
+    CertificateStore,
+    CertificateStores,
+    ChainBuildingParameters,
+    ChainValidationParameters,
+    CmsAttachedSignature,
+    CmsDetachedSignature,
+    CmsSignerInfo,
+    CmsTimestampInfo,
+    KeyAlgorithmNames,
+    KeyAttestationHelper,
+    KeyStorageProviderNames,
+    PfxImportParameters,
+    StandardCertificateStoreNames,
+    SubjectAlternativeNameInfo,
+    UserCertificateEnrollmentManager,
+    UserCertificateStore,
+)
 
 __all__ = [
     "CertificateChainPolicy",
@@ -94,26 +118,3 @@ class SignatureValidationResult(enum.IntEnum):
     INVALID_SIGNATURE = 3
     OTHER_ERRORS = 4
 
-Certificate = _winrt_windows_security_cryptography_certificates.Certificate
-CertificateChain = _winrt_windows_security_cryptography_certificates.CertificateChain
-CertificateEnrollmentManager = _winrt_windows_security_cryptography_certificates.CertificateEnrollmentManager
-CertificateExtension = _winrt_windows_security_cryptography_certificates.CertificateExtension
-CertificateKeyUsages = _winrt_windows_security_cryptography_certificates.CertificateKeyUsages
-CertificateQuery = _winrt_windows_security_cryptography_certificates.CertificateQuery
-CertificateRequestProperties = _winrt_windows_security_cryptography_certificates.CertificateRequestProperties
-CertificateStore = _winrt_windows_security_cryptography_certificates.CertificateStore
-CertificateStores = _winrt_windows_security_cryptography_certificates.CertificateStores
-ChainBuildingParameters = _winrt_windows_security_cryptography_certificates.ChainBuildingParameters
-ChainValidationParameters = _winrt_windows_security_cryptography_certificates.ChainValidationParameters
-CmsAttachedSignature = _winrt_windows_security_cryptography_certificates.CmsAttachedSignature
-CmsDetachedSignature = _winrt_windows_security_cryptography_certificates.CmsDetachedSignature
-CmsSignerInfo = _winrt_windows_security_cryptography_certificates.CmsSignerInfo
-CmsTimestampInfo = _winrt_windows_security_cryptography_certificates.CmsTimestampInfo
-KeyAlgorithmNames = _winrt_windows_security_cryptography_certificates.KeyAlgorithmNames
-KeyAttestationHelper = _winrt_windows_security_cryptography_certificates.KeyAttestationHelper
-KeyStorageProviderNames = _winrt_windows_security_cryptography_certificates.KeyStorageProviderNames
-PfxImportParameters = _winrt_windows_security_cryptography_certificates.PfxImportParameters
-StandardCertificateStoreNames = _winrt_windows_security_cryptography_certificates.StandardCertificateStoreNames
-SubjectAlternativeNameInfo = _winrt_windows_security_cryptography_certificates.SubjectAlternativeNameInfo
-UserCertificateEnrollmentManager = _winrt_windows_security_cryptography_certificates.UserCertificateEnrollmentManager
-UserCertificateStore = _winrt_windows_security_cryptography_certificates.UserCertificateStore

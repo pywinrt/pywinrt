@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_diagnostics_deviceportal
+from winrt._winrt_windows_system_diagnostics_deviceportal import (
+    DevicePortalConnection,
+    DevicePortalConnectionClosedEventArgs,
+    DevicePortalConnectionRequestReceivedEventArgs,
+)
 
 __all__ = [
     "DevicePortalConnectionClosedReason",
@@ -20,6 +24,3 @@ class DevicePortalConnectionClosedReason(enum.IntEnum):
     USER_NOT_PRESENT = 4
     SERVICE_TERMINATED = 5
 
-DevicePortalConnection = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnection
-DevicePortalConnectionClosedEventArgs = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionClosedEventArgs
-DevicePortalConnectionRequestReceivedEventArgs = _winrt_windows_system_diagnostics_deviceportal.DevicePortalConnectionRequestReceivedEventArgs

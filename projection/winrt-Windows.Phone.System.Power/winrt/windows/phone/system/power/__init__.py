@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_system_power
+from winrt._winrt_windows_phone_system_power import (
+    PowerManager,
+)
 
 __all__ = [
     "PowerSavingMode",
@@ -14,4 +16,3 @@ class PowerSavingMode(enum.IntEnum):
     OFF = 0
     ON = 1
 
-PowerManager = _winrt_windows_phone_system_power.PowerManager

@@ -5,7 +5,37 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_devices_smartcards
+from winrt._winrt_windows_devices_smartcards import (
+    CardAddedEventArgs,
+    CardRemovedEventArgs,
+    KnownSmartCardAppletIds,
+    SmartCard,
+    SmartCardAppletIdGroup,
+    SmartCardAppletIdGroupRegistration,
+    SmartCardAutomaticResponseApdu,
+    SmartCardChallengeContext,
+    SmartCardConnection,
+    SmartCardCryptogramGenerator,
+    SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult,
+    SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult,
+    SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult,
+    SmartCardCryptogramMaterialCharacteristics,
+    SmartCardCryptogramMaterialPackageCharacteristics,
+    SmartCardCryptogramMaterialPossessionProof,
+    SmartCardCryptogramPlacementStep,
+    SmartCardCryptogramStorageKeyCharacteristics,
+    SmartCardCryptogramStorageKeyInfo,
+    SmartCardEmulator,
+    SmartCardEmulatorApduReceivedEventArgs,
+    SmartCardEmulatorConnectionDeactivatedEventArgs,
+    SmartCardEmulatorConnectionProperties,
+    SmartCardPinPolicy,
+    SmartCardPinResetDeferral,
+    SmartCardPinResetRequest,
+    SmartCardProvisioning,
+    SmartCardReader,
+    SmartCardTriggerDetails,
+)
 
 __all__ = [
     "SmartCardActivationPolicyChangeResult",
@@ -214,33 +244,4 @@ class SmartCardUnlockPromptingBehavior(enum.IntEnum):
     REQUIRE_UNLOCK_PROMPT = 1
     PREVENT_UNLOCK_PROMPT = 2
 
-CardAddedEventArgs = _winrt_windows_devices_smartcards.CardAddedEventArgs
-CardRemovedEventArgs = _winrt_windows_devices_smartcards.CardRemovedEventArgs
-KnownSmartCardAppletIds = _winrt_windows_devices_smartcards.KnownSmartCardAppletIds
-SmartCard = _winrt_windows_devices_smartcards.SmartCard
-SmartCardAppletIdGroup = _winrt_windows_devices_smartcards.SmartCardAppletIdGroup
-SmartCardAppletIdGroupRegistration = _winrt_windows_devices_smartcards.SmartCardAppletIdGroupRegistration
-SmartCardAutomaticResponseApdu = _winrt_windows_devices_smartcards.SmartCardAutomaticResponseApdu
-SmartCardChallengeContext = _winrt_windows_devices_smartcards.SmartCardChallengeContext
-SmartCardConnection = _winrt_windows_devices_smartcards.SmartCardConnection
-SmartCardCryptogramGenerator = _winrt_windows_devices_smartcards.SmartCardCryptogramGenerator
-SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult = _winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialCharacteristicsResult
-SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult = _winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramMaterialPackageCharacteristicsResult
-SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult = _winrt_windows_devices_smartcards.SmartCardCryptogramGetAllCryptogramStorageKeyCharacteristicsResult
-SmartCardCryptogramMaterialCharacteristics = _winrt_windows_devices_smartcards.SmartCardCryptogramMaterialCharacteristics
-SmartCardCryptogramMaterialPackageCharacteristics = _winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPackageCharacteristics
-SmartCardCryptogramMaterialPossessionProof = _winrt_windows_devices_smartcards.SmartCardCryptogramMaterialPossessionProof
-SmartCardCryptogramPlacementStep = _winrt_windows_devices_smartcards.SmartCardCryptogramPlacementStep
-SmartCardCryptogramStorageKeyCharacteristics = _winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyCharacteristics
-SmartCardCryptogramStorageKeyInfo = _winrt_windows_devices_smartcards.SmartCardCryptogramStorageKeyInfo
-SmartCardEmulator = _winrt_windows_devices_smartcards.SmartCardEmulator
-SmartCardEmulatorApduReceivedEventArgs = _winrt_windows_devices_smartcards.SmartCardEmulatorApduReceivedEventArgs
-SmartCardEmulatorConnectionDeactivatedEventArgs = _winrt_windows_devices_smartcards.SmartCardEmulatorConnectionDeactivatedEventArgs
-SmartCardEmulatorConnectionProperties = _winrt_windows_devices_smartcards.SmartCardEmulatorConnectionProperties
-SmartCardPinPolicy = _winrt_windows_devices_smartcards.SmartCardPinPolicy
-SmartCardPinResetDeferral = _winrt_windows_devices_smartcards.SmartCardPinResetDeferral
-SmartCardPinResetRequest = _winrt_windows_devices_smartcards.SmartCardPinResetRequest
-SmartCardProvisioning = _winrt_windows_devices_smartcards.SmartCardProvisioning
-SmartCardReader = _winrt_windows_devices_smartcards.SmartCardReader
-SmartCardTriggerDetails = _winrt_windows_devices_smartcards.SmartCardTriggerDetails
 SmartCardPinResetHandler = typing.Callable[[SmartCardProvisioning, SmartCardPinResetRequest], None]

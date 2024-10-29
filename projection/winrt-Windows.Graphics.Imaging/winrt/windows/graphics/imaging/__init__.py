@@ -3,7 +3,27 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_imaging
+from winrt._winrt_windows_graphics_imaging import (
+    BitmapBounds,
+    BitmapPlaneDescription,
+    BitmapSize,
+    BitmapBuffer,
+    BitmapCodecInformation,
+    BitmapDecoder,
+    BitmapEncoder,
+    BitmapFrame,
+    BitmapProperties,
+    BitmapPropertiesView,
+    BitmapPropertySet,
+    BitmapTransform,
+    BitmapTypedValue,
+    ImageStream,
+    PixelDataProvider,
+    SoftwareBitmap,
+    IBitmapFrame,
+    IBitmapFrameWithSoftwareBitmap,
+    IBitmapPropertiesView,
+)
 
 __all__ = [
     "BitmapAlphaMode",
@@ -109,23 +129,4 @@ class TiffCompressionMode(enum.IntEnum):
     ZIP = 6
     LZWH_DIFFERENCING = 7
 
-BitmapBounds = _winrt_windows_graphics_imaging.BitmapBounds
-BitmapPlaneDescription = _winrt_windows_graphics_imaging.BitmapPlaneDescription
-BitmapSize = _winrt_windows_graphics_imaging.BitmapSize
-BitmapBuffer = _winrt_windows_graphics_imaging.BitmapBuffer
-BitmapCodecInformation = _winrt_windows_graphics_imaging.BitmapCodecInformation
-BitmapDecoder = _winrt_windows_graphics_imaging.BitmapDecoder
-BitmapEncoder = _winrt_windows_graphics_imaging.BitmapEncoder
-BitmapFrame = _winrt_windows_graphics_imaging.BitmapFrame
-BitmapProperties = _winrt_windows_graphics_imaging.BitmapProperties
-BitmapPropertiesView = _winrt_windows_graphics_imaging.BitmapPropertiesView
-BitmapPropertySet = _winrt_windows_graphics_imaging.BitmapPropertySet
 winrt.system._mixin_mutable_mapping(BitmapPropertySet)
-BitmapTransform = _winrt_windows_graphics_imaging.BitmapTransform
-BitmapTypedValue = _winrt_windows_graphics_imaging.BitmapTypedValue
-ImageStream = _winrt_windows_graphics_imaging.ImageStream
-PixelDataProvider = _winrt_windows_graphics_imaging.PixelDataProvider
-SoftwareBitmap = _winrt_windows_graphics_imaging.SoftwareBitmap
-IBitmapFrame = _winrt_windows_graphics_imaging.IBitmapFrame
-IBitmapFrameWithSoftwareBitmap = _winrt_windows_graphics_imaging.IBitmapFrameWithSoftwareBitmap
-IBitmapPropertiesView = _winrt_windows_graphics_imaging.IBitmapPropertiesView

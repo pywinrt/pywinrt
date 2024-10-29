@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_extendedexecution
+from winrt._winrt_windows_applicationmodel_extendedexecution import (
+    ExtendedExecutionRevokedEventArgs,
+    ExtendedExecutionSession,
+)
 
 __all__ = [
     "ExtendedExecutionReason",
@@ -26,5 +29,3 @@ class ExtendedExecutionRevokedReason(enum.IntEnum):
     RESUMED = 0
     SYSTEM_POLICY = 1
 
-ExtendedExecutionRevokedEventArgs = _winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionRevokedEventArgs
-ExtendedExecutionSession = _winrt_windows_applicationmodel_extendedexecution.ExtendedExecutionSession

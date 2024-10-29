@@ -3,7 +3,28 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking_backgroundtransfer
+from winrt._winrt_windows_networking_backgroundtransfer import (
+    BackgroundDownloadProgress,
+    BackgroundTransferFileRange,
+    BackgroundUploadProgress,
+    BackgroundDownloader,
+    BackgroundTransferCompletionGroup,
+    BackgroundTransferCompletionGroupTriggerDetails,
+    BackgroundTransferContentPart,
+    BackgroundTransferError,
+    BackgroundTransferGroup,
+    BackgroundTransferRangesDownloadedEventArgs,
+    BackgroundUploader,
+    ContentPrefetcher,
+    DownloadOperation,
+    ResponseInformation,
+    UnconstrainedTransferRequestResult,
+    UploadOperation,
+    IBackgroundTransferBase,
+    IBackgroundTransferContentPartFactory,
+    IBackgroundTransferOperation,
+    IBackgroundTransferOperationPriority,
+)
 
 __all__ = [
     "BackgroundTransferBehavior",
@@ -58,23 +79,3 @@ class BackgroundTransferStatus(enum.IntEnum):
     PAUSED_RECOVERABLE_WEB_ERROR_STATUS = 8
     PAUSED_SYSTEM_POLICY = 32
 
-BackgroundDownloadProgress = _winrt_windows_networking_backgroundtransfer.BackgroundDownloadProgress
-BackgroundTransferFileRange = _winrt_windows_networking_backgroundtransfer.BackgroundTransferFileRange
-BackgroundUploadProgress = _winrt_windows_networking_backgroundtransfer.BackgroundUploadProgress
-BackgroundDownloader = _winrt_windows_networking_backgroundtransfer.BackgroundDownloader
-BackgroundTransferCompletionGroup = _winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroup
-BackgroundTransferCompletionGroupTriggerDetails = _winrt_windows_networking_backgroundtransfer.BackgroundTransferCompletionGroupTriggerDetails
-BackgroundTransferContentPart = _winrt_windows_networking_backgroundtransfer.BackgroundTransferContentPart
-BackgroundTransferError = _winrt_windows_networking_backgroundtransfer.BackgroundTransferError
-BackgroundTransferGroup = _winrt_windows_networking_backgroundtransfer.BackgroundTransferGroup
-BackgroundTransferRangesDownloadedEventArgs = _winrt_windows_networking_backgroundtransfer.BackgroundTransferRangesDownloadedEventArgs
-BackgroundUploader = _winrt_windows_networking_backgroundtransfer.BackgroundUploader
-ContentPrefetcher = _winrt_windows_networking_backgroundtransfer.ContentPrefetcher
-DownloadOperation = _winrt_windows_networking_backgroundtransfer.DownloadOperation
-ResponseInformation = _winrt_windows_networking_backgroundtransfer.ResponseInformation
-UnconstrainedTransferRequestResult = _winrt_windows_networking_backgroundtransfer.UnconstrainedTransferRequestResult
-UploadOperation = _winrt_windows_networking_backgroundtransfer.UploadOperation
-IBackgroundTransferBase = _winrt_windows_networking_backgroundtransfer.IBackgroundTransferBase
-IBackgroundTransferContentPartFactory = _winrt_windows_networking_backgroundtransfer.IBackgroundTransferContentPartFactory
-IBackgroundTransferOperation = _winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperation
-IBackgroundTransferOperationPriority = _winrt_windows_networking_backgroundtransfer.IBackgroundTransferOperationPriority

@@ -5,7 +5,16 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_management_setup
+from winrt._winrt_windows_management_setup import (
+    AgentProvisioningProgressReport,
+    DeploymentSessionConnectionChangedEventArgs,
+    DeploymentSessionHeartbeatRequestedEventArgs,
+    DeploymentSessionStateChangedEventArgs,
+    DeploymentWorkload,
+    DeploymentWorkloadBatch,
+    DevicePreparationExecutionContext,
+    MachineProvisioningProgressReporter,
+)
 
 __all__ = [
     "DeploymentAgentProgressState",
@@ -56,12 +65,4 @@ class DeploymentWorkloadState(enum.IntEnum):
     UNINSTALLED = 6
     REBOOT_REQUIRED = 7
 
-AgentProvisioningProgressReport = _winrt_windows_management_setup.AgentProvisioningProgressReport
-DeploymentSessionConnectionChangedEventArgs = _winrt_windows_management_setup.DeploymentSessionConnectionChangedEventArgs
-DeploymentSessionHeartbeatRequestedEventArgs = _winrt_windows_management_setup.DeploymentSessionHeartbeatRequestedEventArgs
-DeploymentSessionStateChangedEventArgs = _winrt_windows_management_setup.DeploymentSessionStateChangedEventArgs
-DeploymentWorkload = _winrt_windows_management_setup.DeploymentWorkload
-DeploymentWorkloadBatch = _winrt_windows_management_setup.DeploymentWorkloadBatch
-DevicePreparationExecutionContext = _winrt_windows_management_setup.DevicePreparationExecutionContext
-MachineProvisioningProgressReporter = _winrt_windows_management_setup.MachineProvisioningProgressReporter
 DeploymentSessionHeartbeatRequested = typing.Callable[[DeploymentSessionHeartbeatRequestedEventArgs], None]

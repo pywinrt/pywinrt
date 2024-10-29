@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_userdatatasks
+from winrt._winrt_windows_applicationmodel_userdatatasks import (
+    UserDataTask,
+    UserDataTaskBatch,
+    UserDataTaskList,
+    UserDataTaskListLimitedWriteOperations,
+    UserDataTaskListSyncManager,
+    UserDataTaskManager,
+    UserDataTaskQueryOptions,
+    UserDataTaskReader,
+    UserDataTaskRecurrenceProperties,
+    UserDataTaskRegenerationProperties,
+    UserDataTaskStore,
+)
 
 __all__ = [
     "UserDataTaskDaysOfWeek",
@@ -111,14 +123,3 @@ class UserDataTaskWeekOfMonth(enum.IntEnum):
     FOURTH = 3
     LAST = 4
 
-UserDataTask = _winrt_windows_applicationmodel_userdatatasks.UserDataTask
-UserDataTaskBatch = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskBatch
-UserDataTaskList = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskList
-UserDataTaskListLimitedWriteOperations = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskListLimitedWriteOperations
-UserDataTaskListSyncManager = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskListSyncManager
-UserDataTaskManager = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskManager
-UserDataTaskQueryOptions = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskQueryOptions
-UserDataTaskReader = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskReader
-UserDataTaskRecurrenceProperties = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskRecurrenceProperties
-UserDataTaskRegenerationProperties = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskRegenerationProperties
-UserDataTaskStore = _winrt_windows_applicationmodel_userdatatasks.UserDataTaskStore

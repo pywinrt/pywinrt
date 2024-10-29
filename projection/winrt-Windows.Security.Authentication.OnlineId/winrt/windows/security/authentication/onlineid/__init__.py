@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_authentication_onlineid
+from winrt._winrt_windows_security_authentication_onlineid import (
+    OnlineIdAuthenticator,
+    OnlineIdServiceTicket,
+    OnlineIdServiceTicketRequest,
+    OnlineIdSystemAuthenticator,
+    OnlineIdSystemAuthenticatorForUser,
+    OnlineIdSystemIdentity,
+    OnlineIdSystemTicketResult,
+    SignOutUserOperation,
+    UserAuthenticationOperation,
+    UserIdentity,
+)
 
 __all__ = [
     "CredentialPromptType",
@@ -30,13 +41,3 @@ class OnlineIdSystemTicketStatus(enum.IntEnum):
     ERROR = 1
     SERVICE_CONNECTION_ERROR = 2
 
-OnlineIdAuthenticator = _winrt_windows_security_authentication_onlineid.OnlineIdAuthenticator
-OnlineIdServiceTicket = _winrt_windows_security_authentication_onlineid.OnlineIdServiceTicket
-OnlineIdServiceTicketRequest = _winrt_windows_security_authentication_onlineid.OnlineIdServiceTicketRequest
-OnlineIdSystemAuthenticator = _winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticator
-OnlineIdSystemAuthenticatorForUser = _winrt_windows_security_authentication_onlineid.OnlineIdSystemAuthenticatorForUser
-OnlineIdSystemIdentity = _winrt_windows_security_authentication_onlineid.OnlineIdSystemIdentity
-OnlineIdSystemTicketResult = _winrt_windows_security_authentication_onlineid.OnlineIdSystemTicketResult
-SignOutUserOperation = _winrt_windows_security_authentication_onlineid.SignOutUserOperation
-UserAuthenticationOperation = _winrt_windows_security_authentication_onlineid.UserAuthenticationOperation
-UserIdentity = _winrt_windows_security_authentication_onlineid.UserIdentity

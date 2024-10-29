@@ -5,7 +5,19 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_media_protection
+from winrt._winrt_windows_media_protection import (
+    ComponentLoadFailedEventArgs,
+    ComponentRenewal,
+    HdcpSession,
+    MediaProtectionManager,
+    MediaProtectionPMPServer,
+    MediaProtectionServiceCompletion,
+    ProtectionCapabilities,
+    RevocationAndRenewalInformation,
+    RevocationAndRenewalItem,
+    ServiceRequestedEventArgs,
+    IMediaProtectionServiceRequest,
+)
 
 __all__ = [
     "GraphicsTrustStatus",
@@ -78,17 +90,6 @@ class RevocationAndRenewalReasons(enum.IntFlag):
     COMPONENT_SIGNED_WITH_TEST_CERTIFICATE = 0x1000000
     ENCRYPTION_FAILURE = 0x10000000
 
-ComponentLoadFailedEventArgs = _winrt_windows_media_protection.ComponentLoadFailedEventArgs
-ComponentRenewal = _winrt_windows_media_protection.ComponentRenewal
-HdcpSession = _winrt_windows_media_protection.HdcpSession
-MediaProtectionManager = _winrt_windows_media_protection.MediaProtectionManager
-MediaProtectionPMPServer = _winrt_windows_media_protection.MediaProtectionPMPServer
-MediaProtectionServiceCompletion = _winrt_windows_media_protection.MediaProtectionServiceCompletion
-ProtectionCapabilities = _winrt_windows_media_protection.ProtectionCapabilities
-RevocationAndRenewalInformation = _winrt_windows_media_protection.RevocationAndRenewalInformation
-RevocationAndRenewalItem = _winrt_windows_media_protection.RevocationAndRenewalItem
-ServiceRequestedEventArgs = _winrt_windows_media_protection.ServiceRequestedEventArgs
-IMediaProtectionServiceRequest = _winrt_windows_media_protection.IMediaProtectionServiceRequest
 ComponentLoadFailedEventHandler = typing.Callable[[MediaProtectionManager, ComponentLoadFailedEventArgs], None]
 RebootNeededEventHandler = typing.Callable[[MediaProtectionManager], None]
 ServiceRequestedEventHandler = typing.Callable[[MediaProtectionManager, ServiceRequestedEventArgs], None]

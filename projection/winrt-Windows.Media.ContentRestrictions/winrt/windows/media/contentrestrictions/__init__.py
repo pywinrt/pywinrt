@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_contentrestrictions
+from winrt._winrt_windows_media_contentrestrictions import (
+    ContentRestrictionsBrowsePolicy,
+    RatedContentDescription,
+    RatedContentRestrictions,
+)
 
 __all__ = [
     "ContentAccessRestrictionLevel",
@@ -27,6 +31,3 @@ class RatedContentCategory(enum.IntEnum):
     TELEVISION = 4
     MUSIC = 5
 
-ContentRestrictionsBrowsePolicy = _winrt_windows_media_contentrestrictions.ContentRestrictionsBrowsePolicy
-RatedContentDescription = _winrt_windows_media_contentrestrictions.RatedContentDescription
-RatedContentRestrictions = _winrt_windows_media_contentrestrictions.RatedContentRestrictions

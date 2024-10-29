@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_applifecycle
+from winrt._winrt_microsoft_windows_applifecycle import (
+    ActivationRegistrationManager,
+    AppActivationArguments,
+    AppInstance,
+)
 
 __all__ = [
     "ExtendedActivationKind",
@@ -60,6 +64,3 @@ class ExtendedActivationKind(enum.IntEnum):
     PUSH = 5000
     APP_NOTIFICATION = 5001
 
-ActivationRegistrationManager = _winrt_microsoft_windows_applifecycle.ActivationRegistrationManager
-AppActivationArguments = _winrt_microsoft_windows_applifecycle.AppActivationArguments
-AppInstance = _winrt_microsoft_windows_applifecycle.AppInstance

@@ -3,7 +3,36 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_input_spatial
+from winrt._winrt_windows_ui_input_spatial import (
+    SpatialGestureRecognizer,
+    SpatialHoldCanceledEventArgs,
+    SpatialHoldCompletedEventArgs,
+    SpatialHoldStartedEventArgs,
+    SpatialInteraction,
+    SpatialInteractionController,
+    SpatialInteractionControllerProperties,
+    SpatialInteractionDetectedEventArgs,
+    SpatialInteractionManager,
+    SpatialInteractionSource,
+    SpatialInteractionSourceEventArgs,
+    SpatialInteractionSourceLocation,
+    SpatialInteractionSourceProperties,
+    SpatialInteractionSourceState,
+    SpatialManipulationCanceledEventArgs,
+    SpatialManipulationCompletedEventArgs,
+    SpatialManipulationDelta,
+    SpatialManipulationStartedEventArgs,
+    SpatialManipulationUpdatedEventArgs,
+    SpatialNavigationCanceledEventArgs,
+    SpatialNavigationCompletedEventArgs,
+    SpatialNavigationStartedEventArgs,
+    SpatialNavigationUpdatedEventArgs,
+    SpatialPointerInteractionSourcePose,
+    SpatialPointerPose,
+    SpatialRecognitionEndedEventArgs,
+    SpatialRecognitionStartedEventArgs,
+    SpatialTappedEventArgs,
+)
 
 __all__ = [
     "SpatialGestureSettings",
@@ -77,31 +106,3 @@ class SpatialInteractionSourcePositionAccuracy(enum.IntEnum):
     HIGH = 0
     APPROXIMATE = 1
 
-SpatialGestureRecognizer = _winrt_windows_ui_input_spatial.SpatialGestureRecognizer
-SpatialHoldCanceledEventArgs = _winrt_windows_ui_input_spatial.SpatialHoldCanceledEventArgs
-SpatialHoldCompletedEventArgs = _winrt_windows_ui_input_spatial.SpatialHoldCompletedEventArgs
-SpatialHoldStartedEventArgs = _winrt_windows_ui_input_spatial.SpatialHoldStartedEventArgs
-SpatialInteraction = _winrt_windows_ui_input_spatial.SpatialInteraction
-SpatialInteractionController = _winrt_windows_ui_input_spatial.SpatialInteractionController
-SpatialInteractionControllerProperties = _winrt_windows_ui_input_spatial.SpatialInteractionControllerProperties
-SpatialInteractionDetectedEventArgs = _winrt_windows_ui_input_spatial.SpatialInteractionDetectedEventArgs
-SpatialInteractionManager = _winrt_windows_ui_input_spatial.SpatialInteractionManager
-SpatialInteractionSource = _winrt_windows_ui_input_spatial.SpatialInteractionSource
-SpatialInteractionSourceEventArgs = _winrt_windows_ui_input_spatial.SpatialInteractionSourceEventArgs
-SpatialInteractionSourceLocation = _winrt_windows_ui_input_spatial.SpatialInteractionSourceLocation
-SpatialInteractionSourceProperties = _winrt_windows_ui_input_spatial.SpatialInteractionSourceProperties
-SpatialInteractionSourceState = _winrt_windows_ui_input_spatial.SpatialInteractionSourceState
-SpatialManipulationCanceledEventArgs = _winrt_windows_ui_input_spatial.SpatialManipulationCanceledEventArgs
-SpatialManipulationCompletedEventArgs = _winrt_windows_ui_input_spatial.SpatialManipulationCompletedEventArgs
-SpatialManipulationDelta = _winrt_windows_ui_input_spatial.SpatialManipulationDelta
-SpatialManipulationStartedEventArgs = _winrt_windows_ui_input_spatial.SpatialManipulationStartedEventArgs
-SpatialManipulationUpdatedEventArgs = _winrt_windows_ui_input_spatial.SpatialManipulationUpdatedEventArgs
-SpatialNavigationCanceledEventArgs = _winrt_windows_ui_input_spatial.SpatialNavigationCanceledEventArgs
-SpatialNavigationCompletedEventArgs = _winrt_windows_ui_input_spatial.SpatialNavigationCompletedEventArgs
-SpatialNavigationStartedEventArgs = _winrt_windows_ui_input_spatial.SpatialNavigationStartedEventArgs
-SpatialNavigationUpdatedEventArgs = _winrt_windows_ui_input_spatial.SpatialNavigationUpdatedEventArgs
-SpatialPointerInteractionSourcePose = _winrt_windows_ui_input_spatial.SpatialPointerInteractionSourcePose
-SpatialPointerPose = _winrt_windows_ui_input_spatial.SpatialPointerPose
-SpatialRecognitionEndedEventArgs = _winrt_windows_ui_input_spatial.SpatialRecognitionEndedEventArgs
-SpatialRecognitionStartedEventArgs = _winrt_windows_ui_input_spatial.SpatialRecognitionStartedEventArgs
-SpatialTappedEventArgs = _winrt_windows_ui_input_spatial.SpatialTappedEventArgs

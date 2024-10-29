@@ -3,7 +3,18 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_personalinformation
+from winrt._winrt_windows_phone_personalinformation import (
+    ContactAddress,
+    ContactChangeRecord,
+    ContactInformation,
+    ContactQueryOptions,
+    ContactQueryResult,
+    ContactStore,
+    KnownContactProperties,
+    StoredContact,
+    IContactInformation,
+    IContactInformation2,
+)
 
 __all__ = [
     "ContactChangeType",
@@ -45,13 +56,3 @@ class VCardFormat(enum.IntEnum):
     VERSION2_1 = 0
     VERSION3 = 1
 
-ContactAddress = _winrt_windows_phone_personalinformation.ContactAddress
-ContactChangeRecord = _winrt_windows_phone_personalinformation.ContactChangeRecord
-ContactInformation = _winrt_windows_phone_personalinformation.ContactInformation
-ContactQueryOptions = _winrt_windows_phone_personalinformation.ContactQueryOptions
-ContactQueryResult = _winrt_windows_phone_personalinformation.ContactQueryResult
-ContactStore = _winrt_windows_phone_personalinformation.ContactStore
-KnownContactProperties = _winrt_windows_phone_personalinformation.KnownContactProperties
-StoredContact = _winrt_windows_phone_personalinformation.StoredContact
-IContactInformation = _winrt_windows_phone_personalinformation.IContactInformation
-IContactInformation2 = _winrt_windows_phone_personalinformation.IContactInformation2

@@ -3,7 +3,91 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_core
+from winrt._winrt_windows_media_core import (
+    MseTimeRange,
+    TimedTextDouble,
+    TimedTextPadding,
+    TimedTextPoint,
+    TimedTextSize,
+    AudioStreamDescriptor,
+    AudioTrack,
+    AudioTrackOpenFailedEventArgs,
+    AudioTrackSupportInfo,
+    ChapterCue,
+    CodecInfo,
+    CodecQuery,
+    CodecSubtypes,
+    DataCue,
+    FaceDetectedEventArgs,
+    FaceDetectionEffect,
+    FaceDetectionEffectDefinition,
+    FaceDetectionEffectFrame,
+    HighDynamicRangeControl,
+    HighDynamicRangeOutput,
+    ImageCue,
+    InitializeMediaStreamSourceRequestedEventArgs,
+    LowLightFusion,
+    LowLightFusionResult,
+    MediaBinder,
+    MediaBindingEventArgs,
+    MediaCueEventArgs,
+    MediaSource,
+    MediaSourceAppServiceConnection,
+    MediaSourceError,
+    MediaSourceOpenOperationCompletedEventArgs,
+    MediaSourceStateChangedEventArgs,
+    MediaStreamSample,
+    MediaStreamSamplePropertySet,
+    MediaStreamSampleProtectionProperties,
+    MediaStreamSource,
+    MediaStreamSourceClosedEventArgs,
+    MediaStreamSourceClosedRequest,
+    MediaStreamSourceSampleRenderedEventArgs,
+    MediaStreamSourceSampleRequest,
+    MediaStreamSourceSampleRequestDeferral,
+    MediaStreamSourceSampleRequestedEventArgs,
+    MediaStreamSourceStartingEventArgs,
+    MediaStreamSourceStartingRequest,
+    MediaStreamSourceStartingRequestDeferral,
+    MediaStreamSourceSwitchStreamsRequest,
+    MediaStreamSourceSwitchStreamsRequestDeferral,
+    MediaStreamSourceSwitchStreamsRequestedEventArgs,
+    MseSourceBuffer,
+    MseSourceBufferList,
+    MseStreamSource,
+    SceneAnalysisEffect,
+    SceneAnalysisEffectDefinition,
+    SceneAnalysisEffectFrame,
+    SceneAnalyzedEventArgs,
+    SpeechCue,
+    TimedMetadataStreamDescriptor,
+    TimedMetadataTrack,
+    TimedMetadataTrackError,
+    TimedMetadataTrackFailedEventArgs,
+    TimedTextBouten,
+    TimedTextCue,
+    TimedTextLine,
+    TimedTextRegion,
+    TimedTextRuby,
+    TimedTextSource,
+    TimedTextSourceResolveResultEventArgs,
+    TimedTextStyle,
+    TimedTextSubformat,
+    VideoStabilizationEffect,
+    VideoStabilizationEffectDefinition,
+    VideoStabilizationEffectEnabledChangedEventArgs,
+    VideoStreamDescriptor,
+    VideoTrack,
+    VideoTrackOpenFailedEventArgs,
+    VideoTrackSupportInfo,
+    IMediaCue,
+    IMediaSource,
+    IMediaStreamDescriptor,
+    IMediaStreamDescriptor2,
+    IMediaTrack,
+    ISingleSelectMediaTrackList,
+    ITimedMetadataTrackProvider,
+)
 
 __all__ = [
     "AudioDecoderDegradation",
@@ -308,87 +392,4 @@ class VideoStabilizationEffectEnabledChangedReason(enum.IntEnum):
     PIXEL_RATE_TOO_HIGH = 1
     RUNNING_SLOWLY = 2
 
-MseTimeRange = _winrt_windows_media_core.MseTimeRange
-TimedTextDouble = _winrt_windows_media_core.TimedTextDouble
-TimedTextPadding = _winrt_windows_media_core.TimedTextPadding
-TimedTextPoint = _winrt_windows_media_core.TimedTextPoint
-TimedTextSize = _winrt_windows_media_core.TimedTextSize
-AudioStreamDescriptor = _winrt_windows_media_core.AudioStreamDescriptor
-AudioTrack = _winrt_windows_media_core.AudioTrack
-AudioTrackOpenFailedEventArgs = _winrt_windows_media_core.AudioTrackOpenFailedEventArgs
-AudioTrackSupportInfo = _winrt_windows_media_core.AudioTrackSupportInfo
-ChapterCue = _winrt_windows_media_core.ChapterCue
-CodecInfo = _winrt_windows_media_core.CodecInfo
-CodecQuery = _winrt_windows_media_core.CodecQuery
-CodecSubtypes = _winrt_windows_media_core.CodecSubtypes
-DataCue = _winrt_windows_media_core.DataCue
-FaceDetectedEventArgs = _winrt_windows_media_core.FaceDetectedEventArgs
-FaceDetectionEffect = _winrt_windows_media_core.FaceDetectionEffect
-FaceDetectionEffectDefinition = _winrt_windows_media_core.FaceDetectionEffectDefinition
-FaceDetectionEffectFrame = _winrt_windows_media_core.FaceDetectionEffectFrame
-HighDynamicRangeControl = _winrt_windows_media_core.HighDynamicRangeControl
-HighDynamicRangeOutput = _winrt_windows_media_core.HighDynamicRangeOutput
-ImageCue = _winrt_windows_media_core.ImageCue
-InitializeMediaStreamSourceRequestedEventArgs = _winrt_windows_media_core.InitializeMediaStreamSourceRequestedEventArgs
-LowLightFusion = _winrt_windows_media_core.LowLightFusion
-LowLightFusionResult = _winrt_windows_media_core.LowLightFusionResult
-MediaBinder = _winrt_windows_media_core.MediaBinder
-MediaBindingEventArgs = _winrt_windows_media_core.MediaBindingEventArgs
-MediaCueEventArgs = _winrt_windows_media_core.MediaCueEventArgs
-MediaSource = _winrt_windows_media_core.MediaSource
-MediaSourceAppServiceConnection = _winrt_windows_media_core.MediaSourceAppServiceConnection
-MediaSourceError = _winrt_windows_media_core.MediaSourceError
-MediaSourceOpenOperationCompletedEventArgs = _winrt_windows_media_core.MediaSourceOpenOperationCompletedEventArgs
-MediaSourceStateChangedEventArgs = _winrt_windows_media_core.MediaSourceStateChangedEventArgs
-MediaStreamSample = _winrt_windows_media_core.MediaStreamSample
-MediaStreamSamplePropertySet = _winrt_windows_media_core.MediaStreamSamplePropertySet
 winrt.system._mixin_mutable_mapping(MediaStreamSamplePropertySet)
-MediaStreamSampleProtectionProperties = _winrt_windows_media_core.MediaStreamSampleProtectionProperties
-MediaStreamSource = _winrt_windows_media_core.MediaStreamSource
-MediaStreamSourceClosedEventArgs = _winrt_windows_media_core.MediaStreamSourceClosedEventArgs
-MediaStreamSourceClosedRequest = _winrt_windows_media_core.MediaStreamSourceClosedRequest
-MediaStreamSourceSampleRenderedEventArgs = _winrt_windows_media_core.MediaStreamSourceSampleRenderedEventArgs
-MediaStreamSourceSampleRequest = _winrt_windows_media_core.MediaStreamSourceSampleRequest
-MediaStreamSourceSampleRequestDeferral = _winrt_windows_media_core.MediaStreamSourceSampleRequestDeferral
-MediaStreamSourceSampleRequestedEventArgs = _winrt_windows_media_core.MediaStreamSourceSampleRequestedEventArgs
-MediaStreamSourceStartingEventArgs = _winrt_windows_media_core.MediaStreamSourceStartingEventArgs
-MediaStreamSourceStartingRequest = _winrt_windows_media_core.MediaStreamSourceStartingRequest
-MediaStreamSourceStartingRequestDeferral = _winrt_windows_media_core.MediaStreamSourceStartingRequestDeferral
-MediaStreamSourceSwitchStreamsRequest = _winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequest
-MediaStreamSourceSwitchStreamsRequestDeferral = _winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestDeferral
-MediaStreamSourceSwitchStreamsRequestedEventArgs = _winrt_windows_media_core.MediaStreamSourceSwitchStreamsRequestedEventArgs
-MseSourceBuffer = _winrt_windows_media_core.MseSourceBuffer
-MseSourceBufferList = _winrt_windows_media_core.MseSourceBufferList
-MseStreamSource = _winrt_windows_media_core.MseStreamSource
-SceneAnalysisEffect = _winrt_windows_media_core.SceneAnalysisEffect
-SceneAnalysisEffectDefinition = _winrt_windows_media_core.SceneAnalysisEffectDefinition
-SceneAnalysisEffectFrame = _winrt_windows_media_core.SceneAnalysisEffectFrame
-SceneAnalyzedEventArgs = _winrt_windows_media_core.SceneAnalyzedEventArgs
-SpeechCue = _winrt_windows_media_core.SpeechCue
-TimedMetadataStreamDescriptor = _winrt_windows_media_core.TimedMetadataStreamDescriptor
-TimedMetadataTrack = _winrt_windows_media_core.TimedMetadataTrack
-TimedMetadataTrackError = _winrt_windows_media_core.TimedMetadataTrackError
-TimedMetadataTrackFailedEventArgs = _winrt_windows_media_core.TimedMetadataTrackFailedEventArgs
-TimedTextBouten = _winrt_windows_media_core.TimedTextBouten
-TimedTextCue = _winrt_windows_media_core.TimedTextCue
-TimedTextLine = _winrt_windows_media_core.TimedTextLine
-TimedTextRegion = _winrt_windows_media_core.TimedTextRegion
-TimedTextRuby = _winrt_windows_media_core.TimedTextRuby
-TimedTextSource = _winrt_windows_media_core.TimedTextSource
-TimedTextSourceResolveResultEventArgs = _winrt_windows_media_core.TimedTextSourceResolveResultEventArgs
-TimedTextStyle = _winrt_windows_media_core.TimedTextStyle
-TimedTextSubformat = _winrt_windows_media_core.TimedTextSubformat
-VideoStabilizationEffect = _winrt_windows_media_core.VideoStabilizationEffect
-VideoStabilizationEffectDefinition = _winrt_windows_media_core.VideoStabilizationEffectDefinition
-VideoStabilizationEffectEnabledChangedEventArgs = _winrt_windows_media_core.VideoStabilizationEffectEnabledChangedEventArgs
-VideoStreamDescriptor = _winrt_windows_media_core.VideoStreamDescriptor
-VideoTrack = _winrt_windows_media_core.VideoTrack
-VideoTrackOpenFailedEventArgs = _winrt_windows_media_core.VideoTrackOpenFailedEventArgs
-VideoTrackSupportInfo = _winrt_windows_media_core.VideoTrackSupportInfo
-IMediaCue = _winrt_windows_media_core.IMediaCue
-IMediaSource = _winrt_windows_media_core.IMediaSource
-IMediaStreamDescriptor = _winrt_windows_media_core.IMediaStreamDescriptor
-IMediaStreamDescriptor2 = _winrt_windows_media_core.IMediaStreamDescriptor2
-IMediaTrack = _winrt_windows_media_core.IMediaTrack
-ISingleSelectMediaTrackList = _winrt_windows_media_core.ISingleSelectMediaTrackList
-ITimedMetadataTrackProvider = _winrt_windows_media_core.ITimedMetadataTrackProvider

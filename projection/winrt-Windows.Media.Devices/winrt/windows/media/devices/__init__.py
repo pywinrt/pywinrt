@@ -5,7 +5,56 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_media_devices
+from winrt._winrt_windows_media_devices import (
+    AdvancedPhotoCaptureSettings,
+    AdvancedPhotoControl,
+    AudioDeviceController,
+    AudioDeviceModule,
+    AudioDeviceModuleNotificationEventArgs,
+    AudioDeviceModulesManager,
+    CallControl,
+    CameraOcclusionInfo,
+    CameraOcclusionState,
+    CameraOcclusionStateChangedEventArgs,
+    DefaultAudioCaptureDeviceChangedEventArgs,
+    DefaultAudioRenderDeviceChangedEventArgs,
+    DialRequestedEventArgs,
+    DigitalWindowBounds,
+    DigitalWindowCapability,
+    DigitalWindowControl,
+    ExposureCompensationControl,
+    ExposureControl,
+    ExposurePriorityVideoControl,
+    FlashControl,
+    FocusControl,
+    FocusSettings,
+    HdrVideoControl,
+    InfraredTorchControl,
+    IsoSpeedControl,
+    KeypadPressedEventArgs,
+    LowLagPhotoControl,
+    LowLagPhotoSequenceControl,
+    MediaDevice,
+    MediaDeviceControl,
+    MediaDeviceControlCapabilities,
+    ModuleCommandResult,
+    OpticalImageStabilizationControl,
+    PanelBasedOptimizationControl,
+    PhotoConfirmationControl,
+    RedialRequestedEventArgs,
+    RegionOfInterest,
+    RegionsOfInterestControl,
+    SceneModeControl,
+    TorchControl,
+    VideoDeviceController,
+    VideoDeviceControllerGetDevicePropertyResult,
+    VideoTemporalDenoisingControl,
+    WhiteBalanceControl,
+    ZoomControl,
+    ZoomSettings,
+    IDefaultAudioDeviceChangedEventArgs,
+    IMediaDeviceController,
+)
 
 __all__ = [
     "AdvancedPhotoMode",
@@ -269,54 +318,6 @@ class ZoomTransitionMode(enum.IntEnum):
     DIRECT = 1
     SMOOTH = 2
 
-AdvancedPhotoCaptureSettings = _winrt_windows_media_devices.AdvancedPhotoCaptureSettings
-AdvancedPhotoControl = _winrt_windows_media_devices.AdvancedPhotoControl
-AudioDeviceController = _winrt_windows_media_devices.AudioDeviceController
-AudioDeviceModule = _winrt_windows_media_devices.AudioDeviceModule
-AudioDeviceModuleNotificationEventArgs = _winrt_windows_media_devices.AudioDeviceModuleNotificationEventArgs
-AudioDeviceModulesManager = _winrt_windows_media_devices.AudioDeviceModulesManager
-CallControl = _winrt_windows_media_devices.CallControl
-CameraOcclusionInfo = _winrt_windows_media_devices.CameraOcclusionInfo
-CameraOcclusionState = _winrt_windows_media_devices.CameraOcclusionState
-CameraOcclusionStateChangedEventArgs = _winrt_windows_media_devices.CameraOcclusionStateChangedEventArgs
-DefaultAudioCaptureDeviceChangedEventArgs = _winrt_windows_media_devices.DefaultAudioCaptureDeviceChangedEventArgs
-DefaultAudioRenderDeviceChangedEventArgs = _winrt_windows_media_devices.DefaultAudioRenderDeviceChangedEventArgs
-DialRequestedEventArgs = _winrt_windows_media_devices.DialRequestedEventArgs
-DigitalWindowBounds = _winrt_windows_media_devices.DigitalWindowBounds
-DigitalWindowCapability = _winrt_windows_media_devices.DigitalWindowCapability
-DigitalWindowControl = _winrt_windows_media_devices.DigitalWindowControl
-ExposureCompensationControl = _winrt_windows_media_devices.ExposureCompensationControl
-ExposureControl = _winrt_windows_media_devices.ExposureControl
-ExposurePriorityVideoControl = _winrt_windows_media_devices.ExposurePriorityVideoControl
-FlashControl = _winrt_windows_media_devices.FlashControl
-FocusControl = _winrt_windows_media_devices.FocusControl
-FocusSettings = _winrt_windows_media_devices.FocusSettings
-HdrVideoControl = _winrt_windows_media_devices.HdrVideoControl
-InfraredTorchControl = _winrt_windows_media_devices.InfraredTorchControl
-IsoSpeedControl = _winrt_windows_media_devices.IsoSpeedControl
-KeypadPressedEventArgs = _winrt_windows_media_devices.KeypadPressedEventArgs
-LowLagPhotoControl = _winrt_windows_media_devices.LowLagPhotoControl
-LowLagPhotoSequenceControl = _winrt_windows_media_devices.LowLagPhotoSequenceControl
-MediaDevice = _winrt_windows_media_devices.MediaDevice
-MediaDeviceControl = _winrt_windows_media_devices.MediaDeviceControl
-MediaDeviceControlCapabilities = _winrt_windows_media_devices.MediaDeviceControlCapabilities
-ModuleCommandResult = _winrt_windows_media_devices.ModuleCommandResult
-OpticalImageStabilizationControl = _winrt_windows_media_devices.OpticalImageStabilizationControl
-PanelBasedOptimizationControl = _winrt_windows_media_devices.PanelBasedOptimizationControl
-PhotoConfirmationControl = _winrt_windows_media_devices.PhotoConfirmationControl
-RedialRequestedEventArgs = _winrt_windows_media_devices.RedialRequestedEventArgs
-RegionOfInterest = _winrt_windows_media_devices.RegionOfInterest
-RegionsOfInterestControl = _winrt_windows_media_devices.RegionsOfInterestControl
-SceneModeControl = _winrt_windows_media_devices.SceneModeControl
-TorchControl = _winrt_windows_media_devices.TorchControl
-VideoDeviceController = _winrt_windows_media_devices.VideoDeviceController
-VideoDeviceControllerGetDevicePropertyResult = _winrt_windows_media_devices.VideoDeviceControllerGetDevicePropertyResult
-VideoTemporalDenoisingControl = _winrt_windows_media_devices.VideoTemporalDenoisingControl
-WhiteBalanceControl = _winrt_windows_media_devices.WhiteBalanceControl
-ZoomControl = _winrt_windows_media_devices.ZoomControl
-ZoomSettings = _winrt_windows_media_devices.ZoomSettings
-IDefaultAudioDeviceChangedEventArgs = _winrt_windows_media_devices.IDefaultAudioDeviceChangedEventArgs
-IMediaDeviceController = _winrt_windows_media_devices.IMediaDeviceController
 CallControlEventHandler = typing.Callable[[CallControl], None]
 DialRequestedEventHandler = typing.Callable[[CallControl, DialRequestedEventArgs], None]
 KeypadPressedEventHandler = typing.Callable[[CallControl, KeypadPressedEventArgs], None]

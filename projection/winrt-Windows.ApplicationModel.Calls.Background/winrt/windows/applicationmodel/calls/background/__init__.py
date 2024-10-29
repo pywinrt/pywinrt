@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_calls_background
+from winrt._winrt_windows_applicationmodel_calls_background import (
+    PhoneCallBlockedTriggerDetails,
+    PhoneCallOriginDataRequestTriggerDetails,
+    PhoneIncomingCallDismissedTriggerDetails,
+    PhoneIncomingCallNotificationTriggerDetails,
+    PhoneLineChangedTriggerDetails,
+    PhoneNewVoicemailMessageTriggerDetails,
+)
 
 __all__ = [
     "PhoneCallBlockedReason",
@@ -57,9 +64,3 @@ class PhoneTriggerType(enum.IntEnum):
     INCOMING_CALL_DISMISSED = 6
     INCOMING_CALL_NOTIFICATION = 7
 
-PhoneCallBlockedTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneCallBlockedTriggerDetails
-PhoneCallOriginDataRequestTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneCallOriginDataRequestTriggerDetails
-PhoneIncomingCallDismissedTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneIncomingCallDismissedTriggerDetails
-PhoneIncomingCallNotificationTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneIncomingCallNotificationTriggerDetails
-PhoneLineChangedTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneLineChangedTriggerDetails
-PhoneNewVoicemailMessageTriggerDetails = _winrt_windows_applicationmodel_calls_background.PhoneNewVoicemailMessageTriggerDetails

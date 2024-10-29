@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_wallet_system
+from winrt._winrt_windows_applicationmodel_wallet_system import (
+    WalletItemSystemStore,
+    WalletManagerSystem,
+)
 
 __all__ = [
     "WalletItemAppAssociation",
@@ -16,5 +19,3 @@ class WalletItemAppAssociation(enum.IntEnum):
     APP_INSTALLED = 1
     APP_NOT_INSTALLED = 2
 
-WalletItemSystemStore = _winrt_windows_applicationmodel_wallet_system.WalletItemSystemStore
-WalletManagerSystem = _winrt_windows_applicationmodel_wallet_system.WalletManagerSystem

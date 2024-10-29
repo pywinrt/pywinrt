@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_bluetooth_background
+from winrt._winrt_windows_devices_bluetooth_background import (
+    BluetoothLEAdvertisementPublisherTriggerDetails,
+    BluetoothLEAdvertisementWatcherTriggerDetails,
+    GattCharacteristicNotificationTriggerDetails,
+    GattServiceProviderConnection,
+    GattServiceProviderTriggerDetails,
+    RfcommConnectionTriggerDetails,
+    RfcommInboundConnectionInformation,
+    RfcommOutboundConnectionInformation,
+)
 
 __all__ = [
     "BluetoothEventTriggeringMode",
@@ -22,11 +31,3 @@ class BluetoothEventTriggeringMode(enum.IntEnum):
     BATCH = 1
     KEEP_LATEST = 2
 
-BluetoothLEAdvertisementPublisherTriggerDetails = _winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementPublisherTriggerDetails
-BluetoothLEAdvertisementWatcherTriggerDetails = _winrt_windows_devices_bluetooth_background.BluetoothLEAdvertisementWatcherTriggerDetails
-GattCharacteristicNotificationTriggerDetails = _winrt_windows_devices_bluetooth_background.GattCharacteristicNotificationTriggerDetails
-GattServiceProviderConnection = _winrt_windows_devices_bluetooth_background.GattServiceProviderConnection
-GattServiceProviderTriggerDetails = _winrt_windows_devices_bluetooth_background.GattServiceProviderTriggerDetails
-RfcommConnectionTriggerDetails = _winrt_windows_devices_bluetooth_background.RfcommConnectionTriggerDetails
-RfcommInboundConnectionInformation = _winrt_windows_devices_bluetooth_background.RfcommInboundConnectionInformation
-RfcommOutboundConnectionInformation = _winrt_windows_devices_bluetooth_background.RfcommOutboundConnectionInformation

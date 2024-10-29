@@ -3,7 +3,82 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_pointofservice
+from winrt._winrt_windows_devices_pointofservice import (
+    SizeUInt32,
+    BarcodeScanner,
+    BarcodeScannerCapabilities,
+    BarcodeScannerDataReceivedEventArgs,
+    BarcodeScannerErrorOccurredEventArgs,
+    BarcodeScannerImagePreviewReceivedEventArgs,
+    BarcodeScannerReport,
+    BarcodeScannerStatusUpdatedEventArgs,
+    BarcodeSymbologies,
+    BarcodeSymbologyAttributes,
+    CashDrawer,
+    CashDrawerCapabilities,
+    CashDrawerCloseAlarm,
+    CashDrawerClosedEventArgs,
+    CashDrawerEventSource,
+    CashDrawerOpenedEventArgs,
+    CashDrawerStatus,
+    CashDrawerStatusUpdatedEventArgs,
+    ClaimedBarcodeScanner,
+    ClaimedBarcodeScannerClosedEventArgs,
+    ClaimedCashDrawer,
+    ClaimedCashDrawerClosedEventArgs,
+    ClaimedJournalPrinter,
+    ClaimedLineDisplay,
+    ClaimedLineDisplayClosedEventArgs,
+    ClaimedMagneticStripeReader,
+    ClaimedMagneticStripeReaderClosedEventArgs,
+    ClaimedPosPrinter,
+    ClaimedPosPrinterClosedEventArgs,
+    ClaimedReceiptPrinter,
+    ClaimedSlipPrinter,
+    JournalPrintJob,
+    JournalPrinterCapabilities,
+    LineDisplay,
+    LineDisplayAttributes,
+    LineDisplayCapabilities,
+    LineDisplayCursor,
+    LineDisplayCursorAttributes,
+    LineDisplayCustomGlyphs,
+    LineDisplayMarquee,
+    LineDisplayStatisticsCategorySelector,
+    LineDisplayStatusUpdatedEventArgs,
+    LineDisplayStoredBitmap,
+    LineDisplayWindow,
+    MagneticStripeReader,
+    MagneticStripeReaderAamvaCardDataReceivedEventArgs,
+    MagneticStripeReaderBankCardDataReceivedEventArgs,
+    MagneticStripeReaderCapabilities,
+    MagneticStripeReaderCardTypes,
+    MagneticStripeReaderEncryptionAlgorithms,
+    MagneticStripeReaderErrorOccurredEventArgs,
+    MagneticStripeReaderReport,
+    MagneticStripeReaderStatusUpdatedEventArgs,
+    MagneticStripeReaderTrackData,
+    MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs,
+    PosPrinter,
+    PosPrinterCapabilities,
+    PosPrinterCharacterSetIds,
+    PosPrinterFontProperty,
+    PosPrinterPrintOptions,
+    PosPrinterReleaseDeviceRequestedEventArgs,
+    PosPrinterStatus,
+    PosPrinterStatusUpdatedEventArgs,
+    ReceiptPrintJob,
+    ReceiptPrinterCapabilities,
+    SlipPrintJob,
+    SlipPrinterCapabilities,
+    UnifiedPosErrorData,
+    ICashDrawerEventSourceEventArgs,
+    ICommonClaimedPosPrinterStation,
+    ICommonPosPrintStationCapabilities,
+    ICommonReceiptSlipCapabilities,
+    IPosPrinterJob,
+    IReceiptOrSlipJob,
+)
 
 __all__ = [
     "BarcodeScannerStatus",
@@ -357,77 +432,3 @@ class UnifiedPosPowerReportingType(enum.IntEnum):
     STANDARD = 1
     ADVANCED = 2
 
-SizeUInt32 = _winrt_windows_devices_pointofservice.SizeUInt32
-BarcodeScanner = _winrt_windows_devices_pointofservice.BarcodeScanner
-BarcodeScannerCapabilities = _winrt_windows_devices_pointofservice.BarcodeScannerCapabilities
-BarcodeScannerDataReceivedEventArgs = _winrt_windows_devices_pointofservice.BarcodeScannerDataReceivedEventArgs
-BarcodeScannerErrorOccurredEventArgs = _winrt_windows_devices_pointofservice.BarcodeScannerErrorOccurredEventArgs
-BarcodeScannerImagePreviewReceivedEventArgs = _winrt_windows_devices_pointofservice.BarcodeScannerImagePreviewReceivedEventArgs
-BarcodeScannerReport = _winrt_windows_devices_pointofservice.BarcodeScannerReport
-BarcodeScannerStatusUpdatedEventArgs = _winrt_windows_devices_pointofservice.BarcodeScannerStatusUpdatedEventArgs
-BarcodeSymbologies = _winrt_windows_devices_pointofservice.BarcodeSymbologies
-BarcodeSymbologyAttributes = _winrt_windows_devices_pointofservice.BarcodeSymbologyAttributes
-CashDrawer = _winrt_windows_devices_pointofservice.CashDrawer
-CashDrawerCapabilities = _winrt_windows_devices_pointofservice.CashDrawerCapabilities
-CashDrawerCloseAlarm = _winrt_windows_devices_pointofservice.CashDrawerCloseAlarm
-CashDrawerClosedEventArgs = _winrt_windows_devices_pointofservice.CashDrawerClosedEventArgs
-CashDrawerEventSource = _winrt_windows_devices_pointofservice.CashDrawerEventSource
-CashDrawerOpenedEventArgs = _winrt_windows_devices_pointofservice.CashDrawerOpenedEventArgs
-CashDrawerStatus = _winrt_windows_devices_pointofservice.CashDrawerStatus
-CashDrawerStatusUpdatedEventArgs = _winrt_windows_devices_pointofservice.CashDrawerStatusUpdatedEventArgs
-ClaimedBarcodeScanner = _winrt_windows_devices_pointofservice.ClaimedBarcodeScanner
-ClaimedBarcodeScannerClosedEventArgs = _winrt_windows_devices_pointofservice.ClaimedBarcodeScannerClosedEventArgs
-ClaimedCashDrawer = _winrt_windows_devices_pointofservice.ClaimedCashDrawer
-ClaimedCashDrawerClosedEventArgs = _winrt_windows_devices_pointofservice.ClaimedCashDrawerClosedEventArgs
-ClaimedJournalPrinter = _winrt_windows_devices_pointofservice.ClaimedJournalPrinter
-ClaimedLineDisplay = _winrt_windows_devices_pointofservice.ClaimedLineDisplay
-ClaimedLineDisplayClosedEventArgs = _winrt_windows_devices_pointofservice.ClaimedLineDisplayClosedEventArgs
-ClaimedMagneticStripeReader = _winrt_windows_devices_pointofservice.ClaimedMagneticStripeReader
-ClaimedMagneticStripeReaderClosedEventArgs = _winrt_windows_devices_pointofservice.ClaimedMagneticStripeReaderClosedEventArgs
-ClaimedPosPrinter = _winrt_windows_devices_pointofservice.ClaimedPosPrinter
-ClaimedPosPrinterClosedEventArgs = _winrt_windows_devices_pointofservice.ClaimedPosPrinterClosedEventArgs
-ClaimedReceiptPrinter = _winrt_windows_devices_pointofservice.ClaimedReceiptPrinter
-ClaimedSlipPrinter = _winrt_windows_devices_pointofservice.ClaimedSlipPrinter
-JournalPrintJob = _winrt_windows_devices_pointofservice.JournalPrintJob
-JournalPrinterCapabilities = _winrt_windows_devices_pointofservice.JournalPrinterCapabilities
-LineDisplay = _winrt_windows_devices_pointofservice.LineDisplay
-LineDisplayAttributes = _winrt_windows_devices_pointofservice.LineDisplayAttributes
-LineDisplayCapabilities = _winrt_windows_devices_pointofservice.LineDisplayCapabilities
-LineDisplayCursor = _winrt_windows_devices_pointofservice.LineDisplayCursor
-LineDisplayCursorAttributes = _winrt_windows_devices_pointofservice.LineDisplayCursorAttributes
-LineDisplayCustomGlyphs = _winrt_windows_devices_pointofservice.LineDisplayCustomGlyphs
-LineDisplayMarquee = _winrt_windows_devices_pointofservice.LineDisplayMarquee
-LineDisplayStatisticsCategorySelector = _winrt_windows_devices_pointofservice.LineDisplayStatisticsCategorySelector
-LineDisplayStatusUpdatedEventArgs = _winrt_windows_devices_pointofservice.LineDisplayStatusUpdatedEventArgs
-LineDisplayStoredBitmap = _winrt_windows_devices_pointofservice.LineDisplayStoredBitmap
-LineDisplayWindow = _winrt_windows_devices_pointofservice.LineDisplayWindow
-MagneticStripeReader = _winrt_windows_devices_pointofservice.MagneticStripeReader
-MagneticStripeReaderAamvaCardDataReceivedEventArgs = _winrt_windows_devices_pointofservice.MagneticStripeReaderAamvaCardDataReceivedEventArgs
-MagneticStripeReaderBankCardDataReceivedEventArgs = _winrt_windows_devices_pointofservice.MagneticStripeReaderBankCardDataReceivedEventArgs
-MagneticStripeReaderCapabilities = _winrt_windows_devices_pointofservice.MagneticStripeReaderCapabilities
-MagneticStripeReaderCardTypes = _winrt_windows_devices_pointofservice.MagneticStripeReaderCardTypes
-MagneticStripeReaderEncryptionAlgorithms = _winrt_windows_devices_pointofservice.MagneticStripeReaderEncryptionAlgorithms
-MagneticStripeReaderErrorOccurredEventArgs = _winrt_windows_devices_pointofservice.MagneticStripeReaderErrorOccurredEventArgs
-MagneticStripeReaderReport = _winrt_windows_devices_pointofservice.MagneticStripeReaderReport
-MagneticStripeReaderStatusUpdatedEventArgs = _winrt_windows_devices_pointofservice.MagneticStripeReaderStatusUpdatedEventArgs
-MagneticStripeReaderTrackData = _winrt_windows_devices_pointofservice.MagneticStripeReaderTrackData
-MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs = _winrt_windows_devices_pointofservice.MagneticStripeReaderVendorSpecificCardDataReceivedEventArgs
-PosPrinter = _winrt_windows_devices_pointofservice.PosPrinter
-PosPrinterCapabilities = _winrt_windows_devices_pointofservice.PosPrinterCapabilities
-PosPrinterCharacterSetIds = _winrt_windows_devices_pointofservice.PosPrinterCharacterSetIds
-PosPrinterFontProperty = _winrt_windows_devices_pointofservice.PosPrinterFontProperty
-PosPrinterPrintOptions = _winrt_windows_devices_pointofservice.PosPrinterPrintOptions
-PosPrinterReleaseDeviceRequestedEventArgs = _winrt_windows_devices_pointofservice.PosPrinterReleaseDeviceRequestedEventArgs
-PosPrinterStatus = _winrt_windows_devices_pointofservice.PosPrinterStatus
-PosPrinterStatusUpdatedEventArgs = _winrt_windows_devices_pointofservice.PosPrinterStatusUpdatedEventArgs
-ReceiptPrintJob = _winrt_windows_devices_pointofservice.ReceiptPrintJob
-ReceiptPrinterCapabilities = _winrt_windows_devices_pointofservice.ReceiptPrinterCapabilities
-SlipPrintJob = _winrt_windows_devices_pointofservice.SlipPrintJob
-SlipPrinterCapabilities = _winrt_windows_devices_pointofservice.SlipPrinterCapabilities
-UnifiedPosErrorData = _winrt_windows_devices_pointofservice.UnifiedPosErrorData
-ICashDrawerEventSourceEventArgs = _winrt_windows_devices_pointofservice.ICashDrawerEventSourceEventArgs
-ICommonClaimedPosPrinterStation = _winrt_windows_devices_pointofservice.ICommonClaimedPosPrinterStation
-ICommonPosPrintStationCapabilities = _winrt_windows_devices_pointofservice.ICommonPosPrintStationCapabilities
-ICommonReceiptSlipCapabilities = _winrt_windows_devices_pointofservice.ICommonReceiptSlipCapabilities
-IPosPrinterJob = _winrt_windows_devices_pointofservice.IPosPrinterJob
-IReceiptOrSlipJob = _winrt_windows_devices_pointofservice.IReceiptOrSlipJob

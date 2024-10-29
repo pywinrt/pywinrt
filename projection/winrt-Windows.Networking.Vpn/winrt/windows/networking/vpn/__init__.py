@@ -3,7 +3,53 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_networking_vpn
+from winrt._winrt_windows_networking_vpn import (
+    VpnAppId,
+    VpnChannel,
+    VpnChannelActivityEventArgs,
+    VpnChannelActivityStateChangedArgs,
+    VpnChannelConfiguration,
+    VpnCredential,
+    VpnCustomCheckBox,
+    VpnCustomComboBox,
+    VpnCustomEditBox,
+    VpnCustomErrorBox,
+    VpnCustomPromptBooleanInput,
+    VpnCustomPromptOptionSelector,
+    VpnCustomPromptText,
+    VpnCustomPromptTextInput,
+    VpnCustomTextBox,
+    VpnDomainNameAssignment,
+    VpnDomainNameInfo,
+    VpnForegroundActivatedEventArgs,
+    VpnForegroundActivationOperation,
+    VpnInterfaceId,
+    VpnManagementAgent,
+    VpnNamespaceAssignment,
+    VpnNamespaceInfo,
+    VpnNativeProfile,
+    VpnPacketBuffer,
+    VpnPacketBufferList,
+    VpnPickedCredential,
+    VpnPlugInProfile,
+    VpnRoute,
+    VpnRouteAssignment,
+    VpnSystemHealth,
+    VpnTrafficFilter,
+    VpnTrafficFilterAssignment,
+    IVpnChannelStatics,
+    IVpnCredential,
+    IVpnCustomPrompt,
+    IVpnCustomPromptElement,
+    IVpnDomainNameInfoFactory,
+    IVpnInterfaceIdFactory,
+    IVpnNamespaceInfoFactory,
+    IVpnPacketBufferFactory,
+    IVpnPlugIn,
+    IVpnPlugInReconnectTransport,
+    IVpnProfile,
+    IVpnRouteFactory,
+)
 
 __all__ = [
     "VpnAppIdType",
@@ -153,48 +199,3 @@ class VpnRoutingPolicyType(enum.IntEnum):
     SPLIT_ROUTING = 0
     FORCE_ALL_TRAFFIC_OVER_VPN = 1
 
-VpnAppId = _winrt_windows_networking_vpn.VpnAppId
-VpnChannel = _winrt_windows_networking_vpn.VpnChannel
-VpnChannelActivityEventArgs = _winrt_windows_networking_vpn.VpnChannelActivityEventArgs
-VpnChannelActivityStateChangedArgs = _winrt_windows_networking_vpn.VpnChannelActivityStateChangedArgs
-VpnChannelConfiguration = _winrt_windows_networking_vpn.VpnChannelConfiguration
-VpnCredential = _winrt_windows_networking_vpn.VpnCredential
-VpnCustomCheckBox = _winrt_windows_networking_vpn.VpnCustomCheckBox
-VpnCustomComboBox = _winrt_windows_networking_vpn.VpnCustomComboBox
-VpnCustomEditBox = _winrt_windows_networking_vpn.VpnCustomEditBox
-VpnCustomErrorBox = _winrt_windows_networking_vpn.VpnCustomErrorBox
-VpnCustomPromptBooleanInput = _winrt_windows_networking_vpn.VpnCustomPromptBooleanInput
-VpnCustomPromptOptionSelector = _winrt_windows_networking_vpn.VpnCustomPromptOptionSelector
-VpnCustomPromptText = _winrt_windows_networking_vpn.VpnCustomPromptText
-VpnCustomPromptTextInput = _winrt_windows_networking_vpn.VpnCustomPromptTextInput
-VpnCustomTextBox = _winrt_windows_networking_vpn.VpnCustomTextBox
-VpnDomainNameAssignment = _winrt_windows_networking_vpn.VpnDomainNameAssignment
-VpnDomainNameInfo = _winrt_windows_networking_vpn.VpnDomainNameInfo
-VpnForegroundActivatedEventArgs = _winrt_windows_networking_vpn.VpnForegroundActivatedEventArgs
-VpnForegroundActivationOperation = _winrt_windows_networking_vpn.VpnForegroundActivationOperation
-VpnInterfaceId = _winrt_windows_networking_vpn.VpnInterfaceId
-VpnManagementAgent = _winrt_windows_networking_vpn.VpnManagementAgent
-VpnNamespaceAssignment = _winrt_windows_networking_vpn.VpnNamespaceAssignment
-VpnNamespaceInfo = _winrt_windows_networking_vpn.VpnNamespaceInfo
-VpnNativeProfile = _winrt_windows_networking_vpn.VpnNativeProfile
-VpnPacketBuffer = _winrt_windows_networking_vpn.VpnPacketBuffer
-VpnPacketBufferList = _winrt_windows_networking_vpn.VpnPacketBufferList
-VpnPickedCredential = _winrt_windows_networking_vpn.VpnPickedCredential
-VpnPlugInProfile = _winrt_windows_networking_vpn.VpnPlugInProfile
-VpnRoute = _winrt_windows_networking_vpn.VpnRoute
-VpnRouteAssignment = _winrt_windows_networking_vpn.VpnRouteAssignment
-VpnSystemHealth = _winrt_windows_networking_vpn.VpnSystemHealth
-VpnTrafficFilter = _winrt_windows_networking_vpn.VpnTrafficFilter
-VpnTrafficFilterAssignment = _winrt_windows_networking_vpn.VpnTrafficFilterAssignment
-IVpnChannelStatics = _winrt_windows_networking_vpn.IVpnChannelStatics
-IVpnCredential = _winrt_windows_networking_vpn.IVpnCredential
-IVpnCustomPrompt = _winrt_windows_networking_vpn.IVpnCustomPrompt
-IVpnCustomPromptElement = _winrt_windows_networking_vpn.IVpnCustomPromptElement
-IVpnDomainNameInfoFactory = _winrt_windows_networking_vpn.IVpnDomainNameInfoFactory
-IVpnInterfaceIdFactory = _winrt_windows_networking_vpn.IVpnInterfaceIdFactory
-IVpnNamespaceInfoFactory = _winrt_windows_networking_vpn.IVpnNamespaceInfoFactory
-IVpnPacketBufferFactory = _winrt_windows_networking_vpn.IVpnPacketBufferFactory
-IVpnPlugIn = _winrt_windows_networking_vpn.IVpnPlugIn
-IVpnPlugInReconnectTransport = _winrt_windows_networking_vpn.IVpnPlugInReconnectTransport
-IVpnProfile = _winrt_windows_networking_vpn.IVpnProfile
-IVpnRouteFactory = _winrt_windows_networking_vpn.IVpnRouteFactory

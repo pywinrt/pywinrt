@@ -3,7 +3,29 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_documents
+from winrt._winrt_microsoft_ui_xaml_documents import (
+    TextRange,
+    Block,
+    BlockCollection,
+    Bold,
+    Glyphs,
+    Hyperlink,
+    HyperlinkClickEventArgs,
+    Inline,
+    InlineCollection,
+    InlineUIContainer,
+    Italic,
+    LineBreak,
+    Paragraph,
+    Run,
+    Span,
+    TextElement,
+    TextHighlighter,
+    TextHighlighterBase,
+    TextPointer,
+    Typography,
+    Underline,
+)
 
 __all__ = [
     "LogicalDirection",
@@ -39,26 +61,5 @@ class UnderlineStyle(enum.IntEnum):
     NONE = 0
     SINGLE = 1
 
-TextRange = _winrt_microsoft_ui_xaml_documents.TextRange
-Block = _winrt_microsoft_ui_xaml_documents.Block
-BlockCollection = _winrt_microsoft_ui_xaml_documents.BlockCollection
 winrt.system._mixin_mutable_sequence(BlockCollection)
-Bold = _winrt_microsoft_ui_xaml_documents.Bold
-Glyphs = _winrt_microsoft_ui_xaml_documents.Glyphs
-Hyperlink = _winrt_microsoft_ui_xaml_documents.Hyperlink
-HyperlinkClickEventArgs = _winrt_microsoft_ui_xaml_documents.HyperlinkClickEventArgs
-Inline = _winrt_microsoft_ui_xaml_documents.Inline
-InlineCollection = _winrt_microsoft_ui_xaml_documents.InlineCollection
 winrt.system._mixin_mutable_sequence(InlineCollection)
-InlineUIContainer = _winrt_microsoft_ui_xaml_documents.InlineUIContainer
-Italic = _winrt_microsoft_ui_xaml_documents.Italic
-LineBreak = _winrt_microsoft_ui_xaml_documents.LineBreak
-Paragraph = _winrt_microsoft_ui_xaml_documents.Paragraph
-Run = _winrt_microsoft_ui_xaml_documents.Run
-Span = _winrt_microsoft_ui_xaml_documents.Span
-TextElement = _winrt_microsoft_ui_xaml_documents.TextElement
-TextHighlighter = _winrt_microsoft_ui_xaml_documents.TextHighlighter
-TextHighlighterBase = _winrt_microsoft_ui_xaml_documents.TextHighlighterBase
-TextPointer = _winrt_microsoft_ui_xaml_documents.TextPointer
-Typography = _winrt_microsoft_ui_xaml_documents.Typography
-Underline = _winrt_microsoft_ui_xaml_documents.Underline

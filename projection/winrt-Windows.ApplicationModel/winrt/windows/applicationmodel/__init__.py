@@ -3,7 +3,49 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel
+from winrt._winrt_windows_applicationmodel import (
+    PackageInstallProgress,
+    PackageVersion,
+    AppDisplayInfo,
+    AppInfo,
+    AppInstallerInfo,
+    AppInstance,
+    CameraApplicationManager,
+    DesignMode,
+    EnteredBackgroundEventArgs,
+    FindRelatedPackagesOptions,
+    FullTrustProcessLaunchResult,
+    FullTrustProcessLauncher,
+    LeavingBackgroundEventArgs,
+    LimitedAccessFeatureRequestResult,
+    LimitedAccessFeatures,
+    Package,
+    PackageCatalog,
+    PackageCatalogAddOptionalPackageResult,
+    PackageCatalogAddResourcePackageResult,
+    PackageCatalogRemoveOptionalPackagesResult,
+    PackageCatalogRemoveResourcePackagesResult,
+    PackageContentGroup,
+    PackageContentGroupStagingEventArgs,
+    PackageId,
+    PackageInstallingEventArgs,
+    PackageStagingEventArgs,
+    PackageStatus,
+    PackageStatusChangedEventArgs,
+    PackageUninstallingEventArgs,
+    PackageUpdateAvailabilityResult,
+    PackageUpdatingEventArgs,
+    StartupTask,
+    SuspendingDeferral,
+    SuspendingEventArgs,
+    SuspendingOperation,
+    IEnteredBackgroundEventArgs,
+    ILeavingBackgroundEventArgs,
+    IPackageCatalogStatics2,
+    ISuspendingDeferral,
+    ISuspendingEventArgs,
+    ISuspendingOperation,
+)
 
 __all__ = [
     "AddResourcePackageOptions",
@@ -117,44 +159,3 @@ class StartupTaskState(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     ENABLED_BY_POLICY = 4
 
-PackageInstallProgress = _winrt_windows_applicationmodel.PackageInstallProgress
-PackageVersion = _winrt_windows_applicationmodel.PackageVersion
-AppDisplayInfo = _winrt_windows_applicationmodel.AppDisplayInfo
-AppInfo = _winrt_windows_applicationmodel.AppInfo
-AppInstallerInfo = _winrt_windows_applicationmodel.AppInstallerInfo
-AppInstance = _winrt_windows_applicationmodel.AppInstance
-CameraApplicationManager = _winrt_windows_applicationmodel.CameraApplicationManager
-DesignMode = _winrt_windows_applicationmodel.DesignMode
-EnteredBackgroundEventArgs = _winrt_windows_applicationmodel.EnteredBackgroundEventArgs
-FindRelatedPackagesOptions = _winrt_windows_applicationmodel.FindRelatedPackagesOptions
-FullTrustProcessLaunchResult = _winrt_windows_applicationmodel.FullTrustProcessLaunchResult
-FullTrustProcessLauncher = _winrt_windows_applicationmodel.FullTrustProcessLauncher
-LeavingBackgroundEventArgs = _winrt_windows_applicationmodel.LeavingBackgroundEventArgs
-LimitedAccessFeatureRequestResult = _winrt_windows_applicationmodel.LimitedAccessFeatureRequestResult
-LimitedAccessFeatures = _winrt_windows_applicationmodel.LimitedAccessFeatures
-Package = _winrt_windows_applicationmodel.Package
-PackageCatalog = _winrt_windows_applicationmodel.PackageCatalog
-PackageCatalogAddOptionalPackageResult = _winrt_windows_applicationmodel.PackageCatalogAddOptionalPackageResult
-PackageCatalogAddResourcePackageResult = _winrt_windows_applicationmodel.PackageCatalogAddResourcePackageResult
-PackageCatalogRemoveOptionalPackagesResult = _winrt_windows_applicationmodel.PackageCatalogRemoveOptionalPackagesResult
-PackageCatalogRemoveResourcePackagesResult = _winrt_windows_applicationmodel.PackageCatalogRemoveResourcePackagesResult
-PackageContentGroup = _winrt_windows_applicationmodel.PackageContentGroup
-PackageContentGroupStagingEventArgs = _winrt_windows_applicationmodel.PackageContentGroupStagingEventArgs
-PackageId = _winrt_windows_applicationmodel.PackageId
-PackageInstallingEventArgs = _winrt_windows_applicationmodel.PackageInstallingEventArgs
-PackageStagingEventArgs = _winrt_windows_applicationmodel.PackageStagingEventArgs
-PackageStatus = _winrt_windows_applicationmodel.PackageStatus
-PackageStatusChangedEventArgs = _winrt_windows_applicationmodel.PackageStatusChangedEventArgs
-PackageUninstallingEventArgs = _winrt_windows_applicationmodel.PackageUninstallingEventArgs
-PackageUpdateAvailabilityResult = _winrt_windows_applicationmodel.PackageUpdateAvailabilityResult
-PackageUpdatingEventArgs = _winrt_windows_applicationmodel.PackageUpdatingEventArgs
-StartupTask = _winrt_windows_applicationmodel.StartupTask
-SuspendingDeferral = _winrt_windows_applicationmodel.SuspendingDeferral
-SuspendingEventArgs = _winrt_windows_applicationmodel.SuspendingEventArgs
-SuspendingOperation = _winrt_windows_applicationmodel.SuspendingOperation
-IEnteredBackgroundEventArgs = _winrt_windows_applicationmodel.IEnteredBackgroundEventArgs
-ILeavingBackgroundEventArgs = _winrt_windows_applicationmodel.ILeavingBackgroundEventArgs
-IPackageCatalogStatics2 = _winrt_windows_applicationmodel.IPackageCatalogStatics2
-ISuspendingDeferral = _winrt_windows_applicationmodel.ISuspendingDeferral
-ISuspendingEventArgs = _winrt_windows_applicationmodel.ISuspendingEventArgs
-ISuspendingOperation = _winrt_windows_applicationmodel.ISuspendingOperation

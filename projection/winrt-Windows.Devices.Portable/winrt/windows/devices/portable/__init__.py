@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_portable
+from winrt._winrt_windows_devices_portable import (
+    ServiceDevice,
+    StorageDevice,
+)
 
 __all__ = [
     "ServiceDeviceType",
@@ -20,5 +23,3 @@ class ServiceDeviceType(enum.IntEnum):
     SMS_SERVICE = 5
     TASKS_SERVICE = 6
 
-ServiceDevice = _winrt_windows_devices_portable.ServiceDevice
-StorageDevice = _winrt_windows_devices_portable.StorageDevice

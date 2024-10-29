@@ -5,7 +5,36 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_storage_provider
+from winrt._winrt_windows_storage_provider import (
+    CachedFileUpdater,
+    CachedFileUpdaterUI,
+    FileUpdateRequest,
+    FileUpdateRequestDeferral,
+    FileUpdateRequestedEventArgs,
+    StorageProviderFileTypeInfo,
+    StorageProviderGetContentInfoForPathResult,
+    StorageProviderGetPathForContentUriResult,
+    StorageProviderItemProperties,
+    StorageProviderItemProperty,
+    StorageProviderItemPropertyDefinition,
+    StorageProviderKnownFolderEntry,
+    StorageProviderKnownFolderSyncInfo,
+    StorageProviderKnownFolderSyncRequestArgs,
+    StorageProviderMoreInfoUI,
+    StorageProviderQuotaUI,
+    StorageProviderStatusUI,
+    StorageProviderSyncRootInfo,
+    StorageProviderSyncRootManager,
+    IStorageProviderItemPropertySource,
+    IStorageProviderKnownFolderSyncInfoSource,
+    IStorageProviderKnownFolderSyncInfoSourceFactory,
+    IStorageProviderPropertyCapabilities,
+    IStorageProviderShareLinkSource,
+    IStorageProviderStatusUISource,
+    IStorageProviderStatusUISourceFactory,
+    IStorageProviderUICommand,
+    IStorageProviderUriSource,
+)
 
 __all__ = [
     "CachedFileOptions",
@@ -155,32 +184,4 @@ class WriteActivationMode(enum.IntEnum):
     NOT_NEEDED = 1
     AFTER_WRITE = 2
 
-CachedFileUpdater = _winrt_windows_storage_provider.CachedFileUpdater
-CachedFileUpdaterUI = _winrt_windows_storage_provider.CachedFileUpdaterUI
-FileUpdateRequest = _winrt_windows_storage_provider.FileUpdateRequest
-FileUpdateRequestDeferral = _winrt_windows_storage_provider.FileUpdateRequestDeferral
-FileUpdateRequestedEventArgs = _winrt_windows_storage_provider.FileUpdateRequestedEventArgs
-StorageProviderFileTypeInfo = _winrt_windows_storage_provider.StorageProviderFileTypeInfo
-StorageProviderGetContentInfoForPathResult = _winrt_windows_storage_provider.StorageProviderGetContentInfoForPathResult
-StorageProviderGetPathForContentUriResult = _winrt_windows_storage_provider.StorageProviderGetPathForContentUriResult
-StorageProviderItemProperties = _winrt_windows_storage_provider.StorageProviderItemProperties
-StorageProviderItemProperty = _winrt_windows_storage_provider.StorageProviderItemProperty
-StorageProviderItemPropertyDefinition = _winrt_windows_storage_provider.StorageProviderItemPropertyDefinition
-StorageProviderKnownFolderEntry = _winrt_windows_storage_provider.StorageProviderKnownFolderEntry
-StorageProviderKnownFolderSyncInfo = _winrt_windows_storage_provider.StorageProviderKnownFolderSyncInfo
-StorageProviderKnownFolderSyncRequestArgs = _winrt_windows_storage_provider.StorageProviderKnownFolderSyncRequestArgs
-StorageProviderMoreInfoUI = _winrt_windows_storage_provider.StorageProviderMoreInfoUI
-StorageProviderQuotaUI = _winrt_windows_storage_provider.StorageProviderQuotaUI
-StorageProviderStatusUI = _winrt_windows_storage_provider.StorageProviderStatusUI
-StorageProviderSyncRootInfo = _winrt_windows_storage_provider.StorageProviderSyncRootInfo
-StorageProviderSyncRootManager = _winrt_windows_storage_provider.StorageProviderSyncRootManager
-IStorageProviderItemPropertySource = _winrt_windows_storage_provider.IStorageProviderItemPropertySource
-IStorageProviderKnownFolderSyncInfoSource = _winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSource
-IStorageProviderKnownFolderSyncInfoSourceFactory = _winrt_windows_storage_provider.IStorageProviderKnownFolderSyncInfoSourceFactory
-IStorageProviderPropertyCapabilities = _winrt_windows_storage_provider.IStorageProviderPropertyCapabilities
-IStorageProviderShareLinkSource = _winrt_windows_storage_provider.IStorageProviderShareLinkSource
-IStorageProviderStatusUISource = _winrt_windows_storage_provider.IStorageProviderStatusUISource
-IStorageProviderStatusUISourceFactory = _winrt_windows_storage_provider.IStorageProviderStatusUISourceFactory
-IStorageProviderUICommand = _winrt_windows_storage_provider.IStorageProviderUICommand
-IStorageProviderUriSource = _winrt_windows_storage_provider.IStorageProviderUriSource
 StorageProviderKnownFolderSyncRequestedHandler = typing.Callable[[StorageProviderKnownFolderSyncRequestArgs], None]

@@ -3,7 +3,16 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_hosting
+from winrt._winrt_microsoft_ui_xaml_hosting import (
+    DesktopWindowXamlSource,
+    DesktopWindowXamlSourceGotFocusEventArgs,
+    DesktopWindowXamlSourceTakeFocusRequestedEventArgs,
+    ElementCompositionPreview,
+    WindowsXamlManager,
+    XamlShutdownCompletedOnThreadEventArgs,
+    XamlSourceFocusNavigationRequest,
+    XamlSourceFocusNavigationResult,
+)
 
 __all__ = [
     "XamlSourceFocusNavigationReason",
@@ -27,11 +36,3 @@ class XamlSourceFocusNavigationReason(enum.IntEnum):
     RIGHT = 9
     DOWN = 10
 
-DesktopWindowXamlSource = _winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource
-DesktopWindowXamlSourceGotFocusEventArgs = _winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSourceGotFocusEventArgs
-DesktopWindowXamlSourceTakeFocusRequestedEventArgs = _winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs
-ElementCompositionPreview = _winrt_microsoft_ui_xaml_hosting.ElementCompositionPreview
-WindowsXamlManager = _winrt_microsoft_ui_xaml_hosting.WindowsXamlManager
-XamlShutdownCompletedOnThreadEventArgs = _winrt_microsoft_ui_xaml_hosting.XamlShutdownCompletedOnThreadEventArgs
-XamlSourceFocusNavigationRequest = _winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationRequest
-XamlSourceFocusNavigationResult = _winrt_microsoft_ui_xaml_hosting.XamlSourceFocusNavigationResult

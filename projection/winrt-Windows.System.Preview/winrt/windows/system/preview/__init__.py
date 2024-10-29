@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_preview
+from winrt._winrt_windows_system_preview import (
+    TwoPanelHingedDevicePosturePreview,
+    TwoPanelHingedDevicePosturePreviewReading,
+    TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs,
+)
 
 __all__ = [
     "HingeState",
@@ -20,6 +24,3 @@ class HingeState(enum.IntEnum):
     CONVEX = 4
     FULL = 5
 
-TwoPanelHingedDevicePosturePreview = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreview
-TwoPanelHingedDevicePosturePreviewReading = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReading
-TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs = _winrt_windows_system_preview.TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs

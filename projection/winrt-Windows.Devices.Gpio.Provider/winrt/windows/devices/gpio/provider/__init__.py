@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_gpio_provider
+from winrt._winrt_windows_devices_gpio_provider import (
+    GpioPinProviderValueChangedEventArgs,
+    IGpioControllerProvider,
+    IGpioPinProvider,
+    IGpioProvider,
+)
 
 __all__ = [
     "ProviderGpioPinDriveMode",
@@ -38,7 +43,3 @@ class ProviderGpioSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED_READ_ONLY = 1
 
-GpioPinProviderValueChangedEventArgs = _winrt_windows_devices_gpio_provider.GpioPinProviderValueChangedEventArgs
-IGpioControllerProvider = _winrt_windows_devices_gpio_provider.IGpioControllerProvider
-IGpioPinProvider = _winrt_windows_devices_gpio_provider.IGpioPinProvider
-IGpioProvider = _winrt_windows_devices_gpio_provider.IGpioProvider

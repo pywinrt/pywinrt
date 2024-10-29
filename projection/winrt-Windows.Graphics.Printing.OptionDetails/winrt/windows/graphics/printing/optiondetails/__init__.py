@@ -3,7 +3,32 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_printing_optiondetails
+from winrt._winrt_windows_graphics_printing_optiondetails import (
+    PrintBindingOptionDetails,
+    PrintBorderingOptionDetails,
+    PrintCollationOptionDetails,
+    PrintColorModeOptionDetails,
+    PrintCopiesOptionDetails,
+    PrintCustomItemDetails,
+    PrintCustomItemListOptionDetails,
+    PrintCustomTextOptionDetails,
+    PrintCustomToggleOptionDetails,
+    PrintDuplexOptionDetails,
+    PrintHolePunchOptionDetails,
+    PrintMediaSizeOptionDetails,
+    PrintMediaTypeOptionDetails,
+    PrintOrientationOptionDetails,
+    PrintPageRangeOptionDetails,
+    PrintQualityOptionDetails,
+    PrintStapleOptionDetails,
+    PrintTaskOptionChangedEventArgs,
+    PrintTaskOptionDetails,
+    IPrintCustomOptionDetails,
+    IPrintItemListOptionDetails,
+    IPrintNumberOptionDetails,
+    IPrintOptionDetails,
+    IPrintTextOptionDetails,
+)
 
 __all__ = [
     "PrintOptionStates",
@@ -46,27 +71,3 @@ class PrintOptionType(enum.IntEnum):
     ITEM_LIST = 3
     TOGGLE = 4
 
-PrintBindingOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintBindingOptionDetails
-PrintBorderingOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintBorderingOptionDetails
-PrintCollationOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintCollationOptionDetails
-PrintColorModeOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintColorModeOptionDetails
-PrintCopiesOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintCopiesOptionDetails
-PrintCustomItemDetails = _winrt_windows_graphics_printing_optiondetails.PrintCustomItemDetails
-PrintCustomItemListOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintCustomItemListOptionDetails
-PrintCustomTextOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintCustomTextOptionDetails
-PrintCustomToggleOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintCustomToggleOptionDetails
-PrintDuplexOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintDuplexOptionDetails
-PrintHolePunchOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintHolePunchOptionDetails
-PrintMediaSizeOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintMediaSizeOptionDetails
-PrintMediaTypeOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintMediaTypeOptionDetails
-PrintOrientationOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintOrientationOptionDetails
-PrintPageRangeOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintPageRangeOptionDetails
-PrintQualityOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintQualityOptionDetails
-PrintStapleOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintStapleOptionDetails
-PrintTaskOptionChangedEventArgs = _winrt_windows_graphics_printing_optiondetails.PrintTaskOptionChangedEventArgs
-PrintTaskOptionDetails = _winrt_windows_graphics_printing_optiondetails.PrintTaskOptionDetails
-IPrintCustomOptionDetails = _winrt_windows_graphics_printing_optiondetails.IPrintCustomOptionDetails
-IPrintItemListOptionDetails = _winrt_windows_graphics_printing_optiondetails.IPrintItemListOptionDetails
-IPrintNumberOptionDetails = _winrt_windows_graphics_printing_optiondetails.IPrintNumberOptionDetails
-IPrintOptionDetails = _winrt_windows_graphics_printing_optiondetails.IPrintOptionDetails
-IPrintTextOptionDetails = _winrt_windows_graphics_printing_optiondetails.IPrintTextOptionDetails

@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_system_userprofile_gameservices_core
+from winrt._winrt_windows_phone_system_userprofile_gameservices_core import (
+    GameService,
+    GameServicePropertyCollection,
+)
 
 __all__ = [
     "GameServiceGameOutcome",
@@ -22,5 +25,3 @@ class GameServiceScoreKind(enum.IntEnum):
     NUMBER = 0
     TIME = 1
 
-GameService = _winrt_windows_phone_system_userprofile_gameservices_core.GameService
-GameServicePropertyCollection = _winrt_windows_phone_system_userprofile_gameservices_core.GameServicePropertyCollection

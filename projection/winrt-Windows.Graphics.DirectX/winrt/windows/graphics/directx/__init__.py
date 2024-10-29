@@ -3,7 +3,6 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_directx
 
 __all__ = [
     "DirectXAlphaMode",

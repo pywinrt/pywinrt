@@ -5,7 +5,52 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_storage
+from winrt._winrt_windows_storage import (
+    AppDataPaths,
+    ApplicationData,
+    ApplicationDataCompositeValue,
+    ApplicationDataContainer,
+    ApplicationDataContainerSettings,
+    CachedFileManager,
+    DownloadsFolder,
+    FileIO,
+    KnownFolders,
+    PathIO,
+    SetVersionDeferral,
+    SetVersionRequest,
+    StorageFile,
+    StorageFolder,
+    StorageLibrary,
+    StorageLibraryChange,
+    StorageLibraryChangeReader,
+    StorageLibraryChangeTracker,
+    StorageLibraryChangeTrackerOptions,
+    StorageLibraryLastChangeId,
+    StorageProvider,
+    StorageStreamTransaction,
+    StreamedFileDataRequest,
+    SystemAudioProperties,
+    SystemDataPaths,
+    SystemGPSProperties,
+    SystemImageProperties,
+    SystemMediaProperties,
+    SystemMusicProperties,
+    SystemPhotoProperties,
+    SystemProperties,
+    SystemVideoProperties,
+    UserDataPaths,
+    IStorageFile,
+    IStorageFile2,
+    IStorageFilePropertiesWithAvailability,
+    IStorageFolder,
+    IStorageFolder2,
+    IStorageItem,
+    IStorageItem2,
+    IStorageItemProperties,
+    IStorageItemProperties2,
+    IStorageItemPropertiesWithProvider,
+    IStreamedFileDataRequest,
+)
 
 __all__ = [
     "ApplicationDataCreateDisposition",
@@ -168,51 +213,7 @@ class StreamedFileFailureMode(enum.IntEnum):
     CURRENTLY_UNAVAILABLE = 1
     INCOMPLETE = 2
 
-AppDataPaths = _winrt_windows_storage.AppDataPaths
-ApplicationData = _winrt_windows_storage.ApplicationData
-ApplicationDataCompositeValue = _winrt_windows_storage.ApplicationDataCompositeValue
 winrt.system._mixin_mutable_mapping(ApplicationDataCompositeValue)
-ApplicationDataContainer = _winrt_windows_storage.ApplicationDataContainer
-ApplicationDataContainerSettings = _winrt_windows_storage.ApplicationDataContainerSettings
 winrt.system._mixin_mutable_mapping(ApplicationDataContainerSettings)
-CachedFileManager = _winrt_windows_storage.CachedFileManager
-DownloadsFolder = _winrt_windows_storage.DownloadsFolder
-FileIO = _winrt_windows_storage.FileIO
-KnownFolders = _winrt_windows_storage.KnownFolders
-PathIO = _winrt_windows_storage.PathIO
-SetVersionDeferral = _winrt_windows_storage.SetVersionDeferral
-SetVersionRequest = _winrt_windows_storage.SetVersionRequest
-StorageFile = _winrt_windows_storage.StorageFile
-StorageFolder = _winrt_windows_storage.StorageFolder
-StorageLibrary = _winrt_windows_storage.StorageLibrary
-StorageLibraryChange = _winrt_windows_storage.StorageLibraryChange
-StorageLibraryChangeReader = _winrt_windows_storage.StorageLibraryChangeReader
-StorageLibraryChangeTracker = _winrt_windows_storage.StorageLibraryChangeTracker
-StorageLibraryChangeTrackerOptions = _winrt_windows_storage.StorageLibraryChangeTrackerOptions
-StorageLibraryLastChangeId = _winrt_windows_storage.StorageLibraryLastChangeId
-StorageProvider = _winrt_windows_storage.StorageProvider
-StorageStreamTransaction = _winrt_windows_storage.StorageStreamTransaction
-StreamedFileDataRequest = _winrt_windows_storage.StreamedFileDataRequest
-SystemAudioProperties = _winrt_windows_storage.SystemAudioProperties
-SystemDataPaths = _winrt_windows_storage.SystemDataPaths
-SystemGPSProperties = _winrt_windows_storage.SystemGPSProperties
-SystemImageProperties = _winrt_windows_storage.SystemImageProperties
-SystemMediaProperties = _winrt_windows_storage.SystemMediaProperties
-SystemMusicProperties = _winrt_windows_storage.SystemMusicProperties
-SystemPhotoProperties = _winrt_windows_storage.SystemPhotoProperties
-SystemProperties = _winrt_windows_storage.SystemProperties
-SystemVideoProperties = _winrt_windows_storage.SystemVideoProperties
-UserDataPaths = _winrt_windows_storage.UserDataPaths
-IStorageFile = _winrt_windows_storage.IStorageFile
-IStorageFile2 = _winrt_windows_storage.IStorageFile2
-IStorageFilePropertiesWithAvailability = _winrt_windows_storage.IStorageFilePropertiesWithAvailability
-IStorageFolder = _winrt_windows_storage.IStorageFolder
-IStorageFolder2 = _winrt_windows_storage.IStorageFolder2
-IStorageItem = _winrt_windows_storage.IStorageItem
-IStorageItem2 = _winrt_windows_storage.IStorageItem2
-IStorageItemProperties = _winrt_windows_storage.IStorageItemProperties
-IStorageItemProperties2 = _winrt_windows_storage.IStorageItemProperties2
-IStorageItemPropertiesWithProvider = _winrt_windows_storage.IStorageItemPropertiesWithProvider
-IStreamedFileDataRequest = _winrt_windows_storage.IStreamedFileDataRequest
 ApplicationDataSetVersionHandler = typing.Callable[[SetVersionRequest], None]
 StreamedFileDataRequestedHandler = typing.Callable[[StreamedFileDataRequest], None]

@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_store_preview_installcontrol
+from winrt._winrt_windows_applicationmodel_store_preview_installcontrol import (
+    AppInstallItem,
+    AppInstallManager,
+    AppInstallManagerItemEventArgs,
+    AppInstallOptions,
+    AppInstallStatus,
+    AppUpdateOptions,
+    GetEntitlementResult,
+)
 
 __all__ = [
     "AppInstallState",
@@ -59,10 +67,3 @@ class GetEntitlementStatus(enum.IntEnum):
     NETWORK_ERROR = 2
     SERVER_ERROR = 3
 
-AppInstallItem = _winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallItem
-AppInstallManager = _winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManager
-AppInstallManagerItemEventArgs = _winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallManagerItemEventArgs
-AppInstallOptions = _winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallOptions
-AppInstallStatus = _winrt_windows_applicationmodel_store_preview_installcontrol.AppInstallStatus
-AppUpdateOptions = _winrt_windows_applicationmodel_store_preview_installcontrol.AppUpdateOptions
-GetEntitlementResult = _winrt_windows_applicationmodel_store_preview_installcontrol.GetEntitlementResult

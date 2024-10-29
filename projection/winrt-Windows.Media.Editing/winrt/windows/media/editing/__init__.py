@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_editing
+from winrt._winrt_windows_media_editing import (
+    BackgroundAudioTrack,
+    EmbeddedAudioTrack,
+    MediaClip,
+    MediaComposition,
+    MediaOverlay,
+    MediaOverlayLayer,
+)
 
 __all__ = [
     "MediaTrimmingPreference",
@@ -24,9 +31,3 @@ class VideoFramePrecision(enum.IntEnum):
     NEAREST_FRAME = 0
     NEAREST_KEY_FRAME = 1
 
-BackgroundAudioTrack = _winrt_windows_media_editing.BackgroundAudioTrack
-EmbeddedAudioTrack = _winrt_windows_media_editing.EmbeddedAudioTrack
-MediaClip = _winrt_windows_media_editing.MediaClip
-MediaComposition = _winrt_windows_media_editing.MediaComposition
-MediaOverlay = _winrt_windows_media_editing.MediaOverlay
-MediaOverlayLayer = _winrt_windows_media_editing.MediaOverlayLayer

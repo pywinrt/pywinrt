@@ -5,7 +5,13 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_navigation
+from winrt._winrt_microsoft_ui_xaml_navigation import (
+    FrameNavigationOptions,
+    NavigatingCancelEventArgs,
+    NavigationEventArgs,
+    NavigationFailedEventArgs,
+    PageStackEntry,
+)
 
 __all__ = [
     "NavigationCacheMode",
@@ -32,11 +38,6 @@ class NavigationMode(enum.IntEnum):
     FORWARD = 2
     REFRESH = 3
 
-FrameNavigationOptions = _winrt_microsoft_ui_xaml_navigation.FrameNavigationOptions
-NavigatingCancelEventArgs = _winrt_microsoft_ui_xaml_navigation.NavigatingCancelEventArgs
-NavigationEventArgs = _winrt_microsoft_ui_xaml_navigation.NavigationEventArgs
-NavigationFailedEventArgs = _winrt_microsoft_ui_xaml_navigation.NavigationFailedEventArgs
-PageStackEntry = _winrt_microsoft_ui_xaml_navigation.PageStackEntry
 NavigatedEventHandler = typing.Callable[[winrt.system.Object, NavigationEventArgs], None]
 NavigatingCancelEventHandler = typing.Callable[[winrt.system.Object, NavigatingCancelEventArgs], None]
 NavigationFailedEventHandler = typing.Callable[[winrt.system.Object, NavigationFailedEventArgs], None]

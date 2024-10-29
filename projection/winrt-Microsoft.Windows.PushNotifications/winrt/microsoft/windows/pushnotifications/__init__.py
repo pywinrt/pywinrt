@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_pushnotifications
+from winrt._winrt_microsoft_windows_pushnotifications import (
+    PushNotificationCreateChannelStatus,
+    PushNotificationChannel,
+    PushNotificationCreateChannelResult,
+    PushNotificationManager,
+    PushNotificationReceivedEventArgs,
+)
 
 __all__ = [
     "PushNotificationChannelStatus",
@@ -20,8 +26,3 @@ class PushNotificationChannelStatus(enum.IntEnum):
     COMPLETED_SUCCESS = 2
     COMPLETED_FAILURE = 3
 
-PushNotificationCreateChannelStatus = _winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelStatus
-PushNotificationChannel = _winrt_microsoft_windows_pushnotifications.PushNotificationChannel
-PushNotificationCreateChannelResult = _winrt_microsoft_windows_pushnotifications.PushNotificationCreateChannelResult
-PushNotificationManager = _winrt_microsoft_windows_pushnotifications.PushNotificationManager
-PushNotificationReceivedEventArgs = _winrt_microsoft_windows_pushnotifications.PushNotificationReceivedEventArgs

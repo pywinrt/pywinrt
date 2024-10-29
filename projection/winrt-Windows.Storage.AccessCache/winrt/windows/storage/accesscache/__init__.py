@@ -3,7 +3,15 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_storage_accesscache
+from winrt._winrt_windows_storage_accesscache import (
+    AccessListEntry,
+    AccessListEntryView,
+    ItemRemovedEventArgs,
+    StorageApplicationPermissions,
+    StorageItemAccessList,
+    StorageItemMostRecentlyUsedList,
+    IStorageItemAccessList,
+)
 
 __all__ = [
     "AccessCacheOptions",
@@ -28,11 +36,4 @@ class RecentStorageItemVisibility(enum.IntEnum):
     APP_ONLY = 0
     APP_AND_SYSTEM = 1
 
-AccessListEntry = _winrt_windows_storage_accesscache.AccessListEntry
-AccessListEntryView = _winrt_windows_storage_accesscache.AccessListEntryView
 winrt.system._mixin_sequence(AccessListEntryView)
-ItemRemovedEventArgs = _winrt_windows_storage_accesscache.ItemRemovedEventArgs
-StorageApplicationPermissions = _winrt_windows_storage_accesscache.StorageApplicationPermissions
-StorageItemAccessList = _winrt_windows_storage_accesscache.StorageItemAccessList
-StorageItemMostRecentlyUsedList = _winrt_windows_storage_accesscache.StorageItemMostRecentlyUsedList
-IStorageItemAccessList = _winrt_windows_storage_accesscache.IStorageItemAccessList

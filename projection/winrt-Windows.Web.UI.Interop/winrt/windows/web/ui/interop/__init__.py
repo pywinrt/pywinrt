@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_ui_interop
+from winrt._winrt_windows_web_ui_interop import (
+    WebViewControl,
+    WebViewControlAcceleratorKeyPressedEventArgs,
+    WebViewControlMoveFocusRequestedEventArgs,
+    WebViewControlProcess,
+    WebViewControlProcessOptions,
+)
 
 __all__ = [
     "WebViewControlAcceleratorKeyRoutingStage",
@@ -30,8 +36,3 @@ class WebViewControlProcessCapabilityState(enum.IntEnum):
     DISABLED = 1
     ENABLED = 2
 
-WebViewControl = _winrt_windows_web_ui_interop.WebViewControl
-WebViewControlAcceleratorKeyPressedEventArgs = _winrt_windows_web_ui_interop.WebViewControlAcceleratorKeyPressedEventArgs
-WebViewControlMoveFocusRequestedEventArgs = _winrt_windows_web_ui_interop.WebViewControlMoveFocusRequestedEventArgs
-WebViewControlProcess = _winrt_windows_web_ui_interop.WebViewControlProcess
-WebViewControlProcessOptions = _winrt_windows_web_ui_interop.WebViewControlProcessOptions

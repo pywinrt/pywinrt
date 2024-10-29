@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_wifi
+from winrt._winrt_windows_devices_wifi import (
+    WiFiAdapter,
+    WiFiAvailableNetwork,
+    WiFiConnectionResult,
+    WiFiNetworkReport,
+    WiFiOnDemandHotspotConnectTriggerDetails,
+    WiFiOnDemandHotspotConnectionResult,
+    WiFiOnDemandHotspotNetwork,
+    WiFiOnDemandHotspotNetworkProperties,
+    WiFiWpsConfigurationResult,
+)
 
 __all__ = [
     "WiFiAccessStatus",
@@ -117,12 +127,3 @@ class WiFiWpsKind(enum.IntEnum):
     ETHERNET = 4
     USB = 5
 
-WiFiAdapter = _winrt_windows_devices_wifi.WiFiAdapter
-WiFiAvailableNetwork = _winrt_windows_devices_wifi.WiFiAvailableNetwork
-WiFiConnectionResult = _winrt_windows_devices_wifi.WiFiConnectionResult
-WiFiNetworkReport = _winrt_windows_devices_wifi.WiFiNetworkReport
-WiFiOnDemandHotspotConnectTriggerDetails = _winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectTriggerDetails
-WiFiOnDemandHotspotConnectionResult = _winrt_windows_devices_wifi.WiFiOnDemandHotspotConnectionResult
-WiFiOnDemandHotspotNetwork = _winrt_windows_devices_wifi.WiFiOnDemandHotspotNetwork
-WiFiOnDemandHotspotNetworkProperties = _winrt_windows_devices_wifi.WiFiOnDemandHotspotNetworkProperties
-WiFiWpsConfigurationResult = _winrt_windows_devices_wifi.WiFiWpsConfigurationResult

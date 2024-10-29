@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_maps
+from winrt._winrt_windows_services_maps import (
+    EnhancedWaypoint,
+    ManeuverWarning,
+    MapAddress,
+    MapLocation,
+    MapLocationFinder,
+    MapLocationFinderResult,
+    MapManager,
+    MapRoute,
+    MapRouteDrivingOptions,
+    MapRouteFinder,
+    MapRouteFinderResult,
+    MapRouteLeg,
+    MapRouteManeuver,
+    MapService,
+    PlaceInfo,
+    PlaceInfoCreateOptions,
+)
 
 __all__ = [
     "ManeuverWarningKind",
@@ -168,19 +185,3 @@ class WaypointKind(enum.IntEnum):
     STOP = 0
     VIA = 1
 
-EnhancedWaypoint = _winrt_windows_services_maps.EnhancedWaypoint
-ManeuverWarning = _winrt_windows_services_maps.ManeuverWarning
-MapAddress = _winrt_windows_services_maps.MapAddress
-MapLocation = _winrt_windows_services_maps.MapLocation
-MapLocationFinder = _winrt_windows_services_maps.MapLocationFinder
-MapLocationFinderResult = _winrt_windows_services_maps.MapLocationFinderResult
-MapManager = _winrt_windows_services_maps.MapManager
-MapRoute = _winrt_windows_services_maps.MapRoute
-MapRouteDrivingOptions = _winrt_windows_services_maps.MapRouteDrivingOptions
-MapRouteFinder = _winrt_windows_services_maps.MapRouteFinder
-MapRouteFinderResult = _winrt_windows_services_maps.MapRouteFinderResult
-MapRouteLeg = _winrt_windows_services_maps.MapRouteLeg
-MapRouteManeuver = _winrt_windows_services_maps.MapRouteManeuver
-MapService = _winrt_windows_services_maps.MapService
-PlaceInfo = _winrt_windows_services_maps.PlaceInfo
-PlaceInfoCreateOptions = _winrt_windows_services_maps.PlaceInfoCreateOptions

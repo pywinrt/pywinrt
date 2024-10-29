@@ -3,7 +3,27 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_windowmanagement
+from winrt._winrt_windows_ui_windowmanagement import (
+    AppWindow,
+    AppWindowChangedEventArgs,
+    AppWindowCloseRequestedEventArgs,
+    AppWindowClosedEventArgs,
+    AppWindowFrame,
+    AppWindowPlacement,
+    AppWindowPresentationConfiguration,
+    AppWindowPresenter,
+    AppWindowTitleBar,
+    AppWindowTitleBarOcclusion,
+    CompactOverlayPresentationConfiguration,
+    DefaultPresentationConfiguration,
+    DisplayRegion,
+    FullScreenPresentationConfiguration,
+    WindowServices,
+    WindowingEnvironment,
+    WindowingEnvironmentAddedEventArgs,
+    WindowingEnvironmentChangedEventArgs,
+    WindowingEnvironmentRemovedEventArgs,
+)
 
 __all__ = [
     "AppWindowClosedReason",
@@ -55,22 +75,3 @@ class WindowingEnvironmentKind(enum.IntEnum):
     OVERLAPPED = 1
     TILED = 2
 
-AppWindow = _winrt_windows_ui_windowmanagement.AppWindow
-AppWindowChangedEventArgs = _winrt_windows_ui_windowmanagement.AppWindowChangedEventArgs
-AppWindowCloseRequestedEventArgs = _winrt_windows_ui_windowmanagement.AppWindowCloseRequestedEventArgs
-AppWindowClosedEventArgs = _winrt_windows_ui_windowmanagement.AppWindowClosedEventArgs
-AppWindowFrame = _winrt_windows_ui_windowmanagement.AppWindowFrame
-AppWindowPlacement = _winrt_windows_ui_windowmanagement.AppWindowPlacement
-AppWindowPresentationConfiguration = _winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration
-AppWindowPresenter = _winrt_windows_ui_windowmanagement.AppWindowPresenter
-AppWindowTitleBar = _winrt_windows_ui_windowmanagement.AppWindowTitleBar
-AppWindowTitleBarOcclusion = _winrt_windows_ui_windowmanagement.AppWindowTitleBarOcclusion
-CompactOverlayPresentationConfiguration = _winrt_windows_ui_windowmanagement.CompactOverlayPresentationConfiguration
-DefaultPresentationConfiguration = _winrt_windows_ui_windowmanagement.DefaultPresentationConfiguration
-DisplayRegion = _winrt_windows_ui_windowmanagement.DisplayRegion
-FullScreenPresentationConfiguration = _winrt_windows_ui_windowmanagement.FullScreenPresentationConfiguration
-WindowServices = _winrt_windows_ui_windowmanagement.WindowServices
-WindowingEnvironment = _winrt_windows_ui_windowmanagement.WindowingEnvironment
-WindowingEnvironmentAddedEventArgs = _winrt_windows_ui_windowmanagement.WindowingEnvironmentAddedEventArgs
-WindowingEnvironmentChangedEventArgs = _winrt_windows_ui_windowmanagement.WindowingEnvironmentChangedEventArgs
-WindowingEnvironmentRemovedEventArgs = _winrt_windows_ui_windowmanagement.WindowingEnvironmentRemovedEventArgs

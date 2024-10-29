@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_ui
+from winrt._winrt_windows_web_ui import (
+    WebViewControlContentLoadingEventArgs,
+    WebViewControlDOMContentLoadedEventArgs,
+    WebViewControlDeferredPermissionRequest,
+    WebViewControlLongRunningScriptDetectedEventArgs,
+    WebViewControlNavigationCompletedEventArgs,
+    WebViewControlNavigationStartingEventArgs,
+    WebViewControlNewWindowRequestedEventArgs,
+    WebViewControlPermissionRequest,
+    WebViewControlPermissionRequestedEventArgs,
+    WebViewControlScriptNotifyEventArgs,
+    WebViewControlSettings,
+    WebViewControlUnsupportedUriSchemeIdentifiedEventArgs,
+    WebViewControlUnviewableContentIdentifiedEventArgs,
+    WebViewControlWebResourceRequestedEventArgs,
+    IWebViewControl,
+    IWebViewControl2,
+)
 
 __all__ = [
     "WebViewControlPermissionState",
@@ -41,19 +58,3 @@ class WebViewControlPermissionType(enum.IntEnum):
     SCREEN = 5
     IMMERSIVE_VIEW = 6
 
-WebViewControlContentLoadingEventArgs = _winrt_windows_web_ui.WebViewControlContentLoadingEventArgs
-WebViewControlDOMContentLoadedEventArgs = _winrt_windows_web_ui.WebViewControlDOMContentLoadedEventArgs
-WebViewControlDeferredPermissionRequest = _winrt_windows_web_ui.WebViewControlDeferredPermissionRequest
-WebViewControlLongRunningScriptDetectedEventArgs = _winrt_windows_web_ui.WebViewControlLongRunningScriptDetectedEventArgs
-WebViewControlNavigationCompletedEventArgs = _winrt_windows_web_ui.WebViewControlNavigationCompletedEventArgs
-WebViewControlNavigationStartingEventArgs = _winrt_windows_web_ui.WebViewControlNavigationStartingEventArgs
-WebViewControlNewWindowRequestedEventArgs = _winrt_windows_web_ui.WebViewControlNewWindowRequestedEventArgs
-WebViewControlPermissionRequest = _winrt_windows_web_ui.WebViewControlPermissionRequest
-WebViewControlPermissionRequestedEventArgs = _winrt_windows_web_ui.WebViewControlPermissionRequestedEventArgs
-WebViewControlScriptNotifyEventArgs = _winrt_windows_web_ui.WebViewControlScriptNotifyEventArgs
-WebViewControlSettings = _winrt_windows_web_ui.WebViewControlSettings
-WebViewControlUnsupportedUriSchemeIdentifiedEventArgs = _winrt_windows_web_ui.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs
-WebViewControlUnviewableContentIdentifiedEventArgs = _winrt_windows_web_ui.WebViewControlUnviewableContentIdentifiedEventArgs
-WebViewControlWebResourceRequestedEventArgs = _winrt_windows_web_ui.WebViewControlWebResourceRequestedEventArgs
-IWebViewControl = _winrt_windows_web_ui.IWebViewControl
-IWebViewControl2 = _winrt_windows_web_ui.IWebViewControl2

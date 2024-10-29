@@ -3,7 +3,60 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_protection_playready
+from winrt._winrt_windows_media_protection_playready import (
+    NDClient,
+    NDCustomData,
+    NDDownloadEngineNotifier,
+    NDLicenseFetchDescriptor,
+    NDStorageFileHelper,
+    NDStreamParserNotifier,
+    NDTCPMessenger,
+    PlayReadyContentHeader,
+    PlayReadyContentResolver,
+    PlayReadyDomain,
+    PlayReadyDomainIterable,
+    PlayReadyDomainIterator,
+    PlayReadyDomainJoinServiceRequest,
+    PlayReadyDomainLeaveServiceRequest,
+    PlayReadyITADataGenerator,
+    PlayReadyIndividualizationServiceRequest,
+    PlayReadyLicense,
+    PlayReadyLicenseAcquisitionServiceRequest,
+    PlayReadyLicenseIterable,
+    PlayReadyLicenseIterator,
+    PlayReadyLicenseManagement,
+    PlayReadyLicenseSession,
+    PlayReadyMeteringReportServiceRequest,
+    PlayReadyRevocationServiceRequest,
+    PlayReadySecureStopIterable,
+    PlayReadySecureStopIterator,
+    PlayReadySecureStopServiceRequest,
+    PlayReadySoapMessage,
+    PlayReadyStatics,
+    INDClosedCaptionDataReceivedEventArgs,
+    INDCustomData,
+    INDDownloadEngine,
+    INDDownloadEngineNotifier,
+    INDLicenseFetchCompletedEventArgs,
+    INDLicenseFetchDescriptor,
+    INDLicenseFetchResult,
+    INDMessenger,
+    INDProximityDetectionCompletedEventArgs,
+    INDRegistrationCompletedEventArgs,
+    INDSendResult,
+    INDStartResult,
+    INDStorageFileHelper,
+    INDStreamParser,
+    INDStreamParserNotifier,
+    INDTransmitterProperties,
+    IPlayReadyDomain,
+    IPlayReadyLicense,
+    IPlayReadyLicenseAcquisitionServiceRequest,
+    IPlayReadyLicenseSession,
+    IPlayReadyLicenseSession2,
+    IPlayReadySecureStopServiceRequest,
+    IPlayReadyServiceRequest,
+)
 
 __all__ = [
     "NDCertificateFeature",
@@ -154,55 +207,3 @@ class PlayReadyITADataFormat(enum.IntEnum):
     SERIALIZED_PROPERTIES = 0
     SERIALIZED_PROPERTIES_WITH_CONTENT_PROTECTION_WRAPPER = 1
 
-NDClient = _winrt_windows_media_protection_playready.NDClient
-NDCustomData = _winrt_windows_media_protection_playready.NDCustomData
-NDDownloadEngineNotifier = _winrt_windows_media_protection_playready.NDDownloadEngineNotifier
-NDLicenseFetchDescriptor = _winrt_windows_media_protection_playready.NDLicenseFetchDescriptor
-NDStorageFileHelper = _winrt_windows_media_protection_playready.NDStorageFileHelper
-NDStreamParserNotifier = _winrt_windows_media_protection_playready.NDStreamParserNotifier
-NDTCPMessenger = _winrt_windows_media_protection_playready.NDTCPMessenger
-PlayReadyContentHeader = _winrt_windows_media_protection_playready.PlayReadyContentHeader
-PlayReadyContentResolver = _winrt_windows_media_protection_playready.PlayReadyContentResolver
-PlayReadyDomain = _winrt_windows_media_protection_playready.PlayReadyDomain
-PlayReadyDomainIterable = _winrt_windows_media_protection_playready.PlayReadyDomainIterable
-PlayReadyDomainIterator = _winrt_windows_media_protection_playready.PlayReadyDomainIterator
-PlayReadyDomainJoinServiceRequest = _winrt_windows_media_protection_playready.PlayReadyDomainJoinServiceRequest
-PlayReadyDomainLeaveServiceRequest = _winrt_windows_media_protection_playready.PlayReadyDomainLeaveServiceRequest
-PlayReadyITADataGenerator = _winrt_windows_media_protection_playready.PlayReadyITADataGenerator
-PlayReadyIndividualizationServiceRequest = _winrt_windows_media_protection_playready.PlayReadyIndividualizationServiceRequest
-PlayReadyLicense = _winrt_windows_media_protection_playready.PlayReadyLicense
-PlayReadyLicenseAcquisitionServiceRequest = _winrt_windows_media_protection_playready.PlayReadyLicenseAcquisitionServiceRequest
-PlayReadyLicenseIterable = _winrt_windows_media_protection_playready.PlayReadyLicenseIterable
-PlayReadyLicenseIterator = _winrt_windows_media_protection_playready.PlayReadyLicenseIterator
-PlayReadyLicenseManagement = _winrt_windows_media_protection_playready.PlayReadyLicenseManagement
-PlayReadyLicenseSession = _winrt_windows_media_protection_playready.PlayReadyLicenseSession
-PlayReadyMeteringReportServiceRequest = _winrt_windows_media_protection_playready.PlayReadyMeteringReportServiceRequest
-PlayReadyRevocationServiceRequest = _winrt_windows_media_protection_playready.PlayReadyRevocationServiceRequest
-PlayReadySecureStopIterable = _winrt_windows_media_protection_playready.PlayReadySecureStopIterable
-PlayReadySecureStopIterator = _winrt_windows_media_protection_playready.PlayReadySecureStopIterator
-PlayReadySecureStopServiceRequest = _winrt_windows_media_protection_playready.PlayReadySecureStopServiceRequest
-PlayReadySoapMessage = _winrt_windows_media_protection_playready.PlayReadySoapMessage
-PlayReadyStatics = _winrt_windows_media_protection_playready.PlayReadyStatics
-INDClosedCaptionDataReceivedEventArgs = _winrt_windows_media_protection_playready.INDClosedCaptionDataReceivedEventArgs
-INDCustomData = _winrt_windows_media_protection_playready.INDCustomData
-INDDownloadEngine = _winrt_windows_media_protection_playready.INDDownloadEngine
-INDDownloadEngineNotifier = _winrt_windows_media_protection_playready.INDDownloadEngineNotifier
-INDLicenseFetchCompletedEventArgs = _winrt_windows_media_protection_playready.INDLicenseFetchCompletedEventArgs
-INDLicenseFetchDescriptor = _winrt_windows_media_protection_playready.INDLicenseFetchDescriptor
-INDLicenseFetchResult = _winrt_windows_media_protection_playready.INDLicenseFetchResult
-INDMessenger = _winrt_windows_media_protection_playready.INDMessenger
-INDProximityDetectionCompletedEventArgs = _winrt_windows_media_protection_playready.INDProximityDetectionCompletedEventArgs
-INDRegistrationCompletedEventArgs = _winrt_windows_media_protection_playready.INDRegistrationCompletedEventArgs
-INDSendResult = _winrt_windows_media_protection_playready.INDSendResult
-INDStartResult = _winrt_windows_media_protection_playready.INDStartResult
-INDStorageFileHelper = _winrt_windows_media_protection_playready.INDStorageFileHelper
-INDStreamParser = _winrt_windows_media_protection_playready.INDStreamParser
-INDStreamParserNotifier = _winrt_windows_media_protection_playready.INDStreamParserNotifier
-INDTransmitterProperties = _winrt_windows_media_protection_playready.INDTransmitterProperties
-IPlayReadyDomain = _winrt_windows_media_protection_playready.IPlayReadyDomain
-IPlayReadyLicense = _winrt_windows_media_protection_playready.IPlayReadyLicense
-IPlayReadyLicenseAcquisitionServiceRequest = _winrt_windows_media_protection_playready.IPlayReadyLicenseAcquisitionServiceRequest
-IPlayReadyLicenseSession = _winrt_windows_media_protection_playready.IPlayReadyLicenseSession
-IPlayReadyLicenseSession2 = _winrt_windows_media_protection_playready.IPlayReadyLicenseSession2
-IPlayReadySecureStopServiceRequest = _winrt_windows_media_protection_playready.IPlayReadySecureStopServiceRequest
-IPlayReadyServiceRequest = _winrt_windows_media_protection_playready.IPlayReadyServiceRequest

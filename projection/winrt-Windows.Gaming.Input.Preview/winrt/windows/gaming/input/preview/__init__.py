@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_input_preview
+from winrt._winrt_windows_gaming_input_preview import (
+    HeadsetGeqGains,
+    GameControllerProviderInfo,
+    LegacyGipGameControllerProvider,
+)
 
 __all__ = [
     "DeviceCommand",
@@ -78,6 +82,3 @@ class RemappingButtonCategory(enum.IntEnum):
     SHARE_DOUBLE_PRESS_META_DATA = 10
     SHARE_DOUBLE_PRESS_META_DATA_DISPLAY = 11
 
-HeadsetGeqGains = _winrt_windows_gaming_input_preview.HeadsetGeqGains
-GameControllerProviderInfo = _winrt_windows_gaming_input_preview.GameControllerProviderInfo
-LegacyGipGameControllerProvider = _winrt_windows_gaming_input_preview.LegacyGipGameControllerProvider

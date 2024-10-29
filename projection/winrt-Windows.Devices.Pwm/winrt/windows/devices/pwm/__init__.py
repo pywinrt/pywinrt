@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_pwm
+from winrt._winrt_windows_devices_pwm import (
+    PwmController,
+    PwmPin,
+)
 
 __all__ = [
     "PwmPulsePolarity",
@@ -15,5 +18,3 @@ class PwmPulsePolarity(enum.IntEnum):
     ACTIVE_HIGH = 0
     ACTIVE_LOW = 1
 
-PwmController = _winrt_windows_devices_pwm.PwmController
-PwmPin = _winrt_windows_devices_pwm.PwmPin

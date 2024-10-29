@@ -5,7 +5,48 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_input
+from winrt._winrt_microsoft_ui_xaml_input import (
+    AccessKeyDisplayDismissedEventArgs,
+    AccessKeyDisplayRequestedEventArgs,
+    AccessKeyInvokedEventArgs,
+    AccessKeyManager,
+    CanExecuteRequestedEventArgs,
+    CharacterReceivedRoutedEventArgs,
+    ContextRequestedEventArgs,
+    DoubleTappedRoutedEventArgs,
+    ExecuteRequestedEventArgs,
+    FindNextElementOptions,
+    FocusManager,
+    FocusManagerGotFocusEventArgs,
+    FocusManagerLostFocusEventArgs,
+    FocusMovementResult,
+    GettingFocusEventArgs,
+    HoldingRoutedEventArgs,
+    InertiaExpansionBehavior,
+    InertiaRotationBehavior,
+    InertiaTranslationBehavior,
+    InputScope,
+    InputScopeName,
+    KeyRoutedEventArgs,
+    KeyboardAccelerator,
+    KeyboardAcceleratorInvokedEventArgs,
+    LosingFocusEventArgs,
+    ManipulationCompletedRoutedEventArgs,
+    ManipulationDeltaRoutedEventArgs,
+    ManipulationInertiaStartingRoutedEventArgs,
+    ManipulationPivot,
+    ManipulationStartedRoutedEventArgs,
+    ManipulationStartingRoutedEventArgs,
+    NoFocusCandidateFoundEventArgs,
+    Pointer,
+    PointerRoutedEventArgs,
+    ProcessKeyboardAcceleratorEventArgs,
+    RightTappedRoutedEventArgs,
+    StandardUICommand,
+    TappedRoutedEventArgs,
+    XamlUICommand,
+    ICommand,
+)
 
 __all__ = [
     "FocusInputDeviceKind",
@@ -203,46 +244,6 @@ class XYFocusNavigationStrategyOverride(enum.IntEnum):
     NAVIGATION_DIRECTION_DISTANCE = 3
     RECTILINEAR_DISTANCE = 4
 
-AccessKeyDisplayDismissedEventArgs = _winrt_microsoft_ui_xaml_input.AccessKeyDisplayDismissedEventArgs
-AccessKeyDisplayRequestedEventArgs = _winrt_microsoft_ui_xaml_input.AccessKeyDisplayRequestedEventArgs
-AccessKeyInvokedEventArgs = _winrt_microsoft_ui_xaml_input.AccessKeyInvokedEventArgs
-AccessKeyManager = _winrt_microsoft_ui_xaml_input.AccessKeyManager
-CanExecuteRequestedEventArgs = _winrt_microsoft_ui_xaml_input.CanExecuteRequestedEventArgs
-CharacterReceivedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.CharacterReceivedRoutedEventArgs
-ContextRequestedEventArgs = _winrt_microsoft_ui_xaml_input.ContextRequestedEventArgs
-DoubleTappedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.DoubleTappedRoutedEventArgs
-ExecuteRequestedEventArgs = _winrt_microsoft_ui_xaml_input.ExecuteRequestedEventArgs
-FindNextElementOptions = _winrt_microsoft_ui_xaml_input.FindNextElementOptions
-FocusManager = _winrt_microsoft_ui_xaml_input.FocusManager
-FocusManagerGotFocusEventArgs = _winrt_microsoft_ui_xaml_input.FocusManagerGotFocusEventArgs
-FocusManagerLostFocusEventArgs = _winrt_microsoft_ui_xaml_input.FocusManagerLostFocusEventArgs
-FocusMovementResult = _winrt_microsoft_ui_xaml_input.FocusMovementResult
-GettingFocusEventArgs = _winrt_microsoft_ui_xaml_input.GettingFocusEventArgs
-HoldingRoutedEventArgs = _winrt_microsoft_ui_xaml_input.HoldingRoutedEventArgs
-InertiaExpansionBehavior = _winrt_microsoft_ui_xaml_input.InertiaExpansionBehavior
-InertiaRotationBehavior = _winrt_microsoft_ui_xaml_input.InertiaRotationBehavior
-InertiaTranslationBehavior = _winrt_microsoft_ui_xaml_input.InertiaTranslationBehavior
-InputScope = _winrt_microsoft_ui_xaml_input.InputScope
-InputScopeName = _winrt_microsoft_ui_xaml_input.InputScopeName
-KeyRoutedEventArgs = _winrt_microsoft_ui_xaml_input.KeyRoutedEventArgs
-KeyboardAccelerator = _winrt_microsoft_ui_xaml_input.KeyboardAccelerator
-KeyboardAcceleratorInvokedEventArgs = _winrt_microsoft_ui_xaml_input.KeyboardAcceleratorInvokedEventArgs
-LosingFocusEventArgs = _winrt_microsoft_ui_xaml_input.LosingFocusEventArgs
-ManipulationCompletedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.ManipulationCompletedRoutedEventArgs
-ManipulationDeltaRoutedEventArgs = _winrt_microsoft_ui_xaml_input.ManipulationDeltaRoutedEventArgs
-ManipulationInertiaStartingRoutedEventArgs = _winrt_microsoft_ui_xaml_input.ManipulationInertiaStartingRoutedEventArgs
-ManipulationPivot = _winrt_microsoft_ui_xaml_input.ManipulationPivot
-ManipulationStartedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs
-ManipulationStartingRoutedEventArgs = _winrt_microsoft_ui_xaml_input.ManipulationStartingRoutedEventArgs
-NoFocusCandidateFoundEventArgs = _winrt_microsoft_ui_xaml_input.NoFocusCandidateFoundEventArgs
-Pointer = _winrt_microsoft_ui_xaml_input.Pointer
-PointerRoutedEventArgs = _winrt_microsoft_ui_xaml_input.PointerRoutedEventArgs
-ProcessKeyboardAcceleratorEventArgs = _winrt_microsoft_ui_xaml_input.ProcessKeyboardAcceleratorEventArgs
-RightTappedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.RightTappedRoutedEventArgs
-StandardUICommand = _winrt_microsoft_ui_xaml_input.StandardUICommand
-TappedRoutedEventArgs = _winrt_microsoft_ui_xaml_input.TappedRoutedEventArgs
-XamlUICommand = _winrt_microsoft_ui_xaml_input.XamlUICommand
-ICommand = _winrt_microsoft_ui_xaml_input.ICommand
 DoubleTappedEventHandler = typing.Callable[[winrt.system.Object, DoubleTappedRoutedEventArgs], None]
 HoldingEventHandler = typing.Callable[[winrt.system.Object, HoldingRoutedEventArgs], None]
 KeyEventHandler = typing.Callable[[winrt.system.Object, KeyRoutedEventArgs], None]

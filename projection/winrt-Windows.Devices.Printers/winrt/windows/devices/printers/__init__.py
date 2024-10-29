@@ -3,7 +3,20 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_printers
+from winrt._winrt_windows_devices_printers import (
+    IppAttributeError,
+    IppAttributeValue,
+    IppIntegerRange,
+    IppPrintDevice,
+    IppResolution,
+    IppSetAttributesResult,
+    IppTextWithLanguage,
+    PageConfigurationSettings,
+    PdlPassthroughProvider,
+    PdlPassthroughTarget,
+    Print3DDevice,
+    PrintSchema,
+)
 
 __all__ = [
     "IppAttributeErrorReason",
@@ -68,15 +81,3 @@ class PageConfigurationSource(enum.IntEnum):
     PRINT_JOB_CONFIGURATION = 0
     PDL_CONTENT = 1
 
-IppAttributeError = _winrt_windows_devices_printers.IppAttributeError
-IppAttributeValue = _winrt_windows_devices_printers.IppAttributeValue
-IppIntegerRange = _winrt_windows_devices_printers.IppIntegerRange
-IppPrintDevice = _winrt_windows_devices_printers.IppPrintDevice
-IppResolution = _winrt_windows_devices_printers.IppResolution
-IppSetAttributesResult = _winrt_windows_devices_printers.IppSetAttributesResult
-IppTextWithLanguage = _winrt_windows_devices_printers.IppTextWithLanguage
-PageConfigurationSettings = _winrt_windows_devices_printers.PageConfigurationSettings
-PdlPassthroughProvider = _winrt_windows_devices_printers.PdlPassthroughProvider
-PdlPassthroughTarget = _winrt_windows_devices_printers.PdlPassthroughTarget
-Print3DDevice = _winrt_windows_devices_printers.Print3DDevice
-PrintSchema = _winrt_windows_devices_printers.PrintSchema

@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_spi_provider
+from winrt._winrt_windows_devices_spi_provider import (
+    ProviderSpiConnectionSettings,
+    ISpiControllerProvider,
+    ISpiDeviceProvider,
+    ISpiProvider,
+)
 
 __all__ = [
     "ProviderSpiMode",
@@ -24,7 +29,3 @@ class ProviderSpiSharingMode(enum.IntEnum):
     EXCLUSIVE = 0
     SHARED = 1
 
-ProviderSpiConnectionSettings = _winrt_windows_devices_spi_provider.ProviderSpiConnectionSettings
-ISpiControllerProvider = _winrt_windows_devices_spi_provider.ISpiControllerProvider
-ISpiDeviceProvider = _winrt_windows_devices_spi_provider.ISpiDeviceProvider
-ISpiProvider = _winrt_windows_devices_spi_provider.ISpiProvider

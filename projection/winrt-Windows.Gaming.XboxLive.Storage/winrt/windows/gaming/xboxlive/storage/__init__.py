@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_gaming_xboxlive_storage
+from winrt._winrt_windows_gaming_xboxlive_storage import (
+    GameSaveBlobGetResult,
+    GameSaveBlobInfo,
+    GameSaveBlobInfoGetResult,
+    GameSaveBlobInfoQuery,
+    GameSaveContainer,
+    GameSaveContainerInfo,
+    GameSaveContainerInfoGetResult,
+    GameSaveContainerInfoQuery,
+    GameSaveOperationResult,
+    GameSaveProvider,
+    GameSaveProviderGetResult,
+)
 
 __all__ = [
     "GameSaveErrorStatus",
@@ -37,14 +49,3 @@ class GameSaveErrorStatus(enum.IntEnum):
     USER_HAS_NO_XBOX_LIVE_INFO = -2138898420
     OBJECT_EXPIRED = -2138898419
 
-GameSaveBlobGetResult = _winrt_windows_gaming_xboxlive_storage.GameSaveBlobGetResult
-GameSaveBlobInfo = _winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfo
-GameSaveBlobInfoGetResult = _winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoGetResult
-GameSaveBlobInfoQuery = _winrt_windows_gaming_xboxlive_storage.GameSaveBlobInfoQuery
-GameSaveContainer = _winrt_windows_gaming_xboxlive_storage.GameSaveContainer
-GameSaveContainerInfo = _winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfo
-GameSaveContainerInfoGetResult = _winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoGetResult
-GameSaveContainerInfoQuery = _winrt_windows_gaming_xboxlive_storage.GameSaveContainerInfoQuery
-GameSaveOperationResult = _winrt_windows_gaming_xboxlive_storage.GameSaveOperationResult
-GameSaveProvider = _winrt_windows_gaming_xboxlive_storage.GameSaveProvider
-GameSaveProviderGetResult = _winrt_windows_gaming_xboxlive_storage.GameSaveProviderGetResult

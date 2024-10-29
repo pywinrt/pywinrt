@@ -3,7 +3,35 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media
+from winrt._winrt_windows_media import (
+    MediaTimeRange,
+    AudioBuffer,
+    AudioFrame,
+    AutoRepeatModeChangeRequestedEventArgs,
+    ImageDisplayProperties,
+    MediaControl,
+    MediaExtensionManager,
+    MediaMarkerTypes,
+    MediaProcessingTriggerDetails,
+    MediaTimelineController,
+    MediaTimelineControllerFailedEventArgs,
+    MusicDisplayProperties,
+    PlaybackPositionChangeRequestedEventArgs,
+    PlaybackRateChangeRequestedEventArgs,
+    ShuffleEnabledChangeRequestedEventArgs,
+    SystemMediaTransportControls,
+    SystemMediaTransportControlsButtonPressedEventArgs,
+    SystemMediaTransportControlsDisplayUpdater,
+    SystemMediaTransportControlsPropertyChangedEventArgs,
+    SystemMediaTransportControlsTimelineProperties,
+    VideoDisplayProperties,
+    VideoEffects,
+    VideoFrame,
+    IMediaExtension,
+    IMediaFrame,
+    IMediaMarker,
+    IMediaMarkers,
+)
 
 __all__ = [
     "AudioBufferAccessMode",
@@ -97,30 +125,3 @@ class SystemMediaTransportControlsButton(enum.IntEnum):
 class SystemMediaTransportControlsProperty(enum.IntEnum):
     SOUND_LEVEL = 0
 
-MediaTimeRange = _winrt_windows_media.MediaTimeRange
-AudioBuffer = _winrt_windows_media.AudioBuffer
-AudioFrame = _winrt_windows_media.AudioFrame
-AutoRepeatModeChangeRequestedEventArgs = _winrt_windows_media.AutoRepeatModeChangeRequestedEventArgs
-ImageDisplayProperties = _winrt_windows_media.ImageDisplayProperties
-MediaControl = _winrt_windows_media.MediaControl
-MediaExtensionManager = _winrt_windows_media.MediaExtensionManager
-MediaMarkerTypes = _winrt_windows_media.MediaMarkerTypes
-MediaProcessingTriggerDetails = _winrt_windows_media.MediaProcessingTriggerDetails
-MediaTimelineController = _winrt_windows_media.MediaTimelineController
-MediaTimelineControllerFailedEventArgs = _winrt_windows_media.MediaTimelineControllerFailedEventArgs
-MusicDisplayProperties = _winrt_windows_media.MusicDisplayProperties
-PlaybackPositionChangeRequestedEventArgs = _winrt_windows_media.PlaybackPositionChangeRequestedEventArgs
-PlaybackRateChangeRequestedEventArgs = _winrt_windows_media.PlaybackRateChangeRequestedEventArgs
-ShuffleEnabledChangeRequestedEventArgs = _winrt_windows_media.ShuffleEnabledChangeRequestedEventArgs
-SystemMediaTransportControls = _winrt_windows_media.SystemMediaTransportControls
-SystemMediaTransportControlsButtonPressedEventArgs = _winrt_windows_media.SystemMediaTransportControlsButtonPressedEventArgs
-SystemMediaTransportControlsDisplayUpdater = _winrt_windows_media.SystemMediaTransportControlsDisplayUpdater
-SystemMediaTransportControlsPropertyChangedEventArgs = _winrt_windows_media.SystemMediaTransportControlsPropertyChangedEventArgs
-SystemMediaTransportControlsTimelineProperties = _winrt_windows_media.SystemMediaTransportControlsTimelineProperties
-VideoDisplayProperties = _winrt_windows_media.VideoDisplayProperties
-VideoEffects = _winrt_windows_media.VideoEffects
-VideoFrame = _winrt_windows_media.VideoFrame
-IMediaExtension = _winrt_windows_media.IMediaExtension
-IMediaFrame = _winrt_windows_media.IMediaFrame
-IMediaMarker = _winrt_windows_media.IMediaMarker
-IMediaMarkers = _winrt_windows_media.IMediaMarkers

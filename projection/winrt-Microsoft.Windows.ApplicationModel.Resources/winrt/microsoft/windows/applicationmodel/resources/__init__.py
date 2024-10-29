@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_applicationmodel_resources
+from winrt._winrt_microsoft_windows_applicationmodel_resources import (
+    KnownResourceQualifierName,
+    ResourceCandidate,
+    ResourceContext,
+    ResourceLoader,
+    ResourceManager,
+    ResourceMap,
+    ResourceNotFoundEventArgs,
+    IResourceContext,
+    IResourceManager,
+)
 
 __all__ = [
     "ResourceCandidateKind",
@@ -24,12 +34,3 @@ class ResourceCandidateKind(enum.IntEnum):
     FILE_PATH = 2
     EMBEDDED_DATA = 3
 
-KnownResourceQualifierName = _winrt_microsoft_windows_applicationmodel_resources.KnownResourceQualifierName
-ResourceCandidate = _winrt_microsoft_windows_applicationmodel_resources.ResourceCandidate
-ResourceContext = _winrt_microsoft_windows_applicationmodel_resources.ResourceContext
-ResourceLoader = _winrt_microsoft_windows_applicationmodel_resources.ResourceLoader
-ResourceManager = _winrt_microsoft_windows_applicationmodel_resources.ResourceManager
-ResourceMap = _winrt_microsoft_windows_applicationmodel_resources.ResourceMap
-ResourceNotFoundEventArgs = _winrt_microsoft_windows_applicationmodel_resources.ResourceNotFoundEventArgs
-IResourceContext = _winrt_microsoft_windows_applicationmodel_resources.IResourceContext
-IResourceManager = _winrt_microsoft_windows_applicationmodel_resources.IResourceManager

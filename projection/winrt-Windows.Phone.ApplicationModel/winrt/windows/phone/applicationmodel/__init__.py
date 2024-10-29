@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_phone_applicationmodel
+from winrt._winrt_windows_phone_applicationmodel import (
+    ApplicationProfile,
+)
 
 __all__ = [
     "ApplicationProfileModes",
@@ -14,4 +16,3 @@ class ApplicationProfileModes(enum.IntFlag):
     DEFAULT = 0x0
     ALTERNATE = 0x1
 
-ApplicationProfile = _winrt_windows_phone_applicationmodel.ApplicationProfile

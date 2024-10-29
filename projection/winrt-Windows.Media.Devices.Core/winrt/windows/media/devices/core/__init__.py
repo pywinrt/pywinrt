@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_devices_core
+from winrt._winrt_windows_media_devices_core import (
+    CameraIntrinsics,
+    DepthCorrelatedCoordinateMapper,
+    FrameControlCapabilities,
+    FrameController,
+    FrameExposureCapabilities,
+    FrameExposureCompensationCapabilities,
+    FrameExposureCompensationControl,
+    FrameExposureControl,
+    FrameFlashCapabilities,
+    FrameFlashControl,
+    FrameFocusCapabilities,
+    FrameFocusControl,
+    FrameIsoSpeedCapabilities,
+    FrameIsoSpeedControl,
+    VariablePhotoSequenceController,
+)
 
 __all__ = [
     "FrameFlashMode",
@@ -29,18 +45,3 @@ class FrameFlashMode(enum.IntEnum):
     ENABLE = 1
     GLOBAL = 2
 
-CameraIntrinsics = _winrt_windows_media_devices_core.CameraIntrinsics
-DepthCorrelatedCoordinateMapper = _winrt_windows_media_devices_core.DepthCorrelatedCoordinateMapper
-FrameControlCapabilities = _winrt_windows_media_devices_core.FrameControlCapabilities
-FrameController = _winrt_windows_media_devices_core.FrameController
-FrameExposureCapabilities = _winrt_windows_media_devices_core.FrameExposureCapabilities
-FrameExposureCompensationCapabilities = _winrt_windows_media_devices_core.FrameExposureCompensationCapabilities
-FrameExposureCompensationControl = _winrt_windows_media_devices_core.FrameExposureCompensationControl
-FrameExposureControl = _winrt_windows_media_devices_core.FrameExposureControl
-FrameFlashCapabilities = _winrt_windows_media_devices_core.FrameFlashCapabilities
-FrameFlashControl = _winrt_windows_media_devices_core.FrameFlashControl
-FrameFocusCapabilities = _winrt_windows_media_devices_core.FrameFocusCapabilities
-FrameFocusControl = _winrt_windows_media_devices_core.FrameFocusControl
-FrameIsoSpeedCapabilities = _winrt_windows_media_devices_core.FrameIsoSpeedCapabilities
-FrameIsoSpeedControl = _winrt_windows_media_devices_core.FrameIsoSpeedControl
-VariablePhotoSequenceController = _winrt_windows_media_devices_core.VariablePhotoSequenceController

@@ -3,7 +3,23 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_storage_search
+from winrt._winrt_windows_storage_search import (
+    SortEntry,
+    ContentIndexer,
+    ContentIndexerQuery,
+    IndexableContent,
+    QueryOptions,
+    SortEntryVector,
+    StorageFileQueryResult,
+    StorageFolderQueryResult,
+    StorageItemQueryResult,
+    StorageLibraryChangeTrackerTriggerDetails,
+    StorageLibraryContentChangedTriggerDetails,
+    ValueAndLanguage,
+    IIndexableContent,
+    IStorageFolderQueryOperations,
+    IStorageQueryResultBase,
+)
 
 __all__ = [
     "CommonFileQuery",
@@ -73,19 +89,4 @@ class IndexerOption(enum.IntEnum):
     DO_NOT_USE_INDEXER = 2
     ONLY_USE_INDEXER_AND_OPTIMIZE_FOR_INDEXED_PROPERTIES = 3
 
-SortEntry = _winrt_windows_storage_search.SortEntry
-ContentIndexer = _winrt_windows_storage_search.ContentIndexer
-ContentIndexerQuery = _winrt_windows_storage_search.ContentIndexerQuery
-IndexableContent = _winrt_windows_storage_search.IndexableContent
-QueryOptions = _winrt_windows_storage_search.QueryOptions
-SortEntryVector = _winrt_windows_storage_search.SortEntryVector
 winrt.system._mixin_mutable_sequence(SortEntryVector)
-StorageFileQueryResult = _winrt_windows_storage_search.StorageFileQueryResult
-StorageFolderQueryResult = _winrt_windows_storage_search.StorageFolderQueryResult
-StorageItemQueryResult = _winrt_windows_storage_search.StorageItemQueryResult
-StorageLibraryChangeTrackerTriggerDetails = _winrt_windows_storage_search.StorageLibraryChangeTrackerTriggerDetails
-StorageLibraryContentChangedTriggerDetails = _winrt_windows_storage_search.StorageLibraryContentChangedTriggerDetails
-ValueAndLanguage = _winrt_windows_storage_search.ValueAndLanguage
-IIndexableContent = _winrt_windows_storage_search.IIndexableContent
-IStorageFolderQueryOperations = _winrt_windows_storage_search.IStorageFolderQueryOperations
-IStorageQueryResultBase = _winrt_windows_storage_search.IStorageQueryResultBase

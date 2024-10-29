@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_geolocation_provider
+from winrt._winrt_windows_devices_geolocation_provider import (
+    GeolocationProvider,
+)
 
 __all__ = [
     "LocationOverrideStatus",
@@ -16,4 +18,3 @@ class LocationOverrideStatus(enum.IntEnum):
     ALREADY_STARTED = 2
     OTHER = 3
 
-GeolocationProvider = _winrt_windows_devices_geolocation_provider.GeolocationProvider

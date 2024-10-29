@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_cortana
+from winrt._winrt_windows_services_cortana import (
+    CortanaActionableInsights,
+    CortanaActionableInsightsOptions,
+    CortanaPermissionsManager,
+    CortanaSettings,
+)
 
 __all__ = [
     "CortanaPermission",
@@ -32,7 +37,3 @@ class CortanaPermissionsChangeResult(enum.IntEnum):
     UNAVAILABLE = 1
     DISABLED_BY_POLICY = 2
 
-CortanaActionableInsights = _winrt_windows_services_cortana.CortanaActionableInsights
-CortanaActionableInsightsOptions = _winrt_windows_services_cortana.CortanaActionableInsightsOptions
-CortanaPermissionsManager = _winrt_windows_services_cortana.CortanaPermissionsManager
-CortanaSettings = _winrt_windows_services_cortana.CortanaSettings

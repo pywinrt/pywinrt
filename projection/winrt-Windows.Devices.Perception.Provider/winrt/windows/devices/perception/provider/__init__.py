@@ -4,7 +4,20 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_devices_perception_provider
+from winrt._winrt_windows_devices_perception_provider import (
+    KnownPerceptionFrameKind,
+    PerceptionControlGroup,
+    PerceptionCorrelation,
+    PerceptionCorrelationGroup,
+    PerceptionFaceAuthenticationGroup,
+    PerceptionFrame,
+    PerceptionFrameProviderInfo,
+    PerceptionFrameProviderManagerService,
+    PerceptionPropertyChangeRequest,
+    PerceptionVideoFrameAllocator,
+    IPerceptionFrameProvider,
+    IPerceptionFrameProviderManager,
+)
 
 __all__ = [
     "KnownPerceptionFrameKind",
@@ -23,17 +36,5 @@ __all__ = [
     "PerceptionStopFaceAuthenticationHandler",
 ]
 
-KnownPerceptionFrameKind = _winrt_windows_devices_perception_provider.KnownPerceptionFrameKind
-PerceptionControlGroup = _winrt_windows_devices_perception_provider.PerceptionControlGroup
-PerceptionCorrelation = _winrt_windows_devices_perception_provider.PerceptionCorrelation
-PerceptionCorrelationGroup = _winrt_windows_devices_perception_provider.PerceptionCorrelationGroup
-PerceptionFaceAuthenticationGroup = _winrt_windows_devices_perception_provider.PerceptionFaceAuthenticationGroup
-PerceptionFrame = _winrt_windows_devices_perception_provider.PerceptionFrame
-PerceptionFrameProviderInfo = _winrt_windows_devices_perception_provider.PerceptionFrameProviderInfo
-PerceptionFrameProviderManagerService = _winrt_windows_devices_perception_provider.PerceptionFrameProviderManagerService
-PerceptionPropertyChangeRequest = _winrt_windows_devices_perception_provider.PerceptionPropertyChangeRequest
-PerceptionVideoFrameAllocator = _winrt_windows_devices_perception_provider.PerceptionVideoFrameAllocator
-IPerceptionFrameProvider = _winrt_windows_devices_perception_provider.IPerceptionFrameProvider
-IPerceptionFrameProviderManager = _winrt_windows_devices_perception_provider.IPerceptionFrameProviderManager
 PerceptionStartFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], bool]
 PerceptionStopFaceAuthenticationHandler = typing.Callable[[PerceptionFaceAuthenticationGroup], None]

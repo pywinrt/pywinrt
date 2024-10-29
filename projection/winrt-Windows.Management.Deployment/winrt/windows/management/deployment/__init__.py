@@ -3,7 +3,31 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_management_deployment
+from winrt._winrt_windows_management_deployment import (
+    DeploymentProgress,
+    AddPackageOptions,
+    AppInstallerManager,
+    AutoUpdateSettingsOptions,
+    CreateSharedPackageContainerOptions,
+    CreateSharedPackageContainerResult,
+    DeleteSharedPackageContainerOptions,
+    DeleteSharedPackageContainerResult,
+    DeploymentResult,
+    FindSharedPackageContainerOptions,
+    PackageAllUserProvisioningOptions,
+    PackageManager,
+    PackageManagerDebugSettings,
+    PackageUserInformation,
+    PackageVolume,
+    RegisterPackageOptions,
+    RemovePackageOptions,
+    SharedPackageContainer,
+    SharedPackageContainerManager,
+    SharedPackageContainerMember,
+    StagePackageOptions,
+    UpdateSharedPackageContainerOptions,
+    UpdateSharedPackageContainerResult,
+)
 
 __all__ = [
     "AddPackageByAppInstallerOptions",
@@ -124,26 +148,3 @@ class StubPackageOption(enum.IntEnum):
     INSTALL_STUB = 2
     USE_PREFERENCE = 3
 
-DeploymentProgress = _winrt_windows_management_deployment.DeploymentProgress
-AddPackageOptions = _winrt_windows_management_deployment.AddPackageOptions
-AppInstallerManager = _winrt_windows_management_deployment.AppInstallerManager
-AutoUpdateSettingsOptions = _winrt_windows_management_deployment.AutoUpdateSettingsOptions
-CreateSharedPackageContainerOptions = _winrt_windows_management_deployment.CreateSharedPackageContainerOptions
-CreateSharedPackageContainerResult = _winrt_windows_management_deployment.CreateSharedPackageContainerResult
-DeleteSharedPackageContainerOptions = _winrt_windows_management_deployment.DeleteSharedPackageContainerOptions
-DeleteSharedPackageContainerResult = _winrt_windows_management_deployment.DeleteSharedPackageContainerResult
-DeploymentResult = _winrt_windows_management_deployment.DeploymentResult
-FindSharedPackageContainerOptions = _winrt_windows_management_deployment.FindSharedPackageContainerOptions
-PackageAllUserProvisioningOptions = _winrt_windows_management_deployment.PackageAllUserProvisioningOptions
-PackageManager = _winrt_windows_management_deployment.PackageManager
-PackageManagerDebugSettings = _winrt_windows_management_deployment.PackageManagerDebugSettings
-PackageUserInformation = _winrt_windows_management_deployment.PackageUserInformation
-PackageVolume = _winrt_windows_management_deployment.PackageVolume
-RegisterPackageOptions = _winrt_windows_management_deployment.RegisterPackageOptions
-RemovePackageOptions = _winrt_windows_management_deployment.RemovePackageOptions
-SharedPackageContainer = _winrt_windows_management_deployment.SharedPackageContainer
-SharedPackageContainerManager = _winrt_windows_management_deployment.SharedPackageContainerManager
-SharedPackageContainerMember = _winrt_windows_management_deployment.SharedPackageContainerMember
-StagePackageOptions = _winrt_windows_management_deployment.StagePackageOptions
-UpdateSharedPackageContainerOptions = _winrt_windows_management_deployment.UpdateSharedPackageContainerOptions
-UpdateSharedPackageContainerResult = _winrt_windows_management_deployment.UpdateSharedPackageContainerResult

@@ -3,7 +3,28 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_effects
+from winrt._winrt_windows_media_effects import (
+    AcousticEchoCancellationConfiguration,
+    AudioCaptureEffectsManager,
+    AudioEffect,
+    AudioEffectDefinition,
+    AudioEffectsManager,
+    AudioRenderEffectsManager,
+    CompositeVideoFrameContext,
+    ProcessAudioFrameContext,
+    ProcessVideoFrameContext,
+    SlowMotionEffectDefinition,
+    VideoCompositorDefinition,
+    VideoEffectDefinition,
+    VideoTransformEffectDefinition,
+    VideoTransformSphericalProjection,
+    IAudioEffectDefinition,
+    IBasicAudioEffect,
+    IBasicVideoEffect,
+    IVideoCompositor,
+    IVideoCompositorDefinition,
+    IVideoEffectDefinition,
+)
 
 __all__ = [
     "AudioEffectState",
@@ -69,23 +90,3 @@ class MediaMemoryTypes(enum.IntEnum):
     CPU = 1
     GPU_AND_CPU = 2
 
-AcousticEchoCancellationConfiguration = _winrt_windows_media_effects.AcousticEchoCancellationConfiguration
-AudioCaptureEffectsManager = _winrt_windows_media_effects.AudioCaptureEffectsManager
-AudioEffect = _winrt_windows_media_effects.AudioEffect
-AudioEffectDefinition = _winrt_windows_media_effects.AudioEffectDefinition
-AudioEffectsManager = _winrt_windows_media_effects.AudioEffectsManager
-AudioRenderEffectsManager = _winrt_windows_media_effects.AudioRenderEffectsManager
-CompositeVideoFrameContext = _winrt_windows_media_effects.CompositeVideoFrameContext
-ProcessAudioFrameContext = _winrt_windows_media_effects.ProcessAudioFrameContext
-ProcessVideoFrameContext = _winrt_windows_media_effects.ProcessVideoFrameContext
-SlowMotionEffectDefinition = _winrt_windows_media_effects.SlowMotionEffectDefinition
-VideoCompositorDefinition = _winrt_windows_media_effects.VideoCompositorDefinition
-VideoEffectDefinition = _winrt_windows_media_effects.VideoEffectDefinition
-VideoTransformEffectDefinition = _winrt_windows_media_effects.VideoTransformEffectDefinition
-VideoTransformSphericalProjection = _winrt_windows_media_effects.VideoTransformSphericalProjection
-IAudioEffectDefinition = _winrt_windows_media_effects.IAudioEffectDefinition
-IBasicAudioEffect = _winrt_windows_media_effects.IBasicAudioEffect
-IBasicVideoEffect = _winrt_windows_media_effects.IBasicVideoEffect
-IVideoCompositor = _winrt_windows_media_effects.IVideoCompositor
-IVideoCompositorDefinition = _winrt_windows_media_effects.IVideoCompositorDefinition
-IVideoEffectDefinition = _winrt_windows_media_effects.IVideoEffectDefinition

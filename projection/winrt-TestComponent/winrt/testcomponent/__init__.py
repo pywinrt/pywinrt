@@ -4,7 +4,13 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_testcomponent
+from winrt._winrt_testcomponent import (
+    Blittable,
+    Nested,
+    NonBlittable,
+    TestRunner,
+    ITests,
+)
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
@@ -61,11 +67,6 @@ __all__ = [
     "TestHandler",
 ]
 
-Blittable = _winrt_testcomponent.Blittable
-Nested = _winrt_testcomponent.Nested
-NonBlittable = _winrt_testcomponent.NonBlittable
-TestRunner = _winrt_testcomponent.TestRunner
-ITests = _winrt_testcomponent.ITests
 Array10Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.Double], winrt.system.Array[winrt.system.Double]]]
 Array11Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.Char16], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.Char16], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.Char16], winrt.system.Array[winrt.system.Char16]]]
 Array12Handler = typing.Callable[[typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[str], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[str], winrt.system.Array[str]]]

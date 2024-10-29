@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_display
+from winrt._winrt_windows_devices_display import (
+    DisplayMonitor,
+)
 
 __all__ = [
     "DisplayMonitorConnectionKind",
@@ -38,4 +40,3 @@ class DisplayMonitorUsageKind(enum.IntEnum):
     HEAD_MOUNTED = 1
     SPECIAL_PURPOSE = 2
 
-DisplayMonitor = _winrt_windows_devices_display.DisplayMonitor

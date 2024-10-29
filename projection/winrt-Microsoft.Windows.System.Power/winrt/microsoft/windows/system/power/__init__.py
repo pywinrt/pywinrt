@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_system_power
+from winrt._winrt_microsoft_windows_system_power import (
+    PowerManager,
+)
 
 __all__ = [
     "BatteryStatus",
@@ -62,4 +64,3 @@ class UserPresenceStatus(enum.IntEnum):
     PRESENT = 0
     ABSENT = 1
 
-PowerManager = _winrt_microsoft_windows_system_power.PowerManager

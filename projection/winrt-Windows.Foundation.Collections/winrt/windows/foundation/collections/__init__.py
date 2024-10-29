@@ -5,7 +5,23 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_foundation_collections
+from winrt._winrt_windows_foundation_collections import (
+    PropertySet,
+    StringMap,
+    ValueSet,
+    IIterable,
+    IIterator,
+    IKeyValuePair,
+    IMapChangedEventArgs,
+    IMapView,
+    IMap,
+    IObservableMap,
+    IObservableVector,
+    IPropertySet,
+    IVectorChangedEventArgs,
+    IVectorView,
+    IVector,
+)
 
 __all__ = [
     "CollectionChange",
@@ -37,30 +53,15 @@ class CollectionChange(enum.IntEnum):
     ITEM_REMOVED = 2
     ITEM_CHANGED = 3
 
-PropertySet = _winrt_windows_foundation_collections.PropertySet
 winrt.system._mixin_mutable_mapping(PropertySet)
-StringMap = _winrt_windows_foundation_collections.StringMap
 winrt.system._mixin_mutable_mapping(StringMap)
-ValueSet = _winrt_windows_foundation_collections.ValueSet
 winrt.system._mixin_mutable_mapping(ValueSet)
-IIterable = _winrt_windows_foundation_collections.IIterable
-IIterator = _winrt_windows_foundation_collections.IIterator
-IKeyValuePair = _winrt_windows_foundation_collections.IKeyValuePair
-IMapChangedEventArgs = _winrt_windows_foundation_collections.IMapChangedEventArgs
-IMapView = _winrt_windows_foundation_collections.IMapView
 winrt.system._mixin_mapping(IMapView)
-IMap = _winrt_windows_foundation_collections.IMap
 winrt.system._mixin_mutable_mapping(IMap)
-IObservableMap = _winrt_windows_foundation_collections.IObservableMap
 winrt.system._mixin_mutable_mapping(IObservableMap)
-IObservableVector = _winrt_windows_foundation_collections.IObservableVector
 winrt.system._mixin_mutable_sequence(IObservableVector)
-IPropertySet = _winrt_windows_foundation_collections.IPropertySet
 winrt.system._mixin_mutable_mapping(IPropertySet)
-IVectorChangedEventArgs = _winrt_windows_foundation_collections.IVectorChangedEventArgs
-IVectorView = _winrt_windows_foundation_collections.IVectorView
 winrt.system._mixin_sequence(IVectorView)
-IVector = _winrt_windows_foundation_collections.IVector
 winrt.system._mixin_mutable_sequence(IVector)
 MapChangedEventHandler = typing.Callable[[IObservableMap[K, V], IMapChangedEventArgs[K]], None]
 VectorChangedEventHandler = typing.Callable[[IObservableVector[T], IVectorChangedEventArgs], None]

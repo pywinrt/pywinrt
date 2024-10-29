@@ -5,7 +5,55 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_system
+from winrt._winrt_windows_system import (
+    AppActivationResult,
+    AppDiagnosticInfo,
+    AppDiagnosticInfoWatcher,
+    AppDiagnosticInfoWatcherEventArgs,
+    AppExecutionStateChangeResult,
+    AppMemoryReport,
+    AppMemoryUsageLimitChangingEventArgs,
+    AppResourceGroupBackgroundTaskReport,
+    AppResourceGroupInfo,
+    AppResourceGroupInfoWatcher,
+    AppResourceGroupInfoWatcherEventArgs,
+    AppResourceGroupInfoWatcherExecutionStateChangedEventArgs,
+    AppResourceGroupMemoryReport,
+    AppResourceGroupStateReport,
+    AppUriHandlerHost,
+    AppUriHandlerRegistration,
+    AppUriHandlerRegistrationManager,
+    DateTimeSettings,
+    DispatcherQueue,
+    DispatcherQueueController,
+    DispatcherQueueShutdownStartingEventArgs,
+    DispatcherQueueTimer,
+    FolderLauncherOptions,
+    KnownUserProperties,
+    LaunchUriResult,
+    Launcher,
+    LauncherOptions,
+    LauncherUIOptions,
+    MemoryManager,
+    ProcessLauncher,
+    ProcessLauncherOptions,
+    ProcessLauncherResult,
+    ProcessMemoryReport,
+    ProtocolForResultsOperation,
+    RemoteLauncher,
+    RemoteLauncherOptions,
+    ShutdownManager,
+    TimeZoneSettings,
+    User,
+    UserAuthenticationStatusChangeDeferral,
+    UserAuthenticationStatusChangingEventArgs,
+    UserChangedEventArgs,
+    UserDeviceAssociation,
+    UserDeviceAssociationChangedEventArgs,
+    UserPicker,
+    UserWatcher,
+    ILauncherViewOptions,
+)
 
 __all__ = [
     "AppDiagnosticInfoWatcherStatus",
@@ -407,51 +455,4 @@ class VirtualKeyModifiers(enum.IntFlag):
     SHIFT = 0x4
     WINDOWS = 0x8
 
-AppActivationResult = _winrt_windows_system.AppActivationResult
-AppDiagnosticInfo = _winrt_windows_system.AppDiagnosticInfo
-AppDiagnosticInfoWatcher = _winrt_windows_system.AppDiagnosticInfoWatcher
-AppDiagnosticInfoWatcherEventArgs = _winrt_windows_system.AppDiagnosticInfoWatcherEventArgs
-AppExecutionStateChangeResult = _winrt_windows_system.AppExecutionStateChangeResult
-AppMemoryReport = _winrt_windows_system.AppMemoryReport
-AppMemoryUsageLimitChangingEventArgs = _winrt_windows_system.AppMemoryUsageLimitChangingEventArgs
-AppResourceGroupBackgroundTaskReport = _winrt_windows_system.AppResourceGroupBackgroundTaskReport
-AppResourceGroupInfo = _winrt_windows_system.AppResourceGroupInfo
-AppResourceGroupInfoWatcher = _winrt_windows_system.AppResourceGroupInfoWatcher
-AppResourceGroupInfoWatcherEventArgs = _winrt_windows_system.AppResourceGroupInfoWatcherEventArgs
-AppResourceGroupInfoWatcherExecutionStateChangedEventArgs = _winrt_windows_system.AppResourceGroupInfoWatcherExecutionStateChangedEventArgs
-AppResourceGroupMemoryReport = _winrt_windows_system.AppResourceGroupMemoryReport
-AppResourceGroupStateReport = _winrt_windows_system.AppResourceGroupStateReport
-AppUriHandlerHost = _winrt_windows_system.AppUriHandlerHost
-AppUriHandlerRegistration = _winrt_windows_system.AppUriHandlerRegistration
-AppUriHandlerRegistrationManager = _winrt_windows_system.AppUriHandlerRegistrationManager
-DateTimeSettings = _winrt_windows_system.DateTimeSettings
-DispatcherQueue = _winrt_windows_system.DispatcherQueue
-DispatcherQueueController = _winrt_windows_system.DispatcherQueueController
-DispatcherQueueShutdownStartingEventArgs = _winrt_windows_system.DispatcherQueueShutdownStartingEventArgs
-DispatcherQueueTimer = _winrt_windows_system.DispatcherQueueTimer
-FolderLauncherOptions = _winrt_windows_system.FolderLauncherOptions
-KnownUserProperties = _winrt_windows_system.KnownUserProperties
-LaunchUriResult = _winrt_windows_system.LaunchUriResult
-Launcher = _winrt_windows_system.Launcher
-LauncherOptions = _winrt_windows_system.LauncherOptions
-LauncherUIOptions = _winrt_windows_system.LauncherUIOptions
-MemoryManager = _winrt_windows_system.MemoryManager
-ProcessLauncher = _winrt_windows_system.ProcessLauncher
-ProcessLauncherOptions = _winrt_windows_system.ProcessLauncherOptions
-ProcessLauncherResult = _winrt_windows_system.ProcessLauncherResult
-ProcessMemoryReport = _winrt_windows_system.ProcessMemoryReport
-ProtocolForResultsOperation = _winrt_windows_system.ProtocolForResultsOperation
-RemoteLauncher = _winrt_windows_system.RemoteLauncher
-RemoteLauncherOptions = _winrt_windows_system.RemoteLauncherOptions
-ShutdownManager = _winrt_windows_system.ShutdownManager
-TimeZoneSettings = _winrt_windows_system.TimeZoneSettings
-User = _winrt_windows_system.User
-UserAuthenticationStatusChangeDeferral = _winrt_windows_system.UserAuthenticationStatusChangeDeferral
-UserAuthenticationStatusChangingEventArgs = _winrt_windows_system.UserAuthenticationStatusChangingEventArgs
-UserChangedEventArgs = _winrt_windows_system.UserChangedEventArgs
-UserDeviceAssociation = _winrt_windows_system.UserDeviceAssociation
-UserDeviceAssociationChangedEventArgs = _winrt_windows_system.UserDeviceAssociationChangedEventArgs
-UserPicker = _winrt_windows_system.UserPicker
-UserWatcher = _winrt_windows_system.UserWatcher
-ILauncherViewOptions = _winrt_windows_system.ILauncherViewOptions
 DispatcherQueueHandler = typing.Callable[[], None]

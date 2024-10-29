@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_lights
+from winrt._winrt_windows_devices_lights import (
+    Lamp,
+    LampArray,
+    LampAvailabilityChangedEventArgs,
+    LampInfo,
+)
 
 __all__ = [
     "LampArrayKind",
@@ -39,7 +44,3 @@ class LampPurposes(enum.IntFlag):
     ILLUMINATION = 0x10
     PRESENTATION = 0x20
 
-Lamp = _winrt_windows_devices_lights.Lamp
-LampArray = _winrt_windows_devices_lights.LampArray
-LampAvailabilityChangedEventArgs = _winrt_windows_devices_lights.LampAvailabilityChangedEventArgs
-LampInfo = _winrt_windows_devices_lights.LampInfo

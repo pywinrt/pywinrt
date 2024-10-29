@@ -3,7 +3,12 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_security_credentials_ui
+from winrt._winrt_windows_security_credentials_ui import (
+    CredentialPicker,
+    CredentialPickerOptions,
+    CredentialPickerResults,
+    UserConsentVerifier,
+)
 
 __all__ = [
     "AuthenticationProtocol",
@@ -46,7 +51,3 @@ class UserConsentVerifierAvailability(enum.IntEnum):
     DISABLED_BY_POLICY = 3
     DEVICE_BUSY = 4
 
-CredentialPicker = _winrt_windows_security_credentials_ui.CredentialPicker
-CredentialPickerOptions = _winrt_windows_security_credentials_ui.CredentialPickerOptions
-CredentialPickerResults = _winrt_windows_security_credentials_ui.CredentialPickerResults
-UserConsentVerifier = _winrt_windows_security_credentials_ui.UserConsentVerifier

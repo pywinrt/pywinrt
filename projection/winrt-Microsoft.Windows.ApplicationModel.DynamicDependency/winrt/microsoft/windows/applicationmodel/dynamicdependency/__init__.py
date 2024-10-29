@@ -3,7 +3,14 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_applicationmodel_dynamicdependency
+from winrt._winrt_microsoft_windows_applicationmodel_dynamicdependency import (
+    PackageDependencyContextId,
+    AddPackageDependencyOptions,
+    CreatePackageDependencyOptions,
+    PackageDependency,
+    PackageDependencyContext,
+    PackageDependencyRank,
+)
 
 __all__ = [
     "PackageDependencyLifetimeArtifactKind",
@@ -30,9 +37,3 @@ class PackageDependencyProcessorArchitectures(enum.IntFlag):
     ARM64 = 0x10
     X86_ON_ARM64 = 0x20
 
-PackageDependencyContextId = _winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContextId
-AddPackageDependencyOptions = _winrt_microsoft_windows_applicationmodel_dynamicdependency.AddPackageDependencyOptions
-CreatePackageDependencyOptions = _winrt_microsoft_windows_applicationmodel_dynamicdependency.CreatePackageDependencyOptions
-PackageDependency = _winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependency
-PackageDependencyContext = _winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyContext
-PackageDependencyRank = _winrt_microsoft_windows_applicationmodel_dynamicdependency.PackageDependencyRank

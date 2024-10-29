@@ -3,7 +3,97 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_xaml_media_animation
+from winrt._winrt_microsoft_ui_xaml_media_animation import (
+    KeyTime,
+    RepeatBehavior,
+    AddDeleteThemeTransition,
+    BackEase,
+    BasicConnectedAnimationConfiguration,
+    BeginStoryboard,
+    BounceEase,
+    CircleEase,
+    ColorAnimation,
+    ColorAnimationUsingKeyFrames,
+    ColorKeyFrame,
+    ColorKeyFrameCollection,
+    CommonNavigationTransitionInfo,
+    ConnectedAnimation,
+    ConnectedAnimationConfiguration,
+    ConnectedAnimationService,
+    ContentThemeTransition,
+    ContinuumNavigationTransitionInfo,
+    CubicEase,
+    DirectConnectedAnimationConfiguration,
+    DiscreteColorKeyFrame,
+    DiscreteDoubleKeyFrame,
+    DiscreteObjectKeyFrame,
+    DiscretePointKeyFrame,
+    DoubleAnimation,
+    DoubleAnimationUsingKeyFrames,
+    DoubleKeyFrame,
+    DoubleKeyFrameCollection,
+    DragItemThemeAnimation,
+    DragOverThemeAnimation,
+    DrillInNavigationTransitionInfo,
+    DrillInThemeAnimation,
+    DrillOutThemeAnimation,
+    DropTargetItemThemeAnimation,
+    EasingColorKeyFrame,
+    EasingDoubleKeyFrame,
+    EasingFunctionBase,
+    EasingPointKeyFrame,
+    EdgeUIThemeTransition,
+    ElasticEase,
+    EntranceNavigationTransitionInfo,
+    EntranceThemeTransition,
+    ExponentialEase,
+    FadeInThemeAnimation,
+    FadeOutThemeAnimation,
+    GravityConnectedAnimationConfiguration,
+    KeySpline,
+    KeyTimeHelper,
+    LinearColorKeyFrame,
+    LinearDoubleKeyFrame,
+    LinearPointKeyFrame,
+    NavigationThemeTransition,
+    NavigationTransitionInfo,
+    ObjectAnimationUsingKeyFrames,
+    ObjectKeyFrame,
+    ObjectKeyFrameCollection,
+    PaneThemeTransition,
+    PointAnimation,
+    PointAnimationUsingKeyFrames,
+    PointKeyFrame,
+    PointKeyFrameCollection,
+    PointerDownThemeAnimation,
+    PointerUpThemeAnimation,
+    PopInThemeAnimation,
+    PopOutThemeAnimation,
+    PopupThemeTransition,
+    PowerEase,
+    QuadraticEase,
+    QuarticEase,
+    QuinticEase,
+    ReorderThemeTransition,
+    RepeatBehaviorHelper,
+    RepositionThemeAnimation,
+    RepositionThemeTransition,
+    SineEase,
+    SlideNavigationTransitionInfo,
+    SplineColorKeyFrame,
+    SplineDoubleKeyFrame,
+    SplinePointKeyFrame,
+    SplitCloseThemeAnimation,
+    SplitOpenThemeAnimation,
+    Storyboard,
+    SuppressNavigationTransitionInfo,
+    SwipeBackThemeAnimation,
+    SwipeHintThemeAnimation,
+    Timeline,
+    TimelineCollection,
+    Transition,
+    TransitionCollection,
+)
 
 __all__ = [
     "ClockState",
@@ -133,98 +223,9 @@ class SlideNavigationTransitionEffect(enum.IntEnum):
     FROM_LEFT = 1
     FROM_RIGHT = 2
 
-KeyTime = _winrt_microsoft_ui_xaml_media_animation.KeyTime
-RepeatBehavior = _winrt_microsoft_ui_xaml_media_animation.RepeatBehavior
-AddDeleteThemeTransition = _winrt_microsoft_ui_xaml_media_animation.AddDeleteThemeTransition
-BackEase = _winrt_microsoft_ui_xaml_media_animation.BackEase
-BasicConnectedAnimationConfiguration = _winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration
-BeginStoryboard = _winrt_microsoft_ui_xaml_media_animation.BeginStoryboard
-BounceEase = _winrt_microsoft_ui_xaml_media_animation.BounceEase
-CircleEase = _winrt_microsoft_ui_xaml_media_animation.CircleEase
-ColorAnimation = _winrt_microsoft_ui_xaml_media_animation.ColorAnimation
-ColorAnimationUsingKeyFrames = _winrt_microsoft_ui_xaml_media_animation.ColorAnimationUsingKeyFrames
-ColorKeyFrame = _winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame
-ColorKeyFrameCollection = _winrt_microsoft_ui_xaml_media_animation.ColorKeyFrameCollection
 winrt.system._mixin_mutable_sequence(ColorKeyFrameCollection)
-CommonNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.CommonNavigationTransitionInfo
-ConnectedAnimation = _winrt_microsoft_ui_xaml_media_animation.ConnectedAnimation
-ConnectedAnimationConfiguration = _winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration
-ConnectedAnimationService = _winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationService
-ContentThemeTransition = _winrt_microsoft_ui_xaml_media_animation.ContentThemeTransition
-ContinuumNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.ContinuumNavigationTransitionInfo
-CubicEase = _winrt_microsoft_ui_xaml_media_animation.CubicEase
-DirectConnectedAnimationConfiguration = _winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration
-DiscreteColorKeyFrame = _winrt_microsoft_ui_xaml_media_animation.DiscreteColorKeyFrame
-DiscreteDoubleKeyFrame = _winrt_microsoft_ui_xaml_media_animation.DiscreteDoubleKeyFrame
-DiscreteObjectKeyFrame = _winrt_microsoft_ui_xaml_media_animation.DiscreteObjectKeyFrame
-DiscretePointKeyFrame = _winrt_microsoft_ui_xaml_media_animation.DiscretePointKeyFrame
-DoubleAnimation = _winrt_microsoft_ui_xaml_media_animation.DoubleAnimation
-DoubleAnimationUsingKeyFrames = _winrt_microsoft_ui_xaml_media_animation.DoubleAnimationUsingKeyFrames
-DoubleKeyFrame = _winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame
-DoubleKeyFrameCollection = _winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrameCollection
 winrt.system._mixin_mutable_sequence(DoubleKeyFrameCollection)
-DragItemThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.DragItemThemeAnimation
-DragOverThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.DragOverThemeAnimation
-DrillInNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.DrillInNavigationTransitionInfo
-DrillInThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.DrillInThemeAnimation
-DrillOutThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.DrillOutThemeAnimation
-DropTargetItemThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.DropTargetItemThemeAnimation
-EasingColorKeyFrame = _winrt_microsoft_ui_xaml_media_animation.EasingColorKeyFrame
-EasingDoubleKeyFrame = _winrt_microsoft_ui_xaml_media_animation.EasingDoubleKeyFrame
-EasingFunctionBase = _winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase
-EasingPointKeyFrame = _winrt_microsoft_ui_xaml_media_animation.EasingPointKeyFrame
-EdgeUIThemeTransition = _winrt_microsoft_ui_xaml_media_animation.EdgeUIThemeTransition
-ElasticEase = _winrt_microsoft_ui_xaml_media_animation.ElasticEase
-EntranceNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.EntranceNavigationTransitionInfo
-EntranceThemeTransition = _winrt_microsoft_ui_xaml_media_animation.EntranceThemeTransition
-ExponentialEase = _winrt_microsoft_ui_xaml_media_animation.ExponentialEase
-FadeInThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.FadeInThemeAnimation
-FadeOutThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.FadeOutThemeAnimation
-GravityConnectedAnimationConfiguration = _winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration
-KeySpline = _winrt_microsoft_ui_xaml_media_animation.KeySpline
-KeyTimeHelper = _winrt_microsoft_ui_xaml_media_animation.KeyTimeHelper
-LinearColorKeyFrame = _winrt_microsoft_ui_xaml_media_animation.LinearColorKeyFrame
-LinearDoubleKeyFrame = _winrt_microsoft_ui_xaml_media_animation.LinearDoubleKeyFrame
-LinearPointKeyFrame = _winrt_microsoft_ui_xaml_media_animation.LinearPointKeyFrame
-NavigationThemeTransition = _winrt_microsoft_ui_xaml_media_animation.NavigationThemeTransition
-NavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo
-ObjectAnimationUsingKeyFrames = _winrt_microsoft_ui_xaml_media_animation.ObjectAnimationUsingKeyFrames
-ObjectKeyFrame = _winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame
-ObjectKeyFrameCollection = _winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrameCollection
 winrt.system._mixin_mutable_sequence(ObjectKeyFrameCollection)
-PaneThemeTransition = _winrt_microsoft_ui_xaml_media_animation.PaneThemeTransition
-PointAnimation = _winrt_microsoft_ui_xaml_media_animation.PointAnimation
-PointAnimationUsingKeyFrames = _winrt_microsoft_ui_xaml_media_animation.PointAnimationUsingKeyFrames
-PointKeyFrame = _winrt_microsoft_ui_xaml_media_animation.PointKeyFrame
-PointKeyFrameCollection = _winrt_microsoft_ui_xaml_media_animation.PointKeyFrameCollection
 winrt.system._mixin_mutable_sequence(PointKeyFrameCollection)
-PointerDownThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.PointerDownThemeAnimation
-PointerUpThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.PointerUpThemeAnimation
-PopInThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.PopInThemeAnimation
-PopOutThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.PopOutThemeAnimation
-PopupThemeTransition = _winrt_microsoft_ui_xaml_media_animation.PopupThemeTransition
-PowerEase = _winrt_microsoft_ui_xaml_media_animation.PowerEase
-QuadraticEase = _winrt_microsoft_ui_xaml_media_animation.QuadraticEase
-QuarticEase = _winrt_microsoft_ui_xaml_media_animation.QuarticEase
-QuinticEase = _winrt_microsoft_ui_xaml_media_animation.QuinticEase
-ReorderThemeTransition = _winrt_microsoft_ui_xaml_media_animation.ReorderThemeTransition
-RepeatBehaviorHelper = _winrt_microsoft_ui_xaml_media_animation.RepeatBehaviorHelper
-RepositionThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.RepositionThemeAnimation
-RepositionThemeTransition = _winrt_microsoft_ui_xaml_media_animation.RepositionThemeTransition
-SineEase = _winrt_microsoft_ui_xaml_media_animation.SineEase
-SlideNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.SlideNavigationTransitionInfo
-SplineColorKeyFrame = _winrt_microsoft_ui_xaml_media_animation.SplineColorKeyFrame
-SplineDoubleKeyFrame = _winrt_microsoft_ui_xaml_media_animation.SplineDoubleKeyFrame
-SplinePointKeyFrame = _winrt_microsoft_ui_xaml_media_animation.SplinePointKeyFrame
-SplitCloseThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.SplitCloseThemeAnimation
-SplitOpenThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.SplitOpenThemeAnimation
-Storyboard = _winrt_microsoft_ui_xaml_media_animation.Storyboard
-SuppressNavigationTransitionInfo = _winrt_microsoft_ui_xaml_media_animation.SuppressNavigationTransitionInfo
-SwipeBackThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.SwipeBackThemeAnimation
-SwipeHintThemeAnimation = _winrt_microsoft_ui_xaml_media_animation.SwipeHintThemeAnimation
-Timeline = _winrt_microsoft_ui_xaml_media_animation.Timeline
-TimelineCollection = _winrt_microsoft_ui_xaml_media_animation.TimelineCollection
 winrt.system._mixin_mutable_sequence(TimelineCollection)
-Transition = _winrt_microsoft_ui_xaml_media_animation.Transition
-TransitionCollection = _winrt_microsoft_ui_xaml_media_animation.TransitionCollection
 winrt.system._mixin_mutable_sequence(TransitionCollection)

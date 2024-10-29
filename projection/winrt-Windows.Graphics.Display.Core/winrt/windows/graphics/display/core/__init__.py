@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_graphics_display_core
+from winrt._winrt_windows_graphics_display_core import (
+    HdmiDisplayHdr2086Metadata,
+    HdmiDisplayInformation,
+    HdmiDisplayMode,
+)
 
 __all__ = [
     "HdmiDisplayColorSpace",
@@ -32,6 +36,3 @@ class HdmiDisplayPixelEncoding(enum.IntEnum):
     YCC422 = 2
     YCC420 = 3
 
-HdmiDisplayHdr2086Metadata = _winrt_windows_graphics_display_core.HdmiDisplayHdr2086Metadata
-HdmiDisplayInformation = _winrt_windows_graphics_display_core.HdmiDisplayInformation
-HdmiDisplayMode = _winrt_windows_graphics_display_core.HdmiDisplayMode

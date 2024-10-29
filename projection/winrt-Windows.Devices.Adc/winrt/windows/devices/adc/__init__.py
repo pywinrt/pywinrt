@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_adc
+from winrt._winrt_windows_devices_adc import (
+    AdcChannel,
+    AdcController,
+)
 
 __all__ = [
     "AdcChannelMode",
@@ -15,5 +18,3 @@ class AdcChannelMode(enum.IntEnum):
     SINGLE_ENDED = 0
     DIFFERENTIAL = 1
 
-AdcChannel = _winrt_windows_devices_adc.AdcChannel
-AdcController = _winrt_windows_devices_adc.AdcController

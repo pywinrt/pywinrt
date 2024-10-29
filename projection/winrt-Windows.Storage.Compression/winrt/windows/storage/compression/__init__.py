@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_storage_compression
+from winrt._winrt_windows_storage_compression import (
+    Compressor,
+    Decompressor,
+)
 
 __all__ = [
     "CompressAlgorithm",
@@ -19,5 +22,3 @@ class CompressAlgorithm(enum.IntEnum):
     XPRESS_HUFF = 4
     LZMS = 5
 
-Compressor = _winrt_windows_storage_compression.Compressor
-Decompressor = _winrt_windows_storage_compression.Decompressor

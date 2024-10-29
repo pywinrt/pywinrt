@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_control
+from winrt._winrt_windows_media_control import (
+    CurrentSessionChangedEventArgs,
+    GlobalSystemMediaTransportControlsSession,
+    GlobalSystemMediaTransportControlsSessionManager,
+    GlobalSystemMediaTransportControlsSessionMediaProperties,
+    GlobalSystemMediaTransportControlsSessionPlaybackControls,
+    GlobalSystemMediaTransportControlsSessionPlaybackInfo,
+    GlobalSystemMediaTransportControlsSessionTimelineProperties,
+    MediaPropertiesChangedEventArgs,
+    PlaybackInfoChangedEventArgs,
+    SessionsChangedEventArgs,
+    TimelinePropertiesChangedEventArgs,
+)
 
 __all__ = [
     "GlobalSystemMediaTransportControlsSessionPlaybackStatus",
@@ -28,14 +40,3 @@ class GlobalSystemMediaTransportControlsSessionPlaybackStatus(enum.IntEnum):
     PLAYING = 4
     PAUSED = 5
 
-CurrentSessionChangedEventArgs = _winrt_windows_media_control.CurrentSessionChangedEventArgs
-GlobalSystemMediaTransportControlsSession = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSession
-GlobalSystemMediaTransportControlsSessionManager = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionManager
-GlobalSystemMediaTransportControlsSessionMediaProperties = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionMediaProperties
-GlobalSystemMediaTransportControlsSessionPlaybackControls = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackControls
-GlobalSystemMediaTransportControlsSessionPlaybackInfo = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionPlaybackInfo
-GlobalSystemMediaTransportControlsSessionTimelineProperties = _winrt_windows_media_control.GlobalSystemMediaTransportControlsSessionTimelineProperties
-MediaPropertiesChangedEventArgs = _winrt_windows_media_control.MediaPropertiesChangedEventArgs
-PlaybackInfoChangedEventArgs = _winrt_windows_media_control.PlaybackInfoChangedEventArgs
-SessionsChangedEventArgs = _winrt_windows_media_control.SessionsChangedEventArgs
-TimelinePropertiesChangedEventArgs = _winrt_windows_media_control.TimelinePropertiesChangedEventArgs

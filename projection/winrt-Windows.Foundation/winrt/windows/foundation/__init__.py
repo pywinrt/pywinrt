@@ -5,7 +5,34 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_foundation
+from winrt._winrt_windows_foundation import (
+    EventRegistrationToken,
+    HResult,
+    Point,
+    Rect,
+    Size,
+    Deferral,
+    GuidHelper,
+    MemoryBuffer,
+    PropertyValue,
+    Uri,
+    WwwFormUrlDecoder,
+    WwwFormUrlDecoderEntry,
+    IAsyncAction,
+    IAsyncActionWithProgress,
+    IAsyncInfo,
+    IAsyncOperationWithProgress,
+    IAsyncOperation,
+    IClosable,
+    IGetActivationFactory,
+    IMemoryBuffer,
+    IMemoryBufferReference,
+    IPropertyValue,
+    IReferenceArray,
+    IReference,
+    IStringable,
+    IWwwFormUrlDecoderEntry,
+)
 
 __all__ = [
     "AsyncStatus",
@@ -100,33 +127,7 @@ class PropertyType(enum.IntEnum):
     RECT_ARRAY = 1043
     OTHER_TYPE_ARRAY = 1044
 
-EventRegistrationToken = _winrt_windows_foundation.EventRegistrationToken
-HResult = _winrt_windows_foundation.HResult
-Point = _winrt_windows_foundation.Point
-Rect = _winrt_windows_foundation.Rect
-Size = _winrt_windows_foundation.Size
-Deferral = _winrt_windows_foundation.Deferral
-GuidHelper = _winrt_windows_foundation.GuidHelper
-MemoryBuffer = _winrt_windows_foundation.MemoryBuffer
-PropertyValue = _winrt_windows_foundation.PropertyValue
-Uri = _winrt_windows_foundation.Uri
-WwwFormUrlDecoder = _winrt_windows_foundation.WwwFormUrlDecoder
 winrt.system._mixin_sequence(WwwFormUrlDecoder)
-WwwFormUrlDecoderEntry = _winrt_windows_foundation.WwwFormUrlDecoderEntry
-IAsyncAction = _winrt_windows_foundation.IAsyncAction
-IAsyncActionWithProgress = _winrt_windows_foundation.IAsyncActionWithProgress
-IAsyncInfo = _winrt_windows_foundation.IAsyncInfo
-IAsyncOperationWithProgress = _winrt_windows_foundation.IAsyncOperationWithProgress
-IAsyncOperation = _winrt_windows_foundation.IAsyncOperation
-IClosable = _winrt_windows_foundation.IClosable
-IGetActivationFactory = _winrt_windows_foundation.IGetActivationFactory
-IMemoryBuffer = _winrt_windows_foundation.IMemoryBuffer
-IMemoryBufferReference = _winrt_windows_foundation.IMemoryBufferReference
-IPropertyValue = _winrt_windows_foundation.IPropertyValue
-IReferenceArray = _winrt_windows_foundation.IReferenceArray
-IReference = _winrt_windows_foundation.IReference
-IStringable = _winrt_windows_foundation.IStringable
-IWwwFormUrlDecoderEntry = _winrt_windows_foundation.IWwwFormUrlDecoderEntry
 AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
 AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
 AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]

@@ -3,7 +3,25 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_profile
+from winrt._winrt_windows_system_profile import (
+    AnalyticsInfo,
+    AnalyticsVersionInfo,
+    AppApplicability,
+    EducationSettings,
+    HardwareIdentification,
+    HardwareToken,
+    KnownRetailInfoProperties,
+    PlatformAutomaticAppSignInManager,
+    PlatformDiagnosticsAndUsageDataSettings,
+    RetailInfo,
+    SharedModeSettings,
+    SmartAppControlPolicy,
+    SystemIdentification,
+    SystemIdentificationInfo,
+    SystemSetupInfo,
+    UnsupportedAppRequirement,
+    WindowsIntegrityPolicy,
+)
 
 __all__ = [
     "PlatformAutomaticAppSignInPolicy",
@@ -56,20 +74,3 @@ class UnsupportedAppRequirementReasons(enum.IntFlag):
     UNKNOWN = 0x0
     DENIED_BY_SYSTEM = 0x1
 
-AnalyticsInfo = _winrt_windows_system_profile.AnalyticsInfo
-AnalyticsVersionInfo = _winrt_windows_system_profile.AnalyticsVersionInfo
-AppApplicability = _winrt_windows_system_profile.AppApplicability
-EducationSettings = _winrt_windows_system_profile.EducationSettings
-HardwareIdentification = _winrt_windows_system_profile.HardwareIdentification
-HardwareToken = _winrt_windows_system_profile.HardwareToken
-KnownRetailInfoProperties = _winrt_windows_system_profile.KnownRetailInfoProperties
-PlatformAutomaticAppSignInManager = _winrt_windows_system_profile.PlatformAutomaticAppSignInManager
-PlatformDiagnosticsAndUsageDataSettings = _winrt_windows_system_profile.PlatformDiagnosticsAndUsageDataSettings
-RetailInfo = _winrt_windows_system_profile.RetailInfo
-SharedModeSettings = _winrt_windows_system_profile.SharedModeSettings
-SmartAppControlPolicy = _winrt_windows_system_profile.SmartAppControlPolicy
-SystemIdentification = _winrt_windows_system_profile.SystemIdentification
-SystemIdentificationInfo = _winrt_windows_system_profile.SystemIdentificationInfo
-SystemSetupInfo = _winrt_windows_system_profile.SystemSetupInfo
-UnsupportedAppRequirement = _winrt_windows_system_profile.UnsupportedAppRequirement
-WindowsIntegrityPolicy = _winrt_windows_system_profile.WindowsIntegrityPolicy

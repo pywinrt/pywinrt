@@ -3,7 +3,26 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_geolocation
+from winrt._winrt_windows_devices_geolocation import (
+    BasicGeoposition,
+    CivicAddress,
+    GeoboundingBox,
+    Geocircle,
+    Geocoordinate,
+    GeocoordinateSatelliteData,
+    Geolocator,
+    Geopath,
+    Geopoint,
+    Geoposition,
+    Geovisit,
+    GeovisitMonitor,
+    GeovisitStateChangedEventArgs,
+    GeovisitTriggerDetails,
+    PositionChangedEventArgs,
+    StatusChangedEventArgs,
+    VenueData,
+    IGeoshape,
+)
 
 __all__ = [
     "AltitudeReferenceSystem",
@@ -83,21 +102,3 @@ class VisitStateChange(enum.IntEnum):
     DEPARTED = 2
     OTHER_MOVEMENT = 3
 
-BasicGeoposition = _winrt_windows_devices_geolocation.BasicGeoposition
-CivicAddress = _winrt_windows_devices_geolocation.CivicAddress
-GeoboundingBox = _winrt_windows_devices_geolocation.GeoboundingBox
-Geocircle = _winrt_windows_devices_geolocation.Geocircle
-Geocoordinate = _winrt_windows_devices_geolocation.Geocoordinate
-GeocoordinateSatelliteData = _winrt_windows_devices_geolocation.GeocoordinateSatelliteData
-Geolocator = _winrt_windows_devices_geolocation.Geolocator
-Geopath = _winrt_windows_devices_geolocation.Geopath
-Geopoint = _winrt_windows_devices_geolocation.Geopoint
-Geoposition = _winrt_windows_devices_geolocation.Geoposition
-Geovisit = _winrt_windows_devices_geolocation.Geovisit
-GeovisitMonitor = _winrt_windows_devices_geolocation.GeovisitMonitor
-GeovisitStateChangedEventArgs = _winrt_windows_devices_geolocation.GeovisitStateChangedEventArgs
-GeovisitTriggerDetails = _winrt_windows_devices_geolocation.GeovisitTriggerDetails
-PositionChangedEventArgs = _winrt_windows_devices_geolocation.PositionChangedEventArgs
-StatusChangedEventArgs = _winrt_windows_devices_geolocation.StatusChangedEventArgs
-VenueData = _winrt_windows_devices_geolocation.VenueData
-IGeoshape = _winrt_windows_devices_geolocation.IGeoshape

@@ -3,7 +3,28 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_web_http
+from winrt._winrt_windows_web_http import (
+    HttpProgress,
+    HttpBufferContent,
+    HttpClient,
+    HttpCookie,
+    HttpCookieCollection,
+    HttpCookieManager,
+    HttpFormUrlEncodedContent,
+    HttpGetBufferResult,
+    HttpGetInputStreamResult,
+    HttpGetStringResult,
+    HttpMethod,
+    HttpMultipartContent,
+    HttpMultipartFormDataContent,
+    HttpRequestMessage,
+    HttpRequestResult,
+    HttpResponseMessage,
+    HttpStreamContent,
+    HttpStringContent,
+    HttpTransportInformation,
+    IHttpContent,
+)
 
 __all__ = [
     "HttpCompletionOption",
@@ -120,24 +141,4 @@ class HttpVersion(enum.IntEnum):
     HTTP11 = 2
     HTTP20 = 3
 
-HttpProgress = _winrt_windows_web_http.HttpProgress
-HttpBufferContent = _winrt_windows_web_http.HttpBufferContent
-HttpClient = _winrt_windows_web_http.HttpClient
-HttpCookie = _winrt_windows_web_http.HttpCookie
-HttpCookieCollection = _winrt_windows_web_http.HttpCookieCollection
 winrt.system._mixin_sequence(HttpCookieCollection)
-HttpCookieManager = _winrt_windows_web_http.HttpCookieManager
-HttpFormUrlEncodedContent = _winrt_windows_web_http.HttpFormUrlEncodedContent
-HttpGetBufferResult = _winrt_windows_web_http.HttpGetBufferResult
-HttpGetInputStreamResult = _winrt_windows_web_http.HttpGetInputStreamResult
-HttpGetStringResult = _winrt_windows_web_http.HttpGetStringResult
-HttpMethod = _winrt_windows_web_http.HttpMethod
-HttpMultipartContent = _winrt_windows_web_http.HttpMultipartContent
-HttpMultipartFormDataContent = _winrt_windows_web_http.HttpMultipartFormDataContent
-HttpRequestMessage = _winrt_windows_web_http.HttpRequestMessage
-HttpRequestResult = _winrt_windows_web_http.HttpRequestResult
-HttpResponseMessage = _winrt_windows_web_http.HttpResponseMessage
-HttpStreamContent = _winrt_windows_web_http.HttpStreamContent
-HttpStringContent = _winrt_windows_web_http.HttpStringContent
-HttpTransportInformation = _winrt_windows_web_http.HttpTransportInformation
-IHttpContent = _winrt_windows_web_http.IHttpContent

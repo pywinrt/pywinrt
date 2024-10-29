@@ -5,7 +5,17 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_store
+from winrt._winrt_windows_applicationmodel_store import (
+    CurrentApp,
+    CurrentAppSimulator,
+    LicenseInformation,
+    ListingInformation,
+    ProductLicense,
+    ProductListing,
+    ProductPurchaseDisplayProperties,
+    PurchaseResults,
+    UnfulfilledConsumable,
+)
 
 __all__ = [
     "FulfillmentResult",
@@ -41,13 +51,4 @@ class ProductType(enum.IntEnum):
     DURABLE = 1
     CONSUMABLE = 2
 
-CurrentApp = _winrt_windows_applicationmodel_store.CurrentApp
-CurrentAppSimulator = _winrt_windows_applicationmodel_store.CurrentAppSimulator
-LicenseInformation = _winrt_windows_applicationmodel_store.LicenseInformation
-ListingInformation = _winrt_windows_applicationmodel_store.ListingInformation
-ProductLicense = _winrt_windows_applicationmodel_store.ProductLicense
-ProductListing = _winrt_windows_applicationmodel_store.ProductListing
-ProductPurchaseDisplayProperties = _winrt_windows_applicationmodel_store.ProductPurchaseDisplayProperties
-PurchaseResults = _winrt_windows_applicationmodel_store.PurchaseResults
-UnfulfilledConsumable = _winrt_windows_applicationmodel_store.UnfulfilledConsumable
 LicenseChangedEventHandler = typing.Callable[[], None]

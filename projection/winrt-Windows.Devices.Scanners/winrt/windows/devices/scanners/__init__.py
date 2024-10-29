@@ -3,7 +3,17 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_scanners
+from winrt._winrt_windows_devices_scanners import (
+    ImageScannerResolution,
+    ImageScanner,
+    ImageScannerAutoConfiguration,
+    ImageScannerFeederConfiguration,
+    ImageScannerFlatbedConfiguration,
+    ImageScannerPreviewResult,
+    ImageScannerScanResult,
+    IImageScannerFormatConfiguration,
+    IImageScannerSourceConfiguration,
+)
 
 __all__ = [
     "ImageScannerAutoCroppingMode",
@@ -47,12 +57,3 @@ class ImageScannerScanSource(enum.IntEnum):
     FEEDER = 2
     AUTO_CONFIGURED = 3
 
-ImageScannerResolution = _winrt_windows_devices_scanners.ImageScannerResolution
-ImageScanner = _winrt_windows_devices_scanners.ImageScanner
-ImageScannerAutoConfiguration = _winrt_windows_devices_scanners.ImageScannerAutoConfiguration
-ImageScannerFeederConfiguration = _winrt_windows_devices_scanners.ImageScannerFeederConfiguration
-ImageScannerFlatbedConfiguration = _winrt_windows_devices_scanners.ImageScannerFlatbedConfiguration
-ImageScannerPreviewResult = _winrt_windows_devices_scanners.ImageScannerPreviewResult
-ImageScannerScanResult = _winrt_windows_devices_scanners.ImageScannerScanResult
-IImageScannerFormatConfiguration = _winrt_windows_devices_scanners.IImageScannerFormatConfiguration
-IImageScannerSourceConfiguration = _winrt_windows_devices_scanners.IImageScannerSourceConfiguration

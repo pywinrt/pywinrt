@@ -5,7 +5,13 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_microsoft_ui_dispatching
+from winrt._winrt_microsoft_ui_dispatching import (
+    DispatcherExitDeferral,
+    DispatcherQueue,
+    DispatcherQueueController,
+    DispatcherQueueShutdownStartingEventArgs,
+    DispatcherQueueTimer,
+)
 
 __all__ = [
     "DispatcherQueuePriority",
@@ -28,9 +34,4 @@ class DispatcherRunOptions(enum.IntFlag):
     CONTINUE_ON_QUIT = 0x1
     QUIT_ONLY_LOCAL_LOOP = 0x2
 
-DispatcherExitDeferral = _winrt_microsoft_ui_dispatching.DispatcherExitDeferral
-DispatcherQueue = _winrt_microsoft_ui_dispatching.DispatcherQueue
-DispatcherQueueController = _winrt_microsoft_ui_dispatching.DispatcherQueueController
-DispatcherQueueShutdownStartingEventArgs = _winrt_microsoft_ui_dispatching.DispatcherQueueShutdownStartingEventArgs
-DispatcherQueueTimer = _winrt_microsoft_ui_dispatching.DispatcherQueueTimer
 DispatcherQueueHandler = typing.Callable[[], None]

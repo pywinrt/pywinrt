@@ -3,7 +3,13 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_i2c
+from winrt._winrt_windows_devices_i2c import (
+    I2cTransferResult,
+    I2cConnectionSettings,
+    I2cController,
+    I2cDevice,
+    II2cDeviceStatics,
+)
 
 __all__ = [
     "I2cBusSpeed",
@@ -31,8 +37,3 @@ class I2cTransferStatus(enum.IntEnum):
     CLOCK_STRETCH_TIMEOUT = 3
     UNKNOWN_ERROR = 4
 
-I2cTransferResult = _winrt_windows_devices_i2c.I2cTransferResult
-I2cConnectionSettings = _winrt_windows_devices_i2c.I2cConnectionSettings
-I2cController = _winrt_windows_devices_i2c.I2cController
-I2cDevice = _winrt_windows_devices_i2c.I2cDevice
-II2cDeviceStatics = _winrt_windows_devices_i2c.II2cDeviceStatics

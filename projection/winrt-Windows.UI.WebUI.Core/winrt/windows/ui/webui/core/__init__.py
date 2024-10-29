@@ -5,7 +5,17 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_ui_webui_core
+from winrt._winrt_windows_ui_webui_core import (
+    WebUICommandBar,
+    WebUICommandBarBitmapIcon,
+    WebUICommandBarConfirmationButton,
+    WebUICommandBarIconButton,
+    WebUICommandBarItemInvokedEventArgs,
+    WebUICommandBarSizeChangedEventArgs,
+    WebUICommandBarSymbolIcon,
+    IWebUICommandBarElement,
+    IWebUICommandBarIcon,
+)
 
 __all__ = [
     "WebUICommandBarClosedDisplayMode",
@@ -28,15 +38,6 @@ class WebUICommandBarClosedDisplayMode(enum.IntEnum):
     MINIMAL = 1
     COMPACT = 2
 
-WebUICommandBar = _winrt_windows_ui_webui_core.WebUICommandBar
-WebUICommandBarBitmapIcon = _winrt_windows_ui_webui_core.WebUICommandBarBitmapIcon
-WebUICommandBarConfirmationButton = _winrt_windows_ui_webui_core.WebUICommandBarConfirmationButton
-WebUICommandBarIconButton = _winrt_windows_ui_webui_core.WebUICommandBarIconButton
-WebUICommandBarItemInvokedEventArgs = _winrt_windows_ui_webui_core.WebUICommandBarItemInvokedEventArgs
-WebUICommandBarSizeChangedEventArgs = _winrt_windows_ui_webui_core.WebUICommandBarSizeChangedEventArgs
-WebUICommandBarSymbolIcon = _winrt_windows_ui_webui_core.WebUICommandBarSymbolIcon
-IWebUICommandBarElement = _winrt_windows_ui_webui_core.IWebUICommandBarElement
-IWebUICommandBarIcon = _winrt_windows_ui_webui_core.IWebUICommandBarIcon
 MenuClosedEventHandler = typing.Callable[[], None]
 MenuOpenedEventHandler = typing.Callable[[], None]
 SizeChangedEventHandler = typing.Callable[[WebUICommandBarSizeChangedEventArgs], None]

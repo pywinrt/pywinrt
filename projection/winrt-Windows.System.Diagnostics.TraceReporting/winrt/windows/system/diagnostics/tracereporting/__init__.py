@@ -3,7 +3,11 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_system_diagnostics_tracereporting
+from winrt._winrt_windows_system_diagnostics_tracereporting import (
+    PlatformDiagnosticActions,
+    PlatformDiagnosticTraceInfo,
+    PlatformDiagnosticTraceRuntimeInfo,
+)
 
 __all__ = [
     "PlatformDiagnosticActionState",
@@ -45,6 +49,3 @@ class PlatformDiagnosticTraceSlotType(enum.IntEnum):
     ALWAYS_ON = 1
     MINI = 2
 
-PlatformDiagnosticActions = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticActions
-PlatformDiagnosticTraceInfo = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceInfo
-PlatformDiagnosticTraceRuntimeInfo = _winrt_windows_system_diagnostics_tracereporting.PlatformDiagnosticTraceRuntimeInfo

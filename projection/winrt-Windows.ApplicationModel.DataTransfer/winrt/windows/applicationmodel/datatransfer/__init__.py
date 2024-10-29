@@ -5,7 +5,34 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_applicationmodel_datatransfer
+from winrt._winrt_windows_applicationmodel_datatransfer import (
+    Clipboard,
+    ClipboardContentOptions,
+    ClipboardHistoryChangedEventArgs,
+    ClipboardHistoryItem,
+    ClipboardHistoryItemsResult,
+    DataPackage,
+    DataPackagePropertySet,
+    DataPackagePropertySetView,
+    DataPackageView,
+    DataProviderDeferral,
+    DataProviderRequest,
+    DataRequest,
+    DataRequestDeferral,
+    DataRequestedEventArgs,
+    DataTransferManager,
+    HtmlFormatHelper,
+    OperationCompletedEventArgs,
+    ShareCompletedEventArgs,
+    ShareProvider,
+    ShareProviderOperation,
+    ShareProvidersRequestedEventArgs,
+    ShareTargetInfo,
+    ShareUIOptions,
+    SharedStorageAccessManager,
+    StandardDataFormats,
+    TargetApplicationChosenEventArgs,
+)
 
 __all__ = [
     "ClipboardHistoryItemsResultStatus",
@@ -63,33 +90,7 @@ class ShareUITheme(enum.IntEnum):
     LIGHT = 1
     DARK = 2
 
-Clipboard = _winrt_windows_applicationmodel_datatransfer.Clipboard
-ClipboardContentOptions = _winrt_windows_applicationmodel_datatransfer.ClipboardContentOptions
-ClipboardHistoryChangedEventArgs = _winrt_windows_applicationmodel_datatransfer.ClipboardHistoryChangedEventArgs
-ClipboardHistoryItem = _winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItem
-ClipboardHistoryItemsResult = _winrt_windows_applicationmodel_datatransfer.ClipboardHistoryItemsResult
-DataPackage = _winrt_windows_applicationmodel_datatransfer.DataPackage
-DataPackagePropertySet = _winrt_windows_applicationmodel_datatransfer.DataPackagePropertySet
 winrt.system._mixin_mutable_mapping(DataPackagePropertySet)
-DataPackagePropertySetView = _winrt_windows_applicationmodel_datatransfer.DataPackagePropertySetView
 winrt.system._mixin_mapping(DataPackagePropertySetView)
-DataPackageView = _winrt_windows_applicationmodel_datatransfer.DataPackageView
-DataProviderDeferral = _winrt_windows_applicationmodel_datatransfer.DataProviderDeferral
-DataProviderRequest = _winrt_windows_applicationmodel_datatransfer.DataProviderRequest
-DataRequest = _winrt_windows_applicationmodel_datatransfer.DataRequest
-DataRequestDeferral = _winrt_windows_applicationmodel_datatransfer.DataRequestDeferral
-DataRequestedEventArgs = _winrt_windows_applicationmodel_datatransfer.DataRequestedEventArgs
-DataTransferManager = _winrt_windows_applicationmodel_datatransfer.DataTransferManager
-HtmlFormatHelper = _winrt_windows_applicationmodel_datatransfer.HtmlFormatHelper
-OperationCompletedEventArgs = _winrt_windows_applicationmodel_datatransfer.OperationCompletedEventArgs
-ShareCompletedEventArgs = _winrt_windows_applicationmodel_datatransfer.ShareCompletedEventArgs
-ShareProvider = _winrt_windows_applicationmodel_datatransfer.ShareProvider
-ShareProviderOperation = _winrt_windows_applicationmodel_datatransfer.ShareProviderOperation
-ShareProvidersRequestedEventArgs = _winrt_windows_applicationmodel_datatransfer.ShareProvidersRequestedEventArgs
-ShareTargetInfo = _winrt_windows_applicationmodel_datatransfer.ShareTargetInfo
-ShareUIOptions = _winrt_windows_applicationmodel_datatransfer.ShareUIOptions
-SharedStorageAccessManager = _winrt_windows_applicationmodel_datatransfer.SharedStorageAccessManager
-StandardDataFormats = _winrt_windows_applicationmodel_datatransfer.StandardDataFormats
-TargetApplicationChosenEventArgs = _winrt_windows_applicationmodel_datatransfer.TargetApplicationChosenEventArgs
 DataProviderHandler = typing.Callable[[DataProviderRequest], None]
 ShareProviderHandler = typing.Callable[[ShareProviderOperation], None]

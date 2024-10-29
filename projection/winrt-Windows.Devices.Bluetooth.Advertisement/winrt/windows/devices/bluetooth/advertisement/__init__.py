@@ -3,7 +3,19 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_bluetooth_advertisement
+from winrt._winrt_windows_devices_bluetooth_advertisement import (
+    BluetoothLEAdvertisement,
+    BluetoothLEAdvertisementBytePattern,
+    BluetoothLEAdvertisementDataSection,
+    BluetoothLEAdvertisementDataTypes,
+    BluetoothLEAdvertisementFilter,
+    BluetoothLEAdvertisementPublisher,
+    BluetoothLEAdvertisementPublisherStatusChangedEventArgs,
+    BluetoothLEAdvertisementReceivedEventArgs,
+    BluetoothLEAdvertisementWatcher,
+    BluetoothLEAdvertisementWatcherStoppedEventArgs,
+    BluetoothLEManufacturerData,
+)
 
 __all__ = [
     "BluetoothLEAdvertisementFlags",
@@ -60,14 +72,3 @@ class BluetoothLEScanningMode(enum.IntEnum):
     ACTIVE = 1
     NONE = 2
 
-BluetoothLEAdvertisement = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisement
-BluetoothLEAdvertisementBytePattern = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementBytePattern
-BluetoothLEAdvertisementDataSection = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataSection
-BluetoothLEAdvertisementDataTypes = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementDataTypes
-BluetoothLEAdvertisementFilter = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementFilter
-BluetoothLEAdvertisementPublisher = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisher
-BluetoothLEAdvertisementPublisherStatusChangedEventArgs = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementPublisherStatusChangedEventArgs
-BluetoothLEAdvertisementReceivedEventArgs = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementReceivedEventArgs
-BluetoothLEAdvertisementWatcher = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcher
-BluetoothLEAdvertisementWatcherStoppedEventArgs = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEAdvertisementWatcherStoppedEventArgs
-BluetoothLEManufacturerData = _winrt_windows_devices_bluetooth_advertisement.BluetoothLEManufacturerData

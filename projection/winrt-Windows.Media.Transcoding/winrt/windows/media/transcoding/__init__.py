@@ -3,7 +3,10 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_transcoding
+from winrt._winrt_windows_media_transcoding import (
+    MediaTranscoder,
+    PrepareTranscodeResult,
+)
 
 __all__ = [
     "MediaVideoProcessingAlgorithm",
@@ -22,5 +25,3 @@ class TranscodeFailureReason(enum.IntEnum):
     INVALID_PROFILE = 2
     CODEC_NOT_FOUND = 3
 
-MediaTranscoder = _winrt_windows_media_transcoding.MediaTranscoder
-PrepareTranscodeResult = _winrt_windows_media_transcoding.PrepareTranscodeResult

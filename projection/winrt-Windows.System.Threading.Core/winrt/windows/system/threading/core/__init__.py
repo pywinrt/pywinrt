@@ -4,7 +4,10 @@ import typing
 import uuid as _uuid
 
 import winrt.system
-from winrt import _winrt_windows_system_threading_core
+from winrt._winrt_windows_system_threading_core import (
+    PreallocatedWorkItem,
+    SignalNotifier,
+)
 
 __all__ = [
     "PreallocatedWorkItem",
@@ -12,6 +15,4 @@ __all__ = [
     "SignalHandler",
 ]
 
-PreallocatedWorkItem = _winrt_windows_system_threading_core.PreallocatedWorkItem
-SignalNotifier = _winrt_windows_system_threading_core.SignalNotifier
 SignalHandler = typing.Callable[[SignalNotifier, bool], None]

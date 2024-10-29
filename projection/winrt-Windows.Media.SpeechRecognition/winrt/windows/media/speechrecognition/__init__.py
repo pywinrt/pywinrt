@@ -3,7 +3,28 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_media_speechrecognition
+from winrt._winrt_windows_media_speechrecognition import (
+    SpeechContinuousRecognitionCompletedEventArgs,
+    SpeechContinuousRecognitionResultGeneratedEventArgs,
+    SpeechContinuousRecognitionSession,
+    SpeechRecognitionCompilationResult,
+    SpeechRecognitionGrammarFileConstraint,
+    SpeechRecognitionHypothesis,
+    SpeechRecognitionHypothesisGeneratedEventArgs,
+    SpeechRecognitionListConstraint,
+    SpeechRecognitionQualityDegradingEventArgs,
+    SpeechRecognitionResult,
+    SpeechRecognitionSemanticInterpretation,
+    SpeechRecognitionTopicConstraint,
+    SpeechRecognitionVoiceCommandDefinitionConstraint,
+    SpeechRecognizer,
+    SpeechRecognizerStateChangedEventArgs,
+    SpeechRecognizerTimeouts,
+    SpeechRecognizerUIOptions,
+    VoiceCommandManager,
+    VoiceCommandSet,
+    ISpeechRecognitionConstraint,
+)
 
 __all__ = [
     "SpeechContinuousRecognitionMode",
@@ -93,23 +114,3 @@ class SpeechRecognizerState(enum.IntEnum):
     SPEECH_DETECTED = 5
     PAUSED = 6
 
-SpeechContinuousRecognitionCompletedEventArgs = _winrt_windows_media_speechrecognition.SpeechContinuousRecognitionCompletedEventArgs
-SpeechContinuousRecognitionResultGeneratedEventArgs = _winrt_windows_media_speechrecognition.SpeechContinuousRecognitionResultGeneratedEventArgs
-SpeechContinuousRecognitionSession = _winrt_windows_media_speechrecognition.SpeechContinuousRecognitionSession
-SpeechRecognitionCompilationResult = _winrt_windows_media_speechrecognition.SpeechRecognitionCompilationResult
-SpeechRecognitionGrammarFileConstraint = _winrt_windows_media_speechrecognition.SpeechRecognitionGrammarFileConstraint
-SpeechRecognitionHypothesis = _winrt_windows_media_speechrecognition.SpeechRecognitionHypothesis
-SpeechRecognitionHypothesisGeneratedEventArgs = _winrt_windows_media_speechrecognition.SpeechRecognitionHypothesisGeneratedEventArgs
-SpeechRecognitionListConstraint = _winrt_windows_media_speechrecognition.SpeechRecognitionListConstraint
-SpeechRecognitionQualityDegradingEventArgs = _winrt_windows_media_speechrecognition.SpeechRecognitionQualityDegradingEventArgs
-SpeechRecognitionResult = _winrt_windows_media_speechrecognition.SpeechRecognitionResult
-SpeechRecognitionSemanticInterpretation = _winrt_windows_media_speechrecognition.SpeechRecognitionSemanticInterpretation
-SpeechRecognitionTopicConstraint = _winrt_windows_media_speechrecognition.SpeechRecognitionTopicConstraint
-SpeechRecognitionVoiceCommandDefinitionConstraint = _winrt_windows_media_speechrecognition.SpeechRecognitionVoiceCommandDefinitionConstraint
-SpeechRecognizer = _winrt_windows_media_speechrecognition.SpeechRecognizer
-SpeechRecognizerStateChangedEventArgs = _winrt_windows_media_speechrecognition.SpeechRecognizerStateChangedEventArgs
-SpeechRecognizerTimeouts = _winrt_windows_media_speechrecognition.SpeechRecognizerTimeouts
-SpeechRecognizerUIOptions = _winrt_windows_media_speechrecognition.SpeechRecognizerUIOptions
-VoiceCommandManager = _winrt_windows_media_speechrecognition.VoiceCommandManager
-VoiceCommandSet = _winrt_windows_media_speechrecognition.VoiceCommandSet
-ISpeechRecognitionConstraint = _winrt_windows_media_speechrecognition.ISpeechRecognitionConstraint

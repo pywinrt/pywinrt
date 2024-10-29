@@ -3,7 +3,9 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_composition_effects
+from winrt._winrt_windows_ui_composition_effects import (
+    SceneLightingEffect,
+)
 
 __all__ = [
     "SceneLightingEffectReflectanceModel",
@@ -14,4 +16,3 @@ class SceneLightingEffectReflectanceModel(enum.IntEnum):
     BLINN_PHONG = 0
     PHYSICALLY_BASED_BLINN_PHONG = 1
 
-SceneLightingEffect = _winrt_windows_ui_composition_effects.SceneLightingEffect

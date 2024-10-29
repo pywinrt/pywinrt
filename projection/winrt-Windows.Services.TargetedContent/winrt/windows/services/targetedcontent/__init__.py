@@ -3,7 +3,22 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_services_targetedcontent
+from winrt._winrt_windows_services_targetedcontent import (
+    TargetedContentAction,
+    TargetedContentAvailabilityChangedEventArgs,
+    TargetedContentChangedEventArgs,
+    TargetedContentCollection,
+    TargetedContentContainer,
+    TargetedContentFile,
+    TargetedContentImage,
+    TargetedContentItem,
+    TargetedContentItemState,
+    TargetedContentObject,
+    TargetedContentStateChangedEventArgs,
+    TargetedContentSubscription,
+    TargetedContentSubscriptionOptions,
+    TargetedContentValue,
+)
 
 __all__ = [
     "TargetedContentAppInstallationState",
@@ -73,17 +88,3 @@ class TargetedContentValueKind(enum.IntEnum):
     IMAGE_FILES = 12
     ACTIONS = 13
 
-TargetedContentAction = _winrt_windows_services_targetedcontent.TargetedContentAction
-TargetedContentAvailabilityChangedEventArgs = _winrt_windows_services_targetedcontent.TargetedContentAvailabilityChangedEventArgs
-TargetedContentChangedEventArgs = _winrt_windows_services_targetedcontent.TargetedContentChangedEventArgs
-TargetedContentCollection = _winrt_windows_services_targetedcontent.TargetedContentCollection
-TargetedContentContainer = _winrt_windows_services_targetedcontent.TargetedContentContainer
-TargetedContentFile = _winrt_windows_services_targetedcontent.TargetedContentFile
-TargetedContentImage = _winrt_windows_services_targetedcontent.TargetedContentImage
-TargetedContentItem = _winrt_windows_services_targetedcontent.TargetedContentItem
-TargetedContentItemState = _winrt_windows_services_targetedcontent.TargetedContentItemState
-TargetedContentObject = _winrt_windows_services_targetedcontent.TargetedContentObject
-TargetedContentStateChangedEventArgs = _winrt_windows_services_targetedcontent.TargetedContentStateChangedEventArgs
-TargetedContentSubscription = _winrt_windows_services_targetedcontent.TargetedContentSubscription
-TargetedContentSubscriptionOptions = _winrt_windows_services_targetedcontent.TargetedContentSubscriptionOptions
-TargetedContentValue = _winrt_windows_services_targetedcontent.TargetedContentValue

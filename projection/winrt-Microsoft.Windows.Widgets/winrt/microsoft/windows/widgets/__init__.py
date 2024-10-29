@@ -3,7 +3,6 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_microsoft_windows_widgets
 
 __all__ = [
     "WidgetSize",

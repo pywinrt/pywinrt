@@ -3,7 +3,30 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_usb
+from winrt._winrt_windows_devices_usb import (
+    UsbBulkInEndpointDescriptor,
+    UsbBulkInPipe,
+    UsbBulkOutEndpointDescriptor,
+    UsbBulkOutPipe,
+    UsbConfiguration,
+    UsbConfigurationDescriptor,
+    UsbControlRequestType,
+    UsbDescriptor,
+    UsbDevice,
+    UsbDeviceClass,
+    UsbDeviceClasses,
+    UsbDeviceDescriptor,
+    UsbEndpointDescriptor,
+    UsbInterface,
+    UsbInterfaceDescriptor,
+    UsbInterfaceSetting,
+    UsbInterruptInEndpointDescriptor,
+    UsbInterruptInEventArgs,
+    UsbInterruptInPipe,
+    UsbInterruptOutEndpointDescriptor,
+    UsbInterruptOutPipe,
+    UsbSetupPacket,
+)
 
 __all__ = [
     "UsbControlRecipient",
@@ -70,25 +93,3 @@ class UsbWriteOptions(enum.IntFlag):
     AUTO_CLEAR_STALL = 0x1
     SHORT_PACKET_TERMINATE = 0x2
 
-UsbBulkInEndpointDescriptor = _winrt_windows_devices_usb.UsbBulkInEndpointDescriptor
-UsbBulkInPipe = _winrt_windows_devices_usb.UsbBulkInPipe
-UsbBulkOutEndpointDescriptor = _winrt_windows_devices_usb.UsbBulkOutEndpointDescriptor
-UsbBulkOutPipe = _winrt_windows_devices_usb.UsbBulkOutPipe
-UsbConfiguration = _winrt_windows_devices_usb.UsbConfiguration
-UsbConfigurationDescriptor = _winrt_windows_devices_usb.UsbConfigurationDescriptor
-UsbControlRequestType = _winrt_windows_devices_usb.UsbControlRequestType
-UsbDescriptor = _winrt_windows_devices_usb.UsbDescriptor
-UsbDevice = _winrt_windows_devices_usb.UsbDevice
-UsbDeviceClass = _winrt_windows_devices_usb.UsbDeviceClass
-UsbDeviceClasses = _winrt_windows_devices_usb.UsbDeviceClasses
-UsbDeviceDescriptor = _winrt_windows_devices_usb.UsbDeviceDescriptor
-UsbEndpointDescriptor = _winrt_windows_devices_usb.UsbEndpointDescriptor
-UsbInterface = _winrt_windows_devices_usb.UsbInterface
-UsbInterfaceDescriptor = _winrt_windows_devices_usb.UsbInterfaceDescriptor
-UsbInterfaceSetting = _winrt_windows_devices_usb.UsbInterfaceSetting
-UsbInterruptInEndpointDescriptor = _winrt_windows_devices_usb.UsbInterruptInEndpointDescriptor
-UsbInterruptInEventArgs = _winrt_windows_devices_usb.UsbInterruptInEventArgs
-UsbInterruptInPipe = _winrt_windows_devices_usb.UsbInterruptInPipe
-UsbInterruptOutEndpointDescriptor = _winrt_windows_devices_usb.UsbInterruptOutEndpointDescriptor
-UsbInterruptOutPipe = _winrt_windows_devices_usb.UsbInterruptOutPipe
-UsbSetupPacket = _winrt_windows_devices_usb.UsbSetupPacket

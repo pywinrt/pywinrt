@@ -3,7 +3,24 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_devices_input
+from winrt._winrt_windows_devices_input import (
+    MouseDelta,
+    PointerDeviceUsage,
+    KeyboardCapabilities,
+    MouseCapabilities,
+    MouseDevice,
+    MouseEventArgs,
+    PenButtonListener,
+    PenDevice,
+    PenDockListener,
+    PenDockedEventArgs,
+    PenTailButtonClickedEventArgs,
+    PenTailButtonDoubleClickedEventArgs,
+    PenTailButtonLongPressedEventArgs,
+    PenUndockedEventArgs,
+    PointerDevice,
+    TouchCapabilities,
+)
 
 __all__ = [
     "PointerDeviceType",
@@ -31,19 +48,3 @@ class PointerDeviceType(enum.IntEnum):
     MOUSE = 2
     TOUCHPAD = 3
 
-MouseDelta = _winrt_windows_devices_input.MouseDelta
-PointerDeviceUsage = _winrt_windows_devices_input.PointerDeviceUsage
-KeyboardCapabilities = _winrt_windows_devices_input.KeyboardCapabilities
-MouseCapabilities = _winrt_windows_devices_input.MouseCapabilities
-MouseDevice = _winrt_windows_devices_input.MouseDevice
-MouseEventArgs = _winrt_windows_devices_input.MouseEventArgs
-PenButtonListener = _winrt_windows_devices_input.PenButtonListener
-PenDevice = _winrt_windows_devices_input.PenDevice
-PenDockListener = _winrt_windows_devices_input.PenDockListener
-PenDockedEventArgs = _winrt_windows_devices_input.PenDockedEventArgs
-PenTailButtonClickedEventArgs = _winrt_windows_devices_input.PenTailButtonClickedEventArgs
-PenTailButtonDoubleClickedEventArgs = _winrt_windows_devices_input.PenTailButtonDoubleClickedEventArgs
-PenTailButtonLongPressedEventArgs = _winrt_windows_devices_input.PenTailButtonLongPressedEventArgs
-PenUndockedEventArgs = _winrt_windows_devices_input.PenUndockedEventArgs
-PointerDevice = _winrt_windows_devices_input.PointerDevice
-TouchCapabilities = _winrt_windows_devices_input.TouchCapabilities

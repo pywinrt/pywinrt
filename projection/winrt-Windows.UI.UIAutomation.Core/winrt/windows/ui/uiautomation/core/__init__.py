@@ -3,7 +3,21 @@
 import enum
 
 import winrt.system
-from winrt import _winrt_windows_ui_uiautomation_core
+from winrt._winrt_windows_ui_uiautomation_core import (
+    AutomationAnnotationTypeRegistration,
+    AutomationRemoteOperationOperandId,
+    AutomationRemoteOperationResult,
+    CoreAutomationRegistrar,
+    CoreAutomationRemoteOperation,
+    CoreAutomationRemoteOperationContext,
+    RemoteAutomationClientSession,
+    RemoteAutomationConnectionRequestedEventArgs,
+    RemoteAutomationDisconnectedEventArgs,
+    RemoteAutomationServer,
+    RemoteAutomationWindow,
+    ICoreAutomationConnectionBoundObjectProvider,
+    ICoreAutomationRemoteOperationExtensionProvider,
+)
 
 __all__ = [
     "AutomationRemoteOperationStatus",
@@ -29,16 +43,3 @@ class AutomationRemoteOperationStatus(enum.IntEnum):
     UNHANDLED_EXCEPTION = 3
     EXECUTION_FAILURE = 4
 
-AutomationAnnotationTypeRegistration = _winrt_windows_ui_uiautomation_core.AutomationAnnotationTypeRegistration
-AutomationRemoteOperationOperandId = _winrt_windows_ui_uiautomation_core.AutomationRemoteOperationOperandId
-AutomationRemoteOperationResult = _winrt_windows_ui_uiautomation_core.AutomationRemoteOperationResult
-CoreAutomationRegistrar = _winrt_windows_ui_uiautomation_core.CoreAutomationRegistrar
-CoreAutomationRemoteOperation = _winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperation
-CoreAutomationRemoteOperationContext = _winrt_windows_ui_uiautomation_core.CoreAutomationRemoteOperationContext
-RemoteAutomationClientSession = _winrt_windows_ui_uiautomation_core.RemoteAutomationClientSession
-RemoteAutomationConnectionRequestedEventArgs = _winrt_windows_ui_uiautomation_core.RemoteAutomationConnectionRequestedEventArgs
-RemoteAutomationDisconnectedEventArgs = _winrt_windows_ui_uiautomation_core.RemoteAutomationDisconnectedEventArgs
-RemoteAutomationServer = _winrt_windows_ui_uiautomation_core.RemoteAutomationServer
-RemoteAutomationWindow = _winrt_windows_ui_uiautomation_core.RemoteAutomationWindow
-ICoreAutomationConnectionBoundObjectProvider = _winrt_windows_ui_uiautomation_core.ICoreAutomationConnectionBoundObjectProvider
-ICoreAutomationRemoteOperationExtensionProvider = _winrt_windows_ui_uiautomation_core.ICoreAutomationRemoteOperationExtensionProvider
