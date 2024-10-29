@@ -13,7 +13,7 @@ pointer_size = 8 if is_64bits else 4
 class TestWinRTArray(unittest.TestCase):
     def test_empty_constructor(self):
         with self.assertRaises(TypeError):
-            Array()
+            Array()  # type: ignore
 
     def test_bool(self):
         a = Array("?", [False, True])

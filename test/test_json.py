@@ -303,11 +303,11 @@ class TestJson(unittest.TestCase):
     def test_invalid_param_count_instance(self):
         a = wdj.JsonArray()
         with self.assertRaises(TypeError):
-            a.append(10, 20)
+            a.append(10, 20)  # type: ignore
 
     def test_invalid_param_count_static(self):
         with self.assertRaises(TypeError):
-            wdj.JsonArray.parse(10, 20)
+            wdj.JsonArray.parse(10, 20)  # type: ignore
 
     def test_IJsonvalue_get_boolean(self):
         a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
