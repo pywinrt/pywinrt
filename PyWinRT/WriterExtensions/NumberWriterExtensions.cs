@@ -854,39 +854,22 @@ static class NumberWriterExtensions
 
             w.WriteTryCatch(() =>
             {
-                var isOverloaded = overloads.Count() > 1;
-
-                if (isOverloaded)
-                {
-                    w.WriteLine("auto n_args = PyTuple_Size(args);");
-                    w.WriteBlankLine();
-                }
+                w.WriteLine("auto n_args = PyTuple_Size(args);");
+                w.WriteBlankLine();
 
                 foreach (var (i, overload) in overloads.Select((o, i) => (i, o)))
                 {
-                    if (isOverloaded)
-                    {
-                        w.WriteLine($"if (n_args == {overload.Parameters.Count})");
-                        w.WriteLine("{");
-                        w.Indent++;
-                    }
+                    w.WriteLine($"if (n_args == {overload.Parameters.Count})");
+                    w.WriteLine("{");
+                    w.Indent++;
 
                     if (overload.NoMinGW)
                     {
                         w.WriteLineNoTabs("#if defined(__MINGW32__)");
                         w.WriteLine("(void)args;");
-                        if (isOverloaded)
-                        {
-                            w.WriteLine(
-                                $"PyErr_SetString(PyExc_NotImplementedError, \"Overload with {overload.Parameters.Count} args is not implemented on MinGW\");"
-                            );
-                        }
-                        else
-                        {
-                            w.WriteLine(
-                                "PyErr_SetString(PyExc_NotImplementedError, \"This function is not implemented on MinGW\");"
-                            );
-                        }
+                        w.WriteLine(
+                            $"PyErr_SetString(PyExc_NotImplementedError, \"Overload with {overload.Parameters.Count} args is not implemented on MinGW\");"
+                        );
                         w.WriteLine("return nullptr;");
                         w.WriteLineNoTabs("#else");
                     }
@@ -908,21 +891,15 @@ static class NumberWriterExtensions
                         w.WriteLineNoTabs("#endif");
                     }
 
-                    if (isOverloaded)
-                    {
-                        w.Indent--;
-                        w.WriteLine("}");
-                        w.WriteBlankLine();
-                    }
+                    w.Indent--;
+                    w.WriteLine("}");
+                    w.WriteBlankLine();
                 }
 
-                if (isOverloaded)
-                {
-                    w.WriteLine(
-                        "PyErr_Format(PyExc_TypeError, \"No overload take %d args.\", n_args);"
-                    );
-                    w.WriteLine("return nullptr;");
-                }
+                w.WriteLine(
+                    "PyErr_Format(PyExc_TypeError, \"No overload take %d args.\", n_args);"
+                );
+                w.WriteLine("return nullptr;");
             });
 
             w.Indent--;
