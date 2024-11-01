@@ -1,5 +1,5 @@
-import winrt._winrt_windows_ui_composition_interop as _interop
+from winrt._winrt_windows_ui_composition_interop import (
+    create_desktop_window_target,
+)
 
 __all__ = ["create_desktop_window_target"]
-
-create_desktop_window_target = _interop.create_desktop_window_target
