@@ -1,8 +1,14 @@
 from enum import IntEnum
 
-import winrt._winrt_windows_system_interop as _interop
+from winrt._winrt_windows_system_interop import (
+    create_dispatcher_queue_controller,
+)
 
-__all__ = ["create_dispatcher_queue_controller"]
+__all__ = [
+    "create_dispatcher_queue_controller",
+    "DispatcherQueueThreadApartmentType",
+    "DispatcherQueueThreadType",
+]
 
 class DispatcherQueueThreadApartmentType(IntEnum):
     NONE = 0
@@ -12,5 +18,3 @@ class DispatcherQueueThreadApartmentType(IntEnum):
 class DispatcherQueueThreadType(IntEnum):
     DEDICATED = 1
     CURRENT = 2
-
-create_dispatcher_queue_controller = _interop.create_dispatcher_queue_controller
