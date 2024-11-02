@@ -8,7 +8,14 @@ from winrt._winrt_testcomponent import (
     Blittable,
     Nested,
     NonBlittable,
+    Class,
+    Composable,
+    Derived,
     TestRunner,
+    IRequiredFour,
+    IRequiredOne,
+    IRequiredThree,
+    IRequiredTwo,
     ITests,
 )
 
@@ -22,7 +29,14 @@ __all__ = [
     "Blittable",
     "Nested",
     "NonBlittable",
+    "Class",
+    "Composable",
+    "Derived",
     "TestRunner",
+    "IRequiredFour",
+    "IRequiredOne",
+    "IRequiredThree",
+    "IRequiredTwo",
     "ITests",
     "Array10Handler",
     "Array11Handler",
@@ -30,6 +44,7 @@ __all__ = [
     "Array13Handler",
     "Array14Handler",
     "Array15Handler",
+    "Array16Handler",
     "Array1Handler",
     "Array2Handler",
     "Array3Handler",
@@ -73,6 +88,7 @@ Array12Handler = typing.Callable[[typing.Union[winrt.system.Array[str], winrt.sy
 Array13Handler = typing.Callable[[typing.Union[winrt.system.Array[Blittable], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[Blittable], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[Blittable], winrt.system.Array[Blittable]]]
 Array14Handler = typing.Callable[[typing.Union[winrt.system.Array[NonBlittable], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[NonBlittable], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[NonBlittable], winrt.system.Array[NonBlittable]]]
 Array15Handler = typing.Callable[[typing.Union[winrt.system.Array[Nested], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[Nested], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[Nested], winrt.system.Array[Nested]]]
+Array16Handler = typing.Callable[[typing.Union[winrt.system.Array["windows_foundation.IStringable"], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array["windows_foundation.IStringable"], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array["windows_foundation.IStringable"], winrt.system.Array["windows_foundation.IStringable"]]]
 Array1Handler = typing.Callable[[typing.Union[winrt.system.Array[bool], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[bool], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[bool], winrt.system.Array[bool]]]
 Array2Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.UInt8], winrt.system.Array[winrt.system.UInt8]]]
 Array3Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.UInt16], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.UInt16], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.UInt16], winrt.system.Array[winrt.system.UInt16]]]
@@ -90,7 +106,7 @@ Collection1Handler = typing.Callable[[typing.Iterable[str]], typing.Tuple["windo
 Collection2Handler = typing.Callable[[typing.Iterable["windows_foundation_collections.IKeyValuePair[str, str]"]], typing.Tuple["windows_foundation_collections.IIterable[windows_foundation_collections.IKeyValuePair[str, str]]", "windows_foundation_collections.IIterable[windows_foundation_collections.IKeyValuePair[str, str]]"]]
 Collection3Handler = typing.Callable[["windows_foundation_collections.IMap[str, str]"], typing.Tuple["windows_foundation_collections.IMap[str, str]", "windows_foundation_collections.IMap[str, str]"]]
 Collection4Handler = typing.Callable[["windows_foundation_collections.IMapView[str, str]"], typing.Tuple["windows_foundation_collections.IMapView[str, str]", "windows_foundation_collections.IMapView[str, str]"]]
-Collection5Handler = typing.Callable[["windows_foundation_collections.IVector[str]"], typing.Tuple["windows_foundation_collections.IVector[str]", "windows_foundation_collections.IVector[str]"]]
+Collection5Handler = typing.Callable[[typing.MutableSequence[str]], typing.Tuple[typing.MutableSequence[str], typing.MutableSequence[str]]]
 Collection6Handler = typing.Callable[["windows_foundation_collections.IVectorView[str]"], typing.Tuple["windows_foundation_collections.IVectorView[str]", "windows_foundation_collections.IVectorView[str]"]]
 Param10Handler = typing.Callable[[winrt.system.Double], typing.Tuple[winrt.system.Double, winrt.system.Double]]
 Param11Handler = typing.Callable[[winrt.system.Char16], typing.Tuple[winrt.system.Char16, winrt.system.Char16]]
