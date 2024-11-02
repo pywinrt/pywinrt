@@ -1463,6 +1463,84 @@ namespace py
     };
 
     template<typename T>
+    struct python_iterator : winrt::implements<
+                                 python_iterator<T>,
+                                 winrt::Windows::Foundation::Collections::IIterator<T>>
+    {
+        pyobj_handle _iterator;
+        std::optional<T> _current_value;
+
+        static std::optional<T> get_next(pyobj_handle const& iterator)
+        {
+            if (!iterator)
+            {
+                if (!PyErr_Occurred())
+                {
+                    PyErr_SetString(PyExc_SystemError, "iterator is null");
+                }
+
+                throw python_exception();
+            }
+
+            pyobj_handle next{PyIter_Next(iterator.get())};
+            if (!next)
+            {
+                if (PyErr_Occurred())
+                {
+                    throw python_exception();
+                }
+                else
+                {
+                    return std::nullopt;
+                }
+            }
+
+            return converter<T>::convert_to(next.get());
+        }
+
+        python_iterator(PyObject* i) : _iterator(i)
+        {
+            if (!_iterator)
+            {
+                if (!PyErr_Occurred())
+                {
+                    PyErr_SetString(PyExc_SystemError, "iterator is null");
+                }
+
+                throw python_exception();
+            }
+
+            _current_value = get_next(_iterator);
+        }
+
+        auto Current() const
+        {
+            return _current_value.value();
+        }
+
+        bool HasCurrent() const
+        {
+            return _current_value.has_value();
+        }
+
+        bool MoveNext()
+        {
+            _current_value = get_next(_iterator);
+            return _current_value.has_value();
+        }
+
+        uint32_t GetMany(winrt::array_view<T> /*unused*/)
+        {
+            // TODO: implement GetMany
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::python_iterator<%s>::GetMany() is not implemented",
+                typeid(T).name());
+            throw python_exception();
+        }
+    };
+
+    template<typename T>
     struct python_iterable : winrt::implements<
                                  python_iterable<T>,
                                  winrt::Windows::Foundation::Collections::IIterable<T>>
@@ -1476,86 +1554,8 @@ namespace py
 
         auto First() const
         {
-            return winrt::make<iterator>(PyObject_GetIter(_iterable.get()));
+            return winrt::make<python_iterator<T>>(PyObject_GetIter(_iterable.get()));
         }
-
-      private:
-        struct iterator : winrt::implements<
-                              iterator,
-                              winrt::Windows::Foundation::Collections::IIterator<T>>
-        {
-            pyobj_handle _iterator;
-            std::optional<T> _current_value;
-
-            static std::optional<T> get_next(pyobj_handle const& iterator)
-            {
-                if (!iterator)
-                {
-                    if (!PyErr_Occurred())
-                    {
-                        PyErr_SetString(PyExc_SystemError, "iterator is null");
-                    }
-
-                    throw python_exception();
-                }
-
-                pyobj_handle next{PyIter_Next(iterator.get())};
-                if (!next)
-                {
-                    if (PyErr_Occurred())
-                    {
-                        throw python_exception();
-                    }
-                    else
-                    {
-                        return std::nullopt;
-                    }
-                }
-
-                return converter<T>::convert_to(next.get());
-            }
-
-            iterator(PyObject* i) : _iterator(i)
-            {
-                if (!_iterator)
-                {
-                    if (!PyErr_Occurred())
-                    {
-                        PyErr_SetString(PyExc_SystemError, "iterator is null");
-                    }
-
-                    throw python_exception();
-                }
-
-                _current_value = get_next(_iterator);
-            }
-
-            auto Current() const
-            {
-                return _current_value.value();
-            }
-
-            bool HasCurrent() const
-            {
-                return _current_value.has_value();
-            }
-
-            bool MoveNext()
-            {
-                _current_value = get_next(_iterator);
-                return _current_value.has_value();
-            }
-
-            uint32_t GetMany(winrt::array_view<T> /*unused*/)
-            {
-                // TODO: implement GetMany
-                PyErr_Format(
-                    PyExc_NotImplementedError,
-                    "py::python_iterable<%s>::iter::GetMany() is not implemented",
-                    typeid(T).name());
-                throw python_exception();
-            }
-        };
     };
 
     template<typename T>
