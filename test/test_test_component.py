@@ -222,6 +222,19 @@ class TestTestComponent(unittest.TestCase):
     def test_test_runner(self):
         tc.TestRunner.test_self()
 
+    def test_dict_to_map(self):
+        arg = {"1": "2", "3": "4"}
+        tests = tc.TestRunner.make_tests()
+        # collection3 is one of the few methods that takes an IMap input
+        # parameter, so we use it to test that a dict can be consumed as an
+        # IMap.
+        result = tests.collection3(arg)
+        # returns a copy of the dict both as a return value and as an out parameter
+        self.assertDictEqual(dict(result[0]), arg)
+        self.assertDictEqual(dict(result[1]), arg)
+
+        # TODO: test wrong type in dict. currently this will cause an abort
+
     def test_list_to_vector(self):
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()
