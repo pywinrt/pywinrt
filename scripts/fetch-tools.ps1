@@ -14,7 +14,7 @@ param(
     [switch]$noWebView2,
 
     [Parameter(Mandatory=$false)]
-    [string]$TestWinRTVersion = "1.0.12",
+    [string]$TestWinRTVersion = "1.0.0",
     [switch]$noTestWinRT
 )
 
@@ -52,7 +52,7 @@ if (!$noWebView2) {
 }
 
 if (!$noTestWinRT) {
-    & nuget install KennyKerr.Windows.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
+    & nuget install PyWinRT.TestWinRT -Version $TestWinRTVersion -ExcludeVersion -DependencyVersion Ignore -OutputDirectory "$repoRootPath/_tools"
 
     if ($LASTEXITCODE -ne 0) {
         exit $LASTEXITCODE

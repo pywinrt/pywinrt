@@ -86,6 +86,19 @@ WINRT_EXPORT namespace winrt::TestComponent
         template <typename O, typename LM> Array15Handler(std::weak_ptr<O>&& object, LM&& lambda_or_method);
         auto operator()(array_view<winrt::TestComponent::Nested const> a, array_view<winrt::TestComponent::Nested> b, com_array<winrt::TestComponent::Nested>& c) const;
     };
+    struct Array16Handler : winrt::Windows::Foundation::IUnknown
+    {
+        Array16Handler(std::nullptr_t = nullptr) noexcept {}
+        Array16Handler(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> Array16Handler(L lambda);
+        template <typename F> Array16Handler(F* function);
+        template <typename O, typename M> Array16Handler(O* object, M method);
+        template <typename O, typename M> Array16Handler(com_ptr<O>&& object, M method);
+        template <typename O, typename LM> Array16Handler(weak_ref<O>&& object, LM&& lambda_or_method);
+        template <typename O, typename M> Array16Handler(std::shared_ptr<O>&& object, M method);
+        template <typename O, typename LM> Array16Handler(std::weak_ptr<O>&& object, LM&& lambda_or_method);
+        auto operator()(array_view<winrt::Windows::Foundation::IStringable const> a, array_view<winrt::Windows::Foundation::IStringable> b, com_array<winrt::Windows::Foundation::IStringable>& c) const;
+    };
     struct Array1Handler : winrt::Windows::Foundation::IUnknown
     {
         Array1Handler(std::nullptr_t = nullptr) noexcept {}
@@ -590,6 +603,34 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         return !(left == right);
     }
+    struct WINRT_IMPL_EMPTY_BASES Class : winrt::TestComponent::IClass,
+        impl::require<Class, winrt::TestComponent::IRequiredOne>
+    {
+        Class(std::nullptr_t) noexcept {}
+        Class(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IClass(ptr, take_ownership_from_abi) {}
+        Class();
+    };
+    struct WINRT_IMPL_EMPTY_BASES Composable : winrt::TestComponent::IComposable,
+        impl::require<Composable, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredThree, winrt::TestComponent::IRequiredFour>
+    {
+        Composable(std::nullptr_t) noexcept {}
+        Composable(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IComposable(ptr, take_ownership_from_abi) {}
+        Composable();
+        explicit Composable(int32_t init);
+        static auto ExpectComposable(winrt::TestComponent::Composable const& t);
+        static auto ExpectRequiredOne(winrt::TestComponent::IRequiredOne const& t);
+        static auto ExpectRequiredTwo(winrt::TestComponent::IRequiredTwo const& t);
+        static auto ExpectRequiredThree(winrt::TestComponent::IRequiredThree const& t);
+        static auto ExpectRequiredFour(winrt::TestComponent::IRequiredFour const& t);
+    };
+    struct WINRT_IMPL_EMPTY_BASES Derived : winrt::TestComponent::IDerived,
+        impl::base<Derived, winrt::TestComponent::Composable>,
+        impl::require<Derived, winrt::TestComponent::IComposable, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredThree, winrt::TestComponent::IRequiredFour>
+    {
+        Derived(std::nullptr_t) noexcept {}
+        Derived(void* ptr, take_ownership_from_abi_t) noexcept : winrt::TestComponent::IDerived(ptr, take_ownership_from_abi) {}
+        Derived();
+    };
     struct TestRunner
     {
         TestRunner() = delete;
@@ -600,6 +641,9 @@ WINRT_EXPORT namespace winrt::TestComponent
         static auto CreateInt32Vector();
         static auto CreateStringVector();
         static auto CreateStringableVector();
+        static auto CreateTimeSpan(uint32_t milliseconds);
+        static auto CreateAsyncAction(uint32_t milliseconds);
+        static auto ExpectObject(winrt::Windows::Foundation::IInspectable const& value);
     };
 }
 #endif
