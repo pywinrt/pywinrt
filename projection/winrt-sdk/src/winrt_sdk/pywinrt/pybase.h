@@ -590,7 +590,22 @@ namespace py
         }
         catch (winrt::hresult_error const& e)
         {
-            PyErr_SetFromWindowsErr(e.code());
+            pyobj_handle exc{PyObject_CallFunction(
+                PyExc_WindowsError,
+                "iuui",
+                0,                   // errno
+                e.message().c_str(), // strerror
+                nullptr,             // filename
+                e.code().value)};    // winerror
+
+            if (!exc)
+            {
+                // REVISIT: should we print something here so we don't loose the
+                // info? Like: while raising an exception another error occurred...
+                return;
+            }
+
+            PyErr_SetObject(reinterpret_cast<PyObject*>(Py_TYPE(exc.get())), exc.get());
         }
         catch (std::bad_alloc const& e)
         {
