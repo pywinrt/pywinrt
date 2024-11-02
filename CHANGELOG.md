@@ -11,6 +11,7 @@
 - Type hints are no longer `typing.Optional` by default.
 - `winrt.windows.foundation.IVector[T]` input parameters now accept any `typing.MutableSequence[T]`.
 - `winrt.windows.foundation.IVectorView[T]` input parameters now accept any `typing.Sequence[T]`.
+- `winrt.windows.foundation.IMap[K, V]` input parameters now accept any `typing.MutableMapping[K, V]`.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
