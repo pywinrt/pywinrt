@@ -21,7 +21,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class AppServiceCatalog_Static(type):
-    def find_app_service_providers_async(cls, app_service_name: str, /) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[windows_applicationmodel.AppInfo]]: ...
+    def find_app_service_providers_async(cls, app_service_name: str, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_applicationmodel.AppInfo]]: ...
 
 @typing.final
 class AppServiceCatalog(winrt.system.Object, metaclass=AppServiceCatalog_Static):

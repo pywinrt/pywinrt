@@ -341,6 +341,9 @@ static class TypeExtensions
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
                 => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
             GenericInstanceType gen
+                when gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
+                => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
+            GenericInstanceType gen
                 => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             ByReferenceType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
             OptionalModifierType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),

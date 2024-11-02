@@ -10,6 +10,7 @@
   but also renames many existing methods.
 - Type hints are no longer `typing.Optional` by default.
 - `winrt.windows.foundation.IVector[T]` input parameters now accept any `typing.MutableSequence[T]`.
+- `winrt.windows.foundation.IVectorView[T]` input parameters now accept any `typing.Sequence[T]`.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.

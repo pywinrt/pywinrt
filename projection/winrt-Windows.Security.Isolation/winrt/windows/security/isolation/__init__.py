@@ -174,5 +174,5 @@ class IsolatedWindowsEnvironmentStartProcessStatus(enum.IntEnum):
     FILE_NOT_FOUND = 3
     APP_NOT_REGISTERED = 4
 
-HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]
-MessageReceivedCallback = typing.Callable[[_uuid.UUID, "windows_foundation_collections.IVectorView[winrt.system.Object]"], None]
+HostMessageReceivedCallback = typing.Callable[[_uuid.UUID, typing.Sequence[winrt.system.Object]], None]
+MessageReceivedCallback = typing.Callable[[_uuid.UUID, typing.Sequence[winrt.system.Object]], None]
