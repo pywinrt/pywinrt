@@ -130,7 +130,7 @@ subprocess.check_call(
 TEST_PACKAGE_METADATA = (
     REPO_ROOT_PATH
     / "_tools"
-    / "KennyKerr.Windows.TestWinRT"
+    / "PyWinRT.TestWinRT"
     / "lib"
     / "uap10.0"
     / "TestComponent.winmd"

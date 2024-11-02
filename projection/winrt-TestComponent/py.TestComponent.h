@@ -312,6 +312,54 @@ namespace py::impl::TestComponent
         };
     };
 
+    struct Array16Handler
+    {
+        static winrt::TestComponent::Array16Handler get(PyObject* callable)
+        {
+            py::delegate_callable _delegate{ callable };
+
+            return [delegate = std::move(_delegate)](winrt::array_view<winrt::Windows::Foundation::IStringable const> param0, winrt::array_view<winrt::Windows::Foundation::IStringable> param1, winrt::com_array<winrt::Windows::Foundation::IStringable>& param2)
+            {
+                auto gil = py::ensure_gil();
+
+                py::pyobj_handle py_param0{ py::convert(param0) };
+
+                if (!py_param0) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param0");
+                }
+
+                py::pyobj_handle py_param1{ py::convert(param1) };
+
+                if (!py_param1) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw std::invalid_argument("param1");
+                }
+
+                py::pyobj_handle args{ PyTuple_Pack(2, py_param0.get(), py_param1.get()) };
+
+                if (!args) {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw winrt::hresult_error();
+                }
+
+                py::pyobj_handle return_value{ PyObject_CallObject(delegate.callable(), args.get()) };
+
+                if (!return_value)
+                {
+                    PyErr_WriteUnraisable(delegate.callable());
+                    throw winrt::hresult_error();
+                }
+
+                auto param2_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IStringable, false>>(return_value.get(), 1);
+                param2 = winrt::com_array<winrt::Windows::Foundation::IStringable>{param2_buf.begin(), param2_buf.end()};
+
+                auto return_buf = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IStringable, false>>(return_value.get(), 0);
+                return winrt::com_array<winrt::Windows::Foundation::IStringable>{return_buf.begin(), return_buf.end()};
+            };
+        };
+    };
+
     struct Array1Handler
     {
         static winrt::TestComponent::Array1Handler get(PyObject* callable)
@@ -1826,7 +1874,14 @@ namespace py::impl::TestComponent
 
 namespace py::wrapper::TestComponent
 {
+    using Class = py::winrt_wrapper<winrt::TestComponent::Class>;
+    using Composable = py::winrt_wrapper<winrt::TestComponent::Composable>;
+    using Derived = py::winrt_wrapper<winrt::TestComponent::Derived>;
     using TestRunner = py::winrt_wrapper<winrt::TestComponent::TestRunner>;
+    using IRequiredFour = py::winrt_wrapper<winrt::TestComponent::IRequiredFour>;
+    using IRequiredOne = py::winrt_wrapper<winrt::TestComponent::IRequiredOne>;
+    using IRequiredThree = py::winrt_wrapper<winrt::TestComponent::IRequiredThree>;
+    using IRequiredTwo = py::winrt_wrapper<winrt::TestComponent::IRequiredTwo>;
     using ITests = py::winrt_wrapper<winrt::TestComponent::ITests>;
     using Blittable = py::winrt_struct_wrapper<winrt::TestComponent::Blittable>;
     using Nested = py::winrt_struct_wrapper<winrt::TestComponent::Nested>;
@@ -1846,11 +1901,67 @@ namespace py
 
 
     template<>
+    struct py_type<winrt::TestComponent::Class>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Class";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Class";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Composable>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Composable";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Composable";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::Derived>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.Derived";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "Derived";
+    };
+
+    template<>
     struct py_type<winrt::TestComponent::TestRunner>
     {
         static constexpr std::string_view qualified_name = "winrt.testcomponent.TestRunner";
         static constexpr const char* module_name = "winrt.testcomponent";
         static constexpr const char* type_name = "TestRunner";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredFour>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredFour";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "IRequiredFour";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredOne>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredOne";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "IRequiredOne";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredThree>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredThree";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "IRequiredThree";
+    };
+
+    template<>
+    struct py_type<winrt::TestComponent::IRequiredTwo>
+    {
+        static constexpr std::string_view qualified_name = "winrt.testcomponent.IRequiredTwo";
+        static constexpr const char* module_name = "winrt.testcomponent";
+        static constexpr const char* type_name = "IRequiredTwo";
     };
 
     template<>
@@ -1918,6 +2029,12 @@ namespace py
     struct delegate_python_type<winrt::TestComponent::Array15Handler>
     {
         using type = py::impl::TestComponent::Array15Handler;
+    };
+
+    template <>
+    struct delegate_python_type<winrt::TestComponent::Array16Handler>
+    {
+        using type = py::impl::TestComponent::Array16Handler;
     };
 
     template <>

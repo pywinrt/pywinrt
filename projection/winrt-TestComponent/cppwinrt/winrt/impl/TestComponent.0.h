@@ -9,6 +9,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     struct IAsyncAction;
     template <typename T> struct WINRT_IMPL_EMPTY_BASES IReference;
+    struct IStringable;
     template <typename TSender, typename TResult> struct WINRT_IMPL_EMPTY_BASES TypedEventHandler;
 }
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
@@ -22,8 +23,21 @@ WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 }
 WINRT_EXPORT namespace winrt::TestComponent
 {
+    struct IClass;
+    struct IComposable;
+    struct IComposableFactory;
+    struct IComposableStatics;
+    struct IDerived;
+    struct IDerivedFactory;
+    struct IRequiredFour;
+    struct IRequiredOne;
+    struct IRequiredThree;
+    struct IRequiredTwo;
     struct ITestRunnerStatics;
     struct ITests;
+    struct Class;
+    struct Composable;
+    struct Derived;
     struct TestRunner;
     struct Blittable;
     struct Nested;
@@ -34,6 +48,7 @@ WINRT_EXPORT namespace winrt::TestComponent
     struct Array13Handler;
     struct Array14Handler;
     struct Array15Handler;
+    struct Array16Handler;
     struct Array1Handler;
     struct Array2Handler;
     struct Array3Handler;
@@ -72,8 +87,21 @@ WINRT_EXPORT namespace winrt::TestComponent
 }
 namespace winrt::impl
 {
+    template <> struct category<winrt::TestComponent::IClass>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IComposable>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IComposableFactory>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IComposableStatics>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IDerived>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IDerivedFactory>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IRequiredFour>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IRequiredOne>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IRequiredThree>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::IRequiredTwo>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::ITestRunnerStatics>{ using type = interface_category; };
     template <> struct category<winrt::TestComponent::ITests>{ using type = interface_category; };
+    template <> struct category<winrt::TestComponent::Class>{ using type = class_category; };
+    template <> struct category<winrt::TestComponent::Composable>{ using type = class_category; };
+    template <> struct category<winrt::TestComponent::Derived>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::TestRunner>{ using type = class_category; };
     template <> struct category<winrt::TestComponent::Blittable>{ using type = struct_category<uint8_t, uint16_t, uint32_t, uint64_t, int16_t, int32_t, int64_t, float, double, winrt::guid>; };
     template <> struct category<winrt::TestComponent::Nested>{ using type = struct_category<winrt::TestComponent::Blittable, winrt::TestComponent::NonBlittable>; };
@@ -84,6 +112,7 @@ namespace winrt::impl
     template <> struct category<winrt::TestComponent::Array13Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Array14Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Array15Handler>{ using type = delegate_category; };
+    template <> struct category<winrt::TestComponent::Array16Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Array1Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Array2Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Array3Handler>{ using type = delegate_category; };
@@ -119,10 +148,23 @@ namespace winrt::impl
     template <> struct category<winrt::TestComponent::Param8Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::Param9Handler>{ using type = delegate_category; };
     template <> struct category<winrt::TestComponent::TestHandler>{ using type = delegate_category; };
+    template <> inline constexpr auto& name_v<winrt::TestComponent::Class> = L"TestComponent.Class";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::Composable> = L"TestComponent.Composable";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::Derived> = L"TestComponent.Derived";
     template <> inline constexpr auto& name_v<winrt::TestComponent::TestRunner> = L"TestComponent.TestRunner";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Blittable> = L"TestComponent.Blittable";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Nested> = L"TestComponent.Nested";
     template <> inline constexpr auto& name_v<winrt::TestComponent::NonBlittable> = L"TestComponent.NonBlittable";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IClass> = L"TestComponent.IClass";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IComposable> = L"TestComponent.IComposable";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IComposableFactory> = L"TestComponent.IComposableFactory";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IComposableStatics> = L"TestComponent.IComposableStatics";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IDerived> = L"TestComponent.IDerived";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IDerivedFactory> = L"TestComponent.IDerivedFactory";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredFour> = L"TestComponent.IRequiredFour";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredOne> = L"TestComponent.IRequiredOne";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredThree> = L"TestComponent.IRequiredThree";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::IRequiredTwo> = L"TestComponent.IRequiredTwo";
     template <> inline constexpr auto& name_v<winrt::TestComponent::ITestRunnerStatics> = L"TestComponent.ITestRunnerStatics";
     template <> inline constexpr auto& name_v<winrt::TestComponent::ITests> = L"TestComponent.ITests";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array10Handler> = L"TestComponent.Array10Handler";
@@ -131,6 +173,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array13Handler> = L"TestComponent.Array13Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array14Handler> = L"TestComponent.Array14Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array15Handler> = L"TestComponent.Array15Handler";
+    template <> inline constexpr auto& name_v<winrt::TestComponent::Array16Handler> = L"TestComponent.Array16Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array1Handler> = L"TestComponent.Array1Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array2Handler> = L"TestComponent.Array2Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Array3Handler> = L"TestComponent.Array3Handler";
@@ -166,14 +209,25 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::TestComponent::Param8Handler> = L"TestComponent.Param8Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::Param9Handler> = L"TestComponent.Param9Handler";
     template <> inline constexpr auto& name_v<winrt::TestComponent::TestHandler> = L"TestComponent.TestHandler";
-    template <> inline constexpr guid guid_v<winrt::TestComponent::ITestRunnerStatics>{ 0x1C772E53,0x4E68,0x56DB,{ 0xB2,0x83,0x2F,0xBC,0xF4,0xCE,0xBB,0xE5 } }; // 1C772E53-4E68-56DB-B283-2FBCF4CEBBE5
-    template <> inline constexpr guid guid_v<winrt::TestComponent::ITests>{ 0x44F5EA16,0xA160,0x59E7,{ 0x95,0xA2,0xCD,0x66,0x61,0x09,0x06,0xEA } }; // 44F5EA16-A160-59E7-95A2-CD66610906EA
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IClass>{ 0x3F55AC7D,0x2D3A,0x5A63,{ 0x9A,0xB3,0x7A,0x30,0x1A,0x11,0xC9,0xCA } }; // 3F55AC7D-2D3A-5A63-9AB3-7A301A11C9CA
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IComposable>{ 0xFB59F551,0x1648,0x57A8,{ 0x9F,0x32,0x11,0x71,0xED,0xA5,0x65,0x67 } }; // FB59F551-1648-57A8-9F32-1171EDA56567
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IComposableFactory>{ 0xB7C48344,0x637C,0x5FBC,{ 0xA7,0xF7,0x1A,0x27,0xFE,0x08,0xCF,0x6B } }; // B7C48344-637C-5FBC-A7F7-1A27FE08CF6B
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IComposableStatics>{ 0x2050A66F,0x2401,0x54FC,{ 0x8C,0x64,0xD2,0x13,0x24,0xA7,0x2C,0xBA } }; // 2050A66F-2401-54FC-8C64-D21324A72CBA
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IDerived>{ 0xAD36EED2,0x8C47,0x56C1,{ 0x97,0x48,0xEA,0x1C,0xB2,0xF2,0x64,0x40 } }; // AD36EED2-8C47-56C1-9748-EA1CB2F26440
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IDerivedFactory>{ 0x4021AFB8,0xC131,0x5BE1,{ 0x9C,0xB9,0xBE,0x65,0xD1,0x35,0xF9,0x31 } }; // 4021AFB8-C131-5BE1-9CB9-BE65D135F931
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredFour>{ 0xAFBF8D43,0xF3FA,0x5093,{ 0x8D,0x16,0x05,0xD0,0xE3,0x59,0x8A,0x5E } }; // AFBF8D43-F3FA-5093-8D16-05D0E3598A5E
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredOne>{ 0x9CDEFEE9,0x59A9,0x5329,{ 0xA7,0xF3,0x59,0x35,0xD9,0xCA,0x27,0x11 } }; // 9CDEFEE9-59A9-5329-A7F3-5935D9CA2711
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredThree>{ 0x541F26D9,0x3083,0x50AE,{ 0x9F,0x32,0x26,0xF9,0x24,0x40,0x36,0x88 } }; // 541F26D9-3083-50AE-9F32-26F924403688
+    template <> inline constexpr guid guid_v<winrt::TestComponent::IRequiredTwo>{ 0x3A307125,0x2148,0x532D,{ 0xB7,0x9B,0xE8,0xCD,0xDF,0x5C,0xA8,0x62 } }; // 3A307125-2148-532D-B79B-E8CDDF5CA862
+    template <> inline constexpr guid guid_v<winrt::TestComponent::ITestRunnerStatics>{ 0xF9962DCC,0xBF90,0x537D,{ 0xA9,0x43,0x4B,0xEC,0xCA,0xCD,0xE7,0x61 } }; // F9962DCC-BF90-537D-A943-4BECCACDE761
+    template <> inline constexpr guid guid_v<winrt::TestComponent::ITests>{ 0xBB28BCA1,0xA46D,0x5897,{ 0xA3,0xE9,0xF9,0xEC,0x16,0x93,0x08,0x75 } }; // BB28BCA1-A46D-5897-A3E9-F9EC16930875
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array10Handler>{ 0xC901DD1B,0x433D,0x565E,{ 0xA8,0xE7,0x0D,0xBD,0x77,0x76,0x1A,0xEA } }; // C901DD1B-433D-565E-A8E7-0DBD77761AEA
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array11Handler>{ 0xB4D851CD,0x5C24,0x5511,{ 0xA6,0xAC,0xF5,0x65,0x85,0x00,0x2A,0x46 } }; // B4D851CD-5C24-5511-A6AC-F56585002A46
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array12Handler>{ 0xAB959AC1,0x7EF5,0x5F76,{ 0x9A,0xDD,0x82,0x03,0xBD,0xEB,0xB1,0xCE } }; // AB959AC1-7EF5-5F76-9ADD-8203BDEBB1CE
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array13Handler>{ 0x55FD07CF,0x8767,0x55FF,{ 0xA1,0x88,0x75,0x5A,0x95,0x3E,0xD0,0x52 } }; // 55FD07CF-8767-55FF-A188-755A953ED052
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array14Handler>{ 0xCDD9A4DB,0xC841,0x5CE4,{ 0xA8,0x8B,0xBB,0x17,0xF9,0xD0,0x12,0x49 } }; // CDD9A4DB-C841-5CE4-A88B-BB17F9D01249
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array15Handler>{ 0xF6C65099,0xAA85,0x51A0,{ 0x81,0xED,0x81,0x93,0xDE,0x43,0x83,0xE1 } }; // F6C65099-AA85-51A0-81ED-8193DE4383E1
+    template <> inline constexpr guid guid_v<winrt::TestComponent::Array16Handler>{ 0x50A84ED8,0x5E2F,0x55E2,{ 0xB1,0x45,0x56,0xF1,0xED,0xC9,0xF5,0x77 } }; // 50A84ED8-5E2F-55E2-B145-56F1EDC9F577
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array1Handler>{ 0x1E06318F,0xE65A,0x5D7B,{ 0xB5,0x2A,0xCA,0x18,0x8D,0x50,0xD4,0x31 } }; // 1E06318F-E65A-5D7B-B52A-CA188D50D431
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array2Handler>{ 0x9E2F3897,0xE409,0x5157,{ 0x87,0x8E,0x9F,0x27,0xDA,0x62,0x4F,0x7C } }; // 9E2F3897-E409-5157-878E-9F27DA624F7C
     template <> inline constexpr guid guid_v<winrt::TestComponent::Array3Handler>{ 0x73FAD5AB,0xA41E,0x54EC,{ 0x88,0xC1,0x37,0xB8,0xB9,0xE2,0xB5,0xE1 } }; // 73FAD5AB-A41E-54EC-88C1-37B8B9E2B5E1
@@ -209,6 +263,83 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::TestComponent::Param8Handler>{ 0x871C3026,0x1BAB,0x54CA,{ 0xA4,0x71,0x8F,0x38,0x9A,0x22,0xDA,0x83 } }; // 871C3026-1BAB-54CA-A471-8F389A22DA83
     template <> inline constexpr guid guid_v<winrt::TestComponent::Param9Handler>{ 0x557F874C,0x407B,0x538E,{ 0xA7,0xE6,0xD1,0x58,0xCA,0x4E,0x84,0x78 } }; // 557F874C-407B-538E-A7E6-D158CA4E8478
     template <> inline constexpr guid guid_v<winrt::TestComponent::TestHandler>{ 0x256D039D,0xCEDF,0x5C56,{ 0xBA,0xAD,0xEF,0xE6,0x71,0x64,0xC9,0x56 } }; // 256D039D-CEDF-5C56-BAAD-EFE67164C956
+    template <> struct default_interface<winrt::TestComponent::Class>{ using type = winrt::TestComponent::IClass; };
+    template <> struct default_interface<winrt::TestComponent::Composable>{ using type = winrt::TestComponent::IComposable; };
+    template <> struct default_interface<winrt::TestComponent::Derived>{ using type = winrt::TestComponent::IDerived; };
+    template <> struct abi<winrt::TestComponent::IClass>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IComposable>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_Value(int32_t*) noexcept = 0;
+            virtual int32_t __stdcall put_Value(int32_t) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IComposableFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+            virtual int32_t __stdcall CreateWithValue(int32_t, void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IComposableStatics>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall ExpectComposable(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall ExpectRequiredOne(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall ExpectRequiredTwo(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall ExpectRequiredThree(void*, int32_t*) noexcept = 0;
+            virtual int32_t __stdcall ExpectRequiredFour(void*, int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IDerived>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IDerivedFactory>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall CreateInstance(void*, void**, void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IRequiredFour>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Four(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IRequiredOne>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall One(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IRequiredThree>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Three(int32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::IRequiredTwo>
+    {
+        struct WINRT_IMPL_NOVTABLE type : inspectable_abi
+        {
+            virtual int32_t __stdcall Two(int32_t*) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::TestComponent::ITestRunnerStatics>
     {
         struct WINRT_IMPL_NOVTABLE type : inspectable_abi
@@ -220,6 +351,9 @@ namespace winrt::impl
             virtual int32_t __stdcall CreateInt32Vector(void**) noexcept = 0;
             virtual int32_t __stdcall CreateStringVector(void**) noexcept = 0;
             virtual int32_t __stdcall CreateStringableVector(void**) noexcept = 0;
+            virtual int32_t __stdcall CreateTimeSpan(uint32_t, int64_t*) noexcept = 0;
+            virtual int32_t __stdcall CreateAsyncAction(uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall ExpectObject(void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::TestComponent::ITests>
@@ -273,6 +407,7 @@ namespace winrt::impl
             virtual int32_t __stdcall Array13(uint32_t, struct struct_TestComponent_Blittable*, uint32_t, struct struct_TestComponent_Blittable*, uint32_t*, struct struct_TestComponent_Blittable**, uint32_t* __resultSize, struct struct_TestComponent_Blittable**) noexcept = 0;
             virtual int32_t __stdcall Array14(uint32_t, struct struct_TestComponent_NonBlittable*, uint32_t, struct struct_TestComponent_NonBlittable*, uint32_t*, struct struct_TestComponent_NonBlittable**, uint32_t* __resultSize, struct struct_TestComponent_NonBlittable**) noexcept = 0;
             virtual int32_t __stdcall Array15(uint32_t, struct struct_TestComponent_Nested*, uint32_t, struct struct_TestComponent_Nested*, uint32_t*, struct struct_TestComponent_Nested**, uint32_t* __resultSize, struct struct_TestComponent_Nested**) noexcept = 0;
+            virtual int32_t __stdcall Array16(uint32_t, void**, uint32_t, void**, uint32_t*, void***, uint32_t* __resultSize, void***) noexcept = 0;
             virtual int32_t __stdcall Array1Call(void*) noexcept = 0;
             virtual int32_t __stdcall Array2Call(void*) noexcept = 0;
             virtual int32_t __stdcall Array3Call(void*) noexcept = 0;
@@ -288,6 +423,7 @@ namespace winrt::impl
             virtual int32_t __stdcall Array13Call(void*) noexcept = 0;
             virtual int32_t __stdcall Array14Call(void*) noexcept = 0;
             virtual int32_t __stdcall Array15Call(void*) noexcept = 0;
+            virtual int32_t __stdcall Array16Call(void*) noexcept = 0;
             virtual int32_t __stdcall Collection1(void*, void**, void**) noexcept = 0;
             virtual int32_t __stdcall Collection2(void*, void**, void**) noexcept = 0;
             virtual int32_t __stdcall Collection3(void*, void**, void**) noexcept = 0;
@@ -314,6 +450,35 @@ namespace winrt::impl
             virtual int32_t __stdcall remove_Event2(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall Event1Call(int32_t) noexcept = 0;
             virtual int32_t __stdcall Event2Call(int32_t) noexcept = 0;
+            virtual int32_t __stdcall GetClassVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetComposableClassVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetObjectVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetInterfaceVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetBooleanVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetStringVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetBlittableVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall GetNonBlittableVectorSubset(void*, int32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall Box1(uint8_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box2(uint16_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box3(uint32_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box4(uint64_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box5(int16_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box6(int32_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box7(int64_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box8(bool, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box9(float, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box10(double, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box11(winrt::guid, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box12(char16_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box13(void*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box14(int64_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box15(struct struct_TestComponent_Blittable, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box16(struct struct_TestComponent_NonBlittable, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box17(int64_t, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box18(uint32_t, int64_t*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box19(uint32_t, bool*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box20(uint32_t, void**, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall Box21(uint32_t, int64_t*, void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::TestComponent::Array10Handler>
@@ -356,6 +521,13 @@ namespace winrt::impl
         struct WINRT_IMPL_NOVTABLE type : unknown_abi
         {
             virtual int32_t __stdcall Invoke(uint32_t, struct struct_TestComponent_Nested*, uint32_t, struct struct_TestComponent_Nested*, uint32_t*, struct struct_TestComponent_Nested**, uint32_t* __resultSize, struct struct_TestComponent_Nested**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::TestComponent::Array16Handler>
+    {
+        struct WINRT_IMPL_NOVTABLE type : unknown_abi
+        {
+            virtual int32_t __stdcall Invoke(uint32_t, void**, uint32_t, void**, uint32_t*, void***, uint32_t* __resultSize, void***) noexcept = 0;
         };
     };
     template <> struct abi<winrt::TestComponent::Array1Handler>
@@ -604,6 +776,100 @@ namespace winrt::impl
         };
     };
     template <typename D>
+    struct consume_TestComponent_IClass
+    {
+    };
+    template <> struct consume<winrt::TestComponent::IClass>
+    {
+        template <typename D> using type = consume_TestComponent_IClass<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IComposable
+    {
+        [[nodiscard]] auto Value() const;
+        auto Value(int32_t value) const;
+    };
+    template <> struct consume<winrt::TestComponent::IComposable>
+    {
+        template <typename D> using type = consume_TestComponent_IComposable<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IComposableFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+        auto CreateWithValue(int32_t init, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::TestComponent::IComposableFactory>
+    {
+        template <typename D> using type = consume_TestComponent_IComposableFactory<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IComposableStatics
+    {
+        auto ExpectComposable(winrt::TestComponent::Composable const& t) const;
+        auto ExpectRequiredOne(winrt::TestComponent::IRequiredOne const& t) const;
+        auto ExpectRequiredTwo(winrt::TestComponent::IRequiredTwo const& t) const;
+        auto ExpectRequiredThree(winrt::TestComponent::IRequiredThree const& t) const;
+        auto ExpectRequiredFour(winrt::TestComponent::IRequiredFour const& t) const;
+    };
+    template <> struct consume<winrt::TestComponent::IComposableStatics>
+    {
+        template <typename D> using type = consume_TestComponent_IComposableStatics<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IDerived
+    {
+    };
+    template <> struct consume<winrt::TestComponent::IDerived>
+    {
+        template <typename D> using type = consume_TestComponent_IDerived<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IDerivedFactory
+    {
+        auto CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const;
+    };
+    template <> struct consume<winrt::TestComponent::IDerivedFactory>
+    {
+        template <typename D> using type = consume_TestComponent_IDerivedFactory<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IRequiredFour
+    {
+        auto Four() const;
+    };
+    template <> struct consume<winrt::TestComponent::IRequiredFour>
+    {
+        template <typename D> using type = consume_TestComponent_IRequiredFour<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IRequiredOne
+    {
+        auto One() const;
+    };
+    template <> struct consume<winrt::TestComponent::IRequiredOne>
+    {
+        template <typename D> using type = consume_TestComponent_IRequiredOne<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IRequiredThree
+    {
+        auto Three() const;
+    };
+    template <> struct consume<winrt::TestComponent::IRequiredThree>
+    {
+        template <typename D> using type = consume_TestComponent_IRequiredThree<D>;
+    };
+    template <typename D>
+    struct consume_TestComponent_IRequiredTwo
+    {
+        auto Two() const;
+    };
+    template <> struct consume<winrt::TestComponent::IRequiredTwo>
+    {
+        template <typename D> using type = consume_TestComponent_IRequiredTwo<D>;
+    };
+    template <typename D>
     struct consume_TestComponent_ITestRunnerStatics
     {
         auto TestProducer(winrt::TestComponent::ITests const& callee) const;
@@ -613,6 +879,9 @@ namespace winrt::impl
         auto CreateInt32Vector() const;
         auto CreateStringVector() const;
         auto CreateStringableVector() const;
+        auto CreateTimeSpan(uint32_t milliseconds) const;
+        auto CreateAsyncAction(uint32_t milliseconds) const;
+        auto ExpectObject(winrt::Windows::Foundation::IInspectable const& value) const;
     };
     template <> struct consume<winrt::TestComponent::ITestRunnerStatics>
     {
@@ -668,6 +937,7 @@ namespace winrt::impl
         auto Array13(array_view<winrt::TestComponent::Blittable const> a, array_view<winrt::TestComponent::Blittable> b, com_array<winrt::TestComponent::Blittable>& c) const;
         auto Array14(array_view<winrt::TestComponent::NonBlittable const> a, array_view<winrt::TestComponent::NonBlittable> b, com_array<winrt::TestComponent::NonBlittable>& c) const;
         auto Array15(array_view<winrt::TestComponent::Nested const> a, array_view<winrt::TestComponent::Nested> b, com_array<winrt::TestComponent::Nested>& c) const;
+        auto Array16(array_view<winrt::Windows::Foundation::IStringable const> a, array_view<winrt::Windows::Foundation::IStringable> b, com_array<winrt::Windows::Foundation::IStringable>& c) const;
         auto Array1Call(winrt::TestComponent::Array1Handler const& handler) const;
         auto Array2Call(winrt::TestComponent::Array2Handler const& handler) const;
         auto Array3Call(winrt::TestComponent::Array3Handler const& handler) const;
@@ -683,6 +953,7 @@ namespace winrt::impl
         auto Array13Call(winrt::TestComponent::Array13Handler const& handler) const;
         auto Array14Call(winrt::TestComponent::Array14Handler const& handler) const;
         auto Array15Call(winrt::TestComponent::Array15Handler const& handler) const;
+        auto Array16Call(winrt::TestComponent::Array16Handler const& handler) const;
         auto Collection1(param::iterable<hstring> const& a, winrt::Windows::Foundation::Collections::IIterable<hstring>& b) const;
         auto Collection2(param::iterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>> const& a, winrt::Windows::Foundation::Collections::IIterable<winrt::Windows::Foundation::Collections::IKeyValuePair<hstring, hstring>>& b) const;
         auto Collection3(param::map<hstring, hstring> const& a, winrt::Windows::Foundation::Collections::IMap<hstring, hstring>& b) const;
@@ -713,6 +984,35 @@ namespace winrt::impl
         auto Event2(winrt::event_token const& token) const noexcept;
         auto Event1Call(int32_t value) const;
         auto Event2Call(int32_t value) const;
+        auto GetClassVectorSubset(param::vector_view<winrt::TestComponent::Class> const& classVector, int32_t startIndex) const;
+        auto GetComposableClassVectorSubset(param::vector_view<winrt::TestComponent::Composable> const& classVector, int32_t startIndex) const;
+        auto GetObjectVectorSubset(param::vector_view<winrt::Windows::Foundation::IInspectable> const& objectVector, int32_t startIndex) const;
+        auto GetInterfaceVectorSubset(param::vector_view<winrt::TestComponent::IRequiredOne> const& interfaceVector, int32_t startIndex) const;
+        auto GetBooleanVectorSubset(param::vector_view<bool> const& booleanVector, int32_t startIndex) const;
+        auto GetStringVectorSubset(param::vector_view<hstring> const& stringVector, int32_t startIndex) const;
+        auto GetBlittableVectorSubset(param::vector_view<winrt::TestComponent::Blittable> const& blittableVector, int32_t startIndex) const;
+        auto GetNonBlittableVectorSubset(param::vector_view<winrt::TestComponent::NonBlittable> const& nonBlittableVector, int32_t startIndex) const;
+        auto Box1(uint8_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box2(uint16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box3(uint32_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box4(uint64_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box5(int16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box6(int32_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box7(int64_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box8(bool param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box9(float param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box10(double param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box11(winrt::guid const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box12(char16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box13(param::hstring const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box14(winrt::Windows::Foundation::TimeSpan const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box15(winrt::TestComponent::Blittable const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box16(winrt::TestComponent::NonBlittable const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box17(winrt::Windows::Foundation::DateTime const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box18(array_view<int64_t const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box19(array_view<bool const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box20(array_view<hstring const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
+        auto Box21(array_view<winrt::Windows::Foundation::TimeSpan const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const;
     };
     template <> struct consume<winrt::TestComponent::ITests>
     {

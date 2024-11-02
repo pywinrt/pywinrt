@@ -11,6 +11,88 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.240111.5"), "Mismatche
 #include "winrt/impl/TestComponent.2.h"
 namespace winrt::impl
 {
+    template <typename D> auto consume_TestComponent_IComposable<D>::Value() const
+    {
+        int32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposable)->get_Value(&value));
+        return value;
+    }
+    template <typename D> auto consume_TestComponent_IComposable<D>::Value(int32_t value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposable)->put_Value(value));
+    }
+    template <typename D> auto consume_TestComponent_IComposableFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::TestComponent::Composable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_IComposableFactory<D>::CreateWithValue(int32_t init, winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableFactory)->CreateWithValue(init, *(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::TestComponent::Composable{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_IComposableStatics<D>::ExpectComposable(winrt::TestComponent::Composable const& t) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableStatics)->ExpectComposable(*(void**)(&t), &result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IComposableStatics<D>::ExpectRequiredOne(winrt::TestComponent::IRequiredOne const& t) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableStatics)->ExpectRequiredOne(*(void**)(&t), &result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IComposableStatics<D>::ExpectRequiredTwo(winrt::TestComponent::IRequiredTwo const& t) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableStatics)->ExpectRequiredTwo(*(void**)(&t), &result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IComposableStatics<D>::ExpectRequiredThree(winrt::TestComponent::IRequiredThree const& t) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableStatics)->ExpectRequiredThree(*(void**)(&t), &result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IComposableStatics<D>::ExpectRequiredFour(winrt::TestComponent::IRequiredFour const& t) const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IComposableStatics)->ExpectRequiredFour(*(void**)(&t), &result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IDerivedFactory<D>::CreateInstance(winrt::Windows::Foundation::IInspectable const& baseInterface, winrt::Windows::Foundation::IInspectable& innerInterface) const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IDerivedFactory)->CreateInstance(*(void**)(&baseInterface), impl::bind_out(innerInterface), &value));
+        return winrt::TestComponent::Derived{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_IRequiredFour<D>::Four() const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IRequiredFour)->Four(&result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IRequiredOne<D>::One() const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IRequiredOne)->One(&result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IRequiredThree<D>::Three() const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IRequiredThree)->Three(&result));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_IRequiredTwo<D>::Two() const
+    {
+        int32_t result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::IRequiredTwo)->Two(&result));
+        return result;
+    }
     template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::TestProducer(winrt::TestComponent::ITests const& callee) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->TestProducer(*(void**)(&callee)));
@@ -48,6 +130,24 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateStringableVector(&result));
         return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IStringable>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateTimeSpan(uint32_t milliseconds) const
+    {
+        winrt::Windows::Foundation::TimeSpan result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateTimeSpan(milliseconds, put_abi(result)));
+        return result;
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::CreateAsyncAction(uint32_t milliseconds) const
+    {
+        void* operation{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->CreateAsyncAction(milliseconds, &operation));
+        return winrt::Windows::Foundation::IAsyncAction{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITestRunnerStatics<D>::ExpectObject(winrt::Windows::Foundation::IInspectable const& value) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITestRunnerStatics)->ExpectObject(*(void**)(&value), &result));
+        return hstring{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_TestComponent_ITests<D>::Percentage() const
     {
@@ -314,6 +414,13 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Array15(a.size(), get_abi(a), b.size(), put_abi(b), impl::put_size_abi(c), put_abi(c), &result_impl_size, &result));
         return com_array<winrt::TestComponent::Nested>{ result, result_impl_size, take_ownership_from_abi };
     }
+    template <typename D> auto consume_TestComponent_ITests<D>::Array16(array_view<winrt::Windows::Foundation::IStringable const> a, array_view<winrt::Windows::Foundation::IStringable> b, com_array<winrt::Windows::Foundation::IStringable>& c) const
+    {
+        uint32_t result_impl_size{};
+        void** result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Array16(a.size(), get_abi(a), b.size(), put_abi(b), impl::put_size_abi(c), put_abi(c), &result_impl_size, &result));
+        return com_array<winrt::Windows::Foundation::IStringable>{ result, result_impl_size, take_ownership_from_abi };
+    }
     template <typename D> auto consume_TestComponent_ITests<D>::Array1Call(winrt::TestComponent::Array1Handler const& handler) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Array1Call(*(void**)(&handler)));
@@ -373,6 +480,10 @@ namespace winrt::impl
     template <typename D> auto consume_TestComponent_ITests<D>::Array15Call(winrt::TestComponent::Array15Handler const& handler) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Array15Call(*(void**)(&handler)));
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Array16Call(winrt::TestComponent::Array16Handler const& handler) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Array16Call(*(void**)(&handler)));
     }
     template <typename D> auto consume_TestComponent_ITests<D>::Collection1(param::iterable<hstring> const& a, winrt::Windows::Foundation::Collections::IIterable<hstring>& b) const
     {
@@ -510,6 +621,180 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Event2Call(value));
     }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetClassVectorSubset(param::vector_view<winrt::TestComponent::Class> const& classVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetClassVectorSubset(*(void**)(&classVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Class>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetComposableClassVectorSubset(param::vector_view<winrt::TestComponent::Composable> const& classVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetComposableClassVectorSubset(*(void**)(&classVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Composable>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetObjectVectorSubset(param::vector_view<winrt::Windows::Foundation::IInspectable> const& objectVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetObjectVectorSubset(*(void**)(&objectVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetInterfaceVectorSubset(param::vector_view<winrt::TestComponent::IRequiredOne> const& interfaceVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetInterfaceVectorSubset(*(void**)(&interfaceVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::IRequiredOne>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetBooleanVectorSubset(param::vector_view<bool> const& booleanVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetBooleanVectorSubset(*(void**)(&booleanVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<bool>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetStringVectorSubset(param::vector_view<hstring> const& stringVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetStringVectorSubset(*(void**)(&stringVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<hstring>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetBlittableVectorSubset(param::vector_view<winrt::TestComponent::Blittable> const& blittableVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetBlittableVectorSubset(*(void**)(&blittableVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Blittable>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::GetNonBlittableVectorSubset(param::vector_view<winrt::TestComponent::NonBlittable> const& nonBlittableVector, int32_t startIndex) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->GetNonBlittableVectorSubset(*(void**)(&nonBlittableVector), startIndex, &result));
+        return winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::NonBlittable>{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box1(uint8_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box1(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box2(uint16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box2(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box3(uint32_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box3(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box4(uint64_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box4(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box5(int16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box5(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box6(int32_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box6(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box7(int64_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box7(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box8(bool param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box8(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box9(float param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box9(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box10(double param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box10(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box11(winrt::guid const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box11(impl::bind_in(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box12(char16_t param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box12(param, *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box13(param::hstring const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box13(*(void**)(&param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box14(winrt::Windows::Foundation::TimeSpan const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box14(impl::bind_in(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box15(winrt::TestComponent::Blittable const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box15(impl::bind_in(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box16(winrt::TestComponent::NonBlittable const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box16(impl::bind_in(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box17(winrt::Windows::Foundation::DateTime const& param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box17(impl::bind_in(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box18(array_view<int64_t const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box18(param.size(), get_abi(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box19(array_view<bool const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box19(param.size(), get_abi(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box20(array_view<hstring const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box20(param.size(), get_abi(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_TestComponent_ITests<D>::Box21(array_view<winrt::Windows::Foundation::TimeSpan const> param, winrt::Windows::Foundation::IInspectable const& boxedParam) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::TestComponent::ITests)->Box21(param.size(), get_abi(param), *(void**)(&boxedParam), &result));
+        return winrt::Windows::Foundation::IInspectable{ result, take_ownership_from_abi };
+    }
     template <typename H> struct delegate<winrt::TestComponent::Array10Handler, H> final : implements_delegate<winrt::TestComponent::Array10Handler, H>
     {
         delegate(H&& handler) : implements_delegate<winrt::TestComponent::Array10Handler, H>(std::forward<H>(handler)) {}
@@ -588,6 +873,20 @@ namespace winrt::impl
             clear_abi(c);
             clear_abi(result);
             std::tie(*__resultSize, *result) = detach_abi((*this)(array_view<winrt::TestComponent::Nested const>(reinterpret_cast<winrt::TestComponent::Nested const *>(a), reinterpret_cast<winrt::TestComponent::Nested const *>(a) + __aSize), array_view<winrt::TestComponent::Nested>(reinterpret_cast<winrt::TestComponent::Nested*>(b), reinterpret_cast<winrt::TestComponent::Nested*>(b) + __bSize), detach_abi<winrt::TestComponent::Nested>(__cSize, c)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename H> struct delegate<winrt::TestComponent::Array16Handler, H> final : implements_delegate<winrt::TestComponent::Array16Handler, H>
+    {
+        delegate(H&& handler) : implements_delegate<winrt::TestComponent::Array16Handler, H>(std::forward<H>(handler)) {}
+
+        int32_t __stdcall Invoke(uint32_t __aSize, void** a, uint32_t __bSize, void** b, uint32_t* __cSize, void*** c, uint32_t* __resultSize, void*** result) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::IStringable>(b, __bSize);
+            clear_abi(c);
+            clear_abi(result);
+            std::tie(*__resultSize, *result) = detach_abi((*this)(array_view<winrt::Windows::Foundation::IStringable const>(reinterpret_cast<winrt::Windows::Foundation::IStringable const *>(a), reinterpret_cast<winrt::Windows::Foundation::IStringable const *>(a) + __aSize), array_view<winrt::Windows::Foundation::IStringable>(reinterpret_cast<winrt::Windows::Foundation::IStringable*>(b), reinterpret_cast<winrt::Windows::Foundation::IStringable*>(b) + __bSize), detach_abi<winrt::Windows::Foundation::IStringable>(__cSize, c)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1021,6 +1320,168 @@ namespace winrt::impl
     };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::TestComponent::IClass> : produce_base<D, winrt::TestComponent::IClass>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IComposable> : produce_base<D, winrt::TestComponent::IComposable>
+    {
+        int32_t __stdcall get_Value(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<int32_t>(this->shim().Value());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Value(int32_t value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Value(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IComposableFactory> : produce_base<D, winrt::TestComponent::IComposableFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::TestComponent::Composable>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateWithValue(int32_t init, void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::TestComponent::Composable>(this->shim().CreateWithValue(init, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IComposableStatics> : produce_base<D, winrt::TestComponent::IComposableStatics>
+    {
+        int32_t __stdcall ExpectComposable(void* t, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().ExpectComposable(*reinterpret_cast<winrt::TestComponent::Composable const*>(&t)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ExpectRequiredOne(void* t, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().ExpectRequiredOne(*reinterpret_cast<winrt::TestComponent::IRequiredOne const*>(&t)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ExpectRequiredTwo(void* t, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().ExpectRequiredTwo(*reinterpret_cast<winrt::TestComponent::IRequiredTwo const*>(&t)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ExpectRequiredThree(void* t, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().ExpectRequiredThree(*reinterpret_cast<winrt::TestComponent::IRequiredThree const*>(&t)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ExpectRequiredFour(void* t, int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().ExpectRequiredFour(*reinterpret_cast<winrt::TestComponent::IRequiredFour const*>(&t)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IDerived> : produce_base<D, winrt::TestComponent::IDerived>
+    {
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IDerivedFactory> : produce_base<D, winrt::TestComponent::IDerivedFactory>
+    {
+        int32_t __stdcall CreateInstance(void* baseInterface, void** innerInterface, void** value) noexcept final try
+        {
+            if (innerInterface) *innerInterface = nullptr;
+            winrt::Windows::Foundation::IInspectable winrt_impl_innerInterface;
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::TestComponent::Derived>(this->shim().CreateInstance(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&baseInterface), winrt_impl_innerInterface));
+                if (innerInterface) *innerInterface = detach_abi(winrt_impl_innerInterface);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IRequiredFour> : produce_base<D, winrt::TestComponent::IRequiredFour>
+    {
+        int32_t __stdcall Four(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().Four());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IRequiredOne> : produce_base<D, winrt::TestComponent::IRequiredOne>
+    {
+        int32_t __stdcall One(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().One());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IRequiredThree> : produce_base<D, winrt::TestComponent::IRequiredThree>
+    {
+        int32_t __stdcall Three(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().Three());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+    template <typename D>
+    struct produce<D, winrt::TestComponent::IRequiredTwo> : produce_base<D, winrt::TestComponent::IRequiredTwo>
+    {
+        int32_t __stdcall Two(int32_t* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<int32_t>(this->shim().Two());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::TestComponent::ITestRunnerStatics> : produce_base<D, winrt::TestComponent::ITestRunnerStatics>
     {
         int32_t __stdcall TestProducer(void* callee) noexcept final try
@@ -1073,6 +1534,30 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IStringable>>(this->shim().CreateStringableVector());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateTimeSpan(uint32_t milliseconds, int64_t* result) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::TimeSpan>(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::TimeSpan>(this->shim().CreateTimeSpan(milliseconds));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall CreateAsyncAction(uint32_t milliseconds, void** operation) noexcept final try
+        {
+            clear_abi(operation);
+            typename D::abi_guard guard(this->shim());
+            *operation = detach_from<winrt::Windows::Foundation::IAsyncAction>(this->shim().CreateAsyncAction(milliseconds));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ExpectObject(void* value, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<hstring>(this->shim().ExpectObject(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&value)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1452,6 +1937,16 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall Array16(uint32_t __aSize, void** a, uint32_t __bSize, void** b, uint32_t* __cSize, void*** c, uint32_t* __resultSize, void*** result) noexcept final try
+        {
+            zero_abi<winrt::Windows::Foundation::IStringable>(b, __bSize);
+            clear_abi(c);
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            std::tie(*__resultSize, *result) = detach_abi(this->shim().Array16(array_view<winrt::Windows::Foundation::IStringable const>(reinterpret_cast<winrt::Windows::Foundation::IStringable const *>(a), reinterpret_cast<winrt::Windows::Foundation::IStringable const *>(a) + __aSize), array_view<winrt::Windows::Foundation::IStringable>(reinterpret_cast<winrt::Windows::Foundation::IStringable*>(b), reinterpret_cast<winrt::Windows::Foundation::IStringable*>(b) + __bSize), detach_abi<winrt::Windows::Foundation::IStringable>(__cSize, c)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
         int32_t __stdcall Array1Call(void* handler) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
@@ -1554,6 +2049,13 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().Array15Call(*reinterpret_cast<winrt::TestComponent::Array15Handler const*>(&handler));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Array16Call(void* handler) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Array16Call(*reinterpret_cast<winrt::TestComponent::Array16Handler const*>(&handler));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1755,10 +2257,281 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall GetClassVectorSubset(void* classVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Class>>(this->shim().GetClassVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Class> const*>(&classVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetComposableClassVectorSubset(void* classVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Composable>>(this->shim().GetComposableClassVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Composable> const*>(&classVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetObjectVectorSubset(void* objectVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(this->shim().GetObjectVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable> const*>(&objectVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetInterfaceVectorSubset(void* interfaceVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::IRequiredOne>>(this->shim().GetInterfaceVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::IRequiredOne> const*>(&interfaceVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetBooleanVectorSubset(void* booleanVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<bool>>(this->shim().GetBooleanVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<bool> const*>(&booleanVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetStringVectorSubset(void* stringVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<hstring>>(this->shim().GetStringVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<hstring> const*>(&stringVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetBlittableVectorSubset(void* blittableVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Blittable>>(this->shim().GetBlittableVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Blittable> const*>(&blittableVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetNonBlittableVectorSubset(void* nonBlittableVector, int32_t startIndex, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::NonBlittable>>(this->shim().GetNonBlittableVectorSubset(*reinterpret_cast<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::NonBlittable> const*>(&nonBlittableVector), startIndex));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box1(uint8_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box1(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box2(uint16_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box2(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box3(uint32_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box3(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box4(uint64_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box4(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box5(int16_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box5(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box6(int32_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box6(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box7(int64_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box7(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box8(bool param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box8(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box9(float param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box9(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box10(double param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box10(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box11(winrt::guid param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box11(*reinterpret_cast<winrt::guid const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box12(char16_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box12(param, *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box13(void* param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box13(*reinterpret_cast<hstring const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box14(int64_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box14(*reinterpret_cast<winrt::Windows::Foundation::TimeSpan const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box15(struct struct_TestComponent_Blittable param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box15(*reinterpret_cast<winrt::TestComponent::Blittable const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box16(struct struct_TestComponent_NonBlittable param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box16(*reinterpret_cast<winrt::TestComponent::NonBlittable const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box17(int64_t param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box17(*reinterpret_cast<winrt::Windows::Foundation::DateTime const*>(&param), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box18(uint32_t __paramSize, int64_t* param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box18(array_view<int64_t const>(reinterpret_cast<int64_t const *>(param), reinterpret_cast<int64_t const *>(param) + __paramSize), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box19(uint32_t __paramSize, bool* param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box19(array_view<bool const>(reinterpret_cast<bool const *>(param), reinterpret_cast<bool const *>(param) + __paramSize), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box20(uint32_t __paramSize, void** param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box20(array_view<hstring const>(reinterpret_cast<hstring const *>(param), reinterpret_cast<hstring const *>(param) + __paramSize), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Box21(uint32_t __paramSize, int64_t* param, void* boxedParam, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().Box21(array_view<winrt::Windows::Foundation::TimeSpan const>(reinterpret_cast<winrt::Windows::Foundation::TimeSpan const *>(param), reinterpret_cast<winrt::Windows::Foundation::TimeSpan const *>(param) + __paramSize), *reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&boxedParam)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
 }
 WINRT_EXPORT namespace winrt::TestComponent
 {
+    inline Class::Class() :
+        Class(impl::call_factory_cast<Class(*)(winrt::Windows::Foundation::IActivationFactory const&), Class>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<Class>(); }))
+    {
+    }
+    inline Composable::Composable()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<Composable, IComposableFactory>([&](IComposableFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
+    inline Composable::Composable(int32_t init)
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<Composable, IComposableFactory>([&](IComposableFactory const& f) { return f.CreateWithValue(init, baseInterface, innerInterface); });
+    }
+    inline auto Composable::ExpectComposable(winrt::TestComponent::Composable const& t)
+    {
+        return impl::call_factory<Composable, IComposableStatics>([&](IComposableStatics const& f) { return f.ExpectComposable(t); });
+    }
+    inline auto Composable::ExpectRequiredOne(winrt::TestComponent::IRequiredOne const& t)
+    {
+        return impl::call_factory<Composable, IComposableStatics>([&](IComposableStatics const& f) { return f.ExpectRequiredOne(t); });
+    }
+    inline auto Composable::ExpectRequiredTwo(winrt::TestComponent::IRequiredTwo const& t)
+    {
+        return impl::call_factory<Composable, IComposableStatics>([&](IComposableStatics const& f) { return f.ExpectRequiredTwo(t); });
+    }
+    inline auto Composable::ExpectRequiredThree(winrt::TestComponent::IRequiredThree const& t)
+    {
+        return impl::call_factory<Composable, IComposableStatics>([&](IComposableStatics const& f) { return f.ExpectRequiredThree(t); });
+    }
+    inline auto Composable::ExpectRequiredFour(winrt::TestComponent::IRequiredFour const& t)
+    {
+        return impl::call_factory<Composable, IComposableStatics>([&](IComposableStatics const& f) { return f.ExpectRequiredFour(t); });
+    }
+    inline Derived::Derived()
+    {
+        winrt::Windows::Foundation::IInspectable baseInterface, innerInterface;
+        *this = impl::call_factory<Derived, IDerivedFactory>([&](IDerivedFactory const& f) { return f.CreateInstance(baseInterface, innerInterface); });
+    }
     inline auto TestRunner::TestProducer(winrt::TestComponent::ITests const& callee)
     {
         impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.TestProducer(callee); });
@@ -1786,6 +2559,18 @@ WINRT_EXPORT namespace winrt::TestComponent
     inline auto TestRunner::CreateStringableVector()
     {
         return impl::call_factory_cast<winrt::Windows::Foundation::Collections::IVector<winrt::Windows::Foundation::IStringable>(*)(ITestRunnerStatics const&), TestRunner, ITestRunnerStatics>([](ITestRunnerStatics const& f) { return f.CreateStringableVector(); });
+    }
+    inline auto TestRunner::CreateTimeSpan(uint32_t milliseconds)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateTimeSpan(milliseconds); });
+    }
+    inline auto TestRunner::CreateAsyncAction(uint32_t milliseconds)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.CreateAsyncAction(milliseconds); });
+    }
+    inline auto TestRunner::ExpectObject(winrt::Windows::Foundation::IInspectable const& value)
+    {
+        return impl::call_factory<TestRunner, ITestRunnerStatics>([&](ITestRunnerStatics const& f) { return f.ExpectObject(value); });
     }
     template <typename L> Array10Handler::Array10Handler(L handler) :
         Array10Handler(impl::make_delegate<Array10Handler>(std::forward<L>(handler)))
@@ -2032,6 +2817,47 @@ WINRT_EXPORT namespace winrt::TestComponent
         struct impl::struct_TestComponent_Nested* result{};
         check_hresult((*(impl::abi_t<Array15Handler>**)this)->Invoke(a.size(), get_abi(a), b.size(), put_abi(b), impl::put_size_abi(c), put_abi(c), &result_impl_size, &result));
         return com_array<winrt::TestComponent::Nested>{ result, result_impl_size, take_ownership_from_abi };
+    }
+    template <typename L> Array16Handler::Array16Handler(L handler) :
+        Array16Handler(impl::make_delegate<Array16Handler>(std::forward<L>(handler)))
+    {
+    }
+    template <typename F> Array16Handler::Array16Handler(F* handler) :
+        Array16Handler([=](auto&&... args) { return handler(args...); })
+    {
+    }
+    template <typename O, typename M> Array16Handler::Array16Handler(O* object, M method) :
+        Array16Handler([=](auto&&... args) { return ((*object).*(method))(args...); })
+    {
+    }
+    template <typename O, typename M> Array16Handler::Array16Handler(com_ptr<O>&& object, M method) :
+        Array16Handler([o = std::move(object), method](auto&&... args) { return ((*o).*(method))(args...); })
+    {
+    }
+    template <typename O, typename LM> Array16Handler::Array16Handler(weak_ref<O>&& object, LM&& lambda_or_method) :
+        Array16Handler([o = std::move(object), lm = std::forward<LM>(lambda_or_method)](auto&&... args) { if (auto s = o.get()) {
+            if constexpr (std::is_member_function_pointer_v<LM>) ((*s).*(lm))(args...);
+            else lm(args...);
+        } })
+    {
+    }
+    template <typename O, typename M> Array16Handler::Array16Handler(std::shared_ptr<O>&& object, M method) :
+        Array16Handler([o = std::move(object), method](auto&&... args) { return ((*o).*(method))(args...); })
+    {
+    }
+    template <typename O, typename LM> Array16Handler::Array16Handler(std::weak_ptr<O>&& object, LM&& lambda_or_method) :
+        Array16Handler([o = std::move(object), lm = std::forward<LM>(lambda_or_method)](auto&&... args) { if (auto s = o.lock()) {
+            if constexpr (std::is_member_function_pointer_v<LM>) ((*s).*(lm))(args...);
+            else lm(args...);
+        } })
+    {
+    }
+    inline auto Array16Handler::operator()(array_view<winrt::Windows::Foundation::IStringable const> a, array_view<winrt::Windows::Foundation::IStringable> b, com_array<winrt::Windows::Foundation::IStringable>& c) const
+    {
+        uint32_t result_impl_size{};
+        void** result{};
+        check_hresult((*(impl::abi_t<Array16Handler>**)this)->Invoke(a.size(), get_abi(a), b.size(), put_abi(b), impl::put_size_abi(c), put_abi(c), &result_impl_size, &result));
+        return com_array<winrt::Windows::Foundation::IStringable>{ result, result_impl_size, take_ownership_from_abi };
     }
     template <typename L> Array1Handler::Array1Handler(L handler) :
         Array1Handler(impl::make_delegate<Array1Handler>(std::forward<L>(handler)))
@@ -3440,12 +4266,55 @@ WINRT_EXPORT namespace winrt::TestComponent
     {
         check_hresult((*(impl::abi_t<TestHandler>**)this)->Invoke(*(void**)(&tests)));
     }
+    template <typename D, typename... Interfaces>
+    struct ComposableT :
+        implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
+        impl::require<D, winrt::TestComponent::IComposable, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredThree, winrt::TestComponent::IRequiredFour>,
+        impl::base<D, Composable>
+    {
+        using composable = Composable;
+    protected:
+        ComposableT()
+        {
+            impl::call_factory<Composable, IComposableFactory>([&](IComposableFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+        ComposableT(int32_t init)
+        {
+            impl::call_factory<Composable, IComposableFactory>([&](IComposableFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateWithValue(init, *this, this->m_inner); });
+        }
+    };
+    template <typename D, typename... Interfaces>
+    struct DerivedT :
+        implements<D, winrt::Windows::Foundation::IInspectable, composing, Interfaces...>,
+        impl::require<D, winrt::TestComponent::IDerived, winrt::TestComponent::IComposable, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredThree, winrt::TestComponent::IRequiredFour>,
+        impl::base<D, Derived, winrt::TestComponent::Composable>
+    {
+        using composable = Derived;
+    protected:
+        DerivedT()
+        {
+            impl::call_factory<Derived, IDerivedFactory>([&](IDerivedFactory const& f) { [[maybe_unused]] auto winrt_impl_discarded = f.CreateInstance(*this, this->m_inner); });
+        }
+    };
 }
 namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
+    template<> struct hash<winrt::TestComponent::IClass> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IComposable> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IComposableFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IComposableStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IDerived> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IDerivedFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IRequiredFour> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IRequiredOne> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IRequiredThree> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::IRequiredTwo> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::ITestRunnerStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::ITests> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::Class> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::Composable> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::TestComponent::Derived> : winrt::impl::hash_base {};
     template<> struct hash<winrt::TestComponent::TestRunner> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format

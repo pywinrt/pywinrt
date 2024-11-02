@@ -6,6 +6,79 @@
 #include "winrt/impl/TestComponent.0.h"
 WINRT_EXPORT namespace winrt::TestComponent
 {
+    struct WINRT_IMPL_EMPTY_BASES IClass :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IClass>
+    {
+        IClass(std::nullptr_t = nullptr) noexcept {}
+        IClass(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IComposable :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IComposable>
+    {
+        IComposable(std::nullptr_t = nullptr) noexcept {}
+        IComposable(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IComposableFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IComposableFactory>
+    {
+        IComposableFactory(std::nullptr_t = nullptr) noexcept {}
+        IComposableFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IComposableStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IComposableStatics>
+    {
+        IComposableStatics(std::nullptr_t = nullptr) noexcept {}
+        IComposableStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IDerived :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDerived>
+    {
+        IDerived(std::nullptr_t = nullptr) noexcept {}
+        IDerived(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IDerivedFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IDerivedFactory>
+    {
+        IDerivedFactory(std::nullptr_t = nullptr) noexcept {}
+        IDerivedFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRequiredFour :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRequiredFour>,
+        impl::require<winrt::TestComponent::IRequiredFour, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredThree>
+    {
+        IRequiredFour(std::nullptr_t = nullptr) noexcept {}
+        IRequiredFour(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRequiredOne :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRequiredOne>
+    {
+        IRequiredOne(std::nullptr_t = nullptr) noexcept {}
+        IRequiredOne(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRequiredThree :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRequiredThree>,
+        impl::require<winrt::TestComponent::IRequiredThree, winrt::TestComponent::IRequiredOne, winrt::TestComponent::IRequiredTwo>
+    {
+        IRequiredThree(std::nullptr_t = nullptr) noexcept {}
+        IRequiredThree(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct WINRT_IMPL_EMPTY_BASES IRequiredTwo :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRequiredTwo>,
+        impl::require<winrt::TestComponent::IRequiredTwo, winrt::TestComponent::IRequiredOne>
+    {
+        IRequiredTwo(std::nullptr_t = nullptr) noexcept {}
+        IRequiredTwo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct WINRT_IMPL_EMPTY_BASES ITestRunnerStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ITestRunnerStatics>

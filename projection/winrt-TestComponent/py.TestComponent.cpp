@@ -4,6 +4,728 @@
 
 namespace py::cpp::TestComponent
 {
+    // ----- Class class --------------------
+
+    static PyObject* _new_Class(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::TestComponent::Class instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_Class(py::wrapper::TestComponent::Class* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Class_One(py::wrapper::TestComponent::Class* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_Class(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Class>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_Class(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::Class>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_Class[] = {
+        { "one", reinterpret_cast<PyCFunction>(Class_One), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_Class, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_Class), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_Class[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_Class[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_Class) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Class) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Class) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_Class) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Class = {
+        "winrt._winrt_testcomponent.Class",
+        sizeof(py::wrapper::TestComponent::Class),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_Class};
+
+    // ----- Composable class --------------------
+
+    static PyObject* _new_Composable(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::TestComponent::Composable instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+
+                winrt::TestComponent::Composable instance{param0};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_Composable(py::wrapper::TestComponent::Composable* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Composable_ExpectComposable(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::Composable>(args, 0);
+
+                return py::convert(winrt::TestComponent::Composable::ExpectComposable(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_ExpectRequiredFour(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::IRequiredFour>(args, 0);
+
+                return py::convert(winrt::TestComponent::Composable::ExpectRequiredFour(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_ExpectRequiredOne(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::IRequiredOne>(args, 0);
+
+                return py::convert(winrt::TestComponent::Composable::ExpectRequiredOne(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_ExpectRequiredThree(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::IRequiredThree>(args, 0);
+
+                return py::convert(winrt::TestComponent::Composable::ExpectRequiredThree(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_ExpectRequiredTwo(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::IRequiredTwo>(args, 0);
+
+                return py::convert(winrt::TestComponent::Composable::ExpectRequiredTwo(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_Four(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Four());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_One(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_Three(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Three());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_Two(py::wrapper::TestComponent::Composable* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Two());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Composable_get_Value(py::wrapper::TestComponent::Composable* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Value());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int Composable_put_Value(py::wrapper::TestComponent::Composable* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.Value(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_Composable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Composable>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_Composable(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::Composable>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_Composable[] = {
+        { "four", reinterpret_cast<PyCFunction>(Composable_Four), METH_VARARGS, nullptr },
+        { "one", reinterpret_cast<PyCFunction>(Composable_One), METH_VARARGS, nullptr },
+        { "three", reinterpret_cast<PyCFunction>(Composable_Three), METH_VARARGS, nullptr },
+        { "two", reinterpret_cast<PyCFunction>(Composable_Two), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_Composable, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_Composable), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_Composable[] = {
+        { "value", reinterpret_cast<getter>(Composable_get_Value), reinterpret_cast<setter>(Composable_put_Value), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_Composable[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_Composable) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Composable) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Composable) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_Composable) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Composable = {
+        "winrt._winrt_testcomponent.Composable",
+        sizeof(py::wrapper::TestComponent::Composable),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_Composable};
+
+    static PyGetSetDef getset_Composable_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Composable_Static[] = {
+        { "expect_composable", reinterpret_cast<PyCFunction>(Composable_ExpectComposable), METH_VARARGS, nullptr },
+        { "expect_required_four", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredFour), METH_VARARGS, nullptr },
+        { "expect_required_one", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredOne), METH_VARARGS, nullptr },
+        { "expect_required_three", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredThree), METH_VARARGS, nullptr },
+        { "expect_required_two", reinterpret_cast<PyCFunction>(Composable_ExpectRequiredTwo), METH_VARARGS, nullptr },
+        { }
+    };
+
+    static PyType_Slot type_slots_Composable_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Composable_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Composable_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Composable_Static =
+    {
+        "winrt._winrt_testcomponent.Composable_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Composable_Static
+    };
+
+    // ----- Derived class --------------------
+
+    static PyObject* _new_Derived(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::TestComponent::Derived instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_Derived(py::wrapper::TestComponent::Derived* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Derived_Four(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Four());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Derived_One(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Derived_Three(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Three());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Derived_Two(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Two());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* Derived_get_Value(py::wrapper::TestComponent::Derived* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            return py::convert(self->obj.Value());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int Derived_put_Value(py::wrapper::TestComponent::Derived* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.Value(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_Derived(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::Derived>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_Derived(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::Derived>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_Derived[] = {
+        { "four", reinterpret_cast<PyCFunction>(Derived_Four), METH_VARARGS, nullptr },
+        { "one", reinterpret_cast<PyCFunction>(Derived_One), METH_VARARGS, nullptr },
+        { "three", reinterpret_cast<PyCFunction>(Derived_Three), METH_VARARGS, nullptr },
+        { "two", reinterpret_cast<PyCFunction>(Derived_Two), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_Derived, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_Derived), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_Derived[] = {
+        { "value", reinterpret_cast<getter>(Derived_get_Value), reinterpret_cast<setter>(Derived_put_Value), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_Derived[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_Derived) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Derived) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Derived) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_Derived) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Derived = {
+        "winrt._winrt_testcomponent.Derived",
+        sizeof(py::wrapper::TestComponent::Derived),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_Derived};
+
     // ----- TestRunner class --------------------
 
     static PyObject* _new_TestRunner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -11,6 +733,31 @@ namespace py::cpp::TestComponent
         static_assert(py::py_type<winrt::TestComponent::TestRunner>::type_name);
         py::set_invalid_activation_error(py::py_type<winrt::TestComponent::TestRunner>::type_name);
         return nullptr;
+    }
+
+    static PyObject* TestRunner_CreateAsyncAction(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+
+                return py::convert(winrt::TestComponent::TestRunner::CreateAsyncAction(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
     }
 
     static PyObject* TestRunner_CreateInt32Vector(PyObject* /*unused*/, PyObject* args) noexcept
@@ -68,6 +815,56 @@ namespace py::cpp::TestComponent
             try
             {
                 return py::convert(winrt::TestComponent::TestRunner::CreateStringableVector());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_CreateTimeSpan(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+
+                return py::convert(winrt::TestComponent::TestRunner::CreateTimeSpan(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TestRunner_ExpectObject(PyObject* /*unused*/, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
+
+                return py::convert(winrt::TestComponent::TestRunner::ExpectObject(param0));
             }
             catch (...)
             {
@@ -207,9 +1004,12 @@ namespace py::cpp::TestComponent
     };
 
     static PyMethodDef methods_TestRunner_Static[] = {
+        { "create_async_action", reinterpret_cast<PyCFunction>(TestRunner_CreateAsyncAction), METH_VARARGS, nullptr },
         { "create_int32_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateInt32Vector), METH_VARARGS, nullptr },
         { "create_string_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringVector), METH_VARARGS, nullptr },
         { "create_stringable_vector", reinterpret_cast<PyCFunction>(TestRunner_CreateStringableVector), METH_VARARGS, nullptr },
+        { "create_time_span", reinterpret_cast<PyCFunction>(TestRunner_CreateTimeSpan), METH_VARARGS, nullptr },
+        { "expect_object", reinterpret_cast<PyCFunction>(TestRunner_ExpectObject), METH_VARARGS, nullptr },
         { "make_tests", reinterpret_cast<PyCFunction>(TestRunner_MakeTests), METH_VARARGS, nullptr },
         { "test_consumer", reinterpret_cast<PyCFunction>(TestRunner_TestConsumer), METH_VARARGS, nullptr },
         { "test_producer", reinterpret_cast<PyCFunction>(TestRunner_TestProducer), METH_VARARGS, nullptr },
@@ -233,6 +1033,510 @@ namespace py::cpp::TestComponent
         Py_TPFLAGS_DEFAULT,
         type_slots_TestRunner_Static
     };
+
+    // ----- IRequiredFour interface --------------------
+
+    static PyObject* _new_IRequiredFour(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::TestComponent::IRequiredFour>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredFour>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IRequiredFour(py::wrapper::TestComponent::IRequiredFour* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IRequiredFour_Four(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Four());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredFour_One(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredFour_Three(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Three());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredFour_Two(py::wrapper::TestComponent::IRequiredFour* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Two());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IRequiredFour(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::IRequiredFour>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IRequiredFour(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredFour>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IRequiredFour[] = {
+        { "four", reinterpret_cast<PyCFunction>(IRequiredFour_Four), METH_VARARGS, nullptr },
+        { "one", reinterpret_cast<PyCFunction>(IRequiredFour_One), METH_VARARGS, nullptr },
+        { "three", reinterpret_cast<PyCFunction>(IRequiredFour_Three), METH_VARARGS, nullptr },
+        { "two", reinterpret_cast<PyCFunction>(IRequiredFour_Two), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IRequiredFour, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredFour), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IRequiredFour[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IRequiredFour[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredFour) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredFour) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredFour) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredFour) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IRequiredFour = {
+        "winrt._winrt_testcomponent.IRequiredFour",
+        sizeof(py::wrapper::TestComponent::IRequiredFour),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IRequiredFour};
+
+    // ----- IRequiredOne interface --------------------
+
+    static PyObject* _new_IRequiredOne(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::TestComponent::IRequiredOne>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredOne>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IRequiredOne(py::wrapper::TestComponent::IRequiredOne* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IRequiredOne_One(py::wrapper::TestComponent::IRequiredOne* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IRequiredOne(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::IRequiredOne>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IRequiredOne(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredOne>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IRequiredOne[] = {
+        { "one", reinterpret_cast<PyCFunction>(IRequiredOne_One), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IRequiredOne, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredOne), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IRequiredOne[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IRequiredOne[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredOne) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredOne) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredOne) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredOne) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IRequiredOne = {
+        "winrt._winrt_testcomponent.IRequiredOne",
+        sizeof(py::wrapper::TestComponent::IRequiredOne),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IRequiredOne};
+
+    // ----- IRequiredThree interface --------------------
+
+    static PyObject* _new_IRequiredThree(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::TestComponent::IRequiredThree>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredThree>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IRequiredThree(py::wrapper::TestComponent::IRequiredThree* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IRequiredThree_One(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredThree_Three(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Three());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredThree_Two(py::wrapper::TestComponent::IRequiredThree* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Two());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IRequiredThree(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::IRequiredThree>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IRequiredThree(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredThree>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IRequiredThree[] = {
+        { "one", reinterpret_cast<PyCFunction>(IRequiredThree_One), METH_VARARGS, nullptr },
+        { "three", reinterpret_cast<PyCFunction>(IRequiredThree_Three), METH_VARARGS, nullptr },
+        { "two", reinterpret_cast<PyCFunction>(IRequiredThree_Two), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IRequiredThree, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredThree), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IRequiredThree[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IRequiredThree[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredThree) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredThree) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredThree) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredThree) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IRequiredThree = {
+        "winrt._winrt_testcomponent.IRequiredThree",
+        sizeof(py::wrapper::TestComponent::IRequiredThree),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IRequiredThree};
+
+    // ----- IRequiredTwo interface --------------------
+
+    static PyObject* _new_IRequiredTwo(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
+    {
+        static_assert(py::py_type<winrt::TestComponent::IRequiredTwo>::type_name);
+        py::set_invalid_activation_error(py::py_type<winrt::TestComponent::IRequiredTwo>::type_name);
+        return nullptr;
+    }
+
+    static void _dealloc_IRequiredTwo(py::wrapper::TestComponent::IRequiredTwo* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* IRequiredTwo_One(py::wrapper::TestComponent::IRequiredTwo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.One());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* IRequiredTwo_Two(py::wrapper::TestComponent::IRequiredTwo* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 0)
+        {
+            try
+            {
+                return py::convert(self->obj.Two());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_IRequiredTwo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::TestComponent::IRequiredTwo>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_IRequiredTwo(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::TestComponent::IRequiredTwo>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_IRequiredTwo[] = {
+        { "one", reinterpret_cast<PyCFunction>(IRequiredTwo_One), METH_VARARGS, nullptr },
+        { "two", reinterpret_cast<PyCFunction>(IRequiredTwo_Two), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_IRequiredTwo, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_IRequiredTwo), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_IRequiredTwo[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_IRequiredTwo[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_IRequiredTwo) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_IRequiredTwo) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_IRequiredTwo) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_IRequiredTwo) },
+        { }
+    };
+
+    static PyType_Spec type_spec_IRequiredTwo = {
+        "winrt._winrt_testcomponent.IRequiredTwo",
+        sizeof(py::wrapper::TestComponent::IRequiredTwo),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_IRequiredTwo};
 
     // ----- ITests interface --------------------
 
@@ -665,6 +1969,71 @@ namespace py::cpp::TestComponent
                 auto param0 = py::convert_to<winrt::TestComponent::Array15Handler>(args, 0);
 
                 self->obj.Array15Call(param0);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Array16(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IStringable, false>>(args, 0);
+                auto param1 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::IStringable, true>>(args, 1);
+                winrt::com_array<winrt::Windows::Foundation::IStringable> param2{};
+
+                auto return_value = self->obj.Array16(param0, param1, param2);
+
+                py::pyobj_handle out_return_value{ py::convert(return_value) };
+                if (!out_return_value)
+                {
+                    return nullptr;
+                }
+                py::pyobj_handle out2{ py::convert(param2) };
+                if (!out2)
+                {
+                    return nullptr;
+                }
+                return PyTuple_Pack(2, out_return_value.get(), out2.get());
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Array16Call(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::Array16Handler>(args, 0);
+
+                self->obj.Array16Call(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1438,6 +2807,552 @@ namespace py::cpp::TestComponent
         }
     }
 
+    static PyObject* ITests_Box1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint8_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box1(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box10(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<double>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box10(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box11(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::guid>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box11(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box12(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<char16_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box12(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box13(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::hstring>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box13(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box14(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box14(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box15(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::Blittable>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box15(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box16(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::TestComponent::NonBlittable>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box16(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box17(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box17(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box18(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<int64_t, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box18(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box19(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<bool, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box19(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box2(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint16_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box2(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box20(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<winrt::hstring, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box20(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box21(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::TimeSpan, false>>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box21(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box3(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box3(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box4(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<uint64_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box4(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box5(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int16_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box5(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box6(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int32_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box6(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box7(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<int64_t>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box7(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box8(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<bool>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box8(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_Box9(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<float>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
+
+                return py::convert(self->obj.Box9(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
     static PyObject* ITests_Collection1(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -1860,6 +3775,214 @@ namespace py::cpp::TestComponent
 
                 self->obj.Event2Call(param0);
                 Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetBlittableVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Blittable>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetBlittableVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetBooleanVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<bool>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetBooleanVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetClassVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Class>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetClassVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetComposableClassVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::Composable>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetComposableClassVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetInterfaceVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::IRequiredOne>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetInterfaceVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetNonBlittableVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::TestComponent::NonBlittable>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetNonBlittableVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetObjectVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Foundation::IInspectable>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetObjectVectorSubset(param0, param1));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ITests_GetStringVectorSubset(py::wrapper::TestComponent::ITests* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 0);
+                auto param1 = py::convert_to<int32_t>(args, 1);
+
+                return py::convert(self->obj.GetStringVectorSubset(param0, param1));
             }
             catch (...)
             {
@@ -2974,6 +5097,8 @@ namespace py::cpp::TestComponent
         { "array14_call", reinterpret_cast<PyCFunction>(ITests_Array14Call), METH_VARARGS, nullptr },
         { "array15", reinterpret_cast<PyCFunction>(ITests_Array15), METH_VARARGS, nullptr },
         { "array15_call", reinterpret_cast<PyCFunction>(ITests_Array15Call), METH_VARARGS, nullptr },
+        { "array16", reinterpret_cast<PyCFunction>(ITests_Array16), METH_VARARGS, nullptr },
+        { "array16_call", reinterpret_cast<PyCFunction>(ITests_Array16Call), METH_VARARGS, nullptr },
         { "array1_call", reinterpret_cast<PyCFunction>(ITests_Array1Call), METH_VARARGS, nullptr },
         { "array2", reinterpret_cast<PyCFunction>(ITests_Array2), METH_VARARGS, nullptr },
         { "array2_call", reinterpret_cast<PyCFunction>(ITests_Array2Call), METH_VARARGS, nullptr },
@@ -2999,6 +5124,27 @@ namespace py::cpp::TestComponent
         { "async3_call", reinterpret_cast<PyCFunction>(ITests_Async3Call), METH_VARARGS, nullptr },
         { "async4", reinterpret_cast<PyCFunction>(ITests_Async4), METH_VARARGS, nullptr },
         { "async4_call", reinterpret_cast<PyCFunction>(ITests_Async4Call), METH_VARARGS, nullptr },
+        { "box1", reinterpret_cast<PyCFunction>(ITests_Box1), METH_VARARGS, nullptr },
+        { "box10", reinterpret_cast<PyCFunction>(ITests_Box10), METH_VARARGS, nullptr },
+        { "box11", reinterpret_cast<PyCFunction>(ITests_Box11), METH_VARARGS, nullptr },
+        { "box12", reinterpret_cast<PyCFunction>(ITests_Box12), METH_VARARGS, nullptr },
+        { "box13", reinterpret_cast<PyCFunction>(ITests_Box13), METH_VARARGS, nullptr },
+        { "box14", reinterpret_cast<PyCFunction>(ITests_Box14), METH_VARARGS, nullptr },
+        { "box15", reinterpret_cast<PyCFunction>(ITests_Box15), METH_VARARGS, nullptr },
+        { "box16", reinterpret_cast<PyCFunction>(ITests_Box16), METH_VARARGS, nullptr },
+        { "box17", reinterpret_cast<PyCFunction>(ITests_Box17), METH_VARARGS, nullptr },
+        { "box18", reinterpret_cast<PyCFunction>(ITests_Box18), METH_VARARGS, nullptr },
+        { "box19", reinterpret_cast<PyCFunction>(ITests_Box19), METH_VARARGS, nullptr },
+        { "box2", reinterpret_cast<PyCFunction>(ITests_Box2), METH_VARARGS, nullptr },
+        { "box20", reinterpret_cast<PyCFunction>(ITests_Box20), METH_VARARGS, nullptr },
+        { "box21", reinterpret_cast<PyCFunction>(ITests_Box21), METH_VARARGS, nullptr },
+        { "box3", reinterpret_cast<PyCFunction>(ITests_Box3), METH_VARARGS, nullptr },
+        { "box4", reinterpret_cast<PyCFunction>(ITests_Box4), METH_VARARGS, nullptr },
+        { "box5", reinterpret_cast<PyCFunction>(ITests_Box5), METH_VARARGS, nullptr },
+        { "box6", reinterpret_cast<PyCFunction>(ITests_Box6), METH_VARARGS, nullptr },
+        { "box7", reinterpret_cast<PyCFunction>(ITests_Box7), METH_VARARGS, nullptr },
+        { "box8", reinterpret_cast<PyCFunction>(ITests_Box8), METH_VARARGS, nullptr },
+        { "box9", reinterpret_cast<PyCFunction>(ITests_Box9), METH_VARARGS, nullptr },
         { "collection1", reinterpret_cast<PyCFunction>(ITests_Collection1), METH_VARARGS, nullptr },
         { "collection1_call", reinterpret_cast<PyCFunction>(ITests_Collection1Call), METH_VARARGS, nullptr },
         { "collection2", reinterpret_cast<PyCFunction>(ITests_Collection2), METH_VARARGS, nullptr },
@@ -3013,6 +5159,14 @@ namespace py::cpp::TestComponent
         { "collection6_call", reinterpret_cast<PyCFunction>(ITests_Collection6Call), METH_VARARGS, nullptr },
         { "event1_call", reinterpret_cast<PyCFunction>(ITests_Event1Call), METH_VARARGS, nullptr },
         { "event2_call", reinterpret_cast<PyCFunction>(ITests_Event2Call), METH_VARARGS, nullptr },
+        { "get_blittable_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetBlittableVectorSubset), METH_VARARGS, nullptr },
+        { "get_boolean_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetBooleanVectorSubset), METH_VARARGS, nullptr },
+        { "get_class_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetClassVectorSubset), METH_VARARGS, nullptr },
+        { "get_composable_class_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetComposableClassVectorSubset), METH_VARARGS, nullptr },
+        { "get_interface_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetInterfaceVectorSubset), METH_VARARGS, nullptr },
+        { "get_non_blittable_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetNonBlittableVectorSubset), METH_VARARGS, nullptr },
+        { "get_object_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetObjectVectorSubset), METH_VARARGS, nullptr },
+        { "get_string_vector_subset", reinterpret_cast<PyCFunction>(ITests_GetStringVectorSubset), METH_VARARGS, nullptr },
         { "param1", reinterpret_cast<PyCFunction>(ITests_Param1), METH_VARARGS, nullptr },
         { "param10", reinterpret_cast<PyCFunction>(ITests_Param10), METH_VARARGS, nullptr },
         { "param10_call", reinterpret_cast<PyCFunction>(ITests_Param10Call), METH_VARARGS, nullptr },
@@ -4180,6 +6334,30 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
+    py::pytype_handle Class_type{py::register_python_type(module.get(), &type_spec_Class, object_bases.get(), nullptr)};
+    if (!Class_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Composable_Static{PyType_FromSpec(&type_spec_Composable_Static)};
+    if (!type_Composable_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Composable_type{py::register_python_type(module.get(), &type_spec_Composable, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Composable_Static.get()))};
+    if (!Composable_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, object_bases.get(), nullptr)};
+    if (!Derived_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_TestRunner_Static{PyType_FromSpec(&type_spec_TestRunner_Static)};
     if (!type_TestRunner_Static)
     {
@@ -4188,6 +6366,30 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
 
     py::pytype_handle TestRunner_type{py::register_python_type(module.get(), &type_spec_TestRunner, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TestRunner_Static.get()))};
     if (!TestRunner_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IRequiredFour_type{py::register_python_type(module.get(), &type_spec_IRequiredFour, object_bases.get(), nullptr)};
+    if (!IRequiredFour_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IRequiredOne_type{py::register_python_type(module.get(), &type_spec_IRequiredOne, object_bases.get(), nullptr)};
+    if (!IRequiredOne_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IRequiredThree_type{py::register_python_type(module.get(), &type_spec_IRequiredThree, object_bases.get(), nullptr)};
+    if (!IRequiredThree_type)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IRequiredTwo_type{py::register_python_type(module.get(), &type_spec_IRequiredTwo, object_bases.get(), nullptr)};
+    if (!IRequiredTwo_type)
     {
         return nullptr;
     }
