@@ -338,6 +338,9 @@ static class TypeExtensions
                 when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
                 => $"typing.Optional[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
             GenericInstanceType gen
+                when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
+            GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
                 => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
             GenericInstanceType gen
@@ -378,15 +381,7 @@ static class TypeExtensions
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.In
-                => param.ParameterType switch
-                {
-                    GenericInstanceType gen
-                        when gen.ElementType.FullName
-                            == "Windows.Foundation.Collections.IIterable`1"
-                        => $"typing.Iterable[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
-                    _ => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)
-                },
+            ParamCategory.In => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
             ParamCategory.PassArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
             ParamCategory.FillArray
