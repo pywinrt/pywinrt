@@ -1920,6 +1920,95 @@ namespace py
     };
 
     template<typename K, typename V>
+    struct python_map_view
+        : winrt::implements<
+              python_map_view<K, V>,
+              winrt::Windows::Foundation::Collections::IMapView<K, V>,
+              winrt::Windows::Foundation::Collections::IIterable<
+                  winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>>
+    {
+        pyobj_handle _mapping;
+
+        // It is up to the caller to ensure that this is a mapping object!
+        explicit python_map_view(PyObject* mapping) : _mapping(mapping)
+        {
+            Py_INCREF(_mapping.get());
+        }
+
+        bool HasKey(K const& key) const
+        {
+            pyobj_handle py_key{converter<K>::convert(key)};
+
+            if (!py_key)
+            {
+                throw python_exception();
+            }
+
+            auto ret = PyMapping_HasKeyWithError(_mapping.get(), py_key.get());
+
+            if (ret == -1)
+            {
+                throw python_exception();
+            }
+
+            return static_cast<bool>(ret);
+        }
+
+        V Lookup(K const& key) const
+        {
+            pyobj_handle py_key{converter<K>::convert(key)};
+
+            if (!py_key)
+            {
+                throw python_exception();
+            }
+
+            pyobj_handle item{PyObject_GetItem(_mapping.get(), py_key.get())};
+
+            if (!item)
+            {
+                if (PyErr_ExceptionMatches(PyExc_KeyError))
+                {
+                    PyErr_Clear();
+                    throw winrt::hresult_out_of_bounds();
+                }
+
+                throw python_exception();
+            }
+
+            return converter<V>::convert_to(item.get());
+        }
+
+        void Split(
+            winrt::Windows::Foundation::Collections::IMapView<K, V>& first,
+            winrt::Windows::Foundation::Collections::IMapView<K, V>& second) const
+        {
+            // null return indicates map cannot be split
+            first = nullptr;
+            second = nullptr;
+        }
+
+        uint32_t Size() const
+        {
+            auto size = PyMapping_Size(_mapping.get());
+
+            if (size == -1 && PyErr_Occurred())
+            {
+                throw python_exception();
+            }
+
+            return static_cast<uint32_t>(size);
+        }
+
+        winrt::Windows::Foundation::Collections::IIterator<
+            winrt::Windows::Foundation::Collections::IKeyValuePair<K, V>>
+        First() const
+        {
+            return winrt::make<python_mapping_iterator<K, V>>(_mapping.get());
+        }
+    };
+
+    template<typename K, typename V>
     struct python_map
         : winrt::implements<
               python_map<K, V>,
@@ -1947,13 +2036,7 @@ namespace py
 
         winrt::Windows::Foundation::Collections::IMapView<K, V> GetView() const
         {
-            // TODO: implement GetView
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_map<%s, %s>::GetView() is not implemented",
-                typeid(K).name(),
-                typeid(V).name());
-            throw python_exception();
+            return winrt::make<python_map_view<K, V>>(_mapping.get());
         }
 
         bool HasKey(K const& key) const
@@ -2198,6 +2281,33 @@ namespace py
     };
 
     template<typename TKey, typename TValue>
+    struct converter<winrt::Windows::Foundation::Collections::IMapView<TKey, TValue>>
+    {
+        using TMap = winrt::Windows::Foundation::Collections::IMapView<TKey, TValue>;
+
+        static PyObject* convert(TMap const& instance) noexcept
+        {
+            return wrap(instance);
+        }
+
+        static auto convert_to(PyObject* obj)
+        {
+            if (auto result = convert_interface_to<TMap>(obj))
+            {
+                return result.value();
+            }
+
+            if (!PyMapping_Check(obj))
+            {
+                PyErr_SetString(PyExc_TypeError, "expected a mapping");
+                throw python_exception();
+            }
+
+            return winrt::make<python_map_view<TKey, TValue>>(obj);
+        }
+    };
+
+    template<typename TKey, typename TValue>
     struct converter<winrt::Windows::Foundation::Collections::IMap<TKey, TValue>>
     {
         using TMap = winrt::Windows::Foundation::Collections::IMap<TKey, TValue>;
@@ -2248,6 +2358,13 @@ namespace py
     template<typename TItem>
     struct is_specialized_interface<
         winrt::Windows::Foundation::Collections::IVector<TItem>> : std::true_type
+    {
+    };
+
+    template<typename TKey, typename TValue>
+    struct is_specialized_interface<
+        winrt::Windows::Foundation::Collections::IMapView<TKey, TValue>>
+        : std::true_type
     {
     };
 

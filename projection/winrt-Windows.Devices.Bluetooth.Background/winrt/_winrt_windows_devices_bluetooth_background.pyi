@@ -62,7 +62,7 @@ class GattCharacteristicNotificationTriggerDetails(winrt.system.Object):
 @typing.final
 class GattServiceProviderConnection_Static(type):
     @_property
-    def all_services(cls) -> windows_foundation_collections.IMapView[str, GattServiceProviderConnection]: ...
+    def all_services(cls) -> typing.Mapping[str, GattServiceProviderConnection]: ...
 
 @typing.final
 class GattServiceProviderConnection(winrt.system.Object, metaclass=GattServiceProviderConnection_Static):
