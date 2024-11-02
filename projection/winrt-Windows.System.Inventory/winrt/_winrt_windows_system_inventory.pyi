@@ -16,7 +16,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class InstalledDesktopApp_Static(type):
-    def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[windows_foundation_collections.IVectorView[InstalledDesktopApp]]: ...
+    def get_inventory_async(cls) -> windows_foundation.IAsyncOperation[typing.Sequence[InstalledDesktopApp]]: ...
 
 @typing.final
 class InstalledDesktopApp(winrt.system.Object, metaclass=InstalledDesktopApp_Static):

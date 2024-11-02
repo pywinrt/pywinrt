@@ -43,7 +43,7 @@ class AnalyticsVersionInfo(winrt.system.Object):
 
 @typing.final
 class AppApplicability_Static(type):
-    def get_unsupported_app_requirements(cls, capabilities: typing.Iterable[str], /) -> windows_foundation_collections.IVectorView[UnsupportedAppRequirement]: ...
+    def get_unsupported_app_requirements(cls, capabilities: typing.Iterable[str], /) -> typing.Sequence[UnsupportedAppRequirement]: ...
 
 @typing.final
 class AppApplicability(winrt.system.Object, metaclass=AppApplicability_Static):

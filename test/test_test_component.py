@@ -234,3 +234,16 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(list(result[1]), arg)
 
         # TODO: test wrong type in list. currently this will cause an abort
+
+    def test_list_to_vector_view(self):
+        arg = ["1", "2", "3", "4"]
+        tests = tc.TestRunner.make_tests()
+        # collection6 is one of the few methods that takes an IVectorView input
+        # parameter, so we use it to test that a list can be consumed as an
+        # IVectorView.
+        result = tests.collection6(arg)
+        # returns a copy of the list both as a return value and as an out parameter
+        self.assertListEqual(list(result[0]), arg)
+        self.assertListEqual(list(result[1]), arg)
+
+        # TODO: test wrong type in list. currently this will cause an abort

@@ -1559,6 +1559,87 @@ namespace py
     };
 
     template<typename T>
+    struct python_vector_view
+        : winrt::implements<
+              python_vector_view<T>,
+              winrt::Windows::Foundation::Collections::IVectorView<T>,
+              winrt::Windows::Foundation::Collections::IIterable<T>>
+    {
+        pyobj_handle _sequence;
+
+        // It is up to the caller to ensure that this is a sequence object!
+        explicit python_vector_view(PyObject* sequence) : _sequence(sequence)
+        {
+            Py_INCREF(_sequence.get());
+        }
+
+        T GetAt(uint32_t index) const
+        {
+            pyobj_handle item{PySequence_GetItem(_sequence.get(), index)};
+
+            if (!item)
+            {
+                throw python_exception();
+            }
+
+            return converter<T>::convert_to(item.get());
+        }
+
+        uint32_t GetMany(uint32_t /*unused*/, winrt::array_view<T> /*unused*/)
+        {
+            // TODO: implement GetMany
+            PyErr_Format(
+                PyExc_NotImplementedError,
+                "py::python_vector<%s>::GetMany() is not implemented",
+                typeid(T).name());
+            throw python_exception();
+        }
+
+        bool IndexOf(T const& value, uint32_t& index) const
+        {
+            pyobj_handle py_value{converter<T>::convert(value)};
+
+            if (!py_value)
+            {
+                throw python_exception();
+            }
+
+            auto py_index = PySequence_Index(_sequence.get(), py_value.get());
+
+            if (py_index == -1)
+            {
+                if (PyErr_ExceptionMatches(PyExc_ValueError))
+                {
+                    PyErr_Clear();
+                    return false;
+                }
+
+                throw python_exception();
+            }
+
+            index = static_cast<uint32_t>(py_index);
+
+            return true;
+        }
+
+        uint32_t Size() const
+        {
+            auto size = PySequence_Size(_sequence.get());
+            if (size == -1 && PyErr_Occurred())
+            {
+                throw python_exception();
+            }
+
+            return static_cast<uint32_t>(size);
+        }
+
+        auto First() const
+        {
+            return winrt::make<python_iterator<T>>(PyObject_GetIter(_sequence.get()));
+        }
+    };
+
+    template<typename T>
     struct python_vector : winrt::implements<
                                python_vector<T>,
                                winrt::Windows::Foundation::Collections::IVector<T>,
@@ -1622,12 +1703,7 @@ namespace py
 
         winrt::Windows::Foundation::Collections::IVectorView<T> GetView() const
         {
-            // TODO: implement GetView
-            PyErr_Format(
-                PyExc_NotImplementedError,
-                "py::python_vector<%s>::GetView() is not implemented",
-                typeid(T).name());
-            throw python_exception();
+            return winrt::make<python_vector_view<T>>(_sequence.get());
         }
 
         bool IndexOf(T const& value, uint32_t& index) const
@@ -1808,6 +1884,40 @@ namespace py
     };
 
     template<typename TItem>
+    struct converter<winrt::Windows::Foundation::Collections::IVectorView<TItem>>
+    {
+        using TCollection = winrt::Windows::Foundation::Collections::IVectorView<TItem>;
+        using TMutableCollection
+            = winrt::Windows::Foundation::Collections::IVector<TItem>;
+
+        static PyObject* convert(TCollection const& instance) noexcept
+        {
+            return wrap(instance);
+        }
+
+        static auto convert_to(PyObject* obj)
+        {
+            if (auto result = convert_interface_to<TCollection>(obj))
+            {
+                return result.value();
+            }
+
+            if (auto result = convert_interface_to<TMutableCollection>(obj))
+            {
+                return result.value().GetView();
+            }
+
+            if (!PySequence_Check(obj))
+            {
+                PyErr_SetString(PyExc_TypeError, "expected a sequence");
+                throw python_exception();
+            }
+
+            return winrt::make<python_vector_view<TItem>>(obj);
+        }
+    };
+
+    template<typename TItem>
     struct converter<winrt::Windows::Foundation::Collections::IVector<TItem>>
     {
         using TCollection = winrt::Windows::Foundation::Collections::IVector<TItem>;
@@ -1846,6 +1956,12 @@ namespace py
     template<typename TItem>
     struct is_specialized_interface<
         winrt::Windows::Foundation::Collections::IIterable<TItem>> : std::true_type
+    {
+    };
+
+    template<typename TItem>
+    struct is_specialized_interface<
+        winrt::Windows::Foundation::Collections::IVectorView<TItem>> : std::true_type
     {
     };
 
