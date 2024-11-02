@@ -221,3 +221,16 @@ class TestTestComponent(unittest.TestCase):
 
     def test_test_runner(self):
         tc.TestRunner.test_self()
+
+    def test_list_to_vector(self):
+        arg = ["1", "2", "3", "4"]
+        tests = tc.TestRunner.make_tests()
+        # collection5 is one of the few methods that takes an IVector input
+        # parameter, so we use it to test that a list can be consumed as an
+        # IVector.
+        result = tests.collection5(arg)
+        # returns a copy of the list both as a return value and as an out parameter
+        self.assertListEqual(list(result[0]), arg)
+        self.assertListEqual(list(result[1]), arg)
+
+        # TODO: test wrong type in list. currently this will cause an abort

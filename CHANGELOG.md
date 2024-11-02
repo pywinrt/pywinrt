@@ -9,6 +9,7 @@
   names when available. This exposes some APIs that otherwise could not be called
   but also renames many existing methods.
 - Type hints are no longer `typing.Optional` by default.
+- `winrt.windows.foundation.IVector[T]` input parameters now accept any `typing.MutableSequence[T]`.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
