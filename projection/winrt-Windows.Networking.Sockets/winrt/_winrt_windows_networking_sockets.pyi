@@ -337,7 +337,7 @@ class SocketActivityContext(winrt.system.Object):
 @typing.final
 class SocketActivityInformation_Static(type):
     @_property
-    def all_sockets(cls) -> windows_foundation_collections.IMapView[str, SocketActivityInformation]: ...
+    def all_sockets(cls) -> typing.Mapping[str, SocketActivityInformation]: ...
 
 @typing.final
 class SocketActivityInformation(winrt.system.Object, metaclass=SocketActivityInformation_Static):

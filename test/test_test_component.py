@@ -235,6 +235,19 @@ class TestTestComponent(unittest.TestCase):
 
         # TODO: test wrong type in dict. currently this will cause an abort
 
+    def test_dict_to_map_view(self):
+        arg = {"1": "2", "3": "4"}
+        tests = tc.TestRunner.make_tests()
+        # collection4 is one of the few methods that takes an IMapView input
+        # parameter, so we use it to test that a dict can be consumed as an
+        # IMapView.
+        result = tests.collection4(arg)
+        # returns a copy of the dict both as a return value and as an out parameter
+        self.assertDictEqual(dict(result[0]), arg)
+        self.assertDictEqual(dict(result[1]), arg)
+
+        # TODO: test wrong type in dict. currently this will cause an abort
+
     def test_list_to_vector(self):
         arg = ["1", "2", "3", "4"]
         tests = tc.TestRunner.make_tests()

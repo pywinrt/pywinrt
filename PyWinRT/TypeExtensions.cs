@@ -350,6 +350,9 @@ static class TypeExtensions
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
                 => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
             GenericInstanceType gen
+                when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+                => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
+            GenericInstanceType gen
                 => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             ByReferenceType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
             OptionalModifierType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
