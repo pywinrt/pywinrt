@@ -336,7 +336,7 @@ static class TypeExtensions
                 => map is null ? type.Name : map[p].ToPyTypeName(ns, default, quoteImportedTypes),
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.IReference`1"
-                => $"typing.Optional[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
+                => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
                 => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
