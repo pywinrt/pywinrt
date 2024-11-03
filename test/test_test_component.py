@@ -1,6 +1,7 @@
 from uuid import UUID
 import unittest
 
+from test._util import catch_unraisable
 import winrt.testcomponent as tc
 
 
@@ -272,4 +273,11 @@ class TestTestComponent(unittest.TestCase):
         self.assertListEqual(list(result[0]), arg)
         self.assertListEqual(list(result[1]), arg)
 
-        # TODO: test wrong type in list. currently this will cause an abort
+        with self.assertRaisesRegex(
+            OSError, "Unraisable Python exception"
+        ), catch_unraisable() as exceptions:
+            # requires list[str] so results in an unraisable TypeError
+            tests.collection6([1])  # type: ignore
+
+        self.assertEqual(len(exceptions), 1)
+        self.assertEqual(exceptions[0].exc_type, TypeError)
