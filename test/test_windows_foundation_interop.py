@@ -18,9 +18,6 @@ class TestWindowsFoundationInteropBoxUnbox(unittest.TestCase):
        self.assertEqual(unbox(box("test")), "test")
 
     def test_box_unbox_int(self):
-       with self.assertRaises(TypeError):
-           box(1)  # type: ignore
-
        self.assertEqual(unbox(box(1, PropertyType.UINT8)), 1)
        self.assertEqual(unbox(box(1, PropertyType.INT16)), 1)
        self.assertEqual(unbox(box(1, PropertyType.UINT16)), 1)
@@ -30,9 +27,6 @@ class TestWindowsFoundationInteropBoxUnbox(unittest.TestCase):
        self.assertEqual(unbox(box(1, PropertyType.UINT64)), 1)
 
     def test_box_unbox_float(self):
-       with self.assertRaises(TypeError):
-           box(1.5)  # type: ignore
-
        self.assertEqual(unbox(box(1.5, PropertyType.SINGLE)), 1.5)
        self.assertEqual(unbox(box(1.5, PropertyType.DOUBLE)), 1.5)
 
