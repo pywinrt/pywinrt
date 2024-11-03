@@ -1,10 +1,17 @@
 from datetime import datetime, timedelta
 from enum import IntEnum, IntFlag
-from typing import Optional
+from typing import Optional, Union, overload
 from uuid import UUID
 
 from winrt.system import Object, Array
-from winrt.windows.foundation import Point, PropertyValue, PropertyType, IPropertyValue, Rect, Size
+from winrt.windows.foundation import (
+    Point,
+    PropertyValue,
+    PropertyType,
+    IPropertyValue,
+    Rect,
+    Size,
+)
 
 __all__ = ["box", "unbox"]
 
@@ -90,7 +97,31 @@ _PROPERTY_TYPE_UNBOX_MAP = {
     PropertyType.UINT8: IPropertyValue.get_uint8,
 }
 
-def box(value, ptype: Optional[PropertyType] = None) -> Optional[Object]:
+Boxable = Union[
+    bool,
+    int,
+    float,
+    str,
+    UUID,
+    datetime,
+    timedelta,
+    Point,
+    Size,
+    Rect,
+    Object,
+    Array["Boxable"],
+]
+
+
+@overload
+def box(value: None, ptype: Optional[PropertyType] = None) -> None: ...
+@overload
+def box(value: Boxable, ptype: Optional[PropertyType] = None) -> Object: ...
+
+
+def box(
+    value: Optional[Boxable], ptype: Optional[PropertyType] = None
+) -> Optional[Object]:
     """
     Boxes a Python value into a System.Object.
 
@@ -161,7 +192,13 @@ def box(value, ptype: Optional[PropertyType] = None) -> Optional[Object]:
     raise TypeError(f"Unsupported type: {type(value)}")
 
 
-def unbox(obj: Optional[Object]):
+@overload
+def unbox(obj: None) -> None: ...
+@overload
+def unbox(obj: Object) -> Boxable: ...
+
+
+def unbox(obj: Optional[Object]) -> Optional[Boxable]:
     """
     Unboxes a System.Object into a Python value.
 
