@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from enum import IntEnum, IntFlag
+from enum import IntFlag
 from typing import Optional, Union, overload
 from uuid import UUID
 
@@ -156,8 +156,11 @@ def box(
     if isinstance(value, IntFlag):
         return PropertyValue.create_uint32(value)
 
-    if isinstance(value, IntEnum):
+    if isinstance(value, int):
         return PropertyValue.create_int32(value)
+
+    if isinstance(value, float):
+        return PropertyValue.create_double(value)
 
     if isinstance(value, UUID):
         return PropertyValue.create_guid(value)
@@ -176,12 +179,6 @@ def box(
 
     if isinstance(value, Rect):
         return PropertyValue.create_rect(value)
-
-    if isinstance(value, int):
-        raise TypeError("Must provide a property type for int values")
-
-    if isinstance(value, float):
-        raise TypeError("Must provide a property type for float values")
 
     if isinstance(value, Object):
         return value
