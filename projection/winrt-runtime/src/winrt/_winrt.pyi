@@ -8,6 +8,7 @@ from typing import (
     Iterator,
     KeysView,
     List,
+    Protocol,
     SupportsIndex,
     Tuple,
     Type,
@@ -63,6 +64,10 @@ class Mapping(Generic[_KT, _VT_co]):
     def values(self) -> ValuesView[_VT_co]: ...
     def __eq__(self, __other: object) -> bool: ...
 
+class SupportsKeysAndGetItem(Protocol[_KT, _VT_co]):
+    def keys(self) -> Iterable[_KT]: ...
+    def __getitem__(self, key: _KT, /) -> _VT_co: ...
+
 class MutableMapping(Mapping[_KT, _VT]):
     # collections.abc.MutableMapping mixin methods
     @overload
@@ -79,7 +84,9 @@ class MutableMapping(Mapping[_KT, _VT]):
     @overload
     def setdefault(self, __key: _KT, __default: _VT) -> _VT: ...
     @overload
-    def update(self, __m: Iterable[Tuple[_KT, _VT]], **kwargs: _VT) -> None: ...
+    def update(self, m: SupportsKeysAndGetItem[_KT, _VT], /, **kwargs: _VT) -> None: ...
+    @overload
+    def update(self, m: Iterable[tuple[_KT, _VT]], /, **kwargs: _VT) -> None: ...
     @overload
     def update(self, **kwargs: _VT) -> None: ...
 
