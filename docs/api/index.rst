@@ -8,5 +8,6 @@ API reference
 
    microsoft
    runtime
+   runtime.interop
    system
    windows

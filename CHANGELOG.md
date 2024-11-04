@@ -6,6 +6,7 @@
 
 ### Added
 - Added new `winrt.runtime` module.
+- Added new `winrt.runtime.interop` module.
 
 ### Changed
 - [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method
