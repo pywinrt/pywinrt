@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Added new `winrt.runtime` module.
+
 ### Changed
 - [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method
   names when available. This exposes some APIs that otherwise could not be called
