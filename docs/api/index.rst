@@ -7,5 +7,6 @@ API reference
    :caption: Contents:
 
    microsoft
+   runtime
    system
    windows
