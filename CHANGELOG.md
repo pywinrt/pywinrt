@@ -7,6 +7,7 @@
 ### Added
 - Added new `winrt.runtime` module.
 - Added new `winrt.runtime.interop` module.
+- Added new `box_...()` and `unbox_...()` functions to `winrt.system`.
 
 ### Changed
 - [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method

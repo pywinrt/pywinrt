@@ -4,8 +4,8 @@ COUNT = 100_000
 REPEAT = 10
 
 times = timeit.repeat(
-    "unbox(box('test'))",
-    setup="from winrt.windows.foundation.interop import box, unbox",
+    "unbox_string(box_string('test'))",
+    setup="from winrt.system import box_string, unbox_string",
     number=COUNT,
     repeat=REPEAT,
 )

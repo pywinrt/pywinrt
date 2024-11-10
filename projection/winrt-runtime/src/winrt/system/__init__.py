@@ -18,11 +18,46 @@ else:
             bytes, bytearray, memoryview, _array[int], _array[float]
         ]
     else:
-        _buffer = Union[
-            bytes, bytearray, memoryview, _array[int], _array[float]
-        ]
+        _buffer = Union[bytes, bytearray, memoryview, _array[int], _array[float]]
 
-from .._winrt import Array, Object, _add_dll_directory, _remove_dll_directory
+from .._winrt import (
+    Array,
+    Object,
+    _add_dll_directory,
+    _remove_dll_directory,
+    box_boolean,
+    box_char16,
+    box_date_time,
+    box_double,
+    box_guid,
+    box_int8,
+    box_int16,
+    box_int32,
+    box_int64,
+    box_single,
+    box_string,
+    box_time_span,
+    box_uint8,
+    box_uint16,
+    box_uint32,
+    box_uint64,
+    unbox_boolean,
+    unbox_char16,
+    unbox_date_time,
+    unbox_double,
+    unbox_guid,
+    unbox_int8,
+    unbox_int16,
+    unbox_int32,
+    unbox_int64,
+    unbox_single,
+    unbox_string,
+    unbox_time_span,
+    unbox_uint8,
+    unbox_uint16,
+    unbox_uint32,
+    unbox_uint64,
+)
 
 
 class _DllCookie:
@@ -48,9 +83,7 @@ def _register_dll_search_path(module_path) -> _DllCookie:
     Returns:
         An cookie object that will remove the search path when closed.
     """
-    return _DllCookie(
-        _add_dll_directory(str(Path(module_path).parent.resolve()))
-    )
+    return _DllCookie(_add_dll_directory(str(Path(module_path).parent.resolve())))
 
 
 # NB: The types implemented in C cannot inherit from abc.ABC since Python 3.12
@@ -220,4 +253,36 @@ __all__ = [
     "Array",
     "ReadableBuffer",
     "WriteableBuffer",
+    "box_boolean",
+    "box_int8",
+    "box_uint8",
+    "box_int16",
+    "box_uint16",
+    "box_int32",
+    "box_uint32",
+    "box_int64",
+    "box_uint64",
+    "box_single",
+    "box_double",
+    "box_char16",
+    "box_string",
+    "box_guid",
+    "box_date_time",
+    "box_time_span",
+    "unbox_boolean",
+    "unbox_int8",
+    "unbox_uint8",
+    "unbox_int16",
+    "unbox_uint16",
+    "unbox_int32",
+    "unbox_uint32",
+    "unbox_int64",
+    "unbox_uint64",
+    "unbox_single",
+    "unbox_double",
+    "unbox_char16",
+    "unbox_string",
+    "unbox_guid",
+    "unbox_date_time",
+    "unbox_time_span",
 ]

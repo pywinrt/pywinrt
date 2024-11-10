@@ -23,14 +23,8 @@ from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import
     initialize,
 )
 from winrt.runtime import ApartmentType, init_apartment
-from winrt.windows.foundation import (
-    AsyncStatus,
-    IAsyncAction,
-    IAsyncOperation,
-    PropertyType,
-    Uri,
-)
-from winrt.windows.foundation.interop import box
+from winrt.system import box_int32
+from winrt.windows.foundation import AsyncStatus, IAsyncAction, IAsyncOperation, Uri
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
@@ -82,8 +76,8 @@ def init(_):
     grid.column_definitions.append(auto_col)
     webview.horizontal_alignment = HorizontalAlignment.STRETCH
     webview.vertical_alignment = VerticalAlignment.STRETCH
-    webview.set_value(Grid.row_property, box(1, PropertyType.INT32))
-    webview.set_value(Grid.column_span_property, box(2, PropertyType.INT32))
+    webview.set_value(Grid.row_property, box_int32(1))
+    webview.set_value(Grid.column_span_property, box_int32(2))
     grid.children.append(webview)
 
     window = Window()

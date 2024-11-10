@@ -3,7 +3,7 @@ import collections.abc
 import unittest
 
 import winrt.windows.foundation.collections as wfc
-from winrt.windows.foundation.interop import box, unbox
+from winrt.system import box_string, unbox_string
 
 from ._util import async_test
 
@@ -110,12 +110,12 @@ class TestCollectionsStringMap(unittest.TestCase):
 class TestCollectionsPropertySet(unittest.TestCase):
     def test_value_set(self):
         m = wfc.PropertySet()
-        m.insert("hello", box("world"))
+        m.insert("hello", box_string("world"))
 
         self.assertTrue(m.has_key("hello"))
         self.assertFalse(m.has_key("world"))
         self.assertEqual(m.size, 1)
-        self.assertEqual(unbox(m.lookup("hello")), "world")
+        self.assertEqual(unbox_string(m.lookup("hello")), "world")
 
         m.remove("hello")
 
@@ -132,12 +132,12 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
         self.assertIsInstance(m, collections.abc.Mapping)
 
-        m["hello"] = box("world")
+        m["hello"] = box_string("world")
 
         self.assertEqual(len(m), 1)
-        self.assertEqual(unbox(m["hello"]), "world")
+        self.assertEqual(unbox_string(m["hello"]), "world")
         self.assertIn("hello", m)
-        self.assertEqual(unbox(m.get("hello")) ,"world")
+        self.assertEqual(unbox_string(m.get("hello")), "world")
         self.assertIn("hello", m.keys())
         # can't test these because there is no equality for boxed values
         # self.assertIn("world", m.values())
@@ -145,8 +145,8 @@ class TestCollectionsPropertySet(unittest.TestCase):
         # self.assertEqual(m, {"hello": "world"})
         # self.assertFalse(m != {"hello": "world"})
 
-        m["hello"] = box(None)
-        self.assertEqual(unbox(m["hello"]), None)
+        m["hello"] = None
+        self.assertEqual(m["hello"], None)
 
         del m["hello"]
 
@@ -159,21 +159,25 @@ class TestCollectionsPropertySet(unittest.TestCase):
         self.assertNotIn("hello", m)
         self.assertIsNone(m.get("hello"))
 
-        m.update(hello=box("world"))
-        self.assertEqual(unbox(m["hello"]), "world")
+        m.update(hello=box_string("world"))
+        self.assertEqual(unbox_string(m["hello"]), "world")
         self.assertTrue(m)
 
         m.clear()
         self.assertFalse(m)
 
-        m.update({"hello": box("world")})
-        self.assertEqual(unbox(m.pop("hello")), "world")
+        m.update({"hello": box_string("world")})
+        self.assertEqual(unbox_string(m.pop("hello")), "world")
 
         with self.assertRaises(KeyError):
             m.pop("hello")
 
-        self.assertEqual(unbox(m.setdefault("hello", box("world"))), "world")
-        self.assertEqual(unbox(m.setdefault("hello", box("other"))), "world")
+        self.assertEqual(
+            unbox_string(m.setdefault("hello", box_string("world"))), "world"
+        )
+        self.assertEqual(
+            unbox_string(m.setdefault("hello", box_string("other"))), "world"
+        )
 
         self.assertIsNotNone(m.popitem())
 
