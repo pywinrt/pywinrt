@@ -159,7 +159,6 @@ else()
         "winrt-Microsoft.Windows.AppNotifications"
     )
     set(interop_packages
-        "interop/winrt-Windows.Foundation.Interop"
         "interop/winrt-Windows.Graphics.Capture.Interop"
         "interop/winrt-Windows.Graphics.DirectX.Direct3D11.Interop"
         "interop/winrt-Windows.System.Interop"

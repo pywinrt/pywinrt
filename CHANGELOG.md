@@ -19,12 +19,13 @@
 - `winrt.windows.foundation.IVectorView[T]` input parameters now accept any `typing.Sequence[T]`.
 - `winrt.windows.foundation.IMap[K, V]` input parameters now accept any `typing.MutableMapping[K, V]`.
 - `winrt.windows.foundation.IMapView[K, V]` input parameters now accept any `typing.Mapping[K, V]`.
-- `box()` converts `int` to `Int32` by default.
-- `box()` converts `float` to `Double` by default.
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
 - Fixed missing `Microsoft.Web.WebView2.Core.dll`.
+
+### Removed
+- BREAKING: Removed `winrt.windows.foundation.interop` module.
 
 ## [v2.3.0] - 2024-10-19
 
