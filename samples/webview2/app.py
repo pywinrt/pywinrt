@@ -2,7 +2,6 @@ import atexit
 import tempfile
 from ctypes import WinError
 
-from winrt._winrt import STA, init_apartment
 from winrt.microsoft.ui.xaml import (
     Application,
     GridLength,
@@ -23,6 +22,7 @@ from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import
     InitializeOptions,
     initialize,
 )
+from winrt.runtime import ApartmentType, init_apartment
 from winrt.windows.foundation import (
     AsyncStatus,
     IAsyncAction,
@@ -130,7 +130,7 @@ def init(_):
 
 
 if __name__ == "__main__":
-    init_apartment(STA)
+    init_apartment(ApartmentType.SINGLE_THREADED)
 
     # This is the main entry point for the application. To use the Windows App SDK
     # outside of a packaged app, you have to bootstrap it using the initialize
