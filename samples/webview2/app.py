@@ -22,7 +22,13 @@ from winrt.microsoft.ui.xaml.controls import (
     ColumnDefinition,
 )
 from winrt.microsoft.web.webview2.core import CoreWebView2Environment
-from winrt.windows.foundation import PropertyType, Uri, AsyncStatus, IAsyncOperation
+from winrt.windows.foundation import (
+    PropertyType,
+    Uri,
+    AsyncStatus,
+    IAsyncOperation,
+    IAsyncAction,
+)
 from winrt.windows.foundation.interop import box
 from winrt._winrt import init_apartment, STA
 
@@ -105,7 +111,7 @@ def init(_):
 
         ensure_op = webview.ensure_core_web_view2_with_environment_async(env)
 
-        def on_ensure(op: IAsyncOperation[bool], status: AsyncStatus):
+        def on_ensure(op: IAsyncAction, status: AsyncStatus):
             if status == AsyncStatus.ERROR:
                 print(
                     "ensure_core_web_view2_async failed:", WinError(op.error_code.value)
