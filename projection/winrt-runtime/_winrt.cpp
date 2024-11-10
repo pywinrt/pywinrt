@@ -5,6 +5,7 @@
 #define PYWINRT_RUNTIME_MODULE
 #include "pybase.h"
 #include "pyruntime.h"
+#include "_winrt_box.h"
 #include <winrt/base.h>
 
 namespace py::cpp::_winrt
@@ -473,6 +474,50 @@ namespace py::cpp::_winrt
          METH_O,
          PyDoc_STR(
              "Removes a directory that was added to the process DLL search path by using _add_dll_directory.")},
+        {"box_boolean", box_boolean, METH_O, PyDoc_STR("Box a Boolean value")},
+        {"box_char16", box_char16, METH_O, PyDoc_STR("Box a Char16 value")},
+        {"box_string", box_string, METH_O, PyDoc_STR("Box a string value")},
+        {"box_int8", box_int8, METH_O, PyDoc_STR("Box a Int8 value")},
+        {"box_uint8", box_uint8, METH_O, PyDoc_STR("Box a UInt8 value")},
+        {"box_int16", box_int16, METH_O, PyDoc_STR("Box a Int16 value")},
+        {"box_uint16", box_uint16, METH_O, PyDoc_STR("Box a UInt16 value")},
+        {"box_int32", box_int32, METH_O, PyDoc_STR("Box a Int32 value")},
+        {"box_uint32", box_uint32, METH_O, PyDoc_STR("Box a UInt32 value")},
+        {"box_int64", box_int64, METH_O, PyDoc_STR("Box a Int64 value")},
+        {"box_uint64", box_uint64, METH_O, PyDoc_STR("Box a UInt64 value")},
+        {"box_single", box_single, METH_O, PyDoc_STR("Box a Single value")},
+        {"box_double", box_double, METH_O, PyDoc_STR("Box a Double value")},
+        {"box_guid", box_guid, METH_O, PyDoc_STR("Box a GUID value")},
+        {"box_date_time",
+         box_date_time,
+         METH_O,
+         PyDoc_STR("Box a Windows.Foundation.DateTime value")},
+        {"box_time_span",
+         box_time_span,
+         METH_O,
+         PyDoc_STR("Box a Windows.Foundation.TimeSpan value")},
+        {"unbox_boolean", unbox_boolean, METH_O, PyDoc_STR("Unbox a Boolean value")},
+        {"unbox_char16", unbox_char16, METH_O, PyDoc_STR("Unbox a Char16 value")},
+        {"unbox_string", unbox_string, METH_O, PyDoc_STR("Unbox a string value")},
+        {"unbox_int8", unbox_int8, METH_O, PyDoc_STR("Unbox a Int8 value")},
+        {"unbox_uint8", unbox_uint8, METH_O, PyDoc_STR("Unbox a UInt8 value")},
+        {"unbox_int16", unbox_int16, METH_O, PyDoc_STR("Unbox a Int16 value")},
+        {"unbox_uint16", unbox_uint16, METH_O, PyDoc_STR("Unbox a UInt16 value")},
+        {"unbox_int32", unbox_int32, METH_O, PyDoc_STR("Unbox a Int32 value")},
+        {"unbox_uint32", unbox_uint32, METH_O, PyDoc_STR("Unbox a UInt32 value")},
+        {"unbox_int64", unbox_int64, METH_O, PyDoc_STR("Unbox a Int64 value")},
+        {"unbox_uint64", unbox_uint64, METH_O, PyDoc_STR("Unbox a UInt64 value")},
+        {"unbox_single", unbox_single, METH_O, PyDoc_STR("Unbox a Single value")},
+        {"unbox_double", unbox_double, METH_O, PyDoc_STR("Unbox a Double value")},
+        {"unbox_guid", unbox_guid, METH_O, PyDoc_STR("Unbox a GUID value")},
+        {"unbox_date_time",
+         unbox_date_time,
+         METH_O,
+         PyDoc_STR("Unbox a Windows.Foundation.DateTime value")},
+        {"unbox_time_span",
+         unbox_time_span,
+         METH_O,
+         PyDoc_STR("Unbox a Windows.Foundation.TimeSpan value")},
         {}};
 
     static PyModuleDef module_def

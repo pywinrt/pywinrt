@@ -111,7 +111,12 @@ endfunction()
 ################################################################################
 
 set(WINRT_RUNTIME_PATH "winrt-runtime")
-set(WINRT_RUNTIME_SOURCES "${WINRT_RUNTIME_PATH}/_winrt.cpp" "${WINRT_RUNTIME_PATH}/_winrt_array.cpp" "${WINRT_RUNTIME_PATH}/runtime.cpp")
+set(WINRT_RUNTIME_SOURCES
+    "${WINRT_RUNTIME_PATH}/_winrt.cpp"
+    "${WINRT_RUNTIME_PATH}/_winrt_array.cpp"
+    "${WINRT_RUNTIME_PATH}/_winrt_box.cpp"
+    "${WINRT_RUNTIME_PATH}/runtime.cpp"
+)
 pywinrt_add_library(_winrt "${WINRT_RUNTIME_SOURCES}")
 install(TARGETS _winrt DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
 install(DIRECTORY "${WINRT_RUNTIME_PATH}/src/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")

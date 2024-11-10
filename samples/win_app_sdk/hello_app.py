@@ -9,7 +9,7 @@ from winrt.microsoft.ui.xaml import (
     Window,
 )
 from winrt.microsoft.ui.xaml.controls import Button, StackPanel
-from winrt.windows.foundation.interop import box
+from winrt.system import box_string
 
 
 def init(_):
@@ -21,12 +21,12 @@ def init(_):
     # Build the UI
     button = Button()
     button.add_click(lambda s, e: print("Hello, world!"))
-    button.content = box("Click me")
+    button.content = box_string("Click me")
     button.horizontal_alignment = HorizontalAlignment.CENTER
 
     button2 = Button()
     button2.add_click(lambda s, e: app.exit())
-    button2.content = box("Exit")
+    button2.content = box_string("Exit")
     button2.horizontal_alignment = HorizontalAlignment.CENTER
 
     panel = StackPanel()

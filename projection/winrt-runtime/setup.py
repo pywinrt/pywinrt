@@ -23,7 +23,7 @@ setup(
     ext_modules=[
         Extension(
             "winrt._winrt",
-            sources=["_winrt.cpp", "_winrt_array.cpp", "runtime.cpp"],
+            sources=["_winrt.cpp", "_winrt_array.cpp", "_winrt_box.cpp", "runtime.cpp"],
             include_dirs=get_include_dirs(),
             libraries=["windowsapp"],
         )

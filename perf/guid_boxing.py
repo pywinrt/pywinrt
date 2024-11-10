@@ -4,10 +4,10 @@ COUNT = 100_000
 REPEAT = 10
 
 times = timeit.repeat(
-    "unbox(box(test))",
+    "unbox_guid(box_guid(test))",
     setup="""
 from uuid import uuid4
-from winrt.windows.foundation.interop import box, unbox
+from winrt.system import box_guid, unbox_guid
 
 test = uuid4()
 """,
