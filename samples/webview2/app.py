@@ -103,7 +103,7 @@ def init(_):
 
         env = op.get_results()
 
-        ensure_op = webview.ensure_core_web_view2_async(env)
+        ensure_op = webview.ensure_core_web_view2_with_environment_async(env)
 
         def on_ensure(op: IAsyncOperation[bool], status: AsyncStatus):
             if status == AsyncStatus.ERROR:
