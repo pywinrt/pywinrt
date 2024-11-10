@@ -1,36 +1,36 @@
 import atexit
-from ctypes import WinError
 import tempfile
+from ctypes import WinError
 
-from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
-    initialize,
-    InitializeOptions,
-)
+from winrt._winrt import STA, init_apartment
 from winrt.microsoft.ui.xaml import (
     Application,
+    GridLength,
+    GridUnitType,
     HorizontalAlignment,
     VerticalAlignment,
     Window,
-    GridLength,
-    GridUnitType,
 )
 from winrt.microsoft.ui.xaml.controls import (
+    ColumnDefinition,
     CoreWebView2InitializedEventArgs,
     Grid,
-    WebView2,
     RowDefinition,
-    ColumnDefinition,
+    WebView2,
 )
 from winrt.microsoft.web.webview2.core import CoreWebView2Environment
+from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+    InitializeOptions,
+    initialize,
+)
 from winrt.windows.foundation import (
+    AsyncStatus,
+    IAsyncAction,
+    IAsyncOperation,
     PropertyType,
     Uri,
-    AsyncStatus,
-    IAsyncOperation,
-    IAsyncAction,
 )
 from winrt.windows.foundation.interop import box
-from winrt._winrt import init_apartment, STA
 
 
 def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
