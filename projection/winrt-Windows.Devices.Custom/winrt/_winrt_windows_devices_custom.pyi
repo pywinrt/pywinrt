@@ -33,7 +33,7 @@ class CustomDevice(winrt.system.Object, metaclass=CustomDevice_Static):
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
-class IOControlCode(winrt.system.Object):
+class IOControlCode(IIOControlCode, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IOControlCode: ...
     def __new__(cls: typing.Type[IOControlCode], device_type: winrt.system.UInt16, function: winrt.system.UInt16, access_mode: IOControlAccessMode, buffering_method: IOControlBufferingMethod) -> IOControlCode: ...
@@ -57,7 +57,6 @@ class KnownDeviceTypes_Static(type):
 class KnownDeviceTypes(winrt.system.Object, metaclass=KnownDeviceTypes_Static):
     pass
 
-@typing.final
 class IIOControlCode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IIOControlCode: ...

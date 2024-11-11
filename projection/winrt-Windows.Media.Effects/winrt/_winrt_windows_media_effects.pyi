@@ -56,7 +56,7 @@ class AudioEffect(winrt.system.Object):
     def state(self) -> AudioEffectState: ...
 
 @typing.final
-class AudioEffectDefinition(winrt.system.Object):
+class AudioEffectDefinition(IAudioEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEffectDefinition: ...
     @typing.overload
@@ -123,7 +123,7 @@ class ProcessVideoFrameContext(winrt.system.Object):
     def output_frame(self) -> windows_media.VideoFrame: ...
 
 @typing.final
-class SlowMotionEffectDefinition(winrt.system.Object):
+class SlowMotionEffectDefinition(IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SlowMotionEffectDefinition: ...
     def __new__(cls: typing.Type[SlowMotionEffectDefinition]) -> SlowMotionEffectDefinition: ...
@@ -137,7 +137,7 @@ class SlowMotionEffectDefinition(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoCompositorDefinition(winrt.system.Object):
+class VideoCompositorDefinition(IVideoCompositorDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoCompositorDefinition: ...
     @typing.overload
@@ -150,7 +150,7 @@ class VideoCompositorDefinition(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoEffectDefinition(winrt.system.Object):
+class VideoEffectDefinition(IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoEffectDefinition: ...
     @typing.overload
@@ -163,7 +163,7 @@ class VideoEffectDefinition(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class VideoTransformEffectDefinition(winrt.system.Object):
+class VideoTransformEffectDefinition(IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTransformEffectDefinition: ...
     def __new__(cls: typing.Type[VideoTransformEffectDefinition]) -> VideoTransformEffectDefinition: ...
@@ -223,7 +223,6 @@ class VideoTransformSphericalProjection(winrt.system.Object):
     @frame_format.setter
     def frame_format(self, value: windows_media_mediaproperties.SphericalVideoFrameFormat) -> None: ...
 
-@typing.final
 class IAudioEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAudioEffectDefinition: ...
@@ -232,8 +231,7 @@ class IAudioEffectDefinition(winrt.system.Object):
     @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-@typing.final
-class IBasicAudioEffect(winrt.system.Object):
+class IBasicAudioEffect(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicAudioEffect: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -246,8 +244,7 @@ class IBasicAudioEffect(winrt.system.Object):
     @_property
     def use_input_frame_for_output(self) -> bool: ...
 
-@typing.final
-class IBasicVideoEffect(winrt.system.Object):
+class IBasicVideoEffect(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBasicVideoEffect: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -264,8 +261,7 @@ class IBasicVideoEffect(winrt.system.Object):
     @_property
     def time_independent(self) -> bool: ...
 
-@typing.final
-class IVideoCompositor(winrt.system.Object):
+class IVideoCompositor(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositor: ...
     def close(self, reason: MediaEffectClosedReason, /) -> None: ...
@@ -276,7 +272,6 @@ class IVideoCompositor(winrt.system.Object):
     @_property
     def time_independent(self) -> bool: ...
 
-@typing.final
 class IVideoCompositorDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoCompositorDefinition: ...
@@ -285,7 +280,6 @@ class IVideoCompositorDefinition(winrt.system.Object):
     @_property
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
-@typing.final
 class IVideoEffectDefinition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVideoEffectDefinition: ...

@@ -20,7 +20,7 @@ from winrt.windows.ui.notifications import AdaptiveNotificationContentKind, Badg
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdaptiveNotificationText(winrt.system.Object):
+class AdaptiveNotificationText(IAdaptiveNotificationContent, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveNotificationText: ...
     def __new__(cls: typing.Type[AdaptiveNotificationText]) -> AdaptiveNotificationText: ...
@@ -604,7 +604,6 @@ class UserNotificationChangedEventArgs(winrt.system.Object):
     @_property
     def user_notification_id(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class IAdaptiveNotificationContent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveNotificationContent: ...

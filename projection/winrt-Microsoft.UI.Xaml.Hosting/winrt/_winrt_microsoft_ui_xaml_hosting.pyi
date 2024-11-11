@@ -22,7 +22,7 @@ from winrt.microsoft.ui.xaml.hosting import XamlSourceFocusNavigationReason
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DesktopWindowXamlSource(winrt.system.Object):
+class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -88,7 +88,7 @@ class WindowsXamlManager_Static(type):
     def initialize_for_current_thread(cls) -> WindowsXamlManager: ...
 
 @typing.final
-class WindowsXamlManager(winrt.system.Object, metaclass=WindowsXamlManager_Static):
+class WindowsXamlManager(windows_foundation.IClosable, winrt.system.Object, metaclass=WindowsXamlManager_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

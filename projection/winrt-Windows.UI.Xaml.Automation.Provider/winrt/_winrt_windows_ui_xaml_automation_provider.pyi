@@ -33,7 +33,6 @@ class IRawElementProviderSimple(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class IAnnotationProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnnotationProvider: ...
@@ -48,13 +47,11 @@ class IAnnotationProvider(winrt.system.Object):
     @_property
     def target(self) -> IRawElementProviderSimple: ...
 
-@typing.final
 class ICustomNavigationProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomNavigationProvider: ...
     def navigate_custom(self, direction: windows_ui_xaml_automation_peers.AutomationNavigationDirection, /) -> winrt.system.Object: ...
 
-@typing.final
 class IDockProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDockProvider: ...
@@ -62,7 +59,6 @@ class IDockProvider(winrt.system.Object):
     @_property
     def dock_position(self) -> windows_ui_xaml_automation.DockPosition: ...
 
-@typing.final
 class IDragProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDragProvider: ...
@@ -74,7 +70,6 @@ class IDragProvider(winrt.system.Object):
     @_property
     def is_grabbed(self) -> bool: ...
 
-@typing.final
 class IDropTargetProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDropTargetProvider: ...
@@ -83,7 +78,6 @@ class IDropTargetProvider(winrt.system.Object):
     @_property
     def drop_effects(self) -> str: ...
 
-@typing.final
 class IExpandCollapseProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IExpandCollapseProvider: ...
@@ -92,7 +86,6 @@ class IExpandCollapseProvider(winrt.system.Object):
     @_property
     def expand_collapse_state(self) -> windows_ui_xaml_automation.ExpandCollapseState: ...
 
-@typing.final
 class IGridItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridItemProvider: ...
@@ -107,7 +100,6 @@ class IGridItemProvider(winrt.system.Object):
     @_property
     def row_span(self) -> winrt.system.Int32: ...
 
-@typing.final
 class IGridProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridProvider: ...
@@ -117,19 +109,16 @@ class IGridProvider(winrt.system.Object):
     @_property
     def row_count(self) -> winrt.system.Int32: ...
 
-@typing.final
 class IInvokeProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInvokeProvider: ...
     def invoke(self) -> None: ...
 
-@typing.final
 class IItemContainerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerProvider: ...
     def find_item_by_property(self, start_after: IRawElementProviderSimple, automation_property: windows_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 
-@typing.final
 class IMultipleViewProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMultipleViewProvider: ...
@@ -139,13 +128,11 @@ class IMultipleViewProvider(winrt.system.Object):
     @_property
     def current_view(self) -> winrt.system.Int32: ...
 
-@typing.final
 class IObjectModelProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IObjectModelProvider: ...
     def get_underlying_object_model(self) -> winrt.system.Object: ...
 
-@typing.final
 class IRangeValueProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRangeValueProvider: ...
@@ -163,13 +150,11 @@ class IRangeValueProvider(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.Double: ...
 
-@typing.final
 class IScrollItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollItemProvider: ...
     def scroll_into_view(self) -> None: ...
 
-@typing.final
 class IScrollProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollProvider: ...
@@ -188,7 +173,6 @@ class IScrollProvider(winrt.system.Object):
     @_property
     def vertically_scrollable(self) -> bool: ...
 
-@typing.final
 class ISelectionItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionItemProvider: ...
@@ -200,7 +184,6 @@ class ISelectionItemProvider(winrt.system.Object):
     @_property
     def selection_container(self) -> IRawElementProviderSimple: ...
 
-@typing.final
 class ISelectionProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionProvider: ...
@@ -210,7 +193,6 @@ class ISelectionProvider(winrt.system.Object):
     @_property
     def is_selection_required(self) -> bool: ...
 
-@typing.final
 class ISpreadsheetItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetItemProvider: ...
@@ -219,13 +201,11 @@ class ISpreadsheetItemProvider(winrt.system.Object):
     @_property
     def formula(self) -> str: ...
 
-@typing.final
 class ISpreadsheetProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetProvider: ...
     def get_item_by_name(self, name: str, /) -> IRawElementProviderSimple: ...
 
-@typing.final
 class IStylesProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStylesProvider: ...
@@ -244,21 +224,18 @@ class IStylesProvider(winrt.system.Object):
     @_property
     def style_name(self) -> str: ...
 
-@typing.final
 class ISynchronizedInputProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISynchronizedInputProvider: ...
     def cancel(self) -> None: ...
     def start_listening(self, input_type: windows_ui_xaml_automation.SynchronizedInputType, /) -> None: ...
 
-@typing.final
 class ITableItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableItemProvider: ...
     def get_column_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
     def get_row_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
 
-@typing.final
 class ITableProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableProvider: ...
@@ -267,7 +244,6 @@ class ITableProvider(winrt.system.Object):
     @_property
     def row_or_column_major(self) -> windows_ui_xaml_automation.RowOrColumnMajor: ...
 
-@typing.final
 class ITextChildProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextChildProvider: ...
@@ -276,8 +252,7 @@ class ITextChildProvider(winrt.system.Object):
     @_property
     def text_range(self) -> ITextRangeProvider: ...
 
-@typing.final
-class ITextEditProvider(winrt.system.Object):
+class ITextEditProvider(ITextProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextEditProvider: ...
     def get_active_composition(self) -> ITextRangeProvider: ...
@@ -291,7 +266,6 @@ class ITextEditProvider(winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-@typing.final
 class ITextProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider: ...
@@ -304,8 +278,7 @@ class ITextProvider(winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-@typing.final
-class ITextProvider2(winrt.system.Object):
+class ITextProvider2(ITextProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider2: ...
     def get_caret_range(self) -> typing.Tuple[ITextRangeProvider, bool]: ...
@@ -319,7 +292,6 @@ class ITextProvider2(winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-@typing.final
 class ITextRangeProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider: ...
@@ -342,8 +314,7 @@ class ITextRangeProvider(winrt.system.Object):
     def scroll_into_view(self, align_to_top: bool, /) -> None: ...
     def select(self) -> None: ...
 
-@typing.final
-class ITextRangeProvider2(winrt.system.Object):
+class ITextRangeProvider2(ITextRangeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider2: ...
     def add_to_selection(self) -> None: ...
@@ -366,7 +337,6 @@ class ITextRangeProvider2(winrt.system.Object):
     def select(self) -> None: ...
     def show_context_menu(self) -> None: ...
 
-@typing.final
 class IToggleProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToggleProvider: ...
@@ -374,7 +344,6 @@ class IToggleProvider(winrt.system.Object):
     @_property
     def toggle_state(self) -> windows_ui_xaml_automation.ToggleState: ...
 
-@typing.final
 class ITransformProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider: ...
@@ -388,8 +357,7 @@ class ITransformProvider(winrt.system.Object):
     @_property
     def can_rotate(self) -> bool: ...
 
-@typing.final
-class ITransformProvider2(winrt.system.Object):
+class ITransformProvider2(ITransformProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider2: ...
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
@@ -412,7 +380,6 @@ class ITransformProvider2(winrt.system.Object):
     @_property
     def can_rotate(self) -> bool: ...
 
-@typing.final
 class IValueProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IValueProvider: ...
@@ -422,13 +389,11 @@ class IValueProvider(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
-@typing.final
 class IVirtualizedItemProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVirtualizedItemProvider: ...
     def realize(self) -> None: ...
 
-@typing.final
 class IWindowProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWindowProvider: ...

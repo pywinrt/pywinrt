@@ -14,10 +14,12 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
 import winrt.windows.graphics.directx.direct3d11 as windows_graphics_directx_direct3d11
 import winrt.windows.graphics.imaging as windows_graphics_imaging
+import winrt.windows.media as windows_media
 import winrt.windows.media.capture as windows_media_capture
 import winrt.windows.media.capture.frames as windows_media_capture_frames
 import winrt.windows.media.devices as windows_media_devices
 import winrt.windows.media.devices.core as windows_media_devices_core
+import winrt.windows.media.effects as windows_media_effects
 import winrt.windows.media.faceanalysis as windows_media_faceanalysis
 import winrt.windows.media.mediaproperties as windows_media_mediaproperties
 import winrt.windows.media.playback as windows_media_playback
@@ -69,7 +71,7 @@ class TimedTextSize:
     def __init__(self, height: winrt.system.Double = 0, width: winrt.system.Double = 0, unit: TimedTextUnit = TimedTextUnit(0)) -> None: ...
 
 @typing.final
-class AudioStreamDescriptor(winrt.system.Object):
+class AudioStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioStreamDescriptor: ...
     def __new__(cls: typing.Type[AudioStreamDescriptor], encoding_properties: windows_media_mediaproperties.AudioEncodingProperties) -> AudioStreamDescriptor: ...
@@ -100,7 +102,7 @@ class AudioStreamDescriptor(winrt.system.Object):
     def label(self, value: str) -> None: ...
 
 @typing.final
-class AudioTrack(winrt.system.Object):
+class AudioTrack(IMediaTrack, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioTrack: ...
     def get_encoding_properties(self) -> windows_media_mediaproperties.AudioEncodingProperties: ...
@@ -144,7 +146,7 @@ class AudioTrackSupportInfo(winrt.system.Object):
     def media_source_status(self) -> MediaSourceStatus: ...
 
 @typing.final
-class ChapterCue(winrt.system.Object):
+class ChapterCue(IMediaCue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChapterCue: ...
     def __new__(cls: typing.Type[ChapterCue]) -> ChapterCue: ...
@@ -297,7 +299,7 @@ class CodecSubtypes(winrt.system.Object, metaclass=CodecSubtypes_Static):
     pass
 
 @typing.final
-class DataCue(winrt.system.Object):
+class DataCue(IMediaCue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataCue: ...
     def __new__(cls: typing.Type[DataCue]) -> DataCue: ...
@@ -328,7 +330,7 @@ class FaceDetectedEventArgs(winrt.system.Object):
     def result_frame(self) -> FaceDetectionEffectFrame: ...
 
 @typing.final
-class FaceDetectionEffect(winrt.system.Object):
+class FaceDetectionEffect(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceDetectionEffect: ...
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
@@ -344,7 +346,7 @@ class FaceDetectionEffect(winrt.system.Object):
     def desired_detection_interval(self, value: datetime.timedelta) -> None: ...
 
 @typing.final
-class FaceDetectionEffectDefinition(winrt.system.Object):
+class FaceDetectionEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FaceDetectionEffectDefinition: ...
     def __new__(cls: typing.Type[FaceDetectionEffectDefinition]) -> FaceDetectionEffectDefinition: ...
@@ -362,7 +364,7 @@ class FaceDetectionEffectDefinition(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class FaceDetectionEffectFrame(winrt.system.Object):
+class FaceDetectionEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -412,7 +414,7 @@ class HighDynamicRangeOutput(winrt.system.Object):
     def frame_controllers(self) -> typing.Sequence[windows_media_devices_core.FrameController]: ...
 
 @typing.final
-class ImageCue(winrt.system.Object):
+class ImageCue(IMediaCue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageCue: ...
     def __new__(cls: typing.Type[ImageCue]) -> ImageCue: ...
@@ -464,7 +466,7 @@ class LowLightFusion(winrt.system.Object, metaclass=LowLightFusion_Static):
     pass
 
 @typing.final
-class LowLightFusionResult(winrt.system.Object):
+class LowLightFusionResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -525,7 +527,7 @@ class MediaSource_Static(type):
     def create_from_uri(cls, uri: windows_foundation.Uri, /) -> MediaSource: ...
 
 @typing.final
-class MediaSource(winrt.system.Object, metaclass=MediaSource_Static):
+class MediaSource(windows_foundation.IClosable, windows_media_playback.IMediaPlaybackSource, winrt.system.Object, metaclass=MediaSource_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -663,7 +665,7 @@ class MediaStreamSampleProtectionProperties(winrt.system.Object):
     def set_sub_sample_mapping(self, value: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> None: ...
 
 @typing.final
-class MediaStreamSource(winrt.system.Object):
+class MediaStreamSource(IMediaSource, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaStreamSource: ...
     @typing.overload
@@ -867,7 +869,7 @@ class MseStreamSource_Static(type):
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...
 
 @typing.final
-class MseStreamSource(winrt.system.Object, metaclass=MseStreamSource_Static):
+class MseStreamSource(IMediaSource, winrt.system.Object, metaclass=MseStreamSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MseStreamSource: ...
     def __new__(cls: typing.Type[MseStreamSource]) -> MseStreamSource: ...
@@ -896,7 +898,7 @@ class MseStreamSource(winrt.system.Object, metaclass=MseStreamSource_Static):
     def live_seekable_range(self, value: typing.Optional[MseTimeRange]) -> None: ...
 
 @typing.final
-class SceneAnalysisEffect(winrt.system.Object):
+class SceneAnalysisEffect(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneAnalysisEffect: ...
     def set_properties(self, configuration: windows_foundation_collections.IPropertySet, /) -> None: ...
@@ -910,7 +912,7 @@ class SceneAnalysisEffect(winrt.system.Object):
     def high_dynamic_range_analyzer(self) -> HighDynamicRangeControl: ...
 
 @typing.final
-class SceneAnalysisEffectDefinition(winrt.system.Object):
+class SceneAnalysisEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneAnalysisEffectDefinition: ...
     def __new__(cls: typing.Type[SceneAnalysisEffectDefinition]) -> SceneAnalysisEffectDefinition: ...
@@ -920,7 +922,7 @@ class SceneAnalysisEffectDefinition(winrt.system.Object):
     def properties(self) -> windows_foundation_collections.IPropertySet: ...
 
 @typing.final
-class SceneAnalysisEffectFrame(winrt.system.Object):
+class SceneAnalysisEffectFrame(windows_media.IMediaFrame, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -963,7 +965,7 @@ class SceneAnalyzedEventArgs(winrt.system.Object):
     def result_frame(self) -> SceneAnalysisEffectFrame: ...
 
 @typing.final
-class SpeechCue(winrt.system.Object):
+class SpeechCue(IMediaCue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SpeechCue: ...
     def __new__(cls: typing.Type[SpeechCue]) -> SpeechCue: ...
@@ -993,7 +995,7 @@ class SpeechCue(winrt.system.Object):
     def end_position_in_input(self, value: typing.Optional[winrt.system.Int32]) -> None: ...
 
 @typing.final
-class TimedMetadataStreamDescriptor(winrt.system.Object):
+class TimedMetadataStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimedMetadataStreamDescriptor: ...
     def __new__(cls: typing.Type[TimedMetadataStreamDescriptor], encoding_properties: windows_media_mediaproperties.TimedMetadataEncodingProperties) -> TimedMetadataStreamDescriptor: ...
@@ -1016,7 +1018,7 @@ class TimedMetadataStreamDescriptor(winrt.system.Object):
     def encoding_properties(self) -> windows_media_mediaproperties.TimedMetadataEncodingProperties: ...
 
 @typing.final
-class TimedMetadataTrack(winrt.system.Object):
+class TimedMetadataTrack(IMediaTrack, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimedMetadataTrack: ...
     def __new__(cls: typing.Type[TimedMetadataTrack], id: str, language: str, kind: TimedMetadataKind) -> TimedMetadataTrack: ...
@@ -1085,7 +1087,7 @@ class TimedTextBouten(winrt.system.Object):
     def color(self, value: windows_ui.Color) -> None: ...
 
 @typing.final
-class TimedTextCue(winrt.system.Object):
+class TimedTextCue(IMediaCue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimedTextCue: ...
     def __new__(cls: typing.Type[TimedTextCue]) -> TimedTextCue: ...
@@ -1327,7 +1329,7 @@ class TimedTextSubformat(winrt.system.Object):
     def length(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class VideoStabilizationEffect(winrt.system.Object):
+class VideoStabilizationEffect(windows_media.IMediaExtension, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStabilizationEffect: ...
     def get_recommended_stream_configuration(self, controller: windows_media_devices.VideoDeviceController, desired_properties: windows_media_mediaproperties.VideoEncodingProperties, /) -> windows_media_capture.VideoStreamConfiguration: ...
@@ -1340,7 +1342,7 @@ class VideoStabilizationEffect(winrt.system.Object):
     def enabled(self, value: bool) -> None: ...
 
 @typing.final
-class VideoStabilizationEffectDefinition(winrt.system.Object):
+class VideoStabilizationEffectDefinition(windows_media_effects.IVideoEffectDefinition, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStabilizationEffectDefinition: ...
     def __new__(cls: typing.Type[VideoStabilizationEffectDefinition]) -> VideoStabilizationEffectDefinition: ...
@@ -1357,7 +1359,7 @@ class VideoStabilizationEffectEnabledChangedEventArgs(winrt.system.Object):
     def reason(self) -> VideoStabilizationEffectEnabledChangedReason: ...
 
 @typing.final
-class VideoStreamDescriptor(winrt.system.Object):
+class VideoStreamDescriptor(IMediaStreamDescriptor2, IMediaStreamDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoStreamDescriptor: ...
     def __new__(cls: typing.Type[VideoStreamDescriptor], encoding_properties: windows_media_mediaproperties.VideoEncodingProperties) -> VideoStreamDescriptor: ...
@@ -1380,7 +1382,7 @@ class VideoStreamDescriptor(winrt.system.Object):
     def encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
 
 @typing.final
-class VideoTrack(winrt.system.Object):
+class VideoTrack(IMediaTrack, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoTrack: ...
     def get_encoding_properties(self) -> windows_media_mediaproperties.VideoEncodingProperties: ...
@@ -1419,7 +1421,6 @@ class VideoTrackSupportInfo(winrt.system.Object):
     @_property
     def media_source_status(self) -> MediaSourceStatus: ...
 
-@typing.final
 class IMediaCue(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaCue: ...
@@ -1436,12 +1437,10 @@ class IMediaCue(winrt.system.Object):
     @start_time.setter
     def start_time(self, value: datetime.timedelta) -> None: ...
 
-@typing.final
 class IMediaSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaSource: ...
 
-@typing.final
 class IMediaStreamDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaStreamDescriptor: ...
@@ -1456,8 +1455,7 @@ class IMediaStreamDescriptor(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
-@typing.final
-class IMediaStreamDescriptor2(winrt.system.Object):
+class IMediaStreamDescriptor2(IMediaStreamDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaStreamDescriptor2: ...
     @_property
@@ -1475,7 +1473,6 @@ class IMediaStreamDescriptor2(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
-@typing.final
 class IMediaTrack(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaTrack: ...
@@ -1490,7 +1487,6 @@ class IMediaTrack(winrt.system.Object):
     @_property
     def track_kind(self) -> MediaTrackKind: ...
 
-@typing.final
 class ISingleSelectMediaTrackList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISingleSelectMediaTrackList: ...
@@ -1501,7 +1497,6 @@ class ISingleSelectMediaTrackList(winrt.system.Object):
     @selected_index.setter
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
-@typing.final
 class ITimedMetadataTrackProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITimedMetadataTrackProvider: ...

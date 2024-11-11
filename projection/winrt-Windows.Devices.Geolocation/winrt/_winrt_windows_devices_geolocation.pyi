@@ -45,7 +45,7 @@ class GeoboundingBox_Static(type):
     def try_compute_with_altitude_reference_and_spatial_reference(cls, positions: typing.Iterable[BasicGeoposition], altitude_ref_system: AltitudeReferenceSystem, spatial_reference_id: winrt.system.UInt32, /) -> GeoboundingBox: ...
 
 @typing.final
-class GeoboundingBox(winrt.system.Object, metaclass=GeoboundingBox_Static):
+class GeoboundingBox(IGeoshape, winrt.system.Object, metaclass=GeoboundingBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeoboundingBox: ...
     @typing.overload
@@ -72,7 +72,7 @@ class GeoboundingBox(winrt.system.Object, metaclass=GeoboundingBox_Static):
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class Geocircle(winrt.system.Object):
+class Geocircle(IGeoshape, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geocircle: ...
     @typing.overload
@@ -182,7 +182,7 @@ class Geolocator(winrt.system.Object, metaclass=Geolocator_Static):
     def desired_accuracy_in_meters(self, value: typing.Optional[winrt.system.UInt32]) -> None: ...
 
 @typing.final
-class Geopath(winrt.system.Object):
+class Geopath(IGeoshape, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geopath: ...
     @typing.overload
@@ -201,7 +201,7 @@ class Geopath(winrt.system.Object):
     def spatial_reference_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class Geopoint(winrt.system.Object):
+class Geopoint(IGeoshape, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geopoint: ...
     @typing.overload
@@ -293,7 +293,6 @@ class VenueData(winrt.system.Object):
     @_property
     def level(self) -> str: ...
 
-@typing.final
 class IGeoshape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeoshape: ...

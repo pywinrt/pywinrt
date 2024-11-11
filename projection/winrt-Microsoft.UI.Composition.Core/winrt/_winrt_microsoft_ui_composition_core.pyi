@@ -15,7 +15,7 @@ import winrt.windows.foundation as windows_foundation
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CompositorController(winrt.system.Object):
+class CompositorController(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

@@ -45,7 +45,7 @@ class ManipulationVelocities:
     def __init__(self, linear: windows_foundation.Point = windows_foundation.Point(), angular: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
 @typing.final
-class AttachableInputObject(winrt.system.Object):
+class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -837,7 +837,6 @@ class TouchpadGlobalActionEventArgs(winrt.system.Object):
     @_property
     def action(self) -> TouchpadGlobalAction: ...
 
-@typing.final
 class IPointerPointTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPointerPointTransform: ...

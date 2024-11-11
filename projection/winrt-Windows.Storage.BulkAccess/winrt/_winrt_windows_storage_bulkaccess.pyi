@@ -19,7 +19,7 @@ import winrt.windows.storage.streams as windows_storage_streams
 Self = typing.TypeVar('Self')
 
 @typing.final
-class FileInformation(winrt.system.Object):
+class FileInformation(windows_storage.IStorageFile2, windows_storage.IStorageFilePropertiesWithAvailability, windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageItem2, windows_storage.IStorageItemProperties, windows_storage.IStorageFile, windows_storage_streams.IInputStreamReference, windows_storage_streams.IRandomAccessStreamReference, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FileInformation: ...
     def copy_and_replace_async(self, file_to_replace: windows_storage.IStorageFile, /) -> windows_foundation.IAsyncAction: ...
@@ -111,7 +111,7 @@ class FileInformationFactory(winrt.system.Object):
     def get_virtualized_items_vector(self) -> winrt.system.Object: ...
 
 @typing.final
-class FolderInformation(winrt.system.Object):
+class FolderInformation(windows_storage.IStorageItemPropertiesWithProvider, windows_storage.IStorageFolder2, windows_storage.IStorageItem2, windows_storage_search.IStorageFolderQueryOperations, windows_storage.IStorageItemProperties, windows_storage.IStorageFolder, windows_storage.IStorageItem, IStorageItemInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderInformation: ...
     def are_query_options_supported(self, query_options: windows_storage_search.QueryOptions, /) -> bool: ...
@@ -188,7 +188,6 @@ class FolderInformation(winrt.system.Object):
     @_property
     def provider(self) -> windows_storage.StorageProvider: ...
 
-@typing.final
 class IStorageItemInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemInformation: ...

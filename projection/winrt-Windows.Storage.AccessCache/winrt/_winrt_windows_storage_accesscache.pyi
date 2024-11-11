@@ -62,7 +62,7 @@ class StorageApplicationPermissions(winrt.system.Object, metaclass=StorageApplic
     pass
 
 @typing.final
-class StorageItemAccessList(winrt.system.Object):
+class StorageItemAccessList(IStorageItemAccessList, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemAccessList: ...
     def add(self, file: windows_storage.IStorageItem, metadata: str, /) -> str: ...
@@ -85,7 +85,7 @@ class StorageItemAccessList(winrt.system.Object):
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class StorageItemMostRecentlyUsedList(winrt.system.Object):
+class StorageItemMostRecentlyUsedList(IStorageItemAccessList, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StorageItemMostRecentlyUsedList: ...
     def add(self, file: windows_storage.IStorageItem, metadata: str, /) -> str: ...
@@ -111,7 +111,6 @@ class StorageItemMostRecentlyUsedList(winrt.system.Object):
     @_property
     def maximum_items_allowed(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class IStorageItemAccessList(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStorageItemAccessList: ...

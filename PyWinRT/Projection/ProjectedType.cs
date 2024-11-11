@@ -75,10 +75,86 @@ class ProjectedType
         IsPyBuffer = iMemoryReference || iBuffer;
         PyBufferSize = iBuffer ? "Length" : "Capacity";
 
+        var sortedInterfaces = DependencySort(
+            type.Interfaces.Select(i => i.InterfaceType.Resolve())
+        );
+        Interfaces = type
+            .Interfaces.Select(i => i.InterfaceType)
+            // Skip types that are projected as Python protocols
+            .Where(i =>
+                !(
+                    i is GenericInstanceType gen
+                    && (
+                        gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
+                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
+                        || gen.ElementType.FullName
+                            == "Windows.Foundation.Collections.IVectorView`1"
+                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
+                        || gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
+                    )
+                )
+            )
+            .Where(i => !i.Resolve().IsExclusiveTo())
+            .OrderBy(i => sortedInterfaces.FindIndex(s => s.FullName == i.Resolve().FullName))
+            .ToArray();
+
         Constructors = EnumerateConstructors(type).ToArray();
         Methods = EnumerateMethods(type).ToList();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
+    }
+
+    private enum Mark
+    {
+        Unmarked,
+        Temporary,
+        Permanent,
+    }
+
+    private sealed class TypeComparer : IEqualityComparer<TypeDefinition>
+    {
+        public bool Equals(TypeDefinition? x, TypeDefinition? y) => x?.FullName == y?.FullName;
+
+        public int GetHashCode(TypeDefinition obj) => obj.FullName.GetHashCode();
+    }
+
+    private static List<TypeDefinition> DependencySort(IEnumerable<TypeDefinition> interfaces)
+    {
+        // depth-first search
+        var marked = interfaces.ToDictionary(i => i, _ => Mark.Unmarked, new TypeComparer());
+        var sorted = new List<TypeDefinition>();
+
+        void visit(TypeDefinition type)
+        {
+            marked.TryAdd(type, Mark.Unmarked);
+
+            switch (marked[type])
+            {
+                case Mark.Permanent:
+                    return;
+                case Mark.Temporary:
+                    throw new InvalidOperationException("Cyclic dependency detected");
+            }
+
+            marked[type] = Mark.Temporary;
+
+            foreach (var iface in type.Interfaces)
+            {
+                visit(iface.InterfaceType.Resolve());
+            }
+
+            marked[type] = Mark.Permanent;
+            sorted.Add(type);
+        }
+
+        while (marked.Values.Any(m => m != Mark.Permanent))
+        {
+            visit(marked.First(m => m.Value == Mark.Unmarked).Key);
+        }
+
+        sorted.Reverse();
+
+        return sorted;
     }
 
     /// <summary>
@@ -204,6 +280,11 @@ class ProjectedType
     /// Only valid if <see cref="IsPyBuffer"/> is true.
     /// </remarks>
     public string PyBufferSize { get; }
+
+    /// <summary>
+    /// Gets the interfaces implemented by the type.
+    /// </summary>
+    public IReadOnlyCollection<TypeReference> Interfaces { get; }
 
     /// <summary>
     /// Gets the constructors of the type.

@@ -17,7 +17,7 @@ from winrt.windows.storage.compression import CompressAlgorithm
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Compressor(winrt.system.Object):
+class Compressor(windows_storage_streams.IOutputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -33,7 +33,7 @@ class Compressor(winrt.system.Object):
     def write_async(self, buffer: windows_storage_streams.IBuffer, /) -> windows_foundation.IAsyncOperationWithProgress[winrt.system.UInt32, winrt.system.UInt32]: ...
 
 @typing.final
-class Decompressor(winrt.system.Object):
+class Decompressor(windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

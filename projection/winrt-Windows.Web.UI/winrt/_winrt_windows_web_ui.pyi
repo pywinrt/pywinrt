@@ -182,7 +182,6 @@ class WebViewControlWebResourceRequestedEventArgs(winrt.system.Object):
     @_property
     def request(self) -> windows_web_http.HttpRequestMessage: ...
 
-@typing.final
 class IWebViewControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl: ...
@@ -254,7 +253,6 @@ class IWebViewControl(winrt.system.Object):
     @source.setter
     def source(self, value: windows_foundation.Uri) -> None: ...
 
-@typing.final
 class IWebViewControl2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebViewControl2: ...

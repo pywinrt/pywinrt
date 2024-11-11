@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.foundation as windows_foundation
 import winrt.windows.networking.connectivity as windows_networking_connectivity
 
 from winrt.windows.networking import DomainNameType, HostNameSortOptions, HostNameType
@@ -42,7 +43,7 @@ class HostName_Static(type):
     def compare(cls, value1: str, value2: str, /) -> winrt.system.Int32: ...
 
 @typing.final
-class HostName(winrt.system.Object, metaclass=HostName_Static):
+class HostName(windows_foundation.IStringable, winrt.system.Object, metaclass=HostName_Static):
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HostName: ...

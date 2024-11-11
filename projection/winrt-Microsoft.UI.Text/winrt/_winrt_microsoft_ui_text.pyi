@@ -97,7 +97,7 @@ class RichEditTextDocument(winrt.system.Object):
     def selection(self) -> ITextSelection: ...
 
 @typing.final
-class RichEditTextRange(winrt.system.Object):
+class RichEditTextRange(ITextRange, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditTextRange: ...
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...
@@ -196,7 +196,6 @@ class TextConstants_Static(type):
 class TextConstants(winrt.system.Object, metaclass=TextConstants_Static):
     pass
 
-@typing.final
 class ITextCharacterFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextCharacterFormat: ...
@@ -298,7 +297,6 @@ class ITextCharacterFormat(winrt.system.Object):
     @weight.setter
     def weight(self, value: winrt.system.Int32) -> None: ...
 
-@typing.final
 class ITextParagraphFormat(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextParagraphFormat: ...
@@ -390,7 +388,6 @@ class ITextParagraphFormat(winrt.system.Object):
     @widow_control.setter
     def widow_control(self, value: FormatEffect) -> None: ...
 
-@typing.final
 class ITextRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRange: ...
@@ -467,8 +464,7 @@ class ITextRange(winrt.system.Object):
     @text.setter
     def text(self, value: str) -> None: ...
 
-@typing.final
-class ITextSelection(winrt.system.Object):
+class ITextSelection(ITextRange, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextSelection: ...
     def can_paste(self, format: winrt.system.Int32, /) -> bool: ...

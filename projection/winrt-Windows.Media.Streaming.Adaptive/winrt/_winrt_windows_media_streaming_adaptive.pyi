@@ -11,6 +11,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.foundation.collections as windows_foundation_collections
+import winrt.windows.media.core as windows_media_core
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.web.http as windows_web_http
 
@@ -27,7 +28,7 @@ class AdaptiveMediaSource_Static(type):
     def is_content_type_supported(cls, content_type: str, /) -> bool: ...
 
 @typing.final
-class AdaptiveMediaSource(winrt.system.Object, metaclass=AdaptiveMediaSource_Static):
+class AdaptiveMediaSource(windows_foundation.IClosable, windows_media_core.IMediaSource, winrt.system.Object, metaclass=AdaptiveMediaSource_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

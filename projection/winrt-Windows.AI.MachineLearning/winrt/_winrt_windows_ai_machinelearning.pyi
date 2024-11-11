@@ -23,7 +23,7 @@ from winrt.windows.ai.machinelearning import LearningModelDeviceKind, LearningMo
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ImageFeatureDescriptor(winrt.system.Object):
+class ImageFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageFeatureDescriptor: ...
     @_property
@@ -50,7 +50,7 @@ class ImageFeatureValue_Static(type):
     def create_from_video_frame(cls, image: windows_media.VideoFrame, /) -> ImageFeatureValue: ...
 
 @typing.final
-class ImageFeatureValue(winrt.system.Object, metaclass=ImageFeatureValue_Static):
+class ImageFeatureValue(ILearningModelFeatureValue, winrt.system.Object, metaclass=ImageFeatureValue_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageFeatureValue: ...
     @_property
@@ -70,7 +70,7 @@ class LearningModel_Static(type):
     def load_from_stream_with_operator_provider_async(cls, model_stream: windows_storage_streams.IRandomAccessStreamReference, operator_provider: ILearningModelOperatorProvider, /) -> windows_foundation.IAsyncOperation[LearningModel]: ...
 
 @typing.final
-class LearningModel(winrt.system.Object, metaclass=LearningModel_Static):
+class LearningModel(windows_foundation.IClosable, winrt.system.Object, metaclass=LearningModel_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -140,7 +140,7 @@ class LearningModelEvaluationResult(winrt.system.Object):
     def succeeded(self) -> bool: ...
 
 @typing.final
-class LearningModelSession(winrt.system.Object):
+class LearningModelSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -179,7 +179,7 @@ class LearningModelSessionOptions(winrt.system.Object):
     def close_model_on_session_creation(self, value: bool) -> None: ...
 
 @typing.final
-class MapFeatureDescriptor(winrt.system.Object):
+class MapFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapFeatureDescriptor: ...
     @_property
@@ -196,7 +196,7 @@ class MapFeatureDescriptor(winrt.system.Object):
     def value_descriptor(self) -> ILearningModelFeatureDescriptor: ...
 
 @typing.final
-class SequenceFeatureDescriptor(winrt.system.Object):
+class SequenceFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SequenceFeatureDescriptor: ...
     @_property
@@ -220,7 +220,7 @@ class TensorBoolean_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[bool], winrt.system.ReadableBuffer], /) -> TensorBoolean: ...
 
 @typing.final
-class TensorBoolean(winrt.system.Object, metaclass=TensorBoolean_Static):
+class TensorBoolean(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorBoolean_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -245,7 +245,7 @@ class TensorDouble_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Double], winrt.system.ReadableBuffer], /) -> TensorDouble: ...
 
 @typing.final
-class TensorDouble(winrt.system.Object, metaclass=TensorDouble_Static):
+class TensorDouble(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorDouble_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -261,7 +261,7 @@ class TensorDouble(winrt.system.Object, metaclass=TensorDouble_Static):
     def tensor_kind(self) -> TensorKind: ...
 
 @typing.final
-class TensorFeatureDescriptor(winrt.system.Object):
+class TensorFeatureDescriptor(ILearningModelFeatureDescriptor, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TensorFeatureDescriptor: ...
     @_property
@@ -287,7 +287,7 @@ class TensorFloat_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.ReadableBuffer], /) -> TensorFloat: ...
 
 @typing.final
-class TensorFloat(winrt.system.Object, metaclass=TensorFloat_Static):
+class TensorFloat(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorFloat_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -312,7 +312,7 @@ class TensorFloat16Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.ReadableBuffer], /) -> TensorFloat16Bit: ...
 
 @typing.final
-class TensorFloat16Bit(winrt.system.Object, metaclass=TensorFloat16Bit_Static):
+class TensorFloat16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorFloat16Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -337,7 +337,7 @@ class TensorInt16Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Int16], winrt.system.ReadableBuffer], /) -> TensorInt16Bit: ...
 
 @typing.final
-class TensorInt16Bit(winrt.system.Object, metaclass=TensorInt16Bit_Static):
+class TensorInt16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt16Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -362,7 +362,7 @@ class TensorInt32Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer], /) -> TensorInt32Bit: ...
 
 @typing.final
-class TensorInt32Bit(winrt.system.Object, metaclass=TensorInt32Bit_Static):
+class TensorInt32Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt32Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -387,7 +387,7 @@ class TensorInt64Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], /) -> TensorInt64Bit: ...
 
 @typing.final
-class TensorInt64Bit(winrt.system.Object, metaclass=TensorInt64Bit_Static):
+class TensorInt64Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt64Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -412,7 +412,7 @@ class TensorInt8Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TensorInt8Bit: ...
 
 @typing.final
-class TensorInt8Bit(winrt.system.Object, metaclass=TensorInt8Bit_Static):
+class TensorInt8Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorInt8Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -436,7 +436,7 @@ class TensorString_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[str], winrt.system.ReadableBuffer], /) -> TensorString: ...
 
 @typing.final
-class TensorString(winrt.system.Object, metaclass=TensorString_Static):
+class TensorString(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorString_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -461,7 +461,7 @@ class TensorUInt16Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.UInt16], winrt.system.ReadableBuffer], /) -> TensorUInt16Bit: ...
 
 @typing.final
-class TensorUInt16Bit(winrt.system.Object, metaclass=TensorUInt16Bit_Static):
+class TensorUInt16Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt16Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -486,7 +486,7 @@ class TensorUInt32Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.UInt32], winrt.system.ReadableBuffer], /) -> TensorUInt32Bit: ...
 
 @typing.final
-class TensorUInt32Bit(winrt.system.Object, metaclass=TensorUInt32Bit_Static):
+class TensorUInt32Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt32Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -511,7 +511,7 @@ class TensorUInt64Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.UInt64], winrt.system.ReadableBuffer], /) -> TensorUInt64Bit: ...
 
 @typing.final
-class TensorUInt64Bit(winrt.system.Object, metaclass=TensorUInt64Bit_Static):
+class TensorUInt64Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt64Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -536,7 +536,7 @@ class TensorUInt8Bit_Static(type):
     def create_from_shape_array_and_data_array(cls, shape: typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TensorUInt8Bit: ...
 
 @typing.final
-class TensorUInt8Bit(winrt.system.Object, metaclass=TensorUInt8Bit_Static):
+class TensorUInt8Bit(windows_foundation.IMemoryBuffer, windows_foundation.IClosable, ITensor, ILearningModelFeatureValue, winrt.system.Object, metaclass=TensorUInt8Bit_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -551,7 +551,6 @@ class TensorUInt8Bit(winrt.system.Object, metaclass=TensorUInt8Bit_Static):
     @_property
     def tensor_kind(self) -> TensorKind: ...
 
-@typing.final
 class ILearningModelFeatureDescriptor(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelFeatureDescriptor: ...
@@ -564,20 +563,17 @@ class ILearningModelFeatureDescriptor(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
-@typing.final
 class ILearningModelFeatureValue(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelFeatureValue: ...
     @_property
     def kind(self) -> LearningModelFeatureKind: ...
 
-@typing.final
 class ILearningModelOperatorProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelOperatorProvider: ...
 
-@typing.final
-class ITensor(winrt.system.Object):
+class ITensor(ILearningModelFeatureValue, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITensor: ...
     @_property

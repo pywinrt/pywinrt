@@ -262,13 +262,11 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> WindowTab: ...
 
-@typing.final
 class IAdaptiveCard(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCard: ...
     def to_json(self) -> str: ...
 
-@typing.final
 class IAdaptiveCardBuilderStatics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCardBuilderStatics: ...

@@ -19,7 +19,7 @@ from winrt.windows.applicationmodel.conversationalagent import ActivationSignalD
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ActivationSignalDetectionConfiguration(winrt.system.Object):
+class ActivationSignalDetectionConfiguration(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -130,7 +130,7 @@ class ConversationalAgentSession_Static(type):
     def get_current_session_sync(cls) -> ConversationalAgentSession: ...
 
 @typing.final
-class ConversationalAgentSession(winrt.system.Object, metaclass=ConversationalAgentSession_Static):
+class ConversationalAgentSession(windows_foundation.IClosable, winrt.system.Object, metaclass=ConversationalAgentSession_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

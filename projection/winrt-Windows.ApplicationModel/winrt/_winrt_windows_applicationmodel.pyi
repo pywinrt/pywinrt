@@ -146,7 +146,7 @@ class DesignMode(winrt.system.Object, metaclass=DesignMode_Static):
     pass
 
 @typing.final
-class EnteredBackgroundEventArgs(winrt.system.Object):
+class EnteredBackgroundEventArgs(IEnteredBackgroundEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EnteredBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -200,7 +200,7 @@ class FullTrustProcessLauncher(winrt.system.Object, metaclass=FullTrustProcessLa
     pass
 
 @typing.final
-class LeavingBackgroundEventArgs(winrt.system.Object):
+class LeavingBackgroundEventArgs(ILeavingBackgroundEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LeavingBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
@@ -558,58 +558,52 @@ class StartupTask(winrt.system.Object, metaclass=StartupTask_Static):
     def task_id(self) -> str: ...
 
 @typing.final
-class SuspendingDeferral(winrt.system.Object):
+class SuspendingDeferral(ISuspendingDeferral, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingDeferral: ...
     def complete(self) -> None: ...
 
 @typing.final
-class SuspendingEventArgs(winrt.system.Object):
+class SuspendingEventArgs(ISuspendingEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
 @typing.final
-class SuspendingOperation(winrt.system.Object):
+class SuspendingOperation(ISuspendingOperation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SuspendingOperation: ...
     def get_deferral(self) -> SuspendingDeferral: ...
     @_property
     def deadline(self) -> datetime.datetime: ...
 
-@typing.final
 class IEnteredBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IEnteredBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
-@typing.final
 class ILeavingBackgroundEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILeavingBackgroundEventArgs: ...
     def get_deferral(self) -> windows_foundation.Deferral: ...
 
-@typing.final
 class IPackageCatalogStatics2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPackageCatalogStatics2: ...
     def open_for_package(self, package: Package, /) -> PackageCatalog: ...
 
-@typing.final
 class ISuspendingDeferral(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingDeferral: ...
     def complete(self) -> None: ...
 
-@typing.final
 class ISuspendingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingEventArgs: ...
     @_property
     def suspending_operation(self) -> SuspendingOperation: ...
 
-@typing.final
 class ISuspendingOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISuspendingOperation: ...

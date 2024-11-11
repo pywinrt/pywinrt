@@ -120,7 +120,10 @@ sealed class Members
         }
     }
 
-    public IEnumerable<string> GetReferencedNamespaces(bool includeDelegates = false)
+    public IEnumerable<string> GetReferencedNamespaces(
+        bool includeDelegates = false,
+        bool includeInheritedInterfaces = false
+    )
     {
         var namespaces = new SortedSet<string>(StringComparer.Ordinal);
 
@@ -141,6 +144,14 @@ sealed class Members
 
         foreach (var type in Classes.Concat(Interfaces))
         {
+            if (includeInheritedInterfaces)
+            {
+                foreach (var t in type.Interfaces.Where(t => t.Namespace != type.Namespace))
+                {
+                    namespaces.Add(t.Namespace);
+                }
+            }
+
             foreach (
                 var method in type
                     .Constructors.Select(c => c.Method)

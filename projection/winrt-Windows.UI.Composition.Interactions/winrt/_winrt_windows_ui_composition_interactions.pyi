@@ -535,7 +535,7 @@ class VisualInteractionSource_Static(type):
     def create_from_i_visual_element(cls, source: windows_ui_composition.IVisualElement, /) -> VisualInteractionSource: ...
 
 @typing.final
-class VisualInteractionSource(winrt.system.Object, metaclass=VisualInteractionSource_Static):
+class VisualInteractionSource(ICompositionInteractionSource, winrt.system.Object, metaclass=VisualInteractionSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualInteractionSource: ...
     def close(self) -> None: ...
@@ -621,12 +621,10 @@ class VisualInteractionSource(winrt.system.Object, metaclass=VisualInteractionSo
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class ICompositionInteractionSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICompositionInteractionSource: ...
 
-@typing.final
 class IInteractionTrackerOwner(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInteractionTrackerOwner: ...

@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.globalization.phonenumberformatting import PhoneNumberFormat, PhoneNumberMatchResult, PhoneNumberParseResult, PredictedPhoneNumberKind
 
@@ -38,7 +39,7 @@ class PhoneNumberInfo_Static(type):
     def try_parse_with_region(cls, input: str, region_code: str, /) -> typing.Tuple[PhoneNumberParseResult, PhoneNumberInfo]: ...
 
 @typing.final
-class PhoneNumberInfo(winrt.system.Object, metaclass=PhoneNumberInfo_Static):
+class PhoneNumberInfo(windows_foundation.IStringable, winrt.system.Object, metaclass=PhoneNumberInfo_Static):
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNumberInfo: ...

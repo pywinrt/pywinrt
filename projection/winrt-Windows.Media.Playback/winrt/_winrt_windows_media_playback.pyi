@@ -168,7 +168,7 @@ class MediaItemDisplayProperties(winrt.system.Object):
     def video_properties(self) -> windows_media.VideoDisplayProperties: ...
 
 @typing.final
-class MediaPlaybackAudioTrackList(winrt.system.Object, winrt._winrt.Sequence[windows_media_core.AudioTrack]):
+class MediaPlaybackAudioTrackList(windows_media_core.ISingleSelectMediaTrackList, winrt.system.Object, winrt._winrt.Sequence[windows_media_core.AudioTrack]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[windows_media_core.AudioTrack]: ...
     @typing.overload
@@ -369,7 +369,7 @@ class MediaPlaybackItem_Static(type):
     def find_from_media_source(cls, source: windows_media_core.MediaSource, /) -> MediaPlaybackItem: ...
 
 @typing.final
-class MediaPlaybackItem(winrt.system.Object, metaclass=MediaPlaybackItem_Static):
+class MediaPlaybackItem(IMediaPlaybackSource, winrt.system.Object, metaclass=MediaPlaybackItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackItem: ...
     @typing.overload
@@ -441,7 +441,7 @@ class MediaPlaybackItemOpenedEventArgs(winrt.system.Object):
     def item(self) -> MediaPlaybackItem: ...
 
 @typing.final
-class MediaPlaybackList(winrt.system.Object):
+class MediaPlaybackList(IMediaPlaybackSource, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlaybackList: ...
     def __new__(cls: typing.Type[MediaPlaybackList]) -> MediaPlaybackList: ...
@@ -629,7 +629,7 @@ class MediaPlaybackTimedMetadataTrackList(winrt.system.Object, winrt._winrt.Sequ
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class MediaPlaybackVideoTrackList(winrt.system.Object, winrt._winrt.Sequence[windows_media_core.VideoTrack]):
+class MediaPlaybackVideoTrackList(windows_media_core.ISingleSelectMediaTrackList, winrt.system.Object, winrt._winrt.Sequence[windows_media_core.VideoTrack]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[windows_media_core.VideoTrack]: ...
     @typing.overload
@@ -652,7 +652,7 @@ class MediaPlaybackVideoTrackList(winrt.system.Object, winrt._winrt.Sequence[win
     def selected_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class MediaPlayer(winrt.system.Object):
+class MediaPlayer(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -825,7 +825,7 @@ class MediaPlayerRateChangedEventArgs(winrt.system.Object):
     def new_rate(self) -> winrt.system.Double: ...
 
 @typing.final
-class MediaPlayerSurface(winrt.system.Object):
+class MediaPlayerSurface(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -882,7 +882,6 @@ class TimedMetadataPresentationModeChangedEventArgs(winrt.system.Object):
     @_property
     def track(self) -> windows_media_core.TimedMetadataTrack: ...
 
-@typing.final
 class IMediaEnginePlaybackSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaEnginePlaybackSource: ...
@@ -890,7 +889,6 @@ class IMediaEnginePlaybackSource(winrt.system.Object):
     @_property
     def current_item(self) -> MediaPlaybackItem: ...
 
-@typing.final
 class IMediaPlaybackSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaPlaybackSource: ...

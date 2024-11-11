@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.foundation as windows_foundation
 
 from winrt.windows.system.remotedesktop.input import RemoteKeyEventAttributes, RemoteTextConnectionOptions
 from winrt.windows.system.remotedesktop.input import RemoteTextConnectionDataHandler
@@ -16,7 +17,7 @@ from winrt.windows.system.remotedesktop.input import RemoteTextConnectionDataHan
 Self = typing.TypeVar('Self')
 
 @typing.final
-class RemoteTextConnection(winrt.system.Object):
+class RemoteTextConnection(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

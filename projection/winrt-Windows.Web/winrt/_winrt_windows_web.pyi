@@ -24,7 +24,6 @@ class WebError_Static(type):
 class WebError(winrt.system.Object, metaclass=WebError_Static):
     pass
 
-@typing.final
 class IUriToStreamResolver(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUriToStreamResolver: ...

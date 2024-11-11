@@ -56,7 +56,7 @@ class BackgroundDownloader_Static(type):
     def request_unconstrained_downloads_async(cls, operations: typing.Iterable[DownloadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
-class BackgroundDownloader(winrt.system.Object, metaclass=BackgroundDownloader_Static):
+class BackgroundDownloader(IBackgroundTransferBase, winrt.system.Object, metaclass=BackgroundDownloader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundDownloader: ...
     @typing.overload
@@ -185,7 +185,7 @@ class BackgroundUploader_Static(type):
     def request_unconstrained_uploads_async(cls, operations: typing.Iterable[UploadOperation], /) -> windows_foundation.IAsyncOperation[UnconstrainedTransferRequestResult]: ...
 
 @typing.final
-class BackgroundUploader(winrt.system.Object, metaclass=BackgroundUploader_Static):
+class BackgroundUploader(IBackgroundTransferBase, winrt.system.Object, metaclass=BackgroundUploader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BackgroundUploader: ...
     @typing.overload
@@ -257,7 +257,7 @@ class ContentPrefetcher(winrt.system.Object, metaclass=ContentPrefetcher_Static)
     pass
 
 @typing.final
-class DownloadOperation(winrt.system.Object):
+class DownloadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DownloadOperation: ...
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[DownloadOperation, DownloadOperation]: ...
@@ -327,7 +327,7 @@ class UnconstrainedTransferRequestResult(winrt.system.Object):
     def is_unconstrained(self) -> bool: ...
 
 @typing.final
-class UploadOperation(winrt.system.Object):
+class UploadOperation(IBackgroundTransferOperationPriority, IBackgroundTransferOperation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UploadOperation: ...
     def attach_async(self) -> windows_foundation.IAsyncOperationWithProgress[UploadOperation, UploadOperation]: ...
@@ -360,7 +360,6 @@ class UploadOperation(winrt.system.Object):
     @_property
     def transfer_group(self) -> BackgroundTransferGroup: ...
 
-@typing.final
 class IBackgroundTransferBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferBase: ...
@@ -386,14 +385,12 @@ class IBackgroundTransferBase(winrt.system.Object):
     @server_credential.setter
     def server_credential(self, value: windows_security_credentials.PasswordCredential) -> None: ...
 
-@typing.final
 class IBackgroundTransferContentPartFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferContentPartFactory: ...
     def create_with_name(self, name: str, /) -> BackgroundTransferContentPart: ...
     def create_with_name_and_file_name(self, name: str, file_name: str, /) -> BackgroundTransferContentPart: ...
 
-@typing.final
 class IBackgroundTransferOperation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperation: ...
@@ -412,7 +409,6 @@ class IBackgroundTransferOperation(winrt.system.Object):
     @_property
     def requested_uri(self) -> windows_foundation.Uri: ...
 
-@typing.final
 class IBackgroundTransferOperationPriority(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBackgroundTransferOperationPriority: ...

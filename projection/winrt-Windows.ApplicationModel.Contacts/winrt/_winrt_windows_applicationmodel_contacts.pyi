@@ -259,7 +259,7 @@ class ContactBatch(winrt.system.Object):
     def status(self) -> ContactBatchStatus: ...
 
 @typing.final
-class ContactCardDelayedDataLoader(winrt.system.Object):
+class ContactCardDelayedDataLoader(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -381,7 +381,7 @@ class ContactEmail(winrt.system.Object):
     def address(self, value: str) -> None: ...
 
 @typing.final
-class ContactField(winrt.system.Object):
+class ContactField(IContactField, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactField: ...
     @typing.overload
@@ -400,7 +400,7 @@ class ContactField(winrt.system.Object):
     def value(self) -> str: ...
 
 @typing.final
-class ContactFieldFactory(winrt.system.Object):
+class ContactFieldFactory(IContactInstantMessageFieldFactory, IContactLocationFieldFactory, IContactFieldFactory, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactFieldFactory: ...
     def __new__(cls: typing.Type[ContactFieldFactory]) -> ContactFieldFactory: ...
@@ -439,7 +439,7 @@ class ContactInformation(winrt.system.Object):
     def phone_numbers(self) -> typing.Sequence[ContactField]: ...
 
 @typing.final
-class ContactInstantMessageField(winrt.system.Object):
+class ContactInstantMessageField(IContactField, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactInstantMessageField: ...
     @typing.overload
@@ -717,7 +717,7 @@ class ContactListSyncManager(winrt.system.Object):
     def last_attempted_sync_time(self, value: datetime.datetime) -> None: ...
 
 @typing.final
-class ContactLocationField(winrt.system.Object):
+class ContactLocationField(IContactField, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactLocationField: ...
     @typing.overload
@@ -1060,7 +1060,6 @@ class PinnedContactManager(winrt.system.Object, metaclass=PinnedContactManager_S
     @_property
     def user(self) -> windows_system.User: ...
 
-@typing.final
 class IContactField(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactField: ...
@@ -1073,7 +1072,6 @@ class IContactField(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
-@typing.final
 class IContactFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactFieldFactory: ...
@@ -1081,7 +1079,6 @@ class IContactFieldFactory(winrt.system.Object):
     def create_field_custom(self, name: str, value: str, type: ContactFieldType, category: ContactFieldCategory, /) -> ContactField: ...
     def create_field_default(self, value: str, type: ContactFieldType, /) -> ContactField: ...
 
-@typing.final
 class IContactInstantMessageFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInstantMessageFieldFactory: ...
@@ -1089,7 +1086,6 @@ class IContactInstantMessageFieldFactory(winrt.system.Object):
     def create_instant_message_category(self, user_name: str, category: ContactFieldCategory, /) -> ContactInstantMessageField: ...
     def create_instant_message_default(self, user_name: str, /) -> ContactInstantMessageField: ...
 
-@typing.final
 class IContactLocationFieldFactory(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactLocationFieldFactory: ...

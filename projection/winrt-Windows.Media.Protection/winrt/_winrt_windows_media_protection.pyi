@@ -36,7 +36,7 @@ class ComponentRenewal(winrt.system.Object, metaclass=ComponentRenewal_Static):
     pass
 
 @typing.final
-class HdcpSession(winrt.system.Object):
+class HdcpSession(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -117,7 +117,6 @@ class ServiceRequestedEventArgs(winrt.system.Object):
     @_property
     def media_playback_item(self) -> windows_media_playback.MediaPlaybackItem: ...
 
-@typing.final
 class IMediaProtectionServiceRequest(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaProtectionServiceRequest: ...
