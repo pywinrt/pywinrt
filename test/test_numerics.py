@@ -614,43 +614,43 @@ class TestNumerics(unittest.TestCase):
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Plane' and 'int'",
         ):
-            wfn.Plane(wfn.Vector3(), 0) + 1
+            wfn.Plane(wfn.Vector3(), 0) + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector2' and 'int'",
         ):
-            wfn.Vector2() + 1
+            wfn.Vector2() + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector3' and 'int'",
         ):
-            wfn.Vector3() + 1
+            wfn.Vector3() + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Vector4' and 'int'",
         ):
-            wfn.Vector4() + 1
+            wfn.Vector4() + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix3x2' and 'int'",
         ):
-            wfn.Matrix3x2() + 1
+            wfn.Matrix3x2() + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Matrix4x4' and 'int'",
         ):
-            wfn.Matrix4x4() + 1
+            wfn.Matrix4x4() + 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \+: '[\w+\.]*Quaternion' and 'int'",
         ):
-            wfn.Quaternion() + 1
+            wfn.Quaternion() + 1  # type: ignore
 
     def test_sub(self):
         self.assertEqual(wfn.Vector2(1, 2) - wfn.Vector2(3, 4), wfn.Vector2(-2, -2))
@@ -682,43 +682,43 @@ class TestNumerics(unittest.TestCase):
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Plane' and 'int'",
         ):
-            wfn.Plane(wfn.Vector3(), 0) - 1
+            wfn.Plane(wfn.Vector3(), 0) - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Vector2' and 'int'",
         ):
-            wfn.Vector2() - 1
+            wfn.Vector2() - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Vector3' and 'int'",
         ):
-            wfn.Vector3() - 1
+            wfn.Vector3() - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Vector4' and 'int'",
         ):
-            wfn.Vector4() - 1
+            wfn.Vector4() - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Matrix3x2' and 'int'",
         ):
-            wfn.Matrix3x2() - 1
+            wfn.Matrix3x2() - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Matrix4x4' and 'int'",
         ):
-            wfn.Matrix4x4() - 1
+            wfn.Matrix4x4() - 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for -: '[\w+\.]*Quaternion' and 'int'",
         ):
-            wfn.Quaternion() - 1
+            wfn.Quaternion() - 1  # type: ignore
 
     def test_mul(self):
         self.assertEqual(wfn.Vector2(1, 2) * wfn.Vector2(3, 4), wfn.Vector2(3, 8))
@@ -788,61 +788,61 @@ class TestNumerics(unittest.TestCase):
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Plane' and 'object'",
         ):
-            wfn.Plane(wfn.Vector3(), 0) * o
+            wfn.Plane(wfn.Vector3(), 0) * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Vector2' and 'object'",
         ):
-            wfn.Vector2() * o
+            wfn.Vector2() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Vector3' and 'object'",
         ):
-            wfn.Vector3() * o
+            wfn.Vector3() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Vector4' and 'object'",
         ):
-            wfn.Vector4() * o
+            wfn.Vector4() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Matrix3x2' and 'object'",
         ):
-            wfn.Matrix3x2() * o
+            wfn.Matrix3x2() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: 'int' and '[\w+\.]*Matrix3x2'",
         ):
-            1 * wfn.Matrix3x2()
+            1 * wfn.Matrix3x2()  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Matrix4x4' and 'object'",
         ):
-            wfn.Matrix4x4() * o
+            wfn.Matrix4x4() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: 'int' and '[\w+\.]*Matrix4x4'",
         ):
-            1 * wfn.Matrix4x4()
+            1 * wfn.Matrix4x4()  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: '[\w+\.]*Quaternion' and 'object'",
         ):
-            wfn.Quaternion() * o
+            wfn.Quaternion() * o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for \*: 'int' and '[\w+\.]*Quaternion'",
         ):
-            1 * wfn.Quaternion()
+            1 * wfn.Quaternion()  # type: ignore
 
     def test_truediv(self):
         self.assertEqual(
@@ -875,43 +875,43 @@ class TestNumerics(unittest.TestCase):
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Plane' and 'object'",
         ):
-            wfn.Plane(wfn.Vector3(), 0) / o
+            wfn.Plane(wfn.Vector3(), 0) / o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Vector2' and 'object'",
         ):
-            wfn.Vector2() / o
+            wfn.Vector2() / o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Vector3' and 'object'",
         ):
-            wfn.Vector3() / o
+            wfn.Vector3() / o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Vector4' and 'object'",
         ):
-            wfn.Vector4() / o
+            wfn.Vector4() / o  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Matrix3x2' and 'int'",
         ):
-            wfn.Matrix3x2() / 1
+            wfn.Matrix3x2() / 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Matrix4x4' and 'int'",
         ):
-            wfn.Matrix4x4() / 1
+            wfn.Matrix4x4() / 1  # type: ignore
 
         with self.assertRaisesRegex(
             TypeError,
             r"unsupported operand type\(s\) for /: '[\w+\.]*Quaternion' and 'int'",
         ):
-            wfn.Quaternion() / 1
+            wfn.Quaternion() / 1  # type: ignore
 
     def test_neg(self):
         self.assertEqual(-wfn.Vector2(1, 2), wfn.Vector2(-1, -2))
