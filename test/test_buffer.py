@@ -36,5 +36,5 @@ class TestBuffer(unittest.TestCase):
     def test_is_collections_abc_buffer_subclass(self):
         from collections.abc import Buffer
 
-        self.assertTrue(issubclass(wss.Buffer, Buffer))
-        self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))
+        self.assertTrue(issubclass(wss.Buffer, Buffer))  # type: ignore
+        self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))  # type: ignore
