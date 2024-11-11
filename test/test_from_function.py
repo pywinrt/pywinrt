@@ -1,7 +1,7 @@
-
 import unittest
 
 import winrt.windows.foundation.collections as wfc
+
 
 class TestQueryInterface(unittest.TestCase):
     def test_as_function(self):

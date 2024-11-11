@@ -1,7 +1,7 @@
-from datetime import datetime
-from concurrent.futures import Future, wait
 import os
 import unittest
+from concurrent.futures import Future, wait
+from datetime import datetime
 
 import winrt.windows.devices.geolocation as wdg
 import winrt.windows.foundation as wf
@@ -49,7 +49,9 @@ class TestGeolocation(unittest.TestCase):
         """test async method using IAsyncOperation Completed callback"""
         op_future = Future[wdg.Geoposition]()
 
-        def callback(operation: wf.IAsyncOperation[wdg.Geoposition], status: wf.AsyncStatus):
+        def callback(
+            operation: wf.IAsyncOperation[wdg.Geoposition], status: wf.AsyncStatus
+        ):
             if status == wf.AsyncStatus.COMPLETED:
                 op_future.set_result(operation.get_results())
             elif status == wf.AsyncStatus.CANCELED:

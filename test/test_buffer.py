@@ -15,14 +15,14 @@ class TestBuffer(unittest.TestCase):
         buf = wss.Buffer(5)
         with memoryview(buf) as mv:
             self.assertEqual(len(mv), 0)
-        
+
         buf.length = 5
         with memoryview(buf) as mv:
             self.assertEqual(len(mv), 5)
 
     def test_memory_buffer(self):
         buf = wss.Buffer(5)
-        buf.length =  5
+        buf.length = 5
         data = b"ABCDE"
 
         with memoryview(buf) as mv:
@@ -35,5 +35,6 @@ class TestBuffer(unittest.TestCase):
     @unittest.skipIf(sys.version_info < (3, 12), "requires Python 3.12 or greater")
     def test_is_collections_abc_buffer_subclass(self):
         from collections.abc import Buffer
+
         self.assertTrue(issubclass(wss.Buffer, Buffer))
         self.assertTrue(issubclass(wf.IMemoryBufferReference, Buffer))

@@ -1,8 +1,9 @@
-from uuid import UUID
 import unittest
+from uuid import UUID
+
+import winrt.testcomponent as tc
 
 from test._util import catch_unraisable
-import winrt.testcomponent as tc
 
 
 class TestTestComponent(unittest.TestCase):

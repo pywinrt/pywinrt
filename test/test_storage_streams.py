@@ -1,7 +1,7 @@
-from datetime import datetime, timedelta, timezone
 import struct
 import unittest
 import uuid
+from datetime import datetime, timedelta, timezone
 
 import winrt.windows.storage.streams as wss
 
