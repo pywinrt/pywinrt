@@ -37,7 +37,7 @@ class GameList(winrt.system.Object, metaclass=GameList_Static):
     pass
 
 @typing.final
-class GameListEntry(winrt.system.Object):
+class GameListEntry(IGameListEntry, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GameListEntry: ...
     def launch_async(self) -> windows_foundation.IAsyncOperation[bool]: ...
@@ -114,7 +114,6 @@ class GameModeUserConfiguration(winrt.system.Object, metaclass=GameModeUserConfi
     @_property
     def gaming_related_process_names(self) -> typing.MutableSequence[str]: ...
 
-@typing.final
 class IGameListEntry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGameListEntry: ...

@@ -135,7 +135,7 @@ class PrintTaskCompletedEventArgs(winrt.system.Object):
     def completion(self) -> PrintTaskCompletion: ...
 
 @typing.final
-class PrintTaskOptions(winrt.system.Object):
+class PrintTaskOptions(IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCoreProperties, IPrintTaskOptionsCore, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskOptions: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
@@ -280,18 +280,15 @@ class StandardPrintTaskOptions_Static(type):
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
     pass
 
-@typing.final
 class IPrintDocumentSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintDocumentSource: ...
 
-@typing.final
 class IPrintTaskOptionsCore(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCore: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
-@typing.final
 class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreProperties: ...
@@ -344,7 +341,6 @@ class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     @staple.setter
     def staple(self, value: PrintStaple) -> None: ...
 
-@typing.final
 class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...

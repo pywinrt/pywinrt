@@ -124,7 +124,9 @@ static class FileWriters
         w.WriteLine("import winrt._winrt");
         w.WriteLine("import winrt.system");
 
-        var referencedNamespaces = members.GetReferencedNamespaces();
+        var referencedNamespaces = members.GetReferencedNamespaces(
+            includeInheritedInterfaces: true
+        );
 
         foreach (var rns in referencedNamespaces)
         {
@@ -307,6 +309,11 @@ static class FileWriters
                 }
             }
 
+            var interfaces = string.Join(
+                "",
+                type.Interfaces.Select(i => $"{i.ToPyTypeName(ns)}, ")
+            );
+
             var generic = "";
 
             if (type.IsGeneric)
@@ -315,8 +322,14 @@ static class FileWriters
                     $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
             }
 
-            w.WriteLine("@typing.final");
-            w.WriteLine($"class {type.Name}(winrt.system.Object{collection}{generic}{metaclass}):");
+            if (type.Category != Category.Interface)
+            {
+                w.WriteLine("@typing.final");
+            }
+
+            w.WriteLine(
+                $"class {type.Name}({interfaces}winrt.system.Object{collection}{generic}{metaclass}):"
+            );
             w.Indent++;
 
             if (type.IsStatic)

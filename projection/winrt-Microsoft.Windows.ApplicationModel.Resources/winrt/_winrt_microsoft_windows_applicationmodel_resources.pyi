@@ -59,7 +59,7 @@ class ResourceCandidate(winrt.system.Object):
     def value_as_string(self) -> str: ...
 
 @typing.final
-class ResourceContext(winrt.system.Object):
+class ResourceContext(IResourceContext, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceContext: ...
     @_property
@@ -83,7 +83,7 @@ class ResourceLoader(winrt.system.Object, metaclass=ResourceLoader_Static):
     def get_string_for_uri(self, resource_uri: windows_foundation.Uri, /) -> str: ...
 
 @typing.final
-class ResourceManager(winrt.system.Object):
+class ResourceManager(IResourceManager, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceManager: ...
     @typing.overload
@@ -121,14 +121,12 @@ class ResourceNotFoundEventArgs(winrt.system.Object):
     @_property
     def name(self) -> str: ...
 
-@typing.final
 class IResourceContext(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IResourceContext: ...
     @_property
     def qualifier_values(self) -> typing.MutableMapping[str, str]: ...
 
-@typing.final
 class IResourceManager(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IResourceManager: ...

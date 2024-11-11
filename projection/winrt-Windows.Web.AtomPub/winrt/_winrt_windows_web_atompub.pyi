@@ -19,7 +19,7 @@ import winrt.windows.web.syndication as windows_web_syndication
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AtomPubClient(winrt.system.Object):
+class AtomPubClient(windows_web_syndication.ISyndicationClient, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AtomPubClient: ...
     @typing.overload
@@ -61,7 +61,7 @@ class AtomPubClient(winrt.system.Object):
     def bypass_cache_on_retrieve(self, value: bool) -> None: ...
 
 @typing.final
-class ResourceCollection(winrt.system.Object):
+class ResourceCollection(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ResourceCollection: ...
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
@@ -99,7 +99,7 @@ class ResourceCollection(winrt.system.Object):
     def element_extensions(self) -> typing.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class ServiceDocument(winrt.system.Object):
+class ServiceDocument(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ServiceDocument: ...
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...
@@ -131,7 +131,7 @@ class ServiceDocument(winrt.system.Object):
     def element_extensions(self) -> typing.MutableSequence[windows_web_syndication.ISyndicationNode]: ...
 
 @typing.final
-class Workspace(winrt.system.Object):
+class Workspace(windows_web_syndication.ISyndicationNode, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Workspace: ...
     def get_xml_document(self, format: windows_web_syndication.SyndicationFormat, /) -> windows_data_xml_dom.XmlDocument: ...

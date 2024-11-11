@@ -309,7 +309,7 @@ class DispatcherQueueTimer(winrt.system.Object):
     def is_running(self) -> bool: ...
 
 @typing.final
-class FolderLauncherOptions(winrt.system.Object):
+class FolderLauncherOptions(ILauncherViewOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FolderLauncherOptions: ...
     def __new__(cls: typing.Type[FolderLauncherOptions]) -> FolderLauncherOptions: ...
@@ -392,7 +392,7 @@ class Launcher(winrt.system.Object, metaclass=Launcher_Static):
     pass
 
 @typing.final
-class LauncherOptions(winrt.system.Object):
+class LauncherOptions(ILauncherViewOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LauncherOptions: ...
     def __new__(cls: typing.Type[LauncherOptions]) -> LauncherOptions: ...
@@ -700,7 +700,6 @@ class UserWatcher(winrt.system.Object):
     @_property
     def status(self) -> UserWatcherStatus: ...
 
-@typing.final
 class ILauncherViewOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILauncherViewOptions: ...

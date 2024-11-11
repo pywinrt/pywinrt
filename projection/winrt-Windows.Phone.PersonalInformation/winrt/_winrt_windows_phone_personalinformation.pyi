@@ -61,7 +61,7 @@ class ContactInformation_Static(type):
     def parse_vcard_async(cls, vcard: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[ContactInformation]: ...
 
 @typing.final
-class ContactInformation(winrt.system.Object, metaclass=ContactInformation_Static):
+class ContactInformation(IContactInformation, winrt.system.Object, metaclass=ContactInformation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContactInformation: ...
     def __new__(cls: typing.Type[ContactInformation]) -> ContactInformation: ...
@@ -214,7 +214,7 @@ class KnownContactProperties(winrt.system.Object, metaclass=KnownContactProperti
     pass
 
 @typing.final
-class StoredContact(winrt.system.Object):
+class StoredContact(IContactInformation2, IContactInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StoredContact: ...
     @typing.overload
@@ -264,7 +264,6 @@ class StoredContact(winrt.system.Object):
     @_property
     def store(self) -> ContactStore: ...
 
-@typing.final
 class IContactInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation: ...
@@ -296,7 +295,6 @@ class IContactInformation(winrt.system.Object):
     @honorific_suffix.setter
     def honorific_suffix(self, value: str) -> None: ...
 
-@typing.final
 class IContactInformation2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IContactInformation2: ...

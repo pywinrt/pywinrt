@@ -42,7 +42,7 @@ class RoundTripTimeStatistics:
     def __init__(self, variance: winrt.system.UInt32 = 0, max: winrt.system.UInt32 = 0, min: winrt.system.UInt32 = 0, sum: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
-class ControlChannelTrigger(winrt.system.Object):
+class ControlChannelTrigger(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -79,7 +79,7 @@ class DatagramSocket_Static(type):
     def get_endpoint_pairs_with_sort_options_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, sort_options: windows_networking.HostNameSortOptions, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_networking.EndpointPair]]: ...
 
 @typing.final
-class DatagramSocket(winrt.system.Object, metaclass=DatagramSocket_Static):
+class DatagramSocket(windows_foundation.IClosable, winrt.system.Object, metaclass=DatagramSocket_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -161,7 +161,7 @@ class DatagramSocketMessageReceivedEventArgs(winrt.system.Object):
     def remote_port(self) -> str: ...
 
 @typing.final
-class MessageWebSocket(winrt.system.Object):
+class MessageWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -187,7 +187,7 @@ class MessageWebSocket(winrt.system.Object):
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
-class MessageWebSocketControl(winrt.system.Object):
+class MessageWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MessageWebSocketControl: ...
     @_property
@@ -230,7 +230,7 @@ class MessageWebSocketControl(winrt.system.Object):
     def ignorable_server_certificate_errors(self) -> typing.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
 
 @typing.final
-class MessageWebSocketInformation(winrt.system.Object):
+class MessageWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MessageWebSocketInformation: ...
     @_property
@@ -260,7 +260,7 @@ class MessageWebSocketMessageReceivedEventArgs(winrt.system.Object):
     def is_message_complete(self) -> bool: ...
 
 @typing.final
-class ServerMessageWebSocket(winrt.system.Object):
+class ServerMessageWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -299,7 +299,7 @@ class ServerMessageWebSocketInformation(winrt.system.Object):
     def protocol(self) -> str: ...
 
 @typing.final
-class ServerStreamWebSocket(winrt.system.Object):
+class ServerStreamWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -381,7 +381,7 @@ class StreamSocket_Static(type):
     def get_endpoint_pairs_with_sort_options_async(cls, remote_host_name: windows_networking.HostName, remote_service_name: str, sort_options: windows_networking.HostNameSortOptions, /) -> windows_foundation.IAsyncOperation[typing.Sequence[windows_networking.EndpointPair]]: ...
 
 @typing.final
-class StreamSocket(winrt.system.Object, metaclass=StreamSocket_Static):
+class StreamSocket(windows_foundation.IClosable, winrt.system.Object, metaclass=StreamSocket_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -482,7 +482,7 @@ class StreamSocketInformation(winrt.system.Object):
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
 @typing.final
-class StreamSocketListener(winrt.system.Object):
+class StreamSocketListener(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -545,7 +545,7 @@ class StreamSocketListenerInformation(winrt.system.Object):
     def local_port(self) -> str: ...
 
 @typing.final
-class StreamWebSocket(winrt.system.Object):
+class StreamWebSocket(IWebSocket, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -569,7 +569,7 @@ class StreamWebSocket(winrt.system.Object):
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
 @typing.final
-class StreamWebSocketControl(winrt.system.Object):
+class StreamWebSocketControl(IWebSocketControl2, IWebSocketControl, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreamWebSocketControl: ...
     @_property
@@ -604,7 +604,7 @@ class StreamWebSocketControl(winrt.system.Object):
     def ignorable_server_certificate_errors(self) -> typing.MutableSequence[windows_security_cryptography_certificates.ChainValidationResult]: ...
 
 @typing.final
-class StreamWebSocketInformation(winrt.system.Object):
+class StreamWebSocketInformation(IWebSocketInformation2, IWebSocketInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StreamWebSocketInformation: ...
     @_property
@@ -640,7 +640,7 @@ class WebSocketError(winrt.system.Object, metaclass=WebSocketError_Static):
     pass
 
 @typing.final
-class WebSocketKeepAlive(winrt.system.Object):
+class WebSocketKeepAlive(windows_applicationmodel_background.IBackgroundTask, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebSocketKeepAlive: ...
     def __new__(cls: typing.Type[WebSocketKeepAlive]) -> WebSocketKeepAlive: ...
@@ -661,14 +661,12 @@ class WebSocketServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
-@typing.final
 class IControlChannelTriggerEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerEventDetails: ...
     @_property
     def control_channel_trigger(self) -> ControlChannelTrigger: ...
 
-@typing.final
 class IControlChannelTriggerResetEventDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IControlChannelTriggerResetEventDetails: ...
@@ -679,8 +677,7 @@ class IControlChannelTriggerResetEventDetails(winrt.system.Object):
     @_property
     def software_slot_reset(self) -> bool: ...
 
-@typing.final
-class IWebSocket(winrt.system.Object):
+class IWebSocket(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -694,7 +691,6 @@ class IWebSocket(winrt.system.Object):
     @_property
     def output_stream(self) -> windows_storage_streams.IOutputStream: ...
 
-@typing.final
 class IWebSocketControl(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketControl: ...
@@ -713,8 +709,7 @@ class IWebSocketControl(winrt.system.Object):
     @_property
     def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
-@typing.final
-class IWebSocketControl2(winrt.system.Object):
+class IWebSocketControl2(IWebSocketControl, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketControl2: ...
     @_property
@@ -734,7 +729,6 @@ class IWebSocketControl2(winrt.system.Object):
     @_property
     def supported_protocols(self) -> typing.MutableSequence[str]: ...
 
-@typing.final
 class IWebSocketInformation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketInformation: ...
@@ -745,8 +739,7 @@ class IWebSocketInformation(winrt.system.Object):
     @_property
     def protocol(self) -> str: ...
 
-@typing.final
-class IWebSocketInformation2(winrt.system.Object):
+class IWebSocketInformation2(IWebSocketInformation, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebSocketInformation2: ...
     @_property

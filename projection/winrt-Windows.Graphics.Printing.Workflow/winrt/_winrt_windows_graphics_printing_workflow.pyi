@@ -78,7 +78,7 @@ class PrintWorkflowForegroundSetupRequestedEventArgs(winrt.system.Object):
     def configuration(self) -> PrintWorkflowConfiguration: ...
 
 @typing.final
-class PrintWorkflowJobActivatedEventArgs(winrt.system.Object):
+class PrintWorkflowJobActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowJobActivatedEventArgs: ...
     @_property
@@ -319,7 +319,7 @@ class PrintWorkflowTriggerDetails(winrt.system.Object):
     def print_workflow_session(self) -> PrintWorkflowBackgroundSession: ...
 
 @typing.final
-class PrintWorkflowUIActivatedEventArgs(winrt.system.Object):
+class PrintWorkflowUIActivatedEventArgs(windows_applicationmodel_activation.IActivatedEventArgsWithUser, windows_applicationmodel_activation.IActivatedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintWorkflowUIActivatedEventArgs: ...
     @_property

@@ -18,7 +18,7 @@ from winrt.windows.devices.adc import AdcChannelMode
 Self = typing.TypeVar('Self')
 
 @typing.final
-class AdcChannel(winrt.system.Object):
+class AdcChannel(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

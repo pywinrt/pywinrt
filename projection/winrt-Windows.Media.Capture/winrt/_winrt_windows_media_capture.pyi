@@ -693,7 +693,7 @@ class AppCaptureManager(winrt.system.Object, metaclass=AppCaptureManager_Static)
     pass
 
 @typing.final
-class AppCaptureMetadataWriter(winrt.system.Object):
+class AppCaptureMetadataWriter(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -961,7 +961,7 @@ class CameraOptionsUI(winrt.system.Object, metaclass=CameraOptionsUI_Static):
     pass
 
 @typing.final
-class CapturedFrame(winrt.system.Object):
+class CapturedFrame(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1135,7 +1135,7 @@ class MediaCapture_Static(type):
     def is_video_profile_supported(cls, video_device_id: str, /) -> bool: ...
 
 @typing.final
-class MediaCapture(winrt.system.Object, metaclass=MediaCapture_Static):
+class MediaCapture(windows_foundation.IClosable, winrt.system.Object, metaclass=MediaCapture_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1319,7 +1319,7 @@ class MediaCaptureInitializationSettings(winrt.system.Object):
     def device_uri(self, value: windows_foundation.Uri) -> None: ...
 
 @typing.final
-class MediaCapturePauseResult(winrt.system.Object):
+class MediaCapturePauseResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1331,7 +1331,7 @@ class MediaCapturePauseResult(winrt.system.Object):
     def record_duration(self) -> datetime.timedelta: ...
 
 @typing.final
-class MediaCaptureRelativePanelWatcher(winrt.system.Object):
+class MediaCaptureRelativePanelWatcher(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -1378,7 +1378,7 @@ class MediaCaptureSettings(winrt.system.Object):
     def direct3_d11_device(self) -> windows_graphics_directx_direct3d11.IDirect3DDevice: ...
 
 @typing.final
-class MediaCaptureStopResult(winrt.system.Object):
+class MediaCaptureStopResult(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

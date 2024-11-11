@@ -17,7 +17,7 @@ from winrt.windows.globalization.numberformatting import CurrencyFormatterMode, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CurrencyFormatter(winrt.system.Object):
+class CurrencyFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyFormatter: ...
     @typing.overload
@@ -81,7 +81,7 @@ class CurrencyFormatter(winrt.system.Object):
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class DecimalFormatter(winrt.system.Object):
+class DecimalFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DecimalFormatter: ...
     @typing.overload
@@ -136,7 +136,7 @@ class DecimalFormatter(winrt.system.Object):
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class IncrementNumberRounder(winrt.system.Object):
+class IncrementNumberRounder(INumberRounder, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IncrementNumberRounder: ...
     def __new__(cls: typing.Type[IncrementNumberRounder]) -> IncrementNumberRounder: ...
@@ -174,7 +174,7 @@ class NumeralSystemTranslator(winrt.system.Object):
     def resolved_language(self) -> str: ...
 
 @typing.final
-class PercentFormatter(winrt.system.Object):
+class PercentFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PercentFormatter: ...
     @typing.overload
@@ -229,7 +229,7 @@ class PercentFormatter(winrt.system.Object):
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class PermilleFormatter(winrt.system.Object):
+class PermilleFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PermilleFormatter: ...
     @typing.overload
@@ -284,7 +284,7 @@ class PermilleFormatter(winrt.system.Object):
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class SignificantDigitsNumberRounder(winrt.system.Object):
+class SignificantDigitsNumberRounder(INumberRounder, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SignificantDigitsNumberRounder: ...
     def __new__(cls: typing.Type[SignificantDigitsNumberRounder]) -> SignificantDigitsNumberRounder: ...
@@ -303,7 +303,6 @@ class SignificantDigitsNumberRounder(winrt.system.Object):
     @rounding_algorithm.setter
     def rounding_algorithm(self, value: RoundingAlgorithm) -> None: ...
 
-@typing.final
 class INumberFormatter(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter: ...
@@ -311,7 +310,6 @@ class INumberFormatter(winrt.system.Object):
     def format_int(self, value: winrt.system.Int64, /) -> str: ...
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
-@typing.final
 class INumberFormatter2(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter2: ...
@@ -319,7 +317,6 @@ class INumberFormatter2(winrt.system.Object):
     def format_int(self, value: winrt.system.Int64, /) -> str: ...
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
-@typing.final
 class INumberFormatterOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatterOptions: ...
@@ -352,7 +349,6 @@ class INumberFormatterOptions(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
-@typing.final
 class INumberParser(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberParser: ...
@@ -360,7 +356,6 @@ class INumberParser(winrt.system.Object):
     def parse_int(self, text: str, /) -> typing.Optional[winrt.system.Int64]: ...
     def parse_uint(self, text: str, /) -> typing.Optional[winrt.system.UInt64]: ...
 
-@typing.final
 class INumberRounder(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounder: ...
@@ -371,7 +366,6 @@ class INumberRounder(winrt.system.Object):
     def round_uint32(self, value: winrt.system.UInt32, /) -> winrt.system.UInt32: ...
     def round_uint64(self, value: winrt.system.UInt64, /) -> winrt.system.UInt64: ...
 
-@typing.final
 class INumberRounderOption(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounderOption: ...
@@ -380,7 +374,6 @@ class INumberRounderOption(winrt.system.Object):
     @number_rounder.setter
     def number_rounder(self, value: INumberRounder) -> None: ...
 
-@typing.final
 class ISignedZeroOption(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignedZeroOption: ...
@@ -389,7 +382,6 @@ class ISignedZeroOption(winrt.system.Object):
     @is_zero_signed.setter
     def is_zero_signed(self, value: bool) -> None: ...
 
-@typing.final
 class ISignificantDigitsOption(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignificantDigitsOption: ...

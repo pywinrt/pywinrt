@@ -331,7 +331,6 @@ class Colors(winrt.system.Object, metaclass=Colors_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Colors: ...
 
-@typing.final
 class IClosableNotifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IClosableNotifier: ...

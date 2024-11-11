@@ -17,7 +17,7 @@ from winrt.windows.gaming.input.forcefeedback import ConditionForceEffectKind, F
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ConditionForceEffect(winrt.system.Object):
+class ConditionForceEffect(IForceFeedbackEffect, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConditionForceEffect: ...
     def __new__(cls: typing.Type[ConditionForceEffect], effect_kind: ConditionForceEffectKind) -> ConditionForceEffect: ...
@@ -34,7 +34,7 @@ class ConditionForceEffect(winrt.system.Object):
     def state(self) -> ForceFeedbackEffectState: ...
 
 @typing.final
-class ConstantForceEffect(winrt.system.Object):
+class ConstantForceEffect(IForceFeedbackEffect, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConstantForceEffect: ...
     def __new__(cls: typing.Type[ConstantForceEffect]) -> ConstantForceEffect: ...
@@ -73,7 +73,7 @@ class ForceFeedbackMotor(winrt.system.Object):
     def supported_axes(self) -> ForceFeedbackEffectAxes: ...
 
 @typing.final
-class PeriodicForceEffect(winrt.system.Object):
+class PeriodicForceEffect(IForceFeedbackEffect, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PeriodicForceEffect: ...
     def __new__(cls: typing.Type[PeriodicForceEffect], effect_kind: PeriodicForceEffectKind) -> PeriodicForceEffect: ...
@@ -91,7 +91,7 @@ class PeriodicForceEffect(winrt.system.Object):
     def kind(self) -> PeriodicForceEffectKind: ...
 
 @typing.final
-class RampForceEffect(winrt.system.Object):
+class RampForceEffect(IForceFeedbackEffect, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RampForceEffect: ...
     def __new__(cls: typing.Type[RampForceEffect]) -> RampForceEffect: ...
@@ -106,7 +106,6 @@ class RampForceEffect(winrt.system.Object):
     @_property
     def state(self) -> ForceFeedbackEffectState: ...
 
-@typing.final
 class IForceFeedbackEffect(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IForceFeedbackEffect: ...

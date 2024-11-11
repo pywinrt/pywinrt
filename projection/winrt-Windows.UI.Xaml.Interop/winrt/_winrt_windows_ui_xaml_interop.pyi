@@ -38,13 +38,11 @@ class NotifyCollectionChangedEventArgs(winrt.system.Object):
     @_property
     def old_starting_index(self) -> winrt.system.Int32: ...
 
-@typing.final
 class IBindableIterable(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterable: ...
     def first(self) -> IBindableIterator: ...
 
-@typing.final
 class IBindableIterator(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableIterator: ...
@@ -54,8 +52,7 @@ class IBindableIterator(winrt.system.Object):
     @_property
     def has_current(self) -> bool: ...
 
-@typing.final
-class IBindableObservableVector(winrt.system.Object):
+class IBindableObservableVector(IBindableVector, IBindableIterable, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableObservableVector: ...
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -73,8 +70,7 @@ class IBindableObservableVector(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class IBindableVector(winrt.system.Object):
+class IBindableVector(IBindableIterable, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVector: ...
     def append(self, value: winrt.system.Object, /) -> None: ...
@@ -90,8 +86,7 @@ class IBindableVector(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
-class IBindableVectorView(winrt.system.Object):
+class IBindableVectorView(IBindableIterable, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IBindableVectorView: ...
     def first(self) -> IBindableIterator: ...
@@ -100,7 +95,6 @@ class IBindableVectorView(winrt.system.Object):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class INotifyCollectionChanged(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyCollectionChanged: ...

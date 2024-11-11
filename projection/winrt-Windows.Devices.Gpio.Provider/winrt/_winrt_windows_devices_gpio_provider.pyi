@@ -24,7 +24,6 @@ class GpioPinProviderValueChangedEventArgs(winrt.system.Object):
     @_property
     def edge(self) -> ProviderGpioPinEdge: ...
 
-@typing.final
 class IGpioControllerProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioControllerProvider: ...
@@ -32,7 +31,6 @@ class IGpioControllerProvider(winrt.system.Object):
     @_property
     def pin_count(self) -> winrt.system.Int32: ...
 
-@typing.final
 class IGpioPinProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioPinProvider: ...
@@ -52,7 +50,6 @@ class IGpioPinProvider(winrt.system.Object):
     @_property
     def sharing_mode(self) -> ProviderGpioSharingMode: ...
 
-@typing.final
 class IGpioProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGpioProvider: ...

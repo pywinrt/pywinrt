@@ -16,7 +16,7 @@ from winrt.microsoft.ui.composition.effects import SceneLightingEffectReflectanc
 Self = typing.TypeVar('Self')
 
 @typing.final
-class SceneLightingEffect(winrt.system.Object):
+class SceneLightingEffect(windows_graphics_effects.IGraphicsEffect, windows_graphics_effects.IGraphicsEffectSource, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneLightingEffect: ...
     def __new__(cls: typing.Type[SceneLightingEffect]) -> SceneLightingEffect: ...

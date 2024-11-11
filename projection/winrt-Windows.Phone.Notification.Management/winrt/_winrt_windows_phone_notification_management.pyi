@@ -103,7 +103,7 @@ class AccessoryManager(winrt.system.Object, metaclass=AccessoryManager_Static):
     pass
 
 @typing.final
-class AlarmNotificationTriggerDetails(winrt.system.Object):
+class AlarmNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AlarmNotificationTriggerDetails: ...
     @_property
@@ -148,7 +148,7 @@ class BinaryId(winrt.system.Object):
     def length(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
+class CalendarChangedNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarChangedNotificationTriggerDetails: ...
     @_property
@@ -169,7 +169,7 @@ class CalendarChangedNotificationTriggerDetails(winrt.system.Object):
     def item_id(self) -> str: ...
 
 @typing.final
-class CortanaTileNotificationTriggerDetails(winrt.system.Object):
+class CortanaTileNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CortanaTileNotificationTriggerDetails: ...
     @_property
@@ -224,7 +224,7 @@ class EmailFolderInfo(winrt.system.Object):
     def is_notification_enabled(self) -> bool: ...
 
 @typing.final
-class EmailNotificationTriggerDetails(winrt.system.Object):
+class EmailNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailNotificationTriggerDetails: ...
     @_property
@@ -255,7 +255,7 @@ class EmailNotificationTriggerDetails(winrt.system.Object):
     def message_entry_id(self) -> BinaryId: ...
 
 @typing.final
-class EmailReadNotificationTriggerDetails(winrt.system.Object):
+class EmailReadNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EmailReadNotificationTriggerDetails: ...
     @_property
@@ -280,7 +280,7 @@ class EmailReadNotificationTriggerDetails(winrt.system.Object):
     def parent_folder_name(self) -> str: ...
 
 @typing.final
-class MediaControlsTriggerDetails(winrt.system.Object):
+class MediaControlsTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaControlsTriggerDetails: ...
     @_property
@@ -368,7 +368,7 @@ class PhoneLineDetails(winrt.system.Object):
     def missed_call_count(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PhoneNotificationTriggerDetails(winrt.system.Object):
+class PhoneNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PhoneNotificationTriggerDetails: ...
     @_property
@@ -391,7 +391,7 @@ class PhoneNotificationTriggerDetails(winrt.system.Object):
     def phone_notification_type(self) -> PhoneNotificationType: ...
 
 @typing.final
-class ReminderNotificationTriggerDetails(winrt.system.Object):
+class ReminderNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ReminderNotificationTriggerDetails: ...
     @_property
@@ -444,7 +444,7 @@ class TextResponse(winrt.system.Object):
     def id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ToastNotificationTriggerDetails(winrt.system.Object):
+class ToastNotificationTriggerDetails(IAccessoryNotificationTriggerDetails, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToastNotificationTriggerDetails: ...
     @_property
@@ -487,7 +487,6 @@ class VolumeInfo(winrt.system.Object):
     @_property
     def system_volume(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class IAccessoryNotificationTriggerDetails(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAccessoryNotificationTriggerDetails: ...

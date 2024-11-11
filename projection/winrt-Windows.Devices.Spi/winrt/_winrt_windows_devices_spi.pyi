@@ -75,7 +75,7 @@ class SpiDevice_Static(type):
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
-class SpiDevice(winrt.system.Object, metaclass=SpiDevice_Static):
+class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=SpiDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -90,7 +90,6 @@ class SpiDevice(winrt.system.Object, metaclass=SpiDevice_Static):
     @_property
     def device_id(self) -> str: ...
 
-@typing.final
 class ISpiDeviceStatics(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiDeviceStatics: ...

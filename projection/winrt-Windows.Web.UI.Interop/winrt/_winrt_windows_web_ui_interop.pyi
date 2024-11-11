@@ -25,7 +25,7 @@ from winrt.windows.web.ui.interop import WebViewControlAcceleratorKeyRoutingStag
 Self = typing.TypeVar('Self')
 
 @typing.final
-class WebViewControl(winrt.system.Object):
+class WebViewControl(windows_web_ui.IWebViewControl2, windows_web_ui.IWebViewControl, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebViewControl: ...
     def add_initialize_script(self, script: str, /) -> None: ...

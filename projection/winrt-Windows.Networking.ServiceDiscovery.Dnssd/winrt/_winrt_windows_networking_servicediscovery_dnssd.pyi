@@ -20,7 +20,7 @@ from winrt.windows.networking.servicediscovery.dnssd import DnssdRegistrationSta
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DnssdRegistrationResult(winrt.system.Object):
+class DnssdRegistrationResult(windows_foundation.IStringable, winrt.system.Object):
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DnssdRegistrationResult: ...
@@ -34,7 +34,7 @@ class DnssdRegistrationResult(winrt.system.Object):
     def status(self) -> DnssdRegistrationStatus: ...
 
 @typing.final
-class DnssdServiceInstance(winrt.system.Object):
+class DnssdServiceInstance(windows_foundation.IStringable, winrt.system.Object):
     def __str__(self) -> str: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DnssdServiceInstance: ...

@@ -118,14 +118,12 @@ class RemoteAutomationWindow(winrt.system.Object):
     @_property
     def automation_provider(self) -> winrt.system.Object: ...
 
-@typing.final
 class ICoreAutomationConnectionBoundObjectProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationConnectionBoundObjectProvider: ...
     @_property
     def is_com_threading_required(self) -> bool: ...
 
-@typing.final
 class ICoreAutomationRemoteOperationExtensionProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICoreAutomationRemoteOperationExtensionProvider: ...

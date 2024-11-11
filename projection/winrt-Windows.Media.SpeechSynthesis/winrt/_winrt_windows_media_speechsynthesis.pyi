@@ -20,7 +20,7 @@ from winrt.windows.media.speechsynthesis import SpeechAppendedSilence, SpeechPun
 Self = typing.TypeVar('Self')
 
 @typing.final
-class SpeechSynthesisStream(winrt.system.Object):
+class SpeechSynthesisStream(windows_media_core.ITimedMetadataTrackProvider, windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -59,7 +59,7 @@ class SpeechSynthesizer_Static(type):
     def default_voice(cls) -> VoiceInformation: ...
 
 @typing.final
-class SpeechSynthesizer(winrt.system.Object, metaclass=SpeechSynthesizer_Static):
+class SpeechSynthesizer(windows_foundation.IClosable, winrt.system.Object, metaclass=SpeechSynthesizer_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

@@ -40,7 +40,6 @@ class DualSimTile(winrt.system.Object, metaclass=DualSimTile_Static):
     @_property
     def is_pinned_to_start(self) -> bool: ...
 
-@typing.final
 class IToastNotificationManagerStatics3(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToastNotificationManagerStatics3: ...

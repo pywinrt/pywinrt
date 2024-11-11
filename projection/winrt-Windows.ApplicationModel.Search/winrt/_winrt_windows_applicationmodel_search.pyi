@@ -81,7 +81,7 @@ class SearchPane(winrt.system.Object, metaclass=SearchPane_Static):
     def visible(self) -> bool: ...
 
 @typing.final
-class SearchPaneQueryChangedEventArgs(winrt.system.Object):
+class SearchPaneQueryChangedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneQueryChangedEventArgs: ...
     @_property
@@ -137,7 +137,7 @@ class SearchPaneSuggestionsRequestDeferral(winrt.system.Object):
     def complete(self) -> None: ...
 
 @typing.final
-class SearchPaneSuggestionsRequestedEventArgs(winrt.system.Object):
+class SearchPaneSuggestionsRequestedEventArgs(ISearchPaneQueryChangedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SearchPaneSuggestionsRequestedEventArgs: ...
     @_property
@@ -195,7 +195,6 @@ class SearchSuggestionsRequestDeferral(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SearchSuggestionsRequestDeferral: ...
     def complete(self) -> None: ...
 
-@typing.final
 class ISearchPaneQueryChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISearchPaneQueryChangedEventArgs: ...

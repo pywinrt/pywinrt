@@ -747,7 +747,7 @@ class XamlUICommand_Static(type):
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class XamlUICommand(winrt.system.Object, metaclass=XamlUICommand_Static):
+class XamlUICommand(ICommand, winrt.system.Object, metaclass=XamlUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...
     def __new__(cls: typing.Type[XamlUICommand]) -> XamlUICommand: ...
@@ -792,7 +792,6 @@ class XamlUICommand(winrt.system.Object, metaclass=XamlUICommand_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ICommand(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICommand: ...

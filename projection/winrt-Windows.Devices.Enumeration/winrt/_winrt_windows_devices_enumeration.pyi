@@ -280,7 +280,7 @@ class DeviceSelectedEventArgs(winrt.system.Object):
     def selected_device(self) -> DeviceInformation: ...
 
 @typing.final
-class DeviceThumbnail(winrt.system.Object):
+class DeviceThumbnail(windows_storage_streams.IRandomAccessStreamWithContentType, windows_storage_streams.IContentTypeProvider, windows_storage_streams.IRandomAccessStream, windows_storage_streams.IOutputStream, windows_storage_streams.IInputStream, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -364,12 +364,10 @@ class EnclosureLocation(winrt.system.Object):
     @_property
     def rotation_angle_in_degrees_clockwise(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class IDeviceEnumerationSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDeviceEnumerationSettings: ...
 
-@typing.final
 class IDevicePairingSettings(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDevicePairingSettings: ...

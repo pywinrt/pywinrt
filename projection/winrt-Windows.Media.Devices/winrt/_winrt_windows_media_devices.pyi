@@ -46,7 +46,7 @@ class AdvancedPhotoControl(winrt.system.Object):
     def supported_modes(self) -> typing.Sequence[AdvancedPhotoMode]: ...
 
 @typing.final
-class AudioDeviceController(winrt.system.Object):
+class AudioDeviceController(IMediaDeviceController, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioDeviceController: ...
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> typing.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
@@ -151,7 +151,7 @@ class CameraOcclusionStateChangedEventArgs(winrt.system.Object):
     def state(self) -> CameraOcclusionState: ...
 
 @typing.final
-class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object):
+class DefaultAudioCaptureDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DefaultAudioCaptureDeviceChangedEventArgs: ...
     @_property
@@ -160,7 +160,7 @@ class DefaultAudioCaptureDeviceChangedEventArgs(winrt.system.Object):
     def role(self) -> AudioDeviceRole: ...
 
 @typing.final
-class DefaultAudioRenderDeviceChangedEventArgs(winrt.system.Object):
+class DefaultAudioRenderDeviceChangedEventArgs(IDefaultAudioDeviceChangedEventArgs, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DefaultAudioRenderDeviceChangedEventArgs: ...
     @_property
@@ -676,7 +676,7 @@ class TorchControl(winrt.system.Object):
     def supported(self) -> bool: ...
 
 @typing.final
-class VideoDeviceController(winrt.system.Object):
+class VideoDeviceController(IMediaDeviceController, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoDeviceController: ...
     def get_available_media_stream_properties(self, media_stream_type: windows_media_capture.MediaStreamType, /) -> typing.Sequence[windows_media_mediaproperties.IMediaEncodingProperties]: ...
@@ -847,7 +847,6 @@ class ZoomSettings(winrt.system.Object):
     @mode.setter
     def mode(self, value: ZoomTransitionMode) -> None: ...
 
-@typing.final
 class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDefaultAudioDeviceChangedEventArgs: ...
@@ -856,7 +855,6 @@ class IDefaultAudioDeviceChangedEventArgs(winrt.system.Object):
     @_property
     def role(self) -> AudioDeviceRole: ...
 
-@typing.final
 class IMediaDeviceController(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaDeviceController: ...

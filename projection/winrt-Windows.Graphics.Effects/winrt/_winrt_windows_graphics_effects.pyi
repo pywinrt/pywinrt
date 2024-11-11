@@ -12,8 +12,7 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
-@typing.final
-class IGraphicsEffect(winrt.system.Object):
+class IGraphicsEffect(IGraphicsEffectSource, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGraphicsEffect: ...
     @_property
@@ -21,7 +20,6 @@ class IGraphicsEffect(winrt.system.Object):
     @name.setter
     def name(self, value: str) -> None: ...
 
-@typing.final
 class IGraphicsEffectSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGraphicsEffectSource: ...

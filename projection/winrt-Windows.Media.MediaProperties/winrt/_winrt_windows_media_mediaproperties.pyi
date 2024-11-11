@@ -30,7 +30,7 @@ class AudioEncodingProperties_Static(type):
     def create_wma(cls, sample_rate: winrt.system.UInt32, channel_count: winrt.system.UInt32, bitrate: winrt.system.UInt32, /) -> AudioEncodingProperties: ...
 
 @typing.final
-class AudioEncodingProperties(winrt.system.Object, metaclass=AudioEncodingProperties_Static):
+class AudioEncodingProperties(IMediaEncodingProperties, winrt.system.Object, metaclass=AudioEncodingProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AudioEncodingProperties: ...
     def __new__(cls: typing.Type[AudioEncodingProperties]) -> AudioEncodingProperties: ...
@@ -96,7 +96,7 @@ class Av1ProfileIds(winrt.system.Object, metaclass=Av1ProfileIds_Static):
     pass
 
 @typing.final
-class ContainerEncodingProperties(winrt.system.Object):
+class ContainerEncodingProperties(IMediaEncodingProperties, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContainerEncodingProperties: ...
     def __new__(cls: typing.Type[ContainerEncodingProperties]) -> ContainerEncodingProperties: ...
@@ -198,7 +198,7 @@ class ImageEncodingProperties_Static(type):
     def create_uncompressed(cls, format: MediaPixelFormat, /) -> ImageEncodingProperties: ...
 
 @typing.final
-class ImageEncodingProperties(winrt.system.Object, metaclass=ImageEncodingProperties_Static):
+class ImageEncodingProperties(IMediaEncodingProperties, winrt.system.Object, metaclass=ImageEncodingProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageEncodingProperties: ...
     def __new__(cls: typing.Type[ImageEncodingProperties]) -> ImageEncodingProperties: ...
@@ -433,7 +433,7 @@ class TimedMetadataEncodingProperties_Static(type):
     def create_vob_sub(cls, format_user_data: typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer], /) -> TimedMetadataEncodingProperties: ...
 
 @typing.final
-class TimedMetadataEncodingProperties(winrt.system.Object, metaclass=TimedMetadataEncodingProperties_Static):
+class TimedMetadataEncodingProperties(IMediaEncodingProperties, winrt.system.Object, metaclass=TimedMetadataEncodingProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimedMetadataEncodingProperties: ...
     def __new__(cls: typing.Type[TimedMetadataEncodingProperties]) -> TimedMetadataEncodingProperties: ...
@@ -459,7 +459,7 @@ class VideoEncodingProperties_Static(type):
     def create_vp9(cls) -> VideoEncodingProperties: ...
 
 @typing.final
-class VideoEncodingProperties(winrt.system.Object, metaclass=VideoEncodingProperties_Static):
+class VideoEncodingProperties(IMediaEncodingProperties, winrt.system.Object, metaclass=VideoEncodingProperties_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VideoEncodingProperties: ...
     def __new__(cls: typing.Type[VideoEncodingProperties]) -> VideoEncodingProperties: ...
@@ -512,7 +512,6 @@ class Vp9ProfileIds_Static(type):
 class Vp9ProfileIds(winrt.system.Object, metaclass=Vp9ProfileIds_Static):
     pass
 
-@typing.final
 class IMediaEncodingProperties(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMediaEncodingProperties: ...

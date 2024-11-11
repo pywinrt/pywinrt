@@ -19,6 +19,7 @@
 - `winrt.windows.foundation.IVectorView[T]` input parameters now accept any `typing.Sequence[T]`.
 - `winrt.windows.foundation.IMap[K, V]` input parameters now accept any `typing.MutableMapping[K, V]`.
 - `winrt.windows.foundation.IMapView[K, V]` input parameters now accept any `typing.Mapping[K, V]`.
+- Implemented type hints for interface inheritance ([#80]).
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
@@ -26,6 +27,8 @@
 
 ### Removed
 - BREAKING: Removed `winrt.windows.foundation.interop` module.
+
+[#80]: https://github.com/pywinrt/pywinrt/issues/80
 
 ## [v2.3.0] - 2024-10-19
 

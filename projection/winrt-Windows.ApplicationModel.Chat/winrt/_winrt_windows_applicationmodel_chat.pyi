@@ -46,7 +46,7 @@ class ChatCapabilitiesManager(winrt.system.Object, metaclass=ChatCapabilitiesMan
     pass
 
 @typing.final
-class ChatConversation(winrt.system.Object):
+class ChatConversation(IChatItem, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatConversation: ...
     def delete_async(self) -> windows_foundation.IAsyncAction: ...
@@ -115,7 +115,7 @@ class ChatConversationThreadingInfo(winrt.system.Object):
     def participants(self) -> typing.MutableSequence[str]: ...
 
 @typing.final
-class ChatMessage(winrt.system.Object):
+class ChatMessage(IChatItem, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ChatMessage: ...
     def __new__(cls: typing.Type[ChatMessage]) -> ChatMessage: ...
@@ -610,7 +610,6 @@ class RemoteParticipantComposingChangedEventArgs(winrt.system.Object):
     @_property
     def transport_id(self) -> str: ...
 
-@typing.final
 class IChatItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IChatItem: ...

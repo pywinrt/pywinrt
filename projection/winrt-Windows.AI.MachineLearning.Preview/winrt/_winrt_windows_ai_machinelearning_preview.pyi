@@ -20,7 +20,7 @@ from winrt.windows.ai.machinelearning.preview import FeatureElementKindPreview, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class ImageVariableDescriptorPreview(winrt.system.Object):
+class ImageVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageVariableDescriptorPreview: ...
     @_property
@@ -131,7 +131,7 @@ class LearningModelPreview(winrt.system.Object, metaclass=LearningModelPreview_S
     def description(self) -> LearningModelDescriptionPreview: ...
 
 @typing.final
-class LearningModelVariableDescriptorPreview(winrt.system.Object):
+class LearningModelVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LearningModelVariableDescriptorPreview: ...
     @_property
@@ -144,7 +144,7 @@ class LearningModelVariableDescriptorPreview(winrt.system.Object):
     def name(self) -> str: ...
 
 @typing.final
-class MapVariableDescriptorPreview(winrt.system.Object):
+class MapVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapVariableDescriptorPreview: ...
     @_property
@@ -165,7 +165,7 @@ class MapVariableDescriptorPreview(winrt.system.Object):
     def valid_string_keys(self) -> typing.Iterable[str]: ...
 
 @typing.final
-class SequenceVariableDescriptorPreview(winrt.system.Object):
+class SequenceVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SequenceVariableDescriptorPreview: ...
     @_property
@@ -180,7 +180,7 @@ class SequenceVariableDescriptorPreview(winrt.system.Object):
     def element_type(self) -> ILearningModelVariableDescriptorPreview: ...
 
 @typing.final
-class TensorVariableDescriptorPreview(winrt.system.Object):
+class TensorVariableDescriptorPreview(ILearningModelVariableDescriptorPreview, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TensorVariableDescriptorPreview: ...
     @_property
@@ -196,7 +196,6 @@ class TensorVariableDescriptorPreview(winrt.system.Object):
     @_property
     def shape(self) -> typing.Iterable[winrt.system.Int64]: ...
 
-@typing.final
 class ILearningModelVariableDescriptorPreview(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ILearningModelVariableDescriptorPreview: ...
