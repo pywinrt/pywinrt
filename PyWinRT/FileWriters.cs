@@ -60,8 +60,7 @@ static class FileWriters
         WritePyWinRTVersionTxt(nsPackageDir);
         WriteRequirementsTxt(nsPackageDir);
 
-        // FIXME: include delegates here
-        if (members.GetReferencedNamespaces().Any())
+        if (members.GetReferencedNamespaces(includeDelegates: true).Any())
         {
             WriteAllRequirementsTxt(nsPackageDir, members);
         }
@@ -75,8 +74,7 @@ static class FileWriters
         w.WriteLicense("#");
         w.WriteBlankLine();
 
-        // FIXME: include delegates here
-        foreach (var ns in members.GetReferencedNamespaces())
+        foreach (var ns in members.GetReferencedNamespaces(includeDelegates: true))
         {
             w.WriteLine($"winrt-{ns}[all]=={PyWinRT.VersionString}");
         }
