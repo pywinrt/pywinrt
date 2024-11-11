@@ -14,11 +14,9 @@ else:
     if sys.version_info >= (3, 10):
         from typing import TypeAlias
 
-        _buffer: TypeAlias = Union[
-            bytes, bytearray, memoryview, _array[int], _array[float]
-        ]
+        _buffer: TypeAlias = Union[bytes, bytearray, memoryview, _array]
     else:
-        _buffer = Union[bytes, bytearray, memoryview, _array[int], _array[float]]
+        _buffer = Union[bytes, bytearray, memoryview, _array]
 
 from .._winrt import (
     Array,
