@@ -82,7 +82,9 @@ class TestCollectionsStringMap(unittest.TestCase):
         loop = asyncio.get_running_loop()
         future = loop.create_future()
 
-        def on_map_changed(sender: wfc.IMap, args: wfc.IMapChangedEventArgs):
+        def on_map_changed(
+            sender: wfc.IObservableMap[str, str], args: wfc.IMapChangedEventArgs[str]
+        ):
             try:
                 self.assertEqual(
                     args.collection_change, wfc.CollectionChange.ITEM_INSERTED
