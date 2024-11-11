@@ -6,7 +6,7 @@ import asyncio
 import contextlib
 import sys
 from types import TracebackType
-from typing import Any, Callable, Generator, List, Protocol
+from typing import Any, Callable, Generator, List, Optional, Protocol
 
 
 def async_test(test: Callable[..., Any]) -> Callable[..., None]:
@@ -22,9 +22,9 @@ def async_test(test: Callable[..., Any]) -> Callable[..., None]:
 
 class UnraisableHookArgs(Protocol):
     exc_type: type[BaseException]
-    exc_value: BaseException | None
-    exc_traceback: TracebackType | None
-    err_msg: str | None
+    exc_value: Optional[BaseException]
+    exc_traceback: Optional[TracebackType]
+    err_msg: Optional[str]
     object: object
 
 

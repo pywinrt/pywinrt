@@ -9,6 +9,7 @@ from typing import (
     Iterator,
     KeysView,
     List,
+    Optional,
     Protocol,
     SupportsIndex,
     Tuple,
@@ -91,7 +92,7 @@ class MutableSequence(Sequence[_T]):
 class Mapping(Generic[_KT, _VT_co]):
     # collections.abc.Mapping mixin methods
     @overload
-    def get(self, __key: _KT) -> _VT_co | None: ...
+    def get(self, __key: _KT) -> Optional[_VT_co]: ...
     @overload
     def get(self, __key: _KT, default: _VT_co | _T) -> _VT_co | _T: ...
     def items(self) -> ItemsView[_KT, _VT_co]: ...
@@ -114,8 +115,8 @@ class MutableMapping(Mapping[_KT, _VT]):
     def popitem(self) -> Tuple[_KT, _VT]: ...
     @overload
     def setdefault(
-        self: MutableMapping[_KT, _T | None], __key: _KT, __default: None = None
-    ) -> _T | None: ...
+        self: MutableMapping[_KT, Optional[_T]], __key: _KT, __default: None = None
+    ) -> Optional[_T]: ...
     @overload
     def setdefault(self, __key: _KT, __default: _VT) -> _VT: ...
     @overload
