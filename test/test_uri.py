@@ -1,10 +1,9 @@
-
 import unittest
 
 import winrt.windows.foundation as wf
 
-class TestUri(unittest.TestCase):
 
+class TestUri(unittest.TestCase):
     def test_activate_uri(self):
         u = wf.Uri("http://microsoft.com")
         self.assertEqual(u.domain, "microsoft.com")
@@ -16,11 +15,12 @@ class TestUri(unittest.TestCase):
         self.assertEqual(u.query, "")
         self.assertEqual(u.query_parsed.size, 0)
 
-
     def test_activate_uri2(self):
         u = wf.Uri("http://microsoft.com", "surface/studio")
         self.assertEqual(u.domain, "microsoft.com")
-        self.assertEqual(u.absolute_canonical_uri, "http://microsoft.com/surface/studio")
+        self.assertEqual(
+            u.absolute_canonical_uri, "http://microsoft.com/surface/studio"
+        )
         self.assertEqual(u.port, 80)
         self.assertEqual(u.scheme_name, "http")
         self.assertEqual(u.suspicious, False)
@@ -28,12 +28,13 @@ class TestUri(unittest.TestCase):
         self.assertEqual(u.query, "")
         self.assertEqual(u.query_parsed.size, 0)
 
-
     def test_combine_uri(self):
         u1 = wf.Uri("http://microsoft.com")
         u = u1.combine_uri("surface/studio")
         self.assertEqual(u.domain, "microsoft.com")
-        self.assertEqual(u.absolute_canonical_uri, "http://microsoft.com/surface/studio")
+        self.assertEqual(
+            u.absolute_canonical_uri, "http://microsoft.com/surface/studio"
+        )
         self.assertEqual(u.port, 80)
         self.assertEqual(u.scheme_name, "http")
         self.assertEqual(u.suspicious, False)

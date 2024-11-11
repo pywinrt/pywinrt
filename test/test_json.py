@@ -1,11 +1,10 @@
-
 import unittest
 
-from winrt.system import Array
 import winrt.windows.data.json as wdj
+from winrt.system import Array
+
 
 class TestJson(unittest.TestCase):
-
     def test_activate_JsonArray(self):
         a = wdj.JsonArray()
         self.assertEqual(a.size, 0)
@@ -23,10 +22,10 @@ class TestJson(unittest.TestCase):
 
     def test_JsonArray_seq_get_item(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
-        for x in range(0,4):
+        for x in range(0, 4):
             v = a[x]
             self.assertEqual(v.value_type, wdj.JsonValueType.NUMBER)
-            self.assertEqual(v.get_number(), x+1)
+            self.assertEqual(v.get_number(), x + 1)
 
     def test_JsonArray_seq_subscript(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
@@ -43,23 +42,23 @@ class TestJson(unittest.TestCase):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         for x, v in enumerate(a):
             self.assertEqual(v.value_type, wdj.JsonValueType.NUMBER)
-            self.assertEqual(v.get_number(), x+1)
+            self.assertEqual(v.get_number(), x + 1)
 
     def test_JsonArray_remove_at(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual(a.size, 5)
         a.remove_at(0)
         self.assertEqual(a.size, 4)
-        for x in range(0,3):
-            self.assertEqual(a.get_number_at(x), x+2)
+        for x in range(0, 3):
+            self.assertEqual(a.get_number_at(x), x + 2)
 
     def test_JsonArray_remove_at_end(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
         self.assertEqual(a.size, 5)
         a.remove_at_end()
         self.assertEqual(a.size, 4)
-        for x in range(0,3):
-            self.assertEqual(a.get_number_at(x), x+1)
+        for x in range(0, 3):
+            self.assertEqual(a.get_number_at(x), x + 1)
 
     def test_JsonArray_replace_all(self):
         a = wdj.JsonArray.parse("[1,2,3,4,5]")
@@ -72,8 +71,8 @@ class TestJson(unittest.TestCase):
         succeeded, a = wdj.JsonArray.try_parse("[1,2,3,4,5]")
         self.assertTrue(succeeded)
         self.assertEqual(a.size, 5)
-        for x in range(0,4):
-            self.assertEqual(a.get_number_at(x), x+1)
+        for x in range(0, 4):
+            self.assertEqual(a.get_number_at(x), x + 1)
 
     def test_JsonArray_try_parse_fail(self):
         succeeded, a = wdj.JsonArray.try_parse("z[1,2,3,4,5]")
@@ -124,7 +123,7 @@ class TestJson(unittest.TestCase):
         self.assertEqual(v1.value_type, wdj.JsonValueType.OBJECT)
 
     def test_JsonArray_get_string_at(self):
-        a = wdj.JsonArray.parse("[true, \"spam\", false]")
+        a = wdj.JsonArray.parse('[true, "spam", false]')
         v1 = a.get_string_at(1)
         self.assertEqual(v1, "spam")
 
@@ -136,7 +135,7 @@ class TestJson(unittest.TestCase):
         self.assertFalse(v2)
 
     def test_JsonArray_get_at(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = a.get_at(0)
         self.assertEqual(v.value_type, wdj.JsonValueType.NULL)
         v = a.get_at(1)
@@ -151,21 +150,21 @@ class TestJson(unittest.TestCase):
         self.assertEqual(v.value_type, wdj.JsonValueType.OBJECT)
 
     def test_JsonArray_get_many(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         items = Array(wdj.IJsonValue, 5)
         count = a.get_many(3, items)
         self.assertEqual(count, 3)
         self.assertEqual(items[0].get_string(), "spam")
 
     def test_JsonArray_index_of(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = a.get_at(3)
         found, index = a.index_of(v)
         self.assertTrue(found)
         self.assertEqual(index, 3)
 
     def test_JsonArray_append(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = wdj.JsonValue.create_string_value("the larch")
         self.assertEqual(a.size, 6)
         a.append(v)
@@ -213,7 +212,7 @@ class TestJson(unittest.TestCase):
         self.assertEqual(o5.size, 0)
 
     def test_JsonObject_parse(self):
-        s = "{\"bool\": true,\"null\": null,\"number\": 42,\"string\": \"plugh\",\"array\": [1,2,3,4],\"object\": {}}"
+        s = '{"bool": true,"null": null,"number": 42,"string": "plugh","array": [1,2,3,4],"object": {}}'
         o = wdj.JsonObject.parse(s)
         self.assertEqual(o.value_type, wdj.JsonValueType.OBJECT)
         self.assertEqual(o.size, 6)
@@ -229,7 +228,7 @@ class TestJson(unittest.TestCase):
         self.assertEqual(o2.value_type, wdj.JsonValueType.OBJECT)
 
     def test_JsonObject_GetView(self):
-        s = "{\"bool\": true,\"null\": null,\"number\": 42,\"string\": \"plugh\",\"array\": [1,2,3,4],\"object\": {}}"
+        s = '{"bool": true,"null": null,"number": 42,"string": "plugh","array": [1,2,3,4],"object": {}}'
         o = wdj.JsonObject.parse(s)
         v = o.get_view()
 
@@ -247,17 +246,17 @@ class TestJson(unittest.TestCase):
         self.assertEqual(o2.value_type, wdj.JsonValueType.OBJECT)
 
     def test_JsonObject_map_len(self):
-        s = "{\"bool\": true,\"null\": null,\"number\": 42,\"string\": \"plugh\",\"array\": [1,2,3,4],\"object\": {}}"
+        s = '{"bool": true,"null": null,"number": 42,"string": "plugh","array": [1,2,3,4],"object": {}}'
         o = wdj.JsonObject.parse(s)
         self.assertEqual(len(o), 6)
 
     def test_JsonObject_map_item(self):
-        s = "{\"bool\": true,\"null\": null,\"number\": 42,\"string\": \"plugh\",\"array\": [1,2,3,4],\"object\": {}}"
+        s = '{"bool": true,"null": null,"number": 42,"string": "plugh","array": [1,2,3,4],"object": {}}'
         o = wdj.JsonObject.parse(s)
         self.assertEqual(o["string"].get_string(), "plugh")
 
     def test_JsonObject_map_item_assign(self):
-        s = "{\"bool\": true,\"null\": null,\"number\": 42,\"string\": \"plugh\",\"array\": [1,2,3,4],\"object\": {}}"
+        s = '{"bool": true,"null": null,"number": 42,"string": "plugh","array": [1,2,3,4],"object": {}}'
         o = wdj.JsonObject.parse(s)
         o["string"] = wdj.JsonValue.create_string_value("the larch")
         v = o.lookup("string")
@@ -296,7 +295,7 @@ class TestJson(unittest.TestCase):
         self.assertEqual(n.value_type, wdj.JsonValueType.NUMBER)
         self.assertEqual(n.get_number(), 16)
 
-        s = wdj.JsonValue.parse("\"plugh\"")
+        s = wdj.JsonValue.parse('"plugh"')
         self.assertEqual(s.value_type, wdj.JsonValueType.STRING)
         self.assertEqual(s.get_string(), "plugh")
 
@@ -310,17 +309,17 @@ class TestJson(unittest.TestCase):
             wdj.JsonArray.parse(10, 20)  # type: ignore
 
     def test_IJsonvalue_get_boolean(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = a.get_at(1)
         self.assertTrue(v.get_boolean())
 
     def test_IJsonvalue_get_number(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = a.get_at(2)
         self.assertEqual(v.get_number(), 42)
 
     def test_IJsonvalue_get_string(self):
-        a = wdj.JsonArray.parse("[null, true, 42, \"spam\", [1,2,3], {\"scene\":24}]")
+        a = wdj.JsonArray.parse('[null, true, 42, "spam", [1,2,3], {"scene":24}]')
         v = a.get_at(3)
         self.assertEqual(v.get_string(), "spam")
 
@@ -351,7 +350,7 @@ class TestJson(unittest.TestCase):
         self.assertEqual(o.stringify(), "{}")
 
     def test_JsonObject_get_named_boolean(self):
-        o = wdj.JsonObject.parse("{ \"spam\": true }")
+        o = wdj.JsonObject.parse('{ "spam": true }')
         v = o.get_named_boolean("spam")
         self.assertTrue(v)
 
@@ -360,18 +359,19 @@ class TestJson(unittest.TestCase):
         self.assertEqual(str(a), "{}")
 
     def test_JsonObject_get_named_boolean_default(self):
-        o = wdj.JsonObject.parse("{ \"spam\": true }")
+        o = wdj.JsonObject.parse('{ "spam": true }')
         v = o.get_named_boolean_or_default("more-spam", True)
         self.assertTrue(v)
 
     def test_JsonObject_get_named_number(self):
-        o = wdj.JsonObject.parse("{ \"spam\": 42 }")
+        o = wdj.JsonObject.parse('{ "spam": 42 }')
         v = o.get_named_number("spam")
         self.assertEqual(v, 42)
 
     def test_JsonObject_get_named_number_default(self):
-        o = wdj.JsonObject.parse("{ \"spam\": true }")
+        o = wdj.JsonObject.parse('{ "spam": true }')
         v = o.get_named_number_or_default("more-spam", 16)
         self.assertEqual(v, 16)
+
 
 # todo: GetMany, iterator, sequence
