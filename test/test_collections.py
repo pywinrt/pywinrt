@@ -1,9 +1,10 @@
 import asyncio
 import collections.abc
 import unittest
+from typing import cast
 
 import winrt.windows.foundation.collections as wfc
-from winrt.system import box_string, unbox_string
+from winrt.system import Object, box_string, unbox_string
 
 from ._util import async_test
 
@@ -139,7 +140,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
         self.assertEqual(len(m), 1)
         self.assertEqual(unbox_string(m["hello"]), "world")
         self.assertIn("hello", m)
-        self.assertEqual(unbox_string(m.get("hello")), "world")
+        self.assertEqual(unbox_string(cast(Object, m.get("hello"))), "world")
         self.assertIn("hello", m.keys())
         # can't test these because there is no equality for boxed values
         # self.assertIn("world", m.values())
@@ -147,7 +148,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
         # self.assertEqual(m, {"hello": "world"})
         # self.assertFalse(m != {"hello": "world"})
 
-        m["hello"] = None
+        m["hello"] = cast(Object, None)
         self.assertEqual(m["hello"], None)
 
         del m["hello"]
