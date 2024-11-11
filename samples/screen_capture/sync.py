@@ -3,22 +3,28 @@
 
 from ctypes import WinError
 from concurrent.futures import Future, wait
-from typing import TypeVar
+from typing import Optional, TypeVar, Union, overload
 
-from winrt.windows.foundation import IAsyncOperation, AsyncStatus
+from winrt.windows.foundation import IAsyncOperation, AsyncStatus, IAsyncAction
 
 T = TypeVar("T")
 
 
-def wait_for(operation: IAsyncOperation[T]) -> T:
+@overload
+def wait_for(operation: IAsyncOperation[T]) -> T: ...
+@overload
+def wait_for(operation: IAsyncAction) -> None: ...
+
+
+def wait_for(operation: Union[IAsyncOperation[T], IAsyncAction]) -> Optional[T]:
     """
     Wait for the given async operation to complete and return its result.
 
     For use in non-asyncio apps.
     """
-    future = Future[T]()
+    future = Future[Optional[T]]()
 
-    def completed(async_op: IAsyncOperation, status: AsyncStatus):
+    def completed(async_op: IAsyncOperation[T] | IAsyncAction, status: AsyncStatus):
         try:
             if status == AsyncStatus.COMPLETED:
                 future.set_result(async_op.get_results())

@@ -1,18 +1,19 @@
-from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
-    initialize,
-    InitializeOptions,
-)
 from winrt.microsoft.ui.xaml import (
     Application,
+    ApplicationInitializationCallbackParams,
     HorizontalAlignment,
     VerticalAlignment,
     Window,
 )
 from winrt.microsoft.ui.xaml.controls import Button, StackPanel
+from winrt.microsoft.windows.applicationmodel.dynamicdependency.bootstrap import (
+    InitializeOptions,
+    initialize,
+)
 from winrt.system import box_string
 
 
-def init(_):
+def init(_: ApplicationInitializationCallbackParams) -> None:
     # Always have to create an application object even if you don't use it.
     # (There seems to be a bug where Window() will segfault if
     # Application.current is None.)

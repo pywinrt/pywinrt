@@ -4,6 +4,7 @@ from ctypes import WinError
 
 from winrt.microsoft.ui.xaml import (
     Application,
+    ApplicationInitializationCallbackParams,
     GridLength,
     GridUnitType,
     HorizontalAlignment,
@@ -34,7 +35,7 @@ def check_initialized(sender: WebView2, args: CoreWebView2InitializedEventArgs):
         print("Initialization failed", WinError(args.exception.value))
 
 
-def init(_):
+def init(_: ApplicationInitializationCallbackParams) -> None:
     # Always have to create an application object even if you don't use it.
     # (There seems to be a bug where Window() will segfault if
     # Application.current is None.)
