@@ -75,7 +75,7 @@ class TestJson(unittest.TestCase):
             self.assertEqual(a.get_number_at(x), x + 1)
 
     def test_JsonArray_try_parse_fail(self):
-        succeeded, a = wdj.JsonArray.try_parse("z[1,2,3,4,5]")
+        succeeded, _ = wdj.JsonArray.try_parse("z[1,2,3,4,5]")
         self.assertFalse(succeeded)
 
     def test_JsonArray_get_array_at(self):
@@ -99,22 +99,22 @@ class TestJson(unittest.TestCase):
     def test_JsonArray_get_boolean(self):
         a = wdj.JsonArray.parse("[true, [], false]")
         with self.assertRaises(OSError):
-            v1 = a.get_boolean()
+            a.get_boolean()
 
     def test_JsonArray_get_number(self):
         a = wdj.JsonArray.parse("[true, [], false]")
         with self.assertRaises(OSError):
-            v1 = a.get_number()
+            a.get_number()
 
     def test_JsonArray_get_string(self):
         a = wdj.JsonArray.parse("[true, [], false]")
         with self.assertRaises(OSError):
-            v1 = a.get_string()
+            a.get_string()
 
     def test_JsonArray_get_object(self):
         a = wdj.JsonArray.parse("[true, {}, false]")
         with self.assertRaises(OSError):
-            v1 = a.get_object()
+            a.get_object()
 
     def test_JsonArray_get_object_at(self):
         a = wdj.JsonArray.parse("[true, {}, false]")
