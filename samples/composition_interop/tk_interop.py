@@ -44,7 +44,7 @@ def add_element(size: float, x: float, y: float) -> None:
     g = randint(0, 255)
     b = randint(0, 255)
 
-    element.brush = compositor.create_color_brush(Color(255, r, g, b))
+    element.brush = compositor.create_color_brush_with_color(Color(255, r, g, b))
     element.size = Vector2(size, size)
     element.offset = Vector3(x, y, 0)
 
