@@ -254,7 +254,7 @@ static class FileWriters
 
                 foreach (var prop in type.Type.Properties.Where(p => p.GetMethod.IsStatic))
                 {
-                    var name = prop.Name.ToPythonIdentifier();
+                    var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
                     var propType = prop.PropertyType.ToPyTypeName(ns);
 
                     w.WriteLine("@_property");
