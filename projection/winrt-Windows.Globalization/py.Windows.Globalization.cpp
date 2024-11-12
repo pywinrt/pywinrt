@@ -8861,7 +8861,7 @@ namespace py::cpp::Windows::Globalization
         { "mmk", reinterpret_cast<getter>(CurrencyIdentifiers_get_MMK), nullptr, nullptr, nullptr },
         { "mnt", reinterpret_cast<getter>(CurrencyIdentifiers_get_MNT), nullptr, nullptr, nullptr },
         { "mop", reinterpret_cast<getter>(CurrencyIdentifiers_get_MOP), nullptr, nullptr, nullptr },
-        { "mro", reinterpret_cast<getter>(CurrencyIdentifiers_get_MRO), nullptr, nullptr, nullptr },
+        { "mro_", reinterpret_cast<getter>(CurrencyIdentifiers_get_MRO), nullptr, nullptr, nullptr },
         { "mur", reinterpret_cast<getter>(CurrencyIdentifiers_get_MUR), nullptr, nullptr, nullptr },
         { "mvr", reinterpret_cast<getter>(CurrencyIdentifiers_get_MVR), nullptr, nullptr, nullptr },
         { "mwk", reinterpret_cast<getter>(CurrencyIdentifiers_get_MWK), nullptr, nullptr, nullptr },

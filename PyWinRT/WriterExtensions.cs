@@ -102,7 +102,7 @@ static class WriterExtensions
                 : $"reinterpret_cast<setter>({type.Name}_put_{prop.Name})";
 
             w.WriteLine(
-                $"{{ \"{prop.Name.ToPythonIdentifier()}\", reinterpret_cast<getter>({typeName}_get_{prop.Name}), {setter}, nullptr, nullptr }},"
+                $"{{ \"{prop.Name.ToPythonIdentifier(isTypeMethod: true)}\", reinterpret_cast<getter>({typeName}_get_{prop.Name}), {setter}, nullptr, nullptr }},"
             );
         }
 
@@ -125,7 +125,7 @@ static class WriterExtensions
         foreach (var method in type.Methods.Where(m => m.IsStatic).DistinctBy(m => m.Name))
         {
             w.WriteLine(
-                $"{{ \"{method.Name.ToPythonIdentifier()}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
+                $"{{ \"{method.Name.ToPythonIdentifier(isTypeMethod: true)}\", reinterpret_cast<PyCFunction>({type.Name}_{method.Name}), METH_VARARGS, nullptr }},"
             );
         }
 

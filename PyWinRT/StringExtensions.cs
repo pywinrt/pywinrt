@@ -120,13 +120,19 @@ static class StringExtensions
     /// <remarks>
     /// If <paramref name="str"/> is a Python keyword, a trailing underscore is added.
     /// </remarks>
-    public static string ToPythonIdentifier(this string str)
+    public static string ToPythonIdentifier(this string str, bool isTypeMethod = false)
     {
         var identifier = str.ToSnakeCase().ToLowerInvariant();
 
         if (pythonKeywords.Contains(identifier))
         {
             return $"{identifier}_";
+        }
+
+        // types have a method named mro, so for metaclasses, we have to avoid this
+        if (isTypeMethod && identifier == "mro")
+        {
+            return "mro_";
         }
 
         return identifier;
