@@ -2130,7 +2130,7 @@ namespace py::cpp::Windows::Security::Authentication::OnlineId
         { "first_name", reinterpret_cast<getter>(UserIdentity_get_FirstName), nullptr, nullptr, nullptr },
         { "id", reinterpret_cast<getter>(UserIdentity_get_Id), nullptr, nullptr, nullptr },
         { "is_beta_account", reinterpret_cast<getter>(UserIdentity_get_IsBetaAccount), nullptr, nullptr, nullptr },
-        { "is_confirmed_p_c", reinterpret_cast<getter>(UserIdentity_get_IsConfirmedPC), nullptr, nullptr, nullptr },
+        { "is_confirmed_pc", reinterpret_cast<getter>(UserIdentity_get_IsConfirmedPC), nullptr, nullptr, nullptr },
         { "last_name", reinterpret_cast<getter>(UserIdentity_get_LastName), nullptr, nullptr, nullptr },
         { "safe_customer_id", reinterpret_cast<getter>(UserIdentity_get_SafeCustomerId), nullptr, nullptr, nullptr },
         { "sign_in_name", reinterpret_cast<getter>(UserIdentity_get_SignInName), nullptr, nullptr, nullptr },

@@ -93,6 +93,10 @@ static class StringExtensions
         str = Regex.Replace(str, @"OK", "Ok");
         // Replace OS with Os
         str = Regex.Replace(str, @"(?<![A-Z])OS", "Os");
+        // Replace PPC with Ppc
+        str = Regex.Replace(str, @"PPC", "Ppc");
+        // Replace PC with Pc
+        str = Regex.Replace(str, @"PC", "Pc");
         // Replace UI with Ui (also handles UInt)
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
         // Replace UWP with Uwp
