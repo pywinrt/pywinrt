@@ -61,6 +61,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
+        // Replace GPS with Gps
+        str = Regex.Replace(str, @"GPS", "Gps");
         // Replace ID with Id, ignore UI, IDR
         str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
         // Replace IO with Io
