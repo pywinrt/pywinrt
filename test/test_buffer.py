@@ -28,7 +28,7 @@ class TestBuffer(unittest.TestCase):
         with memoryview(buf) as mv:
             mv[:] = data
 
-        mb = wss.Buffer.create_memory_buffer_over_i_buffer(buf)
+        mb = wss.Buffer.create_memory_buffer_over_ibuffer(buf)
         with mb.create_reference() as mbr, memoryview(mbr) as mv:
             self.assertEqual(mv, data)
 

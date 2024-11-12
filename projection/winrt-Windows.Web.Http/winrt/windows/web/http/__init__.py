@@ -89,7 +89,7 @@ class HttpStatusCode(enum.IntEnum):
     PARTIAL_CONTENT = 206
     MULTI_STATUS = 207
     ALREADY_REPORTED = 208
-    I_M_USED = 226
+    IM_USED = 226
     MULTIPLE_CHOICES = 300
     MOVED_PERMANENTLY = 301
     FOUND = 302

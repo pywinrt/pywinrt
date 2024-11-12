@@ -100,7 +100,7 @@ class WiFiPhyKind(enum.IntEnum):
     UNKNOWN = 0
     FHSS = 1
     DSSS = 2
-    I_R_BASEBAND = 3
+    IR_BASEBAND = 3
     OFDM = 4
     HRDSSS = 5
     ERP = 6

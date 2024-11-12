@@ -37028,8 +37028,8 @@ namespace py::cpp::Microsoft::UI::Composition
     };
 
     static PyMethodDef methods_CompositionObject_Static[] = {
-        { "start_animation_group_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroupWithIAnimationObject), METH_VARARGS, nullptr },
-        { "start_animation_with_i_animation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithIAnimationObject), METH_VARARGS, nullptr },
+        { "start_animation_group_with_ianimation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationGroupWithIAnimationObject), METH_VARARGS, nullptr },
+        { "start_animation_with_ianimation_object", reinterpret_cast<PyCFunction>(CompositionObject_StartAnimationWithIAnimationObject), METH_VARARGS, nullptr },
         { }
     };
 

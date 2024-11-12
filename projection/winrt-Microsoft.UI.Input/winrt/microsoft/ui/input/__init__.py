@@ -193,7 +193,7 @@ class InputSystemCursorShape(enum.IntEnum):
     CROSS = 1
     HAND = 3
     HELP = 4
-    I_BEAM = 5
+    IBEAM = 5
     SIZE_ALL = 6
     SIZE_NORTHEAST_SOUTHWEST = 7
     SIZE_NORTH_SOUTH = 8

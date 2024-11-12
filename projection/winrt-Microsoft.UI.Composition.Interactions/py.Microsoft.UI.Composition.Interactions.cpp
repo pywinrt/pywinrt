@@ -11378,7 +11378,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
     static PyMethodDef methods_VisualInteractionSource_Static[] = {
         { "create", reinterpret_cast<PyCFunction>(VisualInteractionSource_Create), METH_VARARGS, nullptr },
-        { "create_from_i_visual_element", reinterpret_cast<PyCFunction>(VisualInteractionSource_CreateFromIVisualElement), METH_VARARGS, nullptr },
+        { "create_from_ivisual_element", reinterpret_cast<PyCFunction>(VisualInteractionSource_CreateFromIVisualElement), METH_VARARGS, nullptr },
         { }
     };
 
