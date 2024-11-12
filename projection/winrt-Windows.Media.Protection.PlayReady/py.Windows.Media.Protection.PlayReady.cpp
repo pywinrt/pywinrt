@@ -9021,14 +9021,14 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "secure_stop_service_request_type", reinterpret_cast<getter>(PlayReadyStatics_get_SecureStopServiceRequestType), nullptr, nullptr, nullptr },
         { "protection_system_id", reinterpret_cast<getter>(PlayReadyStatics_get_ProtectionSystemId), nullptr, nullptr, nullptr },
         { "input_trust_authority_to_create", reinterpret_cast<getter>(PlayReadyStatics_get_InputTrustAuthorityToCreate), nullptr, nullptr, nullptr },
-        { "hardware_d_r_m_disabled_until_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledUntilTime), nullptr, nullptr, nullptr },
-        { "hardware_d_r_m_disabled_at_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledAtTime), nullptr, nullptr, nullptr },
+        { "hardware_drm_disabled_until_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledUntilTime), nullptr, nullptr, nullptr },
+        { "hardware_drm_disabled_at_time", reinterpret_cast<getter>(PlayReadyStatics_get_HardwareDRMDisabledAtTime), nullptr, nullptr, nullptr },
         { }
     };
 
     static PyMethodDef methods_PlayReadyStatics_Static[] = {
         { "check_supported_hardware", reinterpret_cast<PyCFunction>(PlayReadyStatics_CheckSupportedHardware), METH_VARARGS, nullptr },
-        { "reset_hardware_d_r_m_disabled", reinterpret_cast<PyCFunction>(PlayReadyStatics_ResetHardwareDRMDisabled), METH_VARARGS, nullptr },
+        { "reset_hardware_drm_disabled", reinterpret_cast<PyCFunction>(PlayReadyStatics_ResetHardwareDRMDisabled), METH_VARARGS, nullptr },
         { }
     };
 

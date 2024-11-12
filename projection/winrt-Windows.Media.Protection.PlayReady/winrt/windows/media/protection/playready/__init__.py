@@ -199,7 +199,7 @@ class PlayReadyEncryptionAlgorithm(enum.IntEnum):
     UNINITIALIZED = 2147483647
 
 class PlayReadyHardwareDRMFeatures(enum.IntEnum):
-    HARDWARE_D_R_M = 1
+    HARDWARE_DRM = 1
     H_E_V_C = 2
     AES128_CBC = 3
 
