@@ -1885,7 +1885,7 @@ namespace py::cpp::Windows::Web::UI
     static PyGetSetDef _getset_WebViewControlSettings[] = {
         { "is_script_notify_allowed", reinterpret_cast<getter>(WebViewControlSettings_get_IsScriptNotifyAllowed), reinterpret_cast<setter>(WebViewControlSettings_put_IsScriptNotifyAllowed), nullptr, nullptr },
         { "is_java_script_enabled", reinterpret_cast<getter>(WebViewControlSettings_get_IsJavaScriptEnabled), reinterpret_cast<setter>(WebViewControlSettings_put_IsJavaScriptEnabled), nullptr, nullptr },
-        { "is_indexed_d_b_enabled", reinterpret_cast<getter>(WebViewControlSettings_get_IsIndexedDBEnabled), reinterpret_cast<setter>(WebViewControlSettings_put_IsIndexedDBEnabled), nullptr, nullptr },
+        { "is_indexed_db_enabled", reinterpret_cast<getter>(WebViewControlSettings_get_IsIndexedDBEnabled), reinterpret_cast<setter>(WebViewControlSettings_put_IsIndexedDBEnabled), nullptr, nullptr },
         { }
     };
 

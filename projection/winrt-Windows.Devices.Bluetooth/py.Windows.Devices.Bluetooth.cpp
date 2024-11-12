@@ -6575,8 +6575,8 @@ namespace py::cpp::Windows::Devices::Bluetooth
     static PyGetSetDef _getset_BluetoothSignalStrengthFilter[] = {
         { "sampling_interval", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_SamplingInterval), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_SamplingInterval), nullptr, nullptr },
         { "out_of_range_timeout", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_OutOfRangeTimeout), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_OutOfRangeTimeout), nullptr, nullptr },
-        { "out_of_range_threshold_in_d_bm", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_OutOfRangeThresholdInDBm), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_OutOfRangeThresholdInDBm), nullptr, nullptr },
-        { "in_range_threshold_in_d_bm", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_InRangeThresholdInDBm), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_InRangeThresholdInDBm), nullptr, nullptr },
+        { "out_of_range_threshold_in_dbm", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_OutOfRangeThresholdInDBm), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_OutOfRangeThresholdInDBm), nullptr, nullptr },
+        { "in_range_threshold_in_dbm", reinterpret_cast<getter>(BluetoothSignalStrengthFilter_get_InRangeThresholdInDBm), reinterpret_cast<setter>(BluetoothSignalStrengthFilter_put_InRangeThresholdInDBm), nullptr, nullptr },
         { }
     };
 

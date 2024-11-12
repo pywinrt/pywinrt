@@ -132,7 +132,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Background
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisherTriggerDetails[] = {
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_Error), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_Status), nullptr, nullptr, nullptr },
-        { "selected_transmit_power_level_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
+        { "selected_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTriggerDetails_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -51,7 +51,7 @@ class WebViewControlPermissionState(enum.IntEnum):
 
 class WebViewControlPermissionType(enum.IntEnum):
     GEOLOCATION = 0
-    UNLIMITED_INDEXED_D_B_QUOTA = 1
+    UNLIMITED_INDEXED_DB_QUOTA = 1
     MEDIA = 2
     POINTER_LOCK = 3
     WEB_NOTIFICATIONS = 4
