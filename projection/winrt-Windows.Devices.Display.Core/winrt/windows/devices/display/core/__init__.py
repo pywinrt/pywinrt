@@ -180,8 +180,8 @@ class DisplayTaskSignalKind(enum.IntEnum):
     ON_PRESENT_FLIP_TO = 1
 
 class DisplayWireFormatColorSpace(enum.IntEnum):
-    B_T709 = 0
-    B_T2020 = 1
+    BT709 = 0
+    BT2020 = 1
     PROFILE_DEFINED_WIDE_COLOR_GAMUT = 2
 
 class DisplayWireFormatEotf(enum.IntEnum):

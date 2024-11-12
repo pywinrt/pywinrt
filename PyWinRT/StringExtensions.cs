@@ -50,7 +50,7 @@ static class StringExtensions
         // Replace acronyms
         str = Regex.Replace(
             str,
-            @"^([A-Z])([A-Z]+)$",
+            @"^([A-Z])([A-Z0-9]+)$",
             m => $"{m.Groups[1].Value}{m.Groups[2].Value.ToLowerInvariant()}"
         );
         // Replace 3MF with _3mf

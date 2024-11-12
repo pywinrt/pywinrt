@@ -27,7 +27,7 @@ class DisplayMonitorDescriptorKind(enum.IntEnum):
 
 class DisplayMonitorPhysicalConnectorKind(enum.IntEnum):
     UNKNOWN = 0
-    H_D15 = 1
+    HD15 = 1
     ANALOG_T_V = 2
     DVI = 3
     HDMI = 4

@@ -165,7 +165,7 @@ class NDCertificateType(enum.IntEnum):
 
 class NDClosedCaptionFormat(enum.IntEnum):
     ATSC = 0
-    S_C_T_E20 = 1
+    SCTE20 = 1
     UNKNOWN = 2
 
 class NDContentIDType(enum.IntEnum):
