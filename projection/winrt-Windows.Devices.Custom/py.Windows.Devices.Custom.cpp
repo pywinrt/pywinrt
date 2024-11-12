@@ -256,8 +256,8 @@ namespace py::cpp::Windows::Devices::Custom
     }
 
     static PyMethodDef _methods_CustomDevice[] = {
-        { "send_i_o_control_async", reinterpret_cast<PyCFunction>(CustomDevice_SendIOControlAsync), METH_VARARGS, nullptr },
-        { "try_send_i_o_control_async", reinterpret_cast<PyCFunction>(CustomDevice_TrySendIOControlAsync), METH_VARARGS, nullptr },
+        { "send_io_control_async", reinterpret_cast<PyCFunction>(CustomDevice_SendIOControlAsync), METH_VARARGS, nullptr },
+        { "try_send_io_control_async", reinterpret_cast<PyCFunction>(CustomDevice_TrySendIOControlAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_CustomDevice, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CustomDevice), METH_O | METH_STATIC, nullptr },
         { }
