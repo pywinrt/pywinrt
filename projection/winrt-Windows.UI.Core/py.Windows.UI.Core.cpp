@@ -4542,7 +4542,7 @@ namespace py::cpp::Windows::UI::Core
     };
 
     static PyMethodDef methods_CoreIndependentInputSourceController_Static[] = {
-        { "create_for_i_visual_element", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForIVisualElement), METH_VARARGS, nullptr },
+        { "create_for_ivisual_element", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForIVisualElement), METH_VARARGS, nullptr },
         { "create_for_visual", reinterpret_cast<PyCFunction>(CoreIndependentInputSourceController_CreateForVisual), METH_VARARGS, nullptr },
         { }
     };

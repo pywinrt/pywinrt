@@ -280,7 +280,7 @@ namespace py::cpp::Windows::Storage::Streams
 
     static PyMethodDef methods_Buffer_Static[] = {
         { "create_copy_from_memory_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateCopyFromMemoryBuffer), METH_VARARGS, nullptr },
-        { "create_memory_buffer_over_i_buffer", reinterpret_cast<PyCFunction>(Buffer_CreateMemoryBufferOverIBuffer), METH_VARARGS, nullptr },
+        { "create_memory_buffer_over_ibuffer", reinterpret_cast<PyCFunction>(Buffer_CreateMemoryBufferOverIBuffer), METH_VARARGS, nullptr },
         { }
     };
 

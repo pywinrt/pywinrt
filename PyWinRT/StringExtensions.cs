@@ -94,6 +94,12 @@ static class StringExtensions
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
         // Replace UWP with Uwp
         str = Regex.Replace(str, @"UWP", "Uwp");
+        // Fix up interface prefix, also fixes IR, IM, IBeam
+        str = Regex.Replace(
+            str,
+            @"(?<![A-Z])I([A-Z])(?!im)",
+            m => $"I{m.Groups[1].Value.ToLowerInvariant()}"
+        );
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {

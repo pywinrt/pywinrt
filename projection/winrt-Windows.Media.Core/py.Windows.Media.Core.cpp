@@ -7707,7 +7707,7 @@ namespace py::cpp::Windows::Media::Core
     static PyMethodDef methods_MediaSource_Static[] = {
         { "create_from_adaptive_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromAdaptiveMediaSource), METH_VARARGS, nullptr },
         { "create_from_download_operation", reinterpret_cast<PyCFunction>(MediaSource_CreateFromDownloadOperation), METH_VARARGS, nullptr },
-        { "create_from_i_media_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromIMediaSource), METH_VARARGS, nullptr },
+        { "create_from_imedia_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromIMediaSource), METH_VARARGS, nullptr },
         { "create_from_media_binder", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaBinder), METH_VARARGS, nullptr },
         { "create_from_media_frame_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaFrameSource), METH_VARARGS, nullptr },
         { "create_from_media_stream_source", reinterpret_cast<PyCFunction>(MediaSource_CreateFromMediaStreamSource), METH_VARARGS, nullptr },
