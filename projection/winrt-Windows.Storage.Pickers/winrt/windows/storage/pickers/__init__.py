@@ -32,7 +32,7 @@ class PickerLocationId(enum.IntEnum):
     MUSIC_LIBRARY = 5
     PICTURES_LIBRARY = 6
     VIDEOS_LIBRARY = 7
-    OBJECTS3_D = 8
+    OBJECTS_3D = 8
     UNSPECIFIED = 9
 
 class PickerViewMode(enum.IntEnum):

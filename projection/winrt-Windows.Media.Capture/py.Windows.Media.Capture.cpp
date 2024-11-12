@@ -22907,7 +22907,7 @@ namespace py::cpp::Windows::Media::Capture
         { "media_category", reinterpret_cast<getter>(MediaCaptureSettings_get_MediaCategory), nullptr, nullptr, nullptr },
         { "pitch_offset_degrees", reinterpret_cast<getter>(MediaCaptureSettings_get_PitchOffsetDegrees), nullptr, nullptr, nullptr },
         { "vertical35mm_equivalent_focal_length", reinterpret_cast<getter>(MediaCaptureSettings_get_Vertical35mmEquivalentFocalLength), nullptr, nullptr, nullptr },
-        { "direct3_d11_device", reinterpret_cast<getter>(MediaCaptureSettings_get_Direct3D11Device), nullptr, nullptr, nullptr },
+        { "direct3d11_device", reinterpret_cast<getter>(MediaCaptureSettings_get_Direct3D11Device), nullptr, nullptr, nullptr },
         { }
     };
 

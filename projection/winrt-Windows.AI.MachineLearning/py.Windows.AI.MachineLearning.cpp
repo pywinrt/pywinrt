@@ -1826,7 +1826,7 @@ namespace py::cpp::Windows::AI::MachineLearning
 
     static PyGetSetDef _getset_LearningModelDevice[] = {
         { "adapter_id", reinterpret_cast<getter>(LearningModelDevice_get_AdapterId), nullptr, nullptr, nullptr },
-        { "direct3_d11_device", reinterpret_cast<getter>(LearningModelDevice_get_Direct3D11Device), nullptr, nullptr, nullptr },
+        { "direct3d11_device", reinterpret_cast<getter>(LearningModelDevice_get_Direct3D11Device), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1850,7 +1850,7 @@ namespace py::cpp::Windows::AI::MachineLearning
     };
 
     static PyMethodDef methods_LearningModelDevice_Static[] = {
-        { "create_from_direct3_d11_device", reinterpret_cast<PyCFunction>(LearningModelDevice_CreateFromDirect3D11Device), METH_VARARGS, nullptr },
+        { "create_from_direct3d11_device", reinterpret_cast<PyCFunction>(LearningModelDevice_CreateFromDirect3D11Device), METH_VARARGS, nullptr },
         { }
     };
 

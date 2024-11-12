@@ -59,8 +59,8 @@ class StoreSystemFeature(enum.IntEnum):
     DIRECT_X9 = 3
     DIRECT_X10 = 4
     DIRECT_X11 = 5
-    D3_D12_HARDWARE_F_L11 = 6
-    D3_D12_HARDWARE_F_L12 = 7
+    D3D12_HARDWARE_F_L11 = 6
+    D3D12_HARDWARE_F_L12 = 7
     MEMORY300_M_B = 8
     MEMORY750_M_B = 9
     MEMORY1_G_B = 10

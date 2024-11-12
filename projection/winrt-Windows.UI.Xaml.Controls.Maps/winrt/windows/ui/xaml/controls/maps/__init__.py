@@ -187,8 +187,8 @@ class MapStyle(enum.IntEnum):
     AERIAL = 2
     AERIAL_WITH_ROADS = 3
     TERRAIN = 4
-    AERIAL3_D = 5
-    AERIAL3_D_WITH_ROADS = 6
+    AERIAL_3D = 5
+    AERIAL_3D_WITH_ROADS = 6
     CUSTOM = 7
 
 class MapTileAnimationState(enum.IntEnum):

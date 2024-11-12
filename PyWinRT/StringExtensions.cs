@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Text.RegularExpressions;
 
 static class StringExtensions
 {
@@ -47,6 +48,11 @@ static class StringExtensions
     static string ToSnakeCase(this string str)
     {
         var sb = new StringBuilder();
+
+        // replace D3D with D3d
+        str = Regex.Replace(str, @"(D(?:irect)?)3D", "${1}3d");
+        // Replace 3D with _3d
+        str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {

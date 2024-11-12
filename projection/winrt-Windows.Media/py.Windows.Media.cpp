@@ -8065,7 +8065,7 @@ namespace py::cpp::Windows::Media
         { "extended_properties", reinterpret_cast<getter>(VideoFrame_get_ExtendedProperties), nullptr, nullptr, nullptr },
         { "is_read_only", reinterpret_cast<getter>(VideoFrame_get_IsReadOnly), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(VideoFrame_get_Type), nullptr, nullptr, nullptr },
-        { "direct3_d_surface", reinterpret_cast<getter>(VideoFrame_get_Direct3DSurface), nullptr, nullptr, nullptr },
+        { "direct3d_surface", reinterpret_cast<getter>(VideoFrame_get_Direct3DSurface), nullptr, nullptr, nullptr },
         { "software_bitmap", reinterpret_cast<getter>(VideoFrame_get_SoftwareBitmap), nullptr, nullptr, nullptr },
         { }
     };
@@ -8090,9 +8090,9 @@ namespace py::cpp::Windows::Media
     };
 
     static PyMethodDef methods_VideoFrame_Static[] = {
-        { "create_as_direct3_d11_surface_backed", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBacked), METH_VARARGS, nullptr },
-        { "create_as_direct3_d11_surface_backed_with_device", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBackedWithDevice), METH_VARARGS, nullptr },
-        { "create_with_direct3_d11_surface", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithDirect3D11Surface), METH_VARARGS, nullptr },
+        { "create_as_direct3d11_surface_backed", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBacked), METH_VARARGS, nullptr },
+        { "create_as_direct3d11_surface_backed_with_device", reinterpret_cast<PyCFunction>(VideoFrame_CreateAsDirect3D11SurfaceBackedWithDevice), METH_VARARGS, nullptr },
+        { "create_with_direct3d11_surface", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithDirect3D11Surface), METH_VARARGS, nullptr },
         { "create_with_software_bitmap", reinterpret_cast<PyCFunction>(VideoFrame_CreateWithSoftwareBitmap), METH_VARARGS, nullptr },
         { }
     };

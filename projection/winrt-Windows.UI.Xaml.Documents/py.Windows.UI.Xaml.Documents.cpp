@@ -20058,7 +20058,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "actual_size", reinterpret_cast<getter>(Glyphs_get_ActualSize), nullptr, nullptr, nullptr },
         { "u_i_context", reinterpret_cast<getter>(Glyphs_get_UIContext), nullptr, nullptr, nullptr },
         { "composite_mode", reinterpret_cast<getter>(Glyphs_get_CompositeMode), reinterpret_cast<setter>(Glyphs_put_CompositeMode), nullptr, nullptr },
-        { "transform3_d", reinterpret_cast<getter>(Glyphs_get_Transform3D), reinterpret_cast<setter>(Glyphs_put_Transform3D), nullptr, nullptr },
+        { "transform_3d", reinterpret_cast<getter>(Glyphs_get_Transform3D), reinterpret_cast<setter>(Glyphs_put_Transform3D), nullptr, nullptr },
         { "can_drag", reinterpret_cast<getter>(Glyphs_get_CanDrag), reinterpret_cast<setter>(Glyphs_put_CanDrag), nullptr, nullptr },
         { "is_access_key_scope", reinterpret_cast<getter>(Glyphs_get_IsAccessKeyScope), reinterpret_cast<setter>(Glyphs_put_IsAccessKeyScope), nullptr, nullptr },
         { "exit_display_mode_on_access_key_invoked", reinterpret_cast<getter>(Glyphs_get_ExitDisplayModeOnAccessKeyInvoked), reinterpret_cast<setter>(Glyphs_put_ExitDisplayModeOnAccessKeyInvoked), nullptr, nullptr },
