@@ -63,6 +63,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!I)DB", "Db");
         // Replace DRM with Drm
         str = Regex.Replace(str, @"DRM", "Drm");
+        // Replace DirectX with Directx
+        str = Regex.Replace(str, @"DirectX", "Directx");
         // replace D3D with D3d
         str = Regex.Replace(str, @"(D(?:irect)?)3D", "${1}3d");
         // Replace 3D with _3d

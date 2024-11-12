@@ -56,9 +56,9 @@ class StoreSystemFeature(enum.IntEnum):
     ARCHITECTURE_X86 = 0
     ARCHITECTURE_X64 = 1
     ARCHITECTURE_ARM = 2
-    DIRECT_X9 = 3
-    DIRECT_X10 = 4
-    DIRECT_X11 = 5
+    DIRECTX9 = 3
+    DIRECTX10 = 4
+    DIRECTX11 = 5
     D3D12_HARDWARE_F_L11 = 6
     D3D12_HARDWARE_F_L12 = 7
     MEMORY_300_MB = 8
