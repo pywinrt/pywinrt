@@ -1429,7 +1429,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "bind_endpoint_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindEndpointAsync), METH_VARARGS, nullptr },
         { "bind_service_name_and_adapter_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindServiceNameAndAdapterAsync), METH_VARARGS, nullptr },
         { "bind_service_name_async", reinterpret_cast<PyCFunction>(DatagramSocket_BindServiceNameAsync), METH_VARARGS, nullptr },
-        { "cancel_i_o_async", reinterpret_cast<PyCFunction>(DatagramSocket_CancelIOAsync), METH_VARARGS, nullptr },
+        { "cancel_io_async", reinterpret_cast<PyCFunction>(DatagramSocket_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(DatagramSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(DatagramSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "connect_with_endpoint_pair_async", reinterpret_cast<PyCFunction>(DatagramSocket_ConnectWithEndpointPairAsync), METH_VARARGS, nullptr },
@@ -6472,7 +6472,7 @@ namespace py::cpp::Windows::Networking::Sockets
     }
 
     static PyMethodDef _methods_StreamSocket[] = {
-        { "cancel_i_o_async", reinterpret_cast<PyCFunction>(StreamSocket_CancelIOAsync), METH_VARARGS, nullptr },
+        { "cancel_io_async", reinterpret_cast<PyCFunction>(StreamSocket_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(StreamSocket_Close), METH_VARARGS, nullptr },
         { "connect_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectAsync), METH_VARARGS, nullptr },
         { "connect_with_endpoint_pair_and_protection_level_async", reinterpret_cast<PyCFunction>(StreamSocket_ConnectWithEndpointPairAndProtectionLevelAsync), METH_VARARGS, nullptr },
@@ -8158,7 +8158,7 @@ namespace py::cpp::Windows::Networking::Sockets
         { "bind_service_name_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameAsync), METH_VARARGS, nullptr },
         { "bind_service_name_with_protection_level_and_adapter_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameWithProtectionLevelAndAdapterAsync), METH_VARARGS, nullptr },
         { "bind_service_name_with_protection_level_async", reinterpret_cast<PyCFunction>(StreamSocketListener_BindServiceNameWithProtectionLevelAsync), METH_VARARGS, nullptr },
-        { "cancel_i_o_async", reinterpret_cast<PyCFunction>(StreamSocketListener_CancelIOAsync), METH_VARARGS, nullptr },
+        { "cancel_io_async", reinterpret_cast<PyCFunction>(StreamSocketListener_CancelIOAsync), METH_VARARGS, nullptr },
         { "close", reinterpret_cast<PyCFunction>(StreamSocketListener_Close), METH_VARARGS, nullptr },
         { "enable_transfer_ownership", reinterpret_cast<PyCFunction>(StreamSocketListener_EnableTransferOwnership), METH_VARARGS, nullptr },
         { "enable_transfer_ownership_with_connected_standby_action", reinterpret_cast<PyCFunction>(StreamSocketListener_EnableTransferOwnershipWithConnectedStandbyAction), METH_VARARGS, nullptr },
