@@ -47,6 +47,8 @@ static class StringExtensions
     {
         var sb = new StringBuilder();
 
+        // Replace 3MF with _3mf
+        str = Regex.Replace(str, @"3MF", "_3mf");
         // Replace ARM with Arm
         str = Regex.Replace(str, @"ARM", "Arm");
         // replace DB with Db, ignore ID
