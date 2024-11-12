@@ -53,6 +53,8 @@ static class StringExtensions
             @"^([A-Z])([A-Z0-9]+)$",
             m => $"{m.Groups[1].Value}{m.Groups[2].Value.ToLowerInvariant()}"
         );
+        // Replace memory size
+        str = Regex.Replace(str, @"(\d+)(M|G)B", "_${1}${2}b");
         // Replace 3MF with _3mf
         str = Regex.Replace(str, @"3MF", "_3mf");
         // Replace ARM with Arm
