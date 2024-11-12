@@ -12993,7 +12993,7 @@ namespace py::cpp::Windows::Storage
         { "audio", reinterpret_cast<getter>(SystemProperties_get_Audio), nullptr, nullptr, nullptr },
         { "author", reinterpret_cast<getter>(SystemProperties_get_Author), nullptr, nullptr, nullptr },
         { "comment", reinterpret_cast<getter>(SystemProperties_get_Comment), nullptr, nullptr, nullptr },
-        { "g_p_s", reinterpret_cast<getter>(SystemProperties_get_GPS), nullptr, nullptr, nullptr },
+        { "gps", reinterpret_cast<getter>(SystemProperties_get_GPS), nullptr, nullptr, nullptr },
         { "image", reinterpret_cast<getter>(SystemProperties_get_Image), nullptr, nullptr, nullptr },
         { "item_name_display", reinterpret_cast<getter>(SystemProperties_get_ItemNameDisplay), nullptr, nullptr, nullptr },
         { "keywords", reinterpret_cast<getter>(SystemProperties_get_Keywords), nullptr, nullptr, nullptr },
