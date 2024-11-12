@@ -137,15 +137,15 @@ class NDCertificateFeature(enum.IntEnum):
 class NDCertificatePlatformID(enum.IntEnum):
     WINDOWS = 0
     O_S_X = 1
-    WINDOWS_ON_A_R_M = 2
+    WINDOWS_ON_ARM = 2
     WINDOWS_MOBILE7 = 5
-    I_O_S_ON_A_R_M = 6
+    I_O_S_ON_ARM = 6
     X_BOX_ON_P_P_C = 7
-    WINDOWS_PHONE8_ON_A_R_M = 8
+    WINDOWS_PHONE8_ON_ARM = 8
     WINDOWS_PHONE8_ON_X86 = 9
     XBOX_ONE = 10
-    ANDROID_ON_A_R_M = 11
-    WINDOWS_PHONE81_ON_A_R_M = 12
+    ANDROID_ON_ARM = 11
+    WINDOWS_PHONE81_ON_ARM = 12
     WINDOWS_PHONE81_ON_X86 = 13
 
 class NDCertificateType(enum.IntEnum):
