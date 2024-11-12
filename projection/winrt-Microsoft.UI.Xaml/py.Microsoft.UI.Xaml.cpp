@@ -24612,7 +24612,7 @@ namespace py::cpp::Microsoft::UI::Xaml
 
     static PyGetSetDef _getset_LaunchActivatedEventArgs[] = {
         { "arguments", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
-        { "u_w_p_launch_activated_event_args", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_UWPLaunchActivatedEventArgs), nullptr, nullptr, nullptr },
+        { "uwp_launch_activated_event_args", reinterpret_cast<getter>(LaunchActivatedEventArgs_get_UWPLaunchActivatedEventArgs), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -75,6 +75,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<![A-Z])OS", "Os");
         // Replace UI with Ui (also handles UInt)
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
+        // Replace UWP with Uwp
+        str = Regex.Replace(str, @"UWP", "Uwp");
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {
