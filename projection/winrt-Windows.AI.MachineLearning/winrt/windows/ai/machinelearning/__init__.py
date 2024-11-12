@@ -72,9 +72,9 @@ __all__ = [
 class LearningModelDeviceKind(enum.IntEnum):
     DEFAULT = 0
     CPU = 1
-    DIRECT_X = 2
-    DIRECT_X_HIGH_PERFORMANCE = 3
-    DIRECT_X_MIN_POWER = 4
+    DIRECTX = 2
+    DIRECTX_HIGH_PERFORMANCE = 3
+    DIRECTX_MIN_POWER = 4
 
 class LearningModelFeatureKind(enum.IntEnum):
     TENSOR = 0
