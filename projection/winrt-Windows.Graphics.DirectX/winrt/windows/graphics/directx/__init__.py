@@ -148,25 +148,25 @@ class DirectXPixelFormat(enum.IntEnum):
     AYUV = 100
     Y410 = 101
     Y416 = 102
-    N_V12 = 103
+    NV12 = 103
     P010 = 104
     P016 = 105
     OPAQUE420 = 106
     YUY2 = 107
     Y210 = 108
     Y216 = 109
-    N_V11 = 110
-    A_I44 = 111
-    I_A44 = 112
+    NV11 = 110
+    AI44 = 111
+    IA44 = 112
     P8 = 113
-    A8_P8 = 114
+    A8P8 = 114
     B4_G4_R4_A4_UINT_NORMALIZED = 115
     P208 = 130
     V208 = 131
     V408 = 132
     SAMPLER_FEEDBACK_MIN_MIP_OPAQUE = 189
     SAMPLER_FEEDBACK_MIP_REGION_USED_OPAQUE = 190
-    A4_B4_G4_R4 = 191
+    A4B4G4R4 = 191
 
 class DirectXPrimitiveTopology(enum.IntEnum):
     UNDEFINED = 0

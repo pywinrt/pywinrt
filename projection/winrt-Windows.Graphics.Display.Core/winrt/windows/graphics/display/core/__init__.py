@@ -21,8 +21,8 @@ __all__ = [
 class HdmiDisplayColorSpace(enum.IntEnum):
     RGB_LIMITED = 0
     RGB_FULL = 1
-    B_T2020 = 2
-    B_T709 = 3
+    BT2020 = 2
+    BT709 = 3
 
 class HdmiDisplayHdrOption(enum.IntEnum):
     NONE = 0

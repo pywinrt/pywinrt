@@ -132,7 +132,7 @@ class SmsEncoding(enum.IntEnum):
     EIGHT_BIT = 5
     LATIN = 6
     KOREAN = 7
-    I_A5 = 8
+    IA5 = 8
     SHIFT_JIS = 9
     LATIN_HEBREW = 10
 

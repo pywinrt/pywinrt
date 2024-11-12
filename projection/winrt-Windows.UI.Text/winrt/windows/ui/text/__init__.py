@@ -300,10 +300,10 @@ class TextScript(enum.IntEnum):
     SYMBOL = 11
     THAI = 12
     SHIFT_JIS = 13
-    G_B2312 = 14
+    GB2312 = 14
     HANGUL = 15
     BIG5 = 16
-    P_C437 = 17
+    PC437 = 17
     OEM = 18
     MAC = 19
     ARMENIAN = 20
