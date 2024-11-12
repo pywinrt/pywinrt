@@ -71,6 +71,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
+        // Replace EU with Eu
+        str = Regex.Replace(str, @"EU", "Eu");
         // Replace ID with Id, ignore UI, IDR
         str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
         // Replace IO with Io

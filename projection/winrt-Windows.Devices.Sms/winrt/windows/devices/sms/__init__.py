@@ -96,11 +96,11 @@ class SmsBroadcastType(enum.IntEnum):
     CMAS_SEVERE = 3
     CMAS_AMBER = 4
     CMAS_TEST = 5
-    E_U_ALERT1 = 6
-    E_U_ALERT2 = 7
-    E_U_ALERT3 = 8
-    E_U_ALERT_AMBER = 9
-    E_U_ALERT_INFO = 10
+    EU_ALERT1 = 6
+    EU_ALERT2 = 7
+    EU_ALERT3 = 8
+    EU_ALERT_AMBER = 9
+    EU_ALERT_INFO = 10
     ETWS_EARTHQUAKE = 11
     ETWS_TSUNAMI = 12
     ETWS_TSUNAMI_AND_EARTHQUAKE = 13
