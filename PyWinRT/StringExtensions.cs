@@ -47,6 +47,8 @@ static class StringExtensions
     {
         var sb = new StringBuilder();
 
+        // Replace ARM with Arm
+        str = Regex.Replace(str, @"ARM", "Arm");
         // replace DB with Db, ignore ID
         str = Regex.Replace(str, @"(?<!I)DB", "Db");
         // replace D3D with D3d
