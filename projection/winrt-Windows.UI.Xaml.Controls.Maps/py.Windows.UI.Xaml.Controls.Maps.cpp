@@ -31679,8 +31679,8 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
     };
 
     static PyMethodDef methods_MapModel3D_Static[] = {
-        { "create_from3_m_f_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFAsync), METH_VARARGS, nullptr },
-        { "create_from3_m_f_with_shading_option_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFWithShadingOptionAsync), METH_VARARGS, nullptr },
+        { "create_from_3mf_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFAsync), METH_VARARGS, nullptr },
+        { "create_from_3mf_with_shading_option_async", reinterpret_cast<PyCFunction>(MapModel3D_CreateFrom3MFWithShadingOptionAsync), METH_VARARGS, nullptr },
         { }
     };
 
