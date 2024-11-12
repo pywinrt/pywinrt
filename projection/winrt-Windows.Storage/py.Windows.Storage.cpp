@@ -4258,7 +4258,7 @@ namespace py::cpp::Windows::Storage
         { "removable_devices", reinterpret_cast<getter>(KnownFolders_get_RemovableDevices), nullptr, nullptr, nullptr },
         { "videos_library", reinterpret_cast<getter>(KnownFolders_get_VideosLibrary), nullptr, nullptr, nullptr },
         { "app_captures", reinterpret_cast<getter>(KnownFolders_get_AppCaptures), nullptr, nullptr, nullptr },
-        { "objects3_d", reinterpret_cast<getter>(KnownFolders_get_Objects3D), nullptr, nullptr, nullptr },
+        { "objects_3d", reinterpret_cast<getter>(KnownFolders_get_Objects3D), nullptr, nullptr, nullptr },
         { "recorded_calls", reinterpret_cast<getter>(KnownFolders_get_RecordedCalls), nullptr, nullptr, nullptr },
         { }
     };

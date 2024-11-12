@@ -1512,7 +1512,7 @@ namespace py::cpp::Windows::Graphics::Holographic
     }
 
     static PyMethodDef _methods_HolographicCameraRenderingParameters[] = {
-        { "commit_direct3_d11_depth_buffer", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer), METH_VARARGS, nullptr },
+        { "commit_direct3d11_depth_buffer", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer), METH_VARARGS, nullptr },
         { "set_focus_point", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPoint), METH_VARARGS, nullptr },
         { "set_focus_point_with_normal", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPointWithNormal), METH_VARARGS, nullptr },
         { "set_focus_point_with_normal_linear_velocity", reinterpret_cast<PyCFunction>(HolographicCameraRenderingParameters_SetFocusPointWithNormalLinearVelocity), METH_VARARGS, nullptr },
@@ -1522,8 +1522,8 @@ namespace py::cpp::Windows::Graphics::Holographic
     };
 
     static PyGetSetDef _getset_HolographicCameraRenderingParameters[] = {
-        { "direct3_d11_back_buffer", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_Direct3D11BackBuffer), nullptr, nullptr, nullptr },
-        { "direct3_d11_device", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_Direct3D11Device), nullptr, nullptr, nullptr },
+        { "direct3d11_back_buffer", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_Direct3D11BackBuffer), nullptr, nullptr, nullptr },
+        { "direct3d11_device", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_Direct3D11Device), nullptr, nullptr, nullptr },
         { "reprojection_mode", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_ReprojectionMode), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_ReprojectionMode), nullptr, nullptr },
         { "is_content_protection_enabled", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_IsContentProtectionEnabled), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_IsContentProtectionEnabled), nullptr, nullptr },
         { "depth_reprojection_method", reinterpret_cast<getter>(HolographicCameraRenderingParameters_get_DepthReprojectionMethod), reinterpret_cast<setter>(HolographicCameraRenderingParameters_put_DepthReprojectionMethod), nullptr, nullptr },
@@ -4756,7 +4756,7 @@ namespace py::cpp::Windows::Graphics::Holographic
         { "create_frame_presentation_monitor", reinterpret_cast<PyCFunction>(HolographicSpace_CreateFramePresentationMonitor), METH_VARARGS, nullptr },
         { "create_frame_scanout_monitor", reinterpret_cast<PyCFunction>(HolographicSpace_CreateFrameScanoutMonitor), METH_VARARGS, nullptr },
         { "create_next_frame", reinterpret_cast<PyCFunction>(HolographicSpace_CreateNextFrame), METH_VARARGS, nullptr },
-        { "set_direct3_d11_device", reinterpret_cast<PyCFunction>(HolographicSpace_SetDirect3D11Device), METH_VARARGS, nullptr },
+        { "set_direct3d11_device", reinterpret_cast<PyCFunction>(HolographicSpace_SetDirect3D11Device), METH_VARARGS, nullptr },
         { "wait_for_next_frame_ready", reinterpret_cast<PyCFunction>(HolographicSpace_WaitForNextFrameReady), METH_VARARGS, nullptr },
         { "wait_for_next_frame_ready_with_head_start", reinterpret_cast<PyCFunction>(HolographicSpace_WaitForNextFrameReadyWithHeadStart), METH_VARARGS, nullptr },
         { "add_camera_added", reinterpret_cast<PyCFunction>(HolographicSpace_add_CameraAdded), METH_O, nullptr },

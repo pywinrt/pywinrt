@@ -98,8 +98,8 @@ class Printing3DBufferFormat(enum.IntEnum):
     R32_G32_B32_A32_UINT = 3
     R32_G32_B32_FLOAT = 6
     R32_G32_B32_UINT = 7
-    PRINTING3_D_DOUBLE = 500
-    PRINTING3_D_UINT = 501
+    PRINTING_3D_DOUBLE = 500
+    PRINTING_3D_UINT = 501
 
 class Printing3DMeshVerificationMode(enum.IntEnum):
     FIND_FIRST_ERROR = 0

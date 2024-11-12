@@ -15652,7 +15652,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Documents
         { "scale", reinterpret_cast<getter>(Glyphs_get_Scale), reinterpret_cast<setter>(Glyphs_put_Scale), nullptr, nullptr },
         { "tab_index", reinterpret_cast<getter>(Glyphs_get_TabIndex), reinterpret_cast<setter>(Glyphs_put_TabIndex), nullptr, nullptr },
         { "rotation_axis", reinterpret_cast<getter>(Glyphs_get_RotationAxis), reinterpret_cast<setter>(Glyphs_put_RotationAxis), nullptr, nullptr },
-        { "transform3_d", reinterpret_cast<getter>(Glyphs_get_Transform3D), reinterpret_cast<setter>(Glyphs_put_Transform3D), nullptr, nullptr },
+        { "transform_3d", reinterpret_cast<getter>(Glyphs_get_Transform3D), reinterpret_cast<setter>(Glyphs_put_Transform3D), nullptr, nullptr },
         { "desired_size", reinterpret_cast<getter>(Glyphs_get_DesiredSize), nullptr, nullptr, nullptr },
         { "focus_state", reinterpret_cast<getter>(Glyphs_get_FocusState), nullptr, nullptr, nullptr },
         { "keyboard_accelerators", reinterpret_cast<getter>(Glyphs_get_KeyboardAccelerators), nullptr, nullptr, nullptr },

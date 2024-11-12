@@ -151,7 +151,7 @@ class KnownFolderId(enum.IntEnum):
     HOME_GROUP = 3
     MEDIA_SERVER_DEVICES = 4
     MUSIC_LIBRARY = 5
-    OBJECTS3_D = 6
+    OBJECTS_3D = 6
     PICTURES_LIBRARY = 7
     PLAYLISTS = 8
     RECORDED_CALLS = 9

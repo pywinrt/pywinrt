@@ -114,7 +114,7 @@ class LearningModelBinding(winrt.system.Object, winrt._winrt.Mapping[str, winrt.
 
 @typing.final
 class LearningModelDevice_Static(type):
-    def create_from_direct3_d11_device(cls, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> LearningModelDevice: ...
+    def create_from_direct3d11_device(cls, device: windows_graphics_directx_direct3d11.IDirect3DDevice, /) -> LearningModelDevice: ...
 
 @typing.final
 class LearningModelDevice(winrt.system.Object, metaclass=LearningModelDevice_Static):
@@ -124,7 +124,7 @@ class LearningModelDevice(winrt.system.Object, metaclass=LearningModelDevice_Sta
     @_property
     def adapter_id(self) -> windows_graphics.DisplayAdapterId: ...
     @_property
-    def direct3_d11_device(self) -> windows_graphics_directx_direct3d11.IDirect3DDevice: ...
+    def direct3d11_device(self) -> windows_graphics_directx_direct3d11.IDirect3DDevice: ...
 
 @typing.final
 class LearningModelEvaluationResult(winrt.system.Object):

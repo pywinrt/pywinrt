@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::Graphics::Printing
         { "source", reinterpret_cast<getter>(PrintTask_get_Source), nullptr, nullptr, nullptr },
         { "is_preview_enabled", reinterpret_cast<getter>(PrintTask_get_IsPreviewEnabled), reinterpret_cast<setter>(PrintTask_put_IsPreviewEnabled), nullptr, nullptr },
         { "is_printer_target_enabled", reinterpret_cast<getter>(PrintTask_get_IsPrinterTargetEnabled), reinterpret_cast<setter>(PrintTask_put_IsPrinterTargetEnabled), nullptr, nullptr },
-        { "is3_d_manufacturing_target_enabled", reinterpret_cast<getter>(PrintTask_get_Is3DManufacturingTargetEnabled), reinterpret_cast<setter>(PrintTask_put_Is3DManufacturingTargetEnabled), nullptr, nullptr },
+        { "is_3d_manufacturing_target_enabled", reinterpret_cast<getter>(PrintTask_get_Is3DManufacturingTargetEnabled), reinterpret_cast<setter>(PrintTask_put_Is3DManufacturingTargetEnabled), nullptr, nullptr },
         { }
     };
 

@@ -8836,7 +8836,7 @@ namespace py::cpp::Windows::Media::Core
         { "extended_properties", reinterpret_cast<getter>(MediaStreamSample_get_ExtendedProperties), nullptr, nullptr, nullptr },
         { "protection", reinterpret_cast<getter>(MediaStreamSample_get_Protection), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(MediaStreamSample_get_Timestamp), nullptr, nullptr, nullptr },
-        { "direct3_d11_surface", reinterpret_cast<getter>(MediaStreamSample_get_Direct3D11Surface), nullptr, nullptr, nullptr },
+        { "direct3d11_surface", reinterpret_cast<getter>(MediaStreamSample_get_Direct3D11Surface), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -8861,7 +8861,7 @@ namespace py::cpp::Windows::Media::Core
 
     static PyMethodDef methods_MediaStreamSample_Static[] = {
         { "create_from_buffer", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromBuffer), METH_VARARGS, nullptr },
-        { "create_from_direct3_d11_surface", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromDirect3D11Surface), METH_VARARGS, nullptr },
+        { "create_from_direct3d11_surface", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromDirect3D11Surface), METH_VARARGS, nullptr },
         { "create_from_stream_async", reinterpret_cast<PyCFunction>(MediaStreamSample_CreateFromStreamAsync), METH_VARARGS, nullptr },
         { }
     };

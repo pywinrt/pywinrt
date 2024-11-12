@@ -4034,7 +4034,7 @@ namespace py::cpp::Windows::Media::Capture::Frames
     static PyGetSetDef _getset_VideoMediaFrame[] = {
         { "camera_intrinsics", reinterpret_cast<getter>(VideoMediaFrame_get_CameraIntrinsics), nullptr, nullptr, nullptr },
         { "depth_media_frame", reinterpret_cast<getter>(VideoMediaFrame_get_DepthMediaFrame), nullptr, nullptr, nullptr },
-        { "direct3_d_surface", reinterpret_cast<getter>(VideoMediaFrame_get_Direct3DSurface), nullptr, nullptr, nullptr },
+        { "direct3d_surface", reinterpret_cast<getter>(VideoMediaFrame_get_Direct3DSurface), nullptr, nullptr, nullptr },
         { "frame_reference", reinterpret_cast<getter>(VideoMediaFrame_get_FrameReference), nullptr, nullptr, nullptr },
         { "infrared_media_frame", reinterpret_cast<getter>(VideoMediaFrame_get_InfraredMediaFrame), nullptr, nullptr, nullptr },
         { "software_bitmap", reinterpret_cast<getter>(VideoMediaFrame_get_SoftwareBitmap), nullptr, nullptr, nullptr },
