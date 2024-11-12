@@ -2240,7 +2240,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_Advertisement), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_Status), nullptr, nullptr, nullptr },
         { "use_extended_advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_UseExtendedAdvertisement), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_UseExtendedAdvertisement), nullptr, nullptr },
-        { "preferred_transmit_power_level_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_PreferredTransmitPowerLevelInDBm), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_PreferredTransmitPowerLevelInDBm), nullptr, nullptr },
+        { "preferred_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_PreferredTransmitPowerLevelInDBm), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_PreferredTransmitPowerLevelInDBm), nullptr, nullptr },
         { "is_anonymous", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_IsAnonymous), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_IsAnonymous), nullptr, nullptr },
         { "include_transmit_power_level", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisher_get_IncludeTransmitPowerLevel), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisher_put_IncludeTransmitPowerLevel), nullptr, nullptr },
         { }
@@ -2389,7 +2389,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisherStatusChangedEventArgs[] = {
         { "error", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_Error), nullptr, nullptr, nullptr },
         { "status", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_Status), nullptr, nullptr, nullptr },
-        { "selected_transmit_power_level_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
+        { "selected_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherStatusChangedEventArgs_get_SelectedTransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2771,7 +2771,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_Advertisement), nullptr, nullptr, nullptr },
         { "advertisement_type", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_AdvertisementType), nullptr, nullptr, nullptr },
         { "bluetooth_address", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_BluetoothAddress), nullptr, nullptr, nullptr },
-        { "raw_signal_strength_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_RawSignalStrengthInDBm), nullptr, nullptr, nullptr },
+        { "raw_signal_strength_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_RawSignalStrengthInDBm), nullptr, nullptr, nullptr },
         { "timestamp", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_Timestamp), nullptr, nullptr, nullptr },
         { "bluetooth_address_type", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_BluetoothAddressType), nullptr, nullptr, nullptr },
         { "is_anonymous", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsAnonymous), nullptr, nullptr, nullptr },
@@ -2779,7 +2779,7 @@ namespace py::cpp::Windows::Devices::Bluetooth::Advertisement
         { "is_directed", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsDirected), nullptr, nullptr, nullptr },
         { "is_scan_response", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsScanResponse), nullptr, nullptr, nullptr },
         { "is_scannable", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_IsScannable), nullptr, nullptr, nullptr },
-        { "transmit_power_level_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_TransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
+        { "transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementReceivedEventArgs_get_TransmitPowerLevelInDBm), nullptr, nullptr, nullptr },
         { }
     };
 

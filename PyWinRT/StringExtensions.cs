@@ -47,6 +47,8 @@ static class StringExtensions
     {
         var sb = new StringBuilder();
 
+        // replace DB with Db, ignore ID
+        str = Regex.Replace(str, @"(?<!I)DB", "Db");
         // replace D3D with D3d
         str = Regex.Replace(str, @"(D(?:irect)?)3D", "${1}3d");
         // Replace 3D with _3d

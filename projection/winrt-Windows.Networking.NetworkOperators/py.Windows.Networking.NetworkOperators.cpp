@@ -6234,7 +6234,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "base_station_longitude", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_BaseStationLongitude), nullptr, nullptr, nullptr },
         { "base_station_p_n_code", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_BaseStationPNCode), nullptr, nullptr, nullptr },
         { "network_id", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_NetworkId), nullptr, nullptr, nullptr },
-        { "pilot_signal_strength_in_d_b", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_PilotSignalStrengthInDB), nullptr, nullptr, nullptr },
+        { "pilot_signal_strength_in_db", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_PilotSignalStrengthInDB), nullptr, nullptr, nullptr },
         { "system_id", reinterpret_cast<getter>(MobileBroadbandCellCdma_get_SystemId), nullptr, nullptr, nullptr },
         { }
     };
@@ -6489,7 +6489,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "channel_number", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ChannelNumber), nullptr, nullptr, nullptr },
         { "location_area_code", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_LocationAreaCode), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ProviderId), nullptr, nullptr, nullptr },
-        { "received_signal_strength_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ReceivedSignalStrengthInDBm), nullptr, nullptr, nullptr },
+        { "received_signal_strength_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_ReceivedSignalStrengthInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellGsm_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
         { }
     };
@@ -6769,8 +6769,8 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "channel_number", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ChannelNumber), nullptr, nullptr, nullptr },
         { "physical_cell_id", reinterpret_cast<getter>(MobileBroadbandCellLte_get_PhysicalCellId), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ProviderId), nullptr, nullptr, nullptr },
-        { "reference_signal_received_power_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ReferenceSignalReceivedPowerInDBm), nullptr, nullptr, nullptr },
-        { "reference_signal_received_quality_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ReferenceSignalReceivedQualityInDBm), nullptr, nullptr, nullptr },
+        { "reference_signal_received_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ReferenceSignalReceivedPowerInDBm), nullptr, nullptr, nullptr },
+        { "reference_signal_received_quality_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellLte_get_ReferenceSignalReceivedQualityInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellLte_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
         { "tracking_area_code", reinterpret_cast<getter>(MobileBroadbandCellLte_get_TrackingAreaCode), nullptr, nullptr, nullptr },
         { }
@@ -7077,9 +7077,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "channel_number", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ChannelNumber), nullptr, nullptr, nullptr },
         { "physical_cell_id", reinterpret_cast<getter>(MobileBroadbandCellNR_get_PhysicalCellId), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ProviderId), nullptr, nullptr, nullptr },
-        { "reference_signal_received_power_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ReferenceSignalReceivedPowerInDBm), nullptr, nullptr, nullptr },
-        { "reference_signal_received_quality_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ReferenceSignalReceivedQualityInDBm), nullptr, nullptr, nullptr },
-        { "signal_to_noise_ratio_in_d_b", reinterpret_cast<getter>(MobileBroadbandCellNR_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
+        { "reference_signal_received_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ReferenceSignalReceivedPowerInDBm), nullptr, nullptr, nullptr },
+        { "reference_signal_received_quality_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellNR_get_ReferenceSignalReceivedQualityInDBm), nullptr, nullptr, nullptr },
+        { "signal_to_noise_ratio_in_db", reinterpret_cast<getter>(MobileBroadbandCellNR_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
         { "timing_advance_in_nanoseconds", reinterpret_cast<getter>(MobileBroadbandCellNR_get_TimingAdvanceInNanoseconds), nullptr, nullptr, nullptr },
         { "tracking_area_code", reinterpret_cast<getter>(MobileBroadbandCellNR_get_TrackingAreaCode), nullptr, nullptr, nullptr },
         { }
@@ -7360,9 +7360,9 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "cell_parameter_id", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_CellParameterId), nullptr, nullptr, nullptr },
         { "channel_number", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ChannelNumber), nullptr, nullptr, nullptr },
         { "location_area_code", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_LocationAreaCode), nullptr, nullptr, nullptr },
-        { "path_loss_in_d_b", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_PathLossInDB), nullptr, nullptr, nullptr },
+        { "path_loss_in_db", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_PathLossInDB), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ProviderId), nullptr, nullptr, nullptr },
-        { "received_signal_code_power_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
+        { "received_signal_code_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
         { "timing_advance_in_bit_periods", reinterpret_cast<getter>(MobileBroadbandCellTdscdma_get_TimingAdvanceInBitPeriods), nullptr, nullptr, nullptr },
         { }
     };
@@ -7641,11 +7641,11 @@ namespace py::cpp::Windows::Networking::NetworkOperators
         { "cell_id", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_CellId), nullptr, nullptr, nullptr },
         { "channel_number", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ChannelNumber), nullptr, nullptr, nullptr },
         { "location_area_code", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_LocationAreaCode), nullptr, nullptr, nullptr },
-        { "path_loss_in_d_b", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_PathLossInDB), nullptr, nullptr, nullptr },
+        { "path_loss_in_db", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_PathLossInDB), nullptr, nullptr, nullptr },
         { "primary_scrambling_code", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_PrimaryScramblingCode), nullptr, nullptr, nullptr },
         { "provider_id", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ProviderId), nullptr, nullptr, nullptr },
-        { "received_signal_code_power_in_d_bm", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
-        { "signal_to_noise_ratio_in_d_b", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
+        { "received_signal_code_power_in_dbm", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_ReceivedSignalCodePowerInDBm), nullptr, nullptr, nullptr },
+        { "signal_to_noise_ratio_in_db", reinterpret_cast<getter>(MobileBroadbandCellUmts_get_SignalToNoiseRatioInDB), nullptr, nullptr, nullptr },
         { }
     };
 

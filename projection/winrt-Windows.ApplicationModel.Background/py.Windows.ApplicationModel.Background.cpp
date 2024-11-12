@@ -4053,7 +4053,7 @@ namespace py::cpp::Windows::ApplicationModel::Background
     static PyGetSetDef _getset_BluetoothLEAdvertisementPublisherTrigger[] = {
         { "advertisement", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_Advertisement), nullptr, nullptr, nullptr },
         { "use_extended_format", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_UseExtendedFormat), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisherTrigger_put_UseExtendedFormat), nullptr, nullptr },
-        { "preferred_transmit_power_level_in_d_bm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_PreferredTransmitPowerLevelInDBm), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisherTrigger_put_PreferredTransmitPowerLevelInDBm), nullptr, nullptr },
+        { "preferred_transmit_power_level_in_dbm", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_PreferredTransmitPowerLevelInDBm), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisherTrigger_put_PreferredTransmitPowerLevelInDBm), nullptr, nullptr },
         { "is_anonymous", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_IsAnonymous), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisherTrigger_put_IsAnonymous), nullptr, nullptr },
         { "include_transmit_power_level", reinterpret_cast<getter>(BluetoothLEAdvertisementPublisherTrigger_get_IncludeTransmitPowerLevel), reinterpret_cast<setter>(BluetoothLEAdvertisementPublisherTrigger_put_IncludeTransmitPowerLevel), nullptr, nullptr },
         { }
