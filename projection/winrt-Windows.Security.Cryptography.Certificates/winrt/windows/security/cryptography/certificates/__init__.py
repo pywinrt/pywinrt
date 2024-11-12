@@ -66,7 +66,7 @@ __all__ = [
 class CertificateChainPolicy(enum.IntEnum):
     BASE = 0
     SSL = 1
-    N_T_AUTHENTICATION = 2
+    NT_AUTHENTICATION = 2
     MICROSOFT_ROOT = 3
 
 class ChainValidationResult(enum.IntEnum):

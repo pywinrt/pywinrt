@@ -86,6 +86,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"MD5", "Md5");
         // Replace NS with Ns
         str = Regex.Replace(str, @"NS", "Ns");
+        // Replace NT with Nt
+        str = Regex.Replace(str, @"NT", "Nt");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
         // Replace OK with Ok

@@ -95,7 +95,7 @@ class LoggingFieldFormat(enum.IntEnum):
     XML = 11
     JSON = 12
     WIN32_ERROR = 13
-    N_T_STATUS = 14
+    NT_STATUS = 14
     H_RESULT = 15
     FILE_TIME = 16
     SIGNED = 17
