@@ -3545,7 +3545,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { "close", reinterpret_cast<PyCFunction>(SpeechRecognizer_Close), METH_VARARGS, nullptr },
         { "compile_constraints_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_CompileConstraintsAsync), METH_VARARGS, nullptr },
         { "recognize_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_RecognizeAsync), METH_VARARGS, nullptr },
-        { "recognize_with_u_i_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_RecognizeWithUIAsync), METH_VARARGS, nullptr },
+        { "recognize_with_ui_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_RecognizeWithUIAsync), METH_VARARGS, nullptr },
         { "stop_recognition_async", reinterpret_cast<PyCFunction>(SpeechRecognizer_StopRecognitionAsync), METH_VARARGS, nullptr },
         { "add_recognition_quality_degrading", reinterpret_cast<PyCFunction>(SpeechRecognizer_add_RecognitionQualityDegrading), METH_O, nullptr },
         { "remove_recognition_quality_degrading", reinterpret_cast<PyCFunction>(SpeechRecognizer_remove_RecognitionQualityDegrading), METH_O, nullptr },
@@ -3564,7 +3564,7 @@ namespace py::cpp::Windows::Media::SpeechRecognition
         { "constraints", reinterpret_cast<getter>(SpeechRecognizer_get_Constraints), nullptr, nullptr, nullptr },
         { "current_language", reinterpret_cast<getter>(SpeechRecognizer_get_CurrentLanguage), nullptr, nullptr, nullptr },
         { "timeouts", reinterpret_cast<getter>(SpeechRecognizer_get_Timeouts), nullptr, nullptr, nullptr },
-        { "u_i_options", reinterpret_cast<getter>(SpeechRecognizer_get_UIOptions), nullptr, nullptr, nullptr },
+        { "ui_options", reinterpret_cast<getter>(SpeechRecognizer_get_UIOptions), nullptr, nullptr, nullptr },
         { "continuous_recognition_session", reinterpret_cast<getter>(SpeechRecognizer_get_ContinuousRecognitionSession), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(SpeechRecognizer_get_State), nullptr, nullptr, nullptr },
         { }

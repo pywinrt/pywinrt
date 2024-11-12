@@ -9619,7 +9619,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "accepted_operation", reinterpret_cast<getter>(DragEventArgs_get_AcceptedOperation), reinterpret_cast<setter>(DragEventArgs_put_AcceptedOperation), nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragEventArgs_get_AllowedOperations), nullptr, nullptr, nullptr },
         { "data_view", reinterpret_cast<getter>(DragEventArgs_get_DataView), nullptr, nullptr, nullptr },
-        { "drag_u_i_override", reinterpret_cast<getter>(DragEventArgs_get_DragUIOverride), nullptr, nullptr, nullptr },
+        { "drag_ui_override", reinterpret_cast<getter>(DragEventArgs_get_DragUIOverride), nullptr, nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(DragEventArgs_get_Modifiers), nullptr, nullptr, nullptr },
         { "original_source", reinterpret_cast<getter>(DragEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
@@ -10071,7 +10071,7 @@ namespace py::cpp::Microsoft::UI::Xaml
         { "cancel", reinterpret_cast<getter>(DragStartingEventArgs_get_Cancel), reinterpret_cast<setter>(DragStartingEventArgs_put_Cancel), nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragStartingEventArgs_get_AllowedOperations), reinterpret_cast<setter>(DragStartingEventArgs_put_AllowedOperations), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(DragStartingEventArgs_get_Data), nullptr, nullptr, nullptr },
-        { "drag_u_i", reinterpret_cast<getter>(DragStartingEventArgs_get_DragUI), nullptr, nullptr, nullptr },
+        { "drag_ui", reinterpret_cast<getter>(DragStartingEventArgs_get_DragUI), nullptr, nullptr, nullptr },
         { "original_source", reinterpret_cast<getter>(DragStartingEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
     };

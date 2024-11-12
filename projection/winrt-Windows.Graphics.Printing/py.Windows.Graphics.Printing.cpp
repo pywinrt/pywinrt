@@ -244,7 +244,7 @@ namespace py::cpp::Windows::Graphics::Printing
     static PyMethodDef methods_PrintManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(PrintManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(PrintManager_IsSupported), METH_VARARGS, nullptr },
-        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(PrintManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
+        { "show_print_ui_async", reinterpret_cast<PyCFunction>(PrintManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
         { }
     };
 

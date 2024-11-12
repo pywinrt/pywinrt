@@ -38,9 +38,9 @@ class AnimationEffect(enum.IntEnum):
     DELETE_FROM_SEARCH_GRID = 10
     ADD_TO_SEARCH_LIST = 11
     DELETE_FROM_SEARCH_LIST = 12
-    SHOW_EDGE_U_I = 13
+    SHOW_EDGE_UI = 13
     SHOW_PANEL = 14
-    HIDE_EDGE_U_I = 15
+    HIDE_EDGE_UI = 15
     HIDE_PANEL = 16
     SHOW_POPUP = 17
     HIDE_POPUP = 18

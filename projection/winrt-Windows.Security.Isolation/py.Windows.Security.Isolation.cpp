@@ -854,8 +854,8 @@ namespace py::cpp::Windows::Security::Isolation
     static PyMethodDef _methods_IsolatedWindowsEnvironment[] = {
         { "change_priority", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_ChangePriority), METH_VARARGS, nullptr },
         { "get_user_info", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_GetUserInfo), METH_VARARGS, nullptr },
-        { "launch_file_with_u_i_and_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAndTelemetryAsync), METH_VARARGS, nullptr },
-        { "launch_file_with_u_i_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAsync), METH_VARARGS, nullptr },
+        { "launch_file_with_ui_and_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAndTelemetryAsync), METH_VARARGS, nullptr },
+        { "launch_file_with_ui_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_LaunchFileWithUIAsync), METH_VARARGS, nullptr },
         { "post_message_to_receiver_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_PostMessageToReceiverAsync), METH_VARARGS, nullptr },
         { "post_message_to_receiver_with_telemetry_async", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_PostMessageToReceiverWithTelemetryAsync), METH_VARARGS, nullptr },
         { "register_message_receiver", reinterpret_cast<PyCFunction>(IsolatedWindowsEnvironment_RegisterMessageReceiver), METH_VARARGS, nullptr },

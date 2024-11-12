@@ -1107,7 +1107,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         { "is_visible", reinterpret_cast<getter>(AppWindow_get_IsVisible), nullptr, nullptr, nullptr },
         { "presenter", reinterpret_cast<getter>(AppWindow_get_Presenter), nullptr, nullptr, nullptr },
         { "title_bar", reinterpret_cast<getter>(AppWindow_get_TitleBar), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(AppWindow_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(AppWindow_get_UIContext), nullptr, nullptr, nullptr },
         { "windowing_environment", reinterpret_cast<getter>(AppWindow_get_WindowingEnvironment), nullptr, nullptr, nullptr },
         { }
     };

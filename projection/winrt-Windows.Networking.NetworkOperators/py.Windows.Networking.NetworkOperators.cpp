@@ -11823,7 +11823,7 @@ namespace py::cpp::Windows::Networking::NetworkOperators
     static PyMethodDef _methods_MobileBroadbandNetwork[] = {
         { "get_cells_info_async", reinterpret_cast<PyCFunction>(MobileBroadbandNetwork_GetCellsInfoAsync), METH_VARARGS, nullptr },
         { "get_voice_call_support_async", reinterpret_cast<PyCFunction>(MobileBroadbandNetwork_GetVoiceCallSupportAsync), METH_VARARGS, nullptr },
-        { "show_connection_u_i", reinterpret_cast<PyCFunction>(MobileBroadbandNetwork_ShowConnectionUI), METH_VARARGS, nullptr },
+        { "show_connection_ui", reinterpret_cast<PyCFunction>(MobileBroadbandNetwork_ShowConnectionUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_MobileBroadbandNetwork, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_MobileBroadbandNetwork), METH_O | METH_STATIC, nullptr },
         { }

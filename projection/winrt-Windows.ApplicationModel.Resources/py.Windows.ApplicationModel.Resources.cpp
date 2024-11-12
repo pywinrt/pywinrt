@@ -455,7 +455,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources
         { "get_default_pri_path", reinterpret_cast<PyCFunction>(ResourceLoader_GetDefaultPriPath), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ResourceLoader_GetForCurrentView), METH_VARARGS, nullptr },
         { "get_for_current_view_with_name", reinterpret_cast<PyCFunction>(ResourceLoader_GetForCurrentViewWithName), METH_VARARGS, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceLoader_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_ui_context", reinterpret_cast<PyCFunction>(ResourceLoader_GetForUIContext), METH_VARARGS, nullptr },
         { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUse), METH_VARARGS, nullptr },
         { "get_for_view_independent_use_with_name", reinterpret_cast<PyCFunction>(ResourceLoader_GetForViewIndependentUseWithName), METH_VARARGS, nullptr },
         { "get_string_for_reference", reinterpret_cast<PyCFunction>(ResourceLoader_GetStringForReference), METH_VARARGS, nullptr },

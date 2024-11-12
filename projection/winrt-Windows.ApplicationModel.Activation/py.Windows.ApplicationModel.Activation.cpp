@@ -1701,7 +1701,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "previous_execution_state", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "cached_file_updater_u_i", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
+        { "cached_file_updater_ui", reinterpret_cast<getter>(CachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -3462,7 +3462,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "kind", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { "contact_picker_u_i", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
+        { "contact_picker_ui", reinterpret_cast<getter>(ContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5327,7 +5327,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "previous_execution_state", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "file_open_picker_u_i", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
+        { "file_open_picker_ui", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(FileOpenPickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { }
     };
@@ -5809,7 +5809,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "previous_execution_state", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "file_save_picker_u_i", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
+        { "file_save_picker_ui", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "enterprise_id", reinterpret_cast<getter>(FileSavePickerActivatedEventArgs_get_EnterpriseId), nullptr, nullptr, nullptr },
         { }
@@ -7085,7 +7085,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
         { "currently_shown_application_view_id", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_CurrentlyShownApplicationViewId), nullptr, nullptr, nullptr },
         { "arguments", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
         { "tile_id", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_TileId), nullptr, nullptr, nullptr },
-        { "call_u_i", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
+        { "call_ui", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
         { "view_switcher", reinterpret_cast<getter>(LockScreenCallActivatedEventArgs_get_ViewSwitcher), nullptr, nullptr, nullptr },
         { }
     };
@@ -13211,7 +13211,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     static PyGetSetDef _getset_ICachedFileUpdaterActivatedEventArgs[] = {
-        { "cached_file_updater_u_i", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
+        { "cached_file_updater_ui", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(ICachedFileUpdaterActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
@@ -14792,7 +14792,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     static PyGetSetDef _getset_IContactPickerActivatedEventArgs[] = {
-        { "contact_picker_u_i", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
+        { "contact_picker_ui", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IContactPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
@@ -17030,7 +17030,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     static PyGetSetDef _getset_IFileOpenPickerActivatedEventArgs[] = {
-        { "file_open_picker_u_i", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
+        { "file_open_picker_ui", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileOpenPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
@@ -17498,7 +17498,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     static PyGetSetDef _getset_IFileSavePickerActivatedEventArgs[] = {
-        { "file_save_picker_u_i", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
+        { "file_save_picker_ui", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(IFileSavePickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
@@ -18849,7 +18849,7 @@ namespace py::cpp::Windows::ApplicationModel::Activation
     };
 
     static PyGetSetDef _getset_ILockScreenCallActivatedEventArgs[] = {
-        { "call_u_i", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
+        { "call_ui", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
         { "arguments", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
         { "tile_id", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_TileId), nullptr, nullptr, nullptr },
         { "kind", reinterpret_cast<getter>(ILockScreenCallActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },

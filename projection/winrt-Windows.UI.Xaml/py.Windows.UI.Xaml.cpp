@@ -9539,7 +9539,7 @@ namespace py::cpp::Windows::UI::Xaml
         { "data", reinterpret_cast<getter>(DragEventArgs_get_Data), reinterpret_cast<setter>(DragEventArgs_put_Data), nullptr, nullptr },
         { "accepted_operation", reinterpret_cast<getter>(DragEventArgs_get_AcceptedOperation), reinterpret_cast<setter>(DragEventArgs_put_AcceptedOperation), nullptr, nullptr },
         { "data_view", reinterpret_cast<getter>(DragEventArgs_get_DataView), nullptr, nullptr, nullptr },
-        { "drag_u_i_override", reinterpret_cast<getter>(DragEventArgs_get_DragUIOverride), nullptr, nullptr, nullptr },
+        { "drag_ui_override", reinterpret_cast<getter>(DragEventArgs_get_DragUIOverride), nullptr, nullptr, nullptr },
         { "modifiers", reinterpret_cast<getter>(DragEventArgs_get_Modifiers), nullptr, nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragEventArgs_get_AllowedOperations), nullptr, nullptr, nullptr },
         { "original_source", reinterpret_cast<getter>(DragEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
@@ -9991,7 +9991,7 @@ namespace py::cpp::Windows::UI::Xaml
     static PyGetSetDef _getset_DragStartingEventArgs[] = {
         { "cancel", reinterpret_cast<getter>(DragStartingEventArgs_get_Cancel), reinterpret_cast<setter>(DragStartingEventArgs_put_Cancel), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(DragStartingEventArgs_get_Data), nullptr, nullptr, nullptr },
-        { "drag_u_i", reinterpret_cast<getter>(DragStartingEventArgs_get_DragUI), nullptr, nullptr, nullptr },
+        { "drag_ui", reinterpret_cast<getter>(DragStartingEventArgs_get_DragUI), nullptr, nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragStartingEventArgs_get_AllowedOperations), reinterpret_cast<setter>(DragStartingEventArgs_put_AllowedOperations), nullptr, nullptr },
         { "original_source", reinterpret_cast<getter>(DragStartingEventArgs_get_OriginalSource), nullptr, nullptr, nullptr },
         { }
@@ -22538,7 +22538,7 @@ namespace py::cpp::Windows::UI::Xaml
         { "shadow", reinterpret_cast<getter>(FrameworkElement_get_Shadow), reinterpret_cast<setter>(FrameworkElement_put_Shadow), nullptr, nullptr },
         { "actual_offset", reinterpret_cast<getter>(FrameworkElement_get_ActualOffset), nullptr, nullptr, nullptr },
         { "actual_size", reinterpret_cast<getter>(FrameworkElement_get_ActualSize), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(FrameworkElement_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(FrameworkElement_get_UIContext), nullptr, nullptr, nullptr },
         { "composite_mode", reinterpret_cast<getter>(FrameworkElement_get_CompositeMode), reinterpret_cast<setter>(FrameworkElement_put_CompositeMode), nullptr, nullptr },
         { "transform_3d", reinterpret_cast<getter>(FrameworkElement_get_Transform3D), reinterpret_cast<setter>(FrameworkElement_put_Transform3D), nullptr, nullptr },
         { "can_drag", reinterpret_cast<getter>(FrameworkElement_get_CanDrag), reinterpret_cast<setter>(FrameworkElement_put_CanDrag), nullptr, nullptr },
@@ -41624,7 +41624,7 @@ namespace py::cpp::Windows::UI::Xaml
         { "shadow", reinterpret_cast<getter>(UIElement_get_Shadow), reinterpret_cast<setter>(UIElement_put_Shadow), nullptr, nullptr },
         { "actual_offset", reinterpret_cast<getter>(UIElement_get_ActualOffset), nullptr, nullptr, nullptr },
         { "actual_size", reinterpret_cast<getter>(UIElement_get_ActualSize), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(UIElement_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(UIElement_get_UIContext), nullptr, nullptr, nullptr },
         { "composite_mode", reinterpret_cast<getter>(UIElement_get_CompositeMode), reinterpret_cast<setter>(UIElement_put_CompositeMode), nullptr, nullptr },
         { "transform_3d", reinterpret_cast<getter>(UIElement_get_Transform3D), reinterpret_cast<setter>(UIElement_put_Transform3D), nullptr, nullptr },
         { "can_drag", reinterpret_cast<getter>(UIElement_get_CanDrag), reinterpret_cast<setter>(UIElement_put_CanDrag), nullptr, nullptr },
@@ -46285,7 +46285,7 @@ namespace py::cpp::Windows::UI::Xaml
         { "dispatcher", reinterpret_cast<getter>(Window_get_Dispatcher), nullptr, nullptr, nullptr },
         { "visible", reinterpret_cast<getter>(Window_get_Visible), nullptr, nullptr, nullptr },
         { "compositor", reinterpret_cast<getter>(Window_get_Compositor), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(Window_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(Window_get_UIContext), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -46664,7 +46664,7 @@ namespace py::cpp::Windows::UI::Xaml
         { "is_host_visible", reinterpret_cast<getter>(XamlRoot_get_IsHostVisible), nullptr, nullptr, nullptr },
         { "rasterization_scale", reinterpret_cast<getter>(XamlRoot_get_RasterizationScale), nullptr, nullptr, nullptr },
         { "size", reinterpret_cast<getter>(XamlRoot_get_Size), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(XamlRoot_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(XamlRoot_get_UIContext), nullptr, nullptr, nullptr },
         { }
     };
 

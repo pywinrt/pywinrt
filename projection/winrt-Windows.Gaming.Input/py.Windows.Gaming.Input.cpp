@@ -4583,16 +4583,16 @@ namespace py::cpp::Windows::Gaming::Input
         _type_slots_UINavigationController};
 
     static PyGetSetDef getset_UINavigationController_Static[] = {
-        { "u_i_navigation_controllers", reinterpret_cast<getter>(UINavigationController_get_UINavigationControllers), nullptr, nullptr, nullptr },
+        { "ui_navigation_controllers", reinterpret_cast<getter>(UINavigationController_get_UINavigationControllers), nullptr, nullptr, nullptr },
         { }
     };
 
     static PyMethodDef methods_UINavigationController_Static[] = {
         { "from_game_controller", reinterpret_cast<PyCFunction>(UINavigationController_FromGameController), METH_VARARGS, nullptr },
-        { "add_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerAdded), METH_O, nullptr },
-        { "remove_u_i_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerAdded), METH_O, nullptr },
-        { "add_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerRemoved), METH_O, nullptr },
-        { "remove_u_i_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerRemoved), METH_O, nullptr },
+        { "add_ui_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerAdded), METH_O, nullptr },
+        { "remove_ui_navigation_controller_added", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerAdded), METH_O, nullptr },
+        { "add_ui_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_add_UINavigationControllerRemoved), METH_O, nullptr },
+        { "remove_ui_navigation_controller_removed", reinterpret_cast<PyCFunction>(UINavigationController_remove_UINavigationControllerRemoved), METH_O, nullptr },
         { }
     };
 

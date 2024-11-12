@@ -268,7 +268,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyMethodDef methods_CoreFrameworkInputView_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForCurrentView), METH_VARARGS, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_ui_context", reinterpret_cast<PyCFunction>(CoreFrameworkInputView_GetForUIContext), METH_VARARGS, nullptr },
         { }
     };
 
@@ -1418,7 +1418,7 @@ namespace py::cpp::Windows::UI::ViewManagement::Core
 
     static PyMethodDef methods_CoreInputView_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(CoreInputView_GetForCurrentView), METH_VARARGS, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(CoreInputView_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_ui_context", reinterpret_cast<PyCFunction>(CoreInputView_GetForUIContext), METH_VARARGS, nullptr },
         { }
     };
 

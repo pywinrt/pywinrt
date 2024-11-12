@@ -4358,7 +4358,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
     static PyMethodDef methods_ProtectionPolicyManager_Static[] = {
         { "check_access", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccess), METH_VARARGS, nullptr },
         { "check_access_for_app", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CheckAccessForApp), METH_VARARGS, nullptr },
-        { "clear_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_ClearProcessUIPolicy), METH_VARARGS, nullptr },
+        { "clear_process_ui_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_ClearProcessUIPolicy), METH_VARARGS, nullptr },
         { "create_current_thread_network_context", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_CreateCurrentThreadNetworkContext), METH_VARARGS, nullptr },
         { "get_enforcement_level", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetEnforcementLevel), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_GetForCurrentView), METH_VARARGS, nullptr },
@@ -4385,7 +4385,7 @@ namespace py::cpp::Windows::Security::EnterpriseData
         { "request_access_with_behavior_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessWithBehaviorAsync), METH_VARARGS, nullptr },
         { "request_access_with_message_async", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RequestAccessWithMessageAsync), METH_VARARGS, nullptr },
         { "revoke_content", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_RevokeContent), METH_VARARGS, nullptr },
-        { "try_apply_process_u_i_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS, nullptr },
+        { "try_apply_process_ui_policy", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_TryApplyProcessUIPolicy), METH_VARARGS, nullptr },
         { "add_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_PolicyChanged), METH_O, nullptr },
         { "remove_policy_changed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_remove_PolicyChanged), METH_O, nullptr },
         { "add_protected_access_resumed", reinterpret_cast<PyCFunction>(ProtectionPolicyManager_add_ProtectedAccessResumed), METH_O, nullptr },

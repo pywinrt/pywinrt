@@ -207,7 +207,7 @@ namespace py::cpp::Windows::Graphics::Printing3D
 
     static PyMethodDef methods_Print3DManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(Print3DManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { "show_print_u_i_async", reinterpret_cast<PyCFunction>(Print3DManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
+        { "show_print_ui_async", reinterpret_cast<PyCFunction>(Print3DManager_ShowPrintUIAsync), METH_VARARGS, nullptr },
         { }
     };
 

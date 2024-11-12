@@ -128,7 +128,7 @@ class AppInstance(winrt.system.Object, metaclass=AppInstance_Static):
 
 @typing.final
 class CameraApplicationManager_Static(type):
-    def show_installed_applications_u_i(cls) -> None: ...
+    def show_installed_applications_ui(cls) -> None: ...
 
 @typing.final
 class CameraApplicationManager(winrt.system.Object, metaclass=CameraApplicationManager_Static):

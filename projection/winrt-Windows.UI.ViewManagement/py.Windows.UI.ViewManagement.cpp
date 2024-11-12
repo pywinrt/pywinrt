@@ -2069,7 +2069,7 @@ namespace py::cpp::Windows::UI::ViewManagement
         { "view_mode", reinterpret_cast<getter>(ApplicationView_get_ViewMode), nullptr, nullptr, nullptr },
         { "persisted_state_id", reinterpret_cast<getter>(ApplicationView_get_PersistedStateId), reinterpret_cast<setter>(ApplicationView_put_PersistedStateId), nullptr, nullptr },
         { "windowing_environment", reinterpret_cast<getter>(ApplicationView_get_WindowingEnvironment), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(ApplicationView_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(ApplicationView_get_UIContext), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4334,7 +4334,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyMethodDef methods_InputPane_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(InputPane_GetForCurrentView), METH_VARARGS, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(InputPane_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_ui_context", reinterpret_cast<PyCFunction>(InputPane_GetForUIContext), METH_VARARGS, nullptr },
         { }
     };
 
@@ -6630,7 +6630,7 @@ namespace py::cpp::Windows::UI::ViewManagement
 
     static PyMethodDef _methods_UISettings[] = {
         { "get_color_value", reinterpret_cast<PyCFunction>(UISettings_GetColorValue), METH_VARARGS, nullptr },
-        { "u_i_element_color", reinterpret_cast<PyCFunction>(UISettings_UIElementColor), METH_VARARGS, nullptr },
+        { "ui_element_color", reinterpret_cast<PyCFunction>(UISettings_UIElementColor), METH_VARARGS, nullptr },
         { "add_text_scale_factor_changed", reinterpret_cast<PyCFunction>(UISettings_add_TextScaleFactorChanged), METH_O, nullptr },
         { "remove_text_scale_factor_changed", reinterpret_cast<PyCFunction>(UISettings_remove_TextScaleFactorChanged), METH_O, nullptr },
         { "add_color_values_changed", reinterpret_cast<PyCFunction>(UISettings_add_ColorValuesChanged), METH_O, nullptr },

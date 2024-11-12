@@ -875,8 +875,8 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
 
     static PyMethodDef _methods_DragOperation[] = {
         { "close", reinterpret_cast<PyCFunction>(DragOperation_Close), METH_VARARGS, nullptr },
-        { "set_drag_u_i_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap), METH_VARARGS, nullptr },
-        { "set_drag_u_i_content_from_software_bitmap2", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap2), METH_VARARGS, nullptr },
+        { "set_drag_ui_content_from_software_bitmap", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap), METH_VARARGS, nullptr },
+        { "set_drag_ui_content_from_software_bitmap2", reinterpret_cast<PyCFunction>(DragOperation_SetDragUIContentFromSoftwareBitmap2), METH_VARARGS, nullptr },
         { "start_async", reinterpret_cast<PyCFunction>(DragOperation_StartAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_DragOperation, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_DragOperation), METH_O | METH_STATIC, nullptr },
@@ -886,7 +886,7 @@ namespace py::cpp::Microsoft::UI::Input::DragDrop
     };
 
     static PyGetSetDef _getset_DragOperation[] = {
-        { "drag_u_i_content_mode", reinterpret_cast<getter>(DragOperation_get_DragUIContentMode), reinterpret_cast<setter>(DragOperation_put_DragUIContentMode), nullptr, nullptr },
+        { "drag_ui_content_mode", reinterpret_cast<getter>(DragOperation_get_DragUIContentMode), reinterpret_cast<setter>(DragOperation_put_DragUIContentMode), nullptr, nullptr },
         { "allowed_operations", reinterpret_cast<getter>(DragOperation_get_AllowedOperations), reinterpret_cast<setter>(DragOperation_put_AllowedOperations), nullptr, nullptr },
         { "data", reinterpret_cast<getter>(DragOperation_get_Data), nullptr, nullptr, nullptr },
         { }

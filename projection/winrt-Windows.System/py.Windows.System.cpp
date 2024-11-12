@@ -7613,7 +7613,7 @@ namespace py::cpp::Windows::System
         { "fallback_uri", reinterpret_cast<getter>(LauncherOptions_get_FallbackUri), reinterpret_cast<setter>(LauncherOptions_put_FallbackUri), nullptr, nullptr },
         { "display_application_picker", reinterpret_cast<getter>(LauncherOptions_get_DisplayApplicationPicker), reinterpret_cast<setter>(LauncherOptions_put_DisplayApplicationPicker), nullptr, nullptr },
         { "content_type", reinterpret_cast<getter>(LauncherOptions_get_ContentType), reinterpret_cast<setter>(LauncherOptions_put_ContentType), nullptr, nullptr },
-        { "u_i", reinterpret_cast<getter>(LauncherOptions_get_UI), nullptr, nullptr, nullptr },
+        { "ui", reinterpret_cast<getter>(LauncherOptions_get_UI), nullptr, nullptr, nullptr },
         { "target_application_package_family_name", reinterpret_cast<getter>(LauncherOptions_get_TargetApplicationPackageFamilyName), reinterpret_cast<setter>(LauncherOptions_put_TargetApplicationPackageFamilyName), nullptr, nullptr },
         { "neighboring_files_query", reinterpret_cast<getter>(LauncherOptions_get_NeighboringFilesQuery), reinterpret_cast<setter>(LauncherOptions_put_NeighboringFilesQuery), nullptr, nullptr },
         { "ignore_app_uri_handlers", reinterpret_cast<getter>(LauncherOptions_get_IgnoreAppUriHandlers), reinterpret_cast<setter>(LauncherOptions_put_IgnoreAppUriHandlers), nullptr, nullptr },

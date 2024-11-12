@@ -199,7 +199,7 @@ class PhoneLineNetworkOperatorDisplayTextLocation(enum.IntEnum):
     DEFAULT = 0
     TILE = 1
     DIALER = 2
-    IN_CALL_U_I = 3
+    IN_CALL_UI = 3
 
 class PhoneLineOperationStatus(enum.IntEnum):
     SUCCEEDED = 0

@@ -1387,8 +1387,8 @@ namespace py::cpp::Windows::Services::Maps
     };
 
     static PyMethodDef methods_MapManager_Static[] = {
-        { "show_downloaded_maps_u_i", reinterpret_cast<PyCFunction>(MapManager_ShowDownloadedMapsUI), METH_VARARGS, nullptr },
-        { "show_maps_update_u_i", reinterpret_cast<PyCFunction>(MapManager_ShowMapsUpdateUI), METH_VARARGS, nullptr },
+        { "show_downloaded_maps_ui", reinterpret_cast<PyCFunction>(MapManager_ShowDownloadedMapsUI), METH_VARARGS, nullptr },
+        { "show_maps_update_ui", reinterpret_cast<PyCFunction>(MapManager_ShowMapsUpdateUI), METH_VARARGS, nullptr },
         { }
     };
 

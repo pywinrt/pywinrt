@@ -1481,7 +1481,7 @@ namespace py::cpp::Windows::ApplicationModel
     };
 
     static PyMethodDef methods_CameraApplicationManager_Static[] = {
-        { "show_installed_applications_u_i", reinterpret_cast<PyCFunction>(CameraApplicationManager_ShowInstalledApplicationsUI), METH_VARARGS, nullptr },
+        { "show_installed_applications_ui", reinterpret_cast<PyCFunction>(CameraApplicationManager_ShowInstalledApplicationsUI), METH_VARARGS, nullptr },
         { }
     };
 

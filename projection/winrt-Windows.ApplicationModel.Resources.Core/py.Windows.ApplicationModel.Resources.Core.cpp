@@ -1625,7 +1625,7 @@ namespace py::cpp::Windows::ApplicationModel::Resources::Core
     static PyMethodDef methods_ResourceContext_Static[] = {
         { "create_matching_context", reinterpret_cast<PyCFunction>(ResourceContext_CreateMatchingContext), METH_VARARGS, nullptr },
         { "get_for_current_view", reinterpret_cast<PyCFunction>(ResourceContext_GetForCurrentView), METH_VARARGS, nullptr },
-        { "get_for_u_i_context", reinterpret_cast<PyCFunction>(ResourceContext_GetForUIContext), METH_VARARGS, nullptr },
+        { "get_for_ui_context", reinterpret_cast<PyCFunction>(ResourceContext_GetForUIContext), METH_VARARGS, nullptr },
         { "get_for_view_independent_use", reinterpret_cast<PyCFunction>(ResourceContext_GetForViewIndependentUse), METH_VARARGS, nullptr },
         { "reset_global_qualifier_values", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValues), METH_VARARGS, nullptr },
         { "reset_global_qualifier_values_for_specified_qualifiers", reinterpret_cast<PyCFunction>(ResourceContext_ResetGlobalQualifierValuesForSpecifiedQualifiers), METH_VARARGS, nullptr },

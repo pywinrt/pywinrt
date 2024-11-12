@@ -7424,8 +7424,8 @@ namespace py::cpp::Windows::ApplicationModel::Calls
 
     static PyMethodDef methods_PhoneCallManager_Static[] = {
         { "request_store_async", reinterpret_cast<PyCFunction>(PhoneCallManager_RequestStoreAsync), METH_VARARGS, nullptr },
-        { "show_phone_call_settings_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallSettingsUI), METH_VARARGS, nullptr },
-        { "show_phone_call_u_i", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallUI), METH_VARARGS, nullptr },
+        { "show_phone_call_settings_ui", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallSettingsUI), METH_VARARGS, nullptr },
+        { "show_phone_call_ui", reinterpret_cast<PyCFunction>(PhoneCallManager_ShowPhoneCallUI), METH_VARARGS, nullptr },
         { "add_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_add_CallStateChanged), METH_O, nullptr },
         { "remove_call_state_changed", reinterpret_cast<PyCFunction>(PhoneCallManager_remove_CallStateChanged), METH_O, nullptr },
         { }
@@ -13106,7 +13106,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls
         { "notify_call_ready", reinterpret_cast<PyCFunction>(VoipPhoneCall_NotifyCallReady), METH_VARARGS, nullptr },
         { "remove_associated_call_control_device", reinterpret_cast<PyCFunction>(VoipPhoneCall_RemoveAssociatedCallControlDevice), METH_VARARGS, nullptr },
         { "set_associated_call_control_devices", reinterpret_cast<PyCFunction>(VoipPhoneCall_SetAssociatedCallControlDevices), METH_VARARGS, nullptr },
-        { "try_show_app_u_i", reinterpret_cast<PyCFunction>(VoipPhoneCall_TryShowAppUI), METH_VARARGS, nullptr },
+        { "try_show_app_ui", reinterpret_cast<PyCFunction>(VoipPhoneCall_TryShowAppUI), METH_VARARGS, nullptr },
         { "add_answer_requested", reinterpret_cast<PyCFunction>(VoipPhoneCall_add_AnswerRequested), METH_O, nullptr },
         { "remove_answer_requested", reinterpret_cast<PyCFunction>(VoipPhoneCall_remove_AnswerRequested), METH_O, nullptr },
         { "add_end_requested", reinterpret_cast<PyCFunction>(VoipPhoneCall_add_EndRequested), METH_O, nullptr },
