@@ -53,6 +53,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(D(?:irect)?)3D", "${1}3d");
         // Replace 3D with _3d
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
+        // Replace DOM with Dom
+        str = Regex.Replace(str, @"DOM", "Dom");
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {
