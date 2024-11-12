@@ -140,7 +140,7 @@ class NDCertificatePlatformID(enum.IntEnum):
     WINDOWS_ON_ARM = 2
     WINDOWS_MOBILE7 = 5
     IOS_ON_ARM = 6
-    X_BOX_ON_P_P_C = 7
+    X_BOX_ON_PPC = 7
     WINDOWS_PHONE8_ON_ARM = 8
     WINDOWS_PHONE8_ON_X86 = 9
     XBOX_ONE = 10
