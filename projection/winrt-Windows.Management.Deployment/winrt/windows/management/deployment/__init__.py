@@ -102,7 +102,7 @@ class PackageState(enum.IntEnum):
     TAMPERED = 3
 
 class PackageStatus(enum.IntFlag):
-    O_K = 0x0
+    OK = 0x0
     LICENSE_ISSUE = 0x1
     MODIFIED = 0x2
     TAMPERED = 0x4

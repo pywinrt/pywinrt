@@ -12255,7 +12255,7 @@ namespace py::cpp::Windows::ApplicationModel::Email
         { "subject", reinterpret_cast<getter>(EmailMessage_get_Subject), reinterpret_cast<setter>(EmailMessage_put_Subject), nullptr, nullptr },
         { "body", reinterpret_cast<getter>(EmailMessage_get_Body), reinterpret_cast<setter>(EmailMessage_put_Body), nullptr, nullptr },
         { "bcc", reinterpret_cast<getter>(EmailMessage_get_Bcc), nullptr, nullptr, nullptr },
-        { "c_c", reinterpret_cast<getter>(EmailMessage_get_CC), nullptr, nullptr, nullptr },
+        { "cc", reinterpret_cast<getter>(EmailMessage_get_CC), nullptr, nullptr, nullptr },
         { "attachments", reinterpret_cast<getter>(EmailMessage_get_Attachments), nullptr, nullptr, nullptr },
         { "to", reinterpret_cast<getter>(EmailMessage_get_To), nullptr, nullptr, nullptr },
         { "allow_internet_images", reinterpret_cast<getter>(EmailMessage_get_AllowInternetImages), reinterpret_cast<setter>(EmailMessage_put_AllowInternetImages), nullptr, nullptr },

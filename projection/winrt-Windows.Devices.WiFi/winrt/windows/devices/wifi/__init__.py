@@ -104,10 +104,10 @@ class WiFiPhyKind(enum.IntEnum):
     OFDM = 4
     HRDSSS = 5
     ERP = 6
-    H_T = 7
+    HT = 7
     VHT = 8
     DMG = 9
-    H_E = 10
+    HE = 10
     EHT = 11
 
 class WiFiReconnectionKind(enum.IntEnum):

@@ -64,8 +64,8 @@ class Platform(enum.IntEnum):
     WINDOWS_PHONE = 1
 
 class ThreadingModel(enum.IntEnum):
-    S_T_A = 1
-    M_T_A = 2
+    STA = 1
+    MTA = 2
     BOTH = 3
     INVALID_THREADING = 0
 

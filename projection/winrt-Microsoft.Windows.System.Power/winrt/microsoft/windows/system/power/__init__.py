@@ -46,8 +46,8 @@ class EnergySaverStatus(enum.IntEnum):
     ON = 3
 
 class PowerSourceKind(enum.IntEnum):
-    A_C = 0
-    D_C = 1
+    AC = 0
+    DC = 1
 
 class PowerSupplyStatus(enum.IntEnum):
     NOT_PRESENT = 0

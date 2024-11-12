@@ -25,7 +25,7 @@ class RadioKind(enum.IntEnum):
     WI_FI = 1
     MOBILE_BROADBAND = 2
     BLUETOOTH = 3
-    F_M = 4
+    FM = 4
 
 class RadioState(enum.IntEnum):
     UNKNOWN = 0

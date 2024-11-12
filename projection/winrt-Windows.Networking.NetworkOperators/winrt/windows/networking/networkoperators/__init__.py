@@ -481,7 +481,7 @@ class UiccAccessCondition(enum.IntEnum):
 
 class UiccAppKind(enum.IntEnum):
     UNKNOWN = 0
-    M_F = 1
+    MF = 1
     M_F_SIM = 2
     M_F_RUIM = 3
     U_SIM = 4
