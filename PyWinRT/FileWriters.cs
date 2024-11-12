@@ -314,7 +314,8 @@ static class FileWriters
 
             var generic = "";
 
-            if (type.IsGeneric)
+            // typing.Generic is redundant when there is a collection type
+            if (type.IsGeneric && string.IsNullOrEmpty(collection))
             {
                 generic =
                     $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
