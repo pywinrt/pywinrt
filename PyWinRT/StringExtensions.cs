@@ -63,10 +63,16 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
         // Replace IO with Io
         str = Regex.Replace(str, @"(?<![A-Z])IO", "Io");
+        // Replace iOS with Ios
+        str = Regex.Replace(str, @"iOS", "Ios");
         // Replace IP with Ip, ignore UI, GIP
         str = Regex.Replace(str, @"(?<![GU])IP(?=[A-Zv]|$)", "Ip");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
+        // replace OSX with Osx
+        str = Regex.Replace(str, @"OSX", "Osx");
+        // Replace OS with Os
+        str = Regex.Replace(str, @"(?<![A-Z])OS", "Os");
         // Replace UI with Ui (also handles UInt)
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
 
