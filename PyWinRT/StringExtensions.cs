@@ -43,8 +43,6 @@ static class StringExtensions
             ]
         );
 
-    static readonly ReadOnlyCollection<string> snakeCaseExceptions = new(["IPAddress"]);
-
     static string ToSnakeCase(this string str)
     {
         var sb = new StringBuilder();
@@ -55,17 +53,14 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
+        // Replace IP with Ip, ignore UI, GIP
+        str = Regex.Replace(str, @"(?<![GU])IP(?=[A-Zv]|$)", "Ip");
         // Replace UI with Ui (also handles UInt)
         str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {
-            if (
-                i > 0
-                && char.IsUpper(c)
-                && str[i - 1] != '_'
-                && !snakeCaseExceptions.Any(e => str[(i - 1)..].StartsWith(e))
-            )
+            if (i > 0 && char.IsUpper(c) && str[i - 1] != '_')
             {
                 sb.Append('_');
             }

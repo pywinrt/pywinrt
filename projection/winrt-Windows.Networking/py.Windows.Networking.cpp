@@ -677,7 +677,7 @@ namespace py::cpp::Windows::Networking
     static PyGetSetDef _getset_HostName[] = {
         { "canonical_name", reinterpret_cast<getter>(HostName_get_CanonicalName), nullptr, nullptr, nullptr },
         { "display_name", reinterpret_cast<getter>(HostName_get_DisplayName), nullptr, nullptr, nullptr },
-        { "i_p_information", reinterpret_cast<getter>(HostName_get_IPInformation), nullptr, nullptr, nullptr },
+        { "ip_information", reinterpret_cast<getter>(HostName_get_IPInformation), nullptr, nullptr, nullptr },
         { "raw_name", reinterpret_cast<getter>(HostName_get_RawName), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(HostName_get_Type), nullptr, nullptr, nullptr },
         { }

@@ -57,7 +57,7 @@ class PhotoImportAccessMode(enum.IntEnum):
 class PhotoImportConnectionTransport(enum.IntEnum):
     UNKNOWN = 0
     USB = 1
-    I_P = 2
+    IP = 2
     BLUETOOTH = 3
 
 class PhotoImportContentType(enum.IntEnum):
