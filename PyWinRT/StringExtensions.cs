@@ -55,6 +55,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
+        // Replace ID with Id, ignore UI, IDR
+        str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
         // Replace IP with Ip, ignore UI, GIP
         str = Regex.Replace(str, @"(?<![GU])IP(?=[A-Zv]|$)", "Ip");
         // Replace UI with Ui (also handles UInt)

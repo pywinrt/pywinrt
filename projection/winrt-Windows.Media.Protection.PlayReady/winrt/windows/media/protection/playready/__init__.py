@@ -169,7 +169,7 @@ class NDClosedCaptionFormat(enum.IntEnum):
     UNKNOWN = 2
 
 class NDContentIDType(enum.IntEnum):
-    KEY_I_D = 1
+    KEY_ID = 1
     PLAY_READY_OBJECT = 2
     CUSTOM = 3
 

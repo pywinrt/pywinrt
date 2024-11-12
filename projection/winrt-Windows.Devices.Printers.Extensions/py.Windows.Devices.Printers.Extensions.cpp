@@ -295,7 +295,7 @@ namespace py::cpp::Windows::Devices::Printers::Extensions
 
     static PyGetSetDef _getset_Print3DWorkflow[] = {
         { "is_print_ready", reinterpret_cast<getter>(Print3DWorkflow_get_IsPrintReady), reinterpret_cast<setter>(Print3DWorkflow_put_IsPrintReady), nullptr, nullptr },
-        { "device_i_d", reinterpret_cast<getter>(Print3DWorkflow_get_DeviceID), nullptr, nullptr, nullptr },
+        { "device_id", reinterpret_cast<getter>(Print3DWorkflow_get_DeviceID), nullptr, nullptr, nullptr },
         { }
     };
 

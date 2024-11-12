@@ -675,7 +675,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_NDCustomData[] = {
         { "custom_data", reinterpret_cast<getter>(NDCustomData_get_CustomData), nullptr, nullptr, nullptr },
-        { "custom_data_type_i_d", reinterpret_cast<getter>(NDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
+        { "custom_data_type_id", reinterpret_cast<getter>(NDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -987,7 +987,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_NDDownloadEngineNotifier[] = {
-        { "on_content_i_d_received", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
+        { "on_content_id_received", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_data_received", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnDataReceived), METH_VARARGS, nullptr },
         { "on_end_of_stream", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnEndOfStream), METH_VARARGS, nullptr },
         { "on_network_error", reinterpret_cast<PyCFunction>(NDDownloadEngineNotifier_OnNetworkError), METH_VARARGS, nullptr },
@@ -1205,8 +1205,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_NDLicenseFetchDescriptor[] = {
         { "license_fetch_challenge_custom_data", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_LicenseFetchChallengeCustomData), reinterpret_cast<setter>(NDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData), nullptr, nullptr },
-        { "content_i_d", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
-        { "content_i_d_type", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
+        { "content_id", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
+        { "content_id_type", reinterpret_cast<getter>(NDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -1581,7 +1581,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyMethodDef _methods_NDStreamParserNotifier[] = {
         { "on_begin_setup_decryptor", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnBeginSetupDecryptor), METH_VARARGS, nullptr },
-        { "on_content_i_d_received", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
+        { "on_content_id_received", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_media_stream_descriptor_created", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnMediaStreamDescriptorCreated), METH_VARARGS, nullptr },
         { "on_sample_parsed", reinterpret_cast<PyCFunction>(NDStreamParserNotifier_OnSampleParsed), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_NDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
@@ -5128,7 +5128,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_PlayReadyLicense[] = {
         { "chain_depth", reinterpret_cast<getter>(PlayReadyLicense_get_ChainDepth), nullptr, nullptr, nullptr },
-        { "domain_account_i_d", reinterpret_cast<getter>(PlayReadyLicense_get_DomainAccountID), nullptr, nullptr, nullptr },
+        { "domain_account_id", reinterpret_cast<getter>(PlayReadyLicense_get_DomainAccountID), nullptr, nullptr, nullptr },
         { "expiration_date", reinterpret_cast<getter>(PlayReadyLicense_get_ExpirationDate), nullptr, nullptr, nullptr },
         { "expire_after_first_play", reinterpret_cast<getter>(PlayReadyLicense_get_ExpireAfterFirstPlay), nullptr, nullptr, nullptr },
         { "fully_evaluated", reinterpret_cast<getter>(PlayReadyLicense_get_FullyEvaluated), nullptr, nullptr, nullptr },
@@ -8356,7 +8356,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
         { "protection_system", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_ProtectionSystem), nullptr, nullptr, nullptr },
         { "type", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_Type), nullptr, nullptr, nullptr },
         { "publisher_certificate", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_PublisherCertificate), nullptr, nullptr, nullptr },
-        { "session_i_d", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_SessionID), nullptr, nullptr, nullptr },
+        { "session_id", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_SessionID), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_StartTime), nullptr, nullptr, nullptr },
         { "stopped", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_Stopped), nullptr, nullptr, nullptr },
         { "update_time", reinterpret_cast<getter>(PlayReadySecureStopServiceRequest_get_UpdateTime), nullptr, nullptr, nullptr },
@@ -9297,7 +9297,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_INDCustomData[] = {
         { "custom_data", reinterpret_cast<getter>(INDCustomData_get_CustomData), nullptr, nullptr, nullptr },
-        { "custom_data_type_i_d", reinterpret_cast<getter>(INDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
+        { "custom_data_type_id", reinterpret_cast<getter>(INDCustomData_get_CustomDataTypeID), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -9956,7 +9956,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     }
 
     static PyMethodDef _methods_INDDownloadEngineNotifier[] = {
-        { "on_content_i_d_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
+        { "on_content_id_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_data_received", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnDataReceived), METH_VARARGS, nullptr },
         { "on_end_of_stream", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnEndOfStream), METH_VARARGS, nullptr },
         { "on_network_error", reinterpret_cast<PyCFunction>(INDDownloadEngineNotifier_OnNetworkError), METH_VARARGS, nullptr },
@@ -10240,8 +10240,8 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
     };
 
     static PyGetSetDef _getset_INDLicenseFetchDescriptor[] = {
-        { "content_i_d", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
-        { "content_i_d_type", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
+        { "content_id", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentID), nullptr, nullptr, nullptr },
+        { "content_id_type", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_ContentIDType), nullptr, nullptr, nullptr },
         { "license_fetch_challenge_custom_data", reinterpret_cast<getter>(INDLicenseFetchDescriptor_get_LicenseFetchChallengeCustomData), reinterpret_cast<setter>(INDLicenseFetchDescriptor_put_LicenseFetchChallengeCustomData), nullptr, nullptr },
         { }
     };
@@ -11618,7 +11618,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyMethodDef _methods_INDStreamParserNotifier[] = {
         { "on_begin_setup_decryptor", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnBeginSetupDecryptor), METH_VARARGS, nullptr },
-        { "on_content_i_d_received", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
+        { "on_content_id_received", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnContentIDReceived), METH_VARARGS, nullptr },
         { "on_media_stream_descriptor_created", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnMediaStreamDescriptorCreated), METH_VARARGS, nullptr },
         { "on_sample_parsed", reinterpret_cast<PyCFunction>(INDStreamParserNotifier_OnSampleParsed), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_INDStreamParserNotifier, METH_O | METH_STATIC, nullptr },
@@ -11980,7 +11980,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_INDTransmitterProperties[] = {
         { "certificate_type", reinterpret_cast<getter>(INDTransmitterProperties_get_CertificateType), nullptr, nullptr, nullptr },
-        { "client_i_d", reinterpret_cast<getter>(INDTransmitterProperties_get_ClientID), nullptr, nullptr, nullptr },
+        { "client_id", reinterpret_cast<getter>(INDTransmitterProperties_get_ClientID), nullptr, nullptr, nullptr },
         { "expiration_date", reinterpret_cast<getter>(INDTransmitterProperties_get_ExpirationDate), nullptr, nullptr, nullptr },
         { "model_digest", reinterpret_cast<getter>(INDTransmitterProperties_get_ModelDigest), nullptr, nullptr, nullptr },
         { "model_manufacturer_name", reinterpret_cast<getter>(INDTransmitterProperties_get_ModelManufacturerName), nullptr, nullptr, nullptr },
@@ -12453,7 +12453,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_IPlayReadyLicense[] = {
         { "chain_depth", reinterpret_cast<getter>(IPlayReadyLicense_get_ChainDepth), nullptr, nullptr, nullptr },
-        { "domain_account_i_d", reinterpret_cast<getter>(IPlayReadyLicense_get_DomainAccountID), nullptr, nullptr, nullptr },
+        { "domain_account_id", reinterpret_cast<getter>(IPlayReadyLicense_get_DomainAccountID), nullptr, nullptr, nullptr },
         { "expiration_date", reinterpret_cast<getter>(IPlayReadyLicense_get_ExpirationDate), nullptr, nullptr, nullptr },
         { "expire_after_first_play", reinterpret_cast<getter>(IPlayReadyLicense_get_ExpireAfterFirstPlay), nullptr, nullptr, nullptr },
         { "fully_evaluated", reinterpret_cast<getter>(IPlayReadyLicense_get_FullyEvaluated), nullptr, nullptr, nullptr },
@@ -13876,7 +13876,7 @@ namespace py::cpp::Windows::Media::Protection::PlayReady
 
     static PyGetSetDef _getset_IPlayReadySecureStopServiceRequest[] = {
         { "publisher_certificate", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_PublisherCertificate), nullptr, nullptr, nullptr },
-        { "session_i_d", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_SessionID), nullptr, nullptr, nullptr },
+        { "session_id", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_SessionID), nullptr, nullptr, nullptr },
         { "start_time", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_StartTime), nullptr, nullptr, nullptr },
         { "stopped", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_Stopped), nullptr, nullptr, nullptr },
         { "update_time", reinterpret_cast<getter>(IPlayReadySecureStopServiceRequest_get_UpdateTime), nullptr, nullptr, nullptr },
