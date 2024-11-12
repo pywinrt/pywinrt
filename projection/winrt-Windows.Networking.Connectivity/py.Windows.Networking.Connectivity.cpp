@@ -5825,7 +5825,7 @@ namespace py::cpp::Windows::Networking::Connectivity
     static PyGetSetDef _getset_WwanConnectionProfileDetails[] = {
         { "access_point_name", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_AccessPointName), nullptr, nullptr, nullptr },
         { "home_provider_id", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_HomeProviderId), nullptr, nullptr, nullptr },
-        { "i_p_kind", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_IPKind), nullptr, nullptr, nullptr },
+        { "ip_kind", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_IPKind), nullptr, nullptr, nullptr },
         { "purpose_guids", reinterpret_cast<getter>(WwanConnectionProfileDetails_get_PurposeGuids), nullptr, nullptr, nullptr },
         { }
     };

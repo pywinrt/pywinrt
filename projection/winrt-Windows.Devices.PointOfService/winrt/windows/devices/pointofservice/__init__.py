@@ -300,7 +300,7 @@ class MagneticStripeReaderTrackIds(enum.IntEnum):
 
 class PosConnectionTypes(enum.IntFlag):
     LOCAL = 0x1
-    I_P = 0x2
+    IP = 0x2
     BLUETOOTH = 0x4
     ALL = 0xFFFFFFFF
 

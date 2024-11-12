@@ -184,7 +184,7 @@ class VpnManagementErrorStatus(enum.IntEnum):
     SERVER_CONNECTION = 15
     USER_NAME_PASSWORD = 16
     DNS_NOT_RESOLVABLE = 17
-    INVALID_I_P = 18
+    INVALID_IP = 18
 
 class VpnNativeProtocolType(enum.IntEnum):
     PPTP = 0
