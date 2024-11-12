@@ -216,7 +216,7 @@ class EmailMailboxSmimeEncryptionAlgorithm(enum.IntEnum):
 class EmailMailboxSmimeSigningAlgorithm(enum.IntEnum):
     ANY = 0
     SHA1 = 1
-    M_D5 = 2
+    MD5 = 2
 
 class EmailMailboxSyncStatus(enum.IntEnum):
     IDLE = 0

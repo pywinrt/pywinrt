@@ -7398,7 +7398,7 @@ namespace py::cpp::Windows::Web::Http::Headers
         { "expires", reinterpret_cast<getter>(HttpContentHeaderCollection_get_Expires), reinterpret_cast<setter>(HttpContentHeaderCollection_put_Expires), nullptr, nullptr },
         { "content_type", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentType), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentType), nullptr, nullptr },
         { "content_range", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentRange), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentRange), nullptr, nullptr },
-        { "content_m_d5", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentMD5), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentMD5), nullptr, nullptr },
+        { "content_md5", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentMD5), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentMD5), nullptr, nullptr },
         { "content_location", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentLocation), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentLocation), nullptr, nullptr },
         { "content_length", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentLength), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentLength), nullptr, nullptr },
         { "content_disposition", reinterpret_cast<getter>(HttpContentHeaderCollection_get_ContentDisposition), reinterpret_cast<setter>(HttpContentHeaderCollection_put_ContentDisposition), nullptr, nullptr },
