@@ -73,17 +73,14 @@ static class StringExtensions
         str = Regex.Replace(str, @"DOM", "Dom");
         // Replace EU with Eu
         str = Regex.Replace(str, @"EU", "Eu");
-        // Replace ID with Id, ignore UI, IDR
-        str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
+        // Replace ID with Id, ignore UI
+        str = Regex.Replace(str, @"(?<![A-Z])ID", "Id");
         // Replace IO with Io
         str = Regex.Replace(str, @"(?<![A-Z])IO", "Io");
         // Replace iOS with Ios
         str = Regex.Replace(str, @"iOS", "Ios");
-        // Replace IP with Ip, ignore UI, GIP
-        str = Regex.Replace(str, @"(?<![GU])IP(?=[A-Zv]|$)", "Ip");
-        // Replace LTR/RTL with Ltr/Rtl
-        str = Regex.Replace(str, @"LTR", "Ltr");
-        str = Regex.Replace(str, @"RTL", "Rtl");
+        // Replace IP with Ip, ignore UI
+        str = Regex.Replace(str, @"(?<!U)IP(?=[A-Zv]|$)", "Ip");
         // Replace MD5 with Md5
         str = Regex.Replace(str, @"MD5", "Md5");
         // Replace NS with Ns
