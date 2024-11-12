@@ -7139,7 +7139,7 @@ namespace py::cpp::Windows::ApplicationModel
     }
 
     static PyMethodDef _methods_PackageStatus[] = {
-        { "verify_is_o_k", reinterpret_cast<PyCFunction>(PackageStatus_VerifyIsOK), METH_VARARGS, nullptr },
+        { "verify_is_ok", reinterpret_cast<PyCFunction>(PackageStatus_VerifyIsOK), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PackageStatus, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PackageStatus), METH_O | METH_STATIC, nullptr },
         { }
