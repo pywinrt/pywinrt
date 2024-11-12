@@ -83,13 +83,13 @@ class ActivationSignalDetectionTrainingDataFormat(enum.IntEnum):
     VOICE8K_HZ16_BIT_MONO = 1
     VOICE16K_HZ8_BIT_MONO = 2
     VOICE16K_HZ16_BIT_MONO = 3
-    VOICE_O_E_M_DEFINED = 4
+    VOICE_OEM_DEFINED = 4
     AUDIO44K_HZ8_BIT_MONO = 5
     AUDIO44K_HZ16_BIT_MONO = 6
     AUDIO48K_HZ8_BIT_MONO = 7
     AUDIO48K_HZ16_BIT_MONO = 8
-    AUDIO_O_E_M_DEFINED = 9
-    OTHER_O_E_M_DEFINED = 10
+    AUDIO_OEM_DEFINED = 9
+    OTHER_OEM_DEFINED = 10
 
 class ActivationSignalDetectorKind(enum.IntEnum):
     AUDIO_PATTERN = 0
