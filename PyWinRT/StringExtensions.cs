@@ -84,6 +84,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"NS", "Ns");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
+        // Replace OK with Ok
+        str = Regex.Replace(str, @"OK", "Ok");
         // Replace OS with Os
         str = Regex.Replace(str, @"(?<![A-Z])OS", "Os");
         // Replace UI with Ui (also handles UInt)
