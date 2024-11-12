@@ -136,10 +136,10 @@ class NDCertificateFeature(enum.IntEnum):
 
 class NDCertificatePlatformID(enum.IntEnum):
     WINDOWS = 0
-    O_S_X = 1
+    OSX = 1
     WINDOWS_ON_ARM = 2
     WINDOWS_MOBILE7 = 5
-    I_O_S_ON_ARM = 6
+    IOS_ON_ARM = 6
     X_BOX_ON_P_P_C = 7
     WINDOWS_PHONE8_ON_ARM = 8
     WINDOWS_PHONE8_ON_X86 = 9

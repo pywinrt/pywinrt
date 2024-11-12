@@ -1106,7 +1106,7 @@ namespace py::cpp::Windows::Management::Update
         { "is_driver", reinterpret_cast<getter>(WindowsUpdate_get_IsDriver), nullptr, nullptr, nullptr },
         { "is_eula_accepted", reinterpret_cast<getter>(WindowsUpdate_get_IsEulaAccepted), nullptr, nullptr, nullptr },
         { "is_feature_update", reinterpret_cast<getter>(WindowsUpdate_get_IsFeatureUpdate), nullptr, nullptr, nullptr },
-        { "is_for_o_s", reinterpret_cast<getter>(WindowsUpdate_get_IsForOS), nullptr, nullptr, nullptr },
+        { "is_for_os", reinterpret_cast<getter>(WindowsUpdate_get_IsForOS), nullptr, nullptr, nullptr },
         { "is_mandatory", reinterpret_cast<getter>(WindowsUpdate_get_IsMandatory), nullptr, nullptr, nullptr },
         { "is_minor_impact", reinterpret_cast<getter>(WindowsUpdate_get_IsMinorImpact), nullptr, nullptr, nullptr },
         { "is_security", reinterpret_cast<getter>(WindowsUpdate_get_IsSecurity), nullptr, nullptr, nullptr },
