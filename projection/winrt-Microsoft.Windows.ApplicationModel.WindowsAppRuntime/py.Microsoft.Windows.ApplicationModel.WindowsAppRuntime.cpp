@@ -197,7 +197,7 @@ namespace py::cpp::Microsoft::Windows::ApplicationModel::WindowsAppRuntime
 
     static PyGetSetDef _getset_DeploymentInitializeOptions[] = {
         { "force_deployment", reinterpret_cast<getter>(DeploymentInitializeOptions_get_ForceDeployment), reinterpret_cast<setter>(DeploymentInitializeOptions_put_ForceDeployment), nullptr, nullptr },
-        { "on_error_show_u_i", reinterpret_cast<getter>(DeploymentInitializeOptions_get_OnErrorShowUI), reinterpret_cast<setter>(DeploymentInitializeOptions_put_OnErrorShowUI), nullptr, nullptr },
+        { "on_error_show_ui", reinterpret_cast<getter>(DeploymentInitializeOptions_get_OnErrorShowUI), reinterpret_cast<setter>(DeploymentInitializeOptions_put_OnErrorShowUI), nullptr, nullptr },
         { }
     };
 

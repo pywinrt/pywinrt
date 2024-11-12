@@ -6109,8 +6109,8 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer
     static PyMethodDef methods_DataTransferManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(DataTransferManager_GetForCurrentView), METH_VARARGS, nullptr },
         { "is_supported", reinterpret_cast<PyCFunction>(DataTransferManager_IsSupported), METH_VARARGS, nullptr },
-        { "show_share_u_i", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUI), METH_VARARGS, nullptr },
-        { "show_share_u_i_with_options", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUIWithOptions), METH_VARARGS, nullptr },
+        { "show_share_ui", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUI), METH_VARARGS, nullptr },
+        { "show_share_ui_with_options", reinterpret_cast<PyCFunction>(DataTransferManager_ShowShareUIWithOptions), METH_VARARGS, nullptr },
         { }
     };
 

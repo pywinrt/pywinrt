@@ -48,7 +48,7 @@ class MicrosoftAccountMultiFactorServiceResponse(enum.IntEnum):
     OPERATION_CANCELED_BY_USER = 17
     NGC_DISABLED_BY_SERVER = 18
     NGC_KEY_NOT_FOUND_ON_SERVER = 19
-    U_I_REQUIRED = 20
+    UI_REQUIRED = 20
     DEVICE_ID_CHANGED = 21
 
 class MicrosoftAccountMultiFactorSessionApprovalStatus(enum.IntEnum):

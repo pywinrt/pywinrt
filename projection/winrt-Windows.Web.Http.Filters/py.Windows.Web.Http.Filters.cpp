@@ -1027,7 +1027,7 @@ namespace py::cpp::Windows::Web::Http::Filters
         { "max_connections_per_server", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_MaxConnectionsPerServer), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_MaxConnectionsPerServer), nullptr, nullptr },
         { "client_certificate", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_ClientCertificate), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_ClientCertificate), nullptr, nullptr },
         { "automatic_decompression", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_AutomaticDecompression), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_AutomaticDecompression), nullptr, nullptr },
-        { "allow_u_i", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_AllowUI), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_AllowUI), nullptr, nullptr },
+        { "allow_ui", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_AllowUI), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_AllowUI), nullptr, nullptr },
         { "allow_auto_redirect", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_AllowAutoRedirect), reinterpret_cast<setter>(HttpBaseProtocolFilter_put_AllowAutoRedirect), nullptr, nullptr },
         { "cache_control", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_CacheControl), nullptr, nullptr, nullptr },
         { "cookie_manager", reinterpret_cast<getter>(HttpBaseProtocolFilter_get_CookieManager), nullptr, nullptr, nullptr },

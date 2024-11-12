@@ -4148,7 +4148,7 @@ namespace py::cpp::Windows::UI
     };
 
     static PyGetSetDef _getset_UIContentRoot[] = {
-        { "u_i_context", reinterpret_cast<getter>(UIContentRoot_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(UIContentRoot_get_UIContext), nullptr, nullptr, nullptr },
         { }
     };
 

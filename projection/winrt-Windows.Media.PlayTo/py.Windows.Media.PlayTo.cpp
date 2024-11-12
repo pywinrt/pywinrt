@@ -1145,7 +1145,7 @@ namespace py::cpp::Windows::Media::PlayTo
 
     static PyMethodDef methods_PlayToManager_Static[] = {
         { "get_for_current_view", reinterpret_cast<PyCFunction>(PlayToManager_GetForCurrentView), METH_VARARGS, nullptr },
-        { "show_play_to_u_i", reinterpret_cast<PyCFunction>(PlayToManager_ShowPlayToUI), METH_VARARGS, nullptr },
+        { "show_play_to_ui", reinterpret_cast<PyCFunction>(PlayToManager_ShowPlayToUI), METH_VARARGS, nullptr },
         { }
     };
 

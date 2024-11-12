@@ -6735,7 +6735,7 @@ namespace py::cpp::Windows::UI::Core
         { "visible", reinterpret_cast<getter>(CoreWindow_get_Visible), nullptr, nullptr, nullptr },
         { "activation_mode", reinterpret_cast<getter>(CoreWindow_get_ActivationMode), nullptr, nullptr, nullptr },
         { "dispatcher_queue", reinterpret_cast<getter>(CoreWindow_get_DispatcherQueue), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(CoreWindow_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(CoreWindow_get_UIContext), nullptr, nullptr, nullptr },
         { }
     };
 

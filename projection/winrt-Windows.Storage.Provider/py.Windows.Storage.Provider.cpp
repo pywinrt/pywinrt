@@ -438,8 +438,8 @@ namespace py::cpp::Windows::Storage::Provider
         { "get_deferral", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_GetDeferral), METH_VARARGS, nullptr },
         { "add_file_update_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_add_FileUpdateRequested), METH_O, nullptr },
         { "remove_file_update_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_remove_FileUpdateRequested), METH_O, nullptr },
-        { "add_u_i_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_add_UIRequested), METH_O, nullptr },
-        { "remove_u_i_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_remove_UIRequested), METH_O, nullptr },
+        { "add_ui_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_add_UIRequested), METH_O, nullptr },
+        { "remove_ui_requested", reinterpret_cast<PyCFunction>(CachedFileUpdaterUI_remove_UIRequested), METH_O, nullptr },
         { "_assign_array_", _assign_array_CachedFileUpdaterUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_CachedFileUpdaterUI), METH_O | METH_STATIC, nullptr },
         { }
@@ -447,7 +447,7 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyGetSetDef _getset_CachedFileUpdaterUI[] = {
         { "title", reinterpret_cast<getter>(CachedFileUpdaterUI_get_Title), reinterpret_cast<setter>(CachedFileUpdaterUI_put_Title), nullptr, nullptr },
-        { "u_i_status", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UIStatus), nullptr, nullptr, nullptr },
+        { "ui_status", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UIStatus), nullptr, nullptr, nullptr },
         { "update_target", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UpdateTarget), nullptr, nullptr, nullptr },
         { "update_request", reinterpret_cast<getter>(CachedFileUpdaterUI_get_UpdateRequest), nullptr, nullptr, nullptr },
         { }
@@ -3877,13 +3877,13 @@ namespace py::cpp::Windows::Storage::Provider
 
     static PyGetSetDef _getset_StorageProviderStatusUI[] = {
         { "sync_status_command", reinterpret_cast<getter>(StorageProviderStatusUI_get_SyncStatusCommand), reinterpret_cast<setter>(StorageProviderStatusUI_put_SyncStatusCommand), nullptr, nullptr },
-        { "quota_u_i", reinterpret_cast<getter>(StorageProviderStatusUI_get_QuotaUI), reinterpret_cast<setter>(StorageProviderStatusUI_put_QuotaUI), nullptr, nullptr },
+        { "quota_ui", reinterpret_cast<getter>(StorageProviderStatusUI_get_QuotaUI), reinterpret_cast<setter>(StorageProviderStatusUI_put_QuotaUI), nullptr, nullptr },
         { "provider_state_label", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderStateLabel), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderStateLabel), nullptr, nullptr },
         { "provider_state_icon", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderStateIcon), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderStateIcon), nullptr, nullptr },
         { "provider_state", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderState), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderState), nullptr, nullptr },
         { "provider_secondary_commands", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderSecondaryCommands), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderSecondaryCommands), nullptr, nullptr },
         { "provider_primary_command", reinterpret_cast<getter>(StorageProviderStatusUI_get_ProviderPrimaryCommand), reinterpret_cast<setter>(StorageProviderStatusUI_put_ProviderPrimaryCommand), nullptr, nullptr },
-        { "more_info_u_i", reinterpret_cast<getter>(StorageProviderStatusUI_get_MoreInfoUI), reinterpret_cast<setter>(StorageProviderStatusUI_put_MoreInfoUI), nullptr, nullptr },
+        { "more_info_ui", reinterpret_cast<getter>(StorageProviderStatusUI_get_MoreInfoUI), reinterpret_cast<setter>(StorageProviderStatusUI_put_MoreInfoUI), nullptr, nullptr },
         { }
     };
 
@@ -6117,9 +6117,9 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_IStorageProviderStatusUISource[] = {
-        { "get_status_u_i", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_GetStatusUI), METH_VARARGS, nullptr },
-        { "add_status_u_i_changed", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_add_StatusUIChanged), METH_O, nullptr },
-        { "remove_status_u_i_changed", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_remove_StatusUIChanged), METH_O, nullptr },
+        { "get_status_ui", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_GetStatusUI), METH_VARARGS, nullptr },
+        { "add_status_ui_changed", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_add_StatusUIChanged), METH_O, nullptr },
+        { "remove_status_ui_changed", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISource_remove_StatusUIChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderStatusUISource, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderStatusUISource), METH_O | METH_STATIC, nullptr },
         { }
@@ -6224,7 +6224,7 @@ namespace py::cpp::Windows::Storage::Provider
     }
 
     static PyMethodDef _methods_IStorageProviderStatusUISourceFactory[] = {
-        { "get_status_u_i_source", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISourceFactory_GetStatusUISource), METH_VARARGS, nullptr },
+        { "get_status_ui_source", reinterpret_cast<PyCFunction>(IStorageProviderStatusUISourceFactory_GetStatusUISource), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_IStorageProviderStatusUISourceFactory, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_IStorageProviderStatusUISourceFactory), METH_O | METH_STATIC, nullptr },
         { }

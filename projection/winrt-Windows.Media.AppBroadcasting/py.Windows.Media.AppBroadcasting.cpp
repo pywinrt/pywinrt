@@ -770,7 +770,7 @@ namespace py::cpp::Windows::Media::AppBroadcasting
 
     static PyMethodDef _methods_AppBroadcastingUI[] = {
         { "get_status", reinterpret_cast<PyCFunction>(AppBroadcastingUI_GetStatus), METH_VARARGS, nullptr },
-        { "show_broadcast_u_i", reinterpret_cast<PyCFunction>(AppBroadcastingUI_ShowBroadcastUI), METH_VARARGS, nullptr },
+        { "show_broadcast_ui", reinterpret_cast<PyCFunction>(AppBroadcastingUI_ShowBroadcastUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_AppBroadcastingUI, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_AppBroadcastingUI), METH_O | METH_STATIC, nullptr },
         { }

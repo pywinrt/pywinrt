@@ -250,7 +250,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     }
 
     static PyMethodDef _methods_AddAppointmentOperation[] = {
-        { "dismiss_u_i", reinterpret_cast<PyCFunction>(AddAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
+        { "dismiss_ui", reinterpret_cast<PyCFunction>(AddAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
         { "report_canceled", reinterpret_cast<PyCFunction>(AddAppointmentOperation_ReportCanceled), METH_VARARGS, nullptr },
         { "report_completed", reinterpret_cast<PyCFunction>(AddAppointmentOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(AddAppointmentOperation_ReportError), METH_VARARGS, nullptr },
@@ -741,7 +741,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     }
 
     static PyMethodDef _methods_RemoveAppointmentOperation[] = {
-        { "dismiss_u_i", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
+        { "dismiss_ui", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
         { "report_canceled", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_ReportCanceled), METH_VARARGS, nullptr },
         { "report_completed", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(RemoveAppointmentOperation_ReportError), METH_VARARGS, nullptr },
@@ -1070,7 +1070,7 @@ namespace py::cpp::Windows::ApplicationModel::Appointments::AppointmentsProvider
     }
 
     static PyMethodDef _methods_ReplaceAppointmentOperation[] = {
-        { "dismiss_u_i", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
+        { "dismiss_ui", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_DismissUI), METH_VARARGS, nullptr },
         { "report_canceled", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_ReportCanceled), METH_VARARGS, nullptr },
         { "report_completed", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_error", reinterpret_cast<PyCFunction>(ReplaceAppointmentOperation_ReportError), METH_VARARGS, nullptr },

@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::Gaming::UI
         { "kind", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { "game_u_i_args", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_GameUIArgs), nullptr, nullptr, nullptr },
+        { "game_ui_args", reinterpret_cast<getter>(GameUIProviderActivatedEventArgs_get_GameUIArgs), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -256,10 +256,10 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyMethodDef methods_CommunicationBlockingAccessManager_Static[] = {
         { "is_blocked_number_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_IsBlockedNumberAsync), METH_VARARGS, nullptr },
-        { "show_block_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockNumbersUI), METH_VARARGS, nullptr },
-        { "show_blocked_calls_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedCallsUI), METH_VARARGS, nullptr },
-        { "show_blocked_messages_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedMessagesUI), METH_VARARGS, nullptr },
-        { "show_unblock_numbers_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowUnblockNumbersUI), METH_VARARGS, nullptr },
+        { "show_block_numbers_ui", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockNumbersUI), METH_VARARGS, nullptr },
+        { "show_blocked_calls_ui", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedCallsUI), METH_VARARGS, nullptr },
+        { "show_blocked_messages_ui", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowBlockedMessagesUI), METH_VARARGS, nullptr },
+        { "show_unblock_numbers_ui", reinterpret_cast<PyCFunction>(CommunicationBlockingAccessManager_ShowUnblockNumbersUI), METH_VARARGS, nullptr },
         { }
     };
 
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::ApplicationModel::CommunicationBlocking
 
     static PyMethodDef methods_CommunicationBlockingAppManager_Static[] = {
         { "request_set_as_active_blocking_app_async", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_RequestSetAsActiveBlockingAppAsync), METH_VARARGS, nullptr },
-        { "show_communication_blocking_settings_u_i", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_ShowCommunicationBlockingSettingsUI), METH_VARARGS, nullptr },
+        { "show_communication_blocking_settings_ui", reinterpret_cast<PyCFunction>(CommunicationBlockingAppManager_ShowCommunicationBlockingSettingsUI), METH_VARARGS, nullptr },
         { }
     };
 

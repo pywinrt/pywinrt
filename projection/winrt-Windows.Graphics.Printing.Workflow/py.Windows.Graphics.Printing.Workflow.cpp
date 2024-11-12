@@ -432,7 +432,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyMethodDef _methods_PrintWorkflowBackgroundSetupRequestedEventArgs[] = {
         { "get_deferral", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSetupRequestedEventArgs_GetDeferral), METH_VARARGS, nullptr },
         { "get_user_print_ticket_async", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSetupRequestedEventArgs_GetUserPrintTicketAsync), METH_VARARGS, nullptr },
-        { "set_requires_u_i", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSetupRequestedEventArgs_SetRequiresUI), METH_VARARGS, nullptr },
+        { "set_requires_ui", reinterpret_cast<PyCFunction>(PrintWorkflowBackgroundSetupRequestedEventArgs_SetRequiresUI), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowBackgroundSetupRequestedEventArgs, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowBackgroundSetupRequestedEventArgs), METH_O | METH_STATIC, nullptr },
         { }
@@ -1851,7 +1851,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "extended_error", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_ExtendedError), nullptr, nullptr, nullptr },
         { "job_issue_kind", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_JobIssueKind), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
-        { "u_i_launcher", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
+        { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowJobIssueDetectedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2329,7 +2329,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyGetSetDef _getset_PrintWorkflowJobStartingEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_Printer), nullptr, nullptr, nullptr },
-        { "skip_system_fax_u_i", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_SkipSystemFaxUI), reinterpret_cast<setter>(PrintWorkflowJobStartingEventArgs_put_SkipSystemFaxUI), nullptr, nullptr },
+        { "skip_system_fax_ui", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_SkipSystemFaxUI), reinterpret_cast<setter>(PrintWorkflowJobStartingEventArgs_put_SkipSystemFaxUI), nullptr, nullptr },
         { "is_ipp_compression_enabled", reinterpret_cast<getter>(PrintWorkflowJobStartingEventArgs_get_IsIppCompressionEnabled), nullptr, nullptr, nullptr },
         { }
     };
@@ -2723,8 +2723,8 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "remove_job_notification", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_remove_JobNotification), METH_O, nullptr },
         { "add_pdl_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_add_PdlDataAvailable), METH_O, nullptr },
         { "remove_pdl_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_remove_PdlDataAvailable), METH_O, nullptr },
-        { "add_virtual_printer_u_i_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_add_VirtualPrinterUIDataAvailable), METH_O, nullptr },
-        { "remove_virtual_printer_u_i_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_remove_VirtualPrinterUIDataAvailable), METH_O, nullptr },
+        { "add_virtual_printer_ui_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_add_VirtualPrinterUIDataAvailable), METH_O, nullptr },
+        { "remove_virtual_printer_ui_data_available", reinterpret_cast<PyCFunction>(PrintWorkflowJobUISession_remove_VirtualPrinterUIDataAvailable), METH_O, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowJobUISession, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowJobUISession), METH_O | METH_STATIC, nullptr },
         { }
@@ -3639,7 +3639,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
         { "configuration", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "printer_job", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_PrinterJob), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
-        { "u_i_launcher", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
+        { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowPdlModificationRequestedEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5598,8 +5598,8 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     }
 
     static PyMethodDef _methods_PrintWorkflowUILauncher[] = {
-        { "is_u_i_launch_enabled", reinterpret_cast<PyCFunction>(PrintWorkflowUILauncher_IsUILaunchEnabled), METH_VARARGS, nullptr },
-        { "launch_and_complete_u_i_async", reinterpret_cast<PyCFunction>(PrintWorkflowUILauncher_LaunchAndCompleteUIAsync), METH_VARARGS, nullptr },
+        { "is_ui_launch_enabled", reinterpret_cast<PyCFunction>(PrintWorkflowUILauncher_IsUILaunchEnabled), METH_VARARGS, nullptr },
+        { "launch_and_complete_ui_async", reinterpret_cast<PyCFunction>(PrintWorkflowUILauncher_LaunchAndCompleteUIAsync), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_PrintWorkflowUILauncher, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_PrintWorkflowUILauncher), METH_O | METH_STATIC, nullptr },
         { }
@@ -5905,7 +5905,7 @@ namespace py::cpp::Windows::Graphics::Printing::Workflow
     static PyGetSetDef _getset_PrintWorkflowVirtualPrinterDataAvailableEventArgs[] = {
         { "configuration", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_Configuration), nullptr, nullptr, nullptr },
         { "source_content", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_SourceContent), nullptr, nullptr, nullptr },
-        { "u_i_launcher", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
+        { "ui_launcher", reinterpret_cast<getter>(PrintWorkflowVirtualPrinterDataAvailableEventArgs_get_UILauncher), nullptr, nullptr, nullptr },
         { }
     };
 

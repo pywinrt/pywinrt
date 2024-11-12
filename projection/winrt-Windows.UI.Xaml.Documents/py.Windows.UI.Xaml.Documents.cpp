@@ -20056,7 +20056,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         { "shadow", reinterpret_cast<getter>(Glyphs_get_Shadow), reinterpret_cast<setter>(Glyphs_put_Shadow), nullptr, nullptr },
         { "actual_offset", reinterpret_cast<getter>(Glyphs_get_ActualOffset), nullptr, nullptr, nullptr },
         { "actual_size", reinterpret_cast<getter>(Glyphs_get_ActualSize), nullptr, nullptr, nullptr },
-        { "u_i_context", reinterpret_cast<getter>(Glyphs_get_UIContext), nullptr, nullptr, nullptr },
+        { "ui_context", reinterpret_cast<getter>(Glyphs_get_UIContext), nullptr, nullptr, nullptr },
         { "composite_mode", reinterpret_cast<getter>(Glyphs_get_CompositeMode), reinterpret_cast<setter>(Glyphs_put_CompositeMode), nullptr, nullptr },
         { "transform_3d", reinterpret_cast<getter>(Glyphs_get_Transform3D), reinterpret_cast<setter>(Glyphs_put_Transform3D), nullptr, nullptr },
         { "can_drag", reinterpret_cast<getter>(Glyphs_get_CanDrag), reinterpret_cast<setter>(Glyphs_put_CanDrag), nullptr, nullptr },

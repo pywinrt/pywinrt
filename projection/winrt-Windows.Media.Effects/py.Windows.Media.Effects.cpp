@@ -1089,7 +1089,7 @@ namespace py::cpp::Windows::Media::Effects
 
     static PyMethodDef _methods_AudioRenderEffectsManager[] = {
         { "get_audio_render_effects", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_GetAudioRenderEffects), METH_VARARGS, nullptr },
-        { "show_settings_u_i", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_ShowSettingsUI), METH_VARARGS, nullptr },
+        { "show_settings_ui", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_ShowSettingsUI), METH_VARARGS, nullptr },
         { "add_audio_render_effects_changed", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_add_AudioRenderEffectsChanged), METH_O, nullptr },
         { "remove_audio_render_effects_changed", reinterpret_cast<PyCFunction>(AudioRenderEffectsManager_remove_AudioRenderEffectsChanged), METH_O, nullptr },
         { "_assign_array_", _assign_array_AudioRenderEffectsManager, METH_O | METH_STATIC, nullptr },

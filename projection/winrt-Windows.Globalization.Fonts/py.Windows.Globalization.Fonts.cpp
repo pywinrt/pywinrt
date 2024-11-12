@@ -569,11 +569,11 @@ namespace py::cpp::Windows::Globalization::Fonts
         { "fixed_width_text_font", reinterpret_cast<getter>(LanguageFontGroup_get_FixedWidthTextFont), nullptr, nullptr, nullptr },
         { "modern_document_font", reinterpret_cast<getter>(LanguageFontGroup_get_ModernDocumentFont), nullptr, nullptr, nullptr },
         { "traditional_document_font", reinterpret_cast<getter>(LanguageFontGroup_get_TraditionalDocumentFont), nullptr, nullptr, nullptr },
-        { "u_i_caption_font", reinterpret_cast<getter>(LanguageFontGroup_get_UICaptionFont), nullptr, nullptr, nullptr },
-        { "u_i_heading_font", reinterpret_cast<getter>(LanguageFontGroup_get_UIHeadingFont), nullptr, nullptr, nullptr },
-        { "u_i_notification_heading_font", reinterpret_cast<getter>(LanguageFontGroup_get_UINotificationHeadingFont), nullptr, nullptr, nullptr },
-        { "u_i_text_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITextFont), nullptr, nullptr, nullptr },
-        { "u_i_title_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITitleFont), nullptr, nullptr, nullptr },
+        { "ui_caption_font", reinterpret_cast<getter>(LanguageFontGroup_get_UICaptionFont), nullptr, nullptr, nullptr },
+        { "ui_heading_font", reinterpret_cast<getter>(LanguageFontGroup_get_UIHeadingFont), nullptr, nullptr, nullptr },
+        { "ui_notification_heading_font", reinterpret_cast<getter>(LanguageFontGroup_get_UINotificationHeadingFont), nullptr, nullptr, nullptr },
+        { "ui_text_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITextFont), nullptr, nullptr, nullptr },
+        { "ui_title_font", reinterpret_cast<getter>(LanguageFontGroup_get_UITitleFont), nullptr, nullptr, nullptr },
         { }
     };
 

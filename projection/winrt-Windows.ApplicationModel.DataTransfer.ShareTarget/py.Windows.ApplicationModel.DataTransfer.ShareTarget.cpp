@@ -752,7 +752,7 @@ namespace py::cpp::Windows::ApplicationModel::DataTransfer::ShareTarget
     }
 
     static PyMethodDef _methods_ShareOperation[] = {
-        { "dismiss_u_i", reinterpret_cast<PyCFunction>(ShareOperation_DismissUI), METH_VARARGS, nullptr },
+        { "dismiss_ui", reinterpret_cast<PyCFunction>(ShareOperation_DismissUI), METH_VARARGS, nullptr },
         { "remove_this_quick_link", reinterpret_cast<PyCFunction>(ShareOperation_RemoveThisQuickLink), METH_VARARGS, nullptr },
         { "report_completed", reinterpret_cast<PyCFunction>(ShareOperation_ReportCompleted), METH_VARARGS, nullptr },
         { "report_completed_with_quick_link", reinterpret_cast<PyCFunction>(ShareOperation_ReportCompletedWithQuickLink), METH_VARARGS, nullptr },

@@ -43,7 +43,7 @@ static class StringExtensions
             ]
         );
 
-    static readonly ReadOnlyCollection<string> snakeCaseExceptions = new(["UInt", "IPAddress"]);
+    static readonly ReadOnlyCollection<string> snakeCaseExceptions = new(["IPAddress"]);
 
     static string ToSnakeCase(this string str)
     {
@@ -55,6 +55,8 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
+        // Replace UI with Ui (also handles UInt)
+        str = Regex.Replace(str, @"UI(?!nfo)", "Ui");
 
         foreach (var (i, c) in str.Select((c, i) => (i, c)))
         {

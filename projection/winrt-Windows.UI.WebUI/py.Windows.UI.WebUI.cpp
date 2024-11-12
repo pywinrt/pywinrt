@@ -1362,7 +1362,7 @@ namespace py::cpp::Windows::UI::WebUI
     static PyGetSetDef _getset_NewWebUIViewCreatedEventArgs[] = {
         { "activated_event_args", reinterpret_cast<getter>(NewWebUIViewCreatedEventArgs_get_ActivatedEventArgs), nullptr, nullptr, nullptr },
         { "has_pending_navigate", reinterpret_cast<getter>(NewWebUIViewCreatedEventArgs_get_HasPendingNavigate), nullptr, nullptr, nullptr },
-        { "web_u_i_view", reinterpret_cast<getter>(NewWebUIViewCreatedEventArgs_get_WebUIView), nullptr, nullptr, nullptr },
+        { "web_ui_view", reinterpret_cast<getter>(NewWebUIViewCreatedEventArgs_get_WebUIView), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -2321,8 +2321,8 @@ namespace py::cpp::Windows::UI::WebUI
         { "request_restart_for_user_async", reinterpret_cast<PyCFunction>(WebUIApplication_RequestRestartForUserAsync), METH_VARARGS, nullptr },
         { "add_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_add_BackgroundActivated), METH_O, nullptr },
         { "remove_background_activated", reinterpret_cast<PyCFunction>(WebUIApplication_remove_BackgroundActivated), METH_O, nullptr },
-        { "add_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_add_NewWebUIViewCreated), METH_O, nullptr },
-        { "remove_new_web_u_i_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_remove_NewWebUIViewCreated), METH_O, nullptr },
+        { "add_new_web_ui_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_add_NewWebUIViewCreated), METH_O, nullptr },
+        { "remove_new_web_ui_view_created", reinterpret_cast<PyCFunction>(WebUIApplication_remove_NewWebUIViewCreated), METH_O, nullptr },
         { "add_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_EnteredBackground), METH_O, nullptr },
         { "remove_entered_background", reinterpret_cast<PyCFunction>(WebUIApplication_remove_EnteredBackground), METH_O, nullptr },
         { "add_leaving_background", reinterpret_cast<PyCFunction>(WebUIApplication_add_LeavingBackground), METH_O, nullptr },
@@ -4624,7 +4624,7 @@ namespace py::cpp::Windows::UI::WebUI
         { "previous_execution_state", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "cached_file_updater_u_i", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
+        { "cached_file_updater_ui", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_CachedFileUpdaterUI), nullptr, nullptr, nullptr },
         { "activated_operation", reinterpret_cast<getter>(WebUICachedFileUpdaterActivatedEventArgs_get_ActivatedOperation), nullptr, nullptr, nullptr },
         { }
     };
@@ -6355,7 +6355,7 @@ namespace py::cpp::Windows::UI::WebUI
         { "kind", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_Kind), nullptr, nullptr, nullptr },
         { "previous_execution_state", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
-        { "contact_picker_u_i", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
+        { "contact_picker_ui", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_ContactPickerUI), nullptr, nullptr, nullptr },
         { "activated_operation", reinterpret_cast<getter>(WebUIContactPickerActivatedEventArgs_get_ActivatedOperation), nullptr, nullptr, nullptr },
         { }
     };
@@ -8301,7 +8301,7 @@ namespace py::cpp::Windows::UI::WebUI
         { "previous_execution_state", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "file_open_picker_u_i", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
+        { "file_open_picker_ui", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_FileOpenPickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "activated_operation", reinterpret_cast<getter>(WebUIFileOpenPickerActivatedEventArgs_get_ActivatedOperation), nullptr, nullptr, nullptr },
         { }
@@ -8837,7 +8837,7 @@ namespace py::cpp::Windows::UI::WebUI
         { "previous_execution_state", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_PreviousExecutionState), nullptr, nullptr, nullptr },
         { "splash_screen", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_SplashScreen), nullptr, nullptr, nullptr },
         { "user", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_User), nullptr, nullptr, nullptr },
-        { "file_save_picker_u_i", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
+        { "file_save_picker_ui", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_FileSavePickerUI), nullptr, nullptr, nullptr },
         { "caller_package_family_name", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_CallerPackageFamilyName), nullptr, nullptr, nullptr },
         { "enterprise_id", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_EnterpriseId), nullptr, nullptr, nullptr },
         { "activated_operation", reinterpret_cast<getter>(WebUIFileSavePickerActivatedEventArgs_get_ActivatedOperation), nullptr, nullptr, nullptr },
@@ -10222,7 +10222,7 @@ namespace py::cpp::Windows::UI::WebUI
         { "currently_shown_application_view_id", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_CurrentlyShownApplicationViewId), nullptr, nullptr, nullptr },
         { "arguments", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_Arguments), nullptr, nullptr, nullptr },
         { "tile_id", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_TileId), nullptr, nullptr, nullptr },
-        { "call_u_i", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
+        { "call_ui", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_CallUI), nullptr, nullptr, nullptr },
         { "activated_operation", reinterpret_cast<getter>(WebUILockScreenCallActivatedEventArgs_get_ActivatedOperation), nullptr, nullptr, nullptr },
         { }
     };

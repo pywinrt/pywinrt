@@ -2336,8 +2336,8 @@ namespace py::cpp::Windows::ApplicationModel::Store::Preview
     };
 
     static PyMethodDef methods_WebAuthenticationCoreManagerHelper_Static[] = {
-        { "request_token_with_u_i_element_hosting_and_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync), METH_VARARGS, nullptr },
-        { "request_token_with_u_i_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS, nullptr },
+        { "request_token_with_ui_element_hosting_and_web_account_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAndWebAccountAsync), METH_VARARGS, nullptr },
+        { "request_token_with_ui_element_hosting_async", reinterpret_cast<PyCFunction>(WebAuthenticationCoreManagerHelper_RequestTokenWithUIElementHostingAsync), METH_VARARGS, nullptr },
         { }
     };
 

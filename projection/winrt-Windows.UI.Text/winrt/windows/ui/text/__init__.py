@@ -195,7 +195,7 @@ class PointOptions(enum.IntFlag):
     NO_VERTICAL_SCROLL = 0x40000
 
 class RangeGravity(enum.IntEnum):
-    U_I_BEHAVIOR = 0
+    UI_BEHAVIOR = 0
     BACKWARD = 1
     FORWARD = 2
     INWARD = 3

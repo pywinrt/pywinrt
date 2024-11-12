@@ -607,7 +607,7 @@ namespace py::cpp::Windows::ApplicationModel::Calls::Provider
     static PyMethodDef methods_PhoneCallOriginManager_Static[] = {
         { "request_set_as_active_call_origin_app_async", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_RequestSetAsActiveCallOriginAppAsync), METH_VARARGS, nullptr },
         { "set_call_origin", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_SetCallOrigin), METH_VARARGS, nullptr },
-        { "show_phone_call_origin_settings_u_i", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_ShowPhoneCallOriginSettingsUI), METH_VARARGS, nullptr },
+        { "show_phone_call_origin_settings_ui", reinterpret_cast<PyCFunction>(PhoneCallOriginManager_ShowPhoneCallOriginSettingsUI), METH_VARARGS, nullptr },
         { }
     };
 
