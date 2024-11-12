@@ -47,6 +47,12 @@ static class StringExtensions
     {
         var sb = new StringBuilder();
 
+        // Replace acronyms
+        str = Regex.Replace(
+            str,
+            @"^([A-Z])([A-Z]+)$",
+            m => $"{m.Groups[1].Value}{m.Groups[2].Value.ToLowerInvariant()}"
+        );
         // Replace 3MF with _3mf
         str = Regex.Replace(str, @"3MF", "_3mf");
         // Replace ARM with Arm
@@ -61,8 +67,6 @@ static class StringExtensions
         str = Regex.Replace(str, @"(?<!\d)3D(?!ay)", "_3d");
         // Replace DOM with Dom
         str = Regex.Replace(str, @"DOM", "Dom");
-        // Replace GPS with Gps
-        str = Regex.Replace(str, @"GPS", "Gps");
         // Replace ID with Id, ignore UI, IDR
         str = Regex.Replace(str, @"(?<![A-Z])ID(?!R$)", "Id");
         // Replace IO with Io
@@ -80,8 +84,6 @@ static class StringExtensions
         str = Regex.Replace(str, @"NS", "Ns");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
-        // replace OSX with Osx
-        str = Regex.Replace(str, @"OSX", "Osx");
         // Replace OS with Os
         str = Regex.Replace(str, @"(?<![A-Z])OS", "Os");
         // Replace UI with Ui (also handles UInt)

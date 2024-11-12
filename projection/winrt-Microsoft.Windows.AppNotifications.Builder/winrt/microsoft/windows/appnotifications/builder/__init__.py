@@ -51,10 +51,10 @@ class AppNotificationScenario(enum.IntEnum):
 
 class AppNotificationSoundEvent(enum.IntEnum):
     DEFAULT = 0
-    I_M = 1
+    IM = 1
     MAIL = 2
     REMINDER = 3
-    S_M_S = 4
+    SMS = 4
     ALARM = 5
     ALARM2 = 6
     ALARM3 = 7

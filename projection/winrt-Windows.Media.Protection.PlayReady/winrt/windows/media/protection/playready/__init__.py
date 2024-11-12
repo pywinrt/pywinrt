@@ -131,7 +131,7 @@ class NDCertificateFeature(enum.IntEnum):
     SHARED_CERTIFICATE = 3
     SECURE_CLOCK = 4
     ANTI_ROLL_BACK_CLOCK = 5
-    C_R_L_S = 9
+    CRLS = 9
     PLAY_READY3_FEATURES = 13
 
 class NDCertificatePlatformID(enum.IntEnum):
@@ -150,7 +150,7 @@ class NDCertificatePlatformID(enum.IntEnum):
 
 class NDCertificateType(enum.IntEnum):
     UNKNOWN = 0
-    P_C = 1
+    PC = 1
     DEVICE = 2
     DOMAIN = 3
     ISSUER = 4
@@ -164,7 +164,7 @@ class NDCertificateType(enum.IntEnum):
     LICENSE_SIGNER = 12
 
 class NDClosedCaptionFormat(enum.IntEnum):
-    A_T_S_C = 0
+    ATSC = 0
     S_C_T_E20 = 1
     UNKNOWN = 2
 
@@ -178,8 +178,8 @@ class NDMediaStreamType(enum.IntEnum):
     VIDEO = 2
 
 class NDProximityDetectionType(enum.IntEnum):
-    U_D_P = 1
-    T_C_P = 2
+    UDP = 1
+    TCP = 2
     TRANSPORT_AGNOSTIC = 4
 
 class NDStartAsyncOptions(enum.IntEnum):
@@ -200,7 +200,7 @@ class PlayReadyEncryptionAlgorithm(enum.IntEnum):
 
 class PlayReadyHardwareDRMFeatures(enum.IntEnum):
     HARDWARE_DRM = 1
-    H_E_V_C = 2
+    HEVC = 2
     AES128_CBC = 3
 
 class PlayReadyITADataFormat(enum.IntEnum):
