@@ -67,6 +67,9 @@ static class StringExtensions
         str = Regex.Replace(str, @"iOS", "Ios");
         // Replace IP with Ip, ignore UI, GIP
         str = Regex.Replace(str, @"(?<![GU])IP(?=[A-Zv]|$)", "Ip");
+        // Replace LTR/RTL with Ltr/Rtl
+        str = Regex.Replace(str, @"LTR", "Ltr");
+        str = Regex.Replace(str, @"RTL", "Rtl");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
         // replace OSX with Osx

@@ -130,8 +130,8 @@ class AutomationBulletStyle(enum.IntEnum):
     OTHER = 6
 
 class AutomationCaretBidiMode(enum.IntEnum):
-    L_T_R = 0
-    R_T_L = 1
+    LTR = 0
+    RTL = 1
 
 class AutomationCaretPosition(enum.IntEnum):
     UNKNOWN = 0
