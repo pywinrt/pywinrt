@@ -70,6 +70,8 @@ static class StringExtensions
         // Replace LTR/RTL with Ltr/Rtl
         str = Regex.Replace(str, @"LTR", "Ltr");
         str = Regex.Replace(str, @"RTL", "Rtl");
+        // Replace NS with Ns
+        str = Regex.Replace(str, @"NS", "Ns");
         // Replace OEM with Oem
         str = Regex.Replace(str, @"OEM", "Oem");
         // replace OSX with Osx
