@@ -84,9 +84,13 @@ class FileProtectionManager(winrt.system.Object, metaclass=FileProtectionManager
 
 @typing.final
 class FileRevocationManager_Static(type):
+    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def copy_protection_async(cls, source_storage_item: windows_storage.IStorageItem, target_storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def get_status_async(cls, storage_item: windows_storage.IStorageItem, /) -> windows_foundation.IAsyncOperation[FileProtectionStatus]: ...
+    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def protect_async(cls, storage_item: windows_storage.IStorageItem, enterprise_identity: str, /) -> windows_foundation.IAsyncOperation[FileProtectionStatus]: ...
+    # @deprecated("FileRevocationManager might be unavailable after Windows 10. Instead, use FileProtectionManager.")
     def revoke(cls, enterprise_identity: str, /) -> None: ...
 
 @typing.final

@@ -1724,6 +1724,12 @@ static class WriterExtensions
         string self = "self"
     )
     {
+        // REVISIT: can use @warning.deprecated in Python 3.13
+        if (method.IsDeprecated)
+        {
+            w.WriteLine($"# @deprecated(\"{method.DeprecatedMessage}\")");
+        }
+
         var paramList = "";
 
         if (method.Method.Parameters.Any(p => p.IsPythonInParam()))

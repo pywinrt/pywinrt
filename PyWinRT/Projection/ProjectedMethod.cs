@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Mono.Cecil;
 
 /// <summary>
@@ -77,4 +78,24 @@ class ProjectedMethod(
     /// Gets a value indicating whether the method is static.
     /// </summary>
     public bool IsStatic { get; } = method.IsStatic;
+
+    /// <summary>
+    /// Gets a value indicating whether the method is deprecated.
+    /// </summary>
+    [MemberNotNullWhen(true, nameof(DeprecatedMessage))]
+    public bool IsDeprecated { get; } =
+        method.CustomAttributes.Any(a =>
+            a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
+        );
+
+    /// <summary>
+    /// Gets the message associated with the deprecation of the method.
+    /// </summary>
+    public string? DeprecatedMessage { get; } =
+        method
+            .CustomAttributes.SingleOrDefault(a =>
+                a.AttributeType.FullName == "Windows.Foundation.Metadata.DeprecatedAttribute"
+            )
+            ?.ConstructorArguments[0]
+            .Value as string;
 }

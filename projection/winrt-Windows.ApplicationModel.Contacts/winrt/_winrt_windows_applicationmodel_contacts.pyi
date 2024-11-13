@@ -1018,7 +1018,9 @@ class FullContactCardOptions(winrt.system.Object):
 
 @typing.final
 class KnownContactField_Static(type):
+    # @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def convert_name_to_type(cls, name: str, /) -> ContactFieldType: ...
+    # @deprecated("IKnownContactFieldStatics may be altered or unavailable for releases after Windows 8.1. Instead, use ContactAddress, ContactPhone, ContactConnectedServiceAccount or ContactEmail.")
     def convert_type_to_name(cls, type: ContactFieldType, /) -> str: ...
     @_property
     def email(cls) -> str: ...

@@ -100,7 +100,9 @@ class SettingsCommand(windows_ui_popups.IUICommand, winrt.system.Object, metacla
 
 @typing.final
 class SettingsPane_Static(type):
+    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_for_current_view(cls) -> SettingsPane: ...
+    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def show(cls) -> None: ...
     @_property
     def edge(cls) -> SettingsEdgeLocation: ...
@@ -109,7 +111,9 @@ class SettingsPane_Static(type):
 class SettingsPane(winrt.system.Object, metaclass=SettingsPane_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SettingsPane: ...
+    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_commands_requested(self, handler: windows_foundation.TypedEventHandler[SettingsPane, SettingsPaneCommandsRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # @deprecated("SettingsPane is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_commands_requested(self, cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final

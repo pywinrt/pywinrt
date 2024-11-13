@@ -18,14 +18,18 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class TwoPanelHingedDevicePosturePreview_Static(type):
+    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreview]: ...
 
 @typing.final
 class TwoPanelHingedDevicePosturePreview(winrt.system.Object, metaclass=TwoPanelHingedDevicePosturePreview_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPanelHingedDevicePosturePreview: ...
+    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def get_current_posture_async(self) -> windows_foundation.IAsyncOperation[TwoPanelHingedDevicePosturePreviewReading]: ...
+    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def add_posture_changed(self, handler: windows_foundation.TypedEventHandler[TwoPanelHingedDevicePosturePreview, TwoPanelHingedDevicePosturePreviewReadingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
+    # @deprecated("TwoPanelHingedDevicePosturePreview is deprecated and might not work on all platforms. For more info, see MSDN.")
     def remove_posture_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
