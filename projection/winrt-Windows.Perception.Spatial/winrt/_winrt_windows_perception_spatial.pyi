@@ -123,8 +123,11 @@ class SpatialAnchorStore(winrt.system.Object):
 
 @typing.final
 class SpatialAnchorTransferManager_Static(type):
+    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def request_access_async(cls) -> windows_foundation.IAsyncOperation[SpatialPerceptionAccessStatus]: ...
+    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def try_export_anchors_async(cls, anchors: typing.Iterable[windows_foundation_collections.IKeyValuePair[str, SpatialAnchor]], stream: windows_storage_streams.IOutputStream, /) -> windows_foundation.IAsyncOperation[bool]: ...
+    # @deprecated("Use SpatialEntityStore instead of SpatialAnchorTransferManager. For more info, see MSDN.")
     def try_import_anchors_async(cls, stream: windows_storage_streams.IInputStream, /) -> windows_foundation.IAsyncOperation[typing.Mapping[str, SpatialAnchor]]: ...
 
 @typing.final

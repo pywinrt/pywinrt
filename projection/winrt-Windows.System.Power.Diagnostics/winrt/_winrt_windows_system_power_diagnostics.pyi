@@ -14,7 +14,9 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class BackgroundEnergyDiagnostics_Static(type):
+    # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
+    # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def reset_total_energy_usage(cls) -> None: ...
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
@@ -25,7 +27,9 @@ class BackgroundEnergyDiagnostics(winrt.system.Object, metaclass=BackgroundEnerg
 
 @typing.final
 class ForegroundEnergyDiagnostics_Static(type):
+    # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def compute_total_energy_usage(cls) -> winrt.system.UInt64: ...
+    # @deprecated("Background Energy Diagnostics has been deprecated. For more info, see MSDN.")
     def reset_total_energy_usage(cls) -> None: ...
     @_property
     def device_specific_conversion_factor(cls) -> winrt.system.Double: ...
