@@ -30,7 +30,6 @@ class XmlnsDefinition:
     namespace: str
     def __init__(self, xml_namespace: str = "", namespace: str = "") -> None: ...
 
-@typing.final
 class MarkupExtension(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MarkupExtension: ...

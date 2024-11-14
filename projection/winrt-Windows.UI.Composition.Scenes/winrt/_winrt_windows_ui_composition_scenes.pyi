@@ -60,7 +60,6 @@ class SceneBoundingBox(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class SceneComponent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneComponent: ...
@@ -148,7 +147,6 @@ class SceneComponentCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class SceneMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterial: ...
@@ -177,7 +175,6 @@ class SceneMaterial(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class SceneMaterialInput(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterialInput: ...
@@ -576,7 +573,6 @@ class SceneNodeCollection(winrt.system.Object, winrt._winrt.MutableSequence[Scen
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class SceneObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneObject: ...
@@ -605,7 +601,6 @@ class SceneObject(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class ScenePbrMaterial(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScenePbrMaterial: ...
@@ -670,7 +665,6 @@ class ScenePbrMaterial(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class SceneRendererComponent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneRendererComponent: ...

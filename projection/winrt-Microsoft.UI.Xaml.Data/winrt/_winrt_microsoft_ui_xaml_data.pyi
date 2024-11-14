@@ -26,7 +26,6 @@ class LoadMoreItemsResult:
     count: winrt.system.UInt32
     def __init__(self, count: winrt.system.UInt32 = 0) -> None: ...
 
-@typing.final
 class Binding(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Binding: ...
@@ -87,7 +86,6 @@ class Binding(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class BindingBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingBase: ...
@@ -104,7 +102,6 @@ class BindingBase(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class BindingExpression(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpression: ...
@@ -114,7 +111,6 @@ class BindingExpression(winrt.system.Object):
     @_property
     def parent_binding(self) -> Binding: ...
 
-@typing.final
 class BindingExpressionBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpressionBase: ...
@@ -170,7 +166,6 @@ class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_S
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class CurrentChangingEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentChangingEventArgs: ...
@@ -195,7 +190,6 @@ class DataErrorsChangedEventArgs(winrt.system.Object):
     @property_name.setter
     def property_name(self, value: str) -> None: ...
 
-@typing.final
 class ItemIndexRange(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemIndexRange: ...
@@ -207,7 +201,6 @@ class ItemIndexRange(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class PropertyChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyChangedEventArgs: ...
@@ -215,7 +208,6 @@ class PropertyChangedEventArgs(winrt.system.Object):
     @_property
     def property_name(self) -> str: ...
 
-@typing.final
 class RelativeSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RelativeSource: ...

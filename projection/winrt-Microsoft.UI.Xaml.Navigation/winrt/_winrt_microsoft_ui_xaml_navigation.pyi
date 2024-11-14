@@ -21,7 +21,6 @@ from winrt.microsoft.ui.xaml.navigation import NavigatedEventHandler, Navigating
 
 Self = typing.TypeVar('Self')
 
-@typing.final
 class FrameNavigationOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameNavigationOptions: ...

@@ -348,7 +348,6 @@ class KeyRoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class KeyboardAccelerator_Static(type):
     @_property
     def is_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -359,7 +358,6 @@ class KeyboardAccelerator_Static(type):
     @_property
     def scope_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class KeyboardAccelerator(winrt.system.Object, metaclass=KeyboardAccelerator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyboardAccelerator: ...
@@ -538,7 +536,6 @@ class ManipulationPivot(winrt.system.Object):
     @center.setter
     def center(self, value: windows_foundation.Point) -> None: ...
 
-@typing.final
 class ManipulationStartedRoutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartedRoutedEventArgs: ...
@@ -658,12 +655,10 @@ class RightTappedRoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class StandardUICommand_Static(type):
     @_property
     def kind_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class StandardUICommand(winrt.system.Object, metaclass=StandardUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StandardUICommand: ...
@@ -731,7 +726,6 @@ class TappedRoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class XamlUICommand_Static(type):
     @_property
     def access_key_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -746,7 +740,6 @@ class XamlUICommand_Static(type):
     @_property
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class XamlUICommand(ICommand, winrt.system.Object, metaclass=XamlUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...

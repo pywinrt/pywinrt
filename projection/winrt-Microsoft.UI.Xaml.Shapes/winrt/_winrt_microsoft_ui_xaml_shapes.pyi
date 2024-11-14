@@ -1138,12 +1138,10 @@ class Line(winrt.system.Object, metaclass=Line_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Path_Static(type):
     @_property
     def data_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Path(winrt.system.Object, metaclass=Path_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Path: ...
@@ -3360,7 +3358,6 @@ class Rectangle(winrt.system.Object, metaclass=Rectangle_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Shape_Static(type):
     @_property
     def fill_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -3385,7 +3382,6 @@ class Shape_Static(type):
     @_property
     def stroke_thickness_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Shape(winrt.system.Object, metaclass=Shape_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shape: ...

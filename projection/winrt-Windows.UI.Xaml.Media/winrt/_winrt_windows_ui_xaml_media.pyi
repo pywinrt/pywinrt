@@ -35,7 +35,6 @@ class Matrix:
     offset_y: winrt.system.Double
     def __init__(self, m11: winrt.system.Double = 0, m12: winrt.system.Double = 0, m21: winrt.system.Double = 0, m22: winrt.system.Double = 0, offset_x: winrt.system.Double = 0, offset_y: winrt.system.Double = 0) -> None: ...
 
-@typing.final
 class AcrylicBrush_Static(type):
     @_property
     def always_use_fallback_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -50,7 +49,6 @@ class AcrylicBrush_Static(type):
     @_property
     def tint_luminosity_opacity_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class AcrylicBrush(winrt.system.Object, metaclass=AcrylicBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AcrylicBrush: ...
@@ -205,7 +203,6 @@ class BitmapCache(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Brush_Static(type):
     @_property
     def opacity_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -214,7 +211,6 @@ class Brush_Static(type):
     @_property
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Brush(windows_ui_composition.IAnimationObject, winrt.system.Object, metaclass=Brush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Brush: ...
@@ -275,7 +271,6 @@ class BrushCollection(winrt.system.Object, winrt._winrt.MutableSequence[Brush]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class CacheMode(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CacheMode: ...
@@ -456,12 +451,10 @@ class EllipseGeometry(winrt.system.Object, metaclass=EllipseGeometry_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class FontFamily_Static(type):
     @_property
     def xaml_auto_font_family(cls) -> FontFamily: ...
 
-@typing.final
 class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontFamily: ...
@@ -469,7 +462,6 @@ class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     @_property
     def source(self) -> str: ...
 
-@typing.final
 class GeneralTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeneralTransform: ...
@@ -488,7 +480,6 @@ class GeneralTransform(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Geometry_Static(type):
     @_property
     def empty(cls) -> Geometry: ...
@@ -497,7 +488,6 @@ class Geometry_Static(type):
     @_property
     def transform_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Geometry(winrt.system.Object, metaclass=Geometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Geometry: ...
@@ -587,7 +577,6 @@ class GeometryGroup(winrt.system.Object, metaclass=GeometryGroup_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class GradientBrush_Static(type):
     @_property
     def color_interpolation_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -598,7 +587,6 @@ class GradientBrush_Static(type):
     @_property
     def spread_method_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class GradientBrush(winrt.system.Object, metaclass=GradientBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GradientBrush: ...
@@ -758,7 +746,6 @@ class ImageBrush(winrt.system.Object, metaclass=ImageBrush_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ImageSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageSource: ...
@@ -1119,7 +1106,6 @@ class PathGeometry(winrt.system.Object, metaclass=PathGeometry_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class PathSegment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathSegment: ...
@@ -1367,7 +1353,6 @@ class PolyQuadraticBezierSegment(winrt.system.Object, metaclass=PolyQuadraticBez
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Projection(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Projection: ...
@@ -1463,7 +1448,6 @@ class RenderingEventArgs(winrt.system.Object):
     @_property
     def rendering_time(self) -> datetime.timedelta: ...
 
-@typing.final
 class RevealBackgroundBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBackgroundBrush: ...
@@ -1507,7 +1491,6 @@ class RevealBackgroundBrush(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class RevealBorderBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBorderBrush: ...
@@ -1551,7 +1534,6 @@ class RevealBorderBrush(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class RevealBrush_Static(type):
     def get_state(cls, element: windows_ui_xaml.UIElement, /) -> RevealBrushState: ...
     def set_state(cls, element: windows_ui_xaml.UIElement, value: RevealBrushState, /) -> None: ...
@@ -1564,7 +1546,6 @@ class RevealBrush_Static(type):
     @_property
     def target_theme_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class RevealBrush(winrt.system.Object, metaclass=RevealBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBrush: ...
@@ -1695,7 +1676,6 @@ class ScaleTransform(winrt.system.Object, metaclass=ScaleTransform_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Shadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shadow: ...
@@ -1796,7 +1776,6 @@ class SolidColorBrush(winrt.system.Object, metaclass=SolidColorBrush_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ThemeShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThemeShadow: ...
@@ -1813,7 +1792,6 @@ class ThemeShadow(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class TileBrush_Static(type):
     @_property
     def alignment_x_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -1822,7 +1800,6 @@ class TileBrush_Static(type):
     @_property
     def stretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class TileBrush(winrt.system.Object, metaclass=TileBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TileBrush: ...
@@ -1943,7 +1920,6 @@ class TimelineMarkerRoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class Transform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform: ...
@@ -2080,12 +2056,10 @@ class VisualTreeHelper(winrt.system.Object, metaclass=VisualTreeHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualTreeHelper: ...
 
-@typing.final
 class XamlCompositionBrushBase_Static(type):
     @_property
     def fallback_color_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class XamlCompositionBrushBase(winrt.system.Object, metaclass=XamlCompositionBrushBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlCompositionBrushBase: ...
@@ -2116,14 +2090,12 @@ class XamlCompositionBrushBase(winrt.system.Object, metaclass=XamlCompositionBru
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class XamlLight_Static(type):
     def add_target_brush(cls, light_id: str, brush: Brush, /) -> None: ...
     def add_target_element(cls, light_id: str, element: windows_ui_xaml.UIElement, /) -> None: ...
     def remove_target_brush(cls, light_id: str, brush: Brush, /) -> None: ...
     def remove_target_element(cls, light_id: str, element: windows_ui_xaml.UIElement, /) -> None: ...
 
-@typing.final
 class XamlLight(winrt.system.Object, metaclass=XamlLight_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlLight: ...

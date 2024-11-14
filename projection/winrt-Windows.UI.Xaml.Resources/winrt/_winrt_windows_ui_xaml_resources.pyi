@@ -12,14 +12,12 @@ import winrt.system
 
 Self = typing.TypeVar('Self')
 
-@typing.final
 class CustomXamlResourceLoader_Static(type):
     @_property
     def current(cls) -> CustomXamlResourceLoader: ...
     @current.setter
     def current(cls, value: CustomXamlResourceLoader) -> None: ...
 
-@typing.final
 class CustomXamlResourceLoader(winrt.system.Object, metaclass=CustomXamlResourceLoader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomXamlResourceLoader: ...

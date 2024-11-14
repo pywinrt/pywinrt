@@ -29,7 +29,6 @@ class RawElementProviderRuntimeId:
     part2: winrt.system.UInt32
     def __init__(self, part1: winrt.system.UInt32 = 0, part2: winrt.system.UInt32 = 0) -> None: ...
 
-@typing.final
 class AnimatedVisualPlayerAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimatedVisualPlayerAutomationPeer: ...
@@ -106,7 +105,6 @@ class AnimatedVisualPlayerAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class AppBarAutomationPeer(microsoft_ui_xaml_automation_provider.IWindowProvider, microsoft_ui_xaml_automation_provider.IToggleProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarAutomationPeer: ...
@@ -205,7 +203,6 @@ class AppBarAutomationPeer(microsoft_ui_xaml_automation_provider.IWindowProvider
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class AppBarButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarButtonAutomationPeer: ...
@@ -287,7 +284,6 @@ class AppBarButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCo
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class AppBarToggleButtonAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarToggleButtonAutomationPeer: ...
@@ -445,12 +441,10 @@ class AutoSuggestBoxAutomationPeer(microsoft_ui_xaml_automation_provider.IInvoke
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class AutomationPeer_Static(type):
     def generate_raw_element_provider_runtime_id(cls) -> RawElementProviderRuntimeId: ...
     def listener_exists(cls, event_id: AutomationEvents, /) -> bool: ...
 
-@typing.final
 class AutomationPeer(winrt.system.Object, metaclass=AutomationPeer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationPeer: ...
@@ -561,7 +555,6 @@ class AutomationPeerAnnotation(winrt.system.Object, metaclass=AutomationPeerAnno
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class BreadcrumbBarItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BreadcrumbBarItemAutomationPeer: ...
@@ -639,7 +632,6 @@ class BreadcrumbBarItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInv
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ButtonAutomationPeer: ...
@@ -717,7 +709,6 @@ class ButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ButtonBaseAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ButtonBaseAutomationPeer: ...
@@ -793,7 +784,6 @@ class ButtonBaseAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class CalendarDatePickerAutomationPeer(microsoft_ui_xaml_automation_provider.IValueProvider, microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarDatePickerAutomationPeer: ...
@@ -878,7 +868,6 @@ class CalendarDatePickerAutomationPeer(microsoft_ui_xaml_automation_provider.IVa
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class CheckBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CheckBoxAutomationPeer: ...
@@ -958,7 +947,6 @@ class CheckBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ColorPickerSliderAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPickerSliderAutomationPeer: ...
@@ -1050,7 +1038,6 @@ class ColorPickerSliderAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ColorSpectrumAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorSpectrumAutomationPeer: ...
@@ -1127,7 +1114,6 @@ class ColorSpectrumAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ComboBoxAutomationPeer(microsoft_ui_xaml_automation_provider.IWindowProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, microsoft_ui_xaml_automation_provider.IValueProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxAutomationPeer: ...
@@ -1237,7 +1223,6 @@ class ComboBoxAutomationPeer(microsoft_ui_xaml_automation_provider.IWindowProvid
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ComboBoxItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxItemAutomationPeer: ...
@@ -1314,7 +1299,6 @@ class ComboBoxItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ComboBoxItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxItemDataAutomationPeer: ...
@@ -1402,7 +1386,6 @@ class ComboBoxItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DatePickerAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerAutomationPeer: ...
@@ -1555,7 +1538,6 @@ class DatePickerFlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DropDownButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropDownButtonAutomationPeer: ...
@@ -1637,7 +1619,6 @@ class DropDownButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IExpand
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ExpanderAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExpanderAutomationPeer: ...
@@ -1718,7 +1699,6 @@ class ExpanderAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollap
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FlipViewAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewAutomationPeer: ...
@@ -1802,7 +1782,6 @@ class FlipViewAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FlipViewItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewItemAutomationPeer: ...
@@ -1879,7 +1858,6 @@ class FlipViewItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FlipViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewItemDataAutomationPeer: ...
@@ -1967,7 +1945,6 @@ class FlipViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FlyoutPresenterAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutPresenterAutomationPeer: ...
@@ -2044,12 +2021,10 @@ class FlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FrameworkElementAutomationPeer_Static(type):
     def create_peer_for_element(cls, element: microsoft_ui_xaml.UIElement, /) -> AutomationPeer: ...
     def from_element(cls, element: microsoft_ui_xaml.UIElement, /) -> AutomationPeer: ...
 
-@typing.final
 class FrameworkElementAutomationPeer(winrt.system.Object, metaclass=FrameworkElementAutomationPeer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameworkElementAutomationPeer: ...
@@ -2126,7 +2101,6 @@ class FrameworkElementAutomationPeer(winrt.system.Object, metaclass=FrameworkEle
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GridViewAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewAutomationPeer: ...
@@ -2214,7 +2188,6 @@ class GridViewAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GridViewHeaderItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewHeaderItemAutomationPeer: ...
@@ -2291,7 +2264,6 @@ class GridViewHeaderItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GridViewItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItemAutomationPeer: ...
@@ -2368,7 +2340,6 @@ class GridViewItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GridViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItemDataAutomationPeer: ...
@@ -2456,7 +2427,6 @@ class GridViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GroupItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GroupItemAutomationPeer: ...
@@ -2533,7 +2503,6 @@ class GroupItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class HubAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HubAutomationPeer: ...
@@ -2610,7 +2579,6 @@ class HubAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class HubSectionAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HubSectionAutomationPeer: ...
@@ -2688,7 +2656,6 @@ class HubSectionAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItem
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class HyperlinkButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HyperlinkButtonAutomationPeer: ...
@@ -2766,7 +2733,6 @@ class HyperlinkButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvok
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ImageAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageAutomationPeer: ...
@@ -2843,7 +2809,6 @@ class ImageAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class InfoBarAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfoBarAutomationPeer: ...
@@ -2920,7 +2885,6 @@ class InfoBarAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ItemAutomationPeer(microsoft_ui_xaml_automation_provider.IVirtualizedItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemAutomationPeer: ...
@@ -3000,7 +2964,6 @@ class ItemAutomationPeer(microsoft_ui_xaml_automation_provider.IVirtualizedItemP
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ItemContainerAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.ISelectionItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemContainerAutomationPeer: ...
@@ -3085,7 +3048,6 @@ class ItemContainerAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeP
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ItemsControlAutomationPeer(microsoft_ui_xaml_automation_provider.IItemContainerProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsControlAutomationPeer: ...
@@ -3164,7 +3126,6 @@ class ItemsControlAutomationPeer(microsoft_ui_xaml_automation_provider.IItemCont
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ItemsViewAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsViewAutomationPeer: ...
@@ -3246,7 +3207,6 @@ class ItemsViewAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionPr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxAutomationPeer: ...
@@ -3330,7 +3290,6 @@ class ListBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListBoxItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxItemAutomationPeer: ...
@@ -3407,7 +3366,6 @@ class ListBoxItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListBoxItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxItemDataAutomationPeer: ...
@@ -3571,7 +3529,6 @@ class ListPickerFlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewAutomationPeer: ...
@@ -3659,7 +3616,6 @@ class ListViewAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewBaseAutomationPeer(microsoft_ui_xaml_automation_provider.IDropTargetProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBaseAutomationPeer: ...
@@ -3747,7 +3703,6 @@ class ListViewBaseAutomationPeer(microsoft_ui_xaml_automation_provider.IDropTarg
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewBaseHeaderItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBaseHeaderItemAutomationPeer: ...
@@ -3823,7 +3778,6 @@ class ListViewBaseHeaderItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewHeaderItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewHeaderItemAutomationPeer: ...
@@ -3900,7 +3854,6 @@ class ListViewHeaderItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItemAutomationPeer: ...
@@ -3977,7 +3930,6 @@ class ListViewItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ListViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItemDataAutomationPeer: ...
@@ -4320,7 +4272,6 @@ class LoopingSelectorItemDataAutomationPeer(microsoft_ui_xaml_automation_provide
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MediaPlayerElementAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerElementAutomationPeer: ...
@@ -4397,7 +4348,6 @@ class MediaPlayerElementAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MediaTransportControlsAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTransportControlsAutomationPeer: ...
@@ -4474,7 +4424,6 @@ class MediaTransportControlsAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MenuBarAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuBarAutomationPeer: ...
@@ -4551,7 +4500,6 @@ class MenuBarAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MenuBarItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuBarItemAutomationPeer: ...
@@ -4633,7 +4581,6 @@ class MenuBarItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokePro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MenuFlyoutItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutItemAutomationPeer: ...
@@ -4711,7 +4658,6 @@ class MenuFlyoutItemAutomationPeer(microsoft_ui_xaml_automation_provider.IInvoke
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class MenuFlyoutPresenterAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutPresenterAutomationPeer: ...
@@ -4790,7 +4736,6 @@ class MenuFlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class NavigationViewAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewAutomationPeer: ...
@@ -4867,7 +4812,6 @@ class NavigationViewAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class NavigationViewItemAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemAutomationPeer: ...
@@ -4948,7 +4892,6 @@ class NavigationViewItemAutomationPeer(microsoft_ui_xaml_automation_provider.IEx
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class NumberBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NumberBoxAutomationPeer: ...
@@ -5025,7 +4968,6 @@ class NumberBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class PasswordBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PasswordBoxAutomationPeer: ...
@@ -5102,7 +5044,6 @@ class PasswordBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class PersonPictureAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PersonPictureAutomationPeer: ...
@@ -5255,7 +5196,6 @@ class PickerFlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class PipsPagerAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PipsPagerAutomationPeer: ...
@@ -5595,7 +5535,6 @@ class PivotItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IVirtual
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ProgressBarAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressBarAutomationPeer: ...
@@ -5687,7 +5626,6 @@ class ProgressBarAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ProgressRingAutomationPeer(microsoft_ui_xaml_automation_provider.IRangeValueProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressRingAutomationPeer: ...
@@ -5779,7 +5717,6 @@ class ProgressRingAutomationPeer(microsoft_ui_xaml_automation_provider.IRangeVal
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RadioButtonAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadioButtonAutomationPeer: ...
@@ -5866,7 +5803,6 @@ class RadioButtonAutomationPeer(microsoft_ui_xaml_automation_provider.ISelection
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RadioButtonsAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadioButtonsAutomationPeer: ...
@@ -5943,7 +5879,6 @@ class RadioButtonsAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RangeBaseAutomationPeer(microsoft_ui_xaml_automation_provider.IRangeValueProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RangeBaseAutomationPeer: ...
@@ -6035,7 +5970,6 @@ class RangeBaseAutomationPeer(microsoft_ui_xaml_automation_provider.IRangeValueP
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RatingControlAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatingControlAutomationPeer: ...
@@ -6112,7 +6046,6 @@ class RatingControlAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RepeatButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepeatButtonAutomationPeer: ...
@@ -6190,7 +6123,6 @@ class RepeatButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokePr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RepeaterAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepeaterAutomationPeer: ...
@@ -6267,7 +6199,6 @@ class RepeaterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RichEditBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditBoxAutomationPeer: ...
@@ -6344,7 +6275,6 @@ class RichEditBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RichTextBlockAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichTextBlockAutomationPeer: ...
@@ -6421,7 +6351,6 @@ class RichTextBlockAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class RichTextBlockOverflowAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichTextBlockOverflowAutomationPeer: ...
@@ -6498,7 +6427,6 @@ class RichTextBlockOverflowAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ScrollBarAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollBarAutomationPeer: ...
@@ -6590,7 +6518,6 @@ class ScrollBarAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ScrollPresenterAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollPresenterAutomationPeer: ...
@@ -6667,7 +6594,6 @@ class ScrollPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ScrollViewerAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollViewerAutomationPeer: ...
@@ -6758,7 +6684,6 @@ class ScrollViewerAutomationPeer(microsoft_ui_xaml_automation_provider.IScrollPr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SelectorAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorAutomationPeer: ...
@@ -6842,7 +6767,6 @@ class SelectorAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionPro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SelectorBarItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorBarItemAutomationPeer: ...
@@ -6927,7 +6851,6 @@ class SelectorBarItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SelectorItemAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectionItemProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorItemAutomationPeer: ...
@@ -7014,7 +6937,6 @@ class SelectorItemAutomationPeer(microsoft_ui_xaml_automation_provider.ISelectio
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SemanticZoomAutomationPeer(microsoft_ui_xaml_automation_provider.IToggleProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SemanticZoomAutomationPeer: ...
@@ -7094,7 +7016,6 @@ class SemanticZoomAutomationPeer(microsoft_ui_xaml_automation_provider.ITogglePr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SliderAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SliderAutomationPeer: ...
@@ -7186,7 +7107,6 @@ class SliderAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SplitButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokeProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitButtonAutomationPeer: ...
@@ -7268,7 +7188,6 @@ class SplitButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IInvokePro
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TabViewAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewAutomationPeer: ...
@@ -7345,7 +7264,6 @@ class TabViewAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TabViewItemAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewItemAutomationPeer: ...
@@ -7422,7 +7340,6 @@ class TabViewItemAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TeachingTipAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TeachingTipAutomationPeer: ...
@@ -7499,7 +7416,6 @@ class TeachingTipAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TextBlockAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBlockAutomationPeer: ...
@@ -7576,7 +7492,6 @@ class TextBlockAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TextBoxAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBoxAutomationPeer: ...
@@ -7653,7 +7568,6 @@ class TextBoxAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ThumbAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThumbAutomationPeer: ...
@@ -7730,7 +7644,6 @@ class ThumbAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TimePickerAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePickerAutomationPeer: ...
@@ -7883,7 +7796,6 @@ class TimePickerFlyoutPresenterAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ToggleButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IToggleProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleButtonAutomationPeer: ...
@@ -7963,7 +7875,6 @@ class ToggleButtonAutomationPeer(microsoft_ui_xaml_automation_provider.ITogglePr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ToggleMenuFlyoutItemAutomationPeer(microsoft_ui_xaml_automation_provider.IToggleProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleMenuFlyoutItemAutomationPeer: ...
@@ -8043,7 +7954,6 @@ class ToggleMenuFlyoutItemAutomationPeer(microsoft_ui_xaml_automation_provider.I
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ToggleSplitButtonAutomationPeer(microsoft_ui_xaml_automation_provider.IToggleProvider, microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleSplitButtonAutomationPeer: ...
@@ -8127,7 +8037,6 @@ class ToggleSplitButtonAutomationPeer(microsoft_ui_xaml_automation_provider.ITog
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ToggleSwitchAutomationPeer(microsoft_ui_xaml_automation_provider.IToggleProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleSwitchAutomationPeer: ...
@@ -8207,7 +8116,6 @@ class ToggleSwitchAutomationPeer(microsoft_ui_xaml_automation_provider.ITogglePr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TreeViewItemAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewItemAutomationPeer: ...
@@ -8288,7 +8196,6 @@ class TreeViewItemAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCo
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TreeViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IExpandCollapseProvider, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewItemDataAutomationPeer: ...
@@ -8372,7 +8279,6 @@ class TreeViewItemDataAutomationPeer(microsoft_ui_xaml_automation_provider.IExpa
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class TreeViewListAutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewListAutomationPeer: ...
@@ -8460,7 +8366,6 @@ class TreeViewListAutomationPeer(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class WebView2AutomationPeer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebView2AutomationPeer: ...

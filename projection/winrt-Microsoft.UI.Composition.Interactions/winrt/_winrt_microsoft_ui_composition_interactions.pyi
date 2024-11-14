@@ -248,7 +248,6 @@ class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
-@typing.final
 class InteractionTrackerInertiaModifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaModifier: ...
@@ -442,7 +441,6 @@ class InteractionTrackerValuesChangedArgs(winrt.system.Object):
     @_property
     def scale(self) -> winrt.system.Single: ...
 
-@typing.final
 class InteractionTrackerVector2InertiaModifier(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaModifier: ...
@@ -508,12 +506,10 @@ class InteractionTrackerVector2InertiaNaturalMotion(winrt.system.Object, metacla
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class VisualInteractionSource_Static(type):
     def create(cls, source: microsoft_ui_composition.Visual, /) -> VisualInteractionSource: ...
     def create_from_ivisual_element(cls, source: microsoft_ui_composition.IVisualElement, /) -> VisualInteractionSource: ...
 
-@typing.final
 class VisualInteractionSource(ICompositionInteractionSource, winrt.system.Object, metaclass=VisualInteractionSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualInteractionSource: ...

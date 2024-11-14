@@ -16,7 +16,6 @@ from winrt.microsoft.ui.xaml.interop import BindableVectorChangedEventHandler, N
 
 Self = typing.TypeVar('Self')
 
-@typing.final
 class NotifyCollectionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotifyCollectionChangedEventArgs: ...

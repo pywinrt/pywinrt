@@ -36,7 +36,6 @@ class TextRange:
     length: winrt.system.Int32
     def __init__(self, start_index: winrt.system.Int32 = 0, length: winrt.system.Int32 = 0) -> None: ...
 
-@typing.final
 class Block_Static(type):
     @_property
     def line_height_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -49,7 +48,6 @@ class Block_Static(type):
     @_property
     def horizontal_text_alignment_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Block(winrt.system.Object, metaclass=Block_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Block: ...
@@ -551,7 +549,6 @@ class ContentLinkInvokedEventArgs(winrt.system.Object):
     @_property
     def content_link_info(self) -> windows_ui_text.ContentLinkInfo: ...
 
-@typing.final
 class ContentLinkProvider(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentLinkProvider: ...
@@ -1332,7 +1329,6 @@ class HyperlinkClickEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class Inline(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Inline: ...
@@ -2079,7 +2075,6 @@ class Run(winrt.system.Object, metaclass=Run_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Span(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Span: ...
@@ -2191,7 +2186,6 @@ class Span(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class TextElement_Static(type):
     @_property
     def character_spacing_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -2230,7 +2224,6 @@ class TextElement_Static(type):
     @_property
     def text_decorations_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class TextElement(winrt.system.Object, metaclass=TextElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextElement: ...
@@ -2337,14 +2330,12 @@ class TextElement(winrt.system.Object, metaclass=TextElement_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class TextHighlighter_Static(type):
     @_property
     def background_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def foreground_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextHighlighter: ...
@@ -2360,7 +2351,6 @@ class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     @_property
     def ranges(self) -> typing.MutableSequence[TextRange]: ...
 
-@typing.final
 class TextHighlighterBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextHighlighterBase: ...

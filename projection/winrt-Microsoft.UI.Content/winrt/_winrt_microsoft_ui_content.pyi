@@ -22,11 +22,9 @@ from winrt.microsoft.ui.content import ContentCoordinateRoundingMode, ContentLay
 
 Self = typing.TypeVar('Self')
 
-@typing.final
 class ContentCoordinateConverter_Static(type):
     def create_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> ContentCoordinateConverter: ...
 
-@typing.final
 class ContentCoordinateConverter(winrt.system.Object, metaclass=ContentCoordinateConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentCoordinateConverter: ...
@@ -60,7 +58,6 @@ class ContentEnvironmentStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_display_id_change(self) -> bool: ...
 
-@typing.final
 class ContentIsland_Static(type):
     def create(cls, root: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
     def find_all_for_compositor(cls, compositor: microsoft_ui_composition.Compositor, /) -> winrt.system.Array[ContentIsland]: ...
@@ -68,7 +65,6 @@ class ContentIsland_Static(type):
     def get_by_visual(cls, child: microsoft_ui_composition.Visual, /) -> ContentIsland: ...
     def get_from_id(cls, id: winrt.system.UInt64, /) -> ContentIsland: ...
 
-@typing.final
 class ContentIsland(microsoft_ui_composition.ICompositionSupportsSystemBackdrop, microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ContentIsland_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -144,7 +140,6 @@ class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
-@typing.final
 class ContentIslandEnvironment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentIslandEnvironment: ...
@@ -172,7 +167,6 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_site_visible_change(self) -> bool: ...
 
-@typing.final
 class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -235,7 +229,6 @@ class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, 
     @_property
     def is_closed(self) -> bool: ...
 
-@typing.final
 class ContentSiteEnvironment(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteEnvironment: ...
@@ -251,7 +244,6 @@ class ContentSiteEnvironment(winrt.system.Object):
     @_property
     def view(self) -> ContentSiteEnvironmentView: ...
 
-@typing.final
 class ContentSiteEnvironmentView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteEnvironmentView: ...
@@ -267,7 +259,6 @@ class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_requested_size_change(self) -> bool: ...
 
-@typing.final
 class ContentSiteView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteView: ...
@@ -347,11 +338,9 @@ class DesktopChildSiteBridge(winrt.system.Object, metaclass=DesktopChildSiteBrid
     @_property
     def is_closed(self) -> bool: ...
 
-@typing.final
 class DesktopSiteBridge_Static(type):
     def is_supported(cls) -> bool: ...
 
-@typing.final
 class DesktopSiteBridge(IContentSiteBridge, windows_foundation.IClosable, microsoft_ui.IClosableNotifier, winrt.system.Object, metaclass=DesktopSiteBridge_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

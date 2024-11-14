@@ -14,6 +14,9 @@ class ProjectedType
         Category = type.GetCategory();
         IsStatic = type.IsStaticClass();
         IsGeneric = type.HasGenericParameters;
+        IsComposable = type.CustomAttributes.Any(a =>
+            a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
+        );
 
         PyModuleName = Namespace.ToPyModuleName();
         PyExtModuleName = Namespace.ToNsModuleName();
@@ -181,6 +184,11 @@ class ProjectedType
     /// True if the type is a generic type.
     /// </summary>
     public bool IsGeneric { get; }
+
+    /// <summary>
+    /// True if the type is a composable WinRT runtime class.
+    /// </summary>
+    public bool IsComposable { get; }
 
     /// <summary>
     /// Gets the dotted Python module name of the type, e.g. "winrt.windows.foundation".

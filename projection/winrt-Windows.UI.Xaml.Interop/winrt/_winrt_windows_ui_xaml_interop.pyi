@@ -22,7 +22,6 @@ class TypeName:
     kind: TypeKind
     def __init__(self, name: str = "", kind: TypeKind = TypeKind(0)) -> None: ...
 
-@typing.final
 class NotifyCollectionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotifyCollectionChangedEventArgs: ...

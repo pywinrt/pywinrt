@@ -180,7 +180,6 @@ class PerspectiveTransform3D(winrt.system.Object, metaclass=PerspectiveTransform
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Transform3D(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform3D: ...
