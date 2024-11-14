@@ -33,6 +33,7 @@ class TestCollectionsStringMap(unittest.TestCase):
         m = wfc.StringMap()
 
         self.assertIsInstance(m, collections.abc.Mapping)
+        self.assertFalse(m, "Empty map should be falsy")
 
         m["hello"] = "world"
 
@@ -45,6 +46,7 @@ class TestCollectionsStringMap(unittest.TestCase):
         self.assertIn(("hello", "world"), m.items())
         self.assertEqual(m, {"hello": "world"})
         self.assertFalse(m != {"hello": "world"})
+        self.assertTrue(m, "Non-empty map should be truthy")
 
         del m["hello"]
 
@@ -132,6 +134,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
 
     def test_test_property_set_is_mapping(self):
         m = wfc.PropertySet()
+        self.assertFalse(m, "Empty set should be falsy")
 
         self.assertIsInstance(m, collections.abc.Mapping)
 
@@ -147,6 +150,7 @@ class TestCollectionsPropertySet(unittest.TestCase):
         # self.assertIn(("hello", "world"), m.items())
         # self.assertEqual(m, {"hello": "world"})
         # self.assertFalse(m != {"hello": "world"})
+        self.assertTrue(m, "Non-empty set should be truthy")
 
         m["hello"] = cast(Object, None)
         self.assertEqual(m["hello"], None)
