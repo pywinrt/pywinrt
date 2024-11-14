@@ -424,30 +424,6 @@ class ProjectedType
 
         addInterfaces(type);
 
-        void addBaseClasses(TypeDefinition parent)
-        {
-            if (parent.BaseType is null || parent.BaseType.Namespace == "System")
-            {
-                return;
-            }
-
-            var resolvedType = parent.BaseType.Resolve();
-
-            inheritance.Push(parent.BaseType);
-            add(
-                resolvedType.Methods.Where(m => !m.IsStatic && !m.IsSpecialName && m.IsPublic),
-                inheritance.Reverse(),
-                default
-            );
-            addBaseClasses(resolvedType);
-            inheritance.Pop();
-        }
-
-        if (type.GetCategory() == Category.Class)
-        {
-            addBaseClasses(type);
-        }
-
         foreach (var (name, methods) in collectedMethods)
         {
             foreach (var (argCount, overloads) in methods)
@@ -533,32 +509,6 @@ class ProjectedType
 
         addInterfaces(type);
 
-        void addBaseClasses(TypeDefinition parent)
-        {
-            if (parent.BaseType is null || parent.BaseType.Namespace == "System")
-            {
-                return;
-            }
-
-            var resolvedType = parent.BaseType.Resolve();
-
-            inheritance.Push(parent.BaseType);
-            add(
-                resolvedType.Properties.Where(m =>
-                    (m.GetMethod?.IsPublic ?? false) && !(m.GetMethod?.IsStatic ?? false)
-                ),
-                inheritance.Reverse().ToList(),
-                default
-            );
-            addBaseClasses(resolvedType);
-            inheritance.Pop();
-        }
-
-        if (type.GetCategory() == Category.Class)
-        {
-            addBaseClasses(type);
-        }
-
         return collectedProperties;
     }
 
@@ -623,32 +573,6 @@ class ProjectedType
         }
 
         addInterfaces(type);
-
-        void addBaseClasses(TypeDefinition parent)
-        {
-            if (parent.BaseType is null || parent.BaseType.Namespace == "System")
-            {
-                return;
-            }
-
-            var resolvedType = parent.BaseType.Resolve();
-
-            inheritance.Push(parent.BaseType);
-            add(
-                resolvedType.Events.Where(m =>
-                    (m.AddMethod?.IsPublic ?? false) && !(m.AddMethod?.IsStatic ?? false)
-                ),
-                inheritance.Reverse().ToList(),
-                default
-            );
-            addBaseClasses(resolvedType);
-            inheritance.Pop();
-        }
-
-        if (type.GetCategory() == Category.Class)
-        {
-            addBaseClasses(type);
-        }
 
         return collectedEvents;
     }

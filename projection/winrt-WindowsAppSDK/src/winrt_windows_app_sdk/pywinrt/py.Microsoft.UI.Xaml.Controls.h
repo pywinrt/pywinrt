@@ -13,10 +13,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Composition.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.Input.h")
 #include "py.Microsoft.UI.Input.h"
 #endif
@@ -55,10 +51,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Microsoft.UI.Xaml.Media.Animation.h")
 #include "py.Microsoft.UI.Xaml.Media.Animation.h"
-#endif
-
-#if __has_include("py.Microsoft.UI.Xaml.Media.Media3D.h")
-#include "py.Microsoft.UI.Xaml.Media.Media3D.h"
 #endif
 
 #if __has_include("py.Microsoft.UI.Xaml.Navigation.h")
@@ -113,10 +105,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #if __has_include("py.Windows.UI.Text.h")
 #include "py.Windows.UI.Text.h"
 #endif
@@ -127,7 +115,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #include <winrt/Microsoft.UI.h>
 #include <winrt/Microsoft.UI.Composition.h>
-#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Microsoft.UI.Text.h>
 #include <winrt/Microsoft.UI.Xaml.h>
@@ -138,7 +125,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Microsoft.UI.Xaml.Interop.h>
 #include <winrt/Microsoft.UI.Xaml.Media.h>
 #include <winrt/Microsoft.UI.Xaml.Media.Animation.h>
-#include <winrt/Microsoft.UI.Xaml.Media.Media3D.h>
 #include <winrt/Microsoft.UI.Xaml.Navigation.h>
 #include <winrt/Microsoft.Web.WebView2.Core.h>
 #include <winrt/Windows.ApplicationModel.Contacts.h>
@@ -152,7 +138,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Media.Casting.h>
 #include <winrt/Windows.Media.Playback.h>
 #include <winrt/Windows.UI.h>
-#include <winrt/Windows.UI.Core.h>
 #include <winrt/Windows.UI.Text.h>
 #include <winrt/Windows.UI.Xaml.Interop.h>
 

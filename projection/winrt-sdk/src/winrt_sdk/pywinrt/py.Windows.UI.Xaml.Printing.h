@@ -13,17 +13,12 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Graphics.Printing.h"
 #endif
 
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.h")
 #include "py.Windows.UI.Xaml.h"
 #endif
 
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Graphics.Printing.h>
-#include <winrt/Windows.UI.Core.h>
 #include <winrt/Windows.UI.Xaml.h>
 
 #include <winrt/Windows.UI.Xaml.Printing.h>

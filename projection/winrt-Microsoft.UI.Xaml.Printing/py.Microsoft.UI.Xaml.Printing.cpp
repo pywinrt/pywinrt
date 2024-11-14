@@ -491,121 +491,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_ClearValue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ClearValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-
-                self->obj.ClearValue(param0);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_GetAnimationBaseValue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetAnimationBaseValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-
-                return py::convert(self->obj.GetAnimationBaseValue(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_GetValue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"GetValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-
-                return py::convert(self->obj.GetValue(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PrintDocument_InvalidatePreview(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
     {
         auto arg_count = PyTuple_Size(args);
@@ -629,83 +514,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
                 self->obj.InvalidatePreview();
                 Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_ReadLocalValue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 1)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"ReadLocalValue", 1);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(1);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-
-                return py::convert(self->obj.ReadLocalValue(param0));
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_RegisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"RegisterPropertyChangedCallback", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-                auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyPropertyChangedCallback>(args, 1);
-
-                return py::convert(self->obj.RegisterPropertyChangedCallback(param0, param1));
             }
             catch (...)
             {
@@ -800,86 +608,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
         }
     }
 
-    static PyObject* PrintDocument_SetValue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"SetValue", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-                auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
-
-                self->obj.SetValue(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_UnregisterPropertyChangedCallback(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 2)
-        {
-            try
-            {
-                static std::optional<bool> is_overload_present{};
-
-                if (!is_overload_present.has_value())
-                {
-                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.DependencyObject", L"UnregisterPropertyChangedCallback", 2);
-                }
-
-                if (!is_overload_present.value())
-                {
-                    py::set_arg_count_version_error(2);
-                    return nullptr;
-                }
-
-                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DependencyProperty>(args, 0);
-                auto param1 = py::convert_to<int64_t>(args, 1);
-
-                self->obj.UnregisterPropertyChangedCallback(param0, param1);
-                Py_RETURN_NONE;
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
     static PyObject* PrintDocument_get_DocumentSource(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
     {
         try
@@ -924,58 +652,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
             }
 
             return py::convert(winrt::Microsoft::UI::Xaml::Printing::PrintDocument::DocumentSourceProperty());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_get_Dispatcher(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"Dispatcher");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.Dispatcher());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static PyObject* PrintDocument_get_DispatcherQueue(py::wrapper::Microsoft::UI::Xaml::Printing::PrintDocument* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.DependencyObject", L"DispatcherQueue");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.DispatcherQueue());
         }
         catch (...)
         {
@@ -1182,16 +858,9 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
     static PyMethodDef _methods_PrintDocument[] = {
         { "add_page", reinterpret_cast<PyCFunction>(PrintDocument_AddPage), METH_VARARGS, nullptr },
         { "add_pages_complete", reinterpret_cast<PyCFunction>(PrintDocument_AddPagesComplete), METH_VARARGS, nullptr },
-        { "clear_value", reinterpret_cast<PyCFunction>(PrintDocument_ClearValue), METH_VARARGS, nullptr },
-        { "get_animation_base_value", reinterpret_cast<PyCFunction>(PrintDocument_GetAnimationBaseValue), METH_VARARGS, nullptr },
-        { "get_value", reinterpret_cast<PyCFunction>(PrintDocument_GetValue), METH_VARARGS, nullptr },
         { "invalidate_preview", reinterpret_cast<PyCFunction>(PrintDocument_InvalidatePreview), METH_VARARGS, nullptr },
-        { "read_local_value", reinterpret_cast<PyCFunction>(PrintDocument_ReadLocalValue), METH_VARARGS, nullptr },
-        { "register_property_changed_callback", reinterpret_cast<PyCFunction>(PrintDocument_RegisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "set_preview_page", reinterpret_cast<PyCFunction>(PrintDocument_SetPreviewPage), METH_VARARGS, nullptr },
         { "set_preview_page_count", reinterpret_cast<PyCFunction>(PrintDocument_SetPreviewPageCount), METH_VARARGS, nullptr },
-        { "set_value", reinterpret_cast<PyCFunction>(PrintDocument_SetValue), METH_VARARGS, nullptr },
-        { "unregister_property_changed_callback", reinterpret_cast<PyCFunction>(PrintDocument_UnregisterPropertyChangedCallback), METH_VARARGS, nullptr },
         { "add_add_pages", reinterpret_cast<PyCFunction>(PrintDocument_add_AddPages), METH_O, nullptr },
         { "remove_add_pages", reinterpret_cast<PyCFunction>(PrintDocument_remove_AddPages), METH_O, nullptr },
         { "add_get_preview_page", reinterpret_cast<PyCFunction>(PrintDocument_add_GetPreviewPage), METH_O, nullptr },
@@ -1205,8 +874,6 @@ namespace py::cpp::Microsoft::UI::Xaml::Printing
 
     static PyGetSetDef _getset_PrintDocument[] = {
         { "document_source", reinterpret_cast<getter>(PrintDocument_get_DocumentSource), nullptr, nullptr, nullptr },
-        { "dispatcher", reinterpret_cast<getter>(PrintDocument_get_Dispatcher), nullptr, nullptr, nullptr },
-        { "dispatcher_queue", reinterpret_cast<getter>(PrintDocument_get_DispatcherQueue), nullptr, nullptr, nullptr },
         { }
     };
 

@@ -3378,32 +3378,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
-    static PyObject* CompactOverlayPresenter_get_Kind(py::wrapper::Microsoft::UI::Windowing::CompactOverlayPresenter* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPresenter", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.Kind());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_CompactOverlayPresenter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Windowing::CompactOverlayPresenter>>();
@@ -3436,7 +3410,6 @@ namespace py::cpp::Microsoft::UI::Windowing
 
     static PyGetSetDef _getset_CompactOverlayPresenter[] = {
         { "initial_size", reinterpret_cast<getter>(CompactOverlayPresenter_get_InitialSize), reinterpret_cast<setter>(CompactOverlayPresenter_put_InitialSize), nullptr, nullptr },
-        { "kind", reinterpret_cast<getter>(CompactOverlayPresenter_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -4457,32 +4430,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
-    static PyObject* FullScreenPresenter_get_Kind(py::wrapper::Microsoft::UI::Windowing::FullScreenPresenter* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPresenter", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.Kind());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_FullScreenPresenter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Windowing::FullScreenPresenter>>();
@@ -4514,7 +4461,6 @@ namespace py::cpp::Microsoft::UI::Windowing
     };
 
     static PyGetSetDef _getset_FullScreenPresenter[] = {
-        { "kind", reinterpret_cast<getter>(FullScreenPresenter_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 
@@ -5358,32 +5304,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         }
     }
 
-    static PyObject* OverlappedPresenter_get_Kind(py::wrapper::Microsoft::UI::Windowing::OverlappedPresenter* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            static std::optional<bool> is_property_present{};
-
-            if (!is_property_present.has_value())
-            {
-                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Windowing.AppWindowPresenter", L"Kind");
-            }
-
-            if (!is_property_present.value())
-            {
-                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
-                return nullptr;
-            }
-
-            return py::convert(self->obj.Kind());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
     static PyObject* _assign_array_OverlappedPresenter(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Windowing::OverlappedPresenter>>();
@@ -5429,7 +5349,6 @@ namespace py::cpp::Microsoft::UI::Windowing
         { "has_border", reinterpret_cast<getter>(OverlappedPresenter_get_HasBorder), nullptr, nullptr, nullptr },
         { "has_title_bar", reinterpret_cast<getter>(OverlappedPresenter_get_HasTitleBar), nullptr, nullptr, nullptr },
         { "state", reinterpret_cast<getter>(OverlappedPresenter_get_State), nullptr, nullptr, nullptr },
-        { "kind", reinterpret_cast<getter>(OverlappedPresenter_get_Kind), nullptr, nullptr, nullptr },
         { }
     };
 

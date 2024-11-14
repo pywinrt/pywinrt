@@ -545,133 +545,6 @@ namespace py::cpp::TestComponent
         Py_DECREF(tp);
     }
 
-    static PyObject* Derived_Four(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                return py::convert(self->obj.Four());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Derived_One(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                return py::convert(self->obj.One());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Derived_Three(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                return py::convert(self->obj.Three());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Derived_Two(py::wrapper::TestComponent::Derived* self, PyObject* args) noexcept
-    {
-        auto arg_count = PyTuple_Size(args);
-
-        if (arg_count == 0)
-        {
-            try
-            {
-                return py::convert(self->obj.Two());
-            }
-            catch (...)
-            {
-                py::to_PyErr();
-                return nullptr;
-            }
-        }
-        else
-        {
-            py::set_invalid_arg_count_error(arg_count);
-            return nullptr;
-        }
-    }
-
-    static PyObject* Derived_get_Value(py::wrapper::TestComponent::Derived* self, void* /*unused*/) noexcept
-    {
-        try
-        {
-            return py::convert(self->obj.Value());
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return nullptr;
-        }
-    }
-
-    static int Derived_put_Value(py::wrapper::TestComponent::Derived* self, PyObject* arg, void* /*unused*/) noexcept
-    {
-        if (arg == nullptr)
-        {
-            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
-            return -1;
-        }
-
-        try
-        {
-            auto param0 = py::convert_to<int32_t>(arg);
-
-            self->obj.Value(param0);
-            return 0;
-        }
-        catch (...)
-        {
-            py::to_PyErr();
-            return -1;
-        }
-    }
-
     static PyObject* _assign_array_Derived(PyObject* /*unused*/, PyObject* arg) noexcept
     {
         auto array = std::make_unique<py::ComArray<winrt::TestComponent::Derived>>();
@@ -697,17 +570,12 @@ namespace py::cpp::TestComponent
     }
 
     static PyMethodDef _methods_Derived[] = {
-        { "four", reinterpret_cast<PyCFunction>(Derived_Four), METH_VARARGS, nullptr },
-        { "one", reinterpret_cast<PyCFunction>(Derived_One), METH_VARARGS, nullptr },
-        { "three", reinterpret_cast<PyCFunction>(Derived_Three), METH_VARARGS, nullptr },
-        { "two", reinterpret_cast<PyCFunction>(Derived_Two), METH_VARARGS, nullptr },
         { "_assign_array_", _assign_array_Derived, METH_O | METH_STATIC, nullptr },
         { "_from", reinterpret_cast<PyCFunction>(_from_Derived), METH_O | METH_STATIC, nullptr },
         { }
     };
 
     static PyGetSetDef _getset_Derived[] = {
-        { "value", reinterpret_cast<getter>(Derived_get_Value), reinterpret_cast<setter>(Derived_put_Value), nullptr, nullptr },
         { }
     };
 
