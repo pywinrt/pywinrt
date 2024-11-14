@@ -41,7 +41,6 @@ class MapZoomLevelRange:
     max: winrt.system.Double
     def __init__(self, min: winrt.system.Double = 0, max: winrt.system.Double = 0) -> None: ...
 
-@typing.final
 class CustomMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomMapTileDataSource: ...
@@ -58,7 +57,6 @@ class CustomMapTileDataSource(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class HttpMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpMapTileDataSource: ...
@@ -88,7 +86,6 @@ class HttpMapTileDataSource(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class LocalMapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalMapTileDataSource: ...
@@ -1257,7 +1254,6 @@ class MapControlTransitFeatureRightTappedEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
 
-@typing.final
 class MapCustomExperience(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapCustomExperience: ...
@@ -1278,7 +1274,6 @@ class MapCustomExperienceChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> MapCustomExperienceChangedEventArgs: ...
     def __new__(cls: typing.Type[MapCustomExperienceChangedEventArgs]) -> MapCustomExperienceChangedEventArgs: ...
 
-@typing.final
 class MapElement_Static(type):
     @_property
     def visible_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -1295,7 +1290,6 @@ class MapElement_Static(type):
     @_property
     def is_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class MapElement(winrt.system.Object, metaclass=MapElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElement: ...
@@ -1673,7 +1667,6 @@ class MapItemsControl(winrt.system.Object, metaclass=MapItemsControl_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class MapLayer_Static(type):
     @_property
     def map_tab_index_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -1682,7 +1675,6 @@ class MapLayer_Static(type):
     @_property
     def z_index_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class MapLayer(winrt.system.Object, metaclass=MapLayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLayer: ...
@@ -1709,12 +1701,10 @@ class MapLayer(winrt.system.Object, metaclass=MapLayer_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class MapModel3D_Static(type):
     def create_from_3mf_async(cls, source: windows_storage_streams.IRandomAccessStreamReference, /) -> windows_foundation.IAsyncOperation[MapModel3D]: ...
     def create_from_3mf_with_shading_option_async(cls, source: windows_storage_streams.IRandomAccessStreamReference, shading_option: MapModel3DShadingOption, /) -> windows_foundation.IAsyncOperation[MapModel3D]: ...
 
-@typing.final
 class MapModel3D(winrt.system.Object, metaclass=MapModel3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapModel3D: ...
@@ -1879,7 +1869,6 @@ class MapRightTappedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> windows_foundation.Point: ...
 
-@typing.final
 class MapRouteView(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteView: ...
@@ -2152,7 +2141,6 @@ class MapTileBitmapRequestedEventArgs(winrt.system.Object):
     @_property
     def frame_index(self) -> winrt.system.Int32: ...
 
-@typing.final
 class MapTileDataSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileDataSource: ...
@@ -2167,7 +2155,6 @@ class MapTileDataSource(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class MapTileSource_Static(type):
     @_property
     def allow_overstretch_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -2200,7 +2187,6 @@ class MapTileSource_Static(type):
     @_property
     def frame_duration_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class MapTileSource(winrt.system.Object, metaclass=MapTileSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileSource: ...

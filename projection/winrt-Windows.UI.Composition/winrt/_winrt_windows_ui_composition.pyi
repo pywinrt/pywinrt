@@ -665,7 +665,6 @@ class ColorKeyFrameAnimation(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionAnimation(ICompositionAnimationBase, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionAnimation: ...
@@ -807,7 +806,6 @@ class CompositionBatchCompletedEventArgs(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBrush: ...
@@ -849,7 +847,6 @@ class CompositionCapabilities(winrt.system.Object, metaclass=CompositionCapabili
     def add_changed(self, handler: windows_foundation.TypedEventHandler[CompositionCapabilities, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-@typing.final
 class CompositionClip(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionClip: ...
@@ -1099,7 +1096,6 @@ class CompositionContainerShape(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionDrawingSurface(ICompositionSurface, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDrawingSurface: ...
@@ -1141,7 +1137,6 @@ class CompositionDrawingSurface(ICompositionSurface, winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionEasingFunction_Static(type):
     def create_back_easing_function(cls, owner: Compositor, mode: CompositionEasingFunctionMode, amplitude: winrt.system.Single, /) -> BackEasingFunction: ...
     def create_bounce_easing_function(cls, owner: Compositor, mode: CompositionEasingFunctionMode, bounces: winrt.system.Int32, bounciness: winrt.system.Single, /) -> BounceEasingFunction: ...
@@ -1155,7 +1150,6 @@ class CompositionEasingFunction_Static(type):
     def create_step_easing_function(cls, owner: Compositor, /) -> StepEasingFunction: ...
     def create_step_easing_function_with_step_count(cls, owner: Compositor, step_count: winrt.system.Int32, /) -> StepEasingFunction: ...
 
-@typing.final
 class CompositionEasingFunction(winrt.system.Object, metaclass=CompositionEasingFunction_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionEasingFunction: ...
@@ -1371,7 +1365,6 @@ class CompositionGeometricClip(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionGeometry(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGeometry: ...
@@ -1412,7 +1405,6 @@ class CompositionGeometry(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionGradientBrush(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGradientBrush: ...
@@ -1520,7 +1512,6 @@ class CompositionGraphicsDevice(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionLight(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionLight: ...
@@ -1833,12 +1824,10 @@ class CompositionNineGridBrush(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionObject_Static(type):
     def start_animation_group_with_ianimation_object(cls, target: IAnimationObject, animation: ICompositionAnimationBase, /) -> None: ...
     def start_animation_with_ianimation_object(cls, target: IAnimationObject, property_name: str, animation: CompositionAnimation, /) -> None: ...
 
-@typing.final
 class CompositionObject(IAnimationObject, windows_foundation.IClosable, winrt.system.Object, metaclass=CompositionObject_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
@@ -2389,7 +2378,6 @@ class CompositionScopedBatch(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionShadow(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShadow: ...
@@ -2418,7 +2406,6 @@ class CompositionShadow(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionShape(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShape: ...
@@ -2765,7 +2752,6 @@ class CompositionSurfaceBrush(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionTarget(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTarget: ...
@@ -2798,7 +2784,6 @@ class CompositionTarget(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionTexture(ICompositionSurface, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTexture: ...
@@ -2839,7 +2824,6 @@ class CompositionTexture(ICompositionSurface, winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionTransform(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTransform: ...
@@ -2917,7 +2901,6 @@ class CompositionViewBox(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class CompositionVirtualDrawingSurface(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionVirtualDrawingSurface: ...
@@ -3103,7 +3086,6 @@ class Compositor(windows_foundation.IClosable, winrt.system.Object, metaclass=Co
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class ContainerVisual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContainerVisual: ...
@@ -3764,7 +3746,6 @@ class InsetClip(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class KeyFrameAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyFrameAnimation: ...
@@ -3998,7 +3979,6 @@ class LinearEasingFunction(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NaturalMotionAnimation: ...
@@ -4651,7 +4631,6 @@ class ScalarKeyFrameAnimation(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class ScalarNaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScalarNaturalMotionAnimation: ...
@@ -5474,7 +5453,6 @@ class Vector2KeyFrameAnimation(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class Vector2NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector2NaturalMotionAnimation: ...
@@ -5628,7 +5606,6 @@ class Vector3KeyFrameAnimation(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class Vector3NaturalMotionAnimation(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector3NaturalMotionAnimation: ...
@@ -5782,7 +5759,6 @@ class Vector4KeyFrameAnimation(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> windows_system.DispatcherQueue: ...
 
-@typing.final
 class Visual(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Visual: ...

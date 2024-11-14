@@ -104,7 +104,6 @@ class AppBarToggleButtonTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ButtonBase_Static(type):
     @_property
     def click_mode_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -117,7 +116,6 @@ class ButtonBase_Static(type):
     @_property
     def is_pressed_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ButtonBase(winrt.system.Object, metaclass=ButtonBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ButtonBase: ...
@@ -1265,7 +1263,6 @@ class CalendarViewTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
@@ -1791,12 +1788,10 @@ class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ColorPickerSlider_Static(type):
     @_property
     def color_channel_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
@@ -2460,7 +2455,6 @@ class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static)
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ColorSpectrum_Static(type):
     @_property
     def color_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -2483,7 +2477,6 @@ class ColorSpectrum_Static(type):
     @_property
     def shape_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ColorSpectrum(winrt.system.Object, metaclass=ColorSpectrum_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorSpectrum: ...
@@ -3143,7 +3136,6 @@ class ComboBoxTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class CommandBarFlyoutCommandBar(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandBarFlyoutCommandBar: ...
@@ -3899,7 +3891,6 @@ class CommandBarTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class DragCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragCompletedEventArgs: ...
@@ -3913,7 +3904,6 @@ class DragCompletedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class DragDeltaEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragDeltaEventArgs: ...
@@ -3925,7 +3915,6 @@ class DragDeltaEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class DragStartedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragStartedEventArgs: ...
@@ -3937,7 +3926,6 @@ class DragStartedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class FlyoutBase_Static(type):
     def get_attached_flyout(cls, element: windows_ui_xaml.FrameworkElement, /) -> FlyoutBase: ...
     def set_attached_flyout(cls, element: windows_ui_xaml.FrameworkElement, value: FlyoutBase, /) -> None: ...
@@ -3969,7 +3957,6 @@ class FlyoutBase_Static(type):
     @_property
     def should_constrain_to_root_bounds_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class FlyoutBase(winrt.system.Object, metaclass=FlyoutBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutBase: ...
@@ -4054,7 +4041,6 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-@typing.final
 class FlyoutShowOptions(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutShowOptions: ...
@@ -4085,7 +4071,6 @@ class GeneratorPositionHelper(winrt.system.Object, metaclass=GeneratorPositionHe
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeneratorPositionHelper: ...
 
-@typing.final
 class GridViewItemPresenter_Static(type):
     @_property
     def check_brush_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -4132,7 +4117,6 @@ class GridViewItemPresenter_Static(type):
     @_property
     def selection_check_mark_visual_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class GridViewItemPresenter(winrt.system.Object, metaclass=GridViewItemPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItemPresenter: ...
@@ -4893,7 +4877,6 @@ class LayoutInformation(winrt.system.Object, metaclass=LayoutInformation_Static)
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LayoutInformation: ...
 
-@typing.final
 class ListViewItemPresenter_Static(type):
     @_property
     def selected_pointer_over_border_brush_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -5014,7 +4997,6 @@ class ListViewItemPresenter_Static(type):
     @_property
     def selection_indicator_visual_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ListViewItemPresenter(winrt.system.Object, metaclass=ListViewItemPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItemPresenter: ...
@@ -7600,12 +7582,10 @@ class MenuFlyoutPresenterTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class NavigationViewItemPresenter_Static(type):
     @_property
     def icon_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class NavigationViewItemPresenter(winrt.system.Object, metaclass=NavigationViewItemPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemPresenter: ...
@@ -8221,7 +8201,6 @@ class NavigationViewItemPresenter(winrt.system.Object, metaclass=NavigationViewI
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class OrientedVirtualizingPanel(windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
@@ -8747,14 +8726,12 @@ class OrientedVirtualizingPanel(windows_ui_xaml_controls.IInsertionPanel, IScrol
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class PickerFlyoutBase_Static(type):
     def get_title(cls, element: windows_ui_xaml.DependencyObject, /) -> str: ...
     def set_title(cls, element: windows_ui_xaml.DependencyObject, value: str, /) -> None: ...
     @_property
     def title_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class PickerFlyoutBase(winrt.system.Object, metaclass=PickerFlyoutBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyoutBase: ...
@@ -8830,7 +8807,6 @@ class PickerFlyoutBase(winrt.system.Object, metaclass=PickerFlyoutBase_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class PivotHeaderItem(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotHeaderItem: ...
@@ -10982,7 +10958,6 @@ class ProgressRingTemplateSettings(winrt.system.Object):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class RangeBase_Static(type):
     @_property
     def large_change_property(cls) -> windows_ui_xaml.DependencyProperty: ...
@@ -10995,7 +10970,6 @@ class RangeBase_Static(type):
     @_property
     def value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class RangeBase(winrt.system.Object, metaclass=RangeBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RangeBase: ...
@@ -12917,7 +12891,6 @@ class ScrollEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class Selector_Static(type):
     def get_is_selection_active(cls, element: windows_ui_xaml.DependencyObject, /) -> bool: ...
     @_property
@@ -12931,7 +12904,6 @@ class Selector_Static(type):
     @_property
     def selected_value_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Selector(winrt.system.Object, metaclass=Selector_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Selector: ...
@@ -13597,12 +13569,10 @@ class Selector(winrt.system.Object, metaclass=Selector_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class SelectorItem_Static(type):
     @_property
     def is_selected_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class SelectorItem(winrt.system.Object, metaclass=SelectorItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorItem: ...
@@ -15345,14 +15315,12 @@ class TickBar(winrt.system.Object, metaclass=TickBar_Static):
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class ToggleButton_Static(type):
     @_property
     def is_checked_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def is_three_state_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ToggleButton(winrt.system.Object, metaclass=ToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleButton: ...

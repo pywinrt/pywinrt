@@ -102,14 +102,12 @@ class BitmapImage(winrt.system.Object, metaclass=BitmapImage_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class BitmapSource_Static(type):
     @_property
     def pixel_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def pixel_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class BitmapSource(winrt.system.Object, metaclass=BitmapSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapSource: ...
@@ -192,7 +190,6 @@ class SoftwareBitmapSource(windows_foundation.IClosable, winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SurfaceImageSource(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SurfaceImageSource: ...
@@ -212,7 +209,6 @@ class SurfaceImageSource(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SvgImageSource_Static(type):
     @_property
     def rasterize_pixel_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
@@ -221,7 +217,6 @@ class SvgImageSource_Static(type):
     @_property
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class SvgImageSource(winrt.system.Object, metaclass=SvgImageSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SvgImageSource: ...
@@ -316,7 +311,6 @@ class WriteableBitmap(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class XamlRenderingBackgroundTask(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlRenderingBackgroundTask: ...

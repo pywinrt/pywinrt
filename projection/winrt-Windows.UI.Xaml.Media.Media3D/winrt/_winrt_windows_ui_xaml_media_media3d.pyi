@@ -175,7 +175,6 @@ class PerspectiveTransform3D(winrt.system.Object, metaclass=PerspectiveTransform
     @_property
     def dispatcher(self) -> windows_ui_core.CoreDispatcher: ...
 
-@typing.final
 class Transform3D(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform3D: ...

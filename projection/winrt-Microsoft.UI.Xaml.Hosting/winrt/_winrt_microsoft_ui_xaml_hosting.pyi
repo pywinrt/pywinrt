@@ -21,7 +21,6 @@ from winrt.microsoft.ui.xaml.hosting import XamlSourceFocusNavigationReason
 
 Self = typing.TypeVar('Self')
 
-@typing.final
 class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...

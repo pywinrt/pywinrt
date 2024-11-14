@@ -68,14 +68,12 @@ class Thickness:
     bottom: winrt.system.Double
     def __init__(self, left: winrt.system.Double = 0, top: winrt.system.Double = 0, right: winrt.system.Double = 0, bottom: winrt.system.Double = 0) -> None: ...
 
-@typing.final
 class AdaptiveTrigger_Static(type):
     @_property
     def min_window_height_property(cls) -> DependencyProperty: ...
     @_property
     def min_window_width_property(cls) -> DependencyProperty: ...
 
-@typing.final
 class AdaptiveTrigger(winrt.system.Object, metaclass=AdaptiveTrigger_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AdaptiveTrigger: ...
@@ -100,7 +98,6 @@ class AdaptiveTrigger(winrt.system.Object, metaclass=AdaptiveTrigger_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Application_Static(type):
     def load_component(cls, component: winrt.system.Object, resource_locator: windows_foundation.Uri, /) -> None: ...
     def load_component_with_resource_location(cls, component: winrt.system.Object, resource_locator: windows_foundation.Uri, component_resource_location: microsoft_ui_xaml_controls_primitives.ComponentResourceLocation, /) -> None: ...
@@ -108,7 +105,6 @@ class Application_Static(type):
     @_property
     def current(cls) -> Application: ...
 
-@typing.final
 class Application(winrt.system.Object, metaclass=Application_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Application: ...
@@ -218,7 +214,6 @@ class BringIntoViewRequestedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class BrushTransition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BrushTransition: ...
@@ -228,7 +223,6 @@ class BrushTransition(winrt.system.Object):
     @duration.setter
     def duration(self, value: datetime.timedelta) -> None: ...
 
-@typing.final
 class ColorPaletteResources(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPaletteResources: ...
@@ -391,14 +385,12 @@ class DataContextChangedEventArgs(winrt.system.Object):
     @_property
     def new_value(self) -> winrt.system.Object: ...
 
-@typing.final
 class DataTemplate_Static(type):
     def get_extension_instance(cls, element: FrameworkElement, /) -> IDataTemplateExtension: ...
     def set_extension_instance(cls, element: FrameworkElement, value: IDataTemplateExtension, /) -> None: ...
     @_property
     def extension_instance_property(cls) -> DependencyProperty: ...
 
-@typing.final
 class DataTemplate(IElementFactory, winrt.system.Object, metaclass=DataTemplate_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataTemplate: ...
@@ -418,7 +410,6 @@ class DataTemplate(IElementFactory, winrt.system.Object, metaclass=DataTemplate_
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DataTemplateKey(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DataTemplateKey: ...
@@ -468,7 +459,6 @@ class DebugSettings(winrt.system.Object):
     @layout_cycle_debug_break_level.setter
     def layout_cycle_debug_break_level(self, value: LayoutCycleDebugBreakLevel) -> None: ...
 
-@typing.final
 class DependencyObject(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DependencyObject: ...
@@ -484,7 +474,6 @@ class DependencyObject(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DependencyObjectCollection(windows_foundation_collections.IObservableVector[DependencyObject], winrt.system.Object, winrt._winrt.MutableSequence[DependencyObject]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[DependencyObject]: ...
@@ -555,7 +544,6 @@ class DependencyPropertyChangedEventArgs(winrt.system.Object):
     @_property
     def property(self) -> DependencyProperty: ...
 
-@typing.final
 class DispatcherTimer(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DispatcherTimer: ...
@@ -703,7 +691,6 @@ class EffectiveViewportChangedEventArgs(winrt.system.Object):
     @_property
     def max_viewport(self) -> windows_foundation.Rect: ...
 
-@typing.final
 class ElementFactoryGetArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ElementFactoryGetArgs: ...
@@ -717,7 +704,6 @@ class ElementFactoryGetArgs(winrt.system.Object):
     @data.setter
     def data(self, value: winrt.system.Object) -> None: ...
 
-@typing.final
 class ElementFactoryRecycleArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ElementFactoryRecycleArgs: ...
@@ -775,7 +761,6 @@ class EventTrigger(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ExceptionRoutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExceptionRoutedEventArgs: ...
@@ -784,7 +769,6 @@ class ExceptionRoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class FrameworkElement_Static(type):
     def defer_tree(cls, element: DependencyObject, /) -> None: ...
     @_property
@@ -840,7 +824,6 @@ class FrameworkElement_Static(type):
     @_property
     def width_property(cls) -> DependencyProperty: ...
 
-@typing.final
 class FrameworkElement(winrt.system.Object, metaclass=FrameworkElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameworkElement: ...
@@ -1334,7 +1317,6 @@ class FrameworkElement(winrt.system.Object, metaclass=FrameworkElement_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class FrameworkTemplate(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameworkTemplate: ...
@@ -1413,14 +1395,12 @@ class PointHelper(winrt.system.Object, metaclass=PointHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointHelper: ...
 
-@typing.final
 class PropertyMetadata_Static(type):
     def create_with_default_value(cls, default_value: winrt.system.Object, /) -> PropertyMetadata: ...
     def create_with_default_value_and_callback(cls, default_value: winrt.system.Object, property_changed_callback: PropertyChangedCallback, /) -> PropertyMetadata: ...
     def create_with_factory(cls, create_default_value_callback: CreateDefaultValueCallback, /) -> PropertyMetadata: ...
     def create_with_factory_and_callback(cls, create_default_value_callback: CreateDefaultValueCallback, property_changed_callback: PropertyChangedCallback, /) -> PropertyMetadata: ...
 
-@typing.final
 class PropertyMetadata(winrt.system.Object, metaclass=PropertyMetadata_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyMetadata: ...
@@ -1475,7 +1455,6 @@ class RectHelper(winrt.system.Object, metaclass=RectHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RectHelper: ...
 
-@typing.final
 class ResourceDictionary(winrt.system.Object, winrt._winrt.MutableMapping[winrt.system.Object, winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[winrt.system.Object]: ...
@@ -1529,7 +1508,6 @@ class RoutedEvent(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RoutedEvent: ...
 
-@typing.final
 class RoutedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RoutedEventArgs: ...
@@ -1537,7 +1515,6 @@ class RoutedEventArgs(winrt.system.Object):
     @_property
     def original_source(self) -> winrt.system.Object: ...
 
-@typing.final
 class ScalarTransition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScalarTransition: ...
@@ -1581,7 +1558,6 @@ class Setter(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class SetterBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SetterBase: ...
@@ -1685,7 +1661,6 @@ class StateTrigger(winrt.system.Object, metaclass=StateTrigger_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class StateTriggerBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StateTriggerBase: ...
@@ -1761,7 +1736,6 @@ class ThicknessHelper(winrt.system.Object, metaclass=ThicknessHelper_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThicknessHelper: ...
 
-@typing.final
 class TriggerAction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TriggerAction: ...
@@ -1811,7 +1785,6 @@ class TriggerActionCollection(winrt.system.Object, winrt._winrt.MutableSequence[
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class TriggerBase(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TriggerBase: ...
@@ -1860,7 +1833,6 @@ class TriggerCollection(winrt.system.Object, winrt._winrt.MutableSequence[Trigge
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class UIElement_Static(type):
     def register_as_scroll_port(cls, element: UIElement, /) -> None: ...
     def try_start_direct_manipulation(cls, value: microsoft_ui_xaml_input.Pointer, /) -> bool: ...
@@ -2025,7 +1997,6 @@ class UIElement_Static(type):
     @_property
     def x_y_focus_up_property(cls) -> DependencyProperty: ...
 
-@typing.final
 class UIElement(microsoft_ui_composition.IVisualElement2, microsoft_ui_composition.IVisualElement, microsoft_ui_composition.IAnimationObject, winrt.system.Object, metaclass=UIElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UIElement: ...
@@ -2390,7 +2361,6 @@ class UIElement(microsoft_ui_composition.IVisualElement2, microsoft_ui_compositi
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class UIElementWeakCollection(winrt.system.Object, winrt._winrt.MutableSequence[UIElement]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[UIElement]: ...
@@ -2437,7 +2407,6 @@ class UnhandledExceptionEventArgs(winrt.system.Object):
     @_property
     def message(self) -> str: ...
 
-@typing.final
 class Vector3Transition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector3Transition: ...
@@ -2525,7 +2494,6 @@ class VisualStateGroup(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class VisualStateManager_Static(type):
     def get_custom_visual_state_manager(cls, obj: FrameworkElement, /) -> VisualStateManager: ...
     def get_visual_state_groups(cls, obj: FrameworkElement, /) -> typing.MutableSequence[VisualStateGroup]: ...
@@ -2534,7 +2502,6 @@ class VisualStateManager_Static(type):
     @_property
     def custom_visual_state_manager_property(cls) -> DependencyProperty: ...
 
-@typing.final
 class VisualStateManager(winrt.system.Object, metaclass=VisualStateManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualStateManager: ...
@@ -2551,7 +2518,6 @@ class VisualStateManager(winrt.system.Object, metaclass=VisualStateManager_Stati
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class VisualTransition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VisualTransition: ...
@@ -2588,12 +2554,10 @@ class VisualTransition(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Window_Static(type):
     @_property
     def current(cls) -> Window: ...
 
-@typing.final
 class Window(winrt.system.Object, metaclass=Window_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Window: ...

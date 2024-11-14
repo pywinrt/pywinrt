@@ -232,7 +232,11 @@ static class FileWriters
 
             if (type.PyRequiresMetaclass)
             {
-                w.WriteLine("@typing.final");
+                if (!type.IsComposable)
+                {
+                    w.WriteLine("@typing.final");
+                }
+
                 w.WriteLine($"class {type.Name}_Static(type):");
                 w.Indent++;
 
@@ -321,7 +325,7 @@ static class FileWriters
                     $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
             }
 
-            if (type.Category != Category.Interface)
+            if (type.Category != Category.Interface && !type.IsComposable)
             {
                 w.WriteLine("@typing.final");
             }

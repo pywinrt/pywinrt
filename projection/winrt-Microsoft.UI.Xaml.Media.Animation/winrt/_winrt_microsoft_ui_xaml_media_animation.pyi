@@ -83,7 +83,6 @@ class BackEase(winrt.system.Object, metaclass=BackEase_Static):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class BasicConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BasicConnectedAnimationConfiguration: ...
@@ -304,14 +303,12 @@ class ColorAnimationUsingKeyFrames(winrt.system.Object, metaclass=ColorAnimation
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ColorKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ColorKeyFrame(winrt.system.Object, metaclass=ColorKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorKeyFrame: ...
@@ -418,7 +415,6 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: ConnectedAnimationConfiguration) -> None: ...
 
-@typing.final
 class ConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectedAnimationConfiguration: ...
@@ -534,7 +530,6 @@ class CubicEase(winrt.system.Object):
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DirectConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DirectConnectedAnimationConfiguration: ...
@@ -770,14 +765,12 @@ class DoubleAnimationUsingKeyFrames(winrt.system.Object, metaclass=DoubleAnimati
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class DoubleKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class DoubleKeyFrame(winrt.system.Object, metaclass=DoubleKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleKeyFrame: ...
@@ -1228,12 +1221,10 @@ class EasingDoubleKeyFrame(winrt.system.Object, metaclass=EasingDoubleKeyFrame_S
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class EasingFunctionBase_Static(type):
     @_property
     def easing_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class EasingFunctionBase(winrt.system.Object, metaclass=EasingFunctionBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> EasingFunctionBase: ...
@@ -1548,7 +1539,6 @@ class FadeOutThemeAnimation(winrt.system.Object, metaclass=FadeOutThemeAnimation
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class GravityConnectedAnimationConfiguration(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GravityConnectedAnimationConfiguration: ...
@@ -1693,7 +1683,6 @@ class NavigationThemeTransition(winrt.system.Object, metaclass=NavigationThemeTr
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class NavigationTransitionInfo(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationTransitionInfo: ...
@@ -1763,14 +1752,12 @@ class ObjectAnimationUsingKeyFrames(winrt.system.Object, metaclass=ObjectAnimati
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class ObjectKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class ObjectKeyFrame(winrt.system.Object, metaclass=ObjectKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ObjectKeyFrame: ...
@@ -1984,14 +1971,12 @@ class PointAnimationUsingKeyFrames(winrt.system.Object, metaclass=PointAnimation
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class PointKeyFrame_Static(type):
     @_property
     def key_time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class PointKeyFrame(winrt.system.Object, metaclass=PointKeyFrame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointKeyFrame: ...
@@ -3105,7 +3090,6 @@ class SwipeHintThemeAnimation(winrt.system.Object, metaclass=SwipeHintThemeAnima
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-@typing.final
 class Timeline_Static(type):
     @_property
     def allow_dependent_animations(cls) -> bool: ...
@@ -3124,7 +3108,6 @@ class Timeline_Static(type):
     @_property
     def speed_ratio_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-@typing.final
 class Timeline(winrt.system.Object, metaclass=Timeline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Timeline: ...
@@ -3200,7 +3183,6 @@ class TimelineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Timel
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-@typing.final
 class Transition(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transition: ...
