@@ -9,10 +9,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Microsoft.UI.Composition.h"
 #endif
 
-#if __has_include("py.Microsoft.UI.Dispatching.h")
-#include "py.Microsoft.UI.Dispatching.h"
-#endif
-
 #if __has_include("py.Microsoft.UI.Input.h")
 #include "py.Microsoft.UI.Input.h"
 #endif
@@ -30,7 +26,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #endif
 
 #include <winrt/Microsoft.UI.Composition.h>
-#include <winrt/Microsoft.UI.Dispatching.h>
 #include <winrt/Microsoft.UI.Input.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>

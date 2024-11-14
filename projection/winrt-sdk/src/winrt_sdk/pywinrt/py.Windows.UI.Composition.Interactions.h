@@ -17,16 +17,8 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Numerics.h"
 #endif
 
-#if __has_include("py.Windows.System.h")
-#include "py.Windows.System.h"
-#endif
-
 #if __has_include("py.Windows.UI.Composition.h")
 #include "py.Windows.UI.Composition.h"
-#endif
-
-#if __has_include("py.Windows.UI.Core.h")
-#include "py.Windows.UI.Core.h"
 #endif
 
 #if __has_include("py.Windows.UI.Input.h")
@@ -36,9 +28,7 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
 #include <winrt/Windows.Foundation.Numerics.h>
-#include <winrt/Windows.System.h>
 #include <winrt/Windows.UI.Composition.h>
-#include <winrt/Windows.UI.Core.h>
 #include <winrt/Windows.UI.Input.h>
 
 #include <winrt/Windows.UI.Composition.Interactions.h>

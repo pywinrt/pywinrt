@@ -25,10 +25,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.Foundation.Collections.h"
 #endif
 
-#if __has_include("py.Windows.Foundation.Numerics.h")
-#include "py.Windows.Foundation.Numerics.h"
-#endif
-
 #if __has_include("py.Windows.Globalization.h")
 #include "py.Windows.Globalization.h"
 #endif
@@ -77,10 +73,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Core.h"
 #endif
 
-#if __has_include("py.Windows.UI.Input.h")
-#include "py.Windows.UI.Input.h"
-#endif
-
 #if __has_include("py.Windows.UI.Input.Inking.h")
 #include "py.Windows.UI.Input.Inking.h"
 #endif
@@ -95,10 +87,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 
 #if __has_include("py.Windows.UI.Xaml.Automation.h")
 #include "py.Windows.UI.Xaml.Automation.h"
-#endif
-
-#if __has_include("py.Windows.UI.Xaml.Automation.Peers.h")
-#include "py.Windows.UI.Xaml.Automation.Peers.h"
 #endif
 
 #if __has_include("py.Windows.UI.Xaml.Controls.Primitives.h")
@@ -129,10 +117,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Xaml.Media.Animation.h"
 #endif
 
-#if __has_include("py.Windows.UI.Xaml.Media.Media3D.h")
-#include "py.Windows.UI.Xaml.Media.Media3D.h"
-#endif
-
 #if __has_include("py.Windows.UI.Xaml.Navigation.h")
 #include "py.Windows.UI.Xaml.Navigation.h"
 #endif
@@ -150,7 +134,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.ApplicationModel.Search.h>
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Foundation.Collections.h>
-#include <winrt/Windows.Foundation.Numerics.h>
 #include <winrt/Windows.Globalization.h>
 #include <winrt/Windows.Media.Capture.h>
 #include <winrt/Windows.Media.Casting.h>
@@ -163,12 +146,10 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.h>
 #include <winrt/Windows.UI.Composition.h>
 #include <winrt/Windows.UI.Core.h>
-#include <winrt/Windows.UI.Input.h>
 #include <winrt/Windows.UI.Input.Inking.h>
 #include <winrt/Windows.UI.Text.h>
 #include <winrt/Windows.UI.Xaml.h>
 #include <winrt/Windows.UI.Xaml.Automation.h>
-#include <winrt/Windows.UI.Xaml.Automation.Peers.h>
 #include <winrt/Windows.UI.Xaml.Controls.Primitives.h>
 #include <winrt/Windows.UI.Xaml.Data.h>
 #include <winrt/Windows.UI.Xaml.Documents.h>
@@ -176,7 +157,6 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include <winrt/Windows.UI.Xaml.Interop.h>
 #include <winrt/Windows.UI.Xaml.Media.h>
 #include <winrt/Windows.UI.Xaml.Media.Animation.h>
-#include <winrt/Windows.UI.Xaml.Media.Media3D.h>
 #include <winrt/Windows.UI.Xaml.Navigation.h>
 #include <winrt/Windows.Web.h>
 #include <winrt/Windows.Web.Http.h>

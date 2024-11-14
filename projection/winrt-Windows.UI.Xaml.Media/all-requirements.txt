@@ -6,7 +6,6 @@ winrt-Windows.Media.Playback[all]==0.0.0
 winrt-Windows.Storage.Streams[all]==0.0.0
 winrt-Windows.UI[all]==0.0.0
 winrt-Windows.UI.Composition[all]==0.0.0
-winrt-Windows.UI.Core[all]==0.0.0
 winrt-Windows.UI.Xaml[all]==0.0.0
 winrt-Windows.UI.Xaml.Controls.Primitives[all]==0.0.0
 winrt-Windows.UI.Xaml.Media.Media3D[all]==0.0.0
