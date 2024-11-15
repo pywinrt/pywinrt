@@ -53,10 +53,12 @@ static class FileWriters
             return;
         }
 
-        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls);
+        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 0);
+        WriteNamespaceCpp(nsPackageDir, ns, members, componentDlls, 1);
         WriteNamespaceH(headerDir, ns, members, componentDlls);
         WriteNamespaceDunderInitPy(nsDir, ns, members, componentDlls);
-        WriteNamespacePyi(nsWinrtDir, ns, members);
+        WriteNamespacePyi(nsWinrtDir, ns, members, 0);
+        WriteNamespacePyi(nsWinrtDir, ns, members, 1);
         WritePyWinRTVersionTxt(nsPackageDir);
         WriteRequirementsTxt(nsPackageDir);
 
@@ -104,10 +106,16 @@ static class FileWriters
         sw.WriteFileIfChanged(nsPackageDir, "pywinrt-version.txt");
     }
 
-    private static void WriteNamespacePyi(DirectoryInfo nsWinrtDir, string ns, Members members)
+    private static void WriteNamespacePyi(
+        DirectoryInfo nsWinrtDir,
+        string ns,
+        Members members,
+        int dependencyDepth
+    )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+        bool didWriteClass = false;
 
         w.WriteLicense("#");
         w.WriteBlankLine();
@@ -134,6 +142,39 @@ static class FileWriters
         }
 
         w.WriteBlankLine();
+
+        // handle circular dependencies by importing sibling modules of the same namespace
+        for (int depth = 0; depth < 2; depth++)
+        {
+            if (depth == dependencyDepth)
+            {
+                // don't import this module to itself
+                continue;
+            }
+
+            var dependencyTypes = members
+                .Structs.Where(s => !s.Type.IsCustomizedStruct())
+                .Concat(members.Classes)
+                .Concat(members.Interfaces)
+                .Where(t => t.CircularDependencyDepth == depth);
+
+            if (!dependencyTypes.Any())
+            {
+                // nothing to import
+                continue;
+            }
+
+            var suffix = depth == 0 ? "" : $"_{depth + 1}";
+            w.WriteLine($"from .{ns.ToNsModuleName()}{suffix} import (");
+            w.Indent++;
+            foreach (var type in dependencyTypes)
+            {
+                w.WriteLine($"{type.Name},");
+            }
+            w.Indent--;
+            w.WriteLine(")");
+            w.WriteBlankLine();
+        }
 
         if (members.Enums.Count != 0)
         {
@@ -168,386 +209,34 @@ static class FileWriters
 
         w.WriteBlankLine();
 
-        foreach (var type in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+        foreach (
+            var type in members.Structs.Where(s =>
+                !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
+            )
+        )
         {
-            var metaclass = "";
-
-            if (type.PyRequiresMetaclass)
-            {
-                w.WriteLine("@typing.final");
-                w.WriteLine($"class {type.Name}_Static(type):");
-                w.Indent++;
-
-                var pass = true;
-
-                if (type.Type.IsCustomNumeric())
-                {
-                    w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
-                    w.WriteNumberCommonValuesPyTyping(type, ref pass);
-                }
-
-                if (pass)
-                {
-                    w.WriteLine("pass");
-                }
-
-                w.Indent--;
-                w.WriteBlankLine();
-
-                metaclass = $"(metaclass={type.Name}_Static)";
-            }
-
-            w.WriteLine("@typing.final");
-            w.WriteLine($"class {type.Name}{metaclass}:");
-            w.Indent++;
-
-            foreach (var field in type.Type.Fields)
-            {
-                w.WriteLine(
-                    $"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns)}"
-                );
-            }
-
-            w.WriteLine(
-                $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
-            );
-
-            if (type.Type.IsCustomNumeric())
-            {
-                if (type.Name != "Plane")
-                {
-                    w.WriteNumberSlotMethodsPyTyping(type);
-                }
-
-                w.WriteNumberMethodPyTyping(type);
-            }
-
-            w.Indent--;
-            w.WriteBlankLine();
+            w.WritePythonStructTyping(type, ns);
+            didWriteClass = true;
         }
 
-        foreach (var type in members.Classes.Concat(members.Interfaces))
+        foreach (
+            var type in members
+                .Classes.Concat(members.Interfaces)
+                .Where(t => t.CircularDependencyDepth == dependencyDepth)
+        )
         {
-            var metaclass = "";
-
-            if (type.PyRequiresMetaclass)
-            {
-                if (!type.IsComposable)
-                {
-                    w.WriteLine("@typing.final");
-                }
-
-                w.WriteLine($"class {type.Name}_Static(type):");
-                w.Indent++;
-
-                foreach (var method in type.Methods.Where(m => m.IsStatic))
-                {
-                    if (type.Methods.Count(m => m.Name == method.Name) > 1)
-                    {
-                        w.WriteLine("@typing.overload");
-                    }
-
-                    w.WritePythonMethodTyping(method, ns, "cls");
-                }
-
-                foreach (var evt in type.Events.Where(e => e.IsStatic))
-                {
-                    w.WritePythonMethodTyping(evt.AddMethod, ns, "cls");
-                    w.WritePythonMethodTyping(evt.RemoveMethod, ns, "cls");
-                }
-
-                foreach (var prop in type.Type.Properties.Where(p => p.GetMethod.IsStatic))
-                {
-                    var name = prop.Name.ToPythonIdentifier(isTypeMethod: true);
-                    var propType = prop.PropertyType.ToPyTypeName(ns);
-
-                    w.WriteLine("@_property");
-                    w.WriteLine($"def {name}(cls) -> {propType}: ...");
-
-                    if (prop.SetMethod is not null)
-                    {
-                        w.WriteLine($"@{name}.setter");
-                        w.WriteLine($"def {name}(cls, value: {propType}) -> None: ...");
-                    }
-                }
-
-                w.Indent--;
-                w.WriteBlankLine();
-
-                metaclass = $", metaclass={type.Name}_Static";
-            }
-
-            var collection = "";
-
-            if (type.IsPyMapping)
-            {
-                var method = type.Methods.Single(m => m.Name == "Lookup");
-                var keyType = method
-                    .Method.Parameters[0]
-                    .ParameterType.ToPyTypeName(ns, method.GenericArgMap);
-                var valueType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-
-                if (type.IsPyMutableMapping)
-                {
-                    collection = $", winrt._winrt.MutableMapping[{keyType}, {valueType}]";
-                }
-                else
-                {
-                    collection = $", winrt._winrt.Mapping[{keyType}, {valueType}]";
-                }
-            }
-            else if (type.IsPySequence)
-            {
-                var method = type.Methods.Single(m => m.Name == "GetAt");
-                var elementType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-
-                if (type.IsPyMutableSequence)
-                {
-                    collection = $", winrt._winrt.MutableSequence[{elementType}]";
-                }
-                else
-                {
-                    collection = $", winrt._winrt.Sequence[{elementType}]";
-                }
-            }
-
-            var interfaces = string.Join(
-                "",
-                type.Interfaces.Select(i => $"{i.ToPyTypeName(ns)}, ")
-            );
-
-            var generic = "";
-
-            // typing.Generic is redundant when there is a collection type
-            if (type.IsGeneric && string.IsNullOrEmpty(collection))
-            {
-                generic =
-                    $", typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
-            }
-
-            if (type.Category != Category.Interface && !type.IsComposable)
-            {
-                w.WriteLine("@typing.final");
-            }
-
-            w.WriteLine(
-                $"class {type.Name}({interfaces}winrt.system.Object{collection}{generic}{metaclass}):"
-            );
-            w.Indent++;
-
-            if (type.IsStatic)
-            {
-                w.WriteLine("pass");
-                w.Indent--;
-                w.WriteBlankLine();
-                continue;
-            }
-
-            if (type.IsGeneric)
-            {
-                w.WriteLine(
-                    "def __class_getitem__(cls, key: typing.Any) -> types.GenericAlias: ..."
-                );
-            }
-
-            if (type.IsPyCloseable)
-            {
-                w.WriteLine("def __enter__(self: Self) -> Self: ...");
-                w.WriteLine("def __exit__(self, *args) -> None: ...");
-            }
-
-            if (type.IsPyStringable)
-            {
-                w.WriteLine("def __str__(self) -> str: ...");
-            }
-
-            if (type.IsPyBuffer)
-            {
-                w.WriteLine("def __buffer__(self, flags: int, /) -> memoryview: ...");
-                w.WriteLine("def __release_buffer__(self, view: memoryview, /) -> None: ...");
-            }
-
-            if (type.IsPyMapping)
-            {
-                var method = type.Methods.Single(m => m.Name == "Lookup");
-                var keyType = method
-                    .Method.Parameters[0]
-                    .ParameterType.ToPyTypeName(ns, method.GenericArgMap);
-                var valueType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-
-                w.WriteLine("def __len__(self) -> int: ...");
-                w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyType}]: ...");
-                w.WriteLine("def __contains__(self, key: object) -> bool: ...");
-                w.WriteLine($"def __getitem__(self, key: {keyType}) -> {valueType}: ...");
-
-                if (type.IsPyMutableMapping)
-                {
-                    w.WriteLine(
-                        $"def __setitem__(self, key: {keyType}, value: {valueType}) -> None: ..."
-                    );
-                    w.WriteLine($"def __delitem__(self, key: {keyType}) -> None: ...");
-                }
-            }
-            else if (type.IsPySequence)
-            {
-                var method = type.Methods.Single(m => m.Name == "First");
-                var iterType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-                method = type.Methods.Single(m => m.Name == "GetAt");
-                var elementType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-
-                w.WriteLine("def __len__(self) -> int: ...");
-                w.WriteLine($"def __iter__(self) -> {iterType}: ...");
-                w.WriteLine("@typing.overload");
-                w.WriteLine(
-                    $"def __getitem__(self, index: typing.SupportsIndex) -> {elementType}: ..."
-                );
-                w.WriteLine("@typing.overload");
-                w.WriteLine(
-                    $"def __getitem__(self, index: slice) -> winrt.system.Array[{elementType}]: ..."
-                );
-
-                if (type.IsPyMutableSequence)
-                {
-                    w.WriteLine("@typing.overload");
-                    w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");
-                    w.WriteLine("@typing.overload");
-                    w.WriteLine($"def __delitem__(self, index: slice) -> None: ...");
-                    w.WriteLine("@typing.overload");
-                    w.WriteLine(
-                        $"def __setitem__(self, index: typing.SupportsIndex, value: {elementType}) -> None: ..."
-                    );
-                    w.WriteLine("@typing.overload");
-                    w.WriteLine(
-                        $"def __setitem__(self, index: slice, value: typing.Iterable[{elementType}]) -> None: ..."
-                    );
-                }
-            }
-            else if (type.IsPyIterator)
-            {
-                var prop = type.Type.Properties.Single(p => p.Name == "Current");
-                var nextType = prop.PropertyType.ToPyTypeName(ns);
-                w.WriteLine("def __iter__(self: Self) -> Self: ...");
-                w.WriteLine($"def __next__(self) -> {nextType}: ...");
-            }
-            else if (type.IsPyIterable)
-            {
-                var method = type.Methods.Single(m => m.Name == "First");
-                var iterType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
-                w.WriteLine($"def __iter__(self) -> {iterType}: ...");
-            }
-
-            if (type.IsPyAwaitable)
-            {
-                var returnType = "None";
-
-                if (
-                    type.Type.Namespace == "Windows.Foundation"
-                    && (
-                        type.Type.Name == "IAsyncOperation`1"
-                        || type.Type.Name == "IAsyncOperationWithProgress`2"
-                    )
-                )
-                {
-                    returnType = type.Type.GenericParameters[0].ToPyTypeName(ns);
-                }
-                else
-                {
-                    foreach (var ii in type.Type.Interfaces)
-                    {
-                        // REVISIT: this is probably not as robust as it should
-                        // be since it assumes that any class that implements
-                        // IAsyncOperation* will reference it this way. We may
-                        // need to make this recursive and/or check TypeDef or TypeRef.
-
-                        if (ii.InterfaceType is not GenericInstanceType genericInst)
-                        {
-                            continue;
-                        }
-
-                        if (
-                            genericInst.Namespace != "Windows.Foundation"
-                            || (
-                                genericInst.Name != "IAsyncOperation`1"
-                                && genericInst.Name != "IAsyncOperationWithProgress`2"
-                            )
-                        )
-                        {
-                            continue;
-                        }
-
-                        returnType = genericInst.GenericArguments[0].ToPyTypeName(ns);
-
-                        break;
-                    }
-                }
-
-                w.WriteLine(
-                    $"def __await__(self) -> typing.Generator[typing.Any, None, {returnType}]: ..."
-                );
-            }
-
-            if (!type.IsGeneric)
-            {
-                w.WriteLine("@staticmethod");
-                w.WriteLine($"def _from(obj: winrt.system.Object, /) -> {type.Name}: ...");
-            }
-
-            foreach (var ctor in type.Constructors)
-            {
-                var paramList = "";
-
-                if (ctor.Method.Parameters.Any(p => p.IsPythonInParam()))
-                {
-                    paramList =
-                        $", {string.Join(", ", ctor.Method.Parameters.Where(p => p.IsPythonInParam()).Select(p => $"{p.Name.ToPythonIdentifier()}: {p.ToPyInParamTyping(ns)}"))}";
-                }
-
-                if (type.Constructors.Count(m => m.Name == ctor.Name) > 1)
-                {
-                    w.WriteLine("@typing.overload");
-                }
-
-                w.WriteLine(
-                    $"def __new__(cls: typing.Type[{type.Name}]{paramList}) -> {type.Name}: ..."
-                );
-            }
-
-            foreach (var method in type.Methods.Where(m => !m.IsStatic))
-            {
-                if (type.Methods.Count(m => m.Name == method.Name) > 1)
-                {
-                    w.WriteLine("@typing.overload");
-                }
-
-                w.WritePythonMethodTyping(method, ns);
-            }
-
-            foreach (var evt in type.Events.Where(e => !e.IsStatic))
-            {
-                w.WritePythonMethodTyping(evt.AddMethod, ns);
-                w.WritePythonMethodTyping(evt.RemoveMethod, ns);
-            }
-
-            foreach (var prop in type.Properties.Where(p => !p.IsStatic))
-            {
-                var name = prop.Name.ToPythonIdentifier();
-                var propType = prop.Property.PropertyType.ToPyTypeName(ns, prop.GenericArgMap);
-
-                w.WriteLine("@_property");
-                w.WriteLine($"def {name}(self) -> {propType}: ...");
-
-                if (prop.SetMethod is not null)
-                {
-                    w.WriteLine($"@{name}.setter");
-                    w.WriteLine($"def {name}(self, value: {propType}) -> None: ...");
-                }
-            }
-
-            w.Indent--;
-            w.WriteBlankLine();
+            w.WritePythonClassTyping(type, ns);
+            didWriteClass = true;
         }
 
-        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.ToNsModuleName()}.pyi");
+        // only write the file if we wrote at least one class
+        if (!didWriteClass)
+        {
+            return;
+        }
+
+        var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
+        sw.WriteFileIfChanged(nsWinrtDir, $"{ns.ToNsModuleName()}{moduleSuffix}.pyi");
     }
 
     private static void WriteNamespaceDunderInitPy(
@@ -586,18 +275,24 @@ static class FileWriters
             .Concat(members.Classes)
             .Concat(members.Interfaces);
 
-        if (allExtensionTypes.Any())
+        for (int depth = 0; depth < 2; depth++)
         {
-            w.WriteLine($"from winrt.{ns.ToNsModuleName()} import (");
-            w.Indent++;
-
-            foreach (var type in allExtensionTypes)
+            if (allExtensionTypes.Any(t => t.CircularDependencyDepth == depth))
             {
-                w.WriteLine($"{type.Name},");
-            }
+                var n = depth == 0 ? "" : $"_{depth + 1}";
+                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{n} import (");
+                w.Indent++;
 
-            w.Indent--;
-            w.WriteLine(")");
+                foreach (
+                    var type in allExtensionTypes.Where(t => t.CircularDependencyDepth == depth)
+                )
+                {
+                    w.WriteLine($"{type.Name},");
+                }
+
+                w.Indent--;
+                w.WriteLine(")");
+            }
         }
 
         // Since not all packages may be installed, delegates can't safely
@@ -882,11 +577,15 @@ static class FileWriters
         DirectoryInfo nsPackageDir,
         string ns,
         Members members,
-        bool componentDlls
+        bool componentDlls,
+        int dependencyDepth
     )
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
+        bool didWriteClass = false;
+
+        var moduleSuffix = dependencyDepth == 0 ? "" : $"_{dependencyDepth + 1}";
 
         w.WriteLicense();
         w.WriteBlankLine();
@@ -899,24 +598,34 @@ static class FileWriters
         w.Indent++;
         var i = 0;
 
-        foreach (var t in members.Classes.Concat(members.Interfaces))
+        foreach (
+            var t in members
+                .Classes.Concat(members.Interfaces)
+                .Where(t => t.CircularDependencyDepth == dependencyDepth)
+        )
         {
             if (i++ > 0)
             {
                 w.WriteBlankLine();
             }
 
-            w.WriteInspectableType(t, componentDlls);
+            w.WriteInspectableType(t, componentDlls, moduleSuffix);
+            didWriteClass = true;
         }
 
-        foreach (var t in members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+        foreach (
+            var t in members.Structs.Where(s =>
+                !s.Type.IsCustomizedStruct() && s.CircularDependencyDepth == dependencyDepth
+            )
+        )
         {
             if (i++ > 0)
             {
                 w.WriteBlankLine();
             }
 
-            w.WriteStruct(t);
+            w.WriteStruct(t, moduleSuffix);
+            didWriteClass = true;
         }
 
         if (i++ > 0)
@@ -924,14 +633,20 @@ static class FileWriters
             w.WriteBlankLine();
         }
 
-        w.WriteNamespaceInitialization(ns);
+        w.WriteNamespaceInitialization(ns, moduleSuffix);
 
         w.Indent--;
         w.WriteLine($"}} // py::cpp::{ns.ToCppNamespace()}");
         w.WriteBlankLine();
 
-        w.WriteNamespaceModuleInitFunction(ns, members);
+        w.WriteNamespaceModuleInitFunction(ns, members, dependencyDepth, moduleSuffix);
 
-        sw.WriteFileIfChanged(nsPackageDir, $"py.{ns}.cpp");
+        // only write the file if we wrote at least one class
+        if (!didWriteClass)
+        {
+            return;
+        }
+
+        sw.WriteFileIfChanged(nsPackageDir, $"py.{ns}{moduleSuffix}.cpp");
     }
 }

@@ -103,9 +103,18 @@ setup(
             sources=[{sources}],
             include_dirs=get_include_dirs(){extra_include_dirs},
             libraries=["windowsapp"{extra_libraries}],
-        )
+        ){extra_extension}
     ],
 )
+"""
+
+EXTRA_EXT_MODULES = """,
+        Extension(
+            "winrt.{ext_module}",
+            sources=[{sources}],
+            include_dirs=get_include_dirs(){extra_include_dirs},
+            libraries=["windowsapp"],
+        ),
 """
 
 APP_SDK_INIT = """
@@ -256,6 +265,7 @@ def write_project_files(
     module_name: str,
     ext_module_name: str,
     sources: List[str],
+    second_ext_source_file: str = None,
 ) -> None:
     package_name = package_path.name
     relative_package_path = package_path.relative_to(PROJECTION_PATH)
@@ -357,6 +367,20 @@ def write_project_files(
                         else ""
                     )
                     + (', "D3D11"' if is_direct3d11_package(package_name) else ""),
+                    extra_extension=(
+                        EXTRA_EXT_MODULES.format(
+                            ext_module=f"{ext_module_name}_2",
+                            sources=f'"{second_ext_source_file}"',
+                            extra_include_dirs=(
+                                " + get_app_sdk_include_dirs()"
+                                if is_windows_app_package(package_name)
+                                else ""
+                            ),
+                        )
+                        if second_ext_source_file
+                        and (package_path / second_ext_source_file).exists()
+                        else ""
+                    ),
                 )
             )
 
@@ -423,5 +447,12 @@ for package_path in chain(
     module_name = f"winrt.{winrt_ns_to_py_package(namespace)}"
     ext_module_name = f"_{module_name.replace('.', '_')}"
     source_file = f"py.{namespace}.cpp"
+    second_ext_source_file = f"py.{namespace}_2.cpp"
 
-    write_project_files(package_path, module_name, ext_module_name, [source_file])
+    write_project_files(
+        package_path,
+        module_name,
+        ext_module_name,
+        [source_file],
+        second_ext_source_file,
+    )

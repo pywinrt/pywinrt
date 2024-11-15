@@ -21,6 +21,10 @@ import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 import winrt.windows.ui.xaml.media.animation as windows_ui_xaml_media_animation
 
+from ._winrt_windows_ui_xaml_controls_primitives_2 import (
+    ColorPickerSlider,
+)
+
 from winrt.windows.ui.xaml.controls.primitives import AnimationDirection, ComponentResourceLocation, EdgeTransitionLocation, FlyoutPlacementMode, FlyoutShowMode, GeneratorDirection, GroupHeaderPlacement, ListViewItemPresenterCheckMode, ListViewItemPresenterSelectionIndicatorMode, PlacementMode, PopupPlacementMode, ScrollEventType, ScrollingIndicatorMode, SliderSnapsTo, SnapPointsAlignment, TickPlacement
 from winrt.windows.ui.xaml.controls.primitives import DragCompletedEventHandler, DragDeltaEventHandler, DragStartedEventHandler, ItemsChangedEventHandler, RangeBaseValueChangedEventHandler, ScrollEventHandler
 
@@ -199,19 +203,6 @@ class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
     def are_horizontal_snap_points_regular(self) -> bool: ...
     @_property
     def are_vertical_snap_points_regular(self) -> bool: ...
-
-class ColorPickerSlider_Static(type):
-    @_property
-    def color_channel_property(cls) -> windows_ui_xaml.DependencyProperty: ...
-
-class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
-    def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider: ...
-    @_property
-    def color_channel(self) -> windows_ui_xaml_controls.ColorPickerHsvChannel: ...
-    @color_channel.setter
-    def color_channel(self, value: windows_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
 class ColorSpectrum_Static(type):
     @_property

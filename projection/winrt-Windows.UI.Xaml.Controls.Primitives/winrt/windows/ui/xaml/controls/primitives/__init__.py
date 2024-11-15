@@ -14,7 +14,6 @@ from winrt._winrt_windows_ui_xaml_controls_primitives import (
     CalendarPanel,
     CalendarViewTemplateSettings,
     CarouselPanel,
-    ColorPickerSlider,
     ColorSpectrum,
     ComboBoxTemplateSettings,
     CommandBarFlyoutCommandBar,
@@ -64,6 +63,9 @@ from winrt._winrt_windows_ui_xaml_controls_primitives import (
     ToggleSwitchTemplateSettings,
     ToolTipTemplateSettings,
     IScrollSnapPointsInfo,
+)
+from winrt._winrt_windows_ui_xaml_controls_primitives_2 import (
+    ColorPickerSlider,
 )
 
 __all__ = [

@@ -17,6 +17,7 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
+        CircularDependencyDepth = Category == Category.Class ? GetCircularDependencyDepth(type) : 0;
 
         PyModuleName = Namespace.ToPyModuleName();
         PyExtModuleName = Namespace.ToNsModuleName();
@@ -107,6 +108,37 @@ class ProjectedType
         Events = EnumerateEvents(type).ToArray();
     }
 
+    private static TypeDefinition? TryResolve(TypeReference type)
+    {
+        try
+        {
+            return type?.Resolve();
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private static int GetCircularDependencyDepth(TypeDefinition type)
+    {
+        var depth = 0;
+        var isInOwnNamespace = true;
+
+        for (var current = type; current != null; current = TryResolve(current.BaseType))
+        {
+            var wasInOwnNamespace = isInOwnNamespace;
+            isInOwnNamespace = current.Namespace == type.Namespace;
+
+            if (isInOwnNamespace && !wasInOwnNamespace)
+            {
+                depth++;
+            }
+        }
+
+        return depth;
+    }
+
     private enum Mark
     {
         Unmarked,
@@ -189,6 +221,16 @@ class ProjectedType
     /// True if the type is a composable WinRT runtime class.
     /// </summary>
     public bool IsComposable { get; }
+
+    /// <summary>
+    /// Gets the depth of circular dependencies, if any.
+    /// </summary>
+    /// <remarks>
+    /// A value of 0 indicates no circular dependencies. A value of 1 indicates
+    /// that this type depends on a type in another namespace that depends on
+    /// a type in this namespace.
+    /// </remarks>
+    public int CircularDependencyDepth { get; }
 
     /// <summary>
     /// Gets the dotted Python module name of the type, e.g. "winrt.windows.foundation".
