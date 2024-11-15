@@ -37,7 +37,8 @@ static class WriterExtensions
     public static void WriteInspectableType(
         this IndentedTextWriter w,
         ProjectedType type,
-        bool componentDlls
+        bool componentDlls,
+        string moduleSuffix
     )
     {
         var category = type.Category.ToString().ToLowerInvariant();
@@ -49,15 +50,19 @@ static class WriterExtensions
         w.WriteMethodTable(type);
         w.WriteGetSetTable(type);
         w.WriteTypeSlotTable(type);
-        w.WriteTypeSpec(type);
+        w.WriteTypeSpec(type, moduleSuffix);
 
         if (type.PyRequiresMetaclass)
         {
-            w.WriteMetaclass(type);
+            w.WriteMetaclass(type, moduleSuffix);
         }
     }
 
-    public static void WriteMetaclass(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteMetaclass(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string moduleSuffix
+    )
     {
         w.WriteMetaclassPropertyGetsetTable(type);
         w.WriteMetaclassMethodTable(type);
@@ -77,7 +82,9 @@ static class WriterExtensions
         w.WriteLine($"static PyType_Spec type_spec_{type.Name}_Static =");
         w.WriteLine("{");
         w.Indent++;
-        w.WriteLine($"\"winrt.{type.Namespace.ToNsModuleName()}.{type.Name}_Static\",");
+        w.WriteLine(
+            $"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}_Static\","
+        );
         w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
         w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
         w.WriteLine("Py_TPFLAGS_DEFAULT,");
@@ -149,12 +156,16 @@ static class WriterExtensions
         w.WriteLine("};");
     }
 
-    public static void WriteTypeSpec(this IndentedTextWriter w, ProjectedType type)
+    public static void WriteTypeSpec(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string moduleSuffix
+    )
     {
         w.WriteBlankLine();
         w.WriteLine($"static PyType_Spec type_spec_{type.Name} = {{");
         w.Indent++;
-        w.WriteLine($"\"winrt.{type.Namespace.ToNsModuleName()}.{type.Name}\",");
+        w.WriteLine($"\"winrt.{type.Namespace.ToNsModuleName()}{moduleSuffix}.{type.Name}\",");
 
         if (type.IsStatic)
         {
@@ -1156,7 +1167,11 @@ static class WriterExtensions
         }
     }
 
-    public static void WriteNamespaceInitialization(this IndentedTextWriter w, string ns)
+    public static void WriteNamespaceInitialization(
+        this IndentedTextWriter w,
+        string ns,
+        string moduleSuffix
+    )
     {
         w.WriteLine($"// ----- {ns} Initialization --------------------");
         w.WriteBlankLine();
@@ -1165,7 +1180,7 @@ static class WriterExtensions
         w.WriteLine("static PyModuleDef module_def = {");
         w.Indent++;
         w.WriteLine("PyModuleDef_HEAD_INIT,");
-        w.WriteLine($"\"{ns.ToNsModuleName()}\",");
+        w.WriteLine($"\"{ns.ToNsModuleName()}{moduleSuffix}\",");
         w.WriteLine("module_doc,");
         w.WriteLine("0,");
         w.WriteLine("nullptr,");
@@ -1179,10 +1194,12 @@ static class WriterExtensions
     public static void WriteNamespaceModuleInitFunction(
         this IndentedTextWriter w,
         string ns,
-        Members members
+        Members members,
+        int dependencyDepth,
+        string moduleSuffix
     )
     {
-        w.WriteLine($"PyMODINIT_FUNC PyInit_{ns.ToNsModuleName()}(void) noexcept");
+        w.WriteLine($"PyMODINIT_FUNC PyInit_{ns.ToNsModuleName()}{moduleSuffix}(void) noexcept");
         w.WriteLine("{");
         w.Indent++;
         w.WriteLine($"using namespace py::cpp::{ns.ToCppNamespace()};");
@@ -1230,6 +1247,7 @@ static class WriterExtensions
             var t in members
                 .Classes.Concat(members.Interfaces)
                 .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
+                .Where(t => t.CircularDependencyDepth == dependencyDepth)
         )
         {
             w.WriteNamespaceInitPythonType(t);

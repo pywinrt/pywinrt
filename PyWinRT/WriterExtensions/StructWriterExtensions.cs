@@ -3,7 +3,71 @@ using Mono.Cecil;
 
 static class StructWriterExtensions
 {
-    public static void WriteStruct(this IndentedTextWriter w, ProjectedType type)
+    public static void WritePythonStructTyping(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string ns
+    )
+    {
+        var metaclass = "";
+
+        if (type.PyRequiresMetaclass)
+        {
+            w.WriteLine("@typing.final");
+            w.WriteLine($"class {type.Name}_Static(type):");
+            w.Indent++;
+
+            var pass = true;
+
+            if (type.Type.IsCustomNumeric())
+            {
+                w.WriteNumberFactoryFunctionPyTyping(type, ref pass);
+                w.WriteNumberCommonValuesPyTyping(type, ref pass);
+            }
+
+            if (pass)
+            {
+                w.WriteLine("pass");
+            }
+
+            w.Indent--;
+            w.WriteBlankLine();
+
+            metaclass = $"(metaclass={type.Name}_Static)";
+        }
+
+        w.WriteLine("@typing.final");
+        w.WriteLine($"class {type.Name}{metaclass}:");
+        w.Indent++;
+
+        foreach (var field in type.Type.Fields)
+        {
+            w.WriteLine($"{field.Name.ToPythonIdentifier()}: {field.FieldType.ToPyTypeName(ns)}");
+        }
+
+        w.WriteLine(
+            $"def __init__(self, {string.Join(", ", type.Type.Fields.Select(f => $"{f.Name.ToPythonIdentifier()}: {f.FieldType.ToPyTypeName(ns)} = {f.FieldType.GetDefaultPyValue(ns)}"))}) -> None: ..."
+        );
+
+        if (type.Type.IsCustomNumeric())
+        {
+            if (type.Name != "Plane")
+            {
+                w.WriteNumberSlotMethodsPyTyping(type);
+            }
+
+            w.WriteNumberMethodPyTyping(type);
+        }
+
+        w.Indent--;
+        w.WriteBlankLine();
+    }
+
+    public static void WriteStruct(
+        this IndentedTextWriter w,
+        ProjectedType type,
+        string moduleSuffix
+    )
     {
         w.WriteLine($"// ----- {type.Name} struct --------------------");
         w.WriteStructConstructor(type);
@@ -35,11 +99,11 @@ static class StructWriterExtensions
         w.WriteStructEqualityMethods(type);
         w.WriteStructRepr(type);
         w.WriteTypeSlotTable(type);
-        w.WriteTypeSpec(type);
+        w.WriteTypeSpec(type, moduleSuffix);
 
         if (type.PyRequiresMetaclass)
         {
-            w.WriteMetaclass(type);
+            w.WriteMetaclass(type, moduleSuffix);
         }
     }
 

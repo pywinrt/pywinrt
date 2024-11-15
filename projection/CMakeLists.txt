@@ -86,6 +86,13 @@ function(pywinrt_add_library target sources)
     endif()
 endfunction()
 
+set(circular_dependency_packages
+    "winrt-Microsoft.UI.Xaml.Controls"
+    "winrt-Microsoft.UI.Xaml.Controls.Primitives"
+    "winrt-Windows.UI.Xaml.Controls"
+    "winrt-Windows.UI.Xaml.Controls.Primitives"
+)
+
 function(pywinrt_add_namespace_package package)
     get_filename_component(package_name "${package}" NAME)
     string(REPLACE "winrt-" "" package_namespace "${package_name}")
@@ -99,6 +106,15 @@ function(pywinrt_add_namespace_package package)
 
     install(TARGETS ${package_target} DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
     install(DIRECTORY "${package}/winrt/" DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+
+    if (package IN_LIST circular_dependency_packages)
+        set(package_sources_2 "${package}/py.${package_namespace}_2.cpp")
+
+        pywinrt_add_library(${package_target}_2 "${package_sources_2}")
+        target_include_directories(${package_target}_2 PRIVATE "${package}/cppwinrt" "${package}")
+
+        install(TARGETS ${package_target}_2 DESTINATION "${PYWINRT_SITE_PACKAGES_DIR}/winrt")
+    endif()
 
     return(PROPAGATE package_target)
 endfunction()
@@ -187,11 +203,17 @@ foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packa
             endif()
         else()
             target_precompile_headers(${package_target} REUSE_FROM ${first_target})
+            if (${package} IN_LIST circular_dependency_packages)
+                target_precompile_headers(${package_target}_2 REUSE_FROM ${first_target})
+            endif()
         endif()
     endif()
 
     # don't define ${package_target}_EXPORTS symbol to avoid shared precompiled header warning
     set_target_properties(${package_target} PROPERTIES DEFINE_SYMBOL "")
+    if (${package} IN_LIST circular_dependency_packages)
+        set_target_properties(${package_target}_2 PROPERTIES DEFINE_SYMBOL "")
+    endif()
 
     # windows app sdk headers
     if (package IN_LIST app_packages OR package IN_LIST app_interop_packages)
@@ -201,6 +223,14 @@ foreach(package ${packages} ${app_packages} ${webview2_packages} ${interop_packa
             "${WINRT_WEBVIEW2_PATH}/cppwinrt"
             "${WINRT_WEBVIEW2_PATH}"
         )
+        if (${package} IN_LIST circular_dependency_packages)
+            target_include_directories(${package_target}_2 PRIVATE
+                "${WINRT_WINDOWS_APP_SDK_PATH}/cppwinrt"
+                "${WINRT_WINDOWS_APP_SDK_PATH}/pywinrt"
+                "${WINRT_WEBVIEW2_PATH}/cppwinrt"
+                "${WINRT_WEBVIEW2_PATH}"
+            )
+        endif()
     endif()
 
     if (package IN_LIST app_interop_packages)

@@ -24,6 +24,11 @@ import winrt.windows.foundation.numerics as windows_foundation_numerics
 import winrt.windows.ui as windows_ui
 import winrt.windows.ui.xaml.interop as windows_ui_xaml_interop
 
+from ._winrt_microsoft_ui_xaml_controls_primitives_2 import (
+    ColorPickerSlider,
+    TabViewListView,
+)
+
 from winrt.microsoft.ui.xaml.controls.primitives import AnimationDirection, ComponentResourceLocation, CornerRadiusFilterKind, CornerRadiusToThicknessConverterKind, EdgeTransitionLocation, FlyoutPlacementMode, FlyoutShowMode, GeneratorDirection, GroupHeaderPlacement, ListViewItemPresenterCheckMode, ListViewItemPresenterSelectionIndicatorMode, PlacementMode, PopupPlacementMode, ScrollEventType, ScrollSnapPointsAlignment, ScrollingIndicatorMode, SliderSnapsTo, SnapPointsAlignment, TickPlacement
 from winrt.microsoft.ui.xaml.controls.primitives import DragCompletedEventHandler, DragDeltaEventHandler, DragStartedEventHandler, ItemsChangedEventHandler, RangeBaseValueChangedEventHandler, ScrollEventHandler
 
@@ -214,19 +219,6 @@ class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
     def are_horizontal_snap_points_regular(self) -> bool: ...
     @_property
     def are_vertical_snap_points_regular(self) -> bool: ...
-
-class ColorPickerSlider_Static(type):
-    @_property
-    def color_channel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
-
-class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
-    def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider: ...
-    @_property
-    def color_channel(self) -> microsoft_ui_xaml_controls.ColorPickerHsvChannel: ...
-    @color_channel.setter
-    def color_channel(self, value: microsoft_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
 class ColorSpectrum_Static(type):
     @_property
@@ -2046,11 +2038,6 @@ class SplitViewTemplateSettings(winrt.system.Object):
     def open_pane_length(self) -> winrt.system.Double: ...
     @_property
     def open_pane_length_minus_compact_length(self) -> winrt.system.Double: ...
-
-class TabViewListView(winrt.system.Object):
-    @staticmethod
-    def _from(obj: winrt.system.Object, /) -> TabViewListView: ...
-    def __new__(cls: typing.Type[TabViewListView]) -> TabViewListView: ...
 
 @typing.final
 class Thumb_Static(type):

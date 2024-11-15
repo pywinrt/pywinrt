@@ -15,7 +15,6 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     CalendarPanel,
     CalendarViewTemplateSettings,
     CarouselPanel,
-    ColorPickerSlider,
     ColorSpectrum,
     ColumnMajorUniformToLargestGridLayout,
     ComboBoxHelper,
@@ -74,7 +73,6 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     SelectorItem,
     SnapPointBase,
     SplitViewTemplateSettings,
-    TabViewListView,
     Thumb,
     TickBar,
     ToggleButton,
@@ -85,6 +83,10 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     IScrollController,
     IScrollControllerPanningInfo,
     IScrollSnapPointsInfo,
+)
+from winrt._winrt_microsoft_ui_xaml_controls_primitives_2 import (
+    ColorPickerSlider,
+    TabViewListView,
 )
 
 __all__ = [
