@@ -129,7 +129,10 @@ class AppWindowPlacement(winrt.system.Object):
     @_property
     def size(self) -> windows_foundation.Size: ...
 
-class AppWindowPresentationConfiguration(winrt.system.Object):
+class AppWindowPresentationConfiguration_Static(type):
+    pass
+
+class AppWindowPresentationConfiguration(winrt.system.Object, metaclass=AppWindowPresentationConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresentationConfiguration: ...
     @_property

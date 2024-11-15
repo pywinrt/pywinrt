@@ -2047,6 +2047,31 @@ namespace py::cpp::Microsoft::UI::Windowing
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppWindowPresenter};
 
+    static PyGetSetDef getset_AppWindowPresenter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppWindowPresenter_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AppWindowPresenter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppWindowPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppWindowPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppWindowPresenter_Static =
+    {
+        "winrt._winrt_microsoft_ui_windowing.AppWindowPresenter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppWindowPresenter_Static
+    };
+
     // ----- AppWindowTitleBar class --------------------
 
     static PyObject* _new_AppWindowTitleBar(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -5466,7 +5491,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AppWindowPresenter_type{py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AppWindowPresenter_Static{PyType_FromSpec(&type_spec_AppWindowPresenter_Static)};
+    if (!type_AppWindowPresenter_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppWindowPresenter_type{py::register_python_type(module.get(), &type_spec_AppWindowPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppWindowPresenter_Static.get()))};
     if (!AppWindowPresenter_type)
     {
         return nullptr;

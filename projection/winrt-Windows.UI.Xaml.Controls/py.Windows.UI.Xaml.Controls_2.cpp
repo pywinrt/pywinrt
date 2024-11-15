@@ -1750,6 +1750,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_CheckBox};
 
+    static PyGetSetDef getset_CheckBox_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CheckBox_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CheckBox_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CheckBox_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CheckBox_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CheckBox_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.CheckBox_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CheckBox_Static
+    };
+
     // ----- ComboBox class --------------------
 
     static PyObject* _new_ComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3393,6 +3418,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ComboBoxItem};
 
+    static PyGetSetDef getset_ComboBoxItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ComboBoxItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ComboBoxItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ComboBoxItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ComboBoxItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ComboBoxItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.ComboBoxItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ComboBoxItem_Static
+    };
+
     // ----- DropDownButton class --------------------
 
     static PyObject* _new_DropDownButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3480,6 +3530,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DropDownButton};
+
+    static PyGetSetDef getset_DropDownButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DropDownButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DropDownButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DropDownButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DropDownButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DropDownButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.DropDownButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DropDownButton_Static
+    };
 
     // ----- FlipView class --------------------
 
@@ -3771,6 +3846,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlipViewItem};
 
+    static PyGetSetDef getset_FlipViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlipViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlipViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlipViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlipViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlipViewItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.FlipViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlipViewItem_Static
+    };
+
     // ----- GridView class --------------------
 
     static PyObject* _new_GridView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3858,6 +3958,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridView};
+
+    static PyGetSetDef getset_GridView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridView_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.GridView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridView_Static
+    };
 
     // ----- GridViewItem class --------------------
 
@@ -3973,6 +4098,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewItem};
+
+    static PyGetSetDef getset_GridViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.GridViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewItem_Static
+    };
 
     // ----- HyperlinkButton class --------------------
 
@@ -4263,6 +4413,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkToolbarBallpointPenButton};
+
+    static PyGetSetDef getset_InkToolbarBallpointPenButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkToolbarBallpointPenButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InkToolbarBallpointPenButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkToolbarBallpointPenButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkToolbarBallpointPenButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkToolbarBallpointPenButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarBallpointPenButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkToolbarBallpointPenButton_Static
+    };
 
     // ----- InkToolbarCustomPenButton class --------------------
 
@@ -4642,6 +4817,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkToolbarCustomToggleButton};
+
+    static PyGetSetDef getset_InkToolbarCustomToggleButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkToolbarCustomToggleButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InkToolbarCustomToggleButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkToolbarCustomToggleButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkToolbarCustomToggleButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkToolbarCustomToggleButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarCustomToggleButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkToolbarCustomToggleButton_Static
+    };
 
     // ----- InkToolbarCustomToolButton class --------------------
 
@@ -5544,6 +5744,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkToolbarHighlighterButton};
 
+    static PyGetSetDef getset_InkToolbarHighlighterButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkToolbarHighlighterButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InkToolbarHighlighterButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkToolbarHighlighterButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkToolbarHighlighterButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkToolbarHighlighterButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarHighlighterButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkToolbarHighlighterButton_Static
+    };
+
     // ----- InkToolbarMenuButton class --------------------
 
     static PyObject* _new_InkToolbarMenuButton(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6429,6 +6654,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkToolbarPencilButton};
 
+    static PyGetSetDef getset_InkToolbarPencilButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkToolbarPencilButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InkToolbarPencilButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkToolbarPencilButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkToolbarPencilButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkToolbarPencilButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarPencilButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkToolbarPencilButton_Static
+    };
+
     // ----- InkToolbarRulerButton class --------------------
 
     static PyObject* _new_InkToolbarRulerButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7177,6 +7427,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_InkToolbarToggleButton};
 
+    static PyGetSetDef getset_InkToolbarToggleButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InkToolbarToggleButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InkToolbarToggleButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InkToolbarToggleButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InkToolbarToggleButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InkToolbarToggleButton_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.InkToolbarToggleButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InkToolbarToggleButton_Static
+    };
+
     // ----- InkToolbarToolButton class --------------------
 
     static PyObject* _new_InkToolbarToolButton(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7868,6 +8143,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListBoxItem};
 
+    static PyGetSetDef getset_ListBoxItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListBoxItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListBoxItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListBoxItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListBoxItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListBoxItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.ListBoxItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListBoxItem_Static
+    };
+
     // ----- ListView class --------------------
 
     static PyObject* _new_ListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7955,6 +8255,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListView};
+
+    static PyGetSetDef getset_ListView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListView_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.ListView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListView_Static
+    };
 
     // ----- ListViewBase class --------------------
 
@@ -11114,6 +11439,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewItem};
 
+    static PyGetSetDef getset_ListViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewItem_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.ListViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewItem_Static
+    };
+
     // ----- NavigationViewItem class --------------------
 
     static PyObject* _new_NavigationViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11525,6 +11875,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewItemBase};
 
+    static PyGetSetDef getset_NavigationViewItemBase_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewItemBase_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewItemBase_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewItemBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewItemBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemBase_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewItemBase_Static
+    };
+
     // ----- NavigationViewItemHeader class --------------------
 
     static PyObject* _new_NavigationViewItemHeader(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11612,6 +11987,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewItemHeader};
+
+    static PyGetSetDef getset_NavigationViewItemHeader_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewItemHeader_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewItemHeader_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemHeader_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewItemHeader_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewItemHeader_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemHeader_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewItemHeader_Static
+    };
 
     // ----- NavigationViewItemSeparator class --------------------
 
@@ -11701,6 +12101,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewItemSeparator};
 
+    static PyGetSetDef getset_NavigationViewItemSeparator_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewItemSeparator_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewItemSeparator_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemSeparator_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewItemSeparator_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewItemSeparator_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewItemSeparator_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewItemSeparator_Static
+    };
+
     // ----- NavigationViewList class --------------------
 
     static PyObject* _new_NavigationViewList(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11788,6 +12213,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewList};
+
+    static PyGetSetDef getset_NavigationViewList_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewList_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewList_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewList_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewList_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewList_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.NavigationViewList_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewList_Static
+    };
 
     // ----- ProgressBar class --------------------
 
@@ -14457,6 +14907,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_TreeViewList};
 
+    static PyGetSetDef getset_TreeViewList_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TreeViewList_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TreeViewList_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TreeViewList_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TreeViewList_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TreeViewList_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_2.TreeViewList_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TreeViewList_Static
+    };
+
     // ----- VirtualizingStackPanel class --------------------
 
     static PyObject* _new_VirtualizingStackPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15708,7 +16183,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CheckBox_Static{PyType_FromSpec(&type_spec_CheckBox_Static)};
+    if (!type_CheckBox_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBox_Static.get()))};
     if (!CheckBox_type)
     {
         return nullptr;
@@ -15726,13 +16207,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ComboBoxItem_Static{PyType_FromSpec(&type_spec_ComboBoxItem_Static)};
+    if (!type_ComboBoxItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItem_Static.get()))};
     if (!ComboBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DropDownButton_Static{PyType_FromSpec(&type_spec_DropDownButton_Static)};
+    if (!type_DropDownButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButton_Static.get()))};
     if (!DropDownButton_type)
     {
         return nullptr;
@@ -15750,19 +16243,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlipViewItem_Static{PyType_FromSpec(&type_spec_FlipViewItem_Static)};
+    if (!type_FlipViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItem_Static.get()))};
     if (!FlipViewItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridView_Static{PyType_FromSpec(&type_spec_GridView_Static)};
+    if (!type_GridView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridView_Static.get()))};
     if (!GridView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewItem_Static{PyType_FromSpec(&type_spec_GridViewItem_Static)};
+    if (!type_GridViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItem_Static.get()))};
     if (!GridViewItem_type)
     {
         return nullptr;
@@ -15780,7 +16291,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarBallpointPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarBallpointPenButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InkToolbarBallpointPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarBallpointPenButton_Static)};
+    if (!type_InkToolbarBallpointPenButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarBallpointPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarBallpointPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarBallpointPenButton_Static.get()))};
     if (!InkToolbarBallpointPenButton_type)
     {
         return nullptr;
@@ -15798,7 +16315,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarCustomToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToggleButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InkToolbarCustomToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarCustomToggleButton_Static)};
+    if (!type_InkToolbarCustomToggleButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarCustomToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomToggleButton_Static.get()))};
     if (!InkToolbarCustomToggleButton_type)
     {
         return nullptr;
@@ -15840,7 +16363,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarHighlighterButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarHighlighterButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InkToolbarHighlighterButton_Static{PyType_FromSpec(&type_spec_InkToolbarHighlighterButton_Static)};
+    if (!type_InkToolbarHighlighterButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarHighlighterButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarHighlighterButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarHighlighterButton_Static.get()))};
     if (!InkToolbarHighlighterButton_type)
     {
         return nullptr;
@@ -15870,7 +16399,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarPencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPencilButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InkToolbarPencilButton_Static{PyType_FromSpec(&type_spec_InkToolbarPencilButton_Static)};
+    if (!type_InkToolbarPencilButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarPencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPencilButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPencilButton_Static.get()))};
     if (!InkToolbarPencilButton_type)
     {
         return nullptr;
@@ -15900,7 +16435,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InkToolbarToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarToggleButton_Static)};
+    if (!type_InkToolbarToggleButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToggleButton_Static.get()))};
     if (!InkToolbarToggleButton_type)
     {
         return nullptr;
@@ -15930,13 +16471,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListBoxItem_Static{PyType_FromSpec(&type_spec_ListBoxItem_Static)};
+    if (!type_ListBoxItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItem_Static.get()))};
     if (!ListBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListView_Static{PyType_FromSpec(&type_spec_ListView_Static)};
+    if (!type_ListView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListView_Static.get()))};
     if (!ListView_type)
     {
         return nullptr;
@@ -15954,7 +16507,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewItem_Static{PyType_FromSpec(&type_spec_ListViewItem_Static)};
+    if (!type_ListViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItem_Static.get()))};
     if (!ListViewItem_type)
     {
         return nullptr;
@@ -15972,25 +16531,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemBase_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemBase, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewItemBase_Static{PyType_FromSpec(&type_spec_NavigationViewItemBase_Static)};
+    if (!type_NavigationViewItemBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemBase_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemBase_Static.get()))};
     if (!NavigationViewItemBase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemHeader_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemHeader, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewItemHeader_Static{PyType_FromSpec(&type_spec_NavigationViewItemHeader_Static)};
+    if (!type_NavigationViewItemHeader_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemHeader_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemHeader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemHeader_Static.get()))};
     if (!NavigationViewItemHeader_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemSeparator_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemSeparator, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewItemSeparator_Static{PyType_FromSpec(&type_spec_NavigationViewItemSeparator_Static)};
+    if (!type_NavigationViewItemSeparator_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemSeparator_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemSeparator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemSeparator_Static.get()))};
     if (!NavigationViewItemSeparator_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewList_type{py::register_python_type(module.get(), &type_spec_NavigationViewList, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewList_Static{PyType_FromSpec(&type_spec_NavigationViewList_Static)};
+    if (!type_NavigationViewList_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewList_type{py::register_python_type(module.get(), &type_spec_NavigationViewList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewList_Static.get()))};
     if (!NavigationViewList_type)
     {
         return nullptr;
@@ -16044,7 +16627,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TreeViewList_Static{PyType_FromSpec(&type_spec_TreeViewList_Static)};
+    if (!type_TreeViewList_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewList_Static.get()))};
     if (!TreeViewList_type)
     {
         return nullptr;

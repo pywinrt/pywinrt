@@ -74,7 +74,10 @@ class Composable(IRequiredFour, IRequiredThree, IRequiredTwo, IRequiredOne, winr
     @value.setter
     def value(self, value: winrt.system.Int32) -> None: ...
 
-class Derived(winrt.system.Object):
+class Derived_Static(type):
+    pass
+
+class Derived(winrt.system.Object, metaclass=Derived_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Derived: ...
     def __new__(cls: typing.Type[Derived]) -> Derived: ...

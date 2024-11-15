@@ -156,7 +156,10 @@ class ColorKeyFrameAnimation(winrt.system.Object):
     @interpolation_color_space.setter
     def interpolation_color_space(self, value: CompositionColorSpace) -> None: ...
 
-class CompositionAnimation(ICompositionAnimationBase, winrt.system.Object):
+class CompositionAnimation_Static(type):
+    pass
+
+class CompositionAnimation(ICompositionAnimationBase, winrt.system.Object, metaclass=CompositionAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionAnimation: ...
     def clear_all_parameters(self) -> None: ...
@@ -210,7 +213,10 @@ class CompositionBatchCompletedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBatchCompletedEventArgs: ...
 
-class CompositionBrush(winrt.system.Object):
+class CompositionBrush_Static(type):
+    pass
+
+class CompositionBrush(winrt.system.Object, metaclass=CompositionBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionBrush: ...
 
@@ -224,7 +230,10 @@ class CompositionCapabilities(winrt.system.Object):
     def add_changed(self, handler: windows_foundation.TypedEventHandler[CompositionCapabilities, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class CompositionClip(winrt.system.Object):
+class CompositionClip_Static(type):
+    pass
+
+class CompositionClip(winrt.system.Object, metaclass=CompositionClip_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionClip: ...
     @_property
@@ -329,7 +338,10 @@ class CompositionContainerShape(winrt.system.Object):
     @_property
     def shapes(self) -> CompositionShapeCollection: ...
 
-class CompositionDrawingSurface(ICompositionSurface, winrt.system.Object):
+class CompositionDrawingSurface_Static(type):
+    pass
+
+class CompositionDrawingSurface(ICompositionSurface, winrt.system.Object, metaclass=CompositionDrawingSurface_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionDrawingSurface: ...
     def resize(self, size_pixels: windows_graphics.SizeInt32, /) -> None: ...
@@ -414,7 +426,10 @@ class CompositionGeometricClip(winrt.system.Object):
     @geometry.setter
     def geometry(self, value: CompositionGeometry) -> None: ...
 
-class CompositionGeometry(winrt.system.Object):
+class CompositionGeometry_Static(type):
+    pass
+
+class CompositionGeometry(winrt.system.Object, metaclass=CompositionGeometry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGeometry: ...
     @_property
@@ -430,7 +445,10 @@ class CompositionGeometry(winrt.system.Object):
     @trim_end.setter
     def trim_end(self, value: winrt.system.Single) -> None: ...
 
-class CompositionGradientBrush(winrt.system.Object):
+class CompositionGradientBrush_Static(type):
+    pass
+
+class CompositionGradientBrush(winrt.system.Object, metaclass=CompositionGradientBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionGradientBrush: ...
     @_property
@@ -489,7 +507,10 @@ class CompositionGraphicsDevice(winrt.system.Object):
     def add_rendering_device_replaced(self, handler: windows_foundation.TypedEventHandler[CompositionGraphicsDevice, RenderingDeviceReplacedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_rendering_device_replaced(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class CompositionLight(winrt.system.Object):
+class CompositionLight_Static(type):
+    pass
+
+class CompositionLight(winrt.system.Object, metaclass=CompositionLight_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionLight: ...
     @_property
@@ -813,11 +834,17 @@ class CompositionScopedBatch(winrt.system.Object):
     @_property
     def is_ended(self) -> bool: ...
 
-class CompositionShadow(winrt.system.Object):
+class CompositionShadow_Static(type):
+    pass
+
+class CompositionShadow(winrt.system.Object, metaclass=CompositionShadow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShadow: ...
 
-class CompositionShape(winrt.system.Object):
+class CompositionShape_Static(type):
+    pass
+
+class CompositionShape(winrt.system.Object, metaclass=CompositionShape_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionShape: ...
     @_property
@@ -1019,7 +1046,10 @@ class CompositionSurfaceBrush(winrt.system.Object):
     @snap_to_pixels.setter
     def snap_to_pixels(self, value: bool) -> None: ...
 
-class CompositionTransform(winrt.system.Object):
+class CompositionTransform_Static(type):
+    pass
+
+class CompositionTransform(winrt.system.Object, metaclass=CompositionTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionTransform: ...
 
@@ -1048,7 +1078,10 @@ class CompositionViewBox(winrt.system.Object):
     @horizontal_alignment_ratio.setter
     def horizontal_alignment_ratio(self, value: winrt.system.Single) -> None: ...
 
-class CompositionVirtualDrawingSurface(winrt.system.Object):
+class CompositionVirtualDrawingSurface_Static(type):
+    pass
+
+class CompositionVirtualDrawingSurface(winrt.system.Object, metaclass=CompositionVirtualDrawingSurface_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompositionVirtualDrawingSurface: ...
     def trim(self, rects: typing.Union[winrt.system.Array[windows_graphics.RectInt32], winrt.system.ReadableBuffer], /) -> None: ...
@@ -1169,7 +1202,10 @@ class Compositor(windows_foundation.IClosable, winrt.system.Object, metaclass=Co
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-class ContainerVisual(winrt.system.Object):
+class ContainerVisual_Static(type):
+    pass
+
+class ContainerVisual(winrt.system.Object, metaclass=ContainerVisual_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContainerVisual: ...
     @_property
@@ -1324,7 +1360,10 @@ class InsetClip(winrt.system.Object):
     @bottom_inset.setter
     def bottom_inset(self, value: winrt.system.Single) -> None: ...
 
-class KeyFrameAnimation(winrt.system.Object):
+class KeyFrameAnimation_Static(type):
+    pass
+
+class KeyFrameAnimation(winrt.system.Object, metaclass=KeyFrameAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyFrameAnimation: ...
     def insert_expression_key_frame(self, normalized_progress_key: winrt.system.Single, value: str, /) -> None: ...
@@ -1378,7 +1417,10 @@ class LinearEasingFunction(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinearEasingFunction: ...
 
-class NaturalMotionAnimation(winrt.system.Object):
+class NaturalMotionAnimation_Static(type):
+    pass
+
+class NaturalMotionAnimation(winrt.system.Object, metaclass=NaturalMotionAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NaturalMotionAnimation: ...
     @_property
@@ -1518,7 +1560,10 @@ class ScalarKeyFrameAnimation(winrt.system.Object):
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, /) -> None: ...
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: winrt.system.Single, easing_function: CompositionEasingFunction, /) -> None: ...
 
-class ScalarNaturalMotionAnimation(winrt.system.Object):
+class ScalarNaturalMotionAnimation_Static(type):
+    pass
+
+class ScalarNaturalMotionAnimation(winrt.system.Object, metaclass=ScalarNaturalMotionAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScalarNaturalMotionAnimation: ...
     @_property
@@ -1705,7 +1750,10 @@ class Vector2KeyFrameAnimation(winrt.system.Object):
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector2, /) -> None: ...
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector2, easing_function: CompositionEasingFunction, /) -> None: ...
 
-class Vector2NaturalMotionAnimation(winrt.system.Object):
+class Vector2NaturalMotionAnimation_Static(type):
+    pass
+
+class Vector2NaturalMotionAnimation(winrt.system.Object, metaclass=Vector2NaturalMotionAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector2NaturalMotionAnimation: ...
     @_property
@@ -1728,7 +1776,10 @@ class Vector3KeyFrameAnimation(winrt.system.Object):
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector3, /) -> None: ...
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector3, easing_function: CompositionEasingFunction, /) -> None: ...
 
-class Vector3NaturalMotionAnimation(winrt.system.Object):
+class Vector3NaturalMotionAnimation_Static(type):
+    pass
+
+class Vector3NaturalMotionAnimation(winrt.system.Object, metaclass=Vector3NaturalMotionAnimation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Vector3NaturalMotionAnimation: ...
     @_property
@@ -1751,7 +1802,10 @@ class Vector4KeyFrameAnimation(winrt.system.Object):
     def insert_key_frame(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector4, /) -> None: ...
     def insert_key_frame_with_easing_function(self, normalized_progress_key: winrt.system.Single, value: windows_foundation_numerics.Vector4, easing_function: CompositionEasingFunction, /) -> None: ...
 
-class Visual(winrt.system.Object):
+class Visual_Static(type):
+    pass
+
+class Visual(winrt.system.Object, metaclass=Visual_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Visual: ...
     @_property

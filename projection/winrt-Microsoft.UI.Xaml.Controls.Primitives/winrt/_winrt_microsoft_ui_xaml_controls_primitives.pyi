@@ -166,7 +166,10 @@ class CalendarViewTemplateSettings(winrt.system.Object):
     @_property
     def week_day7(self) -> str: ...
 
-class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
+class CarouselPanel_Static(type):
+    pass
+
+class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object, metaclass=CarouselPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
     def __new__(cls: typing.Type[CarouselPanel]) -> CarouselPanel: ...
@@ -487,7 +490,10 @@ class CornerRadiusToThicknessConverter(microsoft_ui_xaml_data.IValueConverter, w
     @conversion_kind.setter
     def conversion_kind(self, value: CornerRadiusToThicknessConverterKind) -> None: ...
 
-class DragCompletedEventArgs(winrt.system.Object):
+class DragCompletedEventArgs_Static(type):
+    pass
+
+class DragCompletedEventArgs(winrt.system.Object, metaclass=DragCompletedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragCompletedEventArgs: ...
     def __new__(cls: typing.Type[DragCompletedEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: bool) -> DragCompletedEventArgs: ...
@@ -498,7 +504,10 @@ class DragCompletedEventArgs(winrt.system.Object):
     @_property
     def vertical_change(self) -> winrt.system.Double: ...
 
-class DragDeltaEventArgs(winrt.system.Object):
+class DragDeltaEventArgs_Static(type):
+    pass
+
+class DragDeltaEventArgs(winrt.system.Object, metaclass=DragDeltaEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragDeltaEventArgs: ...
     def __new__(cls: typing.Type[DragDeltaEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double) -> DragDeltaEventArgs: ...
@@ -507,7 +516,10 @@ class DragDeltaEventArgs(winrt.system.Object):
     @_property
     def vertical_change(self) -> winrt.system.Double: ...
 
-class DragStartedEventArgs(winrt.system.Object):
+class DragStartedEventArgs_Static(type):
+    pass
+
+class DragStartedEventArgs(winrt.system.Object, metaclass=DragStartedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragStartedEventArgs: ...
     def __new__(cls: typing.Type[DragStartedEventArgs], horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double) -> DragStartedEventArgs: ...
@@ -626,7 +638,10 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class FlyoutShowOptions(winrt.system.Object):
+class FlyoutShowOptions_Static(type):
+    pass
+
+class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutShowOptions: ...
     def __new__(cls: typing.Type[FlyoutShowOptions]) -> FlyoutShowOptions: ...
@@ -1412,7 +1427,10 @@ class NavigationViewItemPresenterTemplateSettings(winrt.system.Object, metaclass
     @_property
     def smaller_icon_width(self) -> winrt.system.Double: ...
 
-class OrientedVirtualizingPanel(microsoft_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, winrt.system.Object):
+class OrientedVirtualizingPanel_Static(type):
+    pass
+
+class OrientedVirtualizingPanel(microsoft_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, winrt.system.Object, metaclass=OrientedVirtualizingPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -1476,7 +1494,10 @@ class PickerFlyoutBase(winrt.system.Object, metaclass=PickerFlyoutBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyoutBase: ...
 
-class PivotHeaderItem(winrt.system.Object):
+class PivotHeaderItem_Static(type):
+    pass
+
+class PivotHeaderItem(winrt.system.Object, metaclass=PivotHeaderItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotHeaderItem: ...
     def __new__(cls: typing.Type[PivotHeaderItem]) -> PivotHeaderItem: ...
@@ -1656,7 +1677,10 @@ class RepeatButton(winrt.system.Object, metaclass=RepeatButton_Static):
     @delay.setter
     def delay(self, value: winrt.system.Int32) -> None: ...
 
-class RepeatedScrollSnapPoint(winrt.system.Object):
+class RepeatedScrollSnapPoint_Static(type):
+    pass
+
+class RepeatedScrollSnapPoint(winrt.system.Object, metaclass=RepeatedScrollSnapPoint_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepeatedScrollSnapPoint: ...
     def __new__(cls: typing.Type[RepeatedScrollSnapPoint], offset: winrt.system.Double, interval: winrt.system.Double, start: winrt.system.Double, end: winrt.system.Double, alignment: ScrollSnapPointsAlignment) -> RepeatedScrollSnapPoint: ...
@@ -1669,7 +1693,10 @@ class RepeatedScrollSnapPoint(winrt.system.Object):
     @_property
     def start(self) -> winrt.system.Double: ...
 
-class RepeatedZoomSnapPoint(winrt.system.Object):
+class RepeatedZoomSnapPoint_Static(type):
+    pass
+
+class RepeatedZoomSnapPoint(winrt.system.Object, metaclass=RepeatedZoomSnapPoint_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RepeatedZoomSnapPoint: ...
     def __new__(cls: typing.Type[RepeatedZoomSnapPoint], offset: winrt.system.Double, interval: winrt.system.Double, start: winrt.system.Double, end: winrt.system.Double) -> RepeatedZoomSnapPoint: ...
@@ -1954,14 +1981,20 @@ class ScrollPresenter(microsoft_ui_xaml_controls.IScrollAnchorProvider, winrt.sy
     @_property
     def zoom_snap_points(self) -> typing.MutableSequence[ZoomSnapPointBase]: ...
 
-class ScrollSnapPoint(winrt.system.Object):
+class ScrollSnapPoint_Static(type):
+    pass
+
+class ScrollSnapPoint(winrt.system.Object, metaclass=ScrollSnapPoint_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollSnapPoint: ...
     def __new__(cls: typing.Type[ScrollSnapPoint], snap_point_value: winrt.system.Double, alignment: ScrollSnapPointsAlignment) -> ScrollSnapPoint: ...
     @_property
     def value(self) -> winrt.system.Double: ...
 
-class ScrollSnapPointBase(winrt.system.Object):
+class ScrollSnapPointBase_Static(type):
+    pass
+
+class ScrollSnapPointBase(winrt.system.Object, metaclass=ScrollSnapPointBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollSnapPointBase: ...
     @_property
@@ -2018,7 +2051,10 @@ class SelectorItem(winrt.system.Object, metaclass=SelectorItem_Static):
     @is_selected.setter
     def is_selected(self, value: bool) -> None: ...
 
-class SnapPointBase(winrt.system.Object):
+class SnapPointBase_Static(type):
+    pass
+
+class SnapPointBase(winrt.system.Object, metaclass=SnapPointBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SnapPointBase: ...
 
@@ -2129,14 +2165,20 @@ class ToolTipTemplateSettings(winrt.system.Object):
     @_property
     def from_vertical_offset(self) -> winrt.system.Double: ...
 
-class ZoomSnapPoint(winrt.system.Object):
+class ZoomSnapPoint_Static(type):
+    pass
+
+class ZoomSnapPoint(winrt.system.Object, metaclass=ZoomSnapPoint_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ZoomSnapPoint: ...
     def __new__(cls: typing.Type[ZoomSnapPoint], snap_point_value: winrt.system.Double) -> ZoomSnapPoint: ...
     @_property
     def value(self) -> winrt.system.Double: ...
 
-class ZoomSnapPointBase(winrt.system.Object):
+class ZoomSnapPointBase_Static(type):
+    pass
+
+class ZoomSnapPointBase(winrt.system.Object, metaclass=ZoomSnapPointBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ZoomSnapPointBase: ...
 

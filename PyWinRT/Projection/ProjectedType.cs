@@ -52,7 +52,8 @@ class ProjectedType
         CppPyWrapperType = $"py::wrapper::{CppNamespace}::{Name}";
         CppPyWrapperTemplateType = IsGeneric ? $"py::proj::{CppNamespace}::{Name}" : CppWinrtType;
 
-        PyRequiresMetaclass = type.Methods.Any(m => m.IsStatic) || type.IsCustomNumeric();
+        PyRequiresMetaclass =
+            IsComposable || type.Methods.Any(m => m.IsStatic) || type.IsCustomNumeric();
 
         IsPyIterator = type.ImplementsInterface("Windows.Foundation.Collections.IIterator`1");
         IsPyIterable =

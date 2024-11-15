@@ -138,7 +138,10 @@ class SoftwareBitmapSource(windows_foundation.IClosable, winrt.system.Object):
     def close(self) -> None: ...
     def set_bitmap_async(self, software_bitmap: windows_graphics_imaging.SoftwareBitmap, /) -> windows_foundation.IAsyncAction: ...
 
-class SurfaceImageSource(winrt.system.Object):
+class SurfaceImageSource_Static(type):
+    pass
+
+class SurfaceImageSource(winrt.system.Object, metaclass=SurfaceImageSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SurfaceImageSource: ...
     @typing.overload
@@ -209,7 +212,10 @@ class WriteableBitmap(winrt.system.Object):
     @_property
     def pixel_buffer(self) -> windows_storage_streams.IBuffer: ...
 
-class XamlRenderingBackgroundTask(winrt.system.Object):
+class XamlRenderingBackgroundTask_Static(type):
+    pass
+
+class XamlRenderingBackgroundTask(winrt.system.Object, metaclass=XamlRenderingBackgroundTask_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlRenderingBackgroundTask: ...
 

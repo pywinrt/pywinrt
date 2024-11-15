@@ -273,7 +273,10 @@ class HyperlinkClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HyperlinkClickEventArgs: ...
 
-class Inline(winrt.system.Object):
+class Inline_Static(type):
+    pass
+
+class Inline(winrt.system.Object, metaclass=Inline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Inline: ...
 
@@ -368,7 +371,10 @@ class Run(winrt.system.Object, metaclass=Run_Static):
     @flow_direction.setter
     def flow_direction(self, value: microsoft_ui_xaml.FlowDirection) -> None: ...
 
-class Span(winrt.system.Object):
+class Span_Static(type):
+    pass
+
+class Span(winrt.system.Object, metaclass=Span_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Span: ...
     def __new__(cls: typing.Type[Span]) -> Span: ...
@@ -533,7 +539,10 @@ class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     @_property
     def ranges(self) -> typing.MutableSequence[TextRange]: ...
 
-class TextHighlighterBase(winrt.system.Object):
+class TextHighlighterBase_Static(type):
+    pass
+
+class TextHighlighterBase(winrt.system.Object, metaclass=TextHighlighterBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextHighlighterBase: ...
 

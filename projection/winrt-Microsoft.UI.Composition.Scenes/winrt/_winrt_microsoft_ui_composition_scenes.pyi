@@ -34,7 +34,10 @@ class SceneBoundingBox(winrt.system.Object):
     @_property
     def size(self) -> windows_foundation_numerics.Vector3: ...
 
-class SceneComponent(winrt.system.Object):
+class SceneComponent_Static(type):
+    pass
+
+class SceneComponent(winrt.system.Object, metaclass=SceneComponent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneComponent: ...
     @_property
@@ -73,11 +76,17 @@ class SceneComponentCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class SceneMaterial(winrt.system.Object):
+class SceneMaterial_Static(type):
+    pass
+
+class SceneMaterial(winrt.system.Object, metaclass=SceneMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterial: ...
 
-class SceneMaterialInput(winrt.system.Object):
+class SceneMaterialInput_Static(type):
+    pass
+
+class SceneMaterialInput(winrt.system.Object, metaclass=SceneMaterialInput_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterialInput: ...
 
@@ -245,11 +254,17 @@ class SceneNodeCollection(winrt.system.Object, winrt._winrt.MutableSequence[Scen
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class SceneObject(winrt.system.Object):
+class SceneObject_Static(type):
+    pass
+
+class SceneObject(winrt.system.Object, metaclass=SceneObject_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneObject: ...
 
-class ScenePbrMaterial(winrt.system.Object):
+class ScenePbrMaterial_Static(type):
+    pass
+
+class ScenePbrMaterial(winrt.system.Object, metaclass=ScenePbrMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScenePbrMaterial: ...
     @_property
@@ -289,7 +304,10 @@ class ScenePbrMaterial(winrt.system.Object):
     @alpha_cutoff.setter
     def alpha_cutoff(self, value: winrt.system.Single) -> None: ...
 
-class SceneRendererComponent(winrt.system.Object):
+class SceneRendererComponent_Static(type):
+    pass
+
+class SceneRendererComponent(winrt.system.Object, metaclass=SceneRendererComponent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneRendererComponent: ...
 

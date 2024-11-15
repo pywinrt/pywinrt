@@ -2480,6 +2480,31 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentIslandEnvironment};
 
+    static PyGetSetDef getset_ContentIslandEnvironment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentIslandEnvironment_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentIslandEnvironment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentIslandEnvironment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentIslandEnvironment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentIslandEnvironment_Static =
+    {
+        "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentIslandEnvironment_Static
+    };
+
     // ----- ContentIslandStateChangedEventArgs class --------------------
 
     static PyObject* _new_ContentIslandStateChangedEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3732,6 +3757,31 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentSite};
 
+    static PyGetSetDef getset_ContentSite_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentSite_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentSite_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentSite_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentSite_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentSite_Static =
+    {
+        "winrt._winrt_microsoft_ui_content.ContentSite_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentSite_Static
+    };
+
     // ----- ContentSiteEnvironment class --------------------
 
     static PyObject* _new_ContentSiteEnvironment(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3989,6 +4039,31 @@ namespace py::cpp::Microsoft::UI::Content
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentSiteEnvironment};
 
+    static PyGetSetDef getset_ContentSiteEnvironment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentSiteEnvironment_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentSiteEnvironment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentSiteEnvironment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentSiteEnvironment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentSiteEnvironment_Static =
+    {
+        "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentSiteEnvironment_Static
+    };
+
     // ----- ContentSiteEnvironmentView class --------------------
 
     static PyObject* _new_ContentSiteEnvironmentView(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4108,6 +4183,31 @@ namespace py::cpp::Microsoft::UI::Content
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentSiteEnvironmentView};
+
+    static PyGetSetDef getset_ContentSiteEnvironmentView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentSiteEnvironmentView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentSiteEnvironmentView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentSiteEnvironmentView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentSiteEnvironmentView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentSiteEnvironmentView_Static =
+    {
+        "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentSiteEnvironmentView_Static
+    };
 
     // ----- ContentSiteRequestedStateChangedEventArgs class --------------------
 
@@ -4645,6 +4745,31 @@ namespace py::cpp::Microsoft::UI::Content
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentSiteView};
+
+    static PyGetSetDef getset_ContentSiteView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentSiteView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentSiteView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentSiteView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentSiteView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentSiteView_Static =
+    {
+        "winrt._winrt_microsoft_ui_content.ContentSiteView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentSiteView_Static
+    };
 
     // ----- DesktopChildSiteBridge class --------------------
 
@@ -6147,7 +6272,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentIslandEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentIslandEnvironment, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentIslandEnvironment_Static{PyType_FromSpec(&type_spec_ContentIslandEnvironment_Static)};
+    if (!type_ContentIslandEnvironment_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentIslandEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentIslandEnvironment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentIslandEnvironment_Static.get()))};
     if (!ContentIslandEnvironment_type)
     {
         return nullptr;
@@ -6159,19 +6290,37 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentSite_type{py::register_python_type(module.get(), &type_spec_ContentSite, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentSite_Static{PyType_FromSpec(&type_spec_ContentSite_Static)};
+    if (!type_ContentSite_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentSite_type{py::register_python_type(module.get(), &type_spec_ContentSite, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentSite_Static.get()))};
     if (!ContentSite_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContentSiteEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironment, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentSiteEnvironment_Static{PyType_FromSpec(&type_spec_ContentSiteEnvironment_Static)};
+    if (!type_ContentSiteEnvironment_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentSiteEnvironment_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentSiteEnvironment_Static.get()))};
     if (!ContentSiteEnvironment_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContentSiteEnvironmentView_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironmentView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentSiteEnvironmentView_Static{PyType_FromSpec(&type_spec_ContentSiteEnvironmentView_Static)};
+    if (!type_ContentSiteEnvironmentView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentSiteEnvironmentView_type{py::register_python_type(module.get(), &type_spec_ContentSiteEnvironmentView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentSiteEnvironmentView_Static.get()))};
     if (!ContentSiteEnvironmentView_type)
     {
         return nullptr;
@@ -6183,7 +6332,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentSiteView_type{py::register_python_type(module.get(), &type_spec_ContentSiteView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentSiteView_Static{PyType_FromSpec(&type_spec_ContentSiteView_Static)};
+    if (!type_ContentSiteView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentSiteView_type{py::register_python_type(module.get(), &type_spec_ContentSiteView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentSiteView_Static.get()))};
     if (!ContentSiteView_type)
     {
         return nullptr;

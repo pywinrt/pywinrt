@@ -159,7 +159,10 @@ class InteractionTrackerIdleStateEnteredArgs(winrt.system.Object):
     @_property
     def is_from_binding(self) -> bool: ...
 
-class InteractionTrackerInertiaModifier(winrt.system.Object):
+class InteractionTrackerInertiaModifier_Static(type):
+    pass
+
+class InteractionTrackerInertiaModifier(winrt.system.Object, metaclass=InteractionTrackerInertiaModifier_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerInertiaModifier: ...
 
@@ -264,7 +267,10 @@ class InteractionTrackerValuesChangedArgs(winrt.system.Object):
     @_property
     def scale(self) -> winrt.system.Single: ...
 
-class InteractionTrackerVector2InertiaModifier(winrt.system.Object):
+class InteractionTrackerVector2InertiaModifier_Static(type):
+    pass
+
+class InteractionTrackerVector2InertiaModifier(winrt.system.Object, metaclass=InteractionTrackerVector2InertiaModifier_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InteractionTrackerVector2InertiaModifier: ...
 

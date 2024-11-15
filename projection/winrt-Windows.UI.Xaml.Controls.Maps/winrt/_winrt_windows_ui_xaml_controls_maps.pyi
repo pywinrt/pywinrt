@@ -29,14 +29,20 @@ class MapZoomLevelRange:
     max: winrt.system.Double
     def __init__(self, min: winrt.system.Double = 0, max: winrt.system.Double = 0) -> None: ...
 
-class CustomMapTileDataSource(winrt.system.Object):
+class CustomMapTileDataSource_Static(type):
+    pass
+
+class CustomMapTileDataSource(winrt.system.Object, metaclass=CustomMapTileDataSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CustomMapTileDataSource: ...
     def __new__(cls: typing.Type[CustomMapTileDataSource]) -> CustomMapTileDataSource: ...
     def add_bitmap_requested(self, handler: windows_foundation.TypedEventHandler[CustomMapTileDataSource, MapTileBitmapRequestedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_bitmap_requested(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class HttpMapTileDataSource(winrt.system.Object):
+class HttpMapTileDataSource_Static(type):
+    pass
+
+class HttpMapTileDataSource(winrt.system.Object, metaclass=HttpMapTileDataSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HttpMapTileDataSource: ...
     @typing.overload
@@ -56,7 +62,10 @@ class HttpMapTileDataSource(winrt.system.Object):
     @_property
     def additional_request_headers(self) -> typing.MutableMapping[str, str]: ...
 
-class LocalMapTileDataSource(winrt.system.Object):
+class LocalMapTileDataSource_Static(type):
+    pass
+
+class LocalMapTileDataSource(winrt.system.Object, metaclass=LocalMapTileDataSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LocalMapTileDataSource: ...
     @typing.overload
@@ -576,7 +585,10 @@ class MapControlTransitFeatureRightTappedEventArgs(winrt.system.Object):
     @_property
     def transit_properties(self) -> typing.Mapping[str, winrt.system.Object]: ...
 
-class MapCustomExperience(winrt.system.Object):
+class MapCustomExperience_Static(type):
+    pass
+
+class MapCustomExperience(winrt.system.Object, metaclass=MapCustomExperience_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapCustomExperience: ...
     def __new__(cls: typing.Type[MapCustomExperience]) -> MapCustomExperience: ...
@@ -968,7 +980,10 @@ class MapRightTappedEventArgs(winrt.system.Object):
     @_property
     def position(self) -> windows_foundation.Point: ...
 
-class MapRouteView(winrt.system.Object):
+class MapRouteView_Static(type):
+    pass
+
+class MapRouteView(winrt.system.Object, metaclass=MapRouteView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapRouteView: ...
     def __new__(cls: typing.Type[MapRouteView], route: windows_services_maps.MapRoute) -> MapRouteView: ...
@@ -1213,7 +1228,10 @@ class MapTileBitmapRequestedEventArgs(winrt.system.Object):
     @_property
     def frame_index(self) -> winrt.system.Int32: ...
 
-class MapTileDataSource(winrt.system.Object):
+class MapTileDataSource_Static(type):
+    pass
+
+class MapTileDataSource(winrt.system.Object, metaclass=MapTileDataSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapTileDataSource: ...
     def __new__(cls: typing.Type[MapTileDataSource]) -> MapTileDataSource: ...

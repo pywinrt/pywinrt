@@ -113,7 +113,10 @@ class AppWindowClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class AppWindowPresenter(winrt.system.Object):
+class AppWindowPresenter_Static(type):
+    pass
+
+class AppWindowPresenter(winrt.system.Object, metaclass=AppWindowPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppWindowPresenter: ...
     @_property

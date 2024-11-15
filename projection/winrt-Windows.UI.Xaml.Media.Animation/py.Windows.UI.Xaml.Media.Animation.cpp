@@ -382,6 +382,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_TPFLAGS_DEFAULT,
         _type_slots_BasicConnectedAnimationConfiguration};
 
+    static PyGetSetDef getset_BasicConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BasicConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_BasicConnectedAnimationConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BasicConnectedAnimationConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BasicConnectedAnimationConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BasicConnectedAnimationConfiguration_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.BasicConnectedAnimationConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BasicConnectedAnimationConfiguration_Static
+    };
+
     // ----- BeginStoryboard class --------------------
 
     static PyObject* _new_BeginStoryboard(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3525,6 +3550,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_TPFLAGS_DEFAULT,
         _type_slots_ConnectedAnimationConfiguration};
 
+    static PyGetSetDef getset_ConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ConnectedAnimationConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ConnectedAnimationConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ConnectedAnimationConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ConnectedAnimationConfiguration_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.ConnectedAnimationConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ConnectedAnimationConfiguration_Static
+    };
+
     // ----- ConnectedAnimationService class --------------------
 
     static PyObject* _new_ConnectedAnimationService(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4845,6 +4895,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DirectConnectedAnimationConfiguration};
+
+    static PyGetSetDef getset_DirectConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DirectConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DirectConnectedAnimationConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DirectConnectedAnimationConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DirectConnectedAnimationConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DirectConnectedAnimationConfiguration_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.DirectConnectedAnimationConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DirectConnectedAnimationConfiguration_Static
+    };
 
     // ----- DiscreteColorKeyFrame class --------------------
 
@@ -11462,6 +11537,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_TPFLAGS_DEFAULT,
         _type_slots_GravityConnectedAnimationConfiguration};
 
+    static PyGetSetDef getset_GravityConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GravityConnectedAnimationConfiguration_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GravityConnectedAnimationConfiguration_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GravityConnectedAnimationConfiguration_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GravityConnectedAnimationConfiguration_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GravityConnectedAnimationConfiguration_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.GravityConnectedAnimationConfiguration_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GravityConnectedAnimationConfiguration_Static
+    };
+
     // ----- KeySpline class --------------------
 
     static PyObject* _new_KeySpline(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12335,6 +12435,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationTransitionInfo};
+
+    static PyGetSetDef getset_NavigationTransitionInfo_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationTransitionInfo_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationTransitionInfo_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationTransitionInfo_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationTransitionInfo_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationTransitionInfo_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.NavigationTransitionInfo_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationTransitionInfo_Static
+    };
 
     // ----- ObjectAnimationUsingKeyFrames class --------------------
 
@@ -24470,6 +24595,31 @@ namespace py::cpp::Windows::UI::Xaml::Media::Animation
         Py_TPFLAGS_DEFAULT,
         _type_slots_Transition};
 
+    static PyGetSetDef getset_Transition_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Transition_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Transition_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Transition_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Transition_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Transition_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media_animation.Transition_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Transition_Static
+    };
+
     // ----- TransitionCollection class --------------------
 
     static PyObject* _new_TransitionCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -25685,7 +25835,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BasicConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle type_BasicConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_BasicConnectedAnimationConfiguration_Static)};
+    if (!type_BasicConnectedAnimationConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BasicConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BasicConnectedAnimationConfiguration_Static.get()))};
     if (!BasicConnectedAnimationConfiguration_type)
     {
         return nullptr;
@@ -25781,7 +25937,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_ConnectedAnimationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_ConnectedAnimationConfiguration_Static)};
+    if (!type_ConnectedAnimationConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_ConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ConnectedAnimationConfiguration_Static.get()))};
     if (!ConnectedAnimationConfiguration_type)
     {
         return nullptr;
@@ -25829,7 +25991,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DirectConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DirectConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_DirectConnectedAnimationConfiguration_Static)};
+    if (!type_DirectConnectedAnimationConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DirectConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DirectConnectedAnimationConfiguration_Static.get()))};
     if (!DirectConnectedAnimationConfiguration_type)
     {
         return nullptr;
@@ -26099,7 +26267,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GravityConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GravityConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_GravityConnectedAnimationConfiguration_Static)};
+    if (!type_GravityConnectedAnimationConfiguration_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GravityConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GravityConnectedAnimationConfiguration_Static.get()))};
     if (!GravityConnectedAnimationConfiguration_type)
     {
         return nullptr;
@@ -26153,7 +26327,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_NavigationTransitionInfo_Static)};
+    if (!type_NavigationTransitionInfo_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationTransitionInfo_Static.get()))};
     if (!NavigationTransitionInfo_type)
     {
         return nullptr;
@@ -26513,7 +26693,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Transition_type{py::register_python_type(module.get(), &type_spec_Transition, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Transition_Static{PyType_FromSpec(&type_spec_Transition_Static)};
+    if (!type_Transition_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transition_type{py::register_python_type(module.get(), &type_spec_Transition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transition_Static.get()))};
     if (!Transition_type)
     {
         return nullptr;

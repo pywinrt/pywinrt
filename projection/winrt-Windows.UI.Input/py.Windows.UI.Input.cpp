@@ -129,6 +129,31 @@ namespace py::cpp::Windows::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_AttachableInputObject};
 
+    static PyGetSetDef getset_AttachableInputObject_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AttachableInputObject_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AttachableInputObject_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AttachableInputObject_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AttachableInputObject_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AttachableInputObject_Static =
+    {
+        "winrt._winrt_windows_ui_input.AttachableInputObject_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AttachableInputObject_Static
+    };
+
     // ----- CrossSlidingEventArgs class --------------------
 
     static PyObject* _new_CrossSlidingEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14178,7 +14203,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AttachableInputObject_type{py::register_python_type(module.get(), &type_spec_AttachableInputObject, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AttachableInputObject_Static{PyType_FromSpec(&type_spec_AttachableInputObject_Static)};
+    if (!type_AttachableInputObject_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AttachableInputObject_type{py::register_python_type(module.get(), &type_spec_AttachableInputObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AttachableInputObject_Static.get()))};
     if (!AttachableInputObject_type)
     {
         return nullptr;

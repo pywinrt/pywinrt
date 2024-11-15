@@ -4235,6 +4235,31 @@ namespace py::cpp::Microsoft::UI::Input
         Py_TPFLAGS_DEFAULT,
         _type_slots_InputCustomCursor};
 
+    static PyGetSetDef getset_InputCustomCursor_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InputCustomCursor_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InputCustomCursor_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputCustomCursor_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputCustomCursor_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputCustomCursor_Static =
+    {
+        "winrt._winrt_microsoft_ui_input.InputCustomCursor_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputCustomCursor_Static
+    };
+
     // ----- InputDesktopNamedResourceCursor class --------------------
 
     static PyObject* _new_InputDesktopNamedResourceCursor(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7319,6 +7344,31 @@ namespace py::cpp::Microsoft::UI::Input
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InputObject};
+
+    static PyGetSetDef getset_InputObject_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InputObject_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InputObject_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InputObject_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InputObject_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InputObject_Static =
+    {
+        "winrt._winrt_microsoft_ui_input.InputObject_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InputObject_Static
+    };
 
     // ----- InputPointerSource class --------------------
 
@@ -13882,7 +13932,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InputCustomCursor_Static{PyType_FromSpec(&type_spec_InputCustomCursor_Static)};
+    if (!type_InputCustomCursor_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputCustomCursor_Static.get()))};
     if (!InputCustomCursor_type)
     {
         return nullptr;
@@ -13978,7 +14034,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InputObject_Static{PyType_FromSpec(&type_spec_InputObject_Static)};
+    if (!type_InputObject_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputObject_Static.get()))};
     if (!InputObject_type)
     {
         return nullptr;

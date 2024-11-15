@@ -122,7 +122,10 @@ class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static)
     @color_channel.setter
     def color_channel(self, value: microsoft_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
-class TabViewListView(winrt.system.Object):
+class TabViewListView_Static(type):
+    pass
+
+class TabViewListView(winrt.system.Object, metaclass=TabViewListView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewListView: ...
     def __new__(cls: typing.Type[TabViewListView]) -> TabViewListView: ...

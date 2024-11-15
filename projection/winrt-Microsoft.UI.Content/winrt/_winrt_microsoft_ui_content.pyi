@@ -140,7 +140,10 @@ class ContentIslandAutomationProviderRequestedEventArgs(winrt.system.Object):
     @automation_provider.setter
     def automation_provider(self, value: winrt.system.Object) -> None: ...
 
-class ContentIslandEnvironment(winrt.system.Object):
+class ContentIslandEnvironment_Static(type):
+    pass
+
+class ContentIslandEnvironment(winrt.system.Object, metaclass=ContentIslandEnvironment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentIslandEnvironment: ...
     def add_setting_changed(self, handler: windows_foundation.TypedEventHandler[ContentIslandEnvironment, ContentEnvironmentSettingChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -167,7 +170,10 @@ class ContentIslandStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_site_visible_change(self) -> bool: ...
 
-class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object):
+class ContentSite_Static(type):
+    pass
+
+class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, winrt.system.Object, metaclass=ContentSite_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -229,7 +235,10 @@ class ContentSite(microsoft_ui.IClosableNotifier, windows_foundation.IClosable, 
     @_property
     def is_closed(self) -> bool: ...
 
-class ContentSiteEnvironment(winrt.system.Object):
+class ContentSiteEnvironment_Static(type):
+    pass
+
+class ContentSiteEnvironment(winrt.system.Object, metaclass=ContentSiteEnvironment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteEnvironment: ...
     def notify_setting_changed(self, setting: str, /) -> None: ...
@@ -244,7 +253,10 @@ class ContentSiteEnvironment(winrt.system.Object):
     @_property
     def view(self) -> ContentSiteEnvironmentView: ...
 
-class ContentSiteEnvironmentView(winrt.system.Object):
+class ContentSiteEnvironmentView_Static(type):
+    pass
+
+class ContentSiteEnvironmentView(winrt.system.Object, metaclass=ContentSiteEnvironmentView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteEnvironmentView: ...
     @_property
@@ -259,7 +271,10 @@ class ContentSiteRequestedStateChangedEventArgs(winrt.system.Object):
     @_property
     def did_requested_size_change(self) -> bool: ...
 
-class ContentSiteView(winrt.system.Object):
+class ContentSiteView_Static(type):
+    pass
+
+class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentSiteView: ...
     @_property

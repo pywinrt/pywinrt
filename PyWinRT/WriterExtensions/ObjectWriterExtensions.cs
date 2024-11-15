@@ -21,6 +21,8 @@ static class ObjectWriterExtensions
             w.WriteLine($"class {type.Name}_Static(type):");
             w.Indent++;
 
+            var hasMembers = false;
+
             foreach (var method in type.Methods.Where(m => m.IsStatic))
             {
                 if (type.Methods.Count(m => m.Name == method.Name) > 1)
@@ -29,12 +31,16 @@ static class ObjectWriterExtensions
                 }
 
                 w.WritePythonMethodTyping(method, ns, "cls");
+
+                hasMembers = true;
             }
 
             foreach (var evt in type.Events.Where(e => e.IsStatic))
             {
                 w.WritePythonMethodTyping(evt.AddMethod, ns, "cls");
                 w.WritePythonMethodTyping(evt.RemoveMethod, ns, "cls");
+
+                hasMembers = true;
             }
 
             foreach (var prop in type.Type.Properties.Where(p => p.GetMethod.IsStatic))
@@ -50,6 +56,13 @@ static class ObjectWriterExtensions
                     w.WriteLine($"@{name}.setter");
                     w.WriteLine($"def {name}(cls, value: {propType}) -> None: ...");
                 }
+
+                hasMembers = true;
+            }
+
+            if (!hasMembers)
+            {
+                w.WriteLine("pass");
             }
 
             w.Indent--;

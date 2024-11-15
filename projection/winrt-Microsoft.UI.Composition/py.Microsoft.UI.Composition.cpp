@@ -2735,6 +2735,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionAnimation};
 
+    static PyGetSetDef getset_CompositionAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionAnimation_Static
+    };
+
     // ----- CompositionAnimationGroup class --------------------
 
     static PyObject* _new_CompositionAnimationGroup(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3277,6 +3302,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionBrush};
+
+    static PyGetSetDef getset_CompositionBrush_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionBrush_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionBrush_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionBrush_Static
+    };
 
     // ----- CompositionCapabilities class --------------------
 
@@ -3998,6 +4048,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionClip};
+
+    static PyGetSetDef getset_CompositionClip_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionClip_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionClip_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionClip_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionClip_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionClip_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionClip_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionClip_Static
+    };
 
     // ----- CompositionColorBrush class --------------------
 
@@ -5669,6 +5744,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionDrawingSurface};
 
+    static PyGetSetDef getset_CompositionDrawingSurface_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionDrawingSurface_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionDrawingSurface_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionDrawingSurface_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionDrawingSurface_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionDrawingSurface_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionDrawingSurface_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionDrawingSurface_Static
+    };
+
     // ----- CompositionEasingFunction class --------------------
 
     static PyObject* _new_CompositionEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7258,6 +7358,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionGeometry};
 
+    static PyGetSetDef getset_CompositionGeometry_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionGeometry_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionGeometry_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionGeometry_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionGeometry_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionGeometry_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionGeometry_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionGeometry_Static
+    };
+
     // ----- CompositionGradientBrush class --------------------
 
     static PyObject* _new_CompositionGradientBrush(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -7971,6 +8096,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionGradientBrush};
 
+    static PyGetSetDef getset_CompositionGradientBrush_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionGradientBrush_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionGradientBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionGradientBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionGradientBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionGradientBrush_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionGradientBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionGradientBrush_Static
+    };
+
     // ----- CompositionGraphicsDevice class --------------------
 
     static PyObject* _new_CompositionGraphicsDevice(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8522,6 +8672,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionLight};
+
+    static PyGetSetDef getset_CompositionLight_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionLight_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionLight_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionLight_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionLight_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionLight_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionLight_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionLight_Static
+    };
 
     // ----- CompositionLineGeometry class --------------------
 
@@ -14437,6 +14612,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionShadow};
 
+    static PyGetSetDef getset_CompositionShadow_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionShadow_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionShadow_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionShadow_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionShadow_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionShadow_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionShadow_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionShadow_Static
+    };
+
     // ----- CompositionShape class --------------------
 
     static PyObject* _new_CompositionShape(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -14874,6 +15074,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionShape};
+
+    static PyGetSetDef getset_CompositionShape_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionShape_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionShape_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionShape_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionShape_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionShape_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionShape_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionShape_Static
+    };
 
     // ----- CompositionShapeCollection class --------------------
 
@@ -17992,6 +18217,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionTransform};
 
+    static PyGetSetDef getset_CompositionTransform_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionTransform_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionTransform_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionTransform_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionTransform_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionTransform_Static
+    };
+
     // ----- CompositionViewBox class --------------------
 
     static PyObject* _new_CompositionViewBox(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18473,6 +18723,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CompositionVirtualDrawingSurface};
+
+    static PyGetSetDef getset_CompositionVirtualDrawingSurface_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CompositionVirtualDrawingSurface_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CompositionVirtualDrawingSurface_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CompositionVirtualDrawingSurface_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CompositionVirtualDrawingSurface_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CompositionVirtualDrawingSurface_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CompositionVirtualDrawingSurface_Static
+    };
 
     // ----- CompositionVisualSurface class --------------------
 
@@ -21947,6 +22222,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContainerVisual};
 
+    static PyGetSetDef getset_ContainerVisual_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContainerVisual_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContainerVisual_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContainerVisual_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContainerVisual_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContainerVisual_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.ContainerVisual_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContainerVisual_Static
+    };
+
     // ----- CubicBezierEasingFunction class --------------------
 
     static PyObject* _new_CubicBezierEasingFunction(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -25076,6 +25376,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_KeyFrameAnimation};
 
+    static PyGetSetDef getset_KeyFrameAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_KeyFrameAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_KeyFrameAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_KeyFrameAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_KeyFrameAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_KeyFrameAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.KeyFrameAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_KeyFrameAnimation_Static
+    };
+
     // ----- LayerVisual class --------------------
 
     static PyObject* _new_LayerVisual(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -25583,6 +25908,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NaturalMotionAnimation};
+
+    static PyGetSetDef getset_NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NaturalMotionAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NaturalMotionAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NaturalMotionAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NaturalMotionAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.NaturalMotionAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NaturalMotionAnimation_Static
+    };
 
     // ----- PathKeyFrameAnimation class --------------------
 
@@ -27809,6 +28159,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScalarNaturalMotionAnimation};
+
+    static PyGetSetDef getset_ScalarNaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScalarNaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScalarNaturalMotionAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScalarNaturalMotionAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScalarNaturalMotionAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScalarNaturalMotionAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScalarNaturalMotionAnimation_Static
+    };
 
     // ----- ShapeVisual class --------------------
 
@@ -30653,6 +31028,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector2NaturalMotionAnimation};
 
+    static PyGetSetDef getset_Vector2NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Vector2NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector2NaturalMotionAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector2NaturalMotionAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector2NaturalMotionAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector2NaturalMotionAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector2NaturalMotionAnimation_Static
+    };
+
     // ----- Vector3KeyFrameAnimation class --------------------
 
     static PyObject* _new_Vector3KeyFrameAnimation(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -31053,6 +31453,31 @@ namespace py::cpp::Microsoft::UI::Composition
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Vector3NaturalMotionAnimation};
+
+    static PyGetSetDef getset_Vector3NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Vector3NaturalMotionAnimation_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Vector3NaturalMotionAnimation_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Vector3NaturalMotionAnimation_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Vector3NaturalMotionAnimation_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Vector3NaturalMotionAnimation_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Vector3NaturalMotionAnimation_Static
+    };
 
     // ----- Vector4KeyFrameAnimation class --------------------
 
@@ -32598,6 +33023,31 @@ namespace py::cpp::Microsoft::UI::Composition
         Py_TPFLAGS_DEFAULT,
         _type_slots_Visual};
 
+    static PyGetSetDef getset_Visual_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Visual_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Visual_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Visual_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Visual_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Visual_Static =
+    {
+        "winrt._winrt_microsoft_ui_composition.Visual_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Visual_Static
+    };
+
     // ----- VisualCollection class --------------------
 
     static PyObject* _new_VisualCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -34000,7 +34450,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionAnimation_type{py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionAnimation_Static{PyType_FromSpec(&type_spec_CompositionAnimation_Static)};
+    if (!type_CompositionAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionAnimation_type{py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionAnimation_Static.get()))};
     if (!CompositionAnimation_type)
     {
         return nullptr;
@@ -34036,7 +34492,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionBrush_Static{PyType_FromSpec(&type_spec_CompositionBrush_Static)};
+    if (!type_CompositionBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionBrush_Static.get()))};
     if (!CompositionBrush_type)
     {
         return nullptr;
@@ -34048,7 +34510,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionClip_type{py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionClip_Static{PyType_FromSpec(&type_spec_CompositionClip_Static)};
+    if (!type_CompositionClip_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionClip_type{py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionClip_Static.get()))};
     if (!CompositionClip_type)
     {
         return nullptr;
@@ -34084,7 +34552,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionDrawingSurface_Static{PyType_FromSpec(&type_spec_CompositionDrawingSurface_Static)};
+    if (!type_CompositionDrawingSurface_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionDrawingSurface_Static.get()))};
     if (!CompositionDrawingSurface_type)
     {
         return nullptr;
@@ -34132,13 +34606,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionGeometry_Static{PyType_FromSpec(&type_spec_CompositionGeometry_Static)};
+    if (!type_CompositionGeometry_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGeometry_Static.get()))};
     if (!CompositionGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionGradientBrush_Static{PyType_FromSpec(&type_spec_CompositionGradientBrush_Static)};
+    if (!type_CompositionGradientBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGradientBrush_Static.get()))};
     if (!CompositionGradientBrush_type)
     {
         return nullptr;
@@ -34150,7 +34636,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionLight_type{py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionLight_Static{PyType_FromSpec(&type_spec_CompositionLight_Static)};
+    if (!type_CompositionLight_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionLight_type{py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionLight_Static.get()))};
     if (!CompositionLight_type)
     {
         return nullptr;
@@ -34276,13 +34768,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionShadow_type{py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionShadow_Static{PyType_FromSpec(&type_spec_CompositionShadow_Static)};
+    if (!type_CompositionShadow_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionShadow_type{py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShadow_Static.get()))};
     if (!CompositionShadow_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionShape_type{py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionShape_Static{PyType_FromSpec(&type_spec_CompositionShape_Static)};
+    if (!type_CompositionShape_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionShape_type{py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShape_Static.get()))};
     if (!CompositionShape_type)
     {
         return nullptr;
@@ -34312,7 +34816,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionTransform_type{py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionTransform_Static{PyType_FromSpec(&type_spec_CompositionTransform_Static)};
+    if (!type_CompositionTransform_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionTransform_type{py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionTransform_Static.get()))};
     if (!CompositionTransform_type)
     {
         return nullptr;
@@ -34324,7 +34834,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionVirtualDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CompositionVirtualDrawingSurface_Static{PyType_FromSpec(&type_spec_CompositionVirtualDrawingSurface_Static)};
+    if (!type_CompositionVirtualDrawingSurface_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionVirtualDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionVirtualDrawingSurface_Static.get()))};
     if (!CompositionVirtualDrawingSurface_type)
     {
         return nullptr;
@@ -34348,7 +34864,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContainerVisual_type{py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContainerVisual_Static{PyType_FromSpec(&type_spec_ContainerVisual_Static)};
+    if (!type_ContainerVisual_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContainerVisual_type{py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContainerVisual_Static.get()))};
     if (!ContainerVisual_type)
     {
         return nullptr;
@@ -34408,7 +34930,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_KeyFrameAnimation_Static{PyType_FromSpec(&type_spec_KeyFrameAnimation_Static)};
+    if (!type_KeyFrameAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyFrameAnimation_Static.get()))};
     if (!KeyFrameAnimation_type)
     {
         return nullptr;
@@ -34426,7 +34954,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_NaturalMotionAnimation_Static)};
+    if (!type_NaturalMotionAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NaturalMotionAnimation_Static.get()))};
     if (!NaturalMotionAnimation_type)
     {
         return nullptr;
@@ -34480,7 +35014,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScalarNaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_ScalarNaturalMotionAnimation_Static)};
+    if (!type_ScalarNaturalMotionAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScalarNaturalMotionAnimation_Static.get()))};
     if (!ScalarNaturalMotionAnimation_type)
     {
         return nullptr;
@@ -34540,7 +35080,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Vector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Vector2NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_Vector2NaturalMotionAnimation_Static)};
+    if (!type_Vector2NaturalMotionAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector2NaturalMotionAnimation_Static.get()))};
     if (!Vector2NaturalMotionAnimation_type)
     {
         return nullptr;
@@ -34552,7 +35098,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Vector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Vector3NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_Vector3NaturalMotionAnimation_Static)};
+    if (!type_Vector3NaturalMotionAnimation_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector3NaturalMotionAnimation_Static.get()))};
     if (!Vector3NaturalMotionAnimation_type)
     {
         return nullptr;
@@ -34564,7 +35116,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Visual_type{py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Visual_Static{PyType_FromSpec(&type_spec_Visual_Static)};
+    if (!type_Visual_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Visual_type{py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Visual_Static.get()))};
     if (!Visual_type)
     {
         return nullptr;

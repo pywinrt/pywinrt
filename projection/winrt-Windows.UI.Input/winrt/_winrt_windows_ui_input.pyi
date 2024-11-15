@@ -44,7 +44,10 @@ class ManipulationVelocities:
     expansion: winrt.system.Single
     def __init__(self, linear: windows_foundation.Point = windows_foundation.Point(), angular: winrt.system.Single = 0, expansion: winrt.system.Single = 0) -> None: ...
 
-class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object):
+class AttachableInputObject_Static(type):
+    pass
+
+class AttachableInputObject(windows_foundation.IClosable, winrt.system.Object, metaclass=AttachableInputObject_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

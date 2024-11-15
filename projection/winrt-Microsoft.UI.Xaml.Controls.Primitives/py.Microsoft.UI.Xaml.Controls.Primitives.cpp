@@ -3085,6 +3085,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_CarouselPanel};
 
+    static PyGetSetDef getset_CarouselPanel_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CarouselPanel_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CarouselPanel_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CarouselPanel_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CarouselPanel_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CarouselPanel_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.CarouselPanel_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CarouselPanel_Static
+    };
+
     // ----- ColorSpectrum class --------------------
 
     static PyObject* _new_ColorSpectrum(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7237,6 +7262,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_DragCompletedEventArgs};
 
+    static PyGetSetDef getset_DragCompletedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DragCompletedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DragCompletedEventArgs_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DragCompletedEventArgs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DragCompletedEventArgs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DragCompletedEventArgs_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragCompletedEventArgs_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DragCompletedEventArgs_Static
+    };
+
     // ----- DragDeltaEventArgs class --------------------
 
     static PyObject* _new_DragDeltaEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7382,6 +7432,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_DragDeltaEventArgs};
 
+    static PyGetSetDef getset_DragDeltaEventArgs_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DragDeltaEventArgs_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DragDeltaEventArgs_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DragDeltaEventArgs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DragDeltaEventArgs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DragDeltaEventArgs_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragDeltaEventArgs_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DragDeltaEventArgs_Static
+    };
+
     // ----- DragStartedEventArgs class --------------------
 
     static PyObject* _new_DragStartedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7526,6 +7601,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DragStartedEventArgs};
+
+    static PyGetSetDef getset_DragStartedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DragStartedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DragStartedEventArgs_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DragStartedEventArgs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DragStartedEventArgs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DragStartedEventArgs_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.DragStartedEventArgs_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DragStartedEventArgs_Static
+    };
 
     // ----- FlyoutBase class --------------------
 
@@ -9764,6 +9864,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlyoutShowOptions};
+
+    static PyGetSetDef getset_FlyoutShowOptions_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlyoutShowOptions_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlyoutShowOptions_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlyoutShowOptions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlyoutShowOptions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlyoutShowOptions_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.FlyoutShowOptions_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlyoutShowOptions_Static
+    };
 
     // ----- GeneratorPositionHelper class --------------------
 
@@ -22702,6 +22827,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_OrientedVirtualizingPanel};
 
+    static PyGetSetDef getset_OrientedVirtualizingPanel_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_OrientedVirtualizingPanel_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_OrientedVirtualizingPanel_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_OrientedVirtualizingPanel_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_OrientedVirtualizingPanel_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_OrientedVirtualizingPanel_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_OrientedVirtualizingPanel_Static
+    };
+
     // ----- PickerFlyoutBase class --------------------
 
     static PyObject* _new_PickerFlyoutBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -22987,6 +23137,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PivotHeaderItem};
+
+    static PyGetSetDef getset_PivotHeaderItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PivotHeaderItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PivotHeaderItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PivotHeaderItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PivotHeaderItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PivotHeaderItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.PivotHeaderItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PivotHeaderItem_Static
+    };
 
     // ----- PivotHeaderPanel class --------------------
 
@@ -25960,6 +26135,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_RepeatedScrollSnapPoint};
 
+    static PyGetSetDef getset_RepeatedScrollSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RepeatedScrollSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RepeatedScrollSnapPoint_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeatedScrollSnapPoint_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RepeatedScrollSnapPoint_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RepeatedScrollSnapPoint_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedScrollSnapPoint_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RepeatedScrollSnapPoint_Static
+    };
+
     // ----- RepeatedZoomSnapPoint class --------------------
 
     static PyObject* _new_RepeatedZoomSnapPoint(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -26160,6 +26360,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RepeatedZoomSnapPoint};
+
+    static PyGetSetDef getset_RepeatedZoomSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RepeatedZoomSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RepeatedZoomSnapPoint_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeatedZoomSnapPoint_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RepeatedZoomSnapPoint_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RepeatedZoomSnapPoint_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.RepeatedZoomSnapPoint_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RepeatedZoomSnapPoint_Static
+    };
 
     // ----- ScrollBar class --------------------
 
@@ -30850,6 +31075,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScrollSnapPoint};
 
+    static PyGetSetDef getset_ScrollSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScrollSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScrollSnapPoint_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollSnapPoint_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollSnapPoint_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollSnapPoint_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPoint_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScrollSnapPoint_Static
+    };
+
     // ----- ScrollSnapPointBase class --------------------
 
     static PyObject* _new_ScrollSnapPointBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -30942,6 +31192,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScrollSnapPointBase};
+
+    static PyGetSetDef getset_ScrollSnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScrollSnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScrollSnapPointBase_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollSnapPointBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollSnapPointBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollSnapPointBase_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ScrollSnapPointBase_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScrollSnapPointBase_Static
+    };
 
     // ----- Selector class --------------------
 
@@ -31822,6 +32097,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SnapPointBase};
+
+    static PyGetSetDef getset_SnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SnapPointBase_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SnapPointBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SnapPointBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SnapPointBase_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.SnapPointBase_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SnapPointBase_Static
+    };
 
     // ----- SplitViewTemplateSettings class --------------------
 
@@ -33622,6 +33922,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         Py_TPFLAGS_DEFAULT,
         _type_slots_ZoomSnapPoint};
 
+    static PyGetSetDef getset_ZoomSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ZoomSnapPoint_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ZoomSnapPoint_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ZoomSnapPoint_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ZoomSnapPoint_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ZoomSnapPoint_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPoint_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ZoomSnapPoint_Static
+    };
+
     // ----- ZoomSnapPointBase class --------------------
 
     static PyObject* _new_ZoomSnapPointBase(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -33687,6 +34012,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ZoomSnapPointBase};
+
+    static PyGetSetDef getset_ZoomSnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ZoomSnapPointBase_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ZoomSnapPointBase_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ZoomSnapPointBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ZoomSnapPointBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ZoomSnapPointBase_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_primitives.ZoomSnapPointBase_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ZoomSnapPointBase_Static
+    };
 
     // ----- IScrollController interface --------------------
 
@@ -35248,7 +35598,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle CarouselPanel_type{py::register_python_type(module.get(), &type_spec_CarouselPanel, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CarouselPanel_Static{PyType_FromSpec(&type_spec_CarouselPanel_Static)};
+    if (!type_CarouselPanel_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CarouselPanel_type{py::register_python_type(module.get(), &type_spec_CarouselPanel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CarouselPanel_Static.get()))};
     if (!CarouselPanel_type)
     {
         return nullptr;
@@ -35356,19 +35712,37 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle DragCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DragCompletedEventArgs_Static{PyType_FromSpec(&type_spec_DragCompletedEventArgs_Static)};
+    if (!type_DragCompletedEventArgs_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DragCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragCompletedEventArgs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragCompletedEventArgs_Static.get()))};
     if (!DragCompletedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DragDeltaEventArgs_type{py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DragDeltaEventArgs_Static{PyType_FromSpec(&type_spec_DragDeltaEventArgs_Static)};
+    if (!type_DragDeltaEventArgs_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DragDeltaEventArgs_type{py::register_python_type(module.get(), &type_spec_DragDeltaEventArgs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragDeltaEventArgs_Static.get()))};
     if (!DragDeltaEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DragStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DragStartedEventArgs_Static{PyType_FromSpec(&type_spec_DragStartedEventArgs_Static)};
+    if (!type_DragStartedEventArgs_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DragStartedEventArgs_type{py::register_python_type(module.get(), &type_spec_DragStartedEventArgs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragStartedEventArgs_Static.get()))};
     if (!DragStartedEventArgs_type)
     {
         return nullptr;
@@ -35392,7 +35766,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle FlyoutShowOptions_type{py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlyoutShowOptions_Static{PyType_FromSpec(&type_spec_FlyoutShowOptions_Static)};
+    if (!type_FlyoutShowOptions_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlyoutShowOptions_type{py::register_python_type(module.get(), &type_spec_FlyoutShowOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutShowOptions_Static.get()))};
     if (!FlyoutShowOptions_type)
     {
         return nullptr;
@@ -35572,7 +35952,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle OrientedVirtualizingPanel_type{py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, object_bases.get(), nullptr)};
+    py::pyobj_handle type_OrientedVirtualizingPanel_Static{PyType_FromSpec(&type_spec_OrientedVirtualizingPanel_Static)};
+    if (!type_OrientedVirtualizingPanel_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle OrientedVirtualizingPanel_type{py::register_python_type(module.get(), &type_spec_OrientedVirtualizingPanel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OrientedVirtualizingPanel_Static.get()))};
     if (!OrientedVirtualizingPanel_type)
     {
         return nullptr;
@@ -35590,7 +35976,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle PivotHeaderItem_type{py::register_python_type(module.get(), &type_spec_PivotHeaderItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_PivotHeaderItem_Static{PyType_FromSpec(&type_spec_PivotHeaderItem_Static)};
+    if (!type_PivotHeaderItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PivotHeaderItem_type{py::register_python_type(module.get(), &type_spec_PivotHeaderItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PivotHeaderItem_Static.get()))};
     if (!PivotHeaderItem_type)
     {
         return nullptr;
@@ -35650,13 +36042,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle RepeatedScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedScrollSnapPoint, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RepeatedScrollSnapPoint_Static{PyType_FromSpec(&type_spec_RepeatedScrollSnapPoint_Static)};
+    if (!type_RepeatedScrollSnapPoint_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeatedScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedScrollSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatedScrollSnapPoint_Static.get()))};
     if (!RepeatedScrollSnapPoint_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepeatedZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedZoomSnapPoint, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RepeatedZoomSnapPoint_Static{PyType_FromSpec(&type_spec_RepeatedZoomSnapPoint_Static)};
+    if (!type_RepeatedZoomSnapPoint_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeatedZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedZoomSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatedZoomSnapPoint_Static.get()))};
     if (!RepeatedZoomSnapPoint_type)
     {
         return nullptr;
@@ -35716,13 +36120,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPoint, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScrollSnapPoint_Static{PyType_FromSpec(&type_spec_ScrollSnapPoint_Static)};
+    if (!type_ScrollSnapPoint_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollSnapPoint_Static.get()))};
     if (!ScrollSnapPoint_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScrollSnapPointBase_Static{PyType_FromSpec(&type_spec_ScrollSnapPointBase_Static)};
+    if (!type_ScrollSnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollSnapPointBase_Static.get()))};
     if (!ScrollSnapPointBase_type)
     {
         return nullptr;
@@ -35752,7 +36168,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle SnapPointBase_type{py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SnapPointBase_Static{PyType_FromSpec(&type_spec_SnapPointBase_Static)};
+    if (!type_SnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SnapPointBase_type{py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SnapPointBase_Static.get()))};
     if (!SnapPointBase_type)
     {
         return nullptr;
@@ -35812,13 +36234,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle ZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPoint, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ZoomSnapPoint_Static{PyType_FromSpec(&type_spec_ZoomSnapPoint_Static)};
+    if (!type_ZoomSnapPoint_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ZoomSnapPoint_Static.get()))};
     if (!ZoomSnapPoint_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ZoomSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ZoomSnapPointBase_Static{PyType_FromSpec(&type_spec_ZoomSnapPointBase_Static)};
+    if (!type_ZoomSnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ZoomSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ZoomSnapPointBase_Static.get()))};
     if (!ZoomSnapPointBase_type)
     {
         return nullptr;

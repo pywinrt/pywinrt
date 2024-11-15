@@ -487,7 +487,10 @@ class ManipulationPivot(winrt.system.Object):
     @center.setter
     def center(self, value: windows_foundation.Point) -> None: ...
 
-class ManipulationStartedRoutedEventArgs(winrt.system.Object):
+class ManipulationStartedRoutedEventArgs_Static(type):
+    pass
+
+class ManipulationStartedRoutedEventArgs(winrt.system.Object, metaclass=ManipulationStartedRoutedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartedRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationStartedRoutedEventArgs]) -> ManipulationStartedRoutedEventArgs: ...

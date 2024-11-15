@@ -150,7 +150,10 @@ class CalendarViewTemplateSettings(winrt.system.Object):
     @_property
     def week_day7(self) -> str: ...
 
-class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object):
+class CarouselPanel_Static(type):
+    pass
+
+class CarouselPanel(IScrollSnapPointsInfo, winrt.system.Object, metaclass=CarouselPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
     def __new__(cls: typing.Type[CarouselPanel]) -> CarouselPanel: ...
@@ -288,7 +291,10 @@ class ComboBoxTemplateSettings(winrt.system.Object):
     @_property
     def drop_down_content_min_width(self) -> winrt.system.Double: ...
 
-class CommandBarFlyoutCommandBar(winrt.system.Object):
+class CommandBarFlyoutCommandBar_Static(type):
+    pass
+
+class CommandBarFlyoutCommandBar(winrt.system.Object, metaclass=CommandBarFlyoutCommandBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandBarFlyoutCommandBar: ...
     def __new__(cls: typing.Type[CommandBarFlyoutCommandBar]) -> CommandBarFlyoutCommandBar: ...
@@ -369,7 +375,10 @@ class CommandBarTemplateSettings(winrt.system.Object):
     @_property
     def overflow_content_minimal_y_translation(self) -> winrt.system.Double: ...
 
-class DragCompletedEventArgs(winrt.system.Object):
+class DragCompletedEventArgs_Static(type):
+    pass
+
+class DragCompletedEventArgs(winrt.system.Object, metaclass=DragCompletedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragCompletedEventArgs: ...
     def __new__(cls: typing.Type[DragCompletedEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double, canceled: bool) -> DragCompletedEventArgs: ...
@@ -380,7 +389,10 @@ class DragCompletedEventArgs(winrt.system.Object):
     @_property
     def vertical_change(self) -> winrt.system.Double: ...
 
-class DragDeltaEventArgs(winrt.system.Object):
+class DragDeltaEventArgs_Static(type):
+    pass
+
+class DragDeltaEventArgs(winrt.system.Object, metaclass=DragDeltaEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragDeltaEventArgs: ...
     def __new__(cls: typing.Type[DragDeltaEventArgs], horizontal_change: winrt.system.Double, vertical_change: winrt.system.Double) -> DragDeltaEventArgs: ...
@@ -389,7 +401,10 @@ class DragDeltaEventArgs(winrt.system.Object):
     @_property
     def vertical_change(self) -> winrt.system.Double: ...
 
-class DragStartedEventArgs(winrt.system.Object):
+class DragStartedEventArgs_Static(type):
+    pass
+
+class DragStartedEventArgs(winrt.system.Object, metaclass=DragStartedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DragStartedEventArgs: ...
     def __new__(cls: typing.Type[DragStartedEventArgs], horizontal_offset: winrt.system.Double, vertical_offset: winrt.system.Double) -> DragStartedEventArgs: ...
@@ -504,7 +519,10 @@ class FlyoutBaseClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class FlyoutShowOptions(winrt.system.Object):
+class FlyoutShowOptions_Static(type):
+    pass
+
+class FlyoutShowOptions(winrt.system.Object, metaclass=FlyoutShowOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutShowOptions: ...
     def __new__(cls: typing.Type[FlyoutShowOptions]) -> FlyoutShowOptions: ...
@@ -1219,7 +1237,10 @@ class NavigationViewItemPresenter(winrt.system.Object, metaclass=NavigationViewI
     @icon.setter
     def icon(self, value: windows_ui_xaml_controls.IconElement) -> None: ...
 
-class OrientedVirtualizingPanel(windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, winrt.system.Object):
+class OrientedVirtualizingPanel_Static(type):
+    pass
+
+class OrientedVirtualizingPanel(windows_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, winrt.system.Object, metaclass=OrientedVirtualizingPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -1283,7 +1304,10 @@ class PickerFlyoutBase(winrt.system.Object, metaclass=PickerFlyoutBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyoutBase: ...
 
-class PivotHeaderItem(winrt.system.Object):
+class PivotHeaderItem_Static(type):
+    pass
+
+class PivotHeaderItem(winrt.system.Object, metaclass=PivotHeaderItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotHeaderItem: ...
     def __new__(cls: typing.Type[PivotHeaderItem]) -> PivotHeaderItem: ...

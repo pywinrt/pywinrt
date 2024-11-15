@@ -1750,6 +1750,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_CheckBox};
 
+    static PyGetSetDef getset_CheckBox_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CheckBox_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CheckBox_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CheckBox_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CheckBox_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CheckBox_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.CheckBox_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CheckBox_Static
+    };
+
     // ----- ComboBox class --------------------
 
     static PyObject* _new_ComboBox(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3393,6 +3418,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ComboBoxItem};
 
+    static PyGetSetDef getset_ComboBoxItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ComboBoxItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ComboBoxItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ComboBoxItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ComboBoxItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ComboBoxItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBoxItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ComboBoxItem_Static
+    };
+
     // ----- DropDownButton class --------------------
 
     static PyObject* _new_DropDownButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3480,6 +3530,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DropDownButton};
+
+    static PyGetSetDef getset_DropDownButton_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DropDownButton_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DropDownButton_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DropDownButton_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DropDownButton_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DropDownButton_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.DropDownButton_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DropDownButton_Static
+    };
 
     // ----- FlipView class --------------------
 
@@ -3771,6 +3846,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlipViewItem};
 
+    static PyGetSetDef getset_FlipViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlipViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlipViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlipViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlipViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlipViewItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.FlipViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlipViewItem_Static
+    };
+
     // ----- GridView class --------------------
 
     static PyObject* _new_GridView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3858,6 +3958,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridView};
+
+    static PyGetSetDef getset_GridView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridView_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.GridView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridView_Static
+    };
 
     // ----- GridViewItem class --------------------
 
@@ -3973,6 +4098,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewItem};
+
+    static PyGetSetDef getset_GridViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.GridViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewItem_Static
+    };
 
     // ----- HyperlinkButton class --------------------
 
@@ -4660,6 +4810,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListBoxItem};
 
+    static PyGetSetDef getset_ListBoxItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListBoxItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListBoxItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListBoxItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListBoxItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListBoxItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ListBoxItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListBoxItem_Static
+    };
+
     // ----- ListView class --------------------
 
     static PyObject* _new_ListView(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4747,6 +4922,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListView};
+
+    static PyGetSetDef getset_ListView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListView_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ListView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListView_Static
+    };
 
     // ----- ListViewBase class --------------------
 
@@ -7906,6 +8106,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewItem};
 
+    static PyGetSetDef getset_ListViewItem_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewItem_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewItem_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItem_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewItem_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewItem_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewItem_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewItem_Static
+    };
+
     // ----- ProgressBar class --------------------
 
     static PyObject* _new_ProgressBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8602,6 +8827,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RevealListViewItemPresenter};
+
+    static PyGetSetDef getset_RevealListViewItemPresenter_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RevealListViewItemPresenter_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RevealListViewItemPresenter_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealListViewItemPresenter_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealListViewItemPresenter_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealListViewItemPresenter_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.RevealListViewItemPresenter_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RevealListViewItemPresenter_Static
+    };
 
     // ----- Slider class --------------------
 
@@ -11244,6 +11494,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         Py_TPFLAGS_DEFAULT,
         _type_slots_TreeViewList};
 
+    static PyGetSetDef getset_TreeViewList_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TreeViewList_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TreeViewList_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TreeViewList_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TreeViewList_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TreeViewList_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewList_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TreeViewList_Static
+    };
+
     // ----- VirtualizingStackPanel class --------------------
 
     static PyObject* _new_VirtualizingStackPanel(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12495,7 +12770,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CheckBox_Static{PyType_FromSpec(&type_spec_CheckBox_Static)};
+    if (!type_CheckBox_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBox_Static.get()))};
     if (!CheckBox_type)
     {
         return nullptr;
@@ -12513,13 +12794,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ComboBoxItem_Static{PyType_FromSpec(&type_spec_ComboBoxItem_Static)};
+    if (!type_ComboBoxItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItem_Static.get()))};
     if (!ComboBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DropDownButton_Static{PyType_FromSpec(&type_spec_DropDownButton_Static)};
+    if (!type_DropDownButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButton_Static.get()))};
     if (!DropDownButton_type)
     {
         return nullptr;
@@ -12537,19 +12830,37 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlipViewItem_Static{PyType_FromSpec(&type_spec_FlipViewItem_Static)};
+    if (!type_FlipViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItem_Static.get()))};
     if (!FlipViewItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridView_Static{PyType_FromSpec(&type_spec_GridView_Static)};
+    if (!type_GridView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridView_Static.get()))};
     if (!GridView_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewItem_Static{PyType_FromSpec(&type_spec_GridViewItem_Static)};
+    if (!type_GridViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItem_Static.get()))};
     if (!GridViewItem_type)
     {
         return nullptr;
@@ -12579,13 +12890,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListBoxItem_Static{PyType_FromSpec(&type_spec_ListBoxItem_Static)};
+    if (!type_ListBoxItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItem_Static.get()))};
     if (!ListBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListView_Static{PyType_FromSpec(&type_spec_ListView_Static)};
+    if (!type_ListView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListView_Static.get()))};
     if (!ListView_type)
     {
         return nullptr;
@@ -12603,7 +12926,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewItem_Static{PyType_FromSpec(&type_spec_ListViewItem_Static)};
+    if (!type_ListViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItem_Static.get()))};
     if (!ListViewItem_type)
     {
         return nullptr;
@@ -12633,7 +12962,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RevealListViewItemPresenter_type{py::register_python_type(module.get(), &type_spec_RevealListViewItemPresenter, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RevealListViewItemPresenter_Static{PyType_FromSpec(&type_spec_RevealListViewItemPresenter_Static)};
+    if (!type_RevealListViewItemPresenter_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealListViewItemPresenter_type{py::register_python_type(module.get(), &type_spec_RevealListViewItemPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealListViewItemPresenter_Static.get()))};
     if (!RevealListViewItemPresenter_type)
     {
         return nullptr;
@@ -12675,7 +13010,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TreeViewList_Static{PyType_FromSpec(&type_spec_TreeViewList_Static)};
+    if (!type_TreeViewList_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewList_Static.get()))};
     if (!TreeViewList_type)
     {
         return nullptr;

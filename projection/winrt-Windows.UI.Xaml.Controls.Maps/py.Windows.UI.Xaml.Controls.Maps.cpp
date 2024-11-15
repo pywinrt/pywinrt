@@ -151,6 +151,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_TPFLAGS_DEFAULT,
         _type_slots_CustomMapTileDataSource};
 
+    static PyGetSetDef getset_CustomMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CustomMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CustomMapTileDataSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CustomMapTileDataSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CustomMapTileDataSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CustomMapTileDataSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CustomMapTileDataSource_Static
+    };
+
     // ----- HttpMapTileDataSource class --------------------
 
     static PyObject* _new_HttpMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -464,6 +489,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_TPFLAGS_DEFAULT,
         _type_slots_HttpMapTileDataSource};
 
+    static PyGetSetDef getset_HttpMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HttpMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_HttpMapTileDataSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HttpMapTileDataSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HttpMapTileDataSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HttpMapTileDataSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HttpMapTileDataSource_Static
+    };
+
     // ----- LocalMapTileDataSource class --------------------
 
     static PyObject* _new_LocalMapTileDataSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -687,6 +737,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_LocalMapTileDataSource};
+
+    static PyGetSetDef getset_LocalMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_LocalMapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_LocalMapTileDataSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_LocalMapTileDataSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_LocalMapTileDataSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_LocalMapTileDataSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_LocalMapTileDataSource_Static
+    };
 
     // ----- MapActualCameraChangedEventArgs class --------------------
 
@@ -9792,6 +9867,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_TPFLAGS_DEFAULT,
         _type_slots_MapCustomExperience};
 
+    static PyGetSetDef getset_MapCustomExperience_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MapCustomExperience_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MapCustomExperience_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MapCustomExperience_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MapCustomExperience_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MapCustomExperience_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MapCustomExperience_Static
+    };
+
     // ----- MapCustomExperienceChangedEventArgs class --------------------
 
     static PyObject* _new_MapCustomExperienceChangedEventArgs(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15776,6 +15876,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_TPFLAGS_DEFAULT,
         _type_slots_MapRouteView};
 
+    static PyGetSetDef getset_MapRouteView_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MapRouteView_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MapRouteView_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MapRouteView_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MapRouteView_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MapRouteView_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MapRouteView_Static
+    };
+
     // ----- MapScene class --------------------
 
     static PyObject* _new_MapScene(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -19444,6 +19569,31 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         Py_TPFLAGS_DEFAULT,
         _type_slots_MapTileDataSource};
 
+    static PyGetSetDef getset_MapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MapTileDataSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MapTileDataSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MapTileDataSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MapTileDataSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MapTileDataSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MapTileDataSource_Static
+    };
+
     // ----- MapTileSource class --------------------
 
     static PyObject* _new_MapTileSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -22509,19 +22659,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CustomMapTileDataSource_Static{PyType_FromSpec(&type_spec_CustomMapTileDataSource_Static)};
+    if (!type_CustomMapTileDataSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomMapTileDataSource_Static.get()))};
     if (!CustomMapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_HttpMapTileDataSource_Static{PyType_FromSpec(&type_spec_HttpMapTileDataSource_Static)};
+    if (!type_HttpMapTileDataSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMapTileDataSource_Static.get()))};
     if (!HttpMapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_LocalMapTileDataSource_Static{PyType_FromSpec(&type_spec_LocalMapTileDataSource_Static)};
+    if (!type_LocalMapTileDataSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalMapTileDataSource_Static.get()))};
     if (!LocalMapTileDataSource_type)
     {
         return nullptr;
@@ -22635,7 +22803,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapCustomExperience_type{py::register_python_type(module.get(), &type_spec_MapCustomExperience, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MapCustomExperience_Static{PyType_FromSpec(&type_spec_MapCustomExperience_Static)};
+    if (!type_MapCustomExperience_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapCustomExperience_type{py::register_python_type(module.get(), &type_spec_MapCustomExperience, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapCustomExperience_Static.get()))};
     if (!MapCustomExperience_type)
     {
         return nullptr;
@@ -22809,7 +22983,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MapRouteView_Static{PyType_FromSpec(&type_spec_MapRouteView_Static)};
+    if (!type_MapRouteView_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapRouteView_Static.get()))};
     if (!MapRouteView_type)
     {
         return nullptr;
@@ -22887,7 +23067,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MapTileDataSource_Static{PyType_FromSpec(&type_spec_MapTileDataSource_Static)};
+    if (!type_MapTileDataSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileDataSource_Static.get()))};
     if (!MapTileDataSource_type)
     {
         return nullptr;

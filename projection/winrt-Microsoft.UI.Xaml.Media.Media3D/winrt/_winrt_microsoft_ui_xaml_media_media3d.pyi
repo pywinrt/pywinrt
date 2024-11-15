@@ -156,7 +156,10 @@ class PerspectiveTransform3D(winrt.system.Object, metaclass=PerspectiveTransform
     @depth.setter
     def depth(self, value: winrt.system.Double) -> None: ...
 
-class Transform3D(winrt.system.Object):
+class Transform3D_Static(type):
+    pass
+
+class Transform3D(winrt.system.Object, metaclass=Transform3D_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform3D: ...
 

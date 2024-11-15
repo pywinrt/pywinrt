@@ -5908,6 +5908,31 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         Py_TPFLAGS_DEFAULT,
         _type_slots_CoreWebView2Controller};
 
+    static PyGetSetDef getset_CoreWebView2Controller_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CoreWebView2Controller_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CoreWebView2Controller_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CoreWebView2Controller_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CoreWebView2Controller_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CoreWebView2Controller_Static =
+    {
+        "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CoreWebView2Controller_Static
+    };
+
     // ----- CoreWebView2ControllerOptions class --------------------
 
     static PyObject* _new_CoreWebView2ControllerOptions(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -18996,7 +19021,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreWebView2Controller_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CoreWebView2Controller_Static{PyType_FromSpec(&type_spec_CoreWebView2Controller_Static)};
+    if (!type_CoreWebView2Controller_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWebView2Controller_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2Controller_Static.get()))};
     if (!CoreWebView2Controller_type)
     {
         return nullptr;
