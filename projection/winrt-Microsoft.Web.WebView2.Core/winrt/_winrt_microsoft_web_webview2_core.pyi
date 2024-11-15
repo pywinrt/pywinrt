@@ -451,7 +451,10 @@ class CoreWebView2ContextMenuTarget(winrt.system.Object):
     @_property
     def source_uri(self) -> str: ...
 
-class CoreWebView2Controller(winrt.system.Object):
+class CoreWebView2Controller_Static(type):
+    pass
+
+class CoreWebView2Controller(winrt.system.Object, metaclass=CoreWebView2Controller_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CoreWebView2Controller: ...
     def close(self) -> None: ...

@@ -304,7 +304,10 @@ class InputCursor(windows_foundation.IClosable, winrt.system.Object, metaclass=I
     def _from(obj: winrt.system.Object, /) -> InputCursor: ...
     def close(self) -> None: ...
 
-class InputCustomCursor(winrt.system.Object):
+class InputCustomCursor_Static(type):
+    pass
+
+class InputCustomCursor(winrt.system.Object, metaclass=InputCustomCursor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputCustomCursor: ...
 
@@ -448,7 +451,10 @@ class InputNonClientPointerSource(winrt.system.Object, metaclass=InputNonClientP
     @_property
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
-class InputObject(winrt.system.Object):
+class InputObject_Static(type):
+    pass
+
+class InputObject(winrt.system.Object, metaclass=InputObject_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputObject: ...
     @_property

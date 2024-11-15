@@ -588,6 +588,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         Py_TPFLAGS_DEFAULT,
         _type_slots_DesktopWindowXamlSource};
 
+    static PyGetSetDef getset_DesktopWindowXamlSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DesktopWindowXamlSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DesktopWindowXamlSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DesktopWindowXamlSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DesktopWindowXamlSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DesktopWindowXamlSource_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DesktopWindowXamlSource_Static
+    };
+
     // ----- DesktopWindowXamlSourceGotFocusEventArgs class --------------------
 
     static PyObject* _new_DesktopWindowXamlSourceGotFocusEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1937,7 +1962,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_hosting(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DesktopWindowXamlSource_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DesktopWindowXamlSource_Static{PyType_FromSpec(&type_spec_DesktopWindowXamlSource_Static)};
+    if (!type_DesktopWindowXamlSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DesktopWindowXamlSource_type{py::register_python_type(module.get(), &type_spec_DesktopWindowXamlSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopWindowXamlSource_Static.get()))};
     if (!DesktopWindowXamlSource_type)
     {
         return nullptr;

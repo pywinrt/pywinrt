@@ -1960,6 +1960,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Media3D
         Py_TPFLAGS_DEFAULT,
         _type_slots_Transform3D};
 
+    static PyGetSetDef getset_Transform3D_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Transform3D_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Transform3D_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Transform3D_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Transform3D_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Transform3D_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_media_media3d.Transform3D_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Transform3D_Static
+    };
+
     // ----- Matrix3D struct --------------------
 
     winrt_struct_wrapper<winrt::Microsoft::UI::Xaml::Media::Media3D::Matrix3D>* _new_Matrix3D(PyTypeObject* subclass, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2843,7 +2868,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Transform3D_type{py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Transform3D_Static{PyType_FromSpec(&type_spec_Transform3D_Static)};
+    if (!type_Transform3D_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transform3D_type{py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform3D_Static.get()))};
     if (!Transform3D_type)
     {
         return nullptr;

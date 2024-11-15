@@ -22,7 +22,10 @@ class TypeName:
     kind: TypeKind
     def __init__(self, name: str = "", kind: TypeKind = TypeKind(0)) -> None: ...
 
-class NotifyCollectionChangedEventArgs(winrt.system.Object):
+class NotifyCollectionChangedEventArgs_Static(type):
+    pass
+
+class NotifyCollectionChangedEventArgs(winrt.system.Object, metaclass=NotifyCollectionChangedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NotifyCollectionChangedEventArgs: ...
     def __new__(cls: typing.Type[NotifyCollectionChangedEventArgs], action: NotifyCollectionChangedAction, new_items: IBindableVector, old_items: IBindableVector, new_index: winrt.system.Int32, old_index: winrt.system.Int32) -> NotifyCollectionChangedEventArgs: ...

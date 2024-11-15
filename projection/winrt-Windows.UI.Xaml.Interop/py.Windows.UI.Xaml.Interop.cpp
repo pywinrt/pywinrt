@@ -233,6 +233,31 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         Py_TPFLAGS_DEFAULT,
         _type_slots_NotifyCollectionChangedEventArgs};
 
+    static PyGetSetDef getset_NotifyCollectionChangedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NotifyCollectionChangedEventArgs_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NotifyCollectionChangedEventArgs_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NotifyCollectionChangedEventArgs_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NotifyCollectionChangedEventArgs_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NotifyCollectionChangedEventArgs_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NotifyCollectionChangedEventArgs_Static
+    };
+
     // ----- IBindableIterable interface --------------------
 
     static PyObject* _new_IBindableIterable(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -2149,7 +2174,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_interop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle NotifyCollectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NotifyCollectionChangedEventArgs_Static{PyType_FromSpec(&type_spec_NotifyCollectionChangedEventArgs_Static)};
+    if (!type_NotifyCollectionChangedEventArgs_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NotifyCollectionChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_NotifyCollectionChangedEventArgs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NotifyCollectionChangedEventArgs_Static.get()))};
     if (!NotifyCollectionChangedEventArgs_type)
     {
         return nullptr;

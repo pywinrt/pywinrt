@@ -54,7 +54,10 @@ class BackEase(winrt.system.Object, metaclass=BackEase_Static):
     @amplitude.setter
     def amplitude(self, value: winrt.system.Double) -> None: ...
 
-class BasicConnectedAnimationConfiguration(winrt.system.Object):
+class BasicConnectedAnimationConfiguration_Static(type):
+    pass
+
+class BasicConnectedAnimationConfiguration(winrt.system.Object, metaclass=BasicConnectedAnimationConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BasicConnectedAnimationConfiguration: ...
     def __new__(cls: typing.Type[BasicConnectedAnimationConfiguration]) -> BasicConnectedAnimationConfiguration: ...
@@ -247,7 +250,10 @@ class ConnectedAnimation(winrt.system.Object):
     @configuration.setter
     def configuration(self, value: ConnectedAnimationConfiguration) -> None: ...
 
-class ConnectedAnimationConfiguration(winrt.system.Object):
+class ConnectedAnimationConfiguration_Static(type):
+    pass
+
+class ConnectedAnimationConfiguration(winrt.system.Object, metaclass=ConnectedAnimationConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ConnectedAnimationConfiguration: ...
 
@@ -324,7 +330,10 @@ class CubicEase(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> CubicEase: ...
     def __new__(cls: typing.Type[CubicEase]) -> CubicEase: ...
 
-class DirectConnectedAnimationConfiguration(winrt.system.Object):
+class DirectConnectedAnimationConfiguration_Static(type):
+    pass
+
+class DirectConnectedAnimationConfiguration(winrt.system.Object, metaclass=DirectConnectedAnimationConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DirectConnectedAnimationConfiguration: ...
     def __new__(cls: typing.Type[DirectConnectedAnimationConfiguration]) -> DirectConnectedAnimationConfiguration: ...
@@ -769,7 +778,10 @@ class FadeOutThemeAnimation(winrt.system.Object, metaclass=FadeOutThemeAnimation
     @target_name.setter
     def target_name(self, value: str) -> None: ...
 
-class GravityConnectedAnimationConfiguration(winrt.system.Object):
+class GravityConnectedAnimationConfiguration_Static(type):
+    pass
+
+class GravityConnectedAnimationConfiguration(winrt.system.Object, metaclass=GravityConnectedAnimationConfiguration_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GravityConnectedAnimationConfiguration: ...
     def __new__(cls: typing.Type[GravityConnectedAnimationConfiguration]) -> GravityConnectedAnimationConfiguration: ...
@@ -834,7 +846,10 @@ class NavigationThemeTransition(winrt.system.Object, metaclass=NavigationThemeTr
     @default_navigation_transition_info.setter
     def default_navigation_transition_info(self, value: NavigationTransitionInfo) -> None: ...
 
-class NavigationTransitionInfo(winrt.system.Object):
+class NavigationTransitionInfo_Static(type):
+    pass
+
+class NavigationTransitionInfo(winrt.system.Object, metaclass=NavigationTransitionInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationTransitionInfo: ...
 
@@ -1606,7 +1621,10 @@ class TimelineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Timel
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class Transition(winrt.system.Object):
+class Transition_Static(type):
+    pass
+
+class Transition(winrt.system.Object, metaclass=Transition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transition: ...
 

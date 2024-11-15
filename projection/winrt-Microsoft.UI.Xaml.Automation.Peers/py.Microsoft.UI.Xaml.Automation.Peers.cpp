@@ -94,6 +94,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_AnimatedVisualPlayerAutomationPeer};
 
+    static PyGetSetDef getset_AnimatedVisualPlayerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AnimatedVisualPlayerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AnimatedVisualPlayerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AnimatedVisualPlayerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AnimatedVisualPlayerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AnimatedVisualPlayerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.AnimatedVisualPlayerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AnimatedVisualPlayerAutomationPeer_Static
+    };
+
     // ----- AppBarAutomationPeer class --------------------
 
     static PyObject* _new_AppBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -631,6 +656,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppBarAutomationPeer};
 
+    static PyGetSetDef getset_AppBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AppBarAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppBarAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppBarAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppBarAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppBarAutomationPeer_Static
+    };
+
     // ----- AppBarButtonAutomationPeer class --------------------
 
     static PyObject* _new_AppBarButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -824,6 +874,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppBarButtonAutomationPeer};
 
+    static PyGetSetDef getset_AppBarButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppBarButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AppBarButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppBarButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppBarButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppBarButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppBarButtonAutomationPeer_Static
+    };
+
     // ----- AppBarToggleButtonAutomationPeer class --------------------
 
     static PyObject* _new_AppBarToggleButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -913,6 +988,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_AppBarToggleButtonAutomationPeer};
+
+    static PyGetSetDef getset_AppBarToggleButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_AppBarToggleButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_AppBarToggleButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_AppBarToggleButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_AppBarToggleButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_AppBarToggleButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_AppBarToggleButtonAutomationPeer_Static
+    };
 
     // ----- AutoSuggestBoxAutomationPeer class --------------------
 
@@ -3681,6 +3781,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_BreadcrumbBarItemAutomationPeer};
 
+    static PyGetSetDef getset_BreadcrumbBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_BreadcrumbBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_BreadcrumbBarItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_BreadcrumbBarItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_BreadcrumbBarItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_BreadcrumbBarItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.BreadcrumbBarItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_BreadcrumbBarItemAutomationPeer_Static
+    };
+
     // ----- ButtonAutomationPeer class --------------------
 
     static PyObject* _new_ButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3809,6 +3934,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ButtonAutomationPeer};
 
+    static PyGetSetDef getset_ButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ButtonAutomationPeer_Static
+    };
+
     // ----- ButtonBaseAutomationPeer class --------------------
 
     static PyObject* _new_ButtonBaseAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -3874,6 +4024,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ButtonBaseAutomationPeer};
+
+    static PyGetSetDef getset_ButtonBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ButtonBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ButtonBaseAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ButtonBaseAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ButtonBaseAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ButtonBaseAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonBaseAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ButtonBaseAutomationPeer_Static
+    };
 
     // ----- CalendarDatePickerAutomationPeer class --------------------
 
@@ -4097,6 +4272,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_CalendarDatePickerAutomationPeer};
 
+    static PyGetSetDef getset_CalendarDatePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CalendarDatePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CalendarDatePickerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CalendarDatePickerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CalendarDatePickerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CalendarDatePickerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CalendarDatePickerAutomationPeer_Static
+    };
+
     // ----- CheckBoxAutomationPeer class --------------------
 
     static PyObject* _new_CheckBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4186,6 +4386,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_CheckBoxAutomationPeer};
+
+    static PyGetSetDef getset_CheckBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CheckBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CheckBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CheckBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CheckBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CheckBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.CheckBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CheckBoxAutomationPeer_Static
+    };
 
     // ----- ColorPickerSliderAutomationPeer class --------------------
 
@@ -4277,6 +4502,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ColorPickerSliderAutomationPeer};
 
+    static PyGetSetDef getset_ColorPickerSliderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ColorPickerSliderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ColorPickerSliderAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorPickerSliderAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ColorPickerSliderAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ColorPickerSliderAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ColorPickerSliderAutomationPeer_Static
+    };
+
     // ----- ColorSpectrumAutomationPeer class --------------------
 
     static PyObject* _new_ColorSpectrumAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4366,6 +4616,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ColorSpectrumAutomationPeer};
+
+    static PyGetSetDef getset_ColorSpectrumAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ColorSpectrumAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ColorSpectrumAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ColorSpectrumAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ColorSpectrumAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ColorSpectrumAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorSpectrumAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ColorSpectrumAutomationPeer_Static
+    };
 
     // ----- ComboBoxAutomationPeer class --------------------
 
@@ -4933,6 +5208,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ComboBoxAutomationPeer};
 
+    static PyGetSetDef getset_ComboBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ComboBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ComboBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ComboBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ComboBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ComboBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ComboBoxAutomationPeer_Static
+    };
+
     // ----- ComboBoxItemAutomationPeer class --------------------
 
     static PyObject* _new_ComboBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5022,6 +5322,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ComboBoxItemAutomationPeer};
+
+    static PyGetSetDef getset_ComboBoxItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ComboBoxItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ComboBoxItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ComboBoxItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ComboBoxItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ComboBoxItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ComboBoxItemAutomationPeer_Static
+    };
 
     // ----- ComboBoxItemDataAutomationPeer class --------------------
 
@@ -5152,6 +5477,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ComboBoxItemDataAutomationPeer};
 
+    static PyGetSetDef getset_ComboBoxItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ComboBoxItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ComboBoxItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ComboBoxItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ComboBoxItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ComboBoxItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ComboBoxItemDataAutomationPeer_Static
+    };
+
     // ----- DatePickerAutomationPeer class --------------------
 
     static PyObject* _new_DatePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5241,6 +5591,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_DatePickerAutomationPeer};
+
+    static PyGetSetDef getset_DatePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DatePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DatePickerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DatePickerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DatePickerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DatePickerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.DatePickerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DatePickerAutomationPeer_Static
+    };
 
     // ----- DatePickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -5501,6 +5876,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_DropDownButtonAutomationPeer};
 
+    static PyGetSetDef getset_DropDownButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_DropDownButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DropDownButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DropDownButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DropDownButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DropDownButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.DropDownButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DropDownButtonAutomationPeer_Static
+    };
+
     // ----- ExpanderAutomationPeer class --------------------
 
     static PyObject* _new_ExpanderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5694,6 +6094,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ExpanderAutomationPeer};
 
+    static PyGetSetDef getset_ExpanderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ExpanderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ExpanderAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ExpanderAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ExpanderAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ExpanderAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ExpanderAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ExpanderAutomationPeer_Static
+    };
+
     // ----- FlipViewAutomationPeer class --------------------
 
     static PyObject* _new_FlipViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5784,6 +6209,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlipViewAutomationPeer};
 
+    static PyGetSetDef getset_FlipViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlipViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlipViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlipViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlipViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlipViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlipViewAutomationPeer_Static
+    };
+
     // ----- FlipViewItemAutomationPeer class --------------------
 
     static PyObject* _new_FlipViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5873,6 +6323,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlipViewItemAutomationPeer};
+
+    static PyGetSetDef getset_FlipViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlipViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlipViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlipViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlipViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlipViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlipViewItemAutomationPeer_Static
+    };
 
     // ----- FlipViewItemDataAutomationPeer class --------------------
 
@@ -6003,6 +6478,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlipViewItemDataAutomationPeer};
 
+    static PyGetSetDef getset_FlipViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlipViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlipViewItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlipViewItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlipViewItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlipViewItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlipViewItemDataAutomationPeer_Static
+    };
+
     // ----- FlyoutPresenterAutomationPeer class --------------------
 
     static PyObject* _new_FlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6092,6 +6592,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_FlyoutPresenterAutomationPeer};
+
+    static PyGetSetDef getset_FlyoutPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FlyoutPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FlyoutPresenterAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FlyoutPresenterAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FlyoutPresenterAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FlyoutPresenterAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FlyoutPresenterAutomationPeer_Static
+    };
 
     // ----- FrameworkElementAutomationPeer class --------------------
 
@@ -6403,6 +6928,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewAutomationPeer};
 
+    static PyGetSetDef getset_GridViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewAutomationPeer_Static
+    };
+
     // ----- GridViewHeaderItemAutomationPeer class --------------------
 
     static PyObject* _new_GridViewHeaderItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6493,6 +7043,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewHeaderItemAutomationPeer};
 
+    static PyGetSetDef getset_GridViewHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewHeaderItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewHeaderItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewHeaderItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewHeaderItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewHeaderItemAutomationPeer_Static
+    };
+
     // ----- GridViewItemAutomationPeer class --------------------
 
     static PyObject* _new_GridViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6582,6 +7157,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewItemAutomationPeer};
+
+    static PyGetSetDef getset_GridViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewItemAutomationPeer_Static
+    };
 
     // ----- GridViewItemDataAutomationPeer class --------------------
 
@@ -6712,6 +7312,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_GridViewItemDataAutomationPeer};
 
+    static PyGetSetDef getset_GridViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GridViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GridViewItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GridViewItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GridViewItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GridViewItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GridViewItemDataAutomationPeer_Static
+    };
+
     // ----- GroupItemAutomationPeer class --------------------
 
     static PyObject* _new_GroupItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6802,6 +7427,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_GroupItemAutomationPeer};
 
+    static PyGetSetDef getset_GroupItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GroupItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GroupItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GroupItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GroupItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GroupItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.GroupItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GroupItemAutomationPeer_Static
+    };
+
     // ----- HubAutomationPeer class --------------------
 
     static PyObject* _new_HubAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6891,6 +7541,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_HubAutomationPeer};
+
+    static PyGetSetDef getset_HubAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HubAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_HubAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HubAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HubAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HubAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.HubAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HubAutomationPeer_Static
+    };
 
     // ----- HubSectionAutomationPeer class --------------------
 
@@ -7020,6 +7695,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_HubSectionAutomationPeer};
 
+    static PyGetSetDef getset_HubSectionAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HubSectionAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_HubSectionAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HubSectionAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HubSectionAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HubSectionAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.HubSectionAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HubSectionAutomationPeer_Static
+    };
+
     // ----- HyperlinkButtonAutomationPeer class --------------------
 
     static PyObject* _new_HyperlinkButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7148,6 +7848,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_HyperlinkButtonAutomationPeer};
 
+    static PyGetSetDef getset_HyperlinkButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_HyperlinkButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_HyperlinkButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_HyperlinkButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_HyperlinkButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_HyperlinkButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_HyperlinkButtonAutomationPeer_Static
+    };
+
     // ----- ImageAutomationPeer class --------------------
 
     static PyObject* _new_ImageAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7238,6 +7963,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ImageAutomationPeer};
 
+    static PyGetSetDef getset_ImageAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ImageAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ImageAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImageAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ImageAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ImageAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ImageAutomationPeer_Static
+    };
+
     // ----- InfoBarAutomationPeer class --------------------
 
     static PyObject* _new_InfoBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7327,6 +8077,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InfoBarAutomationPeer};
+
+    static PyGetSetDef getset_InfoBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InfoBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InfoBarAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InfoBarAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InfoBarAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InfoBarAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.InfoBarAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InfoBarAutomationPeer_Static
+    };
 
     // ----- ItemAutomationPeer class --------------------
 
@@ -7510,6 +8285,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ItemAutomationPeer};
+
+    static PyGetSetDef getset_ItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ItemAutomationPeer_Static
+    };
 
     // ----- ItemContainerAutomationPeer class --------------------
 
@@ -7807,6 +8607,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ItemContainerAutomationPeer};
 
+    static PyGetSetDef getset_ItemContainerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ItemContainerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ItemContainerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ItemContainerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ItemContainerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ItemContainerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemContainerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ItemContainerAutomationPeer_Static
+    };
+
     // ----- ItemsControlAutomationPeer class --------------------
 
     static PyObject* _new_ItemsControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -7976,6 +8801,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ItemsControlAutomationPeer};
+
+    static PyGetSetDef getset_ItemsControlAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ItemsControlAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ItemsControlAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ItemsControlAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ItemsControlAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ItemsControlAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsControlAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ItemsControlAutomationPeer_Static
+    };
 
     // ----- ItemsViewAutomationPeer class --------------------
 
@@ -8158,6 +9008,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ItemsViewAutomationPeer};
 
+    static PyGetSetDef getset_ItemsViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ItemsViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ItemsViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ItemsViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ItemsViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ItemsViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ItemsViewAutomationPeer_Static
+    };
+
     // ----- ListBoxAutomationPeer class --------------------
 
     static PyObject* _new_ListBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8248,6 +9123,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListBoxAutomationPeer};
 
+    static PyGetSetDef getset_ListBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListBoxAutomationPeer_Static
+    };
+
     // ----- ListBoxItemAutomationPeer class --------------------
 
     static PyObject* _new_ListBoxItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8337,6 +9237,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListBoxItemAutomationPeer};
+
+    static PyGetSetDef getset_ListBoxItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListBoxItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListBoxItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListBoxItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListBoxItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListBoxItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListBoxItemAutomationPeer_Static
+    };
 
     // ----- ListBoxItemDataAutomationPeer class --------------------
 
@@ -8466,6 +9391,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListBoxItemDataAutomationPeer};
+
+    static PyGetSetDef getset_ListBoxItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListBoxItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListBoxItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListBoxItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListBoxItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListBoxItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListBoxItemDataAutomationPeer_Static
+    };
 
     // ----- ListPickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -8623,6 +9573,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewAutomationPeer};
 
+    static PyGetSetDef getset_ListViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewAutomationPeer_Static
+    };
+
     // ----- ListViewBaseAutomationPeer class --------------------
 
     static PyObject* _new_ListViewBaseAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -8767,6 +9742,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewBaseAutomationPeer};
 
+    static PyGetSetDef getset_ListViewBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewBaseAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewBaseAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewBaseAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewBaseAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewBaseAutomationPeer_Static
+    };
+
     // ----- ListViewBaseHeaderItemAutomationPeer class --------------------
 
     static PyObject* _new_ListViewBaseHeaderItemAutomationPeer(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8832,6 +9832,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewBaseHeaderItemAutomationPeer};
+
+    static PyGetSetDef getset_ListViewBaseHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewBaseHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewBaseHeaderItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewBaseHeaderItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewBaseHeaderItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewBaseHeaderItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewBaseHeaderItemAutomationPeer_Static
+    };
 
     // ----- ListViewHeaderItemAutomationPeer class --------------------
 
@@ -8923,6 +9948,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewHeaderItemAutomationPeer};
 
+    static PyGetSetDef getset_ListViewHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewHeaderItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewHeaderItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewHeaderItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewHeaderItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewHeaderItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewHeaderItemAutomationPeer_Static
+    };
+
     // ----- ListViewItemAutomationPeer class --------------------
 
     static PyObject* _new_ListViewItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -9012,6 +10062,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewItemAutomationPeer};
+
+    static PyGetSetDef getset_ListViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewItemAutomationPeer_Static
+    };
 
     // ----- ListViewItemDataAutomationPeer class --------------------
 
@@ -9141,6 +10216,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ListViewItemDataAutomationPeer};
+
+    static PyGetSetDef getset_ListViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ListViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListViewItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListViewItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListViewItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListViewItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListViewItemDataAutomationPeer_Static
+    };
 
     // ----- LoopingSelectorAutomationPeer class --------------------
 
@@ -10050,6 +11150,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaPlayerElementAutomationPeer};
 
+    static PyGetSetDef getset_MediaPlayerElementAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaPlayerElementAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaPlayerElementAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaPlayerElementAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaPlayerElementAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaPlayerElementAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaPlayerElementAutomationPeer_Static
+    };
+
     // ----- MediaTransportControlsAutomationPeer class --------------------
 
     static PyObject* _new_MediaTransportControlsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10140,6 +11265,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_MediaTransportControlsAutomationPeer};
 
+    static PyGetSetDef getset_MediaTransportControlsAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MediaTransportControlsAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MediaTransportControlsAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MediaTransportControlsAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MediaTransportControlsAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MediaTransportControlsAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MediaTransportControlsAutomationPeer_Static
+    };
+
     // ----- MenuBarAutomationPeer class --------------------
 
     static PyObject* _new_MenuBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10229,6 +11379,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_MenuBarAutomationPeer};
+
+    static PyGetSetDef getset_MenuBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MenuBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuBarAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuBarAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuBarAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuBarAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuBarAutomationPeer_Static
+    };
 
     // ----- MenuBarItemAutomationPeer class --------------------
 
@@ -10461,6 +11636,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_MenuBarItemAutomationPeer};
 
+    static PyGetSetDef getset_MenuBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MenuBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuBarItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuBarItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuBarItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuBarItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuBarItemAutomationPeer_Static
+    };
+
     // ----- MenuFlyoutItemAutomationPeer class --------------------
 
     static PyObject* _new_MenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10589,6 +11789,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_MenuFlyoutItemAutomationPeer};
 
+    static PyGetSetDef getset_MenuFlyoutItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MenuFlyoutItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuFlyoutItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuFlyoutItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuFlyoutItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuFlyoutItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuFlyoutItemAutomationPeer_Static
+    };
+
     // ----- MenuFlyoutPresenterAutomationPeer class --------------------
 
     static PyObject* _new_MenuFlyoutPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10679,6 +11904,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_MenuFlyoutPresenterAutomationPeer};
 
+    static PyGetSetDef getset_MenuFlyoutPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MenuFlyoutPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuFlyoutPresenterAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuFlyoutPresenterAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuFlyoutPresenterAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuFlyoutPresenterAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuFlyoutPresenterAutomationPeer_Static
+    };
+
     // ----- NavigationViewAutomationPeer class --------------------
 
     static PyObject* _new_NavigationViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10768,6 +12018,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewAutomationPeer};
+
+    static PyGetSetDef getset_NavigationViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewAutomationPeer_Static
+    };
 
     // ----- NavigationViewItemAutomationPeer class --------------------
 
@@ -10962,6 +12237,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_NavigationViewItemAutomationPeer};
 
+    static PyGetSetDef getset_NavigationViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NavigationViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NavigationViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NavigationViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NavigationViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NavigationViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NavigationViewItemAutomationPeer_Static
+    };
+
     // ----- NumberBoxAutomationPeer class --------------------
 
     static PyObject* _new_NumberBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11051,6 +12351,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_NumberBoxAutomationPeer};
+
+    static PyGetSetDef getset_NumberBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_NumberBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_NumberBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_NumberBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_NumberBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_NumberBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.NumberBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_NumberBoxAutomationPeer_Static
+    };
 
     // ----- PasswordBoxAutomationPeer class --------------------
 
@@ -11142,6 +12467,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_PasswordBoxAutomationPeer};
 
+    static PyGetSetDef getset_PasswordBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PasswordBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PasswordBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PasswordBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PasswordBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PasswordBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.PasswordBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PasswordBoxAutomationPeer_Static
+    };
+
     // ----- PersonPictureAutomationPeer class --------------------
 
     static PyObject* _new_PersonPictureAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -11231,6 +12581,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PersonPictureAutomationPeer};
+
+    static PyGetSetDef getset_PersonPictureAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PersonPictureAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PersonPictureAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PersonPictureAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PersonPictureAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PersonPictureAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.PersonPictureAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PersonPictureAutomationPeer_Static
+    };
 
     // ----- PickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -11387,6 +12762,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_PipsPagerAutomationPeer};
+
+    static PyGetSetDef getset_PipsPagerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PipsPagerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PipsPagerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PipsPagerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PipsPagerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PipsPagerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.PipsPagerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PipsPagerAutomationPeer_Static
+    };
 
     // ----- PivotAutomationPeer class --------------------
 
@@ -12328,6 +13728,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ProgressBarAutomationPeer};
 
+    static PyGetSetDef getset_ProgressBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ProgressBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ProgressBarAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProgressBarAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProgressBarAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProgressBarAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressBarAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ProgressBarAutomationPeer_Static
+    };
+
     // ----- ProgressRingAutomationPeer class --------------------
 
     static PyObject* _new_ProgressRingAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12620,6 +14045,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ProgressRingAutomationPeer};
 
+    static PyGetSetDef getset_ProgressRingAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ProgressRingAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ProgressRingAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ProgressRingAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ProgressRingAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ProgressRingAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressRingAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ProgressRingAutomationPeer_Static
+    };
+
     // ----- RadioButtonAutomationPeer class --------------------
 
     static PyObject* _new_RadioButtonAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12878,6 +14328,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_RadioButtonAutomationPeer};
 
+    static PyGetSetDef getset_RadioButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RadioButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RadioButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RadioButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RadioButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RadioButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RadioButtonAutomationPeer_Static
+    };
+
     // ----- RadioButtonsAutomationPeer class --------------------
 
     static PyObject* _new_RadioButtonsAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12967,6 +14442,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RadioButtonsAutomationPeer};
+
+    static PyGetSetDef getset_RadioButtonsAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RadioButtonsAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RadioButtonsAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RadioButtonsAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RadioButtonsAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RadioButtonsAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonsAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RadioButtonsAutomationPeer_Static
+    };
 
     // ----- RangeBaseAutomationPeer class --------------------
 
@@ -13260,6 +14760,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_RangeBaseAutomationPeer};
 
+    static PyGetSetDef getset_RangeBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RangeBaseAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RangeBaseAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RangeBaseAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RangeBaseAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RangeBaseAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RangeBaseAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RangeBaseAutomationPeer_Static
+    };
+
     // ----- RatingControlAutomationPeer class --------------------
 
     static PyObject* _new_RatingControlAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13349,6 +14874,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RatingControlAutomationPeer};
+
+    static PyGetSetDef getset_RatingControlAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RatingControlAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RatingControlAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RatingControlAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RatingControlAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RatingControlAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RatingControlAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RatingControlAutomationPeer_Static
+    };
 
     // ----- RepeatButtonAutomationPeer class --------------------
 
@@ -13478,6 +15028,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_RepeatButtonAutomationPeer};
 
+    static PyGetSetDef getset_RepeatButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RepeatButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RepeatButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeatButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RepeatButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RepeatButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeatButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RepeatButtonAutomationPeer_Static
+    };
+
     // ----- RepeaterAutomationPeer class --------------------
 
     static PyObject* _new_RepeaterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13567,6 +15142,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RepeaterAutomationPeer};
+
+    static PyGetSetDef getset_RepeaterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RepeaterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RepeaterAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RepeaterAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RepeaterAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RepeaterAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeaterAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RepeaterAutomationPeer_Static
+    };
 
     // ----- RichEditBoxAutomationPeer class --------------------
 
@@ -13658,6 +15258,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_RichEditBoxAutomationPeer};
 
+    static PyGetSetDef getset_RichEditBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RichEditBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RichEditBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RichEditBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RichEditBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RichEditBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RichEditBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RichEditBoxAutomationPeer_Static
+    };
+
     // ----- RichTextBlockAutomationPeer class --------------------
 
     static PyObject* _new_RichTextBlockAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13747,6 +15372,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RichTextBlockAutomationPeer};
+
+    static PyGetSetDef getset_RichTextBlockAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RichTextBlockAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RichTextBlockAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RichTextBlockAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RichTextBlockAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RichTextBlockAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RichTextBlockAutomationPeer_Static
+    };
 
     // ----- RichTextBlockOverflowAutomationPeer class --------------------
 
@@ -13838,6 +15488,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_RichTextBlockOverflowAutomationPeer};
 
+    static PyGetSetDef getset_RichTextBlockOverflowAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RichTextBlockOverflowAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RichTextBlockOverflowAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RichTextBlockOverflowAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RichTextBlockOverflowAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RichTextBlockOverflowAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RichTextBlockOverflowAutomationPeer_Static
+    };
+
     // ----- ScrollBarAutomationPeer class --------------------
 
     static PyObject* _new_ScrollBarAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -13928,6 +15603,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScrollBarAutomationPeer};
 
+    static PyGetSetDef getset_ScrollBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScrollBarAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScrollBarAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollBarAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollBarAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollBarAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScrollBarAutomationPeer_Static
+    };
+
     // ----- ScrollPresenterAutomationPeer class --------------------
 
     static PyObject* _new_ScrollPresenterAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -14017,6 +15717,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScrollPresenterAutomationPeer};
+
+    static PyGetSetDef getset_ScrollPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScrollPresenterAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScrollPresenterAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollPresenterAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollPresenterAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollPresenterAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollPresenterAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScrollPresenterAutomationPeer_Static
+    };
 
     // ----- ScrollViewerAutomationPeer class --------------------
 
@@ -14352,6 +16077,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ScrollViewerAutomationPeer};
 
+    static PyGetSetDef getset_ScrollViewerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ScrollViewerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ScrollViewerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ScrollViewerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ScrollViewerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ScrollViewerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ScrollViewerAutomationPeer_Static
+    };
+
     // ----- SelectorAutomationPeer class --------------------
 
     static PyObject* _new_SelectorAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -14533,6 +16283,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_SelectorAutomationPeer};
 
+    static PyGetSetDef getset_SelectorAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SelectorAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SelectorAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SelectorAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SelectorAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SelectorAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SelectorAutomationPeer_Static
+    };
+
     // ----- SelectorBarItemAutomationPeer class --------------------
 
     static PyObject* _new_SelectorBarItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -14622,6 +16397,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SelectorBarItemAutomationPeer};
+
+    static PyGetSetDef getset_SelectorBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SelectorBarItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SelectorBarItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SelectorBarItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SelectorBarItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SelectorBarItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SelectorBarItemAutomationPeer_Static
+    };
 
     // ----- SelectorItemAutomationPeer class --------------------
 
@@ -14882,6 +16682,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_SelectorItemAutomationPeer};
 
+    static PyGetSetDef getset_SelectorItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SelectorItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SelectorItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SelectorItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SelectorItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SelectorItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SelectorItemAutomationPeer_Static
+    };
+
     // ----- SemanticZoomAutomationPeer class --------------------
 
     static PyObject* _new_SemanticZoomAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15037,6 +16862,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_SemanticZoomAutomationPeer};
 
+    static PyGetSetDef getset_SemanticZoomAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SemanticZoomAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SemanticZoomAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SemanticZoomAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SemanticZoomAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SemanticZoomAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SemanticZoomAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SemanticZoomAutomationPeer_Static
+    };
+
     // ----- SliderAutomationPeer class --------------------
 
     static PyObject* _new_SliderAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15126,6 +16976,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_SliderAutomationPeer};
+
+    static PyGetSetDef getset_SliderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SliderAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SliderAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SliderAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SliderAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SliderAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SliderAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SliderAutomationPeer_Static
+    };
 
     // ----- SplitButtonAutomationPeer class --------------------
 
@@ -15358,6 +17233,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_SplitButtonAutomationPeer};
 
+    static PyGetSetDef getset_SplitButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SplitButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SplitButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SplitButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SplitButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SplitButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.SplitButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SplitButtonAutomationPeer_Static
+    };
+
     // ----- TabViewAutomationPeer class --------------------
 
     static PyObject* _new_TabViewAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15447,6 +17347,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TabViewAutomationPeer};
+
+    static PyGetSetDef getset_TabViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TabViewAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TabViewAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TabViewAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TabViewAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TabViewAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TabViewAutomationPeer_Static
+    };
 
     // ----- TabViewItemAutomationPeer class --------------------
 
@@ -15538,6 +17463,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_TabViewItemAutomationPeer};
 
+    static PyGetSetDef getset_TabViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TabViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TabViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TabViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TabViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TabViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TabViewItemAutomationPeer_Static
+    };
+
     // ----- TeachingTipAutomationPeer class --------------------
 
     static PyObject* _new_TeachingTipAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15627,6 +17577,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TeachingTipAutomationPeer};
+
+    static PyGetSetDef getset_TeachingTipAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TeachingTipAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TeachingTipAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TeachingTipAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TeachingTipAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TeachingTipAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TeachingTipAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TeachingTipAutomationPeer_Static
+    };
 
     // ----- TextBlockAutomationPeer class --------------------
 
@@ -15718,6 +17693,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_TextBlockAutomationPeer};
 
+    static PyGetSetDef getset_TextBlockAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TextBlockAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TextBlockAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextBlockAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextBlockAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextBlockAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBlockAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TextBlockAutomationPeer_Static
+    };
+
     // ----- TextBoxAutomationPeer class --------------------
 
     static PyObject* _new_TextBoxAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15807,6 +17807,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TextBoxAutomationPeer};
+
+    static PyGetSetDef getset_TextBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TextBoxAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TextBoxAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextBoxAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextBoxAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextBoxAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBoxAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TextBoxAutomationPeer_Static
+    };
 
     // ----- ThumbAutomationPeer class --------------------
 
@@ -15898,6 +17923,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ThumbAutomationPeer};
 
+    static PyGetSetDef getset_ThumbAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ThumbAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ThumbAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ThumbAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ThumbAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ThumbAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ThumbAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ThumbAutomationPeer_Static
+    };
+
     // ----- TimePickerAutomationPeer class --------------------
 
     static PyObject* _new_TimePickerAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15987,6 +18037,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TimePickerAutomationPeer};
+
+    static PyGetSetDef getset_TimePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TimePickerAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TimePickerAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TimePickerAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TimePickerAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimePickerAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TimePickerAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TimePickerAutomationPeer_Static
+    };
 
     // ----- TimePickerFlyoutPresenterAutomationPeer class --------------------
 
@@ -16209,6 +18284,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ToggleButtonAutomationPeer};
 
+    static PyGetSetDef getset_ToggleButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ToggleButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ToggleButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ToggleButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ToggleButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ToggleButtonAutomationPeer_Static
+    };
+
     // ----- ToggleMenuFlyoutItemAutomationPeer class --------------------
 
     static PyObject* _new_ToggleMenuFlyoutItemAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16363,6 +18463,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ToggleMenuFlyoutItemAutomationPeer};
+
+    static PyGetSetDef getset_ToggleMenuFlyoutItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ToggleMenuFlyoutItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ToggleMenuFlyoutItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleMenuFlyoutItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ToggleMenuFlyoutItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ToggleMenuFlyoutItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ToggleMenuFlyoutItemAutomationPeer_Static
+    };
 
     // ----- ToggleSplitButtonAutomationPeer class --------------------
 
@@ -16622,6 +18747,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_ToggleSplitButtonAutomationPeer};
 
+    static PyGetSetDef getset_ToggleSplitButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ToggleSplitButtonAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ToggleSplitButtonAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleSplitButtonAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ToggleSplitButtonAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ToggleSplitButtonAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSplitButtonAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ToggleSplitButtonAutomationPeer_Static
+    };
+
     // ----- ToggleSwitchAutomationPeer class --------------------
 
     static PyObject* _new_ToggleSwitchAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16776,6 +18926,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ToggleSwitchAutomationPeer};
+
+    static PyGetSetDef getset_ToggleSwitchAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ToggleSwitchAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ToggleSwitchAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ToggleSwitchAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ToggleSwitchAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ToggleSwitchAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSwitchAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ToggleSwitchAutomationPeer_Static
+    };
 
     // ----- TreeViewItemAutomationPeer class --------------------
 
@@ -16969,6 +19144,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TreeViewItemAutomationPeer};
+
+    static PyGetSetDef getset_TreeViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TreeViewItemAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TreeViewItemAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TreeViewItemAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TreeViewItemAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TreeViewItemAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TreeViewItemAutomationPeer_Static
+    };
 
     // ----- TreeViewItemDataAutomationPeer class --------------------
 
@@ -17164,6 +19364,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_TreeViewItemDataAutomationPeer};
 
+    static PyGetSetDef getset_TreeViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TreeViewItemDataAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TreeViewItemDataAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TreeViewItemDataAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TreeViewItemDataAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TreeViewItemDataAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemDataAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TreeViewItemDataAutomationPeer_Static
+    };
+
     // ----- TreeViewListAutomationPeer class --------------------
 
     static PyObject* _new_TreeViewListAutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -17254,6 +19479,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         Py_TPFLAGS_DEFAULT,
         _type_slots_TreeViewListAutomationPeer};
 
+    static PyGetSetDef getset_TreeViewListAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TreeViewListAutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TreeViewListAutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TreeViewListAutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TreeViewListAutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TreeViewListAutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewListAutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TreeViewListAutomationPeer_Static
+    };
+
     // ----- WebView2AutomationPeer class --------------------
 
     static PyObject* _new_WebView2AutomationPeer(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -17343,6 +19593,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_WebView2AutomationPeer};
+
+    static PyGetSetDef getset_WebView2AutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_WebView2AutomationPeer_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_WebView2AutomationPeer_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_WebView2AutomationPeer_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_WebView2AutomationPeer_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_WebView2AutomationPeer_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_automation_peers.WebView2AutomationPeer_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_WebView2AutomationPeer_Static
+    };
 
     // ----- RawElementProviderRuntimeId struct --------------------
 
@@ -17603,25 +19878,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle AnimatedVisualPlayerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AnimatedVisualPlayerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AnimatedVisualPlayerAutomationPeer_Static{PyType_FromSpec(&type_spec_AnimatedVisualPlayerAutomationPeer_Static)};
+    if (!type_AnimatedVisualPlayerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AnimatedVisualPlayerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AnimatedVisualPlayerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimatedVisualPlayerAutomationPeer_Static.get()))};
     if (!AnimatedVisualPlayerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AppBarAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarAutomationPeer_Static)};
+    if (!type_AppBarAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarAutomationPeer_Static.get()))};
     if (!AppBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AppBarButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarButtonAutomationPeer_Static)};
+    if (!type_AppBarButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarButtonAutomationPeer_Static.get()))};
     if (!AppBarButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_AppBarToggleButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarToggleButtonAutomationPeer_Static)};
+    if (!type_AppBarToggleButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButtonAutomationPeer_Static.get()))};
     if (!AppBarToggleButtonAutomationPeer_type)
     {
         return nullptr;
@@ -17657,67 +19956,133 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle BreadcrumbBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_BreadcrumbBarItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_BreadcrumbBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_BreadcrumbBarItemAutomationPeer_Static)};
+    if (!type_BreadcrumbBarItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BreadcrumbBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_BreadcrumbBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BreadcrumbBarItemAutomationPeer_Static.get()))};
     if (!BreadcrumbBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ButtonAutomationPeer_Static)};
+    if (!type_ButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonAutomationPeer_Static.get()))};
     if (!ButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ButtonBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ButtonBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_ButtonBaseAutomationPeer_Static)};
+    if (!type_ButtonBaseAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ButtonBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBaseAutomationPeer_Static.get()))};
     if (!ButtonBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CalendarDatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CalendarDatePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_CalendarDatePickerAutomationPeer_Static)};
+    if (!type_CalendarDatePickerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CalendarDatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarDatePickerAutomationPeer_Static.get()))};
     if (!CalendarDatePickerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CheckBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CheckBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_CheckBoxAutomationPeer_Static)};
+    if (!type_CheckBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CheckBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBoxAutomationPeer_Static.get()))};
     if (!CheckBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorPickerSliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ColorPickerSliderAutomationPeer_Static{PyType_FromSpec(&type_spec_ColorPickerSliderAutomationPeer_Static)};
+    if (!type_ColorPickerSliderAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorPickerSliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSliderAutomationPeer_Static.get()))};
     if (!ColorPickerSliderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorSpectrumAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ColorSpectrumAutomationPeer_Static{PyType_FromSpec(&type_spec_ColorSpectrumAutomationPeer_Static)};
+    if (!type_ColorSpectrumAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorSpectrumAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrumAutomationPeer_Static.get()))};
     if (!ColorSpectrumAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ComboBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxAutomationPeer_Static)};
+    if (!type_ComboBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxAutomationPeer_Static.get()))};
     if (!ComboBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ComboBoxItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxItemAutomationPeer_Static)};
+    if (!type_ComboBoxItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemAutomationPeer_Static.get()))};
     if (!ComboBoxItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ComboBoxItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxItemDataAutomationPeer_Static)};
+    if (!type_ComboBoxItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemDataAutomationPeer_Static.get()))};
     if (!ComboBoxItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DatePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_DatePickerAutomationPeer_Static)};
+    if (!type_DatePickerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerAutomationPeer_Static.get()))};
     if (!DatePickerAutomationPeer_type)
     {
         return nullptr;
@@ -17729,37 +20094,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DropDownButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DropDownButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_DropDownButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_DropDownButtonAutomationPeer_Static)};
+    if (!type_DropDownButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropDownButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DropDownButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButtonAutomationPeer_Static.get()))};
     if (!DropDownButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExpanderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ExpanderAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ExpanderAutomationPeer_Static{PyType_FromSpec(&type_spec_ExpanderAutomationPeer_Static)};
+    if (!type_ExpanderAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExpanderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ExpanderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpanderAutomationPeer_Static.get()))};
     if (!ExpanderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlipViewAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewAutomationPeer_Static)};
+    if (!type_FlipViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewAutomationPeer_Static.get()))};
     if (!FlipViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlipViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewItemAutomationPeer_Static)};
+    if (!type_FlipViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemAutomationPeer_Static.get()))};
     if (!FlipViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlipViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewItemDataAutomationPeer_Static)};
+    if (!type_FlipViewItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemDataAutomationPeer_Static.get()))};
     if (!FlipViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FlyoutPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_FlyoutPresenterAutomationPeer_Static)};
+    if (!type_FlyoutPresenterAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutPresenterAutomationPeer_Static.get()))};
     if (!FlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
@@ -17777,103 +20178,205 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GridViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewAutomationPeer_Static)};
+    if (!type_GridViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewAutomationPeer_Static.get()))};
     if (!GridViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewHeaderItemAutomationPeer_Static)};
+    if (!type_GridViewHeaderItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewHeaderItemAutomationPeer_Static.get()))};
     if (!GridViewHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewItemAutomationPeer_Static)};
+    if (!type_GridViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemAutomationPeer_Static.get()))};
     if (!GridViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GridViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewItemDataAutomationPeer_Static)};
+    if (!type_GridViewItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemDataAutomationPeer_Static.get()))};
     if (!GridViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle GroupItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GroupItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GroupItemAutomationPeer_Static)};
+    if (!type_GroupItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GroupItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GroupItemAutomationPeer_Static.get()))};
     if (!GroupItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HubAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_HubAutomationPeer_Static{PyType_FromSpec(&type_spec_HubAutomationPeer_Static)};
+    if (!type_HubAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HubAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubAutomationPeer_Static.get()))};
     if (!HubAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HubSectionAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_HubSectionAutomationPeer_Static{PyType_FromSpec(&type_spec_HubSectionAutomationPeer_Static)};
+    if (!type_HubSectionAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HubSectionAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubSectionAutomationPeer_Static.get()))};
     if (!HubSectionAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HyperlinkButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_HyperlinkButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_HyperlinkButtonAutomationPeer_Static)};
+    if (!type_HyperlinkButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HyperlinkButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HyperlinkButtonAutomationPeer_Static.get()))};
     if (!HyperlinkButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ImageAutomationPeer_Static{PyType_FromSpec(&type_spec_ImageAutomationPeer_Static)};
+    if (!type_ImageAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageAutomationPeer_Static.get()))};
     if (!ImageAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InfoBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InfoBarAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InfoBarAutomationPeer_Static{PyType_FromSpec(&type_spec_InfoBarAutomationPeer_Static)};
+    if (!type_InfoBarAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InfoBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InfoBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InfoBarAutomationPeer_Static.get()))};
     if (!InfoBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemAutomationPeer_Static)};
+    if (!type_ItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemAutomationPeer_Static.get()))};
     if (!ItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemContainerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemContainerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ItemContainerAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemContainerAutomationPeer_Static)};
+    if (!type_ItemContainerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemContainerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemContainerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemContainerAutomationPeer_Static.get()))};
     if (!ItemContainerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemsControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ItemsControlAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemsControlAutomationPeer_Static)};
+    if (!type_ItemsControlAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemsControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsControlAutomationPeer_Static.get()))};
     if (!ItemsControlAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemsViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ItemsViewAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemsViewAutomationPeer_Static)};
+    if (!type_ItemsViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemsViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsViewAutomationPeer_Static.get()))};
     if (!ItemsViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxAutomationPeer_Static)};
+    if (!type_ListBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxAutomationPeer_Static.get()))};
     if (!ListBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListBoxItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxItemAutomationPeer_Static)};
+    if (!type_ListBoxItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemAutomationPeer_Static.get()))};
     if (!ListBoxItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListBoxItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxItemDataAutomationPeer_Static)};
+    if (!type_ListBoxItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemDataAutomationPeer_Static.get()))};
     if (!ListBoxItemDataAutomationPeer_type)
     {
         return nullptr;
@@ -17885,37 +20388,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ListViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewAutomationPeer_Static)};
+    if (!type_ListViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewAutomationPeer_Static.get()))};
     if (!ListViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewBaseAutomationPeer_Static)};
+    if (!type_ListViewBaseAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseAutomationPeer_Static.get()))};
     if (!ListViewBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewBaseHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewBaseHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewBaseHeaderItemAutomationPeer_Static)};
+    if (!type_ListViewBaseHeaderItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBaseHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseHeaderItemAutomationPeer_Static.get()))};
     if (!ListViewBaseHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewHeaderItemAutomationPeer_Static)};
+    if (!type_ListViewHeaderItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewHeaderItemAutomationPeer_Static.get()))};
     if (!ListViewHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewItemAutomationPeer_Static)};
+    if (!type_ListViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemAutomationPeer_Static.get()))};
     if (!ListViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ListViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewItemDataAutomationPeer_Static)};
+    if (!type_ListViewItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemDataAutomationPeer_Static.get()))};
     if (!ListViewItemDataAutomationPeer_type)
     {
         return nullptr;
@@ -17939,67 +20478,133 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MediaPlayerElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MediaPlayerElementAutomationPeer_Static{PyType_FromSpec(&type_spec_MediaPlayerElementAutomationPeer_Static)};
+    if (!type_MediaPlayerElementAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MediaPlayerElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaPlayerElementAutomationPeer_Static.get()))};
     if (!MediaPlayerElementAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaTransportControlsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MediaTransportControlsAutomationPeer_Static{PyType_FromSpec(&type_spec_MediaTransportControlsAutomationPeer_Static)};
+    if (!type_MediaTransportControlsAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MediaTransportControlsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaTransportControlsAutomationPeer_Static.get()))};
     if (!MediaTransportControlsAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MenuBarAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuBarAutomationPeer_Static)};
+    if (!type_MenuBarAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarAutomationPeer_Static.get()))};
     if (!MenuBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MenuBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuBarItemAutomationPeer_Static)};
+    if (!type_MenuBarItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemAutomationPeer_Static.get()))};
     if (!MenuBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MenuFlyoutItemAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuFlyoutItemAutomationPeer_Static)};
+    if (!type_MenuFlyoutItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutItemAutomationPeer_Static.get()))};
     if (!MenuFlyoutItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MenuFlyoutPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuFlyoutPresenterAutomationPeer_Static)};
+    if (!type_MenuFlyoutPresenterAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutPresenterAutomationPeer_Static.get()))};
     if (!MenuFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewAutomationPeer_Static{PyType_FromSpec(&type_spec_NavigationViewAutomationPeer_Static)};
+    if (!type_NavigationViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewAutomationPeer_Static.get()))};
     if (!NavigationViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NavigationViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_NavigationViewItemAutomationPeer_Static)};
+    if (!type_NavigationViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemAutomationPeer_Static.get()))};
     if (!NavigationViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NumberBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NumberBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_NumberBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_NumberBoxAutomationPeer_Static)};
+    if (!type_NumberBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NumberBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NumberBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumberBoxAutomationPeer_Static.get()))};
     if (!NumberBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PasswordBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_PasswordBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_PasswordBoxAutomationPeer_Static)};
+    if (!type_PasswordBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PasswordBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PasswordBoxAutomationPeer_Static.get()))};
     if (!PasswordBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PersonPictureAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_PersonPictureAutomationPeer_Static{PyType_FromSpec(&type_spec_PersonPictureAutomationPeer_Static)};
+    if (!type_PersonPictureAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PersonPictureAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PersonPictureAutomationPeer_Static.get()))};
     if (!PersonPictureAutomationPeer_type)
     {
         return nullptr;
@@ -18011,7 +20616,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PipsPagerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PipsPagerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_PipsPagerAutomationPeer_Static{PyType_FromSpec(&type_spec_PipsPagerAutomationPeer_Static)};
+    if (!type_PipsPagerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PipsPagerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PipsPagerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PipsPagerAutomationPeer_Static.get()))};
     if (!PipsPagerAutomationPeer_type)
     {
         return nullptr;
@@ -18035,163 +20646,325 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ProgressBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ProgressBarAutomationPeer_Static{PyType_FromSpec(&type_spec_ProgressBarAutomationPeer_Static)};
+    if (!type_ProgressBarAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProgressBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBarAutomationPeer_Static.get()))};
     if (!ProgressBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProgressRingAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ProgressRingAutomationPeer_Static{PyType_FromSpec(&type_spec_ProgressRingAutomationPeer_Static)};
+    if (!type_ProgressRingAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProgressRingAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressRingAutomationPeer_Static.get()))};
     if (!ProgressRingAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadioButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RadioButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_RadioButtonAutomationPeer_Static)};
+    if (!type_RadioButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonAutomationPeer_Static.get()))};
     if (!RadioButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadioButtonsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonsAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RadioButtonsAutomationPeer_Static{PyType_FromSpec(&type_spec_RadioButtonsAutomationPeer_Static)};
+    if (!type_RadioButtonsAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButtonsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonsAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonsAutomationPeer_Static.get()))};
     if (!RadioButtonsAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RangeBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RangeBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_RangeBaseAutomationPeer_Static)};
+    if (!type_RangeBaseAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RangeBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBaseAutomationPeer_Static.get()))};
     if (!RangeBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RatingControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RatingControlAutomationPeer_Static{PyType_FromSpec(&type_spec_RatingControlAutomationPeer_Static)};
+    if (!type_RatingControlAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RatingControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RatingControlAutomationPeer_Static.get()))};
     if (!RatingControlAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepeatButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RepeatButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_RepeatButtonAutomationPeer_Static)};
+    if (!type_RepeatButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeatButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButtonAutomationPeer_Static.get()))};
     if (!RepeatButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepeaterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeaterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RepeaterAutomationPeer_Static{PyType_FromSpec(&type_spec_RepeaterAutomationPeer_Static)};
+    if (!type_RepeaterAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeaterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeaterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeaterAutomationPeer_Static.get()))};
     if (!RepeaterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichEditBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RichEditBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_RichEditBoxAutomationPeer_Static)};
+    if (!type_RichEditBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichEditBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichEditBoxAutomationPeer_Static.get()))};
     if (!RichEditBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichTextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RichTextBlockAutomationPeer_Static{PyType_FromSpec(&type_spec_RichTextBlockAutomationPeer_Static)};
+    if (!type_RichTextBlockAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichTextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockAutomationPeer_Static.get()))};
     if (!RichTextBlockAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichTextBlockOverflowAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RichTextBlockOverflowAutomationPeer_Static{PyType_FromSpec(&type_spec_RichTextBlockOverflowAutomationPeer_Static)};
+    if (!type_RichTextBlockOverflowAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichTextBlockOverflowAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockOverflowAutomationPeer_Static.get()))};
     if (!RichTextBlockOverflowAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScrollBarAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollBarAutomationPeer_Static)};
+    if (!type_ScrollBarAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBarAutomationPeer_Static.get()))};
     if (!ScrollBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScrollPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollPresenterAutomationPeer_Static)};
+    if (!type_ScrollPresenterAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPresenterAutomationPeer_Static.get()))};
     if (!ScrollPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollViewerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ScrollViewerAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollViewerAutomationPeer_Static)};
+    if (!type_ScrollViewerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollViewerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollViewerAutomationPeer_Static.get()))};
     if (!ScrollViewerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SelectorAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorAutomationPeer_Static)};
+    if (!type_SelectorAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorAutomationPeer_Static.get()))};
     if (!SelectorAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorBarItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SelectorBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorBarItemAutomationPeer_Static)};
+    if (!type_SelectorBarItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorBarItemAutomationPeer_Static.get()))};
     if (!SelectorBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SelectorItemAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorItemAutomationPeer_Static)};
+    if (!type_SelectorItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItemAutomationPeer_Static.get()))};
     if (!SelectorItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SemanticZoomAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SemanticZoomAutomationPeer_Static{PyType_FromSpec(&type_spec_SemanticZoomAutomationPeer_Static)};
+    if (!type_SemanticZoomAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SemanticZoomAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SemanticZoomAutomationPeer_Static.get()))};
     if (!SemanticZoomAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SliderAutomationPeer_Static{PyType_FromSpec(&type_spec_SliderAutomationPeer_Static)};
+    if (!type_SliderAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SliderAutomationPeer_Static.get()))};
     if (!SliderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SplitButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SplitButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_SplitButtonAutomationPeer_Static)};
+    if (!type_SplitButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SplitButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitButtonAutomationPeer_Static.get()))};
     if (!SplitButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TabViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TabViewAutomationPeer_Static{PyType_FromSpec(&type_spec_TabViewAutomationPeer_Static)};
+    if (!type_TabViewAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TabViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewAutomationPeer_Static.get()))};
     if (!TabViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TabViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TabViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_TabViewItemAutomationPeer_Static)};
+    if (!type_TabViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TabViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewItemAutomationPeer_Static.get()))};
     if (!TabViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TeachingTipAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TeachingTipAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TeachingTipAutomationPeer_Static{PyType_FromSpec(&type_spec_TeachingTipAutomationPeer_Static)};
+    if (!type_TeachingTipAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TeachingTipAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TeachingTipAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TeachingTipAutomationPeer_Static.get()))};
     if (!TeachingTipAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TextBlockAutomationPeer_Static{PyType_FromSpec(&type_spec_TextBlockAutomationPeer_Static)};
+    if (!type_TextBlockAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBlockAutomationPeer_Static.get()))};
     if (!TextBlockAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TextBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_TextBoxAutomationPeer_Static)};
+    if (!type_TextBoxAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBoxAutomationPeer_Static.get()))};
     if (!TextBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ThumbAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ThumbAutomationPeer_Static{PyType_FromSpec(&type_spec_ThumbAutomationPeer_Static)};
+    if (!type_ThumbAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ThumbAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThumbAutomationPeer_Static.get()))};
     if (!ThumbAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TimePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_TimePickerAutomationPeer_Static)};
+    if (!type_TimePickerAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TimePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerAutomationPeer_Static.get()))};
     if (!TimePickerAutomationPeer_type)
     {
         return nullptr;
@@ -18203,49 +20976,97 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ToggleButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleButtonAutomationPeer_Static)};
+    if (!type_ToggleButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButtonAutomationPeer_Static.get()))};
     if (!ToggleButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleMenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ToggleMenuFlyoutItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleMenuFlyoutItemAutomationPeer_Static)};
+    if (!type_ToggleMenuFlyoutItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleMenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleMenuFlyoutItemAutomationPeer_Static.get()))};
     if (!ToggleMenuFlyoutItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleSplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSplitButtonAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ToggleSplitButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleSplitButtonAutomationPeer_Static)};
+    if (!type_ToggleSplitButtonAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleSplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSplitButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSplitButtonAutomationPeer_Static.get()))};
     if (!ToggleSplitButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleSwitchAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ToggleSwitchAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleSwitchAutomationPeer_Static)};
+    if (!type_ToggleSwitchAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleSwitchAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSwitchAutomationPeer_Static.get()))};
     if (!ToggleSwitchAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TreeViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewItemAutomationPeer_Static)};
+    if (!type_TreeViewItemAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemAutomationPeer_Static.get()))};
     if (!TreeViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TreeViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewItemDataAutomationPeer_Static)};
+    if (!type_TreeViewItemDataAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemDataAutomationPeer_Static.get()))};
     if (!TreeViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewListAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TreeViewListAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewListAutomationPeer_Static)};
+    if (!type_TreeViewListAutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewListAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewListAutomationPeer_Static.get()))};
     if (!TreeViewListAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebView2AutomationPeer_type{py::register_python_type(module.get(), &type_spec_WebView2AutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle type_WebView2AutomationPeer_Static{PyType_FromSpec(&type_spec_WebView2AutomationPeer_Static)};
+    if (!type_WebView2AutomationPeer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WebView2AutomationPeer_type{py::register_python_type(module.get(), &type_spec_WebView2AutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebView2AutomationPeer_Static.get()))};
     if (!WebView2AutomationPeer_type)
     {
         return nullptr;

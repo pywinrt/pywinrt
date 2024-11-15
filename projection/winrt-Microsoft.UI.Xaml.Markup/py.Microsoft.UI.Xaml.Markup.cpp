@@ -92,6 +92,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         Py_TPFLAGS_DEFAULT,
         _type_slots_MarkupExtension};
 
+    static PyGetSetDef getset_MarkupExtension_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MarkupExtension_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MarkupExtension_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MarkupExtension_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MarkupExtension_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MarkupExtension_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_markup.MarkupExtension_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MarkupExtension_Static
+    };
+
     // ----- ProvideValueTargetProperty class --------------------
 
     static PyObject* _new_ProvideValueTargetProperty(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -4200,7 +4225,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_markup(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle MarkupExtension_type{py::register_python_type(module.get(), &type_spec_MarkupExtension, object_bases.get(), nullptr)};
+    py::pyobj_handle type_MarkupExtension_Static{PyType_FromSpec(&type_spec_MarkupExtension_Static)};
+    if (!type_MarkupExtension_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MarkupExtension_type{py::register_python_type(module.get(), &type_spec_MarkupExtension, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MarkupExtension_Static.get()))};
     if (!MarkupExtension_type)
     {
         return nullptr;

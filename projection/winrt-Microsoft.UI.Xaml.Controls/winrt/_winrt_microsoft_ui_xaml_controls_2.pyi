@@ -474,7 +474,10 @@ class Button(winrt.system.Object, metaclass=Button_Static):
     @flyout.setter
     def flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
 
-class CheckBox(winrt.system.Object):
+class CheckBox_Static(type):
+    pass
+
+class CheckBox(winrt.system.Object, metaclass=CheckBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CheckBox: ...
     def __new__(cls: typing.Type[CheckBox]) -> CheckBox: ...
@@ -578,12 +581,18 @@ class ComboBox(winrt.system.Object, metaclass=ComboBox_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ComboBoxTemplateSettings: ...
 
-class ComboBoxItem(winrt.system.Object):
+class ComboBoxItem_Static(type):
+    pass
+
+class ComboBoxItem(winrt.system.Object, metaclass=ComboBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxItem: ...
     def __new__(cls: typing.Type[ComboBoxItem]) -> ComboBoxItem: ...
 
-class DropDownButton(winrt.system.Object):
+class DropDownButton_Static(type):
+    pass
+
+class DropDownButton(winrt.system.Object, metaclass=DropDownButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropDownButton: ...
     def __new__(cls: typing.Type[DropDownButton]) -> DropDownButton: ...
@@ -601,17 +610,26 @@ class FlipView(winrt.system.Object, metaclass=FlipView_Static):
     @use_touch_animations_for_all_navigation.setter
     def use_touch_animations_for_all_navigation(self, value: bool) -> None: ...
 
-class FlipViewItem(winrt.system.Object):
+class FlipViewItem_Static(type):
+    pass
+
+class FlipViewItem(winrt.system.Object, metaclass=FlipViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewItem: ...
     def __new__(cls: typing.Type[FlipViewItem]) -> FlipViewItem: ...
 
-class GridView(winrt.system.Object):
+class GridView_Static(type):
+    pass
+
+class GridView(winrt.system.Object, metaclass=GridView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridView: ...
     def __new__(cls: typing.Type[GridView]) -> GridView: ...
 
-class GridViewItem(winrt.system.Object):
+class GridViewItem_Static(type):
+    pass
+
+class GridViewItem(winrt.system.Object, metaclass=GridViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItem: ...
     def __new__(cls: typing.Type[GridViewItem]) -> GridViewItem: ...
@@ -654,12 +672,18 @@ class ListBox(winrt.system.Object, metaclass=ListBox_Static):
     @_property
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class ListBoxItem(winrt.system.Object):
+class ListBoxItem_Static(type):
+    pass
+
+class ListBoxItem(winrt.system.Object, metaclass=ListBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxItem: ...
     def __new__(cls: typing.Type[ListBoxItem]) -> ListBoxItem: ...
 
-class ListView(winrt.system.Object):
+class ListView_Static(type):
+    pass
+
+class ListView(winrt.system.Object, metaclass=ListView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListView: ...
     def __new__(cls: typing.Type[ListView]) -> ListView: ...
@@ -829,7 +853,10 @@ class ListViewBase(ISemanticZoomInformation, winrt.system.Object, metaclass=List
     @is_active_view.setter
     def is_active_view(self, value: bool) -> None: ...
 
-class ListViewItem(winrt.system.Object):
+class ListViewItem_Static(type):
+    pass
+
+class ListViewItem(winrt.system.Object, metaclass=ListViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItem: ...
     def __new__(cls: typing.Type[ListViewItem]) -> ListViewItem: ...
@@ -876,7 +903,10 @@ class RadioButton(winrt.system.Object, metaclass=RadioButton_Static):
     @group_name.setter
     def group_name(self, value: str) -> None: ...
 
-class RevealListViewItemPresenter(winrt.system.Object):
+class RevealListViewItemPresenter_Static(type):
+    pass
+
+class RevealListViewItemPresenter(winrt.system.Object, metaclass=RevealListViewItemPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealListViewItemPresenter: ...
     def __new__(cls: typing.Type[RevealListViewItemPresenter]) -> RevealListViewItemPresenter: ...
@@ -1050,7 +1080,10 @@ class TreeViewItem(winrt.system.Object, metaclass=TreeViewItem_Static):
     @has_unrealized_children.setter
     def has_unrealized_children(self, value: bool) -> None: ...
 
-class TreeViewList(winrt.system.Object):
+class TreeViewList_Static(type):
+    pass
+
+class TreeViewList(winrt.system.Object, metaclass=TreeViewList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewList: ...
     def __new__(cls: typing.Type[TreeViewList]) -> TreeViewList: ...

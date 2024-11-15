@@ -24,7 +24,10 @@ class LoadMoreItemsResult:
     count: winrt.system.UInt32
     def __init__(self, count: winrt.system.UInt32 = 0) -> None: ...
 
-class Binding(winrt.system.Object):
+class Binding_Static(type):
+    pass
+
+class Binding(winrt.system.Object, metaclass=Binding_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Binding: ...
     def __new__(cls: typing.Type[Binding]) -> Binding: ...
@@ -73,12 +76,18 @@ class Binding(winrt.system.Object):
     @converter.setter
     def converter(self, value: IValueConverter) -> None: ...
 
-class BindingBase(winrt.system.Object):
+class BindingBase_Static(type):
+    pass
+
+class BindingBase(winrt.system.Object, metaclass=BindingBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingBase: ...
     def __new__(cls: typing.Type[BindingBase]) -> BindingBase: ...
 
-class BindingExpression(winrt.system.Object):
+class BindingExpression_Static(type):
+    pass
+
+class BindingExpression(winrt.system.Object, metaclass=BindingExpression_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpression: ...
     def update_source(self) -> None: ...
@@ -87,7 +96,10 @@ class BindingExpression(winrt.system.Object):
     @_property
     def parent_binding(self) -> Binding: ...
 
-class BindingExpressionBase(winrt.system.Object):
+class BindingExpressionBase_Static(type):
+    pass
+
+class BindingExpressionBase(winrt.system.Object, metaclass=BindingExpressionBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpressionBase: ...
 
@@ -131,7 +143,10 @@ class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_S
     @_property
     def view(self) -> ICollectionView: ...
 
-class CurrentChangingEventArgs(winrt.system.Object):
+class CurrentChangingEventArgs_Static(type):
+    pass
+
+class CurrentChangingEventArgs(winrt.system.Object, metaclass=CurrentChangingEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrentChangingEventArgs: ...
     @typing.overload
@@ -155,7 +170,10 @@ class DataErrorsChangedEventArgs(winrt.system.Object):
     @property_name.setter
     def property_name(self, value: str) -> None: ...
 
-class ItemIndexRange(winrt.system.Object):
+class ItemIndexRange_Static(type):
+    pass
+
+class ItemIndexRange(winrt.system.Object, metaclass=ItemIndexRange_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemIndexRange: ...
     def __new__(cls: typing.Type[ItemIndexRange], first_index: winrt.system.Int32, length: winrt.system.UInt32) -> ItemIndexRange: ...
@@ -166,14 +184,20 @@ class ItemIndexRange(winrt.system.Object):
     @_property
     def length(self) -> winrt.system.UInt32: ...
 
-class PropertyChangedEventArgs(winrt.system.Object):
+class PropertyChangedEventArgs_Static(type):
+    pass
+
+class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyChangedEventArgs: ...
     def __new__(cls: typing.Type[PropertyChangedEventArgs], name: str) -> PropertyChangedEventArgs: ...
     @_property
     def property_name(self) -> str: ...
 
-class RelativeSource(winrt.system.Object):
+class RelativeSource_Static(type):
+    pass
+
+class RelativeSource(winrt.system.Object, metaclass=RelativeSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RelativeSource: ...
     def __new__(cls: typing.Type[RelativeSource]) -> RelativeSource: ...

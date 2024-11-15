@@ -413,7 +413,10 @@ class Button(winrt.system.Object, metaclass=Button_Static):
     @flyout.setter
     def flyout(self, value: windows_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
 
-class CheckBox(winrt.system.Object):
+class CheckBox_Static(type):
+    pass
+
+class CheckBox(winrt.system.Object, metaclass=CheckBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CheckBox: ...
     def __new__(cls: typing.Type[CheckBox]) -> CheckBox: ...
@@ -517,12 +520,18 @@ class ComboBox(winrt.system.Object, metaclass=ComboBox_Static):
     @description.setter
     def description(self, value: winrt.system.Object) -> None: ...
 
-class ComboBoxItem(winrt.system.Object):
+class ComboBoxItem_Static(type):
+    pass
+
+class ComboBoxItem(winrt.system.Object, metaclass=ComboBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxItem: ...
     def __new__(cls: typing.Type[ComboBoxItem]) -> ComboBoxItem: ...
 
-class DropDownButton(winrt.system.Object):
+class DropDownButton_Static(type):
+    pass
+
+class DropDownButton(winrt.system.Object, metaclass=DropDownButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropDownButton: ...
     def __new__(cls: typing.Type[DropDownButton]) -> DropDownButton: ...
@@ -540,17 +549,26 @@ class FlipView(winrt.system.Object, metaclass=FlipView_Static):
     @use_touch_animations_for_all_navigation.setter
     def use_touch_animations_for_all_navigation(self, value: bool) -> None: ...
 
-class FlipViewItem(winrt.system.Object):
+class FlipViewItem_Static(type):
+    pass
+
+class FlipViewItem(winrt.system.Object, metaclass=FlipViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewItem: ...
     def __new__(cls: typing.Type[FlipViewItem]) -> FlipViewItem: ...
 
-class GridView(winrt.system.Object):
+class GridView_Static(type):
+    pass
+
+class GridView(winrt.system.Object, metaclass=GridView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridView: ...
     def __new__(cls: typing.Type[GridView]) -> GridView: ...
 
-class GridViewItem(winrt.system.Object):
+class GridViewItem_Static(type):
+    pass
+
+class GridViewItem(winrt.system.Object, metaclass=GridViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItem: ...
     def __new__(cls: typing.Type[GridViewItem]) -> GridViewItem: ...
@@ -570,7 +588,10 @@ class HyperlinkButton(winrt.system.Object, metaclass=HyperlinkButton_Static):
     @navigate_uri.setter
     def navigate_uri(self, value: windows_foundation.Uri) -> None: ...
 
-class InkToolbarBallpointPenButton(winrt.system.Object):
+class InkToolbarBallpointPenButton_Static(type):
+    pass
+
+class InkToolbarBallpointPenButton(winrt.system.Object, metaclass=InkToolbarBallpointPenButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarBallpointPenButton: ...
     def __new__(cls: typing.Type[InkToolbarBallpointPenButton]) -> InkToolbarBallpointPenButton: ...
@@ -594,7 +615,10 @@ class InkToolbarCustomPenButton(winrt.system.Object, metaclass=InkToolbarCustomP
     @configuration_content.setter
     def configuration_content(self, value: windows_ui_xaml.UIElement) -> None: ...
 
-class InkToolbarCustomToggleButton(winrt.system.Object):
+class InkToolbarCustomToggleButton_Static(type):
+    pass
+
+class InkToolbarCustomToggleButton(winrt.system.Object, metaclass=InkToolbarCustomToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarCustomToggleButton: ...
     def __new__(cls: typing.Type[InkToolbarCustomToggleButton]) -> InkToolbarCustomToggleButton: ...
@@ -648,7 +672,10 @@ class InkToolbarFlyoutItem(winrt.system.Object, metaclass=InkToolbarFlyoutItem_S
     @is_checked.setter
     def is_checked(self, value: bool) -> None: ...
 
-class InkToolbarHighlighterButton(winrt.system.Object):
+class InkToolbarHighlighterButton_Static(type):
+    pass
+
+class InkToolbarHighlighterButton(winrt.system.Object, metaclass=InkToolbarHighlighterButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarHighlighterButton: ...
     def __new__(cls: typing.Type[InkToolbarHighlighterButton]) -> InkToolbarHighlighterButton: ...
@@ -707,7 +734,10 @@ class InkToolbarPenButton(winrt.system.Object, metaclass=InkToolbarPenButton_Sta
     @_property
     def selected_brush(self) -> windows_ui_xaml_media.Brush: ...
 
-class InkToolbarPencilButton(winrt.system.Object):
+class InkToolbarPencilButton_Static(type):
+    pass
+
+class InkToolbarPencilButton(winrt.system.Object, metaclass=InkToolbarPencilButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarPencilButton: ...
     def __new__(cls: typing.Type[InkToolbarPencilButton]) -> InkToolbarPencilButton: ...
@@ -756,7 +786,10 @@ class InkToolbarStencilButton(winrt.system.Object, metaclass=InkToolbarStencilBu
     @_property
     def ruler(self) -> windows_ui_input_inking.InkPresenterRuler: ...
 
-class InkToolbarToggleButton(winrt.system.Object):
+class InkToolbarToggleButton_Static(type):
+    pass
+
+class InkToolbarToggleButton(winrt.system.Object, metaclass=InkToolbarToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InkToolbarToggleButton: ...
     @_property
@@ -799,12 +832,18 @@ class ListBox(winrt.system.Object, metaclass=ListBox_Static):
     @single_selection_follows_focus.setter
     def single_selection_follows_focus(self, value: bool) -> None: ...
 
-class ListBoxItem(winrt.system.Object):
+class ListBoxItem_Static(type):
+    pass
+
+class ListBoxItem(winrt.system.Object, metaclass=ListBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxItem: ...
     def __new__(cls: typing.Type[ListBoxItem]) -> ListBoxItem: ...
 
-class ListView(winrt.system.Object):
+class ListView_Static(type):
+    pass
+
+class ListView(winrt.system.Object, metaclass=ListView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListView: ...
     def __new__(cls: typing.Type[ListView]) -> ListView: ...
@@ -974,7 +1013,10 @@ class ListViewBase(ISemanticZoomInformation, winrt.system.Object, metaclass=List
     @is_active_view.setter
     def is_active_view(self, value: bool) -> None: ...
 
-class ListViewItem(winrt.system.Object):
+class ListViewItem_Static(type):
+    pass
+
+class ListViewItem(winrt.system.Object, metaclass=ListViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItem: ...
     def __new__(cls: typing.Type[ListViewItem]) -> ListViewItem: ...
@@ -1004,21 +1046,33 @@ class NavigationViewItem(winrt.system.Object, metaclass=NavigationViewItem_Stati
     @selects_on_invoked.setter
     def selects_on_invoked(self, value: bool) -> None: ...
 
-class NavigationViewItemBase(winrt.system.Object):
+class NavigationViewItemBase_Static(type):
+    pass
+
+class NavigationViewItemBase(winrt.system.Object, metaclass=NavigationViewItemBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemBase: ...
 
-class NavigationViewItemHeader(winrt.system.Object):
+class NavigationViewItemHeader_Static(type):
+    pass
+
+class NavigationViewItemHeader(winrt.system.Object, metaclass=NavigationViewItemHeader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemHeader: ...
     def __new__(cls: typing.Type[NavigationViewItemHeader]) -> NavigationViewItemHeader: ...
 
-class NavigationViewItemSeparator(winrt.system.Object):
+class NavigationViewItemSeparator_Static(type):
+    pass
+
+class NavigationViewItemSeparator(winrt.system.Object, metaclass=NavigationViewItemSeparator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemSeparator: ...
     def __new__(cls: typing.Type[NavigationViewItemSeparator]) -> NavigationViewItemSeparator: ...
 
-class NavigationViewList(winrt.system.Object):
+class NavigationViewList_Static(type):
+    pass
+
+class NavigationViewList(winrt.system.Object, metaclass=NavigationViewList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewList: ...
     def __new__(cls: typing.Type[NavigationViewList]) -> NavigationViewList: ...
@@ -1195,7 +1249,10 @@ class TreeViewItem(winrt.system.Object, metaclass=TreeViewItem_Static):
     @has_unrealized_children.setter
     def has_unrealized_children(self, value: bool) -> None: ...
 
-class TreeViewList(winrt.system.Object):
+class TreeViewList_Static(type):
+    pass
+
+class TreeViewList(winrt.system.Object, metaclass=TreeViewList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewList: ...
     def __new__(cls: typing.Type[TreeViewList]) -> TreeViewList: ...

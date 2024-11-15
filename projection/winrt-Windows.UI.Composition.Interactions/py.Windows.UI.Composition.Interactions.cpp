@@ -2679,6 +2679,31 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerInertiaModifier};
 
+    static PyGetSetDef getset_InteractionTrackerInertiaModifier_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerInertiaModifier_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerInertiaModifier_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerInertiaModifier_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerInertiaModifier_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerInertiaModifier_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerInertiaModifier_Static
+    };
+
     // ----- InteractionTrackerInertiaMotion class --------------------
 
     static PyObject* _new_InteractionTrackerInertiaMotion(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -4175,6 +4200,31 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_InteractionTrackerVector2InertiaModifier};
+
+    static PyGetSetDef getset_InteractionTrackerVector2InertiaModifier_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_InteractionTrackerVector2InertiaModifier_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_InteractionTrackerVector2InertiaModifier_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_InteractionTrackerVector2InertiaModifier_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_InteractionTrackerVector2InertiaModifier_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_InteractionTrackerVector2InertiaModifier_Static =
+    {
+        "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_InteractionTrackerVector2InertiaModifier_Static
+    };
 
     // ----- InteractionTrackerVector2InertiaNaturalMotion class --------------------
 
@@ -6084,7 +6134,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaModifier, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InteractionTrackerInertiaModifier_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaModifier_Static)};
+    if (!type_InteractionTrackerInertiaModifier_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerInertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaModifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaModifier_Static.get()))};
     if (!InteractionTrackerInertiaModifier_type)
     {
         return nullptr;
@@ -6150,7 +6206,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_interactions(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerVector2InertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaModifier, object_bases.get(), nullptr)};
+    py::pyobj_handle type_InteractionTrackerVector2InertiaModifier_Static{PyType_FromSpec(&type_spec_InteractionTrackerVector2InertiaModifier_Static)};
+    if (!type_InteractionTrackerVector2InertiaModifier_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerVector2InertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaModifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaModifier_Static.get()))};
     if (!InteractionTrackerVector2InertiaModifier_type)
     {
         return nullptr;

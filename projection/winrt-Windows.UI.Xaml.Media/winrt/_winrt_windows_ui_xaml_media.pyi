@@ -208,7 +208,10 @@ class BrushCollection(winrt.system.Object, winrt._winrt.MutableSequence[Brush]):
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class CacheMode(winrt.system.Object):
+class CacheMode_Static(type):
+    pass
+
+class CacheMode(winrt.system.Object, metaclass=CacheMode_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CacheMode: ...
 
@@ -361,7 +364,10 @@ class FontFamily(winrt.system.Object, metaclass=FontFamily_Static):
     @_property
     def source(self) -> str: ...
 
-class GeneralTransform(winrt.system.Object):
+class GeneralTransform_Static(type):
+    pass
+
+class GeneralTransform(winrt.system.Object, metaclass=GeneralTransform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GeneralTransform: ...
     def transform_bounds(self, rect: windows_foundation.Rect, /) -> windows_foundation.Rect: ...
@@ -547,7 +553,10 @@ class ImageBrush(winrt.system.Object, metaclass=ImageBrush_Static):
     @image_source.setter
     def image_source(self, value: ImageSource) -> None: ...
 
-class ImageSource(winrt.system.Object):
+class ImageSource_Static(type):
+    pass
+
+class ImageSource(winrt.system.Object, metaclass=ImageSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageSource: ...
 
@@ -789,7 +798,10 @@ class PathGeometry(winrt.system.Object, metaclass=PathGeometry_Static):
     @figures.setter
     def figures(self, value: PathFigureCollection) -> None: ...
 
-class PathSegment(winrt.system.Object):
+class PathSegment_Static(type):
+    pass
+
+class PathSegment(winrt.system.Object, metaclass=PathSegment_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathSegment: ...
 
@@ -991,7 +1003,10 @@ class PolyQuadraticBezierSegment(winrt.system.Object, metaclass=PolyQuadraticBez
     @points.setter
     def points(self, value: PointCollection) -> None: ...
 
-class Projection(winrt.system.Object):
+class Projection_Static(type):
+    pass
+
+class Projection(winrt.system.Object, metaclass=Projection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Projection: ...
 
@@ -1051,12 +1066,18 @@ class RenderingEventArgs(winrt.system.Object):
     @_property
     def rendering_time(self) -> datetime.timedelta: ...
 
-class RevealBackgroundBrush(winrt.system.Object):
+class RevealBackgroundBrush_Static(type):
+    pass
+
+class RevealBackgroundBrush(winrt.system.Object, metaclass=RevealBackgroundBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBackgroundBrush: ...
     def __new__(cls: typing.Type[RevealBackgroundBrush]) -> RevealBackgroundBrush: ...
 
-class RevealBorderBrush(winrt.system.Object):
+class RevealBorderBrush_Static(type):
+    pass
+
+class RevealBorderBrush(winrt.system.Object, metaclass=RevealBorderBrush_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealBorderBrush: ...
     def __new__(cls: typing.Type[RevealBorderBrush]) -> RevealBorderBrush: ...
@@ -1149,7 +1170,10 @@ class ScaleTransform(winrt.system.Object, metaclass=ScaleTransform_Static):
     @center_x.setter
     def center_x(self, value: winrt.system.Double) -> None: ...
 
-class Shadow(winrt.system.Object):
+class Shadow_Static(type):
+    pass
+
+class Shadow(winrt.system.Object, metaclass=Shadow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shadow: ...
 
@@ -1204,7 +1228,10 @@ class SolidColorBrush(winrt.system.Object, metaclass=SolidColorBrush_Static):
     @color.setter
     def color(self, value: windows_ui.Color) -> None: ...
 
-class ThemeShadow(winrt.system.Object):
+class ThemeShadow_Static(type):
+    pass
+
+class ThemeShadow(winrt.system.Object, metaclass=ThemeShadow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ThemeShadow: ...
     def __new__(cls: typing.Type[ThemeShadow]) -> ThemeShadow: ...
@@ -1306,7 +1333,10 @@ class TimelineMarkerRoutedEventArgs(winrt.system.Object):
     @marker.setter
     def marker(self, value: TimelineMarker) -> None: ...
 
-class Transform(winrt.system.Object):
+class Transform_Static(type):
+    pass
+
+class Transform(winrt.system.Object, metaclass=Transform_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Transform: ...
 

@@ -2065,6 +2065,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_SurfaceImageSource};
 
+    static PyGetSetDef getset_SurfaceImageSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_SurfaceImageSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_SurfaceImageSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_SurfaceImageSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_SurfaceImageSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_SurfaceImageSource_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_media_imaging.SurfaceImageSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_SurfaceImageSource_Static
+    };
+
     // ----- SvgImageSource class --------------------
 
     static PyObject* _new_SvgImageSource(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3106,6 +3131,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
         Py_TPFLAGS_DEFAULT,
         _type_slots_XamlRenderingBackgroundTask};
 
+    static PyGetSetDef getset_XamlRenderingBackgroundTask_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_XamlRenderingBackgroundTask_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_XamlRenderingBackgroundTask_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_XamlRenderingBackgroundTask_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_XamlRenderingBackgroundTask_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_XamlRenderingBackgroundTask_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_media_imaging.XamlRenderingBackgroundTask_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_XamlRenderingBackgroundTask_Static
+    };
+
     // ----- Microsoft.UI.Xaml.Media.Imaging Initialization --------------------
 
     PyDoc_STRVAR(module_doc, "Microsoft.UI.Xaml.Media.Imaging");
@@ -3199,7 +3249,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_SurfaceImageSource_Static{PyType_FromSpec(&type_spec_SurfaceImageSource_Static)};
+    if (!type_SurfaceImageSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SurfaceImageSource_Static.get()))};
     if (!SurfaceImageSource_type)
     {
         return nullptr;
@@ -3241,7 +3297,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle XamlRenderingBackgroundTask_type{py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, object_bases.get(), nullptr)};
+    py::pyobj_handle type_XamlRenderingBackgroundTask_Static{PyType_FromSpec(&type_spec_XamlRenderingBackgroundTask_Static)};
+    if (!type_XamlRenderingBackgroundTask_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle XamlRenderingBackgroundTask_type{py::register_python_type(module.get(), &type_spec_XamlRenderingBackgroundTask, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlRenderingBackgroundTask_Static.get()))};
     if (!XamlRenderingBackgroundTask_type)
     {
         return nullptr;

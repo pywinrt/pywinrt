@@ -2866,6 +2866,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_CacheMode};
 
+    static PyGetSetDef getset_CacheMode_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CacheMode_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CacheMode_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CacheMode_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CacheMode_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CacheMode_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.CacheMode_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CacheMode_Static
+    };
+
     // ----- CompositeTransform class --------------------
 
     static PyObject* _new_CompositeTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -5543,6 +5568,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_GeneralTransform};
+
+    static PyGetSetDef getset_GeneralTransform_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_GeneralTransform_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_GeneralTransform_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_GeneralTransform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_GeneralTransform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_GeneralTransform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.GeneralTransform_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_GeneralTransform_Static
+    };
 
     // ----- Geometry class --------------------
 
@@ -8667,6 +8717,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ImageSource};
+
+    static PyGetSetDef getset_ImageSource_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ImageSource_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ImageSource_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ImageSource_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ImageSource_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ImageSource_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.ImageSource_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ImageSource_Static
+    };
 
     // ----- LineGeometry class --------------------
 
@@ -12489,6 +12564,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_PathSegment};
 
+    static PyGetSetDef getset_PathSegment_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_PathSegment_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PathSegment_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PathSegment_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PathSegment_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PathSegment_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.PathSegment_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PathSegment_Static
+    };
+
     // ----- PathSegmentCollection class --------------------
 
     static PyObject* _new_PathSegmentCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -15844,6 +15944,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_Projection};
 
+    static PyGetSetDef getset_Projection_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Projection_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Projection_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Projection_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Projection_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Projection_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Projection_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Projection_Static
+    };
+
     // ----- QuadraticBezierSegment class --------------------
 
     static PyObject* _new_QuadraticBezierSegment(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16699,6 +16824,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_RevealBackgroundBrush};
 
+    static PyGetSetDef getset_RevealBackgroundBrush_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RevealBackgroundBrush_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RevealBackgroundBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBackgroundBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBackgroundBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBackgroundBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.RevealBackgroundBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RevealBackgroundBrush_Static
+    };
+
     // ----- RevealBorderBrush class --------------------
 
     static PyObject* _new_RevealBorderBrush(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -16786,6 +16936,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_RevealBorderBrush};
+
+    static PyGetSetDef getset_RevealBorderBrush_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_RevealBorderBrush_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_RevealBorderBrush_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_RevealBorderBrush_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_RevealBorderBrush_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_RevealBorderBrush_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.RevealBorderBrush_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_RevealBorderBrush_Static
+    };
 
     // ----- RevealBrush class --------------------
 
@@ -18167,6 +18342,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         Py_TPFLAGS_DEFAULT,
         _type_slots_Shadow};
 
+    static PyGetSetDef getset_Shadow_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Shadow_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Shadow_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Shadow_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Shadow_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Shadow_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Shadow_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Shadow_Static
+    };
+
     // ----- SkewTransform class --------------------
 
     static PyObject* _new_SkewTransform(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -18967,6 +19167,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_ThemeShadow};
+
+    static PyGetSetDef getset_ThemeShadow_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ThemeShadow_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ThemeShadow_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ThemeShadow_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ThemeShadow_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ThemeShadow_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.ThemeShadow_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ThemeShadow_Static
+    };
 
     // ----- TileBrush class --------------------
 
@@ -20645,6 +20870,31 @@ namespace py::cpp::Windows::UI::Xaml::Media
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Transform};
+
+    static PyGetSetDef getset_Transform_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Transform_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Transform_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Transform_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Transform_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Transform_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_media.Transform_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Transform_Static
+    };
 
     // ----- TransformCollection class --------------------
 
@@ -23323,7 +23573,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CacheMode_type{py::register_python_type(module.get(), &type_spec_CacheMode, object_bases.get(), nullptr)};
+    py::pyobj_handle type_CacheMode_Static{PyType_FromSpec(&type_spec_CacheMode_Static)};
+    if (!type_CacheMode_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CacheMode_type{py::register_python_type(module.get(), &type_spec_CacheMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CacheMode_Static.get()))};
     if (!CacheMode_type)
     {
         return nullptr;
@@ -23383,7 +23639,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GeneralTransform_type{py::register_python_type(module.get(), &type_spec_GeneralTransform, object_bases.get(), nullptr)};
+    py::pyobj_handle type_GeneralTransform_Static{PyType_FromSpec(&type_spec_GeneralTransform_Static)};
+    if (!type_GeneralTransform_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GeneralTransform_type{py::register_python_type(module.get(), &type_spec_GeneralTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneralTransform_Static.get()))};
     if (!GeneralTransform_type)
     {
         return nullptr;
@@ -23461,7 +23723,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ImageSource_type{py::register_python_type(module.get(), &type_spec_ImageSource, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ImageSource_Static{PyType_FromSpec(&type_spec_ImageSource_Static)};
+    if (!type_ImageSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageSource_type{py::register_python_type(module.get(), &type_spec_ImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageSource_Static.get()))};
     if (!ImageSource_type)
     {
         return nullptr;
@@ -23599,7 +23867,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PathSegment_type{py::register_python_type(module.get(), &type_spec_PathSegment, object_bases.get(), nullptr)};
+    py::pyobj_handle type_PathSegment_Static{PyType_FromSpec(&type_spec_PathSegment_Static)};
+    if (!type_PathSegment_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PathSegment_type{py::register_python_type(module.get(), &type_spec_PathSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathSegment_Static.get()))};
     if (!PathSegment_type)
     {
         return nullptr;
@@ -23665,7 +23939,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Projection_type{py::register_python_type(module.get(), &type_spec_Projection, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Projection_Static{PyType_FromSpec(&type_spec_Projection_Static)};
+    if (!type_Projection_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Projection_type{py::register_python_type(module.get(), &type_spec_Projection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Projection_Static.get()))};
     if (!Projection_type)
     {
         return nullptr;
@@ -23713,13 +23993,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RevealBackgroundBrush_type{py::register_python_type(module.get(), &type_spec_RevealBackgroundBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RevealBackgroundBrush_Static{PyType_FromSpec(&type_spec_RevealBackgroundBrush_Static)};
+    if (!type_RevealBackgroundBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealBackgroundBrush_type{py::register_python_type(module.get(), &type_spec_RevealBackgroundBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBackgroundBrush_Static.get()))};
     if (!RevealBackgroundBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RevealBorderBrush_type{py::register_python_type(module.get(), &type_spec_RevealBorderBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle type_RevealBorderBrush_Static{PyType_FromSpec(&type_spec_RevealBorderBrush_Static)};
+    if (!type_RevealBorderBrush_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RevealBorderBrush_type{py::register_python_type(module.get(), &type_spec_RevealBorderBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RevealBorderBrush_Static.get()))};
     if (!RevealBorderBrush_type)
     {
         return nullptr;
@@ -23761,7 +24053,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Shadow_type{py::register_python_type(module.get(), &type_spec_Shadow, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Shadow_Static{PyType_FromSpec(&type_spec_Shadow_Static)};
+    if (!type_Shadow_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Shadow_type{py::register_python_type(module.get(), &type_spec_Shadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shadow_Static.get()))};
     if (!Shadow_type)
     {
         return nullptr;
@@ -23791,7 +24089,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ThemeShadow_type{py::register_python_type(module.get(), &type_spec_ThemeShadow, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ThemeShadow_Static{PyType_FromSpec(&type_spec_ThemeShadow_Static)};
+    if (!type_ThemeShadow_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ThemeShadow_type{py::register_python_type(module.get(), &type_spec_ThemeShadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThemeShadow_Static.get()))};
     if (!ThemeShadow_type)
     {
         return nullptr;
@@ -23833,7 +24137,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Transform_type{py::register_python_type(module.get(), &type_spec_Transform, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Transform_Static{PyType_FromSpec(&type_spec_Transform_Static)};
+    if (!type_Transform_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transform_type{py::register_python_type(module.get(), &type_spec_Transform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform_Static.get()))};
     if (!Transform_type)
     {
         return nullptr;

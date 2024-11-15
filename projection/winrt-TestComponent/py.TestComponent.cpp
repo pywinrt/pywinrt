@@ -594,6 +594,31 @@ namespace py::cpp::TestComponent
         Py_TPFLAGS_DEFAULT,
         _type_slots_Derived};
 
+    static PyGetSetDef getset_Derived_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Derived_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Derived_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Derived_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Derived_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Derived_Static =
+    {
+        "winrt._winrt_testcomponent.Derived_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Derived_Static
+    };
+
     // ----- TestRunner class --------------------
 
     static PyObject* _new_TestRunner(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -6220,7 +6245,13 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Derived_Static{PyType_FromSpec(&type_spec_Derived_Static)};
+    if (!type_Derived_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Derived_Static.get()))};
     if (!Derived_type)
     {
         return nullptr;

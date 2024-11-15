@@ -59,7 +59,10 @@ class DesignerAppView(windows_foundation.IClosable, winrt.system.Object):
     @_property
     def view_state(self) -> DesignerAppViewState: ...
 
-class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object):
+class DesktopWindowXamlSource_Static(type):
+    pass
+
+class DesktopWindowXamlSource(windows_foundation.IClosable, winrt.system.Object, metaclass=DesktopWindowXamlSource_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

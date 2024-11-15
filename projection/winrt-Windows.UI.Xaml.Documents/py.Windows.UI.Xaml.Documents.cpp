@@ -3241,6 +3241,31 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         Py_TPFLAGS_DEFAULT,
         _type_slots_ContentLinkProvider};
 
+    static PyGetSetDef getset_ContentLinkProvider_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_ContentLinkProvider_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ContentLinkProvider_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ContentLinkProvider_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ContentLinkProvider_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ContentLinkProvider_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.ContentLinkProvider_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ContentLinkProvider_Static
+    };
+
     // ----- ContentLinkProviderCollection class --------------------
 
     static PyObject* _new_ContentLinkProviderCollection(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -6640,6 +6665,31 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         Py_TPFLAGS_DEFAULT,
         _type_slots_Inline};
 
+    static PyGetSetDef getset_Inline_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Inline_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Inline_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Inline_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Inline_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Inline_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Inline_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Inline_Static
+    };
+
     // ----- InlineCollection class --------------------
 
     static PyObject* _new_InlineCollection(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -8398,6 +8448,31 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_Span};
+
+    static PyGetSetDef getset_Span_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_Span_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Span_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Span_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Span_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Span_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.Span_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Span_Static
+    };
 
     // ----- TextElement class --------------------
 
@@ -10888,6 +10963,31 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         0,
         Py_TPFLAGS_DEFAULT,
         _type_slots_TextHighlighterBase};
+
+    static PyGetSetDef getset_TextHighlighterBase_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TextHighlighterBase_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TextHighlighterBase_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextHighlighterBase_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextHighlighterBase_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextHighlighterBase_Static =
+    {
+        "winrt._winrt_windows_ui_xaml_documents.TextHighlighterBase_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TextHighlighterBase_Static
+    };
 
     // ----- TextPointer class --------------------
 
@@ -16229,7 +16329,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle ContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_ContentLinkProvider, object_bases.get(), nullptr)};
+    py::pyobj_handle type_ContentLinkProvider_Static{PyType_FromSpec(&type_spec_ContentLinkProvider_Static)};
+    if (!type_ContentLinkProvider_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentLinkProvider_type{py::register_python_type(module.get(), &type_spec_ContentLinkProvider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentLinkProvider_Static.get()))};
     if (!ContentLinkProvider_type)
     {
         return nullptr;
@@ -16271,7 +16377,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Inline_Static{PyType_FromSpec(&type_spec_Inline_Static)};
+    if (!type_Inline_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Inline_Static.get()))};
     if (!Inline_type)
     {
         return nullptr;
@@ -16331,7 +16443,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), nullptr)};
+    py::pyobj_handle type_Span_Static{PyType_FromSpec(&type_spec_Span_Static)};
+    if (!type_Span_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Span_Static.get()))};
     if (!Span_type)
     {
         return nullptr;
@@ -16361,7 +16479,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle TextHighlighterBase_type{py::register_python_type(module.get(), &type_spec_TextHighlighterBase, object_bases.get(), nullptr)};
+    py::pyobj_handle type_TextHighlighterBase_Static{PyType_FromSpec(&type_spec_TextHighlighterBase_Static)};
+    if (!type_TextHighlighterBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextHighlighterBase_type{py::register_python_type(module.get(), &type_spec_TextHighlighterBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextHighlighterBase_Static.get()))};
     if (!TextHighlighterBase_type)
     {
         return nullptr;

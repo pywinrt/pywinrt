@@ -216,6 +216,31 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
         Py_TPFLAGS_DEFAULT,
         _type_slots_FrameNavigationOptions};
 
+    static PyGetSetDef getset_FrameNavigationOptions_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_FrameNavigationOptions_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_FrameNavigationOptions_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_FrameNavigationOptions_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_FrameNavigationOptions_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_FrameNavigationOptions_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_navigation.FrameNavigationOptions_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_FrameNavigationOptions_Static
+    };
+
     // ----- NavigatingCancelEventArgs class --------------------
 
     static PyObject* _new_NavigatingCancelEventArgs(PyTypeObject* /*unused*/, PyObject* /*unused*/, PyObject* /*unused*/) noexcept
@@ -1167,7 +1192,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FrameNavigationOptions_type{py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, object_bases.get(), nullptr)};
+    py::pyobj_handle type_FrameNavigationOptions_Static{PyType_FromSpec(&type_spec_FrameNavigationOptions_Static)};
+    if (!type_FrameNavigationOptions_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FrameNavigationOptions_type{py::register_python_type(module.get(), &type_spec_FrameNavigationOptions, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameNavigationOptions_Static.get()))};
     if (!FrameNavigationOptions_type)
     {
         return nullptr;

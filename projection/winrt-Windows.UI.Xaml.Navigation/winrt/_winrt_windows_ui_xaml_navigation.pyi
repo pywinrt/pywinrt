@@ -19,7 +19,10 @@ from winrt.windows.ui.xaml.navigation import LoadCompletedEventHandler, Navigate
 
 Self = typing.TypeVar('Self')
 
-class FrameNavigationOptions(winrt.system.Object):
+class FrameNavigationOptions_Static(type):
+    pass
+
+class FrameNavigationOptions(winrt.system.Object, metaclass=FrameNavigationOptions_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FrameNavigationOptions: ...
     def __new__(cls: typing.Type[FrameNavigationOptions]) -> FrameNavigationOptions: ...
