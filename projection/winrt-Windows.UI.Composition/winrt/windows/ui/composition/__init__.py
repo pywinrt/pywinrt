@@ -118,6 +118,32 @@ from winrt._winrt_windows_ui_composition import (
     IVisualElement,
     IVisualElement2,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_composition import (
+        CompositionAnimation_Static,
+        CompositionBrush_Static,
+        CompositionClip_Static,
+        CompositionDrawingSurface_Static,
+        CompositionEasingFunction_Static,
+        CompositionGeometry_Static,
+        CompositionGradientBrush_Static,
+        CompositionLight_Static,
+        CompositionObject_Static,
+        CompositionShadow_Static,
+        CompositionShape_Static,
+        CompositionTarget_Static,
+        CompositionTexture_Static,
+        CompositionTransform_Static,
+        CompositionVirtualDrawingSurface_Static,
+        ContainerVisual_Static,
+        KeyFrameAnimation_Static,
+        NaturalMotionAnimation_Static,
+        ScalarNaturalMotionAnimation_Static,
+        Vector2NaturalMotionAnimation_Static,
+        Vector3NaturalMotionAnimation_Static,
+        Visual_Static,
+    )
 
 __all__ = [
     "AnimationControllerProgressBehavior",

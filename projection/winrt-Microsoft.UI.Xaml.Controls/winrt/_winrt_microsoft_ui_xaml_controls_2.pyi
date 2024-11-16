@@ -354,7 +354,7 @@ from winrt.microsoft.ui.xaml.controls import CalendarViewDayItemChangingEventHan
 
 Self = typing.TypeVar('Self')
 
-class AppBarButton_Static(type):
+class AppBarButton_Static(Button_Static):
     @_property
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -370,7 +370,7 @@ class AppBarButton_Static(type):
     @_property
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarButton(ICommandBarElement, winrt.system.Object, metaclass=AppBarButton_Static):
+class AppBarButton(ICommandBarElement, Button, metaclass=AppBarButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarButton: ...
     def __new__(cls: typing.Type[AppBarButton]) -> AppBarButton: ...
@@ -403,7 +403,7 @@ class AppBarButton(ICommandBarElement, winrt.system.Object, metaclass=AppBarButt
     @_property
     def is_in_overflow(self) -> bool: ...
 
-class AppBarToggleButton_Static(type):
+class AppBarToggleButton_Static(microsoft_ui_xaml_controls_primitives.ToggleButton_Static):
     @_property
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -419,7 +419,7 @@ class AppBarToggleButton_Static(type):
     @_property
     def label_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarToggleButton(ICommandBarElement, winrt.system.Object, metaclass=AppBarToggleButton_Static):
+class AppBarToggleButton(ICommandBarElement, microsoft_ui_xaml_controls_primitives.ToggleButton, metaclass=AppBarToggleButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarToggleButton: ...
     def __new__(cls: typing.Type[AppBarToggleButton]) -> AppBarToggleButton: ...
@@ -452,11 +452,11 @@ class AppBarToggleButton(ICommandBarElement, winrt.system.Object, metaclass=AppB
     @_property
     def is_in_overflow(self) -> bool: ...
 
-class Button_Static(type):
+class Button_Static(microsoft_ui_xaml_controls_primitives.ButtonBase_Static):
     @_property
     def flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Button(winrt.system.Object, metaclass=Button_Static):
+class Button(microsoft_ui_xaml_controls_primitives.ButtonBase, metaclass=Button_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Button: ...
     def __new__(cls: typing.Type[Button]) -> Button: ...
@@ -465,15 +465,15 @@ class Button(winrt.system.Object, metaclass=Button_Static):
     @flyout.setter
     def flyout(self, value: microsoft_ui_xaml_controls_primitives.FlyoutBase) -> None: ...
 
-class CheckBox_Static(type):
+class CheckBox_Static(microsoft_ui_xaml_controls_primitives.ToggleButton_Static):
     pass
 
-class CheckBox(winrt.system.Object, metaclass=CheckBox_Static):
+class CheckBox(microsoft_ui_xaml_controls_primitives.ToggleButton, metaclass=CheckBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CheckBox: ...
     def __new__(cls: typing.Type[CheckBox]) -> CheckBox: ...
 
-class ComboBox_Static(type):
+class ComboBox_Static(microsoft_ui_xaml_controls_primitives.Selector_Static):
     @_property
     def description_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -501,7 +501,7 @@ class ComboBox_Static(type):
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ComboBox(winrt.system.Object, metaclass=ComboBox_Static):
+class ComboBox(microsoft_ui_xaml_controls_primitives.Selector, metaclass=ComboBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBox: ...
     def __new__(cls: typing.Type[ComboBox]) -> ComboBox: ...
@@ -572,18 +572,18 @@ class ComboBox(winrt.system.Object, metaclass=ComboBox_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ComboBoxTemplateSettings: ...
 
-class ComboBoxItem_Static(type):
+class ComboBoxItem_Static(microsoft_ui_xaml_controls_primitives.SelectorItem_Static):
     pass
 
-class ComboBoxItem(winrt.system.Object, metaclass=ComboBoxItem_Static):
+class ComboBoxItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass=ComboBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ComboBoxItem: ...
     def __new__(cls: typing.Type[ComboBoxItem]) -> ComboBoxItem: ...
 
-class CommandBarFlyout_Static(type):
+class CommandBarFlyout_Static(microsoft_ui_xaml_controls_primitives.FlyoutBase_Static):
     pass
 
-class CommandBarFlyout(winrt.system.Object, metaclass=CommandBarFlyout_Static):
+class CommandBarFlyout(microsoft_ui_xaml_controls_primitives.FlyoutBase, metaclass=CommandBarFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandBarFlyout: ...
     def __new__(cls: typing.Type[CommandBarFlyout]) -> CommandBarFlyout: ...
@@ -597,7 +597,7 @@ class CommandBarFlyout(winrt.system.Object, metaclass=CommandBarFlyout_Static):
     def always_expanded(self, value: bool) -> None: ...
 
 @typing.final
-class DatePickerFlyout_Static(type):
+class DatePickerFlyout_Static(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
     @_property
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -620,7 +620,7 @@ class DatePickerFlyout_Static(type):
     def year_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class DatePickerFlyout(winrt.system.Object, metaclass=DatePickerFlyout_Static):
+class DatePickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=DatePickerFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerFlyout: ...
     def __new__(cls: typing.Type[DatePickerFlyout]) -> DatePickerFlyout: ...
@@ -668,19 +668,19 @@ class DatePickerFlyout(winrt.system.Object, metaclass=DatePickerFlyout_Static):
     @calendar_identifier.setter
     def calendar_identifier(self, value: str) -> None: ...
 
-class DropDownButton_Static(type):
+class DropDownButton_Static(Button_Static):
     pass
 
-class DropDownButton(winrt.system.Object, metaclass=DropDownButton_Static):
+class DropDownButton(Button, metaclass=DropDownButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DropDownButton: ...
     def __new__(cls: typing.Type[DropDownButton]) -> DropDownButton: ...
 
-class FlipView_Static(type):
+class FlipView_Static(microsoft_ui_xaml_controls_primitives.Selector_Static):
     @_property
     def use_touch_animations_for_all_navigation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class FlipView(winrt.system.Object, metaclass=FlipView_Static):
+class FlipView(microsoft_ui_xaml_controls_primitives.Selector, metaclass=FlipView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipView: ...
     def __new__(cls: typing.Type[FlipView]) -> FlipView: ...
@@ -689,21 +689,21 @@ class FlipView(winrt.system.Object, metaclass=FlipView_Static):
     @use_touch_animations_for_all_navigation.setter
     def use_touch_animations_for_all_navigation(self, value: bool) -> None: ...
 
-class FlipViewItem_Static(type):
+class FlipViewItem_Static(microsoft_ui_xaml_controls_primitives.SelectorItem_Static):
     pass
 
-class FlipViewItem(winrt.system.Object, metaclass=FlipViewItem_Static):
+class FlipViewItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass=FlipViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlipViewItem: ...
     def __new__(cls: typing.Type[FlipViewItem]) -> FlipViewItem: ...
 
-class Flyout_Static(type):
+class Flyout_Static(microsoft_ui_xaml_controls_primitives.FlyoutBase_Static):
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def flyout_presenter_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Flyout(winrt.system.Object, metaclass=Flyout_Static):
+class Flyout(microsoft_ui_xaml_controls_primitives.FlyoutBase, metaclass=Flyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Flyout: ...
     def __new__(cls: typing.Type[Flyout]) -> Flyout: ...
@@ -716,29 +716,29 @@ class Flyout(winrt.system.Object, metaclass=Flyout_Static):
     @content.setter
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
-class GridView_Static(type):
+class GridView_Static(ListViewBase_Static):
     pass
 
-class GridView(winrt.system.Object, metaclass=GridView_Static):
+class GridView(ListViewBase, metaclass=GridView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridView: ...
     def __new__(cls: typing.Type[GridView]) -> GridView: ...
 
-class GridViewItem_Static(type):
+class GridViewItem_Static(microsoft_ui_xaml_controls_primitives.SelectorItem_Static):
     pass
 
-class GridViewItem(winrt.system.Object, metaclass=GridViewItem_Static):
+class GridViewItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass=GridViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewItem: ...
     def __new__(cls: typing.Type[GridViewItem]) -> GridViewItem: ...
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.GridViewItemTemplateSettings: ...
 
-class HyperlinkButton_Static(type):
+class HyperlinkButton_Static(microsoft_ui_xaml_controls_primitives.ButtonBase_Static):
     @_property
     def navigate_uri_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class HyperlinkButton(winrt.system.Object, metaclass=HyperlinkButton_Static):
+class HyperlinkButton(microsoft_ui_xaml_controls_primitives.ButtonBase, metaclass=HyperlinkButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HyperlinkButton: ...
     def __new__(cls: typing.Type[HyperlinkButton]) -> HyperlinkButton: ...
@@ -747,13 +747,13 @@ class HyperlinkButton(winrt.system.Object, metaclass=HyperlinkButton_Static):
     @navigate_uri.setter
     def navigate_uri(self, value: windows_foundation.Uri) -> None: ...
 
-class ListBox_Static(type):
+class ListBox_Static(microsoft_ui_xaml_controls_primitives.Selector_Static):
     @_property
     def selection_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ListBox(winrt.system.Object, metaclass=ListBox_Static):
+class ListBox(microsoft_ui_xaml_controls_primitives.Selector, metaclass=ListBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBox: ...
     def __new__(cls: typing.Type[ListBox]) -> ListBox: ...
@@ -770,16 +770,16 @@ class ListBox(winrt.system.Object, metaclass=ListBox_Static):
     @_property
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class ListBoxItem_Static(type):
+class ListBoxItem_Static(microsoft_ui_xaml_controls_primitives.SelectorItem_Static):
     pass
 
-class ListBoxItem(winrt.system.Object, metaclass=ListBoxItem_Static):
+class ListBoxItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass=ListBoxItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListBoxItem: ...
     def __new__(cls: typing.Type[ListBoxItem]) -> ListBoxItem: ...
 
 @typing.final
-class ListPickerFlyout_Static(type):
+class ListPickerFlyout_Static(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
     @_property
     def display_member_path_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -798,7 +798,7 @@ class ListPickerFlyout_Static(type):
     def selection_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ListPickerFlyout(winrt.system.Object, metaclass=ListPickerFlyout_Static):
+class ListPickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=ListPickerFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListPickerFlyout: ...
     def __new__(cls: typing.Type[ListPickerFlyout]) -> ListPickerFlyout: ...
@@ -840,15 +840,15 @@ class ListPickerFlyout(winrt.system.Object, metaclass=ListPickerFlyout_Static):
     @_property
     def selected_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class ListView_Static(type):
+class ListView_Static(ListViewBase_Static):
     pass
 
-class ListView(winrt.system.Object, metaclass=ListView_Static):
+class ListView(ListViewBase, metaclass=ListView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListView: ...
     def __new__(cls: typing.Type[ListView]) -> ListView: ...
 
-class ListViewBase_Static(type):
+class ListViewBase_Static(microsoft_ui_xaml_controls_primitives.Selector_Static):
     @_property
     def can_drag_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -892,7 +892,7 @@ class ListViewBase_Static(type):
     @_property
     def single_selection_follows_focus_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ListViewBase(ISemanticZoomInformation, winrt.system.Object, metaclass=ListViewBase_Static):
+class ListViewBase(ISemanticZoomInformation, microsoft_ui_xaml_controls_primitives.Selector, metaclass=ListViewBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBase: ...
     def complete_view_change(self) -> None: ...
@@ -1013,29 +1013,29 @@ class ListViewBase(ISemanticZoomInformation, winrt.system.Object, metaclass=List
     @is_active_view.setter
     def is_active_view(self, value: bool) -> None: ...
 
-class ListViewItem_Static(type):
+class ListViewItem_Static(microsoft_ui_xaml_controls_primitives.SelectorItem_Static):
     pass
 
-class ListViewItem(winrt.system.Object, metaclass=ListViewItem_Static):
+class ListViewItem(microsoft_ui_xaml_controls_primitives.SelectorItem, metaclass=ListViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewItem: ...
     def __new__(cls: typing.Type[ListViewItem]) -> ListViewItem: ...
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ListViewItemTemplateSettings: ...
 
-class MenuBarItemFlyout_Static(type):
+class MenuBarItemFlyout_Static(MenuFlyout_Static):
     pass
 
-class MenuBarItemFlyout(winrt.system.Object, metaclass=MenuBarItemFlyout_Static):
+class MenuBarItemFlyout(MenuFlyout, metaclass=MenuBarItemFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuBarItemFlyout: ...
     def __new__(cls: typing.Type[MenuBarItemFlyout]) -> MenuBarItemFlyout: ...
 
-class MenuFlyout_Static(type):
+class MenuFlyout_Static(microsoft_ui_xaml_controls_primitives.FlyoutBase_Static):
     @_property
     def menu_flyout_presenter_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MenuFlyout(winrt.system.Object, metaclass=MenuFlyout_Static):
+class MenuFlyout(microsoft_ui_xaml_controls_primitives.FlyoutBase, metaclass=MenuFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyout: ...
     def __new__(cls: typing.Type[MenuFlyout]) -> MenuFlyout: ...
@@ -1048,14 +1048,14 @@ class MenuFlyout(winrt.system.Object, metaclass=MenuFlyout_Static):
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
 @typing.final
-class PickerFlyout_Static(type):
+class PickerFlyout_Static(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
     @_property
     def confirmation_buttons_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class PickerFlyout(winrt.system.Object, metaclass=PickerFlyout_Static):
+class PickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=PickerFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyout: ...
     def __new__(cls: typing.Type[PickerFlyout]) -> PickerFlyout: ...
@@ -1071,7 +1071,7 @@ class PickerFlyout(winrt.system.Object, metaclass=PickerFlyout_Static):
     @confirmation_buttons_visible.setter
     def confirmation_buttons_visible(self, value: bool) -> None: ...
 
-class ProgressBar_Static(type):
+class ProgressBar_Static(microsoft_ui_xaml_controls_primitives.RangeBase_Static):
     @_property
     def is_indeterminate_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1079,7 +1079,7 @@ class ProgressBar_Static(type):
     @_property
     def show_paused_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ProgressBar(winrt.system.Object, metaclass=ProgressBar_Static):
+class ProgressBar(microsoft_ui_xaml_controls_primitives.RangeBase, metaclass=ProgressBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressBar: ...
     def __new__(cls: typing.Type[ProgressBar]) -> ProgressBar: ...
@@ -1098,11 +1098,11 @@ class ProgressBar(winrt.system.Object, metaclass=ProgressBar_Static):
     @_property
     def template_settings(self) -> ProgressBarTemplateSettings: ...
 
-class RadioButton_Static(type):
+class RadioButton_Static(microsoft_ui_xaml_controls_primitives.ToggleButton_Static):
     @_property
     def group_name_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RadioButton(winrt.system.Object, metaclass=RadioButton_Static):
+class RadioButton(microsoft_ui_xaml_controls_primitives.ToggleButton, metaclass=RadioButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadioButton: ...
     def __new__(cls: typing.Type[RadioButton]) -> RadioButton: ...
@@ -1111,15 +1111,15 @@ class RadioButton(winrt.system.Object, metaclass=RadioButton_Static):
     @group_name.setter
     def group_name(self, value: str) -> None: ...
 
-class RevealListViewItemPresenter_Static(type):
+class RevealListViewItemPresenter_Static(microsoft_ui_xaml_controls_primitives.ListViewItemPresenter_Static):
     pass
 
-class RevealListViewItemPresenter(winrt.system.Object, metaclass=RevealListViewItemPresenter_Static):
+class RevealListViewItemPresenter(microsoft_ui_xaml_controls_primitives.ListViewItemPresenter, metaclass=RevealListViewItemPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RevealListViewItemPresenter: ...
     def __new__(cls: typing.Type[RevealListViewItemPresenter]) -> RevealListViewItemPresenter: ...
 
-class Slider_Static(type):
+class Slider_Static(microsoft_ui_xaml_controls_primitives.RangeBase_Static):
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1143,7 +1143,7 @@ class Slider_Static(type):
     @_property
     def tick_placement_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Slider(winrt.system.Object, metaclass=Slider_Static):
+class Slider(microsoft_ui_xaml_controls_primitives.RangeBase, metaclass=Slider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Slider: ...
     def __new__(cls: typing.Type[Slider]) -> Slider: ...
@@ -1192,7 +1192,7 @@ class Slider(winrt.system.Object, metaclass=Slider_Static):
     @header.setter
     def header(self, value: winrt.system.Object) -> None: ...
 
-class TabViewItem_Static(type):
+class TabViewItem_Static(ListViewItem_Static):
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1204,7 +1204,7 @@ class TabViewItem_Static(type):
     @_property
     def tab_view_template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TabViewItem(winrt.system.Object, metaclass=TabViewItem_Static):
+class TabViewItem(ListViewItem, metaclass=TabViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewItem: ...
     def __new__(cls: typing.Type[TabViewItem]) -> TabViewItem: ...
@@ -1229,16 +1229,16 @@ class TabViewItem(winrt.system.Object, metaclass=TabViewItem_Static):
     @_property
     def tab_view_template_settings(self) -> TabViewItemTemplateSettings: ...
 
-class TextCommandBarFlyout_Static(type):
+class TextCommandBarFlyout_Static(CommandBarFlyout_Static):
     pass
 
-class TextCommandBarFlyout(winrt.system.Object, metaclass=TextCommandBarFlyout_Static):
+class TextCommandBarFlyout(CommandBarFlyout, metaclass=TextCommandBarFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextCommandBarFlyout: ...
     def __new__(cls: typing.Type[TextCommandBarFlyout]) -> TextCommandBarFlyout: ...
 
 @typing.final
-class TimePickerFlyout_Static(type):
+class TimePickerFlyout_Static(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase_Static):
     @_property
     def clock_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1247,7 +1247,7 @@ class TimePickerFlyout_Static(type):
     def time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class TimePickerFlyout(winrt.system.Object, metaclass=TimePickerFlyout_Static):
+class TimePickerFlyout(microsoft_ui_xaml_controls_primitives.PickerFlyoutBase, metaclass=TimePickerFlyout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePickerFlyout: ...
     def __new__(cls: typing.Type[TimePickerFlyout]) -> TimePickerFlyout: ...
@@ -1267,7 +1267,7 @@ class TimePickerFlyout(winrt.system.Object, metaclass=TimePickerFlyout_Static):
     @clock_identifier.setter
     def clock_identifier(self, value: str) -> None: ...
 
-class TreeViewItem_Static(type):
+class TreeViewItem_Static(ListViewItem_Static):
     @_property
     def collapsed_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1287,7 +1287,7 @@ class TreeViewItem_Static(type):
     @_property
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TreeViewItem(winrt.system.Object, metaclass=TreeViewItem_Static):
+class TreeViewItem(ListViewItem, metaclass=TreeViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewItem: ...
     def __new__(cls: typing.Type[TreeViewItem]) -> TreeViewItem: ...
@@ -1326,16 +1326,16 @@ class TreeViewItem(winrt.system.Object, metaclass=TreeViewItem_Static):
     @has_unrealized_children.setter
     def has_unrealized_children(self, value: bool) -> None: ...
 
-class TreeViewList_Static(type):
+class TreeViewList_Static(ListView_Static):
     pass
 
-class TreeViewList(winrt.system.Object, metaclass=TreeViewList_Static):
+class TreeViewList(ListView, metaclass=TreeViewList_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewList: ...
     def __new__(cls: typing.Type[TreeViewList]) -> TreeViewList: ...
 
 @typing.final
-class VirtualizingStackPanel_Static(type):
+class VirtualizingStackPanel_Static(microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static):
     def get_is_virtualizing(cls, o: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
     def get_virtualization_mode(cls, element: microsoft_ui_xaml.DependencyObject, /) -> VirtualizationMode: ...
     def set_virtualization_mode(cls, element: microsoft_ui_xaml.DependencyObject, value: VirtualizationMode, /) -> None: ...
@@ -1349,7 +1349,7 @@ class VirtualizingStackPanel_Static(type):
     def virtualization_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class VirtualizingStackPanel(winrt.system.Object, metaclass=VirtualizingStackPanel_Static):
+class VirtualizingStackPanel(microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel, metaclass=VirtualizingStackPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VirtualizingStackPanel: ...
     def __new__(cls: typing.Type[VirtualizingStackPanel]) -> VirtualizingStackPanel: ...
@@ -1365,7 +1365,7 @@ class VirtualizingStackPanel(winrt.system.Object, metaclass=VirtualizingStackPan
     def are_scroll_snap_points_regular(self, value: bool) -> None: ...
 
 @typing.final
-class WrapGrid_Static(type):
+class WrapGrid_Static(microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static):
     @_property
     def horizontal_children_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1380,7 +1380,7 @@ class WrapGrid_Static(type):
     def vertical_children_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class WrapGrid(winrt.system.Object, metaclass=WrapGrid_Static):
+class WrapGrid(microsoft_ui_xaml_controls_primitives.OrientedVirtualizingPanel, metaclass=WrapGrid_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WrapGrid: ...
     def __new__(cls: typing.Type[WrapGrid]) -> WrapGrid: ...

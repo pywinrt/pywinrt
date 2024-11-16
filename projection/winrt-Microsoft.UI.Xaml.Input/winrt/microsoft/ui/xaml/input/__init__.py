@@ -47,6 +47,14 @@ from winrt._winrt_microsoft_ui_xaml_input import (
     XamlUICommand,
     ICommand,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_input import (
+        KeyboardAccelerator_Static,
+        ManipulationStartedRoutedEventArgs_Static,
+        StandardUICommand_Static,
+        XamlUICommand_Static,
+    )
 
 __all__ = [
     "FocusInputDeviceKind",

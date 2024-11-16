@@ -109,11 +109,11 @@ from winrt.microsoft.ui.xaml.controls.primitives import DragCompletedEventHandle
 
 Self = typing.TypeVar('Self')
 
-class ColorPickerSlider_Static(type):
+class ColorPickerSlider_Static(microsoft_ui_xaml_controls.Slider_Static):
     @_property
     def color_channel_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
+class ColorPickerSlider(microsoft_ui_xaml_controls.Slider, metaclass=ColorPickerSlider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
     def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider: ...
@@ -122,10 +122,10 @@ class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static)
     @color_channel.setter
     def color_channel(self, value: microsoft_ui_xaml_controls.ColorPickerHsvChannel) -> None: ...
 
-class TabViewListView_Static(type):
+class TabViewListView_Static(microsoft_ui_xaml_controls.ListView_Static):
     pass
 
-class TabViewListView(winrt.system.Object, metaclass=TabViewListView_Static):
+class TabViewListView(microsoft_ui_xaml_controls.ListView, metaclass=TabViewListView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewListView: ...
     def __new__(cls: typing.Type[TabViewListView]) -> TabViewListView: ...

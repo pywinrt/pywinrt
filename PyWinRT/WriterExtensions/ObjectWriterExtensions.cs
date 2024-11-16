@@ -13,12 +13,19 @@ static class ObjectWriterExtensions
 
         if (type.PyRequiresMetaclass)
         {
+            var baseType = "type";
+
+            if (type.Type.BaseType is TypeReference b && b.Namespace != "System")
+            {
+                baseType = $"{b.ToPyTypeName(ns)}_Static";
+            }
+
             if (!type.IsComposable)
             {
                 w.WriteLine("@typing.final");
             }
 
-            w.WriteLine($"class {type.Name}_Static(type):");
+            w.WriteLine($"class {type.Name}_Static({baseType}):");
             w.Indent++;
 
             var hasMembers = false;
@@ -122,7 +129,7 @@ static class ObjectWriterExtensions
         }
 
         w.WriteLine(
-            $"class {type.Name}({interfaces}winrt.system.Object{collection}{generic}{metaclass}):"
+            $"class {type.Name}({interfaces}{type.Type.BaseType?.ToPyTypeName(ns) ?? "winrt.system.Object"}{collection}{generic}{metaclass}):"
         );
         w.Indent++;
 

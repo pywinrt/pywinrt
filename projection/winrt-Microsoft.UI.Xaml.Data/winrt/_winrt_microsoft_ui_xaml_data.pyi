@@ -24,10 +24,10 @@ class LoadMoreItemsResult:
     count: winrt.system.UInt32
     def __init__(self, count: winrt.system.UInt32 = 0) -> None: ...
 
-class Binding_Static(type):
+class Binding_Static(BindingBase_Static):
     pass
 
-class Binding(winrt.system.Object, metaclass=Binding_Static):
+class Binding(BindingBase, metaclass=Binding_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Binding: ...
     def __new__(cls: typing.Type[Binding]) -> Binding: ...
@@ -76,18 +76,18 @@ class Binding(winrt.system.Object, metaclass=Binding_Static):
     @converter.setter
     def converter(self, value: IValueConverter) -> None: ...
 
-class BindingBase_Static(type):
+class BindingBase_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class BindingBase(winrt.system.Object, metaclass=BindingBase_Static):
+class BindingBase(microsoft_ui_xaml.DependencyObject, metaclass=BindingBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingBase: ...
     def __new__(cls: typing.Type[BindingBase]) -> BindingBase: ...
 
-class BindingExpression_Static(type):
+class BindingExpression_Static(BindingExpressionBase_Static):
     pass
 
-class BindingExpression(winrt.system.Object, metaclass=BindingExpression_Static):
+class BindingExpression(BindingExpressionBase, metaclass=BindingExpression_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BindingExpression: ...
     def update_source(self) -> None: ...
@@ -113,7 +113,7 @@ class BindingOperations(winrt.system.Object, metaclass=BindingOperations_Static)
     def _from(obj: winrt.system.Object, /) -> BindingOperations: ...
 
 @typing.final
-class CollectionViewSource_Static(type):
+class CollectionViewSource_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def is_source_grouped_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -124,7 +124,7 @@ class CollectionViewSource_Static(type):
     def view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class CollectionViewSource(winrt.system.Object, metaclass=CollectionViewSource_Static):
+class CollectionViewSource(microsoft_ui_xaml.DependencyObject, metaclass=CollectionViewSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CollectionViewSource: ...
     def __new__(cls: typing.Type[CollectionViewSource]) -> CollectionViewSource: ...
@@ -194,10 +194,10 @@ class PropertyChangedEventArgs(winrt.system.Object, metaclass=PropertyChangedEve
     @_property
     def property_name(self) -> str: ...
 
-class RelativeSource_Static(type):
+class RelativeSource_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class RelativeSource(winrt.system.Object, metaclass=RelativeSource_Static):
+class RelativeSource(microsoft_ui_xaml.DependencyObject, metaclass=RelativeSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RelativeSource: ...
     def __new__(cls: typing.Type[RelativeSource]) -> RelativeSource: ...

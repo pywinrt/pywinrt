@@ -282,21 +282,47 @@ static class FileWriters
 
         for (int depth = 0; depth < 2; depth++)
         {
-            if (allExtensionTypes.Any(t => t.CircularDependencyDepth == depth))
+            var dependencyModuleTypes = allExtensionTypes.Where(t =>
+                t.CircularDependencyDepth == depth
+            );
+            var suffix = depth == 0 ? "" : $"_{depth + 1}";
+
+            if (dependencyModuleTypes.Any())
             {
-                var n = depth == 0 ? "" : $"_{depth + 1}";
-                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{n} import (");
+                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{suffix} import (");
                 w.Indent++;
 
-                foreach (
-                    var type in allExtensionTypes.Where(t => t.CircularDependencyDepth == depth)
-                )
+                foreach (var type in dependencyModuleTypes)
                 {
                     w.WriteLine($"{type.Name},");
                 }
 
                 w.Indent--;
                 w.WriteLine(")");
+            }
+
+            // REVISIT: Composable classes also have to inherit metaclass, so we need to
+            // make these accessible. For now though, they are only available as type
+            // hints and can't actually be imported at runtime. In the future, if we
+            // allow subclassing in Python, we can change this.
+
+            var composableTypes = dependencyModuleTypes.Where(t => t.IsComposable);
+            if (composableTypes.Any())
+            {
+                w.WriteLine("from typing import TYPE_CHECKING");
+                w.WriteLine("if TYPE_CHECKING:");
+                w.Indent++;
+                w.WriteLine($"from winrt.{ns.ToNsModuleName()}{suffix} import (");
+                w.Indent++;
+
+                foreach (var type in composableTypes)
+                {
+                    w.WriteLine($"{type.Name}_Static,");
+                }
+
+                w.Indent--;
+                w.WriteLine(")");
+                w.Indent--;
             }
         }
 

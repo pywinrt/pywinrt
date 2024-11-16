@@ -76,7 +76,7 @@ class CanExecuteRequestedEventArgs(winrt.system.Object):
     def parameter(self) -> winrt.system.Object: ...
 
 @typing.final
-class CharacterReceivedRoutedEventArgs(winrt.system.Object):
+class CharacterReceivedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CharacterReceivedRoutedEventArgs: ...
     @_property
@@ -89,7 +89,7 @@ class CharacterReceivedRoutedEventArgs(winrt.system.Object):
     def key_status(self) -> windows_ui_core.CorePhysicalKeyStatus: ...
 
 @typing.final
-class ContextRequestedEventArgs(winrt.system.Object):
+class ContextRequestedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContextRequestedEventArgs: ...
     def __new__(cls: typing.Type[ContextRequestedEventArgs]) -> ContextRequestedEventArgs: ...
@@ -100,7 +100,7 @@ class ContextRequestedEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class DoubleTappedRoutedEventArgs(winrt.system.Object):
+class DoubleTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DoubleTappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[DoubleTappedRoutedEventArgs]) -> DoubleTappedRoutedEventArgs: ...
@@ -198,7 +198,7 @@ class FocusMovementResult(winrt.system.Object):
     def succeeded(self) -> bool: ...
 
 @typing.final
-class GettingFocusEventArgs(winrt.system.Object):
+class GettingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GettingFocusEventArgs: ...
     def try_cancel(self) -> bool: ...
@@ -227,7 +227,7 @@ class GettingFocusEventArgs(winrt.system.Object):
     def correlation_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class HoldingRoutedEventArgs(winrt.system.Object):
+class HoldingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HoldingRoutedEventArgs: ...
     def __new__(cls: typing.Type[HoldingRoutedEventArgs]) -> HoldingRoutedEventArgs: ...
@@ -281,7 +281,7 @@ class InertiaTranslationBehavior(winrt.system.Object):
     def desired_deceleration(self, value: winrt.system.Double) -> None: ...
 
 @typing.final
-class InputScope(winrt.system.Object):
+class InputScope(windows_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputScope: ...
     def __new__(cls: typing.Type[InputScope]) -> InputScope: ...
@@ -289,7 +289,7 @@ class InputScope(winrt.system.Object):
     def names(self) -> typing.MutableSequence[InputScopeName]: ...
 
 @typing.final
-class InputScopeName(winrt.system.Object):
+class InputScopeName(windows_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputScopeName: ...
     @typing.overload
@@ -302,7 +302,7 @@ class InputScopeName(winrt.system.Object):
     def name_value(self, value: InputScopeNameValue) -> None: ...
 
 @typing.final
-class KeyRoutedEventArgs(winrt.system.Object):
+class KeyRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyRoutedEventArgs: ...
     @_property
@@ -318,7 +318,7 @@ class KeyRoutedEventArgs(winrt.system.Object):
     @_property
     def device_id(self) -> str: ...
 
-class KeyboardAccelerator_Static(type):
+class KeyboardAccelerator_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
     def is_enabled_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
@@ -328,7 +328,7 @@ class KeyboardAccelerator_Static(type):
     @_property
     def scope_owner_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class KeyboardAccelerator(winrt.system.Object, metaclass=KeyboardAccelerator_Static):
+class KeyboardAccelerator(windows_ui_xaml.DependencyObject, metaclass=KeyboardAccelerator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> KeyboardAccelerator: ...
     def __new__(cls: typing.Type[KeyboardAccelerator]) -> KeyboardAccelerator: ...
@@ -365,7 +365,7 @@ class KeyboardAcceleratorInvokedEventArgs(winrt.system.Object):
     def keyboard_accelerator(self) -> KeyboardAccelerator: ...
 
 @typing.final
-class LosingFocusEventArgs(winrt.system.Object):
+class LosingFocusEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LosingFocusEventArgs: ...
     def try_cancel(self) -> bool: ...
@@ -394,7 +394,7 @@ class LosingFocusEventArgs(winrt.system.Object):
     def correlation_id(self) -> _uuid.UUID: ...
 
 @typing.final
-class ManipulationCompletedRoutedEventArgs(winrt.system.Object):
+class ManipulationCompletedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationCompletedRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationCompletedRoutedEventArgs]) -> ManipulationCompletedRoutedEventArgs: ...
@@ -416,7 +416,7 @@ class ManipulationCompletedRoutedEventArgs(winrt.system.Object):
     def velocities(self) -> windows_ui_input.ManipulationVelocities: ...
 
 @typing.final
-class ManipulationDeltaRoutedEventArgs(winrt.system.Object):
+class ManipulationDeltaRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationDeltaRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationDeltaRoutedEventArgs]) -> ManipulationDeltaRoutedEventArgs: ...
@@ -441,7 +441,7 @@ class ManipulationDeltaRoutedEventArgs(winrt.system.Object):
     def velocities(self) -> windows_ui_input.ManipulationVelocities: ...
 
 @typing.final
-class ManipulationInertiaStartingRoutedEventArgs(winrt.system.Object):
+class ManipulationInertiaStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationInertiaStartingRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationInertiaStartingRoutedEventArgs]) -> ManipulationInertiaStartingRoutedEventArgs: ...
@@ -489,10 +489,10 @@ class ManipulationPivot(winrt.system.Object):
     @center.setter
     def center(self, value: windows_foundation.Point) -> None: ...
 
-class ManipulationStartedRoutedEventArgs_Static(type):
+class ManipulationStartedRoutedEventArgs_Static(windows_ui_xaml.RoutedEventArgs_Static):
     pass
 
-class ManipulationStartedRoutedEventArgs(winrt.system.Object, metaclass=ManipulationStartedRoutedEventArgs_Static):
+class ManipulationStartedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs, metaclass=ManipulationStartedRoutedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartedRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationStartedRoutedEventArgs]) -> ManipulationStartedRoutedEventArgs: ...
@@ -511,7 +511,7 @@ class ManipulationStartedRoutedEventArgs(winrt.system.Object, metaclass=Manipula
     def position(self) -> windows_foundation.Point: ...
 
 @typing.final
-class ManipulationStartingRoutedEventArgs(winrt.system.Object):
+class ManipulationStartingRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ManipulationStartingRoutedEventArgs: ...
     def __new__(cls: typing.Type[ManipulationStartingRoutedEventArgs]) -> ManipulationStartingRoutedEventArgs: ...
@@ -533,7 +533,7 @@ class ManipulationStartingRoutedEventArgs(winrt.system.Object):
     def container(self, value: windows_ui_xaml.UIElement) -> None: ...
 
 @typing.final
-class NoFocusCandidateFoundEventArgs(winrt.system.Object):
+class NoFocusCandidateFoundEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NoFocusCandidateFoundEventArgs: ...
     @_property
@@ -559,7 +559,7 @@ class Pointer(winrt.system.Object):
     def pointer_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class PointerRoutedEventArgs(winrt.system.Object):
+class PointerRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PointerRoutedEventArgs: ...
     def get_current_point(self, relative_to: windows_ui_xaml.UIElement, /) -> windows_ui_input.PointerPoint: ...
@@ -589,7 +589,7 @@ class ProcessKeyboardAcceleratorEventArgs(winrt.system.Object):
     def modifiers(self) -> windows_system.VirtualKeyModifiers: ...
 
 @typing.final
-class RightTappedRoutedEventArgs(winrt.system.Object):
+class RightTappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RightTappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[RightTappedRoutedEventArgs]) -> RightTappedRoutedEventArgs: ...
@@ -601,11 +601,11 @@ class RightTappedRoutedEventArgs(winrt.system.Object):
     @_property
     def pointer_device_type(self) -> windows_devices_input.PointerDeviceType: ...
 
-class StandardUICommand_Static(type):
+class StandardUICommand_Static(XamlUICommand_Static):
     @_property
     def kind_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class StandardUICommand(winrt.system.Object, metaclass=StandardUICommand_Static):
+class StandardUICommand(XamlUICommand, metaclass=StandardUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StandardUICommand: ...
     @typing.overload
@@ -618,7 +618,7 @@ class StandardUICommand(winrt.system.Object, metaclass=StandardUICommand_Static)
     def kind(self, value: StandardUICommandKind) -> None: ...
 
 @typing.final
-class TappedRoutedEventArgs(winrt.system.Object):
+class TappedRoutedEventArgs(windows_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TappedRoutedEventArgs: ...
     def __new__(cls: typing.Type[TappedRoutedEventArgs]) -> TappedRoutedEventArgs: ...
@@ -630,7 +630,7 @@ class TappedRoutedEventArgs(winrt.system.Object):
     @_property
     def pointer_device_type(self) -> windows_devices_input.PointerDeviceType: ...
 
-class XamlUICommand_Static(type):
+class XamlUICommand_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
     def access_key_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
@@ -644,7 +644,7 @@ class XamlUICommand_Static(type):
     @_property
     def label_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class XamlUICommand(ICommand, winrt.system.Object, metaclass=XamlUICommand_Static):
+class XamlUICommand(ICommand, windows_ui_xaml.DependencyObject, metaclass=XamlUICommand_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlUICommand: ...
     def __new__(cls: typing.Type[XamlUICommand]) -> XamlUICommand: ...

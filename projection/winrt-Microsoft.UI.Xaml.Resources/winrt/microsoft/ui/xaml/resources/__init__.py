@@ -4,6 +4,11 @@ import winrt.system
 from winrt._winrt_microsoft_ui_xaml_resources import (
     CustomXamlResourceLoader,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_resources import (
+        CustomXamlResourceLoader_Static,
+    )
 
 __all__ = [
     "CustomXamlResourceLoader",

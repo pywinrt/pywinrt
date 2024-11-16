@@ -18,6 +18,12 @@ from winrt._winrt_testcomponent import (
     IRequiredTwo,
     ITests,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_testcomponent import (
+        Composable_Static,
+        Derived_Static,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation

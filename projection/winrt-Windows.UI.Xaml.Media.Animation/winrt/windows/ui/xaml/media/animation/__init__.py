@@ -94,6 +94,22 @@ from winrt._winrt_windows_ui_xaml_media_animation import (
     Transition,
     TransitionCollection,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_media_animation import (
+        BasicConnectedAnimationConfiguration_Static,
+        ColorKeyFrame_Static,
+        ConnectedAnimationConfiguration_Static,
+        DirectConnectedAnimationConfiguration_Static,
+        DoubleKeyFrame_Static,
+        EasingFunctionBase_Static,
+        GravityConnectedAnimationConfiguration_Static,
+        NavigationTransitionInfo_Static,
+        ObjectKeyFrame_Static,
+        PointKeyFrame_Static,
+        Timeline_Static,
+        Transition_Static,
+    )
 
 __all__ = [
     "ClockState",

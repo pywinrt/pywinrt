@@ -24,6 +24,11 @@ from winrt._winrt_windows_ui_windowmanagement import (
     WindowingEnvironmentChangedEventArgs,
     WindowingEnvironmentRemovedEventArgs,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_windowmanagement import (
+        AppWindowPresentationConfiguration_Static,
+    )
 
 __all__ = [
     "AppWindowClosedReason",

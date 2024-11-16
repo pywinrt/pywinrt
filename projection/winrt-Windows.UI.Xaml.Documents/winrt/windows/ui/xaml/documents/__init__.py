@@ -32,6 +32,17 @@ from winrt._winrt_windows_ui_xaml_documents import (
     Typography,
     Underline,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_documents import (
+        Block_Static,
+        ContentLinkProvider_Static,
+        Inline_Static,
+        Span_Static,
+        TextElement_Static,
+        TextHighlighter_Static,
+        TextHighlighterBase_Static,
+    )
 
 __all__ = [
     "LogicalDirection",

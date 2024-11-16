@@ -11,6 +11,11 @@ from winrt._winrt_microsoft_ui_xaml_printing import (
     PaginateEventArgs,
     PrintDocument,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_printing import (
+        PrintDocument_Static,
+    )
 
 __all__ = [
     "PreviewPageCountType",

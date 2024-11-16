@@ -19,6 +19,14 @@ from winrt._winrt_microsoft_ui_xaml_media_imaging import (
     WriteableBitmap,
     XamlRenderingBackgroundTask,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_media_imaging import (
+        BitmapSource_Static,
+        SurfaceImageSource_Static,
+        SvgImageSource_Static,
+        XamlRenderingBackgroundTask_Static,
+    )
 
 __all__ = [
     "BitmapCreateOptions",

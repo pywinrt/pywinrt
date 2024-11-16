@@ -19,6 +19,11 @@ from winrt._winrt_windows_ui_xaml_hosting import (
     IXamlUIPresenterHost2,
     IXamlUIPresenterHost3,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_hosting import (
+        DesktopWindowXamlSource_Static,
+    )
 
 __all__ = [
     "DesignerAppViewState",

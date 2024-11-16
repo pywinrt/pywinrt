@@ -8,6 +8,11 @@ from winrt._winrt_windows_ui_xaml_media_media3d import (
     PerspectiveTransform3D,
     Transform3D,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_media_media3d import (
+        Transform3D_Static,
+    )
 
 __all__ = [
     "Matrix3D",

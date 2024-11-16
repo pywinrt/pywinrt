@@ -60,6 +60,20 @@ from winrt._winrt_windows_ui_xaml_controls_maps import (
     StreetsideExperience,
     StreetsidePanorama,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_controls_maps import (
+        CustomMapTileDataSource_Static,
+        HttpMapTileDataSource_Static,
+        LocalMapTileDataSource_Static,
+        MapCustomExperience_Static,
+        MapElement_Static,
+        MapLayer_Static,
+        MapModel3D_Static,
+        MapRouteView_Static,
+        MapTileDataSource_Static,
+        MapTileSource_Static,
+    )
 
 __all__ = [
     "MapAnimationKind",

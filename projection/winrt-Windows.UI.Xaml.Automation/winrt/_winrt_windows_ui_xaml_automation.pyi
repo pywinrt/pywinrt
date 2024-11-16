@@ -36,14 +36,14 @@ class AnnotationPatternIdentifiers(winrt.system.Object, metaclass=AnnotationPatt
     def _from(obj: winrt.system.Object, /) -> AnnotationPatternIdentifiers: ...
 
 @typing.final
-class AutomationAnnotation_Static(type):
+class AutomationAnnotation_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
     def element_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def type_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class AutomationAnnotation(winrt.system.Object, metaclass=AutomationAnnotation_Static):
+class AutomationAnnotation(windows_ui_xaml.DependencyObject, metaclass=AutomationAnnotation_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutomationAnnotation: ...
     @typing.overload

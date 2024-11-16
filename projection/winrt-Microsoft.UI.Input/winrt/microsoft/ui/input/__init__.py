@@ -55,6 +55,13 @@ from winrt._winrt_microsoft_ui_input import (
     WindowRectChangingEventArgs,
     IPointerPointTransform,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_input import (
+        InputCursor_Static,
+        InputCustomCursor_Static,
+        InputObject_Static,
+    )
 
 __all__ = [
     "CrossSlidingState",

@@ -44,11 +44,11 @@ class PaginateEventArgs(winrt.system.Object):
     @_property
     def print_task_options(self) -> windows_graphics_printing.PrintTaskOptions: ...
 
-class PrintDocument_Static(type):
+class PrintDocument_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def document_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PrintDocument(winrt.system.Object, metaclass=PrintDocument_Static):
+class PrintDocument(microsoft_ui_xaml.DependencyObject, metaclass=PrintDocument_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintDocument: ...
     def __new__(cls: typing.Type[PrintDocument]) -> PrintDocument: ...

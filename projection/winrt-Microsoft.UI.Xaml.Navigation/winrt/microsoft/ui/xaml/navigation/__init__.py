@@ -12,6 +12,11 @@ from winrt._winrt_microsoft_ui_xaml_navigation import (
     NavigationFailedEventArgs,
     PageStackEntry,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_navigation import (
+        FrameNavigationOptions_Static,
+    )
 
 __all__ = [
     "NavigationCacheMode",

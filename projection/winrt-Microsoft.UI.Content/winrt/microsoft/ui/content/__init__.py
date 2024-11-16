@@ -21,6 +21,18 @@ from winrt._winrt_microsoft_ui_content import (
     DesktopSiteBridge,
     IContentSiteBridge,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_content import (
+        ContentCoordinateConverter_Static,
+        ContentIsland_Static,
+        ContentIslandEnvironment_Static,
+        ContentSite_Static,
+        ContentSiteEnvironment_Static,
+        ContentSiteEnvironmentView_Static,
+        ContentSiteView_Static,
+        DesktopSiteBridge_Static,
+    )
 
 __all__ = [
     "ContentCoordinateRoundingMode",

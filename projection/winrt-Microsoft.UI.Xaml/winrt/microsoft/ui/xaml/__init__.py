@@ -92,6 +92,38 @@ from winrt._winrt_microsoft_ui_xaml import (
     IElementFactory,
     IXamlServiceProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml import (
+        AdaptiveTrigger_Static,
+        Application_Static,
+        BrushTransition_Static,
+        ColorPaletteResources_Static,
+        DataTemplate_Static,
+        DataTemplateKey_Static,
+        DependencyObject_Static,
+        DependencyObjectCollection_Static,
+        DispatcherTimer_Static,
+        ElementFactoryGetArgs_Static,
+        ElementFactoryRecycleArgs_Static,
+        ExceptionRoutedEventArgs_Static,
+        FrameworkElement_Static,
+        FrameworkTemplate_Static,
+        PropertyMetadata_Static,
+        ResourceDictionary_Static,
+        RoutedEventArgs_Static,
+        ScalarTransition_Static,
+        SetterBase_Static,
+        StateTriggerBase_Static,
+        TriggerAction_Static,
+        TriggerBase_Static,
+        UIElement_Static,
+        UIElementWeakCollection_Static,
+        Vector3Transition_Static,
+        VisualStateManager_Static,
+        VisualTransition_Static,
+        Window_Static,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel

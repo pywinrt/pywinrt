@@ -85,12 +85,12 @@ class NavigationFailedEventArgs(winrt.system.Object):
     def source_page_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
-class PageStackEntry_Static(type):
+class PageStackEntry_Static(windows_ui_xaml.DependencyObject_Static):
     @_property
     def source_page_type_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class PageStackEntry(winrt.system.Object, metaclass=PageStackEntry_Static):
+class PageStackEntry(windows_ui_xaml.DependencyObject, metaclass=PageStackEntry_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PageStackEntry: ...
     def __new__(cls: typing.Type[PageStackEntry], source_page_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, navigation_transition_info: windows_ui_xaml_media_animation.NavigationTransitionInfo) -> PageStackEntry: ...

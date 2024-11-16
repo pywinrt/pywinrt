@@ -13,6 +13,11 @@ from winrt._winrt_microsoft_ui_xaml_hosting import (
     XamlSourceFocusNavigationRequest,
     XamlSourceFocusNavigationResult,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_hosting import (
+        DesktopWindowXamlSource_Static,
+    )
 
 __all__ = [
     "XamlSourceFocusNavigationReason",

@@ -21,6 +21,11 @@ from winrt._winrt_microsoft_ui_xaml_markup import (
     IXamlType,
     IXamlTypeResolver,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_markup import (
+        MarkupExtension_Static,
+    )
 
 __all__ = [
     "XamlBinaryWriterErrorInformation",

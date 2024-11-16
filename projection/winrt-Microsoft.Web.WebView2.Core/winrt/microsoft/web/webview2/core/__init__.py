@@ -73,6 +73,11 @@ from winrt._winrt_microsoft_web_webview2_core import (
     CoreWebView2WindowFeatures,
     ICoreWebView2DispatchAdapter,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_web_webview2_core import (
+        CoreWebView2Controller_Static,
+    )
 
 _dll_search_path_cookie_ = winrt.system._register_dll_search_path(__file__)
 

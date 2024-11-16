@@ -75,6 +75,29 @@ from winrt._winrt_windows_ui_xaml_media import (
     XamlCompositionBrushBase,
     XamlLight,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_media import (
+        AcrylicBrush_Static,
+        Brush_Static,
+        CacheMode_Static,
+        FontFamily_Static,
+        GeneralTransform_Static,
+        Geometry_Static,
+        GradientBrush_Static,
+        ImageSource_Static,
+        PathSegment_Static,
+        Projection_Static,
+        RevealBackgroundBrush_Static,
+        RevealBorderBrush_Static,
+        RevealBrush_Static,
+        Shadow_Static,
+        ThemeShadow_Static,
+        TileBrush_Static,
+        Transform_Static,
+        XamlCompositionBrushBase_Static,
+        XamlLight_Static,
+    )
 
 __all__ = [
     "AcrylicBackgroundSource",

@@ -24,6 +24,13 @@ from winrt._winrt_windows_ui_composition_interactions import (
     ICompositionInteractionSource,
     IInteractionTrackerOwner,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_composition_interactions import (
+        InteractionTrackerInertiaModifier_Static,
+        InteractionTrackerVector2InertiaModifier_Static,
+        VisualInteractionSource_Static,
+    )
 
 __all__ = [
     "InteractionBindingAxisModes",
