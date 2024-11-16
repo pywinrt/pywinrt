@@ -5316,7 +5316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.KeyboardAccelerator",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Input::KeyboardAccelerator),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_KeyboardAccelerator};
 
     static PyGetSetDef getset_KeyboardAccelerator_Static[] = {
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.KeyboardAccelerator_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_KeyboardAccelerator_Static
     };
 
@@ -7674,7 +7674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Input::ManipulationStartedRoutedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ManipulationStartedRoutedEventArgs};
 
     static PyGetSetDef getset_ManipulationStartedRoutedEventArgs_Static[] = {
@@ -7698,7 +7698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.ManipulationStartedRoutedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ManipulationStartedRoutedEventArgs_Static
     };
 
@@ -9267,7 +9267,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.StandardUICommand",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Input::StandardUICommand),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_StandardUICommand};
 
     static PyGetSetDef getset_StandardUICommand_Static[] = {
@@ -9292,7 +9292,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.StandardUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_StandardUICommand_Static
     };
 
@@ -10384,7 +10384,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.XamlUICommand",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Input::XamlUICommand),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlUICommand};
 
     static PyGetSetDef getset_XamlUICommand_Static[] = {
@@ -10414,7 +10414,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Input
         "winrt._winrt_microsoft_ui_xaml_input.XamlUICommand_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_XamlUICommand_Static
     };
 

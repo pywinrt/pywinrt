@@ -1957,7 +1957,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         "winrt._winrt_windows_ui_xaml_media_media3d.Transform3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Media3D::Transform3D),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transform3D};
 
     static PyGetSetDef getset_Transform3D_Static[] = {
@@ -1981,7 +1981,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Media3D
         "winrt._winrt_windows_ui_xaml_media_media3d.Transform3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Transform3D_Static
     };
 

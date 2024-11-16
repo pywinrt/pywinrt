@@ -148,7 +148,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CustomMapTileDataSource};
 
     static PyGetSetDef getset_CustomMapTileDataSource_Static[] = {
@@ -172,7 +172,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.CustomMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CustomMapTileDataSource_Static
     };
 
@@ -486,7 +486,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HttpMapTileDataSource};
 
     static PyGetSetDef getset_HttpMapTileDataSource_Static[] = {
@@ -510,7 +510,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.HttpMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_HttpMapTileDataSource_Static
     };
 
@@ -735,7 +735,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_LocalMapTileDataSource};
 
     static PyGetSetDef getset_LocalMapTileDataSource_Static[] = {
@@ -759,7 +759,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.LocalMapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_LocalMapTileDataSource_Static
     };
 
@@ -9864,7 +9864,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapCustomExperience),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapCustomExperience};
 
     static PyGetSetDef getset_MapCustomExperience_Static[] = {
@@ -9888,7 +9888,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapCustomExperience_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapCustomExperience_Static
     };
 
@@ -10681,7 +10681,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapElement),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapElement};
 
     static PyGetSetDef getset_MapElement_Static[] = {
@@ -10712,7 +10712,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapElement_Static
     };
 
@@ -14324,7 +14324,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapLayer",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapLayer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapLayer};
 
     static PyGetSetDef getset_MapLayer_Static[] = {
@@ -14351,7 +14351,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapLayer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapLayer_Static
     };
 
@@ -14517,7 +14517,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapModel3D",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapModel3D),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapModel3D};
 
     static PyGetSetDef getset_MapModel3D_Static[] = {
@@ -14543,7 +14543,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapModel3D_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapModel3D_Static
     };
 
@@ -15873,7 +15873,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapRouteView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapRouteView};
 
     static PyGetSetDef getset_MapRouteView_Static[] = {
@@ -15897,7 +15897,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapRouteView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapRouteView_Static
     };
 
@@ -19566,7 +19566,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileDataSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapTileDataSource};
 
     static PyGetSetDef getset_MapTileDataSource_Static[] = {
@@ -19590,7 +19590,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileDataSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapTileDataSource_Static
     };
 
@@ -21144,7 +21144,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Maps::MapTileSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MapTileSource};
 
     static PyGetSetDef getset_MapTileSource_Static[] = {
@@ -21183,7 +21183,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
         "winrt._winrt_windows_ui_xaml_controls_maps.MapTileSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MapTileSource_Static
     };
 

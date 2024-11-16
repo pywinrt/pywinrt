@@ -1275,7 +1275,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::BitmapSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BitmapSource};
 
     static PyGetSetDef getset_BitmapSource_Static[] = {
@@ -1301,7 +1301,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.BitmapSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_BitmapSource_Static
     };
 
@@ -2062,7 +2062,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.SurfaceImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SurfaceImageSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SurfaceImageSource};
 
     static PyGetSetDef getset_SurfaceImageSource_Static[] = {
@@ -2086,7 +2086,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.SurfaceImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SurfaceImageSource_Static
     };
 
@@ -2611,7 +2611,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::SvgImageSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SvgImageSource};
 
     static PyGetSetDef getset_SvgImageSource_Static[] = {
@@ -2638,7 +2638,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.SvgImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SvgImageSource_Static
     };
 
@@ -3128,7 +3128,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask",
         sizeof(py::wrapper::Windows::UI::Xaml::Media::Imaging::XamlRenderingBackgroundTask),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlRenderingBackgroundTask};
 
     static PyGetSetDef getset_XamlRenderingBackgroundTask_Static[] = {
@@ -3152,7 +3152,7 @@ namespace py::cpp::Windows::UI::Xaml::Media::Imaging
         "winrt._winrt_windows_ui_xaml_media_imaging.XamlRenderingBackgroundTask_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_XamlRenderingBackgroundTask_Static
     };
 

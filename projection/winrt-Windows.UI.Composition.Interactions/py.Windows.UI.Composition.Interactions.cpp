@@ -2676,7 +2676,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerInertiaModifier),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InteractionTrackerInertiaModifier};
 
     static PyGetSetDef getset_InteractionTrackerInertiaModifier_Static[] = {
@@ -2700,7 +2700,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerInertiaModifier_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InteractionTrackerInertiaModifier_Static
     };
 
@@ -4198,7 +4198,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::InteractionTrackerVector2InertiaModifier),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InteractionTrackerVector2InertiaModifier};
 
     static PyGetSetDef getset_InteractionTrackerVector2InertiaModifier_Static[] = {
@@ -4222,7 +4222,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.InteractionTrackerVector2InertiaModifier_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InteractionTrackerVector2InertiaModifier_Static
     };
 
@@ -5633,7 +5633,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.VisualInteractionSource",
         sizeof(py::wrapper::Windows::UI::Composition::Interactions::VisualInteractionSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_VisualInteractionSource};
 
     static PyGetSetDef getset_VisualInteractionSource_Static[] = {
@@ -5659,7 +5659,7 @@ namespace py::cpp::Windows::UI::Composition::Interactions
         "winrt._winrt_windows_ui_composition_interactions.VisualInteractionSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_VisualInteractionSource_Static
     };
 

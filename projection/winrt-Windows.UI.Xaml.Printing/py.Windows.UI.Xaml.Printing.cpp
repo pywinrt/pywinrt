@@ -889,7 +889,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         "winrt._winrt_windows_ui_xaml_printing.PrintDocument",
         sizeof(py::wrapper::Windows::UI::Xaml::Printing::PrintDocument),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PrintDocument};
 
     static PyGetSetDef getset_PrintDocument_Static[] = {
@@ -914,7 +914,7 @@ namespace py::cpp::Windows::UI::Xaml::Printing
         "winrt._winrt_windows_ui_xaml_printing.PrintDocument_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PrintDocument_Static
     };
 

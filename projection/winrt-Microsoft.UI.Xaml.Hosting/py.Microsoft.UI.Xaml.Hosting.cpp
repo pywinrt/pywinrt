@@ -585,7 +585,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DesktopWindowXamlSource};
 
     static PyGetSetDef getset_DesktopWindowXamlSource_Static[] = {
@@ -609,7 +609,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
         "winrt._winrt_microsoft_ui_xaml_hosting.DesktopWindowXamlSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DesktopWindowXamlSource_Static
     };
 

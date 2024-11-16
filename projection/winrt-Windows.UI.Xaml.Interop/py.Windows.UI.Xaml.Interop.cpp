@@ -230,7 +230,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Interop::NotifyCollectionChangedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NotifyCollectionChangedEventArgs};
 
     static PyGetSetDef getset_NotifyCollectionChangedEventArgs_Static[] = {
@@ -254,7 +254,7 @@ namespace py::cpp::Windows::UI::Xaml::Interop
         "winrt._winrt_windows_ui_xaml_interop.NotifyCollectionChangedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NotifyCollectionChangedEventArgs_Static
     };
 

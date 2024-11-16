@@ -379,7 +379,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentCoordinateConverter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentCoordinateConverter};
 
     static PyGetSetDef getset_ContentCoordinateConverter_Static[] = {
@@ -404,7 +404,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentCoordinateConverter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentCoordinateConverter_Static
     };
 
@@ -2019,7 +2019,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentIsland",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIsland),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentIsland};
 
     static PyGetSetDef getset_ContentIsland_Static[] = {
@@ -2048,7 +2048,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentIsland_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentIsland_Static
     };
 
@@ -2477,7 +2477,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentIslandEnvironment),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentIslandEnvironment};
 
     static PyGetSetDef getset_ContentIslandEnvironment_Static[] = {
@@ -2501,7 +2501,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentIslandEnvironment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentIslandEnvironment_Static
     };
 
@@ -3754,7 +3754,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSite",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSite),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSite};
 
     static PyGetSetDef getset_ContentSite_Static[] = {
@@ -3778,7 +3778,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSite_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentSite_Static
     };
 
@@ -4036,7 +4036,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironment),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteEnvironment};
 
     static PyGetSetDef getset_ContentSiteEnvironment_Static[] = {
@@ -4060,7 +4060,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentSiteEnvironment_Static
     };
 
@@ -4181,7 +4181,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteEnvironmentView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteEnvironmentView};
 
     static PyGetSetDef getset_ContentSiteEnvironmentView_Static[] = {
@@ -4205,7 +4205,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteEnvironmentView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentSiteEnvironmentView_Static
     };
 
@@ -4743,7 +4743,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteView",
         sizeof(py::wrapper::Microsoft::UI::Content::ContentSiteView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentSiteView};
 
     static PyGetSetDef getset_ContentSiteView_Static[] = {
@@ -4767,7 +4767,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.ContentSiteView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentSiteView_Static
     };
 
@@ -5874,7 +5874,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge",
         sizeof(py::wrapper::Microsoft::UI::Content::DesktopSiteBridge),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DesktopSiteBridge};
 
     static PyGetSetDef getset_DesktopSiteBridge_Static[] = {
@@ -5899,7 +5899,7 @@ namespace py::cpp::Microsoft::UI::Content
         "winrt._winrt_microsoft_ui_content.DesktopSiteBridge_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DesktopSiteBridge_Static
     };
 

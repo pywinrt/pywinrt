@@ -2732,7 +2732,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionAnimation};
 
     static PyGetSetDef getset_CompositionAnimation_Static[] = {
@@ -2756,7 +2756,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionAnimation_Static
     };
 
@@ -3300,7 +3300,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionBrush",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionBrush};
 
     static PyGetSetDef getset_CompositionBrush_Static[] = {
@@ -3324,7 +3324,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionBrush_Static
     };
 
@@ -4046,7 +4046,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionClip",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionClip),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionClip};
 
     static PyGetSetDef getset_CompositionClip_Static[] = {
@@ -4070,7 +4070,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionClip_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionClip_Static
     };
 
@@ -5741,7 +5741,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionDrawingSurface",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionDrawingSurface),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionDrawingSurface};
 
     static PyGetSetDef getset_CompositionDrawingSurface_Static[] = {
@@ -5765,7 +5765,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionDrawingSurface_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionDrawingSurface_Static
     };
 
@@ -6267,7 +6267,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionEasingFunction",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionEasingFunction),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionEasingFunction};
 
     static PyGetSetDef getset_CompositionEasingFunction_Static[] = {
@@ -6302,7 +6302,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionEasingFunction_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionEasingFunction_Static
     };
 
@@ -7355,7 +7355,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionGeometry",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionGeometry),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionGeometry};
 
     static PyGetSetDef getset_CompositionGeometry_Static[] = {
@@ -7379,7 +7379,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionGeometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionGeometry_Static
     };
 
@@ -8093,7 +8093,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionGradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionGradientBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionGradientBrush};
 
     static PyGetSetDef getset_CompositionGradientBrush_Static[] = {
@@ -8117,7 +8117,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionGradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionGradientBrush_Static
     };
 
@@ -8670,7 +8670,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionLight",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionLight),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionLight};
 
     static PyGetSetDef getset_CompositionLight_Static[] = {
@@ -8694,7 +8694,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionLight_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionLight_Static
     };
 
@@ -11024,7 +11024,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionObject",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionObject),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionObject};
 
     static PyGetSetDef getset_CompositionObject_Static[] = {
@@ -11050,7 +11050,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionObject_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionObject_Static
     };
 
@@ -14609,7 +14609,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionShadow",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionShadow),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionShadow};
 
     static PyGetSetDef getset_CompositionShadow_Static[] = {
@@ -14633,7 +14633,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionShadow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionShadow_Static
     };
 
@@ -15072,7 +15072,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionShape",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionShape),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionShape};
 
     static PyGetSetDef getset_CompositionShape_Static[] = {
@@ -15096,7 +15096,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionShape_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionShape_Static
     };
 
@@ -18214,7 +18214,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionTransform",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionTransform),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionTransform};
 
     static PyGetSetDef getset_CompositionTransform_Static[] = {
@@ -18238,7 +18238,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionTransform_Static
     };
 
@@ -18721,7 +18721,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface",
         sizeof(py::wrapper::Microsoft::UI::Composition::CompositionVirtualDrawingSurface),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CompositionVirtualDrawingSurface};
 
     static PyGetSetDef getset_CompositionVirtualDrawingSurface_Static[] = {
@@ -18745,7 +18745,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.CompositionVirtualDrawingSurface_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CompositionVirtualDrawingSurface_Static
     };
 
@@ -22219,7 +22219,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.ContainerVisual",
         sizeof(py::wrapper::Microsoft::UI::Composition::ContainerVisual),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContainerVisual};
 
     static PyGetSetDef getset_ContainerVisual_Static[] = {
@@ -22243,7 +22243,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.ContainerVisual_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContainerVisual_Static
     };
 
@@ -25373,7 +25373,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.KeyFrameAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::KeyFrameAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_KeyFrameAnimation};
 
     static PyGetSetDef getset_KeyFrameAnimation_Static[] = {
@@ -25397,7 +25397,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.KeyFrameAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_KeyFrameAnimation_Static
     };
 
@@ -25906,7 +25906,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.NaturalMotionAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::NaturalMotionAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NaturalMotionAnimation};
 
     static PyGetSetDef getset_NaturalMotionAnimation_Static[] = {
@@ -25930,7 +25930,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NaturalMotionAnimation_Static
     };
 
@@ -28157,7 +28157,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::ScalarNaturalMotionAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScalarNaturalMotionAnimation};
 
     static PyGetSetDef getset_ScalarNaturalMotionAnimation_Static[] = {
@@ -28181,7 +28181,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.ScalarNaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ScalarNaturalMotionAnimation_Static
     };
 
@@ -31025,7 +31025,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::Vector2NaturalMotionAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Vector2NaturalMotionAnimation};
 
     static PyGetSetDef getset_Vector2NaturalMotionAnimation_Static[] = {
@@ -31049,7 +31049,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Vector2NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Vector2NaturalMotionAnimation_Static
     };
 
@@ -31451,7 +31451,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation",
         sizeof(py::wrapper::Microsoft::UI::Composition::Vector3NaturalMotionAnimation),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Vector3NaturalMotionAnimation};
 
     static PyGetSetDef getset_Vector3NaturalMotionAnimation_Static[] = {
@@ -31475,7 +31475,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Vector3NaturalMotionAnimation_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Vector3NaturalMotionAnimation_Static
     };
 
@@ -33020,7 +33020,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Visual",
         sizeof(py::wrapper::Microsoft::UI::Composition::Visual),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Visual};
 
     static PyGetSetDef getset_Visual_Static[] = {
@@ -33044,7 +33044,7 @@ namespace py::cpp::Microsoft::UI::Composition
         "winrt._winrt_microsoft_ui_composition.Visual_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Visual_Static
     };
 

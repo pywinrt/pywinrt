@@ -529,7 +529,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.AcrylicBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::AcrylicBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AcrylicBrush};
 
     static PyGetSetDef getset_AcrylicBrush_Static[] = {
@@ -558,7 +558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.AcrylicBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AcrylicBrush_Static
     };
 
@@ -1956,7 +1956,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Brush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Brush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Brush};
 
     static PyGetSetDef getset_Brush_Static[] = {
@@ -1983,7 +1983,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Brush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Brush_Static
     };
 
@@ -2774,7 +2774,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.CacheMode",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::CacheMode),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CacheMode};
 
     static PyGetSetDef getset_CacheMode_Static[] = {
@@ -2798,7 +2798,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.CacheMode_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CacheMode_Static
     };
 
@@ -4106,7 +4106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.DesktopAcrylicBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::DesktopAcrylicBackdrop),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DesktopAcrylicBackdrop};
 
     static PyGetSetDef getset_DesktopAcrylicBackdrop_Static[] = {
@@ -4130,7 +4130,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.DesktopAcrylicBackdrop_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DesktopAcrylicBackdrop_Static
     };
 
@@ -5378,7 +5378,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.FontFamily",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::FontFamily),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FontFamily};
 
     static PyGetSetDef getset_FontFamily_Static[] = {
@@ -5403,7 +5403,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.FontFamily_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FontFamily_Static
     };
 
@@ -5627,7 +5627,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.GeneralTransform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GeneralTransform),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GeneralTransform};
 
     static PyGetSetDef getset_GeneralTransform_Static[] = {
@@ -5651,7 +5651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.GeneralTransform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GeneralTransform_Static
     };
 
@@ -5885,7 +5885,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Geometry",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Geometry),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Geometry};
 
     static PyGetSetDef getset_Geometry_Static[] = {
@@ -5912,7 +5912,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Geometry_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Geometry_Static
     };
 
@@ -7346,7 +7346,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.GradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::GradientBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GradientBrush};
 
     static PyGetSetDef getset_GradientBrush_Static[] = {
@@ -7374,7 +7374,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.GradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GradientBrush_Static
     };
 
@@ -8776,7 +8776,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.ImageSource",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ImageSource),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ImageSource};
 
     static PyGetSetDef getset_ImageSource_Static[] = {
@@ -8800,7 +8800,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.ImageSource_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ImageSource_Static
     };
 
@@ -11106,7 +11106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.MicaBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::MicaBackdrop),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MicaBackdrop};
 
     static PyGetSetDef getset_MicaBackdrop_Static[] = {
@@ -11131,7 +11131,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.MicaBackdrop_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MicaBackdrop_Static
     };
 
@@ -12682,7 +12682,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.PathSegment",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::PathSegment),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PathSegment};
 
     static PyGetSetDef getset_PathSegment_Static[] = {
@@ -12706,7 +12706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.PathSegment_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PathSegment_Static
     };
 
@@ -16062,7 +16062,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Projection",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Projection),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Projection};
 
     static PyGetSetDef getset_Projection_Static[] = {
@@ -16086,7 +16086,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Projection_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Projection_Static
     };
 
@@ -17109,7 +17109,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.RadialGradientBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::RadialGradientBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadialGradientBrush};
 
     static PyGetSetDef getset_RadialGradientBrush_Static[] = {
@@ -17140,7 +17140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.RadialGradientBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RadialGradientBrush_Static
     };
 
@@ -18444,7 +18444,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Shadow",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Shadow),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Shadow};
 
     static PyGetSetDef getset_Shadow_Static[] = {
@@ -18468,7 +18468,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Shadow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Shadow_Static
     };
 
@@ -19261,7 +19261,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.SystemBackdrop",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::SystemBackdrop),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SystemBackdrop};
 
     static PyGetSetDef getset_SystemBackdrop_Static[] = {
@@ -19285,7 +19285,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.SystemBackdrop_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SystemBackdrop_Static
     };
 
@@ -19401,7 +19401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.ThemeShadow",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::ThemeShadow),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ThemeShadow};
 
     static PyGetSetDef getset_ThemeShadow_Static[] = {
@@ -19425,7 +19425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.ThemeShadow_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ThemeShadow_Static
     };
 
@@ -19756,7 +19756,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.TileBrush",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::TileBrush),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TileBrush};
 
     static PyGetSetDef getset_TileBrush_Static[] = {
@@ -19783,7 +19783,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.TileBrush_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TileBrush_Static
     };
 
@@ -19850,7 +19850,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Transform",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Transform),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transform};
 
     static PyGetSetDef getset_Transform_Static[] = {
@@ -19874,7 +19874,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.Transform_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Transform_Static
     };
 
@@ -21762,7 +21762,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.XamlCompositionBrushBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlCompositionBrushBase};
 
     static PyGetSetDef getset_XamlCompositionBrushBase_Static[] = {
@@ -21787,7 +21787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.XamlCompositionBrushBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_XamlCompositionBrushBase_Static
     };
 
@@ -22036,7 +22036,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.XamlLight",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::XamlLight),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_XamlLight};
 
     static PyGetSetDef getset_XamlLight_Static[] = {
@@ -22064,7 +22064,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
         "winrt._winrt_microsoft_ui_xaml_media.XamlLight_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_XamlLight_Static
     };
 

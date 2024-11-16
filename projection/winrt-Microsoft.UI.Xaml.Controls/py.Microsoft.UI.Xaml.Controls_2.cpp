@@ -697,7 +697,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AppBarButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarButton};
 
     static PyGetSetDef getset_AppBarButton_Static[] = {
@@ -728,7 +728,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppBarButton_Static
     };
 
@@ -1425,7 +1425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarToggleButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::AppBarToggleButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarToggleButton};
 
     static PyGetSetDef getset_AppBarToggleButton_Static[] = {
@@ -1456,7 +1456,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.AppBarToggleButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppBarToggleButton_Static
     };
 
@@ -1633,7 +1633,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Button",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Button),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Button};
 
     static PyGetSetDef getset_Button_Static[] = {
@@ -1658,7 +1658,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Button_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Button_Static
     };
 
@@ -1747,7 +1747,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.CheckBox",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::CheckBox),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CheckBox};
 
     static PyGetSetDef getset_CheckBox_Static[] = {
@@ -1771,7 +1771,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.CheckBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CheckBox_Static
     };
 
@@ -3289,7 +3289,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBox",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ComboBox),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBox};
 
     static PyGetSetDef getset_ComboBox_Static[] = {
@@ -3326,7 +3326,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ComboBox_Static
     };
 
@@ -3415,7 +3415,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBoxItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ComboBoxItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItem};
 
     static PyGetSetDef getset_ComboBoxItem_Static[] = {
@@ -3439,7 +3439,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ComboBoxItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ComboBoxItem_Static
     };
 
@@ -3644,7 +3644,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CommandBarFlyout};
 
     static PyGetSetDef getset_CommandBarFlyout_Static[] = {
@@ -3668,7 +3668,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CommandBarFlyout_Static
     };
 
@@ -4858,7 +4858,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.DropDownButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::DropDownButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DropDownButton};
 
     static PyGetSetDef getset_DropDownButton_Static[] = {
@@ -4882,7 +4882,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.DropDownButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DropDownButton_Static
     };
 
@@ -5059,7 +5059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::FlipView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipView};
 
     static PyGetSetDef getset_FlipView_Static[] = {
@@ -5084,7 +5084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlipView_Static
     };
 
@@ -5173,7 +5173,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipViewItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::FlipViewItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItem};
 
     static PyGetSetDef getset_FlipViewItem_Static[] = {
@@ -5197,7 +5197,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.FlipViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlipViewItem_Static
     };
 
@@ -5462,7 +5462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Flyout};
 
     static PyGetSetDef getset_Flyout_Static[] = {
@@ -5488,7 +5488,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Flyout_Static
     };
 
@@ -5577,7 +5577,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::GridView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridView};
 
     static PyGetSetDef getset_GridView_Static[] = {
@@ -5601,7 +5601,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridView_Static
     };
 
@@ -5717,7 +5717,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridViewItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::GridViewItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItem};
 
     static PyGetSetDef getset_GridViewItem_Static[] = {
@@ -5741,7 +5741,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.GridViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewItem_Static
     };
 
@@ -5918,7 +5918,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.HyperlinkButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::HyperlinkButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HyperlinkButton};
 
     static PyGetSetDef getset_HyperlinkButton_Static[] = {
@@ -5943,7 +5943,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.HyperlinkButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_HyperlinkButton_Static
     };
 
@@ -6313,7 +6313,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBox",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListBox),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBox};
 
     static PyGetSetDef getset_ListBox_Static[] = {
@@ -6339,7 +6339,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBox_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListBox_Static
     };
 
@@ -6428,7 +6428,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBoxItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListBoxItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItem};
 
     static PyGetSetDef getset_ListBoxItem_Static[] = {
@@ -6452,7 +6452,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListBoxItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListBoxItem_Static
     };
 
@@ -7491,7 +7491,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListView",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListView),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListView};
 
     static PyGetSetDef getset_ListView_Static[] = {
@@ -7515,7 +7515,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListView_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListView_Static
     };
 
@@ -10513,7 +10513,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListViewBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBase};
 
     static PyGetSetDef getset_ListViewBase_Static[] = {
@@ -10558,7 +10558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewBase_Static
     };
 
@@ -10674,7 +10674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListViewItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItem};
 
     static PyGetSetDef getset_ListViewItem_Static[] = {
@@ -10698,7 +10698,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ListViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewItem_Static
     };
 
@@ -10787,7 +10787,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarItemFlyout};
 
     static PyGetSetDef getset_MenuBarItemFlyout_Static[] = {
@@ -10811,7 +10811,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuBarItemFlyout_Static
     };
 
@@ -11056,7 +11056,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyout};
 
     static PyGetSetDef getset_MenuFlyout_Static[] = {
@@ -11081,7 +11081,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuFlyout_Static
     };
 
@@ -11850,7 +11850,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ProgressBar",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ProgressBar),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressBar};
 
     static PyGetSetDef getset_ProgressBar_Static[] = {
@@ -11877,7 +11877,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.ProgressBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ProgressBar_Static
     };
 
@@ -12054,7 +12054,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.RadioButton",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::RadioButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButton};
 
     static PyGetSetDef getset_RadioButton_Static[] = {
@@ -12079,7 +12079,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.RadioButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RadioButton_Static
     };
 
@@ -12168,7 +12168,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.RevealListViewItemPresenter",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::RevealListViewItemPresenter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RevealListViewItemPresenter};
 
     static PyGetSetDef getset_RevealListViewItemPresenter_Static[] = {
@@ -12192,7 +12192,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.RevealListViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RevealListViewItemPresenter_Static
     };
 
@@ -13249,7 +13249,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Slider",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Slider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Slider};
 
     static PyGetSetDef getset_Slider_Static[] = {
@@ -13284,7 +13284,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.Slider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Slider_Static
     };
 
@@ -13837,7 +13837,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TabViewItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TabViewItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewItem};
 
     static PyGetSetDef getset_TabViewItem_Static[] = {
@@ -13866,7 +13866,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TabViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TabViewItem_Static
     };
 
@@ -13955,7 +13955,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextCommandBarFlyout};
 
     static PyGetSetDef getset_TextCommandBarFlyout_Static[] = {
@@ -13979,7 +13979,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextCommandBarFlyout_Static
     };
 
@@ -15303,7 +15303,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewItem",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TreeViewItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItem};
 
     static PyGetSetDef getset_TreeViewItem_Static[] = {
@@ -15336,7 +15336,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TreeViewItem_Static
     };
 
@@ -15425,7 +15425,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewList",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TreeViewList),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewList};
 
     static PyGetSetDef getset_TreeViewList_Static[] = {
@@ -15449,7 +15449,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         "winrt._winrt_microsoft_ui_xaml_controls_2.TreeViewList_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TreeViewList_Static
     };
 

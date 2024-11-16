@@ -1018,7 +1018,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ButtonBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonBase};
 
     static PyGetSetDef getset_ButtonBase_Static[] = {
@@ -1047,7 +1047,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ButtonBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ButtonBase_Static
     };
 
@@ -2884,7 +2884,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.CarouselPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CarouselPanel),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CarouselPanel};
 
     static PyGetSetDef getset_CarouselPanel_Static[] = {
@@ -2908,7 +2908,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.CarouselPanel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CarouselPanel_Static
     };
 
@@ -3936,7 +3936,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorSpectrum};
 
     static PyGetSetDef getset_ColorSpectrum_Static[] = {
@@ -3970,7 +3970,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ColorSpectrum_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ColorSpectrum_Static
     };
 
@@ -4287,7 +4287,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CommandBarFlyoutCommandBar};
 
     static PyGetSetDef getset_CommandBarFlyoutCommandBar_Static[] = {
@@ -4311,7 +4311,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.CommandBarFlyoutCommandBar_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CommandBarFlyoutCommandBar_Static
     };
 
@@ -5481,7 +5481,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragCompletedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragCompletedEventArgs};
 
     static PyGetSetDef getset_DragCompletedEventArgs_Static[] = {
@@ -5505,7 +5505,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragCompletedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DragCompletedEventArgs_Static
     };
 
@@ -5651,7 +5651,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragDeltaEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragDeltaEventArgs};
 
     static PyGetSetDef getset_DragDeltaEventArgs_Static[] = {
@@ -5675,7 +5675,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragDeltaEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DragDeltaEventArgs_Static
     };
 
@@ -5821,7 +5821,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragStartedEventArgs",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DragStartedEventArgs};
 
     static PyGetSetDef getset_DragStartedEventArgs_Static[] = {
@@ -5845,7 +5845,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.DragStartedEventArgs_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DragStartedEventArgs_Static
     };
 
@@ -7478,7 +7478,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutBase};
 
     static PyGetSetDef getset_FlyoutBase_Static[] = {
@@ -7518,7 +7518,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlyoutBase_Static
     };
 
@@ -7983,7 +7983,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutShowOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutShowOptions};
 
     static PyGetSetDef getset_FlyoutShowOptions_Static[] = {
@@ -8007,7 +8007,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.FlyoutShowOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlyoutShowOptions_Static
     };
 
@@ -10163,7 +10163,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemPresenter};
 
     static PyGetSetDef getset_GridViewItemPresenter_Static[] = {
@@ -10209,7 +10209,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.GridViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewItemPresenter_Static
     };
 
@@ -16742,7 +16742,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemPresenter};
 
     static PyGetSetDef getset_ListViewItemPresenter_Static[] = {
@@ -16825,7 +16825,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ListViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewItemPresenter_Static
     };
 
@@ -18451,7 +18451,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemPresenter};
 
     static PyGetSetDef getset_NavigationViewItemPresenter_Static[] = {
@@ -18476,7 +18476,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.NavigationViewItemPresenter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NavigationViewItemPresenter_Static
     };
 
@@ -19785,7 +19785,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_OrientedVirtualizingPanel};
 
     static PyGetSetDef getset_OrientedVirtualizingPanel_Static[] = {
@@ -19809,7 +19809,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.OrientedVirtualizingPanel_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_OrientedVirtualizingPanel_Static
     };
 
@@ -19980,7 +19980,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PickerFlyoutBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PickerFlyoutBase};
 
     static PyGetSetDef getset_PickerFlyoutBase_Static[] = {
@@ -20007,7 +20007,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.PickerFlyoutBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PickerFlyoutBase_Static
     };
 
@@ -20096,7 +20096,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.PivotHeaderItem",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::PivotHeaderItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PivotHeaderItem};
 
     static PyGetSetDef getset_PivotHeaderItem_Static[] = {
@@ -20120,7 +20120,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.PivotHeaderItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PivotHeaderItem_Static
     };
 
@@ -22763,7 +22763,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::RangeBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RangeBase};
 
     static PyGetSetDef getset_RangeBase_Static[] = {
@@ -22792,7 +22792,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.RangeBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RangeBase_Static
     };
 
@@ -24388,7 +24388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.Selector",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::Selector),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Selector};
 
     static PyGetSetDef getset_Selector_Static[] = {
@@ -24418,7 +24418,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.Selector_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Selector_Static
     };
 
@@ -24573,7 +24573,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::SelectorItem),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorItem};
 
     static PyGetSetDef getset_SelectorItem_Static[] = {
@@ -24598,7 +24598,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.SelectorItem_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SelectorItem_Static
     };
 
@@ -26080,7 +26080,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton",
         sizeof(py::wrapper::Windows::UI::Xaml::Controls::Primitives::ToggleButton),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleButton};
 
     static PyGetSetDef getset_ToggleButton_Static[] = {
@@ -26106,7 +26106,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
         "winrt._winrt_windows_ui_xaml_controls_primitives.ToggleButton_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ToggleButton_Static
     };
 

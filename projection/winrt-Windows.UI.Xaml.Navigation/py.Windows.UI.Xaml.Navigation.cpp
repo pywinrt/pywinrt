@@ -213,7 +213,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         "winrt._winrt_windows_ui_xaml_navigation.FrameNavigationOptions",
         sizeof(py::wrapper::Windows::UI::Xaml::Navigation::FrameNavigationOptions),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameNavigationOptions};
 
     static PyGetSetDef getset_FrameNavigationOptions_Static[] = {
@@ -237,7 +237,7 @@ namespace py::cpp::Windows::UI::Xaml::Navigation
         "winrt._winrt_windows_ui_xaml_navigation.FrameNavigationOptions_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FrameNavigationOptions_Static
     };
 

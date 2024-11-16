@@ -91,7 +91,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AnimatedVisualPlayerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AnimatedVisualPlayerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AnimatedVisualPlayerAutomationPeer};
 
     static PyGetSetDef getset_AnimatedVisualPlayerAutomationPeer_Static[] = {
@@ -115,7 +115,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AnimatedVisualPlayerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AnimatedVisualPlayerAutomationPeer_Static
     };
 
@@ -653,7 +653,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarAutomationPeer};
 
     static PyGetSetDef getset_AppBarAutomationPeer_Static[] = {
@@ -677,7 +677,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppBarAutomationPeer_Static
     };
 
@@ -871,7 +871,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarButtonAutomationPeer};
 
     static PyGetSetDef getset_AppBarButtonAutomationPeer_Static[] = {
@@ -895,7 +895,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppBarButtonAutomationPeer_Static
     };
 
@@ -986,7 +986,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AppBarToggleButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppBarToggleButtonAutomationPeer};
 
     static PyGetSetDef getset_AppBarToggleButtonAutomationPeer_Static[] = {
@@ -1010,7 +1010,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AppBarToggleButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppBarToggleButtonAutomationPeer_Static
     };
 
@@ -3301,7 +3301,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::AutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AutomationPeer};
 
     static PyGetSetDef getset_AutomationPeer_Static[] = {
@@ -3327,7 +3327,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.AutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AutomationPeer_Static
     };
 
@@ -3778,7 +3778,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.BreadcrumbBarItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::BreadcrumbBarItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BreadcrumbBarItemAutomationPeer};
 
     static PyGetSetDef getset_BreadcrumbBarItemAutomationPeer_Static[] = {
@@ -3802,7 +3802,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.BreadcrumbBarItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_BreadcrumbBarItemAutomationPeer_Static
     };
 
@@ -3931,7 +3931,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonAutomationPeer};
 
     static PyGetSetDef getset_ButtonAutomationPeer_Static[] = {
@@ -3955,7 +3955,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ButtonAutomationPeer_Static
     };
 
@@ -4022,7 +4022,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonBaseAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ButtonBaseAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ButtonBaseAutomationPeer};
 
     static PyGetSetDef getset_ButtonBaseAutomationPeer_Static[] = {
@@ -4046,7 +4046,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ButtonBaseAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ButtonBaseAutomationPeer_Static
     };
 
@@ -4269,7 +4269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CalendarDatePickerAutomationPeer};
 
     static PyGetSetDef getset_CalendarDatePickerAutomationPeer_Static[] = {
@@ -4293,7 +4293,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CalendarDatePickerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CalendarDatePickerAutomationPeer_Static
     };
 
@@ -4384,7 +4384,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CheckBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::CheckBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CheckBoxAutomationPeer};
 
     static PyGetSetDef getset_CheckBoxAutomationPeer_Static[] = {
@@ -4408,7 +4408,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.CheckBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CheckBoxAutomationPeer_Static
     };
 
@@ -4499,7 +4499,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorPickerSliderAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorPickerSliderAutomationPeer};
 
     static PyGetSetDef getset_ColorPickerSliderAutomationPeer_Static[] = {
@@ -4523,7 +4523,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorPickerSliderAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ColorPickerSliderAutomationPeer_Static
     };
 
@@ -4614,7 +4614,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorSpectrumAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ColorSpectrumAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorSpectrumAutomationPeer};
 
     static PyGetSetDef getset_ColorSpectrumAutomationPeer_Static[] = {
@@ -4638,7 +4638,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ColorSpectrumAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ColorSpectrumAutomationPeer_Static
     };
 
@@ -5205,7 +5205,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxAutomationPeer};
 
     static PyGetSetDef getset_ComboBoxAutomationPeer_Static[] = {
@@ -5229,7 +5229,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ComboBoxAutomationPeer_Static
     };
 
@@ -5320,7 +5320,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItemAutomationPeer};
 
     static PyGetSetDef getset_ComboBoxItemAutomationPeer_Static[] = {
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ComboBoxItemAutomationPeer_Static
     };
 
@@ -5474,7 +5474,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ComboBoxItemDataAutomationPeer};
 
     static PyGetSetDef getset_ComboBoxItemDataAutomationPeer_Static[] = {
@@ -5498,7 +5498,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ComboBoxItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ComboBoxItemDataAutomationPeer_Static
     };
 
@@ -5589,7 +5589,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DatePickerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DatePickerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DatePickerAutomationPeer};
 
     static PyGetSetDef getset_DatePickerAutomationPeer_Static[] = {
@@ -5613,7 +5613,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DatePickerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DatePickerAutomationPeer_Static
     };
 
@@ -5873,7 +5873,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DropDownButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::DropDownButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DropDownButtonAutomationPeer};
 
     static PyGetSetDef getset_DropDownButtonAutomationPeer_Static[] = {
@@ -5897,7 +5897,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.DropDownButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DropDownButtonAutomationPeer_Static
     };
 
@@ -6091,7 +6091,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ExpanderAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ExpanderAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ExpanderAutomationPeer};
 
     static PyGetSetDef getset_ExpanderAutomationPeer_Static[] = {
@@ -6115,7 +6115,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ExpanderAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ExpanderAutomationPeer_Static
     };
 
@@ -6206,7 +6206,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewAutomationPeer};
 
     static PyGetSetDef getset_FlipViewAutomationPeer_Static[] = {
@@ -6230,7 +6230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlipViewAutomationPeer_Static
     };
 
@@ -6321,7 +6321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItemAutomationPeer};
 
     static PyGetSetDef getset_FlipViewItemAutomationPeer_Static[] = {
@@ -6345,7 +6345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlipViewItemAutomationPeer_Static
     };
 
@@ -6475,7 +6475,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlipViewItemDataAutomationPeer};
 
     static PyGetSetDef getset_FlipViewItemDataAutomationPeer_Static[] = {
@@ -6499,7 +6499,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlipViewItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlipViewItemDataAutomationPeer_Static
     };
 
@@ -6590,7 +6590,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FlyoutPresenterAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FlyoutPresenterAutomationPeer};
 
     static PyGetSetDef getset_FlyoutPresenterAutomationPeer_Static[] = {
@@ -6614,7 +6614,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FlyoutPresenterAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FlyoutPresenterAutomationPeer_Static
     };
 
@@ -6808,7 +6808,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_FrameworkElementAutomationPeer};
 
     static PyGetSetDef getset_FrameworkElementAutomationPeer_Static[] = {
@@ -6834,7 +6834,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.FrameworkElementAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_FrameworkElementAutomationPeer_Static
     };
 
@@ -6925,7 +6925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewAutomationPeer};
 
     static PyGetSetDef getset_GridViewAutomationPeer_Static[] = {
@@ -6949,7 +6949,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewAutomationPeer_Static
     };
 
@@ -7040,7 +7040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewHeaderItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewHeaderItemAutomationPeer};
 
     static PyGetSetDef getset_GridViewHeaderItemAutomationPeer_Static[] = {
@@ -7064,7 +7064,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewHeaderItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewHeaderItemAutomationPeer_Static
     };
 
@@ -7155,7 +7155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemAutomationPeer};
 
     static PyGetSetDef getset_GridViewItemAutomationPeer_Static[] = {
@@ -7179,7 +7179,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewItemAutomationPeer_Static
     };
 
@@ -7309,7 +7309,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GridViewItemDataAutomationPeer};
 
     static PyGetSetDef getset_GridViewItemDataAutomationPeer_Static[] = {
@@ -7333,7 +7333,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GridViewItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GridViewItemDataAutomationPeer_Static
     };
 
@@ -7424,7 +7424,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GroupItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::GroupItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GroupItemAutomationPeer};
 
     static PyGetSetDef getset_GroupItemAutomationPeer_Static[] = {
@@ -7448,7 +7448,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.GroupItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GroupItemAutomationPeer_Static
     };
 
@@ -7539,7 +7539,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HubAutomationPeer};
 
     static PyGetSetDef getset_HubAutomationPeer_Static[] = {
@@ -7563,7 +7563,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_HubAutomationPeer_Static
     };
 
@@ -7692,7 +7692,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubSectionAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HubSectionAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HubSectionAutomationPeer};
 
     static PyGetSetDef getset_HubSectionAutomationPeer_Static[] = {
@@ -7716,7 +7716,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HubSectionAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_HubSectionAutomationPeer_Static
     };
 
@@ -7845,7 +7845,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_HyperlinkButtonAutomationPeer};
 
     static PyGetSetDef getset_HyperlinkButtonAutomationPeer_Static[] = {
@@ -7869,7 +7869,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.HyperlinkButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_HyperlinkButtonAutomationPeer_Static
     };
 
@@ -7960,7 +7960,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ImageAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ImageAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ImageAutomationPeer};
 
     static PyGetSetDef getset_ImageAutomationPeer_Static[] = {
@@ -7984,7 +7984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ImageAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ImageAutomationPeer_Static
     };
 
@@ -8075,7 +8075,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.InfoBarAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::InfoBarAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InfoBarAutomationPeer};
 
     static PyGetSetDef getset_InfoBarAutomationPeer_Static[] = {
@@ -8099,7 +8099,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.InfoBarAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InfoBarAutomationPeer_Static
     };
 
@@ -8283,7 +8283,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemAutomationPeer};
 
     static PyGetSetDef getset_ItemAutomationPeer_Static[] = {
@@ -8307,7 +8307,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ItemAutomationPeer_Static
     };
 
@@ -8604,7 +8604,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemContainerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemContainerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemContainerAutomationPeer};
 
     static PyGetSetDef getset_ItemContainerAutomationPeer_Static[] = {
@@ -8628,7 +8628,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemContainerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ItemContainerAutomationPeer_Static
     };
 
@@ -8799,7 +8799,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsControlAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemsControlAutomationPeer};
 
     static PyGetSetDef getset_ItemsControlAutomationPeer_Static[] = {
@@ -8823,7 +8823,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsControlAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ItemsControlAutomationPeer_Static
     };
 
@@ -9005,7 +9005,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ItemsViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ItemsViewAutomationPeer};
 
     static PyGetSetDef getset_ItemsViewAutomationPeer_Static[] = {
@@ -9029,7 +9029,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ItemsViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ItemsViewAutomationPeer_Static
     };
 
@@ -9120,7 +9120,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxAutomationPeer};
 
     static PyGetSetDef getset_ListBoxAutomationPeer_Static[] = {
@@ -9144,7 +9144,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListBoxAutomationPeer_Static
     };
 
@@ -9235,7 +9235,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItemAutomationPeer};
 
     static PyGetSetDef getset_ListBoxItemAutomationPeer_Static[] = {
@@ -9259,7 +9259,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListBoxItemAutomationPeer_Static
     };
 
@@ -9389,7 +9389,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListBoxItemDataAutomationPeer};
 
     static PyGetSetDef getset_ListBoxItemDataAutomationPeer_Static[] = {
@@ -9413,7 +9413,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListBoxItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListBoxItemDataAutomationPeer_Static
     };
 
@@ -9570,7 +9570,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewAutomationPeer};
 
     static PyGetSetDef getset_ListViewAutomationPeer_Static[] = {
@@ -9594,7 +9594,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewAutomationPeer_Static
     };
 
@@ -9739,7 +9739,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBaseAutomationPeer};
 
     static PyGetSetDef getset_ListViewBaseAutomationPeer_Static[] = {
@@ -9763,7 +9763,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewBaseAutomationPeer_Static
     };
 
@@ -9830,7 +9830,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewBaseHeaderItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewBaseHeaderItemAutomationPeer};
 
     static PyGetSetDef getset_ListViewBaseHeaderItemAutomationPeer_Static[] = {
@@ -9854,7 +9854,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewBaseHeaderItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewBaseHeaderItemAutomationPeer_Static
     };
 
@@ -9945,7 +9945,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewHeaderItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewHeaderItemAutomationPeer};
 
     static PyGetSetDef getset_ListViewHeaderItemAutomationPeer_Static[] = {
@@ -9969,7 +9969,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewHeaderItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewHeaderItemAutomationPeer_Static
     };
 
@@ -10060,7 +10060,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemAutomationPeer};
 
     static PyGetSetDef getset_ListViewItemAutomationPeer_Static[] = {
@@ -10084,7 +10084,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewItemAutomationPeer_Static
     };
 
@@ -10214,7 +10214,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ListViewItemDataAutomationPeer};
 
     static PyGetSetDef getset_ListViewItemDataAutomationPeer_Static[] = {
@@ -10238,7 +10238,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ListViewItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ListViewItemDataAutomationPeer_Static
     };
 
@@ -11147,7 +11147,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaPlayerElementAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MediaPlayerElementAutomationPeer};
 
     static PyGetSetDef getset_MediaPlayerElementAutomationPeer_Static[] = {
@@ -11171,7 +11171,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaPlayerElementAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MediaPlayerElementAutomationPeer_Static
     };
 
@@ -11262,7 +11262,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MediaTransportControlsAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MediaTransportControlsAutomationPeer};
 
     static PyGetSetDef getset_MediaTransportControlsAutomationPeer_Static[] = {
@@ -11286,7 +11286,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MediaTransportControlsAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MediaTransportControlsAutomationPeer_Static
     };
 
@@ -11377,7 +11377,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarAutomationPeer};
 
     static PyGetSetDef getset_MenuBarAutomationPeer_Static[] = {
@@ -11401,7 +11401,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuBarAutomationPeer_Static
     };
 
@@ -11633,7 +11633,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuBarItemAutomationPeer};
 
     static PyGetSetDef getset_MenuBarItemAutomationPeer_Static[] = {
@@ -11657,7 +11657,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuBarItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuBarItemAutomationPeer_Static
     };
 
@@ -11786,7 +11786,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyoutItemAutomationPeer};
 
     static PyGetSetDef getset_MenuFlyoutItemAutomationPeer_Static[] = {
@@ -11810,7 +11810,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuFlyoutItemAutomationPeer_Static
     };
 
@@ -11901,7 +11901,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::MenuFlyoutPresenterAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MenuFlyoutPresenterAutomationPeer};
 
     static PyGetSetDef getset_MenuFlyoutPresenterAutomationPeer_Static[] = {
@@ -11925,7 +11925,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.MenuFlyoutPresenterAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MenuFlyoutPresenterAutomationPeer_Static
     };
 
@@ -12016,7 +12016,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewAutomationPeer};
 
     static PyGetSetDef getset_NavigationViewAutomationPeer_Static[] = {
@@ -12040,7 +12040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NavigationViewAutomationPeer_Static
     };
 
@@ -12234,7 +12234,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NavigationViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationViewItemAutomationPeer};
 
     static PyGetSetDef getset_NavigationViewItemAutomationPeer_Static[] = {
@@ -12258,7 +12258,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NavigationViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NavigationViewItemAutomationPeer_Static
     };
 
@@ -12349,7 +12349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NumberBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::NumberBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NumberBoxAutomationPeer};
 
     static PyGetSetDef getset_NumberBoxAutomationPeer_Static[] = {
@@ -12373,7 +12373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.NumberBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NumberBoxAutomationPeer_Static
     };
 
@@ -12464,7 +12464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PasswordBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PasswordBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PasswordBoxAutomationPeer};
 
     static PyGetSetDef getset_PasswordBoxAutomationPeer_Static[] = {
@@ -12488,7 +12488,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PasswordBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PasswordBoxAutomationPeer_Static
     };
 
@@ -12579,7 +12579,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PersonPictureAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PersonPictureAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PersonPictureAutomationPeer};
 
     static PyGetSetDef getset_PersonPictureAutomationPeer_Static[] = {
@@ -12603,7 +12603,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PersonPictureAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PersonPictureAutomationPeer_Static
     };
 
@@ -12760,7 +12760,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PipsPagerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::PipsPagerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PipsPagerAutomationPeer};
 
     static PyGetSetDef getset_PipsPagerAutomationPeer_Static[] = {
@@ -12784,7 +12784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.PipsPagerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PipsPagerAutomationPeer_Static
     };
 
@@ -13725,7 +13725,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressBarAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressBarAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressBarAutomationPeer};
 
     static PyGetSetDef getset_ProgressBarAutomationPeer_Static[] = {
@@ -13749,7 +13749,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressBarAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ProgressBarAutomationPeer_Static
     };
 
@@ -14042,7 +14042,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressRingAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ProgressRingAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ProgressRingAutomationPeer};
 
     static PyGetSetDef getset_ProgressRingAutomationPeer_Static[] = {
@@ -14066,7 +14066,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ProgressRingAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ProgressRingAutomationPeer_Static
     };
 
@@ -14325,7 +14325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButtonAutomationPeer};
 
     static PyGetSetDef getset_RadioButtonAutomationPeer_Static[] = {
@@ -14349,7 +14349,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RadioButtonAutomationPeer_Static
     };
 
@@ -14440,7 +14440,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonsAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RadioButtonsAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RadioButtonsAutomationPeer};
 
     static PyGetSetDef getset_RadioButtonsAutomationPeer_Static[] = {
@@ -14464,7 +14464,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RadioButtonsAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RadioButtonsAutomationPeer_Static
     };
 
@@ -14757,7 +14757,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RangeBaseAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RangeBaseAutomationPeer};
 
     static PyGetSetDef getset_RangeBaseAutomationPeer_Static[] = {
@@ -14781,7 +14781,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RangeBaseAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RangeBaseAutomationPeer_Static
     };
 
@@ -14872,7 +14872,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RatingControlAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RatingControlAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RatingControlAutomationPeer};
 
     static PyGetSetDef getset_RatingControlAutomationPeer_Static[] = {
@@ -14896,7 +14896,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RatingControlAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RatingControlAutomationPeer_Static
     };
 
@@ -15025,7 +15025,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeatButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeatButtonAutomationPeer};
 
     static PyGetSetDef getset_RepeatButtonAutomationPeer_Static[] = {
@@ -15049,7 +15049,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeatButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RepeatButtonAutomationPeer_Static
     };
 
@@ -15140,7 +15140,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeaterAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RepeaterAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RepeaterAutomationPeer};
 
     static PyGetSetDef getset_RepeaterAutomationPeer_Static[] = {
@@ -15164,7 +15164,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RepeaterAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RepeaterAutomationPeer_Static
     };
 
@@ -15255,7 +15255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichEditBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichEditBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichEditBoxAutomationPeer};
 
     static PyGetSetDef getset_RichEditBoxAutomationPeer_Static[] = {
@@ -15279,7 +15279,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichEditBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RichEditBoxAutomationPeer_Static
     };
 
@@ -15370,7 +15370,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichTextBlockAutomationPeer};
 
     static PyGetSetDef getset_RichTextBlockAutomationPeer_Static[] = {
@@ -15394,7 +15394,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RichTextBlockAutomationPeer_Static
     };
 
@@ -15485,7 +15485,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::RichTextBlockOverflowAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_RichTextBlockOverflowAutomationPeer};
 
     static PyGetSetDef getset_RichTextBlockOverflowAutomationPeer_Static[] = {
@@ -15509,7 +15509,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.RichTextBlockOverflowAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_RichTextBlockOverflowAutomationPeer_Static
     };
 
@@ -15600,7 +15600,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollBarAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollBarAutomationPeer};
 
     static PyGetSetDef getset_ScrollBarAutomationPeer_Static[] = {
@@ -15624,7 +15624,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollBarAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ScrollBarAutomationPeer_Static
     };
 
@@ -15715,7 +15715,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollPresenterAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollPresenterAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollPresenterAutomationPeer};
 
     static PyGetSetDef getset_ScrollPresenterAutomationPeer_Static[] = {
@@ -15739,7 +15739,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollPresenterAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ScrollPresenterAutomationPeer_Static
     };
 
@@ -16074,7 +16074,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScrollViewerAutomationPeer};
 
     static PyGetSetDef getset_ScrollViewerAutomationPeer_Static[] = {
@@ -16098,7 +16098,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ScrollViewerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ScrollViewerAutomationPeer_Static
     };
 
@@ -16280,7 +16280,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorAutomationPeer};
 
     static PyGetSetDef getset_SelectorAutomationPeer_Static[] = {
@@ -16304,7 +16304,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SelectorAutomationPeer_Static
     };
 
@@ -16395,7 +16395,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorBarItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorBarItemAutomationPeer};
 
     static PyGetSetDef getset_SelectorBarItemAutomationPeer_Static[] = {
@@ -16419,7 +16419,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorBarItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SelectorBarItemAutomationPeer_Static
     };
 
@@ -16679,7 +16679,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SelectorItemAutomationPeer};
 
     static PyGetSetDef getset_SelectorItemAutomationPeer_Static[] = {
@@ -16703,7 +16703,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SelectorItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SelectorItemAutomationPeer_Static
     };
 
@@ -16859,7 +16859,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SemanticZoomAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SemanticZoomAutomationPeer};
 
     static PyGetSetDef getset_SemanticZoomAutomationPeer_Static[] = {
@@ -16883,7 +16883,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SemanticZoomAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SemanticZoomAutomationPeer_Static
     };
 
@@ -16974,7 +16974,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SliderAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SliderAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SliderAutomationPeer};
 
     static PyGetSetDef getset_SliderAutomationPeer_Static[] = {
@@ -16998,7 +16998,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SliderAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SliderAutomationPeer_Static
     };
 
@@ -17230,7 +17230,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SplitButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::SplitButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SplitButtonAutomationPeer};
 
     static PyGetSetDef getset_SplitButtonAutomationPeer_Static[] = {
@@ -17254,7 +17254,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.SplitButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SplitButtonAutomationPeer_Static
     };
 
@@ -17345,7 +17345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewAutomationPeer};
 
     static PyGetSetDef getset_TabViewAutomationPeer_Static[] = {
@@ -17369,7 +17369,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TabViewAutomationPeer_Static
     };
 
@@ -17460,7 +17460,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TabViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TabViewItemAutomationPeer};
 
     static PyGetSetDef getset_TabViewItemAutomationPeer_Static[] = {
@@ -17484,7 +17484,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TabViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TabViewItemAutomationPeer_Static
     };
 
@@ -17575,7 +17575,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TeachingTipAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TeachingTipAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TeachingTipAutomationPeer};
 
     static PyGetSetDef getset_TeachingTipAutomationPeer_Static[] = {
@@ -17599,7 +17599,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TeachingTipAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TeachingTipAutomationPeer_Static
     };
 
@@ -17690,7 +17690,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBlockAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBlockAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextBlockAutomationPeer};
 
     static PyGetSetDef getset_TextBlockAutomationPeer_Static[] = {
@@ -17714,7 +17714,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBlockAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextBlockAutomationPeer_Static
     };
 
@@ -17805,7 +17805,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBoxAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TextBoxAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextBoxAutomationPeer};
 
     static PyGetSetDef getset_TextBoxAutomationPeer_Static[] = {
@@ -17829,7 +17829,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TextBoxAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextBoxAutomationPeer_Static
     };
 
@@ -17920,7 +17920,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ThumbAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ThumbAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ThumbAutomationPeer};
 
     static PyGetSetDef getset_ThumbAutomationPeer_Static[] = {
@@ -17944,7 +17944,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ThumbAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ThumbAutomationPeer_Static
     };
 
@@ -18035,7 +18035,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TimePickerAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TimePickerAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TimePickerAutomationPeer};
 
     static PyGetSetDef getset_TimePickerAutomationPeer_Static[] = {
@@ -18059,7 +18059,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TimePickerAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TimePickerAutomationPeer_Static
     };
 
@@ -18281,7 +18281,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleButtonAutomationPeer};
 
     static PyGetSetDef getset_ToggleButtonAutomationPeer_Static[] = {
@@ -18305,7 +18305,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ToggleButtonAutomationPeer_Static
     };
 
@@ -18461,7 +18461,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleMenuFlyoutItemAutomationPeer};
 
     static PyGetSetDef getset_ToggleMenuFlyoutItemAutomationPeer_Static[] = {
@@ -18485,7 +18485,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleMenuFlyoutItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ToggleMenuFlyoutItemAutomationPeer_Static
     };
 
@@ -18744,7 +18744,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSplitButtonAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSplitButtonAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleSplitButtonAutomationPeer};
 
     static PyGetSetDef getset_ToggleSplitButtonAutomationPeer_Static[] = {
@@ -18768,7 +18768,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSplitButtonAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ToggleSplitButtonAutomationPeer_Static
     };
 
@@ -18924,7 +18924,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSwitchAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ToggleSwitchAutomationPeer};
 
     static PyGetSetDef getset_ToggleSwitchAutomationPeer_Static[] = {
@@ -18948,7 +18948,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.ToggleSwitchAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ToggleSwitchAutomationPeer_Static
     };
 
@@ -19142,7 +19142,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItemAutomationPeer};
 
     static PyGetSetDef getset_TreeViewItemAutomationPeer_Static[] = {
@@ -19166,7 +19166,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TreeViewItemAutomationPeer_Static
     };
 
@@ -19361,7 +19361,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemDataAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewItemDataAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewItemDataAutomationPeer};
 
     static PyGetSetDef getset_TreeViewItemDataAutomationPeer_Static[] = {
@@ -19385,7 +19385,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewItemDataAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TreeViewItemDataAutomationPeer_Static
     };
 
@@ -19476,7 +19476,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewListAutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::TreeViewListAutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TreeViewListAutomationPeer};
 
     static PyGetSetDef getset_TreeViewListAutomationPeer_Static[] = {
@@ -19500,7 +19500,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.TreeViewListAutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TreeViewListAutomationPeer_Static
     };
 
@@ -19591,7 +19591,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.WebView2AutomationPeer",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Automation::Peers::WebView2AutomationPeer),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_WebView2AutomationPeer};
 
     static PyGetSetDef getset_WebView2AutomationPeer_Static[] = {
@@ -19615,7 +19615,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Automation::Peers
         "winrt._winrt_microsoft_ui_xaml_automation_peers.WebView2AutomationPeer_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_WebView2AutomationPeer_Static
     };
 

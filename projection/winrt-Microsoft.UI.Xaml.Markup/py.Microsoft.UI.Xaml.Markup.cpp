@@ -89,7 +89,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         "winrt._winrt_microsoft_ui_xaml_markup.MarkupExtension",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Markup::MarkupExtension),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_MarkupExtension};
 
     static PyGetSetDef getset_MarkupExtension_Static[] = {
@@ -113,7 +113,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Markup
         "winrt._winrt_microsoft_ui_xaml_markup.MarkupExtension_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_MarkupExtension_Static
     };
 

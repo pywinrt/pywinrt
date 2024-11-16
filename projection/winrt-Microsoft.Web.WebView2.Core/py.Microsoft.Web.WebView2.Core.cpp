@@ -5905,7 +5905,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller",
         sizeof(py::wrapper::Microsoft::Web::WebView2::Core::CoreWebView2Controller),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CoreWebView2Controller};
 
     static PyGetSetDef getset_CoreWebView2Controller_Static[] = {
@@ -5929,7 +5929,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         "winrt._winrt_microsoft_web_webview2_core.CoreWebView2Controller_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CoreWebView2Controller_Static
     };
 

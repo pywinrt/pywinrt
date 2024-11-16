@@ -379,7 +379,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::BasicConnectedAnimationConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_BasicConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_BasicConnectedAnimationConfiguration_Static[] = {
@@ -403,7 +403,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.BasicConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_BasicConnectedAnimationConfiguration_Static
     };
 
@@ -2014,7 +2014,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ColorKeyFrame};
 
     static PyGetSetDef getset_ColorKeyFrame_Static[] = {
@@ -2040,7 +2040,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ColorKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ColorKeyFrame_Static
     };
 
@@ -3547,7 +3547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ConnectedAnimationConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_ConnectedAnimationConfiguration_Static[] = {
@@ -3571,7 +3571,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ConnectedAnimationConfiguration_Static
     };
 
@@ -4893,7 +4893,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DirectConnectedAnimationConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DirectConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_DirectConnectedAnimationConfiguration_Static[] = {
@@ -4917,7 +4917,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.DirectConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DirectConnectedAnimationConfiguration_Static
     };
 
@@ -6299,7 +6299,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_DoubleKeyFrame};
 
     static PyGetSetDef getset_DoubleKeyFrame_Static[] = {
@@ -6325,7 +6325,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.DoubleKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_DoubleKeyFrame_Static
     };
 
@@ -9457,7 +9457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_EasingFunctionBase};
 
     static PyGetSetDef getset_EasingFunctionBase_Static[] = {
@@ -9482,7 +9482,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.EasingFunctionBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_EasingFunctionBase_Static
     };
 
@@ -11534,7 +11534,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_GravityConnectedAnimationConfiguration};
 
     static PyGetSetDef getset_GravityConnectedAnimationConfiguration_Static[] = {
@@ -11558,7 +11558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.GravityConnectedAnimationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_GravityConnectedAnimationConfiguration_Static
     };
 
@@ -12433,7 +12433,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_NavigationTransitionInfo};
 
     static PyGetSetDef getset_NavigationTransitionInfo_Static[] = {
@@ -12457,7 +12457,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.NavigationTransitionInfo_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_NavigationTransitionInfo_Static
     };
 
@@ -12929,7 +12929,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ObjectKeyFrame};
 
     static PyGetSetDef getset_ObjectKeyFrame_Static[] = {
@@ -12955,7 +12955,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.ObjectKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ObjectKeyFrame_Static
     };
 
@@ -14911,7 +14911,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrame",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_PointKeyFrame};
 
     static PyGetSetDef getset_PointKeyFrame_Static[] = {
@@ -14937,7 +14937,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.PointKeyFrame_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_PointKeyFrame_Static
     };
 
@@ -23770,7 +23770,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.Timeline",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Timeline),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Timeline};
 
     static PyGetSetDef getset_Timeline_Static[] = {
@@ -23801,7 +23801,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.Timeline_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Timeline_Static
     };
 
@@ -24592,7 +24592,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.Transition",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Media::Animation::Transition),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Transition};
 
     static PyGetSetDef getset_Transition_Static[] = {
@@ -24616,7 +24616,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
         "winrt._winrt_microsoft_ui_xaml_media_animation.Transition_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Transition_Static
     };
 

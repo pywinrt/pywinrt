@@ -4140,7 +4140,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputCursor",
         sizeof(py::wrapper::Microsoft::UI::Input::InputCursor),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputCursor};
 
     static PyGetSetDef getset_InputCursor_Static[] = {
@@ -4165,7 +4165,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputCursor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InputCursor_Static
     };
 
@@ -4232,7 +4232,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputCustomCursor",
         sizeof(py::wrapper::Microsoft::UI::Input::InputCustomCursor),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputCustomCursor};
 
     static PyGetSetDef getset_InputCustomCursor_Static[] = {
@@ -4256,7 +4256,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputCustomCursor_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InputCustomCursor_Static
     };
 
@@ -7342,7 +7342,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputObject",
         sizeof(py::wrapper::Microsoft::UI::Input::InputObject),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_InputObject};
 
     static PyGetSetDef getset_InputObject_Static[] = {
@@ -7366,7 +7366,7 @@ namespace py::cpp::Microsoft::UI::Input
         "winrt._winrt_microsoft_ui_input.InputObject_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_InputObject_Static
     };
 
