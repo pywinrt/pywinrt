@@ -11,6 +11,7 @@ import winrt._winrt
 import winrt.system
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.ui as windows_ui
+import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.automation as windows_ui_xaml_automation
 import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peers
 import winrt.windows.ui.xaml.automation.text as windows_ui_xaml_automation_text

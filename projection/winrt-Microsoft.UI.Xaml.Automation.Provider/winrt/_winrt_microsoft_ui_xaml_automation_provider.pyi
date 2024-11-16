@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.microsoft.ui.xaml as microsoft_ui_xaml
 import winrt.microsoft.ui.xaml.automation as microsoft_ui_xaml_automation
 import winrt.microsoft.ui.xaml.automation.peers as microsoft_ui_xaml_automation_peers
 import winrt.microsoft.ui.xaml.automation.text as microsoft_ui_xaml_automation_text

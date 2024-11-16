@@ -10,6 +10,7 @@ from builtins import property as _property
 import winrt._winrt
 import winrt.system
 import winrt.microsoft.ui.xaml as microsoft_ui_xaml
+import winrt.microsoft.ui.xaml.media as microsoft_ui_xaml_media
 import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.imaging as windows_graphics_imaging
 import winrt.windows.storage.streams as windows_storage_streams

@@ -21,10 +21,15 @@ static_assert(winrt::check_version(PYWINRT_VERSION, "0.0.0"), "Mismatched Py/Win
 #include "py.Windows.UI.Xaml.h"
 #endif
 
+#if __has_include("py.Windows.UI.Xaml.Media.h")
+#include "py.Windows.UI.Xaml.Media.h"
+#endif
+
 #include <winrt/Windows.Foundation.h>
 #include <winrt/Windows.Graphics.Imaging.h>
 #include <winrt/Windows.Storage.Streams.h>
 #include <winrt/Windows.UI.Xaml.h>
+#include <winrt/Windows.UI.Xaml.Media.h>
 
 #include <winrt/Windows.UI.Xaml.Media.Imaging.h>
 

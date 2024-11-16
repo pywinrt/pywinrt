@@ -13,6 +13,7 @@ import winrt.windows.foundation as windows_foundation
 import winrt.windows.graphics.imaging as windows_graphics_imaging
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui.xaml as windows_ui_xaml
+import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 
 from winrt.windows.ui.xaml.media.imaging import BitmapCreateOptions, DecodePixelType, SvgImageSourceLoadStatus
 from winrt.windows.ui.xaml.media.imaging import DownloadProgressEventHandler
