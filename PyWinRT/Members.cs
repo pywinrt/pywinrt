@@ -120,6 +120,25 @@ sealed class Members
         }
     }
 
+    public IEnumerable<string> GetRequiredNamespaces()
+    {
+        var namespaces = new SortedSet<string>(StringComparer.Ordinal);
+
+        foreach (var type in Classes)
+        {
+            if (
+                type.Type.BaseType is TypeReference baseType
+                && baseType.Namespace != type.Namespace
+                && baseType.Namespace != "System"
+            )
+            {
+                namespaces.Add(baseType.Namespace);
+            }
+        }
+
+        return namespaces;
+    }
+
     public IEnumerable<string> GetReferencedNamespaces(
         bool includeDelegates = false,
         bool includeInheritedInterfaces = false
