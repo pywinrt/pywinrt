@@ -340,24 +340,30 @@ static class TypeExtensions
                 => $"typing.Optional[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IIterable`1"
-                => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"typing.Iterable[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IVector`1"
-                => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"typing.MutableSequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IVectorView`1"
-                => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes)}]",
+                => $"typing.Sequence[{gen.GenericArguments[0].ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IMap`2"
-                => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
+                => $"typing.MutableMapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
             GenericInstanceType gen
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
-                => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
+                => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface && (TryResolve(gen.GenericArguments[0])?.IsInterface ?? false))))}]",
             GenericInstanceType gen
                 => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             ByReferenceType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
             OptionalModifierType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
-            ArrayType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
+            ArrayType t
+                => t.ElementType.ToPyTypeName(
+                    ns,
+                    map,
+                    quoteImportedTypes,
+                    implementsInterface && (TryResolve(t.ElementType)?.IsInterface ?? false)
+                ),
             { FullName: "System.Void" } => "None",
             { FullName: "System.Boolean" } => "bool",
             { FullName: "System.SByte" } => "winrt.system.Int8",
@@ -396,7 +402,7 @@ static class TypeExtensions
                     implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false
                 ),
             ParamCategory.PassArray
-                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
+                => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes, implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false)}], winrt.system.ReadableBuffer]",
             ParamCategory.FillArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.WriteableBuffer]",
             ParamCategory.ReceiveArray
