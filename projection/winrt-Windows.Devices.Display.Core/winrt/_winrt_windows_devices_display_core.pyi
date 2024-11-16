@@ -269,7 +269,7 @@ class DisplayPath(winrt.system.Object):
 
 @typing.final
 class DisplayPrimaryDescription_Static(type):
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, /) -> DisplayPrimaryDescription: ...
+    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[_uuid.UUID, winrt.system.Object]], width: winrt.system.UInt32, height: winrt.system.UInt32, pixel_format: windows_graphics_directx.DirectXPixelFormat, color_space: windows_graphics_directx.DirectXColorSpace, is_stereo: bool, multisample_description: windows_graphics_directx_direct3d11.Direct3DMultisampleDescription, /) -> DisplayPrimaryDescription: ...
 
 @typing.final
 class DisplayPrimaryDescription(winrt.system.Object, metaclass=DisplayPrimaryDescription_Static):
@@ -422,7 +422,7 @@ class DisplayView(winrt.system.Object):
 
 @typing.final
 class DisplayWireFormat_Static(type):
-    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.IKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
+    def create_with_properties(cls, extra_properties: typing.Iterable[windows_foundation_collections.ImplementsIKeyValuePair[_uuid.UUID, winrt.system.Object]], pixel_encoding: DisplayWireFormatPixelEncoding, bits_per_channel: winrt.system.Int32, color_space: DisplayWireFormatColorSpace, eotf: DisplayWireFormatEotf, hdr_metadata: DisplayWireFormatHdrMetadata, /) -> DisplayWireFormat: ...
 
 @typing.final
 class DisplayWireFormat(winrt.system.Object, metaclass=DisplayWireFormat_Static):

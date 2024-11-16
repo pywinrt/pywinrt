@@ -40,7 +40,7 @@ class MarkupExtension(winrt.system.Object, metaclass=MarkupExtension_Static):
 
 @typing.final
 class XamlBinaryWriter_Static(type):
-    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], xaml_metadata_provider: ImplementsIXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
+    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.ImplementsIRandomAccessStream], xaml_metadata_provider: ImplementsIXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
