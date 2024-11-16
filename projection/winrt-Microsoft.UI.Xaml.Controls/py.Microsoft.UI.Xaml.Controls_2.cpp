@@ -3443,6 +3443,1336 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         type_slots_ComboBoxItem_Static
     };
 
+    // ----- CommandBarFlyout class --------------------
+
+    static PyObject* _new_CommandBarFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_CommandBarFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* CommandBarFlyout_get_PrimaryCommands(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.CommandBarFlyout", L"PrimaryCommands");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>().PrimaryCommands());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommandBarFlyout_get_SecondaryCommands(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.CommandBarFlyout", L"SecondaryCommands");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>().SecondaryCommands());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* CommandBarFlyout_get_AlwaysExpanded(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.CommandBarFlyout", L"AlwaysExpanded");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>().AlwaysExpanded());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int CommandBarFlyout_put_AlwaysExpanded(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.CommandBarFlyout", L"AlwaysExpanded");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>().AlwaysExpanded(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* _assign_array_CommandBarFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_CommandBarFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::CommandBarFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_CommandBarFlyout[] = {
+        { "_assign_array_", _assign_array_CommandBarFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_CommandBarFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_CommandBarFlyout[] = {
+        { "primary_commands", reinterpret_cast<getter>(CommandBarFlyout_get_PrimaryCommands), nullptr, nullptr, nullptr },
+        { "secondary_commands", reinterpret_cast<getter>(CommandBarFlyout_get_SecondaryCommands), nullptr, nullptr, nullptr },
+        { "always_expanded", reinterpret_cast<getter>(CommandBarFlyout_get_AlwaysExpanded), reinterpret_cast<setter>(CommandBarFlyout_put_AlwaysExpanded), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_CommandBarFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_CommandBarFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_CommandBarFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_CommandBarFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_CommandBarFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CommandBarFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::CommandBarFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_CommandBarFlyout};
+
+    static PyGetSetDef getset_CommandBarFlyout_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_CommandBarFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_CommandBarFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_CommandBarFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_CommandBarFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_CommandBarFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.CommandBarFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_CommandBarFlyout_Static
+    };
+
+    // ----- DatePickerFlyout class --------------------
+
+    static PyObject* _new_DatePickerFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_DatePickerFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* DatePickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"ShowAtAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
+
+                return py::convert(self->obj.ShowAtAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_YearVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.YearVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_YearVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.YearVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_YearFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.YearFormat());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_YearFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.YearFormat(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MonthVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MonthVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_MonthVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.MonthVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MonthFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MonthFormat());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_MonthFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.MonthFormat(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MinYear(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MinYear");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinYear());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_MinYear(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MinYear");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
+
+            self->obj.MinYear(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MaxYear(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MaxYear");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MaxYear());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_MaxYear(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MaxYear");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
+
+            self->obj.MaxYear(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_DayVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DayVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_DayVisible(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.DayVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_DayFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DayFormat());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_DayFormat(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayFormat");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.DayFormat(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_Date(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"Date");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Date());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_Date(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"Date");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::DateTime>(arg);
+
+            self->obj.Date(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_CalendarIdentifier(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"CalendarIdentifier");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.CalendarIdentifier());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int DatePickerFlyout_put_CalendarIdentifier(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"CalendarIdentifier");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.CalendarIdentifier(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_CalendarIdentifierProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"CalendarIdentifierProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::CalendarIdentifierProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_DateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DateProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::DateProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_DayFormatProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayFormatProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::DayFormatProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_DayVisibleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DayVisibleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::DayVisibleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MaxYearProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MaxYearProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::MaxYearProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MinYearProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MinYearProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::MinYearProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MonthFormatProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthFormatProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::MonthFormatProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_MonthVisibleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"MonthVisibleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::MonthVisibleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_YearFormatProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearFormatProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::YearFormatProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_get_YearVisibleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"YearVisibleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout::YearVisibleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_add_DatePicked(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DatePicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout, winrt::Microsoft::UI::Xaml::Controls::DatePickedEventArgs>>(arg);
+
+            return py::convert(self->obj.DatePicked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* DatePickerFlyout_remove_DatePicked(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.DatePickerFlyout", L"DatePicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.DatePicked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_DatePickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_DatePickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::DatePickerFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_DatePickerFlyout[] = {
+        { "show_at_async", reinterpret_cast<PyCFunction>(DatePickerFlyout_ShowAtAsync), METH_VARARGS, nullptr },
+        { "add_date_picked", reinterpret_cast<PyCFunction>(DatePickerFlyout_add_DatePicked), METH_O, nullptr },
+        { "remove_date_picked", reinterpret_cast<PyCFunction>(DatePickerFlyout_remove_DatePicked), METH_O, nullptr },
+        { "_assign_array_", _assign_array_DatePickerFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_DatePickerFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_DatePickerFlyout[] = {
+        { "year_visible", reinterpret_cast<getter>(DatePickerFlyout_get_YearVisible), reinterpret_cast<setter>(DatePickerFlyout_put_YearVisible), nullptr, nullptr },
+        { "year_format", reinterpret_cast<getter>(DatePickerFlyout_get_YearFormat), reinterpret_cast<setter>(DatePickerFlyout_put_YearFormat), nullptr, nullptr },
+        { "month_visible", reinterpret_cast<getter>(DatePickerFlyout_get_MonthVisible), reinterpret_cast<setter>(DatePickerFlyout_put_MonthVisible), nullptr, nullptr },
+        { "month_format", reinterpret_cast<getter>(DatePickerFlyout_get_MonthFormat), reinterpret_cast<setter>(DatePickerFlyout_put_MonthFormat), nullptr, nullptr },
+        { "min_year", reinterpret_cast<getter>(DatePickerFlyout_get_MinYear), reinterpret_cast<setter>(DatePickerFlyout_put_MinYear), nullptr, nullptr },
+        { "max_year", reinterpret_cast<getter>(DatePickerFlyout_get_MaxYear), reinterpret_cast<setter>(DatePickerFlyout_put_MaxYear), nullptr, nullptr },
+        { "day_visible", reinterpret_cast<getter>(DatePickerFlyout_get_DayVisible), reinterpret_cast<setter>(DatePickerFlyout_put_DayVisible), nullptr, nullptr },
+        { "day_format", reinterpret_cast<getter>(DatePickerFlyout_get_DayFormat), reinterpret_cast<setter>(DatePickerFlyout_put_DayFormat), nullptr, nullptr },
+        { "date", reinterpret_cast<getter>(DatePickerFlyout_get_Date), reinterpret_cast<setter>(DatePickerFlyout_put_Date), nullptr, nullptr },
+        { "calendar_identifier", reinterpret_cast<getter>(DatePickerFlyout_get_CalendarIdentifier), reinterpret_cast<setter>(DatePickerFlyout_put_CalendarIdentifier), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_DatePickerFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_DatePickerFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_DatePickerFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_DatePickerFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_DatePickerFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DatePickerFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.DatePickerFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::DatePickerFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_DatePickerFlyout};
+
+    static PyGetSetDef getset_DatePickerFlyout_Static[] = {
+        { "calendar_identifier_property", reinterpret_cast<getter>(DatePickerFlyout_get_CalendarIdentifierProperty), nullptr, nullptr, nullptr },
+        { "date_property", reinterpret_cast<getter>(DatePickerFlyout_get_DateProperty), nullptr, nullptr, nullptr },
+        { "day_format_property", reinterpret_cast<getter>(DatePickerFlyout_get_DayFormatProperty), nullptr, nullptr, nullptr },
+        { "day_visible_property", reinterpret_cast<getter>(DatePickerFlyout_get_DayVisibleProperty), nullptr, nullptr, nullptr },
+        { "max_year_property", reinterpret_cast<getter>(DatePickerFlyout_get_MaxYearProperty), nullptr, nullptr, nullptr },
+        { "min_year_property", reinterpret_cast<getter>(DatePickerFlyout_get_MinYearProperty), nullptr, nullptr, nullptr },
+        { "month_format_property", reinterpret_cast<getter>(DatePickerFlyout_get_MonthFormatProperty), nullptr, nullptr, nullptr },
+        { "month_visible_property", reinterpret_cast<getter>(DatePickerFlyout_get_MonthVisibleProperty), nullptr, nullptr, nullptr },
+        { "year_format_property", reinterpret_cast<getter>(DatePickerFlyout_get_YearFormatProperty), nullptr, nullptr, nullptr },
+        { "year_visible_property", reinterpret_cast<getter>(DatePickerFlyout_get_YearVisibleProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_DatePickerFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_DatePickerFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_DatePickerFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_DatePickerFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_DatePickerFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.DatePickerFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_DatePickerFlyout_Static
+    };
+
     // ----- DropDownButton class --------------------
 
     static PyObject* _new_DropDownButton(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -3869,6 +5199,297 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_FlipViewItem_Static
+    };
+
+    // ----- Flyout class --------------------
+
+    static PyObject* _new_Flyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::Flyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_Flyout(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* Flyout_get_FlyoutPresenterStyle(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"FlyoutPresenterStyle");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int Flyout_put_FlyoutPresenterStyle(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"FlyoutPresenterStyle");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Style>(arg);
+
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Flyout>().FlyoutPresenterStyle(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* Flyout_get_Content(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Flyout>().Content());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int Flyout_put_Content(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
+
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Flyout>().Content(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* Flyout_get_ContentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"ContentProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::Flyout::ContentProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* Flyout_get_FlyoutPresenterStyleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.Flyout", L"FlyoutPresenterStyleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::Flyout::FlyoutPresenterStyleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_Flyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::Flyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_Flyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::Flyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_Flyout[] = {
+        { "_assign_array_", _assign_array_Flyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_Flyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_Flyout[] = {
+        { "flyout_presenter_style", reinterpret_cast<getter>(Flyout_get_FlyoutPresenterStyle), reinterpret_cast<setter>(Flyout_put_FlyoutPresenterStyle), nullptr, nullptr },
+        { "content", reinterpret_cast<getter>(Flyout_get_Content), reinterpret_cast<setter>(Flyout_put_Content), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_Flyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_Flyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_Flyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_Flyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_Flyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Flyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::Flyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_Flyout};
+
+    static PyGetSetDef getset_Flyout_Static[] = {
+        { "content_property", reinterpret_cast<getter>(Flyout_get_ContentProperty), nullptr, nullptr, nullptr },
+        { "flyout_presenter_style_property", reinterpret_cast<getter>(Flyout_get_FlyoutPresenterStyleProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_Flyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_Flyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_Flyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_Flyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_Flyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.Flyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_Flyout_Static
     };
 
     // ----- GridView class --------------------
@@ -4833,6 +6454,956 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         static_cast<int>(PyType_Type.tp_itemsize),
         Py_TPFLAGS_DEFAULT,
         type_slots_ListBoxItem_Static
+    };
+
+    // ----- ListPickerFlyout class --------------------
+
+    static PyObject* _new_ListPickerFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_ListPickerFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* ListPickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ShowAtAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
+
+                return py::convert(self->obj.ShowAtAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectionMode(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectionMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectionMode());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_SelectionMode(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectionMode");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyoutSelectionMode>(arg);
+
+            self->obj.SelectionMode(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedValuePath(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValuePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectedValuePath());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_SelectedValuePath(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValuePath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.SelectedValuePath(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedValue(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectedValue());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_SelectedValue(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValue");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.SelectedValue(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedItem(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedItem");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectedItem());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_SelectedItem(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedItem");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.SelectedItem(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedIndex(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedIndex");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectedIndex());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_SelectedIndex(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedIndex");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.SelectedIndex(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_ItemsSource(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemsSource");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ItemsSource());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_ItemsSource(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemsSource");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+
+            self->obj.ItemsSource(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_ItemTemplate(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemTemplate");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ItemTemplate());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_ItemTemplate(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemTemplate");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::DataTemplate>(arg);
+
+            self->obj.ItemTemplate(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_DisplayMemberPath(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"DisplayMemberPath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.DisplayMemberPath());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int ListPickerFlyout_put_DisplayMemberPath(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"DisplayMemberPath");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.DisplayMemberPath(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedItems(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedItems");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.SelectedItems());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_DisplayMemberPathProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"DisplayMemberPathProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::DisplayMemberPathProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_ItemTemplateProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemTemplateProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::ItemTemplateProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_ItemsSourceProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemsSourceProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::ItemsSourceProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedIndexProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedIndexProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::SelectedIndexProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedItemProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedItemProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::SelectedItemProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedValuePathProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValuePathProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::SelectedValuePathProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectedValueProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectedValueProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::SelectedValueProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_get_SelectionModeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"SelectionModeProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout::SelectionModeProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_add_ItemsPicked(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemsPicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout, winrt::Microsoft::UI::Xaml::Controls::ItemsPickedEventArgs>>(arg);
+
+            return py::convert(self->obj.ItemsPicked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* ListPickerFlyout_remove_ItemsPicked(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.ListPickerFlyout", L"ItemsPicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.ItemsPicked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_ListPickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_ListPickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::ListPickerFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_ListPickerFlyout[] = {
+        { "show_at_async", reinterpret_cast<PyCFunction>(ListPickerFlyout_ShowAtAsync), METH_VARARGS, nullptr },
+        { "add_items_picked", reinterpret_cast<PyCFunction>(ListPickerFlyout_add_ItemsPicked), METH_O, nullptr },
+        { "remove_items_picked", reinterpret_cast<PyCFunction>(ListPickerFlyout_remove_ItemsPicked), METH_O, nullptr },
+        { "_assign_array_", _assign_array_ListPickerFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_ListPickerFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_ListPickerFlyout[] = {
+        { "selection_mode", reinterpret_cast<getter>(ListPickerFlyout_get_SelectionMode), reinterpret_cast<setter>(ListPickerFlyout_put_SelectionMode), nullptr, nullptr },
+        { "selected_value_path", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValuePath), reinterpret_cast<setter>(ListPickerFlyout_put_SelectedValuePath), nullptr, nullptr },
+        { "selected_value", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValue), reinterpret_cast<setter>(ListPickerFlyout_put_SelectedValue), nullptr, nullptr },
+        { "selected_item", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedItem), reinterpret_cast<setter>(ListPickerFlyout_put_SelectedItem), nullptr, nullptr },
+        { "selected_index", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedIndex), reinterpret_cast<setter>(ListPickerFlyout_put_SelectedIndex), nullptr, nullptr },
+        { "items_source", reinterpret_cast<getter>(ListPickerFlyout_get_ItemsSource), reinterpret_cast<setter>(ListPickerFlyout_put_ItemsSource), nullptr, nullptr },
+        { "item_template", reinterpret_cast<getter>(ListPickerFlyout_get_ItemTemplate), reinterpret_cast<setter>(ListPickerFlyout_put_ItemTemplate), nullptr, nullptr },
+        { "display_member_path", reinterpret_cast<getter>(ListPickerFlyout_get_DisplayMemberPath), reinterpret_cast<setter>(ListPickerFlyout_put_DisplayMemberPath), nullptr, nullptr },
+        { "selected_items", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedItems), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_ListPickerFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_ListPickerFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_ListPickerFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_ListPickerFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_ListPickerFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListPickerFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ListPickerFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::ListPickerFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_ListPickerFlyout};
+
+    static PyGetSetDef getset_ListPickerFlyout_Static[] = {
+        { "display_member_path_property", reinterpret_cast<getter>(ListPickerFlyout_get_DisplayMemberPathProperty), nullptr, nullptr, nullptr },
+        { "item_template_property", reinterpret_cast<getter>(ListPickerFlyout_get_ItemTemplateProperty), nullptr, nullptr, nullptr },
+        { "items_source_property", reinterpret_cast<getter>(ListPickerFlyout_get_ItemsSourceProperty), nullptr, nullptr, nullptr },
+        { "selected_index_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedIndexProperty), nullptr, nullptr, nullptr },
+        { "selected_item_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedItemProperty), nullptr, nullptr, nullptr },
+        { "selected_value_path_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValuePathProperty), nullptr, nullptr, nullptr },
+        { "selected_value_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectedValueProperty), nullptr, nullptr, nullptr },
+        { "selection_mode_property", reinterpret_cast<getter>(ListPickerFlyout_get_SelectionModeProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_ListPickerFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_ListPickerFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_ListPickerFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_ListPickerFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_ListPickerFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.ListPickerFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_ListPickerFlyout_Static
     };
 
     // ----- ListView class --------------------
@@ -8131,6 +10702,778 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         type_slots_ListViewItem_Static
     };
 
+    // ----- MenuBarItemFlyout class --------------------
+
+    static PyObject* _new_MenuBarItemFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_MenuBarItemFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_MenuBarItemFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_MenuBarItemFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_MenuBarItemFlyout[] = {
+        { "_assign_array_", _assign_array_MenuBarItemFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_MenuBarItemFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_MenuBarItemFlyout[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_MenuBarItemFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_MenuBarItemFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuBarItemFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuBarItemFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuBarItemFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuBarItemFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::MenuBarItemFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_MenuBarItemFlyout};
+
+    static PyGetSetDef getset_MenuBarItemFlyout_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_MenuBarItemFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuBarItemFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuBarItemFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuBarItemFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuBarItemFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.MenuBarItemFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuBarItemFlyout_Static
+    };
+
+    // ----- MenuFlyout class --------------------
+
+    static PyObject* _new_MenuFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::MenuFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_MenuFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* MenuFlyout_ShowAt(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 2)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.MenuFlyout", L"ShowAt", 2);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(2);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(args, 0);
+                auto param1 = py::convert_to<winrt::Windows::Foundation::Point>(args, 1);
+
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>().ShowAt(param0, param1);
+                Py_RETURN_NONE;
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* MenuFlyout_get_MenuFlyoutPresenterStyle(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.MenuFlyout", L"MenuFlyoutPresenterStyle");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int MenuFlyout_put_MenuFlyoutPresenterStyle(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.MenuFlyout", L"MenuFlyoutPresenterStyle");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Style>(arg);
+
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>().MenuFlyoutPresenterStyle(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* MenuFlyout_get_Items(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.MenuFlyout", L"Items");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>().Items());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* MenuFlyout_get_MenuFlyoutPresenterStyleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.MenuFlyout", L"MenuFlyoutPresenterStyleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::MenuFlyout::MenuFlyoutPresenterStyleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_MenuFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_MenuFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::MenuFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_MenuFlyout[] = {
+        { "show_at", reinterpret_cast<PyCFunction>(MenuFlyout_ShowAt), METH_VARARGS, nullptr },
+        { "_assign_array_", _assign_array_MenuFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_MenuFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_MenuFlyout[] = {
+        { "menu_flyout_presenter_style", reinterpret_cast<getter>(MenuFlyout_get_MenuFlyoutPresenterStyle), reinterpret_cast<setter>(MenuFlyout_put_MenuFlyoutPresenterStyle), nullptr, nullptr },
+        { "items", reinterpret_cast<getter>(MenuFlyout_get_Items), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_MenuFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_MenuFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_MenuFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_MenuFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_MenuFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::MenuFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_MenuFlyout};
+
+    static PyGetSetDef getset_MenuFlyout_Static[] = {
+        { "menu_flyout_presenter_style_property", reinterpret_cast<getter>(MenuFlyout_get_MenuFlyoutPresenterStyleProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_MenuFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_MenuFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_MenuFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_MenuFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_MenuFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.MenuFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_MenuFlyout_Static
+    };
+
+    // ----- PickerFlyout class --------------------
+
+    static PyObject* _new_PickerFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::PickerFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_PickerFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* PickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"ShowAtAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
+
+                return py::convert(self->obj.ShowAtAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* PickerFlyout_get_Content(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Content());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PickerFlyout_put_Content(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"Content");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
+
+            self->obj.Content(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PickerFlyout_get_ConfirmationButtonsVisible(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"ConfirmationButtonsVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ConfirmationButtonsVisible());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int PickerFlyout_put_ConfirmationButtonsVisible(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"ConfirmationButtonsVisible");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<bool>(arg);
+
+            self->obj.ConfirmationButtonsVisible(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* PickerFlyout_get_ConfirmationButtonsVisibleProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"ConfirmationButtonsVisibleProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::PickerFlyout::ConfirmationButtonsVisibleProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PickerFlyout_get_ContentProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"ContentProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::PickerFlyout::ContentProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PickerFlyout_add_Confirmed(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"Confirmed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::PickerFlyout, winrt::Microsoft::UI::Xaml::Controls::PickerConfirmedEventArgs>>(arg);
+
+            return py::convert(self->obj.Confirmed(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* PickerFlyout_remove_Confirmed(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.PickerFlyout", L"Confirmed");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.Confirmed(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_PickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::PickerFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_PickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::PickerFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_PickerFlyout[] = {
+        { "show_at_async", reinterpret_cast<PyCFunction>(PickerFlyout_ShowAtAsync), METH_VARARGS, nullptr },
+        { "add_confirmed", reinterpret_cast<PyCFunction>(PickerFlyout_add_Confirmed), METH_O, nullptr },
+        { "remove_confirmed", reinterpret_cast<PyCFunction>(PickerFlyout_remove_Confirmed), METH_O, nullptr },
+        { "_assign_array_", _assign_array_PickerFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_PickerFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_PickerFlyout[] = {
+        { "content", reinterpret_cast<getter>(PickerFlyout_get_Content), reinterpret_cast<setter>(PickerFlyout_put_Content), nullptr, nullptr },
+        { "confirmation_buttons_visible", reinterpret_cast<getter>(PickerFlyout_get_ConfirmationButtonsVisible), reinterpret_cast<setter>(PickerFlyout_put_ConfirmationButtonsVisible), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_PickerFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_PickerFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_PickerFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_PickerFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_PickerFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PickerFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.PickerFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::PickerFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_PickerFlyout};
+
+    static PyGetSetDef getset_PickerFlyout_Static[] = {
+        { "confirmation_buttons_visible_property", reinterpret_cast<getter>(PickerFlyout_get_ConfirmationButtonsVisibleProperty), nullptr, nullptr, nullptr },
+        { "content_property", reinterpret_cast<getter>(PickerFlyout_get_ContentProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_PickerFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_PickerFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_PickerFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_PickerFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_PickerFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.PickerFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_PickerFlyout_Static
+    };
+
     // ----- ProgressBar class --------------------
 
     static PyObject* _new_ProgressBar(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -10527,6 +13870,597 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls
         type_slots_TabViewItem_Static
     };
 
+    // ----- TextCommandBarFlyout class --------------------
+
+    static PyObject* _new_TextCommandBarFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_TextCommandBarFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* _assign_array_TextCommandBarFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_TextCommandBarFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_TextCommandBarFlyout[] = {
+        { "_assign_array_", _assign_array_TextCommandBarFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_TextCommandBarFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_TextCommandBarFlyout[] = {
+        { }
+    };
+
+    static PyType_Slot _type_slots_TextCommandBarFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_TextCommandBarFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TextCommandBarFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TextCommandBarFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_TextCommandBarFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextCommandBarFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TextCommandBarFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_TextCommandBarFlyout};
+
+    static PyGetSetDef getset_TextCommandBarFlyout_Static[] = {
+        { }
+    };
+
+    static PyMethodDef methods_TextCommandBarFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TextCommandBarFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TextCommandBarFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TextCommandBarFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TextCommandBarFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.TextCommandBarFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TextCommandBarFlyout_Static
+    };
+
+    // ----- TimePickerFlyout class --------------------
+
+    static PyObject* _new_TimePickerFlyout(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
+    {
+        if (kwds != nullptr)
+        {
+            py::set_invalid_kwd_args_error();
+            return nullptr;
+        }
+
+        auto arg_count = PyTuple_Size(args);
+        if (arg_count == 0)
+        {
+            try
+            {
+                winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout instance{};
+                return py::wrap(instance, type);
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static void _dealloc_TimePickerFlyout(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self) noexcept
+    {
+        auto tp = Py_TYPE(self);
+        std::destroy_at(&self->obj);
+        tp->tp_free(self);
+        Py_DECREF(tp);
+    }
+
+    static PyObject* TimePickerFlyout_ShowAtAsync(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* args) noexcept
+    {
+        auto arg_count = PyTuple_Size(args);
+
+        if (arg_count == 1)
+        {
+            try
+            {
+                static std::optional<bool> is_overload_present{};
+
+                if (!is_overload_present.has_value())
+                {
+                    is_overload_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsMethodPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"ShowAtAsync", 1);
+                }
+
+                if (!is_overload_present.value())
+                {
+                    py::set_arg_count_version_error(1);
+                    return nullptr;
+                }
+
+                auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::FrameworkElement>(args, 0);
+
+                return py::convert(self->obj.ShowAtAsync(param0));
+            }
+            catch (...)
+            {
+                py::to_PyErr();
+                return nullptr;
+            }
+        }
+        else
+        {
+            py::set_invalid_arg_count_error(arg_count);
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_Time(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"Time");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.Time());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TimePickerFlyout_put_Time(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"Time");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
+
+            self->obj.Time(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_MinuteIncrement(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"MinuteIncrement");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.MinuteIncrement());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TimePickerFlyout_put_MinuteIncrement(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"MinuteIncrement");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<int32_t>(arg);
+
+            self->obj.MinuteIncrement(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_ClockIdentifier(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"ClockIdentifier");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(self->obj.ClockIdentifier());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static int TimePickerFlyout_put_ClockIdentifier(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* arg, void* /*unused*/) noexcept
+    {
+        if (arg == nullptr)
+        {
+            PyErr_SetString(PyExc_AttributeError, "can't delete attribute");
+            return -1;
+        }
+
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"ClockIdentifier");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return -1;
+            }
+
+            auto param0 = py::convert_to<winrt::hstring>(arg);
+
+            self->obj.ClockIdentifier(param0);
+            return 0;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return -1;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_ClockIdentifierProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"ClockIdentifierProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout::ClockIdentifierProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_MinuteIncrementProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"MinuteIncrementProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout::MinuteIncrementProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_get_TimeProperty(PyObject* /*unused*/, void* /*unused*/) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_property_present{};
+
+            if (!is_property_present.has_value())
+            {
+                is_property_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsPropertyPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"TimeProperty");
+            }
+
+            if (!is_property_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "property is not available in this version of Windows");
+                return nullptr;
+            }
+
+            return py::convert(winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout::TimeProperty());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_add_TimePicked(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"TimePicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout, winrt::Microsoft::UI::Xaml::Controls::TimePickedEventArgs>>(arg);
+
+            return py::convert(self->obj.TimePicked(param0));
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* TimePickerFlyout_remove_TimePicked(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout* self, PyObject* arg) noexcept
+    {
+        try
+        {
+            static std::optional<bool> is_event_present{};
+
+            if (!is_event_present.has_value())
+            {
+                is_event_present = winrt::Windows::Foundation::Metadata::ApiInformation::IsEventPresent(L"Microsoft.UI.Xaml.Controls.TimePickerFlyout", L"TimePicked");
+            }
+
+            if (!is_event_present.value())
+            {
+                PyErr_SetString(PyExc_AttributeError, "event is not available in this version of Windows");
+                return nullptr;
+            }
+
+            auto param0 = py::convert_to<winrt::event_token>(arg);
+
+            self->obj.TimePicked(param0);
+            Py_RETURN_NONE;
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyObject* _assign_array_TimePickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        auto array = std::make_unique<py::ComArray<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout>>();
+        if (!py::cpp::_winrt::Array_Assign(arg, std::move(array)))
+        {
+            return nullptr;
+        }
+        Py_RETURN_NONE;
+    }
+
+    static PyObject* _from_TimePickerFlyout(PyObject* /*unused*/, PyObject* arg) noexcept
+    {
+        try
+        {
+            auto return_value = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
+            return py::convert(return_value.as<winrt::Microsoft::UI::Xaml::Controls::TimePickerFlyout>());
+        }
+        catch (...)
+        {
+            py::to_PyErr();
+            return nullptr;
+        }
+    }
+
+    static PyMethodDef _methods_TimePickerFlyout[] = {
+        { "show_at_async", reinterpret_cast<PyCFunction>(TimePickerFlyout_ShowAtAsync), METH_VARARGS, nullptr },
+        { "add_time_picked", reinterpret_cast<PyCFunction>(TimePickerFlyout_add_TimePicked), METH_O, nullptr },
+        { "remove_time_picked", reinterpret_cast<PyCFunction>(TimePickerFlyout_remove_TimePicked), METH_O, nullptr },
+        { "_assign_array_", _assign_array_TimePickerFlyout, METH_O | METH_STATIC, nullptr },
+        { "_from", reinterpret_cast<PyCFunction>(_from_TimePickerFlyout), METH_O | METH_STATIC, nullptr },
+        { }
+    };
+
+    static PyGetSetDef _getset_TimePickerFlyout[] = {
+        { "time", reinterpret_cast<getter>(TimePickerFlyout_get_Time), reinterpret_cast<setter>(TimePickerFlyout_put_Time), nullptr, nullptr },
+        { "minute_increment", reinterpret_cast<getter>(TimePickerFlyout_get_MinuteIncrement), reinterpret_cast<setter>(TimePickerFlyout_put_MinuteIncrement), nullptr, nullptr },
+        { "clock_identifier", reinterpret_cast<getter>(TimePickerFlyout_get_ClockIdentifier), reinterpret_cast<setter>(TimePickerFlyout_put_ClockIdentifier), nullptr, nullptr },
+        { }
+    };
+
+    static PyType_Slot _type_slots_TimePickerFlyout[] = {
+        { Py_tp_new, reinterpret_cast<void*>(_new_TimePickerFlyout) },
+        { Py_tp_dealloc, reinterpret_cast<void*>(_dealloc_TimePickerFlyout) },
+        { Py_tp_methods, reinterpret_cast<void*>(_methods_TimePickerFlyout) },
+        { Py_tp_getset, reinterpret_cast<void*>(_getset_TimePickerFlyout) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimePickerFlyout = {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.TimePickerFlyout",
+        sizeof(py::wrapper::Microsoft::UI::Xaml::Controls::TimePickerFlyout),
+        0,
+        Py_TPFLAGS_DEFAULT,
+        _type_slots_TimePickerFlyout};
+
+    static PyGetSetDef getset_TimePickerFlyout_Static[] = {
+        { "clock_identifier_property", reinterpret_cast<getter>(TimePickerFlyout_get_ClockIdentifierProperty), nullptr, nullptr, nullptr },
+        { "minute_increment_property", reinterpret_cast<getter>(TimePickerFlyout_get_MinuteIncrementProperty), nullptr, nullptr, nullptr },
+        { "time_property", reinterpret_cast<getter>(TimePickerFlyout_get_TimeProperty), nullptr, nullptr, nullptr },
+        { }
+    };
+
+    static PyMethodDef methods_TimePickerFlyout_Static[] = {
+        { }
+    };
+
+    static PyType_Slot type_slots_TimePickerFlyout_Static[] = 
+    {
+        { Py_tp_base, reinterpret_cast<void*>(&PyType_Type) },
+        { Py_tp_getset, reinterpret_cast<void*>(getset_TimePickerFlyout_Static) },
+        { Py_tp_methods, reinterpret_cast<void*>(methods_TimePickerFlyout_Static) },
+        { }
+    };
+
+    static PyType_Spec type_spec_TimePickerFlyout_Static =
+    {
+        "winrt._winrt_microsoft_ui_xaml_controls_2.TimePickerFlyout_Static",
+        static_cast<int>(PyType_Type.tp_basicsize),
+        static_cast<int>(PyType_Type.tp_itemsize),
+        Py_TPFLAGS_DEFAULT,
+        type_slots_TimePickerFlyout_Static
+    };
+
     // ----- TreeViewItem class --------------------
 
     static PyObject* _new_TreeViewItem(PyTypeObject* type, PyObject* args, PyObject* kwds) noexcept
@@ -12806,6 +16740,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_CommandBarFlyout_Static{PyType_FromSpec(&type_spec_CommandBarFlyout_Static)};
+    if (!type_CommandBarFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyout_Static.get()))};
+    if (!CommandBarFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DatePickerFlyout_Static{PyType_FromSpec(&type_spec_DatePickerFlyout_Static)};
+    if (!type_DatePickerFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DatePickerFlyout_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerFlyout_Static.get()))};
+    if (!DatePickerFlyout_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_DropDownButton_Static{PyType_FromSpec(&type_spec_DropDownButton_Static)};
     if (!type_DropDownButton_Static)
     {
@@ -12838,6 +16796,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItem_Static.get()))};
     if (!FlipViewItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Flyout_Static{PyType_FromSpec(&type_spec_Flyout_Static)};
+    if (!type_Flyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Flyout_type{py::register_python_type(module.get(), &type_spec_Flyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Flyout_Static.get()))};
+    if (!Flyout_type)
     {
         return nullptr;
     }
@@ -12914,6 +16884,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_ListPickerFlyout_Static{PyType_FromSpec(&type_spec_ListPickerFlyout_Static)};
+    if (!type_ListPickerFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListPickerFlyout_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListPickerFlyout_Static.get()))};
+    if (!ListPickerFlyout_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_ListView_Static{PyType_FromSpec(&type_spec_ListView_Static)};
     if (!type_ListView_Static)
     {
@@ -12934,6 +16916,42 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItem_Static.get()))};
     if (!ListViewItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuFlyout_Static{PyType_FromSpec(&type_spec_MenuFlyout_Static)};
+    if (!type_MenuFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyout_type{py::register_python_type(module.get(), &type_spec_MenuFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyout_Static.get()))};
+    if (!MenuFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuBarItemFlyout_Static{PyType_FromSpec(&type_spec_MenuBarItemFlyout_Static)};
+    if (!type_MenuBarItemFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarItemFlyout_type{py::register_python_type(module.get(), &type_spec_MenuBarItemFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemFlyout_Static.get()))};
+    if (!MenuBarItemFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PickerFlyout_Static{PyType_FromSpec(&type_spec_PickerFlyout_Static)};
+    if (!type_PickerFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PickerFlyout_type{py::register_python_type(module.get(), &type_spec_PickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyout_Static.get()))};
+    if (!PickerFlyout_type)
     {
         return nullptr;
     }
@@ -12994,6 +17012,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle TabViewItem_type{py::register_python_type(module.get(), &type_spec_TabViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewItem_Static.get()))};
     if (!TabViewItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextCommandBarFlyout_Static{PyType_FromSpec(&type_spec_TextCommandBarFlyout_Static)};
+    if (!type_TextCommandBarFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextCommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_TextCommandBarFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextCommandBarFlyout_Static.get()))};
+    if (!TextCommandBarFlyout_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TimePickerFlyout_Static{PyType_FromSpec(&type_spec_TimePickerFlyout_Static)};
+    if (!type_TimePickerFlyout_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TimePickerFlyout_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerFlyout_Static.get()))};
+    if (!TimePickerFlyout_type)
     {
         return nullptr;
     }

@@ -603,4 +603,50 @@ static class TypeExtensions
             return types.OrderBy(t => sorted.IndexOf(t.Type));
         }
     }
+
+    private static TypeDefinition? TryResolve(TypeReference type)
+    {
+        try
+        {
+            return type?.Resolve();
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    public static int GetCircularDependencyDepth(this TypeReference type)
+    {
+        var depth = 0;
+        var isInOwnNamespace = true;
+        var dependsOnOwnSubmodule = false;
+
+        for (
+            var current = TryResolve(type);
+            current != null;
+            current = TryResolve(current.BaseType)
+        )
+        {
+            var wasInOwnNamespace = isInOwnNamespace;
+            isInOwnNamespace = current.Namespace == type.Namespace;
+
+            if (isInOwnNamespace && !wasInOwnNamespace)
+            {
+                depth++;
+            }
+
+            if (current.Namespace.StartsWith(type.Namespace + ".", StringComparison.Ordinal))
+            {
+                dependsOnOwnSubmodule = true;
+            }
+        }
+
+        if (depth == 0 && dependsOnOwnSubmodule)
+        {
+            depth++;
+        }
+
+        return depth;
+    }
 }

@@ -17,7 +17,8 @@ class ProjectedType
         IsComposable = type.CustomAttributes.Any(a =>
             a.AttributeType.FullName == "Windows.Foundation.Metadata.ComposableAttribute"
         );
-        CircularDependencyDepth = Category == Category.Class ? GetCircularDependencyDepth(type) : 0;
+        CircularDependencyDepth =
+            Category == Category.Class ? type.GetCircularDependencyDepth() : 0;
 
         PyModuleName = Namespace.ToPyModuleName();
         PyExtModuleName = Namespace.ToNsModuleName();
@@ -107,37 +108,6 @@ class ProjectedType
         Methods = EnumerateMethods(type).ToList();
         Properties = EnumerateProperties(type).ToArray();
         Events = EnumerateEvents(type).ToArray();
-    }
-
-    private static TypeDefinition? TryResolve(TypeReference type)
-    {
-        try
-        {
-            return type?.Resolve();
-        }
-        catch
-        {
-            return null;
-        }
-    }
-
-    private static int GetCircularDependencyDepth(TypeDefinition type)
-    {
-        var depth = 0;
-        var isInOwnNamespace = true;
-
-        for (var current = type; current != null; current = TryResolve(current.BaseType))
-        {
-            var wasInOwnNamespace = isInOwnNamespace;
-            isInOwnNamespace = current.Namespace == type.Namespace;
-
-            if (isInOwnNamespace && !wasInOwnNamespace)
-            {
-                depth++;
-            }
-        }
-
-        return depth;
     }
 
     private enum Mark
