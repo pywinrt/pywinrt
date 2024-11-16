@@ -27,4 +27,4 @@ class RemoteTextConnectionOptions(enum.IntFlag):
     NONE = 0x0
     ENABLE_PREDICTED_KEY_REPORTING = 0x1
 
-RemoteTextConnectionDataHandler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.UInt8], winrt.system.ReadableBuffer]], bool]
+RemoteTextConnectionDataHandler = typing.Callable[[winrt.system.Array[winrt.system.UInt8]], bool]

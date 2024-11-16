@@ -50,5 +50,5 @@ class NotifyCollectionChangedAction(enum.IntEnum):
     MOVE = 3
     RESET = 4
 
-BindableVectorChangedEventHandler = typing.Callable[[ImplementsIBindableObservableVector, winrt.system.Object], None]
+BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
 NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]

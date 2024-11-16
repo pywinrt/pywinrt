@@ -146,12 +146,12 @@ class PropertyType(enum.IntEnum):
     OTHER_TYPE_ARRAY = 1044
 
 winrt.system._mixin_sequence(WwwFormUrlDecoder)
-AsyncActionCompletedHandler = typing.Callable[[ImplementsIAsyncAction, AsyncStatus], None]
-AsyncActionProgressHandler = typing.Callable[[ImplementsIAsyncActionWithProgress[TProgress], TProgress], None]
-AsyncActionWithProgressCompletedHandler = typing.Callable[[ImplementsIAsyncActionWithProgress[TProgress], AsyncStatus], None]
-AsyncOperationCompletedHandler = typing.Callable[[ImplementsIAsyncOperation[TResult], AsyncStatus], None]
-AsyncOperationProgressHandler = typing.Callable[[ImplementsIAsyncOperationWithProgress[TResult, TProgress], TProgress], None]
-AsyncOperationWithProgressCompletedHandler = typing.Callable[[ImplementsIAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], None]
+AsyncActionCompletedHandler = typing.Callable[[IAsyncAction, AsyncStatus], None]
+AsyncActionProgressHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], TProgress], None]
+AsyncActionWithProgressCompletedHandler = typing.Callable[[IAsyncActionWithProgress[TProgress], AsyncStatus], None]
+AsyncOperationCompletedHandler = typing.Callable[[IAsyncOperation[TResult], AsyncStatus], None]
+AsyncOperationProgressHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], TProgress], None]
+AsyncOperationWithProgressCompletedHandler = typing.Callable[[IAsyncOperationWithProgress[TResult, TProgress], AsyncStatus], None]
 DeferralCompletedHandler = typing.Callable[[], None]
 EventHandler = typing.Callable[[winrt.system.Object, T], None]
 TypedEventHandler = typing.Callable[[TSender, TResult], None]

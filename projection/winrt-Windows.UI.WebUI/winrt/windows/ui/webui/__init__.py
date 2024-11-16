@@ -166,10 +166,10 @@ class PrintContent(enum.IntEnum):
     CUSTOM_PAGE_RANGE = 2
     CURRENT_SELECTION = 3
 
-ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.ImplementsIActivatedEventArgs"], None]
-BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.ImplementsIBackgroundActivatedEventArgs"], None]
-EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ImplementsIEnteredBackgroundEventArgs"], None]
-LeavingBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ImplementsILeavingBackgroundEventArgs"], None]
-NavigatedEventHandler = typing.Callable[[winrt.system.Object, ImplementsIWebUINavigatedEventArgs], None]
+ActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IActivatedEventArgs"], None]
+BackgroundActivatedEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel_activation.IBackgroundActivatedEventArgs"], None]
+EnteredBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.IEnteredBackgroundEventArgs"], None]
+LeavingBackgroundEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ILeavingBackgroundEventArgs"], None]
+NavigatedEventHandler = typing.Callable[[winrt.system.Object, IWebUINavigatedEventArgs], None]
 ResumingEventHandler = typing.Callable[[winrt.system.Object], None]
-SuspendingEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ImplementsISuspendingEventArgs"], None]
+SuspendingEventHandler = typing.Callable[[winrt.system.Object, "windows_applicationmodel.ISuspendingEventArgs"], None]

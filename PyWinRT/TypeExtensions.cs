@@ -410,6 +410,39 @@ static class TypeExtensions
             _ => throw new NotImplementedException(),
         };
 
+    /// <summary>
+    /// Gets Python type hint for the input parameter of a WinRT delegate.
+    /// </summary>
+    /// <param name="param">The parameter.</param>
+    /// <param name="ns">The current namespace.</param>
+    /// <param name="map">Map of generic parameters.</param>
+    /// <param name="quoteImportedTypes">
+    /// If types outside of the current namespace should be quoted.
+    /// </param>
+    /// <returns>The Python typing</returns>
+    /// <remarks>
+    /// In this case, input parameters are actually like output parameters in
+    /// regular methods since we are passing data from C++ to Python.
+    /// </remarks>
+    public static string ToPyCallbackInParamTyping(
+        this ParameterDefinition param,
+        string ns,
+        IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
+        bool quoteImportedTypes = false
+    ) =>
+        param.GetCategory() switch
+        {
+            ParamCategory.In => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+            // REVISIT: Do we need a different type hint for the winrt::array_view wrapper?
+            // REVISIT: Do we want separate types for read-only arrays (PassArray)?
+            ParamCategory.PassArray
+            or ParamCategory.FillArray
+                => $"winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}]",
+            ParamCategory.ReceiveArray
+                => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+            _ => throw new NotImplementedException(),
+        };
+
     public static string ToPyOutParamTyping(
         this ParameterDefinition param,
         string ns,

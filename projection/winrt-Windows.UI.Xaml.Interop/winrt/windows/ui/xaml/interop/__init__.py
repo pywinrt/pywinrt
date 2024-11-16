@@ -58,5 +58,5 @@ class TypeKind(enum.IntEnum):
     METADATA = 1
     CUSTOM = 2
 
-BindableVectorChangedEventHandler = typing.Callable[[ImplementsIBindableObservableVector, winrt.system.Object], None]
+BindableVectorChangedEventHandler = typing.Callable[[IBindableObservableVector, winrt.system.Object], None]
 NotifyCollectionChangedEventHandler = typing.Callable[[winrt.system.Object, NotifyCollectionChangedEventArgs], None]
