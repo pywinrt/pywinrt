@@ -5913,18 +5913,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Binding_Static{PyType_FromSpec(&type_spec_Binding_Static)};
-    if (!type_Binding_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Binding_Static.get()))};
-    if (!Binding_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_BindingBase_Static{PyType_FromSpec(&type_spec_BindingBase_Static)};
     if (!type_BindingBase_Static)
     {
@@ -5937,14 +5925,14 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingExpression_Static{PyType_FromSpec(&type_spec_BindingExpression_Static)};
-    if (!type_BindingExpression_Static)
+    py::pyobj_handle type_Binding_Static{PyType_FromSpec(&type_spec_Binding_Static)};
+    if (!type_Binding_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingExpression_Static.get()))};
-    if (!BindingExpression_type)
+    py::pytype_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Binding_Static.get()))};
+    if (!Binding_type)
     {
         return nullptr;
     }
@@ -5957,6 +5945,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_data(void) noexcept
 
     py::pytype_handle BindingExpressionBase_type{py::register_python_type(module.get(), &type_spec_BindingExpressionBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingExpressionBase_Static.get()))};
     if (!BindingExpressionBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingExpression_Static{PyType_FromSpec(&type_spec_BindingExpression_Static)};
+    if (!type_BindingExpression_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingExpression_Static.get()))};
+    if (!BindingExpression_type)
     {
         return nullptr;
     }

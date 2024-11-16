@@ -5521,6 +5521,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_SceneObject_Static{PyType_FromSpec(&type_spec_SceneObject_Static)};
+    if (!type_SceneObject_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneObject_Static.get()))};
+    if (!SceneObject_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr)};
     if (!SceneBoundingBox_type)
     {
@@ -5587,6 +5599,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_SceneRendererComponent_Static{PyType_FromSpec(&type_spec_SceneRendererComponent_Static)};
+    if (!type_SceneRendererComponent_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneRendererComponent_Static.get()))};
+    if (!SceneRendererComponent_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_SceneMeshRendererComponent_Static{PyType_FromSpec(&type_spec_SceneMeshRendererComponent_Static)};
     if (!type_SceneMeshRendererComponent_Static)
     {
@@ -5595,6 +5619,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
 
     py::pytype_handle SceneMeshRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get()))};
     if (!SceneMeshRendererComponent_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScenePbrMaterial_Static{PyType_FromSpec(&type_spec_ScenePbrMaterial_Static)};
+    if (!type_ScenePbrMaterial_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScenePbrMaterial_Static.get()))};
+    if (!ScenePbrMaterial_type)
     {
         return nullptr;
     }
@@ -5631,42 +5667,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
 
     py::pytype_handle SceneNodeCollection_type{py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr)};
     if (!SceneNodeCollection_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_SceneObject_Static{PyType_FromSpec(&type_spec_SceneObject_Static)};
-    if (!type_SceneObject_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneObject_Static.get()))};
-    if (!SceneObject_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_ScenePbrMaterial_Static{PyType_FromSpec(&type_spec_ScenePbrMaterial_Static)};
-    if (!type_ScenePbrMaterial_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScenePbrMaterial_Static.get()))};
-    if (!ScenePbrMaterial_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_SceneRendererComponent_Static{PyType_FromSpec(&type_spec_SceneRendererComponent_Static)};
-    if (!type_SceneRendererComponent_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneRendererComponent_Static.get()))};
-    if (!SceneRendererComponent_type)
     {
         return nullptr;
     }

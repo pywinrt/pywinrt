@@ -2815,6 +2815,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_Shape_Static{PyType_FromSpec(&type_spec_Shape_Static)};
+    if (!type_Shape_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
+    if (!Shape_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, object_bases.get(), nullptr)};
     if (!Ellipse_type)
     {
@@ -2877,18 +2889,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_shapes(void) noexcept
 
     py::pytype_handle Rectangle_type{py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get()))};
     if (!Rectangle_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Shape_Static{PyType_FromSpec(&type_spec_Shape_Static)};
-    if (!type_Shape_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
-    if (!Shape_type)
     {
         return nullptr;
     }

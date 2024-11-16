@@ -27156,6 +27156,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_RangeBase_Static{PyType_FromSpec(&type_spec_RangeBase_Static)};
+    if (!type_RangeBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RangeBase_type{py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get()))};
+    if (!RangeBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_ColorSpectrum_Static{PyType_FromSpec(&type_spec_ColorSpectrum_Static)};
     if (!type_ColorSpectrum_Static)
     {
@@ -27470,18 +27482,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives(void) noexcept
 
     py::pytype_handle ProgressRingTemplateSettings_type{py::register_python_type(module.get(), &type_spec_ProgressRingTemplateSettings, object_bases.get(), nullptr)};
     if (!ProgressRingTemplateSettings_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_RangeBase_Static{PyType_FromSpec(&type_spec_RangeBase_Static)};
-    if (!type_RangeBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle RangeBase_type{py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get()))};
-    if (!RangeBase_type)
     {
         return nullptr;
     }

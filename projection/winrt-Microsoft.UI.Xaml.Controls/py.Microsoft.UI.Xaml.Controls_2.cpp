@@ -12734,6 +12734,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_Button_Static{PyType_FromSpec(&type_spec_Button_Static)};
+    if (!type_Button_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
+    if (!Button_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_AppBarButton_Static{PyType_FromSpec(&type_spec_AppBarButton_Static)};
     if (!type_AppBarButton_Static)
     {
@@ -12754,18 +12766,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle AppBarToggleButton_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButton_Static.get()))};
     if (!AppBarToggleButton_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Button_Static{PyType_FromSpec(&type_spec_Button_Static)};
-    if (!type_Button_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
-    if (!Button_type)
     {
         return nullptr;
     }
@@ -12842,6 +12842,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpec(&type_spec_ListViewBase_Static)};
+    if (!type_ListViewBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
+    if (!ListViewBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_GridView_Static{PyType_FromSpec(&type_spec_GridView_Static)};
     if (!type_GridView_Static)
     {
@@ -12910,18 +12922,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListView_Static.get()))};
     if (!ListView_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpec(&type_spec_ListViewBase_Static)};
-    if (!type_ListViewBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
-    if (!ListViewBase_type)
     {
         return nullptr;
     }

@@ -13902,6 +13902,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_InputObject_Static{PyType_FromSpec(&type_spec_InputObject_Static)};
+    if (!type_InputObject_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputObject_Static.get()))};
+    if (!InputObject_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_InputActivationListener_Static{PyType_FromSpec(&type_spec_InputActivationListener_Static)};
     if (!type_InputActivationListener_Static)
     {
@@ -14030,18 +14042,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
 
     py::pytype_handle InputNonClientPointerSource_type{py::register_python_type(module.get(), &type_spec_InputNonClientPointerSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputNonClientPointerSource_Static.get()))};
     if (!InputNonClientPointerSource_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_InputObject_Static{PyType_FromSpec(&type_spec_InputObject_Static)};
-    if (!type_InputObject_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle InputObject_type{py::register_python_type(module.get(), &type_spec_InputObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputObject_Static.get()))};
-    if (!InputObject_type)
     {
         return nullptr;
     }

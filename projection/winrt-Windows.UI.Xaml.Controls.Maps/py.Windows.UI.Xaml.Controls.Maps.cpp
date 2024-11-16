@@ -22659,6 +22659,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_MapTileDataSource_Static{PyType_FromSpec(&type_spec_MapTileDataSource_Static)};
+    if (!type_MapTileDataSource_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileDataSource_Static.get()))};
+    if (!MapTileDataSource_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_CustomMapTileDataSource_Static{PyType_FromSpec(&type_spec_CustomMapTileDataSource_Static)};
     if (!type_CustomMapTileDataSource_Static)
     {
@@ -22703,6 +22715,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
 
     py::pytype_handle MapActualCameraChangingEventArgs_type{py::register_python_type(module.get(), &type_spec_MapActualCameraChangingEventArgs, object_bases.get(), nullptr)};
     if (!MapActualCameraChangingEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapElement_Static{PyType_FromSpec(&type_spec_MapElement_Static)};
+    if (!type_MapElement_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapElement_type{py::register_python_type(module.get(), &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Static.get()))};
+    if (!MapElement_type)
     {
         return nullptr;
     }
@@ -22821,18 +22845,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapElement_Static{PyType_FromSpec(&type_spec_MapElement_Static)};
-    if (!type_MapElement_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle MapElement_type{py::register_python_type(module.get(), &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Static.get()))};
-    if (!MapElement_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_MapElement3D_Static{PyType_FromSpec(&type_spec_MapElement3D_Static)};
     if (!type_MapElement3D_Static)
     {
@@ -22859,6 +22871,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
 
     py::pytype_handle MapElementPointerExitedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapElementPointerExitedEventArgs, object_bases.get(), nullptr)};
     if (!MapElementPointerExitedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapLayer_Static{PyType_FromSpec(&type_spec_MapLayer_Static)};
+    if (!type_MapLayer_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
+    if (!MapLayer_type)
     {
         return nullptr;
     }
@@ -22925,18 +22949,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
 
     py::pytype_handle MapItemsControl_type{py::register_python_type(module.get(), &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Static.get()))};
     if (!MapItemsControl_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_MapLayer_Static{PyType_FromSpec(&type_spec_MapLayer_Static)};
-    if (!type_MapLayer_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
-    if (!MapLayer_type)
     {
         return nullptr;
     }
@@ -23063,18 +23075,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
 
     py::pytype_handle MapTileBitmapRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_MapTileBitmapRequestedEventArgs, object_bases.get(), nullptr)};
     if (!MapTileBitmapRequestedEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_MapTileDataSource_Static{PyType_FromSpec(&type_spec_MapTileDataSource_Static)};
-    if (!type_MapTileDataSource_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileDataSource_Static.get()))};
-    if (!MapTileDataSource_type)
     {
         return nullptr;
     }

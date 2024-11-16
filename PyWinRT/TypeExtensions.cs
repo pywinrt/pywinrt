@@ -548,4 +548,59 @@ static class TypeExtensions
         return type.Namespace == "Windows.Foundation.Numerics"
             && CustomNumerics.TryGetValue(type.Name, out cppName);
     }
+
+    private enum Mark
+    {
+        Unmarked,
+        Temporary,
+        Permanent,
+    }
+
+    private sealed class TypeComparer : IEqualityComparer<TypeDefinition>
+    {
+        public bool Equals(TypeDefinition? x, TypeDefinition? y) => x?.FullName == y?.FullName;
+
+        public int GetHashCode(TypeDefinition obj) => obj.FullName.GetHashCode();
+    }
+
+    public static IEnumerable<ProjectedType> OrderByDependency(
+        this IEnumerable<ProjectedType> types
+    )
+    {
+        {
+            // depth-first search
+            var marked = types.ToDictionary(i => i.Type, _ => Mark.Unmarked, new TypeComparer());
+            var sorted = new List<TypeDefinition>();
+
+            void visit(TypeDefinition type)
+            {
+                marked.TryAdd(type, Mark.Unmarked);
+
+                switch (marked[type])
+                {
+                    case Mark.Permanent:
+                        return;
+                    case Mark.Temporary:
+                        throw new InvalidOperationException("Cyclic dependency detected");
+                }
+
+                marked[type] = Mark.Temporary;
+
+                if (type.BaseType.FullName != "System.Object")
+                {
+                    visit(type.BaseType.Resolve());
+                }
+
+                marked[type] = Mark.Permanent;
+                sorted.Add(type);
+            }
+
+            while (marked.Values.Any(m => m != Mark.Permanent))
+            {
+                visit(marked.First(m => m.Value == Mark.Unmarked).Key);
+            }
+
+            return types.OrderBy(t => sorted.IndexOf(t.Type));
+        }
+    }
 }
