@@ -193,22 +193,27 @@ static class ObjectWriterExtensions
         if (type.IsPyMapping)
         {
             var method = type.Methods.Single(m => m.Name == "Lookup");
-            var keyType = method
+            var keyParamType = method
                 .Method.Parameters[0]
-                .ParameterType.ToPyTypeName(ns, method.GenericArgMap);
-            var valueType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+                .ToPyInParamTyping(ns, method.GenericArgMap);
+            var valueReturnType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
 
             w.WriteLine("def __len__(self) -> int: ...");
-            w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyType}]: ...");
+            w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
             w.WriteLine("def __contains__(self, key: object) -> bool: ...");
-            w.WriteLine($"def __getitem__(self, key: {keyType}) -> {valueType}: ...");
+            w.WriteLine($"def __getitem__(self, key: {keyParamType}) -> {valueReturnType}: ...");
 
             if (type.IsPyMutableMapping)
             {
+                var setMethod = type.Methods.Single(m => m.Name == "Insert");
+                var valParamType = setMethod
+                    .Method.Parameters[1]
+                    .ToPyInParamTyping(ns, setMethod.GenericArgMap);
+
                 w.WriteLine(
-                    $"def __setitem__(self, key: {keyType}, value: {valueType}) -> None: ..."
+                    $"def __setitem__(self, key: {keyParamType}, value: {valParamType}) -> None: ..."
                 );
-                w.WriteLine($"def __delitem__(self, key: {keyType}) -> None: ...");
+                w.WriteLine($"def __delitem__(self, key: {keyParamType}) -> None: ...");
             }
         }
         else if (type.IsPySequence)
@@ -231,17 +236,22 @@ static class ObjectWriterExtensions
 
             if (type.IsPyMutableSequence)
             {
+                var setMethod = type.Methods.Single(m => m.Name == "SetAt");
+                var valParamType = setMethod
+                    .Method.Parameters[1]
+                    .ToPyInParamTyping(ns, setMethod.GenericArgMap);
+
                 w.WriteLine("@typing.overload");
                 w.WriteLine($"def __delitem__(self, index: typing.SupportsIndex) -> None: ...");
                 w.WriteLine("@typing.overload");
                 w.WriteLine($"def __delitem__(self, index: slice) -> None: ...");
                 w.WriteLine("@typing.overload");
                 w.WriteLine(
-                    $"def __setitem__(self, index: typing.SupportsIndex, value: {elementType}) -> None: ..."
+                    $"def __setitem__(self, index: typing.SupportsIndex, value: {valParamType}) -> None: ..."
                 );
                 w.WriteLine("@typing.overload");
                 w.WriteLine(
-                    $"def __setitem__(self, index: slice, value: typing.Iterable[{elementType}]) -> None: ..."
+                    $"def __setitem__(self, index: slice, value: typing.Iterable[{valParamType}]) -> None: ..."
                 );
             }
         }
