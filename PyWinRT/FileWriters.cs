@@ -468,8 +468,11 @@ static class FileWriters
             var invoke = type.Type.Methods.Single(m => m.Name == "Invoke");
             var paramTypes = invoke
                 .Parameters.Where(p => p.IsPythonInParam())
-                .Select(p => p.ToPyInParamTyping(ns, quoteImportedTypes: true));
+                .Select(p => p.ToPyCallbackInParamTyping(ns, quoteImportedTypes: true));
 
+            // REVISIT: We will likely need to implement a ToPyCallbackInParamTyping()
+            // instead of ToPyReturnTyping(). For now, this isn't a problem outside
+            // of the TestComponent modules since most callbacks only return None or bool.
             w.WriteLine(
                 $"{type.Name} = typing.Callable[[{string.Join(", ", paramTypes)}], {invoke.ToPyReturnTyping(ns, quoteImportedTypes: true)}]"
             );

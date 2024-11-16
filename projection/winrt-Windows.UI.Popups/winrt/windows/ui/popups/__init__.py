@@ -40,4 +40,4 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
-UICommandInvokedHandler = typing.Callable[[ImplementsIUICommand], None]
+UICommandInvokedHandler = typing.Callable[[IUICommand], None]

@@ -299,6 +299,6 @@ class SystemTriggerType(enum.IntEnum):
     POWER_STATE_CHANGE = 14
     DEFAULT_SIGN_IN_ACCOUNT_CHANGE = 15
 
-BackgroundTaskCanceledEventHandler = typing.Callable[[ImplementsIBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
+BackgroundTaskCanceledEventHandler = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
 BackgroundTaskCompletedEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], None]
 BackgroundTaskProgressEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], None]
