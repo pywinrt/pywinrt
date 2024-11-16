@@ -579,7 +579,7 @@ namespace py
     {
         if (PyErr_Occurred())
         {
-            // A Python excpetion is already pending - don't overwrite it
+            // A Python exception is already pending - don't overwrite it
             return;
         }
 
