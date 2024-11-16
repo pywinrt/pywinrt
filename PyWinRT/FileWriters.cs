@@ -60,7 +60,7 @@ static class FileWriters
         WriteNamespacePyi(nsWinrtDir, ns, members, 0);
         WriteNamespacePyi(nsWinrtDir, ns, members, 1);
         WritePyWinRTVersionTxt(nsPackageDir);
-        WriteRequirementsTxt(nsPackageDir);
+        WriteRequirementsTxt(nsPackageDir, members);
 
         if (members.GetReferencedNamespaces(includeDelegates: true).Any())
         {
@@ -84,7 +84,7 @@ static class FileWriters
         sw.WriteFileIfChanged(nsPackageDir, "all-requirements.txt");
     }
 
-    private static void WriteRequirementsTxt(DirectoryInfo nsPackageDir)
+    private static void WriteRequirementsTxt(DirectoryInfo nsPackageDir, Members members)
     {
         using var sw = new StringWriter();
         using var w = new IndentedTextWriter(sw) { NewLine = "\n" };
@@ -92,6 +92,11 @@ static class FileWriters
         w.WriteLicense("#");
         w.WriteBlankLine();
         w.WriteLine($"winrt-runtime=={PyWinRT.VersionString}");
+
+        foreach (var ns in members.GetRequiredNamespaces())
+        {
+            w.WriteLine($"winrt-{ns}=={PyWinRT.VersionString}");
+        }
 
         sw.WriteFileIfChanged(nsPackageDir, "requirements.txt");
     }
