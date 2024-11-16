@@ -30,6 +30,7 @@ import winrt.windows.ui.input.inking as windows_ui_input_inking
 import winrt.windows.ui.text as windows_ui_text
 import winrt.windows.ui.xaml as windows_ui_xaml
 import winrt.windows.ui.xaml.automation as windows_ui_xaml_automation
+import winrt.windows.ui.xaml.automation.peers as windows_ui_xaml_automation_peers
 import winrt.windows.ui.xaml.automation.provider as windows_ui_xaml_automation_provider
 import winrt.windows.ui.xaml.controls.primitives as windows_ui_xaml_controls_primitives
 import winrt.windows.ui.xaml.data as windows_ui_xaml_data

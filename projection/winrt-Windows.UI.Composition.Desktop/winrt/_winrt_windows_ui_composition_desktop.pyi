@@ -9,6 +9,7 @@ from builtins import property as _property
 
 import winrt._winrt
 import winrt.system
+import winrt.windows.ui.composition as windows_ui_composition
 
 Self = typing.TypeVar('Self')
 

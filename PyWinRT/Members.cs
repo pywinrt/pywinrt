@@ -163,6 +163,15 @@ sealed class Members
 
         foreach (var type in Classes.Concat(Interfaces))
         {
+            if (
+                type.Type.BaseType is TypeReference baseType
+                && baseType.Namespace != type.Namespace
+                && baseType.Namespace != "System"
+            )
+            {
+                namespaces.Add(baseType.Namespace);
+            }
+
             if (includeInheritedInterfaces)
             {
                 foreach (var t in type.Interfaces.Where(t => t.Namespace != type.Namespace))

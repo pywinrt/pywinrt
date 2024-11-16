@@ -18,6 +18,7 @@ import winrt.windows.services.maps.localsearch as windows_services_maps_localsea
 import winrt.windows.storage.streams as windows_storage_streams
 import winrt.windows.ui as windows_ui
 import winrt.windows.ui.xaml as windows_ui_xaml
+import winrt.windows.ui.xaml.controls as windows_ui_xaml_controls
 
 from winrt.windows.ui.xaml.controls.maps import MapAnimationKind, MapCameraChangeReason, MapColorScheme, MapElementCollisionBehavior, MapInteractionMode, MapLoadingStatus, MapModel3DShadingOption, MapPanInteractionMode, MapProjection, MapStyle, MapTileAnimationState, MapTileLayer, MapVisibleRegionKind, MapWatermarkMode
 
