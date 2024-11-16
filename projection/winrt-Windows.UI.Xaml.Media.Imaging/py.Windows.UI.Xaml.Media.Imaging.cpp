@@ -3201,25 +3201,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapSource_Static{PyType_FromSpec(&type_spec_BitmapSource_Static)};
+    py::pyobj_handle windows_ui_xaml_media_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_media")};
+    if (!windows_ui_xaml_media_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_media_ImageSource_type{PyObject_GetAttrString(windows_ui_xaml_media_module.get(), "ImageSource")};
+    if (!windows_ui_xaml_media_ImageSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BitmapSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_media_ImageSource_type.get())))};
+    if (!BitmapSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BitmapSource_Static{PyType_FromSpecWithBases(&type_spec_BitmapSource_Static, BitmapSource_Static_bases.get())};
     if (!type_BitmapSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BitmapSource_type{py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Static.get()))};
+    py::pyobj_handle BitmapSource_bases{PyTuple_Pack(1, windows_ui_xaml_media_ImageSource_type.get())};
+    if (!BitmapSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BitmapSource_type{py::register_python_type(module.get(), &type_spec_BitmapSource, BitmapSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Static.get()))};
     if (!BitmapSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
+    py::pyobj_handle BitmapImage_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(BitmapSource_type.get())))};
+    if (!BitmapImage_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpecWithBases(&type_spec_BitmapImage_Static, BitmapImage_Static_bases.get())};
     if (!type_BitmapImage_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
+    py::pyobj_handle BitmapImage_bases{PyTuple_Pack(1, BitmapSource_type.get())};
+    if (!BitmapImage_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, BitmapImage_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
     if (!BitmapImage_type)
     {
         return nullptr;
@@ -3231,43 +3267,85 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RenderTargetBitmap_Static{PyType_FromSpec(&type_spec_RenderTargetBitmap_Static)};
+    py::pyobj_handle RenderTargetBitmap_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_media_ImageSource_type.get())))};
+    if (!RenderTargetBitmap_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RenderTargetBitmap_Static{PyType_FromSpecWithBases(&type_spec_RenderTargetBitmap_Static, RenderTargetBitmap_Static_bases.get())};
     if (!type_RenderTargetBitmap_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RenderTargetBitmap_type{py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Static.get()))};
+    py::pyobj_handle RenderTargetBitmap_bases{PyTuple_Pack(1, windows_ui_xaml_media_ImageSource_type.get())};
+    if (!RenderTargetBitmap_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RenderTargetBitmap_type{py::register_python_type(module.get(), &type_spec_RenderTargetBitmap, RenderTargetBitmap_bases.get(), reinterpret_cast<PyTypeObject*>(type_RenderTargetBitmap_Static.get()))};
     if (!RenderTargetBitmap_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SoftwareBitmapSource_type{py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, object_bases.get(), nullptr)};
+    py::pyobj_handle SoftwareBitmapSource_bases{PyTuple_Pack(1, windows_ui_xaml_media_ImageSource_type.get())};
+    if (!SoftwareBitmapSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SoftwareBitmapSource_type{py::register_python_type(module.get(), &type_spec_SoftwareBitmapSource, SoftwareBitmapSource_bases.get(), nullptr)};
     if (!SoftwareBitmapSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SurfaceImageSource_Static{PyType_FromSpec(&type_spec_SurfaceImageSource_Static)};
+    py::pyobj_handle SurfaceImageSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_media_ImageSource_type.get())))};
+    if (!SurfaceImageSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SurfaceImageSource_Static{PyType_FromSpecWithBases(&type_spec_SurfaceImageSource_Static, SurfaceImageSource_Static_bases.get())};
     if (!type_SurfaceImageSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SurfaceImageSource_Static.get()))};
+    py::pyobj_handle SurfaceImageSource_bases{PyTuple_Pack(1, windows_ui_xaml_media_ImageSource_type.get())};
+    if (!SurfaceImageSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_SurfaceImageSource, SurfaceImageSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_SurfaceImageSource_Static.get()))};
     if (!SurfaceImageSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SvgImageSource_Static{PyType_FromSpec(&type_spec_SvgImageSource_Static)};
+    py::pyobj_handle SvgImageSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_media_ImageSource_type.get())))};
+    if (!SvgImageSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SvgImageSource_Static{PyType_FromSpecWithBases(&type_spec_SvgImageSource_Static, SvgImageSource_Static_bases.get())};
     if (!type_SvgImageSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SvgImageSource_type{py::register_python_type(module.get(), &type_spec_SvgImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Static.get()))};
+    py::pyobj_handle SvgImageSource_bases{PyTuple_Pack(1, windows_ui_xaml_media_ImageSource_type.get())};
+    if (!SvgImageSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SvgImageSource_type{py::register_python_type(module.get(), &type_spec_SvgImageSource, SvgImageSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_SvgImageSource_Static.get()))};
     if (!SvgImageSource_type)
     {
         return nullptr;
@@ -3285,13 +3363,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle VirtualSurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, object_bases.get(), nullptr)};
+    py::pyobj_handle VirtualSurfaceImageSource_bases{PyTuple_Pack(1, SurfaceImageSource_type.get())};
+    if (!VirtualSurfaceImageSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualSurfaceImageSource_type{py::register_python_type(module.get(), &type_spec_VirtualSurfaceImageSource, VirtualSurfaceImageSource_bases.get(), nullptr)};
     if (!VirtualSurfaceImageSource_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle WriteableBitmap_type{py::register_python_type(module.get(), &type_spec_WriteableBitmap, object_bases.get(), nullptr)};
+    py::pyobj_handle WriteableBitmap_bases{PyTuple_Pack(1, BitmapSource_type.get())};
+    if (!WriteableBitmap_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WriteableBitmap_type{py::register_python_type(module.get(), &type_spec_WriteableBitmap, WriteableBitmap_bases.get(), nullptr)};
     if (!WriteableBitmap_type)
     {
         return nullptr;

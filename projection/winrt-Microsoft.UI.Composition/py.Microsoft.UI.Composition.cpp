@@ -34390,175 +34390,349 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionLight_Static{PyType_FromSpec(&type_spec_CompositionLight_Static)};
+    py::pyobj_handle CompositionLight_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionLight_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionLight_Static{PyType_FromSpecWithBases(&type_spec_CompositionLight_Static, CompositionLight_Static_bases.get())};
     if (!type_CompositionLight_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionLight_type{py::register_python_type(module.get(), &type_spec_CompositionLight, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionLight_Static.get()))};
+    py::pyobj_handle CompositionLight_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionLight_type{py::register_python_type(module.get(), &type_spec_CompositionLight, CompositionLight_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionLight_Static.get()))};
     if (!CompositionLight_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AmbientLight_type{py::register_python_type(module.get(), &type_spec_AmbientLight, object_bases.get(), nullptr)};
+    py::pyobj_handle AmbientLight_bases{PyTuple_Pack(1, CompositionLight_type.get())};
+    if (!AmbientLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AmbientLight_type{py::register_python_type(module.get(), &type_spec_AmbientLight, AmbientLight_bases.get(), nullptr)};
     if (!AmbientLight_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AnimationController_Static{PyType_FromSpec(&type_spec_AnimationController_Static)};
+    py::pyobj_handle AnimationController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!AnimationController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AnimationController_Static{PyType_FromSpecWithBases(&type_spec_AnimationController_Static, AnimationController_Static_bases.get())};
     if (!type_AnimationController_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AnimationController_type{py::register_python_type(module.get(), &type_spec_AnimationController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Static.get()))};
+    py::pyobj_handle AnimationController_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!AnimationController_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AnimationController_type{py::register_python_type(module.get(), &type_spec_AnimationController, AnimationController_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimationController_Static.get()))};
     if (!AnimationController_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AnimationPropertyInfo_type{py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, object_bases.get(), nullptr)};
+    py::pyobj_handle AnimationPropertyInfo_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!AnimationPropertyInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AnimationPropertyInfo_type{py::register_python_type(module.get(), &type_spec_AnimationPropertyInfo, AnimationPropertyInfo_bases.get(), nullptr)};
     if (!AnimationPropertyInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionEasingFunction_Static{PyType_FromSpec(&type_spec_CompositionEasingFunction_Static)};
+    py::pyobj_handle CompositionEasingFunction_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionEasingFunction_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionEasingFunction_Static{PyType_FromSpecWithBases(&type_spec_CompositionEasingFunction_Static, CompositionEasingFunction_Static_bases.get())};
     if (!type_CompositionEasingFunction_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionEasingFunction_type{py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionEasingFunction_Static.get()))};
+    py::pyobj_handle CompositionEasingFunction_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionEasingFunction_type{py::register_python_type(module.get(), &type_spec_CompositionEasingFunction, CompositionEasingFunction_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionEasingFunction_Static.get()))};
     if (!CompositionEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackEasingFunction_type{py::register_python_type(module.get(), &type_spec_BackEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle BackEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!BackEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BackEasingFunction_type{py::register_python_type(module.get(), &type_spec_BackEasingFunction, BackEasingFunction_bases.get(), nullptr)};
     if (!BackEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionAnimation_Static{PyType_FromSpec(&type_spec_CompositionAnimation_Static)};
+    py::pyobj_handle CompositionAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionAnimation_Static{PyType_FromSpecWithBases(&type_spec_CompositionAnimation_Static, CompositionAnimation_Static_bases.get())};
     if (!type_CompositionAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionAnimation_type{py::register_python_type(module.get(), &type_spec_CompositionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionAnimation_Static.get()))};
+    py::pyobj_handle CompositionAnimation_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionAnimation_type{py::register_python_type(module.get(), &type_spec_CompositionAnimation, CompositionAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionAnimation_Static.get()))};
     if (!CompositionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyFrameAnimation_Static{PyType_FromSpec(&type_spec_KeyFrameAnimation_Static)};
+    py::pyobj_handle KeyFrameAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionAnimation_type.get())))};
+    if (!KeyFrameAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyFrameAnimation_Static{PyType_FromSpecWithBases(&type_spec_KeyFrameAnimation_Static, KeyFrameAnimation_Static_bases.get())};
     if (!type_KeyFrameAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyFrameAnimation_Static.get()))};
+    py::pyobj_handle KeyFrameAnimation_bases{PyTuple_Pack(1, CompositionAnimation_type.get())};
+    if (!KeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_KeyFrameAnimation, KeyFrameAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyFrameAnimation_Static.get()))};
     if (!KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BooleanKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle BooleanKeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!BooleanKeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BooleanKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_BooleanKeyFrameAnimation, BooleanKeyFrameAnimation_bases.get(), nullptr)};
     if (!BooleanKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BounceEasingFunction_type{py::register_python_type(module.get(), &type_spec_BounceEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle BounceEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!BounceEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BounceEasingFunction_type{py::register_python_type(module.get(), &type_spec_BounceEasingFunction, BounceEasingFunction_bases.get(), nullptr)};
     if (!BounceEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_NaturalMotionAnimation_Static)};
+    py::pyobj_handle NaturalMotionAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionAnimation_type.get())))};
+    if (!NaturalMotionAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NaturalMotionAnimation_Static{PyType_FromSpecWithBases(&type_spec_NaturalMotionAnimation_Static, NaturalMotionAnimation_Static_bases.get())};
     if (!type_NaturalMotionAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NaturalMotionAnimation_Static.get()))};
+    py::pyobj_handle NaturalMotionAnimation_bases{PyTuple_Pack(1, CompositionAnimation_type.get())};
+    if (!NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_NaturalMotionAnimation, NaturalMotionAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_NaturalMotionAnimation_Static.get()))};
     if (!NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScalarNaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_ScalarNaturalMotionAnimation_Static)};
+    py::pyobj_handle ScalarNaturalMotionAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NaturalMotionAnimation_type.get())))};
+    if (!ScalarNaturalMotionAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScalarNaturalMotionAnimation_Static{PyType_FromSpecWithBases(&type_spec_ScalarNaturalMotionAnimation_Static, ScalarNaturalMotionAnimation_Static_bases.get())};
     if (!type_ScalarNaturalMotionAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScalarNaturalMotionAnimation_Static.get()))};
+    py::pyobj_handle ScalarNaturalMotionAnimation_bases{PyTuple_Pack(1, NaturalMotionAnimation_type.get())};
+    if (!ScalarNaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarNaturalMotionAnimation, ScalarNaturalMotionAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScalarNaturalMotionAnimation_Static.get()))};
     if (!ScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BounceScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle BounceScalarNaturalMotionAnimation_bases{PyTuple_Pack(1, ScalarNaturalMotionAnimation_type.get())};
+    if (!BounceScalarNaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BounceScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceScalarNaturalMotionAnimation, BounceScalarNaturalMotionAnimation_bases.get(), nullptr)};
     if (!BounceScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Vector2NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_Vector2NaturalMotionAnimation_Static)};
+    py::pyobj_handle Vector2NaturalMotionAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NaturalMotionAnimation_type.get())))};
+    if (!Vector2NaturalMotionAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Vector2NaturalMotionAnimation_Static{PyType_FromSpecWithBases(&type_spec_Vector2NaturalMotionAnimation_Static, Vector2NaturalMotionAnimation_Static_bases.get())};
     if (!type_Vector2NaturalMotionAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector2NaturalMotionAnimation_Static.get()))};
+    py::pyobj_handle Vector2NaturalMotionAnimation_bases{PyTuple_Pack(1, NaturalMotionAnimation_type.get())};
+    if (!Vector2NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2NaturalMotionAnimation, Vector2NaturalMotionAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector2NaturalMotionAnimation_Static.get()))};
     if (!Vector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BounceVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle BounceVector2NaturalMotionAnimation_bases{PyTuple_Pack(1, Vector2NaturalMotionAnimation_type.get())};
+    if (!BounceVector2NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BounceVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector2NaturalMotionAnimation, BounceVector2NaturalMotionAnimation_bases.get(), nullptr)};
     if (!BounceVector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Vector3NaturalMotionAnimation_Static{PyType_FromSpec(&type_spec_Vector3NaturalMotionAnimation_Static)};
+    py::pyobj_handle Vector3NaturalMotionAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NaturalMotionAnimation_type.get())))};
+    if (!Vector3NaturalMotionAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Vector3NaturalMotionAnimation_Static{PyType_FromSpecWithBases(&type_spec_Vector3NaturalMotionAnimation_Static, Vector3NaturalMotionAnimation_Static_bases.get())};
     if (!type_Vector3NaturalMotionAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector3NaturalMotionAnimation_Static.get()))};
+    py::pyobj_handle Vector3NaturalMotionAnimation_bases{PyTuple_Pack(1, NaturalMotionAnimation_type.get())};
+    if (!Vector3NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3NaturalMotionAnimation, Vector3NaturalMotionAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_Vector3NaturalMotionAnimation_Static.get()))};
     if (!Vector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BounceVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle BounceVector3NaturalMotionAnimation_bases{PyTuple_Pack(1, Vector3NaturalMotionAnimation_type.get())};
+    if (!BounceVector3NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BounceVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_BounceVector3NaturalMotionAnimation, BounceVector3NaturalMotionAnimation_bases.get(), nullptr)};
     if (!BounceVector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CircleEasingFunction_type{py::register_python_type(module.get(), &type_spec_CircleEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle CircleEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!CircleEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CircleEasingFunction_type{py::register_python_type(module.get(), &type_spec_CircleEasingFunction, CircleEasingFunction_bases.get(), nullptr)};
     if (!CircleEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle ColorKeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!ColorKeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ColorKeyFrameAnimation, ColorKeyFrameAnimation_bases.get(), nullptr)};
     if (!ColorKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionAnimationGroup_type{py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionAnimationGroup_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionAnimationGroup_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionAnimationGroup_type{py::register_python_type(module.get(), &type_spec_CompositionAnimationGroup, CompositionAnimationGroup_bases.get(), nullptr)};
     if (!CompositionAnimationGroup_type)
     {
         return nullptr;
@@ -34576,25 +34750,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionBrush_Static{PyType_FromSpec(&type_spec_CompositionBrush_Static)};
+    py::pyobj_handle CompositionBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionBrush_Static{PyType_FromSpecWithBases(&type_spec_CompositionBrush_Static, CompositionBrush_Static_bases.get())};
     if (!type_CompositionBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionBrush_Static.get()))};
+    py::pyobj_handle CompositionBrush_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBrush, CompositionBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionBrush_Static.get()))};
     if (!CompositionBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionBackdropBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionBackdropBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionBackdropBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionBackdropBrush_type{py::register_python_type(module.get(), &type_spec_CompositionBackdropBrush, CompositionBackdropBrush_bases.get(), nullptr)};
     if (!CompositionBackdropBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionBatchCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionBatchCompletedEventArgs_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionBatchCompletedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionBatchCompletedEventArgs_type{py::register_python_type(module.get(), &type_spec_CompositionBatchCompletedEventArgs, CompositionBatchCompletedEventArgs_bases.get(), nullptr)};
     if (!CompositionBatchCompletedEventArgs_type)
     {
         return nullptr;
@@ -34606,25 +34804,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionClip_Static{PyType_FromSpec(&type_spec_CompositionClip_Static)};
+    py::pyobj_handle CompositionClip_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionClip_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionClip_Static{PyType_FromSpecWithBases(&type_spec_CompositionClip_Static, CompositionClip_Static_bases.get())};
     if (!type_CompositionClip_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionClip_type{py::register_python_type(module.get(), &type_spec_CompositionClip, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionClip_Static.get()))};
+    py::pyobj_handle CompositionClip_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionClip_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionClip_type{py::register_python_type(module.get(), &type_spec_CompositionClip, CompositionClip_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionClip_Static.get()))};
     if (!CompositionClip_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionColorBrush_type{py::register_python_type(module.get(), &type_spec_CompositionColorBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionColorBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionColorBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionColorBrush_type{py::register_python_type(module.get(), &type_spec_CompositionColorBrush, CompositionColorBrush_bases.get(), nullptr)};
     if (!CompositionColorBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionColorGradientStop_type{py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionColorGradientStop_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionColorGradientStop_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionColorGradientStop_type{py::register_python_type(module.get(), &type_spec_CompositionColorGradientStop, CompositionColorGradientStop_bases.get(), nullptr)};
     if (!CompositionColorGradientStop_type)
     {
         return nullptr;
@@ -34636,49 +34858,97 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionCommitBatch_type{py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionCommitBatch_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionCommitBatch_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionCommitBatch_type{py::register_python_type(module.get(), &type_spec_CompositionCommitBatch, CompositionCommitBatch_bases.get(), nullptr)};
     if (!CompositionCommitBatch_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionShape_Static{PyType_FromSpec(&type_spec_CompositionShape_Static)};
+    py::pyobj_handle CompositionShape_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionShape_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionShape_Static{PyType_FromSpecWithBases(&type_spec_CompositionShape_Static, CompositionShape_Static_bases.get())};
     if (!type_CompositionShape_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionShape_type{py::register_python_type(module.get(), &type_spec_CompositionShape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShape_Static.get()))};
+    py::pyobj_handle CompositionShape_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionShape_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionShape_type{py::register_python_type(module.get(), &type_spec_CompositionShape, CompositionShape_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShape_Static.get()))};
     if (!CompositionShape_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionContainerShape_type{py::register_python_type(module.get(), &type_spec_CompositionContainerShape, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionContainerShape_bases{PyTuple_Pack(1, CompositionShape_type.get())};
+    if (!CompositionContainerShape_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionContainerShape_type{py::register_python_type(module.get(), &type_spec_CompositionContainerShape, CompositionContainerShape_bases.get(), nullptr)};
     if (!CompositionContainerShape_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionDrawingSurface_Static{PyType_FromSpec(&type_spec_CompositionDrawingSurface_Static)};
+    py::pyobj_handle CompositionDrawingSurface_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionDrawingSurface_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionDrawingSurface_Static{PyType_FromSpecWithBases(&type_spec_CompositionDrawingSurface_Static, CompositionDrawingSurface_Static_bases.get())};
     if (!type_CompositionDrawingSurface_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionDrawingSurface_Static.get()))};
+    py::pyobj_handle CompositionDrawingSurface_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionDrawingSurface_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionDrawingSurface, CompositionDrawingSurface_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionDrawingSurface_Static.get()))};
     if (!CompositionDrawingSurface_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionEffectBrush_type{py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionEffectBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionEffectBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionEffectBrush_type{py::register_python_type(module.get(), &type_spec_CompositionEffectBrush, CompositionEffectBrush_bases.get(), nullptr)};
     if (!CompositionEffectBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionEffectFactory_type{py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionEffectFactory_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionEffectFactory_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionEffectFactory_type{py::register_python_type(module.get(), &type_spec_CompositionEffectFactory, CompositionEffectFactory_bases.get(), nullptr)};
     if (!CompositionEffectFactory_type)
     {
         return nullptr;
@@ -34690,73 +34960,145 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionGeometry_Static{PyType_FromSpec(&type_spec_CompositionGeometry_Static)};
+    py::pyobj_handle CompositionGeometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionGeometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionGeometry_Static{PyType_FromSpecWithBases(&type_spec_CompositionGeometry_Static, CompositionGeometry_Static_bases.get())};
     if (!type_CompositionGeometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGeometry_Static.get()))};
+    py::pyobj_handle CompositionGeometry_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionGeometry, CompositionGeometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGeometry_Static.get()))};
     if (!CompositionGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionEllipseGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionEllipseGeometry_bases{PyTuple_Pack(1, CompositionGeometry_type.get())};
+    if (!CompositionEllipseGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionEllipseGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionEllipseGeometry, CompositionEllipseGeometry_bases.get(), nullptr)};
     if (!CompositionEllipseGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionGeometricClip_type{py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionGeometricClip_bases{PyTuple_Pack(1, CompositionClip_type.get())};
+    if (!CompositionGeometricClip_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGeometricClip_type{py::register_python_type(module.get(), &type_spec_CompositionGeometricClip, CompositionGeometricClip_bases.get(), nullptr)};
     if (!CompositionGeometricClip_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionGradientBrush_Static{PyType_FromSpec(&type_spec_CompositionGradientBrush_Static)};
+    py::pyobj_handle CompositionGradientBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionBrush_type.get())))};
+    if (!CompositionGradientBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionGradientBrush_Static{PyType_FromSpecWithBases(&type_spec_CompositionGradientBrush_Static, CompositionGradientBrush_Static_bases.get())};
     if (!type_CompositionGradientBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGradientBrush_Static.get()))};
+    py::pyobj_handle CompositionGradientBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionGradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionGradientBrush, CompositionGradientBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionGradientBrush_Static.get()))};
     if (!CompositionGradientBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionGraphicsDevice_type{py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionGraphicsDevice_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionGraphicsDevice_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionGraphicsDevice_type{py::register_python_type(module.get(), &type_spec_CompositionGraphicsDevice, CompositionGraphicsDevice_bases.get(), nullptr)};
     if (!CompositionGraphicsDevice_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionLineGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionLineGeometry_bases{PyTuple_Pack(1, CompositionGeometry_type.get())};
+    if (!CompositionLineGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionLineGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionLineGeometry, CompositionLineGeometry_bases.get(), nullptr)};
     if (!CompositionLineGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionLinearGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionLinearGradientBrush_bases{PyTuple_Pack(1, CompositionGradientBrush_type.get())};
+    if (!CompositionLinearGradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionLinearGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionLinearGradientBrush, CompositionLinearGradientBrush_bases.get(), nullptr)};
     if (!CompositionLinearGradientBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionMaskBrush_type{py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionMaskBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionMaskBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionMaskBrush_type{py::register_python_type(module.get(), &type_spec_CompositionMaskBrush, CompositionMaskBrush_bases.get(), nullptr)};
     if (!CompositionMaskBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionMipmapSurface_type{py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionMipmapSurface_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionMipmapSurface_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionMipmapSurface_type{py::register_python_type(module.get(), &type_spec_CompositionMipmapSurface, CompositionMipmapSurface_bases.get(), nullptr)};
     if (!CompositionMipmapSurface_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionNineGridBrush_type{py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionNineGridBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionNineGridBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionNineGridBrush_type{py::register_python_type(module.get(), &type_spec_CompositionNineGridBrush, CompositionNineGridBrush_bases.get(), nullptr)};
     if (!CompositionNineGridBrush_type)
     {
         return nullptr;
@@ -34768,145 +35110,289 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompositionPathGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionPathGeometry_bases{PyTuple_Pack(1, CompositionGeometry_type.get())};
+    if (!CompositionPathGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionPathGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionPathGeometry, CompositionPathGeometry_bases.get(), nullptr)};
     if (!CompositionPathGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionProjectedShadow_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionProjectedShadow_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionProjectedShadow_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionProjectedShadow_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadow, CompositionProjectedShadow_bases.get(), nullptr)};
     if (!CompositionProjectedShadow_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionProjectedShadowCaster_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionProjectedShadowCaster_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionProjectedShadowCaster_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionProjectedShadowCaster_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCaster, CompositionProjectedShadowCaster_bases.get(), nullptr)};
     if (!CompositionProjectedShadowCaster_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionProjectedShadowCasterCollection_Static{PyType_FromSpec(&type_spec_CompositionProjectedShadowCasterCollection_Static)};
+    py::pyobj_handle CompositionProjectedShadowCasterCollection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionProjectedShadowCasterCollection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionProjectedShadowCasterCollection_Static{PyType_FromSpecWithBases(&type_spec_CompositionProjectedShadowCasterCollection_Static, CompositionProjectedShadowCasterCollection_Static_bases.get())};
     if (!type_CompositionProjectedShadowCasterCollection_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionProjectedShadowCasterCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Static.get()))};
+    py::pyobj_handle CompositionProjectedShadowCasterCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionProjectedShadowCasterCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionProjectedShadowCasterCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowCasterCollection, CompositionProjectedShadowCasterCollection_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionProjectedShadowCasterCollection_Static.get()))};
     if (!CompositionProjectedShadowCasterCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionProjectedShadowReceiver_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionProjectedShadowReceiver_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionProjectedShadowReceiver_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionProjectedShadowReceiver_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiver, CompositionProjectedShadowReceiver_bases.get(), nullptr)};
     if (!CompositionProjectedShadowReceiver_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionProjectedShadowReceiverUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionProjectedShadowReceiverUnorderedCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionProjectedShadowReceiverUnorderedCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionProjectedShadowReceiverUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_CompositionProjectedShadowReceiverUnorderedCollection, CompositionProjectedShadowReceiverUnorderedCollection_bases.get(), nullptr)};
     if (!CompositionProjectedShadowReceiverUnorderedCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionPropertySet_type{py::register_python_type(module.get(), &type_spec_CompositionPropertySet, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionPropertySet_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionPropertySet_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionPropertySet_type{py::register_python_type(module.get(), &type_spec_CompositionPropertySet, CompositionPropertySet_bases.get(), nullptr)};
     if (!CompositionPropertySet_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionRadialGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionRadialGradientBrush_bases{PyTuple_Pack(1, CompositionGradientBrush_type.get())};
+    if (!CompositionRadialGradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionRadialGradientBrush_type{py::register_python_type(module.get(), &type_spec_CompositionRadialGradientBrush, CompositionRadialGradientBrush_bases.get(), nullptr)};
     if (!CompositionRadialGradientBrush_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionRectangleGeometry_bases{PyTuple_Pack(1, CompositionGeometry_type.get())};
+    if (!CompositionRectangleGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRectangleGeometry, CompositionRectangleGeometry_bases.get(), nullptr)};
     if (!CompositionRectangleGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionRoundedRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionRoundedRectangleGeometry_bases{PyTuple_Pack(1, CompositionGeometry_type.get())};
+    if (!CompositionRoundedRectangleGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionRoundedRectangleGeometry_type{py::register_python_type(module.get(), &type_spec_CompositionRoundedRectangleGeometry, CompositionRoundedRectangleGeometry_bases.get(), nullptr)};
     if (!CompositionRoundedRectangleGeometry_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionScopedBatch_type{py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionScopedBatch_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionScopedBatch_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionScopedBatch_type{py::register_python_type(module.get(), &type_spec_CompositionScopedBatch, CompositionScopedBatch_bases.get(), nullptr)};
     if (!CompositionScopedBatch_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionShadow_Static{PyType_FromSpec(&type_spec_CompositionShadow_Static)};
+    py::pyobj_handle CompositionShadow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionShadow_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionShadow_Static{PyType_FromSpecWithBases(&type_spec_CompositionShadow_Static, CompositionShadow_Static_bases.get())};
     if (!type_CompositionShadow_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionShadow_type{py::register_python_type(module.get(), &type_spec_CompositionShadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShadow_Static.get()))};
+    py::pyobj_handle CompositionShadow_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionShadow_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionShadow_type{py::register_python_type(module.get(), &type_spec_CompositionShadow, CompositionShadow_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionShadow_Static.get()))};
     if (!CompositionShadow_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionShapeCollection_type{py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionShapeCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionShapeCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionShapeCollection_type{py::register_python_type(module.get(), &type_spec_CompositionShapeCollection, CompositionShapeCollection_bases.get(), nullptr)};
     if (!CompositionShapeCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionSpriteShape_type{py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionSpriteShape_bases{PyTuple_Pack(1, CompositionShape_type.get())};
+    if (!CompositionSpriteShape_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionSpriteShape_type{py::register_python_type(module.get(), &type_spec_CompositionSpriteShape, CompositionSpriteShape_bases.get(), nullptr)};
     if (!CompositionSpriteShape_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionStrokeDashArray_type{py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionStrokeDashArray_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionStrokeDashArray_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionStrokeDashArray_type{py::register_python_type(module.get(), &type_spec_CompositionStrokeDashArray, CompositionStrokeDashArray_bases.get(), nullptr)};
     if (!CompositionStrokeDashArray_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionSurfaceBrush_type{py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionSurfaceBrush_bases{PyTuple_Pack(1, CompositionBrush_type.get())};
+    if (!CompositionSurfaceBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionSurfaceBrush_type{py::register_python_type(module.get(), &type_spec_CompositionSurfaceBrush, CompositionSurfaceBrush_bases.get(), nullptr)};
     if (!CompositionSurfaceBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionTransform_Static{PyType_FromSpec(&type_spec_CompositionTransform_Static)};
+    py::pyobj_handle CompositionTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!CompositionTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionTransform_Static{PyType_FromSpecWithBases(&type_spec_CompositionTransform_Static, CompositionTransform_Static_bases.get())};
     if (!type_CompositionTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionTransform_type{py::register_python_type(module.get(), &type_spec_CompositionTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionTransform_Static.get()))};
+    py::pyobj_handle CompositionTransform_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionTransform_type{py::register_python_type(module.get(), &type_spec_CompositionTransform, CompositionTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionTransform_Static.get()))};
     if (!CompositionTransform_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionViewBox_type{py::register_python_type(module.get(), &type_spec_CompositionViewBox, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionViewBox_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionViewBox_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionViewBox_type{py::register_python_type(module.get(), &type_spec_CompositionViewBox, CompositionViewBox_bases.get(), nullptr)};
     if (!CompositionViewBox_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionVirtualDrawingSurface_Static{PyType_FromSpec(&type_spec_CompositionVirtualDrawingSurface_Static)};
+    py::pyobj_handle CompositionVirtualDrawingSurface_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionDrawingSurface_type.get())))};
+    if (!CompositionVirtualDrawingSurface_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionVirtualDrawingSurface_Static{PyType_FromSpecWithBases(&type_spec_CompositionVirtualDrawingSurface_Static, CompositionVirtualDrawingSurface_Static_bases.get())};
     if (!type_CompositionVirtualDrawingSurface_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionVirtualDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionVirtualDrawingSurface_Static.get()))};
+    py::pyobj_handle CompositionVirtualDrawingSurface_bases{PyTuple_Pack(1, CompositionDrawingSurface_type.get())};
+    if (!CompositionVirtualDrawingSurface_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionVirtualDrawingSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVirtualDrawingSurface, CompositionVirtualDrawingSurface_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionVirtualDrawingSurface_Static.get()))};
     if (!CompositionVirtualDrawingSurface_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionVisualSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionVisualSurface_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!CompositionVisualSurface_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionVisualSurface_type{py::register_python_type(module.get(), &type_spec_CompositionVisualSurface, CompositionVisualSurface_bases.get(), nullptr)};
     if (!CompositionVisualSurface_type)
     {
         return nullptr;
@@ -34924,217 +35410,433 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Visual_Static{PyType_FromSpec(&type_spec_Visual_Static)};
+    py::pyobj_handle Visual_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CompositionObject_type.get())))};
+    if (!Visual_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Visual_Static{PyType_FromSpecWithBases(&type_spec_Visual_Static, Visual_Static_bases.get())};
     if (!type_Visual_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Visual_type{py::register_python_type(module.get(), &type_spec_Visual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Visual_Static.get()))};
+    py::pyobj_handle Visual_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!Visual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Visual_type{py::register_python_type(module.get(), &type_spec_Visual, Visual_bases.get(), reinterpret_cast<PyTypeObject*>(type_Visual_Static.get()))};
     if (!Visual_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ContainerVisual_Static{PyType_FromSpec(&type_spec_ContainerVisual_Static)};
+    py::pyobj_handle ContainerVisual_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Visual_type.get())))};
+    if (!ContainerVisual_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContainerVisual_Static{PyType_FromSpecWithBases(&type_spec_ContainerVisual_Static, ContainerVisual_Static_bases.get())};
     if (!type_ContainerVisual_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContainerVisual_type{py::register_python_type(module.get(), &type_spec_ContainerVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContainerVisual_Static.get()))};
+    py::pyobj_handle ContainerVisual_bases{PyTuple_Pack(1, Visual_type.get())};
+    if (!ContainerVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContainerVisual_type{py::register_python_type(module.get(), &type_spec_ContainerVisual, ContainerVisual_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContainerVisual_Static.get()))};
     if (!ContainerVisual_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CubicBezierEasingFunction_type{py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle CubicBezierEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!CubicBezierEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CubicBezierEasingFunction_type{py::register_python_type(module.get(), &type_spec_CubicBezierEasingFunction, CubicBezierEasingFunction_bases.get(), nullptr)};
     if (!CubicBezierEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DistantLight_type{py::register_python_type(module.get(), &type_spec_DistantLight, object_bases.get(), nullptr)};
+    py::pyobj_handle DistantLight_bases{PyTuple_Pack(1, CompositionLight_type.get())};
+    if (!DistantLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DistantLight_type{py::register_python_type(module.get(), &type_spec_DistantLight, DistantLight_bases.get(), nullptr)};
     if (!DistantLight_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropShadow_type{py::register_python_type(module.get(), &type_spec_DropShadow, object_bases.get(), nullptr)};
+    py::pyobj_handle DropShadow_bases{PyTuple_Pack(1, CompositionShadow_type.get())};
+    if (!DropShadow_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropShadow_type{py::register_python_type(module.get(), &type_spec_DropShadow, DropShadow_bases.get(), nullptr)};
     if (!DropShadow_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ElasticEasingFunction_type{py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle ElasticEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!ElasticEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ElasticEasingFunction_type{py::register_python_type(module.get(), &type_spec_ElasticEasingFunction, ElasticEasingFunction_bases.get(), nullptr)};
     if (!ElasticEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExponentialEasingFunction_type{py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle ExponentialEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!ExponentialEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExponentialEasingFunction_type{py::register_python_type(module.get(), &type_spec_ExponentialEasingFunction, ExponentialEasingFunction_bases.get(), nullptr)};
     if (!ExponentialEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExpressionAnimation_type{py::register_python_type(module.get(), &type_spec_ExpressionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle ExpressionAnimation_bases{PyTuple_Pack(1, CompositionAnimation_type.get())};
+    if (!ExpressionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExpressionAnimation_type{py::register_python_type(module.get(), &type_spec_ExpressionAnimation, ExpressionAnimation_bases.get(), nullptr)};
     if (!ExpressionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImplicitAnimationCollection_type{py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle ImplicitAnimationCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!ImplicitAnimationCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImplicitAnimationCollection_type{py::register_python_type(module.get(), &type_spec_ImplicitAnimationCollection, ImplicitAnimationCollection_bases.get(), nullptr)};
     if (!ImplicitAnimationCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InitialValueExpressionCollection_type{py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle InitialValueExpressionCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!InitialValueExpressionCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InitialValueExpressionCollection_type{py::register_python_type(module.get(), &type_spec_InitialValueExpressionCollection, InitialValueExpressionCollection_bases.get(), nullptr)};
     if (!InitialValueExpressionCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InsetClip_type{py::register_python_type(module.get(), &type_spec_InsetClip, object_bases.get(), nullptr)};
+    py::pyobj_handle InsetClip_bases{PyTuple_Pack(1, CompositionClip_type.get())};
+    if (!InsetClip_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InsetClip_type{py::register_python_type(module.get(), &type_spec_InsetClip, InsetClip_bases.get(), nullptr)};
     if (!InsetClip_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LayerVisual_type{py::register_python_type(module.get(), &type_spec_LayerVisual, object_bases.get(), nullptr)};
+    py::pyobj_handle LayerVisual_bases{PyTuple_Pack(1, ContainerVisual_type.get())};
+    if (!LayerVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LayerVisual_type{py::register_python_type(module.get(), &type_spec_LayerVisual, LayerVisual_bases.get(), nullptr)};
     if (!LayerVisual_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LinearEasingFunction_type{py::register_python_type(module.get(), &type_spec_LinearEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle LinearEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!LinearEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LinearEasingFunction_type{py::register_python_type(module.get(), &type_spec_LinearEasingFunction, LinearEasingFunction_bases.get(), nullptr)};
     if (!LinearEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PathKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle PathKeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!PathKeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PathKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_PathKeyFrameAnimation, PathKeyFrameAnimation_bases.get(), nullptr)};
     if (!PathKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointLight_type{py::register_python_type(module.get(), &type_spec_PointLight, object_bases.get(), nullptr)};
+    py::pyobj_handle PointLight_bases{PyTuple_Pack(1, CompositionLight_type.get())};
+    if (!PointLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointLight_type{py::register_python_type(module.get(), &type_spec_PointLight, PointLight_bases.get(), nullptr)};
     if (!PointLight_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PowerEasingFunction_type{py::register_python_type(module.get(), &type_spec_PowerEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle PowerEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!PowerEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PowerEasingFunction_type{py::register_python_type(module.get(), &type_spec_PowerEasingFunction, PowerEasingFunction_bases.get(), nullptr)};
     if (!PowerEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle QuaternionKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle QuaternionKeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!QuaternionKeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle QuaternionKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_QuaternionKeyFrameAnimation, QuaternionKeyFrameAnimation_bases.get(), nullptr)};
     if (!QuaternionKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RectangleClip_type{py::register_python_type(module.get(), &type_spec_RectangleClip, object_bases.get(), nullptr)};
+    py::pyobj_handle RectangleClip_bases{PyTuple_Pack(1, CompositionClip_type.get())};
+    if (!RectangleClip_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RectangleClip_type{py::register_python_type(module.get(), &type_spec_RectangleClip, RectangleClip_bases.get(), nullptr)};
     if (!RectangleClip_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RedirectVisual_type{py::register_python_type(module.get(), &type_spec_RedirectVisual, object_bases.get(), nullptr)};
+    py::pyobj_handle RedirectVisual_bases{PyTuple_Pack(1, ContainerVisual_type.get())};
+    if (!RedirectVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RedirectVisual_type{py::register_python_type(module.get(), &type_spec_RedirectVisual, RedirectVisual_bases.get(), nullptr)};
     if (!RedirectVisual_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle RenderingDeviceReplacedEventArgs_type{py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle RenderingDeviceReplacedEventArgs_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!RenderingDeviceReplacedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RenderingDeviceReplacedEventArgs_type{py::register_python_type(module.get(), &type_spec_RenderingDeviceReplacedEventArgs, RenderingDeviceReplacedEventArgs_bases.get(), nullptr)};
     if (!RenderingDeviceReplacedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScalarKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle ScalarKeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!ScalarKeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScalarKeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_ScalarKeyFrameAnimation, ScalarKeyFrameAnimation_bases.get(), nullptr)};
     if (!ScalarKeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ShapeVisual_type{py::register_python_type(module.get(), &type_spec_ShapeVisual, object_bases.get(), nullptr)};
+    py::pyobj_handle ShapeVisual_bases{PyTuple_Pack(1, ContainerVisual_type.get())};
+    if (!ShapeVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ShapeVisual_type{py::register_python_type(module.get(), &type_spec_ShapeVisual, ShapeVisual_bases.get(), nullptr)};
     if (!ShapeVisual_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SineEasingFunction_type{py::register_python_type(module.get(), &type_spec_SineEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle SineEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!SineEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SineEasingFunction_type{py::register_python_type(module.get(), &type_spec_SineEasingFunction, SineEasingFunction_bases.get(), nullptr)};
     if (!SineEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpotLight_type{py::register_python_type(module.get(), &type_spec_SpotLight, object_bases.get(), nullptr)};
+    py::pyobj_handle SpotLight_bases{PyTuple_Pack(1, CompositionLight_type.get())};
+    if (!SpotLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SpotLight_type{py::register_python_type(module.get(), &type_spec_SpotLight, SpotLight_bases.get(), nullptr)};
     if (!SpotLight_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpringScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle SpringScalarNaturalMotionAnimation_bases{PyTuple_Pack(1, ScalarNaturalMotionAnimation_type.get())};
+    if (!SpringScalarNaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SpringScalarNaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringScalarNaturalMotionAnimation, SpringScalarNaturalMotionAnimation_bases.get(), nullptr)};
     if (!SpringScalarNaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpringVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle SpringVector2NaturalMotionAnimation_bases{PyTuple_Pack(1, Vector2NaturalMotionAnimation_type.get())};
+    if (!SpringVector2NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SpringVector2NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector2NaturalMotionAnimation, SpringVector2NaturalMotionAnimation_bases.get(), nullptr)};
     if (!SpringVector2NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpringVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle SpringVector3NaturalMotionAnimation_bases{PyTuple_Pack(1, Vector3NaturalMotionAnimation_type.get())};
+    if (!SpringVector3NaturalMotionAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SpringVector3NaturalMotionAnimation_type{py::register_python_type(module.get(), &type_spec_SpringVector3NaturalMotionAnimation, SpringVector3NaturalMotionAnimation_bases.get(), nullptr)};
     if (!SpringVector3NaturalMotionAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SpriteVisual_type{py::register_python_type(module.get(), &type_spec_SpriteVisual, object_bases.get(), nullptr)};
+    py::pyobj_handle SpriteVisual_bases{PyTuple_Pack(1, ContainerVisual_type.get())};
+    if (!SpriteVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SpriteVisual_type{py::register_python_type(module.get(), &type_spec_SpriteVisual, SpriteVisual_bases.get(), nullptr)};
     if (!SpriteVisual_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle StepEasingFunction_type{py::register_python_type(module.get(), &type_spec_StepEasingFunction, object_bases.get(), nullptr)};
+    py::pyobj_handle StepEasingFunction_bases{PyTuple_Pack(1, CompositionEasingFunction_type.get())};
+    if (!StepEasingFunction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StepEasingFunction_type{py::register_python_type(module.get(), &type_spec_StepEasingFunction, StepEasingFunction_bases.get(), nullptr)};
     if (!StepEasingFunction_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector2KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle Vector2KeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!Vector2KeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector2KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector2KeyFrameAnimation, Vector2KeyFrameAnimation_bases.get(), nullptr)};
     if (!Vector2KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector3KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle Vector3KeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!Vector3KeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector3KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector3KeyFrameAnimation, Vector3KeyFrameAnimation_bases.get(), nullptr)};
     if (!Vector3KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Vector4KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, object_bases.get(), nullptr)};
+    py::pyobj_handle Vector4KeyFrameAnimation_bases{PyTuple_Pack(1, KeyFrameAnimation_type.get())};
+    if (!Vector4KeyFrameAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Vector4KeyFrameAnimation_type{py::register_python_type(module.get(), &type_spec_Vector4KeyFrameAnimation, Vector4KeyFrameAnimation_bases.get(), nullptr)};
     if (!Vector4KeyFrameAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualCollection_type{py::register_python_type(module.get(), &type_spec_VisualCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle VisualCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!VisualCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VisualCollection_type{py::register_python_type(module.get(), &type_spec_VisualCollection, VisualCollection_bases.get(), nullptr)};
     if (!VisualCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle VisualUnorderedCollection_bases{PyTuple_Pack(1, CompositionObject_type.get())};
+    if (!VisualUnorderedCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VisualUnorderedCollection_type{py::register_python_type(module.get(), &type_spec_VisualUnorderedCollection, VisualUnorderedCollection_bases.get(), nullptr)};
     if (!VisualUnorderedCollection_type)
     {
         return nullptr;

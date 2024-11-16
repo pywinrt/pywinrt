@@ -22495,91 +22495,193 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Brush_Static{PyType_FromSpec(&type_spec_Brush_Static)};
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_DependencyObject_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "DependencyObject")};
+    if (!microsoft_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Brush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!Brush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Brush_Static{PyType_FromSpecWithBases(&type_spec_Brush_Static, Brush_Static_bases.get())};
     if (!type_Brush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Brush_type{py::register_python_type(module.get(), &type_spec_Brush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Static.get()))};
+    py::pyobj_handle Brush_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!Brush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Brush_type{py::register_python_type(module.get(), &type_spec_Brush, Brush_bases.get(), reinterpret_cast<PyTypeObject*>(type_Brush_Static.get()))};
     if (!Brush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlCompositionBrushBase_Static{PyType_FromSpec(&type_spec_XamlCompositionBrushBase_Static)};
+    py::pyobj_handle XamlCompositionBrushBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Brush_type.get())))};
+    if (!XamlCompositionBrushBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlCompositionBrushBase_Static{PyType_FromSpecWithBases(&type_spec_XamlCompositionBrushBase_Static, XamlCompositionBrushBase_Static_bases.get())};
     if (!type_XamlCompositionBrushBase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle XamlCompositionBrushBase_type{py::register_python_type(module.get(), &type_spec_XamlCompositionBrushBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Static.get()))};
+    py::pyobj_handle XamlCompositionBrushBase_bases{PyTuple_Pack(1, Brush_type.get())};
+    if (!XamlCompositionBrushBase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle XamlCompositionBrushBase_type{py::register_python_type(module.get(), &type_spec_XamlCompositionBrushBase, XamlCompositionBrushBase_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlCompositionBrushBase_Static.get()))};
     if (!XamlCompositionBrushBase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AcrylicBrush_Static{PyType_FromSpec(&type_spec_AcrylicBrush_Static)};
+    py::pyobj_handle AcrylicBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(XamlCompositionBrushBase_type.get())))};
+    if (!AcrylicBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AcrylicBrush_Static{PyType_FromSpecWithBases(&type_spec_AcrylicBrush_Static, AcrylicBrush_Static_bases.get())};
     if (!type_AcrylicBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AcrylicBrush_type{py::register_python_type(module.get(), &type_spec_AcrylicBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Static.get()))};
+    py::pyobj_handle AcrylicBrush_bases{PyTuple_Pack(1, XamlCompositionBrushBase_type.get())};
+    if (!AcrylicBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AcrylicBrush_type{py::register_python_type(module.get(), &type_spec_AcrylicBrush, AcrylicBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_AcrylicBrush_Static.get()))};
     if (!AcrylicBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PathSegment_Static{PyType_FromSpec(&type_spec_PathSegment_Static)};
+    py::pyobj_handle PathSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!PathSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PathSegment_Static{PyType_FromSpecWithBases(&type_spec_PathSegment_Static, PathSegment_Static_bases.get())};
     if (!type_PathSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PathSegment_type{py::register_python_type(module.get(), &type_spec_PathSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathSegment_Static.get()))};
+    py::pyobj_handle PathSegment_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!PathSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PathSegment_type{py::register_python_type(module.get(), &type_spec_PathSegment, PathSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathSegment_Static.get()))};
     if (!PathSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ArcSegment_Static{PyType_FromSpec(&type_spec_ArcSegment_Static)};
+    py::pyobj_handle ArcSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!ArcSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ArcSegment_Static{PyType_FromSpecWithBases(&type_spec_ArcSegment_Static, ArcSegment_Static_bases.get())};
     if (!type_ArcSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ArcSegment_type{py::register_python_type(module.get(), &type_spec_ArcSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Static.get()))};
+    py::pyobj_handle ArcSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!ArcSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ArcSegment_type{py::register_python_type(module.get(), &type_spec_ArcSegment, ArcSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_ArcSegment_Static.get()))};
     if (!ArcSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BezierSegment_Static{PyType_FromSpec(&type_spec_BezierSegment_Static)};
+    py::pyobj_handle BezierSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!BezierSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BezierSegment_Static{PyType_FromSpecWithBases(&type_spec_BezierSegment_Static, BezierSegment_Static_bases.get())};
     if (!type_BezierSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BezierSegment_type{py::register_python_type(module.get(), &type_spec_BezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Static.get()))};
+    py::pyobj_handle BezierSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!BezierSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BezierSegment_type{py::register_python_type(module.get(), &type_spec_BezierSegment, BezierSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_BezierSegment_Static.get()))};
     if (!BezierSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CacheMode_Static{PyType_FromSpec(&type_spec_CacheMode_Static)};
+    py::pyobj_handle CacheMode_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!CacheMode_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CacheMode_Static{PyType_FromSpecWithBases(&type_spec_CacheMode_Static, CacheMode_Static_bases.get())};
     if (!type_CacheMode_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CacheMode_type{py::register_python_type(module.get(), &type_spec_CacheMode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CacheMode_Static.get()))};
+    py::pyobj_handle CacheMode_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!CacheMode_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CacheMode_type{py::register_python_type(module.get(), &type_spec_CacheMode, CacheMode_bases.get(), reinterpret_cast<PyTypeObject*>(type_CacheMode_Static.get()))};
     if (!CacheMode_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle BitmapCache_type{py::register_python_type(module.get(), &type_spec_BitmapCache, object_bases.get(), nullptr)};
+    py::pyobj_handle BitmapCache_bases{PyTuple_Pack(1, CacheMode_type.get())};
+    if (!BitmapCache_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BitmapCache_type{py::register_python_type(module.get(), &type_spec_BitmapCache, BitmapCache_bases.get(), nullptr)};
     if (!BitmapCache_type)
     {
         return nullptr;
@@ -22591,37 +22693,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GeneralTransform_Static{PyType_FromSpec(&type_spec_GeneralTransform_Static)};
+    py::pyobj_handle GeneralTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!GeneralTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GeneralTransform_Static{PyType_FromSpecWithBases(&type_spec_GeneralTransform_Static, GeneralTransform_Static_bases.get())};
     if (!type_GeneralTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GeneralTransform_type{py::register_python_type(module.get(), &type_spec_GeneralTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneralTransform_Static.get()))};
+    py::pyobj_handle GeneralTransform_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!GeneralTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GeneralTransform_type{py::register_python_type(module.get(), &type_spec_GeneralTransform, GeneralTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeneralTransform_Static.get()))};
     if (!GeneralTransform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Transform_Static{PyType_FromSpec(&type_spec_Transform_Static)};
+    py::pyobj_handle Transform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(GeneralTransform_type.get())))};
+    if (!Transform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Transform_Static{PyType_FromSpecWithBases(&type_spec_Transform_Static, Transform_Static_bases.get())};
     if (!type_Transform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Transform_type{py::register_python_type(module.get(), &type_spec_Transform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform_Static.get()))};
+    py::pyobj_handle Transform_bases{PyTuple_Pack(1, GeneralTransform_type.get())};
+    if (!Transform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transform_type{py::register_python_type(module.get(), &type_spec_Transform, Transform_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform_Static.get()))};
     if (!Transform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositeTransform_Static{PyType_FromSpec(&type_spec_CompositeTransform_Static)};
+    py::pyobj_handle CompositeTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!CompositeTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositeTransform_Static{PyType_FromSpecWithBases(&type_spec_CompositeTransform_Static, CompositeTransform_Static_bases.get())};
     if (!type_CompositeTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositeTransform_type{py::register_python_type(module.get(), &type_spec_CompositeTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Static.get()))};
+    py::pyobj_handle CompositeTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!CompositeTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositeTransform_type{py::register_python_type(module.get(), &type_spec_CompositeTransform, CompositeTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform_Static.get()))};
     if (!CompositeTransform_type)
     {
         return nullptr;
@@ -22639,25 +22777,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemBackdrop_Static{PyType_FromSpec(&type_spec_SystemBackdrop_Static)};
+    py::pyobj_handle SystemBackdrop_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!SystemBackdrop_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemBackdrop_Static{PyType_FromSpecWithBases(&type_spec_SystemBackdrop_Static, SystemBackdrop_Static_bases.get())};
     if (!type_SystemBackdrop_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemBackdrop_type{py::register_python_type(module.get(), &type_spec_SystemBackdrop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemBackdrop_Static.get()))};
+    py::pyobj_handle SystemBackdrop_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!SystemBackdrop_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SystemBackdrop_type{py::register_python_type(module.get(), &type_spec_SystemBackdrop, SystemBackdrop_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemBackdrop_Static.get()))};
     if (!SystemBackdrop_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DesktopAcrylicBackdrop_Static{PyType_FromSpec(&type_spec_DesktopAcrylicBackdrop_Static)};
+    py::pyobj_handle DesktopAcrylicBackdrop_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SystemBackdrop_type.get())))};
+    if (!DesktopAcrylicBackdrop_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesktopAcrylicBackdrop_Static{PyType_FromSpecWithBases(&type_spec_DesktopAcrylicBackdrop_Static, DesktopAcrylicBackdrop_Static_bases.get())};
     if (!type_DesktopAcrylicBackdrop_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DesktopAcrylicBackdrop_type{py::register_python_type(module.get(), &type_spec_DesktopAcrylicBackdrop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopAcrylicBackdrop_Static.get()))};
+    py::pyobj_handle DesktopAcrylicBackdrop_bases{PyTuple_Pack(1, SystemBackdrop_type.get())};
+    if (!DesktopAcrylicBackdrop_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DesktopAcrylicBackdrop_type{py::register_python_type(module.get(), &type_spec_DesktopAcrylicBackdrop, DesktopAcrylicBackdrop_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopAcrylicBackdrop_Static.get()))};
     if (!DesktopAcrylicBackdrop_type)
     {
         return nullptr;
@@ -22669,25 +22831,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Geometry_Static{PyType_FromSpec(&type_spec_Geometry_Static)};
+    py::pyobj_handle Geometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!Geometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Geometry_Static{PyType_FromSpecWithBases(&type_spec_Geometry_Static, Geometry_Static_bases.get())};
     if (!type_Geometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Geometry_type{py::register_python_type(module.get(), &type_spec_Geometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Static.get()))};
+    py::pyobj_handle Geometry_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!Geometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Geometry_type{py::register_python_type(module.get(), &type_spec_Geometry, Geometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_Geometry_Static.get()))};
     if (!Geometry_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EllipseGeometry_Static{PyType_FromSpec(&type_spec_EllipseGeometry_Static)};
+    py::pyobj_handle EllipseGeometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Geometry_type.get())))};
+    if (!EllipseGeometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EllipseGeometry_Static{PyType_FromSpecWithBases(&type_spec_EllipseGeometry_Static, EllipseGeometry_Static_bases.get())};
     if (!type_EllipseGeometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EllipseGeometry_type{py::register_python_type(module.get(), &type_spec_EllipseGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Static.get()))};
+    py::pyobj_handle EllipseGeometry_bases{PyTuple_Pack(1, Geometry_type.get())};
+    if (!EllipseGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EllipseGeometry_type{py::register_python_type(module.get(), &type_spec_EllipseGeometry, EllipseGeometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_EllipseGeometry_Static.get()))};
     if (!EllipseGeometry_type)
     {
         return nullptr;
@@ -22711,37 +22897,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_GeometryGroup_Static{PyType_FromSpec(&type_spec_GeometryGroup_Static)};
+    py::pyobj_handle GeometryGroup_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Geometry_type.get())))};
+    if (!GeometryGroup_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GeometryGroup_Static{PyType_FromSpecWithBases(&type_spec_GeometryGroup_Static, GeometryGroup_Static_bases.get())};
     if (!type_GeometryGroup_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GeometryGroup_type{py::register_python_type(module.get(), &type_spec_GeometryGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Static.get()))};
+    py::pyobj_handle GeometryGroup_bases{PyTuple_Pack(1, Geometry_type.get())};
+    if (!GeometryGroup_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GeometryGroup_type{py::register_python_type(module.get(), &type_spec_GeometryGroup, GeometryGroup_bases.get(), reinterpret_cast<PyTypeObject*>(type_GeometryGroup_Static.get()))};
     if (!GeometryGroup_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GradientBrush_Static{PyType_FromSpec(&type_spec_GradientBrush_Static)};
+    py::pyobj_handle GradientBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Brush_type.get())))};
+    if (!GradientBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GradientBrush_Static{PyType_FromSpecWithBases(&type_spec_GradientBrush_Static, GradientBrush_Static_bases.get())};
     if (!type_GradientBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GradientBrush_type{py::register_python_type(module.get(), &type_spec_GradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Static.get()))};
+    py::pyobj_handle GradientBrush_bases{PyTuple_Pack(1, Brush_type.get())};
+    if (!GradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GradientBrush_type{py::register_python_type(module.get(), &type_spec_GradientBrush, GradientBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientBrush_Static.get()))};
     if (!GradientBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GradientStop_Static{PyType_FromSpec(&type_spec_GradientStop_Static)};
+    py::pyobj_handle GradientStop_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!GradientStop_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GradientStop_Static{PyType_FromSpecWithBases(&type_spec_GradientStop_Static, GradientStop_Static_bases.get())};
     if (!type_GradientStop_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GradientStop_type{py::register_python_type(module.get(), &type_spec_GradientStop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Static.get()))};
+    py::pyobj_handle GradientStop_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!GradientStop_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GradientStop_type{py::register_python_type(module.get(), &type_spec_GradientStop, GradientStop_bases.get(), reinterpret_cast<PyTypeObject*>(type_GradientStop_Static.get()))};
     if (!GradientStop_type)
     {
         return nullptr;
@@ -22753,73 +22975,145 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TileBrush_Static{PyType_FromSpec(&type_spec_TileBrush_Static)};
+    py::pyobj_handle TileBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Brush_type.get())))};
+    if (!TileBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TileBrush_Static{PyType_FromSpecWithBases(&type_spec_TileBrush_Static, TileBrush_Static_bases.get())};
     if (!type_TileBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TileBrush_type{py::register_python_type(module.get(), &type_spec_TileBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Static.get()))};
+    py::pyobj_handle TileBrush_bases{PyTuple_Pack(1, Brush_type.get())};
+    if (!TileBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TileBrush_type{py::register_python_type(module.get(), &type_spec_TileBrush, TileBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_TileBrush_Static.get()))};
     if (!TileBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageBrush_Static{PyType_FromSpec(&type_spec_ImageBrush_Static)};
+    py::pyobj_handle ImageBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(TileBrush_type.get())))};
+    if (!ImageBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageBrush_Static{PyType_FromSpecWithBases(&type_spec_ImageBrush_Static, ImageBrush_Static_bases.get())};
     if (!type_ImageBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageBrush_type{py::register_python_type(module.get(), &type_spec_ImageBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Static.get()))};
+    py::pyobj_handle ImageBrush_bases{PyTuple_Pack(1, TileBrush_type.get())};
+    if (!ImageBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageBrush_type{py::register_python_type(module.get(), &type_spec_ImageBrush, ImageBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageBrush_Static.get()))};
     if (!ImageBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageSource_Static{PyType_FromSpec(&type_spec_ImageSource_Static)};
+    py::pyobj_handle ImageSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!ImageSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageSource_Static{PyType_FromSpecWithBases(&type_spec_ImageSource_Static, ImageSource_Static_bases.get())};
     if (!type_ImageSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageSource_type{py::register_python_type(module.get(), &type_spec_ImageSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageSource_Static.get()))};
+    py::pyobj_handle ImageSource_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!ImageSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageSource_type{py::register_python_type(module.get(), &type_spec_ImageSource, ImageSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageSource_Static.get()))};
     if (!ImageSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LineGeometry_Static{PyType_FromSpec(&type_spec_LineGeometry_Static)};
+    py::pyobj_handle LineGeometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Geometry_type.get())))};
+    if (!LineGeometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LineGeometry_Static{PyType_FromSpecWithBases(&type_spec_LineGeometry_Static, LineGeometry_Static_bases.get())};
     if (!type_LineGeometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineGeometry_type{py::register_python_type(module.get(), &type_spec_LineGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Static.get()))};
+    py::pyobj_handle LineGeometry_bases{PyTuple_Pack(1, Geometry_type.get())};
+    if (!LineGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LineGeometry_type{py::register_python_type(module.get(), &type_spec_LineGeometry, LineGeometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineGeometry_Static.get()))};
     if (!LineGeometry_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LineSegment_Static{PyType_FromSpec(&type_spec_LineSegment_Static)};
+    py::pyobj_handle LineSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!LineSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LineSegment_Static{PyType_FromSpecWithBases(&type_spec_LineSegment_Static, LineSegment_Static_bases.get())};
     if (!type_LineSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle LineSegment_type{py::register_python_type(module.get(), &type_spec_LineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Static.get()))};
+    py::pyobj_handle LineSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!LineSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LineSegment_type{py::register_python_type(module.get(), &type_spec_LineSegment, LineSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_LineSegment_Static.get()))};
     if (!LineSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LinearGradientBrush_Static{PyType_FromSpec(&type_spec_LinearGradientBrush_Static)};
+    py::pyobj_handle LinearGradientBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(GradientBrush_type.get())))};
+    if (!LinearGradientBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LinearGradientBrush_Static{PyType_FromSpecWithBases(&type_spec_LinearGradientBrush_Static, LinearGradientBrush_Static_bases.get())};
     if (!type_LinearGradientBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle LinearGradientBrush_type{py::register_python_type(module.get(), &type_spec_LinearGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Static.get()))};
+    py::pyobj_handle LinearGradientBrush_bases{PyTuple_Pack(1, GradientBrush_type.get())};
+    if (!LinearGradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LinearGradientBrush_type{py::register_python_type(module.get(), &type_spec_LinearGradientBrush, LinearGradientBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_LinearGradientBrush_Static.get()))};
     if (!LinearGradientBrush_type)
     {
         return nullptr;
@@ -22843,25 +23137,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Projection_Static{PyType_FromSpec(&type_spec_Projection_Static)};
+    py::pyobj_handle Projection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!Projection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Projection_Static{PyType_FromSpecWithBases(&type_spec_Projection_Static, Projection_Static_bases.get())};
     if (!type_Projection_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Projection_type{py::register_python_type(module.get(), &type_spec_Projection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Projection_Static.get()))};
+    py::pyobj_handle Projection_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!Projection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Projection_type{py::register_python_type(module.get(), &type_spec_Projection, Projection_bases.get(), reinterpret_cast<PyTypeObject*>(type_Projection_Static.get()))};
     if (!Projection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Matrix3DProjection_Static{PyType_FromSpec(&type_spec_Matrix3DProjection_Static)};
+    py::pyobj_handle Matrix3DProjection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Projection_type.get())))};
+    if (!Matrix3DProjection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Matrix3DProjection_Static{PyType_FromSpecWithBases(&type_spec_Matrix3DProjection_Static, Matrix3DProjection_Static_bases.get())};
     if (!type_Matrix3DProjection_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Matrix3DProjection_type{py::register_python_type(module.get(), &type_spec_Matrix3DProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Static.get()))};
+    py::pyobj_handle Matrix3DProjection_bases{PyTuple_Pack(1, Projection_type.get())};
+    if (!Matrix3DProjection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Matrix3DProjection_type{py::register_python_type(module.get(), &type_spec_Matrix3DProjection, Matrix3DProjection_bases.get(), reinterpret_cast<PyTypeObject*>(type_Matrix3DProjection_Static.get()))};
     if (!Matrix3DProjection_type)
     {
         return nullptr;
@@ -22879,13 +23197,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MatrixTransform_Static{PyType_FromSpec(&type_spec_MatrixTransform_Static)};
+    py::pyobj_handle MatrixTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!MatrixTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MatrixTransform_Static{PyType_FromSpecWithBases(&type_spec_MatrixTransform_Static, MatrixTransform_Static_bases.get())};
     if (!type_MatrixTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MatrixTransform_type{py::register_python_type(module.get(), &type_spec_MatrixTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Static.get()))};
+    py::pyobj_handle MatrixTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!MatrixTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MatrixTransform_type{py::register_python_type(module.get(), &type_spec_MatrixTransform, MatrixTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_MatrixTransform_Static.get()))};
     if (!MatrixTransform_type)
     {
         return nullptr;
@@ -22897,25 +23227,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MicaBackdrop_Static{PyType_FromSpec(&type_spec_MicaBackdrop_Static)};
+    py::pyobj_handle MicaBackdrop_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SystemBackdrop_type.get())))};
+    if (!MicaBackdrop_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MicaBackdrop_Static{PyType_FromSpecWithBases(&type_spec_MicaBackdrop_Static, MicaBackdrop_Static_bases.get())};
     if (!type_MicaBackdrop_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MicaBackdrop_type{py::register_python_type(module.get(), &type_spec_MicaBackdrop, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicaBackdrop_Static.get()))};
+    py::pyobj_handle MicaBackdrop_bases{PyTuple_Pack(1, SystemBackdrop_type.get())};
+    if (!MicaBackdrop_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MicaBackdrop_type{py::register_python_type(module.get(), &type_spec_MicaBackdrop, MicaBackdrop_bases.get(), reinterpret_cast<PyTypeObject*>(type_MicaBackdrop_Static.get()))};
     if (!MicaBackdrop_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PathFigure_Static{PyType_FromSpec(&type_spec_PathFigure_Static)};
+    py::pyobj_handle PathFigure_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!PathFigure_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PathFigure_Static{PyType_FromSpecWithBases(&type_spec_PathFigure_Static, PathFigure_Static_bases.get())};
     if (!type_PathFigure_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PathFigure_type{py::register_python_type(module.get(), &type_spec_PathFigure, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Static.get()))};
+    py::pyobj_handle PathFigure_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!PathFigure_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PathFigure_type{py::register_python_type(module.get(), &type_spec_PathFigure, PathFigure_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathFigure_Static.get()))};
     if (!PathFigure_type)
     {
         return nullptr;
@@ -22927,13 +23281,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PathGeometry_Static{PyType_FromSpec(&type_spec_PathGeometry_Static)};
+    py::pyobj_handle PathGeometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Geometry_type.get())))};
+    if (!PathGeometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PathGeometry_Static{PyType_FromSpecWithBases(&type_spec_PathGeometry_Static, PathGeometry_Static_bases.get())};
     if (!type_PathGeometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PathGeometry_type{py::register_python_type(module.get(), &type_spec_PathGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Static.get()))};
+    py::pyobj_handle PathGeometry_bases{PyTuple_Pack(1, Geometry_type.get())};
+    if (!PathGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PathGeometry_type{py::register_python_type(module.get(), &type_spec_PathGeometry, PathGeometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_PathGeometry_Static.get()))};
     if (!PathGeometry_type)
     {
         return nullptr;
@@ -22945,13 +23311,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PlaneProjection_Static{PyType_FromSpec(&type_spec_PlaneProjection_Static)};
+    py::pyobj_handle PlaneProjection_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Projection_type.get())))};
+    if (!PlaneProjection_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PlaneProjection_Static{PyType_FromSpecWithBases(&type_spec_PlaneProjection_Static, PlaneProjection_Static_bases.get())};
     if (!type_PlaneProjection_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PlaneProjection_type{py::register_python_type(module.get(), &type_spec_PlaneProjection, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Static.get()))};
+    py::pyobj_handle PlaneProjection_bases{PyTuple_Pack(1, Projection_type.get())};
+    if (!PlaneProjection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PlaneProjection_type{py::register_python_type(module.get(), &type_spec_PlaneProjection, PlaneProjection_bases.get(), reinterpret_cast<PyTypeObject*>(type_PlaneProjection_Static.get()))};
     if (!PlaneProjection_type)
     {
         return nullptr;
@@ -22963,73 +23341,145 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyBezierSegment_Static{PyType_FromSpec(&type_spec_PolyBezierSegment_Static)};
+    py::pyobj_handle PolyBezierSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!PolyBezierSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PolyBezierSegment_Static{PyType_FromSpecWithBases(&type_spec_PolyBezierSegment_Static, PolyBezierSegment_Static_bases.get())};
     if (!type_PolyBezierSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PolyBezierSegment_type{py::register_python_type(module.get(), &type_spec_PolyBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Static.get()))};
+    py::pyobj_handle PolyBezierSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!PolyBezierSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PolyBezierSegment_type{py::register_python_type(module.get(), &type_spec_PolyBezierSegment, PolyBezierSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyBezierSegment_Static.get()))};
     if (!PolyBezierSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyLineSegment_Static{PyType_FromSpec(&type_spec_PolyLineSegment_Static)};
+    py::pyobj_handle PolyLineSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!PolyLineSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PolyLineSegment_Static{PyType_FromSpecWithBases(&type_spec_PolyLineSegment_Static, PolyLineSegment_Static_bases.get())};
     if (!type_PolyLineSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PolyLineSegment_type{py::register_python_type(module.get(), &type_spec_PolyLineSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Static.get()))};
+    py::pyobj_handle PolyLineSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!PolyLineSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PolyLineSegment_type{py::register_python_type(module.get(), &type_spec_PolyLineSegment, PolyLineSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyLineSegment_Static.get()))};
     if (!PolyLineSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PolyQuadraticBezierSegment_Static{PyType_FromSpec(&type_spec_PolyQuadraticBezierSegment_Static)};
+    py::pyobj_handle PolyQuadraticBezierSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!PolyQuadraticBezierSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PolyQuadraticBezierSegment_Static{PyType_FromSpecWithBases(&type_spec_PolyQuadraticBezierSegment_Static, PolyQuadraticBezierSegment_Static_bases.get())};
     if (!type_PolyQuadraticBezierSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PolyQuadraticBezierSegment_type{py::register_python_type(module.get(), &type_spec_PolyQuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Static.get()))};
+    py::pyobj_handle PolyQuadraticBezierSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!PolyQuadraticBezierSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PolyQuadraticBezierSegment_type{py::register_python_type(module.get(), &type_spec_PolyQuadraticBezierSegment, PolyQuadraticBezierSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_PolyQuadraticBezierSegment_Static.get()))};
     if (!PolyQuadraticBezierSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_QuadraticBezierSegment_Static{PyType_FromSpec(&type_spec_QuadraticBezierSegment_Static)};
+    py::pyobj_handle QuadraticBezierSegment_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PathSegment_type.get())))};
+    if (!QuadraticBezierSegment_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_QuadraticBezierSegment_Static{PyType_FromSpecWithBases(&type_spec_QuadraticBezierSegment_Static, QuadraticBezierSegment_Static_bases.get())};
     if (!type_QuadraticBezierSegment_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle QuadraticBezierSegment_type{py::register_python_type(module.get(), &type_spec_QuadraticBezierSegment, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Static.get()))};
+    py::pyobj_handle QuadraticBezierSegment_bases{PyTuple_Pack(1, PathSegment_type.get())};
+    if (!QuadraticBezierSegment_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle QuadraticBezierSegment_type{py::register_python_type(module.get(), &type_spec_QuadraticBezierSegment, QuadraticBezierSegment_bases.get(), reinterpret_cast<PyTypeObject*>(type_QuadraticBezierSegment_Static.get()))};
     if (!QuadraticBezierSegment_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RadialGradientBrush_Static{PyType_FromSpec(&type_spec_RadialGradientBrush_Static)};
+    py::pyobj_handle RadialGradientBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(XamlCompositionBrushBase_type.get())))};
+    if (!RadialGradientBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RadialGradientBrush_Static{PyType_FromSpecWithBases(&type_spec_RadialGradientBrush_Static, RadialGradientBrush_Static_bases.get())};
     if (!type_RadialGradientBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadialGradientBrush_type{py::register_python_type(module.get(), &type_spec_RadialGradientBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialGradientBrush_Static.get()))};
+    py::pyobj_handle RadialGradientBrush_bases{PyTuple_Pack(1, XamlCompositionBrushBase_type.get())};
+    if (!RadialGradientBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadialGradientBrush_type{py::register_python_type(module.get(), &type_spec_RadialGradientBrush, RadialGradientBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadialGradientBrush_Static.get()))};
     if (!RadialGradientBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RectangleGeometry_Static{PyType_FromSpec(&type_spec_RectangleGeometry_Static)};
+    py::pyobj_handle RectangleGeometry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Geometry_type.get())))};
+    if (!RectangleGeometry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RectangleGeometry_Static{PyType_FromSpecWithBases(&type_spec_RectangleGeometry_Static, RectangleGeometry_Static_bases.get())};
     if (!type_RectangleGeometry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RectangleGeometry_type{py::register_python_type(module.get(), &type_spec_RectangleGeometry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Static.get()))};
+    py::pyobj_handle RectangleGeometry_bases{PyTuple_Pack(1, Geometry_type.get())};
+    if (!RectangleGeometry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RectangleGeometry_type{py::register_python_type(module.get(), &type_spec_RectangleGeometry, RectangleGeometry_bases.get(), reinterpret_cast<PyTypeObject*>(type_RectangleGeometry_Static.get()))};
     if (!RectangleGeometry_type)
     {
         return nullptr;
@@ -23047,73 +23497,145 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RotateTransform_Static{PyType_FromSpec(&type_spec_RotateTransform_Static)};
+    py::pyobj_handle RotateTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!RotateTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RotateTransform_Static{PyType_FromSpecWithBases(&type_spec_RotateTransform_Static, RotateTransform_Static_bases.get())};
     if (!type_RotateTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RotateTransform_type{py::register_python_type(module.get(), &type_spec_RotateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Static.get()))};
+    py::pyobj_handle RotateTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!RotateTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RotateTransform_type{py::register_python_type(module.get(), &type_spec_RotateTransform, RotateTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_RotateTransform_Static.get()))};
     if (!RotateTransform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScaleTransform_Static{PyType_FromSpec(&type_spec_ScaleTransform_Static)};
+    py::pyobj_handle ScaleTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!ScaleTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScaleTransform_Static{PyType_FromSpecWithBases(&type_spec_ScaleTransform_Static, ScaleTransform_Static_bases.get())};
     if (!type_ScaleTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScaleTransform_type{py::register_python_type(module.get(), &type_spec_ScaleTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Static.get()))};
+    py::pyobj_handle ScaleTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!ScaleTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScaleTransform_type{py::register_python_type(module.get(), &type_spec_ScaleTransform, ScaleTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScaleTransform_Static.get()))};
     if (!ScaleTransform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Shadow_Static{PyType_FromSpec(&type_spec_Shadow_Static)};
+    py::pyobj_handle Shadow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!Shadow_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Shadow_Static{PyType_FromSpecWithBases(&type_spec_Shadow_Static, Shadow_Static_bases.get())};
     if (!type_Shadow_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Shadow_type{py::register_python_type(module.get(), &type_spec_Shadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shadow_Static.get()))};
+    py::pyobj_handle Shadow_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!Shadow_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Shadow_type{py::register_python_type(module.get(), &type_spec_Shadow, Shadow_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shadow_Static.get()))};
     if (!Shadow_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SkewTransform_Static{PyType_FromSpec(&type_spec_SkewTransform_Static)};
+    py::pyobj_handle SkewTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!SkewTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SkewTransform_Static{PyType_FromSpecWithBases(&type_spec_SkewTransform_Static, SkewTransform_Static_bases.get())};
     if (!type_SkewTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SkewTransform_type{py::register_python_type(module.get(), &type_spec_SkewTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Static.get()))};
+    py::pyobj_handle SkewTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!SkewTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SkewTransform_type{py::register_python_type(module.get(), &type_spec_SkewTransform, SkewTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_SkewTransform_Static.get()))};
     if (!SkewTransform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SolidColorBrush_Static{PyType_FromSpec(&type_spec_SolidColorBrush_Static)};
+    py::pyobj_handle SolidColorBrush_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Brush_type.get())))};
+    if (!SolidColorBrush_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SolidColorBrush_Static{PyType_FromSpecWithBases(&type_spec_SolidColorBrush_Static, SolidColorBrush_Static_bases.get())};
     if (!type_SolidColorBrush_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SolidColorBrush_type{py::register_python_type(module.get(), &type_spec_SolidColorBrush, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Static.get()))};
+    py::pyobj_handle SolidColorBrush_bases{PyTuple_Pack(1, Brush_type.get())};
+    if (!SolidColorBrush_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SolidColorBrush_type{py::register_python_type(module.get(), &type_spec_SolidColorBrush, SolidColorBrush_bases.get(), reinterpret_cast<PyTypeObject*>(type_SolidColorBrush_Static.get()))};
     if (!SolidColorBrush_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ThemeShadow_Static{PyType_FromSpec(&type_spec_ThemeShadow_Static)};
+    py::pyobj_handle ThemeShadow_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shadow_type.get())))};
+    if (!ThemeShadow_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ThemeShadow_Static{PyType_FromSpecWithBases(&type_spec_ThemeShadow_Static, ThemeShadow_Static_bases.get())};
     if (!type_ThemeShadow_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ThemeShadow_type{py::register_python_type(module.get(), &type_spec_ThemeShadow, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThemeShadow_Static.get()))};
+    py::pyobj_handle ThemeShadow_bases{PyTuple_Pack(1, Shadow_type.get())};
+    if (!ThemeShadow_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ThemeShadow_type{py::register_python_type(module.get(), &type_spec_ThemeShadow, ThemeShadow_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThemeShadow_Static.get()))};
     if (!ThemeShadow_type)
     {
         return nullptr;
@@ -23125,25 +23647,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_TransformGroup_Static{PyType_FromSpec(&type_spec_TransformGroup_Static)};
+    py::pyobj_handle TransformGroup_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!TransformGroup_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TransformGroup_Static{PyType_FromSpecWithBases(&type_spec_TransformGroup_Static, TransformGroup_Static_bases.get())};
     if (!type_TransformGroup_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TransformGroup_type{py::register_python_type(module.get(), &type_spec_TransformGroup, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Static.get()))};
+    py::pyobj_handle TransformGroup_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!TransformGroup_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TransformGroup_type{py::register_python_type(module.get(), &type_spec_TransformGroup, TransformGroup_bases.get(), reinterpret_cast<PyTypeObject*>(type_TransformGroup_Static.get()))};
     if (!TransformGroup_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TranslateTransform_Static{PyType_FromSpec(&type_spec_TranslateTransform_Static)};
+    py::pyobj_handle TranslateTransform_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform_type.get())))};
+    if (!TranslateTransform_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TranslateTransform_Static{PyType_FromSpecWithBases(&type_spec_TranslateTransform_Static, TranslateTransform_Static_bases.get())};
     if (!type_TranslateTransform_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TranslateTransform_type{py::register_python_type(module.get(), &type_spec_TranslateTransform, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Static.get()))};
+    py::pyobj_handle TranslateTransform_bases{PyTuple_Pack(1, Transform_type.get())};
+    if (!TranslateTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TranslateTransform_type{py::register_python_type(module.get(), &type_spec_TranslateTransform, TranslateTransform_bases.get(), reinterpret_cast<PyTypeObject*>(type_TranslateTransform_Static.get()))};
     if (!TranslateTransform_type)
     {
         return nullptr;
@@ -23161,13 +23707,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_media(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlLight_Static{PyType_FromSpec(&type_spec_XamlLight_Static)};
+    py::pyobj_handle XamlLight_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!XamlLight_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlLight_Static{PyType_FromSpecWithBases(&type_spec_XamlLight_Static, XamlLight_Static_bases.get())};
     if (!type_XamlLight_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle XamlLight_type{py::register_python_type(module.get(), &type_spec_XamlLight, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlLight_Static.get()))};
+    py::pyobj_handle XamlLight_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!XamlLight_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle XamlLight_type{py::register_python_type(module.get(), &type_spec_XamlLight, XamlLight_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlLight_Static.get()))};
     if (!XamlLight_type)
     {
         return nullptr;

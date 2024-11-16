@@ -22659,49 +22659,121 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapTileDataSource_Static{PyType_FromSpec(&type_spec_MapTileDataSource_Static)};
+    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
+    if (!windows_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
+    if (!windows_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls")};
+    if (!windows_ui_xaml_controls_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_Control_type{PyObject_GetAttrString(windows_ui_xaml_controls_module.get(), "Control")};
+    if (!windows_ui_xaml_controls_Control_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle MapTileDataSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapTileDataSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapTileDataSource_Static{PyType_FromSpecWithBases(&type_spec_MapTileDataSource_Static, MapTileDataSource_Static_bases.get())};
     if (!type_MapTileDataSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileDataSource_Static.get()))};
+    py::pyobj_handle MapTileDataSource_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapTileDataSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapTileDataSource_type{py::register_python_type(module.get(), &type_spec_MapTileDataSource, MapTileDataSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileDataSource_Static.get()))};
     if (!MapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CustomMapTileDataSource_Static{PyType_FromSpec(&type_spec_CustomMapTileDataSource_Static)};
+    py::pyobj_handle CustomMapTileDataSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapTileDataSource_type.get())))};
+    if (!CustomMapTileDataSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CustomMapTileDataSource_Static{PyType_FromSpecWithBases(&type_spec_CustomMapTileDataSource_Static, CustomMapTileDataSource_Static_bases.get())};
     if (!type_CustomMapTileDataSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomMapTileDataSource_Static.get()))};
+    py::pyobj_handle CustomMapTileDataSource_bases{PyTuple_Pack(1, MapTileDataSource_type.get())};
+    if (!CustomMapTileDataSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CustomMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_CustomMapTileDataSource, CustomMapTileDataSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_CustomMapTileDataSource_Static.get()))};
     if (!CustomMapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HttpMapTileDataSource_Static{PyType_FromSpec(&type_spec_HttpMapTileDataSource_Static)};
+    py::pyobj_handle HttpMapTileDataSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapTileDataSource_type.get())))};
+    if (!HttpMapTileDataSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HttpMapTileDataSource_Static{PyType_FromSpecWithBases(&type_spec_HttpMapTileDataSource_Static, HttpMapTileDataSource_Static_bases.get())};
     if (!type_HttpMapTileDataSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMapTileDataSource_Static.get()))};
+    py::pyobj_handle HttpMapTileDataSource_bases{PyTuple_Pack(1, MapTileDataSource_type.get())};
+    if (!HttpMapTileDataSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HttpMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_HttpMapTileDataSource, HttpMapTileDataSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_HttpMapTileDataSource_Static.get()))};
     if (!HttpMapTileDataSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_LocalMapTileDataSource_Static{PyType_FromSpec(&type_spec_LocalMapTileDataSource_Static)};
+    py::pyobj_handle LocalMapTileDataSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapTileDataSource_type.get())))};
+    if (!LocalMapTileDataSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_LocalMapTileDataSource_Static{PyType_FromSpecWithBases(&type_spec_LocalMapTileDataSource_Static, LocalMapTileDataSource_Static_bases.get())};
     if (!type_LocalMapTileDataSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalMapTileDataSource_Static.get()))};
+    py::pyobj_handle LocalMapTileDataSource_bases{PyTuple_Pack(1, MapTileDataSource_type.get())};
+    if (!LocalMapTileDataSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LocalMapTileDataSource_type{py::register_python_type(module.get(), &type_spec_LocalMapTileDataSource, LocalMapTileDataSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_LocalMapTileDataSource_Static.get()))};
     if (!LocalMapTileDataSource_type)
     {
         return nullptr;
@@ -22719,31 +22791,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapElement_Static{PyType_FromSpec(&type_spec_MapElement_Static)};
+    py::pyobj_handle MapElement_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapElement_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapElement_Static{PyType_FromSpecWithBases(&type_spec_MapElement_Static, MapElement_Static_bases.get())};
     if (!type_MapElement_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElement_type{py::register_python_type(module.get(), &type_spec_MapElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Static.get()))};
+    py::pyobj_handle MapElement_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapElement_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapElement_type{py::register_python_type(module.get(), &type_spec_MapElement, MapElement_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement_Static.get()))};
     if (!MapElement_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapBillboard_Static{PyType_FromSpec(&type_spec_MapBillboard_Static)};
+    py::pyobj_handle MapBillboard_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapElement_type.get())))};
+    if (!MapBillboard_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapBillboard_Static{PyType_FromSpecWithBases(&type_spec_MapBillboard_Static, MapBillboard_Static_bases.get())};
     if (!type_MapBillboard_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapBillboard_type{py::register_python_type(module.get(), &type_spec_MapBillboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Static.get()))};
+    py::pyobj_handle MapBillboard_bases{PyTuple_Pack(1, MapElement_type.get())};
+    if (!MapBillboard_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapBillboard_type{py::register_python_type(module.get(), &type_spec_MapBillboard, MapBillboard_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapBillboard_Static.get()))};
     if (!MapBillboard_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapCamera_type{py::register_python_type(module.get(), &type_spec_MapCamera, object_bases.get(), nullptr)};
+    py::pyobj_handle MapCamera_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapCamera_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapCamera_type{py::register_python_type(module.get(), &type_spec_MapCamera, MapCamera_bases.get(), nullptr)};
     if (!MapCamera_type)
     {
         return nullptr;
@@ -22755,13 +22857,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapControl_Static{PyType_FromSpec(&type_spec_MapControl_Static)};
+    py::pyobj_handle MapControl_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_Control_type.get())))};
+    if (!MapControl_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapControl_Static{PyType_FromSpecWithBases(&type_spec_MapControl_Static, MapControl_Static_bases.get())};
     if (!type_MapControl_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControl_type{py::register_python_type(module.get(), &type_spec_MapControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Static.get()))};
+    py::pyobj_handle MapControl_bases{PyTuple_Pack(1, windows_ui_xaml_controls_Control_type.get())};
+    if (!MapControl_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapControl_type{py::register_python_type(module.get(), &type_spec_MapControl, MapControl_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControl_Static.get()))};
     if (!MapControl_type)
     {
         return nullptr;
@@ -22791,13 +22905,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapControlDataHelper_Static{PyType_FromSpec(&type_spec_MapControlDataHelper_Static)};
+    py::pyobj_handle MapControlDataHelper_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapControlDataHelper_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapControlDataHelper_Static{PyType_FromSpecWithBases(&type_spec_MapControlDataHelper_Static, MapControlDataHelper_Static_bases.get())};
     if (!type_MapControlDataHelper_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapControlDataHelper_type{py::register_python_type(module.get(), &type_spec_MapControlDataHelper, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControlDataHelper_Static.get()))};
+    py::pyobj_handle MapControlDataHelper_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapControlDataHelper_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapControlDataHelper_type{py::register_python_type(module.get(), &type_spec_MapControlDataHelper, MapControlDataHelper_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapControlDataHelper_Static.get()))};
     if (!MapControlDataHelper_type)
     {
         return nullptr;
@@ -22827,13 +22953,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapCustomExperience_Static{PyType_FromSpec(&type_spec_MapCustomExperience_Static)};
+    py::pyobj_handle MapCustomExperience_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapCustomExperience_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapCustomExperience_Static{PyType_FromSpecWithBases(&type_spec_MapCustomExperience_Static, MapCustomExperience_Static_bases.get())};
     if (!type_MapCustomExperience_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapCustomExperience_type{py::register_python_type(module.get(), &type_spec_MapCustomExperience, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapCustomExperience_Static.get()))};
+    py::pyobj_handle MapCustomExperience_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapCustomExperience_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapCustomExperience_type{py::register_python_type(module.get(), &type_spec_MapCustomExperience, MapCustomExperience_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapCustomExperience_Static.get()))};
     if (!MapCustomExperience_type)
     {
         return nullptr;
@@ -22845,13 +22983,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapElement3D_Static{PyType_FromSpec(&type_spec_MapElement3D_Static)};
+    py::pyobj_handle MapElement3D_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapElement_type.get())))};
+    if (!MapElement3D_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapElement3D_Static{PyType_FromSpecWithBases(&type_spec_MapElement3D_Static, MapElement3D_Static_bases.get())};
     if (!type_MapElement3D_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElement3D_type{py::register_python_type(module.get(), &type_spec_MapElement3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Static.get()))};
+    py::pyobj_handle MapElement3D_bases{PyTuple_Pack(1, MapElement_type.get())};
+    if (!MapElement3D_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapElement3D_type{py::register_python_type(module.get(), &type_spec_MapElement3D, MapElement3D_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElement3D_Static.get()))};
     if (!MapElement3D_type)
     {
         return nullptr;
@@ -22875,25 +23025,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapLayer_Static{PyType_FromSpec(&type_spec_MapLayer_Static)};
+    py::pyobj_handle MapLayer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapLayer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapLayer_Static{PyType_FromSpecWithBases(&type_spec_MapLayer_Static, MapLayer_Static_bases.get())};
     if (!type_MapLayer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
+    py::pyobj_handle MapLayer_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapLayer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapLayer_type{py::register_python_type(module.get(), &type_spec_MapLayer, MapLayer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapLayer_Static.get()))};
     if (!MapLayer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapElementsLayer_Static{PyType_FromSpec(&type_spec_MapElementsLayer_Static)};
+    py::pyobj_handle MapElementsLayer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapLayer_type.get())))};
+    if (!MapElementsLayer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapElementsLayer_Static{PyType_FromSpecWithBases(&type_spec_MapElementsLayer_Static, MapElementsLayer_Static_bases.get())};
     if (!type_MapElementsLayer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapElementsLayer_type{py::register_python_type(module.get(), &type_spec_MapElementsLayer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Static.get()))};
+    py::pyobj_handle MapElementsLayer_bases{PyTuple_Pack(1, MapLayer_type.get())};
+    if (!MapElementsLayer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapElementsLayer_type{py::register_python_type(module.get(), &type_spec_MapElementsLayer, MapElementsLayer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapElementsLayer_Static.get()))};
     if (!MapElementsLayer_type)
     {
         return nullptr;
@@ -22923,67 +23097,133 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapIcon_Static{PyType_FromSpec(&type_spec_MapIcon_Static)};
+    py::pyobj_handle MapIcon_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapElement_type.get())))};
+    if (!MapIcon_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapIcon_Static{PyType_FromSpecWithBases(&type_spec_MapIcon_Static, MapIcon_Static_bases.get())};
     if (!type_MapIcon_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapIcon_type{py::register_python_type(module.get(), &type_spec_MapIcon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Static.get()))};
+    py::pyobj_handle MapIcon_bases{PyTuple_Pack(1, MapElement_type.get())};
+    if (!MapIcon_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapIcon_type{py::register_python_type(module.get(), &type_spec_MapIcon, MapIcon_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapIcon_Static.get()))};
     if (!MapIcon_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapInputEventArgs_type{py::register_python_type(module.get(), &type_spec_MapInputEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle MapInputEventArgs_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapInputEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapInputEventArgs_type{py::register_python_type(module.get(), &type_spec_MapInputEventArgs, MapInputEventArgs_bases.get(), nullptr)};
     if (!MapInputEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapItemsControl_Static{PyType_FromSpec(&type_spec_MapItemsControl_Static)};
+    py::pyobj_handle MapItemsControl_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapItemsControl_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapItemsControl_Static{PyType_FromSpecWithBases(&type_spec_MapItemsControl_Static, MapItemsControl_Static_bases.get())};
     if (!type_MapItemsControl_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapItemsControl_type{py::register_python_type(module.get(), &type_spec_MapItemsControl, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Static.get()))};
+    py::pyobj_handle MapItemsControl_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapItemsControl_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapItemsControl_type{py::register_python_type(module.get(), &type_spec_MapItemsControl, MapItemsControl_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapItemsControl_Static.get()))};
     if (!MapItemsControl_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapModel3D_Static{PyType_FromSpec(&type_spec_MapModel3D_Static)};
+    py::pyobj_handle MapModel3D_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapModel3D_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapModel3D_Static{PyType_FromSpecWithBases(&type_spec_MapModel3D_Static, MapModel3D_Static_bases.get())};
     if (!type_MapModel3D_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapModel3D_type{py::register_python_type(module.get(), &type_spec_MapModel3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapModel3D_Static.get()))};
+    py::pyobj_handle MapModel3D_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapModel3D_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapModel3D_type{py::register_python_type(module.get(), &type_spec_MapModel3D, MapModel3D_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapModel3D_Static.get()))};
     if (!MapModel3D_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapPolygon_Static{PyType_FromSpec(&type_spec_MapPolygon_Static)};
+    py::pyobj_handle MapPolygon_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapElement_type.get())))};
+    if (!MapPolygon_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapPolygon_Static{PyType_FromSpecWithBases(&type_spec_MapPolygon_Static, MapPolygon_Static_bases.get())};
     if (!type_MapPolygon_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapPolygon_type{py::register_python_type(module.get(), &type_spec_MapPolygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Static.get()))};
+    py::pyobj_handle MapPolygon_bases{PyTuple_Pack(1, MapElement_type.get())};
+    if (!MapPolygon_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapPolygon_type{py::register_python_type(module.get(), &type_spec_MapPolygon, MapPolygon_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolygon_Static.get()))};
     if (!MapPolygon_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapPolyline_Static{PyType_FromSpec(&type_spec_MapPolyline_Static)};
+    py::pyobj_handle MapPolyline_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MapElement_type.get())))};
+    if (!MapPolyline_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapPolyline_Static{PyType_FromSpecWithBases(&type_spec_MapPolyline_Static, MapPolyline_Static_bases.get())};
     if (!type_MapPolyline_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapPolyline_type{py::register_python_type(module.get(), &type_spec_MapPolyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Static.get()))};
+    py::pyobj_handle MapPolyline_bases{PyTuple_Pack(1, MapElement_type.get())};
+    if (!MapPolyline_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapPolyline_type{py::register_python_type(module.get(), &type_spec_MapPolyline, MapPolyline_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapPolyline_Static.get()))};
     if (!MapPolyline_type)
     {
         return nullptr;
@@ -22995,37 +23235,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapRouteView_Static{PyType_FromSpec(&type_spec_MapRouteView_Static)};
+    py::pyobj_handle MapRouteView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapRouteView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapRouteView_Static{PyType_FromSpecWithBases(&type_spec_MapRouteView_Static, MapRouteView_Static_bases.get())};
     if (!type_MapRouteView_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapRouteView_Static.get()))};
+    py::pyobj_handle MapRouteView_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapRouteView_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapRouteView_type{py::register_python_type(module.get(), &type_spec_MapRouteView, MapRouteView_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapRouteView_Static.get()))};
     if (!MapRouteView_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapScene_Static{PyType_FromSpec(&type_spec_MapScene_Static)};
+    py::pyobj_handle MapScene_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapScene_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapScene_Static{PyType_FromSpecWithBases(&type_spec_MapScene_Static, MapScene_Static_bases.get())};
     if (!type_MapScene_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapScene_type{py::register_python_type(module.get(), &type_spec_MapScene, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapScene_Static.get()))};
+    py::pyobj_handle MapScene_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapScene_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapScene_type{py::register_python_type(module.get(), &type_spec_MapScene, MapScene_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapScene_Static.get()))};
     if (!MapScene_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MapStyleSheet_Static{PyType_FromSpec(&type_spec_MapStyleSheet_Static)};
+    py::pyobj_handle MapStyleSheet_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapStyleSheet_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapStyleSheet_Static{PyType_FromSpecWithBases(&type_spec_MapStyleSheet_Static, MapStyleSheet_Static_bases.get())};
     if (!type_MapStyleSheet_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapStyleSheet_type{py::register_python_type(module.get(), &type_spec_MapStyleSheet, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheet_Static.get()))};
+    py::pyobj_handle MapStyleSheet_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapStyleSheet_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapStyleSheet_type{py::register_python_type(module.get(), &type_spec_MapStyleSheet, MapStyleSheet_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapStyleSheet_Static.get()))};
     if (!MapStyleSheet_type)
     {
         return nullptr;
@@ -23079,13 +23355,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_MapTileSource_Static{PyType_FromSpec(&type_spec_MapTileSource_Static)};
+    py::pyobj_handle MapTileSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!MapTileSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MapTileSource_Static{PyType_FromSpecWithBases(&type_spec_MapTileSource_Static, MapTileSource_Static_bases.get())};
     if (!type_MapTileSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MapTileSource_type{py::register_python_type(module.get(), &type_spec_MapTileSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Static.get()))};
+    py::pyobj_handle MapTileSource_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!MapTileSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MapTileSource_type{py::register_python_type(module.get(), &type_spec_MapTileSource, MapTileSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_MapTileSource_Static.get()))};
     if (!MapTileSource_type)
     {
         return nullptr;
@@ -23109,19 +23397,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_maps(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle StreetsideExperience_type{py::register_python_type(module.get(), &type_spec_StreetsideExperience, object_bases.get(), nullptr)};
+    py::pyobj_handle StreetsideExperience_bases{PyTuple_Pack(1, MapCustomExperience_type.get())};
+    if (!StreetsideExperience_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StreetsideExperience_type{py::register_python_type(module.get(), &type_spec_StreetsideExperience, StreetsideExperience_bases.get(), nullptr)};
     if (!StreetsideExperience_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StreetsidePanorama_Static{PyType_FromSpec(&type_spec_StreetsidePanorama_Static)};
+    py::pyobj_handle StreetsidePanorama_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!StreetsidePanorama_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StreetsidePanorama_Static{PyType_FromSpecWithBases(&type_spec_StreetsidePanorama_Static, StreetsidePanorama_Static_bases.get())};
     if (!type_StreetsidePanorama_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle StreetsidePanorama_type{py::register_python_type(module.get(), &type_spec_StreetsidePanorama, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StreetsidePanorama_Static.get()))};
+    py::pyobj_handle StreetsidePanorama_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!StreetsidePanorama_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StreetsidePanorama_type{py::register_python_type(module.get(), &type_spec_StreetsidePanorama, StreetsidePanorama_bases.get(), reinterpret_cast<PyTypeObject*>(type_StreetsidePanorama_Static.get()))};
     if (!StreetsidePanorama_type)
     {
         return nullptr;

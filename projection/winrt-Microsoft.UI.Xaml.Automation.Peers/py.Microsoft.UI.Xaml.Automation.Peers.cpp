@@ -19878,1195 +19878,2401 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_peers(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationPeer_Static{PyType_FromSpec(&type_spec_AutomationPeer_Static)};
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_DependencyObject_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "DependencyObject")};
+    if (!microsoft_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle AutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!AutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_AutomationPeer_Static, AutomationPeer_Static_bases.get())};
     if (!type_AutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeer_Static.get()))};
+    py::pyobj_handle AutomationPeer_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!AutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutomationPeer, AutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeer_Static.get()))};
     if (!AutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FrameworkElementAutomationPeer_Static{PyType_FromSpec(&type_spec_FrameworkElementAutomationPeer_Static)};
+    py::pyobj_handle FrameworkElementAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AutomationPeer_type.get())))};
+    if (!FrameworkElementAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FrameworkElementAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_FrameworkElementAutomationPeer_Static, FrameworkElementAutomationPeer_Static_bases.get())};
     if (!type_FrameworkElementAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FrameworkElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElementAutomationPeer_Static.get()))};
+    py::pyobj_handle FrameworkElementAutomationPeer_bases{PyTuple_Pack(1, AutomationPeer_type.get())};
+    if (!FrameworkElementAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FrameworkElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FrameworkElementAutomationPeer, FrameworkElementAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_FrameworkElementAutomationPeer_Static.get()))};
     if (!FrameworkElementAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AnimatedVisualPlayerAutomationPeer_Static{PyType_FromSpec(&type_spec_AnimatedVisualPlayerAutomationPeer_Static)};
+    py::pyobj_handle AnimatedVisualPlayerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!AnimatedVisualPlayerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AnimatedVisualPlayerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_AnimatedVisualPlayerAutomationPeer_Static, AnimatedVisualPlayerAutomationPeer_Static_bases.get())};
     if (!type_AnimatedVisualPlayerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AnimatedVisualPlayerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AnimatedVisualPlayerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimatedVisualPlayerAutomationPeer_Static.get()))};
+    py::pyobj_handle AnimatedVisualPlayerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!AnimatedVisualPlayerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AnimatedVisualPlayerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AnimatedVisualPlayerAutomationPeer, AnimatedVisualPlayerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_AnimatedVisualPlayerAutomationPeer_Static.get()))};
     if (!AnimatedVisualPlayerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppBarAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarAutomationPeer_Static)};
+    py::pyobj_handle AppBarAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!AppBarAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppBarAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_AppBarAutomationPeer_Static, AppBarAutomationPeer_Static_bases.get())};
     if (!type_AppBarAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarAutomationPeer_Static.get()))};
+    py::pyobj_handle AppBarAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!AppBarAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarAutomationPeer, AppBarAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarAutomationPeer_Static.get()))};
     if (!AppBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ButtonBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_ButtonBaseAutomationPeer_Static)};
+    py::pyobj_handle ButtonBaseAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ButtonBaseAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ButtonBaseAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ButtonBaseAutomationPeer_Static, ButtonBaseAutomationPeer_Static_bases.get())};
     if (!type_ButtonBaseAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ButtonBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBaseAutomationPeer_Static.get()))};
+    py::pyobj_handle ButtonBaseAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ButtonBaseAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ButtonBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonBaseAutomationPeer, ButtonBaseAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonBaseAutomationPeer_Static.get()))};
     if (!ButtonBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ButtonAutomationPeer_Static)};
+    py::pyobj_handle ButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonBaseAutomationPeer_type.get())))};
+    if (!ButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ButtonAutomationPeer_Static, ButtonAutomationPeer_Static_bases.get())};
     if (!type_ButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle ButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonBaseAutomationPeer_type.get())};
+    if (!ButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ButtonAutomationPeer, ButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ButtonAutomationPeer_Static.get()))};
     if (!ButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppBarButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarButtonAutomationPeer_Static)};
+    py::pyobj_handle AppBarButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonAutomationPeer_type.get())))};
+    if (!AppBarButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppBarButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_AppBarButtonAutomationPeer_Static, AppBarButtonAutomationPeer_Static_bases.get())};
     if (!type_AppBarButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle AppBarButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonAutomationPeer_type.get())};
+    if (!AppBarButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarButtonAutomationPeer, AppBarButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarButtonAutomationPeer_Static.get()))};
     if (!AppBarButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ToggleButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleButtonAutomationPeer_Static)};
+    py::pyobj_handle ToggleButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonBaseAutomationPeer_type.get())))};
+    if (!ToggleButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ToggleButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ToggleButtonAutomationPeer_Static, ToggleButtonAutomationPeer_Static_bases.get())};
     if (!type_ToggleButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle ToggleButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonBaseAutomationPeer_type.get())};
+    if (!ToggleButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleButtonAutomationPeer, ToggleButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleButtonAutomationPeer_Static.get()))};
     if (!ToggleButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppBarToggleButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_AppBarToggleButtonAutomationPeer_Static)};
+    py::pyobj_handle AppBarToggleButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ToggleButtonAutomationPeer_type.get())))};
+    if (!AppBarToggleButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppBarToggleButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_AppBarToggleButtonAutomationPeer_Static, AppBarToggleButtonAutomationPeer_Static_bases.get())};
     if (!type_AppBarToggleButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle AppBarToggleButtonAutomationPeer_bases{PyTuple_Pack(1, ToggleButtonAutomationPeer_type.get())};
+    if (!AppBarToggleButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarToggleButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButtonAutomationPeer, AppBarToggleButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButtonAutomationPeer_Static.get()))};
     if (!AppBarToggleButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutoSuggestBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle AutoSuggestBoxAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!AutoSuggestBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AutoSuggestBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_AutoSuggestBoxAutomationPeer, AutoSuggestBoxAutomationPeer_bases.get(), nullptr)};
     if (!AutoSuggestBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationPeerAnnotation_Static{PyType_FromSpec(&type_spec_AutomationPeerAnnotation_Static)};
+    py::pyobj_handle AutomationPeerAnnotation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!AutomationPeerAnnotation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationPeerAnnotation_Static{PyType_FromSpecWithBases(&type_spec_AutomationPeerAnnotation_Static, AutomationPeerAnnotation_Static_bases.get())};
     if (!type_AutomationPeerAnnotation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationPeerAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Static.get()))};
+    py::pyobj_handle AutomationPeerAnnotation_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!AutomationPeerAnnotation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AutomationPeerAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationPeerAnnotation, AutomationPeerAnnotation_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationPeerAnnotation_Static.get()))};
     if (!AutomationPeerAnnotation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BreadcrumbBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_BreadcrumbBarItemAutomationPeer_Static)};
+    py::pyobj_handle BreadcrumbBarItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!BreadcrumbBarItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BreadcrumbBarItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_BreadcrumbBarItemAutomationPeer_Static, BreadcrumbBarItemAutomationPeer_Static_bases.get())};
     if (!type_BreadcrumbBarItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BreadcrumbBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_BreadcrumbBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BreadcrumbBarItemAutomationPeer_Static.get()))};
+    py::pyobj_handle BreadcrumbBarItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!BreadcrumbBarItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BreadcrumbBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_BreadcrumbBarItemAutomationPeer, BreadcrumbBarItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_BreadcrumbBarItemAutomationPeer_Static.get()))};
     if (!BreadcrumbBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CalendarDatePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_CalendarDatePickerAutomationPeer_Static)};
+    py::pyobj_handle CalendarDatePickerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!CalendarDatePickerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CalendarDatePickerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_CalendarDatePickerAutomationPeer_Static, CalendarDatePickerAutomationPeer_Static_bases.get())};
     if (!type_CalendarDatePickerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CalendarDatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarDatePickerAutomationPeer_Static.get()))};
+    py::pyobj_handle CalendarDatePickerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!CalendarDatePickerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CalendarDatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CalendarDatePickerAutomationPeer, CalendarDatePickerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_CalendarDatePickerAutomationPeer_Static.get()))};
     if (!CalendarDatePickerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CheckBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_CheckBoxAutomationPeer_Static)};
+    py::pyobj_handle CheckBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ToggleButtonAutomationPeer_type.get())))};
+    if (!CheckBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CheckBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_CheckBoxAutomationPeer_Static, CheckBoxAutomationPeer_Static_bases.get())};
     if (!type_CheckBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CheckBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle CheckBoxAutomationPeer_bases{PyTuple_Pack(1, ToggleButtonAutomationPeer_type.get())};
+    if (!CheckBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CheckBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_CheckBoxAutomationPeer, CheckBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBoxAutomationPeer_Static.get()))};
     if (!CheckBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RangeBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_RangeBaseAutomationPeer_Static)};
+    py::pyobj_handle RangeBaseAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RangeBaseAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RangeBaseAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RangeBaseAutomationPeer_Static, RangeBaseAutomationPeer_Static_bases.get())};
     if (!type_RangeBaseAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RangeBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBaseAutomationPeer_Static.get()))};
+    py::pyobj_handle RangeBaseAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RangeBaseAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RangeBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RangeBaseAutomationPeer, RangeBaseAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBaseAutomationPeer_Static.get()))};
     if (!RangeBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SliderAutomationPeer_Static{PyType_FromSpec(&type_spec_SliderAutomationPeer_Static)};
+    py::pyobj_handle SliderAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RangeBaseAutomationPeer_type.get())))};
+    if (!SliderAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SliderAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SliderAutomationPeer_Static, SliderAutomationPeer_Static_bases.get())};
     if (!type_SliderAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SliderAutomationPeer_Static.get()))};
+    py::pyobj_handle SliderAutomationPeer_bases{PyTuple_Pack(1, RangeBaseAutomationPeer_type.get())};
+    if (!SliderAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SliderAutomationPeer, SliderAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SliderAutomationPeer_Static.get()))};
     if (!SliderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorPickerSliderAutomationPeer_Static{PyType_FromSpec(&type_spec_ColorPickerSliderAutomationPeer_Static)};
+    py::pyobj_handle ColorPickerSliderAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SliderAutomationPeer_type.get())))};
+    if (!ColorPickerSliderAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorPickerSliderAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ColorPickerSliderAutomationPeer_Static, ColorPickerSliderAutomationPeer_Static_bases.get())};
     if (!type_ColorPickerSliderAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorPickerSliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSliderAutomationPeer_Static.get()))};
+    py::pyobj_handle ColorPickerSliderAutomationPeer_bases{PyTuple_Pack(1, SliderAutomationPeer_type.get())};
+    if (!ColorPickerSliderAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorPickerSliderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorPickerSliderAutomationPeer, ColorPickerSliderAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSliderAutomationPeer_Static.get()))};
     if (!ColorPickerSliderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorSpectrumAutomationPeer_Static{PyType_FromSpec(&type_spec_ColorSpectrumAutomationPeer_Static)};
+    py::pyobj_handle ColorSpectrumAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ColorSpectrumAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorSpectrumAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ColorSpectrumAutomationPeer_Static, ColorSpectrumAutomationPeer_Static_bases.get())};
     if (!type_ColorSpectrumAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorSpectrumAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrumAutomationPeer_Static.get()))};
+    py::pyobj_handle ColorSpectrumAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ColorSpectrumAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorSpectrumAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ColorSpectrumAutomationPeer, ColorSpectrumAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorSpectrumAutomationPeer_Static.get()))};
     if (!ColorSpectrumAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ItemsControlAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemsControlAutomationPeer_Static)};
+    py::pyobj_handle ItemsControlAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ItemsControlAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ItemsControlAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ItemsControlAutomationPeer_Static, ItemsControlAutomationPeer_Static_bases.get())};
     if (!type_ItemsControlAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemsControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsControlAutomationPeer_Static.get()))};
+    py::pyobj_handle ItemsControlAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ItemsControlAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemsControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsControlAutomationPeer, ItemsControlAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsControlAutomationPeer_Static.get()))};
     if (!ItemsControlAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectorAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorAutomationPeer_Static)};
+    py::pyobj_handle SelectorAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ItemsControlAutomationPeer_type.get())))};
+    if (!SelectorAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SelectorAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SelectorAutomationPeer_Static, SelectorAutomationPeer_Static_bases.get())};
     if (!type_SelectorAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorAutomationPeer_Static.get()))};
+    py::pyobj_handle SelectorAutomationPeer_bases{PyTuple_Pack(1, ItemsControlAutomationPeer_type.get())};
+    if (!SelectorAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorAutomationPeer, SelectorAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorAutomationPeer_Static.get()))};
     if (!SelectorAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComboBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxAutomationPeer_Static)};
+    py::pyobj_handle ComboBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorAutomationPeer_type.get())))};
+    if (!ComboBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComboBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ComboBoxAutomationPeer_Static, ComboBoxAutomationPeer_Static_bases.get())};
     if (!type_ComboBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle ComboBoxAutomationPeer_bases{PyTuple_Pack(1, SelectorAutomationPeer_type.get())};
+    if (!ComboBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxAutomationPeer, ComboBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxAutomationPeer_Static.get()))};
     if (!ComboBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComboBoxItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxItemAutomationPeer_Static)};
+    py::pyobj_handle ComboBoxItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ComboBoxItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComboBoxItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ComboBoxItemAutomationPeer_Static, ComboBoxItemAutomationPeer_Static_bases.get())};
     if (!type_ComboBoxItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ComboBoxItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ComboBoxItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemAutomationPeer, ComboBoxItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemAutomationPeer_Static.get()))};
     if (!ComboBoxItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemAutomationPeer_Static)};
+    py::pyobj_handle ItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AutomationPeer_type.get())))};
+    if (!ItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ItemAutomationPeer_Static, ItemAutomationPeer_Static_bases.get())};
     if (!type_ItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ItemAutomationPeer_bases{PyTuple_Pack(1, AutomationPeer_type.get())};
+    if (!ItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemAutomationPeer, ItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemAutomationPeer_Static.get()))};
     if (!ItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectorItemAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorItemAutomationPeer_Static)};
+    py::pyobj_handle SelectorItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ItemAutomationPeer_type.get())))};
+    if (!SelectorItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SelectorItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SelectorItemAutomationPeer_Static, SelectorItemAutomationPeer_Static_bases.get())};
     if (!type_SelectorItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItemAutomationPeer_Static.get()))};
+    py::pyobj_handle SelectorItemAutomationPeer_bases{PyTuple_Pack(1, ItemAutomationPeer_type.get())};
+    if (!SelectorItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorItemAutomationPeer, SelectorItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItemAutomationPeer_Static.get()))};
     if (!SelectorItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComboBoxItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ComboBoxItemDataAutomationPeer_Static)};
+    py::pyobj_handle ComboBoxItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorItemAutomationPeer_type.get())))};
+    if (!ComboBoxItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComboBoxItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ComboBoxItemDataAutomationPeer_Static, ComboBoxItemDataAutomationPeer_Static_bases.get())};
     if (!type_ComboBoxItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle ComboBoxItemDataAutomationPeer_bases{PyTuple_Pack(1, SelectorItemAutomationPeer_type.get())};
+    if (!ComboBoxItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ComboBoxItemDataAutomationPeer, ComboBoxItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItemDataAutomationPeer_Static.get()))};
     if (!ComboBoxItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DatePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_DatePickerAutomationPeer_Static)};
+    py::pyobj_handle DatePickerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!DatePickerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DatePickerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_DatePickerAutomationPeer_Static, DatePickerAutomationPeer_Static_bases.get())};
     if (!type_DatePickerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerAutomationPeer_Static.get()))};
+    py::pyobj_handle DatePickerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!DatePickerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DatePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerAutomationPeer, DatePickerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerAutomationPeer_Static.get()))};
     if (!DatePickerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle DatePickerFlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!DatePickerFlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DatePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyoutPresenterAutomationPeer, DatePickerFlyoutPresenterAutomationPeer_bases.get(), nullptr)};
     if (!DatePickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DropDownButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_DropDownButtonAutomationPeer_Static)};
+    py::pyobj_handle DropDownButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonAutomationPeer_type.get())))};
+    if (!DropDownButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DropDownButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_DropDownButtonAutomationPeer_Static, DropDownButtonAutomationPeer_Static_bases.get())};
     if (!type_DropDownButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropDownButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DropDownButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle DropDownButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonAutomationPeer_type.get())};
+    if (!DropDownButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropDownButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_DropDownButtonAutomationPeer, DropDownButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButtonAutomationPeer_Static.get()))};
     if (!DropDownButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ExpanderAutomationPeer_Static{PyType_FromSpec(&type_spec_ExpanderAutomationPeer_Static)};
+    py::pyobj_handle ExpanderAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ExpanderAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ExpanderAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ExpanderAutomationPeer_Static, ExpanderAutomationPeer_Static_bases.get())};
     if (!type_ExpanderAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExpanderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ExpanderAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpanderAutomationPeer_Static.get()))};
+    py::pyobj_handle ExpanderAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ExpanderAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExpanderAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ExpanderAutomationPeer, ExpanderAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExpanderAutomationPeer_Static.get()))};
     if (!ExpanderAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlipViewAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewAutomationPeer_Static)};
+    py::pyobj_handle FlipViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorAutomationPeer_type.get())))};
+    if (!FlipViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlipViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_FlipViewAutomationPeer_Static, FlipViewAutomationPeer_Static_bases.get())};
     if (!type_FlipViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewAutomationPeer_Static.get()))};
+    py::pyobj_handle FlipViewAutomationPeer_bases{PyTuple_Pack(1, SelectorAutomationPeer_type.get())};
+    if (!FlipViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewAutomationPeer, FlipViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewAutomationPeer_Static.get()))};
     if (!FlipViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlipViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewItemAutomationPeer_Static)};
+    py::pyobj_handle FlipViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!FlipViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlipViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_FlipViewItemAutomationPeer_Static, FlipViewItemAutomationPeer_Static_bases.get())};
     if (!type_FlipViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle FlipViewItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!FlipViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemAutomationPeer, FlipViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemAutomationPeer_Static.get()))};
     if (!FlipViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlipViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_FlipViewItemDataAutomationPeer_Static)};
+    py::pyobj_handle FlipViewItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorItemAutomationPeer_type.get())))};
+    if (!FlipViewItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlipViewItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_FlipViewItemDataAutomationPeer_Static, FlipViewItemDataAutomationPeer_Static_bases.get())};
     if (!type_FlipViewItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle FlipViewItemDataAutomationPeer_bases{PyTuple_Pack(1, SelectorItemAutomationPeer_type.get())};
+    if (!FlipViewItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlipViewItemDataAutomationPeer, FlipViewItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItemDataAutomationPeer_Static.get()))};
     if (!FlipViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlyoutPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_FlyoutPresenterAutomationPeer_Static)};
+    py::pyobj_handle FlyoutPresenterAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!FlyoutPresenterAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlyoutPresenterAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_FlyoutPresenterAutomationPeer_Static, FlyoutPresenterAutomationPeer_Static_bases.get())};
     if (!type_FlyoutPresenterAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutPresenterAutomationPeer_Static.get()))};
+    py::pyobj_handle FlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!FlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_FlyoutPresenterAutomationPeer, FlyoutPresenterAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlyoutPresenterAutomationPeer_Static.get()))};
     if (!FlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewBaseAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewBaseAutomationPeer_Static)};
+    py::pyobj_handle ListViewBaseAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorAutomationPeer_type.get())))};
+    if (!ListViewBaseAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewBaseAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewBaseAutomationPeer_Static, ListViewBaseAutomationPeer_Static_bases.get())};
     if (!type_ListViewBaseAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewBaseAutomationPeer_bases{PyTuple_Pack(1, SelectorAutomationPeer_type.get())};
+    if (!ListViewBaseAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBaseAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseAutomationPeer, ListViewBaseAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseAutomationPeer_Static.get()))};
     if (!ListViewBaseAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewAutomationPeer_Static)};
+    py::pyobj_handle GridViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBaseAutomationPeer_type.get())))};
+    if (!GridViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_GridViewAutomationPeer_Static, GridViewAutomationPeer_Static_bases.get())};
     if (!type_GridViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewAutomationPeer_Static.get()))};
+    py::pyobj_handle GridViewAutomationPeer_bases{PyTuple_Pack(1, ListViewBaseAutomationPeer_type.get())};
+    if (!GridViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewAutomationPeer, GridViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewAutomationPeer_Static.get()))};
     if (!GridViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewBaseHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewBaseHeaderItemAutomationPeer_Static)};
+    py::pyobj_handle ListViewBaseHeaderItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ListViewBaseHeaderItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewBaseHeaderItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewBaseHeaderItemAutomationPeer_Static, ListViewBaseHeaderItemAutomationPeer_Static_bases.get())};
     if (!type_ListViewBaseHeaderItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewBaseHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseHeaderItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewBaseHeaderItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ListViewBaseHeaderItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBaseHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewBaseHeaderItemAutomationPeer, ListViewBaseHeaderItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBaseHeaderItemAutomationPeer_Static.get()))};
     if (!ListViewBaseHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewHeaderItemAutomationPeer_Static)};
+    py::pyobj_handle GridViewHeaderItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBaseHeaderItemAutomationPeer_type.get())))};
+    if (!GridViewHeaderItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridViewHeaderItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_GridViewHeaderItemAutomationPeer_Static, GridViewHeaderItemAutomationPeer_Static_bases.get())};
     if (!type_GridViewHeaderItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewHeaderItemAutomationPeer_Static.get()))};
+    py::pyobj_handle GridViewHeaderItemAutomationPeer_bases{PyTuple_Pack(1, ListViewBaseHeaderItemAutomationPeer_type.get())};
+    if (!GridViewHeaderItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewHeaderItemAutomationPeer, GridViewHeaderItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewHeaderItemAutomationPeer_Static.get()))};
     if (!GridViewHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewItemAutomationPeer_Static)};
+    py::pyobj_handle GridViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!GridViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_GridViewItemAutomationPeer_Static, GridViewItemAutomationPeer_Static_bases.get())};
     if (!type_GridViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle GridViewItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!GridViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemAutomationPeer, GridViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemAutomationPeer_Static.get()))};
     if (!GridViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_GridViewItemDataAutomationPeer_Static)};
+    py::pyobj_handle GridViewItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorItemAutomationPeer_type.get())))};
+    if (!GridViewItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridViewItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_GridViewItemDataAutomationPeer_Static, GridViewItemDataAutomationPeer_Static_bases.get())};
     if (!type_GridViewItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle GridViewItemDataAutomationPeer_bases{PyTuple_Pack(1, SelectorItemAutomationPeer_type.get())};
+    if (!GridViewItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GridViewItemDataAutomationPeer, GridViewItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItemDataAutomationPeer_Static.get()))};
     if (!GridViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GroupItemAutomationPeer_Static{PyType_FromSpec(&type_spec_GroupItemAutomationPeer_Static)};
+    py::pyobj_handle GroupItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!GroupItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GroupItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_GroupItemAutomationPeer_Static, GroupItemAutomationPeer_Static_bases.get())};
     if (!type_GroupItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GroupItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GroupItemAutomationPeer_Static.get()))};
+    py::pyobj_handle GroupItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!GroupItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GroupItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_GroupItemAutomationPeer, GroupItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_GroupItemAutomationPeer_Static.get()))};
     if (!GroupItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HubAutomationPeer_Static{PyType_FromSpec(&type_spec_HubAutomationPeer_Static)};
+    py::pyobj_handle HubAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!HubAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HubAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_HubAutomationPeer_Static, HubAutomationPeer_Static_bases.get())};
     if (!type_HubAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle HubAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubAutomationPeer_Static.get()))};
+    py::pyobj_handle HubAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!HubAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HubAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubAutomationPeer, HubAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubAutomationPeer_Static.get()))};
     if (!HubAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HubSectionAutomationPeer_Static{PyType_FromSpec(&type_spec_HubSectionAutomationPeer_Static)};
+    py::pyobj_handle HubSectionAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!HubSectionAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HubSectionAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_HubSectionAutomationPeer_Static, HubSectionAutomationPeer_Static_bases.get())};
     if (!type_HubSectionAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle HubSectionAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubSectionAutomationPeer_Static.get()))};
+    py::pyobj_handle HubSectionAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!HubSectionAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HubSectionAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HubSectionAutomationPeer, HubSectionAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_HubSectionAutomationPeer_Static.get()))};
     if (!HubSectionAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HyperlinkButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_HyperlinkButtonAutomationPeer_Static)};
+    py::pyobj_handle HyperlinkButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonBaseAutomationPeer_type.get())))};
+    if (!HyperlinkButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HyperlinkButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_HyperlinkButtonAutomationPeer_Static, HyperlinkButtonAutomationPeer_Static_bases.get())};
     if (!type_HyperlinkButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle HyperlinkButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HyperlinkButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle HyperlinkButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonBaseAutomationPeer_type.get())};
+    if (!HyperlinkButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HyperlinkButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_HyperlinkButtonAutomationPeer, HyperlinkButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_HyperlinkButtonAutomationPeer_Static.get()))};
     if (!HyperlinkButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ImageAutomationPeer_Static{PyType_FromSpec(&type_spec_ImageAutomationPeer_Static)};
+    py::pyobj_handle ImageAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ImageAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ImageAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ImageAutomationPeer_Static, ImageAutomationPeer_Static_bases.get())};
     if (!type_ImageAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ImageAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageAutomationPeer_Static.get()))};
+    py::pyobj_handle ImageAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ImageAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ImageAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ImageAutomationPeer, ImageAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ImageAutomationPeer_Static.get()))};
     if (!ImageAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InfoBarAutomationPeer_Static{PyType_FromSpec(&type_spec_InfoBarAutomationPeer_Static)};
+    py::pyobj_handle InfoBarAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!InfoBarAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InfoBarAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_InfoBarAutomationPeer_Static, InfoBarAutomationPeer_Static_bases.get())};
     if (!type_InfoBarAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InfoBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InfoBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InfoBarAutomationPeer_Static.get()))};
+    py::pyobj_handle InfoBarAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!InfoBarAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InfoBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_InfoBarAutomationPeer, InfoBarAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_InfoBarAutomationPeer_Static.get()))};
     if (!InfoBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ItemContainerAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemContainerAutomationPeer_Static)};
+    py::pyobj_handle ItemContainerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ItemContainerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ItemContainerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ItemContainerAutomationPeer_Static, ItemContainerAutomationPeer_Static_bases.get())};
     if (!type_ItemContainerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemContainerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemContainerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemContainerAutomationPeer_Static.get()))};
+    py::pyobj_handle ItemContainerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ItemContainerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemContainerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemContainerAutomationPeer, ItemContainerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemContainerAutomationPeer_Static.get()))};
     if (!ItemContainerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ItemsViewAutomationPeer_Static{PyType_FromSpec(&type_spec_ItemsViewAutomationPeer_Static)};
+    py::pyobj_handle ItemsViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ItemsViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ItemsViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ItemsViewAutomationPeer_Static, ItemsViewAutomationPeer_Static_bases.get())};
     if (!type_ItemsViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ItemsViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsViewAutomationPeer_Static.get()))};
+    py::pyobj_handle ItemsViewAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ItemsViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ItemsViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ItemsViewAutomationPeer, ItemsViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ItemsViewAutomationPeer_Static.get()))};
     if (!ItemsViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxAutomationPeer_Static)};
+    py::pyobj_handle ListBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorAutomationPeer_type.get())))};
+    if (!ListBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListBoxAutomationPeer_Static, ListBoxAutomationPeer_Static_bases.get())};
     if (!type_ListBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle ListBoxAutomationPeer_bases{PyTuple_Pack(1, SelectorAutomationPeer_type.get())};
+    if (!ListBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxAutomationPeer, ListBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxAutomationPeer_Static.get()))};
     if (!ListBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListBoxItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxItemAutomationPeer_Static)};
+    py::pyobj_handle ListBoxItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ListBoxItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListBoxItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListBoxItemAutomationPeer_Static, ListBoxItemAutomationPeer_Static_bases.get())};
     if (!type_ListBoxItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ListBoxItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ListBoxItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemAutomationPeer, ListBoxItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemAutomationPeer_Static.get()))};
     if (!ListBoxItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListBoxItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ListBoxItemDataAutomationPeer_Static)};
+    py::pyobj_handle ListBoxItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorItemAutomationPeer_type.get())))};
+    if (!ListBoxItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListBoxItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListBoxItemDataAutomationPeer_Static, ListBoxItemDataAutomationPeer_Static_bases.get())};
     if (!type_ListBoxItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle ListBoxItemDataAutomationPeer_bases{PyTuple_Pack(1, SelectorItemAutomationPeer_type.get())};
+    if (!ListBoxItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListBoxItemDataAutomationPeer, ListBoxItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItemDataAutomationPeer_Static.get()))};
     if (!ListBoxItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListPickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle ListPickerFlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ListPickerFlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListPickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyoutPresenterAutomationPeer, ListPickerFlyoutPresenterAutomationPeer_bases.get(), nullptr)};
     if (!ListPickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewAutomationPeer_Static)};
+    py::pyobj_handle ListViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBaseAutomationPeer_type.get())))};
+    if (!ListViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewAutomationPeer_Static, ListViewAutomationPeer_Static_bases.get())};
     if (!type_ListViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewAutomationPeer_bases{PyTuple_Pack(1, ListViewBaseAutomationPeer_type.get())};
+    if (!ListViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewAutomationPeer, ListViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewAutomationPeer_Static.get()))};
     if (!ListViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewHeaderItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewHeaderItemAutomationPeer_Static)};
+    py::pyobj_handle ListViewHeaderItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBaseHeaderItemAutomationPeer_type.get())))};
+    if (!ListViewHeaderItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewHeaderItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewHeaderItemAutomationPeer_Static, ListViewHeaderItemAutomationPeer_Static_bases.get())};
     if (!type_ListViewHeaderItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewHeaderItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewHeaderItemAutomationPeer_bases{PyTuple_Pack(1, ListViewBaseHeaderItemAutomationPeer_type.get())};
+    if (!ListViewHeaderItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewHeaderItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewHeaderItemAutomationPeer, ListViewHeaderItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewHeaderItemAutomationPeer_Static.get()))};
     if (!ListViewHeaderItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewItemAutomationPeer_Static)};
+    py::pyobj_handle ListViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ListViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewItemAutomationPeer_Static, ListViewItemAutomationPeer_Static_bases.get())};
     if (!type_ListViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ListViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemAutomationPeer, ListViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemAutomationPeer_Static.get()))};
     if (!ListViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_ListViewItemDataAutomationPeer_Static)};
+    py::pyobj_handle ListViewItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SelectorItemAutomationPeer_type.get())))};
+    if (!ListViewItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ListViewItemDataAutomationPeer_Static, ListViewItemDataAutomationPeer_Static_bases.get())};
     if (!type_ListViewItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle ListViewItemDataAutomationPeer_bases{PyTuple_Pack(1, SelectorItemAutomationPeer_type.get())};
+    if (!ListViewItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ListViewItemDataAutomationPeer, ListViewItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItemDataAutomationPeer_Static.get()))};
     if (!ListViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LoopingSelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle LoopingSelectorAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!LoopingSelectorAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LoopingSelectorAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorAutomationPeer, LoopingSelectorAutomationPeer_bases.get(), nullptr)};
     if (!LoopingSelectorAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LoopingSelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle LoopingSelectorItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!LoopingSelectorItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LoopingSelectorItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemAutomationPeer, LoopingSelectorItemAutomationPeer_bases.get(), nullptr)};
     if (!LoopingSelectorItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LoopingSelectorItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle LoopingSelectorItemDataAutomationPeer_bases{PyTuple_Pack(1, AutomationPeer_type.get())};
+    if (!LoopingSelectorItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LoopingSelectorItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_LoopingSelectorItemDataAutomationPeer, LoopingSelectorItemDataAutomationPeer_bases.get(), nullptr)};
     if (!LoopingSelectorItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaPlayerElementAutomationPeer_Static{PyType_FromSpec(&type_spec_MediaPlayerElementAutomationPeer_Static)};
+    py::pyobj_handle MediaPlayerElementAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!MediaPlayerElementAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaPlayerElementAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MediaPlayerElementAutomationPeer_Static, MediaPlayerElementAutomationPeer_Static_bases.get())};
     if (!type_MediaPlayerElementAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaPlayerElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaPlayerElementAutomationPeer_Static.get()))};
+    py::pyobj_handle MediaPlayerElementAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!MediaPlayerElementAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MediaPlayerElementAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaPlayerElementAutomationPeer, MediaPlayerElementAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaPlayerElementAutomationPeer_Static.get()))};
     if (!MediaPlayerElementAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MediaTransportControlsAutomationPeer_Static{PyType_FromSpec(&type_spec_MediaTransportControlsAutomationPeer_Static)};
+    py::pyobj_handle MediaTransportControlsAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!MediaTransportControlsAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MediaTransportControlsAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MediaTransportControlsAutomationPeer_Static, MediaTransportControlsAutomationPeer_Static_bases.get())};
     if (!type_MediaTransportControlsAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MediaTransportControlsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaTransportControlsAutomationPeer_Static.get()))};
+    py::pyobj_handle MediaTransportControlsAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!MediaTransportControlsAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MediaTransportControlsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MediaTransportControlsAutomationPeer, MediaTransportControlsAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MediaTransportControlsAutomationPeer_Static.get()))};
     if (!MediaTransportControlsAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuBarAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuBarAutomationPeer_Static)};
+    py::pyobj_handle MenuBarAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!MenuBarAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuBarAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MenuBarAutomationPeer_Static, MenuBarAutomationPeer_Static_bases.get())};
     if (!type_MenuBarAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarAutomationPeer_Static.get()))};
+    py::pyobj_handle MenuBarAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!MenuBarAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarAutomationPeer, MenuBarAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarAutomationPeer_Static.get()))};
     if (!MenuBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuBarItemAutomationPeer_Static)};
+    py::pyobj_handle MenuBarItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!MenuBarItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuBarItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MenuBarItemAutomationPeer_Static, MenuBarItemAutomationPeer_Static_bases.get())};
     if (!type_MenuBarItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemAutomationPeer_Static.get()))};
+    py::pyobj_handle MenuBarItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!MenuBarItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuBarItemAutomationPeer, MenuBarItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemAutomationPeer_Static.get()))};
     if (!MenuBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuFlyoutItemAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuFlyoutItemAutomationPeer_Static)};
+    py::pyobj_handle MenuFlyoutItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!MenuFlyoutItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuFlyoutItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MenuFlyoutItemAutomationPeer_Static, MenuFlyoutItemAutomationPeer_Static_bases.get())};
     if (!type_MenuFlyoutItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutItemAutomationPeer_Static.get()))};
+    py::pyobj_handle MenuFlyoutItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!MenuFlyoutItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutItemAutomationPeer, MenuFlyoutItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutItemAutomationPeer_Static.get()))};
     if (!MenuFlyoutItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuFlyoutPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_MenuFlyoutPresenterAutomationPeer_Static)};
+    py::pyobj_handle MenuFlyoutPresenterAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ItemsControlAutomationPeer_type.get())))};
+    if (!MenuFlyoutPresenterAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuFlyoutPresenterAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_MenuFlyoutPresenterAutomationPeer_Static, MenuFlyoutPresenterAutomationPeer_Static_bases.get())};
     if (!type_MenuFlyoutPresenterAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutPresenterAutomationPeer_Static.get()))};
+    py::pyobj_handle MenuFlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, ItemsControlAutomationPeer_type.get())};
+    if (!MenuFlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_MenuFlyoutPresenterAutomationPeer, MenuFlyoutPresenterAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyoutPresenterAutomationPeer_Static.get()))};
     if (!MenuFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewAutomationPeer_Static{PyType_FromSpec(&type_spec_NavigationViewAutomationPeer_Static)};
+    py::pyobj_handle NavigationViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!NavigationViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewAutomationPeer_Static, NavigationViewAutomationPeer_Static_bases.get())};
     if (!type_NavigationViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewAutomationPeer_Static.get()))};
+    py::pyobj_handle NavigationViewAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!NavigationViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewAutomationPeer, NavigationViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewAutomationPeer_Static.get()))};
     if (!NavigationViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_NavigationViewItemAutomationPeer_Static)};
+    py::pyobj_handle NavigationViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!NavigationViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewItemAutomationPeer_Static, NavigationViewItemAutomationPeer_Static_bases.get())};
     if (!type_NavigationViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle NavigationViewItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!NavigationViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemAutomationPeer, NavigationViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemAutomationPeer_Static.get()))};
     if (!NavigationViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NumberBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_NumberBoxAutomationPeer_Static)};
+    py::pyobj_handle NumberBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!NumberBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NumberBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_NumberBoxAutomationPeer_Static, NumberBoxAutomationPeer_Static_bases.get())};
     if (!type_NumberBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NumberBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NumberBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumberBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle NumberBoxAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!NumberBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NumberBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_NumberBoxAutomationPeer, NumberBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_NumberBoxAutomationPeer_Static.get()))};
     if (!NumberBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PasswordBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_PasswordBoxAutomationPeer_Static)};
+    py::pyobj_handle PasswordBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!PasswordBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PasswordBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_PasswordBoxAutomationPeer_Static, PasswordBoxAutomationPeer_Static_bases.get())};
     if (!type_PasswordBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PasswordBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PasswordBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle PasswordBoxAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PasswordBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PasswordBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PasswordBoxAutomationPeer, PasswordBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_PasswordBoxAutomationPeer_Static.get()))};
     if (!PasswordBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PersonPictureAutomationPeer_Static{PyType_FromSpec(&type_spec_PersonPictureAutomationPeer_Static)};
+    py::pyobj_handle PersonPictureAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!PersonPictureAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PersonPictureAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_PersonPictureAutomationPeer_Static, PersonPictureAutomationPeer_Static_bases.get())};
     if (!type_PersonPictureAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PersonPictureAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PersonPictureAutomationPeer_Static.get()))};
+    py::pyobj_handle PersonPictureAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PersonPictureAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PersonPictureAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PersonPictureAutomationPeer, PersonPictureAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_PersonPictureAutomationPeer_Static.get()))};
     if (!PersonPictureAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle PickerFlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PickerFlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PickerFlyoutPresenterAutomationPeer, PickerFlyoutPresenterAutomationPeer_bases.get(), nullptr)};
     if (!PickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PipsPagerAutomationPeer_Static{PyType_FromSpec(&type_spec_PipsPagerAutomationPeer_Static)};
+    py::pyobj_handle PipsPagerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!PipsPagerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PipsPagerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_PipsPagerAutomationPeer_Static, PipsPagerAutomationPeer_Static_bases.get())};
     if (!type_PipsPagerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PipsPagerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PipsPagerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PipsPagerAutomationPeer_Static.get()))};
+    py::pyobj_handle PipsPagerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PipsPagerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PipsPagerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PipsPagerAutomationPeer, PipsPagerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_PipsPagerAutomationPeer_Static.get()))};
     if (!PipsPagerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PivotAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle PivotAutomationPeer_bases{PyTuple_Pack(1, ItemsControlAutomationPeer_type.get())};
+    if (!PivotAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PivotAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotAutomationPeer, PivotAutomationPeer_bases.get(), nullptr)};
     if (!PivotAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PivotItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle PivotItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!PivotItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PivotItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemAutomationPeer, PivotItemAutomationPeer_bases.get(), nullptr)};
     if (!PivotItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle PivotItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle PivotItemDataAutomationPeer_bases{PyTuple_Pack(1, ItemAutomationPeer_type.get())};
+    if (!PivotItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PivotItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_PivotItemDataAutomationPeer, PivotItemDataAutomationPeer_bases.get(), nullptr)};
     if (!PivotItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProgressBarAutomationPeer_Static{PyType_FromSpec(&type_spec_ProgressBarAutomationPeer_Static)};
+    py::pyobj_handle ProgressBarAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RangeBaseAutomationPeer_type.get())))};
+    if (!ProgressBarAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProgressBarAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ProgressBarAutomationPeer_Static, ProgressBarAutomationPeer_Static_bases.get())};
     if (!type_ProgressBarAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProgressBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBarAutomationPeer_Static.get()))};
+    py::pyobj_handle ProgressBarAutomationPeer_bases{PyTuple_Pack(1, RangeBaseAutomationPeer_type.get())};
+    if (!ProgressBarAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProgressBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressBarAutomationPeer, ProgressBarAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBarAutomationPeer_Static.get()))};
     if (!ProgressBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProgressRingAutomationPeer_Static{PyType_FromSpec(&type_spec_ProgressRingAutomationPeer_Static)};
+    py::pyobj_handle ProgressRingAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ProgressRingAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProgressRingAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ProgressRingAutomationPeer_Static, ProgressRingAutomationPeer_Static_bases.get())};
     if (!type_ProgressRingAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProgressRingAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressRingAutomationPeer_Static.get()))};
+    py::pyobj_handle ProgressRingAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ProgressRingAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProgressRingAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ProgressRingAutomationPeer, ProgressRingAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressRingAutomationPeer_Static.get()))};
     if (!ProgressRingAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RadioButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_RadioButtonAutomationPeer_Static)};
+    py::pyobj_handle RadioButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ToggleButtonAutomationPeer_type.get())))};
+    if (!RadioButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RadioButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RadioButtonAutomationPeer_Static, RadioButtonAutomationPeer_Static_bases.get())};
     if (!type_RadioButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadioButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle RadioButtonAutomationPeer_bases{PyTuple_Pack(1, ToggleButtonAutomationPeer_type.get())};
+    if (!RadioButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonAutomationPeer, RadioButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonAutomationPeer_Static.get()))};
     if (!RadioButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RadioButtonsAutomationPeer_Static{PyType_FromSpec(&type_spec_RadioButtonsAutomationPeer_Static)};
+    py::pyobj_handle RadioButtonsAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RadioButtonsAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RadioButtonsAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RadioButtonsAutomationPeer_Static, RadioButtonsAutomationPeer_Static_bases.get())};
     if (!type_RadioButtonsAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadioButtonsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonsAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonsAutomationPeer_Static.get()))};
+    py::pyobj_handle RadioButtonsAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RadioButtonsAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButtonsAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RadioButtonsAutomationPeer, RadioButtonsAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButtonsAutomationPeer_Static.get()))};
     if (!RadioButtonsAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RatingControlAutomationPeer_Static{PyType_FromSpec(&type_spec_RatingControlAutomationPeer_Static)};
+    py::pyobj_handle RatingControlAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RatingControlAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RatingControlAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RatingControlAutomationPeer_Static, RatingControlAutomationPeer_Static_bases.get())};
     if (!type_RatingControlAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RatingControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RatingControlAutomationPeer_Static.get()))};
+    py::pyobj_handle RatingControlAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RatingControlAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RatingControlAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RatingControlAutomationPeer, RatingControlAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RatingControlAutomationPeer_Static.get()))};
     if (!RatingControlAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RepeatButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_RepeatButtonAutomationPeer_Static)};
+    py::pyobj_handle RepeatButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ButtonBaseAutomationPeer_type.get())))};
+    if (!RepeatButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RepeatButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RepeatButtonAutomationPeer_Static, RepeatButtonAutomationPeer_Static_bases.get())};
     if (!type_RepeatButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepeatButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle RepeatButtonAutomationPeer_bases{PyTuple_Pack(1, ButtonBaseAutomationPeer_type.get())};
+    if (!RepeatButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeatButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeatButtonAutomationPeer, RepeatButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatButtonAutomationPeer_Static.get()))};
     if (!RepeatButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RepeaterAutomationPeer_Static{PyType_FromSpec(&type_spec_RepeaterAutomationPeer_Static)};
+    py::pyobj_handle RepeaterAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RepeaterAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RepeaterAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RepeaterAutomationPeer_Static, RepeaterAutomationPeer_Static_bases.get())};
     if (!type_RepeaterAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepeaterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeaterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeaterAutomationPeer_Static.get()))};
+    py::pyobj_handle RepeaterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RepeaterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepeaterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RepeaterAutomationPeer, RepeaterAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeaterAutomationPeer_Static.get()))};
     if (!RepeaterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RichEditBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_RichEditBoxAutomationPeer_Static)};
+    py::pyobj_handle RichEditBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RichEditBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RichEditBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RichEditBoxAutomationPeer_Static, RichEditBoxAutomationPeer_Static_bases.get())};
     if (!type_RichEditBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichEditBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichEditBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle RichEditBoxAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RichEditBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichEditBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichEditBoxAutomationPeer, RichEditBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichEditBoxAutomationPeer_Static.get()))};
     if (!RichEditBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RichTextBlockAutomationPeer_Static{PyType_FromSpec(&type_spec_RichTextBlockAutomationPeer_Static)};
+    py::pyobj_handle RichTextBlockAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RichTextBlockAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RichTextBlockAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RichTextBlockAutomationPeer_Static, RichTextBlockAutomationPeer_Static_bases.get())};
     if (!type_RichTextBlockAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichTextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockAutomationPeer_Static.get()))};
+    py::pyobj_handle RichTextBlockAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RichTextBlockAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichTextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockAutomationPeer, RichTextBlockAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockAutomationPeer_Static.get()))};
     if (!RichTextBlockAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RichTextBlockOverflowAutomationPeer_Static{PyType_FromSpec(&type_spec_RichTextBlockOverflowAutomationPeer_Static)};
+    py::pyobj_handle RichTextBlockOverflowAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!RichTextBlockOverflowAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RichTextBlockOverflowAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_RichTextBlockOverflowAutomationPeer_Static, RichTextBlockOverflowAutomationPeer_Static_bases.get())};
     if (!type_RichTextBlockOverflowAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RichTextBlockOverflowAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockOverflowAutomationPeer_Static.get()))};
+    py::pyobj_handle RichTextBlockOverflowAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!RichTextBlockOverflowAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RichTextBlockOverflowAutomationPeer_type{py::register_python_type(module.get(), &type_spec_RichTextBlockOverflowAutomationPeer, RichTextBlockOverflowAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_RichTextBlockOverflowAutomationPeer_Static.get()))};
     if (!RichTextBlockOverflowAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollBarAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollBarAutomationPeer_Static)};
+    py::pyobj_handle ScrollBarAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RangeBaseAutomationPeer_type.get())))};
+    if (!ScrollBarAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScrollBarAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ScrollBarAutomationPeer_Static, ScrollBarAutomationPeer_Static_bases.get())};
     if (!type_ScrollBarAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBarAutomationPeer_Static.get()))};
+    py::pyobj_handle ScrollBarAutomationPeer_bases{PyTuple_Pack(1, RangeBaseAutomationPeer_type.get())};
+    if (!ScrollBarAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollBarAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollBarAutomationPeer, ScrollBarAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollBarAutomationPeer_Static.get()))};
     if (!ScrollBarAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollPresenterAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollPresenterAutomationPeer_Static)};
+    py::pyobj_handle ScrollPresenterAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ScrollPresenterAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScrollPresenterAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ScrollPresenterAutomationPeer_Static, ScrollPresenterAutomationPeer_Static_bases.get())};
     if (!type_ScrollPresenterAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollPresenterAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPresenterAutomationPeer_Static.get()))};
+    py::pyobj_handle ScrollPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ScrollPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollPresenterAutomationPeer, ScrollPresenterAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollPresenterAutomationPeer_Static.get()))};
     if (!ScrollPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollViewerAutomationPeer_Static{PyType_FromSpec(&type_spec_ScrollViewerAutomationPeer_Static)};
+    py::pyobj_handle ScrollViewerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ScrollViewerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScrollViewerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ScrollViewerAutomationPeer_Static, ScrollViewerAutomationPeer_Static_bases.get())};
     if (!type_ScrollViewerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScrollViewerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollViewerAutomationPeer_Static.get()))};
+    py::pyobj_handle ScrollViewerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ScrollViewerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollViewerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ScrollViewerAutomationPeer, ScrollViewerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollViewerAutomationPeer_Static.get()))};
     if (!ScrollViewerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SelectorBarItemAutomationPeer_Static{PyType_FromSpec(&type_spec_SelectorBarItemAutomationPeer_Static)};
+    py::pyobj_handle SelectorBarItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ItemContainerAutomationPeer_type.get())))};
+    if (!SelectorBarItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SelectorBarItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SelectorBarItemAutomationPeer_Static, SelectorBarItemAutomationPeer_Static_bases.get())};
     if (!type_SelectorBarItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SelectorBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorBarItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorBarItemAutomationPeer_Static.get()))};
+    py::pyobj_handle SelectorBarItemAutomationPeer_bases{PyTuple_Pack(1, ItemContainerAutomationPeer_type.get())};
+    if (!SelectorBarItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SelectorBarItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SelectorBarItemAutomationPeer, SelectorBarItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorBarItemAutomationPeer_Static.get()))};
     if (!SelectorBarItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SemanticZoomAutomationPeer_Static{PyType_FromSpec(&type_spec_SemanticZoomAutomationPeer_Static)};
+    py::pyobj_handle SemanticZoomAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!SemanticZoomAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SemanticZoomAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SemanticZoomAutomationPeer_Static, SemanticZoomAutomationPeer_Static_bases.get())};
     if (!type_SemanticZoomAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SemanticZoomAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SemanticZoomAutomationPeer_Static.get()))};
+    py::pyobj_handle SemanticZoomAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!SemanticZoomAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SemanticZoomAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SemanticZoomAutomationPeer, SemanticZoomAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SemanticZoomAutomationPeer_Static.get()))};
     if (!SemanticZoomAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplitButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_SplitButtonAutomationPeer_Static)};
+    py::pyobj_handle SplitButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!SplitButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplitButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_SplitButtonAutomationPeer_Static, SplitButtonAutomationPeer_Static_bases.get())};
     if (!type_SplitButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SplitButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle SplitButtonAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!SplitButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_SplitButtonAutomationPeer, SplitButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitButtonAutomationPeer_Static.get()))};
     if (!SplitButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TabViewAutomationPeer_Static{PyType_FromSpec(&type_spec_TabViewAutomationPeer_Static)};
+    py::pyobj_handle TabViewAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!TabViewAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TabViewAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TabViewAutomationPeer_Static, TabViewAutomationPeer_Static_bases.get())};
     if (!type_TabViewAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TabViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewAutomationPeer_Static.get()))};
+    py::pyobj_handle TabViewAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TabViewAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TabViewAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewAutomationPeer, TabViewAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewAutomationPeer_Static.get()))};
     if (!TabViewAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TabViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_TabViewItemAutomationPeer_Static)};
+    py::pyobj_handle TabViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewItemAutomationPeer_type.get())))};
+    if (!TabViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TabViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TabViewItemAutomationPeer_Static, TabViewItemAutomationPeer_Static_bases.get())};
     if (!type_TabViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TabViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle TabViewItemAutomationPeer_bases{PyTuple_Pack(1, ListViewItemAutomationPeer_type.get())};
+    if (!TabViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TabViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TabViewItemAutomationPeer, TabViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewItemAutomationPeer_Static.get()))};
     if (!TabViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TeachingTipAutomationPeer_Static{PyType_FromSpec(&type_spec_TeachingTipAutomationPeer_Static)};
+    py::pyobj_handle TeachingTipAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!TeachingTipAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TeachingTipAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TeachingTipAutomationPeer_Static, TeachingTipAutomationPeer_Static_bases.get())};
     if (!type_TeachingTipAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TeachingTipAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TeachingTipAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TeachingTipAutomationPeer_Static.get()))};
+    py::pyobj_handle TeachingTipAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TeachingTipAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TeachingTipAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TeachingTipAutomationPeer, TeachingTipAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TeachingTipAutomationPeer_Static.get()))};
     if (!TeachingTipAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TextBlockAutomationPeer_Static{PyType_FromSpec(&type_spec_TextBlockAutomationPeer_Static)};
+    py::pyobj_handle TextBlockAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!TextBlockAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextBlockAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TextBlockAutomationPeer_Static, TextBlockAutomationPeer_Static_bases.get())};
     if (!type_TextBlockAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBlockAutomationPeer_Static.get()))};
+    py::pyobj_handle TextBlockAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TextBlockAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextBlockAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBlockAutomationPeer, TextBlockAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBlockAutomationPeer_Static.get()))};
     if (!TextBlockAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TextBoxAutomationPeer_Static{PyType_FromSpec(&type_spec_TextBoxAutomationPeer_Static)};
+    py::pyobj_handle TextBoxAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!TextBoxAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextBoxAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TextBoxAutomationPeer_Static, TextBoxAutomationPeer_Static_bases.get())};
     if (!type_TextBoxAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBoxAutomationPeer_Static.get()))};
+    py::pyobj_handle TextBoxAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TextBoxAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextBoxAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TextBoxAutomationPeer, TextBoxAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextBoxAutomationPeer_Static.get()))};
     if (!TextBoxAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ThumbAutomationPeer_Static{PyType_FromSpec(&type_spec_ThumbAutomationPeer_Static)};
+    py::pyobj_handle ThumbAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ThumbAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ThumbAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ThumbAutomationPeer_Static, ThumbAutomationPeer_Static_bases.get())};
     if (!type_ThumbAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ThumbAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThumbAutomationPeer_Static.get()))};
+    py::pyobj_handle ThumbAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ThumbAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ThumbAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ThumbAutomationPeer, ThumbAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ThumbAutomationPeer_Static.get()))};
     if (!ThumbAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TimePickerAutomationPeer_Static{PyType_FromSpec(&type_spec_TimePickerAutomationPeer_Static)};
+    py::pyobj_handle TimePickerAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!TimePickerAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TimePickerAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TimePickerAutomationPeer_Static, TimePickerAutomationPeer_Static_bases.get())};
     if (!type_TimePickerAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerAutomationPeer_Static.get()))};
+    py::pyobj_handle TimePickerAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TimePickerAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TimePickerAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerAutomationPeer, TimePickerAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerAutomationPeer_Static.get()))};
     if (!TimePickerAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, object_bases.get(), nullptr)};
+    py::pyobj_handle TimePickerFlyoutPresenterAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!TimePickerFlyoutPresenterAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TimePickerFlyoutPresenterAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyoutPresenterAutomationPeer, TimePickerFlyoutPresenterAutomationPeer_bases.get(), nullptr)};
     if (!TimePickerFlyoutPresenterAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ToggleMenuFlyoutItemAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleMenuFlyoutItemAutomationPeer_Static)};
+    py::pyobj_handle ToggleMenuFlyoutItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ToggleMenuFlyoutItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ToggleMenuFlyoutItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ToggleMenuFlyoutItemAutomationPeer_Static, ToggleMenuFlyoutItemAutomationPeer_Static_bases.get())};
     if (!type_ToggleMenuFlyoutItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleMenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleMenuFlyoutItemAutomationPeer_Static.get()))};
+    py::pyobj_handle ToggleMenuFlyoutItemAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ToggleMenuFlyoutItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleMenuFlyoutItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleMenuFlyoutItemAutomationPeer, ToggleMenuFlyoutItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleMenuFlyoutItemAutomationPeer_Static.get()))};
     if (!ToggleMenuFlyoutItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ToggleSplitButtonAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleSplitButtonAutomationPeer_Static)};
+    py::pyobj_handle ToggleSplitButtonAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ToggleSplitButtonAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ToggleSplitButtonAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ToggleSplitButtonAutomationPeer_Static, ToggleSplitButtonAutomationPeer_Static_bases.get())};
     if (!type_ToggleSplitButtonAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleSplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSplitButtonAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSplitButtonAutomationPeer_Static.get()))};
+    py::pyobj_handle ToggleSplitButtonAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ToggleSplitButtonAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleSplitButtonAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSplitButtonAutomationPeer, ToggleSplitButtonAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSplitButtonAutomationPeer_Static.get()))};
     if (!ToggleSplitButtonAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ToggleSwitchAutomationPeer_Static{PyType_FromSpec(&type_spec_ToggleSwitchAutomationPeer_Static)};
+    py::pyobj_handle ToggleSwitchAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!ToggleSwitchAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ToggleSwitchAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_ToggleSwitchAutomationPeer_Static, ToggleSwitchAutomationPeer_Static_bases.get())};
     if (!type_ToggleSwitchAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ToggleSwitchAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSwitchAutomationPeer_Static.get()))};
+    py::pyobj_handle ToggleSwitchAutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!ToggleSwitchAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ToggleSwitchAutomationPeer_type{py::register_python_type(module.get(), &type_spec_ToggleSwitchAutomationPeer, ToggleSwitchAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_ToggleSwitchAutomationPeer_Static.get()))};
     if (!ToggleSwitchAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TreeViewItemAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewItemAutomationPeer_Static)};
+    py::pyobj_handle TreeViewItemAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewItemAutomationPeer_type.get())))};
+    if (!TreeViewItemAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TreeViewItemAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TreeViewItemAutomationPeer_Static, TreeViewItemAutomationPeer_Static_bases.get())};
     if (!type_TreeViewItemAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemAutomationPeer_Static.get()))};
+    py::pyobj_handle TreeViewItemAutomationPeer_bases{PyTuple_Pack(1, ListViewItemAutomationPeer_type.get())};
+    if (!TreeViewItemAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewItemAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemAutomationPeer, TreeViewItemAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemAutomationPeer_Static.get()))};
     if (!TreeViewItemAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TreeViewItemDataAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewItemDataAutomationPeer_Static)};
+    py::pyobj_handle TreeViewItemDataAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ItemAutomationPeer_type.get())))};
+    if (!TreeViewItemDataAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TreeViewItemDataAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TreeViewItemDataAutomationPeer_Static, TreeViewItemDataAutomationPeer_Static_bases.get())};
     if (!type_TreeViewItemDataAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemDataAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemDataAutomationPeer_Static.get()))};
+    py::pyobj_handle TreeViewItemDataAutomationPeer_bases{PyTuple_Pack(1, ItemAutomationPeer_type.get())};
+    if (!TreeViewItemDataAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewItemDataAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewItemDataAutomationPeer, TreeViewItemDataAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItemDataAutomationPeer_Static.get()))};
     if (!TreeViewItemDataAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TreeViewListAutomationPeer_Static{PyType_FromSpec(&type_spec_TreeViewListAutomationPeer_Static)};
+    py::pyobj_handle TreeViewListAutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewAutomationPeer_type.get())))};
+    if (!TreeViewListAutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TreeViewListAutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_TreeViewListAutomationPeer_Static, TreeViewListAutomationPeer_Static_bases.get())};
     if (!type_TreeViewListAutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewListAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewListAutomationPeer_Static.get()))};
+    py::pyobj_handle TreeViewListAutomationPeer_bases{PyTuple_Pack(1, ListViewAutomationPeer_type.get())};
+    if (!TreeViewListAutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewListAutomationPeer_type{py::register_python_type(module.get(), &type_spec_TreeViewListAutomationPeer, TreeViewListAutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewListAutomationPeer_Static.get()))};
     if (!TreeViewListAutomationPeer_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WebView2AutomationPeer_Static{PyType_FromSpec(&type_spec_WebView2AutomationPeer_Static)};
+    py::pyobj_handle WebView2AutomationPeer_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(FrameworkElementAutomationPeer_type.get())))};
+    if (!WebView2AutomationPeer_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WebView2AutomationPeer_Static{PyType_FromSpecWithBases(&type_spec_WebView2AutomationPeer_Static, WebView2AutomationPeer_Static_bases.get())};
     if (!type_WebView2AutomationPeer_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle WebView2AutomationPeer_type{py::register_python_type(module.get(), &type_spec_WebView2AutomationPeer, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebView2AutomationPeer_Static.get()))};
+    py::pyobj_handle WebView2AutomationPeer_bases{PyTuple_Pack(1, FrameworkElementAutomationPeer_type.get())};
+    if (!WebView2AutomationPeer_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WebView2AutomationPeer_type{py::register_python_type(module.get(), &type_spec_WebView2AutomationPeer, WebView2AutomationPeer_bases.get(), reinterpret_cast<PyTypeObject*>(type_WebView2AutomationPeer_Static.get()))};
     if (!WebView2AutomationPeer_type)
     {
         return nullptr;

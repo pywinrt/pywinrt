@@ -364,25 +364,67 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives_2(void) noexc
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorPickerSlider_Static{PyType_FromSpec(&type_spec_ColorPickerSlider_Static)};
+    py::pyobj_handle microsoft_ui_xaml_controls_2_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml_controls_2")};
+    if (!microsoft_ui_xaml_controls_2_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_Slider_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "Slider")};
+    if (!microsoft_ui_xaml_controls_Slider_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_controls_ListView_type{PyObject_GetAttrString(microsoft_ui_xaml_controls_2_module.get(), "ListView")};
+    if (!microsoft_ui_xaml_controls_ListView_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ColorPickerSlider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_controls_Slider_type.get())))};
+    if (!ColorPickerSlider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorPickerSlider_Static{PyType_FromSpecWithBases(&type_spec_ColorPickerSlider_Static, ColorPickerSlider_Static_bases.get())};
     if (!type_ColorPickerSlider_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorPickerSlider_type{py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get()))};
+    py::pyobj_handle ColorPickerSlider_bases{PyTuple_Pack(1, microsoft_ui_xaml_controls_Slider_type.get())};
+    if (!ColorPickerSlider_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorPickerSlider_type{py::register_python_type(module.get(), &type_spec_ColorPickerSlider, ColorPickerSlider_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get()))};
     if (!ColorPickerSlider_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TabViewListView_Static{PyType_FromSpec(&type_spec_TabViewListView_Static)};
+    py::pyobj_handle TabViewListView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_controls_ListView_type.get())))};
+    if (!TabViewListView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TabViewListView_Static{PyType_FromSpecWithBases(&type_spec_TabViewListView_Static, TabViewListView_Static_bases.get())};
     if (!type_TabViewListView_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TabViewListView_type{py::register_python_type(module.get(), &type_spec_TabViewListView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewListView_Static.get()))};
+    py::pyobj_handle TabViewListView_bases{PyTuple_Pack(1, microsoft_ui_xaml_controls_ListView_type.get())};
+    if (!TabViewListView_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TabViewListView_type{py::register_python_type(module.get(), &type_spec_TabViewListView, TabViewListView_bases.get(), reinterpret_cast<PyTypeObject*>(type_TabViewListView_Static.get()))};
     if (!TabViewListView_type)
     {
         return nullptr;

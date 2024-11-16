@@ -14257,7 +14257,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputActivationListener_type{py::register_python_type(module.get(), &type_spec_InputActivationListener, object_bases.get(), nullptr)};
+    py::pyobj_handle InputActivationListener_bases{PyTuple_Pack(1, AttachableInputObject_type.get())};
+    if (!InputActivationListener_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputActivationListener_type{py::register_python_type(module.get(), &type_spec_InputActivationListener, InputActivationListener_bases.get(), nullptr)};
     if (!InputActivationListener_type)
     {
         return nullptr;
@@ -14455,13 +14461,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SystemButtonEventController_Static{PyType_FromSpec(&type_spec_SystemButtonEventController_Static)};
+    py::pyobj_handle SystemButtonEventController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AttachableInputObject_type.get())))};
+    if (!SystemButtonEventController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SystemButtonEventController_Static{PyType_FromSpecWithBases(&type_spec_SystemButtonEventController_Static, SystemButtonEventController_Static_bases.get())};
     if (!type_SystemButtonEventController_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SystemButtonEventController_type{py::register_python_type(module.get(), &type_spec_SystemButtonEventController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemButtonEventController_Static.get()))};
+    py::pyobj_handle SystemButtonEventController_bases{PyTuple_Pack(1, AttachableInputObject_type.get())};
+    if (!SystemButtonEventController_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SystemButtonEventController_type{py::register_python_type(module.get(), &type_spec_SystemButtonEventController, SystemButtonEventController_bases.get(), reinterpret_cast<PyTypeObject*>(type_SystemButtonEventController_Static.get()))};
     if (!SystemButtonEventController_type)
     {
         return nullptr;

@@ -20019,625 +20019,1303 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Button_Static{PyType_FromSpec(&type_spec_Button_Static)};
+    py::pyobj_handle windows_ui_xaml_controls_primitives_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_primitives")};
+    if (!windows_ui_xaml_controls_primitives_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_ToggleButton_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "ToggleButton")};
+    if (!windows_ui_xaml_controls_primitives_ToggleButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_ButtonBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "ButtonBase")};
+    if (!windows_ui_xaml_controls_primitives_ButtonBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_Selector_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "Selector")};
+    if (!windows_ui_xaml_controls_primitives_Selector_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_SelectorItem_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "SelectorItem")};
+    if (!windows_ui_xaml_controls_primitives_SelectorItem_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_FlyoutBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "FlyoutBase")};
+    if (!windows_ui_xaml_controls_primitives_FlyoutBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_PickerFlyoutBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "PickerFlyoutBase")};
+    if (!windows_ui_xaml_controls_primitives_PickerFlyoutBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_RangeBase_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "RangeBase")};
+    if (!windows_ui_xaml_controls_primitives_RangeBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type{PyObject_GetAttrString(windows_ui_xaml_controls_primitives_module.get(), "OrientedVirtualizingPanel")};
+    if (!windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Button_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ButtonBase_type.get())))};
+    if (!Button_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Button_Static{PyType_FromSpecWithBases(&type_spec_Button_Static, Button_Static_bases.get())};
     if (!type_Button_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
+    py::pyobj_handle Button_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ButtonBase_type.get())};
+    if (!Button_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, Button_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
     if (!Button_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppBarButton_Static{PyType_FromSpec(&type_spec_AppBarButton_Static)};
+    py::pyobj_handle AppBarButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Button_type.get())))};
+    if (!AppBarButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppBarButton_Static{PyType_FromSpecWithBases(&type_spec_AppBarButton_Static, AppBarButton_Static_bases.get())};
     if (!type_AppBarButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarButton_type{py::register_python_type(module.get(), &type_spec_AppBarButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarButton_Static.get()))};
+    py::pyobj_handle AppBarButton_bases{PyTuple_Pack(1, Button_type.get())};
+    if (!AppBarButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarButton_type{py::register_python_type(module.get(), &type_spec_AppBarButton, AppBarButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarButton_Static.get()))};
     if (!AppBarButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_AppBarToggleButton_Static{PyType_FromSpec(&type_spec_AppBarToggleButton_Static)};
+    py::pyobj_handle AppBarToggleButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ToggleButton_type.get())))};
+    if (!AppBarToggleButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AppBarToggleButton_Static{PyType_FromSpecWithBases(&type_spec_AppBarToggleButton_Static, AppBarToggleButton_Static_bases.get())};
     if (!type_AppBarToggleButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AppBarToggleButton_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButton_Static.get()))};
+    py::pyobj_handle AppBarToggleButton_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ToggleButton_type.get())};
+    if (!AppBarToggleButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AppBarToggleButton_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButton, AppBarToggleButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButton_Static.get()))};
     if (!AppBarToggleButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CheckBox_Static{PyType_FromSpec(&type_spec_CheckBox_Static)};
+    py::pyobj_handle CheckBox_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ToggleButton_type.get())))};
+    if (!CheckBox_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CheckBox_Static{PyType_FromSpecWithBases(&type_spec_CheckBox_Static, CheckBox_Static_bases.get())};
     if (!type_CheckBox_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBox_Static.get()))};
+    py::pyobj_handle CheckBox_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ToggleButton_type.get())};
+    if (!CheckBox_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CheckBox_type{py::register_python_type(module.get(), &type_spec_CheckBox, CheckBox_bases.get(), reinterpret_cast<PyTypeObject*>(type_CheckBox_Static.get()))};
     if (!CheckBox_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComboBox_Static{PyType_FromSpec(&type_spec_ComboBox_Static)};
+    py::pyobj_handle ComboBox_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_Selector_type.get())))};
+    if (!ComboBox_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComboBox_Static{PyType_FromSpecWithBases(&type_spec_ComboBox_Static, ComboBox_Static_bases.get())};
     if (!type_ComboBox_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBox_type{py::register_python_type(module.get(), &type_spec_ComboBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBox_Static.get()))};
+    py::pyobj_handle ComboBox_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_Selector_type.get())};
+    if (!ComboBox_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBox_type{py::register_python_type(module.get(), &type_spec_ComboBox, ComboBox_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBox_Static.get()))};
     if (!ComboBox_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ComboBoxItem_Static{PyType_FromSpec(&type_spec_ComboBoxItem_Static)};
+    py::pyobj_handle ComboBoxItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_SelectorItem_type.get())))};
+    if (!ComboBoxItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ComboBoxItem_Static{PyType_FromSpecWithBases(&type_spec_ComboBoxItem_Static, ComboBoxItem_Static_bases.get())};
     if (!type_ComboBoxItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItem_Static.get()))};
+    py::pyobj_handle ComboBoxItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_SelectorItem_type.get())};
+    if (!ComboBoxItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ComboBoxItem_type{py::register_python_type(module.get(), &type_spec_ComboBoxItem, ComboBoxItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_ComboBoxItem_Static.get()))};
     if (!ComboBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CommandBarFlyout_Static{PyType_FromSpec(&type_spec_CommandBarFlyout_Static)};
+    py::pyobj_handle CommandBarFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_FlyoutBase_type.get())))};
+    if (!CommandBarFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CommandBarFlyout_Static{PyType_FromSpecWithBases(&type_spec_CommandBarFlyout_Static, CommandBarFlyout_Static_bases.get())};
     if (!type_CommandBarFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyout_Static.get()))};
+    py::pyobj_handle CommandBarFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_FlyoutBase_type.get())};
+    if (!CommandBarFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_CommandBarFlyout, CommandBarFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommandBarFlyout_Static.get()))};
     if (!CommandBarFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DatePickerFlyout_Static{PyType_FromSpec(&type_spec_DatePickerFlyout_Static)};
+    py::pyobj_handle DatePickerFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())))};
+    if (!DatePickerFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DatePickerFlyout_Static{PyType_FromSpecWithBases(&type_spec_DatePickerFlyout_Static, DatePickerFlyout_Static_bases.get())};
     if (!type_DatePickerFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DatePickerFlyout_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerFlyout_Static.get()))};
+    py::pyobj_handle DatePickerFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())};
+    if (!DatePickerFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DatePickerFlyout_type{py::register_python_type(module.get(), &type_spec_DatePickerFlyout, DatePickerFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_DatePickerFlyout_Static.get()))};
     if (!DatePickerFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DropDownButton_Static{PyType_FromSpec(&type_spec_DropDownButton_Static)};
+    py::pyobj_handle DropDownButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Button_type.get())))};
+    if (!DropDownButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DropDownButton_Static{PyType_FromSpecWithBases(&type_spec_DropDownButton_Static, DropDownButton_Static_bases.get())};
     if (!type_DropDownButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButton_Static.get()))};
+    py::pyobj_handle DropDownButton_bases{PyTuple_Pack(1, Button_type.get())};
+    if (!DropDownButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropDownButton_type{py::register_python_type(module.get(), &type_spec_DropDownButton, DropDownButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropDownButton_Static.get()))};
     if (!DropDownButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlipView_Static{PyType_FromSpec(&type_spec_FlipView_Static)};
+    py::pyobj_handle FlipView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_Selector_type.get())))};
+    if (!FlipView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlipView_Static{PyType_FromSpecWithBases(&type_spec_FlipView_Static, FlipView_Static_bases.get())};
     if (!type_FlipView_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipView_type{py::register_python_type(module.get(), &type_spec_FlipView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipView_Static.get()))};
+    py::pyobj_handle FlipView_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_Selector_type.get())};
+    if (!FlipView_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipView_type{py::register_python_type(module.get(), &type_spec_FlipView, FlipView_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipView_Static.get()))};
     if (!FlipView_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FlipViewItem_Static{PyType_FromSpec(&type_spec_FlipViewItem_Static)};
+    py::pyobj_handle FlipViewItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_SelectorItem_type.get())))};
+    if (!FlipViewItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FlipViewItem_Static{PyType_FromSpecWithBases(&type_spec_FlipViewItem_Static, FlipViewItem_Static_bases.get())};
     if (!type_FlipViewItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItem_Static.get()))};
+    py::pyobj_handle FlipViewItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_SelectorItem_type.get())};
+    if (!FlipViewItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FlipViewItem_type{py::register_python_type(module.get(), &type_spec_FlipViewItem, FlipViewItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_FlipViewItem_Static.get()))};
     if (!FlipViewItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Flyout_Static{PyType_FromSpec(&type_spec_Flyout_Static)};
+    py::pyobj_handle Flyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_FlyoutBase_type.get())))};
+    if (!Flyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Flyout_Static{PyType_FromSpecWithBases(&type_spec_Flyout_Static, Flyout_Static_bases.get())};
     if (!type_Flyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Flyout_type{py::register_python_type(module.get(), &type_spec_Flyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Flyout_Static.get()))};
+    py::pyobj_handle Flyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_FlyoutBase_type.get())};
+    if (!Flyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Flyout_type{py::register_python_type(module.get(), &type_spec_Flyout, Flyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_Flyout_Static.get()))};
     if (!Flyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpec(&type_spec_ListViewBase_Static)};
+    py::pyobj_handle ListViewBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_Selector_type.get())))};
+    if (!ListViewBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpecWithBases(&type_spec_ListViewBase_Static, ListViewBase_Static_bases.get())};
     if (!type_ListViewBase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
+    py::pyobj_handle ListViewBase_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_Selector_type.get())};
+    if (!ListViewBase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, ListViewBase_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
     if (!ListViewBase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridView_Static{PyType_FromSpec(&type_spec_GridView_Static)};
+    py::pyobj_handle GridView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBase_type.get())))};
+    if (!GridView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridView_Static{PyType_FromSpecWithBases(&type_spec_GridView_Static, GridView_Static_bases.get())};
     if (!type_GridView_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridView_Static.get()))};
+    py::pyobj_handle GridView_bases{PyTuple_Pack(1, ListViewBase_type.get())};
+    if (!GridView_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridView_type{py::register_python_type(module.get(), &type_spec_GridView, GridView_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridView_Static.get()))};
     if (!GridView_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GridViewItem_Static{PyType_FromSpec(&type_spec_GridViewItem_Static)};
+    py::pyobj_handle GridViewItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_SelectorItem_type.get())))};
+    if (!GridViewItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GridViewItem_Static{PyType_FromSpecWithBases(&type_spec_GridViewItem_Static, GridViewItem_Static_bases.get())};
     if (!type_GridViewItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItem_Static.get()))};
+    py::pyobj_handle GridViewItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_SelectorItem_type.get())};
+    if (!GridViewItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GridViewItem_type{py::register_python_type(module.get(), &type_spec_GridViewItem, GridViewItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_GridViewItem_Static.get()))};
     if (!GridViewItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_HyperlinkButton_Static{PyType_FromSpec(&type_spec_HyperlinkButton_Static)};
+    py::pyobj_handle HyperlinkButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ButtonBase_type.get())))};
+    if (!HyperlinkButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_HyperlinkButton_Static{PyType_FromSpecWithBases(&type_spec_HyperlinkButton_Static, HyperlinkButton_Static_bases.get())};
     if (!type_HyperlinkButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle HyperlinkButton_type{py::register_python_type(module.get(), &type_spec_HyperlinkButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_HyperlinkButton_Static.get()))};
+    py::pyobj_handle HyperlinkButton_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ButtonBase_type.get())};
+    if (!HyperlinkButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HyperlinkButton_type{py::register_python_type(module.get(), &type_spec_HyperlinkButton, HyperlinkButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_HyperlinkButton_Static.get()))};
     if (!HyperlinkButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RadioButton_Static{PyType_FromSpec(&type_spec_RadioButton_Static)};
+    py::pyobj_handle RadioButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ToggleButton_type.get())))};
+    if (!RadioButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RadioButton_Static{PyType_FromSpecWithBases(&type_spec_RadioButton_Static, RadioButton_Static_bases.get())};
     if (!type_RadioButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RadioButton_type{py::register_python_type(module.get(), &type_spec_RadioButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButton_Static.get()))};
+    py::pyobj_handle RadioButton_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ToggleButton_type.get())};
+    if (!RadioButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButton_type{py::register_python_type(module.get(), &type_spec_RadioButton, RadioButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButton_Static.get()))};
     if (!RadioButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarToolButton_Static{PyType_FromSpec(&type_spec_InkToolbarToolButton_Static)};
+    py::pyobj_handle InkToolbarToolButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(RadioButton_type.get())))};
+    if (!InkToolbarToolButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarToolButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarToolButton_Static, InkToolbarToolButton_Static_bases.get())};
     if (!type_InkToolbarToolButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToolButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToolButton_Static.get()))};
+    py::pyobj_handle InkToolbarToolButton_bases{PyTuple_Pack(1, RadioButton_type.get())};
+    if (!InkToolbarToolButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToolButton, InkToolbarToolButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToolButton_Static.get()))};
     if (!InkToolbarToolButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarPenButton_Static)};
+    py::pyobj_handle InkToolbarPenButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarToolButton_type.get())))};
+    if (!InkToolbarPenButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarPenButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarPenButton_Static, InkToolbarPenButton_Static_bases.get())};
     if (!type_InkToolbarPenButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPenButton_Static.get()))};
+    py::pyobj_handle InkToolbarPenButton_bases{PyTuple_Pack(1, InkToolbarToolButton_type.get())};
+    if (!InkToolbarPenButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPenButton, InkToolbarPenButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPenButton_Static.get()))};
     if (!InkToolbarPenButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarBallpointPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarBallpointPenButton_Static)};
+    py::pyobj_handle InkToolbarBallpointPenButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarPenButton_type.get())))};
+    if (!InkToolbarBallpointPenButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarBallpointPenButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarBallpointPenButton_Static, InkToolbarBallpointPenButton_Static_bases.get())};
     if (!type_InkToolbarBallpointPenButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarBallpointPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarBallpointPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarBallpointPenButton_Static.get()))};
+    py::pyobj_handle InkToolbarBallpointPenButton_bases{PyTuple_Pack(1, InkToolbarPenButton_type.get())};
+    if (!InkToolbarBallpointPenButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarBallpointPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarBallpointPenButton, InkToolbarBallpointPenButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarBallpointPenButton_Static.get()))};
     if (!InkToolbarBallpointPenButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarCustomPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarCustomPenButton_Static)};
+    py::pyobj_handle InkToolbarCustomPenButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarPenButton_type.get())))};
+    if (!InkToolbarCustomPenButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarCustomPenButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarCustomPenButton_Static, InkToolbarCustomPenButton_Static_bases.get())};
     if (!type_InkToolbarCustomPenButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarCustomPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomPenButton_Static.get()))};
+    py::pyobj_handle InkToolbarCustomPenButton_bases{PyTuple_Pack(1, InkToolbarPenButton_type.get())};
+    if (!InkToolbarCustomPenButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarCustomPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomPenButton, InkToolbarCustomPenButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomPenButton_Static.get()))};
     if (!InkToolbarCustomPenButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarToggleButton_Static)};
+    py::pyobj_handle InkToolbarToggleButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CheckBox_type.get())))};
+    if (!InkToolbarToggleButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarToggleButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarToggleButton_Static, InkToolbarToggleButton_Static_bases.get())};
     if (!type_InkToolbarToggleButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToggleButton_Static.get()))};
+    py::pyobj_handle InkToolbarToggleButton_bases{PyTuple_Pack(1, CheckBox_type.get())};
+    if (!InkToolbarToggleButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, InkToolbarToggleButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToggleButton_Static.get()))};
     if (!InkToolbarToggleButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarCustomToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarCustomToggleButton_Static)};
+    py::pyobj_handle InkToolbarCustomToggleButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarToggleButton_type.get())))};
+    if (!InkToolbarCustomToggleButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarCustomToggleButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarCustomToggleButton_Static, InkToolbarCustomToggleButton_Static_bases.get())};
     if (!type_InkToolbarCustomToggleButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarCustomToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomToggleButton_Static.get()))};
+    py::pyobj_handle InkToolbarCustomToggleButton_bases{PyTuple_Pack(1, InkToolbarToggleButton_type.get())};
+    if (!InkToolbarCustomToggleButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarCustomToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToggleButton, InkToolbarCustomToggleButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomToggleButton_Static.get()))};
     if (!InkToolbarCustomToggleButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarCustomToolButton_Static{PyType_FromSpec(&type_spec_InkToolbarCustomToolButton_Static)};
+    py::pyobj_handle InkToolbarCustomToolButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarToolButton_type.get())))};
+    if (!InkToolbarCustomToolButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarCustomToolButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarCustomToolButton_Static, InkToolbarCustomToolButton_Static_bases.get())};
     if (!type_InkToolbarCustomToolButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarCustomToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToolButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomToolButton_Static.get()))};
+    py::pyobj_handle InkToolbarCustomToolButton_bases{PyTuple_Pack(1, InkToolbarToolButton_type.get())};
+    if (!InkToolbarCustomToolButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarCustomToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomToolButton, InkToolbarCustomToolButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomToolButton_Static.get()))};
     if (!InkToolbarCustomToolButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarEraserButton_Static{PyType_FromSpec(&type_spec_InkToolbarEraserButton_Static)};
+    py::pyobj_handle InkToolbarEraserButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarToolButton_type.get())))};
+    if (!InkToolbarEraserButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarEraserButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarEraserButton_Static, InkToolbarEraserButton_Static_bases.get())};
     if (!type_InkToolbarEraserButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarEraserButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarEraserButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarEraserButton_Static.get()))};
+    py::pyobj_handle InkToolbarEraserButton_bases{PyTuple_Pack(1, InkToolbarToolButton_type.get())};
+    if (!InkToolbarEraserButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarEraserButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarEraserButton, InkToolbarEraserButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarEraserButton_Static.get()))};
     if (!InkToolbarEraserButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarFlyoutItem_Static{PyType_FromSpec(&type_spec_InkToolbarFlyoutItem_Static)};
+    py::pyobj_handle InkToolbarFlyoutItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ButtonBase_type.get())))};
+    if (!InkToolbarFlyoutItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarFlyoutItem_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarFlyoutItem_Static, InkToolbarFlyoutItem_Static_bases.get())};
     if (!type_InkToolbarFlyoutItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarFlyoutItem_type{py::register_python_type(module.get(), &type_spec_InkToolbarFlyoutItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarFlyoutItem_Static.get()))};
+    py::pyobj_handle InkToolbarFlyoutItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ButtonBase_type.get())};
+    if (!InkToolbarFlyoutItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarFlyoutItem_type{py::register_python_type(module.get(), &type_spec_InkToolbarFlyoutItem, InkToolbarFlyoutItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarFlyoutItem_Static.get()))};
     if (!InkToolbarFlyoutItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarHighlighterButton_Static{PyType_FromSpec(&type_spec_InkToolbarHighlighterButton_Static)};
+    py::pyobj_handle InkToolbarHighlighterButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarPenButton_type.get())))};
+    if (!InkToolbarHighlighterButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarHighlighterButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarHighlighterButton_Static, InkToolbarHighlighterButton_Static_bases.get())};
     if (!type_InkToolbarHighlighterButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarHighlighterButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarHighlighterButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarHighlighterButton_Static.get()))};
+    py::pyobj_handle InkToolbarHighlighterButton_bases{PyTuple_Pack(1, InkToolbarPenButton_type.get())};
+    if (!InkToolbarHighlighterButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarHighlighterButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarHighlighterButton, InkToolbarHighlighterButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarHighlighterButton_Static.get()))};
     if (!InkToolbarHighlighterButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarMenuButton_Static{PyType_FromSpec(&type_spec_InkToolbarMenuButton_Static)};
+    py::pyobj_handle InkToolbarMenuButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_ToggleButton_type.get())))};
+    if (!InkToolbarMenuButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarMenuButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarMenuButton_Static, InkToolbarMenuButton_Static_bases.get())};
     if (!type_InkToolbarMenuButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarMenuButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarMenuButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarMenuButton_Static.get()))};
+    py::pyobj_handle InkToolbarMenuButton_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_ToggleButton_type.get())};
+    if (!InkToolbarMenuButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarMenuButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarMenuButton, InkToolbarMenuButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarMenuButton_Static.get()))};
     if (!InkToolbarMenuButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarPencilButton_Static{PyType_FromSpec(&type_spec_InkToolbarPencilButton_Static)};
+    py::pyobj_handle InkToolbarPencilButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarPenButton_type.get())))};
+    if (!InkToolbarPencilButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarPencilButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarPencilButton_Static, InkToolbarPencilButton_Static_bases.get())};
     if (!type_InkToolbarPencilButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarPencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPencilButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPencilButton_Static.get()))};
+    py::pyobj_handle InkToolbarPencilButton_bases{PyTuple_Pack(1, InkToolbarPenButton_type.get())};
+    if (!InkToolbarPencilButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarPencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPencilButton, InkToolbarPencilButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPencilButton_Static.get()))};
     if (!InkToolbarPencilButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarRulerButton_Static{PyType_FromSpec(&type_spec_InkToolbarRulerButton_Static)};
+    py::pyobj_handle InkToolbarRulerButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarToggleButton_type.get())))};
+    if (!InkToolbarRulerButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarRulerButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarRulerButton_Static, InkToolbarRulerButton_Static_bases.get())};
     if (!type_InkToolbarRulerButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarRulerButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarRulerButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarRulerButton_Static.get()))};
+    py::pyobj_handle InkToolbarRulerButton_bases{PyTuple_Pack(1, InkToolbarToggleButton_type.get())};
+    if (!InkToolbarRulerButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarRulerButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarRulerButton, InkToolbarRulerButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarRulerButton_Static.get()))};
     if (!InkToolbarRulerButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarStencilButton_Static{PyType_FromSpec(&type_spec_InkToolbarStencilButton_Static)};
+    py::pyobj_handle InkToolbarStencilButton_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InkToolbarMenuButton_type.get())))};
+    if (!InkToolbarStencilButton_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarStencilButton_Static{PyType_FromSpecWithBases(&type_spec_InkToolbarStencilButton_Static, InkToolbarStencilButton_Static_bases.get())};
     if (!type_InkToolbarStencilButton_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InkToolbarStencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarStencilButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarStencilButton_Static.get()))};
+    py::pyobj_handle InkToolbarStencilButton_bases{PyTuple_Pack(1, InkToolbarMenuButton_type.get())};
+    if (!InkToolbarStencilButton_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarStencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarStencilButton, InkToolbarStencilButton_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarStencilButton_Static.get()))};
     if (!InkToolbarStencilButton_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListBox_Static{PyType_FromSpec(&type_spec_ListBox_Static)};
+    py::pyobj_handle ListBox_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_Selector_type.get())))};
+    if (!ListBox_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListBox_Static{PyType_FromSpecWithBases(&type_spec_ListBox_Static, ListBox_Static_bases.get())};
     if (!type_ListBox_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBox_type{py::register_python_type(module.get(), &type_spec_ListBox, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBox_Static.get()))};
+    py::pyobj_handle ListBox_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_Selector_type.get())};
+    if (!ListBox_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBox_type{py::register_python_type(module.get(), &type_spec_ListBox, ListBox_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBox_Static.get()))};
     if (!ListBox_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListBoxItem_Static{PyType_FromSpec(&type_spec_ListBoxItem_Static)};
+    py::pyobj_handle ListBoxItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_SelectorItem_type.get())))};
+    if (!ListBoxItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListBoxItem_Static{PyType_FromSpecWithBases(&type_spec_ListBoxItem_Static, ListBoxItem_Static_bases.get())};
     if (!type_ListBoxItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItem_Static.get()))};
+    py::pyobj_handle ListBoxItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_SelectorItem_type.get())};
+    if (!ListBoxItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListBoxItem_type{py::register_python_type(module.get(), &type_spec_ListBoxItem, ListBoxItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListBoxItem_Static.get()))};
     if (!ListBoxItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListPickerFlyout_Static{PyType_FromSpec(&type_spec_ListPickerFlyout_Static)};
+    py::pyobj_handle ListPickerFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())))};
+    if (!ListPickerFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListPickerFlyout_Static{PyType_FromSpecWithBases(&type_spec_ListPickerFlyout_Static, ListPickerFlyout_Static_bases.get())};
     if (!type_ListPickerFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListPickerFlyout_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListPickerFlyout_Static.get()))};
+    py::pyobj_handle ListPickerFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())};
+    if (!ListPickerFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListPickerFlyout_type{py::register_python_type(module.get(), &type_spec_ListPickerFlyout, ListPickerFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListPickerFlyout_Static.get()))};
     if (!ListPickerFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListView_Static{PyType_FromSpec(&type_spec_ListView_Static)};
+    py::pyobj_handle ListView_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewBase_type.get())))};
+    if (!ListView_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListView_Static{PyType_FromSpecWithBases(&type_spec_ListView_Static, ListView_Static_bases.get())};
     if (!type_ListView_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListView_Static.get()))};
+    py::pyobj_handle ListView_bases{PyTuple_Pack(1, ListViewBase_type.get())};
+    if (!ListView_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListView_type{py::register_python_type(module.get(), &type_spec_ListView, ListView_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListView_Static.get()))};
     if (!ListView_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewItem_Static{PyType_FromSpec(&type_spec_ListViewItem_Static)};
+    py::pyobj_handle ListViewItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_SelectorItem_type.get())))};
+    if (!ListViewItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ListViewItem_Static{PyType_FromSpecWithBases(&type_spec_ListViewItem_Static, ListViewItem_Static_bases.get())};
     if (!type_ListViewItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItem_Static.get()))};
+    py::pyobj_handle ListViewItem_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_SelectorItem_type.get())};
+    if (!ListViewItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewItem_type{py::register_python_type(module.get(), &type_spec_ListViewItem, ListViewItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewItem_Static.get()))};
     if (!ListViewItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuFlyout_Static{PyType_FromSpec(&type_spec_MenuFlyout_Static)};
+    py::pyobj_handle MenuFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_FlyoutBase_type.get())))};
+    if (!MenuFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuFlyout_Static{PyType_FromSpecWithBases(&type_spec_MenuFlyout_Static, MenuFlyout_Static_bases.get())};
     if (!type_MenuFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuFlyout_type{py::register_python_type(module.get(), &type_spec_MenuFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyout_Static.get()))};
+    py::pyobj_handle MenuFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_FlyoutBase_type.get())};
+    if (!MenuFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuFlyout_type{py::register_python_type(module.get(), &type_spec_MenuFlyout, MenuFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuFlyout_Static.get()))};
     if (!MenuFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_MenuBarItemFlyout_Static{PyType_FromSpec(&type_spec_MenuBarItemFlyout_Static)};
+    py::pyobj_handle MenuBarItemFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(MenuFlyout_type.get())))};
+    if (!MenuBarItemFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_MenuBarItemFlyout_Static{PyType_FromSpecWithBases(&type_spec_MenuBarItemFlyout_Static, MenuBarItemFlyout_Static_bases.get())};
     if (!type_MenuBarItemFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle MenuBarItemFlyout_type{py::register_python_type(module.get(), &type_spec_MenuBarItemFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemFlyout_Static.get()))};
+    py::pyobj_handle MenuBarItemFlyout_bases{PyTuple_Pack(1, MenuFlyout_type.get())};
+    if (!MenuBarItemFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle MenuBarItemFlyout_type{py::register_python_type(module.get(), &type_spec_MenuBarItemFlyout, MenuBarItemFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_MenuBarItemFlyout_Static.get()))};
     if (!MenuBarItemFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItemBase_Static{PyType_FromSpec(&type_spec_NavigationViewItemBase_Static)};
+    py::pyobj_handle NavigationViewItemBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewItem_type.get())))};
+    if (!NavigationViewItemBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItemBase_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewItemBase_Static, NavigationViewItemBase_Static_bases.get())};
     if (!type_NavigationViewItemBase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemBase_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemBase_Static.get()))};
+    py::pyobj_handle NavigationViewItemBase_bases{PyTuple_Pack(1, ListViewItem_type.get())};
+    if (!NavigationViewItemBase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemBase_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemBase, NavigationViewItemBase_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemBase_Static.get()))};
     if (!NavigationViewItemBase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItem_Static{PyType_FromSpec(&type_spec_NavigationViewItem_Static)};
+    py::pyobj_handle NavigationViewItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationViewItemBase_type.get())))};
+    if (!NavigationViewItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItem_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewItem_Static, NavigationViewItem_Static_bases.get())};
     if (!type_NavigationViewItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItem_type{py::register_python_type(module.get(), &type_spec_NavigationViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItem_Static.get()))};
+    py::pyobj_handle NavigationViewItem_bases{PyTuple_Pack(1, NavigationViewItemBase_type.get())};
+    if (!NavigationViewItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItem_type{py::register_python_type(module.get(), &type_spec_NavigationViewItem, NavigationViewItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItem_Static.get()))};
     if (!NavigationViewItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItemHeader_Static{PyType_FromSpec(&type_spec_NavigationViewItemHeader_Static)};
+    py::pyobj_handle NavigationViewItemHeader_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationViewItemBase_type.get())))};
+    if (!NavigationViewItemHeader_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItemHeader_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewItemHeader_Static, NavigationViewItemHeader_Static_bases.get())};
     if (!type_NavigationViewItemHeader_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemHeader_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemHeader, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemHeader_Static.get()))};
+    py::pyobj_handle NavigationViewItemHeader_bases{PyTuple_Pack(1, NavigationViewItemBase_type.get())};
+    if (!NavigationViewItemHeader_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemHeader_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemHeader, NavigationViewItemHeader_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemHeader_Static.get()))};
     if (!NavigationViewItemHeader_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItemSeparator_Static{PyType_FromSpec(&type_spec_NavigationViewItemSeparator_Static)};
+    py::pyobj_handle NavigationViewItemSeparator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationViewItemBase_type.get())))};
+    if (!NavigationViewItemSeparator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItemSeparator_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewItemSeparator_Static, NavigationViewItemSeparator_Static_bases.get())};
     if (!type_NavigationViewItemSeparator_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewItemSeparator_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemSeparator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemSeparator_Static.get()))};
+    py::pyobj_handle NavigationViewItemSeparator_bases{PyTuple_Pack(1, NavigationViewItemBase_type.get())};
+    if (!NavigationViewItemSeparator_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItemSeparator_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemSeparator, NavigationViewItemSeparator_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemSeparator_Static.get()))};
     if (!NavigationViewItemSeparator_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewList_Static{PyType_FromSpec(&type_spec_NavigationViewList_Static)};
+    py::pyobj_handle NavigationViewList_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListView_type.get())))};
+    if (!NavigationViewList_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewList_Static{PyType_FromSpecWithBases(&type_spec_NavigationViewList_Static, NavigationViewList_Static_bases.get())};
     if (!type_NavigationViewList_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationViewList_type{py::register_python_type(module.get(), &type_spec_NavigationViewList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewList_Static.get()))};
+    py::pyobj_handle NavigationViewList_bases{PyTuple_Pack(1, ListView_type.get())};
+    if (!NavigationViewList_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewList_type{py::register_python_type(module.get(), &type_spec_NavigationViewList, NavigationViewList_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewList_Static.get()))};
     if (!NavigationViewList_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PickerFlyout_Static{PyType_FromSpec(&type_spec_PickerFlyout_Static)};
+    py::pyobj_handle PickerFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())))};
+    if (!PickerFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PickerFlyout_Static{PyType_FromSpecWithBases(&type_spec_PickerFlyout_Static, PickerFlyout_Static_bases.get())};
     if (!type_PickerFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PickerFlyout_type{py::register_python_type(module.get(), &type_spec_PickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyout_Static.get()))};
+    py::pyobj_handle PickerFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())};
+    if (!PickerFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PickerFlyout_type{py::register_python_type(module.get(), &type_spec_PickerFlyout, PickerFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_PickerFlyout_Static.get()))};
     if (!PickerFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ProgressBar_Static{PyType_FromSpec(&type_spec_ProgressBar_Static)};
+    py::pyobj_handle ProgressBar_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_RangeBase_type.get())))};
+    if (!ProgressBar_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ProgressBar_Static{PyType_FromSpecWithBases(&type_spec_ProgressBar_Static, ProgressBar_Static_bases.get())};
     if (!type_ProgressBar_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ProgressBar_type{py::register_python_type(module.get(), &type_spec_ProgressBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBar_Static.get()))};
+    py::pyobj_handle ProgressBar_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_RangeBase_type.get())};
+    if (!ProgressBar_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ProgressBar_type{py::register_python_type(module.get(), &type_spec_ProgressBar, ProgressBar_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBar_Static.get()))};
     if (!ProgressBar_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Slider_Static{PyType_FromSpec(&type_spec_Slider_Static)};
+    py::pyobj_handle Slider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_RangeBase_type.get())))};
+    if (!Slider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Slider_Static{PyType_FromSpecWithBases(&type_spec_Slider_Static, Slider_Static_bases.get())};
     if (!type_Slider_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Slider_type{py::register_python_type(module.get(), &type_spec_Slider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Slider_Static.get()))};
+    py::pyobj_handle Slider_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_RangeBase_type.get())};
+    if (!Slider_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Slider_type{py::register_python_type(module.get(), &type_spec_Slider, Slider_bases.get(), reinterpret_cast<PyTypeObject*>(type_Slider_Static.get()))};
     if (!Slider_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TextCommandBarFlyout_Static{PyType_FromSpec(&type_spec_TextCommandBarFlyout_Static)};
+    py::pyobj_handle TextCommandBarFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(CommandBarFlyout_type.get())))};
+    if (!TextCommandBarFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TextCommandBarFlyout_Static{PyType_FromSpecWithBases(&type_spec_TextCommandBarFlyout_Static, TextCommandBarFlyout_Static_bases.get())};
     if (!type_TextCommandBarFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TextCommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_TextCommandBarFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextCommandBarFlyout_Static.get()))};
+    py::pyobj_handle TextCommandBarFlyout_bases{PyTuple_Pack(1, CommandBarFlyout_type.get())};
+    if (!TextCommandBarFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextCommandBarFlyout_type{py::register_python_type(module.get(), &type_spec_TextCommandBarFlyout, TextCommandBarFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextCommandBarFlyout_Static.get()))};
     if (!TextCommandBarFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TimePickerFlyout_Static{PyType_FromSpec(&type_spec_TimePickerFlyout_Static)};
+    py::pyobj_handle TimePickerFlyout_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())))};
+    if (!TimePickerFlyout_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TimePickerFlyout_Static{PyType_FromSpecWithBases(&type_spec_TimePickerFlyout_Static, TimePickerFlyout_Static_bases.get())};
     if (!type_TimePickerFlyout_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TimePickerFlyout_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyout, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerFlyout_Static.get()))};
+    py::pyobj_handle TimePickerFlyout_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_PickerFlyoutBase_type.get())};
+    if (!TimePickerFlyout_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TimePickerFlyout_type{py::register_python_type(module.get(), &type_spec_TimePickerFlyout, TimePickerFlyout_bases.get(), reinterpret_cast<PyTypeObject*>(type_TimePickerFlyout_Static.get()))};
     if (!TimePickerFlyout_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TreeViewItem_Static{PyType_FromSpec(&type_spec_TreeViewItem_Static)};
+    py::pyobj_handle TreeViewItem_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListViewItem_type.get())))};
+    if (!TreeViewItem_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TreeViewItem_Static{PyType_FromSpecWithBases(&type_spec_TreeViewItem_Static, TreeViewItem_Static_bases.get())};
     if (!type_TreeViewItem_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewItem_type{py::register_python_type(module.get(), &type_spec_TreeViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItem_Static.get()))};
+    py::pyobj_handle TreeViewItem_bases{PyTuple_Pack(1, ListViewItem_type.get())};
+    if (!TreeViewItem_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewItem_type{py::register_python_type(module.get(), &type_spec_TreeViewItem, TreeViewItem_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewItem_Static.get()))};
     if (!TreeViewItem_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_TreeViewList_Static{PyType_FromSpec(&type_spec_TreeViewList_Static)};
+    py::pyobj_handle TreeViewList_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ListView_type.get())))};
+    if (!TreeViewList_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_TreeViewList_Static{PyType_FromSpecWithBases(&type_spec_TreeViewList_Static, TreeViewList_Static_bases.get())};
     if (!type_TreeViewList_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewList_Static.get()))};
+    py::pyobj_handle TreeViewList_bases{PyTuple_Pack(1, ListView_type.get())};
+    if (!TreeViewList_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TreeViewList_type{py::register_python_type(module.get(), &type_spec_TreeViewList, TreeViewList_bases.get(), reinterpret_cast<PyTypeObject*>(type_TreeViewList_Static.get()))};
     if (!TreeViewList_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_VirtualizingStackPanel_Static{PyType_FromSpec(&type_spec_VirtualizingStackPanel_Static)};
+    py::pyobj_handle VirtualizingStackPanel_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type.get())))};
+    if (!VirtualizingStackPanel_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VirtualizingStackPanel_Static{PyType_FromSpecWithBases(&type_spec_VirtualizingStackPanel_Static, VirtualizingStackPanel_Static_bases.get())};
     if (!type_VirtualizingStackPanel_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle VirtualizingStackPanel_type{py::register_python_type(module.get(), &type_spec_VirtualizingStackPanel, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VirtualizingStackPanel_Static.get()))};
+    py::pyobj_handle VirtualizingStackPanel_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type.get())};
+    if (!VirtualizingStackPanel_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VirtualizingStackPanel_type{py::register_python_type(module.get(), &type_spec_VirtualizingStackPanel, VirtualizingStackPanel_bases.get(), reinterpret_cast<PyTypeObject*>(type_VirtualizingStackPanel_Static.get()))};
     if (!VirtualizingStackPanel_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_WrapGrid_Static{PyType_FromSpec(&type_spec_WrapGrid_Static)};
+    py::pyobj_handle WrapGrid_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type.get())))};
+    if (!WrapGrid_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_WrapGrid_Static{PyType_FromSpecWithBases(&type_spec_WrapGrid_Static, WrapGrid_Static_bases.get())};
     if (!type_WrapGrid_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle WrapGrid_type{py::register_python_type(module.get(), &type_spec_WrapGrid, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_WrapGrid_Static.get()))};
+    py::pyobj_handle WrapGrid_bases{PyTuple_Pack(1, windows_ui_xaml_controls_primitives_OrientedVirtualizingPanel_type.get())};
+    if (!WrapGrid_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle WrapGrid_type{py::register_python_type(module.get(), &type_spec_WrapGrid, WrapGrid_bases.get(), reinterpret_cast<PyTypeObject*>(type_WrapGrid_Static.get()))};
     if (!WrapGrid_type)
     {
         return nullptr;

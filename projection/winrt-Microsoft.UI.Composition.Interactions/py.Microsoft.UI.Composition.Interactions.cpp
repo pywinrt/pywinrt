@@ -6086,37 +6086,85 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_interactions(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositionConditionalValue_Static{PyType_FromSpec(&type_spec_CompositionConditionalValue_Static)};
+    py::pyobj_handle microsoft_ui_composition_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_composition")};
+    if (!microsoft_ui_composition_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionObject_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionObject")};
+    if (!microsoft_ui_composition_CompositionObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle CompositionConditionalValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!CompositionConditionalValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositionConditionalValue_Static{PyType_FromSpecWithBases(&type_spec_CompositionConditionalValue_Static, CompositionConditionalValue_Static_bases.get())};
     if (!type_CompositionConditionalValue_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionConditionalValue_type{py::register_python_type(module.get(), &type_spec_CompositionConditionalValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionConditionalValue_Static.get()))};
+    py::pyobj_handle CompositionConditionalValue_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!CompositionConditionalValue_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionConditionalValue_type{py::register_python_type(module.get(), &type_spec_CompositionConditionalValue, CompositionConditionalValue_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositionConditionalValue_Static.get()))};
     if (!CompositionConditionalValue_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositionInteractionSourceCollection_type{py::register_python_type(module.get(), &type_spec_CompositionInteractionSourceCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle CompositionInteractionSourceCollection_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!CompositionInteractionSourceCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositionInteractionSourceCollection_type{py::register_python_type(module.get(), &type_spec_CompositionInteractionSourceCollection, CompositionInteractionSourceCollection_bases.get(), nullptr)};
     if (!CompositionInteractionSourceCollection_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_InteractionSourceConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle InteractionSourceConfiguration_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!InteractionSourceConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionSourceConfiguration_type{py::register_python_type(module.get(), &type_spec_InteractionSourceConfiguration, InteractionSourceConfiguration_bases.get(), nullptr)};
     if (!InteractionSourceConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTracker_Static{PyType_FromSpec(&type_spec_InteractionTracker_Static)};
+    py::pyobj_handle InteractionTracker_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!InteractionTracker_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTracker_Static{PyType_FromSpecWithBases(&type_spec_InteractionTracker_Static, InteractionTracker_Static_bases.get())};
     if (!type_InteractionTracker_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTracker_type{py::register_python_type(module.get(), &type_spec_InteractionTracker, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTracker_Static.get()))};
+    py::pyobj_handle InteractionTracker_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!InteractionTracker_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTracker_type{py::register_python_type(module.get(), &type_spec_InteractionTracker, InteractionTracker_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTracker_Static.get()))};
     if (!InteractionTracker_type)
     {
         return nullptr;
@@ -6134,49 +6182,97 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_interactions(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerInertiaModifier_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaModifier_Static)};
+    py::pyobj_handle InteractionTrackerInertiaModifier_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!InteractionTrackerInertiaModifier_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerInertiaModifier_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerInertiaModifier_Static, InteractionTrackerInertiaModifier_Static_bases.get())};
     if (!type_InteractionTrackerInertiaModifier_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaModifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaModifier_Static.get()))};
+    py::pyobj_handle InteractionTrackerInertiaModifier_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!InteractionTrackerInertiaModifier_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerInertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaModifier, InteractionTrackerInertiaModifier_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaModifier_Static.get()))};
     if (!InteractionTrackerInertiaModifier_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerInertiaMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaMotion_Static)};
+    py::pyobj_handle InteractionTrackerInertiaMotion_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InteractionTrackerInertiaModifier_type.get())))};
+    if (!InteractionTrackerInertiaMotion_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerInertiaMotion_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerInertiaMotion_Static, InteractionTrackerInertiaMotion_Static_bases.get())};
     if (!type_InteractionTrackerInertiaMotion_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaMotion_Static.get()))};
+    py::pyobj_handle InteractionTrackerInertiaMotion_bases{PyTuple_Pack(1, InteractionTrackerInertiaModifier_type.get())};
+    if (!InteractionTrackerInertiaMotion_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerInertiaMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaMotion, InteractionTrackerInertiaMotion_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaMotion_Static.get()))};
     if (!InteractionTrackerInertiaMotion_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerInertiaNaturalMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaNaturalMotion_Static)};
+    py::pyobj_handle InteractionTrackerInertiaNaturalMotion_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InteractionTrackerInertiaModifier_type.get())))};
+    if (!InteractionTrackerInertiaNaturalMotion_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerInertiaNaturalMotion_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerInertiaNaturalMotion_Static, InteractionTrackerInertiaNaturalMotion_Static_bases.get())};
     if (!type_InteractionTrackerInertiaNaturalMotion_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaNaturalMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaNaturalMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaNaturalMotion_Static.get()))};
+    py::pyobj_handle InteractionTrackerInertiaNaturalMotion_bases{PyTuple_Pack(1, InteractionTrackerInertiaModifier_type.get())};
+    if (!InteractionTrackerInertiaNaturalMotion_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerInertiaNaturalMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaNaturalMotion, InteractionTrackerInertiaNaturalMotion_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaNaturalMotion_Static.get()))};
     if (!InteractionTrackerInertiaNaturalMotion_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerInertiaRestingValue_Static{PyType_FromSpec(&type_spec_InteractionTrackerInertiaRestingValue_Static)};
+    py::pyobj_handle InteractionTrackerInertiaRestingValue_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InteractionTrackerInertiaModifier_type.get())))};
+    if (!InteractionTrackerInertiaRestingValue_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerInertiaRestingValue_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerInertiaRestingValue_Static, InteractionTrackerInertiaRestingValue_Static_bases.get())};
     if (!type_InteractionTrackerInertiaRestingValue_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerInertiaRestingValue_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaRestingValue, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaRestingValue_Static.get()))};
+    py::pyobj_handle InteractionTrackerInertiaRestingValue_bases{PyTuple_Pack(1, InteractionTrackerInertiaModifier_type.get())};
+    if (!InteractionTrackerInertiaRestingValue_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerInertiaRestingValue_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerInertiaRestingValue, InteractionTrackerInertiaRestingValue_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerInertiaRestingValue_Static.get()))};
     if (!InteractionTrackerInertiaRestingValue_type)
     {
         return nullptr;
@@ -6206,37 +6302,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_interactions(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerVector2InertiaModifier_Static{PyType_FromSpec(&type_spec_InteractionTrackerVector2InertiaModifier_Static)};
+    py::pyobj_handle InteractionTrackerVector2InertiaModifier_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!InteractionTrackerVector2InertiaModifier_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerVector2InertiaModifier_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerVector2InertiaModifier_Static, InteractionTrackerVector2InertiaModifier_Static_bases.get())};
     if (!type_InteractionTrackerVector2InertiaModifier_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerVector2InertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaModifier, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaModifier_Static.get()))};
+    py::pyobj_handle InteractionTrackerVector2InertiaModifier_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!InteractionTrackerVector2InertiaModifier_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerVector2InertiaModifier_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaModifier, InteractionTrackerVector2InertiaModifier_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaModifier_Static.get()))};
     if (!InteractionTrackerVector2InertiaModifier_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InteractionTrackerVector2InertiaNaturalMotion_Static{PyType_FromSpec(&type_spec_InteractionTrackerVector2InertiaNaturalMotion_Static)};
+    py::pyobj_handle InteractionTrackerVector2InertiaNaturalMotion_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InteractionTrackerVector2InertiaModifier_type.get())))};
+    if (!InteractionTrackerVector2InertiaNaturalMotion_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InteractionTrackerVector2InertiaNaturalMotion_Static{PyType_FromSpecWithBases(&type_spec_InteractionTrackerVector2InertiaNaturalMotion_Static, InteractionTrackerVector2InertiaNaturalMotion_Static_bases.get())};
     if (!type_InteractionTrackerVector2InertiaNaturalMotion_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InteractionTrackerVector2InertiaNaturalMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaNaturalMotion, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaNaturalMotion_Static.get()))};
+    py::pyobj_handle InteractionTrackerVector2InertiaNaturalMotion_bases{PyTuple_Pack(1, InteractionTrackerVector2InertiaModifier_type.get())};
+    if (!InteractionTrackerVector2InertiaNaturalMotion_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InteractionTrackerVector2InertiaNaturalMotion_type{py::register_python_type(module.get(), &type_spec_InteractionTrackerVector2InertiaNaturalMotion, InteractionTrackerVector2InertiaNaturalMotion_bases.get(), reinterpret_cast<PyTypeObject*>(type_InteractionTrackerVector2InertiaNaturalMotion_Static.get()))};
     if (!InteractionTrackerVector2InertiaNaturalMotion_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_VisualInteractionSource_Static{PyType_FromSpec(&type_spec_VisualInteractionSource_Static)};
+    py::pyobj_handle VisualInteractionSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!VisualInteractionSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_VisualInteractionSource_Static{PyType_FromSpecWithBases(&type_spec_VisualInteractionSource_Static, VisualInteractionSource_Static_bases.get())};
     if (!type_VisualInteractionSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle VisualInteractionSource_type{py::register_python_type(module.get(), &type_spec_VisualInteractionSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualInteractionSource_Static.get()))};
+    py::pyobj_handle VisualInteractionSource_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!VisualInteractionSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle VisualInteractionSource_type{py::register_python_type(module.get(), &type_spec_VisualInteractionSource, VisualInteractionSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_VisualInteractionSource_Static.get()))};
     if (!VisualInteractionSource_type)
     {
         return nullptr;

@@ -8344,6 +8344,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
+    if (!windows_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
+    if (!windows_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_AnnotationPatternIdentifiers_Static{PyType_FromSpec(&type_spec_AnnotationPatternIdentifiers_Static)};
     if (!type_AnnotationPatternIdentifiers_Static)
     {
@@ -8356,13 +8368,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_automation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_AutomationAnnotation_Static{PyType_FromSpec(&type_spec_AutomationAnnotation_Static)};
+    py::pyobj_handle AutomationAnnotation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!AutomationAnnotation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_AutomationAnnotation_Static{PyType_FromSpecWithBases(&type_spec_AutomationAnnotation_Static, AutomationAnnotation_Static_bases.get())};
     if (!type_AutomationAnnotation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle AutomationAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationAnnotation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Static.get()))};
+    py::pyobj_handle AutomationAnnotation_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!AutomationAnnotation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AutomationAnnotation_type{py::register_python_type(module.get(), &type_spec_AutomationAnnotation, AutomationAnnotation_bases.get(), reinterpret_cast<PyTypeObject*>(type_AutomationAnnotation_Static.get()))};
     if (!AutomationAnnotation_type)
     {
         return nullptr;

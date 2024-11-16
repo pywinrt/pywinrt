@@ -251,13 +251,37 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_primitives_2(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorPickerSlider_Static{PyType_FromSpec(&type_spec_ColorPickerSlider_Static)};
+    py::pyobj_handle windows_ui_xaml_controls_2_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml_controls_2")};
+    if (!windows_ui_xaml_controls_2_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_controls_Slider_type{PyObject_GetAttrString(windows_ui_xaml_controls_2_module.get(), "Slider")};
+    if (!windows_ui_xaml_controls_Slider_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle ColorPickerSlider_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_controls_Slider_type.get())))};
+    if (!ColorPickerSlider_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorPickerSlider_Static{PyType_FromSpecWithBases(&type_spec_ColorPickerSlider_Static, ColorPickerSlider_Static_bases.get())};
     if (!type_ColorPickerSlider_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorPickerSlider_type{py::register_python_type(module.get(), &type_spec_ColorPickerSlider, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get()))};
+    py::pyobj_handle ColorPickerSlider_bases{PyTuple_Pack(1, windows_ui_xaml_controls_Slider_type.get())};
+    if (!ColorPickerSlider_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorPickerSlider_type{py::register_python_type(module.get(), &type_spec_ColorPickerSlider, ColorPickerSlider_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorPickerSlider_Static.get()))};
     if (!ColorPickerSlider_type)
     {
         return nullptr;

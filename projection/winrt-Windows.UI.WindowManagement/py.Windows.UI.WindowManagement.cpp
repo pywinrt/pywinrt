@@ -4821,13 +4821,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CompactOverlayPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_CompactOverlayPresentationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle CompactOverlayPresentationConfiguration_bases{PyTuple_Pack(1, AppWindowPresentationConfiguration_type.get())};
+    if (!CompactOverlayPresentationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompactOverlayPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_CompactOverlayPresentationConfiguration, CompactOverlayPresentationConfiguration_bases.get(), nullptr)};
     if (!CompactOverlayPresentationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DefaultPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_DefaultPresentationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle DefaultPresentationConfiguration_bases{PyTuple_Pack(1, AppWindowPresentationConfiguration_type.get())};
+    if (!DefaultPresentationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DefaultPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_DefaultPresentationConfiguration, DefaultPresentationConfiguration_bases.get(), nullptr)};
     if (!DefaultPresentationConfiguration_type)
     {
         return nullptr;
@@ -4839,7 +4851,13 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_windowmanagement(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle FullScreenPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_FullScreenPresentationConfiguration, object_bases.get(), nullptr)};
+    py::pyobj_handle FullScreenPresentationConfiguration_bases{PyTuple_Pack(1, AppWindowPresentationConfiguration_type.get())};
+    if (!FullScreenPresentationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FullScreenPresentationConfiguration_type{py::register_python_type(module.get(), &type_spec_FullScreenPresentationConfiguration, FullScreenPresentationConfiguration_bases.get(), nullptr)};
     if (!FullScreenPresentationConfiguration_type)
     {
         return nullptr;

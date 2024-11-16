@@ -2832,25 +2832,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Transform3D_Static{PyType_FromSpec(&type_spec_Transform3D_Static)};
+    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
+    if (!windows_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
+    if (!windows_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Transform3D_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!Transform3D_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Transform3D_Static{PyType_FromSpecWithBases(&type_spec_Transform3D_Static, Transform3D_Static_bases.get())};
     if (!type_Transform3D_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Transform3D_type{py::register_python_type(module.get(), &type_spec_Transform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform3D_Static.get()))};
+    py::pyobj_handle Transform3D_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!Transform3D_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transform3D_type{py::register_python_type(module.get(), &type_spec_Transform3D, Transform3D_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transform3D_Static.get()))};
     if (!Transform3D_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CompositeTransform3D_Static{PyType_FromSpec(&type_spec_CompositeTransform3D_Static)};
+    py::pyobj_handle CompositeTransform3D_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform3D_type.get())))};
+    if (!CompositeTransform3D_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompositeTransform3D_Static{PyType_FromSpecWithBases(&type_spec_CompositeTransform3D_Static, CompositeTransform3D_Static_bases.get())};
     if (!type_CompositeTransform3D_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompositeTransform3D_type{py::register_python_type(module.get(), &type_spec_CompositeTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Static.get()))};
+    py::pyobj_handle CompositeTransform3D_bases{PyTuple_Pack(1, Transform3D_type.get())};
+    if (!CompositeTransform3D_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompositeTransform3D_type{py::register_python_type(module.get(), &type_spec_CompositeTransform3D, CompositeTransform3D_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompositeTransform3D_Static.get()))};
     if (!CompositeTransform3D_type)
     {
         return nullptr;
@@ -2868,13 +2904,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_media3d(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PerspectiveTransform3D_Static{PyType_FromSpec(&type_spec_PerspectiveTransform3D_Static)};
+    py::pyobj_handle PerspectiveTransform3D_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transform3D_type.get())))};
+    if (!PerspectiveTransform3D_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PerspectiveTransform3D_Static{PyType_FromSpecWithBases(&type_spec_PerspectiveTransform3D_Static, PerspectiveTransform3D_Static_bases.get())};
     if (!type_PerspectiveTransform3D_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PerspectiveTransform3D_type{py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Static.get()))};
+    py::pyobj_handle PerspectiveTransform3D_bases{PyTuple_Pack(1, Transform3D_type.get())};
+    if (!PerspectiveTransform3D_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PerspectiveTransform3D_type{py::register_python_type(module.get(), &type_spec_PerspectiveTransform3D, PerspectiveTransform3D_bases.get(), reinterpret_cast<PyTypeObject*>(type_PerspectiveTransform3D_Static.get()))};
     if (!PerspectiveTransform3D_type)
     {
         return nullptr;

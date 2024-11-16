@@ -25817,43 +25817,103 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Transition_Static{PyType_FromSpec(&type_spec_Transition_Static)};
+    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
+    if (!windows_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_TriggerAction_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "TriggerAction")};
+    if (!windows_ui_xaml_TriggerAction_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
+    if (!windows_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Transition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!Transition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Transition_Static{PyType_FromSpecWithBases(&type_spec_Transition_Static, Transition_Static_bases.get())};
     if (!type_Transition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Transition_type{py::register_python_type(module.get(), &type_spec_Transition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transition_Static.get()))};
+    py::pyobj_handle Transition_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!Transition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Transition_type{py::register_python_type(module.get(), &type_spec_Transition, Transition_bases.get(), reinterpret_cast<PyTypeObject*>(type_Transition_Static.get()))};
     if (!Transition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle AddDeleteThemeTransition_type{py::register_python_type(module.get(), &type_spec_AddDeleteThemeTransition, object_bases.get(), nullptr)};
+    py::pyobj_handle AddDeleteThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!AddDeleteThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle AddDeleteThemeTransition_type{py::register_python_type(module.get(), &type_spec_AddDeleteThemeTransition, AddDeleteThemeTransition_bases.get(), nullptr)};
     if (!AddDeleteThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EasingFunctionBase_Static{PyType_FromSpec(&type_spec_EasingFunctionBase_Static)};
+    py::pyobj_handle EasingFunctionBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!EasingFunctionBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EasingFunctionBase_Static{PyType_FromSpecWithBases(&type_spec_EasingFunctionBase_Static, EasingFunctionBase_Static_bases.get())};
     if (!type_EasingFunctionBase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasingFunctionBase_type{py::register_python_type(module.get(), &type_spec_EasingFunctionBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Static.get()))};
+    py::pyobj_handle EasingFunctionBase_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!EasingFunctionBase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EasingFunctionBase_type{py::register_python_type(module.get(), &type_spec_EasingFunctionBase, EasingFunctionBase_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingFunctionBase_Static.get()))};
     if (!EasingFunctionBase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BackEase_Static{PyType_FromSpec(&type_spec_BackEase_Static)};
+    py::pyobj_handle BackEase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(EasingFunctionBase_type.get())))};
+    if (!BackEase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BackEase_Static{PyType_FromSpecWithBases(&type_spec_BackEase_Static, BackEase_Static_bases.get())};
     if (!type_BackEase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BackEase_type{py::register_python_type(module.get(), &type_spec_BackEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Static.get()))};
+    py::pyobj_handle BackEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!BackEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BackEase_type{py::register_python_type(module.get(), &type_spec_BackEase, BackEase_bases.get(), reinterpret_cast<PyTypeObject*>(type_BackEase_Static.get()))};
     if (!BackEase_type)
     {
         return nullptr;
@@ -25871,91 +25931,181 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BasicConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_BasicConnectedAnimationConfiguration_Static)};
+    py::pyobj_handle BasicConnectedAnimationConfiguration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ConnectedAnimationConfiguration_type.get())))};
+    if (!BasicConnectedAnimationConfiguration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BasicConnectedAnimationConfiguration_Static{PyType_FromSpecWithBases(&type_spec_BasicConnectedAnimationConfiguration_Static, BasicConnectedAnimationConfiguration_Static_bases.get())};
     if (!type_BasicConnectedAnimationConfiguration_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BasicConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BasicConnectedAnimationConfiguration_Static.get()))};
+    py::pyobj_handle BasicConnectedAnimationConfiguration_bases{PyTuple_Pack(1, ConnectedAnimationConfiguration_type.get())};
+    if (!BasicConnectedAnimationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BasicConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_BasicConnectedAnimationConfiguration, BasicConnectedAnimationConfiguration_bases.get(), reinterpret_cast<PyTypeObject*>(type_BasicConnectedAnimationConfiguration_Static.get()))};
     if (!BasicConnectedAnimationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BeginStoryboard_Static{PyType_FromSpec(&type_spec_BeginStoryboard_Static)};
+    py::pyobj_handle BeginStoryboard_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_TriggerAction_type.get())))};
+    if (!BeginStoryboard_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BeginStoryboard_Static{PyType_FromSpecWithBases(&type_spec_BeginStoryboard_Static, BeginStoryboard_Static_bases.get())};
     if (!type_BeginStoryboard_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BeginStoryboard_type{py::register_python_type(module.get(), &type_spec_BeginStoryboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Static.get()))};
+    py::pyobj_handle BeginStoryboard_bases{PyTuple_Pack(1, windows_ui_xaml_TriggerAction_type.get())};
+    if (!BeginStoryboard_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BeginStoryboard_type{py::register_python_type(module.get(), &type_spec_BeginStoryboard, BeginStoryboard_bases.get(), reinterpret_cast<PyTypeObject*>(type_BeginStoryboard_Static.get()))};
     if (!BeginStoryboard_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_BounceEase_Static{PyType_FromSpec(&type_spec_BounceEase_Static)};
+    py::pyobj_handle BounceEase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(EasingFunctionBase_type.get())))};
+    if (!BounceEase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BounceEase_Static{PyType_FromSpecWithBases(&type_spec_BounceEase_Static, BounceEase_Static_bases.get())};
     if (!type_BounceEase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BounceEase_type{py::register_python_type(module.get(), &type_spec_BounceEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Static.get()))};
+    py::pyobj_handle BounceEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!BounceEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BounceEase_type{py::register_python_type(module.get(), &type_spec_BounceEase, BounceEase_bases.get(), reinterpret_cast<PyTypeObject*>(type_BounceEase_Static.get()))};
     if (!BounceEase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CircleEase_type{py::register_python_type(module.get(), &type_spec_CircleEase, object_bases.get(), nullptr)};
+    py::pyobj_handle CircleEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!CircleEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CircleEase_type{py::register_python_type(module.get(), &type_spec_CircleEase, CircleEase_bases.get(), nullptr)};
     if (!CircleEase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Timeline_Static{PyType_FromSpec(&type_spec_Timeline_Static)};
+    py::pyobj_handle Timeline_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!Timeline_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Timeline_Static{PyType_FromSpecWithBases(&type_spec_Timeline_Static, Timeline_Static_bases.get())};
     if (!type_Timeline_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Timeline_type{py::register_python_type(module.get(), &type_spec_Timeline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Static.get()))};
+    py::pyobj_handle Timeline_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!Timeline_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Timeline_type{py::register_python_type(module.get(), &type_spec_Timeline, Timeline_bases.get(), reinterpret_cast<PyTypeObject*>(type_Timeline_Static.get()))};
     if (!Timeline_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorAnimation_Static{PyType_FromSpec(&type_spec_ColorAnimation_Static)};
+    py::pyobj_handle ColorAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!ColorAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorAnimation_Static{PyType_FromSpecWithBases(&type_spec_ColorAnimation_Static, ColorAnimation_Static_bases.get())};
     if (!type_ColorAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorAnimation_type{py::register_python_type(module.get(), &type_spec_ColorAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Static.get()))};
+    py::pyobj_handle ColorAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!ColorAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorAnimation_type{py::register_python_type(module.get(), &type_spec_ColorAnimation, ColorAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimation_Static.get()))};
     if (!ColorAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorAnimationUsingKeyFrames_Static{PyType_FromSpec(&type_spec_ColorAnimationUsingKeyFrames_Static)};
+    py::pyobj_handle ColorAnimationUsingKeyFrames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!ColorAnimationUsingKeyFrames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorAnimationUsingKeyFrames_Static{PyType_FromSpecWithBases(&type_spec_ColorAnimationUsingKeyFrames_Static, ColorAnimationUsingKeyFrames_Static_bases.get())};
     if (!type_ColorAnimationUsingKeyFrames_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_ColorAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Static.get()))};
+    py::pyobj_handle ColorAnimationUsingKeyFrames_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!ColorAnimationUsingKeyFrames_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_ColorAnimationUsingKeyFrames, ColorAnimationUsingKeyFrames_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorAnimationUsingKeyFrames_Static.get()))};
     if (!ColorAnimationUsingKeyFrames_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ColorKeyFrame_Static{PyType_FromSpec(&type_spec_ColorKeyFrame_Static)};
+    py::pyobj_handle ColorKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!ColorKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ColorKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_ColorKeyFrame_Static, ColorKeyFrame_Static_bases.get())};
     if (!type_ColorKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_ColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Static.get()))};
+    py::pyobj_handle ColorKeyFrame_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!ColorKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_ColorKeyFrame, ColorKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_ColorKeyFrame_Static.get()))};
     if (!ColorKeyFrame_type)
     {
         return nullptr;
@@ -25967,25 +26117,49 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_NavigationTransitionInfo_Static)};
+    py::pyobj_handle NavigationTransitionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!NavigationTransitionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationTransitionInfo_Static{PyType_FromSpecWithBases(&type_spec_NavigationTransitionInfo_Static, NavigationTransitionInfo_Static_bases.get())};
     if (!type_NavigationTransitionInfo_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationTransitionInfo_Static.get()))};
+    py::pyobj_handle NavigationTransitionInfo_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!NavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_NavigationTransitionInfo, NavigationTransitionInfo_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationTransitionInfo_Static.get()))};
     if (!NavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_CommonNavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_CommonNavigationTransitionInfo_Static)};
+    py::pyobj_handle CommonNavigationTransitionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationTransitionInfo_type.get())))};
+    if (!CommonNavigationTransitionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CommonNavigationTransitionInfo_Static{PyType_FromSpecWithBases(&type_spec_CommonNavigationTransitionInfo_Static, CommonNavigationTransitionInfo_Static_bases.get())};
     if (!type_CommonNavigationTransitionInfo_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CommonNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_CommonNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Static.get()))};
+    py::pyobj_handle CommonNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!CommonNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CommonNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_CommonNavigationTransitionInfo, CommonNavigationTransitionInfo_bases.get(), reinterpret_cast<PyTypeObject*>(type_CommonNavigationTransitionInfo_Static.get()))};
     if (!CommonNavigationTransitionInfo_type)
     {
         return nullptr;
@@ -26009,127 +26183,253 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ContentThemeTransition_Static{PyType_FromSpec(&type_spec_ContentThemeTransition_Static)};
+    py::pyobj_handle ContentThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!ContentThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContentThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_ContentThemeTransition_Static, ContentThemeTransition_Static_bases.get())};
     if (!type_ContentThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContentThemeTransition_type{py::register_python_type(module.get(), &type_spec_ContentThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Static.get()))};
+    py::pyobj_handle ContentThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!ContentThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContentThemeTransition_type{py::register_python_type(module.get(), &type_spec_ContentThemeTransition, ContentThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContentThemeTransition_Static.get()))};
     if (!ContentThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ContinuumNavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_ContinuumNavigationTransitionInfo_Static)};
+    py::pyobj_handle ContinuumNavigationTransitionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationTransitionInfo_type.get())))};
+    if (!ContinuumNavigationTransitionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ContinuumNavigationTransitionInfo_Static{PyType_FromSpecWithBases(&type_spec_ContinuumNavigationTransitionInfo_Static, ContinuumNavigationTransitionInfo_Static_bases.get())};
     if (!type_ContinuumNavigationTransitionInfo_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContinuumNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_ContinuumNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Static.get()))};
+    py::pyobj_handle ContinuumNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!ContinuumNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContinuumNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_ContinuumNavigationTransitionInfo, ContinuumNavigationTransitionInfo_bases.get(), reinterpret_cast<PyTypeObject*>(type_ContinuumNavigationTransitionInfo_Static.get()))};
     if (!ContinuumNavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle CubicEase_type{py::register_python_type(module.get(), &type_spec_CubicEase, object_bases.get(), nullptr)};
+    py::pyobj_handle CubicEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!CubicEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CubicEase_type{py::register_python_type(module.get(), &type_spec_CubicEase, CubicEase_bases.get(), nullptr)};
     if (!CubicEase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DirectConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_DirectConnectedAnimationConfiguration_Static)};
+    py::pyobj_handle DirectConnectedAnimationConfiguration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ConnectedAnimationConfiguration_type.get())))};
+    if (!DirectConnectedAnimationConfiguration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DirectConnectedAnimationConfiguration_Static{PyType_FromSpecWithBases(&type_spec_DirectConnectedAnimationConfiguration_Static, DirectConnectedAnimationConfiguration_Static_bases.get())};
     if (!type_DirectConnectedAnimationConfiguration_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DirectConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DirectConnectedAnimationConfiguration_Static.get()))};
+    py::pyobj_handle DirectConnectedAnimationConfiguration_bases{PyTuple_Pack(1, ConnectedAnimationConfiguration_type.get())};
+    if (!DirectConnectedAnimationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DirectConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_DirectConnectedAnimationConfiguration, DirectConnectedAnimationConfiguration_bases.get(), reinterpret_cast<PyTypeObject*>(type_DirectConnectedAnimationConfiguration_Static.get()))};
     if (!DirectConnectedAnimationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DiscreteColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteColorKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle DiscreteColorKeyFrame_bases{PyTuple_Pack(1, ColorKeyFrame_type.get())};
+    if (!DiscreteColorKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DiscreteColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteColorKeyFrame, DiscreteColorKeyFrame_bases.get(), nullptr)};
     if (!DiscreteColorKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DoubleKeyFrame_Static{PyType_FromSpec(&type_spec_DoubleKeyFrame_Static)};
+    py::pyobj_handle DoubleKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!DoubleKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DoubleKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_DoubleKeyFrame_Static, DoubleKeyFrame_Static_bases.get())};
     if (!type_DoubleKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_DoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Static.get()))};
+    py::pyobj_handle DoubleKeyFrame_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!DoubleKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_DoubleKeyFrame, DoubleKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleKeyFrame_Static.get()))};
     if (!DoubleKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DiscreteDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteDoubleKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle DiscreteDoubleKeyFrame_bases{PyTuple_Pack(1, DoubleKeyFrame_type.get())};
+    if (!DiscreteDoubleKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DiscreteDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteDoubleKeyFrame, DiscreteDoubleKeyFrame_bases.get(), nullptr)};
     if (!DiscreteDoubleKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ObjectKeyFrame_Static{PyType_FromSpec(&type_spec_ObjectKeyFrame_Static)};
+    py::pyobj_handle ObjectKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!ObjectKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ObjectKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_ObjectKeyFrame_Static, ObjectKeyFrame_Static_bases.get())};
     if (!type_ObjectKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ObjectKeyFrame_type{py::register_python_type(module.get(), &type_spec_ObjectKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Static.get()))};
+    py::pyobj_handle ObjectKeyFrame_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!ObjectKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ObjectKeyFrame_type{py::register_python_type(module.get(), &type_spec_ObjectKeyFrame, ObjectKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectKeyFrame_Static.get()))};
     if (!ObjectKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DiscreteObjectKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteObjectKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle DiscreteObjectKeyFrame_bases{PyTuple_Pack(1, ObjectKeyFrame_type.get())};
+    if (!DiscreteObjectKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DiscreteObjectKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscreteObjectKeyFrame, DiscreteObjectKeyFrame_bases.get(), nullptr)};
     if (!DiscreteObjectKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PointKeyFrame_Static{PyType_FromSpec(&type_spec_PointKeyFrame_Static)};
+    py::pyobj_handle PointKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!PointKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_PointKeyFrame_Static, PointKeyFrame_Static_bases.get())};
     if (!type_PointKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointKeyFrame_type{py::register_python_type(module.get(), &type_spec_PointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Static.get()))};
+    py::pyobj_handle PointKeyFrame_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!PointKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointKeyFrame_type{py::register_python_type(module.get(), &type_spec_PointKeyFrame, PointKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointKeyFrame_Static.get()))};
     if (!PointKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DiscretePointKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscretePointKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle DiscretePointKeyFrame_bases{PyTuple_Pack(1, PointKeyFrame_type.get())};
+    if (!DiscretePointKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DiscretePointKeyFrame_type{py::register_python_type(module.get(), &type_spec_DiscretePointKeyFrame, DiscretePointKeyFrame_bases.get(), nullptr)};
     if (!DiscretePointKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DoubleAnimation_Static{PyType_FromSpec(&type_spec_DoubleAnimation_Static)};
+    py::pyobj_handle DoubleAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DoubleAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DoubleAnimation_Static{PyType_FromSpecWithBases(&type_spec_DoubleAnimation_Static, DoubleAnimation_Static_bases.get())};
     if (!type_DoubleAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DoubleAnimation_type{py::register_python_type(module.get(), &type_spec_DoubleAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Static.get()))};
+    py::pyobj_handle DoubleAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DoubleAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DoubleAnimation_type{py::register_python_type(module.get(), &type_spec_DoubleAnimation, DoubleAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimation_Static.get()))};
     if (!DoubleAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DoubleAnimationUsingKeyFrames_Static{PyType_FromSpec(&type_spec_DoubleAnimationUsingKeyFrames_Static)};
+    py::pyobj_handle DoubleAnimationUsingKeyFrames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DoubleAnimationUsingKeyFrames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DoubleAnimationUsingKeyFrames_Static{PyType_FromSpecWithBases(&type_spec_DoubleAnimationUsingKeyFrames_Static, DoubleAnimationUsingKeyFrames_Static_bases.get())};
     if (!type_DoubleAnimationUsingKeyFrames_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DoubleAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_DoubleAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Static.get()))};
+    py::pyobj_handle DoubleAnimationUsingKeyFrames_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DoubleAnimationUsingKeyFrames_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DoubleAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_DoubleAnimationUsingKeyFrames, DoubleAnimationUsingKeyFrames_bases.get(), reinterpret_cast<PyTypeObject*>(type_DoubleAnimationUsingKeyFrames_Static.get()))};
     if (!DoubleAnimationUsingKeyFrames_type)
     {
         return nullptr;
@@ -26141,205 +26441,409 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DragItemThemeAnimation_Static{PyType_FromSpec(&type_spec_DragItemThemeAnimation_Static)};
+    py::pyobj_handle DragItemThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DragItemThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DragItemThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_DragItemThemeAnimation_Static, DragItemThemeAnimation_Static_bases.get())};
     if (!type_DragItemThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DragItemThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DragItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Static.get()))};
+    py::pyobj_handle DragItemThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DragItemThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DragItemThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DragItemThemeAnimation, DragItemThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragItemThemeAnimation_Static.get()))};
     if (!DragItemThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DragOverThemeAnimation_Static{PyType_FromSpec(&type_spec_DragOverThemeAnimation_Static)};
+    py::pyobj_handle DragOverThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DragOverThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DragOverThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_DragOverThemeAnimation_Static, DragOverThemeAnimation_Static_bases.get())};
     if (!type_DragOverThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DragOverThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DragOverThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Static.get()))};
+    py::pyobj_handle DragOverThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DragOverThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DragOverThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DragOverThemeAnimation, DragOverThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DragOverThemeAnimation_Static.get()))};
     if (!DragOverThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DrillInNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_DrillInNavigationTransitionInfo, object_bases.get(), nullptr)};
+    py::pyobj_handle DrillInNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!DrillInNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DrillInNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_DrillInNavigationTransitionInfo, DrillInNavigationTransitionInfo_bases.get(), nullptr)};
     if (!DrillInNavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DrillInThemeAnimation_Static{PyType_FromSpec(&type_spec_DrillInThemeAnimation_Static)};
+    py::pyobj_handle DrillInThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DrillInThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DrillInThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_DrillInThemeAnimation_Static, DrillInThemeAnimation_Static_bases.get())};
     if (!type_DrillInThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DrillInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DrillInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Static.get()))};
+    py::pyobj_handle DrillInThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DrillInThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DrillInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DrillInThemeAnimation, DrillInThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillInThemeAnimation_Static.get()))};
     if (!DrillInThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DrillOutThemeAnimation_Static{PyType_FromSpec(&type_spec_DrillOutThemeAnimation_Static)};
+    py::pyobj_handle DrillOutThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DrillOutThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DrillOutThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_DrillOutThemeAnimation_Static, DrillOutThemeAnimation_Static_bases.get())};
     if (!type_DrillOutThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DrillOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DrillOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Static.get()))};
+    py::pyobj_handle DrillOutThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DrillOutThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DrillOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DrillOutThemeAnimation, DrillOutThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DrillOutThemeAnimation_Static.get()))};
     if (!DrillOutThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_DropTargetItemThemeAnimation_Static{PyType_FromSpec(&type_spec_DropTargetItemThemeAnimation_Static)};
+    py::pyobj_handle DropTargetItemThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!DropTargetItemThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DropTargetItemThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_DropTargetItemThemeAnimation_Static, DropTargetItemThemeAnimation_Static_bases.get())};
     if (!type_DropTargetItemThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DropTargetItemThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DropTargetItemThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Static.get()))};
+    py::pyobj_handle DropTargetItemThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!DropTargetItemThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DropTargetItemThemeAnimation_type{py::register_python_type(module.get(), &type_spec_DropTargetItemThemeAnimation, DropTargetItemThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_DropTargetItemThemeAnimation_Static.get()))};
     if (!DropTargetItemThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EasingColorKeyFrame_Static{PyType_FromSpec(&type_spec_EasingColorKeyFrame_Static)};
+    py::pyobj_handle EasingColorKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ColorKeyFrame_type.get())))};
+    if (!EasingColorKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EasingColorKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_EasingColorKeyFrame_Static, EasingColorKeyFrame_Static_bases.get())};
     if (!type_EasingColorKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasingColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Static.get()))};
+    py::pyobj_handle EasingColorKeyFrame_bases{PyTuple_Pack(1, ColorKeyFrame_type.get())};
+    if (!EasingColorKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EasingColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingColorKeyFrame, EasingColorKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingColorKeyFrame_Static.get()))};
     if (!EasingColorKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EasingDoubleKeyFrame_Static{PyType_FromSpec(&type_spec_EasingDoubleKeyFrame_Static)};
+    py::pyobj_handle EasingDoubleKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(DoubleKeyFrame_type.get())))};
+    if (!EasingDoubleKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EasingDoubleKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_EasingDoubleKeyFrame_Static, EasingDoubleKeyFrame_Static_bases.get())};
     if (!type_EasingDoubleKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasingDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Static.get()))};
+    py::pyobj_handle EasingDoubleKeyFrame_bases{PyTuple_Pack(1, DoubleKeyFrame_type.get())};
+    if (!EasingDoubleKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EasingDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingDoubleKeyFrame, EasingDoubleKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingDoubleKeyFrame_Static.get()))};
     if (!EasingDoubleKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EasingPointKeyFrame_Static{PyType_FromSpec(&type_spec_EasingPointKeyFrame_Static)};
+    py::pyobj_handle EasingPointKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PointKeyFrame_type.get())))};
+    if (!EasingPointKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EasingPointKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_EasingPointKeyFrame_Static, EasingPointKeyFrame_Static_bases.get())};
     if (!type_EasingPointKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EasingPointKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingPointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Static.get()))};
+    py::pyobj_handle EasingPointKeyFrame_bases{PyTuple_Pack(1, PointKeyFrame_type.get())};
+    if (!EasingPointKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EasingPointKeyFrame_type{py::register_python_type(module.get(), &type_spec_EasingPointKeyFrame, EasingPointKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_EasingPointKeyFrame_Static.get()))};
     if (!EasingPointKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EdgeUIThemeTransition_Static{PyType_FromSpec(&type_spec_EdgeUIThemeTransition_Static)};
+    py::pyobj_handle EdgeUIThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!EdgeUIThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EdgeUIThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_EdgeUIThemeTransition_Static, EdgeUIThemeTransition_Static_bases.get())};
     if (!type_EdgeUIThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EdgeUIThemeTransition_type{py::register_python_type(module.get(), &type_spec_EdgeUIThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Static.get()))};
+    py::pyobj_handle EdgeUIThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!EdgeUIThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EdgeUIThemeTransition_type{py::register_python_type(module.get(), &type_spec_EdgeUIThemeTransition, EdgeUIThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_EdgeUIThemeTransition_Static.get()))};
     if (!EdgeUIThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ElasticEase_Static{PyType_FromSpec(&type_spec_ElasticEase_Static)};
+    py::pyobj_handle ElasticEase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(EasingFunctionBase_type.get())))};
+    if (!ElasticEase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ElasticEase_Static{PyType_FromSpecWithBases(&type_spec_ElasticEase_Static, ElasticEase_Static_bases.get())};
     if (!type_ElasticEase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ElasticEase_type{py::register_python_type(module.get(), &type_spec_ElasticEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Static.get()))};
+    py::pyobj_handle ElasticEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!ElasticEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ElasticEase_type{py::register_python_type(module.get(), &type_spec_ElasticEase, ElasticEase_bases.get(), reinterpret_cast<PyTypeObject*>(type_ElasticEase_Static.get()))};
     if (!ElasticEase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EntranceNavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_EntranceNavigationTransitionInfo_Static)};
+    py::pyobj_handle EntranceNavigationTransitionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationTransitionInfo_type.get())))};
+    if (!EntranceNavigationTransitionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EntranceNavigationTransitionInfo_Static{PyType_FromSpecWithBases(&type_spec_EntranceNavigationTransitionInfo_Static, EntranceNavigationTransitionInfo_Static_bases.get())};
     if (!type_EntranceNavigationTransitionInfo_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EntranceNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_EntranceNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Static.get()))};
+    py::pyobj_handle EntranceNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!EntranceNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EntranceNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_EntranceNavigationTransitionInfo, EntranceNavigationTransitionInfo_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceNavigationTransitionInfo_Static.get()))};
     if (!EntranceNavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_EntranceThemeTransition_Static{PyType_FromSpec(&type_spec_EntranceThemeTransition_Static)};
+    py::pyobj_handle EntranceThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!EntranceThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_EntranceThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_EntranceThemeTransition_Static, EntranceThemeTransition_Static_bases.get())};
     if (!type_EntranceThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle EntranceThemeTransition_type{py::register_python_type(module.get(), &type_spec_EntranceThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Static.get()))};
+    py::pyobj_handle EntranceThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!EntranceThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle EntranceThemeTransition_type{py::register_python_type(module.get(), &type_spec_EntranceThemeTransition, EntranceThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_EntranceThemeTransition_Static.get()))};
     if (!EntranceThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ExponentialEase_Static{PyType_FromSpec(&type_spec_ExponentialEase_Static)};
+    py::pyobj_handle ExponentialEase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(EasingFunctionBase_type.get())))};
+    if (!ExponentialEase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ExponentialEase_Static{PyType_FromSpecWithBases(&type_spec_ExponentialEase_Static, ExponentialEase_Static_bases.get())};
     if (!type_ExponentialEase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ExponentialEase_type{py::register_python_type(module.get(), &type_spec_ExponentialEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Static.get()))};
+    py::pyobj_handle ExponentialEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!ExponentialEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ExponentialEase_type{py::register_python_type(module.get(), &type_spec_ExponentialEase, ExponentialEase_bases.get(), reinterpret_cast<PyTypeObject*>(type_ExponentialEase_Static.get()))};
     if (!ExponentialEase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FadeInThemeAnimation_Static{PyType_FromSpec(&type_spec_FadeInThemeAnimation_Static)};
+    py::pyobj_handle FadeInThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!FadeInThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FadeInThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_FadeInThemeAnimation_Static, FadeInThemeAnimation_Static_bases.get())};
     if (!type_FadeInThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FadeInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_FadeInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Static.get()))};
+    py::pyobj_handle FadeInThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!FadeInThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FadeInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_FadeInThemeAnimation, FadeInThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeInThemeAnimation_Static.get()))};
     if (!FadeInThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_FadeOutThemeAnimation_Static{PyType_FromSpec(&type_spec_FadeOutThemeAnimation_Static)};
+    py::pyobj_handle FadeOutThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!FadeOutThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FadeOutThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_FadeOutThemeAnimation_Static, FadeOutThemeAnimation_Static_bases.get())};
     if (!type_FadeOutThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FadeOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_FadeOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Static.get()))};
+    py::pyobj_handle FadeOutThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!FadeOutThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FadeOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_FadeOutThemeAnimation, FadeOutThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_FadeOutThemeAnimation_Static.get()))};
     if (!FadeOutThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_GravityConnectedAnimationConfiguration_Static{PyType_FromSpec(&type_spec_GravityConnectedAnimationConfiguration_Static)};
+    py::pyobj_handle GravityConnectedAnimationConfiguration_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ConnectedAnimationConfiguration_type.get())))};
+    if (!GravityConnectedAnimationConfiguration_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_GravityConnectedAnimationConfiguration_Static{PyType_FromSpecWithBases(&type_spec_GravityConnectedAnimationConfiguration_Static, GravityConnectedAnimationConfiguration_Static_bases.get())};
     if (!type_GravityConnectedAnimationConfiguration_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle GravityConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_GravityConnectedAnimationConfiguration_Static.get()))};
+    py::pyobj_handle GravityConnectedAnimationConfiguration_bases{PyTuple_Pack(1, ConnectedAnimationConfiguration_type.get())};
+    if (!GravityConnectedAnimationConfiguration_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GravityConnectedAnimationConfiguration_type{py::register_python_type(module.get(), &type_spec_GravityConnectedAnimationConfiguration, GravityConnectedAnimationConfiguration_bases.get(), reinterpret_cast<PyTypeObject*>(type_GravityConnectedAnimationConfiguration_Static.get()))};
     if (!GravityConnectedAnimationConfiguration_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeySpline_type{py::register_python_type(module.get(), &type_spec_KeySpline, object_bases.get(), nullptr)};
+    py::pyobj_handle KeySpline_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!KeySpline_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle KeySpline_type{py::register_python_type(module.get(), &type_spec_KeySpline, KeySpline_bases.get(), nullptr)};
     if (!KeySpline_type)
     {
         return nullptr;
@@ -26357,43 +26861,85 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LinearColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearColorKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle LinearColorKeyFrame_bases{PyTuple_Pack(1, ColorKeyFrame_type.get())};
+    if (!LinearColorKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LinearColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearColorKeyFrame, LinearColorKeyFrame_bases.get(), nullptr)};
     if (!LinearColorKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LinearDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearDoubleKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle LinearDoubleKeyFrame_bases{PyTuple_Pack(1, DoubleKeyFrame_type.get())};
+    if (!LinearDoubleKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LinearDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearDoubleKeyFrame, LinearDoubleKeyFrame_bases.get(), nullptr)};
     if (!LinearDoubleKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle LinearPointKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearPointKeyFrame, object_bases.get(), nullptr)};
+    py::pyobj_handle LinearPointKeyFrame_bases{PyTuple_Pack(1, PointKeyFrame_type.get())};
+    if (!LinearPointKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LinearPointKeyFrame_type{py::register_python_type(module.get(), &type_spec_LinearPointKeyFrame, LinearPointKeyFrame_bases.get(), nullptr)};
     if (!LinearPointKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationThemeTransition_Static{PyType_FromSpec(&type_spec_NavigationThemeTransition_Static)};
+    py::pyobj_handle NavigationThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!NavigationThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_NavigationThemeTransition_Static, NavigationThemeTransition_Static_bases.get())};
     if (!type_NavigationThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle NavigationThemeTransition_type{py::register_python_type(module.get(), &type_spec_NavigationThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Static.get()))};
+    py::pyobj_handle NavigationThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!NavigationThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationThemeTransition_type{py::register_python_type(module.get(), &type_spec_NavigationThemeTransition, NavigationThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationThemeTransition_Static.get()))};
     if (!NavigationThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ObjectAnimationUsingKeyFrames_Static{PyType_FromSpec(&type_spec_ObjectAnimationUsingKeyFrames_Static)};
+    py::pyobj_handle ObjectAnimationUsingKeyFrames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!ObjectAnimationUsingKeyFrames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ObjectAnimationUsingKeyFrames_Static{PyType_FromSpecWithBases(&type_spec_ObjectAnimationUsingKeyFrames_Static, ObjectAnimationUsingKeyFrames_Static_bases.get())};
     if (!type_ObjectAnimationUsingKeyFrames_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ObjectAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_ObjectAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Static.get()))};
+    py::pyobj_handle ObjectAnimationUsingKeyFrames_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!ObjectAnimationUsingKeyFrames_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ObjectAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_ObjectAnimationUsingKeyFrames, ObjectAnimationUsingKeyFrames_bases.get(), reinterpret_cast<PyTypeObject*>(type_ObjectAnimationUsingKeyFrames_Static.get()))};
     if (!ObjectAnimationUsingKeyFrames_type)
     {
         return nullptr;
@@ -26405,37 +26951,73 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PaneThemeTransition_Static{PyType_FromSpec(&type_spec_PaneThemeTransition_Static)};
+    py::pyobj_handle PaneThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!PaneThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PaneThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_PaneThemeTransition_Static, PaneThemeTransition_Static_bases.get())};
     if (!type_PaneThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PaneThemeTransition_type{py::register_python_type(module.get(), &type_spec_PaneThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Static.get()))};
+    py::pyobj_handle PaneThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!PaneThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PaneThemeTransition_type{py::register_python_type(module.get(), &type_spec_PaneThemeTransition, PaneThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_PaneThemeTransition_Static.get()))};
     if (!PaneThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PointAnimation_Static{PyType_FromSpec(&type_spec_PointAnimation_Static)};
+    py::pyobj_handle PointAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PointAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointAnimation_Static{PyType_FromSpecWithBases(&type_spec_PointAnimation_Static, PointAnimation_Static_bases.get())};
     if (!type_PointAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointAnimation_type{py::register_python_type(module.get(), &type_spec_PointAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Static.get()))};
+    py::pyobj_handle PointAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PointAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointAnimation_type{py::register_python_type(module.get(), &type_spec_PointAnimation, PointAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimation_Static.get()))};
     if (!PointAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PointAnimationUsingKeyFrames_Static{PyType_FromSpec(&type_spec_PointAnimationUsingKeyFrames_Static)};
+    py::pyobj_handle PointAnimationUsingKeyFrames_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PointAnimationUsingKeyFrames_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointAnimationUsingKeyFrames_Static{PyType_FromSpecWithBases(&type_spec_PointAnimationUsingKeyFrames_Static, PointAnimationUsingKeyFrames_Static_bases.get())};
     if (!type_PointAnimationUsingKeyFrames_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_PointAnimationUsingKeyFrames, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Static.get()))};
+    py::pyobj_handle PointAnimationUsingKeyFrames_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PointAnimationUsingKeyFrames_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointAnimationUsingKeyFrames_type{py::register_python_type(module.get(), &type_spec_PointAnimationUsingKeyFrames, PointAnimationUsingKeyFrames_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointAnimationUsingKeyFrames_Static.get()))};
     if (!PointAnimationUsingKeyFrames_type)
     {
         return nullptr;
@@ -26447,97 +27029,193 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PointerDownThemeAnimation_Static{PyType_FromSpec(&type_spec_PointerDownThemeAnimation_Static)};
+    py::pyobj_handle PointerDownThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PointerDownThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointerDownThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_PointerDownThemeAnimation_Static, PointerDownThemeAnimation_Static_bases.get())};
     if (!type_PointerDownThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerDownThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PointerDownThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Static.get()))};
+    py::pyobj_handle PointerDownThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PointerDownThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointerDownThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PointerDownThemeAnimation, PointerDownThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerDownThemeAnimation_Static.get()))};
     if (!PointerDownThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PointerUpThemeAnimation_Static{PyType_FromSpec(&type_spec_PointerUpThemeAnimation_Static)};
+    py::pyobj_handle PointerUpThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PointerUpThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PointerUpThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_PointerUpThemeAnimation_Static, PointerUpThemeAnimation_Static_bases.get())};
     if (!type_PointerUpThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PointerUpThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PointerUpThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Static.get()))};
+    py::pyobj_handle PointerUpThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PointerUpThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointerUpThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PointerUpThemeAnimation, PointerUpThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_PointerUpThemeAnimation_Static.get()))};
     if (!PointerUpThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PopInThemeAnimation_Static{PyType_FromSpec(&type_spec_PopInThemeAnimation_Static)};
+    py::pyobj_handle PopInThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PopInThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PopInThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_PopInThemeAnimation_Static, PopInThemeAnimation_Static_bases.get())};
     if (!type_PopInThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PopInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PopInThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Static.get()))};
+    py::pyobj_handle PopInThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PopInThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PopInThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PopInThemeAnimation, PopInThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopInThemeAnimation_Static.get()))};
     if (!PopInThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PopOutThemeAnimation_Static{PyType_FromSpec(&type_spec_PopOutThemeAnimation_Static)};
+    py::pyobj_handle PopOutThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!PopOutThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PopOutThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_PopOutThemeAnimation_Static, PopOutThemeAnimation_Static_bases.get())};
     if (!type_PopOutThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PopOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PopOutThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Static.get()))};
+    py::pyobj_handle PopOutThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!PopOutThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PopOutThemeAnimation_type{py::register_python_type(module.get(), &type_spec_PopOutThemeAnimation, PopOutThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopOutThemeAnimation_Static.get()))};
     if (!PopOutThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PopupThemeTransition_Static{PyType_FromSpec(&type_spec_PopupThemeTransition_Static)};
+    py::pyobj_handle PopupThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!PopupThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PopupThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_PopupThemeTransition_Static, PopupThemeTransition_Static_bases.get())};
     if (!type_PopupThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PopupThemeTransition_type{py::register_python_type(module.get(), &type_spec_PopupThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Static.get()))};
+    py::pyobj_handle PopupThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!PopupThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PopupThemeTransition_type{py::register_python_type(module.get(), &type_spec_PopupThemeTransition, PopupThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_PopupThemeTransition_Static.get()))};
     if (!PopupThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_PowerEase_Static{PyType_FromSpec(&type_spec_PowerEase_Static)};
+    py::pyobj_handle PowerEase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(EasingFunctionBase_type.get())))};
+    if (!PowerEase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PowerEase_Static{PyType_FromSpecWithBases(&type_spec_PowerEase_Static, PowerEase_Static_bases.get())};
     if (!type_PowerEase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PowerEase_type{py::register_python_type(module.get(), &type_spec_PowerEase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Static.get()))};
+    py::pyobj_handle PowerEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!PowerEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PowerEase_type{py::register_python_type(module.get(), &type_spec_PowerEase, PowerEase_bases.get(), reinterpret_cast<PyTypeObject*>(type_PowerEase_Static.get()))};
     if (!PowerEase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle QuadraticEase_type{py::register_python_type(module.get(), &type_spec_QuadraticEase, object_bases.get(), nullptr)};
+    py::pyobj_handle QuadraticEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!QuadraticEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle QuadraticEase_type{py::register_python_type(module.get(), &type_spec_QuadraticEase, QuadraticEase_bases.get(), nullptr)};
     if (!QuadraticEase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle QuarticEase_type{py::register_python_type(module.get(), &type_spec_QuarticEase, object_bases.get(), nullptr)};
+    py::pyobj_handle QuarticEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!QuarticEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle QuarticEase_type{py::register_python_type(module.get(), &type_spec_QuarticEase, QuarticEase_bases.get(), nullptr)};
     if (!QuarticEase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle QuinticEase_type{py::register_python_type(module.get(), &type_spec_QuinticEase, object_bases.get(), nullptr)};
+    py::pyobj_handle QuinticEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!QuinticEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle QuinticEase_type{py::register_python_type(module.get(), &type_spec_QuinticEase, QuinticEase_bases.get(), nullptr)};
     if (!QuinticEase_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ReorderThemeTransition_type{py::register_python_type(module.get(), &type_spec_ReorderThemeTransition, object_bases.get(), nullptr)};
+    py::pyobj_handle ReorderThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!ReorderThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ReorderThemeTransition_type{py::register_python_type(module.get(), &type_spec_ReorderThemeTransition, ReorderThemeTransition_bases.get(), nullptr)};
     if (!ReorderThemeTransition_type)
     {
         return nullptr;
@@ -26555,145 +27233,289 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_animation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RepositionThemeAnimation_Static{PyType_FromSpec(&type_spec_RepositionThemeAnimation_Static)};
+    py::pyobj_handle RepositionThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!RepositionThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RepositionThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_RepositionThemeAnimation_Static, RepositionThemeAnimation_Static_bases.get())};
     if (!type_RepositionThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepositionThemeAnimation_type{py::register_python_type(module.get(), &type_spec_RepositionThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Static.get()))};
+    py::pyobj_handle RepositionThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!RepositionThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepositionThemeAnimation_type{py::register_python_type(module.get(), &type_spec_RepositionThemeAnimation, RepositionThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeAnimation_Static.get()))};
     if (!RepositionThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_RepositionThemeTransition_Static{PyType_FromSpec(&type_spec_RepositionThemeTransition_Static)};
+    py::pyobj_handle RepositionThemeTransition_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Transition_type.get())))};
+    if (!RepositionThemeTransition_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RepositionThemeTransition_Static{PyType_FromSpecWithBases(&type_spec_RepositionThemeTransition_Static, RepositionThemeTransition_Static_bases.get())};
     if (!type_RepositionThemeTransition_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RepositionThemeTransition_type{py::register_python_type(module.get(), &type_spec_RepositionThemeTransition, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Static.get()))};
+    py::pyobj_handle RepositionThemeTransition_bases{PyTuple_Pack(1, Transition_type.get())};
+    if (!RepositionThemeTransition_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RepositionThemeTransition_type{py::register_python_type(module.get(), &type_spec_RepositionThemeTransition, RepositionThemeTransition_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepositionThemeTransition_Static.get()))};
     if (!RepositionThemeTransition_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SineEase_type{py::register_python_type(module.get(), &type_spec_SineEase, object_bases.get(), nullptr)};
+    py::pyobj_handle SineEase_bases{PyTuple_Pack(1, EasingFunctionBase_type.get())};
+    if (!SineEase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SineEase_type{py::register_python_type(module.get(), &type_spec_SineEase, SineEase_bases.get(), nullptr)};
     if (!SineEase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SlideNavigationTransitionInfo_Static{PyType_FromSpec(&type_spec_SlideNavigationTransitionInfo_Static)};
+    py::pyobj_handle SlideNavigationTransitionInfo_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(NavigationTransitionInfo_type.get())))};
+    if (!SlideNavigationTransitionInfo_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SlideNavigationTransitionInfo_Static{PyType_FromSpecWithBases(&type_spec_SlideNavigationTransitionInfo_Static, SlideNavigationTransitionInfo_Static_bases.get())};
     if (!type_SlideNavigationTransitionInfo_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SlideNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_SlideNavigationTransitionInfo, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Static.get()))};
+    py::pyobj_handle SlideNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!SlideNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SlideNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_SlideNavigationTransitionInfo, SlideNavigationTransitionInfo_bases.get(), reinterpret_cast<PyTypeObject*>(type_SlideNavigationTransitionInfo_Static.get()))};
     if (!SlideNavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplineColorKeyFrame_Static{PyType_FromSpec(&type_spec_SplineColorKeyFrame_Static)};
+    py::pyobj_handle SplineColorKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ColorKeyFrame_type.get())))};
+    if (!SplineColorKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplineColorKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_SplineColorKeyFrame_Static, SplineColorKeyFrame_Static_bases.get())};
     if (!type_SplineColorKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplineColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplineColorKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Static.get()))};
+    py::pyobj_handle SplineColorKeyFrame_bases{PyTuple_Pack(1, ColorKeyFrame_type.get())};
+    if (!SplineColorKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplineColorKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplineColorKeyFrame, SplineColorKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineColorKeyFrame_Static.get()))};
     if (!SplineColorKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplineDoubleKeyFrame_Static{PyType_FromSpec(&type_spec_SplineDoubleKeyFrame_Static)};
+    py::pyobj_handle SplineDoubleKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(DoubleKeyFrame_type.get())))};
+    if (!SplineDoubleKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplineDoubleKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_SplineDoubleKeyFrame_Static, SplineDoubleKeyFrame_Static_bases.get())};
     if (!type_SplineDoubleKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplineDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplineDoubleKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Static.get()))};
+    py::pyobj_handle SplineDoubleKeyFrame_bases{PyTuple_Pack(1, DoubleKeyFrame_type.get())};
+    if (!SplineDoubleKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplineDoubleKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplineDoubleKeyFrame, SplineDoubleKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplineDoubleKeyFrame_Static.get()))};
     if (!SplineDoubleKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplinePointKeyFrame_Static{PyType_FromSpec(&type_spec_SplinePointKeyFrame_Static)};
+    py::pyobj_handle SplinePointKeyFrame_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(PointKeyFrame_type.get())))};
+    if (!SplinePointKeyFrame_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplinePointKeyFrame_Static{PyType_FromSpecWithBases(&type_spec_SplinePointKeyFrame_Static, SplinePointKeyFrame_Static_bases.get())};
     if (!type_SplinePointKeyFrame_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplinePointKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplinePointKeyFrame, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Static.get()))};
+    py::pyobj_handle SplinePointKeyFrame_bases{PyTuple_Pack(1, PointKeyFrame_type.get())};
+    if (!SplinePointKeyFrame_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplinePointKeyFrame_type{py::register_python_type(module.get(), &type_spec_SplinePointKeyFrame, SplinePointKeyFrame_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplinePointKeyFrame_Static.get()))};
     if (!SplinePointKeyFrame_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplitCloseThemeAnimation_Static{PyType_FromSpec(&type_spec_SplitCloseThemeAnimation_Static)};
+    py::pyobj_handle SplitCloseThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!SplitCloseThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplitCloseThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_SplitCloseThemeAnimation_Static, SplitCloseThemeAnimation_Static_bases.get())};
     if (!type_SplitCloseThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplitCloseThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SplitCloseThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Static.get()))};
+    py::pyobj_handle SplitCloseThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!SplitCloseThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplitCloseThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SplitCloseThemeAnimation, SplitCloseThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitCloseThemeAnimation_Static.get()))};
     if (!SplitCloseThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SplitOpenThemeAnimation_Static{PyType_FromSpec(&type_spec_SplitOpenThemeAnimation_Static)};
+    py::pyobj_handle SplitOpenThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!SplitOpenThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SplitOpenThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_SplitOpenThemeAnimation_Static, SplitOpenThemeAnimation_Static_bases.get())};
     if (!type_SplitOpenThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SplitOpenThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SplitOpenThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Static.get()))};
+    py::pyobj_handle SplitOpenThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!SplitOpenThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SplitOpenThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SplitOpenThemeAnimation, SplitOpenThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_SplitOpenThemeAnimation_Static.get()))};
     if (!SplitOpenThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Storyboard_Static{PyType_FromSpec(&type_spec_Storyboard_Static)};
+    py::pyobj_handle Storyboard_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!Storyboard_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Storyboard_Static{PyType_FromSpecWithBases(&type_spec_Storyboard_Static, Storyboard_Static_bases.get())};
     if (!type_Storyboard_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Storyboard_type{py::register_python_type(module.get(), &type_spec_Storyboard, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Static.get()))};
+    py::pyobj_handle Storyboard_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!Storyboard_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Storyboard_type{py::register_python_type(module.get(), &type_spec_Storyboard, Storyboard_bases.get(), reinterpret_cast<PyTypeObject*>(type_Storyboard_Static.get()))};
     if (!Storyboard_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SuppressNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_SuppressNavigationTransitionInfo, object_bases.get(), nullptr)};
+    py::pyobj_handle SuppressNavigationTransitionInfo_bases{PyTuple_Pack(1, NavigationTransitionInfo_type.get())};
+    if (!SuppressNavigationTransitionInfo_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SuppressNavigationTransitionInfo_type{py::register_python_type(module.get(), &type_spec_SuppressNavigationTransitionInfo, SuppressNavigationTransitionInfo_bases.get(), nullptr)};
     if (!SuppressNavigationTransitionInfo_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SwipeBackThemeAnimation_Static{PyType_FromSpec(&type_spec_SwipeBackThemeAnimation_Static)};
+    py::pyobj_handle SwipeBackThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!SwipeBackThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SwipeBackThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_SwipeBackThemeAnimation_Static, SwipeBackThemeAnimation_Static_bases.get())};
     if (!type_SwipeBackThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SwipeBackThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SwipeBackThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Static.get()))};
+    py::pyobj_handle SwipeBackThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!SwipeBackThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SwipeBackThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SwipeBackThemeAnimation, SwipeBackThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeBackThemeAnimation_Static.get()))};
     if (!SwipeBackThemeAnimation_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SwipeHintThemeAnimation_Static{PyType_FromSpec(&type_spec_SwipeHintThemeAnimation_Static)};
+    py::pyobj_handle SwipeHintThemeAnimation_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Timeline_type.get())))};
+    if (!SwipeHintThemeAnimation_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SwipeHintThemeAnimation_Static{PyType_FromSpecWithBases(&type_spec_SwipeHintThemeAnimation_Static, SwipeHintThemeAnimation_Static_bases.get())};
     if (!type_SwipeHintThemeAnimation_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SwipeHintThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SwipeHintThemeAnimation, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Static.get()))};
+    py::pyobj_handle SwipeHintThemeAnimation_bases{PyTuple_Pack(1, Timeline_type.get())};
+    if (!SwipeHintThemeAnimation_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SwipeHintThemeAnimation_type{py::register_python_type(module.get(), &type_spec_SwipeHintThemeAnimation, SwipeHintThemeAnimation_bases.get(), reinterpret_cast<PyTypeObject*>(type_SwipeHintThemeAnimation_Static.get()))};
     if (!SwipeHintThemeAnimation_type)
     {
         return nullptr;

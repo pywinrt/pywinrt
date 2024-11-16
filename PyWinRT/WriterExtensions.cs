@@ -1191,6 +1191,13 @@ static class WriterExtensions
         w.Indent--;
     }
 
+    private class TypeReferenceEqualityComparer : IEqualityComparer<TypeReference>
+    {
+        public bool Equals(TypeReference? x, TypeReference? y) => x?.FullName == y?.FullName;
+
+        public int GetHashCode(TypeReference obj) => obj.FullName.GetHashCode();
+    }
+
     public static void WriteNamespaceModuleInitFunction(
         this IndentedTextWriter w,
         string ns,
@@ -1244,6 +1251,50 @@ static class WriterExtensions
         w.WriteBlankLine();
 
         foreach (
+            var bts in members
+                .Classes.Where(c => c.CircularDependencyDepth == dependencyDepth)
+                .Select(c =>
+                    (c.Type.BaseType, DependencyDepth: c.Type.BaseType.GetCircularDependencyDepth())
+                )
+                .Where(t =>
+                    t.BaseType.Namespace != "System"
+                    && (t.BaseType.Namespace != ns || t.DependencyDepth != dependencyDepth)
+                )
+                .GroupBy(t => (t.BaseType.Namespace, t.DependencyDepth))
+        )
+        {
+            var (bns, bdd) = bts.Key;
+            var suffix = bdd == 0 ? "" : $"_{bdd + 1}";
+
+            w.WriteLine(
+                $"py::pyobj_handle {bns.ToPyModuleAlias()}{suffix}_module{{PyImport_ImportModule(\"winrt.{bns.ToNsModuleName()}{suffix}\")}};"
+            );
+            w.WriteLine($"if (!{bns.ToPyModuleAlias()}{suffix}_module)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("return nullptr;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+
+            foreach (
+                var bt in bts.Select(t => t.BaseType).Distinct(new TypeReferenceEqualityComparer())
+            )
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle {bns.ToPyModuleAlias()}_{bt.Name}_type{{PyObject_GetAttrString({bns.ToPyModuleAlias()}{suffix}_module.get(), \"{bt.Name}\")}};"
+                );
+                w.WriteLine($"if (!{bns.ToPyModuleAlias()}_{bt.Name}_type)");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("return nullptr;");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+            }
+        }
+
+        foreach (
             var t in members
                 .Classes.OrderByDependency()
                 .Concat(members.Interfaces)
@@ -1266,14 +1317,45 @@ static class WriterExtensions
     /// </summary>
     static void WriteNamespaceInitPythonType(this IndentedTextWriter w, ProjectedType type)
     {
+        var hasComposableBase =
+            type.Type.BaseType is not null && type.Type.BaseType.Namespace != "System";
+
         var name = type.Name.ToNonGeneric();
         var metaclass = "nullptr";
 
         if (type.PyRequiresMetaclass)
         {
-            w.WriteLine(
-                $"py::pyobj_handle type_{name}_Static{{PyType_FromSpec(&type_spec_{name}_Static)}};"
-            );
+            if (hasComposableBase)
+            {
+                var baseType = type.Type.BaseType!;
+                var baseName = baseType.Name;
+
+                if (baseType.Namespace != type.Namespace)
+                {
+                    baseName = $"{baseType.Namespace.ToPyModuleAlias()}_{baseName}";
+                }
+
+                w.WriteLine(
+                    $"py::pyobj_handle {name}_Static_bases{{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE({baseName}_type.get())))}};"
+                );
+                w.WriteLine($"if (!{name}_Static_bases)");
+                w.WriteLine("{");
+                w.Indent++;
+                w.WriteLine("return nullptr;");
+                w.Indent--;
+                w.WriteLine("}");
+                w.WriteBlankLine();
+
+                w.WriteLine(
+                    $"py::pyobj_handle type_{name}_Static{{PyType_FromSpecWithBases(&type_spec_{name}_Static, {name}_Static_bases.get())}};"
+                );
+            }
+            else
+            {
+                w.WriteLine(
+                    $"py::pyobj_handle type_{name}_Static{{PyType_FromSpec(&type_spec_{name}_Static)}};"
+                );
+            }
 
             w.WriteLine($"if (!type_{name}_Static)");
             w.WriteLine("{");
@@ -1286,13 +1368,37 @@ static class WriterExtensions
             metaclass = $"reinterpret_cast<PyTypeObject*>(type_{name}_Static.get())";
         }
 
-        var baseType =
-            type.Category == Category.Class || type.Category == Category.Interface
-                ? "object_bases.get()"
-                : "nullptr";
+        if (hasComposableBase)
+        {
+            var baseType = type.Type.BaseType!;
+            var baseName = baseType.Name;
+
+            if (baseType.Namespace != type.Namespace)
+            {
+                baseName = $"{baseType.Namespace.ToPyModuleAlias()}_{baseName}";
+            }
+
+            w.WriteLine(
+                $"py::pyobj_handle {name}_bases{{PyTuple_Pack(1, {baseName}_type.get())}};"
+            );
+            w.WriteLine($"if (!{name}_bases)");
+            w.WriteLine("{");
+            w.Indent++;
+            w.WriteLine("return nullptr;");
+            w.Indent--;
+            w.WriteLine("}");
+            w.WriteBlankLine();
+        }
+
+        var bases = type.Category switch
+        {
+            Category.Class when hasComposableBase => $"{name}_bases.get()",
+            Category.Class or Category.Interface => "object_bases.get()",
+            _ => "nullptr"
+        };
 
         w.WriteLine(
-            $"py::pytype_handle {name}_type{{py::register_python_type(module.get(), &type_spec_{name}, {baseType}, {metaclass})}};"
+            $"py::pytype_handle {name}_type{{py::register_python_type(module.get(), &type_spec_{name}, {bases}, {metaclass})}};"
         );
         w.WriteLine($"if (!{name}_type)");
         w.WriteLine("{");

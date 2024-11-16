@@ -2815,79 +2815,169 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_shapes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Shape_Static{PyType_FromSpec(&type_spec_Shape_Static)};
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_FrameworkElement_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "FrameworkElement")};
+    if (!microsoft_ui_xaml_FrameworkElement_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle Shape_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_FrameworkElement_type.get())))};
+    if (!Shape_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Shape_Static{PyType_FromSpecWithBases(&type_spec_Shape_Static, Shape_Static_bases.get())};
     if (!type_Shape_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
+    py::pyobj_handle Shape_bases{PyTuple_Pack(1, microsoft_ui_xaml_FrameworkElement_type.get())};
+    if (!Shape_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Shape_type{py::register_python_type(module.get(), &type_spec_Shape, Shape_bases.get(), reinterpret_cast<PyTypeObject*>(type_Shape_Static.get()))};
     if (!Shape_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, object_bases.get(), nullptr)};
+    py::pyobj_handle Ellipse_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Ellipse_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Ellipse_type{py::register_python_type(module.get(), &type_spec_Ellipse, Ellipse_bases.get(), nullptr)};
     if (!Ellipse_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Line_Static{PyType_FromSpec(&type_spec_Line_Static)};
+    py::pyobj_handle Line_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shape_type.get())))};
+    if (!Line_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Line_Static{PyType_FromSpecWithBases(&type_spec_Line_Static, Line_Static_bases.get())};
     if (!type_Line_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Line_type{py::register_python_type(module.get(), &type_spec_Line, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Static.get()))};
+    py::pyobj_handle Line_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Line_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Line_type{py::register_python_type(module.get(), &type_spec_Line, Line_bases.get(), reinterpret_cast<PyTypeObject*>(type_Line_Static.get()))};
     if (!Line_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Path_Static{PyType_FromSpec(&type_spec_Path_Static)};
+    py::pyobj_handle Path_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shape_type.get())))};
+    if (!Path_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Path_Static{PyType_FromSpecWithBases(&type_spec_Path_Static, Path_Static_bases.get())};
     if (!type_Path_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Path_type{py::register_python_type(module.get(), &type_spec_Path, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get()))};
+    py::pyobj_handle Path_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Path_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Path_type{py::register_python_type(module.get(), &type_spec_Path, Path_bases.get(), reinterpret_cast<PyTypeObject*>(type_Path_Static.get()))};
     if (!Path_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Polygon_Static{PyType_FromSpec(&type_spec_Polygon_Static)};
+    py::pyobj_handle Polygon_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shape_type.get())))};
+    if (!Polygon_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Polygon_Static{PyType_FromSpecWithBases(&type_spec_Polygon_Static, Polygon_Static_bases.get())};
     if (!type_Polygon_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Polygon_type{py::register_python_type(module.get(), &type_spec_Polygon, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Static.get()))};
+    py::pyobj_handle Polygon_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Polygon_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Polygon_type{py::register_python_type(module.get(), &type_spec_Polygon, Polygon_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polygon_Static.get()))};
     if (!Polygon_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Polyline_Static{PyType_FromSpec(&type_spec_Polyline_Static)};
+    py::pyobj_handle Polyline_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shape_type.get())))};
+    if (!Polyline_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Polyline_Static{PyType_FromSpecWithBases(&type_spec_Polyline_Static, Polyline_Static_bases.get())};
     if (!type_Polyline_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Polyline_type{py::register_python_type(module.get(), &type_spec_Polyline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Static.get()))};
+    py::pyobj_handle Polyline_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Polyline_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Polyline_type{py::register_python_type(module.get(), &type_spec_Polyline, Polyline_bases.get(), reinterpret_cast<PyTypeObject*>(type_Polyline_Static.get()))};
     if (!Polyline_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Rectangle_Static{PyType_FromSpec(&type_spec_Rectangle_Static)};
+    py::pyobj_handle Rectangle_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Shape_type.get())))};
+    if (!Rectangle_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Rectangle_Static{PyType_FromSpecWithBases(&type_spec_Rectangle_Static, Rectangle_Static_bases.get())};
     if (!type_Rectangle_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Rectangle_type{py::register_python_type(module.get(), &type_spec_Rectangle, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get()))};
+    py::pyobj_handle Rectangle_bases{PyTuple_Pack(1, Shape_type.get())};
+    if (!Rectangle_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Rectangle_type{py::register_python_type(module.get(), &type_spec_Rectangle, Rectangle_bases.get(), reinterpret_cast<PyTypeObject*>(type_Rectangle_Static.get()))};
     if (!Rectangle_type)
     {
         return nullptr;

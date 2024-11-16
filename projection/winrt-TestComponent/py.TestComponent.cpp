@@ -6245,13 +6245,25 @@ PyMODINIT_FUNC PyInit__winrt_testcomponent(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_Derived_Static{PyType_FromSpec(&type_spec_Derived_Static)};
+    py::pyobj_handle Derived_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(Composable_type.get())))};
+    if (!Derived_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Derived_Static{PyType_FromSpecWithBases(&type_spec_Derived_Static, Derived_Static_bases.get())};
     if (!type_Derived_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Derived_Static.get()))};
+    py::pyobj_handle Derived_bases{PyTuple_Pack(1, Composable_type.get())};
+    if (!Derived_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Derived_type{py::register_python_type(module.get(), &type_spec_Derived, Derived_bases.get(), reinterpret_cast<PyTypeObject*>(type_Derived_Static.get()))};
     if (!Derived_type)
     {
         return nullptr;
