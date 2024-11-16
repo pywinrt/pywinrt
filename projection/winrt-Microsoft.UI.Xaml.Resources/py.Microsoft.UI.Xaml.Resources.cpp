@@ -150,7 +150,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         "winrt._winrt_microsoft_ui_xaml_resources.CustomXamlResourceLoader",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Resources::CustomXamlResourceLoader),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_CustomXamlResourceLoader};
 
     static PyGetSetDef getset_CustomXamlResourceLoader_Static[] = {
@@ -175,7 +175,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Resources
         "winrt._winrt_microsoft_ui_xaml_resources.CustomXamlResourceLoader_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_CustomXamlResourceLoader_Static
     };
 

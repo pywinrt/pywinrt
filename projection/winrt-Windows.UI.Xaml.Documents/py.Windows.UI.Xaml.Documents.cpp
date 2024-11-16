@@ -507,7 +507,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Block",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Block),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Block};
 
     static PyGetSetDef getset_Block_Static[] = {
@@ -536,7 +536,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Block_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Block_Static
     };
 
@@ -3238,7 +3238,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.ContentLinkProvider",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::ContentLinkProvider),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ContentLinkProvider};
 
     static PyGetSetDef getset_ContentLinkProvider_Static[] = {
@@ -3262,7 +3262,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.ContentLinkProvider_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ContentLinkProvider_Static
     };
 
@@ -6662,7 +6662,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Inline",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Inline),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Inline};
 
     static PyGetSetDef getset_Inline_Static[] = {
@@ -6686,7 +6686,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Inline_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Inline_Static
     };
 
@@ -8446,7 +8446,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Span",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::Span),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Span};
 
     static PyGetSetDef getset_Span_Static[] = {
@@ -8470,7 +8470,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.Span_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Span_Static
     };
 
@@ -10534,7 +10534,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextElement",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextElement),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextElement};
 
     static PyGetSetDef getset_TextElement_Static[] = {
@@ -10576,7 +10576,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextElement_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextElement_Static
     };
 
@@ -10868,7 +10868,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextHighlighter",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighter),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextHighlighter};
 
     static PyGetSetDef getset_TextHighlighter_Static[] = {
@@ -10894,7 +10894,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextHighlighter_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextHighlighter_Static
     };
 
@@ -10961,7 +10961,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextHighlighterBase",
         sizeof(py::wrapper::Windows::UI::Xaml::Documents::TextHighlighterBase),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_TextHighlighterBase};
 
     static PyGetSetDef getset_TextHighlighterBase_Static[] = {
@@ -10985,7 +10985,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
         "winrt._winrt_windows_ui_xaml_documents.TextHighlighterBase_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_TextHighlighterBase_Static
     };
 

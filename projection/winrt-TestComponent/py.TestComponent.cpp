@@ -473,7 +473,7 @@ namespace py::cpp::TestComponent
         "winrt._winrt_testcomponent.Composable",
         sizeof(py::wrapper::TestComponent::Composable),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Composable};
 
     static PyGetSetDef getset_Composable_Static[] = {
@@ -502,7 +502,7 @@ namespace py::cpp::TestComponent
         "winrt._winrt_testcomponent.Composable_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Composable_Static
     };
 
@@ -591,7 +591,7 @@ namespace py::cpp::TestComponent
         "winrt._winrt_testcomponent.Derived",
         sizeof(py::wrapper::TestComponent::Derived),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Derived};
 
     static PyGetSetDef getset_Derived_Static[] = {
@@ -615,7 +615,7 @@ namespace py::cpp::TestComponent
         "winrt._winrt_testcomponent.Derived_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Derived_Static
     };
 

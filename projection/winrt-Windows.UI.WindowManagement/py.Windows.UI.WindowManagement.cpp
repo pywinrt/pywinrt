@@ -2102,7 +2102,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         "winrt._winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration",
         sizeof(py::wrapper::Windows::UI::WindowManagement::AppWindowPresentationConfiguration),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_AppWindowPresentationConfiguration};
 
     static PyGetSetDef getset_AppWindowPresentationConfiguration_Static[] = {
@@ -2126,7 +2126,7 @@ namespace py::cpp::Windows::UI::WindowManagement
         "winrt._winrt_windows_ui_windowmanagement.AppWindowPresentationConfiguration_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_AppWindowPresentationConfiguration_Static
     };
 

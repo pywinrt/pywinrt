@@ -87,7 +87,7 @@ static class WriterExtensions
         );
         w.WriteLine("static_cast<int>(PyType_Type.tp_basicsize),");
         w.WriteLine("static_cast<int>(PyType_Type.tp_itemsize),");
-        w.WriteLine("Py_TPFLAGS_DEFAULT,");
+        w.WriteLine($"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},");
         w.WriteLine($"type_slots_{type.Name}_Static");
 
         w.Indent--;
@@ -177,7 +177,7 @@ static class WriterExtensions
         }
 
         w.WriteLine("0,");
-        w.WriteLine("Py_TPFLAGS_DEFAULT,");
+        w.WriteLine($"Py_TPFLAGS_DEFAULT{(type.IsComposable ? " | Py_TPFLAGS_BASETYPE" : "")},");
         w.WriteLine($"_type_slots_{type.Name}}};");
         w.Indent--;
     }

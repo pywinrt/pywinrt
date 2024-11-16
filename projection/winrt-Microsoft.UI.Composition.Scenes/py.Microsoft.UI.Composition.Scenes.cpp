@@ -295,7 +295,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneComponent",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneComponent),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneComponent};
 
     static PyGetSetDef getset_SceneComponent_Static[] = {
@@ -319,7 +319,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneComponent_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SceneComponent_Static
     };
 
@@ -1088,7 +1088,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterial",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMaterial),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneMaterial};
 
     static PyGetSetDef getset_SceneMaterial_Static[] = {
@@ -1112,7 +1112,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterial_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SceneMaterial_Static
     };
 
@@ -1179,7 +1179,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterialInput",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneMaterialInput),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneMaterialInput};
 
     static PyGetSetDef getset_SceneMaterialInput_Static[] = {
@@ -1203,7 +1203,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneMaterialInput_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SceneMaterialInput_Static
     };
 
@@ -4138,7 +4138,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneObject",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneObject),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneObject};
 
     static PyGetSetDef getset_SceneObject_Static[] = {
@@ -4162,7 +4162,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneObject_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SceneObject_Static
     };
 
@@ -4787,7 +4787,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.ScenePbrMaterial",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::ScenePbrMaterial),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_ScenePbrMaterial};
 
     static PyGetSetDef getset_ScenePbrMaterial_Static[] = {
@@ -4811,7 +4811,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.ScenePbrMaterial_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_ScenePbrMaterial_Static
     };
 
@@ -4878,7 +4878,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneRendererComponent",
         sizeof(py::wrapper::Microsoft::UI::Composition::Scenes::SceneRendererComponent),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_SceneRendererComponent};
 
     static PyGetSetDef getset_SceneRendererComponent_Static[] = {
@@ -4902,7 +4902,7 @@ namespace py::cpp::Microsoft::UI::Composition::Scenes
         "winrt._winrt_microsoft_ui_composition_scenes.SceneRendererComponent_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_SceneRendererComponent_Static
     };
 

@@ -734,7 +734,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         "winrt._winrt_microsoft_ui_xaml_shapes.Path",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Shapes::Path),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Path};
 
     static PyGetSetDef getset_Path_Static[] = {
@@ -759,7 +759,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         "winrt._winrt_microsoft_ui_xaml_shapes.Path_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Path_Static
     };
 
@@ -2731,7 +2731,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         "winrt._winrt_microsoft_ui_xaml_shapes.Shape",
         sizeof(py::wrapper::Microsoft::UI::Xaml::Shapes::Shape),
         0,
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         _type_slots_Shape};
 
     static PyGetSetDef getset_Shape_Static[] = {
@@ -2766,7 +2766,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
         "winrt._winrt_microsoft_ui_xaml_shapes.Shape_Static",
         static_cast<int>(PyType_Type.tp_basicsize),
         static_cast<int>(PyType_Type.tp_itemsize),
-        Py_TPFLAGS_DEFAULT,
+        Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE,
         type_slots_Shape_Static
     };
 
