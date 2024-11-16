@@ -22,6 +22,16 @@ from winrt._winrt_microsoft_ui_composition_scenes import (
     SceneSurfaceMaterialInput,
     SceneVisual,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_composition_scenes import (
+        SceneComponent_Static,
+        SceneMaterial_Static,
+        SceneMaterialInput_Static,
+        SceneObject_Static,
+        ScenePbrMaterial_Static,
+        SceneRendererComponent_Static,
+    )
 
 __all__ = [
     "SceneAlphaMode",

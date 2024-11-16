@@ -84,10 +84,51 @@ from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
     IScrollControllerPanningInfo,
     IScrollSnapPointsInfo,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
+        ButtonBase_Static,
+        CarouselPanel_Static,
+        ColorSpectrum_Static,
+        ColumnMajorUniformToLargestGridLayout_Static,
+        CommandBarFlyoutCommandBar_Static,
+        DragCompletedEventArgs_Static,
+        DragDeltaEventArgs_Static,
+        DragStartedEventArgs_Static,
+        FlyoutBase_Static,
+        FlyoutShowOptions_Static,
+        GridViewItemPresenter_Static,
+        InfoBarPanel_Static,
+        ListViewItemPresenter_Static,
+        MonochromaticOverlayPresenter_Static,
+        NavigationViewItemPresenter_Static,
+        NavigationViewItemPresenterTemplateSettings_Static,
+        OrientedVirtualizingPanel_Static,
+        PickerFlyoutBase_Static,
+        PivotHeaderItem_Static,
+        RangeBase_Static,
+        RepeatedScrollSnapPoint_Static,
+        RepeatedZoomSnapPoint_Static,
+        ScrollPresenter_Static,
+        ScrollSnapPoint_Static,
+        ScrollSnapPointBase_Static,
+        Selector_Static,
+        SelectorItem_Static,
+        SnapPointBase_Static,
+        ToggleButton_Static,
+        ZoomSnapPoint_Static,
+        ZoomSnapPointBase_Static,
+    )
 from winrt._winrt_microsoft_ui_xaml_controls_primitives_2 import (
     ColorPickerSlider,
     TabViewListView,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_controls_primitives_2 import (
+        ColorPickerSlider_Static,
+        TabViewListView_Static,
+    )
 
 __all__ = [
     "AnimationDirection",

@@ -28,6 +28,18 @@ from winrt._winrt_windows_ui_xaml_data import (
     ISupportIncrementalLoading,
     IValueConverter,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_data import (
+        Binding_Static,
+        BindingBase_Static,
+        BindingExpression_Static,
+        BindingExpressionBase_Static,
+        CurrentChangingEventArgs_Static,
+        ItemIndexRange_Static,
+        PropertyChangedEventArgs_Static,
+        RelativeSource_Static,
+    )
 
 __all__ = [
     "BindingMode",

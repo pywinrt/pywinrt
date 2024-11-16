@@ -91,7 +91,7 @@ class AnchorRequestedEventArgs(winrt.system.Object):
     @_property
     def anchor_candidates(self) -> typing.MutableSequence[microsoft_ui_xaml.UIElement]: ...
 
-class AnimatedIcon_Static(type):
+class AnimatedIcon_Static(IconElement_Static):
     def get_state(cls, object: microsoft_ui_xaml.DependencyObject, /) -> str: ...
     def set_state(cls, object: microsoft_ui_xaml.DependencyObject, value: str, /) -> None: ...
     @_property
@@ -103,7 +103,7 @@ class AnimatedIcon_Static(type):
     @_property
     def state_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AnimatedIcon(winrt.system.Object, metaclass=AnimatedIcon_Static):
+class AnimatedIcon(IconElement, metaclass=AnimatedIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimatedIcon: ...
     def __new__(cls: typing.Type[AnimatedIcon]) -> AnimatedIcon: ...
@@ -120,7 +120,7 @@ class AnimatedIcon(winrt.system.Object, metaclass=AnimatedIcon_Static):
     @fallback_icon_source.setter
     def fallback_icon_source(self, value: IconSource) -> None: ...
 
-class AnimatedIconSource_Static(type):
+class AnimatedIconSource_Static(IconSource_Static):
     @_property
     def fallback_icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -128,7 +128,7 @@ class AnimatedIconSource_Static(type):
     @_property
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AnimatedIconSource(winrt.system.Object, metaclass=AnimatedIconSource_Static):
+class AnimatedIconSource(IconSource, metaclass=AnimatedIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimatedIconSource: ...
     def __new__(cls: typing.Type[AnimatedIconSource]) -> AnimatedIconSource: ...
@@ -145,7 +145,7 @@ class AnimatedIconSource(winrt.system.Object, metaclass=AnimatedIconSource_Stati
     @fallback_icon_source.setter
     def fallback_icon_source(self, value: IconSource) -> None: ...
 
-class AnimatedVisualPlayer_Static(type):
+class AnimatedVisualPlayer_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def auto_play_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -167,7 +167,7 @@ class AnimatedVisualPlayer_Static(type):
     @_property
     def animation_optimization_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AnimatedVisualPlayer(winrt.system.Object, metaclass=AnimatedVisualPlayer_Static):
+class AnimatedVisualPlayer(microsoft_ui_xaml.FrameworkElement, metaclass=AnimatedVisualPlayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnimatedVisualPlayer: ...
     def __new__(cls: typing.Type[AnimatedVisualPlayer]) -> AnimatedVisualPlayer: ...
@@ -211,7 +211,7 @@ class AnimatedVisualPlayer(winrt.system.Object, metaclass=AnimatedVisualPlayer_S
     @animation_optimization.setter
     def animation_optimization(self, value: PlayerAnimationOptimization) -> None: ...
 
-class AnnotatedScrollBar_Static(type):
+class AnnotatedScrollBar_Static(Control_Static):
     @_property
     def detail_label_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -221,7 +221,7 @@ class AnnotatedScrollBar_Static(type):
     @_property
     def small_change_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AnnotatedScrollBar(winrt.system.Object, metaclass=AnnotatedScrollBar_Static):
+class AnnotatedScrollBar(Control, metaclass=AnnotatedScrollBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AnnotatedScrollBar: ...
     def __new__(cls: typing.Type[AnnotatedScrollBar]) -> AnnotatedScrollBar: ...
@@ -282,7 +282,7 @@ class AnnotatedScrollBarScrollingEventArgs(winrt.system.Object):
     @_property
     def scrolling_event_kind(self) -> AnnotatedScrollBarScrollingEventKind: ...
 
-class AppBar_Static(type):
+class AppBar_Static(ContentControl_Static):
     @_property
     def closed_display_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -292,7 +292,7 @@ class AppBar_Static(type):
     @_property
     def light_dismiss_overlay_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBar(winrt.system.Object, metaclass=AppBar_Static):
+class AppBar(ContentControl, metaclass=AppBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBar: ...
     def __new__(cls: typing.Type[AppBar]) -> AppBar: ...
@@ -323,7 +323,7 @@ class AppBar(winrt.system.Object, metaclass=AppBar_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.AppBarTemplateSettings: ...
 
-class AppBarElementContainer_Static(type):
+class AppBarElementContainer_Static(ContentControl_Static):
     @_property
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -331,7 +331,7 @@ class AppBarElementContainer_Static(type):
     @_property
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarElementContainer(ICommandBarElement, winrt.system.Object, metaclass=AppBarElementContainer_Static):
+class AppBarElementContainer(ICommandBarElement, ContentControl, metaclass=AppBarElementContainer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarElementContainer: ...
     def __new__(cls: typing.Type[AppBarElementContainer]) -> AppBarElementContainer: ...
@@ -346,7 +346,7 @@ class AppBarElementContainer(ICommandBarElement, winrt.system.Object, metaclass=
     @_property
     def is_in_overflow(self) -> bool: ...
 
-class AppBarSeparator_Static(type):
+class AppBarSeparator_Static(Control_Static):
     @_property
     def dynamic_overflow_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -354,7 +354,7 @@ class AppBarSeparator_Static(type):
     @_property
     def is_in_overflow_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class AppBarSeparator(ICommandBarElement, winrt.system.Object, metaclass=AppBarSeparator_Static):
+class AppBarSeparator(ICommandBarElement, Control, metaclass=AppBarSeparator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AppBarSeparator: ...
     def __new__(cls: typing.Type[AppBarSeparator]) -> AppBarSeparator: ...
@@ -370,7 +370,7 @@ class AppBarSeparator(ICommandBarElement, winrt.system.Object, metaclass=AppBarS
     def is_in_overflow(self) -> bool: ...
 
 @typing.final
-class AutoSuggestBox_Static(type):
+class AutoSuggestBox_Static(ItemsControl_Static):
     @_property
     def auto_maximize_suggestion_area_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -397,7 +397,7 @@ class AutoSuggestBox_Static(type):
     def update_text_on_select_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class AutoSuggestBox(winrt.system.Object, metaclass=AutoSuggestBox_Static):
+class AutoSuggestBox(ItemsControl, metaclass=AutoSuggestBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoSuggestBox: ...
     def __new__(cls: typing.Type[AutoSuggestBox]) -> AutoSuggestBox: ...
@@ -457,7 +457,7 @@ class AutoSuggestBox(winrt.system.Object, metaclass=AutoSuggestBox_Static):
     def auto_maximize_suggestion_area(self, value: bool) -> None: ...
 
 @typing.final
-class AutoSuggestBoxQuerySubmittedEventArgs(winrt.system.Object):
+class AutoSuggestBoxQuerySubmittedEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoSuggestBoxQuerySubmittedEventArgs: ...
     def __new__(cls: typing.Type[AutoSuggestBoxQuerySubmittedEventArgs]) -> AutoSuggestBoxQuerySubmittedEventArgs: ...
@@ -467,7 +467,7 @@ class AutoSuggestBoxQuerySubmittedEventArgs(winrt.system.Object):
     def query_text(self) -> str: ...
 
 @typing.final
-class AutoSuggestBoxSuggestionChosenEventArgs(winrt.system.Object):
+class AutoSuggestBoxSuggestionChosenEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoSuggestBoxSuggestionChosenEventArgs: ...
     def __new__(cls: typing.Type[AutoSuggestBoxSuggestionChosenEventArgs]) -> AutoSuggestBoxSuggestionChosenEventArgs: ...
@@ -475,12 +475,12 @@ class AutoSuggestBoxSuggestionChosenEventArgs(winrt.system.Object):
     def selected_item(self) -> winrt.system.Object: ...
 
 @typing.final
-class AutoSuggestBoxTextChangedEventArgs_Static(type):
+class AutoSuggestBoxTextChangedEventArgs_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def reason_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class AutoSuggestBoxTextChangedEventArgs(winrt.system.Object, metaclass=AutoSuggestBoxTextChangedEventArgs_Static):
+class AutoSuggestBoxTextChangedEventArgs(microsoft_ui_xaml.DependencyObject, metaclass=AutoSuggestBoxTextChangedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> AutoSuggestBoxTextChangedEventArgs: ...
     def __new__(cls: typing.Type[AutoSuggestBoxTextChangedEventArgs]) -> AutoSuggestBoxTextChangedEventArgs: ...
@@ -490,13 +490,13 @@ class AutoSuggestBoxTextChangedEventArgs(winrt.system.Object, metaclass=AutoSugg
     @reason.setter
     def reason(self, value: AutoSuggestionBoxTextChangeReason) -> None: ...
 
-class BitmapIcon_Static(type):
+class BitmapIcon_Static(IconElement_Static):
     @_property
     def show_as_monochrome_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class BitmapIcon(winrt.system.Object, metaclass=BitmapIcon_Static):
+class BitmapIcon(IconElement, metaclass=BitmapIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapIcon: ...
     def __new__(cls: typing.Type[BitmapIcon]) -> BitmapIcon: ...
@@ -509,13 +509,13 @@ class BitmapIcon(winrt.system.Object, metaclass=BitmapIcon_Static):
     @show_as_monochrome.setter
     def show_as_monochrome(self, value: bool) -> None: ...
 
-class BitmapIconSource_Static(type):
+class BitmapIconSource_Static(IconSource_Static):
     @_property
     def show_as_monochrome_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def uri_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class BitmapIconSource(winrt.system.Object, metaclass=BitmapIconSource_Static):
+class BitmapIconSource(IconSource, metaclass=BitmapIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BitmapIconSource: ...
     def __new__(cls: typing.Type[BitmapIconSource]) -> BitmapIconSource: ...
@@ -529,7 +529,7 @@ class BitmapIconSource(winrt.system.Object, metaclass=BitmapIconSource_Static):
     def show_as_monochrome(self, value: bool) -> None: ...
 
 @typing.final
-class Border_Static(type):
+class Border_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -546,7 +546,7 @@ class Border_Static(type):
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Border(winrt.system.Object, metaclass=Border_Static):
+class Border(microsoft_ui_xaml.FrameworkElement, metaclass=Border_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Border: ...
     def __new__(cls: typing.Type[Border]) -> Border: ...
@@ -587,13 +587,13 @@ class Border(winrt.system.Object, metaclass=Border_Static):
     @background.setter
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
-class BreadcrumbBar_Static(type):
+class BreadcrumbBar_Static(Control_Static):
     @_property
     def item_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class BreadcrumbBar(winrt.system.Object, metaclass=BreadcrumbBar_Static):
+class BreadcrumbBar(Control, metaclass=BreadcrumbBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BreadcrumbBar: ...
     def __new__(cls: typing.Type[BreadcrumbBar]) -> BreadcrumbBar: ...
@@ -608,10 +608,10 @@ class BreadcrumbBar(winrt.system.Object, metaclass=BreadcrumbBar_Static):
     @item_template.setter
     def item_template(self, value: winrt.system.Object) -> None: ...
 
-class BreadcrumbBarItem_Static(type):
+class BreadcrumbBarItem_Static(ContentControl_Static):
     pass
 
-class BreadcrumbBarItem(winrt.system.Object, metaclass=BreadcrumbBarItem_Static):
+class BreadcrumbBarItem(ContentControl, metaclass=BreadcrumbBarItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> BreadcrumbBarItem: ...
     def __new__(cls: typing.Type[BreadcrumbBarItem]) -> BreadcrumbBarItem: ...
@@ -625,7 +625,7 @@ class BreadcrumbBarItemClickedEventArgs(winrt.system.Object):
     @_property
     def item(self) -> winrt.system.Object: ...
 
-class CalendarDatePicker_Static(type):
+class CalendarDatePicker_Static(Control_Static):
     @_property
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -663,7 +663,7 @@ class CalendarDatePicker_Static(type):
     @_property
     def placeholder_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class CalendarDatePicker(winrt.system.Object, metaclass=CalendarDatePicker_Static):
+class CalendarDatePicker(Control, metaclass=CalendarDatePicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarDatePicker: ...
     def __new__(cls: typing.Type[CalendarDatePicker]) -> CalendarDatePicker: ...
@@ -759,7 +759,7 @@ class CalendarDatePickerDateChangedEventArgs(winrt.system.Object):
     @_property
     def old_date(self) -> typing.Optional[datetime.datetime]: ...
 
-class CalendarView_Static(type):
+class CalendarView_Static(Control_Static):
     @_property
     def blackout_background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -911,7 +911,7 @@ class CalendarView_Static(type):
     @_property
     def vertical_first_of_month_label_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class CalendarView(winrt.system.Object, metaclass=CalendarView_Static):
+class CalendarView(Control, metaclass=CalendarView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarView: ...
     def __new__(cls: typing.Type[CalendarView]) -> CalendarView: ...
@@ -1218,13 +1218,13 @@ class CalendarView(winrt.system.Object, metaclass=CalendarView_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.CalendarViewTemplateSettings: ...
 
-class CalendarViewDayItem_Static(type):
+class CalendarViewDayItem_Static(Control_Static):
     @_property
     def date_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def is_blackout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class CalendarViewDayItem(winrt.system.Object, metaclass=CalendarViewDayItem_Static):
+class CalendarViewDayItem(Control, metaclass=CalendarViewDayItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CalendarViewDayItem: ...
     def __new__(cls: typing.Type[CalendarViewDayItem]) -> CalendarViewDayItem: ...
@@ -1265,7 +1265,7 @@ class CandidateWindowBoundsChangedEventArgs(winrt.system.Object):
     @_property
     def bounds(self) -> windows_foundation.Rect: ...
 
-class Canvas_Static(type):
+class Canvas_Static(Panel_Static):
     def get_left(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Double: ...
     def get_top(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Double: ...
     def get_z_index(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
@@ -1279,7 +1279,7 @@ class Canvas_Static(type):
     @_property
     def z_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Canvas(winrt.system.Object, metaclass=Canvas_Static):
+class Canvas(Panel, metaclass=Canvas_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Canvas: ...
     def __new__(cls: typing.Type[Canvas]) -> Canvas: ...
@@ -1317,7 +1317,7 @@ class ChoosingItemContainerEventArgs(winrt.system.Object):
     def item_index(self) -> winrt.system.Int32: ...
 
 @typing.final
-class CleanUpVirtualizedItemEventArgs(winrt.system.Object):
+class CleanUpVirtualizedItemEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CleanUpVirtualizedItemEventArgs: ...
     @_property
@@ -1338,7 +1338,7 @@ class ColorChangedEventArgs(winrt.system.Object):
     @_property
     def old_color(self) -> windows_ui.Color: ...
 
-class ColorPicker_Static(type):
+class ColorPicker_Static(Control_Static):
     @_property
     def color_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1380,7 +1380,7 @@ class ColorPicker_Static(type):
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ColorPicker(winrt.system.Object, metaclass=ColorPicker_Static):
+class ColorPicker(Control, metaclass=ColorPicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPicker: ...
     def __new__(cls: typing.Type[ColorPicker]) -> ColorPicker: ...
@@ -1468,7 +1468,7 @@ class ColorPicker(winrt.system.Object, metaclass=ColorPicker_Static):
     def orientation(self, value: Orientation) -> None: ...
 
 @typing.final
-class ColumnDefinition_Static(type):
+class ColumnDefinition_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def max_width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1477,7 +1477,7 @@ class ColumnDefinition_Static(type):
     def width_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ColumnDefinition(winrt.system.Object, metaclass=ColumnDefinition_Static):
+class ColumnDefinition(microsoft_ui_xaml.DependencyObject, metaclass=ColumnDefinition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColumnDefinition: ...
     def __new__(cls: typing.Type[ColumnDefinition]) -> ColumnDefinition: ...
@@ -1540,7 +1540,7 @@ class ComboBoxTextSubmittedEventArgs(winrt.system.Object):
     @_property
     def text(self) -> str: ...
 
-class CommandBar_Static(type):
+class CommandBar_Static(AppBar_Static):
     @_property
     def command_bar_overflow_presenter_style_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1554,7 +1554,7 @@ class CommandBar_Static(type):
     @_property
     def secondary_commands_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class CommandBar(winrt.system.Object, metaclass=CommandBar_Static):
+class CommandBar(AppBar, metaclass=CommandBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandBar: ...
     def __new__(cls: typing.Type[CommandBar]) -> CommandBar: ...
@@ -1583,10 +1583,10 @@ class CommandBar(winrt.system.Object, metaclass=CommandBar_Static):
     @_property
     def secondary_commands(self) -> windows_foundation_collections.IObservableVector[ICommandBarElement]: ...
 
-class CommandBarOverflowPresenter_Static(type):
+class CommandBarOverflowPresenter_Static(ItemsControl_Static):
     pass
 
-class CommandBarOverflowPresenter(winrt.system.Object, metaclass=CommandBarOverflowPresenter_Static):
+class CommandBarOverflowPresenter(ItemsControl, metaclass=CommandBarOverflowPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CommandBarOverflowPresenter: ...
     def __new__(cls: typing.Type[CommandBarOverflowPresenter]) -> CommandBarOverflowPresenter: ...
@@ -1613,7 +1613,7 @@ class ContainerContentChangingEventArgs(winrt.system.Object):
     @_property
     def phase(self) -> winrt.system.UInt32: ...
 
-class ContentControl_Static(type):
+class ContentControl_Static(Control_Static):
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1623,7 +1623,7 @@ class ContentControl_Static(type):
     @_property
     def content_transitions_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ContentControl(winrt.system.Object, metaclass=ContentControl_Static):
+class ContentControl(Control, metaclass=ContentControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentControl: ...
     def __new__(cls: typing.Type[ContentControl]) -> ContentControl: ...
@@ -1646,7 +1646,7 @@ class ContentControl(winrt.system.Object, metaclass=ContentControl_Static):
     @_property
     def content_template_root(self) -> microsoft_ui_xaml.UIElement: ...
 
-class ContentDialog_Static(type):
+class ContentDialog_Static(ContentControl_Static):
     @_property
     def close_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1684,7 +1684,7 @@ class ContentDialog_Static(type):
     @_property
     def title_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ContentDialog(winrt.system.Object, metaclass=ContentDialog_Static):
+class ContentDialog(ContentControl, metaclass=ContentDialog_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentDialog: ...
     def __new__(cls: typing.Type[ContentDialog]) -> ContentDialog: ...
@@ -1822,7 +1822,7 @@ class ContentDialogOpenedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentDialogOpenedEventArgs: ...
 
-class ContentPresenter_Static(type):
+class ContentPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -1876,7 +1876,7 @@ class ContentPresenter_Static(type):
     @_property
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ContentPresenter(winrt.system.Object, metaclass=ContentPresenter_Static):
+class ContentPresenter(microsoft_ui_xaml.FrameworkElement, metaclass=ContentPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContentPresenter: ...
     def __new__(cls: typing.Type[ContentPresenter]) -> ContentPresenter: ...
@@ -1990,7 +1990,7 @@ class ContentPresenter(winrt.system.Object, metaclass=ContentPresenter_Static):
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
-class ContextMenuEventArgs(winrt.system.Object):
+class ContextMenuEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ContextMenuEventArgs: ...
     @_property
@@ -2002,7 +2002,7 @@ class ContextMenuEventArgs(winrt.system.Object):
     @_property
     def cursor_top(self) -> winrt.system.Double: ...
 
-class Control_Static(type):
+class Control_Static(microsoft_ui_xaml.FrameworkElement_Static):
     def get_is_template_focus_target(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> bool: ...
     def get_is_template_key_tip_target(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
     def set_is_template_focus_target(cls, element: microsoft_ui_xaml.FrameworkElement, value: bool, /) -> None: ...
@@ -2062,7 +2062,7 @@ class Control_Static(type):
     @_property
     def vertical_content_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Control(winrt.system.Object, metaclass=Control_Static):
+class Control(microsoft_ui_xaml.FrameworkElement, metaclass=Control_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Control: ...
     def apply_template(self) -> bool: ...
@@ -2171,7 +2171,7 @@ class Control(winrt.system.Object, metaclass=Control_Static):
     def background(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
 @typing.final
-class ControlTemplate(winrt.system.Object):
+class ControlTemplate(microsoft_ui_xaml.FrameworkTemplate):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ControlTemplate: ...
     def __new__(cls: typing.Type[ControlTemplate]) -> ControlTemplate: ...
@@ -2200,7 +2200,7 @@ class DataTemplateSelector(microsoft_ui_xaml.IElementFactory, winrt.system.Objec
     def select_template_for_item(self, item: winrt.system.Object, /) -> microsoft_ui_xaml.DataTemplate: ...
 
 @typing.final
-class DatePickedEventArgs(winrt.system.Object):
+class DatePickedEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickedEventArgs: ...
     def __new__(cls: typing.Type[DatePickedEventArgs]) -> DatePickedEventArgs: ...
@@ -2209,7 +2209,7 @@ class DatePickedEventArgs(winrt.system.Object):
     @_property
     def old_date(self) -> datetime.datetime: ...
 
-class DatePicker_Static(type):
+class DatePicker_Static(Control_Static):
     @_property
     def calendar_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2241,7 +2241,7 @@ class DatePicker_Static(type):
     @_property
     def year_visible_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class DatePicker(winrt.system.Object, metaclass=DatePicker_Static):
+class DatePicker(Control, metaclass=DatePicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePicker: ...
     def __new__(cls: typing.Type[DatePicker]) -> DatePicker: ...
@@ -2311,14 +2311,14 @@ class DatePicker(winrt.system.Object, metaclass=DatePicker_Static):
     def calendar_identifier(self, value: str) -> None: ...
 
 @typing.final
-class DatePickerFlyoutItem_Static(type):
+class DatePickerFlyoutItem_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def primary_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def secondary_text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class DatePickerFlyoutItem(microsoft_ui_xaml_data.ICustomPropertyProvider, winrt.system.Object, metaclass=DatePickerFlyoutItem_Static):
+class DatePickerFlyoutItem(microsoft_ui_xaml_data.ICustomPropertyProvider, microsoft_ui_xaml.DependencyObject, metaclass=DatePickerFlyoutItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerFlyoutItem: ...
     def get_custom_property(self, name: str, /) -> microsoft_ui_xaml_data.ICustomProperty: ...
@@ -2336,12 +2336,12 @@ class DatePickerFlyoutItem(microsoft_ui_xaml_data.ICustomPropertyProvider, winrt
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
 @typing.final
-class DatePickerFlyoutPresenter_Static(type):
+class DatePickerFlyoutPresenter_Static(Control_Static):
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class DatePickerFlyoutPresenter(winrt.system.Object, metaclass=DatePickerFlyoutPresenter_Static):
+class DatePickerFlyoutPresenter(Control, metaclass=DatePickerFlyoutPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DatePickerFlyoutPresenter: ...
     @_property
@@ -2398,7 +2398,7 @@ class DynamicOverflowItemsChangingEventArgs(winrt.system.Object):
     @_property
     def action(self) -> CommandBarDynamicOverflowAction: ...
 
-class Expander_Static(type):
+class Expander_Static(ContentControl_Static):
     @_property
     def expand_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2410,7 +2410,7 @@ class Expander_Static(type):
     @_property
     def is_expanded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Expander(winrt.system.Object, metaclass=Expander_Static):
+class Expander(ContentControl, metaclass=Expander_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Expander: ...
     def __new__(cls: typing.Type[Expander]) -> Expander: ...
@@ -2452,7 +2452,7 @@ class ExpanderExpandingEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ExpanderExpandingEventArgs: ...
 
 @typing.final
-class ExpanderTemplateSettings(winrt.system.Object):
+class ExpanderTemplateSettings(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ExpanderTemplateSettings: ...
     @_property
@@ -2460,11 +2460,11 @@ class ExpanderTemplateSettings(winrt.system.Object):
     @_property
     def negative_content_height(self) -> winrt.system.Double: ...
 
-class FlyoutPresenter_Static(type):
+class FlyoutPresenter_Static(ContentControl_Static):
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class FlyoutPresenter(winrt.system.Object, metaclass=FlyoutPresenter_Static):
+class FlyoutPresenter(ContentControl, metaclass=FlyoutPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FlyoutPresenter: ...
     def __new__(cls: typing.Type[FlyoutPresenter]) -> FlyoutPresenter: ...
@@ -2474,12 +2474,12 @@ class FlyoutPresenter(winrt.system.Object, metaclass=FlyoutPresenter_Static):
     def is_default_shadow_enabled(self, value: bool) -> None: ...
 
 @typing.final
-class FocusDisengagedEventArgs(winrt.system.Object):
+class FocusDisengagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusDisengagedEventArgs: ...
 
 @typing.final
-class FocusEngagedEventArgs(winrt.system.Object):
+class FocusEngagedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FocusEngagedEventArgs: ...
     @_property
@@ -2487,7 +2487,7 @@ class FocusEngagedEventArgs(winrt.system.Object):
     @handled.setter
     def handled(self, value: bool) -> None: ...
 
-class FontIcon_Static(type):
+class FontIcon_Static(IconElement_Static):
     @_property
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2503,7 +2503,7 @@ class FontIcon_Static(type):
     @_property
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class FontIcon(winrt.system.Object, metaclass=FontIcon_Static):
+class FontIcon(IconElement, metaclass=FontIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontIcon: ...
     def __new__(cls: typing.Type[FontIcon]) -> FontIcon: ...
@@ -2536,7 +2536,7 @@ class FontIcon(winrt.system.Object, metaclass=FontIcon_Static):
     @font_family.setter
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
 
-class FontIconSource_Static(type):
+class FontIconSource_Static(IconSource_Static):
     @_property
     def font_family_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2552,7 +2552,7 @@ class FontIconSource_Static(type):
     @_property
     def mirrored_when_right_to_left_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class FontIconSource(winrt.system.Object, metaclass=FontIconSource_Static):
+class FontIconSource(IconSource, metaclass=FontIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FontIconSource: ...
     def __new__(cls: typing.Type[FontIconSource]) -> FontIconSource: ...
@@ -2585,7 +2585,7 @@ class FontIconSource(winrt.system.Object, metaclass=FontIconSource_Static):
     @font_family.setter
     def font_family(self, value: microsoft_ui_xaml_media.FontFamily) -> None: ...
 
-class Frame_Static(type):
+class Frame_Static(ContentControl_Static):
     @_property
     def back_stack_depth_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2605,7 +2605,7 @@ class Frame_Static(type):
     @_property
     def source_page_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Frame(INavigate, winrt.system.Object, metaclass=Frame_Static):
+class Frame(INavigate, ContentControl, metaclass=Frame_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Frame: ...
     def __new__(cls: typing.Type[Frame]) -> Frame: ...
@@ -2654,7 +2654,7 @@ class Frame(INavigate, winrt.system.Object, metaclass=Frame_Static):
     @_property
     def forward_stack(self) -> typing.MutableSequence[microsoft_ui_xaml_navigation.PageStackEntry]: ...
 
-class Grid_Static(type):
+class Grid_Static(Panel_Static):
     def get_column(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
     def get_column_span(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
     def get_row(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> winrt.system.Int32: ...
@@ -2686,7 +2686,7 @@ class Grid_Static(type):
     @_property
     def row_span_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Grid(winrt.system.Object, metaclass=Grid_Static):
+class Grid(Panel, metaclass=Grid_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Grid: ...
     def __new__(cls: typing.Type[Grid]) -> Grid: ...
@@ -2723,18 +2723,18 @@ class Grid(winrt.system.Object, metaclass=Grid_Static):
     @_property
     def row_definitions(self) -> RowDefinitionCollection: ...
 
-class GridViewHeaderItem_Static(type):
+class GridViewHeaderItem_Static(ListViewBaseHeaderItem_Static):
     pass
 
-class GridViewHeaderItem(winrt.system.Object, metaclass=GridViewHeaderItem_Static):
+class GridViewHeaderItem(ListViewBaseHeaderItem, metaclass=GridViewHeaderItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GridViewHeaderItem: ...
     def __new__(cls: typing.Type[GridViewHeaderItem]) -> GridViewHeaderItem: ...
 
-class GroupItem_Static(type):
+class GroupItem_Static(ContentControl_Static):
     pass
 
-class GroupItem(winrt.system.Object, metaclass=GroupItem_Static):
+class GroupItem(ContentControl, metaclass=GroupItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GroupItem: ...
     def __new__(cls: typing.Type[GroupItem]) -> GroupItem: ...
@@ -2793,7 +2793,7 @@ class HasValidationErrorsChangedEventArgs(winrt.system.Object):
     @_property
     def new_value(self) -> bool: ...
 
-class Hub_Static(type):
+class Hub_Static(Control_Static):
     @_property
     def default_section_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2809,7 +2809,7 @@ class Hub_Static(type):
     @_property
     def semantic_zoom_owner_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Hub(ISemanticZoomInformation, winrt.system.Object, metaclass=Hub_Static):
+class Hub(ISemanticZoomInformation, Control, metaclass=Hub_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Hub: ...
     def __new__(cls: typing.Type[Hub]) -> Hub: ...
@@ -2860,7 +2860,7 @@ class Hub(ISemanticZoomInformation, winrt.system.Object, metaclass=Hub_Static):
     @is_active_view.setter
     def is_active_view(self, value: bool) -> None: ...
 
-class HubSection_Static(type):
+class HubSection_Static(Control_Static):
     @_property
     def content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2870,7 +2870,7 @@ class HubSection_Static(type):
     @_property
     def is_header_interactive_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class HubSection(winrt.system.Object, metaclass=HubSection_Static):
+class HubSection(Control, metaclass=HubSection_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HubSection: ...
     def __new__(cls: typing.Type[HubSection]) -> HubSection: ...
@@ -2932,11 +2932,11 @@ class HubSectionHeaderClickEventArgs(winrt.system.Object):
     @_property
     def section(self) -> HubSection: ...
 
-class IconElement_Static(type):
+class IconElement_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class IconElement(winrt.system.Object, metaclass=IconElement_Static):
+class IconElement(microsoft_ui_xaml.FrameworkElement, metaclass=IconElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IconElement: ...
     @_property
@@ -2944,11 +2944,11 @@ class IconElement(winrt.system.Object, metaclass=IconElement_Static):
     @foreground.setter
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
-class IconSource_Static(type):
+class IconSource_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def foreground_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class IconSource(winrt.system.Object, metaclass=IconSource_Static):
+class IconSource(microsoft_ui_xaml.DependencyObject, metaclass=IconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IconSource: ...
     def create_icon_element(self) -> IconElement: ...
@@ -2957,11 +2957,11 @@ class IconSource(winrt.system.Object, metaclass=IconSource_Static):
     @foreground.setter
     def foreground(self, value: microsoft_ui_xaml_media.Brush) -> None: ...
 
-class IconSourceElement_Static(type):
+class IconSourceElement_Static(IconElement_Static):
     @_property
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class IconSourceElement(winrt.system.Object, metaclass=IconSourceElement_Static):
+class IconSourceElement(IconElement, metaclass=IconSourceElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IconSourceElement: ...
     def __new__(cls: typing.Type[IconSourceElement]) -> IconSourceElement: ...
@@ -2971,7 +2971,7 @@ class IconSourceElement(winrt.system.Object, metaclass=IconSourceElement_Static)
     def icon_source(self, value: IconSource) -> None: ...
 
 @typing.final
-class Image_Static(type):
+class Image_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def nine_grid_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -2980,7 +2980,7 @@ class Image_Static(type):
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Image(winrt.system.Object, metaclass=Image_Static):
+class Image(microsoft_ui_xaml.FrameworkElement, metaclass=Image_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Image: ...
     def __new__(cls: typing.Type[Image]) -> Image: ...
@@ -3003,11 +3003,11 @@ class Image(winrt.system.Object, metaclass=Image_Static):
     @nine_grid.setter
     def nine_grid(self, value: microsoft_ui_xaml.Thickness) -> None: ...
 
-class ImageIcon_Static(type):
+class ImageIcon_Static(IconElement_Static):
     @_property
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ImageIcon(winrt.system.Object, metaclass=ImageIcon_Static):
+class ImageIcon(IconElement, metaclass=ImageIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageIcon: ...
     def __new__(cls: typing.Type[ImageIcon]) -> ImageIcon: ...
@@ -3016,11 +3016,11 @@ class ImageIcon(winrt.system.Object, metaclass=ImageIcon_Static):
     @source.setter
     def source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
 
-class ImageIconSource_Static(type):
+class ImageIconSource_Static(IconSource_Static):
     @_property
     def image_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ImageIconSource(winrt.system.Object, metaclass=ImageIconSource_Static):
+class ImageIconSource(IconSource, metaclass=ImageIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ImageIconSource: ...
     def __new__(cls: typing.Type[ImageIconSource]) -> ImageIconSource: ...
@@ -3029,7 +3029,7 @@ class ImageIconSource(winrt.system.Object, metaclass=ImageIconSource_Static):
     @image_source.setter
     def image_source(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
 
-class InfoBadge_Static(type):
+class InfoBadge_Static(Control_Static):
     @_property
     def icon_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3037,7 +3037,7 @@ class InfoBadge_Static(type):
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class InfoBadge(winrt.system.Object, metaclass=InfoBadge_Static):
+class InfoBadge(Control, metaclass=InfoBadge_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfoBadge: ...
     def __new__(cls: typing.Type[InfoBadge]) -> InfoBadge: ...
@@ -3052,13 +3052,13 @@ class InfoBadge(winrt.system.Object, metaclass=InfoBadge_Static):
     @_property
     def template_settings(self) -> InfoBadgeTemplateSettings: ...
 
-class InfoBadgeTemplateSettings_Static(type):
+class InfoBadgeTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def info_badge_corner_radius_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class InfoBadgeTemplateSettings(winrt.system.Object, metaclass=InfoBadgeTemplateSettings_Static):
+class InfoBadgeTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=InfoBadgeTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfoBadgeTemplateSettings: ...
     def __new__(cls: typing.Type[InfoBadgeTemplateSettings]) -> InfoBadgeTemplateSettings: ...
@@ -3071,7 +3071,7 @@ class InfoBadgeTemplateSettings(winrt.system.Object, metaclass=InfoBadgeTemplate
     @icon_element.setter
     def icon_element(self, value: IconElement) -> None: ...
 
-class InfoBar_Static(type):
+class InfoBar_Static(Control_Static):
     @_property
     def action_button_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3101,7 +3101,7 @@ class InfoBar_Static(type):
     @_property
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class InfoBar(winrt.system.Object, metaclass=InfoBar_Static):
+class InfoBar(Control, metaclass=InfoBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfoBar: ...
     def __new__(cls: typing.Type[InfoBar]) -> InfoBar: ...
@@ -3188,11 +3188,11 @@ class InfoBarClosingEventArgs(winrt.system.Object, metaclass=InfoBarClosingEvent
     @_property
     def reason(self) -> InfoBarCloseReason: ...
 
-class InfoBarTemplateSettings_Static(type):
+class InfoBarTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class InfoBarTemplateSettings(winrt.system.Object, metaclass=InfoBarTemplateSettings_Static):
+class InfoBarTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=InfoBarTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InfoBarTemplateSettings: ...
     def __new__(cls: typing.Type[InfoBarTemplateSettings]) -> InfoBarTemplateSettings: ...
@@ -3207,7 +3207,7 @@ class IsTextTrimmedChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> IsTextTrimmedChangedEventArgs: ...
 
 @typing.final
-class ItemClickEventArgs(winrt.system.Object):
+class ItemClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemClickEventArgs: ...
     def __new__(cls: typing.Type[ItemClickEventArgs]) -> ItemClickEventArgs: ...
@@ -3296,13 +3296,13 @@ class ItemCollectionTransitionProvider(winrt.system.Object, metaclass=ItemCollec
     def add_transition_completed(self, handler: windows_foundation.TypedEventHandler[ItemCollectionTransitionProvider, ItemCollectionTransitionCompletedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_transition_completed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class ItemContainer_Static(type):
+class ItemContainer_Static(Control_Static):
     @_property
     def child_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemContainer(winrt.system.Object, metaclass=ItemContainer_Static):
+class ItemContainer(Control, metaclass=ItemContainer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemContainer: ...
     def __new__(cls: typing.Type[ItemContainer]) -> ItemContainer: ...
@@ -3340,7 +3340,7 @@ class ItemContainerGenerator(winrt.system.Object):
     def add_items_changed(self, handler: microsoft_ui_xaml_controls_primitives.ItemsChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_items_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class ItemsControl_Static(type):
+class ItemsControl_Static(Control_Static):
     def get_items_owner(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ItemsControl: ...
     def items_control_from_item_container(cls, container: microsoft_ui_xaml.DependencyObject, /) -> ItemsControl: ...
     @_property
@@ -3364,7 +3364,7 @@ class ItemsControl_Static(type):
     @_property
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemsControl(IItemContainerMapping, winrt.system.Object, metaclass=ItemsControl_Static):
+class ItemsControl(IItemContainerMapping, Control, metaclass=ItemsControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsControl: ...
     def __new__(cls: typing.Type[ItemsControl]) -> ItemsControl: ...
@@ -3421,13 +3421,13 @@ class ItemsControl(IItemContainerMapping, winrt.system.Object, metaclass=ItemsCo
     def items_panel_root(self) -> Panel: ...
 
 @typing.final
-class ItemsPanelTemplate(winrt.system.Object):
+class ItemsPanelTemplate(microsoft_ui_xaml.FrameworkTemplate):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsPanelTemplate: ...
     def __new__(cls: typing.Type[ItemsPanelTemplate]) -> ItemsPanelTemplate: ...
 
 @typing.final
-class ItemsPickedEventArgs(winrt.system.Object):
+class ItemsPickedEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsPickedEventArgs: ...
     def __new__(cls: typing.Type[ItemsPickedEventArgs]) -> ItemsPickedEventArgs: ...
@@ -3437,7 +3437,7 @@ class ItemsPickedEventArgs(winrt.system.Object):
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
 @typing.final
-class ItemsPresenter_Static(type):
+class ItemsPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def footer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3454,7 +3454,7 @@ class ItemsPresenter_Static(type):
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ItemsPresenter(microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, winrt.system.Object, metaclass=ItemsPresenter_Static):
+class ItemsPresenter(microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, microsoft_ui_xaml.FrameworkElement, metaclass=ItemsPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsPresenter: ...
     def __new__(cls: typing.Type[ItemsPresenter]) -> ItemsPresenter: ...
@@ -3497,7 +3497,7 @@ class ItemsPresenter(microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo
     @_property
     def are_vertical_snap_points_regular(self) -> bool: ...
 
-class ItemsRepeater_Static(type):
+class ItemsRepeater_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3513,7 +3513,7 @@ class ItemsRepeater_Static(type):
     @_property
     def item_transition_provider_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemsRepeater(winrt.system.Object, metaclass=ItemsRepeater_Static):
+class ItemsRepeater(microsoft_ui_xaml.FrameworkElement, metaclass=ItemsRepeater_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsRepeater: ...
     def __new__(cls: typing.Type[ItemsRepeater]) -> ItemsRepeater: ...
@@ -3585,7 +3585,7 @@ class ItemsRepeaterElementPreparedEventArgs(winrt.system.Object):
     def index(self) -> winrt.system.Int32: ...
 
 @typing.final
-class ItemsRepeaterScrollHost(winrt.system.Object):
+class ItemsRepeaterScrollHost(microsoft_ui_xaml.FrameworkElement):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsRepeaterScrollHost: ...
     def __new__(cls: typing.Type[ItemsRepeaterScrollHost]) -> ItemsRepeaterScrollHost: ...
@@ -3623,7 +3623,7 @@ class ItemsSourceView(microsoft_ui_xaml_interop.INotifyCollectionChanged, winrt.
     def has_key_index_mapping(self) -> bool: ...
 
 @typing.final
-class ItemsStackPanel_Static(type):
+class ItemsStackPanel_Static(Panel_Static):
     @_property
     def are_sticky_group_headers_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3636,7 +3636,7 @@ class ItemsStackPanel_Static(type):
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ItemsStackPanel(winrt.system.Object, metaclass=ItemsStackPanel_Static):
+class ItemsStackPanel(Panel, metaclass=ItemsStackPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsStackPanel: ...
     def __new__(cls: typing.Type[ItemsStackPanel]) -> ItemsStackPanel: ...
@@ -3675,7 +3675,7 @@ class ItemsStackPanel(winrt.system.Object, metaclass=ItemsStackPanel_Static):
     @_property
     def scrolling_direction(self) -> PanelScrollingDirection: ...
 
-class ItemsView_Static(type):
+class ItemsView_Static(Control_Static):
     @_property
     def current_item_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3697,7 +3697,7 @@ class ItemsView_Static(type):
     @_property
     def vertical_scroll_controller_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemsView(winrt.system.Object, metaclass=ItemsView_Static):
+class ItemsView(Control, metaclass=ItemsView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsView: ...
     def __new__(cls: typing.Type[ItemsView]) -> ItemsView: ...
@@ -3762,7 +3762,7 @@ class ItemsViewSelectionChangedEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsViewSelectionChangedEventArgs: ...
 
-class ItemsWrapGrid_Static(type):
+class ItemsWrapGrid_Static(Panel_Static):
     @_property
     def are_sticky_group_headers_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3780,7 +3780,7 @@ class ItemsWrapGrid_Static(type):
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ItemsWrapGrid(winrt.system.Object, metaclass=ItemsWrapGrid_Static):
+class ItemsWrapGrid(Panel, metaclass=ItemsWrapGrid_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ItemsWrapGrid: ...
     def __new__(cls: typing.Type[ItemsWrapGrid]) -> ItemsWrapGrid: ...
@@ -3827,10 +3827,10 @@ class ItemsWrapGrid(winrt.system.Object, metaclass=ItemsWrapGrid_Static):
     @_property
     def scrolling_direction(self) -> PanelScrollingDirection: ...
 
-class Layout_Static(type):
+class Layout_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class Layout(winrt.system.Object, metaclass=Layout_Static):
+class Layout(microsoft_ui_xaml.DependencyObject, metaclass=Layout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Layout: ...
     def arrange(self, context: LayoutContext, final_size: windows_foundation.Size, /) -> windows_foundation.Size: ...
@@ -3844,10 +3844,10 @@ class Layout(winrt.system.Object, metaclass=Layout_Static):
     @_property
     def index_based_layout_orientation(self) -> IndexBasedLayoutOrientation: ...
 
-class LayoutContext_Static(type):
+class LayoutContext_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class LayoutContext(winrt.system.Object, metaclass=LayoutContext_Static):
+class LayoutContext(microsoft_ui_xaml.DependencyObject, metaclass=LayoutContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LayoutContext: ...
     @_property
@@ -3855,7 +3855,7 @@ class LayoutContext(winrt.system.Object, metaclass=LayoutContext_Static):
     @layout_state.setter
     def layout_state(self, value: winrt.system.Object) -> None: ...
 
-class LinedFlowLayout_Static(type):
+class LinedFlowLayout_Static(VirtualizingLayout_Static):
     @_property
     def actual_line_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3869,7 +3869,7 @@ class LinedFlowLayout_Static(type):
     @_property
     def min_item_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class LinedFlowLayout(winrt.system.Object, metaclass=LinedFlowLayout_Static):
+class LinedFlowLayout(VirtualizingLayout, metaclass=LinedFlowLayout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinedFlowLayout: ...
     def __new__(cls: typing.Type[LinedFlowLayout]) -> LinedFlowLayout: ...
@@ -3906,10 +3906,10 @@ class LinedFlowLayout(winrt.system.Object, metaclass=LinedFlowLayout_Static):
     @_property
     def requested_range_start_index(self) -> winrt.system.Int32: ...
 
-class LinedFlowLayoutItemCollectionTransitionProvider_Static(type):
+class LinedFlowLayoutItemCollectionTransitionProvider_Static(ItemCollectionTransitionProvider_Static):
     pass
 
-class LinedFlowLayoutItemCollectionTransitionProvider(winrt.system.Object, metaclass=LinedFlowLayoutItemCollectionTransitionProvider_Static):
+class LinedFlowLayoutItemCollectionTransitionProvider(ItemCollectionTransitionProvider, metaclass=LinedFlowLayoutItemCollectionTransitionProvider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LinedFlowLayoutItemCollectionTransitionProvider: ...
     def __new__(cls: typing.Type[LinedFlowLayoutItemCollectionTransitionProvider]) -> LinedFlowLayoutItemCollectionTransitionProvider: ...
@@ -3937,21 +3937,21 @@ class LinedFlowLayoutItemsInfoRequestedEventArgs(winrt.system.Object):
     def items_range_requested_length(self) -> winrt.system.Int32: ...
 
 @typing.final
-class ListPickerFlyoutPresenter(winrt.system.Object):
+class ListPickerFlyoutPresenter(Control):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListPickerFlyoutPresenter: ...
 
-class ListViewBaseHeaderItem_Static(type):
+class ListViewBaseHeaderItem_Static(ContentControl_Static):
     pass
 
-class ListViewBaseHeaderItem(winrt.system.Object, metaclass=ListViewBaseHeaderItem_Static):
+class ListViewBaseHeaderItem(ContentControl, metaclass=ListViewBaseHeaderItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewBaseHeaderItem: ...
 
-class ListViewHeaderItem_Static(type):
+class ListViewHeaderItem_Static(ListViewBaseHeaderItem_Static):
     pass
 
-class ListViewHeaderItem(winrt.system.Object, metaclass=ListViewHeaderItem_Static):
+class ListViewHeaderItem(ListViewBaseHeaderItem, metaclass=ListViewHeaderItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewHeaderItem: ...
     def __new__(cls: typing.Type[ListViewHeaderItem]) -> ListViewHeaderItem: ...
@@ -3966,7 +3966,7 @@ class ListViewPersistenceHelper(winrt.system.Object, metaclass=ListViewPersisten
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ListViewPersistenceHelper: ...
 
-class MapControl_Static(type):
+class MapControl_Static(Control_Static):
     @_property
     def center_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -3978,7 +3978,7 @@ class MapControl_Static(type):
     @_property
     def zoom_level_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MapControl(winrt.system.Object, metaclass=MapControl_Static):
+class MapControl(Control, metaclass=MapControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapControl: ...
     def __new__(cls: typing.Type[MapControl]) -> MapControl: ...
@@ -4014,10 +4014,10 @@ class MapControlMapServiceErrorOccurredEventArgs(winrt.system.Object):
     @_property
     def diagnostic_message(self) -> str: ...
 
-class MapElement_Static(type):
+class MapElement_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class MapElement(winrt.system.Object, metaclass=MapElement_Static):
+class MapElement(microsoft_ui_xaml.DependencyObject, metaclass=MapElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElement: ...
 
@@ -4030,11 +4030,11 @@ class MapElementClickEventArgs(winrt.system.Object):
     @_property
     def location(self) -> windows_devices_geolocation.Geopoint: ...
 
-class MapElementsLayer_Static(type):
+class MapElementsLayer_Static(MapLayer_Static):
     @_property
     def map_elements_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MapElementsLayer(winrt.system.Object, metaclass=MapElementsLayer_Static):
+class MapElementsLayer(MapLayer, metaclass=MapElementsLayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapElementsLayer: ...
     def __new__(cls: typing.Type[MapElementsLayer]) -> MapElementsLayer: ...
@@ -4045,11 +4045,11 @@ class MapElementsLayer(winrt.system.Object, metaclass=MapElementsLayer_Static):
     @map_elements.setter
     def map_elements(self, value: typing.MutableSequence[MapElement]) -> None: ...
 
-class MapIcon_Static(type):
+class MapIcon_Static(MapElement_Static):
     @_property
     def location_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MapIcon(winrt.system.Object, metaclass=MapIcon_Static):
+class MapIcon(MapElement, metaclass=MapIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapIcon: ...
     def __new__(cls: typing.Type[MapIcon]) -> MapIcon: ...
@@ -4058,14 +4058,14 @@ class MapIcon(winrt.system.Object, metaclass=MapIcon_Static):
     @location.setter
     def location(self, value: windows_devices_geolocation.Geopoint) -> None: ...
 
-class MapLayer_Static(type):
+class MapLayer_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class MapLayer(winrt.system.Object, metaclass=MapLayer_Static):
+class MapLayer(microsoft_ui_xaml.DependencyObject, metaclass=MapLayer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MapLayer: ...
 
-class MediaPlayerElement_Static(type):
+class MediaPlayerElement_Static(Control_Static):
     @_property
     def are_transport_controls_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4081,7 +4081,7 @@ class MediaPlayerElement_Static(type):
     @_property
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MediaPlayerElement(winrt.system.Object, metaclass=MediaPlayerElement_Static):
+class MediaPlayerElement(Control, metaclass=MediaPlayerElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerElement: ...
     def __new__(cls: typing.Type[MediaPlayerElement]) -> MediaPlayerElement: ...
@@ -4117,7 +4117,7 @@ class MediaPlayerElement(winrt.system.Object, metaclass=MediaPlayerElement_Stati
     @_property
     def media_player(self) -> windows_media_playback.MediaPlayer: ...
 
-class MediaPlayerPresenter_Static(type):
+class MediaPlayerPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def is_full_window_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4125,7 +4125,7 @@ class MediaPlayerPresenter_Static(type):
     @_property
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MediaPlayerPresenter(winrt.system.Object, metaclass=MediaPlayerPresenter_Static):
+class MediaPlayerPresenter(microsoft_ui_xaml.FrameworkElement, metaclass=MediaPlayerPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaPlayerPresenter: ...
     def __new__(cls: typing.Type[MediaPlayerPresenter]) -> MediaPlayerPresenter: ...
@@ -4142,7 +4142,7 @@ class MediaPlayerPresenter(winrt.system.Object, metaclass=MediaPlayerPresenter_S
     @is_full_window.setter
     def is_full_window(self, value: bool) -> None: ...
 
-class MediaTransportControls_Static(type):
+class MediaTransportControls_Static(Control_Static):
     @_property
     def fast_play_fallback_behaviour_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4194,7 +4194,7 @@ class MediaTransportControls_Static(type):
     @_property
     def show_and_hide_automatically_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MediaTransportControls(winrt.system.Object, metaclass=MediaTransportControls_Static):
+class MediaTransportControls(Control, metaclass=MediaTransportControls_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTransportControls: ...
     def __new__(cls: typing.Type[MediaTransportControls]) -> MediaTransportControls: ...
@@ -4315,24 +4315,24 @@ class MediaTransportControlsHelper(winrt.system.Object, metaclass=MediaTransport
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MediaTransportControlsHelper: ...
 
-class MenuBar_Static(type):
+class MenuBar_Static(Control_Static):
     @_property
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MenuBar(winrt.system.Object, metaclass=MenuBar_Static):
+class MenuBar(Control, metaclass=MenuBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuBar: ...
     def __new__(cls: typing.Type[MenuBar]) -> MenuBar: ...
     @_property
     def items(self) -> typing.MutableSequence[MenuBarItem]: ...
 
-class MenuBarItem_Static(type):
+class MenuBarItem_Static(Control_Static):
     @_property
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MenuBarItem(winrt.system.Object, metaclass=MenuBarItem_Static):
+class MenuBarItem(Control, metaclass=MenuBarItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuBarItem: ...
     def __new__(cls: typing.Type[MenuBarItem]) -> MenuBarItem: ...
@@ -4343,7 +4343,7 @@ class MenuBarItem(winrt.system.Object, metaclass=MenuBarItem_Static):
     @_property
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
-class MenuFlyoutItem_Static(type):
+class MenuFlyoutItem_Static(MenuFlyoutItemBase_Static):
     @_property
     def command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4355,7 +4355,7 @@ class MenuFlyoutItem_Static(type):
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MenuFlyoutItem(winrt.system.Object, metaclass=MenuFlyoutItem_Static):
+class MenuFlyoutItem(MenuFlyoutItemBase, metaclass=MenuFlyoutItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutItem: ...
     def __new__(cls: typing.Type[MenuFlyoutItem]) -> MenuFlyoutItem: ...
@@ -4384,20 +4384,20 @@ class MenuFlyoutItem(winrt.system.Object, metaclass=MenuFlyoutItem_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.MenuFlyoutItemTemplateSettings: ...
 
-class MenuFlyoutItemBase_Static(type):
+class MenuFlyoutItemBase_Static(Control_Static):
     pass
 
-class MenuFlyoutItemBase(winrt.system.Object, metaclass=MenuFlyoutItemBase_Static):
+class MenuFlyoutItemBase(Control, metaclass=MenuFlyoutItemBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutItemBase: ...
 
-class MenuFlyoutPresenter_Static(type):
+class MenuFlyoutPresenter_Static(ItemsControl_Static):
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def system_backdrop_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class MenuFlyoutPresenter(winrt.system.Object, metaclass=MenuFlyoutPresenter_Static):
+class MenuFlyoutPresenter(ItemsControl, metaclass=MenuFlyoutPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutPresenter: ...
     def __new__(cls: typing.Type[MenuFlyoutPresenter]) -> MenuFlyoutPresenter: ...
@@ -4412,23 +4412,23 @@ class MenuFlyoutPresenter(winrt.system.Object, metaclass=MenuFlyoutPresenter_Sta
     @system_backdrop.setter
     def system_backdrop(self, value: microsoft_ui_xaml_media.SystemBackdrop) -> None: ...
 
-class MenuFlyoutSeparator_Static(type):
+class MenuFlyoutSeparator_Static(MenuFlyoutItemBase_Static):
     pass
 
-class MenuFlyoutSeparator(winrt.system.Object, metaclass=MenuFlyoutSeparator_Static):
+class MenuFlyoutSeparator(MenuFlyoutItemBase, metaclass=MenuFlyoutSeparator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutSeparator: ...
     def __new__(cls: typing.Type[MenuFlyoutSeparator]) -> MenuFlyoutSeparator: ...
 
 @typing.final
-class MenuFlyoutSubItem_Static(type):
+class MenuFlyoutSubItem_Static(MenuFlyoutItemBase_Static):
     @_property
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class MenuFlyoutSubItem(winrt.system.Object, metaclass=MenuFlyoutSubItem_Static):
+class MenuFlyoutSubItem(MenuFlyoutItemBase, metaclass=MenuFlyoutSubItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> MenuFlyoutSubItem: ...
     def __new__(cls: typing.Type[MenuFlyoutSubItem]) -> MenuFlyoutSubItem: ...
@@ -4443,7 +4443,7 @@ class MenuFlyoutSubItem(winrt.system.Object, metaclass=MenuFlyoutSubItem_Static)
     @_property
     def items(self) -> typing.MutableSequence[MenuFlyoutItemBase]: ...
 
-class NavigationView_Static(type):
+class NavigationView_Static(ContentControl_Static):
     @_property
     def footer_menu_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4519,7 +4519,7 @@ class NavigationView_Static(type):
     @_property
     def content_overlay_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class NavigationView(winrt.system.Object, metaclass=NavigationView_Static):
+class NavigationView(ContentControl, metaclass=NavigationView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationView: ...
     def __new__(cls: typing.Type[NavigationView]) -> NavigationView: ...
@@ -4698,7 +4698,7 @@ class NavigationViewDisplayModeChangedEventArgs(winrt.system.Object):
     @_property
     def display_mode(self) -> NavigationViewDisplayMode: ...
 
-class NavigationViewItem_Static(type):
+class NavigationViewItem_Static(NavigationViewItemBase_Static):
     @_property
     def compact_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4718,7 +4718,7 @@ class NavigationViewItem_Static(type):
     @_property
     def info_badge_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class NavigationViewItem(winrt.system.Object, metaclass=NavigationViewItem_Static):
+class NavigationViewItem(NavigationViewItemBase, metaclass=NavigationViewItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItem: ...
     def __new__(cls: typing.Type[NavigationViewItem]) -> NavigationViewItem: ...
@@ -4755,11 +4755,11 @@ class NavigationViewItem(winrt.system.Object, metaclass=NavigationViewItem_Stati
     @info_badge.setter
     def info_badge(self, value: InfoBadge) -> None: ...
 
-class NavigationViewItemBase_Static(type):
+class NavigationViewItemBase_Static(ContentControl_Static):
     @_property
     def is_selected_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class NavigationViewItemBase(winrt.system.Object, metaclass=NavigationViewItemBase_Static):
+class NavigationViewItemBase(ContentControl, metaclass=NavigationViewItemBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemBase: ...
     @_property
@@ -4785,10 +4785,10 @@ class NavigationViewItemExpandingEventArgs(winrt.system.Object):
     @_property
     def expanding_item_container(self) -> NavigationViewItemBase: ...
 
-class NavigationViewItemHeader_Static(type):
+class NavigationViewItemHeader_Static(NavigationViewItemBase_Static):
     pass
 
-class NavigationViewItemHeader(winrt.system.Object, metaclass=NavigationViewItemHeader_Static):
+class NavigationViewItemHeader(NavigationViewItemBase, metaclass=NavigationViewItemHeader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemHeader: ...
     def __new__(cls: typing.Type[NavigationViewItemHeader]) -> NavigationViewItemHeader: ...
@@ -4807,10 +4807,10 @@ class NavigationViewItemInvokedEventArgs(winrt.system.Object):
     @_property
     def recommended_navigation_transition_info(self) -> microsoft_ui_xaml_media_animation.NavigationTransitionInfo: ...
 
-class NavigationViewItemSeparator_Static(type):
+class NavigationViewItemSeparator_Static(NavigationViewItemBase_Static):
     pass
 
-class NavigationViewItemSeparator(winrt.system.Object, metaclass=NavigationViewItemSeparator_Static):
+class NavigationViewItemSeparator(NavigationViewItemBase, metaclass=NavigationViewItemSeparator_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewItemSeparator: ...
     def __new__(cls: typing.Type[NavigationViewItemSeparator]) -> NavigationViewItemSeparator: ...
@@ -4837,7 +4837,7 @@ class NavigationViewSelectionChangedEventArgs(winrt.system.Object):
     @_property
     def selected_item_container(self) -> NavigationViewItemBase: ...
 
-class NavigationViewTemplateSettings_Static(type):
+class NavigationViewTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def back_button_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4859,7 +4859,7 @@ class NavigationViewTemplateSettings_Static(type):
     @_property
     def open_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class NavigationViewTemplateSettings(winrt.system.Object, metaclass=NavigationViewTemplateSettings_Static):
+class NavigationViewTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=NavigationViewTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NavigationViewTemplateSettings: ...
     def __new__(cls: typing.Type[NavigationViewTemplateSettings]) -> NavigationViewTemplateSettings: ...
@@ -4884,25 +4884,25 @@ class NavigationViewTemplateSettings(winrt.system.Object, metaclass=NavigationVi
     @_property
     def open_pane_length(self) -> winrt.system.Double: ...
 
-class NonVirtualizingLayout_Static(type):
+class NonVirtualizingLayout_Static(Layout_Static):
     pass
 
-class NonVirtualizingLayout(winrt.system.Object, metaclass=NonVirtualizingLayout_Static):
+class NonVirtualizingLayout(Layout, metaclass=NonVirtualizingLayout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NonVirtualizingLayout: ...
     def __new__(cls: typing.Type[NonVirtualizingLayout]) -> NonVirtualizingLayout: ...
 
-class NonVirtualizingLayoutContext_Static(type):
+class NonVirtualizingLayoutContext_Static(LayoutContext_Static):
     pass
 
-class NonVirtualizingLayoutContext(winrt.system.Object, metaclass=NonVirtualizingLayoutContext_Static):
+class NonVirtualizingLayoutContext(LayoutContext, metaclass=NonVirtualizingLayoutContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NonVirtualizingLayoutContext: ...
     def __new__(cls: typing.Type[NonVirtualizingLayoutContext]) -> NonVirtualizingLayoutContext: ...
     @_property
     def children(self) -> typing.Sequence[microsoft_ui_xaml.UIElement]: ...
 
-class NumberBox_Static(type):
+class NumberBox_Static(Control_Static):
     @_property
     def accepts_expression_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -4942,7 +4942,7 @@ class NumberBox_Static(type):
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class NumberBox(winrt.system.Object, metaclass=NumberBox_Static):
+class NumberBox(Control, metaclass=NumberBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> NumberBox: ...
     def __new__(cls: typing.Type[NumberBox]) -> NumberBox: ...
@@ -5034,7 +5034,7 @@ class NumberBoxValueChangedEventArgs(winrt.system.Object):
     @_property
     def old_value(self) -> winrt.system.Double: ...
 
-class Page_Static(type):
+class Page_Static(UserControl_Static):
     @_property
     def bottom_app_bar_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5042,7 +5042,7 @@ class Page_Static(type):
     @_property
     def top_app_bar_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Page(winrt.system.Object, metaclass=Page_Static):
+class Page(UserControl, metaclass=Page_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Page: ...
     def __new__(cls: typing.Type[Page]) -> Page: ...
@@ -5061,7 +5061,7 @@ class Page(winrt.system.Object, metaclass=Page_Static):
     @_property
     def frame(self) -> Frame: ...
 
-class Panel_Static(type):
+class Panel_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5069,7 +5069,7 @@ class Panel_Static(type):
     @_property
     def is_items_host_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Panel(winrt.system.Object, metaclass=Panel_Static):
+class Panel(microsoft_ui_xaml.FrameworkElement, metaclass=Panel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Panel: ...
     @_property
@@ -5089,7 +5089,7 @@ class Panel(winrt.system.Object, metaclass=Panel_Static):
     @_property
     def is_items_host(self) -> bool: ...
 
-class ParallaxView_Static(type):
+class ParallaxView_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def child_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5119,7 +5119,7 @@ class ParallaxView_Static(type):
     @_property
     def vertical_source_start_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ParallaxView(winrt.system.Object, metaclass=ParallaxView_Static):
+class ParallaxView(microsoft_ui_xaml.FrameworkElement, metaclass=ParallaxView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ParallaxView: ...
     def __new__(cls: typing.Type[ParallaxView]) -> ParallaxView: ...
@@ -5183,7 +5183,7 @@ class ParallaxView(winrt.system.Object, metaclass=ParallaxView_Static):
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
-class PasswordBox_Static(type):
+class PasswordBox_Static(Control_Static):
     @_property
     def can_paste_clipboard_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5216,7 +5216,7 @@ class PasswordBox_Static(type):
     def text_reading_order_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class PasswordBox(winrt.system.Object, metaclass=PasswordBox_Static):
+class PasswordBox(Control, metaclass=PasswordBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PasswordBox: ...
     def __new__(cls: typing.Type[PasswordBox]) -> PasswordBox: ...
@@ -5296,11 +5296,11 @@ class PasswordBoxPasswordChangingEventArgs(winrt.system.Object):
     @_property
     def is_content_changing(self) -> bool: ...
 
-class PathIcon_Static(type):
+class PathIcon_Static(IconElement_Static):
     @_property
     def data_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PathIcon(winrt.system.Object, metaclass=PathIcon_Static):
+class PathIcon(IconElement, metaclass=PathIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathIcon: ...
     def __new__(cls: typing.Type[PathIcon]) -> PathIcon: ...
@@ -5309,11 +5309,11 @@ class PathIcon(winrt.system.Object, metaclass=PathIcon_Static):
     @data.setter
     def data(self, value: microsoft_ui_xaml_media.Geometry) -> None: ...
 
-class PathIconSource_Static(type):
+class PathIconSource_Static(IconSource_Static):
     @_property
     def data_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PathIconSource(winrt.system.Object, metaclass=PathIconSource_Static):
+class PathIconSource(IconSource, metaclass=PathIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PathIconSource: ...
     def __new__(cls: typing.Type[PathIconSource]) -> PathIconSource: ...
@@ -5322,7 +5322,7 @@ class PathIconSource(winrt.system.Object, metaclass=PathIconSource_Static):
     @data.setter
     def data(self, value: microsoft_ui_xaml_media.Geometry) -> None: ...
 
-class PersonPicture_Static(type):
+class PersonPicture_Static(Control_Static):
     @_property
     def badge_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5344,7 +5344,7 @@ class PersonPicture_Static(type):
     @_property
     def profile_picture_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PersonPicture(winrt.system.Object, metaclass=PersonPicture_Static):
+class PersonPicture(Control, metaclass=PersonPicture_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PersonPicture: ...
     def __new__(cls: typing.Type[PersonPicture]) -> PersonPicture: ...
@@ -5392,7 +5392,7 @@ class PersonPicture(winrt.system.Object, metaclass=PersonPicture_Static):
     def template_settings(self) -> PersonPictureTemplateSettings: ...
 
 @typing.final
-class PersonPictureTemplateSettings(winrt.system.Object):
+class PersonPictureTemplateSettings(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PersonPictureTemplateSettings: ...
     @_property
@@ -5401,17 +5401,17 @@ class PersonPictureTemplateSettings(winrt.system.Object):
     def actual_initials(self) -> str: ...
 
 @typing.final
-class PickerConfirmedEventArgs(winrt.system.Object):
+class PickerConfirmedEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerConfirmedEventArgs: ...
     def __new__(cls: typing.Type[PickerConfirmedEventArgs]) -> PickerConfirmedEventArgs: ...
 
 @typing.final
-class PickerFlyoutPresenter(winrt.system.Object):
+class PickerFlyoutPresenter(ContentControl):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PickerFlyoutPresenter: ...
 
-class PipsPager_Static(type):
+class PipsPager_Static(Control_Static):
     @_property
     def max_visible_pips_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5435,7 +5435,7 @@ class PipsPager_Static(type):
     @_property
     def wrap_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PipsPager(winrt.system.Object, metaclass=PipsPager_Static):
+class PipsPager(Control, metaclass=PipsPager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PipsPager: ...
     def __new__(cls: typing.Type[PipsPager]) -> PipsPager: ...
@@ -5494,13 +5494,13 @@ class PipsPagerSelectedIndexChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> PipsPagerSelectedIndexChangedEventArgs: ...
 
 @typing.final
-class PipsPagerTemplateSettings(winrt.system.Object):
+class PipsPagerTemplateSettings(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PipsPagerTemplateSettings: ...
     @_property
     def pips_pager_items(self) -> typing.MutableSequence[winrt.system.Int32]: ...
 
-class Pivot_Static(type):
+class Pivot_Static(ItemsControl_Static):
     def get_slide_in_animation_group(cls, element: microsoft_ui_xaml.FrameworkElement, /) -> PivotSlideInAnimationGroup: ...
     def set_slide_in_animation_group(cls, element: microsoft_ui_xaml.FrameworkElement, value: PivotSlideInAnimationGroup, /) -> None: ...
     @_property
@@ -5530,7 +5530,7 @@ class Pivot_Static(type):
     @_property
     def title_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Pivot(winrt.system.Object, metaclass=Pivot_Static):
+class Pivot(ItemsControl, metaclass=Pivot_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Pivot: ...
     def __new__(cls: typing.Type[Pivot]) -> Pivot: ...
@@ -5593,11 +5593,11 @@ class Pivot(winrt.system.Object, metaclass=Pivot_Static):
     @header_focus_visual_placement.setter
     def header_focus_visual_placement(self, value: PivotHeaderFocusVisualPlacement) -> None: ...
 
-class PivotItem_Static(type):
+class PivotItem_Static(ContentControl_Static):
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class PivotItem(winrt.system.Object, metaclass=PivotItem_Static):
+class PivotItem(ContentControl, metaclass=PivotItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotItem: ...
     def __new__(cls: typing.Type[PivotItem]) -> PivotItem: ...
@@ -5617,7 +5617,7 @@ class PivotItemEventArgs(winrt.system.Object):
     def item(self, value: PivotItem) -> None: ...
 
 @typing.final
-class ProgressBarTemplateSettings(winrt.system.Object):
+class ProgressBarTemplateSettings(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressBarTemplateSettings: ...
     @_property
@@ -5643,7 +5643,7 @@ class ProgressBarTemplateSettings(winrt.system.Object):
     @_property
     def indicator_length_delta(self) -> winrt.system.Double: ...
 
-class ProgressRing_Static(type):
+class ProgressRing_Static(Control_Static):
     @_property
     def is_active_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5655,7 +5655,7 @@ class ProgressRing_Static(type):
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ProgressRing(winrt.system.Object, metaclass=ProgressRing_Static):
+class ProgressRing(Control, metaclass=ProgressRing_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressRing: ...
     def __new__(cls: typing.Type[ProgressRing]) -> ProgressRing: ...
@@ -5683,7 +5683,7 @@ class ProgressRing(winrt.system.Object, metaclass=ProgressRing_Static):
     def template_settings(self) -> ProgressRingTemplateSettings: ...
 
 @typing.final
-class ProgressRingTemplateSettings(winrt.system.Object):
+class ProgressRingTemplateSettings(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ProgressRingTemplateSettings: ...
     @_property
@@ -5693,7 +5693,7 @@ class ProgressRingTemplateSettings(winrt.system.Object):
     @_property
     def max_side_length(self) -> winrt.system.Double: ...
 
-class RadioButtons_Static(type):
+class RadioButtons_Static(Control_Static):
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5711,7 +5711,7 @@ class RadioButtons_Static(type):
     @_property
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RadioButtons(winrt.system.Object, metaclass=RadioButtons_Static):
+class RadioButtons(Control, metaclass=RadioButtons_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadioButtons: ...
     def __new__(cls: typing.Type[RadioButtons]) -> RadioButtons: ...
@@ -5749,7 +5749,7 @@ class RadioButtons(winrt.system.Object, metaclass=RadioButtons_Static):
     @_property
     def items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class RadioMenuFlyoutItem_Static(type):
+class RadioMenuFlyoutItem_Static(MenuFlyoutItem_Static):
     def get_are_check_states_enabled(cls, object: MenuFlyoutSubItem, /) -> bool: ...
     def set_are_check_states_enabled(cls, object: MenuFlyoutSubItem, value: bool, /) -> None: ...
     @_property
@@ -5759,7 +5759,7 @@ class RadioMenuFlyoutItem_Static(type):
     @_property
     def are_check_states_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RadioMenuFlyoutItem(winrt.system.Object, metaclass=RadioMenuFlyoutItem_Static):
+class RadioMenuFlyoutItem(MenuFlyoutItem, metaclass=RadioMenuFlyoutItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RadioMenuFlyoutItem: ...
     def __new__(cls: typing.Type[RadioMenuFlyoutItem]) -> RadioMenuFlyoutItem: ...
@@ -5772,7 +5772,7 @@ class RadioMenuFlyoutItem(winrt.system.Object, metaclass=RadioMenuFlyoutItem_Sta
     @group_name.setter
     def group_name(self, value: str) -> None: ...
 
-class RatingControl_Static(type):
+class RatingControl_Static(Control_Static):
     @_property
     def caption_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5790,7 +5790,7 @@ class RatingControl_Static(type):
     @_property
     def value_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RatingControl(winrt.system.Object, metaclass=RatingControl_Static):
+class RatingControl(Control, metaclass=RatingControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatingControl: ...
     def __new__(cls: typing.Type[RatingControl]) -> RatingControl: ...
@@ -5829,7 +5829,7 @@ class RatingControl(winrt.system.Object, metaclass=RatingControl_Static):
     @caption.setter
     def caption(self, value: str) -> None: ...
 
-class RatingItemFontInfo_Static(type):
+class RatingItemFontInfo_Static(RatingItemInfo_Static):
     @_property
     def disabled_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5843,7 +5843,7 @@ class RatingItemFontInfo_Static(type):
     @_property
     def unset_glyph_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RatingItemFontInfo(winrt.system.Object, metaclass=RatingItemFontInfo_Static):
+class RatingItemFontInfo(RatingItemInfo, metaclass=RatingItemFontInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatingItemFontInfo: ...
     def __new__(cls: typing.Type[RatingItemFontInfo]) -> RatingItemFontInfo: ...
@@ -5872,7 +5872,7 @@ class RatingItemFontInfo(winrt.system.Object, metaclass=RatingItemFontInfo_Stati
     @disabled_glyph.setter
     def disabled_glyph(self, value: str) -> None: ...
 
-class RatingItemImageInfo_Static(type):
+class RatingItemImageInfo_Static(RatingItemInfo_Static):
     @_property
     def disabled_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5886,7 +5886,7 @@ class RatingItemImageInfo_Static(type):
     @_property
     def unset_image_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RatingItemImageInfo(winrt.system.Object, metaclass=RatingItemImageInfo_Static):
+class RatingItemImageInfo(RatingItemInfo, metaclass=RatingItemImageInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatingItemImageInfo: ...
     def __new__(cls: typing.Type[RatingItemImageInfo]) -> RatingItemImageInfo: ...
@@ -5915,21 +5915,21 @@ class RatingItemImageInfo(winrt.system.Object, metaclass=RatingItemImageInfo_Sta
     @disabled_image.setter
     def disabled_image(self, value: microsoft_ui_xaml_media.ImageSource) -> None: ...
 
-class RatingItemInfo_Static(type):
+class RatingItemInfo_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class RatingItemInfo(winrt.system.Object, metaclass=RatingItemInfo_Static):
+class RatingItemInfo(microsoft_ui_xaml.DependencyObject, metaclass=RatingItemInfo_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RatingItemInfo: ...
     def __new__(cls: typing.Type[RatingItemInfo]) -> RatingItemInfo: ...
 
-class RefreshContainer_Static(type):
+class RefreshContainer_Static(ContentControl_Static):
     @_property
     def pull_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def visualizer_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RefreshContainer(winrt.system.Object, metaclass=RefreshContainer_Static):
+class RefreshContainer(ContentControl, metaclass=RefreshContainer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RefreshContainer: ...
     def __new__(cls: typing.Type[RefreshContainer]) -> RefreshContainer: ...
@@ -5967,7 +5967,7 @@ class RefreshStateChangedEventArgs(winrt.system.Object):
     @_property
     def old_state(self) -> RefreshVisualizerState: ...
 
-class RefreshVisualizer_Static(type):
+class RefreshVisualizer_Static(Control_Static):
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -5977,7 +5977,7 @@ class RefreshVisualizer_Static(type):
     @_property
     def state_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RefreshVisualizer(winrt.system.Object, metaclass=RefreshVisualizer_Static):
+class RefreshVisualizer(Control, metaclass=RefreshVisualizer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RefreshVisualizer: ...
     def __new__(cls: typing.Type[RefreshVisualizer]) -> RefreshVisualizer: ...
@@ -5997,7 +5997,7 @@ class RefreshVisualizer(winrt.system.Object, metaclass=RefreshVisualizer_Static)
     @_property
     def state(self) -> RefreshVisualizerState: ...
 
-class RelativePanel_Static(type):
+class RelativePanel_Static(Panel_Static):
     def get_above(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
     def get_align_bottom_with(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Object: ...
     def get_align_bottom_with_panel(cls, element: microsoft_ui_xaml.UIElement, /) -> bool: ...
@@ -6073,7 +6073,7 @@ class RelativePanel_Static(type):
     @_property
     def right_of_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RelativePanel(winrt.system.Object, metaclass=RelativePanel_Static):
+class RelativePanel(Panel, metaclass=RelativePanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RelativePanel: ...
     def __new__(cls: typing.Type[RelativePanel]) -> RelativePanel: ...
@@ -6098,7 +6098,7 @@ class RelativePanel(winrt.system.Object, metaclass=RelativePanel_Static):
     @background_sizing.setter
     def background_sizing(self, value: BackgroundSizing) -> None: ...
 
-class RichEditBox_Static(type):
+class RichEditBox_Static(Control_Static):
     @_property
     def accepts_return_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -6148,7 +6148,7 @@ class RichEditBox_Static(type):
     @_property
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class RichEditBox(winrt.system.Object, metaclass=RichEditBox_Static):
+class RichEditBox(Control, metaclass=RichEditBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichEditBox: ...
     def __new__(cls: typing.Type[RichEditBox]) -> RichEditBox: ...
@@ -6297,7 +6297,7 @@ class RichEditBoxTextChangingEventArgs(winrt.system.Object):
     def is_content_changing(self) -> bool: ...
 
 @typing.final
-class RichTextBlock_Static(type):
+class RichTextBlock_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -6358,7 +6358,7 @@ class RichTextBlock_Static(type):
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class RichTextBlock(winrt.system.Object, metaclass=RichTextBlock_Static):
+class RichTextBlock(microsoft_ui_xaml.FrameworkElement, metaclass=RichTextBlock_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichTextBlock: ...
     def __new__(cls: typing.Type[RichTextBlock]) -> RichTextBlock: ...
@@ -6498,7 +6498,7 @@ class RichTextBlock(winrt.system.Object, metaclass=RichTextBlock_Static):
     def baseline_offset(self) -> winrt.system.Double: ...
 
 @typing.final
-class RichTextBlockOverflow_Static(type):
+class RichTextBlockOverflow_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def has_overflow_content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -6511,7 +6511,7 @@ class RichTextBlockOverflow_Static(type):
     def padding_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class RichTextBlockOverflow(winrt.system.Object, metaclass=RichTextBlockOverflow_Static):
+class RichTextBlockOverflow(microsoft_ui_xaml.FrameworkElement, metaclass=RichTextBlockOverflow_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RichTextBlockOverflow: ...
     def __new__(cls: typing.Type[RichTextBlockOverflow]) -> RichTextBlockOverflow: ...
@@ -6544,7 +6544,7 @@ class RichTextBlockOverflow(winrt.system.Object, metaclass=RichTextBlockOverflow
     def is_text_trimmed(self) -> bool: ...
 
 @typing.final
-class RowDefinition_Static(type):
+class RowDefinition_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -6553,7 +6553,7 @@ class RowDefinition_Static(type):
     def min_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class RowDefinition(winrt.system.Object, metaclass=RowDefinition_Static):
+class RowDefinition(microsoft_ui_xaml.DependencyObject, metaclass=RowDefinition_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> RowDefinition: ...
     def __new__(cls: typing.Type[RowDefinition]) -> RowDefinition: ...
@@ -6606,14 +6606,14 @@ class RowDefinitionCollection(winrt.system.Object, winrt._winrt.MutableSequence[
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class ScrollContentPresenter_Static(type):
+class ScrollContentPresenter_Static(ContentPresenter_Static):
     @_property
     def can_content_render_outside_bounds_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def sizes_content_to_templated_parent_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ScrollContentPresenter(winrt.system.Object, metaclass=ScrollContentPresenter_Static):
+class ScrollContentPresenter(ContentPresenter, metaclass=ScrollContentPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollContentPresenter: ...
     def __new__(cls: typing.Type[ScrollContentPresenter]) -> ScrollContentPresenter: ...
@@ -6665,7 +6665,7 @@ class ScrollContentPresenter(winrt.system.Object, metaclass=ScrollContentPresent
     @_property
     def viewport_width(self) -> winrt.system.Double: ...
 
-class ScrollView_Static(type):
+class ScrollView_Static(Control_Static):
     @_property
     def computed_horizontal_scroll_bar_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -6711,7 +6711,7 @@ class ScrollView_Static(type):
     @_property
     def zoom_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ScrollView(winrt.system.Object, metaclass=ScrollView_Static):
+class ScrollView(Control, metaclass=ScrollView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollView: ...
     def __new__(cls: typing.Type[ScrollView]) -> ScrollView: ...
@@ -6849,7 +6849,7 @@ class ScrollView(winrt.system.Object, metaclass=ScrollView_Static):
     def computed_horizontal_scroll_bar_visibility(self) -> microsoft_ui_xaml.Visibility: ...
 
 @typing.final
-class ScrollViewer_Static(type):
+class ScrollViewer_Static(ContentControl_Static):
     def get_bring_into_view_on_focus_change(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
     def get_can_content_render_outside_bounds(cls, element: microsoft_ui_xaml.DependencyObject, /) -> bool: ...
     def get_horizontal_scroll_bar_visibility(cls, element: microsoft_ui_xaml.DependencyObject, /) -> ScrollBarVisibility: ...
@@ -6962,7 +6962,7 @@ class ScrollViewer_Static(type):
     def zoom_snap_points_type_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ScrollViewer(IScrollAnchorProvider, winrt.system.Object, metaclass=ScrollViewer_Static):
+class ScrollViewer(IScrollAnchorProvider, ContentControl, metaclass=ScrollViewer_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollViewer: ...
     def __new__(cls: typing.Type[ScrollViewer]) -> ScrollViewer: ...
@@ -7283,10 +7283,10 @@ class SectionsInViewChangedEventArgs(winrt.system.Object, metaclass=SectionsInVi
     @_property
     def removed_sections(self) -> typing.MutableSequence[HubSection]: ...
 
-class SelectionChangedEventArgs_Static(type):
+class SelectionChangedEventArgs_Static(microsoft_ui_xaml.RoutedEventArgs_Static):
     pass
 
-class SelectionChangedEventArgs(winrt.system.Object, metaclass=SelectionChangedEventArgs_Static):
+class SelectionChangedEventArgs(microsoft_ui_xaml.RoutedEventArgs, metaclass=SelectionChangedEventArgs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectionChangedEventArgs: ...
     def __new__(cls: typing.Type[SelectionChangedEventArgs], removed_items: typing.MutableSequence[winrt.system.Object], added_items: typing.MutableSequence[winrt.system.Object]) -> SelectionChangedEventArgs: ...
@@ -7295,13 +7295,13 @@ class SelectionChangedEventArgs(winrt.system.Object, metaclass=SelectionChangedE
     @_property
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class SelectorBar_Static(type):
+class SelectorBar_Static(Control_Static):
     @_property
     def items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SelectorBar(winrt.system.Object, metaclass=SelectorBar_Static):
+class SelectorBar(Control, metaclass=SelectorBar_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorBar: ...
     def __new__(cls: typing.Type[SelectorBar]) -> SelectorBar: ...
@@ -7314,13 +7314,13 @@ class SelectorBar(winrt.system.Object, metaclass=SelectorBar_Static):
     @_property
     def items(self) -> typing.MutableSequence[SelectorBarItem]: ...
 
-class SelectorBarItem_Static(type):
+class SelectorBarItem_Static(ItemContainer_Static):
     @_property
     def icon_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SelectorBarItem(winrt.system.Object, metaclass=SelectorBarItem_Static):
+class SelectorBarItem(ItemContainer, metaclass=SelectorBarItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SelectorBarItem: ...
     def __new__(cls: typing.Type[SelectorBarItem]) -> SelectorBarItem: ...
@@ -7339,7 +7339,7 @@ class SelectorBarSelectionChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> SelectorBarSelectionChangedEventArgs: ...
 
 @typing.final
-class SemanticZoom_Static(type):
+class SemanticZoom_Static(Control_Static):
     @_property
     def can_change_views_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7352,7 +7352,7 @@ class SemanticZoom_Static(type):
     def zoomed_out_view_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class SemanticZoom(winrt.system.Object, metaclass=SemanticZoom_Static):
+class SemanticZoom(Control, metaclass=SemanticZoom_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SemanticZoom: ...
     def __new__(cls: typing.Type[SemanticZoom]) -> SemanticZoom: ...
@@ -7414,7 +7414,7 @@ class SemanticZoomViewChangedEventArgs(winrt.system.Object):
     @destination_item.setter
     def destination_item(self, value: SemanticZoomLocation) -> None: ...
 
-class SplitButton_Static(type):
+class SplitButton_Static(ContentControl_Static):
     @_property
     def command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7422,7 +7422,7 @@ class SplitButton_Static(type):
     @_property
     def flyout_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SplitButton(winrt.system.Object, metaclass=SplitButton_Static):
+class SplitButton(ContentControl, metaclass=SplitButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitButton: ...
     def __new__(cls: typing.Type[SplitButton]) -> SplitButton: ...
@@ -7446,7 +7446,7 @@ class SplitButtonClickEventArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitButtonClickEventArgs: ...
 
-class SplitView_Static(type):
+class SplitView_Static(Control_Static):
     @_property
     def compact_pane_length_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7468,7 +7468,7 @@ class SplitView_Static(type):
     @_property
     def template_settings_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SplitView(winrt.system.Object, metaclass=SplitView_Static):
+class SplitView(Control, metaclass=SplitView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SplitView: ...
     def __new__(cls: typing.Type[SplitView]) -> SplitView: ...
@@ -7528,13 +7528,13 @@ class SplitViewPaneClosingEventArgs(winrt.system.Object):
     @cancel.setter
     def cancel(self, value: bool) -> None: ...
 
-class StackLayout_Static(type):
+class StackLayout_Static(VirtualizingLayout_Static):
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class StackLayout(winrt.system.Object, metaclass=StackLayout_Static):
+class StackLayout(VirtualizingLayout, metaclass=StackLayout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StackLayout: ...
     def __new__(cls: typing.Type[StackLayout]) -> StackLayout: ...
@@ -7547,7 +7547,7 @@ class StackLayout(winrt.system.Object, metaclass=StackLayout_Static):
     @orientation.setter
     def orientation(self, value: Orientation) -> None: ...
 
-class StackPanel_Static(type):
+class StackPanel_Static(Panel_Static):
     @_property
     def are_scroll_snap_points_regular_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7565,7 +7565,7 @@ class StackPanel_Static(type):
     @_property
     def spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class StackPanel(IInsertionPanel, microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, winrt.system.Object, metaclass=StackPanel_Static):
+class StackPanel(IInsertionPanel, microsoft_ui_xaml_controls_primitives.IScrollSnapPointsInfo, Panel, metaclass=StackPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> StackPanel: ...
     def __new__(cls: typing.Type[StackPanel]) -> StackPanel: ...
@@ -7622,21 +7622,21 @@ class StyleSelector(winrt.system.Object, metaclass=StyleSelector_Static):
     def __new__(cls: typing.Type[StyleSelector]) -> StyleSelector: ...
     def select_style(self, item: winrt.system.Object, container: microsoft_ui_xaml.DependencyObject, /) -> microsoft_ui_xaml.Style: ...
 
-class SwapChainBackgroundPanel_Static(type):
+class SwapChainBackgroundPanel_Static(Grid_Static):
     pass
 
-class SwapChainBackgroundPanel(winrt.system.Object, metaclass=SwapChainBackgroundPanel_Static):
+class SwapChainBackgroundPanel(Grid, metaclass=SwapChainBackgroundPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwapChainBackgroundPanel: ...
     def __new__(cls: typing.Type[SwapChainBackgroundPanel]) -> SwapChainBackgroundPanel: ...
 
-class SwapChainPanel_Static(type):
+class SwapChainPanel_Static(Grid_Static):
     @_property
     def composition_scale_x_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def composition_scale_y_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SwapChainPanel(winrt.system.Object, metaclass=SwapChainPanel_Static):
+class SwapChainPanel(Grid, metaclass=SwapChainPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwapChainPanel: ...
     def __new__(cls: typing.Type[SwapChainPanel]) -> SwapChainPanel: ...
@@ -7648,7 +7648,7 @@ class SwapChainPanel(winrt.system.Object, metaclass=SwapChainPanel_Static):
     @_property
     def composition_scale_y(self) -> winrt.system.Single: ...
 
-class SwipeControl_Static(type):
+class SwipeControl_Static(ContentControl_Static):
     @_property
     def bottom_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7658,7 +7658,7 @@ class SwipeControl_Static(type):
     @_property
     def top_items_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SwipeControl(winrt.system.Object, metaclass=SwipeControl_Static):
+class SwipeControl(ContentControl, metaclass=SwipeControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwipeControl: ...
     def __new__(cls: typing.Type[SwipeControl]) -> SwipeControl: ...
@@ -7680,7 +7680,7 @@ class SwipeControl(winrt.system.Object, metaclass=SwipeControl_Static):
     @bottom_items.setter
     def bottom_items(self, value: SwipeItems) -> None: ...
 
-class SwipeItem_Static(type):
+class SwipeItem_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def background_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7696,7 +7696,7 @@ class SwipeItem_Static(type):
     @_property
     def text_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SwipeItem(winrt.system.Object, metaclass=SwipeItem_Static):
+class SwipeItem(microsoft_ui_xaml.DependencyObject, metaclass=SwipeItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SwipeItem: ...
     def __new__(cls: typing.Type[SwipeItem]) -> SwipeItem: ...
@@ -7738,11 +7738,11 @@ class SwipeItemInvokedEventArgs(winrt.system.Object):
     @_property
     def swipe_control(self) -> SwipeControl: ...
 
-class SwipeItems_Static(type):
+class SwipeItems_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SwipeItems(winrt.system.Object, winrt._winrt.MutableSequence[SwipeItem], metaclass=SwipeItems_Static):
+class SwipeItems(microsoft_ui_xaml.DependencyObject, winrt._winrt.MutableSequence[SwipeItem], metaclass=SwipeItems_Static):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[SwipeItem]: ...
     @typing.overload
@@ -7780,12 +7780,12 @@ class SwipeItems(winrt.system.Object, winrt._winrt.MutableSequence[SwipeItem], m
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class SymbolIcon_Static(type):
+class SymbolIcon_Static(IconElement_Static):
     @_property
     def symbol_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class SymbolIcon(winrt.system.Object, metaclass=SymbolIcon_Static):
+class SymbolIcon(IconElement, metaclass=SymbolIcon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SymbolIcon: ...
     @typing.overload
@@ -7797,11 +7797,11 @@ class SymbolIcon(winrt.system.Object, metaclass=SymbolIcon_Static):
     @symbol.setter
     def symbol(self, value: Symbol) -> None: ...
 
-class SymbolIconSource_Static(type):
+class SymbolIconSource_Static(IconSource_Static):
     @_property
     def symbol_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class SymbolIconSource(winrt.system.Object, metaclass=SymbolIconSource_Static):
+class SymbolIconSource(IconSource, metaclass=SymbolIconSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SymbolIconSource: ...
     def __new__(cls: typing.Type[SymbolIconSource]) -> SymbolIconSource: ...
@@ -7810,7 +7810,7 @@ class SymbolIconSource(winrt.system.Object, metaclass=SymbolIconSource_Static):
     @symbol.setter
     def symbol(self, value: Symbol) -> None: ...
 
-class TabView_Static(type):
+class TabView_Static(Control_Static):
     @_property
     def add_tab_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -7850,7 +7850,7 @@ class TabView_Static(type):
     @_property
     def can_tear_out_tabs_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TabView(winrt.system.Object, metaclass=TabView_Static):
+class TabView(Control, metaclass=TabView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabView: ...
     def __new__(cls: typing.Type[TabView]) -> TabView: ...
@@ -7983,13 +7983,13 @@ class TabViewExternalTornOutTabsDroppingEventArgs(winrt.system.Object):
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
-class TabViewItemTemplateSettings_Static(type):
+class TabViewItemTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def tab_geometry_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TabViewItemTemplateSettings(winrt.system.Object, metaclass=TabViewItemTemplateSettings_Static):
+class TabViewItemTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TabViewItemTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TabViewItemTemplateSettings: ...
     def __new__(cls: typing.Type[TabViewItemTemplateSettings]) -> TabViewItemTemplateSettings: ...
@@ -8070,7 +8070,7 @@ class TabViewTabTearOutWindowRequestedEventArgs(winrt.system.Object):
     @_property
     def tabs(self) -> microsoft_ui_xaml.UIElement: ...
 
-class TeachingTip_Static(type):
+class TeachingTip_Static(ContentControl_Static):
     @_property
     def action_button_command_parameter_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8114,7 +8114,7 @@ class TeachingTip_Static(type):
     @_property
     def title_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TeachingTip(winrt.system.Object, metaclass=TeachingTip_Static):
+class TeachingTip(ContentControl, metaclass=TeachingTip_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TeachingTip: ...
     def __new__(cls: typing.Type[TeachingTip]) -> TeachingTip: ...
@@ -8228,7 +8228,7 @@ class TeachingTipClosingEventArgs(winrt.system.Object):
     @_property
     def reason(self) -> TeachingTipCloseReason: ...
 
-class TeachingTipTemplateSettings_Static(type):
+class TeachingTipTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def icon_element_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8236,7 +8236,7 @@ class TeachingTipTemplateSettings_Static(type):
     @_property
     def top_right_highlight_margin_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TeachingTipTemplateSettings(winrt.system.Object, metaclass=TeachingTipTemplateSettings_Static):
+class TeachingTipTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TeachingTipTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TeachingTipTemplateSettings: ...
     def __new__(cls: typing.Type[TeachingTipTemplateSettings]) -> TeachingTipTemplateSettings: ...
@@ -8254,7 +8254,7 @@ class TeachingTipTemplateSettings(winrt.system.Object, metaclass=TeachingTipTemp
     def icon_element(self, value: IconElement) -> None: ...
 
 @typing.final
-class TextBlock_Static(type):
+class TextBlock_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def character_spacing_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8311,7 +8311,7 @@ class TextBlock_Static(type):
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class TextBlock(winrt.system.Object, metaclass=TextBlock_Static):
+class TextBlock(microsoft_ui_xaml.FrameworkElement, metaclass=TextBlock_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBlock: ...
     def __new__(cls: typing.Type[TextBlock]) -> TextBlock: ...
@@ -8444,7 +8444,7 @@ class TextBlock(winrt.system.Object, metaclass=TextBlock_Static):
     @_property
     def baseline_offset(self) -> winrt.system.Double: ...
 
-class TextBox_Static(type):
+class TextBox_Static(Control_Static):
     @_property
     def accepts_return_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8500,7 +8500,7 @@ class TextBox_Static(type):
     @_property
     def text_wrapping_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TextBox(winrt.system.Object, metaclass=TextBox_Static):
+class TextBox(Control, metaclass=TextBox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextBox: ...
     def __new__(cls: typing.Type[TextBox]) -> TextBox: ...
@@ -8685,7 +8685,7 @@ class TextBoxTextChangingEventArgs(winrt.system.Object):
     def is_content_changing(self) -> bool: ...
 
 @typing.final
-class TextChangedEventArgs(winrt.system.Object):
+class TextChangedEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextChangedEventArgs: ...
 
@@ -8744,7 +8744,7 @@ class TextControlPasteEventArgs(winrt.system.Object):
     def handled(self, value: bool) -> None: ...
 
 @typing.final
-class TimePickedEventArgs(winrt.system.Object):
+class TimePickedEventArgs(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePickedEventArgs: ...
     def __new__(cls: typing.Type[TimePickedEventArgs]) -> TimePickedEventArgs: ...
@@ -8753,7 +8753,7 @@ class TimePickedEventArgs(winrt.system.Object):
     @_property
     def old_time(self) -> datetime.timedelta: ...
 
-class TimePicker_Static(type):
+class TimePicker_Static(Control_Static):
     @_property
     def clock_identifier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8769,7 +8769,7 @@ class TimePicker_Static(type):
     @_property
     def time_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TimePicker(winrt.system.Object, metaclass=TimePicker_Static):
+class TimePicker(Control, metaclass=TimePicker_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePicker: ...
     def __new__(cls: typing.Type[TimePicker]) -> TimePicker: ...
@@ -8807,12 +8807,12 @@ class TimePicker(winrt.system.Object, metaclass=TimePicker_Static):
     def clock_identifier(self, value: str) -> None: ...
 
 @typing.final
-class TimePickerFlyoutPresenter_Static(type):
+class TimePickerFlyoutPresenter_Static(Control_Static):
     @_property
     def is_default_shadow_enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class TimePickerFlyoutPresenter(winrt.system.Object, metaclass=TimePickerFlyoutPresenter_Static):
+class TimePickerFlyoutPresenter(Control, metaclass=TimePickerFlyoutPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TimePickerFlyoutPresenter: ...
     @_property
@@ -8838,11 +8838,11 @@ class TimePickerValueChangedEventArgs(winrt.system.Object):
     @_property
     def old_time(self) -> datetime.timedelta: ...
 
-class ToggleMenuFlyoutItem_Static(type):
+class ToggleMenuFlyoutItem_Static(MenuFlyoutItem_Static):
     @_property
     def is_checked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ToggleMenuFlyoutItem(winrt.system.Object, metaclass=ToggleMenuFlyoutItem_Static):
+class ToggleMenuFlyoutItem(MenuFlyoutItem, metaclass=ToggleMenuFlyoutItem_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleMenuFlyoutItem: ...
     def __new__(cls: typing.Type[ToggleMenuFlyoutItem]) -> ToggleMenuFlyoutItem: ...
@@ -8851,11 +8851,11 @@ class ToggleMenuFlyoutItem(winrt.system.Object, metaclass=ToggleMenuFlyoutItem_S
     @is_checked.setter
     def is_checked(self, value: bool) -> None: ...
 
-class ToggleSplitButton_Static(type):
+class ToggleSplitButton_Static(SplitButton_Static):
     @_property
     def is_checked_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ToggleSplitButton(winrt.system.Object, metaclass=ToggleSplitButton_Static):
+class ToggleSplitButton(SplitButton, metaclass=ToggleSplitButton_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleSplitButton: ...
     def __new__(cls: typing.Type[ToggleSplitButton]) -> ToggleSplitButton: ...
@@ -8872,7 +8872,7 @@ class ToggleSplitButtonIsCheckedChangedEventArgs(winrt.system.Object):
     def _from(obj: winrt.system.Object, /) -> ToggleSplitButtonIsCheckedChangedEventArgs: ...
 
 @typing.final
-class ToggleSwitch_Static(type):
+class ToggleSwitch_Static(Control_Static):
     @_property
     def header_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8889,7 +8889,7 @@ class ToggleSwitch_Static(type):
     def on_content_template_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class ToggleSwitch(winrt.system.Object, metaclass=ToggleSwitch_Static):
+class ToggleSwitch(Control, metaclass=ToggleSwitch_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToggleSwitch: ...
     def __new__(cls: typing.Type[ToggleSwitch]) -> ToggleSwitch: ...
@@ -8926,7 +8926,7 @@ class ToggleSwitch(winrt.system.Object, metaclass=ToggleSwitch_Static):
     @_property
     def template_settings(self) -> microsoft_ui_xaml_controls_primitives.ToggleSwitchTemplateSettings: ...
 
-class ToolTip_Static(type):
+class ToolTip_Static(ContentControl_Static):
     @_property
     def horizontal_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -8940,7 +8940,7 @@ class ToolTip_Static(type):
     @_property
     def vertical_offset_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ToolTip(winrt.system.Object, metaclass=ToolTip_Static):
+class ToolTip(ContentControl, metaclass=ToolTip_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToolTip: ...
     def __new__(cls: typing.Type[ToolTip]) -> ToolTip: ...
@@ -8995,7 +8995,7 @@ class ToolTipService(winrt.system.Object, metaclass=ToolTipService_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ToolTipService: ...
 
-class TreeView_Static(type):
+class TreeView_Static(Control_Static):
     @_property
     def selected_item_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9017,7 +9017,7 @@ class TreeView_Static(type):
     @_property
     def items_source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TreeView(winrt.system.Object, metaclass=TreeView_Static):
+class TreeView(Control, metaclass=TreeView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeView: ...
     def __new__(cls: typing.Type[TreeView]) -> TreeView: ...
@@ -9144,7 +9144,7 @@ class TreeViewItemInvokedEventArgs(winrt.system.Object):
     @_property
     def invoked_item(self) -> winrt.system.Object: ...
 
-class TreeViewItemTemplateSettings_Static(type):
+class TreeViewItemTemplateSettings_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def collapsed_glyph_visibility_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9154,7 +9154,7 @@ class TreeViewItemTemplateSettings_Static(type):
     @_property
     def indentation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TreeViewItemTemplateSettings(winrt.system.Object, metaclass=TreeViewItemTemplateSettings_Static):
+class TreeViewItemTemplateSettings(microsoft_ui_xaml.DependencyObject, metaclass=TreeViewItemTemplateSettings_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewItemTemplateSettings: ...
     def __new__(cls: typing.Type[TreeViewItemTemplateSettings]) -> TreeViewItemTemplateSettings: ...
@@ -9167,7 +9167,7 @@ class TreeViewItemTemplateSettings(winrt.system.Object, metaclass=TreeViewItemTe
     @_property
     def indentation(self) -> microsoft_ui_xaml.Thickness: ...
 
-class TreeViewNode_Static(type):
+class TreeViewNode_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9177,7 +9177,7 @@ class TreeViewNode_Static(type):
     @_property
     def is_expanded_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TreeViewNode(winrt.system.Object, metaclass=TreeViewNode_Static):
+class TreeViewNode(microsoft_ui_xaml.DependencyObject, metaclass=TreeViewNode_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TreeViewNode: ...
     def __new__(cls: typing.Type[TreeViewNode]) -> TreeViewNode: ...
@@ -9211,7 +9211,7 @@ class TreeViewSelectionChangedEventArgs(winrt.system.Object):
     @_property
     def removed_items(self) -> typing.MutableSequence[winrt.system.Object]: ...
 
-class TwoPaneView_Static(type):
+class TwoPaneView_Static(Control_Static):
     @_property
     def min_tall_mode_height_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9233,7 +9233,7 @@ class TwoPaneView_Static(type):
     @_property
     def wide_mode_configuration_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TwoPaneView(winrt.system.Object, metaclass=TwoPaneView_Static):
+class TwoPaneView(Control, metaclass=TwoPaneView_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TwoPaneView: ...
     def __new__(cls: typing.Type[TwoPaneView]) -> TwoPaneView: ...
@@ -9312,7 +9312,7 @@ class UIElementCollection(winrt.system.Object, winrt._winrt.MutableSequence[micr
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class UniformGridLayout_Static(type):
+class UniformGridLayout_Static(VirtualizingLayout_Static):
     @_property
     def items_justification_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9330,7 +9330,7 @@ class UniformGridLayout_Static(type):
     @_property
     def orientation_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class UniformGridLayout(winrt.system.Object, metaclass=UniformGridLayout_Static):
+class UniformGridLayout(VirtualizingLayout, metaclass=UniformGridLayout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UniformGridLayout: ...
     def __new__(cls: typing.Type[UniformGridLayout]) -> UniformGridLayout: ...
@@ -9367,11 +9367,11 @@ class UniformGridLayout(winrt.system.Object, metaclass=UniformGridLayout_Static)
     @items_justification.setter
     def items_justification(self, value: UniformGridLayoutItemsJustification) -> None: ...
 
-class UserControl_Static(type):
+class UserControl_Static(Control_Static):
     @_property
     def content_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class UserControl(winrt.system.Object, metaclass=UserControl_Static):
+class UserControl(Control, metaclass=UserControl_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserControl: ...
     def __new__(cls: typing.Type[UserControl]) -> UserControl: ...
@@ -9381,7 +9381,7 @@ class UserControl(winrt.system.Object, metaclass=UserControl_Static):
     def content(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
-class VariableSizedWrapGrid_Static(type):
+class VariableSizedWrapGrid_Static(Panel_Static):
     def get_column_span(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
     def get_row_span(cls, element: microsoft_ui_xaml.UIElement, /) -> winrt.system.Int32: ...
     def set_column_span(cls, element: microsoft_ui_xaml.UIElement, value: winrt.system.Int32, /) -> None: ...
@@ -9404,7 +9404,7 @@ class VariableSizedWrapGrid_Static(type):
     def vertical_children_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class VariableSizedWrapGrid(winrt.system.Object, metaclass=VariableSizedWrapGrid_Static):
+class VariableSizedWrapGrid(Panel, metaclass=VariableSizedWrapGrid_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VariableSizedWrapGrid: ...
     def __new__(cls: typing.Type[VariableSizedWrapGrid]) -> VariableSizedWrapGrid: ...
@@ -9434,14 +9434,14 @@ class VariableSizedWrapGrid(winrt.system.Object, metaclass=VariableSizedWrapGrid
     def horizontal_children_alignment(self, value: microsoft_ui_xaml.HorizontalAlignment) -> None: ...
 
 @typing.final
-class Viewbox_Static(type):
+class Viewbox_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def stretch_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
     def stretch_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Viewbox(winrt.system.Object, metaclass=Viewbox_Static):
+class Viewbox(microsoft_ui_xaml.FrameworkElement, metaclass=Viewbox_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Viewbox: ...
     def __new__(cls: typing.Type[Viewbox]) -> Viewbox: ...
@@ -9458,18 +9458,18 @@ class Viewbox(winrt.system.Object, metaclass=Viewbox_Static):
     @child.setter
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
-class VirtualizingLayout_Static(type):
+class VirtualizingLayout_Static(Layout_Static):
     pass
 
-class VirtualizingLayout(winrt.system.Object, metaclass=VirtualizingLayout_Static):
+class VirtualizingLayout(Layout, metaclass=VirtualizingLayout_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VirtualizingLayout: ...
     def __new__(cls: typing.Type[VirtualizingLayout]) -> VirtualizingLayout: ...
 
-class VirtualizingLayoutContext_Static(type):
+class VirtualizingLayoutContext_Static(LayoutContext_Static):
     pass
 
-class VirtualizingLayoutContext(winrt.system.Object, metaclass=VirtualizingLayoutContext_Static):
+class VirtualizingLayoutContext(LayoutContext, metaclass=VirtualizingLayoutContext_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VirtualizingLayoutContext: ...
     def __new__(cls: typing.Type[VirtualizingLayoutContext]) -> VirtualizingLayoutContext: ...
@@ -9490,16 +9490,16 @@ class VirtualizingLayoutContext(winrt.system.Object, metaclass=VirtualizingLayou
     @_property
     def visible_rect(self) -> windows_foundation.Rect: ...
 
-class VirtualizingPanel_Static(type):
+class VirtualizingPanel_Static(Panel_Static):
     pass
 
-class VirtualizingPanel(winrt.system.Object, metaclass=VirtualizingPanel_Static):
+class VirtualizingPanel(Panel, metaclass=VirtualizingPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> VirtualizingPanel: ...
     @_property
     def item_container_generator(self) -> ItemContainerGenerator: ...
 
-class WebView2_Static(type):
+class WebView2_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def can_go_back_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -9509,7 +9509,7 @@ class WebView2_Static(type):
     @_property
     def source_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class WebView2(winrt.system.Object, metaclass=WebView2_Static):
+class WebView2(microsoft_ui_xaml.FrameworkElement, metaclass=WebView2_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebView2: ...
     def __new__(cls: typing.Type[WebView2]) -> WebView2: ...
@@ -9552,13 +9552,13 @@ class WebView2(winrt.system.Object, metaclass=WebView2_Static):
     def core_web_view2(self) -> microsoft_web_webview2_core.CoreWebView2: ...
 
 @typing.final
-class XamlControlsResources_Static(type):
+class XamlControlsResources_Static(microsoft_ui_xaml.ResourceDictionary_Static):
     def ensure_reveal_lights(cls, element: microsoft_ui_xaml.UIElement, /) -> None: ...
     @_property
     def use_compact_resources_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class XamlControlsResources(winrt.system.Object, metaclass=XamlControlsResources_Static):
+class XamlControlsResources(microsoft_ui_xaml.ResourceDictionary, metaclass=XamlControlsResources_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlControlsResources: ...
     def __new__(cls: typing.Type[XamlControlsResources]) -> XamlControlsResources: ...

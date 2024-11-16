@@ -20,7 +20,7 @@ from winrt.microsoft.ui.composition.scenes import SceneAlphaMode, SceneAttribute
 Self = typing.TypeVar('Self')
 
 @typing.final
-class SceneBoundingBox(winrt.system.Object):
+class SceneBoundingBox(SceneObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneBoundingBox: ...
     @_property
@@ -34,17 +34,17 @@ class SceneBoundingBox(winrt.system.Object):
     @_property
     def size(self) -> windows_foundation_numerics.Vector3: ...
 
-class SceneComponent_Static(type):
+class SceneComponent_Static(SceneObject_Static):
     pass
 
-class SceneComponent(winrt.system.Object, metaclass=SceneComponent_Static):
+class SceneComponent(SceneObject, metaclass=SceneComponent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneComponent: ...
     @_property
     def component_type(self) -> SceneComponentType: ...
 
 @typing.final
-class SceneComponentCollection(winrt.system.Object, winrt._winrt.MutableSequence[SceneComponent]):
+class SceneComponentCollection(SceneObject, winrt._winrt.MutableSequence[SceneComponent]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[SceneComponent]: ...
     @typing.overload
@@ -76,26 +76,26 @@ class SceneComponentCollection(winrt.system.Object, winrt._winrt.MutableSequence
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class SceneMaterial_Static(type):
+class SceneMaterial_Static(SceneObject_Static):
     pass
 
-class SceneMaterial(winrt.system.Object, metaclass=SceneMaterial_Static):
+class SceneMaterial(SceneObject, metaclass=SceneMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterial: ...
 
-class SceneMaterialInput_Static(type):
+class SceneMaterialInput_Static(SceneObject_Static):
     pass
 
-class SceneMaterialInput(winrt.system.Object, metaclass=SceneMaterialInput_Static):
+class SceneMaterialInput(SceneObject, metaclass=SceneMaterialInput_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMaterialInput: ...
 
 @typing.final
-class SceneMesh_Static(type):
+class SceneMesh_Static(SceneObject_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneMesh: ...
 
 @typing.final
-class SceneMesh(winrt.system.Object, metaclass=SceneMesh_Static):
+class SceneMesh(SceneObject, metaclass=SceneMesh_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMesh: ...
     def fill_mesh_attribute(self, semantic: SceneAttributeSemantic, format: microsoft_graphics_directx.DirectXPixelFormat, memory: windows_foundation.MemoryBuffer, /) -> None: ...
@@ -107,7 +107,7 @@ class SceneMesh(winrt.system.Object, metaclass=SceneMesh_Static):
     def bounds(self) -> SceneBoundingBox: ...
 
 @typing.final
-class SceneMeshMaterialAttributeMap(winrt.system.Object, winrt._winrt.MutableMapping[str, SceneAttributeSemantic]):
+class SceneMeshMaterialAttributeMap(SceneObject, winrt._winrt.MutableMapping[str, SceneAttributeSemantic]):
     def __len__(self) -> int: ...
     def __iter__(self) -> typing.Iterator[str]: ...
     def __contains__(self, key: object) -> bool: ...
@@ -127,11 +127,11 @@ class SceneMeshMaterialAttributeMap(winrt.system.Object, winrt._winrt.MutableMap
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class SceneMeshRendererComponent_Static(type):
+class SceneMeshRendererComponent_Static(SceneRendererComponent_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneMeshRendererComponent: ...
 
 @typing.final
-class SceneMeshRendererComponent(winrt.system.Object, metaclass=SceneMeshRendererComponent_Static):
+class SceneMeshRendererComponent(SceneRendererComponent, metaclass=SceneMeshRendererComponent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMeshRendererComponent: ...
     @_property
@@ -146,11 +146,11 @@ class SceneMeshRendererComponent(winrt.system.Object, metaclass=SceneMeshRendere
     def u_v_mappings(self) -> SceneMeshMaterialAttributeMap: ...
 
 @typing.final
-class SceneMetallicRoughnessMaterial_Static(type):
+class SceneMetallicRoughnessMaterial_Static(ScenePbrMaterial_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneMetallicRoughnessMaterial: ...
 
 @typing.final
-class SceneMetallicRoughnessMaterial(winrt.system.Object, metaclass=SceneMetallicRoughnessMaterial_Static):
+class SceneMetallicRoughnessMaterial(ScenePbrMaterial, metaclass=SceneMetallicRoughnessMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneMetallicRoughnessMaterial: ...
     @_property
@@ -175,7 +175,7 @@ class SceneMetallicRoughnessMaterial(winrt.system.Object, metaclass=SceneMetalli
     def base_color_factor(self, value: windows_foundation_numerics.Vector4) -> None: ...
 
 @typing.final
-class SceneModelTransform(winrt.system.Object):
+class SceneModelTransform(microsoft_ui_composition.CompositionTransform):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneModelTransform: ...
     @_property
@@ -204,11 +204,11 @@ class SceneModelTransform(winrt.system.Object):
     def orientation(self, value: windows_foundation_numerics.Quaternion) -> None: ...
 
 @typing.final
-class SceneNode_Static(type):
+class SceneNode_Static(SceneObject_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneNode: ...
 
 @typing.final
-class SceneNode(winrt.system.Object, metaclass=SceneNode_Static):
+class SceneNode(SceneObject, metaclass=SceneNode_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneNode: ...
     def find_first_component_of_type(self, value: SceneComponentType, /) -> SceneComponent: ...
@@ -222,7 +222,7 @@ class SceneNode(winrt.system.Object, metaclass=SceneNode_Static):
     def transform(self) -> SceneModelTransform: ...
 
 @typing.final
-class SceneNodeCollection(winrt.system.Object, winrt._winrt.MutableSequence[SceneNode]):
+class SceneNodeCollection(SceneObject, winrt._winrt.MutableSequence[SceneNode]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[SceneNode]: ...
     @typing.overload
@@ -254,17 +254,17 @@ class SceneNodeCollection(winrt.system.Object, winrt._winrt.MutableSequence[Scen
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class SceneObject_Static(type):
+class SceneObject_Static(microsoft_ui_composition.CompositionObject_Static):
     pass
 
-class SceneObject(winrt.system.Object, metaclass=SceneObject_Static):
+class SceneObject(microsoft_ui_composition.CompositionObject, metaclass=SceneObject_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneObject: ...
 
-class ScenePbrMaterial_Static(type):
+class ScenePbrMaterial_Static(SceneMaterial_Static):
     pass
 
-class ScenePbrMaterial(winrt.system.Object, metaclass=ScenePbrMaterial_Static):
+class ScenePbrMaterial(SceneMaterial, metaclass=ScenePbrMaterial_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScenePbrMaterial: ...
     @_property
@@ -304,19 +304,19 @@ class ScenePbrMaterial(winrt.system.Object, metaclass=ScenePbrMaterial_Static):
     @alpha_cutoff.setter
     def alpha_cutoff(self, value: winrt.system.Single) -> None: ...
 
-class SceneRendererComponent_Static(type):
+class SceneRendererComponent_Static(SceneComponent_Static):
     pass
 
-class SceneRendererComponent(winrt.system.Object, metaclass=SceneRendererComponent_Static):
+class SceneRendererComponent(SceneComponent, metaclass=SceneRendererComponent_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneRendererComponent: ...
 
 @typing.final
-class SceneSurfaceMaterialInput_Static(type):
+class SceneSurfaceMaterialInput_Static(SceneMaterialInput_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneSurfaceMaterialInput: ...
 
 @typing.final
-class SceneSurfaceMaterialInput(winrt.system.Object, metaclass=SceneSurfaceMaterialInput_Static):
+class SceneSurfaceMaterialInput(SceneMaterialInput, metaclass=SceneSurfaceMaterialInput_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneSurfaceMaterialInput: ...
     @_property
@@ -337,11 +337,11 @@ class SceneSurfaceMaterialInput(winrt.system.Object, metaclass=SceneSurfaceMater
     def bitmap_interpolation_mode(self, value: microsoft_ui_composition.CompositionBitmapInterpolationMode) -> None: ...
 
 @typing.final
-class SceneVisual_Static(type):
+class SceneVisual_Static(microsoft_ui_composition.ContainerVisual_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, /) -> SceneVisual: ...
 
 @typing.final
-class SceneVisual(winrt.system.Object, metaclass=SceneVisual_Static):
+class SceneVisual(microsoft_ui_composition.ContainerVisual, metaclass=SceneVisual_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SceneVisual: ...
     @_property

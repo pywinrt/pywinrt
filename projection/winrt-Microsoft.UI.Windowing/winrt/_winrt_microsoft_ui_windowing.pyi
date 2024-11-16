@@ -201,11 +201,11 @@ class AppWindowTitleBar(winrt.system.Object, metaclass=AppWindowTitleBar_Static)
     def preferred_height_option(self, value: TitleBarHeightOption) -> None: ...
 
 @typing.final
-class CompactOverlayPresenter_Static(type):
+class CompactOverlayPresenter_Static(AppWindowPresenter_Static):
     def create(cls) -> CompactOverlayPresenter: ...
 
 @typing.final
-class CompactOverlayPresenter(winrt.system.Object, metaclass=CompactOverlayPresenter_Static):
+class CompactOverlayPresenter(AppWindowPresenter, metaclass=CompactOverlayPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CompactOverlayPresenter: ...
     @_property
@@ -257,16 +257,16 @@ class DisplayAreaWatcher(winrt.system.Object):
     def status(self) -> DisplayAreaWatcherStatus: ...
 
 @typing.final
-class FullScreenPresenter_Static(type):
+class FullScreenPresenter_Static(AppWindowPresenter_Static):
     def create(cls) -> FullScreenPresenter: ...
 
 @typing.final
-class FullScreenPresenter(winrt.system.Object, metaclass=FullScreenPresenter_Static):
+class FullScreenPresenter(AppWindowPresenter, metaclass=FullScreenPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FullScreenPresenter: ...
 
 @typing.final
-class OverlappedPresenter_Static(type):
+class OverlappedPresenter_Static(AppWindowPresenter_Static):
     def create(cls) -> OverlappedPresenter: ...
     def create_for_context_menu(cls) -> OverlappedPresenter: ...
     def create_for_dialog(cls) -> OverlappedPresenter: ...
@@ -275,7 +275,7 @@ class OverlappedPresenter_Static(type):
     def requested_startup_state(cls) -> OverlappedPresenterState: ...
 
 @typing.final
-class OverlappedPresenter(winrt.system.Object, metaclass=OverlappedPresenter_Static):
+class OverlappedPresenter(AppWindowPresenter, metaclass=OverlappedPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OverlappedPresenter: ...
     def maximize(self) -> None: ...

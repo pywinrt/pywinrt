@@ -19,7 +19,7 @@ import winrt.windows.ui.xaml.automation.text as windows_ui_xaml_automation_text
 Self = typing.TypeVar('Self')
 
 @typing.final
-class IRawElementProviderSimple(winrt.system.Object):
+class IRawElementProviderSimple(windows_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 

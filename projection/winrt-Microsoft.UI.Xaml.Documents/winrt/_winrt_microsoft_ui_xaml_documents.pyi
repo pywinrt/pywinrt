@@ -26,7 +26,7 @@ class TextRange:
     length: winrt.system.Int32
     def __init__(self, start_index: winrt.system.Int32 = 0, length: winrt.system.Int32 = 0) -> None: ...
 
-class Block_Static(type):
+class Block_Static(TextElement_Static):
     @_property
     def horizontal_text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -38,7 +38,7 @@ class Block_Static(type):
     @_property
     def text_alignment_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class Block(winrt.system.Object, metaclass=Block_Static):
+class Block(TextElement, metaclass=Block_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Block: ...
     @_property
@@ -96,13 +96,13 @@ class BlockCollection(winrt.system.Object, winrt._winrt.MutableSequence[Block]):
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class Bold(winrt.system.Object):
+class Bold(Span):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Bold: ...
     def __new__(cls: typing.Type[Bold]) -> Bold: ...
 
 @typing.final
-class Glyphs_Static(type):
+class Glyphs_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def color_font_palette_index_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -125,7 +125,7 @@ class Glyphs_Static(type):
     def unicode_string_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Glyphs(winrt.system.Object, metaclass=Glyphs_Static):
+class Glyphs(microsoft_ui_xaml.FrameworkElement, metaclass=Glyphs_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Glyphs: ...
     def __new__(cls: typing.Type[Glyphs]) -> Glyphs: ...
@@ -171,7 +171,7 @@ class Glyphs(winrt.system.Object, metaclass=Glyphs_Static):
     def color_font_palette_index(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class Hyperlink_Static(type):
+class Hyperlink_Static(Span_Static):
     @_property
     def element_sound_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -202,7 +202,7 @@ class Hyperlink_Static(type):
     def x_y_focus_up_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Hyperlink(winrt.system.Object, metaclass=Hyperlink_Static):
+class Hyperlink(Span, metaclass=Hyperlink_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Hyperlink: ...
     def __new__(cls: typing.Type[Hyperlink]) -> Hyperlink: ...
@@ -269,14 +269,14 @@ class Hyperlink(winrt.system.Object, metaclass=Hyperlink_Static):
     def focus_state(self) -> microsoft_ui_xaml.FocusState: ...
 
 @typing.final
-class HyperlinkClickEventArgs(winrt.system.Object):
+class HyperlinkClickEventArgs(microsoft_ui_xaml.RoutedEventArgs):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> HyperlinkClickEventArgs: ...
 
-class Inline_Static(type):
+class Inline_Static(TextElement_Static):
     pass
 
-class Inline(winrt.system.Object, metaclass=Inline_Static):
+class Inline(TextElement, metaclass=Inline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Inline: ...
 
@@ -314,7 +314,7 @@ class InlineCollection(winrt.system.Object, winrt._winrt.MutableSequence[Inline]
     def size(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class InlineUIContainer(winrt.system.Object):
+class InlineUIContainer(Inline):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InlineUIContainer: ...
     def __new__(cls: typing.Type[InlineUIContainer]) -> InlineUIContainer: ...
@@ -324,24 +324,24 @@ class InlineUIContainer(winrt.system.Object):
     def child(self, value: microsoft_ui_xaml.UIElement) -> None: ...
 
 @typing.final
-class Italic(winrt.system.Object):
+class Italic(Span):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Italic: ...
     def __new__(cls: typing.Type[Italic]) -> Italic: ...
 
 @typing.final
-class LineBreak(winrt.system.Object):
+class LineBreak(Inline):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LineBreak: ...
     def __new__(cls: typing.Type[LineBreak]) -> LineBreak: ...
 
 @typing.final
-class Paragraph_Static(type):
+class Paragraph_Static(Block_Static):
     @_property
     def text_indent_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Paragraph(winrt.system.Object, metaclass=Paragraph_Static):
+class Paragraph(Block, metaclass=Paragraph_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Paragraph: ...
     def __new__(cls: typing.Type[Paragraph]) -> Paragraph: ...
@@ -353,12 +353,12 @@ class Paragraph(winrt.system.Object, metaclass=Paragraph_Static):
     def inlines(self) -> InlineCollection: ...
 
 @typing.final
-class Run_Static(type):
+class Run_Static(Inline_Static):
     @_property
     def flow_direction_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Run(winrt.system.Object, metaclass=Run_Static):
+class Run(Inline, metaclass=Run_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Run: ...
     def __new__(cls: typing.Type[Run]) -> Run: ...
@@ -371,10 +371,10 @@ class Run(winrt.system.Object, metaclass=Run_Static):
     @flow_direction.setter
     def flow_direction(self, value: microsoft_ui_xaml.FlowDirection) -> None: ...
 
-class Span_Static(type):
+class Span_Static(Inline_Static):
     pass
 
-class Span(winrt.system.Object, metaclass=Span_Static):
+class Span(Inline, metaclass=Span_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Span: ...
     def __new__(cls: typing.Type[Span]) -> Span: ...
@@ -383,7 +383,7 @@ class Span(winrt.system.Object, metaclass=Span_Static):
     @inlines.setter
     def inlines(self, value: InlineCollection) -> None: ...
 
-class TextElement_Static(type):
+class TextElement_Static(microsoft_ui_xaml.DependencyObject_Static):
     @_property
     def access_key_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
     @_property
@@ -421,7 +421,7 @@ class TextElement_Static(type):
     @_property
     def text_decorations_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class TextElement(winrt.system.Object, metaclass=TextElement_Static):
+class TextElement(microsoft_ui_xaml.DependencyObject, metaclass=TextElement_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextElement: ...
     def find_name(self, name: str, /) -> winrt.system.Object: ...
@@ -539,10 +539,10 @@ class TextHighlighter(winrt.system.Object, metaclass=TextHighlighter_Static):
     @_property
     def ranges(self) -> typing.MutableSequence[TextRange]: ...
 
-class TextHighlighterBase_Static(type):
+class TextHighlighterBase_Static(microsoft_ui_xaml.DependencyObject_Static):
     pass
 
-class TextHighlighterBase(winrt.system.Object, metaclass=TextHighlighterBase_Static):
+class TextHighlighterBase(microsoft_ui_xaml.DependencyObject, metaclass=TextHighlighterBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TextHighlighterBase: ...
 
@@ -742,7 +742,7 @@ class Typography(winrt.system.Object, metaclass=Typography_Static):
     def _from(obj: winrt.system.Object, /) -> Typography: ...
 
 @typing.final
-class Underline(winrt.system.Object):
+class Underline(Span):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Underline: ...
     def __new__(cls: typing.Type[Underline]) -> Underline: ...

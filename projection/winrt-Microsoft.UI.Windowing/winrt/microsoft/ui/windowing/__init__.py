@@ -15,6 +15,11 @@ from winrt._winrt_microsoft_ui_windowing import (
     FullScreenPresenter,
     OverlappedPresenter,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_windowing import (
+        AppWindowPresenter_Static,
+    )
 
 __all__ = [
     "AppWindowPresenterKind",

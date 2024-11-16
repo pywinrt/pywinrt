@@ -19,7 +19,7 @@ import winrt.windows.ui as windows_ui
 Self = typing.TypeVar('Self')
 
 @typing.final
-class IRawElementProviderSimple(winrt.system.Object):
+class IRawElementProviderSimple(microsoft_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 

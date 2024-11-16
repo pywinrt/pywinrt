@@ -276,12 +276,12 @@ class HoldingEventArgs(winrt.system.Object):
     def position(self) -> windows_foundation.Point: ...
 
 @typing.final
-class InputActivationListener_Static(type):
+class InputActivationListener_Static(InputObject_Static):
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputActivationListener: ...
     def get_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> InputActivationListener: ...
 
 @typing.final
-class InputActivationListener(winrt.system.Object, metaclass=InputActivationListener_Static):
+class InputActivationListener(InputObject, metaclass=InputActivationListener_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputActivationListener: ...
     def add_input_activation_changed(self, handler: windows_foundation.TypedEventHandler[InputActivationListener, InputActivationListenerActivationChangedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -304,20 +304,20 @@ class InputCursor(windows_foundation.IClosable, winrt.system.Object, metaclass=I
     def _from(obj: winrt.system.Object, /) -> InputCursor: ...
     def close(self) -> None: ...
 
-class InputCustomCursor_Static(type):
+class InputCustomCursor_Static(InputCursor_Static):
     pass
 
-class InputCustomCursor(winrt.system.Object, metaclass=InputCustomCursor_Static):
+class InputCustomCursor(InputCursor, metaclass=InputCustomCursor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputCustomCursor: ...
 
 @typing.final
-class InputDesktopNamedResourceCursor_Static(type):
+class InputDesktopNamedResourceCursor_Static(InputCursor_Static):
     def create(cls, resource_name: str, /) -> InputDesktopNamedResourceCursor: ...
     def create_from_module(cls, module_name: str, resource_name: str, /) -> InputDesktopNamedResourceCursor: ...
 
 @typing.final
-class InputDesktopNamedResourceCursor(winrt.system.Object, metaclass=InputDesktopNamedResourceCursor_Static):
+class InputDesktopNamedResourceCursor(InputCursor, metaclass=InputDesktopNamedResourceCursor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputDesktopNamedResourceCursor: ...
     @_property
@@ -326,12 +326,12 @@ class InputDesktopNamedResourceCursor(winrt.system.Object, metaclass=InputDeskto
     def resource_name(self) -> str: ...
 
 @typing.final
-class InputDesktopResourceCursor_Static(type):
+class InputDesktopResourceCursor_Static(InputCursor_Static):
     def create(cls, resource_id: winrt.system.UInt32, /) -> InputDesktopResourceCursor: ...
     def create_from_module(cls, module_name: str, resource_id: winrt.system.UInt32, /) -> InputDesktopResourceCursor: ...
 
 @typing.final
-class InputDesktopResourceCursor(winrt.system.Object, metaclass=InputDesktopResourceCursor_Static):
+class InputDesktopResourceCursor(InputCursor, metaclass=InputDesktopResourceCursor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputDesktopResourceCursor: ...
     @_property
@@ -340,11 +340,11 @@ class InputDesktopResourceCursor(winrt.system.Object, metaclass=InputDesktopReso
     def resource_id(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class InputFocusController_Static(type):
+class InputFocusController_Static(InputObject_Static):
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputFocusController: ...
 
 @typing.final
-class InputFocusController(winrt.system.Object, metaclass=InputFocusController_Static):
+class InputFocusController(InputObject, metaclass=InputFocusController_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputFocusController: ...
     def depart_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
@@ -359,11 +359,11 @@ class InputFocusController(winrt.system.Object, metaclass=InputFocusController_S
     def has_focus(self) -> bool: ...
 
 @typing.final
-class InputFocusNavigationHost_Static(type):
+class InputFocusNavigationHost_Static(InputObject_Static):
     def get_for_site_bridge(cls, site: microsoft_ui_content.IContentSiteBridge, /) -> InputFocusNavigationHost: ...
 
 @typing.final
-class InputFocusNavigationHost(winrt.system.Object, metaclass=InputFocusNavigationHost_Static):
+class InputFocusNavigationHost(InputObject, metaclass=InputFocusNavigationHost_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputFocusNavigationHost: ...
     def navigate_focus(self, request: FocusNavigationRequest, /) -> FocusNavigationResult: ...
@@ -373,12 +373,12 @@ class InputFocusNavigationHost(winrt.system.Object, metaclass=InputFocusNavigati
     def contains_focus(self) -> bool: ...
 
 @typing.final
-class InputKeyboardSource_Static(type):
+class InputKeyboardSource_Static(InputObject_Static):
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputKeyboardSource: ...
     def get_key_state_for_current_thread(cls, virtual_key: windows_system.VirtualKey, /) -> windows_ui_core.CoreVirtualKeyStates: ...
 
 @typing.final
-class InputKeyboardSource(winrt.system.Object, metaclass=InputKeyboardSource_Static):
+class InputKeyboardSource(InputObject, metaclass=InputKeyboardSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputKeyboardSource: ...
     def get_current_key_state(self, virtual_key: windows_system.VirtualKey, /) -> VirtualKeyStates: ...
@@ -397,11 +397,11 @@ class InputKeyboardSource(winrt.system.Object, metaclass=InputKeyboardSource_Sta
     def remove_system_key_up(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
 @typing.final
-class InputLightDismissAction_Static(type):
+class InputLightDismissAction_Static(InputObject_Static):
     def get_for_window_id(cls, window_id: microsoft_ui.WindowId, /) -> InputLightDismissAction: ...
 
 @typing.final
-class InputLightDismissAction(winrt.system.Object, metaclass=InputLightDismissAction_Static):
+class InputLightDismissAction(InputObject, metaclass=InputLightDismissAction_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputLightDismissAction: ...
     def add_dismissed(self, handler: windows_foundation.TypedEventHandler[InputLightDismissAction, InputLightDismissEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -461,11 +461,11 @@ class InputObject(winrt.system.Object, metaclass=InputObject_Static):
     def dispatcher_queue(self) -> microsoft_ui_dispatching.DispatcherQueue: ...
 
 @typing.final
-class InputPointerSource_Static(type):
+class InputPointerSource_Static(InputObject_Static):
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputPointerSource: ...
 
 @typing.final
-class InputPointerSource(winrt.system.Object, metaclass=InputPointerSource_Static):
+class InputPointerSource(InputObject, metaclass=InputPointerSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputPointerSource: ...
     def add_pointer_capture_lost(self, handler: windows_foundation.TypedEventHandler[InputPointerSource, PointerEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
@@ -496,20 +496,20 @@ class InputPointerSource(winrt.system.Object, metaclass=InputPointerSource_Stati
     def device_kinds(self) -> InputPointerSourceDeviceKinds: ...
 
 @typing.final
-class InputPreTranslateKeyboardSource_Static(type):
+class InputPreTranslateKeyboardSource_Static(InputObject_Static):
     def get_for_island(cls, island: microsoft_ui_content.ContentIsland, /) -> InputPreTranslateKeyboardSource: ...
 
 @typing.final
-class InputPreTranslateKeyboardSource(winrt.system.Object, metaclass=InputPreTranslateKeyboardSource_Static):
+class InputPreTranslateKeyboardSource(InputObject, metaclass=InputPreTranslateKeyboardSource_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputPreTranslateKeyboardSource: ...
 
 @typing.final
-class InputSystemCursor_Static(type):
+class InputSystemCursor_Static(InputCursor_Static):
     def create(cls, type: InputSystemCursorShape, /) -> InputSystemCursor: ...
 
 @typing.final
-class InputSystemCursor(winrt.system.Object, metaclass=InputSystemCursor_Static):
+class InputSystemCursor(InputCursor, metaclass=InputSystemCursor_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> InputSystemCursor: ...
     @_property

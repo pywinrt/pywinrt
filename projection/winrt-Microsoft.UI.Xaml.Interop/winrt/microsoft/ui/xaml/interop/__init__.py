@@ -14,6 +14,11 @@ from winrt._winrt_microsoft_ui_xaml_interop import (
     IBindableVectorView,
     INotifyCollectionChanged,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_interop import (
+        NotifyCollectionChangedEventArgs_Static,
+    )
 
 __all__ = [
     "NotifyCollectionChangedAction",

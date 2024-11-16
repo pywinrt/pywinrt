@@ -307,11 +307,11 @@ class ContentSiteView(winrt.system.Object, metaclass=ContentSiteView_Static):
     def should_apply_rasterization_scale(self) -> bool: ...
 
 @typing.final
-class DesktopChildSiteBridge_Static(type):
+class DesktopChildSiteBridge_Static(DesktopSiteBridge_Static):
     def create(cls, compositor: microsoft_ui_composition.Compositor, parent_window_id: microsoft_ui.WindowId, /) -> DesktopChildSiteBridge: ...
 
 @typing.final
-class DesktopChildSiteBridge(winrt.system.Object, metaclass=DesktopChildSiteBridge_Static):
+class DesktopChildSiteBridge(DesktopSiteBridge, metaclass=DesktopChildSiteBridge_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesktopChildSiteBridge: ...
     @_property

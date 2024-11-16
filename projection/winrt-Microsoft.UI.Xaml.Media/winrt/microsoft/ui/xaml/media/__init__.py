@@ -69,6 +69,30 @@ from winrt._winrt_microsoft_ui_xaml_media import (
     XamlCompositionBrushBase,
     XamlLight,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_media import (
+        AcrylicBrush_Static,
+        Brush_Static,
+        CacheMode_Static,
+        DesktopAcrylicBackdrop_Static,
+        FontFamily_Static,
+        GeneralTransform_Static,
+        Geometry_Static,
+        GradientBrush_Static,
+        ImageSource_Static,
+        MicaBackdrop_Static,
+        PathSegment_Static,
+        Projection_Static,
+        RadialGradientBrush_Static,
+        Shadow_Static,
+        SystemBackdrop_Static,
+        ThemeShadow_Static,
+        TileBrush_Static,
+        Transform_Static,
+        XamlCompositionBrushBase_Static,
+        XamlLight_Static,
+    )
 
 __all__ = [
     "AlignmentX",

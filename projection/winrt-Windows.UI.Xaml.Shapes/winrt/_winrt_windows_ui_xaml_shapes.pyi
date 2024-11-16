@@ -16,13 +16,13 @@ import winrt.windows.ui.xaml.media as windows_ui_xaml_media
 Self = typing.TypeVar('Self')
 
 @typing.final
-class Ellipse(winrt.system.Object):
+class Ellipse(Shape):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Ellipse: ...
     def __new__(cls: typing.Type[Ellipse]) -> Ellipse: ...
 
 @typing.final
-class Line_Static(type):
+class Line_Static(Shape_Static):
     @_property
     def x1_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
@@ -33,7 +33,7 @@ class Line_Static(type):
     def y2_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Line(winrt.system.Object, metaclass=Line_Static):
+class Line(Shape, metaclass=Line_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Line: ...
     def __new__(cls: typing.Type[Line]) -> Line: ...
@@ -54,11 +54,11 @@ class Line(winrt.system.Object, metaclass=Line_Static):
     @x1.setter
     def x1(self, value: winrt.system.Double) -> None: ...
 
-class Path_Static(type):
+class Path_Static(Shape_Static):
     @_property
     def data_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class Path(winrt.system.Object, metaclass=Path_Static):
+class Path(Shape, metaclass=Path_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Path: ...
     def __new__(cls: typing.Type[Path]) -> Path: ...
@@ -68,14 +68,14 @@ class Path(winrt.system.Object, metaclass=Path_Static):
     def data(self, value: windows_ui_xaml_media.Geometry) -> None: ...
 
 @typing.final
-class Polygon_Static(type):
+class Polygon_Static(Shape_Static):
     @_property
     def fill_rule_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def points_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Polygon(winrt.system.Object, metaclass=Polygon_Static):
+class Polygon(Shape, metaclass=Polygon_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Polygon: ...
     def __new__(cls: typing.Type[Polygon]) -> Polygon: ...
@@ -89,14 +89,14 @@ class Polygon(winrt.system.Object, metaclass=Polygon_Static):
     def fill_rule(self, value: windows_ui_xaml_media.FillRule) -> None: ...
 
 @typing.final
-class Polyline_Static(type):
+class Polyline_Static(Shape_Static):
     @_property
     def fill_rule_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def points_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Polyline(winrt.system.Object, metaclass=Polyline_Static):
+class Polyline(Shape, metaclass=Polyline_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Polyline: ...
     def __new__(cls: typing.Type[Polyline]) -> Polyline: ...
@@ -110,14 +110,14 @@ class Polyline(winrt.system.Object, metaclass=Polyline_Static):
     def fill_rule(self, value: windows_ui_xaml_media.FillRule) -> None: ...
 
 @typing.final
-class Rectangle_Static(type):
+class Rectangle_Static(Shape_Static):
     @_property
     def radius_x_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
     def radius_y_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class Rectangle(winrt.system.Object, metaclass=Rectangle_Static):
+class Rectangle(Shape, metaclass=Rectangle_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Rectangle: ...
     def __new__(cls: typing.Type[Rectangle]) -> Rectangle: ...
@@ -130,7 +130,7 @@ class Rectangle(winrt.system.Object, metaclass=Rectangle_Static):
     @radius_x.setter
     def radius_x(self, value: winrt.system.Double) -> None: ...
 
-class Shape_Static(type):
+class Shape_Static(windows_ui_xaml.FrameworkElement_Static):
     @_property
     def fill_property(cls) -> windows_ui_xaml.DependencyProperty: ...
     @_property
@@ -154,7 +154,7 @@ class Shape_Static(type):
     @_property
     def stroke_thickness_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class Shape(winrt.system.Object, metaclass=Shape_Static):
+class Shape(windows_ui_xaml.FrameworkElement, metaclass=Shape_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> Shape: ...
     def get_alpha_mask(self) -> windows_ui_composition.CompositionBrush: ...

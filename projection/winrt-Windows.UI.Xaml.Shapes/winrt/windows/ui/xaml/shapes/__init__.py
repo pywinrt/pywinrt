@@ -10,6 +10,12 @@ from winrt._winrt_windows_ui_xaml_shapes import (
     Rectangle,
     Shape,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_shapes import (
+        Path_Static,
+        Shape_Static,
+    )
 
 __all__ = [
     "Ellipse",

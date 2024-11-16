@@ -14,7 +14,7 @@ import winrt.windows.ui.composition as windows_ui_composition
 Self = typing.TypeVar('Self')
 
 @typing.final
-class DesktopWindowTarget(winrt.system.Object):
+class DesktopWindowTarget(windows_ui_composition.CompositionTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DesktopWindowTarget: ...
     @_property

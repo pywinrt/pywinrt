@@ -86,11 +86,11 @@ from winrt.windows.ui.xaml.controls.primitives import DragCompletedEventHandler,
 
 Self = typing.TypeVar('Self')
 
-class ColorPickerSlider_Static(type):
+class ColorPickerSlider_Static(windows_ui_xaml_controls.Slider_Static):
     @_property
     def color_channel_property(cls) -> windows_ui_xaml.DependencyProperty: ...
 
-class ColorPickerSlider(winrt.system.Object, metaclass=ColorPickerSlider_Static):
+class ColorPickerSlider(windows_ui_xaml_controls.Slider, metaclass=ColorPickerSlider_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ColorPickerSlider: ...
     def __new__(cls: typing.Type[ColorPickerSlider]) -> ColorPickerSlider: ...
