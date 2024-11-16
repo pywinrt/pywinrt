@@ -1842,6 +1842,65 @@ static class WriterExtensions
         w.WriteBlankLine();
     }
 
+    private static TypeDefinition? TryResolve(TypeReference type)
+    {
+        try
+        {
+            return type?.Resolve();
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+    private static bool IsProblematicOverride(ProjectedMethod method)
+    {
+        if (method.Method.Name == "SetValue")
+        {
+            for (
+                var baseType = method.Method.DeclaringType.BaseType;
+                baseType is not null;
+                baseType = TryResolve(baseType)?.BaseType
+            )
+            {
+                if (
+                    (
+                        baseType.Namespace == "Microsoft.UI.Xaml"
+                        || baseType.Namespace == "Windows.UI.Xaml"
+                    )
+                    && baseType.Name == "DependencyObject"
+                )
+                {
+                    return true;
+                }
+            }
+        }
+
+        if (method.Method.Name == "ShowAt")
+        {
+            for (
+                var baseType = method.Method.DeclaringType.BaseType;
+                baseType is not null;
+                baseType = TryResolve(baseType)?.BaseType
+            )
+            {
+                if (
+                    (
+                        baseType.Namespace == "Microsoft.UI.Xaml.Controls.Primitives"
+                        || baseType.Namespace == "Windows.UI.Xaml.Controls.Primitives"
+                    )
+                    && baseType.Name == "FlyoutBase"
+                )
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     public static void WritePythonMethodTyping(
         this IndentedTextWriter w,
         ProjectedMethod method,
@@ -1855,6 +1914,11 @@ static class WriterExtensions
             w.WriteLine($"# @deprecated(\"{method.DeprecatedMessage}\")");
         }
 
+        // HACK: There are a couple of problematic methods. Subclasses of
+        // DependencyObject like to override SetValue with a different
+        // parameter type. Subclasses of FlyoutBase like to override ShowAt.
+        var typeIgnore = IsProblematicOverride(method) ? "  # type: ignore[override]" : "";
+
         var paramList = "";
 
         if (method.Method.Parameters.Any(p => p.IsPythonInParam()))
@@ -1864,7 +1928,7 @@ static class WriterExtensions
         }
 
         w.WriteLine(
-            $"def {method.Name.ToPythonIdentifier()}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, method.GenericArgMap)}: ..."
+            $"def {method.Name.ToPythonIdentifier()}({self}{paramList}) -> {method.Method.ToPyReturnTyping(ns, method.GenericArgMap)}: ...{typeIgnore}"
         );
     }
 }
