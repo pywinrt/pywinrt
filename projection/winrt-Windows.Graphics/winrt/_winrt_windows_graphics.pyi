@@ -43,7 +43,10 @@ class SizeInt32:
     height: winrt.system.Int32
     def __init__(self, width: winrt.system.Int32 = 0, height: winrt.system.Int32 = 0) -> None: ...
 
-class IGeometrySource2D(winrt.system.Object):
+class ImplementsIGeometrySource2D():
+    pass
+
+class IGeometrySource2D(winrt.system.Object, ImplementsIGeometrySource2D):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGeometrySource2D: ...
 

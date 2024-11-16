@@ -9,6 +9,11 @@ from winrt._winrt_windows_devices_custom import (
     KnownDeviceTypes,
     IIOControlCode,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_custom import (
+        ImplementsIIOControlCode,
+    )
 
 __all__ = [
     "DeviceAccessMode",

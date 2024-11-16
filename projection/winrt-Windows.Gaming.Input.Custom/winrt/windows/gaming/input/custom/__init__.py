@@ -18,6 +18,16 @@ from winrt._winrt_windows_gaming_input_custom import (
     IHidGameControllerInputSink,
     IXusbGameControllerInputSink,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_gaming_input_custom import (
+        ImplementsICustomGameControllerFactory,
+        ImplementsIGameControllerInputSink,
+        ImplementsIGameControllerProvider,
+        ImplementsIGipGameControllerInputSink,
+        ImplementsIHidGameControllerInputSink,
+        ImplementsIXusbGameControllerInputSink,
+    )
 
 __all__ = [
     "GipFirmwareUpdateStatus",

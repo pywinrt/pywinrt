@@ -52,7 +52,7 @@ class ProvideValueTargetProperty(winrt.system.Object):
 
 @typing.final
 class XamlBinaryWriter_Static(type):
-    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], xaml_metadata_provider: IXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
+    def write(cls, input_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], output_streams: typing.MutableSequence[windows_storage_streams.IRandomAccessStream], xaml_metadata_provider: ImplementsIXamlMetadataProvider, /) -> XamlBinaryWriterErrorInformation: ...
 
 @typing.final
 class XamlBinaryWriter(winrt.system.Object, metaclass=XamlBinaryWriter_Static):
@@ -64,7 +64,7 @@ class XamlBindingHelper_Static(type):
     def convert_value(cls, type: windows_ui_xaml_interop.TypeName, value: winrt.system.Object, /) -> winrt.system.Object: ...
     def get_data_template_component(cls, element: microsoft_ui_xaml.DependencyObject, /) -> IDataTemplateComponent: ...
     def resume_rendering(cls, target: microsoft_ui_xaml.UIElement, /) -> None: ...
-    def set_data_template_component(cls, element: microsoft_ui_xaml.DependencyObject, value: IDataTemplateComponent, /) -> None: ...
+    def set_data_template_component(cls, element: microsoft_ui_xaml.DependencyObject, value: ImplementsIDataTemplateComponent, /) -> None: ...
     def set_property_from_boolean(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: bool, /) -> None: ...
     def set_property_from_byte(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.UInt8, /) -> None: ...
     def set_property_from_char16(cls, dependency_object: winrt.system.Object, property_to_set: microsoft_ui_xaml.DependencyProperty, value: winrt.system.Char16, /) -> None: ...
@@ -110,19 +110,28 @@ class XamlReader(winrt.system.Object, metaclass=XamlReader_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> XamlReader: ...
 
-class IComponentConnector(winrt.system.Object):
+class ImplementsIComponentConnector():
+    pass
+
+class IComponentConnector(winrt.system.Object, ImplementsIComponentConnector):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IComponentConnector: ...
     def connect(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> None: ...
     def get_binding_connector(self, connection_id: winrt.system.Int32, target: winrt.system.Object, /) -> IComponentConnector: ...
 
-class IDataTemplateComponent(winrt.system.Object):
+class ImplementsIDataTemplateComponent():
+    pass
+
+class IDataTemplateComponent(winrt.system.Object, ImplementsIDataTemplateComponent):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDataTemplateComponent: ...
     def process_bindings(self, item: winrt.system.Object, item_index: winrt.system.Int32, phase: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def recycle(self) -> None: ...
 
-class IProvideValueTarget(winrt.system.Object):
+class ImplementsIProvideValueTarget():
+    pass
+
+class IProvideValueTarget(winrt.system.Object, ImplementsIProvideValueTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IProvideValueTarget: ...
     @_property
@@ -130,24 +139,36 @@ class IProvideValueTarget(winrt.system.Object):
     @_property
     def target_property(self) -> winrt.system.Object: ...
 
-class IRootObjectProvider(winrt.system.Object):
+class ImplementsIRootObjectProvider():
+    pass
+
+class IRootObjectProvider(winrt.system.Object, ImplementsIRootObjectProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRootObjectProvider: ...
     @_property
     def root_object(self) -> winrt.system.Object: ...
 
-class IUriContext(winrt.system.Object):
+class ImplementsIUriContext():
+    pass
+
+class IUriContext(winrt.system.Object, ImplementsIUriContext):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUriContext: ...
     @_property
     def base_uri(self) -> windows_foundation.Uri: ...
 
-class IXamlBindScopeDiagnostics(winrt.system.Object):
+class ImplementsIXamlBindScopeDiagnostics():
+    pass
+
+class IXamlBindScopeDiagnostics(winrt.system.Object, ImplementsIXamlBindScopeDiagnostics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlBindScopeDiagnostics: ...
     def disable(self, line_number: winrt.system.Int32, column_number: winrt.system.Int32, /) -> None: ...
 
-class IXamlMember(winrt.system.Object):
+class ImplementsIXamlMember():
+    pass
+
+class IXamlMember(winrt.system.Object, ImplementsIXamlMember):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMember: ...
     def get_value(self, instance: winrt.system.Object, /) -> winrt.system.Object: ...
@@ -165,14 +186,20 @@ class IXamlMember(winrt.system.Object):
     @_property
     def type(self) -> IXamlType: ...
 
-class IXamlMetadataProvider(winrt.system.Object):
+class ImplementsIXamlMetadataProvider():
+    pass
+
+class IXamlMetadataProvider(winrt.system.Object, ImplementsIXamlMetadataProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlMetadataProvider: ...
     def get_xaml_type(self, type: windows_ui_xaml_interop.TypeName, /) -> IXamlType: ...
     def get_xaml_type_by_full_name(self, full_name: str, /) -> IXamlType: ...
     def get_xmlns_definitions(self) -> winrt.system.Array[XmlnsDefinition]: ...
 
-class IXamlType(winrt.system.Object):
+class ImplementsIXamlType():
+    pass
+
+class IXamlType(winrt.system.Object, ImplementsIXamlType):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlType: ...
     def activate_instance(self) -> winrt.system.Object: ...
@@ -208,7 +235,10 @@ class IXamlType(winrt.system.Object):
     @_property
     def underlying_type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-class IXamlTypeResolver(winrt.system.Object):
+class ImplementsIXamlTypeResolver():
+    pass
+
+class IXamlTypeResolver(winrt.system.Object, ImplementsIXamlTypeResolver):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IXamlTypeResolver: ...
     def resolve(self, qualified_type_name: str, /) -> windows_ui_xaml_interop.TypeName: ...

@@ -15,7 +15,7 @@ Self = typing.TypeVar('Self')
 
 @typing.final
 class CorePerceptionAutomation_Static(type):
-    def set_activation_factory_provider(cls, provider: windows_foundation.IGetActivationFactory, /) -> None: ...
+    def set_activation_factory_provider(cls, provider: windows_foundation.ImplementsIGetActivationFactory, /) -> None: ...
 
 @typing.final
 class CorePerceptionAutomation(winrt.system.Object, metaclass=CorePerceptionAutomation_Static):

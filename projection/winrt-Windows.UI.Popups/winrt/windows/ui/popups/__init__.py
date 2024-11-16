@@ -12,6 +12,11 @@ from winrt._winrt_windows_ui_popups import (
     UICommandSeparator,
     IUICommand,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_popups import (
+        ImplementsIUICommand,
+    )
 
 __all__ = [
     "MessageDialogOptions",
@@ -35,4 +40,4 @@ class Placement(enum.IntEnum):
     LEFT = 3
     RIGHT = 4
 
-UICommandInvokedHandler = typing.Callable[[IUICommand], None]
+UICommandInvokedHandler = typing.Callable[[ImplementsIUICommand], None]

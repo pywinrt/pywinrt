@@ -23,6 +23,11 @@ from winrt._winrt_windows_devices_geolocation import (
     VenueData,
     IGeoshape,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_geolocation import (
+        ImplementsIGeoshape,
+    )
 
 __all__ = [
     "AltitudeReferenceSystem",

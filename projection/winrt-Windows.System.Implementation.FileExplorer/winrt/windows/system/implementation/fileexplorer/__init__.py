@@ -7,6 +7,13 @@ from winrt._winrt_windows_system_implementation_fileexplorer import (
     ISysStorageProviderHandlerFactory,
     ISysStorageProviderHttpRequestProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_system_implementation_fileexplorer import (
+        ImplementsISysStorageProviderEventSource,
+        ImplementsISysStorageProviderHandlerFactory,
+        ImplementsISysStorageProviderHttpRequestProvider,
+    )
 
 __all__ = [
     "SysStorageProviderEventReceivedEventArgs",

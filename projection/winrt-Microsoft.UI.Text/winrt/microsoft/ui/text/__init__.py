@@ -13,6 +13,14 @@ from winrt._winrt_microsoft_ui_text import (
     ITextRange,
     ITextSelection,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_text import (
+        ImplementsITextCharacterFormat,
+        ImplementsITextParagraphFormat,
+        ImplementsITextRange,
+        ImplementsITextSelection,
+    )
 
 __all__ = [
     "CaretType",

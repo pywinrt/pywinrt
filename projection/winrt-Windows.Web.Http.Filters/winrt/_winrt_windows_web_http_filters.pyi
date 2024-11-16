@@ -26,7 +26,7 @@ class HttpBaseProtocolFilter_Static(type):
     def create_for_user(cls, user: windows_system.User, /) -> HttpBaseProtocolFilter: ...
 
 @typing.final
-class HttpBaseProtocolFilter(IHttpFilter, windows_foundation.IClosable, winrt.system.Object, metaclass=HttpBaseProtocolFilter_Static):
+class HttpBaseProtocolFilter(winrt.system.Object, ImplementsIHttpFilter, windows_foundation.ImplementsIClosable, metaclass=HttpBaseProtocolFilter_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -116,7 +116,10 @@ class HttpServerCustomValidationRequestedEventArgs(winrt.system.Object):
     @_property
     def server_intermediate_certificates(self) -> typing.Sequence[windows_security_cryptography_certificates.Certificate]: ...
 
-class IHttpFilter(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIHttpFilter():
+    pass
+
+class IHttpFilter(winrt.system.Object, ImplementsIHttpFilter, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

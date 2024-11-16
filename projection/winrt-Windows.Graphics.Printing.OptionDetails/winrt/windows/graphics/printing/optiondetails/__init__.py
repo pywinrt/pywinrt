@@ -29,6 +29,15 @@ from winrt._winrt_windows_graphics_printing_optiondetails import (
     IPrintOptionDetails,
     IPrintTextOptionDetails,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_graphics_printing_optiondetails import (
+        ImplementsIPrintCustomOptionDetails,
+        ImplementsIPrintItemListOptionDetails,
+        ImplementsIPrintNumberOptionDetails,
+        ImplementsIPrintOptionDetails,
+        ImplementsIPrintTextOptionDetails,
+    )
 
 __all__ = [
     "PrintOptionStates",

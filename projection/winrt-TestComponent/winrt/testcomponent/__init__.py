@@ -24,6 +24,15 @@ if TYPE_CHECKING:
         Composable_Static,
         Derived_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_testcomponent import (
+        ImplementsIRequiredFour,
+        ImplementsIRequiredOne,
+        ImplementsIRequiredThree,
+        ImplementsIRequiredTwo,
+        ImplementsITests,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.foundation as windows_foundation
@@ -104,10 +113,10 @@ Array6Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.In
 Array7Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.Int32], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.Int32], winrt.system.Array[winrt.system.Int32]]]
 Array8Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.Int64], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.Int64], winrt.system.Array[winrt.system.Int64]]]
 Array9Handler = typing.Callable[[typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.ReadableBuffer], typing.Union[winrt.system.Array[winrt.system.Single], winrt.system.WriteableBuffer]], typing.Tuple[winrt.system.Array[winrt.system.Single], winrt.system.Array[winrt.system.Single]]]
-Async1Handler = typing.Callable[["windows_foundation.IAsyncAction", bool], "windows_foundation.IAsyncAction"]
-Async2Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncActionWithProgress[winrt.system.Int32]"]
-Async3Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncOperation[winrt.system.Int32]"]
-Async4Handler = typing.Callable[["windows_foundation.IAsyncAction", bool, winrt.system.Int32, winrt.system.Int32], "windows_foundation.IAsyncOperationWithProgress[winrt.system.Int32, winrt.system.Int32]"]
+Async1Handler = typing.Callable[["windows_foundation.ImplementsIAsyncAction", bool], "windows_foundation.IAsyncAction"]
+Async2Handler = typing.Callable[["windows_foundation.ImplementsIAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncActionWithProgress[winrt.system.Int32]"]
+Async3Handler = typing.Callable[["windows_foundation.ImplementsIAsyncAction", bool, winrt.system.Int32], "windows_foundation.IAsyncOperation[winrt.system.Int32]"]
+Async4Handler = typing.Callable[["windows_foundation.ImplementsIAsyncAction", bool, winrt.system.Int32, winrt.system.Int32], "windows_foundation.IAsyncOperationWithProgress[winrt.system.Int32, winrt.system.Int32]"]
 Collection1Handler = typing.Callable[[typing.Iterable[str]], typing.Tuple[typing.Iterable[str], typing.Iterable[str]]]
 Collection2Handler = typing.Callable[[typing.Iterable["windows_foundation_collections.IKeyValuePair[str, str]"]], typing.Tuple[typing.Iterable["windows_foundation_collections.IKeyValuePair[str, str]"], typing.Iterable["windows_foundation_collections.IKeyValuePair[str, str]"]]]
 Collection3Handler = typing.Callable[[typing.MutableMapping[str, str]], typing.Tuple[typing.MutableMapping[str, str], typing.MutableMapping[str, str]]]
@@ -129,4 +138,4 @@ Param6Handler = typing.Callable[[winrt.system.Int16], typing.Tuple[winrt.system.
 Param7Handler = typing.Callable[[winrt.system.Int32], typing.Tuple[winrt.system.Int32, winrt.system.Int32]]
 Param8Handler = typing.Callable[[winrt.system.Int64], typing.Tuple[winrt.system.Int64, winrt.system.Int64]]
 Param9Handler = typing.Callable[[winrt.system.Single], typing.Tuple[winrt.system.Single, winrt.system.Single]]
-TestHandler = typing.Callable[[ITests], None]
+TestHandler = typing.Callable[[ImplementsITests], None]

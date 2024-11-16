@@ -40,6 +40,20 @@ if TYPE_CHECKING:
         PropertyChangedEventArgs_Static,
         RelativeSource_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_data import (
+        ImplementsICollectionView,
+        ImplementsICollectionViewFactory,
+        ImplementsICollectionViewGroup,
+        ImplementsICustomProperty,
+        ImplementsICustomPropertyProvider,
+        ImplementsIItemsRangeInfo,
+        ImplementsINotifyPropertyChanged,
+        ImplementsISelectionInfo,
+        ImplementsISupportIncrementalLoading,
+        ImplementsIValueConverter,
+    )
 
 __all__ = [
     "BindingMode",

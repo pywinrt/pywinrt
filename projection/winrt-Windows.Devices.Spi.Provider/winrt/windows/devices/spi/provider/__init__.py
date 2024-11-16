@@ -9,6 +9,13 @@ from winrt._winrt_windows_devices_spi_provider import (
     ISpiDeviceProvider,
     ISpiProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_spi_provider import (
+        ImplementsISpiControllerProvider,
+        ImplementsISpiDeviceProvider,
+        ImplementsISpiProvider,
+    )
 
 __all__ = [
     "ProviderSpiMode",

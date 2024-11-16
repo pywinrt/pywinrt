@@ -14,6 +14,11 @@ from winrt._winrt_windows_storage_fileproperties import (
     VideoProperties,
     IStorageItemExtraProperties,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_fileproperties import (
+        ImplementsIStorageItemExtraProperties,
+    )
 
 __all__ = [
     "PhotoOrientation",

@@ -22,6 +22,13 @@ from winrt._winrt_windows_web_syndication import (
     ISyndicationNode,
     ISyndicationText,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_web_syndication import (
+        ImplementsISyndicationClient,
+        ImplementsISyndicationNode,
+        ImplementsISyndicationText,
+    )
 
 __all__ = [
     "SyndicationErrorStatus",

@@ -11,6 +11,11 @@ from winrt._winrt_windows_gaming_input_forcefeedback import (
     RampForceEffect,
     IForceFeedbackEffect,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_gaming_input_forcefeedback import (
+        ImplementsIForceFeedbackEffect,
+    )
 
 __all__ = [
     "ConditionForceEffectKind",

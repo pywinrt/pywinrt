@@ -33,7 +33,7 @@ class AnimationDescription(winrt.system.Object):
     def z_order(self) -> winrt.system.Int32: ...
 
 @typing.final
-class OpacityAnimation(IPropertyAnimation, winrt.system.Object):
+class OpacityAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OpacityAnimation: ...
     @_property
@@ -52,7 +52,7 @@ class OpacityAnimation(IPropertyAnimation, winrt.system.Object):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class PropertyAnimation(IPropertyAnimation, winrt.system.Object):
+class PropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PropertyAnimation: ...
     @_property
@@ -67,7 +67,7 @@ class PropertyAnimation(IPropertyAnimation, winrt.system.Object):
     def type(self) -> PropertyAnimationType: ...
 
 @typing.final
-class ScaleAnimation(IPropertyAnimation, winrt.system.Object):
+class ScaleAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScaleAnimation: ...
     @_property
@@ -92,7 +92,7 @@ class ScaleAnimation(IPropertyAnimation, winrt.system.Object):
     def normalized_origin(self) -> windows_foundation.Point: ...
 
 @typing.final
-class TranslationAnimation(IPropertyAnimation, winrt.system.Object):
+class TranslationAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> TranslationAnimation: ...
     @_property
@@ -106,7 +106,10 @@ class TranslationAnimation(IPropertyAnimation, winrt.system.Object):
     @_property
     def type(self) -> PropertyAnimationType: ...
 
-class IPropertyAnimation(winrt.system.Object):
+class ImplementsIPropertyAnimation():
+    pass
+
+class IPropertyAnimation(winrt.system.Object, ImplementsIPropertyAnimation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPropertyAnimation: ...
     @_property

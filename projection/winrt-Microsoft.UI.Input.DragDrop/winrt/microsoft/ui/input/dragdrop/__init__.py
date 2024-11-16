@@ -11,6 +11,11 @@ from winrt._winrt_microsoft_ui_input_dragdrop import (
     DropOperationTargetRequestedEventArgs,
     IDropOperationTarget,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_input_dragdrop import (
+        ImplementsIDropOperationTarget,
+    )
 
 __all__ = [
     "DragDropModifiers",

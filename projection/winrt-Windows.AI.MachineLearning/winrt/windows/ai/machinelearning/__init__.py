@@ -33,6 +33,14 @@ from winrt._winrt_windows_ai_machinelearning import (
     ILearningModelOperatorProvider,
     ITensor,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ai_machinelearning import (
+        ImplementsILearningModelFeatureDescriptor,
+        ImplementsILearningModelFeatureValue,
+        ImplementsILearningModelOperatorProvider,
+        ImplementsITensor,
+    )
 
 __all__ = [
     "LearningModelDeviceKind",

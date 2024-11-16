@@ -10,6 +10,12 @@ from winrt._winrt_microsoft_ui_composition_systembackdrops import (
     ISystemBackdropController,
     ISystemBackdropControllerWithTargets,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_composition_systembackdrops import (
+        ImplementsISystemBackdropController,
+        ImplementsISystemBackdropControllerWithTargets,
+    )
 
 __all__ = [
     "DesktopAcrylicKind",

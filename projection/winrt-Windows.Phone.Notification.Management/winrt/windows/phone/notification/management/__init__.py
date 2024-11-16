@@ -26,6 +26,11 @@ from winrt._winrt_windows_phone_notification_management import (
     VolumeInfo,
     IAccessoryNotificationTriggerDetails,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_phone_notification_management import (
+        ImplementsIAccessoryNotificationTriggerDetails,
+    )
 
 __all__ = [
     "AccessoryNotificationType",

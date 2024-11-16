@@ -55,6 +55,12 @@ from winrt._winrt_windows_media_devices import (
     IDefaultAudioDeviceChangedEventArgs,
     IMediaDeviceController,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_devices import (
+        ImplementsIDefaultAudioDeviceChangedEventArgs,
+        ImplementsIMediaDeviceController,
+    )
 
 __all__ = [
     "AdvancedPhotoMode",

@@ -129,6 +129,13 @@ if TYPE_CHECKING:
         ColorPickerSlider_Static,
         TabViewListView_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml_controls_primitives import (
+        ImplementsIScrollController,
+        ImplementsIScrollControllerPanningInfo,
+        ImplementsIScrollSnapPointsInfo,
+    )
 
 __all__ = [
     "AnimationDirection",

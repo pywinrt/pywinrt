@@ -62,7 +62,7 @@ class WebAccountManager_Static(type):
     def set_per_app_to_per_user_account_async(cls, per_app_account: windows_security_credentials.WebAccount, per_user_web_account_id: str, /) -> windows_foundation.IAsyncAction: ...
     def set_scope_async(cls, web_account: windows_security_credentials.WebAccount, scope: WebAccountScope, /) -> windows_foundation.IAsyncAction: ...
     def set_view_async(cls, web_account: windows_security_credentials.WebAccount, view: WebAccountClientView, /) -> windows_foundation.IAsyncAction: ...
-    def set_web_account_picture_async(cls, web_account: windows_security_credentials.WebAccount, web_account_picture: windows_storage_streams.IRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
+    def set_web_account_picture_async(cls, web_account: windows_security_credentials.WebAccount, web_account_picture: windows_storage_streams.ImplementsIRandomAccessStream, /) -> windows_foundation.IAsyncAction: ...
     def update_web_account_properties_async(cls, web_account: windows_security_credentials.WebAccount, web_account_user_name: str, additional_properties: typing.Mapping[str, str], /) -> windows_foundation.IAsyncAction: ...
 
 @typing.final
@@ -70,7 +70,7 @@ class WebAccountManager(winrt.system.Object, metaclass=WebAccountManager_Static)
     pass
 
 @typing.final
-class WebAccountProviderAddAccountOperation(IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderAddAccountOperation(winrt.system.Object, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderAddAccountOperation: ...
     def report_completed(self) -> None: ...
@@ -78,7 +78,7 @@ class WebAccountProviderAddAccountOperation(IWebAccountProviderOperation, winrt.
     def kind(self) -> WebAccountProviderOperationKind: ...
 
 @typing.final
-class WebAccountProviderDeleteAccountOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderDeleteAccountOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderDeleteAccountOperation: ...
     def report_completed(self) -> None: ...
@@ -89,7 +89,7 @@ class WebAccountProviderDeleteAccountOperation(IWebAccountProviderBaseReportOper
     def kind(self) -> WebAccountProviderOperationKind: ...
 
 @typing.final
-class WebAccountProviderGetTokenSilentOperation(IWebAccountProviderSilentReportOperation, IWebAccountProviderBaseReportOperation, IWebAccountProviderTokenOperation, IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderGetTokenSilentOperation(winrt.system.Object, ImplementsIWebAccountProviderSilentReportOperation, ImplementsIWebAccountProviderBaseReportOperation, ImplementsIWebAccountProviderTokenOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderGetTokenSilentOperation: ...
     def report_completed(self) -> None: ...
@@ -108,7 +108,7 @@ class WebAccountProviderGetTokenSilentOperation(IWebAccountProviderSilentReportO
     def provider_responses(self) -> typing.MutableSequence[WebProviderTokenResponse]: ...
 
 @typing.final
-class WebAccountProviderManageAccountOperation(IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderManageAccountOperation(winrt.system.Object, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderManageAccountOperation: ...
     def report_completed(self) -> None: ...
@@ -118,7 +118,7 @@ class WebAccountProviderManageAccountOperation(IWebAccountProviderOperation, win
     def kind(self) -> WebAccountProviderOperationKind: ...
 
 @typing.final
-class WebAccountProviderRequestTokenOperation(IWebAccountProviderUIReportOperation, IWebAccountProviderBaseReportOperation, IWebAccountProviderTokenOperation, IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderRequestTokenOperation(winrt.system.Object, ImplementsIWebAccountProviderUIReportOperation, ImplementsIWebAccountProviderBaseReportOperation, ImplementsIWebAccountProviderTokenOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderRequestTokenOperation: ...
     def report_completed(self) -> None: ...
@@ -136,7 +136,7 @@ class WebAccountProviderRequestTokenOperation(IWebAccountProviderUIReportOperati
     def provider_responses(self) -> typing.MutableSequence[WebProviderTokenResponse]: ...
 
 @typing.final
-class WebAccountProviderRetrieveCookiesOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderRetrieveCookiesOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderRetrieveCookiesOperation: ...
     def report_completed(self) -> None: ...
@@ -155,7 +155,7 @@ class WebAccountProviderRetrieveCookiesOperation(IWebAccountProviderBaseReportOp
     def cookies(self) -> typing.MutableSequence[windows_web_http.HttpCookie]: ...
 
 @typing.final
-class WebAccountProviderSignOutAccountOperation(IWebAccountProviderBaseReportOperation, IWebAccountProviderOperation, winrt.system.Object):
+class WebAccountProviderSignOutAccountOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderSignOutAccountOperation: ...
     def report_completed(self) -> None: ...
@@ -170,7 +170,7 @@ class WebAccountProviderSignOutAccountOperation(IWebAccountProviderBaseReportOpe
     def web_account(self) -> windows_security_credentials.WebAccount: ...
 
 @typing.final
-class WebAccountProviderTriggerDetails(IWebAccountProviderTokenObjects2, IWebAccountProviderTokenObjects, winrt.system.Object):
+class WebAccountProviderTriggerDetails(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects2, ImplementsIWebAccountProviderTokenObjects):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> WebAccountProviderTriggerDetails: ...
     @_property
@@ -206,19 +206,28 @@ class WebProviderTokenResponse(winrt.system.Object):
     @_property
     def client_response(self) -> windows_security_authentication_web_core.WebTokenResponse: ...
 
-class IWebAccountProviderBaseReportOperation(winrt.system.Object):
+class ImplementsIWebAccountProviderBaseReportOperation():
+    pass
+
+class IWebAccountProviderBaseReportOperation(winrt.system.Object, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderBaseReportOperation: ...
     def report_completed(self) -> None: ...
     def report_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
-class IWebAccountProviderOperation(winrt.system.Object):
+class ImplementsIWebAccountProviderOperation():
+    pass
+
+class IWebAccountProviderOperation(winrt.system.Object, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderOperation: ...
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
-class IWebAccountProviderSilentReportOperation(IWebAccountProviderBaseReportOperation, winrt.system.Object):
+class ImplementsIWebAccountProviderSilentReportOperation():
+    pass
+
+class IWebAccountProviderSilentReportOperation(winrt.system.Object, ImplementsIWebAccountProviderSilentReportOperation, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderSilentReportOperation: ...
     def report_completed(self) -> None: ...
@@ -226,13 +235,19 @@ class IWebAccountProviderSilentReportOperation(IWebAccountProviderBaseReportOper
     def report_user_interaction_required(self) -> None: ...
     def report_user_interaction_required_with_error(self, value: windows_security_authentication_web_core.WebProviderError, /) -> None: ...
 
-class IWebAccountProviderTokenObjects(winrt.system.Object):
+class ImplementsIWebAccountProviderTokenObjects():
+    pass
+
+class IWebAccountProviderTokenObjects(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects: ...
     @_property
     def operation(self) -> IWebAccountProviderOperation: ...
 
-class IWebAccountProviderTokenObjects2(IWebAccountProviderTokenObjects, winrt.system.Object):
+class ImplementsIWebAccountProviderTokenObjects2():
+    pass
+
+class IWebAccountProviderTokenObjects2(winrt.system.Object, ImplementsIWebAccountProviderTokenObjects2, ImplementsIWebAccountProviderTokenObjects):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenObjects2: ...
     @_property
@@ -240,7 +255,10 @@ class IWebAccountProviderTokenObjects2(IWebAccountProviderTokenObjects, winrt.sy
     @_property
     def operation(self) -> IWebAccountProviderOperation: ...
 
-class IWebAccountProviderTokenOperation(IWebAccountProviderOperation, winrt.system.Object):
+class ImplementsIWebAccountProviderTokenOperation():
+    pass
+
+class IWebAccountProviderTokenOperation(winrt.system.Object, ImplementsIWebAccountProviderTokenOperation, ImplementsIWebAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderTokenOperation: ...
     @_property
@@ -254,7 +272,10 @@ class IWebAccountProviderTokenOperation(IWebAccountProviderOperation, winrt.syst
     @_property
     def kind(self) -> WebAccountProviderOperationKind: ...
 
-class IWebAccountProviderUIReportOperation(IWebAccountProviderBaseReportOperation, winrt.system.Object):
+class ImplementsIWebAccountProviderUIReportOperation():
+    pass
+
+class IWebAccountProviderUIReportOperation(winrt.system.Object, ImplementsIWebAccountProviderUIReportOperation, ImplementsIWebAccountProviderBaseReportOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWebAccountProviderUIReportOperation: ...
     def report_completed(self) -> None: ...

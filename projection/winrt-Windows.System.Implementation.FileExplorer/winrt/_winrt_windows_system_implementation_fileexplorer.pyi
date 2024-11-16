@@ -22,19 +22,28 @@ class SysStorageProviderEventReceivedEventArgs(winrt.system.Object):
     @_property
     def json(self) -> str: ...
 
-class ISysStorageProviderEventSource(winrt.system.Object):
+class ImplementsISysStorageProviderEventSource():
+    pass
+
+class ISysStorageProviderEventSource(winrt.system.Object, ImplementsISysStorageProviderEventSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderEventSource: ...
     def add_event_received(self, handler: windows_foundation.TypedEventHandler[ISysStorageProviderEventSource, SysStorageProviderEventReceivedEventArgs], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_event_received(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class ISysStorageProviderHandlerFactory(winrt.system.Object):
+class ImplementsISysStorageProviderHandlerFactory():
+    pass
+
+class ISysStorageProviderHandlerFactory(winrt.system.Object, ImplementsISysStorageProviderHandlerFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHandlerFactory: ...
     def get_event_source(self, sync_root_id: str, event_name: str, /) -> ISysStorageProviderEventSource: ...
     def get_http_request_provider(self, sync_root_id: str, /) -> ISysStorageProviderHttpRequestProvider: ...
 
-class ISysStorageProviderHttpRequestProvider(winrt.system.Object):
+class ImplementsISysStorageProviderHttpRequestProvider():
+    pass
+
+class ISysStorageProviderHttpRequestProvider(winrt.system.Object, ImplementsISysStorageProviderHttpRequestProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISysStorageProviderHttpRequestProvider: ...
     def send_request_async(self, request: windows_web_http.HttpRequestMessage, /) -> windows_foundation.IAsyncOperation[windows_web_http.HttpResponseMessage]: ...

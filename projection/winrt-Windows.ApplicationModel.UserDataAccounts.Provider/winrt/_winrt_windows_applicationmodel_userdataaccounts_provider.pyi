@@ -28,7 +28,7 @@ class UserDataAccountPartnerAccountInfo(winrt.system.Object):
     def priority(self) -> winrt.system.UInt32: ...
 
 @typing.final
-class UserDataAccountProviderAddAccountOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+class UserDataAccountProviderAddAccountOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderAddAccountOperation: ...
     def report_completed(self, user_data_account_id: str, /) -> None: ...
@@ -40,7 +40,7 @@ class UserDataAccountProviderAddAccountOperation(IUserDataAccountProviderOperati
     def kind(self) -> UserDataAccountProviderOperationKind: ...
 
 @typing.final
-class UserDataAccountProviderResolveErrorsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+class UserDataAccountProviderResolveErrorsOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderResolveErrorsOperation: ...
     def report_completed(self) -> None: ...
@@ -50,7 +50,7 @@ class UserDataAccountProviderResolveErrorsOperation(IUserDataAccountProviderOper
     def user_data_account_id(self) -> str: ...
 
 @typing.final
-class UserDataAccountProviderSettingsOperation(IUserDataAccountProviderOperation, winrt.system.Object):
+class UserDataAccountProviderSettingsOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> UserDataAccountProviderSettingsOperation: ...
     def report_completed(self) -> None: ...
@@ -59,7 +59,10 @@ class UserDataAccountProviderSettingsOperation(IUserDataAccountProviderOperation
     @_property
     def user_data_account_id(self) -> str: ...
 
-class IUserDataAccountProviderOperation(winrt.system.Object):
+class ImplementsIUserDataAccountProviderOperation():
+    pass
+
+class IUserDataAccountProviderOperation(winrt.system.Object, ImplementsIUserDataAccountProviderOperation):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IUserDataAccountProviderOperation: ...
     @_property

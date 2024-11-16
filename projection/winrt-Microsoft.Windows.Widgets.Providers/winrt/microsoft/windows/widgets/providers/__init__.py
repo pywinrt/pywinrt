@@ -17,6 +17,15 @@ from winrt._winrt_microsoft_windows_widgets_providers import (
     IWidgetProviderAnalytics,
     IWidgetProviderErrors,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_windows_widgets_providers import (
+        ImplementsIWidgetManager,
+        ImplementsIWidgetProvider,
+        ImplementsIWidgetProvider2,
+        ImplementsIWidgetProviderAnalytics,
+        ImplementsIWidgetProviderErrors,
+    )
 
 __all__ = [
     "WidgetActionInvokedArgs",

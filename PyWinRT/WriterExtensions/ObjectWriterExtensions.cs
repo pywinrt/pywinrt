@@ -78,6 +78,23 @@ static class ObjectWriterExtensions
             metaclass = $", metaclass={type.Name}_Static";
         }
 
+        if (type.Category == Category.Interface)
+        {
+            var generic2 = "";
+
+            if (type.IsGeneric)
+            {
+                generic2 =
+                    $"typing.Generic[{string.Join(", ", type.Type.GenericParameters.Select(p => p.ToPyTypeName(ns)))}]";
+            }
+
+            w.WriteLine($"class Implements{type.Name}({generic2}):");
+            w.Indent++;
+            w.WriteLine("pass");
+            w.Indent--;
+            w.WriteBlankLine();
+        }
+
         var collection = "";
 
         if (type.IsPyMapping)
@@ -112,7 +129,17 @@ static class ObjectWriterExtensions
             }
         }
 
-        var interfaces = string.Join("", type.Interfaces.Select(i => $"{i.ToPyTypeName(ns)}, "));
+        var interfaceTypes = type.Interfaces.AsEnumerable();
+
+        if (type.Category == Category.Interface)
+        {
+            interfaceTypes = interfaceTypes.Prepend(type.Type);
+        }
+
+        var interfaces = string.Join(
+            "",
+            interfaceTypes.Select(i => $", {i.ToPyTypeName(ns, implementsInterface: true)}")
+        );
 
         var generic = "";
 
@@ -129,7 +156,7 @@ static class ObjectWriterExtensions
         }
 
         w.WriteLine(
-            $"class {type.Name}({interfaces}{type.Type.BaseType?.ToPyTypeName(ns) ?? "winrt.system.Object"}{collection}{generic}{metaclass}):"
+            $"class {type.Name}({type.Type.BaseType?.ToPyTypeName(ns) ?? "winrt.system.Object"}{interfaces}{collection}{generic}{metaclass}):"
         );
         w.Indent++;
 

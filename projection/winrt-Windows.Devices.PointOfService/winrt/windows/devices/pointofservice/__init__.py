@@ -79,6 +79,16 @@ from winrt._winrt_windows_devices_pointofservice import (
     IPosPrinterJob,
     IReceiptOrSlipJob,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_pointofservice import (
+        ImplementsICashDrawerEventSourceEventArgs,
+        ImplementsICommonClaimedPosPrinterStation,
+        ImplementsICommonPosPrintStationCapabilities,
+        ImplementsICommonReceiptSlipCapabilities,
+        ImplementsIPosPrinterJob,
+        ImplementsIReceiptOrSlipJob,
+    )
 
 __all__ = [
     "BarcodeScannerStatus",

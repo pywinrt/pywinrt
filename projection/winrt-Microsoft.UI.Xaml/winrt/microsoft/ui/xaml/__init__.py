@@ -124,6 +124,13 @@ if TYPE_CHECKING:
         VisualTransition_Static,
         Window_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_ui_xaml import (
+        ImplementsIDataTemplateExtension,
+        ImplementsIElementFactory,
+        ImplementsIXamlServiceProvider,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel

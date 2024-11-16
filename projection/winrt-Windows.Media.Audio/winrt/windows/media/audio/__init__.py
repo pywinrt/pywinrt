@@ -49,6 +49,14 @@ from winrt._winrt_windows_media_audio import (
     IAudioNode,
     IAudioNodeWithListener,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_audio import (
+        ImplementsIAudioInputNode,
+        ImplementsIAudioInputNode2,
+        ImplementsIAudioNode,
+        ImplementsIAudioNodeWithListener,
+    )
 
 __all__ = [
     "AudioDeviceNodeCreationStatus",

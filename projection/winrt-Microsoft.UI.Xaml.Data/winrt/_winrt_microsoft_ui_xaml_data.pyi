@@ -206,7 +206,10 @@ class RelativeSource(microsoft_ui_xaml.DependencyObject, metaclass=RelativeSourc
     @mode.setter
     def mode(self, value: RelativeSourceMode) -> None: ...
 
-class ICollectionView(windows_foundation_collections.IObservableVector[winrt.system.Object], winrt.system.Object, winrt._winrt.MutableSequence[winrt.system.Object]):
+class ImplementsICollectionView():
+    pass
+
+class ICollectionView(winrt.system.Object, ImplementsICollectionView, windows_foundation_collections.ImplementsIObservableVector[winrt.system.Object], winrt._winrt.MutableSequence[winrt.system.Object]):
     def __len__(self) -> int: ...
     def __iter__(self) -> windows_foundation_collections.IIterator[winrt.system.Object]: ...
     @typing.overload
@@ -263,12 +266,18 @@ class ICollectionView(windows_foundation_collections.IObservableVector[winrt.sys
     @_property
     def size(self) -> winrt.system.UInt32: ...
 
-class ICollectionViewFactory(winrt.system.Object):
+class ImplementsICollectionViewFactory():
+    pass
+
+class ICollectionViewFactory(winrt.system.Object, ImplementsICollectionViewFactory):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICollectionViewFactory: ...
     def create_view(self) -> ICollectionView: ...
 
-class ICollectionViewGroup(winrt.system.Object):
+class ImplementsICollectionViewGroup():
+    pass
+
+class ICollectionViewGroup(winrt.system.Object, ImplementsICollectionViewGroup):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICollectionViewGroup: ...
     @_property
@@ -276,7 +285,10 @@ class ICollectionViewGroup(winrt.system.Object):
     @_property
     def group_items(self) -> windows_foundation_collections.IObservableVector[winrt.system.Object]: ...
 
-class ICustomProperty(winrt.system.Object):
+class ImplementsICustomProperty():
+    pass
+
+class ICustomProperty(winrt.system.Object, ImplementsICustomProperty):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomProperty: ...
     def get_indexed_value(self, target: winrt.system.Object, index: winrt.system.Object, /) -> winrt.system.Object: ...
@@ -292,7 +304,10 @@ class ICustomProperty(winrt.system.Object):
     @_property
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-class ICustomPropertyProvider(winrt.system.Object):
+class ImplementsICustomPropertyProvider():
+    pass
+
+class ICustomPropertyProvider(winrt.system.Object, ImplementsICustomPropertyProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomPropertyProvider: ...
     def get_custom_property(self, name: str, /) -> ICustomProperty: ...
@@ -301,7 +316,10 @@ class ICustomPropertyProvider(winrt.system.Object):
     @_property
     def type(self) -> windows_ui_xaml_interop.TypeName: ...
 
-class IItemsRangeInfo(windows_foundation.IClosable, winrt.system.Object):
+class ImplementsIItemsRangeInfo():
+    pass
+
+class IItemsRangeInfo(winrt.system.Object, ImplementsIItemsRangeInfo, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -309,7 +327,10 @@ class IItemsRangeInfo(windows_foundation.IClosable, winrt.system.Object):
     def close(self) -> None: ...
     def ranges_changed(self, visible_range: ItemIndexRange, tracked_items: typing.Sequence[ItemIndexRange], /) -> None: ...
 
-class INotifyDataErrorInfo(winrt.system.Object):
+class ImplementsINotifyDataErrorInfo():
+    pass
+
+class INotifyDataErrorInfo(winrt.system.Object, ImplementsINotifyDataErrorInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyDataErrorInfo: ...
     def get_errors(self, property_name: str, /) -> typing.Iterable[winrt.system.Object]: ...
@@ -318,13 +339,19 @@ class INotifyDataErrorInfo(winrt.system.Object):
     @_property
     def has_errors(self) -> bool: ...
 
-class INotifyPropertyChanged(winrt.system.Object):
+class ImplementsINotifyPropertyChanged():
+    pass
+
+class INotifyPropertyChanged(winrt.system.Object, ImplementsINotifyPropertyChanged):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INotifyPropertyChanged: ...
     def add_property_changed(self, handler: PropertyChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     def remove_property_changed(self, token: windows_foundation.EventRegistrationToken, /) -> None: ...
 
-class ISelectionInfo(winrt.system.Object):
+class ImplementsISelectionInfo():
+    pass
+
+class ISelectionInfo(winrt.system.Object, ImplementsISelectionInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionInfo: ...
     def deselect_range(self, item_index_range: ItemIndexRange, /) -> None: ...
@@ -332,14 +359,20 @@ class ISelectionInfo(winrt.system.Object):
     def is_selected(self, index: winrt.system.Int32, /) -> bool: ...
     def select_range(self, item_index_range: ItemIndexRange, /) -> None: ...
 
-class ISupportIncrementalLoading(winrt.system.Object):
+class ImplementsISupportIncrementalLoading():
+    pass
+
+class ISupportIncrementalLoading(winrt.system.Object, ImplementsISupportIncrementalLoading):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISupportIncrementalLoading: ...
     def load_more_items_async(self, count: winrt.system.UInt32, /) -> windows_foundation.IAsyncOperation[LoadMoreItemsResult]: ...
     @_property
     def has_more_items(self) -> bool: ...
 
-class IValueConverter(winrt.system.Object):
+class ImplementsIValueConverter():
+    pass
+
+class IValueConverter(winrt.system.Object, ImplementsIValueConverter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IValueConverter: ...
     def convert(self, value: winrt.system.Object, target_type: windows_ui_xaml_interop.TypeName, parameter: winrt.system.Object, language: str, /) -> winrt.system.Object: ...

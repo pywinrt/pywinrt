@@ -84,6 +84,19 @@ from winrt._winrt_windows_applicationmodel_background import (
     IBackgroundTaskRegistration3,
     IBackgroundTrigger,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel_background import (
+        ImplementsIBackgroundCondition,
+        ImplementsIBackgroundTask,
+        ImplementsIBackgroundTaskInstance,
+        ImplementsIBackgroundTaskInstance2,
+        ImplementsIBackgroundTaskInstance4,
+        ImplementsIBackgroundTaskRegistration,
+        ImplementsIBackgroundTaskRegistration2,
+        ImplementsIBackgroundTaskRegistration3,
+        ImplementsIBackgroundTrigger,
+    )
 
 __all__ = [
     "AlarmAccessStatus",
@@ -286,6 +299,6 @@ class SystemTriggerType(enum.IntEnum):
     POWER_STATE_CHANGE = 14
     DEFAULT_SIGN_IN_ACCOUNT_CHANGE = 15
 
-BackgroundTaskCanceledEventHandler = typing.Callable[[IBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
+BackgroundTaskCanceledEventHandler = typing.Callable[[ImplementsIBackgroundTaskInstance, BackgroundTaskCancellationReason], None]
 BackgroundTaskCompletedEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskCompletedEventArgs], None]
 BackgroundTaskProgressEventHandler = typing.Callable[[BackgroundTaskRegistration, BackgroundTaskProgressEventArgs], None]

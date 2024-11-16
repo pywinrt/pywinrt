@@ -23,7 +23,10 @@ class IRawElementProviderSimple(windows_ui_xaml.DependencyObject):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 
-class IAnnotationProvider(winrt.system.Object):
+class ImplementsIAnnotationProvider():
+    pass
+
+class IAnnotationProvider(winrt.system.Object, ImplementsIAnnotationProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAnnotationProvider: ...
     @_property
@@ -37,19 +40,28 @@ class IAnnotationProvider(winrt.system.Object):
     @_property
     def target(self) -> IRawElementProviderSimple: ...
 
-class ICustomNavigationProvider(winrt.system.Object):
+class ImplementsICustomNavigationProvider():
+    pass
+
+class ICustomNavigationProvider(winrt.system.Object, ImplementsICustomNavigationProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ICustomNavigationProvider: ...
     def navigate_custom(self, direction: windows_ui_xaml_automation_peers.AutomationNavigationDirection, /) -> winrt.system.Object: ...
 
-class IDockProvider(winrt.system.Object):
+class ImplementsIDockProvider():
+    pass
+
+class IDockProvider(winrt.system.Object, ImplementsIDockProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDockProvider: ...
     def set_dock_position(self, dock_position: windows_ui_xaml_automation.DockPosition, /) -> None: ...
     @_property
     def dock_position(self) -> windows_ui_xaml_automation.DockPosition: ...
 
-class IDragProvider(winrt.system.Object):
+class ImplementsIDragProvider():
+    pass
+
+class IDragProvider(winrt.system.Object, ImplementsIDragProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDragProvider: ...
     def get_grabbed_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -60,7 +72,10 @@ class IDragProvider(winrt.system.Object):
     @_property
     def is_grabbed(self) -> bool: ...
 
-class IDropTargetProvider(winrt.system.Object):
+class ImplementsIDropTargetProvider():
+    pass
+
+class IDropTargetProvider(winrt.system.Object, ImplementsIDropTargetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IDropTargetProvider: ...
     @_property
@@ -68,7 +83,10 @@ class IDropTargetProvider(winrt.system.Object):
     @_property
     def drop_effects(self) -> str: ...
 
-class IExpandCollapseProvider(winrt.system.Object):
+class ImplementsIExpandCollapseProvider():
+    pass
+
+class IExpandCollapseProvider(winrt.system.Object, ImplementsIExpandCollapseProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IExpandCollapseProvider: ...
     def collapse(self) -> None: ...
@@ -76,7 +94,10 @@ class IExpandCollapseProvider(winrt.system.Object):
     @_property
     def expand_collapse_state(self) -> windows_ui_xaml_automation.ExpandCollapseState: ...
 
-class IGridItemProvider(winrt.system.Object):
+class ImplementsIGridItemProvider():
+    pass
+
+class IGridItemProvider(winrt.system.Object, ImplementsIGridItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridItemProvider: ...
     @_property
@@ -90,7 +111,10 @@ class IGridItemProvider(winrt.system.Object):
     @_property
     def row_span(self) -> winrt.system.Int32: ...
 
-class IGridProvider(winrt.system.Object):
+class ImplementsIGridProvider():
+    pass
+
+class IGridProvider(winrt.system.Object, ImplementsIGridProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IGridProvider: ...
     def get_item(self, row: winrt.system.Int32, column: winrt.system.Int32, /) -> IRawElementProviderSimple: ...
@@ -99,17 +123,26 @@ class IGridProvider(winrt.system.Object):
     @_property
     def row_count(self) -> winrt.system.Int32: ...
 
-class IInvokeProvider(winrt.system.Object):
+class ImplementsIInvokeProvider():
+    pass
+
+class IInvokeProvider(winrt.system.Object, ImplementsIInvokeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IInvokeProvider: ...
     def invoke(self) -> None: ...
 
-class IItemContainerProvider(winrt.system.Object):
+class ImplementsIItemContainerProvider():
+    pass
+
+class IItemContainerProvider(winrt.system.Object, ImplementsIItemContainerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IItemContainerProvider: ...
     def find_item_by_property(self, start_after: IRawElementProviderSimple, automation_property: windows_ui_xaml_automation.AutomationProperty, value: winrt.system.Object, /) -> IRawElementProviderSimple: ...
 
-class IMultipleViewProvider(winrt.system.Object):
+class ImplementsIMultipleViewProvider():
+    pass
+
+class IMultipleViewProvider(winrt.system.Object, ImplementsIMultipleViewProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IMultipleViewProvider: ...
     def get_supported_views(self) -> winrt.system.Array[winrt.system.Int32]: ...
@@ -118,12 +151,18 @@ class IMultipleViewProvider(winrt.system.Object):
     @_property
     def current_view(self) -> winrt.system.Int32: ...
 
-class IObjectModelProvider(winrt.system.Object):
+class ImplementsIObjectModelProvider():
+    pass
+
+class IObjectModelProvider(winrt.system.Object, ImplementsIObjectModelProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IObjectModelProvider: ...
     def get_underlying_object_model(self) -> winrt.system.Object: ...
 
-class IRangeValueProvider(winrt.system.Object):
+class ImplementsIRangeValueProvider():
+    pass
+
+class IRangeValueProvider(winrt.system.Object, ImplementsIRangeValueProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IRangeValueProvider: ...
     def set_value(self, value: winrt.system.Double, /) -> None: ...
@@ -140,12 +179,18 @@ class IRangeValueProvider(winrt.system.Object):
     @_property
     def value(self) -> winrt.system.Double: ...
 
-class IScrollItemProvider(winrt.system.Object):
+class ImplementsIScrollItemProvider():
+    pass
+
+class IScrollItemProvider(winrt.system.Object, ImplementsIScrollItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollItemProvider: ...
     def scroll_into_view(self) -> None: ...
 
-class IScrollProvider(winrt.system.Object):
+class ImplementsIScrollProvider():
+    pass
+
+class IScrollProvider(winrt.system.Object, ImplementsIScrollProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollProvider: ...
     def scroll(self, horizontal_amount: windows_ui_xaml_automation.ScrollAmount, vertical_amount: windows_ui_xaml_automation.ScrollAmount, /) -> None: ...
@@ -163,7 +208,10 @@ class IScrollProvider(winrt.system.Object):
     @_property
     def vertically_scrollable(self) -> bool: ...
 
-class ISelectionItemProvider(winrt.system.Object):
+class ImplementsISelectionItemProvider():
+    pass
+
+class ISelectionItemProvider(winrt.system.Object, ImplementsISelectionItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionItemProvider: ...
     def add_to_selection(self) -> None: ...
@@ -174,7 +222,10 @@ class ISelectionItemProvider(winrt.system.Object):
     @_property
     def selection_container(self) -> IRawElementProviderSimple: ...
 
-class ISelectionProvider(winrt.system.Object):
+class ImplementsISelectionProvider():
+    pass
+
+class ISelectionProvider(winrt.system.Object, ImplementsISelectionProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISelectionProvider: ...
     def get_selection(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -183,7 +234,10 @@ class ISelectionProvider(winrt.system.Object):
     @_property
     def is_selection_required(self) -> bool: ...
 
-class ISpreadsheetItemProvider(winrt.system.Object):
+class ImplementsISpreadsheetItemProvider():
+    pass
+
+class ISpreadsheetItemProvider(winrt.system.Object, ImplementsISpreadsheetItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetItemProvider: ...
     def get_annotation_objects(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -191,12 +245,18 @@ class ISpreadsheetItemProvider(winrt.system.Object):
     @_property
     def formula(self) -> str: ...
 
-class ISpreadsheetProvider(winrt.system.Object):
+class ImplementsISpreadsheetProvider():
+    pass
+
+class ISpreadsheetProvider(winrt.system.Object, ImplementsISpreadsheetProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpreadsheetProvider: ...
     def get_item_by_name(self, name: str, /) -> IRawElementProviderSimple: ...
 
-class IStylesProvider(winrt.system.Object):
+class ImplementsIStylesProvider():
+    pass
+
+class IStylesProvider(winrt.system.Object, ImplementsIStylesProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IStylesProvider: ...
     @_property
@@ -214,19 +274,28 @@ class IStylesProvider(winrt.system.Object):
     @_property
     def style_name(self) -> str: ...
 
-class ISynchronizedInputProvider(winrt.system.Object):
+class ImplementsISynchronizedInputProvider():
+    pass
+
+class ISynchronizedInputProvider(winrt.system.Object, ImplementsISynchronizedInputProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISynchronizedInputProvider: ...
     def cancel(self) -> None: ...
     def start_listening(self, input_type: windows_ui_xaml_automation.SynchronizedInputType, /) -> None: ...
 
-class ITableItemProvider(winrt.system.Object):
+class ImplementsITableItemProvider():
+    pass
+
+class ITableItemProvider(winrt.system.Object, ImplementsITableItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableItemProvider: ...
     def get_column_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
     def get_row_header_items(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
 
-class ITableProvider(winrt.system.Object):
+class ImplementsITableProvider():
+    pass
+
+class ITableProvider(winrt.system.Object, ImplementsITableProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITableProvider: ...
     def get_column_headers(self) -> winrt.system.Array[IRawElementProviderSimple]: ...
@@ -234,7 +303,10 @@ class ITableProvider(winrt.system.Object):
     @_property
     def row_or_column_major(self) -> windows_ui_xaml_automation.RowOrColumnMajor: ...
 
-class ITextChildProvider(winrt.system.Object):
+class ImplementsITextChildProvider():
+    pass
+
+class ITextChildProvider(winrt.system.Object, ImplementsITextChildProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextChildProvider: ...
     @_property
@@ -242,7 +314,10 @@ class ITextChildProvider(winrt.system.Object):
     @_property
     def text_range(self) -> ITextRangeProvider: ...
 
-class ITextEditProvider(ITextProvider, winrt.system.Object):
+class ImplementsITextEditProvider():
+    pass
+
+class ITextEditProvider(winrt.system.Object, ImplementsITextEditProvider, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextEditProvider: ...
     def get_active_composition(self) -> ITextRangeProvider: ...
@@ -256,7 +331,10 @@ class ITextEditProvider(ITextProvider, winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-class ITextProvider(winrt.system.Object):
+class ImplementsITextProvider():
+    pass
+
+class ITextProvider(winrt.system.Object, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider: ...
     def get_selection(self) -> winrt.system.Array[ITextRangeProvider]: ...
@@ -268,7 +346,10 @@ class ITextProvider(winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-class ITextProvider2(ITextProvider, winrt.system.Object):
+class ImplementsITextProvider2():
+    pass
+
+class ITextProvider2(winrt.system.Object, ImplementsITextProvider2, ImplementsITextProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextProvider2: ...
     def get_caret_range(self) -> typing.Tuple[ITextRangeProvider, bool]: ...
@@ -282,13 +363,16 @@ class ITextProvider2(ITextProvider, winrt.system.Object):
     @_property
     def supported_text_selection(self) -> windows_ui_xaml_automation.SupportedTextSelection: ...
 
-class ITextRangeProvider(winrt.system.Object):
+class ImplementsITextRangeProvider():
+    pass
+
+class ITextRangeProvider(winrt.system.Object, ImplementsITextRangeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider: ...
     def add_to_selection(self) -> None: ...
     def clone(self) -> ITextRangeProvider: ...
-    def compare(self, text_range_provider: ITextRangeProvider, /) -> bool: ...
-    def compare_endpoints(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
+    def compare(self, text_range_provider: ImplementsITextRangeProvider, /) -> bool: ...
+    def compare_endpoints(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
     def expand_to_enclosing_unit(self, unit: windows_ui_xaml_automation_text.TextUnit, /) -> None: ...
     def find_attribute(self, attribute_id: winrt.system.Int32, value: winrt.system.Object, backward: bool, /) -> ITextRangeProvider: ...
     def find_text(self, text: str, backward: bool, ignore_case: bool, /) -> ITextRangeProvider: ...
@@ -298,19 +382,22 @@ class ITextRangeProvider(winrt.system.Object):
     def get_enclosing_element(self) -> IRawElementProviderSimple: ...
     def get_text(self, max_length: winrt.system.Int32, /) -> str: ...
     def move(self, unit: windows_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    def move_endpoint_by_range(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
+    def move_endpoint_by_range(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
     def move_endpoint_by_unit(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, unit: windows_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def remove_from_selection(self) -> None: ...
     def scroll_into_view(self, align_to_top: bool, /) -> None: ...
     def select(self) -> None: ...
 
-class ITextRangeProvider2(ITextRangeProvider, winrt.system.Object):
+class ImplementsITextRangeProvider2():
+    pass
+
+class ITextRangeProvider2(winrt.system.Object, ImplementsITextRangeProvider2, ImplementsITextRangeProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITextRangeProvider2: ...
     def add_to_selection(self) -> None: ...
     def clone(self) -> ITextRangeProvider: ...
-    def compare(self, text_range_provider: ITextRangeProvider, /) -> bool: ...
-    def compare_endpoints(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
+    def compare(self, text_range_provider: ImplementsITextRangeProvider, /) -> bool: ...
+    def compare_endpoints(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> winrt.system.Int32: ...
     def expand_to_enclosing_unit(self, unit: windows_ui_xaml_automation_text.TextUnit, /) -> None: ...
     def find_attribute(self, attribute_id: winrt.system.Int32, value: winrt.system.Object, backward: bool, /) -> ITextRangeProvider: ...
     def find_text(self, text: str, backward: bool, ignore_case: bool, /) -> ITextRangeProvider: ...
@@ -320,21 +407,27 @@ class ITextRangeProvider2(ITextRangeProvider, winrt.system.Object):
     def get_enclosing_element(self) -> IRawElementProviderSimple: ...
     def get_text(self, max_length: winrt.system.Int32, /) -> str: ...
     def move(self, unit: windows_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
-    def move_endpoint_by_range(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
+    def move_endpoint_by_range(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, text_range_provider: ImplementsITextRangeProvider, target_endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, /) -> None: ...
     def move_endpoint_by_unit(self, endpoint: windows_ui_xaml_automation_text.TextPatternRangeEndpoint, unit: windows_ui_xaml_automation_text.TextUnit, count: winrt.system.Int32, /) -> winrt.system.Int32: ...
     def remove_from_selection(self) -> None: ...
     def scroll_into_view(self, align_to_top: bool, /) -> None: ...
     def select(self) -> None: ...
     def show_context_menu(self) -> None: ...
 
-class IToggleProvider(winrt.system.Object):
+class ImplementsIToggleProvider():
+    pass
+
+class IToggleProvider(winrt.system.Object, ImplementsIToggleProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IToggleProvider: ...
     def toggle(self) -> None: ...
     @_property
     def toggle_state(self) -> windows_ui_xaml_automation.ToggleState: ...
 
-class ITransformProvider(winrt.system.Object):
+class ImplementsITransformProvider():
+    pass
+
+class ITransformProvider(winrt.system.Object, ImplementsITransformProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider: ...
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
@@ -347,7 +440,10 @@ class ITransformProvider(winrt.system.Object):
     @_property
     def can_rotate(self) -> bool: ...
 
-class ITransformProvider2(ITransformProvider, winrt.system.Object):
+class ImplementsITransformProvider2():
+    pass
+
+class ITransformProvider2(winrt.system.Object, ImplementsITransformProvider2, ImplementsITransformProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ITransformProvider2: ...
     def move(self, x: winrt.system.Double, y: winrt.system.Double, /) -> None: ...
@@ -370,7 +466,10 @@ class ITransformProvider2(ITransformProvider, winrt.system.Object):
     @_property
     def can_rotate(self) -> bool: ...
 
-class IValueProvider(winrt.system.Object):
+class ImplementsIValueProvider():
+    pass
+
+class IValueProvider(winrt.system.Object, ImplementsIValueProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IValueProvider: ...
     def set_value(self, value: str, /) -> None: ...
@@ -379,12 +478,18 @@ class IValueProvider(winrt.system.Object):
     @_property
     def value(self) -> str: ...
 
-class IVirtualizedItemProvider(winrt.system.Object):
+class ImplementsIVirtualizedItemProvider():
+    pass
+
+class IVirtualizedItemProvider(winrt.system.Object, ImplementsIVirtualizedItemProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IVirtualizedItemProvider: ...
     def realize(self) -> None: ...
 
-class IWindowProvider(winrt.system.Object):
+class ImplementsIWindowProvider():
+    pass
+
+class IWindowProvider(winrt.system.Object, ImplementsIWindowProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IWindowProvider: ...
     def close(self) -> None: ...

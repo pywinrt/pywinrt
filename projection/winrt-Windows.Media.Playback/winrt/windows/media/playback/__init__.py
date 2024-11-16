@@ -50,6 +50,12 @@ from winrt._winrt_windows_media_playback import (
     IMediaEnginePlaybackSource,
     IMediaPlaybackSource,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_playback import (
+        ImplementsIMediaEnginePlaybackSource,
+        ImplementsIMediaPlaybackSource,
+    )
 
 __all__ = [
     "AutoLoadedDisplayPropertyKind",

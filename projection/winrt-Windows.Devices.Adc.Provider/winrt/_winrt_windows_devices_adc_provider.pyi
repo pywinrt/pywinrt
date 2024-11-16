@@ -15,7 +15,10 @@ from winrt.windows.devices.adc.provider import ProviderAdcChannelMode
 
 Self = typing.TypeVar('Self')
 
-class IAdcControllerProvider(winrt.system.Object):
+class ImplementsIAdcControllerProvider():
+    pass
+
+class IAdcControllerProvider(winrt.system.Object, ImplementsIAdcControllerProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcControllerProvider: ...
     def acquire_channel(self, channel: winrt.system.Int32, /) -> None: ...
@@ -35,7 +38,10 @@ class IAdcControllerProvider(winrt.system.Object):
     @_property
     def resolution_in_bits(self) -> winrt.system.Int32: ...
 
-class IAdcProvider(winrt.system.Object):
+class ImplementsIAdcProvider():
+    pass
+
+class IAdcProvider(winrt.system.Object, ImplementsIAdcProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdcProvider: ...
     def get_controllers(self) -> typing.Sequence[IAdcControllerProvider]: ...

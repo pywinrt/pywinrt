@@ -24,6 +24,17 @@ from winrt._winrt_windows_security_authentication_web_provider import (
     IWebAccountProviderTokenOperation,
     IWebAccountProviderUIReportOperation,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_security_authentication_web_provider import (
+        ImplementsIWebAccountProviderBaseReportOperation,
+        ImplementsIWebAccountProviderOperation,
+        ImplementsIWebAccountProviderSilentReportOperation,
+        ImplementsIWebAccountProviderTokenObjects,
+        ImplementsIWebAccountProviderTokenObjects2,
+        ImplementsIWebAccountProviderTokenOperation,
+        ImplementsIWebAccountProviderUIReportOperation,
+    )
 
 __all__ = [
     "WebAccountClientViewType",

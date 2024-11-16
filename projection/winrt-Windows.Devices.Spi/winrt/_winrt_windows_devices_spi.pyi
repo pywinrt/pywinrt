@@ -58,7 +58,7 @@ class SpiConnectionSettings(winrt.system.Object):
 
 @typing.final
 class SpiController_Static(type):
-    def get_controllers_async(cls, provider: windows_devices_spi_provider.ISpiProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SpiController]]: ...
+    def get_controllers_async(cls, provider: windows_devices_spi_provider.ImplementsISpiProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[SpiController]]: ...
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[SpiController]: ...
 
 @typing.final
@@ -75,7 +75,7 @@ class SpiDevice_Static(type):
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
-class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=SpiDevice_Static):
+class SpiDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=SpiDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -90,7 +90,10 @@ class SpiDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=Spi
     @_property
     def device_id(self) -> str: ...
 
-class ISpiDeviceStatics(winrt.system.Object):
+class ImplementsISpiDeviceStatics():
+    pass
+
+class ISpiDeviceStatics(winrt.system.Object, ImplementsISpiDeviceStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISpiDeviceStatics: ...
     def from_id_async(self, bus_id: str, settings: SpiConnectionSettings, /) -> windows_foundation.IAsyncOperation[SpiDevice]: ...

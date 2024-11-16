@@ -169,7 +169,7 @@ class CalendarViewTemplateSettings(microsoft_ui_xaml.DependencyObject):
 class CarouselPanel_Static(microsoft_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class CarouselPanel(IScrollSnapPointsInfo, microsoft_ui_xaml_controls.VirtualizingPanel, metaclass=CarouselPanel_Static):
+class CarouselPanel(microsoft_ui_xaml_controls.VirtualizingPanel, ImplementsIScrollSnapPointsInfo, metaclass=CarouselPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CarouselPanel: ...
     def __new__(cls: typing.Type[CarouselPanel]) -> CarouselPanel: ...
@@ -452,7 +452,7 @@ class CornerRadiusFilterConverter_Static(microsoft_ui_xaml.DependencyObject_Stat
     def scale_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class CornerRadiusFilterConverter(microsoft_ui_xaml_data.IValueConverter, microsoft_ui_xaml.DependencyObject, metaclass=CornerRadiusFilterConverter_Static):
+class CornerRadiusFilterConverter(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsIValueConverter, metaclass=CornerRadiusFilterConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CornerRadiusFilterConverter: ...
     def __new__(cls: typing.Type[CornerRadiusFilterConverter]) -> CornerRadiusFilterConverter: ...
@@ -475,7 +475,7 @@ class CornerRadiusToThicknessConverter_Static(microsoft_ui_xaml.DependencyObject
     def multiplier_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class CornerRadiusToThicknessConverter(microsoft_ui_xaml_data.IValueConverter, microsoft_ui_xaml.DependencyObject, metaclass=CornerRadiusToThicknessConverter_Static):
+class CornerRadiusToThicknessConverter(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsIValueConverter, metaclass=CornerRadiusToThicknessConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CornerRadiusToThicknessConverter: ...
     def __new__(cls: typing.Type[CornerRadiusToThicknessConverter]) -> CornerRadiusToThicknessConverter: ...
@@ -867,7 +867,7 @@ class JumpListItemBackgroundConverter_Static(microsoft_ui_xaml.DependencyObject_
     def enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemBackgroundConverter(microsoft_ui_xaml_data.IValueConverter, microsoft_ui_xaml.DependencyObject, metaclass=JumpListItemBackgroundConverter_Static):
+class JumpListItemBackgroundConverter(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemBackgroundConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpListItemBackgroundConverter: ...
     def __new__(cls: typing.Type[JumpListItemBackgroundConverter]) -> JumpListItemBackgroundConverter: ...
@@ -890,7 +890,7 @@ class JumpListItemForegroundConverter_Static(microsoft_ui_xaml.DependencyObject_
     def enabled_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
 @typing.final
-class JumpListItemForegroundConverter(microsoft_ui_xaml_data.IValueConverter, microsoft_ui_xaml.DependencyObject, metaclass=JumpListItemForegroundConverter_Static):
+class JumpListItemForegroundConverter(microsoft_ui_xaml.DependencyObject, microsoft_ui_xaml_data.ImplementsIValueConverter, metaclass=JumpListItemForegroundConverter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> JumpListItemForegroundConverter: ...
     def __new__(cls: typing.Type[JumpListItemForegroundConverter]) -> JumpListItemForegroundConverter: ...
@@ -1342,7 +1342,7 @@ class LoopingSelectorItem(microsoft_ui_xaml_controls.ContentControl):
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorItem: ...
 
 @typing.final
-class LoopingSelectorPanel(IScrollSnapPointsInfo, microsoft_ui_xaml_controls.Canvas):
+class LoopingSelectorPanel(microsoft_ui_xaml_controls.Canvas, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> LoopingSelectorPanel: ...
     def get_irregular_snap_points(self, orientation: microsoft_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...
@@ -1430,7 +1430,7 @@ class NavigationViewItemPresenterTemplateSettings(microsoft_ui_xaml.DependencyOb
 class OrientedVirtualizingPanel_Static(microsoft_ui_xaml_controls.VirtualizingPanel_Static):
     pass
 
-class OrientedVirtualizingPanel(microsoft_ui_xaml_controls.IInsertionPanel, IScrollSnapPointsInfo, microsoft_ui_xaml_controls.VirtualizingPanel, metaclass=OrientedVirtualizingPanel_Static):
+class OrientedVirtualizingPanel(microsoft_ui_xaml_controls.VirtualizingPanel, microsoft_ui_xaml_controls.ImplementsIInsertionPanel, ImplementsIScrollSnapPointsInfo, metaclass=OrientedVirtualizingPanel_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> OrientedVirtualizingPanel: ...
     def get_insertion_indexes(self, position: windows_foundation.Point, /) -> typing.Tuple[winrt.system.Int32, winrt.system.Int32]: ...
@@ -1509,7 +1509,7 @@ class PivotHeaderPanel(microsoft_ui_xaml_controls.Canvas):
     def __new__(cls: typing.Type[PivotHeaderPanel]) -> PivotHeaderPanel: ...
 
 @typing.final
-class PivotPanel(IScrollSnapPointsInfo, microsoft_ui_xaml_controls.Panel):
+class PivotPanel(microsoft_ui_xaml_controls.Panel, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PivotPanel: ...
     def __new__(cls: typing.Type[PivotPanel]) -> PivotPanel: ...
@@ -1840,7 +1840,7 @@ class ScrollPresenter_Static(microsoft_ui_xaml.FrameworkElement_Static):
     @_property
     def zoom_mode_property(cls) -> microsoft_ui_xaml.DependencyProperty: ...
 
-class ScrollPresenter(microsoft_ui_xaml_controls.IScrollAnchorProvider, microsoft_ui_xaml.FrameworkElement, metaclass=ScrollPresenter_Static):
+class ScrollPresenter(microsoft_ui_xaml.FrameworkElement, microsoft_ui_xaml_controls.ImplementsIScrollAnchorProvider, metaclass=ScrollPresenter_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ScrollPresenter: ...
     def __new__(cls: typing.Type[ScrollPresenter]) -> ScrollPresenter: ...
@@ -2182,7 +2182,10 @@ class ZoomSnapPointBase(SnapPointBase, metaclass=ZoomSnapPointBase_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ZoomSnapPointBase: ...
 
-class IScrollController(winrt.system.Object):
+class ImplementsIScrollController():
+    pass
+
+class IScrollController(winrt.system.Object, ImplementsIScrollController):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollController: ...
     def get_scroll_animation(self, correlation_id: winrt.system.Int32, start_position: windows_foundation_numerics.Vector2, end_position: windows_foundation_numerics.Vector2, default_animation: microsoft_ui_composition.CompositionAnimation, /) -> microsoft_ui_composition.CompositionAnimation: ...
@@ -2206,7 +2209,10 @@ class IScrollController(winrt.system.Object):
     @_property
     def panning_info(self) -> IScrollControllerPanningInfo: ...
 
-class IScrollControllerPanningInfo(winrt.system.Object):
+class ImplementsIScrollControllerPanningInfo():
+    pass
+
+class IScrollControllerPanningInfo(winrt.system.Object, ImplementsIScrollControllerPanningInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollControllerPanningInfo: ...
     def set_panning_element_expression_animation_sources(self, property_set: microsoft_ui_composition.CompositionPropertySet, min_offset_property_name: str, max_offset_property_name: str, offset_property_name: str, multiplier_property_name: str, /) -> None: ...
@@ -2221,7 +2227,10 @@ class IScrollControllerPanningInfo(winrt.system.Object):
     @_property
     def panning_element_ancestor(self) -> microsoft_ui_xaml.UIElement: ...
 
-class IScrollSnapPointsInfo(winrt.system.Object):
+class ImplementsIScrollSnapPointsInfo():
+    pass
+
+class IScrollSnapPointsInfo(winrt.system.Object, ImplementsIScrollSnapPointsInfo):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IScrollSnapPointsInfo: ...
     def get_irregular_snap_points(self, orientation: microsoft_ui_xaml_controls.Orientation, alignment: SnapPointsAlignment, /) -> typing.Sequence[winrt.system.Single]: ...

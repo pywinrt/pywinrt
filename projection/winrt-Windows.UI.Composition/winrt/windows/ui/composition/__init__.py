@@ -144,6 +144,17 @@ if TYPE_CHECKING:
         Vector3NaturalMotionAnimation_Static,
         Visual_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_composition import (
+        ImplementsIAnimationObject,
+        ImplementsICompositionAnimationBase,
+        ImplementsICompositionSupportsSystemBackdrop,
+        ImplementsICompositionSurface,
+        ImplementsICompositionSurfaceFacade,
+        ImplementsIVisualElement,
+        ImplementsIVisualElement2,
+    )
 
 __all__ = [
     "AnimationControllerProgressBehavior",

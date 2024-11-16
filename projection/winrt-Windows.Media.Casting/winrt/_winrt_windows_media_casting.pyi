@@ -20,7 +20,7 @@ from winrt.windows.media.casting import CastingConnectionErrorStatus, CastingCon
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CastingConnection(windows_foundation.IClosable, winrt.system.Object):
+class CastingConnection(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

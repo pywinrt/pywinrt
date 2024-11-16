@@ -135,7 +135,7 @@ class PrintTaskCompletedEventArgs(winrt.system.Object):
     def completion(self) -> PrintTaskCompletion: ...
 
 @typing.final
-class PrintTaskOptions(IPrintTaskOptionsCoreUIConfiguration, IPrintTaskOptionsCoreProperties, IPrintTaskOptionsCore, winrt.system.Object):
+class PrintTaskOptions(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration, ImplementsIPrintTaskOptionsCoreProperties, ImplementsIPrintTaskOptionsCore):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskOptions: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
@@ -233,7 +233,7 @@ class PrintTaskSourceRequestedArgs(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PrintTaskSourceRequestedArgs: ...
     def get_deferral(self) -> PrintTaskSourceRequestedDeferral: ...
-    def set_source(self, source: IPrintDocumentSource, /) -> None: ...
+    def set_source(self, source: ImplementsIPrintDocumentSource, /) -> None: ...
     @_property
     def deadline(self) -> datetime.datetime: ...
 
@@ -280,16 +280,25 @@ class StandardPrintTaskOptions_Static(type):
 class StandardPrintTaskOptions(winrt.system.Object, metaclass=StandardPrintTaskOptions_Static):
     pass
 
-class IPrintDocumentSource(winrt.system.Object):
+class ImplementsIPrintDocumentSource():
+    pass
+
+class IPrintDocumentSource(winrt.system.Object, ImplementsIPrintDocumentSource):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintDocumentSource: ...
 
-class IPrintTaskOptionsCore(winrt.system.Object):
+class ImplementsIPrintTaskOptionsCore():
+    pass
+
+class IPrintTaskOptionsCore(winrt.system.Object, ImplementsIPrintTaskOptionsCore):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCore: ...
     def get_page_description(self, job_page_number: winrt.system.UInt32, /) -> PrintPageDescription: ...
 
-class IPrintTaskOptionsCoreProperties(winrt.system.Object):
+class ImplementsIPrintTaskOptionsCoreProperties():
+    pass
+
+class IPrintTaskOptionsCoreProperties(winrt.system.Object, ImplementsIPrintTaskOptionsCoreProperties):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreProperties: ...
     @_property
@@ -341,7 +350,10 @@ class IPrintTaskOptionsCoreProperties(winrt.system.Object):
     @staple.setter
     def staple(self, value: PrintStaple) -> None: ...
 
-class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object):
+class ImplementsIPrintTaskOptionsCoreUIConfiguration():
+    pass
+
+class IPrintTaskOptionsCoreUIConfiguration(winrt.system.Object, ImplementsIPrintTaskOptionsCoreUIConfiguration):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IPrintTaskOptionsCoreUIConfiguration: ...
     @_property

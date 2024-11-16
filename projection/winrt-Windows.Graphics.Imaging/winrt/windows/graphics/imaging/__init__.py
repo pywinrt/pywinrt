@@ -24,6 +24,13 @@ from winrt._winrt_windows_graphics_imaging import (
     IBitmapFrameWithSoftwareBitmap,
     IBitmapPropertiesView,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_graphics_imaging import (
+        ImplementsIBitmapFrame,
+        ImplementsIBitmapFrameWithSoftwareBitmap,
+        ImplementsIBitmapPropertiesView,
+    )
 
 __all__ = [
     "BitmapAlphaMode",

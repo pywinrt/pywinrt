@@ -18,6 +18,12 @@ from winrt._winrt_windows_ui_input_inking_analysis import (
     IInkAnalysisNode,
     IInkAnalyzerFactory,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_input_inking_analysis import (
+        ImplementsIInkAnalysisNode,
+        ImplementsIInkAnalyzerFactory,
+    )
 
 __all__ = [
     "InkAnalysisDrawingKind",

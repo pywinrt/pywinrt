@@ -30,6 +30,21 @@ from winrt._winrt_windows_storage_streams import (
     IRandomAccessStreamReference,
     IRandomAccessStreamWithContentType,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_streams import (
+        ImplementsIBuffer,
+        ImplementsIContentTypeProvider,
+        ImplementsIDataReader,
+        ImplementsIDataWriter,
+        ImplementsIInputStream,
+        ImplementsIInputStreamReference,
+        ImplementsIOutputStream,
+        ImplementsIPropertySetSerializer,
+        ImplementsIRandomAccessStream,
+        ImplementsIRandomAccessStreamReference,
+        ImplementsIRandomAccessStreamWithContentType,
+    )
 
 __all__ = [
     "ByteOrder",

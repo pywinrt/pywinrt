@@ -17,7 +17,7 @@ from winrt.windows.system.remotedesktop.input import RemoteTextConnectionDataHan
 Self = typing.TypeVar('Self')
 
 @typing.final
-class RemoteTextConnection(windows_foundation.IClosable, winrt.system.Object):
+class RemoteTextConnection(winrt.system.Object, windows_foundation.ImplementsIClosable):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod

@@ -25,6 +25,11 @@ from winrt._winrt_windows_web_http import (
     HttpTransportInformation,
     IHttpContent,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_web_http import (
+        ImplementsIHttpContent,
+    )
 
 __all__ = [
     "HttpCompletionOption",

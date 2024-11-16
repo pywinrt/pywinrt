@@ -88,6 +88,17 @@ from winrt._winrt_windows_media_core import (
     ISingleSelectMediaTrackList,
     ITimedMetadataTrackProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media_core import (
+        ImplementsIMediaCue,
+        ImplementsIMediaSource,
+        ImplementsIMediaStreamDescriptor,
+        ImplementsIMediaStreamDescriptor2,
+        ImplementsIMediaTrack,
+        ImplementsISingleSelectMediaTrackList,
+        ImplementsITimedMetadataTrackProvider,
+    )
 
 __all__ = [
     "AudioDecoderDegradation",

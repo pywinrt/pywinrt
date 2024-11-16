@@ -7,6 +7,11 @@ from winrt._winrt_windows_web import (
     WebError,
     IUriToStreamResolver,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_web import (
+        ImplementsIUriToStreamResolver,
+    )
 
 __all__ = [
     "WebErrorStatus",

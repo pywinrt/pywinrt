@@ -29,6 +29,12 @@ from winrt._winrt_windows_devices_enumeration import (
     IDeviceEnumerationSettings,
     IDevicePairingSettings,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_enumeration import (
+        ImplementsIDeviceEnumerationSettings,
+        ImplementsIDevicePairingSettings,
+    )
 
 __all__ = [
     "DeviceAccessStatus",

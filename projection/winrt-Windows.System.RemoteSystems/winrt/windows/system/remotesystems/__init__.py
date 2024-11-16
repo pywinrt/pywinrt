@@ -46,6 +46,11 @@ from winrt._winrt_windows_system_remotesystems import (
     RemoteSystemWebAccountFilter,
     IRemoteSystemFilter,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_system_remotesystems import (
+        ImplementsIRemoteSystemFilter,
+    )
 
 __all__ = [
     "RemoteSystemAccessStatus",

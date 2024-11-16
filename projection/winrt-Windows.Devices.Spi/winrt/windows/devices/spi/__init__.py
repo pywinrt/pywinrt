@@ -10,6 +10,11 @@ from winrt._winrt_windows_devices_spi import (
     SpiDevice,
     ISpiDeviceStatics,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_spi import (
+        ImplementsISpiDeviceStatics,
+    )
 
 __all__ = [
     "SpiMode",

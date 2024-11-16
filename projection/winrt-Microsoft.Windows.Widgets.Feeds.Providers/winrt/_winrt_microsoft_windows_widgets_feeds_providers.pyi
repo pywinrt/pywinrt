@@ -78,7 +78,7 @@ class FeedManager_Static(type):
     def get_default(cls) -> FeedManager: ...
 
 @typing.final
-class FeedManager(IFeedManager2, IFeedManager, winrt.system.Object, metaclass=FeedManager_Static):
+class FeedManager(winrt.system.Object, ImplementsIFeedManager2, ImplementsIFeedManager, metaclass=FeedManager_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FeedManager: ...
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
@@ -159,7 +159,7 @@ class FeedResourceRequestedArgs(winrt.system.Object):
 class FeedResourceResponse(winrt.system.Object):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> FeedResourceResponse: ...
-    def __new__(cls: typing.Type[FeedResourceResponse], content: windows_storage_streams.IRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> FeedResourceResponse: ...
+    def __new__(cls: typing.Type[FeedResourceResponse], content: windows_storage_streams.ImplementsIRandomAccessStreamReference, reason_phrase: str, status_code: winrt.system.Int32) -> FeedResourceResponse: ...
     @_property
     def headers(self) -> typing.Iterable[windows_foundation_collections.IKeyValuePair[str, str]]: ...
     @headers.setter
@@ -171,24 +171,36 @@ class FeedResourceResponse(winrt.system.Object):
     @_property
     def status_code(self) -> winrt.system.Int32: ...
 
-class IFeedAnnouncementInvokedTarget(winrt.system.Object):
+class ImplementsIFeedAnnouncementInvokedTarget():
+    pass
+
+class IFeedAnnouncementInvokedTarget(winrt.system.Object, ImplementsIFeedAnnouncementInvokedTarget):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedAnnouncementInvokedTarget: ...
     def on_announcement_invoked(self, args: microsoft_windows_widgets_notifications.FeedAnnouncementInvokedArgs, /) -> None: ...
 
-class IFeedManager(winrt.system.Object):
+class ImplementsIFeedManager():
+    pass
+
+class IFeedManager(winrt.system.Object, ImplementsIFeedManager):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedManager: ...
     def get_enabled_feed_providers(self) -> winrt.system.Array[FeedProviderInfo]: ...
     def set_custom_query_parameters(self, options: CustomQueryParametersUpdateOptions, /) -> None: ...
 
-class IFeedManager2(winrt.system.Object):
+class ImplementsIFeedManager2():
+    pass
+
+class IFeedManager2(winrt.system.Object, ImplementsIFeedManager2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedManager2: ...
     def send_message_to_content(self, feed_provider_definition_id: str, feed_definition_id: str, message: str, /) -> None: ...
     def try_show_announcement(self, feed_provider_definition_id: str, feed_definition_id: str, announcement: microsoft_windows_widgets_notifications.FeedAnnouncement, /) -> None: ...
 
-class IFeedProvider(winrt.system.Object):
+class ImplementsIFeedProvider():
+    pass
+
+class IFeedProvider(winrt.system.Object, ImplementsIFeedProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProvider: ...
     def on_custom_query_parameters_requested(self, args: CustomQueryParametersRequestedArgs, /) -> None: ...
@@ -197,22 +209,34 @@ class IFeedProvider(winrt.system.Object):
     def on_feed_provider_disabled(self, args: FeedProviderDisabledArgs, /) -> None: ...
     def on_feed_provider_enabled(self, args: FeedProviderEnabledArgs, /) -> None: ...
 
-class IFeedProviderAnalytics(winrt.system.Object):
+class ImplementsIFeedProviderAnalytics():
+    pass
+
+class IFeedProviderAnalytics(winrt.system.Object, ImplementsIFeedProviderAnalytics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderAnalytics: ...
     def on_analytics_info_reported(self, args: FeedAnalyticsInfoReportedArgs, /) -> None: ...
 
-class IFeedProviderErrors(winrt.system.Object):
+class ImplementsIFeedProviderErrors():
+    pass
+
+class IFeedProviderErrors(winrt.system.Object, ImplementsIFeedProviderErrors):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderErrors: ...
     def on_error_info_reported(self, args: FeedErrorInfoReportedArgs, /) -> None: ...
 
-class IFeedProviderMessage(winrt.system.Object):
+class ImplementsIFeedProviderMessage():
+    pass
+
+class IFeedProviderMessage(winrt.system.Object, ImplementsIFeedProviderMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedProviderMessage: ...
     def on_message_received(self, args: FeedMessageReceivedArgs, /) -> None: ...
 
-class IFeedResourceProvider(winrt.system.Object):
+class ImplementsIFeedResourceProvider():
+    pass
+
+class IFeedResourceProvider(winrt.system.Object, ImplementsIFeedResourceProvider):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IFeedResourceProvider: ...
     def on_resource_requested(self, args: FeedResourceRequestedArgs, /) -> None: ...

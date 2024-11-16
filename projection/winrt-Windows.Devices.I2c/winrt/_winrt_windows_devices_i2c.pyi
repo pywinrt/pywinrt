@@ -43,7 +43,7 @@ class I2cConnectionSettings(winrt.system.Object):
 
 @typing.final
 class I2cController_Static(type):
-    def get_controllers_async(cls, provider: windows_devices_i2c_provider.II2cProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[I2cController]]: ...
+    def get_controllers_async(cls, provider: windows_devices_i2c_provider.ImplementsII2cProvider, /) -> windows_foundation.IAsyncOperation[typing.Sequence[I2cController]]: ...
     def get_default_async(cls) -> windows_foundation.IAsyncOperation[I2cController]: ...
 
 @typing.final
@@ -59,7 +59,7 @@ class I2cDevice_Static(type):
     def get_device_selector_from_friendly_name(cls, friendly_name: str, /) -> str: ...
 
 @typing.final
-class I2cDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=I2cDevice_Static):
+class I2cDevice(winrt.system.Object, windows_foundation.ImplementsIClosable, metaclass=I2cDevice_Static):
     def __enter__(self: Self) -> Self: ...
     def __exit__(self, *args) -> None: ...
     @staticmethod
@@ -76,7 +76,10 @@ class I2cDevice(windows_foundation.IClosable, winrt.system.Object, metaclass=I2c
     @_property
     def device_id(self) -> str: ...
 
-class II2cDeviceStatics(winrt.system.Object):
+class ImplementsII2cDeviceStatics():
+    pass
+
+class II2cDeviceStatics(winrt.system.Object, ImplementsII2cDeviceStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> II2cDeviceStatics: ...
     def from_id_async(self, device_id: str, settings: I2cConnectionSettings, /) -> windows_foundation.IAsyncOperation[I2cDevice]: ...

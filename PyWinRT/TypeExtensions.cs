@@ -328,7 +328,8 @@ static class TypeExtensions
         this TypeReference type,
         string ns,
         IReadOnlyDictionary<GenericParameter, TypeReference>? map = default,
-        bool quoteImportedTypes = false
+        bool quoteImportedTypes = false,
+        bool implementsInterface = false
     ) =>
         type switch
         {
@@ -353,7 +354,7 @@ static class TypeExtensions
                 when gen.ElementType.FullName == "Windows.Foundation.Collections.IMapView`2"
                 => $"typing.Mapping[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map, quoteImportedTypes)))}]",
             GenericInstanceType gen
-                => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
+                => $"{(gen.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{gen.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{gen.Name.ToNonGeneric()}[{string.Join(", ", gen.GenericArguments.Select(p => p.ToPyTypeName(ns, map)))}]{(gen.Namespace != ns && quoteImportedTypes ? "\"" : "")}",
             ByReferenceType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
             OptionalModifierType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
             ArrayType t => t.ElementType.ToPyTypeName(ns, map, quoteImportedTypes),
@@ -376,7 +377,7 @@ static class TypeExtensions
             { FullName: "Windows.Foundation.DateTime" } => "datetime.datetime",
             { FullName: "Windows.Foundation.TimeSpan" } => "datetime.timedelta",
             _
-                => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
+                => $"{(type.Namespace == ns ? "" : $"{(quoteImportedTypes ? "\"" : "")}{type.Namespace.ToPyModuleAlias()}.")}{(implementsInterface ? "Implements" : "")}{type.Name.ToNonGeneric()}{(type.Namespace != ns && quoteImportedTypes ? "\"" : "")}"
         };
 
     public static string ToPyInParamTyping(
@@ -387,7 +388,13 @@ static class TypeExtensions
     ) =>
         param.GetCategory() switch
         {
-            ParamCategory.In => param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes),
+            ParamCategory.In
+                => param.ParameterType.ToPyTypeName(
+                    ns,
+                    map,
+                    quoteImportedTypes,
+                    implementsInterface: TryResolve(param.ParameterType)?.IsInterface ?? false
+                ),
             ParamCategory.PassArray
                 => $"typing.Union[winrt.system.Array[{param.ParameterType.ToPyTypeName(ns, map, quoteImportedTypes)}], winrt.system.ReadableBuffer]",
             ParamCategory.FillArray

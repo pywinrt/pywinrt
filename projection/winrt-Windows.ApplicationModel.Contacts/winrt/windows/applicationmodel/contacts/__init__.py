@@ -57,6 +57,14 @@ from winrt._winrt_windows_applicationmodel_contacts import (
     IContactInstantMessageFieldFactory,
     IContactLocationFieldFactory,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_applicationmodel_contacts import (
+        ImplementsIContactField,
+        ImplementsIContactFieldFactory,
+        ImplementsIContactInstantMessageFieldFactory,
+        ImplementsIContactLocationFieldFactory,
+    )
 
 __all__ = [
     "ContactAddressKind",

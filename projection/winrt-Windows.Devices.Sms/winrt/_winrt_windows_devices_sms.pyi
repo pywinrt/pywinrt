@@ -28,7 +28,7 @@ class SmsEncodedLength:
     def __init__(self, segment_count: winrt.system.UInt32 = 0, character_count_last_segment: winrt.system.UInt32 = 0, characters_per_segment: winrt.system.UInt32 = 0, byte_count_last_segment: winrt.system.UInt32 = 0, bytes_per_segment: winrt.system.UInt32 = 0) -> None: ...
 
 @typing.final
-class DeleteSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+class DeleteSmsMessageOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncAction, windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeleteSmsMessageOperation: ...
@@ -47,7 +47,7 @@ class DeleteSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundat
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
-class DeleteSmsMessagesOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+class DeleteSmsMessagesOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncAction, windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DeleteSmsMessagesOperation: ...
@@ -66,7 +66,7 @@ class DeleteSmsMessagesOperation(windows_foundation.IAsyncAction, windows_founda
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
-class GetSmsDeviceOperation(windows_foundation.IAsyncOperation[SmsDevice], windows_foundation.IAsyncInfo, winrt.system.Object):
+class GetSmsDeviceOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncOperation[SmsDevice], windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, SmsDevice]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GetSmsDeviceOperation: ...
@@ -85,7 +85,7 @@ class GetSmsDeviceOperation(windows_foundation.IAsyncOperation[SmsDevice], windo
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[SmsDevice]) -> None: ...
 
 @typing.final
-class GetSmsMessageOperation(windows_foundation.IAsyncOperation[ISmsMessage], windows_foundation.IAsyncInfo, winrt.system.Object):
+class GetSmsMessageOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncOperation[ISmsMessage], windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, ISmsMessage]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GetSmsMessageOperation: ...
@@ -104,7 +104,7 @@ class GetSmsMessageOperation(windows_foundation.IAsyncOperation[ISmsMessage], wi
     def completed(self, value: windows_foundation.AsyncOperationCompletedHandler[ISmsMessage]) -> None: ...
 
 @typing.final
-class GetSmsMessagesOperation(windows_foundation.IAsyncOperationWithProgress[typing.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.IAsyncInfo, winrt.system.Object):
+class GetSmsMessagesOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncOperationWithProgress[typing.Sequence[ISmsMessage], winrt.system.Int32], windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, typing.Sequence[ISmsMessage]]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> GetSmsMessagesOperation: ...
@@ -127,7 +127,7 @@ class GetSmsMessagesOperation(windows_foundation.IAsyncOperationWithProgress[typ
     def completed(self, value: windows_foundation.AsyncOperationWithProgressCompletedHandler[typing.Sequence[ISmsMessage], winrt.system.Int32]) -> None: ...
 
 @typing.final
-class SendSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundation.IAsyncInfo, winrt.system.Object):
+class SendSmsMessageOperation(winrt.system.Object, windows_foundation.ImplementsIAsyncAction, windows_foundation.ImplementsIAsyncInfo):
     def __await__(self) -> typing.Generator[typing.Any, None, None]: ...
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SendSmsMessageOperation: ...
@@ -146,7 +146,7 @@ class SendSmsMessageOperation(windows_foundation.IAsyncAction, windows_foundatio
     def completed(self, value: windows_foundation.AsyncActionCompletedHandler) -> None: ...
 
 @typing.final
-class SmsAppMessage(ISmsMessageBase, winrt.system.Object):
+class SmsAppMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsAppMessage: ...
     def __new__(cls: typing.Type[SmsAppMessage]) -> SmsAppMessage: ...
@@ -206,7 +206,7 @@ class SmsAppMessage(ISmsMessageBase, winrt.system.Object):
     def sim_icc_id(self) -> str: ...
 
 @typing.final
-class SmsBinaryMessage(ISmsBinaryMessage, ISmsMessage, winrt.system.Object):
+class SmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsBinaryMessage: ...
     def __new__(cls: typing.Type[SmsBinaryMessage]) -> SmsBinaryMessage: ...
@@ -224,7 +224,7 @@ class SmsBinaryMessage(ISmsBinaryMessage, ISmsMessage, winrt.system.Object):
     def message_class(self) -> SmsMessageClass: ...
 
 @typing.final
-class SmsBroadcastMessage(ISmsMessageBase, winrt.system.Object):
+class SmsBroadcastMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsBroadcastMessage: ...
     @_property
@@ -270,13 +270,13 @@ class SmsDevice_Static(type):
     def get_device_selector(cls) -> str: ...
 
 @typing.final
-class SmsDevice(ISmsDevice, winrt.system.Object, metaclass=SmsDevice_Static):
+class SmsDevice(winrt.system.Object, ImplementsISmsDevice, metaclass=SmsDevice_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsDevice: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
-    def send_message_async(self, message: ISmsMessage, /) -> SendSmsMessageOperation: ...
+    def send_message_async(self, message: ImplementsISmsMessage, /) -> SendSmsMessageOperation: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def add_sms_device_status_changed(self, event_handler: SmsDeviceStatusChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
@@ -305,8 +305,8 @@ class SmsDevice2_Static(type):
 class SmsDevice2(winrt.system.Object, metaclass=SmsDevice2_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsDevice2: ...
-    def calculate_length(self, message: ISmsMessageBase, /) -> SmsEncodedLength: ...
-    def send_message_and_get_result_async(self, message: ISmsMessageBase, /) -> windows_foundation.IAsyncOperation[SmsSendMessageResult]: ...
+    def calculate_length(self, message: ImplementsISmsMessageBase, /) -> SmsEncodedLength: ...
+    def send_message_and_get_result_async(self, message: ImplementsISmsMessageBase, /) -> windows_foundation.IAsyncOperation[SmsSendMessageResult]: ...
     def add_device_status_changed(self, event_handler: windows_foundation.TypedEventHandler[SmsDevice2, winrt.system.Object], /) -> windows_foundation.EventRegistrationToken: ...
     def remove_device_status_changed(self, event_cookie: windows_foundation.EventRegistrationToken, /) -> None: ...
     @_property
@@ -462,7 +462,7 @@ class SmsSendMessageResult(winrt.system.Object):
     def transport_failure_cause(self) -> winrt.system.Int32: ...
 
 @typing.final
-class SmsStatusMessage(ISmsMessageBase, winrt.system.Object):
+class SmsStatusMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsStatusMessage: ...
     @_property
@@ -498,7 +498,7 @@ class SmsTextMessage_Static(type):
     def from_binary_message(cls, binary_message: SmsBinaryMessage, /) -> SmsTextMessage: ...
 
 @typing.final
-class SmsTextMessage(ISmsTextMessage, ISmsMessage, winrt.system.Object, metaclass=SmsTextMessage_Static):
+class SmsTextMessage(winrt.system.Object, ImplementsISmsTextMessage, ImplementsISmsMessage, metaclass=SmsTextMessage_Static):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsTextMessage: ...
     def __new__(cls: typing.Type[SmsTextMessage]) -> SmsTextMessage: ...
@@ -534,7 +534,7 @@ class SmsTextMessage(ISmsTextMessage, ISmsMessage, winrt.system.Object, metaclas
     def timestamp(self) -> datetime.datetime: ...
 
 @typing.final
-class SmsTextMessage2(ISmsMessageBase, winrt.system.Object):
+class SmsTextMessage2(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsTextMessage2: ...
     def __new__(cls: typing.Type[SmsTextMessage2]) -> SmsTextMessage2: ...
@@ -582,7 +582,7 @@ class SmsTextMessage2(ISmsMessageBase, winrt.system.Object):
     def teleservice_id(self) -> winrt.system.Int32: ...
 
 @typing.final
-class SmsVoicemailMessage(ISmsMessageBase, winrt.system.Object):
+class SmsVoicemailMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsVoicemailMessage: ...
     @_property
@@ -605,7 +605,7 @@ class SmsVoicemailMessage(ISmsMessageBase, winrt.system.Object):
     def to(self) -> str: ...
 
 @typing.final
-class SmsWapMessage(ISmsMessageBase, winrt.system.Object):
+class SmsWapMessage(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SmsWapMessage: ...
     @_property
@@ -633,7 +633,10 @@ class SmsWapMessage(ISmsMessageBase, winrt.system.Object):
     @_property
     def to(self) -> str: ...
 
-class ISmsBinaryMessage(ISmsMessage, winrt.system.Object):
+class ImplementsISmsBinaryMessage():
+    pass
+
+class ISmsBinaryMessage(winrt.system.Object, ImplementsISmsBinaryMessage, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsBinaryMessage: ...
     # @deprecated("SmsBinaryMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsAppMessage.")
@@ -649,13 +652,16 @@ class ISmsBinaryMessage(ISmsMessage, winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
-class ISmsDevice(winrt.system.Object):
+class ImplementsISmsDevice():
+    pass
+
+class ISmsDevice(winrt.system.Object, ImplementsISmsDevice):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsDevice: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def calculate_length(self, message: SmsTextMessage, /) -> SmsEncodedLength: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
-    def send_message_async(self, message: ISmsMessage, /) -> SendSmsMessageOperation: ...
+    def send_message_async(self, message: ImplementsISmsMessage, /) -> SendSmsMessageOperation: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
     def add_sms_device_status_changed(self, event_handler: SmsDeviceStatusChangedEventHandler, /) -> windows_foundation.EventRegistrationToken: ...
     # @deprecated("SmsDevice may be altered or unavailable for releases after Windows 10. Instead, use SmsDevice2.")
@@ -673,7 +679,10 @@ class ISmsDevice(winrt.system.Object):
     @_property
     def message_store(self) -> SmsDeviceMessageStore: ...
 
-class ISmsMessage(winrt.system.Object):
+class ImplementsISmsMessage():
+    pass
+
+class ISmsMessage(winrt.system.Object, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessage: ...
     @_property
@@ -681,7 +690,10 @@ class ISmsMessage(winrt.system.Object):
     @_property
     def message_class(self) -> SmsMessageClass: ...
 
-class ISmsMessageBase(winrt.system.Object):
+class ImplementsISmsMessageBase():
+    pass
+
+class ISmsMessageBase(winrt.system.Object, ImplementsISmsMessageBase):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsMessageBase: ...
     @_property
@@ -695,7 +707,10 @@ class ISmsMessageBase(winrt.system.Object):
     @_property
     def sim_icc_id(self) -> str: ...
 
-class ISmsTextMessage(ISmsMessage, winrt.system.Object):
+class ImplementsISmsTextMessage():
+    pass
+
+class ISmsTextMessage(winrt.system.Object, ImplementsISmsTextMessage, ImplementsISmsMessage):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISmsTextMessage: ...
     # @deprecated("SmsTextMessage may be altered or unavailable for releases after Windows 10. Instead, use SmsTextMessage2.")

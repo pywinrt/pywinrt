@@ -32,6 +32,14 @@ from winrt._winrt_windows_media import (
     IMediaMarker,
     IMediaMarkers,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_media import (
+        ImplementsIMediaExtension,
+        ImplementsIMediaFrame,
+        ImplementsIMediaMarker,
+        ImplementsIMediaMarkers,
+    )
 
 __all__ = [
     "AudioBufferAccessMode",

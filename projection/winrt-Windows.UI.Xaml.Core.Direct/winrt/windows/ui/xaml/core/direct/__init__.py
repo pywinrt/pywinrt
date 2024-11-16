@@ -7,6 +7,11 @@ from winrt._winrt_windows_ui_xaml_core_direct import (
     XamlDirect,
     IXamlDirectObject,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml_core_direct import (
+        ImplementsIXamlDirectObject,
+    )
 
 __all__ = [
     "XamlEventIndex",

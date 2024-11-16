@@ -198,7 +198,7 @@ class WindowTabGroup(winrt.system.Object):
 class WindowTabIcon_Static(type):
     def create_from_font_glyph(cls, glyph: str, font_family: str, /) -> WindowTabIcon: ...
     def create_from_font_glyph_with_uri(cls, glyph: str, font_family: str, font_uri: windows_foundation.Uri, /) -> WindowTabIcon: ...
-    def create_from_image(cls, image: windows_storage_streams.IRandomAccessStreamReference, /) -> WindowTabIcon: ...
+    def create_from_image(cls, image: windows_storage_streams.ImplementsIRandomAccessStreamReference, /) -> WindowTabIcon: ...
 
 @typing.final
 class WindowTabIcon(winrt.system.Object, metaclass=WindowTabIcon_Static):
@@ -262,12 +262,18 @@ class WindowTabThumbnailRequestedEventArgs(winrt.system.Object):
     @_property
     def tab(self) -> WindowTab: ...
 
-class IAdaptiveCard(winrt.system.Object):
+class ImplementsIAdaptiveCard():
+    pass
+
+class IAdaptiveCard(winrt.system.Object, ImplementsIAdaptiveCard):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCard: ...
     def to_json(self) -> str: ...
 
-class IAdaptiveCardBuilderStatics(winrt.system.Object):
+class ImplementsIAdaptiveCardBuilderStatics():
+    pass
+
+class IAdaptiveCardBuilderStatics(winrt.system.Object, ImplementsIAdaptiveCardBuilderStatics):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IAdaptiveCardBuilderStatics: ...
     def create_adaptive_card_from_json(self, value: str, /) -> IAdaptiveCard: ...

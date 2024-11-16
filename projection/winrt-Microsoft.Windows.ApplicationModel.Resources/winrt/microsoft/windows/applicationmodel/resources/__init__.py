@@ -14,6 +14,12 @@ from winrt._winrt_microsoft_windows_applicationmodel_resources import (
     IResourceContext,
     IResourceManager,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_microsoft_windows_applicationmodel_resources import (
+        ImplementsIResourceContext,
+        ImplementsIResourceManager,
+    )
 
 __all__ = [
     "ResourceCandidateKind",

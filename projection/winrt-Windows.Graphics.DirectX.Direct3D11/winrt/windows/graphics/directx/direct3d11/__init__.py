@@ -9,6 +9,12 @@ from winrt._winrt_windows_graphics_directx_direct3d11 import (
     IDirect3DDevice,
     IDirect3DSurface,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_graphics_directx_direct3d11 import (
+        ImplementsIDirect3DDevice,
+        ImplementsIDirect3DSurface,
+    )
 
 __all__ = [
     "Direct3DBindings",

@@ -50,6 +50,22 @@ from winrt._winrt_windows_networking_vpn import (
     IVpnProfile,
     IVpnRouteFactory,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_networking_vpn import (
+        ImplementsIVpnChannelStatics,
+        ImplementsIVpnCredential,
+        ImplementsIVpnCustomPrompt,
+        ImplementsIVpnCustomPromptElement,
+        ImplementsIVpnDomainNameInfoFactory,
+        ImplementsIVpnInterfaceIdFactory,
+        ImplementsIVpnNamespaceInfoFactory,
+        ImplementsIVpnPacketBufferFactory,
+        ImplementsIVpnPlugIn,
+        ImplementsIVpnPlugInReconnectTransport,
+        ImplementsIVpnProfile,
+        ImplementsIVpnRouteFactory,
+    )
 
 __all__ = [
     "VpnAppIdType",

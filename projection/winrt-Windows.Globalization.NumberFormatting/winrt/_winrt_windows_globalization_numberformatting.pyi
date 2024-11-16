@@ -17,7 +17,7 @@ from winrt.windows.globalization.numberformatting import CurrencyFormatterMode, 
 Self = typing.TypeVar('Self')
 
 @typing.final
-class CurrencyFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
+class CurrencyFormatter(winrt.system.Object, ImplementsISignedZeroOption, ImplementsINumberRounderOption, ImplementsISignificantDigitsOption, ImplementsINumberParser, ImplementsINumberFormatter2, ImplementsINumberFormatter, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> CurrencyFormatter: ...
     @typing.overload
@@ -81,7 +81,7 @@ class CurrencyFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDig
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class DecimalFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
+class DecimalFormatter(winrt.system.Object, ImplementsISignedZeroOption, ImplementsINumberRounderOption, ImplementsISignificantDigitsOption, ImplementsINumberParser, ImplementsINumberFormatter2, ImplementsINumberFormatter, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> DecimalFormatter: ...
     @typing.overload
@@ -136,7 +136,7 @@ class DecimalFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigi
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class IncrementNumberRounder(INumberRounder, winrt.system.Object):
+class IncrementNumberRounder(winrt.system.Object, ImplementsINumberRounder):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> IncrementNumberRounder: ...
     def __new__(cls: typing.Type[IncrementNumberRounder]) -> IncrementNumberRounder: ...
@@ -174,7 +174,7 @@ class NumeralSystemTranslator(winrt.system.Object):
     def resolved_language(self) -> str: ...
 
 @typing.final
-class PercentFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
+class PercentFormatter(winrt.system.Object, ImplementsISignedZeroOption, ImplementsINumberRounderOption, ImplementsISignificantDigitsOption, ImplementsINumberParser, ImplementsINumberFormatter2, ImplementsINumberFormatter, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PercentFormatter: ...
     @typing.overload
@@ -229,7 +229,7 @@ class PercentFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigi
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class PermilleFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDigitsOption, INumberParser, INumberFormatter2, INumberFormatter, INumberFormatterOptions, winrt.system.Object):
+class PermilleFormatter(winrt.system.Object, ImplementsISignedZeroOption, ImplementsINumberRounderOption, ImplementsISignificantDigitsOption, ImplementsINumberParser, ImplementsINumberFormatter2, ImplementsINumberFormatter, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> PermilleFormatter: ...
     @typing.overload
@@ -284,7 +284,7 @@ class PermilleFormatter(ISignedZeroOption, INumberRounderOption, ISignificantDig
     def significant_digits(self, value: winrt.system.Int32) -> None: ...
 
 @typing.final
-class SignificantDigitsNumberRounder(INumberRounder, winrt.system.Object):
+class SignificantDigitsNumberRounder(winrt.system.Object, ImplementsINumberRounder):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> SignificantDigitsNumberRounder: ...
     def __new__(cls: typing.Type[SignificantDigitsNumberRounder]) -> SignificantDigitsNumberRounder: ...
@@ -303,21 +303,30 @@ class SignificantDigitsNumberRounder(INumberRounder, winrt.system.Object):
     @rounding_algorithm.setter
     def rounding_algorithm(self, value: RoundingAlgorithm) -> None: ...
 
-class INumberFormatter(winrt.system.Object):
+class ImplementsINumberFormatter():
+    pass
+
+class INumberFormatter(winrt.system.Object, ImplementsINumberFormatter):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter: ...
     def format_double(self, value: winrt.system.Double, /) -> str: ...
     def format_int(self, value: winrt.system.Int64, /) -> str: ...
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
-class INumberFormatter2(winrt.system.Object):
+class ImplementsINumberFormatter2():
+    pass
+
+class INumberFormatter2(winrt.system.Object, ImplementsINumberFormatter2):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatter2: ...
     def format_double(self, value: winrt.system.Double, /) -> str: ...
     def format_int(self, value: winrt.system.Int64, /) -> str: ...
     def format_uint(self, value: winrt.system.UInt64, /) -> str: ...
 
-class INumberFormatterOptions(winrt.system.Object):
+class ImplementsINumberFormatterOptions():
+    pass
+
+class INumberFormatterOptions(winrt.system.Object, ImplementsINumberFormatterOptions):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberFormatterOptions: ...
     @_property
@@ -349,14 +358,20 @@ class INumberFormatterOptions(winrt.system.Object):
     @_property
     def resolved_language(self) -> str: ...
 
-class INumberParser(winrt.system.Object):
+class ImplementsINumberParser():
+    pass
+
+class INumberParser(winrt.system.Object, ImplementsINumberParser):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberParser: ...
     def parse_double(self, text: str, /) -> typing.Optional[winrt.system.Double]: ...
     def parse_int(self, text: str, /) -> typing.Optional[winrt.system.Int64]: ...
     def parse_uint(self, text: str, /) -> typing.Optional[winrt.system.UInt64]: ...
 
-class INumberRounder(winrt.system.Object):
+class ImplementsINumberRounder():
+    pass
+
+class INumberRounder(winrt.system.Object, ImplementsINumberRounder):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounder: ...
     def round_double(self, value: winrt.system.Double, /) -> winrt.system.Double: ...
@@ -366,7 +381,10 @@ class INumberRounder(winrt.system.Object):
     def round_uint32(self, value: winrt.system.UInt32, /) -> winrt.system.UInt32: ...
     def round_uint64(self, value: winrt.system.UInt64, /) -> winrt.system.UInt64: ...
 
-class INumberRounderOption(winrt.system.Object):
+class ImplementsINumberRounderOption():
+    pass
+
+class INumberRounderOption(winrt.system.Object, ImplementsINumberRounderOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> INumberRounderOption: ...
     @_property
@@ -374,7 +392,10 @@ class INumberRounderOption(winrt.system.Object):
     @number_rounder.setter
     def number_rounder(self, value: INumberRounder) -> None: ...
 
-class ISignedZeroOption(winrt.system.Object):
+class ImplementsISignedZeroOption():
+    pass
+
+class ISignedZeroOption(winrt.system.Object, ImplementsISignedZeroOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignedZeroOption: ...
     @_property
@@ -382,7 +403,10 @@ class ISignedZeroOption(winrt.system.Object):
     @is_zero_signed.setter
     def is_zero_signed(self, value: bool) -> None: ...
 
-class ISignificantDigitsOption(winrt.system.Object):
+class ImplementsISignificantDigitsOption():
+    pass
+
+class ISignificantDigitsOption(winrt.system.Object, ImplementsISignificantDigitsOption):
     @staticmethod
     def _from(obj: winrt.system.Object, /) -> ISignificantDigitsOption: ...
     @_property

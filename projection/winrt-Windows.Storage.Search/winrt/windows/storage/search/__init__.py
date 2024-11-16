@@ -20,6 +20,13 @@ from winrt._winrt_windows_storage_search import (
     IStorageFolderQueryOperations,
     IStorageQueryResultBase,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_storage_search import (
+        ImplementsIIndexableContent,
+        ImplementsIStorageFolderQueryOperations,
+        ImplementsIStorageQueryResultBase,
+    )
 
 __all__ = [
     "CommonFileQuery",

@@ -6,6 +6,11 @@ from winrt._winrt_windows_devices import (
     LowLevelDevicesController,
     ILowLevelDevicesAggregateProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices import (
+        ImplementsILowLevelDevicesAggregateProvider,
+    )
 
 __all__ = [
     "LowLevelDevicesAggregateProvider",

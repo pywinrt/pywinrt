@@ -16,6 +16,11 @@ from winrt._winrt_windows_ai_machinelearning_preview import (
     TensorVariableDescriptorPreview,
     ILearningModelVariableDescriptorPreview,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ai_machinelearning_preview import (
+        ImplementsILearningModelVariableDescriptorPreview,
+    )
 
 __all__ = [
     "FeatureElementKindPreview",

@@ -116,6 +116,12 @@ if TYPE_CHECKING:
         VisualStateManager_Static,
         VisualTransition_Static,
     )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_ui_xaml import (
+        ImplementsIDataTemplateExtension,
+        ImplementsIElementFactory,
+    )
 
 if typing.TYPE_CHECKING:
     import winrt.windows.applicationmodel as windows_applicationmodel

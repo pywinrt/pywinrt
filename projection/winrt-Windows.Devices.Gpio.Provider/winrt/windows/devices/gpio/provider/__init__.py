@@ -9,6 +9,13 @@ from winrt._winrt_windows_devices_gpio_provider import (
     IGpioPinProvider,
     IGpioProvider,
 )
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from winrt._winrt_windows_devices_gpio_provider import (
+        ImplementsIGpioControllerProvider,
+        ImplementsIGpioPinProvider,
+        ImplementsIGpioProvider,
+    )
 
 __all__ = [
     "ProviderGpioPinDriveMode",
