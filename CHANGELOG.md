@@ -10,16 +10,17 @@
 - Added new `box_...()` and `unbox_...()` functions to `winrt.system`.
 
 ### Changed
-- [BREAKING] Use `[Windows.Foundation.Metadata.Overload]` attribute for method
+- BREAKING: Use `[Windows.Foundation.Metadata.Overload]` attribute for method
   names when available. This exposes some APIs that otherwise could not be called
   but also renames many existing methods.
-- Use more informative error messages when raising `WinError`.
+- Use more informative error messages, if available, when raising `WinError`.
 - Type hints are no longer `typing.Optional` by default.
 - `winrt.windows.foundation.IVector[T]` input parameters now accept any `typing.MutableSequence[T]`.
 - `winrt.windows.foundation.IVectorView[T]` input parameters now accept any `typing.Sequence[T]`.
 - `winrt.windows.foundation.IMap[K, V]` input parameters now accept any `typing.MutableMapping[K, V]`.
 - `winrt.windows.foundation.IMapView[K, V]` input parameters now accept any `typing.Mapping[K, V]`.
 - Implemented type hints for interface inheritance ([#80]).
+- Implemented proper inheritance of composable classes ([#25]).
 
 ### Fixed
 - Fixed `AttributeError` when calling `winrt.microsoft.web.webview2.core` object members.
@@ -28,6 +29,7 @@
 ### Removed
 - BREAKING: Removed `winrt.windows.foundation.interop` module.
 
+[#25]: https://github.com/pywinrt/pywinrt/issues/25
 [#80]: https://github.com/pywinrt/pywinrt/issues/80
 
 ## [v2.3.0] - 2024-10-19
