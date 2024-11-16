@@ -35610,6 +35610,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
+    py::pyobj_handle type_RangeBase_Static{PyType_FromSpec(&type_spec_RangeBase_Static)};
+    if (!type_RangeBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RangeBase_type{py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get()))};
+    if (!RangeBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_ColorSpectrum_Static{PyType_FromSpec(&type_spec_ColorSpectrum_Static)};
     if (!type_ColorSpectrum_Static)
     {
@@ -36012,18 +36024,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_RangeBase_Static{PyType_FromSpec(&type_spec_RangeBase_Static)};
-    if (!type_RangeBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle RangeBase_type{py::register_python_type(module.get(), &type_spec_RangeBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RangeBase_Static.get()))};
-    if (!RangeBase_type)
-    {
-        return nullptr;
-    }
-
     py::pytype_handle RangeBaseValueChangedEventArgs_type{py::register_python_type(module.get(), &type_spec_RangeBaseValueChangedEventArgs, object_bases.get(), nullptr)};
     if (!RangeBaseValueChangedEventArgs_type)
     {
@@ -36042,6 +36042,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
+    py::pyobj_handle type_SnapPointBase_Static{PyType_FromSpec(&type_spec_SnapPointBase_Static)};
+    if (!type_SnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SnapPointBase_type{py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SnapPointBase_Static.get()))};
+    if (!SnapPointBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScrollSnapPointBase_Static{PyType_FromSpec(&type_spec_ScrollSnapPointBase_Static)};
+    if (!type_ScrollSnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScrollSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollSnapPointBase_Static.get()))};
+    if (!ScrollSnapPointBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_RepeatedScrollSnapPoint_Static{PyType_FromSpec(&type_spec_RepeatedScrollSnapPoint_Static)};
     if (!type_RepeatedScrollSnapPoint_Static)
     {
@@ -36050,6 +36074,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
 
     py::pytype_handle RepeatedScrollSnapPoint_type{py::register_python_type(module.get(), &type_spec_RepeatedScrollSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RepeatedScrollSnapPoint_Static.get()))};
     if (!RepeatedScrollSnapPoint_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ZoomSnapPointBase_Static{PyType_FromSpec(&type_spec_ZoomSnapPointBase_Static)};
+    if (!type_ZoomSnapPointBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ZoomSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ZoomSnapPointBase_Static.get()))};
+    if (!ZoomSnapPointBase_type)
     {
         return nullptr;
     }
@@ -36132,18 +36168,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
         return nullptr;
     }
 
-    py::pyobj_handle type_ScrollSnapPointBase_Static{PyType_FromSpec(&type_spec_ScrollSnapPointBase_Static)};
-    if (!type_ScrollSnapPointBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle ScrollSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ScrollSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScrollSnapPointBase_Static.get()))};
-    if (!ScrollSnapPointBase_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_Selector_Static{PyType_FromSpec(&type_spec_Selector_Static)};
     if (!type_Selector_Static)
     {
@@ -36164,18 +36188,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
 
     py::pytype_handle SelectorItem_type{py::register_python_type(module.get(), &type_spec_SelectorItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SelectorItem_Static.get()))};
     if (!SelectorItem_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_SnapPointBase_Static{PyType_FromSpec(&type_spec_SnapPointBase_Static)};
-    if (!type_SnapPointBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle SnapPointBase_type{py::register_python_type(module.get(), &type_spec_SnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SnapPointBase_Static.get()))};
-    if (!SnapPointBase_type)
     {
         return nullptr;
     }
@@ -36242,18 +36254,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_controls_primitives(void) noexcep
 
     py::pytype_handle ZoomSnapPoint_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPoint, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ZoomSnapPoint_Static.get()))};
     if (!ZoomSnapPoint_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_ZoomSnapPointBase_Static{PyType_FromSpec(&type_spec_ZoomSnapPointBase_Static)};
-    if (!type_ZoomSnapPointBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle ZoomSnapPointBase_type{py::register_python_type(module.get(), &type_spec_ZoomSnapPointBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ZoomSnapPointBase_Static.get()))};
-    if (!ZoomSnapPointBase_type)
     {
         return nullptr;
     }

@@ -1245,7 +1245,8 @@ static class WriterExtensions
 
         foreach (
             var t in members
-                .Classes.Concat(members.Interfaces)
+                .Classes.OrderByDependency()
+                .Concat(members.Interfaces)
                 .Concat(members.Structs.Where(s => !s.Type.IsCustomizedStruct()))
                 .Where(t => t.CircularDependencyDepth == dependencyDepth)
         )

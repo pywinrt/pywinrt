@@ -3201,18 +3201,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
-    if (!type_BitmapImage_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
-    if (!BitmapImage_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_BitmapSource_Static{PyType_FromSpec(&type_spec_BitmapSource_Static)};
     if (!type_BitmapSource_Static)
     {
@@ -3221,6 +3209,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_media_imaging(void) noexcept
 
     py::pytype_handle BitmapSource_type{py::register_python_type(module.get(), &type_spec_BitmapSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapSource_Static.get()))};
     if (!BitmapSource_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BitmapImage_Static{PyType_FromSpec(&type_spec_BitmapImage_Static)};
+    if (!type_BitmapImage_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BitmapImage_type{py::register_python_type(module.get(), &type_spec_BitmapImage, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BitmapImage_Static.get()))};
+    if (!BitmapImage_type)
     {
         return nullptr;
     }

@@ -6344,18 +6344,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopChildSiteBridge_Static)};
-    if (!type_DesktopChildSiteBridge_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
-    if (!DesktopChildSiteBridge_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_DesktopSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopSiteBridge_Static)};
     if (!type_DesktopSiteBridge_Static)
     {
@@ -6364,6 +6352,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
 
     py::pytype_handle DesktopSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopSiteBridge_Static.get()))};
     if (!DesktopSiteBridge_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopChildSiteBridge_Static)};
+    if (!type_DesktopChildSiteBridge_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
+    if (!DesktopChildSiteBridge_type)
     {
         return nullptr;
     }

@@ -18991,6 +18991,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_CoreWebView2Controller_Static{PyType_FromSpec(&type_spec_CoreWebView2Controller_Static)};
+    if (!type_CoreWebView2Controller_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWebView2Controller_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2Controller_Static.get()))};
+    if (!CoreWebView2Controller_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle CoreWebView2CompositionController_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CompositionController, object_bases.get(), nullptr)};
     if (!CoreWebView2CompositionController_type)
     {
@@ -19017,18 +19029,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
 
     py::pytype_handle CoreWebView2ContextMenuTarget_type{py::register_python_type(module.get(), &type_spec_CoreWebView2ContextMenuTarget, object_bases.get(), nullptr)};
     if (!CoreWebView2ContextMenuTarget_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_CoreWebView2Controller_Static{PyType_FromSpec(&type_spec_CoreWebView2Controller_Static)};
-    if (!type_CoreWebView2Controller_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle CoreWebView2Controller_type{py::register_python_type(module.get(), &type_spec_CoreWebView2Controller, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CoreWebView2Controller_Static.get()))};
-    if (!CoreWebView2Controller_type)
     {
         return nullptr;
     }

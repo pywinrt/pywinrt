@@ -13533,6 +13533,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_TextElement_Static{PyType_FromSpec(&type_spec_TextElement_Static)};
+    if (!type_TextElement_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TextElement_type{py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Static.get()))};
+    if (!TextElement_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_Block_Static{PyType_FromSpec(&type_spec_Block_Static)};
     if (!type_Block_Static)
     {
@@ -13547,6 +13559,30 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
 
     py::pytype_handle BlockCollection_type{py::register_python_type(module.get(), &type_spec_BlockCollection, object_bases.get(), nullptr)};
     if (!BlockCollection_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Inline_Static{PyType_FromSpec(&type_spec_Inline_Static)};
+    if (!type_Inline_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Inline_Static.get()))};
+    if (!Inline_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Span_Static{PyType_FromSpec(&type_spec_Span_Static)};
+    if (!type_Span_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Span_Static.get()))};
+    if (!Span_type)
     {
         return nullptr;
     }
@@ -13583,18 +13619,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
 
     py::pytype_handle HyperlinkClickEventArgs_type{py::register_python_type(module.get(), &type_spec_HyperlinkClickEventArgs, object_bases.get(), nullptr)};
     if (!HyperlinkClickEventArgs_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Inline_Static{PyType_FromSpec(&type_spec_Inline_Static)};
-    if (!type_Inline_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Inline_type{py::register_python_type(module.get(), &type_spec_Inline, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Inline_Static.get()))};
-    if (!Inline_type)
     {
         return nullptr;
     }
@@ -13643,30 +13667,6 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_documents(void) noexcept
 
     py::pytype_handle Run_type{py::register_python_type(module.get(), &type_spec_Run, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Run_Static.get()))};
     if (!Run_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Span_Static{PyType_FromSpec(&type_spec_Span_Static)};
-    if (!type_Span_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Span_type{py::register_python_type(module.get(), &type_spec_Span, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Span_Static.get()))};
-    if (!Span_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_TextElement_Static{PyType_FromSpec(&type_spec_TextElement_Static)};
-    if (!type_TextElement_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle TextElement_type{py::register_python_type(module.get(), &type_spec_TextElement, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_TextElement_Static.get()))};
-    if (!TextElement_type)
     {
         return nullptr;
     }

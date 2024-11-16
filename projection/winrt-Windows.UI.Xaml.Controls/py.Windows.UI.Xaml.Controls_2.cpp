@@ -16147,6 +16147,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_Button_Static{PyType_FromSpec(&type_spec_Button_Static)};
+    if (!type_Button_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
+    if (!Button_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_AppBarButton_Static{PyType_FromSpec(&type_spec_AppBarButton_Static)};
     if (!type_AppBarButton_Static)
     {
@@ -16167,18 +16179,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle AppBarToggleButton_type{py::register_python_type(module.get(), &type_spec_AppBarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_AppBarToggleButton_Static.get()))};
     if (!AppBarToggleButton_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_Button_Static{PyType_FromSpec(&type_spec_Button_Static)};
-    if (!type_Button_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle Button_type{py::register_python_type(module.get(), &type_spec_Button, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Button_Static.get()))};
-    if (!Button_type)
     {
         return nullptr;
     }
@@ -16255,6 +16255,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpec(&type_spec_ListViewBase_Static)};
+    if (!type_ListViewBase_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
+    if (!ListViewBase_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_GridView_Static{PyType_FromSpec(&type_spec_GridView_Static)};
     if (!type_GridView_Static)
     {
@@ -16291,6 +16303,42 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle type_RadioButton_Static{PyType_FromSpec(&type_spec_RadioButton_Static)};
+    if (!type_RadioButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RadioButton_type{py::register_python_type(module.get(), &type_spec_RadioButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButton_Static.get()))};
+    if (!RadioButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarToolButton_Static{PyType_FromSpec(&type_spec_InkToolbarToolButton_Static)};
+    if (!type_InkToolbarToolButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToolButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToolButton_Static.get()))};
+    if (!InkToolbarToolButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarPenButton_Static)};
+    if (!type_InkToolbarPenButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPenButton_Static.get()))};
+    if (!InkToolbarPenButton_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_InkToolbarBallpointPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarBallpointPenButton_Static)};
     if (!type_InkToolbarBallpointPenButton_Static)
     {
@@ -16311,6 +16359,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle InkToolbarCustomPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarCustomPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarCustomPenButton_Static.get()))};
     if (!InkToolbarCustomPenButton_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InkToolbarToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarToggleButton_Static)};
+    if (!type_InkToolbarToggleButton_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToggleButton_Static.get()))};
+    if (!InkToolbarToggleButton_type)
     {
         return nullptr;
     }
@@ -16387,18 +16447,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InkToolbarPenButton_Static{PyType_FromSpec(&type_spec_InkToolbarPenButton_Static)};
-    if (!type_InkToolbarPenButton_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle InkToolbarPenButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarPenButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarPenButton_Static.get()))};
-    if (!InkToolbarPenButton_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_InkToolbarPencilButton_Static{PyType_FromSpec(&type_spec_InkToolbarPencilButton_Static)};
     if (!type_InkToolbarPencilButton_Static)
     {
@@ -16431,30 +16479,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle InkToolbarStencilButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarStencilButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarStencilButton_Static.get()))};
     if (!InkToolbarStencilButton_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_InkToolbarToggleButton_Static{PyType_FromSpec(&type_spec_InkToolbarToggleButton_Static)};
-    if (!type_InkToolbarToggleButton_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle InkToolbarToggleButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToggleButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToggleButton_Static.get()))};
-    if (!InkToolbarToggleButton_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_InkToolbarToolButton_Static{PyType_FromSpec(&type_spec_InkToolbarToolButton_Static)};
-    if (!type_InkToolbarToolButton_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle InkToolbarToolButton_type{py::register_python_type(module.get(), &type_spec_InkToolbarToolButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InkToolbarToolButton_Static.get()))};
-    if (!InkToolbarToolButton_type)
     {
         return nullptr;
     }
@@ -16495,18 +16519,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ListViewBase_Static{PyType_FromSpec(&type_spec_ListViewBase_Static)};
-    if (!type_ListViewBase_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle ListViewBase_type{py::register_python_type(module.get(), &type_spec_ListViewBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ListViewBase_Static.get()))};
-    if (!ListViewBase_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_ListViewItem_Static{PyType_FromSpec(&type_spec_ListViewItem_Static)};
     if (!type_ListViewItem_Static)
     {
@@ -16519,18 +16531,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_NavigationViewItem_Static{PyType_FromSpec(&type_spec_NavigationViewItem_Static)};
-    if (!type_NavigationViewItem_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle NavigationViewItem_type{py::register_python_type(module.get(), &type_spec_NavigationViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItem_Static.get()))};
-    if (!NavigationViewItem_type)
-    {
-        return nullptr;
-    }
-
     py::pyobj_handle type_NavigationViewItemBase_Static{PyType_FromSpec(&type_spec_NavigationViewItemBase_Static)};
     if (!type_NavigationViewItemBase_Static)
     {
@@ -16539,6 +16539,18 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle NavigationViewItemBase_type{py::register_python_type(module.get(), &type_spec_NavigationViewItemBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItemBase_Static.get()))};
     if (!NavigationViewItemBase_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_NavigationViewItem_Static{PyType_FromSpec(&type_spec_NavigationViewItem_Static)};
+    if (!type_NavigationViewItem_Static)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NavigationViewItem_type{py::register_python_type(module.get(), &type_spec_NavigationViewItem, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_NavigationViewItem_Static.get()))};
+    if (!NavigationViewItem_type)
     {
         return nullptr;
     }
@@ -16587,18 +16599,6 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_controls_2(void) noexcept
 
     py::pytype_handle ProgressBar_type{py::register_python_type(module.get(), &type_spec_ProgressBar, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ProgressBar_Static.get()))};
     if (!ProgressBar_type)
-    {
-        return nullptr;
-    }
-
-    py::pyobj_handle type_RadioButton_Static{PyType_FromSpec(&type_spec_RadioButton_Static)};
-    if (!type_RadioButton_Static)
-    {
-        return nullptr;
-    }
-
-    py::pytype_handle RadioButton_type{py::register_python_type(module.get(), &type_spec_RadioButton, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RadioButton_Static.get()))};
-    if (!RadioButton_type)
     {
         return nullptr;
     }
