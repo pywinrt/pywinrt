@@ -560,7 +560,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CommandParameter());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().CommandParameter());
         }
         catch (...)
         {
@@ -594,7 +594,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.CommandParameter(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().CommandParameter(param0);
             return 0;
         }
         catch (...)
@@ -621,7 +621,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Command());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().Command());
         }
         catch (...)
         {
@@ -655,7 +655,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ICommand>(arg);
 
-            self->obj.Command(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().Command(param0);
             return 0;
         }
         catch (...)
@@ -682,7 +682,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClickMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().ClickMode());
         }
         catch (...)
         {
@@ -716,7 +716,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ClickMode>(arg);
 
-            self->obj.ClickMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().ClickMode(param0);
             return 0;
         }
         catch (...)
@@ -743,7 +743,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPointerOver());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().IsPointerOver());
         }
         catch (...)
         {
@@ -769,7 +769,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPressed());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().IsPressed());
         }
         catch (...)
         {
@@ -927,7 +927,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.Click(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().Click(param0));
         }
         catch (...)
         {
@@ -955,7 +955,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Click(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ButtonBase>().Click(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1673,7 +1673,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
-                return py::convert(self->obj.GetIrregularSnapPoints(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().GetIrregularSnapPoints(param0, param1));
             }
             catch (...)
             {
@@ -1713,7 +1713,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
 
-                auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
+                auto return_value = self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().GetRegularSnapPoints(param0, param1, param2);
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -1761,7 +1761,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().LineDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1798,7 +1798,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().LineLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1835,7 +1835,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().LineRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1872,7 +1872,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().LineUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1912,7 +1912,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.MakeVisible(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().MakeVisible(param0, param1));
             }
             catch (...)
             {
@@ -1948,7 +1948,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1985,7 +1985,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2022,7 +2022,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2059,7 +2059,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().MouseWheelUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2096,7 +2096,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().PageDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2133,7 +2133,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().PageLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2170,7 +2170,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().PageRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2207,7 +2207,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().PageUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2246,7 +2246,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetHorizontalOffset(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().SetHorizontalOffset(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2285,7 +2285,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetVerticalOffset(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().SetVerticalOffset(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2318,7 +2318,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScrollOwner());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ScrollOwner());
         }
         catch (...)
         {
@@ -2352,7 +2352,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.ScrollOwner(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ScrollOwner(param0);
             return 0;
         }
         catch (...)
@@ -2379,7 +2379,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanVerticallyScroll());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().CanVerticallyScroll());
         }
         catch (...)
         {
@@ -2413,7 +2413,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanVerticallyScroll(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().CanVerticallyScroll(param0);
             return 0;
         }
         catch (...)
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanHorizontallyScroll());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().CanHorizontallyScroll());
         }
         catch (...)
         {
@@ -2474,7 +2474,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanHorizontallyScroll(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().CanHorizontallyScroll(param0);
             return 0;
         }
         catch (...)
@@ -2501,7 +2501,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtentHeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ExtentHeight());
         }
         catch (...)
         {
@@ -2527,7 +2527,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtentWidth());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ExtentWidth());
         }
         catch (...)
         {
@@ -2553,7 +2553,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalOffset());
         }
         catch (...)
         {
@@ -2579,7 +2579,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalOffset());
         }
         catch (...)
         {
@@ -2605,7 +2605,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewportHeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ViewportHeight());
         }
         catch (...)
         {
@@ -2631,7 +2631,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewportWidth());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().ViewportWidth());
         }
         catch (...)
         {
@@ -2657,7 +2657,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreHorizontalSnapPointsRegular());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().AreHorizontalSnapPointsRegular());
         }
         catch (...)
         {
@@ -2683,7 +2683,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreVerticalSnapPointsRegular());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().AreVerticalSnapPointsRegular());
         }
         catch (...)
         {
@@ -2711,7 +2711,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalSnapPointsChanged(param0));
         }
         catch (...)
         {
@@ -2739,7 +2739,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HorizontalSnapPointsChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().HorizontalSnapPointsChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2768,7 +2768,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.VerticalSnapPointsChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalSnapPointsChanged(param0));
         }
         catch (...)
         {
@@ -2796,7 +2796,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.VerticalSnapPointsChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CarouselPanel>().VerticalSnapPointsChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2968,7 +2968,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Shape());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Shape());
         }
         catch (...)
         {
@@ -3002,7 +3002,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorSpectrumShape>(arg);
 
-            self->obj.Shape(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Shape(param0);
             return 0;
         }
         catch (...)
@@ -3029,7 +3029,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinValue());
         }
         catch (...)
         {
@@ -3063,7 +3063,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MinValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinValue(param0);
             return 0;
         }
         catch (...)
@@ -3090,7 +3090,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinSaturation());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinSaturation());
         }
         catch (...)
         {
@@ -3124,7 +3124,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MinSaturation(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinSaturation(param0);
             return 0;
         }
         catch (...)
@@ -3151,7 +3151,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MinHue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinHue());
         }
         catch (...)
         {
@@ -3185,7 +3185,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MinHue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MinHue(param0);
             return 0;
         }
         catch (...)
@@ -3212,7 +3212,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxValue());
         }
         catch (...)
         {
@@ -3246,7 +3246,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaxValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxValue(param0);
             return 0;
         }
         catch (...)
@@ -3273,7 +3273,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxSaturation());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxSaturation());
         }
         catch (...)
         {
@@ -3307,7 +3307,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaxSaturation(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxSaturation(param0);
             return 0;
         }
         catch (...)
@@ -3334,7 +3334,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.MaxHue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxHue());
         }
         catch (...)
         {
@@ -3368,7 +3368,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MaxHue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().MaxHue(param0);
             return 0;
         }
         catch (...)
@@ -3395,7 +3395,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HsvColor());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().HsvColor());
         }
         catch (...)
         {
@@ -3429,7 +3429,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(arg);
 
-            self->obj.HsvColor(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().HsvColor(param0);
             return 0;
         }
         catch (...)
@@ -3456,7 +3456,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Components());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Components());
         }
         catch (...)
         {
@@ -3490,7 +3490,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::ColorSpectrumComponents>(arg);
 
-            self->obj.Components(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Components(param0);
             return 0;
         }
         catch (...)
@@ -3517,7 +3517,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Color());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Color());
         }
         catch (...)
         {
@@ -3551,7 +3551,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Color(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().Color(param0);
             return 0;
         }
         catch (...)
@@ -3840,7 +3840,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum, winrt::Windows::UI::Xaml::Controls::ColorChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.ColorChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().ColorChanged(param0));
         }
         catch (...)
         {
@@ -3868,7 +3868,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ColorChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ColorSpectrum>().ColorChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -4231,7 +4231,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.FlyoutTemplateSettings());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::CommandBarFlyoutCommandBar>().FlyoutTemplateSettings());
         }
         catch (...)
         {
@@ -5371,7 +5371,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Canceled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().Canceled());
         }
         catch (...)
         {
@@ -5397,7 +5397,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().HorizontalChange());
         }
         catch (...)
         {
@@ -5423,7 +5423,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragCompletedEventArgs>().VerticalChange());
         }
         catch (...)
         {
@@ -5568,7 +5568,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>().HorizontalChange());
         }
         catch (...)
         {
@@ -5594,7 +5594,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragDeltaEventArgs>().VerticalChange());
         }
         catch (...)
         {
@@ -5738,7 +5738,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs>().HorizontalOffset());
         }
         catch (...)
         {
@@ -5764,7 +5764,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::DragStartedEventArgs>().VerticalOffset());
         }
         catch (...)
         {
@@ -5925,7 +5925,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.Hide();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Hide();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6004,7 +6004,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::FrameworkElement>(args, 0);
 
-                self->obj.ShowAt(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowAt(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6033,7 +6033,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>(args, 1);
 
-                self->obj.ShowAt(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowAt(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6111,7 +6111,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ProcessKeyboardAcceleratorEventArgs>(args, 0);
 
-                self->obj.TryInvokeKeyboardAccelerator(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().TryInvokeKeyboardAccelerator(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6144,7 +6144,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Placement());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Placement());
         }
         catch (...)
         {
@@ -6178,7 +6178,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
-            self->obj.Placement(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Placement(param0);
             return 0;
         }
         catch (...)
@@ -6205,7 +6205,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.LightDismissOverlayMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().LightDismissOverlayMode());
         }
         catch (...)
         {
@@ -6239,7 +6239,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::LightDismissOverlayMode>(arg);
 
-            self->obj.LightDismissOverlayMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().LightDismissOverlayMode(param0);
             return 0;
         }
         catch (...)
@@ -6266,7 +6266,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementSoundMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ElementSoundMode());
         }
         catch (...)
         {
@@ -6300,7 +6300,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::ElementSoundMode>(arg);
 
-            self->obj.ElementSoundMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ElementSoundMode(param0);
             return 0;
         }
         catch (...)
@@ -6327,7 +6327,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowFocusWhenDisabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusWhenDisabled());
         }
         catch (...)
         {
@@ -6361,7 +6361,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowFocusWhenDisabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusWhenDisabled(param0);
             return 0;
         }
         catch (...)
@@ -6388,7 +6388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowFocusOnInteraction());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusOnInteraction());
         }
         catch (...)
         {
@@ -6422,7 +6422,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowFocusOnInteraction(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AllowFocusOnInteraction(param0);
             return 0;
         }
         catch (...)
@@ -6449,7 +6449,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Target());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Target());
         }
         catch (...)
         {
@@ -6475,7 +6475,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.OverlayInputPassThroughElement());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().OverlayInputPassThroughElement());
         }
         catch (...)
         {
@@ -6509,7 +6509,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.OverlayInputPassThroughElement(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().OverlayInputPassThroughElement(param0);
             return 0;
         }
         catch (...)
@@ -6536,7 +6536,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowMode());
         }
         catch (...)
         {
@@ -6570,7 +6570,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
-            self->obj.ShowMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShowMode(param0);
             return 0;
         }
         catch (...)
@@ -6597,7 +6597,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreOpenCloseAnimationsEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AreOpenCloseAnimationsEnabled());
         }
         catch (...)
         {
@@ -6631,7 +6631,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AreOpenCloseAnimationsEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().AreOpenCloseAnimationsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -6658,7 +6658,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.InputDevicePrefersPrimaryCommands());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().InputDevicePrefersPrimaryCommands());
         }
         catch (...)
         {
@@ -6684,7 +6684,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsOpen());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().IsOpen());
         }
         catch (...)
         {
@@ -6710,7 +6710,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.XamlRoot());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().XamlRoot());
         }
         catch (...)
         {
@@ -6744,7 +6744,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::XamlRoot>(arg);
 
-            self->obj.XamlRoot(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().XamlRoot(param0);
             return 0;
         }
         catch (...)
@@ -6771,7 +6771,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldConstrainToRootBounds());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShouldConstrainToRootBounds());
         }
         catch (...)
         {
@@ -6805,7 +6805,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldConstrainToRootBounds(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().ShouldConstrainToRootBounds(param0);
             return 0;
         }
         catch (...)
@@ -6832,7 +6832,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConstrainedToRootBounds());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().IsConstrainedToRootBounds());
         }
         catch (...)
         {
@@ -7198,7 +7198,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Closed(param0));
         }
         catch (...)
         {
@@ -7226,7 +7226,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Closed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7255,7 +7255,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Opened(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Opened(param0));
         }
         catch (...)
         {
@@ -7283,7 +7283,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Opened(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Opened(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7312,7 +7312,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Opening(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Opening(param0));
         }
         catch (...)
         {
@@ -7340,7 +7340,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Opening(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Opening(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7369,7 +7369,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase, winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBaseClosingEventArgs>>(arg);
 
-            return py::convert(self->obj.Closing(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Closing(param0));
         }
         catch (...)
         {
@@ -7397,7 +7397,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closing(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutBase>().Closing(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7706,7 +7706,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShowMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ShowMode());
         }
         catch (...)
         {
@@ -7740,7 +7740,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowMode>(arg);
 
-            self->obj.ShowMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ShowMode(param0);
             return 0;
         }
         catch (...)
@@ -7767,7 +7767,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Position());
         }
         catch (...)
         {
@@ -7801,7 +7801,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Point>>(arg);
 
-            self->obj.Position(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Position(param0);
             return 0;
         }
         catch (...)
@@ -7828,7 +7828,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Placement());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Placement());
         }
         catch (...)
         {
@@ -7862,7 +7862,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutPlacementMode>(arg);
 
-            self->obj.Placement(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().Placement(param0);
             return 0;
         }
         catch (...)
@@ -7889,7 +7889,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExclusionRect());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ExclusionRect());
         }
         catch (...)
         {
@@ -7923,7 +7923,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Rect>>(arg);
 
-            self->obj.ExclusionRect(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::FlyoutShowOptions>().ExclusionRect(param0);
             return 0;
         }
         catch (...)
@@ -8198,7 +8198,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionCheckMarkVisualEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectionCheckMarkVisualEnabled());
         }
         catch (...)
         {
@@ -8232,7 +8232,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SelectionCheckMarkVisualEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectionCheckMarkVisualEnabled(param0);
             return 0;
         }
         catch (...)
@@ -8259,7 +8259,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPointerOverBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBorderBrush());
         }
         catch (...)
         {
@@ -8293,7 +8293,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPointerOverBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -8320,7 +8320,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPointerOverBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBackground());
         }
         catch (...)
         {
@@ -8354,7 +8354,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPointerOverBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedPointerOverBackground(param0);
             return 0;
         }
         catch (...)
@@ -8381,7 +8381,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedForeground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedForeground());
         }
         catch (...)
         {
@@ -8415,7 +8415,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedForeground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedForeground(param0);
             return 0;
         }
         catch (...)
@@ -8442,7 +8442,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBorderThickness());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBorderThickness());
         }
         catch (...)
         {
@@ -8476,7 +8476,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.SelectedBorderThickness(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBorderThickness(param0);
             return 0;
         }
         catch (...)
@@ -8503,7 +8503,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBackground());
         }
         catch (...)
         {
@@ -8537,7 +8537,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().SelectedBackground(param0);
             return 0;
         }
         catch (...)
@@ -8564,7 +8564,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReorderHintOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ReorderHintOffset());
         }
         catch (...)
         {
@@ -8598,7 +8598,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ReorderHintOffset(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ReorderHintOffset(param0);
             return 0;
         }
         catch (...)
@@ -8625,7 +8625,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverBackgroundMargin());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackgroundMargin());
         }
         catch (...)
         {
@@ -8659,7 +8659,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.PointerOverBackgroundMargin(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackgroundMargin(param0);
             return 0;
         }
         catch (...)
@@ -8686,7 +8686,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackground());
         }
         catch (...)
         {
@@ -8720,7 +8720,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PointerOverBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PointerOverBackground(param0);
             return 0;
         }
         catch (...)
@@ -8747,7 +8747,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaceholderBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PlaceholderBackground());
         }
         catch (...)
         {
@@ -8781,7 +8781,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PlaceholderBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().PlaceholderBackground(param0);
             return 0;
         }
         catch (...)
@@ -8808,7 +8808,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.GridViewItemPresenterVerticalContentAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterVerticalContentAlignment());
         }
         catch (...)
         {
@@ -8842,7 +8842,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
 
-            self->obj.GridViewItemPresenterVerticalContentAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterVerticalContentAlignment(param0);
             return 0;
         }
         catch (...)
@@ -8869,7 +8869,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.GridViewItemPresenterPadding());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterPadding());
         }
         catch (...)
         {
@@ -8903,7 +8903,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.GridViewItemPresenterPadding(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterPadding(param0);
             return 0;
         }
         catch (...)
@@ -8930,7 +8930,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.GridViewItemPresenterHorizontalContentAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterHorizontalContentAlignment());
         }
         catch (...)
         {
@@ -8964,7 +8964,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
 
-            self->obj.GridViewItemPresenterHorizontalContentAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().GridViewItemPresenterHorizontalContentAlignment(param0);
             return 0;
         }
         catch (...)
@@ -8991,7 +8991,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().FocusBorderBrush());
         }
         catch (...)
         {
@@ -9025,7 +9025,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.FocusBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().FocusBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -9052,7 +9052,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragOpacity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragOpacity());
         }
         catch (...)
         {
@@ -9086,7 +9086,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DragOpacity(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragOpacity(param0);
             return 0;
         }
         catch (...)
@@ -9113,7 +9113,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragForeground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragForeground());
         }
         catch (...)
         {
@@ -9147,7 +9147,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.DragForeground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragForeground(param0);
             return 0;
         }
         catch (...)
@@ -9174,7 +9174,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragBackground());
         }
         catch (...)
         {
@@ -9208,7 +9208,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.DragBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DragBackground(param0);
             return 0;
         }
         catch (...)
@@ -9235,7 +9235,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisabledOpacity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DisabledOpacity());
         }
         catch (...)
         {
@@ -9269,7 +9269,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DisabledOpacity(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().DisabledOpacity(param0);
             return 0;
         }
         catch (...)
@@ -9296,7 +9296,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentMargin());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ContentMargin());
         }
         catch (...)
         {
@@ -9330,7 +9330,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.ContentMargin(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().ContentMargin(param0);
             return 0;
         }
         catch (...)
@@ -9357,7 +9357,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckSelectingBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckSelectingBrush());
         }
         catch (...)
         {
@@ -9391,7 +9391,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckSelectingBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckSelectingBrush(param0);
             return 0;
         }
         catch (...)
@@ -9418,7 +9418,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckHintBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckHintBrush());
         }
         catch (...)
         {
@@ -9452,7 +9452,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckHintBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckHintBrush(param0);
             return 0;
         }
         catch (...)
@@ -9479,7 +9479,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckBrush());
         }
         catch (...)
         {
@@ -9513,7 +9513,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::GridViewItemPresenter>().CheckBrush(param0);
             return 0;
         }
         catch (...)
@@ -11521,7 +11521,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionCheckMarkVisualEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionCheckMarkVisualEnabled());
         }
         catch (...)
         {
@@ -11555,7 +11555,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SelectionCheckMarkVisualEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionCheckMarkVisualEnabled(param0);
             return 0;
         }
         catch (...)
@@ -11582,7 +11582,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPointerOverBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBorderBrush());
         }
         catch (...)
         {
@@ -11616,7 +11616,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPointerOverBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -11643,7 +11643,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPointerOverBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBackground());
         }
         catch (...)
         {
@@ -11677,7 +11677,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPointerOverBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPointerOverBackground(param0);
             return 0;
         }
         catch (...)
@@ -11704,7 +11704,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedForeground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedForeground());
         }
         catch (...)
         {
@@ -11738,7 +11738,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedForeground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedForeground(param0);
             return 0;
         }
         catch (...)
@@ -11765,7 +11765,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBorderThickness());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderThickness());
         }
         catch (...)
         {
@@ -11799,7 +11799,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.SelectedBorderThickness(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderThickness(param0);
             return 0;
         }
         catch (...)
@@ -11826,7 +11826,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBackground());
         }
         catch (...)
         {
@@ -11860,7 +11860,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBackground(param0);
             return 0;
         }
         catch (...)
@@ -11887,7 +11887,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ReorderHintOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ReorderHintOffset());
         }
         catch (...)
         {
@@ -11921,7 +11921,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ReorderHintOffset(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ReorderHintOffset(param0);
             return 0;
         }
         catch (...)
@@ -11948,7 +11948,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBrush());
         }
         catch (...)
         {
@@ -11982,7 +11982,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBrush(param0);
             return 0;
         }
         catch (...)
@@ -12009,7 +12009,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackground());
         }
         catch (...)
         {
@@ -12043,7 +12043,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PointerOverBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackground(param0);
             return 0;
         }
         catch (...)
@@ -12070,7 +12070,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PlaceholderBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PlaceholderBackground());
         }
         catch (...)
         {
@@ -12104,7 +12104,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PlaceholderBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PlaceholderBackground(param0);
             return 0;
         }
         catch (...)
@@ -12131,7 +12131,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListViewItemPresenterVerticalContentAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterVerticalContentAlignment());
         }
         catch (...)
         {
@@ -12165,7 +12165,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::VerticalAlignment>(arg);
 
-            self->obj.ListViewItemPresenterVerticalContentAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterVerticalContentAlignment(param0);
             return 0;
         }
         catch (...)
@@ -12192,7 +12192,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListViewItemPresenterPadding());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterPadding());
         }
         catch (...)
         {
@@ -12226,7 +12226,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.ListViewItemPresenterPadding(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterPadding(param0);
             return 0;
         }
         catch (...)
@@ -12253,7 +12253,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ListViewItemPresenterHorizontalContentAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterHorizontalContentAlignment());
         }
         catch (...)
         {
@@ -12287,7 +12287,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::HorizontalAlignment>(arg);
 
-            self->obj.ListViewItemPresenterHorizontalContentAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ListViewItemPresenterHorizontalContentAlignment(param0);
             return 0;
         }
         catch (...)
@@ -12314,7 +12314,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusBorderBrush());
         }
         catch (...)
         {
@@ -12348,7 +12348,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.FocusBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -12375,7 +12375,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragOpacity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragOpacity());
         }
         catch (...)
         {
@@ -12409,7 +12409,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DragOpacity(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragOpacity(param0);
             return 0;
         }
         catch (...)
@@ -12436,7 +12436,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragForeground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragForeground());
         }
         catch (...)
         {
@@ -12470,7 +12470,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.DragForeground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragForeground(param0);
             return 0;
         }
         catch (...)
@@ -12497,7 +12497,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DragBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragBackground());
         }
         catch (...)
         {
@@ -12531,7 +12531,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.DragBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DragBackground(param0);
             return 0;
         }
         catch (...)
@@ -12558,7 +12558,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisabledOpacity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DisabledOpacity());
         }
         catch (...)
         {
@@ -12592,7 +12592,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.DisabledOpacity(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().DisabledOpacity(param0);
             return 0;
         }
         catch (...)
@@ -12619,7 +12619,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentMargin());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ContentMargin());
         }
         catch (...)
         {
@@ -12653,7 +12653,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.ContentMargin(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().ContentMargin(param0);
             return 0;
         }
         catch (...)
@@ -12680,7 +12680,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckSelectingBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckSelectingBrush());
         }
         catch (...)
         {
@@ -12714,7 +12714,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckSelectingBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckSelectingBrush(param0);
             return 0;
         }
         catch (...)
@@ -12741,7 +12741,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckHintBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckHintBrush());
         }
         catch (...)
         {
@@ -12775,7 +12775,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckHintBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckHintBrush(param0);
             return 0;
         }
         catch (...)
@@ -12802,7 +12802,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverBackgroundMargin());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackgroundMargin());
         }
         catch (...)
         {
@@ -12836,7 +12836,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.PointerOverBackgroundMargin(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBackgroundMargin(param0);
             return 0;
         }
         catch (...)
@@ -12863,7 +12863,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPressedBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBackground());
         }
         catch (...)
         {
@@ -12897,7 +12897,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPressedBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBackground(param0);
             return 0;
         }
         catch (...)
@@ -12924,7 +12924,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PressedBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PressedBackground());
         }
         catch (...)
         {
@@ -12958,7 +12958,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PressedBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PressedBackground(param0);
             return 0;
         }
         catch (...)
@@ -12985,7 +12985,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverForeground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverForeground());
         }
         catch (...)
         {
@@ -13019,7 +13019,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PointerOverForeground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverForeground(param0);
             return 0;
         }
         catch (...)
@@ -13046,7 +13046,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.FocusSecondaryBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusSecondaryBorderBrush());
         }
         catch (...)
         {
@@ -13080,7 +13080,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.FocusSecondaryBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().FocusSecondaryBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -13107,7 +13107,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckMode());
         }
         catch (...)
         {
@@ -13141,7 +13141,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterCheckMode>(arg);
 
-            self->obj.CheckMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckMode(param0);
             return 0;
         }
         catch (...)
@@ -13168,7 +13168,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBrush());
         }
         catch (...)
         {
@@ -13202,7 +13202,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBrush(param0);
             return 0;
         }
         catch (...)
@@ -13229,7 +13229,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevealBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackground());
         }
         catch (...)
         {
@@ -13263,7 +13263,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.RevealBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackground(param0);
             return 0;
         }
         catch (...)
@@ -13290,7 +13290,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevealBackgroundShowsAboveContent());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackgroundShowsAboveContent());
         }
         catch (...)
         {
@@ -13324,7 +13324,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.RevealBackgroundShowsAboveContent(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBackgroundShowsAboveContent(param0);
             return 0;
         }
         catch (...)
@@ -13351,7 +13351,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevealBorderThickness());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderThickness());
         }
         catch (...)
         {
@@ -13385,7 +13385,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.RevealBorderThickness(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderThickness(param0);
             return 0;
         }
         catch (...)
@@ -13412,7 +13412,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.RevealBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderBrush());
         }
         catch (...)
         {
@@ -13446,7 +13446,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.RevealBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().RevealBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -13473,7 +13473,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckDisabledBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckDisabledBrush());
         }
         catch (...)
         {
@@ -13507,7 +13507,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckDisabledBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckDisabledBrush(param0);
             return 0;
         }
         catch (...)
@@ -13534,7 +13534,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorPressedBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPressedBrush());
         }
         catch (...)
         {
@@ -13568,7 +13568,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectionIndicatorPressedBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPressedBrush(param0);
             return 0;
         }
         catch (...)
@@ -13595,7 +13595,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorPointerOverBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPointerOverBrush());
         }
         catch (...)
         {
@@ -13629,7 +13629,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectionIndicatorPointerOverBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorPointerOverBrush(param0);
             return 0;
         }
         catch (...)
@@ -13656,7 +13656,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorMode());
         }
         catch (...)
         {
@@ -13690,7 +13690,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenterSelectionIndicatorMode>(arg);
 
-            self->obj.SelectionIndicatorMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorMode(param0);
             return 0;
         }
         catch (...)
@@ -13717,7 +13717,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorDisabledBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorDisabledBrush());
         }
         catch (...)
         {
@@ -13751,7 +13751,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectionIndicatorDisabledBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorDisabledBrush(param0);
             return 0;
         }
         catch (...)
@@ -13778,7 +13778,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorCornerRadius());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorCornerRadius());
         }
         catch (...)
         {
@@ -13812,7 +13812,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(arg);
 
-            self->obj.SelectionIndicatorCornerRadius(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorCornerRadius(param0);
             return 0;
         }
         catch (...)
@@ -13839,7 +13839,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorBrush());
         }
         catch (...)
         {
@@ -13873,7 +13873,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectionIndicatorBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorBrush(param0);
             return 0;
         }
         catch (...)
@@ -13900,7 +13900,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedPressedBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBorderBrush());
         }
         catch (...)
         {
@@ -13934,7 +13934,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedPressedBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedPressedBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -13961,7 +13961,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedInnerBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedInnerBorderBrush());
         }
         catch (...)
         {
@@ -13995,7 +13995,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedInnerBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedInnerBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14022,7 +14022,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedDisabledBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBorderBrush());
         }
         catch (...)
         {
@@ -14056,7 +14056,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedDisabledBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14083,7 +14083,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedDisabledBackground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBackground());
         }
         catch (...)
         {
@@ -14117,7 +14117,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedDisabledBackground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedDisabledBackground(param0);
             return 0;
         }
         catch (...)
@@ -14144,7 +14144,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderBrush());
         }
         catch (...)
         {
@@ -14178,7 +14178,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.SelectedBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectedBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14205,7 +14205,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerOverBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBorderBrush());
         }
         catch (...)
         {
@@ -14239,7 +14239,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.PointerOverBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().PointerOverBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14266,7 +14266,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckPressedBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckPressedBrush());
         }
         catch (...)
         {
@@ -14300,7 +14300,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckPressedBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckPressedBrush(param0);
             return 0;
         }
         catch (...)
@@ -14327,7 +14327,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionIndicatorVisualEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorVisualEnabled());
         }
         catch (...)
         {
@@ -14361,7 +14361,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.SelectionIndicatorVisualEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().SelectionIndicatorVisualEnabled(param0);
             return 0;
         }
         catch (...)
@@ -14388,7 +14388,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxSelectedPressedBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPressedBrush());
         }
         catch (...)
         {
@@ -14422,7 +14422,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxSelectedPressedBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPressedBrush(param0);
             return 0;
         }
         catch (...)
@@ -14449,7 +14449,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxSelectedPointerOverBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPointerOverBrush());
         }
         catch (...)
         {
@@ -14483,7 +14483,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxSelectedPointerOverBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedPointerOverBrush(param0);
             return 0;
         }
         catch (...)
@@ -14510,7 +14510,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxSelectedDisabledBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedDisabledBrush());
         }
         catch (...)
         {
@@ -14544,7 +14544,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxSelectedDisabledBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedDisabledBrush(param0);
             return 0;
         }
         catch (...)
@@ -14571,7 +14571,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxSelectedBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedBrush());
         }
         catch (...)
         {
@@ -14605,7 +14605,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxSelectedBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxSelectedBrush(param0);
             return 0;
         }
         catch (...)
@@ -14632,7 +14632,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxPressedBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBrush());
         }
         catch (...)
         {
@@ -14666,7 +14666,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxPressedBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBrush(param0);
             return 0;
         }
         catch (...)
@@ -14693,7 +14693,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxPressedBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBorderBrush());
         }
         catch (...)
         {
@@ -14727,7 +14727,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxPressedBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPressedBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14754,7 +14754,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxPointerOverBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBrush());
         }
         catch (...)
         {
@@ -14788,7 +14788,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxPointerOverBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBrush(param0);
             return 0;
         }
         catch (...)
@@ -14815,7 +14815,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxPointerOverBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBorderBrush());
         }
         catch (...)
         {
@@ -14849,7 +14849,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxPointerOverBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxPointerOverBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14876,7 +14876,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxDisabledBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBrush());
         }
         catch (...)
         {
@@ -14910,7 +14910,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxDisabledBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBrush(param0);
             return 0;
         }
         catch (...)
@@ -14937,7 +14937,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxDisabledBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBorderBrush());
         }
         catch (...)
         {
@@ -14971,7 +14971,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxDisabledBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxDisabledBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -14998,7 +14998,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxCornerRadius());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxCornerRadius());
         }
         catch (...)
         {
@@ -15032,7 +15032,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::CornerRadius>(arg);
 
-            self->obj.CheckBoxCornerRadius(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxCornerRadius(param0);
             return 0;
         }
         catch (...)
@@ -15059,7 +15059,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CheckBoxBorderBrush());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBorderBrush());
         }
         catch (...)
         {
@@ -15093,7 +15093,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.CheckBoxBorderBrush(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ListViewItemPresenter>().CheckBoxBorderBrush(param0);
             return 0;
         }
         catch (...)
@@ -18334,7 +18334,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Icon());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().Icon());
         }
         catch (...)
         {
@@ -18368,7 +18368,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconElement>(arg);
 
-            self->obj.Icon(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::NavigationViewItemPresenter>().Icon(param0);
             return 0;
         }
         catch (...)
@@ -18522,7 +18522,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 int32_t param1{};
                 int32_t param2{};
 
-                self->obj.GetInsertionIndexes(param0, param1, param2);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetInsertionIndexes(param0, param1, param2);
 
                 py::pyobj_handle out1{ py::convert(param1) };
                 if (!out1)
@@ -18573,7 +18573,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Orientation>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
 
-                return py::convert(self->obj.GetIrregularSnapPoints(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetIrregularSnapPoints(param0, param1));
             }
             catch (...)
             {
@@ -18613,7 +18613,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::SnapPointsAlignment>(args, 1);
                 float param2{};
 
-                auto return_value = self->obj.GetRegularSnapPoints(param0, param1, param2);
+                auto return_value = self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().GetRegularSnapPoints(param0, param1, param2);
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -18661,7 +18661,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18698,7 +18698,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18735,7 +18735,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18772,7 +18772,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.LineUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().LineUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18812,7 +18812,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::UIElement>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 1);
 
-                return py::convert(self->obj.MakeVisible(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MakeVisible(param0, param1));
             }
             catch (...)
             {
@@ -18848,7 +18848,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18885,7 +18885,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18922,7 +18922,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18959,7 +18959,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.MouseWheelUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().MouseWheelUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -18996,7 +18996,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageDown();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageDown();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19033,7 +19033,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageLeft();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageLeft();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19070,7 +19070,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageRight();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageRight();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19107,7 +19107,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                     return nullptr;
                 }
 
-                self->obj.PageUp();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().PageUp();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19146,7 +19146,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetHorizontalOffset(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().SetHorizontalOffset(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19185,7 +19185,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetVerticalOffset(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().SetVerticalOffset(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19218,7 +19218,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScrollOwner());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ScrollOwner());
         }
         catch (...)
         {
@@ -19252,7 +19252,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.ScrollOwner(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ScrollOwner(param0);
             return 0;
         }
         catch (...)
@@ -19279,7 +19279,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanVerticallyScroll());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanVerticallyScroll());
         }
         catch (...)
         {
@@ -19313,7 +19313,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanVerticallyScroll(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanVerticallyScroll(param0);
             return 0;
         }
         catch (...)
@@ -19340,7 +19340,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanHorizontallyScroll());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanHorizontallyScroll());
         }
         catch (...)
         {
@@ -19374,7 +19374,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.CanHorizontallyScroll(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().CanHorizontallyScroll(param0);
             return 0;
         }
         catch (...)
@@ -19401,7 +19401,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtentHeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ExtentHeight());
         }
         catch (...)
         {
@@ -19427,7 +19427,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtentWidth());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ExtentWidth());
         }
         catch (...)
         {
@@ -19453,7 +19453,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalOffset());
         }
         catch (...)
         {
@@ -19479,7 +19479,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalOffset());
         }
         catch (...)
         {
@@ -19505,7 +19505,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewportHeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ViewportHeight());
         }
         catch (...)
         {
@@ -19531,7 +19531,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ViewportWidth());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().ViewportWidth());
         }
         catch (...)
         {
@@ -19557,7 +19557,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreHorizontalSnapPointsRegular());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().AreHorizontalSnapPointsRegular());
         }
         catch (...)
         {
@@ -19583,7 +19583,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.AreVerticalSnapPointsRegular());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().AreVerticalSnapPointsRegular());
         }
         catch (...)
         {
@@ -19611,7 +19611,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.HorizontalSnapPointsChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalSnapPointsChanged(param0));
         }
         catch (...)
         {
@@ -19639,7 +19639,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.HorizontalSnapPointsChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().HorizontalSnapPointsChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -19668,7 +19668,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.VerticalSnapPointsChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalSnapPointsChanged(param0));
         }
         catch (...)
         {
@@ -19696,7 +19696,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.VerticalSnapPointsChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::OrientedVirtualizingPanel>().VerticalSnapPointsChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -22235,7 +22235,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Value());
         }
         catch (...)
         {
@@ -22269,7 +22269,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Value(param0);
             return 0;
         }
         catch (...)
@@ -22296,7 +22296,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmallChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().SmallChange());
         }
         catch (...)
         {
@@ -22330,7 +22330,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.SmallChange(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().SmallChange(param0);
             return 0;
         }
         catch (...)
@@ -22357,7 +22357,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Minimum());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Minimum());
         }
         catch (...)
         {
@@ -22391,7 +22391,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Minimum(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Minimum(param0);
             return 0;
         }
         catch (...)
@@ -22418,7 +22418,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.Maximum());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Maximum());
         }
         catch (...)
         {
@@ -22452,7 +22452,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Maximum(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().Maximum(param0);
             return 0;
         }
         catch (...)
@@ -22479,7 +22479,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.LargeChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().LargeChange());
         }
         catch (...)
         {
@@ -22513,7 +22513,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.LargeChange(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().LargeChange(param0);
             return 0;
         }
         catch (...)
@@ -22672,7 +22672,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBaseValueChangedEventHandler>(arg);
 
-            return py::convert(self->obj.ValueChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().ValueChanged(param0));
         }
         catch (...)
         {
@@ -22700,7 +22700,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ValueChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::RangeBase>().ValueChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -23860,7 +23860,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedValuePath());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedValuePath());
         }
         catch (...)
         {
@@ -23894,7 +23894,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.SelectedValuePath(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedValuePath(param0);
             return 0;
         }
         catch (...)
@@ -23921,7 +23921,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedValue());
         }
         catch (...)
         {
@@ -23955,7 +23955,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.SelectedValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedValue(param0);
             return 0;
         }
         catch (...)
@@ -23982,7 +23982,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedItem());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedItem());
         }
         catch (...)
         {
@@ -24016,7 +24016,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.SelectedItem(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedItem(param0);
             return 0;
         }
         catch (...)
@@ -24043,7 +24043,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectedIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedIndex());
         }
         catch (...)
         {
@@ -24077,7 +24077,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.SelectedIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectedIndex(param0);
             return 0;
         }
         catch (...)
@@ -24104,7 +24104,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSynchronizedWithCurrentItem());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().IsSynchronizedWithCurrentItem());
         }
         catch (...)
         {
@@ -24138,7 +24138,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.IsSynchronizedWithCurrentItem(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().IsSynchronizedWithCurrentItem(param0);
             return 0;
         }
         catch (...)
@@ -24297,7 +24297,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::SelectionChangedEventHandler>(arg);
 
-            return py::convert(self->obj.SelectionChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectionChanged(param0));
         }
         catch (...)
         {
@@ -24325,7 +24325,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SelectionChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::Selector>().SelectionChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -24456,7 +24456,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelected());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>().IsSelected());
         }
         catch (...)
         {
@@ -24490,7 +24490,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSelected(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::SelectorItem>().IsSelected(param0);
             return 0;
         }
         catch (...)
@@ -25698,7 +25698,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsThreeState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().IsThreeState());
         }
         catch (...)
         {
@@ -25732,7 +25732,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsThreeState(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().IsThreeState(param0);
             return 0;
         }
         catch (...)
@@ -25759,7 +25759,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsChecked());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().IsChecked());
         }
         catch (...)
         {
@@ -25793,7 +25793,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<bool>>(arg);
 
-            self->obj.IsChecked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().IsChecked(param0);
             return 0;
         }
         catch (...)
@@ -25874,7 +25874,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.Checked(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Checked(param0));
         }
         catch (...)
         {
@@ -25902,7 +25902,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Checked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Checked(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -25931,7 +25931,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.Indeterminate(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Indeterminate(param0));
         }
         catch (...)
         {
@@ -25959,7 +25959,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Indeterminate(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Indeterminate(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -25988,7 +25988,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::RoutedEventHandler>(arg);
 
-            return py::convert(self->obj.Unchecked(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Unchecked(param0));
         }
         catch (...)
         {
@@ -26016,7 +26016,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Unchecked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Primitives::ToggleButton>().Unchecked(param0);
             Py_RETURN_NONE;
         }
         catch (...)

@@ -4018,7 +4018,7 @@ namespace py::cpp::Microsoft::UI::Input
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::UI::Input::InputCursor>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7286,7 +7286,7 @@ namespace py::cpp::Microsoft::UI::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Input::InputObject>().DispatcherQueue());
         }
         catch (...)
         {

@@ -66,7 +66,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 return nullptr;
             }
 
-            return py::convert(self->obj.Action());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>().Action());
         }
         catch (...)
         {
@@ -92,7 +92,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewItems());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>().NewItems());
         }
         catch (...)
         {
@@ -118,7 +118,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 return nullptr;
             }
 
-            return py::convert(self->obj.NewStartingIndex());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>().NewStartingIndex());
         }
         catch (...)
         {
@@ -144,7 +144,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldItems());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>().OldItems());
         }
         catch (...)
         {
@@ -170,7 +170,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Interop
                 return nullptr;
             }
 
-            return py::convert(self->obj.OldStartingIndex());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Interop::NotifyCollectionChangedEventArgs>().OldStartingIndex());
         }
         catch (...)
         {

@@ -2089,7 +2089,7 @@ namespace py::cpp::Windows::UI::Composition
                     return nullptr;
                 }
 
-                self->obj.ClearAllParameters();
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().ClearAllParameters();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2128,7 +2128,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.ClearParameter(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().ClearParameter(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2168,7 +2168,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<bool>(args, 1);
 
-                self->obj.SetBooleanParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetBooleanParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2208,7 +2208,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Color>(args, 1);
 
-                self->obj.SetColorParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetColorParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2248,7 +2248,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::IAnimationObject>(args, 1);
 
-                self->obj.SetExpressionReferenceParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetExpressionReferenceParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2288,7 +2288,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(args, 1);
 
-                self->obj.SetMatrix3x2Parameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetMatrix3x2Parameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2328,7 +2328,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(args, 1);
 
-                self->obj.SetMatrix4x4Parameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetMatrix4x4Parameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2368,7 +2368,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(args, 1);
 
-                self->obj.SetQuaternionParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetQuaternionParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2408,7 +2408,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionObject>(args, 1);
 
-                self->obj.SetReferenceParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetReferenceParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2448,7 +2448,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<float>(args, 1);
 
-                self->obj.SetScalarParameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetScalarParameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2488,7 +2488,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 1);
 
-                self->obj.SetVector2Parameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetVector2Parameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2528,7 +2528,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(args, 1);
 
-                self->obj.SetVector3Parameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetVector3Parameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2568,7 +2568,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Numerics::float4>(args, 1);
 
-                self->obj.SetVector4Parameter(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().SetVector4Parameter(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2601,7 +2601,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Target());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().Target());
         }
         catch (...)
         {
@@ -2635,7 +2635,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Target(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().Target(param0);
             return 0;
         }
         catch (...)
@@ -2662,7 +2662,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialValueExpressions());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionAnimation>().InitialValueExpressions());
         }
         catch (...)
         {
@@ -3540,7 +3540,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransformMatrix());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().TransformMatrix());
         }
         catch (...)
         {
@@ -3574,7 +3574,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
-            self->obj.TransformMatrix(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().TransformMatrix(param0);
             return 0;
         }
         catch (...)
@@ -3601,7 +3601,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().Scale());
         }
         catch (...)
         {
@@ -3635,7 +3635,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Scale(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().Scale(param0);
             return 0;
         }
         catch (...)
@@ -3662,7 +3662,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegrees());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().RotationAngleInDegrees());
         }
         catch (...)
         {
@@ -3696,7 +3696,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngleInDegrees(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().RotationAngleInDegrees(param0);
             return 0;
         }
         catch (...)
@@ -3723,7 +3723,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngle());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().RotationAngle());
         }
         catch (...)
         {
@@ -3757,7 +3757,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngle(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().RotationAngle(param0);
             return 0;
         }
         catch (...)
@@ -3784,7 +3784,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().Offset());
         }
         catch (...)
         {
@@ -3818,7 +3818,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Offset(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().Offset(param0);
             return 0;
         }
         catch (...)
@@ -3845,7 +3845,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().CenterPoint());
         }
         catch (...)
         {
@@ -3879,7 +3879,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.CenterPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().CenterPoint(param0);
             return 0;
         }
         catch (...)
@@ -3906,7 +3906,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnchorPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().AnchorPoint());
         }
         catch (...)
         {
@@ -3940,7 +3940,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.AnchorPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionClip>().AnchorPoint(param0);
             return 0;
         }
         catch (...)
@@ -5363,7 +5363,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(args, 0);
 
-                self->obj.Resize(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().Resize(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5402,7 +5402,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
 
-                self->obj.Scroll(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().Scroll(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5442,7 +5442,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
-                self->obj.Scroll(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().Scroll(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5483,7 +5483,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 2);
 
-                self->obj.ScrollWithClip(param0, param1, param2);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().ScrollWithClip(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5523,7 +5523,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 1);
 
-                self->obj.ScrollWithClip(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().ScrollWithClip(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5556,7 +5556,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlphaMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().AlphaMode());
         }
         catch (...)
         {
@@ -5582,7 +5582,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelFormat());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().PixelFormat());
         }
         catch (...)
         {
@@ -5608,7 +5608,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().Size());
         }
         catch (...)
         {
@@ -5634,7 +5634,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.SizeInt32());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionDrawingSurface>().SizeInt32());
         }
         catch (...)
         {
@@ -7097,7 +7097,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimStart());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimStart());
         }
         catch (...)
         {
@@ -7131,7 +7131,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.TrimStart(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimStart(param0);
             return 0;
         }
         catch (...)
@@ -7158,7 +7158,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimOffset());
         }
         catch (...)
         {
@@ -7192,7 +7192,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.TrimOffset(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimOffset(param0);
             return 0;
         }
         catch (...)
@@ -7219,7 +7219,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TrimEnd());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimEnd());
         }
         catch (...)
         {
@@ -7253,7 +7253,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.TrimEnd(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGeometry>().TrimEnd(param0);
             return 0;
         }
         catch (...)
@@ -7374,7 +7374,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransformMatrix());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().TransformMatrix());
         }
         catch (...)
         {
@@ -7408,7 +7408,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
-            self->obj.TransformMatrix(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().TransformMatrix(param0);
             return 0;
         }
         catch (...)
@@ -7435,7 +7435,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().Scale());
         }
         catch (...)
         {
@@ -7469,7 +7469,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Scale(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().Scale(param0);
             return 0;
         }
         catch (...)
@@ -7496,7 +7496,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegrees());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().RotationAngleInDegrees());
         }
         catch (...)
         {
@@ -7530,7 +7530,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngleInDegrees(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().RotationAngleInDegrees(param0);
             return 0;
         }
         catch (...)
@@ -7557,7 +7557,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngle());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().RotationAngle());
         }
         catch (...)
         {
@@ -7591,7 +7591,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngle(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().RotationAngle(param0);
             return 0;
         }
         catch (...)
@@ -7618,7 +7618,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().Offset());
         }
         catch (...)
         {
@@ -7652,7 +7652,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Offset(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().Offset(param0);
             return 0;
         }
         catch (...)
@@ -7679,7 +7679,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterpolationSpace());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().InterpolationSpace());
         }
         catch (...)
         {
@@ -7713,7 +7713,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionColorSpace>(arg);
 
-            self->obj.InterpolationSpace(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().InterpolationSpace(param0);
             return 0;
         }
         catch (...)
@@ -7740,7 +7740,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExtendMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().ExtendMode());
         }
         catch (...)
         {
@@ -7774,7 +7774,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionGradientExtendMode>(arg);
 
-            self->obj.ExtendMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().ExtendMode(param0);
             return 0;
         }
         catch (...)
@@ -7801,7 +7801,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().CenterPoint());
         }
         catch (...)
         {
@@ -7835,7 +7835,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.CenterPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().CenterPoint(param0);
             return 0;
         }
         catch (...)
@@ -7862,7 +7862,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnchorPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().AnchorPoint());
         }
         catch (...)
         {
@@ -7896,7 +7896,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.AnchorPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().AnchorPoint(param0);
             return 0;
         }
         catch (...)
@@ -7923,7 +7923,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorStops());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().ColorStops());
         }
         catch (...)
         {
@@ -7949,7 +7949,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.MappingMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().MappingMode());
         }
         catch (...)
         {
@@ -7983,7 +7983,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionMappingMode>(arg);
 
-            self->obj.MappingMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionGradientBrush>().MappingMode(param0);
             return 0;
         }
         catch (...)
@@ -8482,7 +8482,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Targets());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionLight>().Targets());
         }
         catch (...)
         {
@@ -8508,7 +8508,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExclusionsFromTargets());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionLight>().ExclusionsFromTargets());
         }
         catch (...)
         {
@@ -8534,7 +8534,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionLight>().IsEnabled());
         }
         catch (...)
         {
@@ -8568,7 +8568,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionLight>().IsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -10328,7 +10328,7 @@ namespace py::cpp::Windows::UI::Composition
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10368,7 +10368,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::AnimationPropertyInfo>(args, 1);
 
-                self->obj.PopulatePropertyInfo(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().PopulatePropertyInfo(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10408,7 +10408,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
 
-                self->obj.StartAnimation(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StartAnimation(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10447,7 +10447,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
 
-                self->obj.StartAnimationGroup(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StartAnimationGroup(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10528,7 +10528,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param1 = py::convert_to<winrt::Windows::UI::Composition::CompositionAnimation>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Composition::AnimationController>(args, 2);
 
-                self->obj.StartAnimation(param0, param1, param2);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StartAnimation(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10608,7 +10608,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.StopAnimation(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StopAnimation(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10647,7 +10647,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Composition::ICompositionAnimationBase>(args, 0);
 
-                self->obj.StopAnimationGroup(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().StopAnimationGroup(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -10686,7 +10686,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.TryGetAnimationController(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().TryGetAnimationController(param0));
             }
             catch (...)
             {
@@ -10718,7 +10718,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Compositor());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Compositor());
         }
         catch (...)
         {
@@ -10744,7 +10744,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Dispatcher());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Dispatcher());
         }
         catch (...)
         {
@@ -10770,7 +10770,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Properties());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Properties());
         }
         catch (...)
         {
@@ -10796,7 +10796,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ImplicitAnimations());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().ImplicitAnimations());
         }
         catch (...)
         {
@@ -10830,7 +10830,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::ImplicitAnimationCollection>(arg);
 
-            self->obj.ImplicitAnimations(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().ImplicitAnimations(param0);
             return 0;
         }
         catch (...)
@@ -10857,7 +10857,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Comment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Comment());
         }
         catch (...)
         {
@@ -10891,7 +10891,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Comment(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().Comment(param0);
             return 0;
         }
         catch (...)
@@ -10918,7 +10918,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionObject>().DispatcherQueue());
         }
         catch (...)
         {
@@ -14655,7 +14655,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransformMatrix());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().TransformMatrix());
         }
         catch (...)
         {
@@ -14689,7 +14689,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3x2>(arg);
 
-            self->obj.TransformMatrix(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().TransformMatrix(param0);
             return 0;
         }
         catch (...)
@@ -14716,7 +14716,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().Scale());
         }
         catch (...)
         {
@@ -14750,7 +14750,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Scale(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().Scale(param0);
             return 0;
         }
         catch (...)
@@ -14777,7 +14777,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegrees());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().RotationAngleInDegrees());
         }
         catch (...)
         {
@@ -14811,7 +14811,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngleInDegrees(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().RotationAngleInDegrees(param0);
             return 0;
         }
         catch (...)
@@ -14838,7 +14838,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngle());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().RotationAngle());
         }
         catch (...)
         {
@@ -14872,7 +14872,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngle(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().RotationAngle(param0);
             return 0;
         }
         catch (...)
@@ -14899,7 +14899,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().Offset());
         }
         catch (...)
         {
@@ -14933,7 +14933,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Offset(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().Offset(param0);
             return 0;
         }
         catch (...)
@@ -14960,7 +14960,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().CenterPoint());
         }
         catch (...)
         {
@@ -14994,7 +14994,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.CenterPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionShape>().CenterPoint(param0);
             return 0;
         }
         catch (...)
@@ -18169,7 +18169,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Root());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionTarget>().Root());
         }
         catch (...)
         {
@@ -18203,7 +18203,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(arg);
 
-            self->obj.Root(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionTarget>().Root(param0);
             return 0;
         }
         catch (...)
@@ -18322,7 +18322,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.SourceRect());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().SourceRect());
         }
         catch (...)
         {
@@ -18356,7 +18356,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(arg);
 
-            self->obj.SourceRect(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().SourceRect(param0);
             return 0;
         }
         catch (...)
@@ -18383,7 +18383,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorSpace());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().ColorSpace());
         }
         catch (...)
         {
@@ -18417,7 +18417,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXColorSpace>(arg);
 
-            self->obj.ColorSpace(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().ColorSpace(param0);
             return 0;
         }
         catch (...)
@@ -18444,7 +18444,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlphaMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().AlphaMode());
         }
         catch (...)
         {
@@ -18478,7 +18478,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::DirectX::DirectXAlphaMode>(arg);
 
-            self->obj.AlphaMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::CompositionTexture>().AlphaMode(param0);
             return 0;
         }
         catch (...)
@@ -19072,7 +19072,7 @@ namespace py::cpp::Windows::UI::Composition
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Graphics::RectInt32, false>>(args, 0);
 
-                self->obj.Trim(param0);
+                self->obj.try_as<winrt::Windows::UI::Composition::CompositionVirtualDrawingSurface>().Trim(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -22688,7 +22688,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Children());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::ContainerVisual>().Children());
         }
         catch (...)
         {
@@ -25661,7 +25661,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param0 = py::convert_to<float>(args, 0);
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
 
-                self->obj.InsertExpressionKeyFrame(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().InsertExpressionKeyFrame(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25702,7 +25702,7 @@ namespace py::cpp::Windows::UI::Composition
                 auto param1 = py::convert_to<winrt::hstring>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::UI::Composition::CompositionEasingFunction>(args, 2);
 
-                self->obj.InsertExpressionKeyFrame(param0, param1, param2);
+                self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().InsertExpressionKeyFrame(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -25735,7 +25735,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.StopBehavior());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().StopBehavior());
         }
         catch (...)
         {
@@ -25769,7 +25769,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationStopBehavior>(arg);
 
-            self->obj.StopBehavior(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().StopBehavior(param0);
             return 0;
         }
         catch (...)
@@ -25796,7 +25796,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IterationCount());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().IterationCount());
         }
         catch (...)
         {
@@ -25830,7 +25830,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.IterationCount(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().IterationCount(param0);
             return 0;
         }
         catch (...)
@@ -25857,7 +25857,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IterationBehavior());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().IterationBehavior());
         }
         catch (...)
         {
@@ -25891,7 +25891,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationIterationBehavior>(arg);
 
-            self->obj.IterationBehavior(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().IterationBehavior(param0);
             return 0;
         }
         catch (...)
@@ -25918,7 +25918,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().Duration());
         }
         catch (...)
         {
@@ -25952,7 +25952,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.Duration(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().Duration(param0);
             return 0;
         }
         catch (...)
@@ -25979,7 +25979,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.DelayTime());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().DelayTime());
         }
         catch (...)
         {
@@ -26013,7 +26013,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DelayTime(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().DelayTime(param0);
             return 0;
         }
         catch (...)
@@ -26040,7 +26040,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyFrameCount());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().KeyFrameCount());
         }
         catch (...)
         {
@@ -26066,7 +26066,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Direction());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().Direction());
         }
         catch (...)
         {
@@ -26100,7 +26100,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationDirection>(arg);
 
-            self->obj.Direction(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().Direction(param0);
             return 0;
         }
         catch (...)
@@ -26127,7 +26127,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.DelayBehavior());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().DelayBehavior());
         }
         catch (...)
         {
@@ -26161,7 +26161,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationDelayBehavior>(arg);
 
-            self->obj.DelayBehavior(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::KeyFrameAnimation>().DelayBehavior(param0);
             return 0;
         }
         catch (...)
@@ -26545,7 +26545,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.StopBehavior());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().StopBehavior());
         }
         catch (...)
         {
@@ -26579,7 +26579,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationStopBehavior>(arg);
 
-            self->obj.StopBehavior(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().StopBehavior(param0);
             return 0;
         }
         catch (...)
@@ -26606,7 +26606,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.DelayTime());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().DelayTime());
         }
         catch (...)
         {
@@ -26640,7 +26640,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.DelayTime(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().DelayTime(param0);
             return 0;
         }
         catch (...)
@@ -26667,7 +26667,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.DelayBehavior());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().DelayBehavior());
         }
         catch (...)
         {
@@ -26701,7 +26701,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::AnimationDelayBehavior>(arg);
 
-            self->obj.DelayBehavior(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::NaturalMotionAnimation>().DelayBehavior(param0);
             return 0;
         }
         catch (...)
@@ -28796,7 +28796,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialVelocity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().InitialVelocity());
         }
         catch (...)
         {
@@ -28830,7 +28830,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.InitialVelocity(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().InitialVelocity(param0);
             return 0;
         }
         catch (...)
@@ -28857,7 +28857,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().InitialValue());
         }
         catch (...)
         {
@@ -28891,7 +28891,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
-            self->obj.InitialValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().InitialValue(param0);
             return 0;
         }
         catch (...)
@@ -28918,7 +28918,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().FinalValue());
         }
         catch (...)
         {
@@ -28952,7 +28952,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<float>>(arg);
 
-            self->obj.FinalValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::ScalarNaturalMotionAnimation>().FinalValue(param0);
             return 0;
         }
         catch (...)
@@ -31664,7 +31664,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialVelocity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().InitialVelocity());
         }
         catch (...)
         {
@@ -31698,7 +31698,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.InitialVelocity(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().InitialVelocity(param0);
             return 0;
         }
         catch (...)
@@ -31725,7 +31725,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().InitialValue());
         }
         catch (...)
         {
@@ -31759,7 +31759,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(arg);
 
-            self->obj.InitialValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().InitialValue(param0);
             return 0;
         }
         catch (...)
@@ -31786,7 +31786,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().FinalValue());
         }
         catch (...)
         {
@@ -31820,7 +31820,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float2>>(arg);
 
-            self->obj.FinalValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector2NaturalMotionAnimation>().FinalValue(param0);
             return 0;
         }
         catch (...)
@@ -32090,7 +32090,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialVelocity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().InitialVelocity());
         }
         catch (...)
         {
@@ -32124,7 +32124,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.InitialVelocity(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().InitialVelocity(param0);
             return 0;
         }
         catch (...)
@@ -32151,7 +32151,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.InitialValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().InitialValue());
         }
         catch (...)
         {
@@ -32185,7 +32185,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
-            self->obj.InitialValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().InitialValue(param0);
             return 0;
         }
         catch (...)
@@ -32212,7 +32212,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.FinalValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().FinalValue());
         }
         catch (...)
         {
@@ -32246,7 +32246,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::Numerics::float3>>(arg);
 
-            self->obj.FinalValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Vector3NaturalMotionAnimation>().FinalValue(param0);
             return 0;
         }
         catch (...)
@@ -32516,7 +32516,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransformMatrix());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().TransformMatrix());
         }
         catch (...)
         {
@@ -32550,7 +32550,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float4x4>(arg);
 
-            self->obj.TransformMatrix(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().TransformMatrix(param0);
             return 0;
         }
         catch (...)
@@ -32577,7 +32577,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Size());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Size());
         }
         catch (...)
         {
@@ -32611,7 +32611,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.Size(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Size(param0);
             return 0;
         }
         catch (...)
@@ -32638,7 +32638,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Scale());
         }
         catch (...)
         {
@@ -32672,7 +32672,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Scale(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Scale(param0);
             return 0;
         }
         catch (...)
@@ -32699,7 +32699,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAxis());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAxis());
         }
         catch (...)
         {
@@ -32733,7 +32733,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.RotationAxis(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAxis(param0);
             return 0;
         }
         catch (...)
@@ -32760,7 +32760,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngleInDegrees());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAngleInDegrees());
         }
         catch (...)
         {
@@ -32794,7 +32794,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngleInDegrees(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAngleInDegrees(param0);
             return 0;
         }
         catch (...)
@@ -32821,7 +32821,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RotationAngle());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAngle());
         }
         catch (...)
         {
@@ -32855,7 +32855,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.RotationAngle(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RotationAngle(param0);
             return 0;
         }
         catch (...)
@@ -32882,7 +32882,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Orientation());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Orientation());
         }
         catch (...)
         {
@@ -32916,7 +32916,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::quaternion>(arg);
 
-            self->obj.Orientation(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Orientation(param0);
             return 0;
         }
         catch (...)
@@ -32943,7 +32943,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Opacity());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Opacity());
         }
         catch (...)
         {
@@ -32977,7 +32977,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.Opacity(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Opacity(param0);
             return 0;
         }
         catch (...)
@@ -33004,7 +33004,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Offset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Offset());
         }
         catch (...)
         {
@@ -33038,7 +33038,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.Offset(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Offset(param0);
             return 0;
         }
         catch (...)
@@ -33065,7 +33065,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsVisible());
         }
         catch (...)
         {
@@ -33099,7 +33099,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsVisible(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsVisible(param0);
             return 0;
         }
         catch (...)
@@ -33126,7 +33126,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CompositeMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().CompositeMode());
         }
         catch (...)
         {
@@ -33160,7 +33160,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionCompositeMode>(arg);
 
-            self->obj.CompositeMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().CompositeMode(param0);
             return 0;
         }
         catch (...)
@@ -33187,7 +33187,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Clip());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Clip());
         }
         catch (...)
         {
@@ -33221,7 +33221,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionClip>(arg);
 
-            self->obj.Clip(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Clip(param0);
             return 0;
         }
         catch (...)
@@ -33248,7 +33248,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.CenterPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().CenterPoint());
         }
         catch (...)
         {
@@ -33282,7 +33282,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.CenterPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().CenterPoint(param0);
             return 0;
         }
         catch (...)
@@ -33309,7 +33309,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.BorderMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().BorderMode());
         }
         catch (...)
         {
@@ -33343,7 +33343,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBorderMode>(arg);
 
-            self->obj.BorderMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().BorderMode(param0);
             return 0;
         }
         catch (...)
@@ -33370,7 +33370,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.BackfaceVisibility());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().BackfaceVisibility());
         }
         catch (...)
         {
@@ -33404,7 +33404,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBackfaceVisibility>(arg);
 
-            self->obj.BackfaceVisibility(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().BackfaceVisibility(param0);
             return 0;
         }
         catch (...)
@@ -33431,7 +33431,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnchorPoint());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().AnchorPoint());
         }
         catch (...)
         {
@@ -33465,7 +33465,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.AnchorPoint(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().AnchorPoint(param0);
             return 0;
         }
         catch (...)
@@ -33492,7 +33492,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.Parent());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().Parent());
         }
         catch (...)
         {
@@ -33518,7 +33518,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeSizeAdjustment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RelativeSizeAdjustment());
         }
         catch (...)
         {
@@ -33552,7 +33552,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.RelativeSizeAdjustment(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RelativeSizeAdjustment(param0);
             return 0;
         }
         catch (...)
@@ -33579,7 +33579,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeOffsetAdjustment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RelativeOffsetAdjustment());
         }
         catch (...)
         {
@@ -33613,7 +33613,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.RelativeOffsetAdjustment(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().RelativeOffsetAdjustment(param0);
             return 0;
         }
         catch (...)
@@ -33640,7 +33640,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentForTransform());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().ParentForTransform());
         }
         catch (...)
         {
@@ -33674,7 +33674,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Visual>(arg);
 
-            self->obj.ParentForTransform(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().ParentForTransform(param0);
             return 0;
         }
         catch (...)
@@ -33701,7 +33701,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHitTestVisible());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsHitTestVisible());
         }
         catch (...)
         {
@@ -33735,7 +33735,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHitTestVisible(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsHitTestVisible(param0);
             return 0;
         }
         catch (...)
@@ -33762,7 +33762,7 @@ namespace py::cpp::Windows::UI::Composition
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPixelSnappingEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsPixelSnappingEnabled());
         }
         catch (...)
         {
@@ -33796,7 +33796,7 @@ namespace py::cpp::Windows::UI::Composition
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPixelSnappingEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Visual>().IsPixelSnappingEnabled(param0);
             return 0;
         }
         catch (...)

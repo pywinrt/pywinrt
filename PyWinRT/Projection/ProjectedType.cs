@@ -369,6 +369,11 @@ class ProjectedType
             return $"{CppWinrtType}::";
         }
 
+        if (IsComposable)
+        {
+            return $"self->obj.try_as<{CppWinrtType}>().";
+        }
+
         // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
         // so far, this is the only case in the entire Windows SDK where
         // a property is entirely replaced with one of the same name

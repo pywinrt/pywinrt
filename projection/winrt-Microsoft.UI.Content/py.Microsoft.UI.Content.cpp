@@ -44,7 +44,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.ConvertLocalToScreen(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0));
             }
             catch (...)
             {
@@ -82,7 +82,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
 
-                return py::convert(self->obj.ConvertLocalToScreen(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0));
             }
             catch (...)
             {
@@ -121,7 +121,7 @@ namespace py::cpp::Microsoft::UI::Content
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Foundation::Point, false>>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Content::ContentCoordinateRoundingMode>(args, 1);
 
-                return py::convert(self->obj.ConvertLocalToScreen(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0, param1));
             }
             catch (...)
             {
@@ -159,7 +159,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.ConvertLocalToScreen(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertLocalToScreen(param0));
             }
             catch (...)
             {
@@ -197,7 +197,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::PointInt32>(args, 0);
 
-                return py::convert(self->obj.ConvertScreenToLocal(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertScreenToLocal(param0));
             }
             catch (...)
             {
@@ -235,7 +235,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<py::pybuf_view<winrt::Windows::Graphics::PointInt32, false>>(args, 0);
 
-                return py::convert(self->obj.ConvertScreenToLocal(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertScreenToLocal(param0));
             }
             catch (...)
             {
@@ -273,7 +273,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
 
-                return py::convert(self->obj.ConvertScreenToLocal(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentCoordinateConverter>().ConvertScreenToLocal(param0));
             }
             catch (...)
             {
@@ -763,7 +763,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -912,7 +912,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAutomationHostProvider());
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().GetAutomationHostProvider());
             }
             catch (...)
             {
@@ -1024,7 +1024,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetStateChangeDeferral());
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().GetStateChangeDeferral());
             }
             catch (...)
             {
@@ -1062,7 +1062,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(args, 0);
 
-                self->obj.RequestSize(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().RequestSize(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1095,7 +1095,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemBackdrop());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().SystemBackdrop());
         }
         catch (...)
         {
@@ -1129,7 +1129,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::CompositionBrush>(arg);
 
-            self->obj.SystemBackdrop(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().SystemBackdrop(param0);
             return 0;
         }
         catch (...)
@@ -1156,7 +1156,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIslandVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsIslandVisible());
         }
         catch (...)
         {
@@ -1190,7 +1190,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIslandVisible(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsIslandVisible(param0);
             return 0;
         }
         catch (...)
@@ -1217,7 +1217,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsIslandEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsIslandEnabled());
         }
         catch (...)
         {
@@ -1251,7 +1251,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsIslandEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsIslandEnabled(param0);
             return 0;
         }
         catch (...)
@@ -1278,7 +1278,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsHitTestVisibleWhenTransparent());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsHitTestVisibleWhenTransparent());
         }
         catch (...)
         {
@@ -1312,7 +1312,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsHitTestVisibleWhenTransparent(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsHitTestVisibleWhenTransparent(param0);
             return 0;
         }
         catch (...)
@@ -1339,7 +1339,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppData());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().AppData());
         }
         catch (...)
         {
@@ -1373,7 +1373,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.AppData(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().AppData(param0);
             return 0;
         }
         catch (...)
@@ -1400,7 +1400,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().ActualSize());
         }
         catch (...)
         {
@@ -1426,7 +1426,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateConverter());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().CoordinateConverter());
         }
         catch (...)
         {
@@ -1452,7 +1452,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.CustomProperties());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().CustomProperties());
         }
         catch (...)
         {
@@ -1478,7 +1478,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().DispatcherQueue());
         }
         catch (...)
         {
@@ -1504,7 +1504,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.Environment());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Environment());
         }
         catch (...)
         {
@@ -1530,7 +1530,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.Id());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Id());
         }
         catch (...)
         {
@@ -1556,7 +1556,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsConnected());
         }
         catch (...)
         {
@@ -1582,7 +1582,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsSiteEnabled());
         }
         catch (...)
         {
@@ -1608,7 +1608,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsSiteVisible());
         }
         catch (...)
         {
@@ -1634,7 +1634,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutDirection());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().LayoutDirection());
         }
         catch (...)
         {
@@ -1660,7 +1660,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.RasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().RasterizationScale());
         }
         catch (...)
         {
@@ -1686,7 +1686,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClosed());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().IsClosed());
         }
         catch (...)
         {
@@ -1714,7 +1714,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIsland, winrt::Microsoft::UI::Content::ContentIslandAutomationProviderRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.AutomationProviderRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().AutomationProviderRequested(param0));
         }
         catch (...)
         {
@@ -1742,7 +1742,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AutomationProviderRequested(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().AutomationProviderRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1771,7 +1771,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIsland, winrt::Microsoft::UI::Content::ContentIslandStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().StateChanged(param0));
         }
         catch (...)
         {
@@ -1799,7 +1799,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().StateChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1828,7 +1828,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Closed(param0));
         }
         catch (...)
         {
@@ -1856,7 +1856,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().Closed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -1885,7 +1885,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.FrameworkClosed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().FrameworkClosed(param0));
         }
         catch (...)
         {
@@ -1913,7 +1913,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkClosed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIsland>().FrameworkClosed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2276,7 +2276,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppWindowId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().AppWindowId());
         }
         catch (...)
         {
@@ -2302,7 +2302,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().DisplayId());
         }
         catch (...)
         {
@@ -2330,7 +2330,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Microsoft::UI::Content::ContentEnvironmentSettingChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.SettingChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().SettingChanged(param0));
         }
         catch (...)
         {
@@ -2358,7 +2358,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.SettingChanged(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().SettingChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2387,7 +2387,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentIslandEnvironment, winrt::Microsoft::UI::Content::ContentEnvironmentStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.StateChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().StateChanged(param0));
         }
         catch (...)
         {
@@ -2415,7 +2415,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.StateChanged(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentIslandEnvironment>().StateChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2744,7 +2744,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2781,7 +2781,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetIslandStateChangeDeferral());
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().GetIslandStateChangeDeferral());
             }
             catch (...)
             {
@@ -2813,7 +2813,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldApplyRasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ShouldApplyRasterizationScale());
         }
         catch (...)
         {
@@ -2847,7 +2847,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldApplyRasterizationScale(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ShouldApplyRasterizationScale(param0);
             return 0;
         }
         catch (...)
@@ -2874,7 +2874,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ParentScale());
         }
         catch (...)
         {
@@ -2908,7 +2908,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.ParentScale(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ParentScale(param0);
             return 0;
         }
         catch (...)
@@ -2935,7 +2935,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.OverrideScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().OverrideScale());
         }
         catch (...)
         {
@@ -2969,7 +2969,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.OverrideScale(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().OverrideScale(param0);
             return 0;
         }
         catch (...)
@@ -2996,7 +2996,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutDirection());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().LayoutDirection());
         }
         catch (...)
         {
@@ -3030,7 +3030,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentLayoutDirection>(arg);
 
-            self->obj.LayoutDirection(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().LayoutDirection(param0);
             return 0;
         }
         catch (...)
@@ -3057,7 +3057,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsSiteVisible());
         }
         catch (...)
         {
@@ -3091,7 +3091,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSiteVisible(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsSiteVisible(param0);
             return 0;
         }
         catch (...)
@@ -3118,7 +3118,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsSiteEnabled());
         }
         catch (...)
         {
@@ -3152,7 +3152,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsSiteEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsSiteEnabled(param0);
             return 0;
         }
         catch (...)
@@ -3179,7 +3179,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ClientSize());
         }
         catch (...)
         {
@@ -3213,7 +3213,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Graphics::SizeInt32>(arg);
 
-            self->obj.ClientSize(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ClientSize(param0);
             return 0;
         }
         catch (...)
@@ -3240,7 +3240,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ActualSize());
         }
         catch (...)
         {
@@ -3274,7 +3274,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float2>(arg);
 
-            self->obj.ActualSize(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().ActualSize(param0);
             return 0;
         }
         catch (...)
@@ -3301,7 +3301,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateConverter());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().CoordinateConverter());
         }
         catch (...)
         {
@@ -3327,7 +3327,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().DispatcherQueue());
         }
         catch (...)
         {
@@ -3353,7 +3353,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.Environment());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().Environment());
         }
         catch (...)
         {
@@ -3379,7 +3379,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsConnected());
         }
         catch (...)
         {
@@ -3405,7 +3405,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.RasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().RasterizationScale());
         }
         catch (...)
         {
@@ -3431,7 +3431,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().RequestedSize());
         }
         catch (...)
         {
@@ -3457,7 +3457,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.View());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().View());
         }
         catch (...)
         {
@@ -3483,7 +3483,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClosed());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().IsClosed());
         }
         catch (...)
         {
@@ -3511,7 +3511,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Content::ContentSite, winrt::Microsoft::UI::Content::ContentSiteRequestedStateChangedEventArgs>>(arg);
 
-            return py::convert(self->obj.RequestedStateChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().RequestedStateChanged(param0));
         }
         catch (...)
         {
@@ -3539,7 +3539,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RequestedStateChanged(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().RequestedStateChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3568,7 +3568,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().Closed(param0));
         }
         catch (...)
         {
@@ -3596,7 +3596,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().Closed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3625,7 +3625,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.FrameworkClosed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().FrameworkClosed(param0));
         }
         catch (...)
         {
@@ -3653,7 +3653,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkClosed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSite>().FrameworkClosed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -3822,7 +3822,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.NotifySettingChanged(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().NotifySettingChanged(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3855,7 +3855,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().DisplayId());
         }
         catch (...)
         {
@@ -3889,7 +3889,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::DisplayId>(arg);
 
-            self->obj.DisplayId(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().DisplayId(param0);
             return 0;
         }
         catch (...)
@@ -3916,7 +3916,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppWindowId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().AppWindowId());
         }
         catch (...)
         {
@@ -3950,7 +3950,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(arg);
 
-            self->obj.AppWindowId(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().AppWindowId(param0);
             return 0;
         }
         catch (...)
@@ -3977,7 +3977,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.View());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironment>().View());
         }
         catch (...)
         {
@@ -4098,7 +4098,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.AppWindowId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>().AppWindowId());
         }
         catch (...)
         {
@@ -4124,7 +4124,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DisplayId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteEnvironmentView>().DisplayId());
         }
         catch (...)
         {
@@ -4336,7 +4336,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ActualSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().ActualSize());
         }
         catch (...)
         {
@@ -4362,7 +4362,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ClientSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().ClientSize());
         }
         catch (...)
         {
@@ -4388,7 +4388,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.CoordinateConverter());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().CoordinateConverter());
         }
         catch (...)
         {
@@ -4414,7 +4414,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().DispatcherQueue());
         }
         catch (...)
         {
@@ -4440,7 +4440,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.EnvironmentView());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().EnvironmentView());
         }
         catch (...)
         {
@@ -4466,7 +4466,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsConnected());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().IsConnected());
         }
         catch (...)
         {
@@ -4492,7 +4492,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().IsSiteEnabled());
         }
         catch (...)
         {
@@ -4518,7 +4518,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSiteVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().IsSiteVisible());
         }
         catch (...)
         {
@@ -4544,7 +4544,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutDirection());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().LayoutDirection());
         }
         catch (...)
         {
@@ -4570,7 +4570,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.OverrideScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().OverrideScale());
         }
         catch (...)
         {
@@ -4596,7 +4596,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().ParentScale());
         }
         catch (...)
         {
@@ -4622,7 +4622,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.RasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().RasterizationScale());
         }
         catch (...)
         {
@@ -4648,7 +4648,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.RequestedSize());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().RequestedSize());
         }
         catch (...)
         {
@@ -4674,7 +4674,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldApplyRasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::ContentSiteView>().ShouldApplyRasterizationScale());
         }
         catch (...)
         {
@@ -5029,7 +5029,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5068,7 +5068,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Content::ContentIsland>(args, 0);
 
-                self->obj.Connect(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Connect(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5105,7 +5105,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Disable();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Disable();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5142,7 +5142,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Enable();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Enable();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5179,7 +5179,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Hide();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Hide();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5254,7 +5254,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Windows::Graphics::RectInt32>(args, 0);
 
-                self->obj.MoveAndResize(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().MoveAndResize(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5291,7 +5291,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.MoveInZOrderAtBottom();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().MoveInZOrderAtBottom();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5328,7 +5328,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.MoveInZOrderAtTop();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().MoveInZOrderAtTop();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5367,7 +5367,7 @@ namespace py::cpp::Microsoft::UI::Content
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
-                self->obj.MoveInZOrderBelow(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().MoveInZOrderBelow(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5404,7 +5404,7 @@ namespace py::cpp::Microsoft::UI::Content
                     return nullptr;
                 }
 
-                self->obj.Show();
+                self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Show();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5437,7 +5437,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.OverrideScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().OverrideScale());
         }
         catch (...)
         {
@@ -5471,7 +5471,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.OverrideScale(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().OverrideScale(param0);
             return 0;
         }
         catch (...)
@@ -5498,7 +5498,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.LayoutDirectionOverride());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().LayoutDirectionOverride());
         }
         catch (...)
         {
@@ -5532,7 +5532,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Microsoft::UI::Content::ContentLayoutDirection>>(arg);
 
-            self->obj.LayoutDirectionOverride(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().LayoutDirectionOverride(param0);
             return 0;
         }
         catch (...)
@@ -5559,7 +5559,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.DispatcherQueue());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().DispatcherQueue());
         }
         catch (...)
         {
@@ -5585,7 +5585,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().IsEnabled());
         }
         catch (...)
         {
@@ -5611,7 +5611,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().IsVisible());
         }
         catch (...)
         {
@@ -5637,7 +5637,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.WindowId());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().WindowId());
         }
         catch (...)
         {
@@ -5663,7 +5663,7 @@ namespace py::cpp::Microsoft::UI::Content
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsClosed());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().IsClosed());
         }
         catch (...)
         {
@@ -5691,7 +5691,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.Closed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Closed(param0));
         }
         catch (...)
         {
@@ -5719,7 +5719,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Closed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().Closed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5748,7 +5748,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::ClosableNotifierHandler>(arg);
 
-            return py::convert(self->obj.FrameworkClosed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().FrameworkClosed(param0));
         }
         catch (...)
         {
@@ -5776,7 +5776,7 @@ namespace py::cpp::Microsoft::UI::Content
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.FrameworkClosed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Content::DesktopSiteBridge>().FrameworkClosed(param0);
             Py_RETURN_NONE;
         }
         catch (...)

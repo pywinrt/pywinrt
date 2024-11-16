@@ -617,7 +617,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Data());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data());
         }
         catch (...)
         {
@@ -651,7 +651,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Geometry>(arg);
 
-            self->obj.Data(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Path>().Data(param0);
             return 0;
         }
         catch (...)
@@ -1674,7 +1674,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAlphaMask());
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GetAlphaMask());
             }
             catch (...)
             {
@@ -1706,7 +1706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeThickness());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness());
         }
         catch (...)
         {
@@ -1740,7 +1740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.StrokeThickness(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeThickness(param0);
             return 0;
         }
         catch (...)
@@ -1767,7 +1767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeStartLineCap());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap());
         }
         catch (...)
         {
@@ -1801,7 +1801,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.StrokeStartLineCap(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeStartLineCap(param0);
             return 0;
         }
         catch (...)
@@ -1828,7 +1828,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeMiterLimit());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit());
         }
         catch (...)
         {
@@ -1862,7 +1862,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.StrokeMiterLimit(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeMiterLimit(param0);
             return 0;
         }
         catch (...)
@@ -1889,7 +1889,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeLineJoin());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin());
         }
         catch (...)
         {
@@ -1923,7 +1923,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineJoin>(arg);
 
-            self->obj.StrokeLineJoin(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeLineJoin(param0);
             return 0;
         }
         catch (...)
@@ -1950,7 +1950,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeEndLineCap());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap());
         }
         catch (...)
         {
@@ -1984,7 +1984,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.StrokeEndLineCap(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeEndLineCap(param0);
             return 0;
         }
         catch (...)
@@ -2011,7 +2011,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeDashOffset());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset());
         }
         catch (...)
         {
@@ -2045,7 +2045,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.StrokeDashOffset(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashOffset(param0);
             return 0;
         }
         catch (...)
@@ -2072,7 +2072,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeDashCap());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap());
         }
         catch (...)
         {
@@ -2106,7 +2106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::PenLineCap>(arg);
 
-            self->obj.StrokeDashCap(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashCap(param0);
             return 0;
         }
         catch (...)
@@ -2133,7 +2133,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.StrokeDashArray());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray());
         }
         catch (...)
         {
@@ -2167,7 +2167,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::DoubleCollection>(arg);
 
-            self->obj.StrokeDashArray(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().StrokeDashArray(param0);
             return 0;
         }
         catch (...)
@@ -2194,7 +2194,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stroke());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke());
         }
         catch (...)
         {
@@ -2228,7 +2228,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Stroke(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stroke(param0);
             return 0;
         }
         catch (...)
@@ -2255,7 +2255,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stretch());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch());
         }
         catch (...)
         {
@@ -2289,7 +2289,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
 
-            self->obj.Stretch(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Stretch(param0);
             return 0;
         }
         catch (...)
@@ -2316,7 +2316,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.Fill());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill());
         }
         catch (...)
         {
@@ -2350,7 +2350,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Fill(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().Fill(param0);
             return 0;
         }
         catch (...)
@@ -2377,7 +2377,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Shapes
                 return nullptr;
             }
 
-            return py::convert(self->obj.GeometryTransform());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Shapes::Shape>().GeometryTransform());
         }
         catch (...)
         {

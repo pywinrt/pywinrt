@@ -2046,7 +2046,7 @@ namespace py::cpp::Windows::UI::WindowManagement
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::WindowManagement::AppWindowPresentationConfiguration>().Kind());
         }
         catch (...)
         {

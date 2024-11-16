@@ -1988,7 +1988,7 @@ namespace py::cpp::Microsoft::UI::Windowing
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Windowing::AppWindowPresenter>().Kind());
         }
         catch (...)
         {

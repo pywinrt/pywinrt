@@ -239,7 +239,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.ComponentType());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::SceneComponent>().ComponentType());
         }
         catch (...)
         {
@@ -4200,7 +4200,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.OcclusionStrength());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength());
         }
         catch (...)
         {
@@ -4234,7 +4234,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.OcclusionStrength(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionStrength(param0);
             return 0;
         }
         catch (...)
@@ -4261,7 +4261,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.OcclusionInput());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput());
         }
         catch (...)
         {
@@ -4295,7 +4295,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.OcclusionInput(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().OcclusionInput(param0);
             return 0;
         }
         catch (...)
@@ -4322,7 +4322,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalScale());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale());
         }
         catch (...)
         {
@@ -4356,7 +4356,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.NormalScale(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalScale(param0);
             return 0;
         }
         catch (...)
@@ -4383,7 +4383,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.NormalInput());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput());
         }
         catch (...)
         {
@@ -4417,7 +4417,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.NormalInput(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().NormalInput(param0);
             return 0;
         }
         catch (...)
@@ -4444,7 +4444,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsDoubleSided());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided());
         }
         catch (...)
         {
@@ -4478,7 +4478,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsDoubleSided(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().IsDoubleSided(param0);
             return 0;
         }
         catch (...)
@@ -4505,7 +4505,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmissiveInput());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput());
         }
         catch (...)
         {
@@ -4539,7 +4539,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneMaterialInput>(arg);
 
-            self->obj.EmissiveInput(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveInput(param0);
             return 0;
         }
         catch (...)
@@ -4566,7 +4566,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.EmissiveFactor());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor());
         }
         catch (...)
         {
@@ -4600,7 +4600,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Numerics::float3>(arg);
 
-            self->obj.EmissiveFactor(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().EmissiveFactor(param0);
             return 0;
         }
         catch (...)
@@ -4627,7 +4627,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlphaMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode());
         }
         catch (...)
         {
@@ -4661,7 +4661,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<winrt::Windows::UI::Composition::Scenes::SceneAlphaMode>(arg);
 
-            self->obj.AlphaMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaMode(param0);
             return 0;
         }
         catch (...)
@@ -4688,7 +4688,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlphaCutoff());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff());
         }
         catch (...)
         {
@@ -4722,7 +4722,7 @@ namespace py::cpp::Windows::UI::Composition::Scenes
 
             auto param0 = py::convert_to<float>(arg);
 
-            self->obj.AlphaCutoff(param0);
+            self->obj.try_as<winrt::Windows::UI::Composition::Scenes::ScenePbrMaterial>().AlphaCutoff(param0);
             return 0;
         }
         catch (...)

@@ -42,7 +42,7 @@ namespace py::cpp::Windows::UI::Input
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Windows::UI::Input::AttachableInputObject>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)

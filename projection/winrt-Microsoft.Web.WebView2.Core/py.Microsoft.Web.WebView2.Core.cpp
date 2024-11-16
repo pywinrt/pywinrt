@@ -5212,7 +5212,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5238,7 +5238,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
             {
                 auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusReason>(args, 0);
 
-                self->obj.MoveFocus(param0);
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocus(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5262,7 +5262,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             try
             {
-                self->obj.NotifyParentWindowPositionChanged();
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().NotifyParentWindowPositionChanged();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5289,7 +5289,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.SetBoundsAndZoomFactor(param0, param1);
+                self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().SetBoundsAndZoomFactor(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5309,7 +5309,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ZoomFactor());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor());
         }
         catch (...)
         {
@@ -5330,7 +5330,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.ZoomFactor(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactor(param0);
             return 0;
         }
         catch (...)
@@ -5344,7 +5344,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ParentWindow());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow());
         }
         catch (...)
         {
@@ -5365,7 +5365,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2ControllerWindowReference>(arg);
 
-            self->obj.ParentWindow(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ParentWindow(param0);
             return 0;
         }
         catch (...)
@@ -5379,7 +5379,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsVisible());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible());
         }
         catch (...)
         {
@@ -5400,7 +5400,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsVisible(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsVisible(param0);
             return 0;
         }
         catch (...)
@@ -5414,7 +5414,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.Bounds());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds());
         }
         catch (...)
         {
@@ -5435,7 +5435,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(arg);
 
-            self->obj.Bounds(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().Bounds(param0);
             return 0;
         }
         catch (...)
@@ -5449,7 +5449,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.CoreWebView2());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().CoreWebView2());
         }
         catch (...)
         {
@@ -5462,7 +5462,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.DefaultBackgroundColor());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor());
         }
         catch (...)
         {
@@ -5483,7 +5483,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.DefaultBackgroundColor(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().DefaultBackgroundColor(param0);
             return 0;
         }
         catch (...)
@@ -5497,7 +5497,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.ShouldDetectMonitorScaleChanges());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges());
         }
         catch (...)
         {
@@ -5518,7 +5518,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldDetectMonitorScaleChanges(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ShouldDetectMonitorScaleChanges(param0);
             return 0;
         }
         catch (...)
@@ -5532,7 +5532,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.RasterizationScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale());
         }
         catch (...)
         {
@@ -5553,7 +5553,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RasterizationScale(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScale(param0);
             return 0;
         }
         catch (...)
@@ -5567,7 +5567,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.BoundsMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode());
         }
         catch (...)
         {
@@ -5588,7 +5588,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Microsoft::Web::WebView2::Core::CoreWebView2BoundsMode>(arg);
 
-            self->obj.BoundsMode(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().BoundsMode(param0);
             return 0;
         }
         catch (...)
@@ -5602,7 +5602,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.AllowExternalDrop());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop());
         }
         catch (...)
         {
@@ -5623,7 +5623,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowExternalDrop(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AllowExternalDrop(param0);
             return 0;
         }
         catch (...)
@@ -5637,7 +5637,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
     {
         try
         {
-            return py::convert(self->obj.IsBrowserHitTransparent());
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().IsBrowserHitTransparent());
         }
         catch (...)
         {
@@ -5652,7 +5652,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.RasterizationScaleChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0));
         }
         catch (...)
         {
@@ -5667,7 +5667,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.RasterizationScaleChanged(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().RasterizationScaleChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5683,7 +5683,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2AcceleratorKeyPressedEventArgs>>(arg);
 
-            return py::convert(self->obj.AcceleratorKeyPressed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0));
         }
         catch (...)
         {
@@ -5698,7 +5698,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AcceleratorKeyPressed(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().AcceleratorKeyPressed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5714,7 +5714,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.GotFocus(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0));
         }
         catch (...)
         {
@@ -5729,7 +5729,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GotFocus(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().GotFocus(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5745,7 +5745,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.LostFocus(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0));
         }
         catch (...)
         {
@@ -5760,7 +5760,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.LostFocus(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().LostFocus(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5776,7 +5776,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Microsoft::Web::WebView2::Core::CoreWebView2MoveFocusRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.MoveFocusRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0));
         }
         catch (...)
         {
@@ -5791,7 +5791,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.MoveFocusRequested(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().MoveFocusRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -5807,7 +5807,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller, winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.ZoomFactorChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0));
         }
         catch (...)
         {
@@ -5822,7 +5822,7 @@ namespace py::cpp::Microsoft::Web::WebView2::Core
         {
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ZoomFactorChanged(param0);
+            self->obj.try_as<winrt::Microsoft::Web::WebView2::Core::CoreWebView2Controller>().ZoomFactorChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)
