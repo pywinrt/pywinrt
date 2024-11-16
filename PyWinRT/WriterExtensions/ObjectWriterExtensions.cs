@@ -329,7 +329,17 @@ static class ObjectWriterExtensions
             var name = prop.Name.ToPythonIdentifier();
             var propType = prop.Property.PropertyType.ToPyTypeName(ns, prop.GenericArgMap);
 
-            w.WriteLine("@_property");
+            // HACK: work around https://github.com/microsoft/cppwinrt/issues/1287
+            // so far, this is the only case in the entire Windows SDK where
+            // a property is entirely replaced with one of the same name
+            var typeIgnore =
+                type.Namespace == "Windows.UI.Xaml.Controls.Maps"
+                && type.Name == "MapControl"
+                && prop.Name == "Style"
+                    ? "  # type: ignore[override]"
+                    : "";
+
+            w.WriteLine($"@_property{typeIgnore}");
             w.WriteLine($"def {name}(self) -> {propType}: ...");
 
             if (prop.SetMethod is not null)
