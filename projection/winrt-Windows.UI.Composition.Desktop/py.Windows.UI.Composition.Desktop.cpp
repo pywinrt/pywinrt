@@ -142,7 +142,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_composition_desktop(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle DesktopWindowTarget_type{py::register_python_type(module.get(), &type_spec_DesktopWindowTarget, object_bases.get(), nullptr)};
+    py::pyobj_handle windows_ui_composition_module{PyImport_ImportModule("winrt._winrt_windows_ui_composition")};
+    if (!windows_ui_composition_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_composition_CompositionTarget_type{PyObject_GetAttrString(windows_ui_composition_module.get(), "CompositionTarget")};
+    if (!windows_ui_composition_CompositionTarget_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle DesktopWindowTarget_bases{PyTuple_Pack(1, windows_ui_composition_CompositionTarget_type.get())};
+    if (!DesktopWindowTarget_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DesktopWindowTarget_type{py::register_python_type(module.get(), &type_spec_DesktopWindowTarget, DesktopWindowTarget_bases.get(), nullptr)};
     if (!DesktopWindowTarget_type)
     {
         return nullptr;

@@ -10667,6 +10667,24 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_RoutedEventArgs_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "RoutedEventArgs")};
+    if (!microsoft_ui_xaml_RoutedEventArgs_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_DependencyObject_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "DependencyObject")};
+    if (!microsoft_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
     py::pytype_handle AccessKeyDisplayDismissedEventArgs_type{py::register_python_type(module.get(), &type_spec_AccessKeyDisplayDismissedEventArgs, object_bases.get(), nullptr)};
     if (!AccessKeyDisplayDismissedEventArgs_type)
     {
@@ -10703,19 +10721,37 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CharacterReceivedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle CharacterReceivedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!CharacterReceivedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CharacterReceivedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_CharacterReceivedRoutedEventArgs, CharacterReceivedRoutedEventArgs_bases.get(), nullptr)};
     if (!CharacterReceivedRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContextRequestedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle ContextRequestedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ContextRequestedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ContextRequestedEventArgs_type{py::register_python_type(module.get(), &type_spec_ContextRequestedEventArgs, ContextRequestedEventArgs_bases.get(), nullptr)};
     if (!ContextRequestedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle DoubleTappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_DoubleTappedRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle DoubleTappedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!DoubleTappedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DoubleTappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_DoubleTappedRoutedEventArgs, DoubleTappedRoutedEventArgs_bases.get(), nullptr)};
     if (!DoubleTappedRoutedEventArgs_type)
     {
         return nullptr;
@@ -10763,13 +10799,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle GettingFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_GettingFocusEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle GettingFocusEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!GettingFocusEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle GettingFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_GettingFocusEventArgs, GettingFocusEventArgs_bases.get(), nullptr)};
     if (!GettingFocusEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle HoldingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_HoldingRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle HoldingRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!HoldingRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle HoldingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_HoldingRoutedEventArgs, HoldingRoutedEventArgs_bases.get(), nullptr)};
     if (!HoldingRoutedEventArgs_type)
     {
         return nullptr;
@@ -10793,31 +10841,61 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle InputScope_type{py::register_python_type(module.get(), &type_spec_InputScope, object_bases.get(), nullptr)};
+    py::pyobj_handle InputScope_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!InputScope_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputScope_type{py::register_python_type(module.get(), &type_spec_InputScope, InputScope_bases.get(), nullptr)};
     if (!InputScope_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputScopeName_type{py::register_python_type(module.get(), &type_spec_InputScopeName, object_bases.get(), nullptr)};
+    py::pyobj_handle InputScopeName_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!InputScopeName_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputScopeName_type{py::register_python_type(module.get(), &type_spec_InputScopeName, InputScopeName_bases.get(), nullptr)};
     if (!InputScopeName_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle KeyRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!KeyRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle KeyRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_KeyRoutedEventArgs, KeyRoutedEventArgs_bases.get(), nullptr)};
     if (!KeyRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpec(&type_spec_KeyboardAccelerator_Static)};
+    py::pyobj_handle KeyboardAccelerator_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!KeyboardAccelerator_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_KeyboardAccelerator_Static{PyType_FromSpecWithBases(&type_spec_KeyboardAccelerator_Static, KeyboardAccelerator_Static_bases.get())};
     if (!type_KeyboardAccelerator_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
+    py::pyobj_handle KeyboardAccelerator_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!KeyboardAccelerator_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle KeyboardAccelerator_type{py::register_python_type(module.get(), &type_spec_KeyboardAccelerator, KeyboardAccelerator_bases.get(), reinterpret_cast<PyTypeObject*>(type_KeyboardAccelerator_Static.get()))};
     if (!KeyboardAccelerator_type)
     {
         return nullptr;
@@ -10829,25 +10907,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle LosingFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_LosingFocusEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle LosingFocusEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!LosingFocusEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle LosingFocusEventArgs_type{py::register_python_type(module.get(), &type_spec_LosingFocusEventArgs, LosingFocusEventArgs_bases.get(), nullptr)};
     if (!LosingFocusEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationCompletedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationCompletedRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle ManipulationCompletedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ManipulationCompletedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ManipulationCompletedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationCompletedRoutedEventArgs, ManipulationCompletedRoutedEventArgs_bases.get(), nullptr)};
     if (!ManipulationCompletedRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationDeltaRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationDeltaRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle ManipulationDeltaRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ManipulationDeltaRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ManipulationDeltaRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationDeltaRoutedEventArgs, ManipulationDeltaRoutedEventArgs_bases.get(), nullptr)};
     if (!ManipulationDeltaRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationInertiaStartingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle ManipulationInertiaStartingRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ManipulationInertiaStartingRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ManipulationInertiaStartingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationInertiaStartingRoutedEventArgs, ManipulationInertiaStartingRoutedEventArgs_bases.get(), nullptr)};
     if (!ManipulationInertiaStartingRoutedEventArgs_type)
     {
         return nullptr;
@@ -10859,25 +10961,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_ManipulationStartedRoutedEventArgs_Static{PyType_FromSpec(&type_spec_ManipulationStartedRoutedEventArgs_Static)};
+    py::pyobj_handle ManipulationStartedRoutedEventArgs_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_RoutedEventArgs_type.get())))};
+    if (!ManipulationStartedRoutedEventArgs_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ManipulationStartedRoutedEventArgs_Static{PyType_FromSpecWithBases(&type_spec_ManipulationStartedRoutedEventArgs_Static, ManipulationStartedRoutedEventArgs_Static_bases.get())};
     if (!type_ManipulationStartedRoutedEventArgs_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ManipulationStartedRoutedEventArgs_Static.get()))};
+    py::pyobj_handle ManipulationStartedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ManipulationStartedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ManipulationStartedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartedRoutedEventArgs, ManipulationStartedRoutedEventArgs_bases.get(), reinterpret_cast<PyTypeObject*>(type_ManipulationStartedRoutedEventArgs_Static.get()))};
     if (!ManipulationStartedRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle ManipulationStartingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartingRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle ManipulationStartingRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!ManipulationStartingRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ManipulationStartingRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_ManipulationStartingRoutedEventArgs, ManipulationStartingRoutedEventArgs_bases.get(), nullptr)};
     if (!ManipulationStartingRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle NoFocusCandidateFoundEventArgs_type{py::register_python_type(module.get(), &type_spec_NoFocusCandidateFoundEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle NoFocusCandidateFoundEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!NoFocusCandidateFoundEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle NoFocusCandidateFoundEventArgs_type{py::register_python_type(module.get(), &type_spec_NoFocusCandidateFoundEventArgs, NoFocusCandidateFoundEventArgs_bases.get(), nullptr)};
     if (!NoFocusCandidateFoundEventArgs_type)
     {
         return nullptr;
@@ -10889,7 +11015,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle PointerRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle PointerRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!PointerRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PointerRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_PointerRoutedEventArgs, PointerRoutedEventArgs_bases.get(), nullptr)};
     if (!PointerRoutedEventArgs_type)
     {
         return nullptr;
@@ -10901,37 +11033,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_input(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle RightTappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_RightTappedRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle RightTappedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!RightTappedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RightTappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_RightTappedRoutedEventArgs, RightTappedRoutedEventArgs_bases.get(), nullptr)};
     if (!RightTappedRoutedEventArgs_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpec(&type_spec_XamlUICommand_Static)};
+    py::pyobj_handle XamlUICommand_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!XamlUICommand_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_XamlUICommand_Static{PyType_FromSpecWithBases(&type_spec_XamlUICommand_Static, XamlUICommand_Static_bases.get())};
     if (!type_XamlUICommand_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
+    py::pyobj_handle XamlUICommand_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!XamlUICommand_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle XamlUICommand_type{py::register_python_type(module.get(), &type_spec_XamlUICommand, XamlUICommand_bases.get(), reinterpret_cast<PyTypeObject*>(type_XamlUICommand_Static.get()))};
     if (!XamlUICommand_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_StandardUICommand_Static{PyType_FromSpec(&type_spec_StandardUICommand_Static)};
+    py::pyobj_handle StandardUICommand_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(XamlUICommand_type.get())))};
+    if (!StandardUICommand_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_StandardUICommand_Static{PyType_FromSpecWithBases(&type_spec_StandardUICommand_Static, StandardUICommand_Static_bases.get())};
     if (!type_StandardUICommand_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle StandardUICommand_type{py::register_python_type(module.get(), &type_spec_StandardUICommand, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Static.get()))};
+    py::pyobj_handle StandardUICommand_bases{PyTuple_Pack(1, XamlUICommand_type.get())};
+    if (!StandardUICommand_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle StandardUICommand_type{py::register_python_type(module.get(), &type_spec_StandardUICommand, StandardUICommand_bases.get(), reinterpret_cast<PyTypeObject*>(type_StandardUICommand_Static.get()))};
     if (!StandardUICommand_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle TappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedRoutedEventArgs, object_bases.get(), nullptr)};
+    py::pyobj_handle TappedRoutedEventArgs_bases{PyTuple_Pack(1, microsoft_ui_xaml_RoutedEventArgs_type.get())};
+    if (!TappedRoutedEventArgs_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle TappedRoutedEventArgs_type{py::register_python_type(module.get(), &type_spec_TappedRoutedEventArgs, TappedRoutedEventArgs_bases.get(), nullptr)};
     if (!TappedRoutedEventArgs_type)
     {
         return nullptr;

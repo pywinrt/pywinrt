@@ -6356,13 +6356,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_content(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpec(&type_spec_DesktopChildSiteBridge_Static)};
+    py::pyobj_handle DesktopChildSiteBridge_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(DesktopSiteBridge_type.get())))};
+    if (!DesktopChildSiteBridge_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_DesktopChildSiteBridge_Static{PyType_FromSpecWithBases(&type_spec_DesktopChildSiteBridge_Static, DesktopChildSiteBridge_Static_bases.get())};
     if (!type_DesktopChildSiteBridge_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
+    py::pyobj_handle DesktopChildSiteBridge_bases{PyTuple_Pack(1, DesktopSiteBridge_type.get())};
+    if (!DesktopChildSiteBridge_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle DesktopChildSiteBridge_type{py::register_python_type(module.get(), &type_spec_DesktopChildSiteBridge, DesktopChildSiteBridge_bases.get(), reinterpret_cast<PyTypeObject*>(type_DesktopChildSiteBridge_Static.get()))};
     if (!DesktopChildSiteBridge_type)
     {
         return nullptr;

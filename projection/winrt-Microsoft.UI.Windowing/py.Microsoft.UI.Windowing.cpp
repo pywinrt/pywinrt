@@ -5515,13 +5515,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CompactOverlayPresenter_Static{PyType_FromSpec(&type_spec_CompactOverlayPresenter_Static)};
+    py::pyobj_handle CompactOverlayPresenter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AppWindowPresenter_type.get())))};
+    if (!CompactOverlayPresenter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CompactOverlayPresenter_Static{PyType_FromSpecWithBases(&type_spec_CompactOverlayPresenter_Static, CompactOverlayPresenter_Static_bases.get())};
     if (!type_CompactOverlayPresenter_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CompactOverlayPresenter_type{py::register_python_type(module.get(), &type_spec_CompactOverlayPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompactOverlayPresenter_Static.get()))};
+    py::pyobj_handle CompactOverlayPresenter_bases{PyTuple_Pack(1, AppWindowPresenter_type.get())};
+    if (!CompactOverlayPresenter_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CompactOverlayPresenter_type{py::register_python_type(module.get(), &type_spec_CompactOverlayPresenter, CompactOverlayPresenter_bases.get(), reinterpret_cast<PyTypeObject*>(type_CompactOverlayPresenter_Static.get()))};
     if (!CompactOverlayPresenter_type)
     {
         return nullptr;
@@ -5545,25 +5557,49 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_windowing(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_FullScreenPresenter_Static{PyType_FromSpec(&type_spec_FullScreenPresenter_Static)};
+    py::pyobj_handle FullScreenPresenter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AppWindowPresenter_type.get())))};
+    if (!FullScreenPresenter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_FullScreenPresenter_Static{PyType_FromSpecWithBases(&type_spec_FullScreenPresenter_Static, FullScreenPresenter_Static_bases.get())};
     if (!type_FullScreenPresenter_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle FullScreenPresenter_type{py::register_python_type(module.get(), &type_spec_FullScreenPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullScreenPresenter_Static.get()))};
+    py::pyobj_handle FullScreenPresenter_bases{PyTuple_Pack(1, AppWindowPresenter_type.get())};
+    if (!FullScreenPresenter_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle FullScreenPresenter_type{py::register_python_type(module.get(), &type_spec_FullScreenPresenter, FullScreenPresenter_bases.get(), reinterpret_cast<PyTypeObject*>(type_FullScreenPresenter_Static.get()))};
     if (!FullScreenPresenter_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_OverlappedPresenter_Static{PyType_FromSpec(&type_spec_OverlappedPresenter_Static)};
+    py::pyobj_handle OverlappedPresenter_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(AppWindowPresenter_type.get())))};
+    if (!OverlappedPresenter_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_OverlappedPresenter_Static{PyType_FromSpecWithBases(&type_spec_OverlappedPresenter_Static, OverlappedPresenter_Static_bases.get())};
     if (!type_OverlappedPresenter_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle OverlappedPresenter_type{py::register_python_type(module.get(), &type_spec_OverlappedPresenter, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverlappedPresenter_Static.get()))};
+    py::pyobj_handle OverlappedPresenter_bases{PyTuple_Pack(1, AppWindowPresenter_type.get())};
+    if (!OverlappedPresenter_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle OverlappedPresenter_type{py::register_python_type(module.get(), &type_spec_OverlappedPresenter, OverlappedPresenter_bases.get(), reinterpret_cast<PyTypeObject*>(type_OverlappedPresenter_Static.get()))};
     if (!OverlappedPresenter_type)
     {
         return nullptr;

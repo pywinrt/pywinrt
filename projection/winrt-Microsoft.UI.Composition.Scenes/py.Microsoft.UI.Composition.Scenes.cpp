@@ -5521,175 +5521,373 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_composition_scenes(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneObject_Static{PyType_FromSpec(&type_spec_SceneObject_Static)};
+    py::pyobj_handle microsoft_ui_composition_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_composition")};
+    if (!microsoft_ui_composition_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionTransform_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionTransform")};
+    if (!microsoft_ui_composition_CompositionTransform_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_CompositionObject_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "CompositionObject")};
+    if (!microsoft_ui_composition_CompositionObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_composition_ContainerVisual_type{PyObject_GetAttrString(microsoft_ui_composition_module.get(), "ContainerVisual")};
+    if (!microsoft_ui_composition_ContainerVisual_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle SceneObject_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_CompositionObject_type.get())))};
+    if (!SceneObject_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneObject_Static{PyType_FromSpecWithBases(&type_spec_SceneObject_Static, SceneObject_Static_bases.get())};
     if (!type_SceneObject_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneObject_Static.get()))};
+    py::pyobj_handle SceneObject_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionObject_type.get())};
+    if (!SceneObject_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneObject_type{py::register_python_type(module.get(), &type_spec_SceneObject, SceneObject_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneObject_Static.get()))};
     if (!SceneObject_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, object_bases.get(), nullptr)};
+    py::pyobj_handle SceneBoundingBox_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneBoundingBox_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneBoundingBox_type{py::register_python_type(module.get(), &type_spec_SceneBoundingBox, SceneBoundingBox_bases.get(), nullptr)};
     if (!SceneBoundingBox_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneComponent_Static{PyType_FromSpec(&type_spec_SceneComponent_Static)};
+    py::pyobj_handle SceneComponent_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneObject_type.get())))};
+    if (!SceneComponent_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneComponent_Static{PyType_FromSpecWithBases(&type_spec_SceneComponent_Static, SceneComponent_Static_bases.get())};
     if (!type_SceneComponent_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneComponent_type{py::register_python_type(module.get(), &type_spec_SceneComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneComponent_Static.get()))};
+    py::pyobj_handle SceneComponent_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneComponent_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneComponent_type{py::register_python_type(module.get(), &type_spec_SceneComponent, SceneComponent_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneComponent_Static.get()))};
     if (!SceneComponent_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneComponentCollection_type{py::register_python_type(module.get(), &type_spec_SceneComponentCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle SceneComponentCollection_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneComponentCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneComponentCollection_type{py::register_python_type(module.get(), &type_spec_SceneComponentCollection, SceneComponentCollection_bases.get(), nullptr)};
     if (!SceneComponentCollection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneMaterial_Static{PyType_FromSpec(&type_spec_SceneMaterial_Static)};
+    py::pyobj_handle SceneMaterial_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneObject_type.get())))};
+    if (!SceneMaterial_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMaterial_Static{PyType_FromSpecWithBases(&type_spec_SceneMaterial_Static, SceneMaterial_Static_bases.get())};
     if (!type_SceneMaterial_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMaterial_Static.get()))};
+    py::pyobj_handle SceneMaterial_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneMaterial_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMaterial, SceneMaterial_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMaterial_Static.get()))};
     if (!SceneMaterial_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneMaterialInput_Static{PyType_FromSpec(&type_spec_SceneMaterialInput_Static)};
+    py::pyobj_handle SceneMaterialInput_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneObject_type.get())))};
+    if (!SceneMaterialInput_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMaterialInput_Static{PyType_FromSpecWithBases(&type_spec_SceneMaterialInput_Static, SceneMaterialInput_Static_bases.get())};
     if (!type_SceneMaterialInput_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneMaterialInput, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMaterialInput_Static.get()))};
+    py::pyobj_handle SceneMaterialInput_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneMaterialInput_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneMaterialInput, SceneMaterialInput_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMaterialInput_Static.get()))};
     if (!SceneMaterialInput_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneMesh_Static{PyType_FromSpec(&type_spec_SceneMesh_Static)};
+    py::pyobj_handle SceneMesh_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneObject_type.get())))};
+    if (!SceneMesh_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMesh_Static{PyType_FromSpecWithBases(&type_spec_SceneMesh_Static, SceneMesh_Static_bases.get())};
     if (!type_SceneMesh_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMesh_type{py::register_python_type(module.get(), &type_spec_SceneMesh, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMesh_Static.get()))};
+    py::pyobj_handle SceneMesh_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneMesh_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMesh_type{py::register_python_type(module.get(), &type_spec_SceneMesh, SceneMesh_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMesh_Static.get()))};
     if (!SceneMesh_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMeshMaterialAttributeMap_type{py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, object_bases.get(), nullptr)};
+    py::pyobj_handle SceneMeshMaterialAttributeMap_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneMeshMaterialAttributeMap_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMeshMaterialAttributeMap_type{py::register_python_type(module.get(), &type_spec_SceneMeshMaterialAttributeMap, SceneMeshMaterialAttributeMap_bases.get(), nullptr)};
     if (!SceneMeshMaterialAttributeMap_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneRendererComponent_Static{PyType_FromSpec(&type_spec_SceneRendererComponent_Static)};
+    py::pyobj_handle SceneRendererComponent_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneComponent_type.get())))};
+    if (!SceneRendererComponent_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneRendererComponent_Static{PyType_FromSpecWithBases(&type_spec_SceneRendererComponent_Static, SceneRendererComponent_Static_bases.get())};
     if (!type_SceneRendererComponent_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneRendererComponent_Static.get()))};
+    py::pyobj_handle SceneRendererComponent_bases{PyTuple_Pack(1, SceneComponent_type.get())};
+    if (!SceneRendererComponent_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneRendererComponent, SceneRendererComponent_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneRendererComponent_Static.get()))};
     if (!SceneRendererComponent_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneMeshRendererComponent_Static{PyType_FromSpec(&type_spec_SceneMeshRendererComponent_Static)};
+    py::pyobj_handle SceneMeshRendererComponent_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneRendererComponent_type.get())))};
+    if (!SceneMeshRendererComponent_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMeshRendererComponent_Static{PyType_FromSpecWithBases(&type_spec_SceneMeshRendererComponent_Static, SceneMeshRendererComponent_Static_bases.get())};
     if (!type_SceneMeshRendererComponent_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMeshRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get()))};
+    py::pyobj_handle SceneMeshRendererComponent_bases{PyTuple_Pack(1, SceneRendererComponent_type.get())};
+    if (!SceneMeshRendererComponent_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMeshRendererComponent_type{py::register_python_type(module.get(), &type_spec_SceneMeshRendererComponent, SceneMeshRendererComponent_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMeshRendererComponent_Static.get()))};
     if (!SceneMeshRendererComponent_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_ScenePbrMaterial_Static{PyType_FromSpec(&type_spec_ScenePbrMaterial_Static)};
+    py::pyobj_handle ScenePbrMaterial_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneMaterial_type.get())))};
+    if (!ScenePbrMaterial_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_ScenePbrMaterial_Static{PyType_FromSpecWithBases(&type_spec_ScenePbrMaterial_Static, ScenePbrMaterial_Static_bases.get())};
     if (!type_ScenePbrMaterial_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScenePbrMaterial_Static.get()))};
+    py::pyobj_handle ScenePbrMaterial_bases{PyTuple_Pack(1, SceneMaterial_type.get())};
+    if (!ScenePbrMaterial_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle ScenePbrMaterial_type{py::register_python_type(module.get(), &type_spec_ScenePbrMaterial, ScenePbrMaterial_bases.get(), reinterpret_cast<PyTypeObject*>(type_ScenePbrMaterial_Static.get()))};
     if (!ScenePbrMaterial_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneMetallicRoughnessMaterial_Static{PyType_FromSpec(&type_spec_SceneMetallicRoughnessMaterial_Static)};
+    py::pyobj_handle SceneMetallicRoughnessMaterial_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(ScenePbrMaterial_type.get())))};
+    if (!SceneMetallicRoughnessMaterial_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneMetallicRoughnessMaterial_Static{PyType_FromSpecWithBases(&type_spec_SceneMetallicRoughnessMaterial_Static, SceneMetallicRoughnessMaterial_Static_bases.get())};
     if (!type_SceneMetallicRoughnessMaterial_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneMetallicRoughnessMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMetallicRoughnessMaterial_Static.get()))};
+    py::pyobj_handle SceneMetallicRoughnessMaterial_bases{PyTuple_Pack(1, ScenePbrMaterial_type.get())};
+    if (!SceneMetallicRoughnessMaterial_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneMetallicRoughnessMaterial_type{py::register_python_type(module.get(), &type_spec_SceneMetallicRoughnessMaterial, SceneMetallicRoughnessMaterial_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneMetallicRoughnessMaterial_Static.get()))};
     if (!SceneMetallicRoughnessMaterial_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneModelTransform_type{py::register_python_type(module.get(), &type_spec_SceneModelTransform, object_bases.get(), nullptr)};
+    py::pyobj_handle SceneModelTransform_bases{PyTuple_Pack(1, microsoft_ui_composition_CompositionTransform_type.get())};
+    if (!SceneModelTransform_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneModelTransform_type{py::register_python_type(module.get(), &type_spec_SceneModelTransform, SceneModelTransform_bases.get(), nullptr)};
     if (!SceneModelTransform_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneNode_Static{PyType_FromSpec(&type_spec_SceneNode_Static)};
+    py::pyobj_handle SceneNode_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneObject_type.get())))};
+    if (!SceneNode_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneNode_Static{PyType_FromSpecWithBases(&type_spec_SceneNode_Static, SceneNode_Static_bases.get())};
     if (!type_SceneNode_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneNode_type{py::register_python_type(module.get(), &type_spec_SceneNode, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneNode_Static.get()))};
+    py::pyobj_handle SceneNode_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneNode_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneNode_type{py::register_python_type(module.get(), &type_spec_SceneNode, SceneNode_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneNode_Static.get()))};
     if (!SceneNode_type)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneNodeCollection_type{py::register_python_type(module.get(), &type_spec_SceneNodeCollection, object_bases.get(), nullptr)};
+    py::pyobj_handle SceneNodeCollection_bases{PyTuple_Pack(1, SceneObject_type.get())};
+    if (!SceneNodeCollection_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneNodeCollection_type{py::register_python_type(module.get(), &type_spec_SceneNodeCollection, SceneNodeCollection_bases.get(), nullptr)};
     if (!SceneNodeCollection_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneSurfaceMaterialInput_Static{PyType_FromSpec(&type_spec_SceneSurfaceMaterialInput_Static)};
+    py::pyobj_handle SceneSurfaceMaterialInput_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(SceneMaterialInput_type.get())))};
+    if (!SceneSurfaceMaterialInput_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneSurfaceMaterialInput_Static{PyType_FromSpecWithBases(&type_spec_SceneSurfaceMaterialInput_Static, SceneSurfaceMaterialInput_Static_bases.get())};
     if (!type_SceneSurfaceMaterialInput_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneSurfaceMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneSurfaceMaterialInput_Static.get()))};
+    py::pyobj_handle SceneSurfaceMaterialInput_bases{PyTuple_Pack(1, SceneMaterialInput_type.get())};
+    if (!SceneSurfaceMaterialInput_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneSurfaceMaterialInput_type{py::register_python_type(module.get(), &type_spec_SceneSurfaceMaterialInput, SceneSurfaceMaterialInput_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneSurfaceMaterialInput_Static.get()))};
     if (!SceneSurfaceMaterialInput_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_SceneVisual_Static{PyType_FromSpec(&type_spec_SceneVisual_Static)};
+    py::pyobj_handle SceneVisual_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_composition_ContainerVisual_type.get())))};
+    if (!SceneVisual_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_SceneVisual_Static{PyType_FromSpecWithBases(&type_spec_SceneVisual_Static, SceneVisual_Static_bases.get())};
     if (!type_SceneVisual_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle SceneVisual_type{py::register_python_type(module.get(), &type_spec_SceneVisual, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneVisual_Static.get()))};
+    py::pyobj_handle SceneVisual_bases{PyTuple_Pack(1, microsoft_ui_composition_ContainerVisual_type.get())};
+    if (!SceneVisual_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle SceneVisual_type{py::register_python_type(module.get(), &type_spec_SceneVisual, SceneVisual_bases.get(), reinterpret_cast<PyTypeObject*>(type_SceneVisual_Static.get()))};
     if (!SceneVisual_type)
     {
         return nullptr;

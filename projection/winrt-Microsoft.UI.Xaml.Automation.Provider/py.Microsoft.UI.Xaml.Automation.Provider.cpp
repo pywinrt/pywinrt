@@ -8126,7 +8126,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_automation_provider(void) noexcep
         return nullptr;
     }
 
-    py::pytype_handle IRawElementProviderSimple_type{py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, object_bases.get(), nullptr)};
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_DependencyObject_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "DependencyObject")};
+    if (!microsoft_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle IRawElementProviderSimple_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!IRawElementProviderSimple_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle IRawElementProviderSimple_type{py::register_python_type(module.get(), &type_spec_IRawElementProviderSimple, IRawElementProviderSimple_bases.get(), nullptr)};
     if (!IRawElementProviderSimple_type)
     {
         return nullptr;

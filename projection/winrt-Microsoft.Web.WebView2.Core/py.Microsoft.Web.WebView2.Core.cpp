@@ -19003,7 +19003,13 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_web_webview2_core(void) noexcept
         return nullptr;
     }
 
-    py::pytype_handle CoreWebView2CompositionController_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CompositionController, object_bases.get(), nullptr)};
+    py::pyobj_handle CoreWebView2CompositionController_bases{PyTuple_Pack(1, CoreWebView2Controller_type.get())};
+    if (!CoreWebView2CompositionController_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CoreWebView2CompositionController_type{py::register_python_type(module.get(), &type_spec_CoreWebView2CompositionController, CoreWebView2CompositionController_bases.get(), nullptr)};
     if (!CoreWebView2CompositionController_type)
     {
         return nullptr;

@@ -1192,6 +1192,18 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
+    py::pyobj_handle microsoft_ui_xaml_module{PyImport_ImportModule("winrt._winrt_microsoft_ui_xaml")};
+    if (!microsoft_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle microsoft_ui_xaml_DependencyObject_type{PyObject_GetAttrString(microsoft_ui_xaml_module.get(), "DependencyObject")};
+    if (!microsoft_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
     py::pyobj_handle type_FrameNavigationOptions_Static{PyType_FromSpec(&type_spec_FrameNavigationOptions_Static)};
     if (!type_FrameNavigationOptions_Static)
     {
@@ -1222,13 +1234,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_xaml_navigation(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_PageStackEntry_Static{PyType_FromSpec(&type_spec_PageStackEntry_Static)};
+    py::pyobj_handle PageStackEntry_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(microsoft_ui_xaml_DependencyObject_type.get())))};
+    if (!PageStackEntry_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_PageStackEntry_Static{PyType_FromSpecWithBases(&type_spec_PageStackEntry_Static, PageStackEntry_Static_bases.get())};
     if (!type_PageStackEntry_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle PageStackEntry_type{py::register_python_type(module.get(), &type_spec_PageStackEntry, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Static.get()))};
+    py::pyobj_handle PageStackEntry_bases{PyTuple_Pack(1, microsoft_ui_xaml_DependencyObject_type.get())};
+    if (!PageStackEntry_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle PageStackEntry_type{py::register_python_type(module.get(), &type_spec_PageStackEntry, PageStackEntry_bases.get(), reinterpret_cast<PyTypeObject*>(type_PageStackEntry_Static.get()))};
     if (!PageStackEntry_type)
     {
         return nullptr;

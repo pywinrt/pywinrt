@@ -13914,13 +13914,25 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InputActivationListener_Static{PyType_FromSpec(&type_spec_InputActivationListener_Static)};
+    py::pyobj_handle InputActivationListener_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputActivationListener_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputActivationListener_Static{PyType_FromSpecWithBases(&type_spec_InputActivationListener_Static, InputActivationListener_Static_bases.get())};
     if (!type_InputActivationListener_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputActivationListener_type{py::register_python_type(module.get(), &type_spec_InputActivationListener, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputActivationListener_Static.get()))};
+    py::pyobj_handle InputActivationListener_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputActivationListener_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputActivationListener_type{py::register_python_type(module.get(), &type_spec_InputActivationListener, InputActivationListener_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputActivationListener_Static.get()))};
     if (!InputActivationListener_type)
     {
         return nullptr;
@@ -13944,85 +13956,169 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InputCustomCursor_Static{PyType_FromSpec(&type_spec_InputCustomCursor_Static)};
+    py::pyobj_handle InputCustomCursor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputCursor_type.get())))};
+    if (!InputCustomCursor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputCustomCursor_Static{PyType_FromSpecWithBases(&type_spec_InputCustomCursor_Static, InputCustomCursor_Static_bases.get())};
     if (!type_InputCustomCursor_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputCustomCursor_Static.get()))};
+    py::pyobj_handle InputCustomCursor_bases{PyTuple_Pack(1, InputCursor_type.get())};
+    if (!InputCustomCursor_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputCustomCursor_type{py::register_python_type(module.get(), &type_spec_InputCustomCursor, InputCustomCursor_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputCustomCursor_Static.get()))};
     if (!InputCustomCursor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputDesktopNamedResourceCursor_Static{PyType_FromSpec(&type_spec_InputDesktopNamedResourceCursor_Static)};
+    py::pyobj_handle InputDesktopNamedResourceCursor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputCursor_type.get())))};
+    if (!InputDesktopNamedResourceCursor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputDesktopNamedResourceCursor_Static{PyType_FromSpecWithBases(&type_spec_InputDesktopNamedResourceCursor_Static, InputDesktopNamedResourceCursor_Static_bases.get())};
     if (!type_InputDesktopNamedResourceCursor_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputDesktopNamedResourceCursor_type{py::register_python_type(module.get(), &type_spec_InputDesktopNamedResourceCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputDesktopNamedResourceCursor_Static.get()))};
+    py::pyobj_handle InputDesktopNamedResourceCursor_bases{PyTuple_Pack(1, InputCursor_type.get())};
+    if (!InputDesktopNamedResourceCursor_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputDesktopNamedResourceCursor_type{py::register_python_type(module.get(), &type_spec_InputDesktopNamedResourceCursor, InputDesktopNamedResourceCursor_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputDesktopNamedResourceCursor_Static.get()))};
     if (!InputDesktopNamedResourceCursor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputDesktopResourceCursor_Static{PyType_FromSpec(&type_spec_InputDesktopResourceCursor_Static)};
+    py::pyobj_handle InputDesktopResourceCursor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputCursor_type.get())))};
+    if (!InputDesktopResourceCursor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputDesktopResourceCursor_Static{PyType_FromSpecWithBases(&type_spec_InputDesktopResourceCursor_Static, InputDesktopResourceCursor_Static_bases.get())};
     if (!type_InputDesktopResourceCursor_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputDesktopResourceCursor_type{py::register_python_type(module.get(), &type_spec_InputDesktopResourceCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputDesktopResourceCursor_Static.get()))};
+    py::pyobj_handle InputDesktopResourceCursor_bases{PyTuple_Pack(1, InputCursor_type.get())};
+    if (!InputDesktopResourceCursor_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputDesktopResourceCursor_type{py::register_python_type(module.get(), &type_spec_InputDesktopResourceCursor, InputDesktopResourceCursor_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputDesktopResourceCursor_Static.get()))};
     if (!InputDesktopResourceCursor_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputFocusController_Static{PyType_FromSpec(&type_spec_InputFocusController_Static)};
+    py::pyobj_handle InputFocusController_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputFocusController_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputFocusController_Static{PyType_FromSpecWithBases(&type_spec_InputFocusController_Static, InputFocusController_Static_bases.get())};
     if (!type_InputFocusController_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputFocusController_type{py::register_python_type(module.get(), &type_spec_InputFocusController, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusController_Static.get()))};
+    py::pyobj_handle InputFocusController_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputFocusController_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputFocusController_type{py::register_python_type(module.get(), &type_spec_InputFocusController, InputFocusController_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusController_Static.get()))};
     if (!InputFocusController_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputFocusNavigationHost_Static{PyType_FromSpec(&type_spec_InputFocusNavigationHost_Static)};
+    py::pyobj_handle InputFocusNavigationHost_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputFocusNavigationHost_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputFocusNavigationHost_Static{PyType_FromSpecWithBases(&type_spec_InputFocusNavigationHost_Static, InputFocusNavigationHost_Static_bases.get())};
     if (!type_InputFocusNavigationHost_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputFocusNavigationHost_type{py::register_python_type(module.get(), &type_spec_InputFocusNavigationHost, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusNavigationHost_Static.get()))};
+    py::pyobj_handle InputFocusNavigationHost_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputFocusNavigationHost_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputFocusNavigationHost_type{py::register_python_type(module.get(), &type_spec_InputFocusNavigationHost, InputFocusNavigationHost_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputFocusNavigationHost_Static.get()))};
     if (!InputFocusNavigationHost_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputKeyboardSource_Static{PyType_FromSpec(&type_spec_InputKeyboardSource_Static)};
+    py::pyobj_handle InputKeyboardSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputKeyboardSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputKeyboardSource_Static{PyType_FromSpecWithBases(&type_spec_InputKeyboardSource_Static, InputKeyboardSource_Static_bases.get())};
     if (!type_InputKeyboardSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputKeyboardSource_type{py::register_python_type(module.get(), &type_spec_InputKeyboardSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputKeyboardSource_Static.get()))};
+    py::pyobj_handle InputKeyboardSource_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputKeyboardSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputKeyboardSource_type{py::register_python_type(module.get(), &type_spec_InputKeyboardSource, InputKeyboardSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputKeyboardSource_Static.get()))};
     if (!InputKeyboardSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputLightDismissAction_Static{PyType_FromSpec(&type_spec_InputLightDismissAction_Static)};
+    py::pyobj_handle InputLightDismissAction_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputLightDismissAction_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputLightDismissAction_Static{PyType_FromSpecWithBases(&type_spec_InputLightDismissAction_Static, InputLightDismissAction_Static_bases.get())};
     if (!type_InputLightDismissAction_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputLightDismissAction_type{py::register_python_type(module.get(), &type_spec_InputLightDismissAction, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputLightDismissAction_Static.get()))};
+    py::pyobj_handle InputLightDismissAction_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputLightDismissAction_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputLightDismissAction_type{py::register_python_type(module.get(), &type_spec_InputLightDismissAction, InputLightDismissAction_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputLightDismissAction_Static.get()))};
     if (!InputLightDismissAction_type)
     {
         return nullptr;
@@ -14046,37 +14142,73 @@ PyMODINIT_FUNC PyInit__winrt_microsoft_ui_input(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_InputPointerSource_Static{PyType_FromSpec(&type_spec_InputPointerSource_Static)};
+    py::pyobj_handle InputPointerSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputPointerSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputPointerSource_Static{PyType_FromSpecWithBases(&type_spec_InputPointerSource_Static, InputPointerSource_Static_bases.get())};
     if (!type_InputPointerSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputPointerSource_type{py::register_python_type(module.get(), &type_spec_InputPointerSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPointerSource_Static.get()))};
+    py::pyobj_handle InputPointerSource_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputPointerSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputPointerSource_type{py::register_python_type(module.get(), &type_spec_InputPointerSource, InputPointerSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPointerSource_Static.get()))};
     if (!InputPointerSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputPreTranslateKeyboardSource_Static{PyType_FromSpec(&type_spec_InputPreTranslateKeyboardSource_Static)};
+    py::pyobj_handle InputPreTranslateKeyboardSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputObject_type.get())))};
+    if (!InputPreTranslateKeyboardSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputPreTranslateKeyboardSource_Static{PyType_FromSpecWithBases(&type_spec_InputPreTranslateKeyboardSource_Static, InputPreTranslateKeyboardSource_Static_bases.get())};
     if (!type_InputPreTranslateKeyboardSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputPreTranslateKeyboardSource_type{py::register_python_type(module.get(), &type_spec_InputPreTranslateKeyboardSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPreTranslateKeyboardSource_Static.get()))};
+    py::pyobj_handle InputPreTranslateKeyboardSource_bases{PyTuple_Pack(1, InputObject_type.get())};
+    if (!InputPreTranslateKeyboardSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputPreTranslateKeyboardSource_type{py::register_python_type(module.get(), &type_spec_InputPreTranslateKeyboardSource, InputPreTranslateKeyboardSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputPreTranslateKeyboardSource_Static.get()))};
     if (!InputPreTranslateKeyboardSource_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_InputSystemCursor_Static{PyType_FromSpec(&type_spec_InputSystemCursor_Static)};
+    py::pyobj_handle InputSystemCursor_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(InputCursor_type.get())))};
+    if (!InputSystemCursor_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_InputSystemCursor_Static{PyType_FromSpecWithBases(&type_spec_InputSystemCursor_Static, InputSystemCursor_Static_bases.get())};
     if (!type_InputSystemCursor_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle InputSystemCursor_type{py::register_python_type(module.get(), &type_spec_InputSystemCursor, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputSystemCursor_Static.get()))};
+    py::pyobj_handle InputSystemCursor_bases{PyTuple_Pack(1, InputCursor_type.get())};
+    if (!InputSystemCursor_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle InputSystemCursor_type{py::register_python_type(module.get(), &type_spec_InputSystemCursor, InputSystemCursor_bases.get(), reinterpret_cast<PyTypeObject*>(type_InputSystemCursor_Static.get()))};
     if (!InputSystemCursor_type)
     {
         return nullptr;

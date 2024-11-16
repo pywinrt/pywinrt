@@ -5570,25 +5570,61 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingBase_Static{PyType_FromSpec(&type_spec_BindingBase_Static)};
+    py::pyobj_handle windows_ui_xaml_module{PyImport_ImportModule("winrt._winrt_windows_ui_xaml")};
+    if (!windows_ui_xaml_module)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle windows_ui_xaml_DependencyObject_type{PyObject_GetAttrString(windows_ui_xaml_module.get(), "DependencyObject")};
+    if (!windows_ui_xaml_DependencyObject_type)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle BindingBase_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!BindingBase_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingBase_Static{PyType_FromSpecWithBases(&type_spec_BindingBase_Static, BindingBase_Static_bases.get())};
     if (!type_BindingBase_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BindingBase_type{py::register_python_type(module.get(), &type_spec_BindingBase, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingBase_Static.get()))};
+    py::pyobj_handle BindingBase_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!BindingBase_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BindingBase_type{py::register_python_type(module.get(), &type_spec_BindingBase, BindingBase_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingBase_Static.get()))};
     if (!BindingBase_type)
     {
         return nullptr;
     }
 
-    py::pyobj_handle type_Binding_Static{PyType_FromSpec(&type_spec_Binding_Static)};
+    py::pyobj_handle Binding_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(BindingBase_type.get())))};
+    if (!Binding_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_Binding_Static{PyType_FromSpecWithBases(&type_spec_Binding_Static, Binding_Static_bases.get())};
     if (!type_Binding_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_Binding_Static.get()))};
+    py::pyobj_handle Binding_bases{PyTuple_Pack(1, BindingBase_type.get())};
+    if (!Binding_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle Binding_type{py::register_python_type(module.get(), &type_spec_Binding, Binding_bases.get(), reinterpret_cast<PyTypeObject*>(type_Binding_Static.get()))};
     if (!Binding_type)
     {
         return nullptr;
@@ -5606,13 +5642,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_BindingExpression_Static{PyType_FromSpec(&type_spec_BindingExpression_Static)};
+    py::pyobj_handle BindingExpression_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(BindingExpressionBase_type.get())))};
+    if (!BindingExpression_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_BindingExpression_Static{PyType_FromSpecWithBases(&type_spec_BindingExpression_Static, BindingExpression_Static_bases.get())};
     if (!type_BindingExpression_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingExpression_Static.get()))};
+    py::pyobj_handle BindingExpression_bases{PyTuple_Pack(1, BindingExpressionBase_type.get())};
+    if (!BindingExpression_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle BindingExpression_type{py::register_python_type(module.get(), &type_spec_BindingExpression, BindingExpression_bases.get(), reinterpret_cast<PyTypeObject*>(type_BindingExpression_Static.get()))};
     if (!BindingExpression_type)
     {
         return nullptr;
@@ -5630,13 +5678,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_CollectionViewSource_Static{PyType_FromSpec(&type_spec_CollectionViewSource_Static)};
+    py::pyobj_handle CollectionViewSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!CollectionViewSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_CollectionViewSource_Static{PyType_FromSpecWithBases(&type_spec_CollectionViewSource_Static, CollectionViewSource_Static_bases.get())};
     if (!type_CollectionViewSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle CollectionViewSource_type{py::register_python_type(module.get(), &type_spec_CollectionViewSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get()))};
+    py::pyobj_handle CollectionViewSource_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!CollectionViewSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle CollectionViewSource_type{py::register_python_type(module.get(), &type_spec_CollectionViewSource, CollectionViewSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_CollectionViewSource_Static.get()))};
     if (!CollectionViewSource_type)
     {
         return nullptr;
@@ -5678,13 +5738,25 @@ PyMODINIT_FUNC PyInit__winrt_windows_ui_xaml_data(void) noexcept
         return nullptr;
     }
 
-    py::pyobj_handle type_RelativeSource_Static{PyType_FromSpec(&type_spec_RelativeSource_Static)};
+    py::pyobj_handle RelativeSource_Static_bases{PyTuple_Pack(1, reinterpret_cast<PyObject*>(Py_TYPE(windows_ui_xaml_DependencyObject_type.get())))};
+    if (!RelativeSource_Static_bases)
+    {
+        return nullptr;
+    }
+
+    py::pyobj_handle type_RelativeSource_Static{PyType_FromSpecWithBases(&type_spec_RelativeSource_Static, RelativeSource_Static_bases.get())};
     if (!type_RelativeSource_Static)
     {
         return nullptr;
     }
 
-    py::pytype_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, object_bases.get(), reinterpret_cast<PyTypeObject*>(type_RelativeSource_Static.get()))};
+    py::pyobj_handle RelativeSource_bases{PyTuple_Pack(1, windows_ui_xaml_DependencyObject_type.get())};
+    if (!RelativeSource_bases)
+    {
+        return nullptr;
+    }
+
+    py::pytype_handle RelativeSource_type{py::register_python_type(module.get(), &type_spec_RelativeSource, RelativeSource_bases.get(), reinterpret_cast<PyTypeObject*>(type_RelativeSource_Static.get()))};
     if (!RelativeSource_type)
     {
         return nullptr;
