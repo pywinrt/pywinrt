@@ -100,10 +100,8 @@ static class ObjectWriterExtensions
         if (type.IsPyMapping)
         {
             var method = type.Methods.Single(m => m.Name == "Lookup");
-            var keyType = method
-                .Method.Parameters[0]
-                .ParameterType.ToPyTypeName(ns, method.GenericArgMap);
-            var valueType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var keyType = method.Method.Parameters[0].ToPyInParamTyping(ns, method.GenericArgMap);
+            var valueType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
 
             if (type.IsPyMutableMapping)
             {
@@ -117,7 +115,7 @@ static class ObjectWriterExtensions
         else if (type.IsPySequence)
         {
             var method = type.Methods.Single(m => m.Name == "GetAt");
-            var elementType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var elementType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
 
             if (type.IsPyMutableSequence)
             {
@@ -196,7 +194,7 @@ static class ObjectWriterExtensions
             var keyParamType = method
                 .Method.Parameters[0]
                 .ToPyInParamTyping(ns, method.GenericArgMap);
-            var valueReturnType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var valueReturnType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
 
             w.WriteLine("def __len__(self) -> int: ...");
             w.WriteLine($"def __iter__(self) -> typing.Iterator[{keyParamType}]: ...");
@@ -219,9 +217,9 @@ static class ObjectWriterExtensions
         else if (type.IsPySequence)
         {
             var method = type.Methods.Single(m => m.Name == "First");
-            var iterType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var iterType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
             method = type.Methods.Single(m => m.Name == "GetAt");
-            var elementType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var elementType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
 
             w.WriteLine("def __len__(self) -> int: ...");
             w.WriteLine($"def __iter__(self) -> {iterType}: ...");
@@ -265,7 +263,7 @@ static class ObjectWriterExtensions
         else if (type.IsPyIterable)
         {
             var method = type.Methods.Single(m => m.Name == "First");
-            var iterType = method.Method.ReturnType.ToPyTypeName(ns, method.GenericArgMap);
+            var iterType = method.Method.ToPyReturnTyping(ns, method.GenericArgMap);
             w.WriteLine($"def __iter__(self) -> {iterType}: ...");
         }
 
