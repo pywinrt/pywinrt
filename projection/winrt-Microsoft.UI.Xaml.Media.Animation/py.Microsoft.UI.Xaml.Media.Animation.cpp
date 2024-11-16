@@ -1809,7 +1809,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>().Value());
         }
         catch (...)
         {
@@ -1843,7 +1843,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>().Value(param0);
             return 0;
         }
         catch (...)
@@ -1870,7 +1870,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTime());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>().KeyTime());
         }
         catch (...)
         {
@@ -1904,7 +1904,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>(arg);
 
-            self->obj.KeyTime(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ColorKeyFrame>().KeyTime(param0);
             return 0;
         }
         catch (...)
@@ -6094,7 +6094,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>().Value());
         }
         catch (...)
         {
@@ -6128,7 +6128,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>().Value(param0);
             return 0;
         }
         catch (...)
@@ -6155,7 +6155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTime());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>().KeyTime());
         }
         catch (...)
         {
@@ -6189,7 +6189,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>(arg);
 
-            self->obj.KeyTime(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::DoubleKeyFrame>().KeyTime(param0);
             return 0;
         }
         catch (...)
@@ -9307,7 +9307,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                return py::convert(self->obj.Ease(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>().Ease(param0));
             }
             catch (...)
             {
@@ -9339,7 +9339,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.EasingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>().EasingMode());
         }
         catch (...)
         {
@@ -9373,7 +9373,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::EasingMode>(arg);
 
-            self->obj.EasingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::EasingFunctionBase>().EasingMode(param0);
             return 0;
         }
         catch (...)
@@ -11443,7 +11443,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsShadowEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>().IsShadowEnabled());
         }
         catch (...)
         {
@@ -11477,7 +11477,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsShadowEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::GravityConnectedAnimationConfiguration>().IsShadowEnabled(param0);
             return 0;
         }
         catch (...)
@@ -12724,7 +12724,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>().Value());
         }
         catch (...)
         {
@@ -12758,7 +12758,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>().Value(param0);
             return 0;
         }
         catch (...)
@@ -12785,7 +12785,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTime());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>().KeyTime());
         }
         catch (...)
         {
@@ -12819,7 +12819,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>(arg);
 
-            self->obj.KeyTime(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::ObjectKeyFrame>().KeyTime(param0);
             return 0;
         }
         catch (...)
@@ -14706,7 +14706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>().Value());
         }
         catch (...)
         {
@@ -14740,7 +14740,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>().Value(param0);
             return 0;
         }
         catch (...)
@@ -14767,7 +14767,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTime());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>().KeyTime());
         }
         catch (...)
         {
@@ -14801,7 +14801,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::KeyTime>(arg);
 
-            self->obj.KeyTime(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::PointKeyFrame>().KeyTime(param0);
             return 0;
         }
         catch (...)
@@ -23093,7 +23093,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpeedRatio());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().SpeedRatio());
         }
         catch (...)
         {
@@ -23127,7 +23127,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.SpeedRatio(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().SpeedRatio(param0);
             return 0;
         }
         catch (...)
@@ -23154,7 +23154,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.RepeatBehavior());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().RepeatBehavior());
         }
         catch (...)
         {
@@ -23188,7 +23188,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::RepeatBehavior>(arg);
 
-            self->obj.RepeatBehavior(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().RepeatBehavior(param0);
             return 0;
         }
         catch (...)
@@ -23215,7 +23215,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.FillBehavior());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().FillBehavior());
         }
         catch (...)
         {
@@ -23249,7 +23249,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::FillBehavior>(arg);
 
-            self->obj.FillBehavior(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().FillBehavior(param0);
             return 0;
         }
         catch (...)
@@ -23276,7 +23276,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.Duration());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().Duration());
         }
         catch (...)
         {
@@ -23310,7 +23310,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Duration>(arg);
 
-            self->obj.Duration(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().Duration(param0);
             return 0;
         }
         catch (...)
@@ -23337,7 +23337,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.BeginTime());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().BeginTime());
         }
         catch (...)
         {
@@ -23371,7 +23371,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::TimeSpan>>(arg);
 
-            self->obj.BeginTime(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().BeginTime(param0);
             return 0;
         }
         catch (...)
@@ -23398,7 +23398,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoReverse());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().AutoReverse());
         }
         catch (...)
         {
@@ -23432,7 +23432,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoReverse(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().AutoReverse(param0);
             return 0;
         }
         catch (...)
@@ -23678,7 +23678,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.Completed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().Completed(param0));
         }
         catch (...)
         {
@@ -23706,7 +23706,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Animation
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Completed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Animation::Timeline>().Completed(param0);
             Py_RETURN_NONE;
         }
         catch (...)

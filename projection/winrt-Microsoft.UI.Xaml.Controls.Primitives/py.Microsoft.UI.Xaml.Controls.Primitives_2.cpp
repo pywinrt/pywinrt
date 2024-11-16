@@ -60,7 +60,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorChannel());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel());
         }
         catch (...)
         {
@@ -94,7 +94,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Controls::Primitives
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Controls::ColorPickerHsvChannel>(arg);
 
-            self->obj.ColorChannel(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Controls::Primitives::ColorPickerSlider>().ColorChannel(param0);
             return 0;
         }
         catch (...)

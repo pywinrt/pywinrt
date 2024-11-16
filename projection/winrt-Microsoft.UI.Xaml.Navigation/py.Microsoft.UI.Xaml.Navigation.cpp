@@ -60,7 +60,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.TransitionInfoOverride());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride());
         }
         catch (...)
         {
@@ -94,7 +94,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Animation::NavigationTransitionInfo>(arg);
 
-            self->obj.TransitionInfoOverride(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>().TransitionInfoOverride(param0);
             return 0;
         }
         catch (...)
@@ -121,7 +121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsNavigationStackEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled());
         }
         catch (...)
         {
@@ -155,7 +155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Navigation
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsNavigationStackEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Navigation::FrameNavigationOptions>().IsNavigationStackEnabled(param0);
             return 0;
         }
         catch (...)

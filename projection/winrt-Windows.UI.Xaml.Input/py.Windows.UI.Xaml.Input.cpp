@@ -4824,7 +4824,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScopeOwner());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner());
         }
         catch (...)
         {
@@ -4858,7 +4858,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.ScopeOwner(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().ScopeOwner(param0);
             return 0;
         }
         catch (...)
@@ -4885,7 +4885,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Modifiers());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Modifiers());
         }
         catch (...)
         {
@@ -4919,7 +4919,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKeyModifiers>(arg);
 
-            self->obj.Modifiers(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Modifiers(param0);
             return 0;
         }
         catch (...)
@@ -4946,7 +4946,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Key());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Key());
         }
         catch (...)
         {
@@ -4980,7 +4980,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::System::VirtualKey>(arg);
 
-            self->obj.Key(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Key(param0);
             return 0;
         }
         catch (...)
@@ -5007,7 +5007,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled());
         }
         catch (...)
         {
@@ -5041,7 +5041,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().IsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -5174,7 +5174,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator, winrt::Windows::UI::Xaml::Input::KeyboardAcceleratorInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.Invoked(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0));
         }
         catch (...)
         {
@@ -5202,7 +5202,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Invoked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::KeyboardAccelerator>().Invoked(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -7389,7 +7389,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                     return nullptr;
                 }
 
-                self->obj.Complete();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Complete();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7422,7 +7422,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Handled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled());
         }
         catch (...)
         {
@@ -7456,7 +7456,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Handled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Handled(param0);
             return 0;
         }
         catch (...)
@@ -7483,7 +7483,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Container());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Container());
         }
         catch (...)
         {
@@ -7509,7 +7509,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cumulative());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Cumulative());
         }
         catch (...)
         {
@@ -7535,7 +7535,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerDeviceType());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().PointerDeviceType());
         }
         catch (...)
         {
@@ -7561,7 +7561,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::ManipulationStartedRoutedEventArgs>().Position());
         }
         catch (...)
         {
@@ -9098,7 +9098,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::StandardUICommand>().Kind());
         }
         catch (...)
         {
@@ -9132,7 +9132,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::StandardUICommandKind>(arg);
 
-            self->obj.Kind(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::StandardUICommand>().Kind(param0);
             return 0;
         }
         catch (...)
@@ -9522,7 +9522,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.CanExecute(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().CanExecute(param0));
             }
             catch (...)
             {
@@ -9560,7 +9560,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                self->obj.Execute(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Execute(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9597,7 +9597,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                     return nullptr;
                 }
 
-                self->obj.NotifyCanExecuteChanged();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().NotifyCanExecuteChanged();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -9630,7 +9630,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Label());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Label());
         }
         catch (...)
         {
@@ -9664,7 +9664,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Label(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Label(param0);
             return 0;
         }
         catch (...)
@@ -9691,7 +9691,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.IconSource());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().IconSource());
         }
         catch (...)
         {
@@ -9725,7 +9725,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::IconSource>(arg);
 
-            self->obj.IconSource(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().IconSource(param0);
             return 0;
         }
         catch (...)
@@ -9752,7 +9752,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Description());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Description());
         }
         catch (...)
         {
@@ -9786,7 +9786,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Description(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Description(param0);
             return 0;
         }
         catch (...)
@@ -9813,7 +9813,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.Command());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Command());
         }
         catch (...)
         {
@@ -9847,7 +9847,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::ICommand>(arg);
 
-            self->obj.Command(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().Command(param0);
             return 0;
         }
         catch (...)
@@ -9874,7 +9874,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessKey());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().AccessKey());
         }
         catch (...)
         {
@@ -9908,7 +9908,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AccessKey(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().AccessKey(param0);
             return 0;
         }
         catch (...)
@@ -9935,7 +9935,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyboardAccelerators());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().KeyboardAccelerators());
         }
         catch (...)
         {
@@ -10119,7 +10119,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Input::XamlUICommand, winrt::Windows::UI::Xaml::Input::CanExecuteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.CanExecuteRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0));
         }
         catch (...)
         {
@@ -10147,7 +10147,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CanExecuteRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().CanExecuteRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10176,7 +10176,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Input::XamlUICommand, winrt::Windows::UI::Xaml::Input::ExecuteRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.ExecuteRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0));
         }
         catch (...)
         {
@@ -10204,7 +10204,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.ExecuteRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().ExecuteRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10233,7 +10233,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::EventHandler<winrt::Windows::Foundation::IInspectable>>(arg);
 
-            return py::convert(self->obj.CanExecuteChanged(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0));
         }
         catch (...)
         {
@@ -10261,7 +10261,7 @@ namespace py::cpp::Windows::UI::Xaml::Input
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.CanExecuteChanged(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Input::XamlUICommand>().CanExecuteChanged(param0);
             Py_RETURN_NONE;
         }
         catch (...)

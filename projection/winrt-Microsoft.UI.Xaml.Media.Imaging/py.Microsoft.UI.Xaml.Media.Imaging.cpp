@@ -1067,7 +1067,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                self->obj.SetSource(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>().SetSource(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1106,7 +1106,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.SetSourceAsync(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>().SetSourceAsync(param0));
             }
             catch (...)
             {
@@ -1138,7 +1138,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelHeight());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>().PixelHeight());
         }
         catch (...)
         {
@@ -1164,7 +1164,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.PixelWidth());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::BitmapSource>().PixelWidth());
         }
         catch (...)
         {
@@ -2167,7 +2167,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
                 auto param0 = py::convert_to<winrt::Windows::Storage::Streams::IRandomAccessStream>(args, 0);
 
-                return py::convert(self->obj.SetSourceAsync(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().SetSourceAsync(param0));
             }
             catch (...)
             {
@@ -2199,7 +2199,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.UriSource());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource());
         }
         catch (...)
         {
@@ -2233,7 +2233,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Uri>(arg);
 
-            self->obj.UriSource(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().UriSource(param0);
             return 0;
         }
         catch (...)
@@ -2260,7 +2260,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.RasterizePixelWidth());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth());
         }
         catch (...)
         {
@@ -2294,7 +2294,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RasterizePixelWidth(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelWidth(param0);
             return 0;
         }
         catch (...)
@@ -2321,7 +2321,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
                 return nullptr;
             }
 
-            return py::convert(self->obj.RasterizePixelHeight());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight());
         }
         catch (...)
         {
@@ -2355,7 +2355,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RasterizePixelHeight(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().RasterizePixelHeight(param0);
             return 0;
         }
         catch (...)
@@ -2462,7 +2462,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceFailedEventArgs>>(arg);
 
-            return py::convert(self->obj.OpenFailed(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0));
         }
         catch (...)
         {
@@ -2490,7 +2490,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.OpenFailed(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().OpenFailed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -2519,7 +2519,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource, winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSourceOpenedEventArgs>>(arg);
 
-            return py::convert(self->obj.Opened(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0));
         }
         catch (...)
         {
@@ -2547,7 +2547,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media::Imaging
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.Opened(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Imaging::SvgImageSource>().Opened(param0);
             Py_RETURN_NONE;
         }
         catch (...)

@@ -60,7 +60,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Source());
         }
         catch (...)
         {
@@ -94,7 +94,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Source(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Source(param0);
             return 0;
         }
         catch (...)
@@ -121,7 +121,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeSource());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().RelativeSource());
         }
         catch (...)
         {
@@ -155,7 +155,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::RelativeSource>(arg);
 
-            self->obj.RelativeSource(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().RelativeSource(param0);
             return 0;
         }
         catch (...)
@@ -182,7 +182,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Path());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Path());
         }
         catch (...)
         {
@@ -216,7 +216,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::PropertyPath>(arg);
 
-            self->obj.Path(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Path(param0);
             return 0;
         }
         catch (...)
@@ -243,7 +243,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Mode());
         }
         catch (...)
         {
@@ -277,7 +277,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::BindingMode>(arg);
 
-            self->obj.Mode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Mode(param0);
             return 0;
         }
         catch (...)
@@ -304,7 +304,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementName());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ElementName());
         }
         catch (...)
         {
@@ -338,7 +338,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ElementName(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ElementName(param0);
             return 0;
         }
         catch (...)
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConverterParameter());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterParameter());
         }
         catch (...)
         {
@@ -399,7 +399,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.ConverterParameter(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterParameter(param0);
             return 0;
         }
         catch (...)
@@ -426,7 +426,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.ConverterLanguage());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterLanguage());
         }
         catch (...)
         {
@@ -460,7 +460,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.ConverterLanguage(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().ConverterLanguage(param0);
             return 0;
         }
         catch (...)
@@ -487,7 +487,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Converter());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Converter());
         }
         catch (...)
         {
@@ -521,7 +521,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::IValueConverter>(arg);
 
-            self->obj.Converter(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().Converter(param0);
             return 0;
         }
         catch (...)
@@ -548,7 +548,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.UpdateSourceTrigger());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().UpdateSourceTrigger());
         }
         catch (...)
         {
@@ -582,7 +582,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::UpdateSourceTrigger>(arg);
 
-            self->obj.UpdateSourceTrigger(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().UpdateSourceTrigger(param0);
             return 0;
         }
         catch (...)
@@ -609,7 +609,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.TargetNullValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().TargetNullValue());
         }
         catch (...)
         {
@@ -643,7 +643,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.TargetNullValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().TargetNullValue(param0);
             return 0;
         }
         catch (...)
@@ -670,7 +670,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.FallbackValue());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().FallbackValue());
         }
         catch (...)
         {
@@ -704,7 +704,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.FallbackValue(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::Binding>().FallbackValue(param0);
             return 0;
         }
         catch (...)
@@ -950,7 +950,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                     return nullptr;
                 }
 
-                self->obj.UpdateSource();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().UpdateSource();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -983,7 +983,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataItem());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().DataItem());
         }
         catch (...)
         {
@@ -1009,7 +1009,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.ParentBinding());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::BindingExpression>().ParentBinding());
         }
         catch (...)
         {
@@ -1824,7 +1824,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Cancel());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().Cancel());
         }
         catch (...)
         {
@@ -1858,7 +1858,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Cancel(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().Cancel(param0);
             return 0;
         }
         catch (...)
@@ -1885,7 +1885,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsCancelable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::CurrentChangingEventArgs>().IsCancelable());
         }
         catch (...)
         {
@@ -2029,7 +2029,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.FirstIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().FirstIndex());
         }
         catch (...)
         {
@@ -2055,7 +2055,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.LastIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().LastIndex());
         }
         catch (...)
         {
@@ -2081,7 +2081,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Length());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::ItemIndexRange>().Length());
         }
         catch (...)
         {
@@ -2225,7 +2225,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.PropertyName());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::PropertyChangedEventArgs>().PropertyName());
         }
         catch (...)
         {
@@ -2365,7 +2365,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
                 return nullptr;
             }
 
-            return py::convert(self->obj.Mode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Data::RelativeSource>().Mode());
         }
         catch (...)
         {
@@ -2399,7 +2399,7 @@ namespace py::cpp::Windows::UI::Xaml::Data
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Data::RelativeSourceMode>(arg);
 
-            self->obj.Mode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Data::RelativeSource>().Mode(param0);
             return 0;
         }
         catch (...)

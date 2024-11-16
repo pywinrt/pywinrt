@@ -64,7 +64,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +103,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::WindowId>(args, 0);
 
-                self->obj.Initialize(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Initialize(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -142,7 +142,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Hosting::XamlSourceFocusNavigationRequest>(args, 0);
 
-                return py::convert(self->obj.NavigateFocus(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().NavigateFocus(param0));
             }
             catch (...)
             {
@@ -174,7 +174,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SystemBackdrop());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SystemBackdrop());
         }
         catch (...)
         {
@@ -208,7 +208,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>(arg);
 
-            self->obj.SystemBackdrop(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SystemBackdrop(param0);
             return 0;
         }
         catch (...)
@@ -235,7 +235,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.Content());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content());
         }
         catch (...)
         {
@@ -269,7 +269,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::UIElement>(arg);
 
-            self->obj.Content(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().Content(param0);
             return 0;
         }
         catch (...)
@@ -296,7 +296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.HasFocus());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().HasFocus());
         }
         catch (...)
         {
@@ -322,7 +322,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.SiteBridge());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().SiteBridge());
         }
         catch (...)
         {
@@ -348,7 +348,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
                 return nullptr;
             }
 
-            return py::convert(self->obj.ShouldConstrainPopupsToWorkArea());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().ShouldConstrainPopupsToWorkArea());
         }
         catch (...)
         {
@@ -382,7 +382,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ShouldConstrainPopupsToWorkArea(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().ShouldConstrainPopupsToWorkArea(param0);
             return 0;
         }
         catch (...)
@@ -411,7 +411,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceGotFocusEventArgs>>(arg);
 
-            return py::convert(self->obj.GotFocus(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0));
         }
         catch (...)
         {
@@ -439,7 +439,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.GotFocus(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().GotFocus(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -468,7 +468,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource, winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSourceTakeFocusRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.TakeFocusRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0));
         }
         catch (...)
         {
@@ -496,7 +496,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Hosting
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.TakeFocusRequested(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Hosting::DesktopWindowXamlSource>().TakeFocusRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)

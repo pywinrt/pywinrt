@@ -4520,7 +4520,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureCenterPointXModifiers(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointXModifiers(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4559,7 +4559,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureCenterPointYModifiers(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureCenterPointYModifiers(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4598,7 +4598,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureDeltaPositionXModifiers(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionXModifiers(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4637,7 +4637,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureDeltaPositionYModifiers(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaPositionYModifiers(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4676,7 +4676,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Collections::IIterable<winrt::Microsoft::UI::Composition::Interactions::CompositionConditionalValue>>(args, 0);
 
-                self->obj.ConfigureDeltaScaleModifiers(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ConfigureDeltaScaleModifiers(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4791,7 +4791,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Input::PointerPoint>(args, 0);
 
-                self->obj.TryRedirectForManipulation(param0);
+                self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().TryRedirectForManipulation(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4824,7 +4824,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleSourceMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode());
         }
         catch (...)
         {
@@ -4858,7 +4858,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.ScaleSourceMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleSourceMode(param0);
             return 0;
         }
         catch (...)
@@ -4885,7 +4885,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleChainingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode());
         }
         catch (...)
         {
@@ -4919,7 +4919,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.ScaleChainingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleChainingMode(param0);
             return 0;
         }
         catch (...)
@@ -4946,7 +4946,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionYSourceMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode());
         }
         catch (...)
         {
@@ -4980,7 +4980,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.PositionYSourceMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYSourceMode(param0);
             return 0;
         }
         catch (...)
@@ -5007,7 +5007,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionYChainingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode());
         }
         catch (...)
         {
@@ -5041,7 +5041,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.PositionYChainingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionYChainingMode(param0);
             return 0;
         }
         catch (...)
@@ -5068,7 +5068,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionXSourceMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode());
         }
         catch (...)
         {
@@ -5102,7 +5102,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionSourceMode>(arg);
 
-            self->obj.PositionXSourceMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXSourceMode(param0);
             return 0;
         }
         catch (...)
@@ -5129,7 +5129,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionXChainingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode());
         }
         catch (...)
         {
@@ -5163,7 +5163,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::InteractionChainingMode>(arg);
 
-            self->obj.PositionXChainingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionXChainingMode(param0);
             return 0;
         }
         catch (...)
@@ -5190,7 +5190,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ManipulationRedirectionMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode());
         }
         catch (...)
         {
@@ -5224,7 +5224,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSourceRedirectionMode>(arg);
 
-            self->obj.ManipulationRedirectionMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ManipulationRedirectionMode(param0);
             return 0;
         }
         catch (...)
@@ -5251,7 +5251,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPositionYRailsEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled());
         }
         catch (...)
         {
@@ -5285,7 +5285,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPositionYRailsEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionYRailsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -5312,7 +5312,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsPositionXRailsEnabled());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled());
         }
         catch (...)
         {
@@ -5346,7 +5346,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsPositionXRailsEnabled(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().IsPositionXRailsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -5373,7 +5373,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Source());
         }
         catch (...)
         {
@@ -5399,7 +5399,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaPosition());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaPosition());
         }
         catch (...)
         {
@@ -5425,7 +5425,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.DeltaScale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().DeltaScale());
         }
         catch (...)
         {
@@ -5451,7 +5451,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Position());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Position());
         }
         catch (...)
         {
@@ -5477,7 +5477,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PositionVelocity());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PositionVelocity());
         }
         catch (...)
         {
@@ -5503,7 +5503,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.Scale());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().Scale());
         }
         catch (...)
         {
@@ -5529,7 +5529,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.ScaleVelocity());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().ScaleVelocity());
         }
         catch (...)
         {
@@ -5555,7 +5555,7 @@ namespace py::cpp::Microsoft::UI::Composition::Interactions
                 return nullptr;
             }
 
-            return py::convert(self->obj.PointerWheelConfig());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Composition::Interactions::VisualInteractionSource>().PointerWheelConfig());
         }
         catch (...)
         {

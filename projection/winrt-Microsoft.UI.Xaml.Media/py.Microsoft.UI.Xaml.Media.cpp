@@ -60,7 +60,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintTransitionDuration());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration());
         }
         catch (...)
         {
@@ -94,7 +94,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.TintTransitionDuration(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintTransitionDuration(param0);
             return 0;
         }
         catch (...)
@@ -121,7 +121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintOpacity());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity());
         }
         catch (...)
         {
@@ -155,7 +155,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.TintOpacity(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintOpacity(param0);
             return 0;
         }
         catch (...)
@@ -182,7 +182,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintColor());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor());
         }
         catch (...)
         {
@@ -216,7 +216,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.TintColor(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintColor(param0);
             return 0;
         }
         catch (...)
@@ -243,7 +243,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlwaysUseFallback());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback());
         }
         catch (...)
         {
@@ -277,7 +277,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AlwaysUseFallback(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().AlwaysUseFallback(param0);
             return 0;
         }
         catch (...)
@@ -304,7 +304,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.TintLuminosityOpacity());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity());
         }
         catch (...)
         {
@@ -338,7 +338,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IReference<double>>(arg);
 
-            self->obj.TintLuminosityOpacity(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::AcrylicBrush>().TintLuminosityOpacity(param0);
             return 0;
         }
         catch (...)
@@ -1629,7 +1629,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Composition::AnimationPropertyInfo>(args, 1);
 
-                self->obj.PopulatePropertyInfo(param0, param1);
+                self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().PopulatePropertyInfo(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -1662,7 +1662,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transform());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Transform());
         }
         catch (...)
         {
@@ -1696,7 +1696,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
-            self->obj.Transform(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Transform(param0);
             return 0;
         }
         catch (...)
@@ -1723,7 +1723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.RelativeTransform());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().RelativeTransform());
         }
         catch (...)
         {
@@ -1757,7 +1757,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
-            self->obj.RelativeTransform(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().RelativeTransform(param0);
             return 0;
         }
         catch (...)
@@ -1784,7 +1784,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Opacity());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Opacity());
         }
         catch (...)
         {
@@ -1818,7 +1818,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.Opacity(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Brush>().Opacity(param0);
             return 0;
         }
         catch (...)
@@ -5296,7 +5296,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Source());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::FontFamily>().Source());
         }
         catch (...)
         {
@@ -5447,7 +5447,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Rect>(args, 0);
 
-                return py::convert(self->obj.TransformBounds(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TransformBounds(param0));
             }
             catch (...)
             {
@@ -5485,7 +5485,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.TransformPoint(param0));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TransformPoint(param0));
             }
             catch (...)
             {
@@ -5524,7 +5524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
                 winrt::Windows::Foundation::Point param1{};
 
-                auto return_value = self->obj.TryTransform(param0, param1);
+                auto return_value = self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().TryTransform(param0, param1);
 
                 py::pyobj_handle out_return_value{ py::convert(return_value) };
                 if (!out_return_value)
@@ -5568,7 +5568,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Inverse());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GeneralTransform>().Inverse());
         }
         catch (...)
         {
@@ -5689,7 +5689,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Transform());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Transform());
         }
         catch (...)
         {
@@ -5723,7 +5723,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Transform>(arg);
 
-            self->obj.Transform(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Transform(param0);
             return 0;
         }
         catch (...)
@@ -5750,7 +5750,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bounds());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::Geometry>().Bounds());
         }
         catch (...)
         {
@@ -6965,7 +6965,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpreadMethod());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().SpreadMethod());
         }
         catch (...)
         {
@@ -6999,7 +6999,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientSpreadMethod>(arg);
 
-            self->obj.SpreadMethod(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().SpreadMethod(param0);
             return 0;
         }
         catch (...)
@@ -7026,7 +7026,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.MappingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().MappingMode());
         }
         catch (...)
         {
@@ -7060,7 +7060,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::BrushMappingMode>(arg);
 
-            self->obj.MappingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().MappingMode(param0);
             return 0;
         }
         catch (...)
@@ -7087,7 +7087,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.GradientStops());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().GradientStops());
         }
         catch (...)
         {
@@ -7121,7 +7121,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientStopCollection>(arg);
 
-            self->obj.GradientStops(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().GradientStops(param0);
             return 0;
         }
         catch (...)
@@ -7148,7 +7148,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.ColorInterpolationMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().ColorInterpolationMode());
         }
         catch (...)
         {
@@ -7182,7 +7182,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::ColorInterpolationMode>(arg);
 
-            self->obj.ColorInterpolationMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::GradientBrush>().ColorInterpolationMode(param0);
             return 0;
         }
         catch (...)
@@ -10989,7 +10989,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Kind());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>().Kind());
         }
         catch (...)
         {
@@ -11023,7 +11023,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::SystemBackdrops::MicaKind>(arg);
 
-            self->obj.Kind(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::MicaBackdrop>().Kind(param0);
             return 0;
         }
         catch (...)
@@ -16437,7 +16437,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.SpreadMethod());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod());
         }
         catch (...)
         {
@@ -16471,7 +16471,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::GradientSpreadMethod>(arg);
 
-            self->obj.SpreadMethod(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().SpreadMethod(param0);
             return 0;
         }
         catch (...)
@@ -16498,7 +16498,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.RadiusY());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY());
         }
         catch (...)
         {
@@ -16532,7 +16532,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RadiusY(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusY(param0);
             return 0;
         }
         catch (...)
@@ -16559,7 +16559,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.RadiusX());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX());
         }
         catch (...)
         {
@@ -16593,7 +16593,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.RadiusX(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().RadiusX(param0);
             return 0;
         }
         catch (...)
@@ -16620,7 +16620,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.MappingMode());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode());
         }
         catch (...)
         {
@@ -16654,7 +16654,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::BrushMappingMode>(arg);
 
-            self->obj.MappingMode(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().MappingMode(param0);
             return 0;
         }
         catch (...)
@@ -16681,7 +16681,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.InterpolationSpace());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace());
         }
         catch (...)
         {
@@ -16715,7 +16715,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::CompositionColorSpace>(arg);
 
-            self->obj.InterpolationSpace(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().InterpolationSpace(param0);
             return 0;
         }
         catch (...)
@@ -16742,7 +16742,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.GradientOrigin());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin());
         }
         catch (...)
         {
@@ -16776,7 +16776,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.GradientOrigin(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientOrigin(param0);
             return 0;
         }
         catch (...)
@@ -16803,7 +16803,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Center());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center());
         }
         catch (...)
         {
@@ -16837,7 +16837,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(arg);
 
-            self->obj.Center(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().Center(param0);
             return 0;
         }
         catch (...)
@@ -16864,7 +16864,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.GradientStops());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::RadialGradientBrush>().GradientStops());
         }
         catch (...)
         {
@@ -19199,7 +19199,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 auto param0 = py::convert_to<winrt::Microsoft::UI::Composition::ICompositionSupportsSystemBackdrop>(args, 0);
                 auto param1 = py::convert_to<winrt::Microsoft::UI::Xaml::XamlRoot>(args, 1);
 
-                return py::convert(self->obj.GetDefaultSystemBackdropConfiguration(param0, param1));
+                return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::SystemBackdrop>().GetDefaultSystemBackdropConfiguration(param0, param1));
             }
             catch (...)
             {
@@ -19345,7 +19345,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Receivers());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::ThemeShadow>().Receivers());
         }
         catch (...)
         {
@@ -19463,7 +19463,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.Stretch());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().Stretch());
         }
         catch (...)
         {
@@ -19497,7 +19497,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::Stretch>(arg);
 
-            self->obj.Stretch(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().Stretch(param0);
             return 0;
         }
         catch (...)
@@ -19524,7 +19524,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlignmentY());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentY());
         }
         catch (...)
         {
@@ -19558,7 +19558,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentY>(arg);
 
-            self->obj.AlignmentY(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentY(param0);
             return 0;
         }
         catch (...)
@@ -19585,7 +19585,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.AlignmentX());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentX());
         }
         catch (...)
         {
@@ -19619,7 +19619,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Microsoft::UI::Xaml::Media::AlignmentX>(arg);
 
-            self->obj.AlignmentX(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::TileBrush>().AlignmentX(param0);
             return 0;
         }
         catch (...)
@@ -21645,7 +21645,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
                 return nullptr;
             }
 
-            return py::convert(self->obj.FallbackColor());
+            return py::convert(self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>().FallbackColor());
         }
         catch (...)
         {
@@ -21679,7 +21679,7 @@ namespace py::cpp::Microsoft::UI::Xaml::Media
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.FallbackColor(param0);
+            self->obj.try_as<winrt::Microsoft::UI::Xaml::Media::XamlCompositionBrushBase>().FallbackColor(param0);
             return 0;
         }
         catch (...)

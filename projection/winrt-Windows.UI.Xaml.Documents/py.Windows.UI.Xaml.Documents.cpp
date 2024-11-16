@@ -38,7 +38,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().TextAlignment());
         }
         catch (...)
         {
@@ -72,7 +72,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::TextAlignment>(arg);
 
-            self->obj.TextAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().TextAlignment(param0);
             return 0;
         }
         catch (...)
@@ -99,7 +99,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Margin());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().Margin());
         }
         catch (...)
         {
@@ -133,7 +133,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Thickness>(arg);
 
-            self->obj.Margin(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().Margin(param0);
             return 0;
         }
         catch (...)
@@ -160,7 +160,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineStackingStrategy());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().LineStackingStrategy());
         }
         catch (...)
         {
@@ -194,7 +194,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::LineStackingStrategy>(arg);
 
-            self->obj.LineStackingStrategy(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().LineStackingStrategy(param0);
             return 0;
         }
         catch (...)
@@ -221,7 +221,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.LineHeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().LineHeight());
         }
         catch (...)
         {
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.LineHeight(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().LineHeight(param0);
             return 0;
         }
         catch (...)
@@ -282,7 +282,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalTextAlignment());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().HorizontalTextAlignment());
         }
         catch (...)
         {
@@ -316,7 +316,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::TextAlignment>(arg);
 
-            self->obj.HorizontalTextAlignment(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Block>().HorizontalTextAlignment(param0);
             return 0;
         }
         catch (...)
@@ -8355,7 +8355,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Inlines());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Span>().Inlines());
         }
         catch (...)
         {
@@ -8389,7 +8389,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Documents::InlineCollection>(arg);
 
-            self->obj.Inlines(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::Span>().Inlines(param0);
             return 0;
         }
         catch (...)
@@ -8514,7 +8514,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                return py::convert(self->obj.FindName(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FindName(param0));
             }
             catch (...)
             {
@@ -8546,7 +8546,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Language());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().Language());
         }
         catch (...)
         {
@@ -8580,7 +8580,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.Language(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().Language(param0);
             return 0;
         }
         catch (...)
@@ -8607,7 +8607,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Foreground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().Foreground());
         }
         catch (...)
         {
@@ -8641,7 +8641,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Foreground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().Foreground(param0);
             return 0;
         }
         catch (...)
@@ -8668,7 +8668,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontWeight());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontWeight());
         }
         catch (...)
         {
@@ -8702,7 +8702,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontWeight>(arg);
 
-            self->obj.FontWeight(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontWeight(param0);
             return 0;
         }
         catch (...)
@@ -8729,7 +8729,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStyle());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontStyle());
         }
         catch (...)
         {
@@ -8763,7 +8763,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStyle>(arg);
 
-            self->obj.FontStyle(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontStyle(param0);
             return 0;
         }
         catch (...)
@@ -8790,7 +8790,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontStretch());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontStretch());
         }
         catch (...)
         {
@@ -8824,7 +8824,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::FontStretch>(arg);
 
-            self->obj.FontStretch(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontStretch(param0);
             return 0;
         }
         catch (...)
@@ -8851,7 +8851,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontSize());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontSize());
         }
         catch (...)
         {
@@ -8885,7 +8885,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.FontSize(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontSize(param0);
             return 0;
         }
         catch (...)
@@ -8912,7 +8912,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.FontFamily());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontFamily());
         }
         catch (...)
         {
@@ -8946,7 +8946,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::FontFamily>(arg);
 
-            self->obj.FontFamily(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().FontFamily(param0);
             return 0;
         }
         catch (...)
@@ -8973,7 +8973,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.CharacterSpacing());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().CharacterSpacing());
         }
         catch (...)
         {
@@ -9007,7 +9007,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.CharacterSpacing(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().CharacterSpacing(param0);
             return 0;
         }
         catch (...)
@@ -9034,7 +9034,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentEnd());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ContentEnd());
         }
         catch (...)
         {
@@ -9060,7 +9060,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ContentStart());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ContentStart());
         }
         catch (...)
         {
@@ -9086,7 +9086,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementEnd());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ElementEnd());
         }
         catch (...)
         {
@@ -9112,7 +9112,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ElementStart());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ElementStart());
         }
         catch (...)
         {
@@ -9138,7 +9138,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Name());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().Name());
         }
         catch (...)
         {
@@ -9164,7 +9164,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTextScaleFactorEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled());
         }
         catch (...)
         {
@@ -9198,7 +9198,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsTextScaleFactorEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().IsTextScaleFactorEnabled(param0);
             return 0;
         }
         catch (...)
@@ -9225,7 +9225,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExitDisplayModeOnAccessKeyInvoked());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked());
         }
         catch (...)
         {
@@ -9259,7 +9259,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.ExitDisplayModeOnAccessKeyInvoked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().ExitDisplayModeOnAccessKeyInvoked(param0);
             return 0;
         }
         catch (...)
@@ -9286,7 +9286,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowFocusOnInteraction());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction());
         }
         catch (...)
         {
@@ -9320,7 +9320,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowFocusOnInteraction(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AllowFocusOnInteraction(param0);
             return 0;
         }
         catch (...)
@@ -9347,7 +9347,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessKey());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKey());
         }
         catch (...)
         {
@@ -9381,7 +9381,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.AccessKey(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKey(param0);
             return 0;
         }
         catch (...)
@@ -9408,7 +9408,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.TextDecorations());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().TextDecorations());
         }
         catch (...)
         {
@@ -9442,7 +9442,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Text::TextDecorations>(arg);
 
-            self->obj.TextDecorations(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().TextDecorations(param0);
             return 0;
         }
         catch (...)
@@ -9469,7 +9469,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTipVerticalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset());
         }
         catch (...)
         {
@@ -9503,7 +9503,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.KeyTipVerticalOffset(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipVerticalOffset(param0);
             return 0;
         }
         catch (...)
@@ -9530,7 +9530,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTipPlacementMode());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode());
         }
         catch (...)
         {
@@ -9564,7 +9564,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Input::KeyTipPlacementMode>(arg);
 
-            self->obj.KeyTipPlacementMode(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipPlacementMode(param0);
             return 0;
         }
         catch (...)
@@ -9591,7 +9591,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.KeyTipHorizontalOffset());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset());
         }
         catch (...)
         {
@@ -9625,7 +9625,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<double>(arg);
 
-            self->obj.KeyTipHorizontalOffset(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().KeyTipHorizontalOffset(param0);
             return 0;
         }
         catch (...)
@@ -9652,7 +9652,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsAccessKeyScope());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().IsAccessKeyScope());
         }
         catch (...)
         {
@@ -9686,7 +9686,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsAccessKeyScope(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().IsAccessKeyScope(param0);
             return 0;
         }
         catch (...)
@@ -9713,7 +9713,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.AccessKeyScopeOwner());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner());
         }
         catch (...)
         {
@@ -9747,7 +9747,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::DependencyObject>(arg);
 
-            self->obj.AccessKeyScopeOwner(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyScopeOwner(param0);
             return 0;
         }
         catch (...)
@@ -9774,7 +9774,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.XamlRoot());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().XamlRoot());
         }
         catch (...)
         {
@@ -9808,7 +9808,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::XamlRoot>(arg);
 
-            self->obj.XamlRoot(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().XamlRoot(param0);
             return 0;
         }
         catch (...)
@@ -10305,7 +10305,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayDismissedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccessKeyDisplayDismissed(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0));
         }
         catch (...)
         {
@@ -10333,7 +10333,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccessKeyDisplayDismissed(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyDisplayDismissed(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10362,7 +10362,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyDisplayRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccessKeyDisplayRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0));
         }
         catch (...)
         {
@@ -10390,7 +10390,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccessKeyDisplayRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyDisplayRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10419,7 +10419,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Documents::TextElement, winrt::Windows::UI::Xaml::Input::AccessKeyInvokedEventArgs>>(arg);
 
-            return py::convert(self->obj.AccessKeyInvoked(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0));
         }
         catch (...)
         {
@@ -10447,7 +10447,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.AccessKeyInvoked(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextElement>().AccessKeyInvoked(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10636,7 +10636,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Foreground());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextHighlighter>().Foreground());
         }
         catch (...)
         {
@@ -10670,7 +10670,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Foreground(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextHighlighter>().Foreground(param0);
             return 0;
         }
         catch (...)
@@ -10697,7 +10697,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Background());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextHighlighter>().Background());
         }
         catch (...)
         {
@@ -10731,7 +10731,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Media::Brush>(arg);
 
-            self->obj.Background(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextHighlighter>().Background(param0);
             return 0;
         }
         catch (...)
@@ -10758,7 +10758,7 @@ namespace py::cpp::Windows::UI::Xaml::Documents
                 return nullptr;
             }
 
-            return py::convert(self->obj.Ranges());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Documents::TextHighlighter>().Ranges());
         }
         catch (...)
         {

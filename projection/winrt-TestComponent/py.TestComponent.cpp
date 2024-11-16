@@ -303,7 +303,7 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Four());
+                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Four());
             }
             catch (...)
             {
@@ -326,7 +326,7 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.One());
+                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().One());
             }
             catch (...)
             {
@@ -349,7 +349,7 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Three());
+                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Three());
             }
             catch (...)
             {
@@ -372,7 +372,7 @@ namespace py::cpp::TestComponent
         {
             try
             {
-                return py::convert(self->obj.Two());
+                return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Two());
             }
             catch (...)
             {
@@ -391,7 +391,7 @@ namespace py::cpp::TestComponent
     {
         try
         {
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::TestComponent::Composable>().Value());
         }
         catch (...)
         {
@@ -412,7 +412,7 @@ namespace py::cpp::TestComponent
         {
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.Value(param0);
+            self->obj.try_as<winrt::TestComponent::Composable>().Value(param0);
             return 0;
         }
         catch (...)

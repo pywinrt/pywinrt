@@ -62,7 +62,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileBitmapRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.BitmapRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>().BitmapRequested(param0));
         }
         catch (...)
         {
@@ -90,7 +90,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.BitmapRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::CustomMapTileDataSource>().BitmapRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -247,7 +247,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.UriFormatString());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriFormatString());
         }
         catch (...)
         {
@@ -281,7 +281,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UriFormatString(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriFormatString(param0);
             return 0;
         }
         catch (...)
@@ -308,7 +308,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowCaching());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AllowCaching());
         }
         catch (...)
         {
@@ -342,7 +342,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowCaching(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AllowCaching(param0);
             return 0;
         }
         catch (...)
@@ -369,7 +369,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.AdditionalRequestHeaders());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().AdditionalRequestHeaders());
         }
         catch (...)
         {
@@ -397,7 +397,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.UriRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriRequested(param0));
         }
         catch (...)
         {
@@ -425,7 +425,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UriRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::HttpMapTileDataSource>().UriRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -585,7 +585,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.UriFormatString());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriFormatString());
         }
         catch (...)
         {
@@ -619,7 +619,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.UriFormatString(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriFormatString(param0);
             return 0;
         }
         catch (...)
@@ -648,7 +648,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource, winrt::Windows::UI::Xaml::Controls::Maps::MapTileUriRequestedEventArgs>>(arg);
 
-            return py::convert(self->obj.UriRequested(param0));
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriRequested(param0));
         }
         catch (...)
         {
@@ -676,7 +676,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::event_token>(arg);
 
-            self->obj.UriRequested(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::LocalMapTileDataSource>().UriRequested(param0);
             Py_RETURN_NONE;
         }
         catch (...)
@@ -10036,7 +10036,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().ZIndex());
         }
         catch (...)
         {
@@ -10070,7 +10070,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().ZIndex(param0);
             return 0;
         }
         catch (...)
@@ -10097,7 +10097,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Visible());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Visible());
         }
         catch (...)
         {
@@ -10131,7 +10131,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Visible(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Visible(param0);
             return 0;
         }
         catch (...)
@@ -10158,7 +10158,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.MapTabIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapTabIndex());
         }
         catch (...)
         {
@@ -10192,7 +10192,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MapTabIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapTabIndex(param0);
             return 0;
         }
         catch (...)
@@ -10219,7 +10219,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Tag());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Tag());
         }
         catch (...)
         {
@@ -10253,7 +10253,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(arg);
 
-            self->obj.Tag(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().Tag(param0);
             return 0;
         }
         catch (...)
@@ -10280,7 +10280,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.MapStyleSheetEntryState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntryState());
         }
         catch (...)
         {
@@ -10314,7 +10314,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MapStyleSheetEntryState(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntryState(param0);
             return 0;
         }
         catch (...)
@@ -10341,7 +10341,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.MapStyleSheetEntry());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntry());
         }
         catch (...)
         {
@@ -10375,7 +10375,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::hstring>(arg);
 
-            self->obj.MapStyleSheetEntry(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().MapStyleSheetEntry(param0);
             return 0;
         }
         catch (...)
@@ -10402,7 +10402,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().IsEnabled());
         }
         catch (...)
         {
@@ -10436,7 +10436,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapElement>().IsEnabled(param0);
             return 0;
         }
         catch (...)
@@ -14031,7 +14031,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().ZIndex());
         }
         catch (...)
         {
@@ -14065,7 +14065,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().ZIndex(param0);
             return 0;
         }
         catch (...)
@@ -14092,7 +14092,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Visible());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().Visible());
         }
         catch (...)
         {
@@ -14126,7 +14126,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Visible(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().Visible(param0);
             return 0;
         }
         catch (...)
@@ -14153,7 +14153,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.MapTabIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().MapTabIndex());
         }
         catch (...)
         {
@@ -14187,7 +14187,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.MapTabIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapLayer>().MapTabIndex(param0);
             return 0;
         }
         catch (...)
@@ -15693,7 +15693,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.RouteColor());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().RouteColor());
         }
         catch (...)
         {
@@ -15727,7 +15727,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.RouteColor(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().RouteColor(param0);
             return 0;
         }
         catch (...)
@@ -15754,7 +15754,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.OutlineColor());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().OutlineColor());
         }
         catch (...)
         {
@@ -15788,7 +15788,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::UI::Color>(arg);
 
-            self->obj.OutlineColor(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().OutlineColor(param0);
             return 0;
         }
         catch (...)
@@ -15815,7 +15815,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Route());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapRouteView>().Route());
         }
         catch (...)
         {
@@ -19720,7 +19720,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     return nullptr;
                 }
 
-                self->obj.Pause();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Pause();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19757,7 +19757,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     return nullptr;
                 }
 
-                self->obj.Play();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Play();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19794,7 +19794,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                     return nullptr;
                 }
 
-                self->obj.Stop();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Stop();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -19827,7 +19827,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZoomLevelRange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZoomLevelRange());
         }
         catch (...)
         {
@@ -19861,7 +19861,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapZoomLevelRange>(arg);
 
-            self->obj.ZoomLevelRange(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZoomLevelRange(param0);
             return 0;
         }
         catch (...)
@@ -19888,7 +19888,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.ZIndex());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZIndex());
         }
         catch (...)
         {
@@ -19922,7 +19922,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.ZIndex(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().ZIndex(param0);
             return 0;
         }
         catch (...)
@@ -19949,7 +19949,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Visible());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Visible());
         }
         catch (...)
         {
@@ -19983,7 +19983,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.Visible(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Visible(param0);
             return 0;
         }
         catch (...)
@@ -20010,7 +20010,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.TilePixelSize());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().TilePixelSize());
         }
         catch (...)
         {
@@ -20044,7 +20044,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.TilePixelSize(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().TilePixelSize(param0);
             return 0;
         }
         catch (...)
@@ -20071,7 +20071,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Layer());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Layer());
         }
         catch (...)
         {
@@ -20105,7 +20105,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileLayer>(arg);
 
-            self->obj.Layer(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Layer(param0);
             return 0;
         }
         catch (...)
@@ -20132,7 +20132,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTransparencyEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsTransparencyEnabled());
         }
         catch (...)
         {
@@ -20166,7 +20166,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsTransparencyEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsTransparencyEnabled(param0);
             return 0;
         }
         catch (...)
@@ -20193,7 +20193,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsRetryEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsRetryEnabled());
         }
         catch (...)
         {
@@ -20227,7 +20227,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsRetryEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsRetryEnabled(param0);
             return 0;
         }
         catch (...)
@@ -20254,7 +20254,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsFadingEnabled());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsFadingEnabled());
         }
         catch (...)
         {
@@ -20288,7 +20288,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.IsFadingEnabled(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().IsFadingEnabled(param0);
             return 0;
         }
         catch (...)
@@ -20315,7 +20315,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.DataSource());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().DataSource());
         }
         catch (...)
         {
@@ -20349,7 +20349,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Controls::Maps::MapTileDataSource>(arg);
 
-            self->obj.DataSource(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().DataSource(param0);
             return 0;
         }
         catch (...)
@@ -20376,7 +20376,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.Bounds());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Bounds());
         }
         catch (...)
         {
@@ -20410,7 +20410,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Devices::Geolocation::GeoboundingBox>(arg);
 
-            self->obj.Bounds(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().Bounds(param0);
             return 0;
         }
         catch (...)
@@ -20437,7 +20437,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.AllowOverstretch());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AllowOverstretch());
         }
         catch (...)
         {
@@ -20471,7 +20471,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AllowOverstretch(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AllowOverstretch(param0);
             return 0;
         }
         catch (...)
@@ -20498,7 +20498,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameDuration());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameDuration());
         }
         catch (...)
         {
@@ -20532,7 +20532,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<winrt::Windows::Foundation::TimeSpan>(arg);
 
-            self->obj.FrameDuration(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameDuration(param0);
             return 0;
         }
         catch (...)
@@ -20559,7 +20559,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.FrameCount());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameCount());
         }
         catch (...)
         {
@@ -20593,7 +20593,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<int32_t>(arg);
 
-            self->obj.FrameCount(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().FrameCount(param0);
             return 0;
         }
         catch (...)
@@ -20620,7 +20620,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.AutoPlay());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AutoPlay());
         }
         catch (...)
         {
@@ -20654,7 +20654,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
 
             auto param0 = py::convert_to<bool>(arg);
 
-            self->obj.AutoPlay(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AutoPlay(param0);
             return 0;
         }
         catch (...)
@@ -20681,7 +20681,7 @@ namespace py::cpp::Windows::UI::Xaml::Controls::Maps
                 return nullptr;
             }
 
-            return py::convert(self->obj.AnimationState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Controls::Maps::MapTileSource>().AnimationState());
         }
         catch (...)
         {

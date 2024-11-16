@@ -66,7 +66,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -103,7 +103,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Collapse();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Collapse();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -140,7 +140,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Expand();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Expand();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -179,7 +179,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::WindowVisualState>(args, 0);
 
-                self->obj.SetVisualState(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().SetVisualState(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -216,7 +216,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Toggle();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Toggle();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -255,7 +255,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.WaitForInputIdle(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().WaitForInputIdle(param0));
             }
             catch (...)
             {
@@ -287,7 +287,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpandCollapseState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().ExpandCollapseState());
         }
         catch (...)
         {
@@ -313,7 +313,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToggleState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().ToggleState());
         }
         catch (...)
         {
@@ -339,7 +339,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().InteractionState());
         }
         catch (...)
         {
@@ -365,7 +365,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsModal());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().IsModal());
         }
         catch (...)
         {
@@ -391,7 +391,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTopmost());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().IsTopmost());
         }
         catch (...)
         {
@@ -417,7 +417,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Maximizable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Maximizable());
         }
         catch (...)
         {
@@ -443,7 +443,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Minimizable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().Minimizable());
         }
         catch (...)
         {
@@ -469,7 +469,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarAutomationPeer>().VisualState());
         }
         catch (...)
         {
@@ -628,7 +628,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Collapse();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().Collapse();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -665,7 +665,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Expand();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().Expand();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -698,7 +698,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpandCollapseState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AppBarButtonAutomationPeer>().ExpandCollapseState());
         }
         catch (...)
         {
@@ -1101,7 +1101,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAcceleratorKey());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAcceleratorKey());
             }
             catch (...)
             {
@@ -1137,7 +1137,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAccessKey());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAccessKey());
             }
             catch (...)
             {
@@ -1173,7 +1173,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAnnotations());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAnnotations());
             }
             catch (...)
             {
@@ -1209,7 +1209,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAutomationControlType());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAutomationControlType());
             }
             catch (...)
             {
@@ -1245,7 +1245,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetAutomationId());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetAutomationId());
             }
             catch (...)
             {
@@ -1281,7 +1281,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetBoundingRectangle());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetBoundingRectangle());
             }
             catch (...)
             {
@@ -1317,7 +1317,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetChildren());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetChildren());
             }
             catch (...)
             {
@@ -1353,7 +1353,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClassName());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetClassName());
             }
             catch (...)
             {
@@ -1389,7 +1389,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetClickablePoint());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetClickablePoint());
             }
             catch (...)
             {
@@ -1425,7 +1425,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetControlledPeers());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetControlledPeers());
             }
             catch (...)
             {
@@ -1461,7 +1461,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetCulture());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetCulture());
             }
             catch (...)
             {
@@ -1499,7 +1499,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.GetElementFromPoint(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetElementFromPoint(param0));
             }
             catch (...)
             {
@@ -1535,7 +1535,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetFocusedElement());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetFocusedElement());
             }
             catch (...)
             {
@@ -1571,7 +1571,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetFullDescription());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetFullDescription());
             }
             catch (...)
             {
@@ -1607,7 +1607,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetHeadingLevel());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetHeadingLevel());
             }
             catch (...)
             {
@@ -1643,7 +1643,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetHelpText());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetHelpText());
             }
             catch (...)
             {
@@ -1679,7 +1679,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemStatus());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetItemStatus());
             }
             catch (...)
             {
@@ -1715,7 +1715,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetItemType());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetItemType());
             }
             catch (...)
             {
@@ -1751,7 +1751,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLabeledBy());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLabeledBy());
             }
             catch (...)
             {
@@ -1787,7 +1787,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLandmarkType());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLandmarkType());
             }
             catch (...)
             {
@@ -1823,7 +1823,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLevel());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLevel());
             }
             catch (...)
             {
@@ -1859,7 +1859,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLiveSetting());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLiveSetting());
             }
             catch (...)
             {
@@ -1895,7 +1895,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLocalizedControlType());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLocalizedControlType());
             }
             catch (...)
             {
@@ -1931,7 +1931,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetLocalizedLandmarkType());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetLocalizedLandmarkType());
             }
             catch (...)
             {
@@ -1967,7 +1967,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetName());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetName());
             }
             catch (...)
             {
@@ -2003,7 +2003,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetOrientation());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetOrientation());
             }
             catch (...)
             {
@@ -2039,7 +2039,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetParent());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetParent());
             }
             catch (...)
             {
@@ -2077,7 +2077,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::PatternInterface>(args, 0);
 
-                return py::convert(self->obj.GetPattern(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPattern(param0));
             }
             catch (...)
             {
@@ -2115,7 +2115,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::Point>(args, 0);
 
-                return py::convert(self->obj.GetPeerFromPoint(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPeerFromPoint(param0));
             }
             catch (...)
             {
@@ -2151,7 +2151,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetPositionInSet());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetPositionInSet());
             }
             catch (...)
             {
@@ -2187,7 +2187,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSizeOfSet());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().GetSizeOfSet());
             }
             catch (...)
             {
@@ -2223,7 +2223,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.HasKeyboardFocus());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().HasKeyboardFocus());
             }
             catch (...)
             {
@@ -2259,7 +2259,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.InvalidatePeer();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().InvalidatePeer();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2296,7 +2296,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsContentElement());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsContentElement());
             }
             catch (...)
             {
@@ -2332,7 +2332,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsControlElement());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsControlElement());
             }
             catch (...)
             {
@@ -2368,7 +2368,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsDataValidForForm());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsDataValidForForm());
             }
             catch (...)
             {
@@ -2404,7 +2404,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsDialog());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsDialog());
             }
             catch (...)
             {
@@ -2440,7 +2440,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsEnabled());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsEnabled());
             }
             catch (...)
             {
@@ -2476,7 +2476,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsKeyboardFocusable());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsKeyboardFocusable());
             }
             catch (...)
             {
@@ -2512,7 +2512,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsOffscreen());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsOffscreen());
             }
             catch (...)
             {
@@ -2548,7 +2548,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsPassword());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsPassword());
             }
             catch (...)
             {
@@ -2584,7 +2584,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsPeripheral());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsPeripheral());
             }
             catch (...)
             {
@@ -2620,7 +2620,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.IsRequiredForForm());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().IsRequiredForForm());
             }
             catch (...)
             {
@@ -2696,7 +2696,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationNavigationDirection>(args, 0);
 
-                return py::convert(self->obj.Navigate(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().Navigate(param0));
             }
             catch (...)
             {
@@ -2734,7 +2734,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationEvents>(args, 0);
 
-                self->obj.RaiseAutomationEvent(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseAutomationEvent(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2776,7 +2776,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param2 = py::convert_to<winrt::hstring>(args, 2);
                 auto param3 = py::convert_to<winrt::hstring>(args, 3);
 
-                self->obj.RaiseNotificationEvent(param0, param1, param2, param3);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseNotificationEvent(param0, param1, param2, param3);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2817,7 +2817,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param1 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                self->obj.RaisePropertyChangedEvent(param0, param1, param2);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaisePropertyChangedEvent(param0, param1, param2);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2857,7 +2857,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationStructureChangeType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(args, 1);
 
-                self->obj.RaiseStructureChangedEvent(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseStructureChangedEvent(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2897,7 +2897,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationTextEditChangeType>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::Foundation::Collections::IVectorView<winrt::hstring>>(args, 1);
 
-                self->obj.RaiseTextEditTextChangedEvent(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().RaiseTextEditTextChangedEvent(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2934,7 +2934,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.SetFocus();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().SetFocus();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -2973,7 +2973,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(args, 0);
 
-                self->obj.SetParent(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().SetParent(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3010,7 +3010,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ShowContextMenu();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().ShowContextMenu();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3043,7 +3043,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.EventsSource());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().EventsSource());
         }
         catch (...)
         {
@@ -3077,7 +3077,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
             auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>(arg);
 
-            self->obj.EventsSource(param0);
+            self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::AutomationPeer>().EventsSource(param0);
             return 0;
         }
         catch (...)
@@ -3600,7 +3600,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ButtonAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3844,7 +3844,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3883,7 +3883,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetValue(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().SetValue(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -3916,7 +3916,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().IsReadOnly());
         }
         catch (...)
         {
@@ -3942,7 +3942,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::CalendarDatePickerAutomationPeer>().Value());
         }
         catch (...)
         {
@@ -4551,7 +4551,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Close();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Close();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4588,7 +4588,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Collapse();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Collapse();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4625,7 +4625,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Expand();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Expand();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4664,7 +4664,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::hstring>(args, 0);
 
-                self->obj.SetValue(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().SetValue(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4703,7 +4703,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::WindowVisualState>(args, 0);
 
-                self->obj.SetVisualState(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().SetVisualState(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -4742,7 +4742,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<int32_t>(args, 0);
 
-                return py::convert(self->obj.WaitForInputIdle(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().WaitForInputIdle(param0));
             }
             catch (...)
             {
@@ -4774,7 +4774,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpandCollapseState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().ExpandCollapseState());
         }
         catch (...)
         {
@@ -4800,7 +4800,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsReadOnly());
         }
         catch (...)
         {
@@ -4826,7 +4826,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Value());
         }
         catch (...)
         {
@@ -4852,7 +4852,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.InteractionState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().InteractionState());
         }
         catch (...)
         {
@@ -4878,7 +4878,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsModal());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsModal());
         }
         catch (...)
         {
@@ -4904,7 +4904,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsTopmost());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().IsTopmost());
         }
         catch (...)
         {
@@ -4930,7 +4930,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Maximizable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Maximizable());
         }
         catch (...)
         {
@@ -4956,7 +4956,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Minimizable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().Minimizable());
         }
         catch (...)
         {
@@ -4982,7 +4982,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.VisualState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxAutomationPeer>().VisualState());
         }
         catch (...)
         {
@@ -5258,7 +5258,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ComboBoxItemDataAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -5823,7 +5823,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::FlipViewItemDataAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -6163,7 +6163,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Owner());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::FrameworkElementAutomationPeer>().Owner());
         }
         catch (...)
         {
@@ -6657,7 +6657,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::GridViewItemDataAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7040,7 +7040,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::HubSectionAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7193,7 +7193,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::HyperlinkButtonAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7528,7 +7528,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Realize();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().Realize();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -7561,7 +7561,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Item());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().Item());
         }
         catch (...)
         {
@@ -7587,7 +7587,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ItemsControlAutomationPeer());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemAutomationPeer>().ItemsControlAutomationPeer());
         }
         catch (...)
         {
@@ -7737,7 +7737,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 0);
 
-                return py::convert(self->obj.CreateItemAutomationPeer(param0));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>().CreateItemAutomationPeer(param0));
             }
             catch (...)
             {
@@ -7777,7 +7777,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::AutomationProperty>(args, 1);
                 auto param2 = py::convert_to<winrt::Windows::Foundation::IInspectable>(args, 2);
 
-                return py::convert(self->obj.FindItemByProperty(param0, param1, param2));
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ItemsControlAutomationPeer>().FindItemByProperty(param0, param1, param2));
             }
             catch (...)
             {
@@ -8161,7 +8161,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListBoxItemDataAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -8491,7 +8491,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DropEffect());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>().DropEffect());
         }
         catch (...)
         {
@@ -8517,7 +8517,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.DropEffects());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewBaseAutomationPeer>().DropEffects());
         }
         catch (...)
         {
@@ -8986,7 +8986,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.ScrollIntoView();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ListViewItemDataAutomationPeer>().ScrollIntoView();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11221,7 +11221,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Collapse();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Collapse();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11258,7 +11258,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Expand();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Expand();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11295,7 +11295,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -11328,7 +11328,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpandCollapseState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuBarItemAutomationPeer>().ExpandCollapseState());
         }
         catch (...)
         {
@@ -11477,7 +11477,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::MenuFlyoutItemAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13236,7 +13236,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.AddToSelection();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().AddToSelection();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13273,7 +13273,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.RemoveFromSelection();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().RemoveFromSelection();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13310,7 +13310,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Select();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().Select();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13343,7 +13343,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelected());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().IsSelected());
         }
         catch (...)
         {
@@ -13369,7 +13369,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionContainer());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RadioButtonAutomationPeer>().SelectionContainer());
         }
         catch (...)
         {
@@ -13521,7 +13521,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
 
                 auto param0 = py::convert_to<double>(args, 0);
 
-                self->obj.SetValue(param0);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().SetValue(param0);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -13554,7 +13554,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsReadOnly());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().IsReadOnly());
         }
         catch (...)
         {
@@ -13580,7 +13580,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.LargeChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().LargeChange());
         }
         catch (...)
         {
@@ -13606,7 +13606,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Maximum());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Maximum());
         }
         catch (...)
         {
@@ -13632,7 +13632,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Minimum());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Minimum());
         }
         catch (...)
         {
@@ -13658,7 +13658,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SmallChange());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().SmallChange());
         }
         catch (...)
         {
@@ -13684,7 +13684,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.Value());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RangeBaseAutomationPeer>().Value());
         }
         catch (...)
         {
@@ -13951,7 +13951,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Invoke();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::RepeatButtonAutomationPeer>().Invoke();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14567,7 +14567,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param0 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 0);
                 auto param1 = py::convert_to<winrt::Windows::UI::Xaml::Automation::ScrollAmount>(args, 1);
 
-                self->obj.Scroll(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().Scroll(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14607,7 +14607,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 auto param0 = py::convert_to<double>(args, 0);
                 auto param1 = py::convert_to<double>(args, 1);
 
-                self->obj.SetScrollPercent(param0, param1);
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().SetScrollPercent(param0, param1);
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -14640,7 +14640,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalScrollPercent());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontalScrollPercent());
         }
         catch (...)
         {
@@ -14666,7 +14666,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontalViewSize());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontalViewSize());
         }
         catch (...)
         {
@@ -14692,7 +14692,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.HorizontallyScrollable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().HorizontallyScrollable());
         }
         catch (...)
         {
@@ -14718,7 +14718,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalScrollPercent());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticalScrollPercent());
         }
         catch (...)
         {
@@ -14744,7 +14744,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticalViewSize());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticalViewSize());
         }
         catch (...)
         {
@@ -14770,7 +14770,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.VerticallyScrollable());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ScrollViewerAutomationPeer>().VerticallyScrollable());
         }
         catch (...)
         {
@@ -15038,7 +15038,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                return py::convert(self->obj.GetSelection());
+                return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().GetSelection());
             }
             catch (...)
             {
@@ -15070,7 +15070,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.CanSelectMultiple());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().CanSelectMultiple());
         }
         catch (...)
         {
@@ -15096,7 +15096,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelectionRequired());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorAutomationPeer>().IsSelectionRequired());
         }
         catch (...)
         {
@@ -15245,7 +15245,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.AddToSelection();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().AddToSelection();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15282,7 +15282,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.RemoveFromSelection();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().RemoveFromSelection();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15319,7 +15319,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Select();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().Select();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15352,7 +15352,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.IsSelected());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().IsSelected());
         }
         catch (...)
         {
@@ -15378,7 +15378,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.SelectionContainer());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SelectorItemAutomationPeer>().SelectionContainer());
         }
         catch (...)
         {
@@ -15528,7 +15528,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Toggle();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>().Toggle();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -15561,7 +15561,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToggleState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::SemanticZoomAutomationPeer>().ToggleState());
         }
         catch (...)
         {
@@ -16464,7 +16464,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Toggle();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>().Toggle();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16497,7 +16497,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToggleState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleButtonAutomationPeer>().ToggleState());
         }
         catch (...)
         {
@@ -16644,7 +16644,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Toggle();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>().Toggle();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16677,7 +16677,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToggleState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleMenuFlyoutItemAutomationPeer>().ToggleState());
         }
         catch (...)
         {
@@ -16824,7 +16824,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Toggle();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>().Toggle();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -16857,7 +16857,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ToggleState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::ToggleSwitchAutomationPeer>().ToggleState());
         }
         catch (...)
         {
@@ -17004,7 +17004,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Collapse();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().Collapse();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17041,7 +17041,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                     return nullptr;
                 }
 
-                self->obj.Expand();
+                self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().Expand();
                 Py_RETURN_NONE;
             }
             catch (...)
@@ -17074,7 +17074,7 @@ namespace py::cpp::Windows::UI::Xaml::Automation::Peers
                 return nullptr;
             }
 
-            return py::convert(self->obj.ExpandCollapseState());
+            return py::convert(self->obj.try_as<winrt::Windows::UI::Xaml::Automation::Peers::TreeViewItemAutomationPeer>().ExpandCollapseState());
         }
         catch (...)
         {
