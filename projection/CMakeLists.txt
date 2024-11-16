@@ -13,7 +13,7 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 link_libraries("RuntimeObject.lib")
 
 if (MSVC)
-    add_compile_options(/bigobj /permissive- /EHsc /W4 /WX /Gy)
+    add_compile_options(/bigobj /permissive- /W4 /WX /Gy)
 else()
     add_compile_options(-Werror -Wall -Wextra)
 
